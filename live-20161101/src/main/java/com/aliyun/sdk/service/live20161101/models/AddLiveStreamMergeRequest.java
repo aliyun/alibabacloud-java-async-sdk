@@ -53,6 +53,14 @@ public class AddLiveStreamMergeRequest extends Request {
     private String inStreamName2;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveMerger")
+    private String liveMerger;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MergeParameters")
+    private String mergeParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -83,6 +91,8 @@ public class AddLiveStreamMergeRequest extends Request {
         this.inAppName2 = builder.inAppName2;
         this.inStreamName1 = builder.inStreamName1;
         this.inStreamName2 = builder.inStreamName2;
+        this.liveMerger = builder.liveMerger;
+        this.mergeParameters = builder.mergeParameters;
         this.ownerId = builder.ownerId;
         this.protocol = builder.protocol;
         this.regionId = builder.regionId;
@@ -153,6 +163,20 @@ public class AddLiveStreamMergeRequest extends Request {
     }
 
     /**
+     * @return liveMerger
+     */
+    public String getLiveMerger() {
+        return this.liveMerger;
+    }
+
+    /**
+     * @return mergeParameters
+     */
+    public String getMergeParameters() {
+        return this.mergeParameters;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -195,6 +219,8 @@ public class AddLiveStreamMergeRequest extends Request {
         private String inAppName2; 
         private String inStreamName1; 
         private String inStreamName2; 
+        private String liveMerger; 
+        private String mergeParameters; 
         private Long ownerId; 
         private String protocol; 
         private String regionId; 
@@ -214,6 +240,8 @@ public class AddLiveStreamMergeRequest extends Request {
             this.inAppName2 = request.inAppName2;
             this.inStreamName1 = request.inStreamName1;
             this.inStreamName2 = request.inStreamName2;
+            this.liveMerger = request.liveMerger;
+            this.mergeParameters = request.mergeParameters;
             this.ownerId = request.ownerId;
             this.protocol = request.protocol;
             this.regionId = request.regionId;
@@ -313,6 +341,24 @@ public class AddLiveStreamMergeRequest extends Request {
         public Builder inStreamName2(String inStreamName2) {
             this.putQueryParameter("InStreamName2", inStreamName2);
             this.inStreamName2 = inStreamName2;
+            return this;
+        }
+
+        /**
+         * LiveMerger.
+         */
+        public Builder liveMerger(String liveMerger) {
+            this.putQueryParameter("LiveMerger", liveMerger);
+            this.liveMerger = liveMerger;
+            return this;
+        }
+
+        /**
+         * MergeParameters.
+         */
+        public Builder mergeParameters(String mergeParameters) {
+            this.putQueryParameter("MergeParameters", mergeParameters);
+            this.mergeParameters = mergeParameters;
             return this;
         }
 

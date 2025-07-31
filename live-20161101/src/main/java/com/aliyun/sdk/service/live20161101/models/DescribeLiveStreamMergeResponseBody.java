@@ -125,6 +125,12 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InStreamName2")
         private String inStreamName2;
 
+        @com.aliyun.core.annotation.NameInMap("LiveMerger")
+        private String liveMerger;
+
+        @com.aliyun.core.annotation.NameInMap("MergeParameters")
+        private String mergeParameters;
+
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
@@ -147,6 +153,8 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
             this.inAppName2 = builder.inAppName2;
             this.inStreamName1 = builder.inStreamName1;
             this.inStreamName2 = builder.inStreamName2;
+            this.liveMerger = builder.liveMerger;
+            this.mergeParameters = builder.mergeParameters;
             this.protocol = builder.protocol;
             this.startTime = builder.startTime;
             this.streamName = builder.streamName;
@@ -225,6 +233,20 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         }
 
         /**
+         * @return liveMerger
+         */
+        public String getLiveMerger() {
+            return this.liveMerger;
+        }
+
+        /**
+         * @return mergeParameters
+         */
+        public String getMergeParameters() {
+            return this.mergeParameters;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -262,6 +284,8 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
             private String inAppName2; 
             private String inStreamName1; 
             private String inStreamName2; 
+            private String liveMerger; 
+            private String mergeParameters; 
             private String protocol; 
             private String startTime; 
             private String streamName; 
@@ -280,6 +304,8 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
                 this.inAppName2 = model.inAppName2;
                 this.inStreamName1 = model.inStreamName1;
                 this.inStreamName2 = model.inStreamName2;
+                this.liveMerger = model.liveMerger;
+                this.mergeParameters = model.mergeParameters;
                 this.protocol = model.protocol;
                 this.startTime = model.startTime;
                 this.streamName = model.streamName;
@@ -382,6 +408,22 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
              */
             public Builder inStreamName2(String inStreamName2) {
                 this.inStreamName2 = inStreamName2;
+                return this;
+            }
+
+            /**
+             * LiveMerger.
+             */
+            public Builder liveMerger(String liveMerger) {
+                this.liveMerger = liveMerger;
+                return this;
+            }
+
+            /**
+             * MergeParameters.
+             */
+            public Builder mergeParameters(String mergeParameters) {
+                this.mergeParameters = mergeParameters;
                 return this;
             }
 

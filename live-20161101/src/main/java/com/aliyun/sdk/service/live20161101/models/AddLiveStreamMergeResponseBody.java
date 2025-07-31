@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddLiveStreamMergeResponseBody</p>
  */
 public class AddLiveStreamMergeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddLiveStreamMergeResponseBody(Builder builder) {
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class AddLiveStreamMergeResponseBody extends TeaModel {
     }
 
     /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class AddLiveStreamMergeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String message; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(AddLiveStreamMergeResponseBody model) {
+            this.message = model.message;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>
