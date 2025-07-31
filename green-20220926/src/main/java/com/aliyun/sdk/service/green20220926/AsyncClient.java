@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCallbackResponse> createCallback(CreateCallbackRequest request);
 
     /**
+     * @param request the request parameters of CreateOnlineTest  CreateOnlineTestRequest
+     * @return CreateOnlineTestResponse
+     */
+    CompletableFuture<CreateOnlineTestResponse> createOnlineTest(CreateOnlineTestRequest request);
+
+    /**
      * @param request the request parameters of CreatePreCheck  CreatePreCheckRequest
      * @return CreatePreCheckResponse
      */
@@ -132,6 +138,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteKeywordLibResponse
      */
     CompletableFuture<DeleteKeywordLibResponse> deleteKeywordLib(DeleteKeywordLibRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOnlineTest  DeleteOnlineTestRequest
+     * @return DeleteOnlineTestResponse
+     */
+    CompletableFuture<DeleteOnlineTestResponse> deleteOnlineTest(DeleteOnlineTestRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOnlineTestResult  DescribeOnlineTestResultRequest
+     * @return DescribeOnlineTestResultResponse
+     */
+    CompletableFuture<DescribeOnlineTestResultResponse> describeOnlineTestResult(DescribeOnlineTestResultRequest request);
 
     /**
      * @param request the request parameters of ExportAnswerSample  ExportAnswerSampleRequest
@@ -254,6 +272,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetKeywordLibResponse> getKeywordLib(GetKeywordLibRequest request);
 
     /**
+     * @param request the request parameters of GetOssCheckFreezeResult  GetOssCheckFreezeResultRequest
+     * @return GetOssCheckFreezeResultResponse
+     */
+    CompletableFuture<GetOssCheckFreezeResultResponse> getOssCheckFreezeResult(GetOssCheckFreezeResultRequest request);
+
+    /**
+     * @param request the request parameters of GetOssCheckResultDetail  GetOssCheckResultDetailRequest
+     * @return GetOssCheckResultDetailResponse
+     */
+    CompletableFuture<GetOssCheckResultDetailResponse> getOssCheckResultDetail(GetOssCheckResultDetailRequest request);
+
+    /**
      * @param request the request parameters of GetOssCheckStat  GetOssCheckStatRequest
      * @return GetOssCheckStatResponse
      */
@@ -264,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetOssCheckStatusResponse
      */
     CompletableFuture<GetOssCheckStatusResponse> getOssCheckStatus(GetOssCheckStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetOssCheckTaskInfo  GetOssCheckTaskInfoRequest
+     * @return GetOssCheckTaskInfoResponse
+     */
+    CompletableFuture<GetOssCheckTaskInfoResponse> getOssCheckTaskInfo(GetOssCheckTaskInfoRequest request);
 
     /**
      * @param request the request parameters of GetScanNum  GetScanNumRequest
@@ -312,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUploadInfoResponse
      */
     CompletableFuture<GetUploadInfoResponse> getUploadInfo(GetUploadInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetUploadLink  GetUploadLinkRequest
+     * @return GetUploadLinkResponse
+     */
+    CompletableFuture<GetUploadLinkResponse> getUploadLink(GetUploadLinkRequest request);
 
     /**
      * @param request the request parameters of GetUserBuyStatus  GetUserBuyStatusRequest
@@ -400,6 +442,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyServiceInfoResponse> modifyServiceInfo(ModifyServiceInfoRequest request);
 
     /**
+     * @param request the request parameters of OssCheckResultList  OssCheckResultListRequest
+     * @return OssCheckResultListResponse
+     */
+    CompletableFuture<OssCheckResultListResponse> ossCheckResultList(OssCheckResultListRequest request);
+
+    /**
      * @param request the request parameters of QueryAnswerSampleByPage  QueryAnswerSampleByPageRequest
      * @return QueryAnswerSampleByPageResponse
      */
@@ -416,6 +464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryCallbackByPageResponse
      */
     CompletableFuture<QueryCallbackByPageResponse> queryCallbackByPage(QueryCallbackByPageRequest request);
+
+    /**
+     * @param request the request parameters of StopOnlineTest  StopOnlineTestRequest
+     * @return StopOnlineTestResponse
+     */
+    CompletableFuture<StopOnlineTestResponse> stopOnlineTest(StopOnlineTestRequest request);
 
     /**
      * @param request the request parameters of UpdateBackupConfig  UpdateBackupConfigRequest
@@ -440,6 +494,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKeywordLibResponse
      */
     CompletableFuture<UpdateKeywordLibResponse> updateKeywordLib(UpdateKeywordLibRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOssCheckResultsBatchFeedback  UpdateOssCheckResultsBatchFeedbackRequest
+     * @return UpdateOssCheckResultsBatchFeedbackResponse
+     */
+    CompletableFuture<UpdateOssCheckResultsBatchFeedbackResponse> updateOssCheckResultsBatchFeedback(UpdateOssCheckResultsBatchFeedbackRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOssCheckResultsFeedBack  UpdateOssCheckResultsFeedBackRequest
+     * @return UpdateOssCheckResultsFeedBackResponse
+     */
+    CompletableFuture<UpdateOssCheckResultsFeedBackResponse> updateOssCheckResultsFeedBack(UpdateOssCheckResultsFeedBackRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOssCheckResultsFreeze  UpdateOssCheckResultsFreezeRequest
+     * @return UpdateOssCheckResultsFreezeResponse
+     */
+    CompletableFuture<UpdateOssCheckResultsFreezeResponse> updateOssCheckResultsFreeze(UpdateOssCheckResultsFreezeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOssCheckResultsUnfreeze  UpdateOssCheckResultsUnfreezeRequest
+     * @return UpdateOssCheckResultsUnfreezeResponse
+     */
+    CompletableFuture<UpdateOssCheckResultsUnfreezeResponse> updateOssCheckResultsUnfreeze(UpdateOssCheckResultsUnfreezeRequest request);
 
     /**
      * @param request the request parameters of UpdateScanResultFeedback  UpdateScanResultFeedbackRequest

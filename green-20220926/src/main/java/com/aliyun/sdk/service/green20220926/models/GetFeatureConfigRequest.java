@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFeatureConfigRequest</p>
  */
 public class GetFeatureConfigRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -35,6 +39,7 @@ public class GetFeatureConfigRequest extends Request {
 
     private GetFeatureConfigRequest(Builder builder) {
         super(builder);
+        this.query = builder.query;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
         this.serviceCode = builder.serviceCode;
@@ -52,6 +57,13 @@ public class GetFeatureConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
     }
 
     /**
@@ -83,6 +95,7 @@ public class GetFeatureConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetFeatureConfigRequest, Builder> {
+        private String query; 
         private String regionId; 
         private String resourceType; 
         private String serviceCode; 
@@ -94,11 +107,21 @@ public class GetFeatureConfigRequest extends Request {
 
         private Builder(GetFeatureConfigRequest request) {
             super(request);
+            this.query = request.query;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
             this.serviceCode = request.serviceCode;
             this.type = request.type;
         } 
+
+        /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putBodyParameter("Query", query);
+            this.query = query;
+            return this;
+        }
 
         /**
          * <p>Region ID</p>

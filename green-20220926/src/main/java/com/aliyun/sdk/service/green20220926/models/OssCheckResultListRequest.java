@@ -12,24 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExportResultRequest} extends {@link RequestModel}
+ * {@link OssCheckResultListRequest} extends {@link RequestModel}
  *
- * <p>ExportResultRequest</p>
+ * <p>OssCheckResultListRequest</p>
  */
-public class ExportResultRequest extends Request {
-    @com.aliyun.core.annotation.Body
+public class OssCheckResultListRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinishNum")
+    private Long finishNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
@@ -37,35 +41,36 @@ public class ExportResultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sort")
     private java.util.Map<String, String> sort;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Source")
-    private String source;
-
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    private ExportResultRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    private OssCheckResultListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.endDate = builder.endDate;
+        this.finishNum = builder.finishNum;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
         this.regionId = builder.regionId;
         this.sort = builder.sort;
-        this.source = builder.source;
         this.startDate = builder.startDate;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ExportResultRequest create() {
+    public static OssCheckResultListRequest create() {
         return builder().build();
     }
 
@@ -86,6 +91,13 @@ public class ExportResultRequest extends Request {
      */
     public String getEndDate() {
         return this.endDate;
+    }
+
+    /**
+     * @return finishNum
+     */
+    public Long getFinishNum() {
+        return this.finishNum;
     }
 
     /**
@@ -117,50 +129,52 @@ public class ExportResultRequest extends Request {
     }
 
     /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
         return this.startDate;
     }
 
-    public static final class Builder extends Request.Builder<ExportResultRequest, Builder> {
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder extends Request.Builder<OssCheckResultListRequest, Builder> {
         private Integer currentPage; 
         private String endDate; 
+        private Long finishNum; 
         private Integer pageSize; 
         private String query; 
         private String regionId; 
         private java.util.Map<String, String> sort; 
-        private String source; 
         private String startDate; 
+        private Integer status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportResultRequest request) {
+        private Builder(OssCheckResultListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
             this.endDate = request.endDate;
+            this.finishNum = request.finishNum;
             this.pageSize = request.pageSize;
             this.query = request.query;
             this.regionId = request.regionId;
             this.sort = request.sort;
-            this.source = request.source;
             this.startDate = request.startDate;
+            this.status = request.status;
         } 
 
         /**
          * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
-            this.putBodyParameter("CurrentPage", currentPage);
+            this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
             return this;
         }
@@ -169,8 +183,17 @@ public class ExportResultRequest extends Request {
          * EndDate.
          */
         public Builder endDate(String endDate) {
-            this.putBodyParameter("EndDate", endDate);
+            this.putQueryParameter("EndDate", endDate);
             this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * FinishNum.
+         */
+        public Builder finishNum(Long finishNum) {
+            this.putQueryParameter("FinishNum", finishNum);
+            this.finishNum = finishNum;
             return this;
         }
 
@@ -178,7 +201,7 @@ public class ExportResultRequest extends Request {
          * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
-            this.putBodyParameter("PageSize", pageSize);
+            this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
@@ -187,7 +210,7 @@ public class ExportResultRequest extends Request {
          * Query.
          */
         public Builder query(String query) {
-            this.putBodyParameter("Query", query);
+            this.putQueryParameter("Query", query);
             this.query = query;
             return this;
         }
@@ -206,17 +229,8 @@ public class ExportResultRequest extends Request {
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
-            this.putBodyParameter("Sort", sortShrink);
+            this.putQueryParameter("Sort", sortShrink);
             this.sort = sort;
-            return this;
-        }
-
-        /**
-         * Source.
-         */
-        public Builder source(String source) {
-            this.putBodyParameter("Source", source);
-            this.source = source;
             return this;
         }
 
@@ -224,14 +238,23 @@ public class ExportResultRequest extends Request {
          * StartDate.
          */
         public Builder startDate(String startDate) {
-            this.putBodyParameter("StartDate", startDate);
+            this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
             return this;
         }
 
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
         @Override
-        public ExportResultRequest build() {
-            return new ExportResultRequest(this);
+        public OssCheckResultListRequest build() {
+            return new OssCheckResultListRequest(this);
         } 
 
     } 

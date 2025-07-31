@@ -62,6 +62,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
     private Boolean freezeMediumRisk2;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FreezeRestorePath")
+    private String freezeRestorePath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FreezeType")
     private String freezeType;
 
@@ -84,6 +88,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Referer")
+    private String referer;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -134,12 +142,14 @@ public class CreatStockOssCheckTaskRequest extends Request {
         this.freezeHighRisk2 = builder.freezeHighRisk2;
         this.freezeMediumRisk1 = builder.freezeMediumRisk1;
         this.freezeMediumRisk2 = builder.freezeMediumRisk2;
+        this.freezeRestorePath = builder.freezeRestorePath;
         this.freezeType = builder.freezeType;
         this.isInc = builder.isInc;
         this.mediaType = builder.mediaType;
         this.prefixFilterType = builder.prefixFilterType;
         this.prefixFilters = builder.prefixFilters;
         this.priority = builder.priority;
+        this.referer = builder.referer;
         this.regionId = builder.regionId;
         this.scanLimit = builder.scanLimit;
         this.scanNoFileType = builder.scanNoFileType;
@@ -242,6 +252,13 @@ public class CreatStockOssCheckTaskRequest extends Request {
     }
 
     /**
+     * @return freezeRestorePath
+     */
+    public String getFreezeRestorePath() {
+        return this.freezeRestorePath;
+    }
+
+    /**
      * @return freezeType
      */
     public String getFreezeType() {
@@ -281,6 +298,13 @@ public class CreatStockOssCheckTaskRequest extends Request {
      */
     public Integer getPriority() {
         return this.priority;
+    }
+
+    /**
+     * @return referer
+     */
+    public String getReferer() {
+        return this.referer;
     }
 
     /**
@@ -358,12 +382,14 @@ public class CreatStockOssCheckTaskRequest extends Request {
         private Boolean freezeHighRisk2; 
         private Boolean freezeMediumRisk1; 
         private Boolean freezeMediumRisk2; 
+        private String freezeRestorePath; 
         private String freezeType; 
         private Boolean isInc; 
         private Integer mediaType; 
         private String prefixFilterType; 
         private String prefixFilters; 
         private Integer priority; 
+        private String referer; 
         private String regionId; 
         private Long scanLimit; 
         private Boolean scanNoFileType; 
@@ -391,12 +417,14 @@ public class CreatStockOssCheckTaskRequest extends Request {
             this.freezeHighRisk2 = request.freezeHighRisk2;
             this.freezeMediumRisk1 = request.freezeMediumRisk1;
             this.freezeMediumRisk2 = request.freezeMediumRisk2;
+            this.freezeRestorePath = request.freezeRestorePath;
             this.freezeType = request.freezeType;
             this.isInc = request.isInc;
             this.mediaType = request.mediaType;
             this.prefixFilterType = request.prefixFilterType;
             this.prefixFilters = request.prefixFilters;
             this.priority = request.priority;
+            this.referer = request.referer;
             this.regionId = request.regionId;
             this.scanLimit = request.scanLimit;
             this.scanNoFileType = request.scanNoFileType;
@@ -508,6 +536,15 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
+         * FreezeRestorePath.
+         */
+        public Builder freezeRestorePath(String freezeRestorePath) {
+            this.putQueryParameter("FreezeRestorePath", freezeRestorePath);
+            this.freezeRestorePath = freezeRestorePath;
+            return this;
+        }
+
+        /**
          * FreezeType.
          */
         public Builder freezeType(String freezeType) {
@@ -558,6 +595,15 @@ public class CreatStockOssCheckTaskRequest extends Request {
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * Referer.
+         */
+        public Builder referer(String referer) {
+            this.putQueryParameter("Referer", referer);
+            this.referer = referer;
             return this;
         }
 

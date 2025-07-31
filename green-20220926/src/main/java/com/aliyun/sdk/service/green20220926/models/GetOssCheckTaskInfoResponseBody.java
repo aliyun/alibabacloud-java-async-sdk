@@ -12,39 +12,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+ * {@link GetOssCheckTaskInfoResponseBody} extends {@link TeaModel}
  *
- * <p>GetStockOssCheckTasksListResponseBody</p>
+ * <p>GetOssCheckTaskInfoResponseBody</p>
  */
-public class GetStockOssCheckTasksListResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("CurrentPage")
-    private Integer currentPage;
+public class GetOssCheckTaskInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Buckets")
+    private String buckets;
 
-    @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List<Items> items;
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private Config config;
 
-    @com.aliyun.core.annotation.NameInMap("PageSize")
-    private Integer pageSize;
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.NameInMap("FinishNum")
+    private Long finishNum;
+
+    @com.aliyun.core.annotation.NameInMap("IsInc")
+    private Boolean isInc;
+
+    @com.aliyun.core.annotation.NameInMap("LastExecuteDate")
+    private String lastExecuteDate;
+
+    @com.aliyun.core.annotation.NameInMap("MediaType")
+    private Integer mediaType;
+
+    @com.aliyun.core.annotation.NameInMap("NextExecuteDate")
+    private String nextExecuteDate;
+
+    @com.aliyun.core.annotation.NameInMap("ObjectNum")
+    private Long objectNum;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Long totalCount;
+    @com.aliyun.core.annotation.NameInMap("SearchNum")
+    private Long searchNum;
 
-    private GetStockOssCheckTasksListResponseBody(Builder builder) {
-        this.currentPage = builder.currentPage;
-        this.items = builder.items;
-        this.pageSize = builder.pageSize;
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    private String taskType;
+
+    private GetOssCheckTaskInfoResponseBody(Builder builder) {
+        this.buckets = builder.buckets;
+        this.config = builder.config;
+        this.endTime = builder.endTime;
+        this.finishNum = builder.finishNum;
+        this.isInc = builder.isInc;
+        this.lastExecuteDate = builder.lastExecuteDate;
+        this.mediaType = builder.mediaType;
+        this.nextExecuteDate = builder.nextExecuteDate;
+        this.objectNum = builder.objectNum;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
+        this.searchNum = builder.searchNum;
+        this.startTime = builder.startTime;
+        this.status = builder.status;
+        this.taskId = builder.taskId;
+        this.taskName = builder.taskName;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetStockOssCheckTasksListResponseBody create() {
+    public static GetOssCheckTaskInfoResponseBody create() {
         return builder().build();
     }
 
@@ -53,24 +97,66 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     }
 
     /**
-     * @return currentPage
+     * @return buckets
      */
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getBuckets() {
+        return this.buckets;
     }
 
     /**
-     * @return items
+     * @return config
      */
-    public java.util.List<Items> getItems() {
-        return this.items;
+    public Config getConfig() {
+        return this.config;
     }
 
     /**
-     * @return pageSize
+     * @return endTime
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return finishNum
+     */
+    public Long getFinishNum() {
+        return this.finishNum;
+    }
+
+    /**
+     * @return isInc
+     */
+    public Boolean getIsInc() {
+        return this.isInc;
+    }
+
+    /**
+     * @return lastExecuteDate
+     */
+    public String getLastExecuteDate() {
+        return this.lastExecuteDate;
+    }
+
+    /**
+     * @return mediaType
+     */
+    public Integer getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
+     * @return nextExecuteDate
+     */
+    public String getNextExecuteDate() {
+        return this.nextExecuteDate;
+    }
+
+    /**
+     * @return objectNum
+     */
+    public Long getObjectNum() {
+        return this.objectNum;
     }
 
     /**
@@ -81,51 +167,156 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
+     * @return searchNum
      */
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getSearchNum() {
+        return this.searchNum;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
     }
 
     public static final class Builder {
-        private Integer currentPage; 
-        private java.util.List<Items> items; 
-        private Integer pageSize; 
+        private String buckets; 
+        private Config config; 
+        private String endTime; 
+        private Long finishNum; 
+        private Boolean isInc; 
+        private String lastExecuteDate; 
+        private Integer mediaType; 
+        private String nextExecuteDate; 
+        private Long objectNum; 
         private String requestId; 
-        private Long totalCount; 
+        private Long searchNum; 
+        private String startTime; 
+        private Integer status; 
+        private String taskId; 
+        private String taskName; 
+        private String taskType; 
 
         private Builder() {
         } 
 
-        private Builder(GetStockOssCheckTasksListResponseBody model) {
-            this.currentPage = model.currentPage;
-            this.items = model.items;
-            this.pageSize = model.pageSize;
+        private Builder(GetOssCheckTaskInfoResponseBody model) {
+            this.buckets = model.buckets;
+            this.config = model.config;
+            this.endTime = model.endTime;
+            this.finishNum = model.finishNum;
+            this.isInc = model.isInc;
+            this.lastExecuteDate = model.lastExecuteDate;
+            this.mediaType = model.mediaType;
+            this.nextExecuteDate = model.nextExecuteDate;
+            this.objectNum = model.objectNum;
             this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
+            this.searchNum = model.searchNum;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+            this.taskType = model.taskType;
         } 
 
         /**
-         * CurrentPage.
+         * Buckets.
          */
-        public Builder currentPage(Integer currentPage) {
-            this.currentPage = currentPage;
+        public Builder buckets(String buckets) {
+            this.buckets = buckets;
             return this;
         }
 
         /**
-         * Items.
+         * Config.
          */
-        public Builder items(java.util.List<Items> items) {
-            this.items = items;
+        public Builder config(Config config) {
+            this.config = config;
             return this;
         }
 
         /**
-         * PageSize.
+         * EndTime.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder endTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * FinishNum.
+         */
+        public Builder finishNum(Long finishNum) {
+            this.finishNum = finishNum;
+            return this;
+        }
+
+        /**
+         * IsInc.
+         */
+        public Builder isInc(Boolean isInc) {
+            this.isInc = isInc;
+            return this;
+        }
+
+        /**
+         * LastExecuteDate.
+         */
+        public Builder lastExecuteDate(String lastExecuteDate) {
+            this.lastExecuteDate = lastExecuteDate;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(Integer mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+
+        /**
+         * NextExecuteDate.
+         */
+        public Builder nextExecuteDate(String nextExecuteDate) {
+            this.nextExecuteDate = nextExecuteDate;
+            return this;
+        }
+
+        /**
+         * ObjectNum.
+         */
+        public Builder objectNum(Long objectNum) {
+            this.objectNum = objectNum;
             return this;
         }
 
@@ -138,24 +329,64 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * SearchNum.
          */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public Builder searchNum(Long searchNum) {
+            this.searchNum = searchNum;
             return this;
         }
 
-        public GetStockOssCheckTasksListResponseBody build() {
-            return new GetStockOssCheckTasksListResponseBody(this);
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+
+        /**
+         * TaskType.
+         */
+        public Builder taskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+
+        public GetOssCheckTaskInfoResponseBody build() {
+            return new GetOssCheckTaskInfoResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     * {@link GetOssCheckTaskInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>GetStockOssCheckTasksListResponseBody</p>
+     * <p>GetOssCheckTaskInfoResponseBody</p>
      */
     public static class ScanServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CopyFrom")
@@ -270,9 +501,9 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     * {@link GetOssCheckTaskInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>GetStockOssCheckTasksListResponseBody</p>
+     * <p>GetOssCheckTaskInfoResponseBody</p>
      */
     public static class UserFreezeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FreezeRestorePath")
@@ -345,9 +576,9 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     * {@link GetOssCheckTaskInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>GetStockOssCheckTasksListResponseBody</p>
+     * <p>GetOssCheckTaskInfoResponseBody</p>
      */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallbackId")
@@ -802,7 +1033,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * Referer.
+             * <p>Referer。</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder referer(String referer) {
                 this.referer = referer;
@@ -875,354 +1109,6 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
 
             public Config build() {
                 return new Config(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetStockOssCheckTasksListResponseBody</p>
-     */
-    public static class Items extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Buckets")
-        private String buckets;
-
-        @com.aliyun.core.annotation.NameInMap("Config")
-        private Config config;
-
-        @com.aliyun.core.annotation.NameInMap("EndTime")
-        private String endTime;
-
-        @com.aliyun.core.annotation.NameInMap("FinishNum")
-        private Long finishNum;
-
-        @com.aliyun.core.annotation.NameInMap("IsInc")
-        private Boolean isInc;
-
-        @com.aliyun.core.annotation.NameInMap("LastExecuteDate")
-        private String lastExecuteDate;
-
-        @com.aliyun.core.annotation.NameInMap("MediaType")
-        private Integer mediaType;
-
-        @com.aliyun.core.annotation.NameInMap("NextExecuteDate")
-        private String nextExecuteDate;
-
-        @com.aliyun.core.annotation.NameInMap("ObjectNum")
-        private Long objectNum;
-
-        @com.aliyun.core.annotation.NameInMap("SearchNum")
-        private Long searchNum;
-
-        @com.aliyun.core.annotation.NameInMap("StartTime")
-        private String startTime;
-
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private Integer status;
-
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
-
-        @com.aliyun.core.annotation.NameInMap("TaskName")
-        private String taskName;
-
-        @com.aliyun.core.annotation.NameInMap("TaskType")
-        private String taskType;
-
-        private Items(Builder builder) {
-            this.buckets = builder.buckets;
-            this.config = builder.config;
-            this.endTime = builder.endTime;
-            this.finishNum = builder.finishNum;
-            this.isInc = builder.isInc;
-            this.lastExecuteDate = builder.lastExecuteDate;
-            this.mediaType = builder.mediaType;
-            this.nextExecuteDate = builder.nextExecuteDate;
-            this.objectNum = builder.objectNum;
-            this.searchNum = builder.searchNum;
-            this.startTime = builder.startTime;
-            this.status = builder.status;
-            this.taskId = builder.taskId;
-            this.taskName = builder.taskName;
-            this.taskType = builder.taskType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Items create() {
-            return builder().build();
-        }
-
-        /**
-         * @return buckets
-         */
-        public String getBuckets() {
-            return this.buckets;
-        }
-
-        /**
-         * @return config
-         */
-        public Config getConfig() {
-            return this.config;
-        }
-
-        /**
-         * @return endTime
-         */
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        /**
-         * @return finishNum
-         */
-        public Long getFinishNum() {
-            return this.finishNum;
-        }
-
-        /**
-         * @return isInc
-         */
-        public Boolean getIsInc() {
-            return this.isInc;
-        }
-
-        /**
-         * @return lastExecuteDate
-         */
-        public String getLastExecuteDate() {
-            return this.lastExecuteDate;
-        }
-
-        /**
-         * @return mediaType
-         */
-        public Integer getMediaType() {
-            return this.mediaType;
-        }
-
-        /**
-         * @return nextExecuteDate
-         */
-        public String getNextExecuteDate() {
-            return this.nextExecuteDate;
-        }
-
-        /**
-         * @return objectNum
-         */
-        public Long getObjectNum() {
-            return this.objectNum;
-        }
-
-        /**
-         * @return searchNum
-         */
-        public Long getSearchNum() {
-            return this.searchNum;
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
-         * @return status
-         */
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        /**
-         * @return taskName
-         */
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        /**
-         * @return taskType
-         */
-        public String getTaskType() {
-            return this.taskType;
-        }
-
-        public static final class Builder {
-            private String buckets; 
-            private Config config; 
-            private String endTime; 
-            private Long finishNum; 
-            private Boolean isInc; 
-            private String lastExecuteDate; 
-            private Integer mediaType; 
-            private String nextExecuteDate; 
-            private Long objectNum; 
-            private Long searchNum; 
-            private String startTime; 
-            private Integer status; 
-            private String taskId; 
-            private String taskName; 
-            private String taskType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.buckets = model.buckets;
-                this.config = model.config;
-                this.endTime = model.endTime;
-                this.finishNum = model.finishNum;
-                this.isInc = model.isInc;
-                this.lastExecuteDate = model.lastExecuteDate;
-                this.mediaType = model.mediaType;
-                this.nextExecuteDate = model.nextExecuteDate;
-                this.objectNum = model.objectNum;
-                this.searchNum = model.searchNum;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.taskId = model.taskId;
-                this.taskName = model.taskName;
-                this.taskType = model.taskType;
-            } 
-
-            /**
-             * Buckets.
-             */
-            public Builder buckets(String buckets) {
-                this.buckets = buckets;
-                return this;
-            }
-
-            /**
-             * Config.
-             */
-            public Builder config(Config config) {
-                this.config = config;
-                return this;
-            }
-
-            /**
-             * EndTime.
-             */
-            public Builder endTime(String endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * FinishNum.
-             */
-            public Builder finishNum(Long finishNum) {
-                this.finishNum = finishNum;
-                return this;
-            }
-
-            /**
-             * IsInc.
-             */
-            public Builder isInc(Boolean isInc) {
-                this.isInc = isInc;
-                return this;
-            }
-
-            /**
-             * LastExecuteDate.
-             */
-            public Builder lastExecuteDate(String lastExecuteDate) {
-                this.lastExecuteDate = lastExecuteDate;
-                return this;
-            }
-
-            /**
-             * MediaType.
-             */
-            public Builder mediaType(Integer mediaType) {
-                this.mediaType = mediaType;
-                return this;
-            }
-
-            /**
-             * NextExecuteDate.
-             */
-            public Builder nextExecuteDate(String nextExecuteDate) {
-                this.nextExecuteDate = nextExecuteDate;
-                return this;
-            }
-
-            /**
-             * ObjectNum.
-             */
-            public Builder objectNum(Long objectNum) {
-                this.objectNum = objectNum;
-                return this;
-            }
-
-            /**
-             * SearchNum.
-             */
-            public Builder searchNum(Long searchNum) {
-                this.searchNum = searchNum;
-                return this;
-            }
-
-            /**
-             * StartTime.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * TaskId.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * TaskName.
-             */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
-                return this;
-            }
-
-            /**
-             * TaskType.
-             */
-            public Builder taskType(String taskType) {
-                this.taskType = taskType;
-                return this;
-            }
-
-            public Items build() {
-                return new Items(this);
             } 
 
         } 
