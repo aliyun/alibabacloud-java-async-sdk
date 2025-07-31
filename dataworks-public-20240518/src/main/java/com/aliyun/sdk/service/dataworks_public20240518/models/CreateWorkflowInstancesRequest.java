@@ -52,6 +52,14 @@ public class CreateWorkflowInstancesRequest extends Request {
     private Long projectId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagCreationPolicy")
+    private String tagCreationPolicy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskParameters")
     private String taskParameters;
 
@@ -79,6 +87,8 @@ public class CreateWorkflowInstancesRequest extends Request {
         this.name = builder.name;
         this.periods = builder.periods;
         this.projectId = builder.projectId;
+        this.tagCreationPolicy = builder.tagCreationPolicy;
+        this.tags = builder.tags;
         this.taskParameters = builder.taskParameters;
         this.type = builder.type;
         this.workflowId = builder.workflowId;
@@ -155,6 +165,20 @@ public class CreateWorkflowInstancesRequest extends Request {
     }
 
     /**
+     * @return tagCreationPolicy
+     */
+    public String getTagCreationPolicy() {
+        return this.tagCreationPolicy;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return taskParameters
      */
     public String getTaskParameters() {
@@ -191,6 +215,8 @@ public class CreateWorkflowInstancesRequest extends Request {
         private String name; 
         private Periods periods; 
         private Long projectId; 
+        private String tagCreationPolicy; 
+        private java.util.List<Tags> tags; 
         private String taskParameters; 
         private String type; 
         private Long workflowId; 
@@ -210,6 +236,8 @@ public class CreateWorkflowInstancesRequest extends Request {
             this.name = request.name;
             this.periods = request.periods;
             this.projectId = request.projectId;
+            this.tagCreationPolicy = request.tagCreationPolicy;
+            this.tags = request.tags;
             this.taskParameters = request.taskParameters;
             this.type = request.type;
             this.workflowId = request.workflowId;
@@ -308,6 +336,25 @@ public class CreateWorkflowInstancesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * TagCreationPolicy.
+         */
+        public Builder tagCreationPolicy(String tagCreationPolicy) {
+            this.putBodyParameter("TagCreationPolicy", tagCreationPolicy);
+            this.tagCreationPolicy = tagCreationPolicy;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putBodyParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 
@@ -1236,6 +1283,81 @@ public class CreateWorkflowInstancesRequest extends Request {
 
             public Periods build() {
                 return new Periods(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWorkflowInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkflowInstancesRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

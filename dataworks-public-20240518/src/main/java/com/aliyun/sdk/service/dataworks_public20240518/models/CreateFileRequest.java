@@ -804,7 +804,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ResourceGroupIdentifier.
+         * <p>The resource group for the task deployed from the file. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page. In the left-side navigation pane, click <strong>Resource Group</strong> to obtain the ID of the resource group associated with the current workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_res_group_559_1613715566828</p>
          */
         public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
             this.putBodyParameter("ResourceGroupIdentifier", resourceGroupIdentifier);

@@ -56,7 +56,6 @@ public class UpdateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
@@ -65,7 +64,6 @@ public class UpdateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Owner")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String owner;
 
     @com.aliyun.core.annotation.Body
@@ -74,7 +72,6 @@ public class UpdateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RerunMode")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String rerunMode;
 
     @com.aliyun.core.annotation.Body
@@ -83,7 +80,6 @@ public class UpdateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RuntimeResource")
-    @com.aliyun.core.annotation.Validation(required = true)
     private RuntimeResource runtimeResource;
 
     @com.aliyun.core.annotation.Body
@@ -100,7 +96,6 @@ public class UpdateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Trigger")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Trigger trigger;
 
     private UpdateTaskRequest(Builder builder) {
@@ -440,7 +435,6 @@ public class UpdateTaskRequest extends Request {
 
         /**
          * <p>The name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -463,7 +457,6 @@ public class UpdateTaskRequest extends Request {
 
         /**
          * <p>The account ID of the task owner.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -493,7 +486,6 @@ public class UpdateTaskRequest extends Request {
          * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
          * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
@@ -518,7 +510,6 @@ public class UpdateTaskRequest extends Request {
 
         /**
          * <p>The configurations of the runtime environment, such as the resource group information.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -561,7 +552,6 @@ public class UpdateTaskRequest extends Request {
 
         /**
          * <p>The trigger method.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -1173,7 +1163,6 @@ public class UpdateTaskRequest extends Request {
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceGroupId;
 
         private RuntimeResource(Builder builder) {
@@ -1249,7 +1238,6 @@ public class UpdateTaskRequest extends Request {
 
             /**
              * <p>The ID of the resource group for scheduling configured for task running.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -1450,7 +1438,6 @@ public class UpdateTaskRequest extends Request {
         private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("Type")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Trigger(Builder builder) {
@@ -1577,7 +1564,6 @@ public class UpdateTaskRequest extends Request {
              * <li>Scheduler: scheduling cycle-based trigger</li>
              * <li>Manual: manual trigger</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>Scheduler</p>
