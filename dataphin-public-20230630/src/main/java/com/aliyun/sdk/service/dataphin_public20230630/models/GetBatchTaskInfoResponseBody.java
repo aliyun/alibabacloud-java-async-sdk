@@ -806,6 +806,12 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceSchema")
         private String dataSourceSchema;
 
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerId")
+        private String developOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerName")
+        private String developOwnerName;
+
         @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
@@ -838,6 +844,12 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OperatorUserId")
         private String operatorUserId;
+
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerId")
+        private String opsOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerName")
+        private String opsOwnerName;
 
         @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
@@ -892,6 +904,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             this.dataSourceCatalog = builder.dataSourceCatalog;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
+            this.developOwnerId = builder.developOwnerId;
+            this.developOwnerName = builder.developOwnerName;
             this.fileId = builder.fileId;
             this.hasDevNode = builder.hasDevNode;
             this.name = builder.name;
@@ -903,6 +917,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             this.nodeOutputNameList = builder.nodeOutputNameList;
             this.nodeStatus = builder.nodeStatus;
             this.operatorUserId = builder.operatorUserId;
+            this.opsOwnerId = builder.opsOwnerId;
+            this.opsOwnerName = builder.opsOwnerName;
             this.ownerName = builder.ownerName;
             this.ownerUserId = builder.ownerUserId;
             this.paramList = builder.paramList;
@@ -975,6 +991,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        /**
+         * @return developOwnerId
+         */
+        public String getDevelopOwnerId() {
+            return this.developOwnerId;
+        }
+
+        /**
+         * @return developOwnerName
+         */
+        public String getDevelopOwnerName() {
+            return this.developOwnerName;
         }
 
         /**
@@ -1052,6 +1082,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         public String getOperatorUserId() {
             return this.operatorUserId;
+        }
+
+        /**
+         * @return opsOwnerId
+         */
+        public String getOpsOwnerId() {
+            return this.opsOwnerId;
+        }
+
+        /**
+         * @return opsOwnerName
+         */
+        public String getOpsOwnerName() {
+            return this.opsOwnerName;
         }
 
         /**
@@ -1167,6 +1211,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private String dataSourceCatalog; 
             private String dataSourceId; 
             private String dataSourceSchema; 
+            private String developOwnerId; 
+            private String developOwnerName; 
             private Long fileId; 
             private Boolean hasDevNode; 
             private String name; 
@@ -1178,6 +1224,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private java.util.List<String> nodeOutputNameList; 
             private Integer nodeStatus; 
             private String operatorUserId; 
+            private String opsOwnerId; 
+            private String opsOwnerName; 
             private String ownerName; 
             private String ownerUserId; 
             private java.util.List<ParamList> paramList; 
@@ -1205,6 +1253,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
                 this.dataSourceCatalog = model.dataSourceCatalog;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
+                this.developOwnerId = model.developOwnerId;
+                this.developOwnerName = model.developOwnerName;
                 this.fileId = model.fileId;
                 this.hasDevNode = model.hasDevNode;
                 this.name = model.name;
@@ -1216,6 +1266,8 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
                 this.nodeOutputNameList = model.nodeOutputNameList;
                 this.nodeStatus = model.nodeStatus;
                 this.operatorUserId = model.operatorUserId;
+                this.opsOwnerId = model.opsOwnerId;
+                this.opsOwnerName = model.opsOwnerName;
                 this.ownerName = model.ownerName;
                 this.ownerUserId = model.ownerUserId;
                 this.paramList = model.paramList;
@@ -1286,6 +1338,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
+                return this;
+            }
+
+            /**
+             * DevelopOwnerId.
+             */
+            public Builder developOwnerId(String developOwnerId) {
+                this.developOwnerId = developOwnerId;
+                return this;
+            }
+
+            /**
+             * DevelopOwnerName.
+             */
+            public Builder developOwnerName(String developOwnerName) {
+                this.developOwnerName = developOwnerName;
                 return this;
             }
 
@@ -1374,6 +1442,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder operatorUserId(String operatorUserId) {
                 this.operatorUserId = operatorUserId;
+                return this;
+            }
+
+            /**
+             * OpsOwnerId.
+             */
+            public Builder opsOwnerId(String opsOwnerId) {
+                this.opsOwnerId = opsOwnerId;
+                return this;
+            }
+
+            /**
+             * OpsOwnerName.
+             */
+            public Builder opsOwnerName(String opsOwnerName) {
+                this.opsOwnerName = opsOwnerName;
                 return this;
             }
 

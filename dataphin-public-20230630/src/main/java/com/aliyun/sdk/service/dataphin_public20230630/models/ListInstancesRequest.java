@@ -161,6 +161,9 @@ public class ListInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BizUnitId")
         private Long bizUnitId;
 
+        @com.aliyun.core.annotation.NameInMap("FlowId")
+        private String flowId;
+
         @com.aliyun.core.annotation.NameInMap("MaxBizDate")
         private String maxBizDate;
 
@@ -216,6 +219,7 @@ public class ListInstancesRequest extends Request {
         private ListQuery(Builder builder) {
             this.bizType = builder.bizType;
             this.bizUnitId = builder.bizUnitId;
+            this.flowId = builder.flowId;
             this.maxBizDate = builder.maxBizDate;
             this.maxRunDate = builder.maxRunDate;
             this.minBizDate = builder.minBizDate;
@@ -254,6 +258,13 @@ public class ListInstancesRequest extends Request {
          */
         public Long getBizUnitId() {
             return this.bizUnitId;
+        }
+
+        /**
+         * @return flowId
+         */
+        public String getFlowId() {
+            return this.flowId;
         }
 
         /**
@@ -371,6 +382,7 @@ public class ListInstancesRequest extends Request {
         public static final class Builder {
             private String bizType; 
             private Long bizUnitId; 
+            private String flowId; 
             private String maxBizDate; 
             private String maxRunDate; 
             private String minBizDate; 
@@ -394,6 +406,7 @@ public class ListInstancesRequest extends Request {
             private Builder(ListQuery model) {
                 this.bizType = model.bizType;
                 this.bizUnitId = model.bizUnitId;
+                this.flowId = model.flowId;
                 this.maxBizDate = model.maxBizDate;
                 this.maxRunDate = model.maxRunDate;
                 this.minBizDate = model.minBizDate;
@@ -425,6 +438,14 @@ public class ListInstancesRequest extends Request {
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
+                return this;
+            }
+
+            /**
+             * FlowId.
+             */
+            public Builder flowId(String flowId) {
+                this.flowId = flowId;
                 return this;
             }
 

@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDataServiceProjectMember  AddDataServiceProjectMemberRequest
+     * @return AddDataServiceProjectMemberResponse
+     */
+    CompletableFuture<AddDataServiceProjectMemberResponse> addDataServiceProjectMember(AddDataServiceProjectMemberRequest request);
+
+    /**
+     * @param request the request parameters of AddProjectMember  AddProjectMemberRequest
+     * @return AddProjectMemberResponse
+     */
+    CompletableFuture<AddProjectMemberResponse> addProjectMember(AddProjectMemberRequest request);
+
+    /**
      * @param request the request parameters of AddTenantMembers  AddTenantMembersRequest
      * @return AddTenantMembersResponse
      */
@@ -38,6 +50,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUserGroupMemberResponse> addUserGroupMember(AddUserGroupMemberRequest request);
 
     /**
+     * @param request the request parameters of ApplyDataServiceApi  ApplyDataServiceApiRequest
+     * @return ApplyDataServiceApiResponse
+     */
+    CompletableFuture<ApplyDataServiceApiResponse> applyDataServiceApi(ApplyDataServiceApiRequest request);
+
+    /**
+     * @param request the request parameters of ApplyDataServiceApp  ApplyDataServiceAppRequest
+     * @return ApplyDataServiceAppResponse
+     */
+    CompletableFuture<ApplyDataServiceAppResponse> applyDataServiceApp(ApplyDataServiceAppRequest request);
+
+    /**
+     * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
+     * @return CheckComputeSourceConnectivityResponse
+     */
+    CompletableFuture<CheckComputeSourceConnectivityResponse> checkComputeSourceConnectivity(CheckComputeSourceConnectivityRequest request);
+
+    /**
+     * @param request the request parameters of CheckComputeSourceConnectivityById  CheckComputeSourceConnectivityByIdRequest
+     * @return CheckComputeSourceConnectivityByIdResponse
+     */
+    CompletableFuture<CheckComputeSourceConnectivityByIdResponse> checkComputeSourceConnectivityById(CheckComputeSourceConnectivityByIdRequest request);
+
+    /**
      * @param request the request parameters of CheckDataSourceConnectivity  CheckDataSourceConnectivityRequest
      * @return CheckDataSourceConnectivityResponse
      */
@@ -48,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckDataSourceConnectivityByIdResponse
      */
     CompletableFuture<CheckDataSourceConnectivityByIdResponse> checkDataSourceConnectivityById(CheckDataSourceConnectivityByIdRequest request);
+
+    /**
+     * @param request the request parameters of CheckProjectHasDependency  CheckProjectHasDependencyRequest
+     * @return CheckProjectHasDependencyResponse
+     */
+    CompletableFuture<CheckProjectHasDependencyResponse> checkProjectHasDependency(CheckProjectHasDependencyRequest request);
 
     /**
      * @param request the request parameters of CheckResourcePermission  CheckResourcePermissionRequest
@@ -78,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateBizUnitResponse
      */
     CompletableFuture<CreateBizUnitResponse> createBizUnit(CreateBizUnitRequest request);
+
+    /**
+     * @param request the request parameters of CreateComputeSource  CreateComputeSourceRequest
+     * @return CreateComputeSourceResponse
+     */
+    CompletableFuture<CreateComputeSourceResponse> createComputeSource(CreateComputeSourceRequest request);
 
     /**
      * @param request the request parameters of CreateDataDomain  CreateDataDomainRequest
@@ -116,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePipelineNodeResponse> createPipelineNode(CreatePipelineNodeRequest request);
 
     /**
+     * @param request the request parameters of CreateResource  CreateResourceRequest
+     * @return CreateResourceResponse
+     */
+    CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
+
+    /**
      * @param request the request parameters of CreateRowPermission  CreateRowPermissionRequest
      * @return CreateRowPermissionResponse
      */
@@ -126,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateStreamBatchJobMappingResponse
      */
     CompletableFuture<CreateStreamBatchJobMappingResponse> createStreamBatchJobMapping(CreateStreamBatchJobMappingRequest request);
+
+    /**
+     * @param request the request parameters of CreateUdf  CreateUdfRequest
+     * @return CreateUdfResponse
+     */
+    CompletableFuture<CreateUdfResponse> createUdf(CreateUdfRequest request);
 
     /**
      * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
@@ -158,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBizUnitResponse> deleteBizUnit(DeleteBizUnitRequest request);
 
     /**
+     * @param request the request parameters of DeleteComputeSource  DeleteComputeSourceRequest
+     * @return DeleteComputeSourceResponse
+     */
+    CompletableFuture<DeleteComputeSourceResponse> deleteComputeSource(DeleteComputeSourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteDataDomain  DeleteDataDomainRequest
      * @return DeleteDataDomainResponse
      */
@@ -176,10 +242,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteResource  DeleteResourceRequest
+     * @return DeleteResourceResponse
+     */
+    CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteRowPermission  DeleteRowPermissionRequest
      * @return DeleteRowPermissionResponse
      */
     CompletableFuture<DeleteRowPermissionResponse> deleteRowPermission(DeleteRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteUdf  DeleteUdfRequest
+     * @return DeleteUdfResponse
+     */
+    CompletableFuture<DeleteUdfResponse> deleteUdf(DeleteUdfRequest request);
 
     /**
      * @param request the request parameters of DeleteUserGroup  DeleteUserGroupRequest
@@ -284,10 +362,94 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClusterQueueInfoByEnvResponse> getClusterQueueInfoByEnv(GetClusterQueueInfoByEnvRequest request);
 
     /**
+     * @param request the request parameters of GetComputeSource  GetComputeSourceRequest
+     * @return GetComputeSourceResponse
+     */
+    CompletableFuture<GetComputeSourceResponse> getComputeSource(GetComputeSourceRequest request);
+
+    /**
      * @param request the request parameters of GetDataDomainInfo  GetDataDomainInfoRequest
      * @return GetDataDomainInfoResponse
      */
     CompletableFuture<GetDataDomainInfoResponse> getDataDomainInfo(GetDataDomainInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceApiCallSummary  GetDataServiceApiCallSummaryRequest
+     * @return GetDataServiceApiCallSummaryResponse
+     */
+    CompletableFuture<GetDataServiceApiCallSummaryResponse> getDataServiceApiCallSummary(GetDataServiceApiCallSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceApiCallTrend  GetDataServiceApiCallTrendRequest
+     * @return GetDataServiceApiCallTrendResponse
+     */
+    CompletableFuture<GetDataServiceApiCallTrendResponse> getDataServiceApiCallTrend(GetDataServiceApiCallTrendRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceApiDocument  GetDataServiceApiDocumentRequest
+     * @return GetDataServiceApiDocumentResponse
+     */
+    CompletableFuture<GetDataServiceApiDocumentResponse> getDataServiceApiDocument(GetDataServiceApiDocumentRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceApiErrorImpact  GetDataServiceApiErrorImpactRequest
+     * @return GetDataServiceApiErrorImpactResponse
+     */
+    CompletableFuture<GetDataServiceApiErrorImpactResponse> getDataServiceApiErrorImpact(GetDataServiceApiErrorImpactRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceApiGroups  GetDataServiceApiGroupsRequest
+     * @return GetDataServiceApiGroupsResponse
+     */
+    CompletableFuture<GetDataServiceApiGroupsResponse> getDataServiceApiGroups(GetDataServiceApiGroupsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAppAuthorizedUsers  GetDataServiceAppAuthorizedUsersRequest
+     * @return GetDataServiceAppAuthorizedUsersResponse
+     */
+    CompletableFuture<GetDataServiceAppAuthorizedUsersResponse> getDataServiceAppAuthorizedUsers(GetDataServiceAppAuthorizedUsersRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAppGroups  GetDataServiceAppGroupsRequest
+     * @return GetDataServiceAppGroupsResponse
+     */
+    CompletableFuture<GetDataServiceAppGroupsResponse> getDataServiceAppGroups(GetDataServiceAppGroupsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAppsByGroupId  GetDataServiceAppsByGroupIdRequest
+     * @return GetDataServiceAppsByGroupIdResponse
+     */
+    CompletableFuture<GetDataServiceAppsByGroupIdResponse> getDataServiceAppsByGroupId(GetDataServiceAppsByGroupIdRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAuthorizedAppsByGroupId  GetDataServiceAuthorizedAppsByGroupIdRequest
+     * @return GetDataServiceAuthorizedAppsByGroupIdResponse
+     */
+    CompletableFuture<GetDataServiceAuthorizedAppsByGroupIdResponse> getDataServiceAuthorizedAppsByGroupId(GetDataServiceAuthorizedAppsByGroupIdRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAuthorizedProjects  GetDataServiceAuthorizedProjectsRequest
+     * @return GetDataServiceAuthorizedProjectsResponse
+     */
+    CompletableFuture<GetDataServiceAuthorizedProjectsResponse> getDataServiceAuthorizedProjects(GetDataServiceAuthorizedProjectsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceMyProjects  GetDataServiceMyProjectsRequest
+     * @return GetDataServiceMyProjectsResponse
+     */
+    CompletableFuture<GetDataServiceMyProjectsResponse> getDataServiceMyProjects(GetDataServiceMyProjectsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceProjectAddableUsers  GetDataServiceProjectAddableUsersRequest
+     * @return GetDataServiceProjectAddableUsersResponse
+     */
+    CompletableFuture<GetDataServiceProjectAddableUsersResponse> getDataServiceProjectAddableUsers(GetDataServiceProjectAddableUsersRequest request);
+
+    /**
+     * @param request the request parameters of GetDataSourceDependencies  GetDataSourceDependenciesRequest
+     * @return GetDataSourceDependenciesResponse
+     */
+    CompletableFuture<GetDataSourceDependenciesResponse> getDataSourceDependencies(GetDataSourceDependenciesRequest request);
 
     /**
      * @param request the request parameters of GetDevObjectDependency  GetDevObjectDependencyRequest
@@ -300,6 +462,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDirectoryTreeResponse
      */
     CompletableFuture<GetDirectoryTreeResponse> getDirectoryTree(GetDirectoryTreeRequest request);
+
+    /**
+     * @param request the request parameters of GetFileStorageCredential  GetFileStorageCredentialRequest
+     * @return GetFileStorageCredentialResponse
+     */
+    CompletableFuture<GetFileStorageCredentialResponse> getFileStorageCredential(GetFileStorageCredentialRequest request);
 
     /**
      * @param request the request parameters of GetInstanceDownStream  GetInstanceDownStreamRequest
@@ -380,10 +548,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPhysicalNodeOperationLogResponse> getPhysicalNodeOperationLog(GetPhysicalNodeOperationLogRequest request);
 
     /**
+     * @param request the request parameters of GetProject  GetProjectRequest
+     * @return GetProjectResponse
+     */
+    CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
+
+    /**
+     * @param request the request parameters of GetProjectByName  GetProjectByNameRequest
+     * @return GetProjectByNameResponse
+     */
+    CompletableFuture<GetProjectByNameResponse> getProjectByName(GetProjectByNameRequest request);
+
+    /**
      * @param request the request parameters of GetProjectProduceUser  GetProjectProduceUserRequest
      * @return GetProjectProduceUserResponse
      */
     CompletableFuture<GetProjectProduceUserResponse> getProjectProduceUser(GetProjectProduceUserRequest request);
+
+    /**
+     * @param request the request parameters of GetProjectWhiteLists  GetProjectWhiteListsRequest
+     * @return GetProjectWhiteListsResponse
+     */
+    CompletableFuture<GetProjectWhiteListsResponse> getProjectWhiteLists(GetProjectWhiteListsRequest request);
 
     /**
      * @param request the request parameters of GetQueueEngineVersionByEnv  GetQueueEngineVersionByEnvRequest
@@ -392,10 +578,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQueueEngineVersionByEnvResponse> getQueueEngineVersionByEnv(GetQueueEngineVersionByEnvRequest request);
 
     /**
+     * @param request the request parameters of GetResource  GetResourceRequest
+     * @return GetResourceResponse
+     */
+    CompletableFuture<GetResourceResponse> getResource(GetResourceRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceByVersion  GetResourceByVersionRequest
+     * @return GetResourceByVersionResponse
+     */
+    CompletableFuture<GetResourceByVersionResponse> getResourceByVersion(GetResourceByVersionRequest request);
+
+    /**
      * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
      * @return GetSparkLocalClientInfoResponse
      */
     CompletableFuture<GetSparkLocalClientInfoResponse> getSparkLocalClientInfo(GetSparkLocalClientInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetStreamJobs  GetStreamJobsRequest
+     * @return GetStreamJobsResponse
+     */
+    CompletableFuture<GetStreamJobsResponse> getStreamJobs(GetStreamJobsRequest request);
 
     /**
      * @param request the request parameters of GetSupplementDagrun  GetSupplementDagrunRequest
@@ -422,6 +626,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableLineageByTaskIdResponse> getTableLineageByTaskId(GetTableLineageByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of GetUdf  GetUdfRequest
+     * @return GetUdfResponse
+     */
+    CompletableFuture<GetUdfResponse> getUdf(GetUdfRequest request);
+
+    /**
+     * @param request the request parameters of GetUdfByVersion  GetUdfByVersionRequest
+     * @return GetUdfByVersionResponse
+     */
+    CompletableFuture<GetUdfByVersionResponse> getUdfByVersion(GetUdfByVersionRequest request);
+
+    /**
      * @param request the request parameters of GetUserBySourceId  GetUserBySourceIdRequest
      * @return GetUserBySourceIdResponse
      */
@@ -438,6 +654,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUsersResponse
      */
     CompletableFuture<GetUsersResponse> getUsers(GetUsersRequest request);
+
+    /**
+     * @param request the request parameters of GrantDataServiceApi  GrantDataServiceApiRequest
+     * @return GrantDataServiceApiResponse
+     */
+    CompletableFuture<GrantDataServiceApiResponse> grantDataServiceApi(GrantDataServiceApiRequest request);
 
     /**
      * @param request the request parameters of GrantResourcePermission  GrantResourcePermissionRequest
@@ -494,10 +716,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBizUnitsResponse> listBizUnits(ListBizUnitsRequest request);
 
     /**
+     * @param request the request parameters of ListComputeSources  ListComputeSourcesRequest
+     * @return ListComputeSourcesResponse
+     */
+    CompletableFuture<ListComputeSourcesResponse> listComputeSources(ListComputeSourcesRequest request);
+
+    /**
      * @param request the request parameters of ListDataDomains  ListDataDomainsRequest
      * @return ListDataDomainsResponse
      */
     CompletableFuture<ListDataDomainsResponse> listDataDomains(ListDataDomainsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceApiCallStatistics  ListDataServiceApiCallStatisticsRequest
+     * @return ListDataServiceApiCallStatisticsResponse
+     */
+    CompletableFuture<ListDataServiceApiCallStatisticsResponse> listDataServiceApiCallStatistics(ListDataServiceApiCallStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceApiCalls  ListDataServiceApiCallsRequest
+     * @return ListDataServiceApiCallsResponse
+     */
+    CompletableFuture<ListDataServiceApiCallsResponse> listDataServiceApiCalls(ListDataServiceApiCallsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceApiImpacts  ListDataServiceApiImpactsRequest
+     * @return ListDataServiceApiImpactsResponse
+     */
+    CompletableFuture<ListDataServiceApiImpactsResponse> listDataServiceApiImpacts(ListDataServiceApiImpactsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceAuthorizedApps  ListDataServiceAuthorizedAppsRequest
+     * @return ListDataServiceAuthorizedAppsResponse
+     */
+    CompletableFuture<ListDataServiceAuthorizedAppsResponse> listDataServiceAuthorizedApps(ListDataServiceAuthorizedAppsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceMyApiPermissions  ListDataServiceMyApiPermissionsRequest
+     * @return ListDataServiceMyApiPermissionsResponse
+     */
+    CompletableFuture<ListDataServiceMyApiPermissionsResponse> listDataServiceMyApiPermissions(ListDataServiceMyApiPermissionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceMyAppPermissions  ListDataServiceMyAppPermissionsRequest
+     * @return ListDataServiceMyAppPermissionsResponse
+     */
+    CompletableFuture<ListDataServiceMyAppPermissionsResponse> listDataServiceMyAppPermissions(ListDataServiceMyAppPermissionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServicePublishedApis  ListDataServicePublishedApisRequest
+     * @return ListDataServicePublishedApisResponse
+     */
+    CompletableFuture<ListDataServicePublishedApisResponse> listDataServicePublishedApis(ListDataServicePublishedApisRequest request);
 
     /**
      * @param request the request parameters of ListDataSourceWithConfig  ListDataSourceWithConfigRequest
@@ -528,6 +798,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNodesResponse
      */
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
+     * @return ListProjectMembersResponse
+     */
+    CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
+
+    /**
+     * @param request the request parameters of ListProjects  ListProjectsRequest
+     * @return ListProjectsResponse
+     */
+    CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     /**
      * @param request the request parameters of ListPublishRecords  ListPublishRecordsRequest
@@ -620,10 +902,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PausePhysicalNodeResponse> pausePhysicalNode(PausePhysicalNodeRequest request);
 
     /**
+     * @param request the request parameters of PublishDataServiceApi  PublishDataServiceApiRequest
+     * @return PublishDataServiceApiResponse
+     */
+    CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
+
+    /**
      * @param request the request parameters of PublishObjectList  PublishObjectListRequest
      * @return PublishObjectListResponse
      */
     CompletableFuture<PublishObjectListResponse> publishObjectList(PublishObjectListRequest request);
+
+    /**
+     * @param request the request parameters of RemoveProjectMember  RemoveProjectMemberRequest
+     * @return RemoveProjectMemberResponse
+     */
+    CompletableFuture<RemoveProjectMemberResponse> removeProjectMember(RemoveProjectMemberRequest request);
 
     /**
      * @param request the request parameters of RemoveTenantMember  RemoveTenantMemberRequest
@@ -638,10 +932,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveUserGroupMemberResponse> removeUserGroupMember(RemoveUserGroupMemberRequest request);
 
     /**
+     * @param request the request parameters of ReplaceProjectWhiteLists  ReplaceProjectWhiteListsRequest
+     * @return ReplaceProjectWhiteListsResponse
+     */
+    CompletableFuture<ReplaceProjectWhiteListsResponse> replaceProjectWhiteLists(ReplaceProjectWhiteListsRequest request);
+
+    /**
      * @param request the request parameters of ResumePhysicalNode  ResumePhysicalNodeRequest
      * @return ResumePhysicalNodeResponse
      */
     CompletableFuture<ResumePhysicalNodeResponse> resumePhysicalNode(ResumePhysicalNodeRequest request);
+
+    /**
+     * @param request the request parameters of RevokeDataServiceApi  RevokeDataServiceApiRequest
+     * @return RevokeDataServiceApiResponse
+     */
+    CompletableFuture<RevokeDataServiceApiResponse> revokeDataServiceApi(RevokeDataServiceApiRequest request);
 
     /**
      * @param request the request parameters of RevokeResourcePermission  RevokeResourcePermissionRequest
@@ -660,18 +966,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitBatchTaskResponse
      */
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
-
-    /**
-     * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
-     * @return SyncDepartmentResponse
-     */
-    CompletableFuture<SyncDepartmentResponse> syncDepartment(SyncDepartmentRequest request);
-
-    /**
-     * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest
-     * @return SyncDepartmentUserResponse
-     */
-    CompletableFuture<SyncDepartmentUserResponse> syncDepartmentUser(SyncDepartmentUserRequest request);
 
     /**
      * @param request the request parameters of UpdateAdHocFile  UpdateAdHocFileRequest
@@ -704,6 +998,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateBizUnitResponse> updateBizUnit(UpdateBizUnitRequest request);
 
     /**
+     * @param request the request parameters of UpdateComputeSource  UpdateComputeSourceRequest
+     * @return UpdateComputeSourceResponse
+     */
+    CompletableFuture<UpdateComputeSourceResponse> updateComputeSource(UpdateComputeSourceRequest request);
+
+    /**
      * @param request the request parameters of UpdateDataDomain  UpdateDataDomainRequest
      * @return UpdateDataDomainResponse
      */
@@ -734,16 +1034,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFileNameResponse> updateFileName(UpdateFileNameRequest request);
 
     /**
+     * @param request the request parameters of UpdateProjectMember  UpdateProjectMemberRequest
+     * @return UpdateProjectMemberResponse
+     */
+    CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResource  UpdateResourceRequest
+     * @return UpdateResourceResponse
+     */
+    CompletableFuture<UpdateResourceResponse> updateResource(UpdateResourceRequest request);
+
+    /**
      * @param request the request parameters of UpdateRowPermission  UpdateRowPermissionRequest
      * @return UpdateRowPermissionResponse
      */
     CompletableFuture<UpdateRowPermissionResponse> updateRowPermission(UpdateRowPermissionRequest request);
 
     /**
+     * @param request the request parameters of UpdateTenantComputeEngine  UpdateTenantComputeEngineRequest
+     * @return UpdateTenantComputeEngineResponse
+     */
+    CompletableFuture<UpdateTenantComputeEngineResponse> updateTenantComputeEngine(UpdateTenantComputeEngineRequest request);
+
+    /**
      * @param request the request parameters of UpdateTenantMember  UpdateTenantMemberRequest
      * @return UpdateTenantMemberResponse
      */
     CompletableFuture<UpdateTenantMemberResponse> updateTenantMember(UpdateTenantMemberRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUdf  UpdateUdfRequest
+     * @return UpdateUdfResponse
+     */
+    CompletableFuture<UpdateUdfResponse> updateUdf(UpdateUdfRequest request);
 
     /**
      * @param request the request parameters of UpdateUserGroup  UpdateUserGroupRequest
