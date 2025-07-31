@@ -146,6 +146,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatabaseSummaryResponse> getDatabaseSummary(GetDatabaseSummaryRequest request);
 
     /**
+     * @param request the request parameters of GetIcebergNamespace  GetIcebergNamespaceRequest
+     * @return GetIcebergNamespaceResponse
+     */
+    CompletableFuture<GetIcebergNamespaceResponse> getIcebergNamespace(GetIcebergNamespaceRequest request);
+
+    /**
+     * @param request the request parameters of GetIcebergTable  GetIcebergTableRequest
+     * @return GetIcebergTableResponse
+     */
+    CompletableFuture<GetIcebergTableResponse> getIcebergTable(GetIcebergTableRequest request);
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -198,6 +210,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDatabasesResponse
      */
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
+
+    /**
+     * @param request the request parameters of ListIcebergNamespaceDetails  ListIcebergNamespaceDetailsRequest
+     * @return ListIcebergNamespaceDetailsResponse
+     */
+    CompletableFuture<ListIcebergNamespaceDetailsResponse> listIcebergNamespaceDetails(ListIcebergNamespaceDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ListIcebergSnapshots  ListIcebergSnapshotsRequest
+     * @return ListIcebergSnapshotsResponse
+     */
+    CompletableFuture<ListIcebergSnapshotsResponse> listIcebergSnapshots(ListIcebergSnapshotsRequest request);
+
+    /**
+     * @param request the request parameters of ListIcebergTableDetails  ListIcebergTableDetailsRequest
+     * @return ListIcebergTableDetailsResponse
+     */
+    CompletableFuture<ListIcebergTableDetailsResponse> listIcebergTableDetails(ListIcebergTableDetailsRequest request);
 
     /**
      * @param request the request parameters of ListPartitionSummaries  ListPartitionSummariesRequest

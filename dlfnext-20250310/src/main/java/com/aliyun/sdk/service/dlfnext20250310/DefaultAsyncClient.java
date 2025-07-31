@@ -418,6 +418,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetIcebergNamespace  GetIcebergNamespaceRequest
+     * @return GetIcebergNamespaceResponse
+     */
+    @Override
+    public CompletableFuture<GetIcebergNamespaceResponse> getIcebergNamespace(GetIcebergNamespaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetIcebergNamespace").setMethod(HttpMethod.GET).setPathRegex("/iceberg/dlf/v1/{catalogId}/namespaces/{namespace}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIcebergNamespaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIcebergNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIcebergTable  GetIcebergTableRequest
+     * @return GetIcebergTableResponse
+     */
+    @Override
+    public CompletableFuture<GetIcebergTableResponse> getIcebergTable(GetIcebergTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetIcebergTable").setMethod(HttpMethod.GET).setPathRegex("/iceberg/dlf/v1/{catalogId}/namespaces/{namespace}/tables/{table}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIcebergTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIcebergTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -574,6 +610,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListDatabasesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIcebergNamespaceDetails  ListIcebergNamespaceDetailsRequest
+     * @return ListIcebergNamespaceDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListIcebergNamespaceDetailsResponse> listIcebergNamespaceDetails(ListIcebergNamespaceDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListIcebergNamespaceDetails").setMethod(HttpMethod.GET).setPathRegex("/iceberg/dlf/v1/{catalogId}/namespace-details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIcebergNamespaceDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIcebergNamespaceDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIcebergSnapshots  ListIcebergSnapshotsRequest
+     * @return ListIcebergSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<ListIcebergSnapshotsResponse> listIcebergSnapshots(ListIcebergSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListIcebergSnapshots").setMethod(HttpMethod.GET).setPathRegex("/iceberg/dlf/v1/{catalogId}/namespaces/{namespace}/tables/{table}/snapshots").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIcebergSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIcebergSnapshotsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIcebergTableDetails  ListIcebergTableDetailsRequest
+     * @return ListIcebergTableDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListIcebergTableDetailsResponse> listIcebergTableDetails(ListIcebergTableDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListIcebergTableDetails").setMethod(HttpMethod.GET).setPathRegex("/iceberg/dlf/v1/{catalogId}/namespaces/{namespace}/table-details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIcebergTableDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIcebergTableDetailsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
