@@ -27,6 +27,10 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRoleRecognitionVideoUrl")
+    private String autoRoleRecognitionVideoUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deduplicationId")
     private String deduplicationId;
 
@@ -107,6 +111,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.autoRoleRecognitionVideoUrl = builder.autoRoleRecognitionVideoUrl;
         this.deduplicationId = builder.deduplicationId;
         this.excludeGenerateOptions = builder.excludeGenerateOptions;
         this.faceIdentitySimilarityMinScore = builder.faceIdentitySimilarityMinScore;
@@ -153,6 +158,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return autoRoleRecognitionVideoUrl
+     */
+    public String getAutoRoleRecognitionVideoUrl() {
+        return this.autoRoleRecognitionVideoUrl;
     }
 
     /**
@@ -291,6 +303,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitVideoAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private String autoRoleRecognitionVideoUrl; 
         private String deduplicationId; 
         private java.util.List<String> excludeGenerateOptions; 
         private Float faceIdentitySimilarityMinScore; 
@@ -319,6 +332,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.autoRoleRecognitionVideoUrl = request.autoRoleRecognitionVideoUrl;
             this.deduplicationId = request.deduplicationId;
             this.excludeGenerateOptions = request.excludeGenerateOptions;
             this.faceIdentitySimilarityMinScore = request.faceIdentitySimilarityMinScore;
@@ -358,6 +372,15 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * autoRoleRecognitionVideoUrl.
+         */
+        public Builder autoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {
+            this.putBodyParameter("autoRoleRecognitionVideoUrl", autoRoleRecognitionVideoUrl);
+            this.autoRoleRecognitionVideoUrl = autoRoleRecognitionVideoUrl;
             return this;
         }
 
@@ -938,19 +961,102 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
      *
      * <p>SubmitVideoAnalysisTaskRequest</p>
      */
+    public static class TimeIntervals extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
+
+        private TimeIntervals(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeIntervals create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeIntervals model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public TimeIntervals build() {
+                return new TimeIntervals(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitVideoAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitVideoAnalysisTaskRequest</p>
+     */
     public static class VideoRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("isAutoRecognition")
+        private Boolean isAutoRecognition;
+
         @com.aliyun.core.annotation.NameInMap("roleInfo")
         private String roleInfo;
 
         @com.aliyun.core.annotation.NameInMap("roleName")
         private String roleName;
 
+        @com.aliyun.core.annotation.NameInMap("timeIntervals")
+        private java.util.List<TimeIntervals> timeIntervals;
+
         @com.aliyun.core.annotation.NameInMap("urls")
         private java.util.List<String> urls;
 
         private VideoRoles(Builder builder) {
+            this.isAutoRecognition = builder.isAutoRecognition;
             this.roleInfo = builder.roleInfo;
             this.roleName = builder.roleName;
+            this.timeIntervals = builder.timeIntervals;
             this.urls = builder.urls;
         }
 
@@ -960,6 +1066,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
 
         public static VideoRoles create() {
             return builder().build();
+        }
+
+        /**
+         * @return isAutoRecognition
+         */
+        public Boolean getIsAutoRecognition() {
+            return this.isAutoRecognition;
         }
 
         /**
@@ -977,6 +1090,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         /**
+         * @return timeIntervals
+         */
+        public java.util.List<TimeIntervals> getTimeIntervals() {
+            return this.timeIntervals;
+        }
+
+        /**
          * @return urls
          */
         public java.util.List<String> getUrls() {
@@ -984,18 +1104,30 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean isAutoRecognition; 
             private String roleInfo; 
             private String roleName; 
+            private java.util.List<TimeIntervals> timeIntervals; 
             private java.util.List<String> urls; 
 
             private Builder() {
             } 
 
             private Builder(VideoRoles model) {
+                this.isAutoRecognition = model.isAutoRecognition;
                 this.roleInfo = model.roleInfo;
                 this.roleName = model.roleName;
+                this.timeIntervals = model.timeIntervals;
                 this.urls = model.urls;
             } 
+
+            /**
+             * isAutoRecognition.
+             */
+            public Builder isAutoRecognition(Boolean isAutoRecognition) {
+                this.isAutoRecognition = isAutoRecognition;
+                return this;
+            }
 
             /**
              * roleInfo.
@@ -1010,6 +1142,14 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * timeIntervals.
+             */
+            public Builder timeIntervals(java.util.List<TimeIntervals> timeIntervals) {
+                this.timeIntervals = timeIntervals;
                 return this;
             }
 

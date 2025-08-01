@@ -1852,6 +1852,315 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
      *
      * <p>GetVideoAnalysisTaskResponseBody</p>
      */
+    public static class TimeIntervals extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("timestamp")
+        private Long timestamp;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private TimeIntervals(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.timestamp = builder.timestamp;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeIntervals create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+            private Long timestamp; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeIntervals model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public TimeIntervals build() {
+                return new TimeIntervals(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class VideoRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("isAutoRecognition")
+        private Boolean isAutoRecognition;
+
+        @com.aliyun.core.annotation.NameInMap("ratio")
+        private Float ratio;
+
+        @com.aliyun.core.annotation.NameInMap("roleInfo")
+        private String roleInfo;
+
+        @com.aliyun.core.annotation.NameInMap("roleName")
+        private String roleName;
+
+        @com.aliyun.core.annotation.NameInMap("timeIntervals")
+        private java.util.List<TimeIntervals> timeIntervals;
+
+        private VideoRoles(Builder builder) {
+            this.isAutoRecognition = builder.isAutoRecognition;
+            this.ratio = builder.ratio;
+            this.roleInfo = builder.roleInfo;
+            this.roleName = builder.roleName;
+            this.timeIntervals = builder.timeIntervals;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoRoles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isAutoRecognition
+         */
+        public Boolean getIsAutoRecognition() {
+            return this.isAutoRecognition;
+        }
+
+        /**
+         * @return ratio
+         */
+        public Float getRatio() {
+            return this.ratio;
+        }
+
+        /**
+         * @return roleInfo
+         */
+        public String getRoleInfo() {
+            return this.roleInfo;
+        }
+
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
+         * @return timeIntervals
+         */
+        public java.util.List<TimeIntervals> getTimeIntervals() {
+            return this.timeIntervals;
+        }
+
+        public static final class Builder {
+            private Boolean isAutoRecognition; 
+            private Float ratio; 
+            private String roleInfo; 
+            private String roleName; 
+            private java.util.List<TimeIntervals> timeIntervals; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoRoles model) {
+                this.isAutoRecognition = model.isAutoRecognition;
+                this.ratio = model.ratio;
+                this.roleInfo = model.roleInfo;
+                this.roleName = model.roleName;
+                this.timeIntervals = model.timeIntervals;
+            } 
+
+            /**
+             * isAutoRecognition.
+             */
+            public Builder isAutoRecognition(Boolean isAutoRecognition) {
+                this.isAutoRecognition = isAutoRecognition;
+                return this;
+            }
+
+            /**
+             * ratio.
+             */
+            public Builder ratio(Float ratio) {
+                this.ratio = ratio;
+                return this;
+            }
+
+            /**
+             * roleInfo.
+             */
+            public Builder roleInfo(String roleInfo) {
+                this.roleInfo = roleInfo;
+                return this;
+            }
+
+            /**
+             * roleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * timeIntervals.
+             */
+            public Builder timeIntervals(java.util.List<TimeIntervals> timeIntervals) {
+                this.timeIntervals = timeIntervals;
+                return this;
+            }
+
+            public VideoRoles build() {
+                return new VideoRoles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class VideoRoleRecognitionResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("videoRoles")
+        private java.util.List<VideoRoles> videoRoles;
+
+        private VideoRoleRecognitionResult(Builder builder) {
+            this.videoRoles = builder.videoRoles;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoRoleRecognitionResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoRoles
+         */
+        public java.util.List<VideoRoles> getVideoRoles() {
+            return this.videoRoles;
+        }
+
+        public static final class Builder {
+            private java.util.List<VideoRoles> videoRoles; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoRoleRecognitionResult model) {
+                this.videoRoles = model.videoRoles;
+            } 
+
+            /**
+             * videoRoles.
+             */
+            public Builder videoRoles(java.util.List<VideoRoles> videoRoles) {
+                this.videoRoles = videoRoles;
+                return this;
+            }
+
+            public VideoRoleRecognitionResult build() {
+                return new VideoRoleRecognitionResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
     public static class VideoTitleGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -2063,6 +2372,9 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("videoMindMappingGenerateResult")
         private VideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
+        @com.aliyun.core.annotation.NameInMap("videoRoleRecognitionResult")
+        private VideoRoleRecognitionResult videoRoleRecognitionResult;
+
         @com.aliyun.core.annotation.NameInMap("videoTitleGenerateResult")
         private VideoTitleGenerateResult videoTitleGenerateResult;
 
@@ -2073,6 +2385,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             this.videoGenerateResult = builder.videoGenerateResult;
             this.videoGenerateResults = builder.videoGenerateResults;
             this.videoMindMappingGenerateResult = builder.videoMindMappingGenerateResult;
+            this.videoRoleRecognitionResult = builder.videoRoleRecognitionResult;
             this.videoTitleGenerateResult = builder.videoTitleGenerateResult;
         }
 
@@ -2127,6 +2440,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return videoRoleRecognitionResult
+         */
+        public VideoRoleRecognitionResult getVideoRoleRecognitionResult() {
+            return this.videoRoleRecognitionResult;
+        }
+
+        /**
          * @return videoTitleGenerateResult
          */
         public VideoTitleGenerateResult getVideoTitleGenerateResult() {
@@ -2140,6 +2460,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             private VideoGenerateResult videoGenerateResult; 
             private java.util.List<VideoGenerateResults> videoGenerateResults; 
             private VideoMindMappingGenerateResult videoMindMappingGenerateResult; 
+            private VideoRoleRecognitionResult videoRoleRecognitionResult; 
             private VideoTitleGenerateResult videoTitleGenerateResult; 
 
             private Builder() {
@@ -2152,6 +2473,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
                 this.videoGenerateResult = model.videoGenerateResult;
                 this.videoGenerateResults = model.videoGenerateResults;
                 this.videoMindMappingGenerateResult = model.videoMindMappingGenerateResult;
+                this.videoRoleRecognitionResult = model.videoRoleRecognitionResult;
                 this.videoTitleGenerateResult = model.videoTitleGenerateResult;
             } 
 
@@ -2200,6 +2522,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
              */
             public Builder videoMindMappingGenerateResult(VideoMindMappingGenerateResult videoMindMappingGenerateResult) {
                 this.videoMindMappingGenerateResult = videoMindMappingGenerateResult;
+                return this;
+            }
+
+            /**
+             * videoRoleRecognitionResult.
+             */
+            public Builder videoRoleRecognitionResult(VideoRoleRecognitionResult videoRoleRecognitionResult) {
+                this.videoRoleRecognitionResult = videoRoleRecognitionResult;
                 return this;
             }
 
