@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class SmsConversionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +143,11 @@ public class SmsConversionRequest extends Request {
         }
 
         /**
-         * To.
+         * <p>The mobile phone number of the recipient. You must add the dialing code to the beginning of the mobile phone number.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158400.html">Dialing codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8521245567****</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);

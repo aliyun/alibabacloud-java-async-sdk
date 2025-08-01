@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ConversionDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -60,6 +69,15 @@ public class ConversionDataResponseBody extends TeaModel {
         private String requestId; 
         private String responseCode; 
         private String responseDescription; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConversionDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.responseCode = model.responseCode;
+            this.responseDescription = model.responseDescription;
+        } 
 
         /**
          * <p>The ID of the request.</p>

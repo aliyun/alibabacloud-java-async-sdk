@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
 
     public static SendMessageToGlobeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         private String responseDescription; 
         private String segments; 
         private String to; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendMessageToGlobeResponseBody model) {
+            this.from = model.from;
+            this.messageId = model.messageId;
+            this.numberDetail = model.numberDetail;
+            this.requestId = model.requestId;
+            this.responseCode = model.responseCode;
+            this.responseDescription = model.responseDescription;
+            this.segments = model.segments;
+            this.to = model.to;
+        } 
 
         /**
          * <p>The sender ID returned.</p>
@@ -267,6 +290,15 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
             private String carrier; 
             private String country; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(NumberDetail model) {
+                this.carrier = model.carrier;
+                this.country = model.country;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The carrier that owns the mobile phone number.</p>

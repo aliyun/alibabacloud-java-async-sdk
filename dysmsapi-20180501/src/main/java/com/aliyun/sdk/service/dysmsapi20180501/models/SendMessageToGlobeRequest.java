@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class SendMessageToGlobeRequest extends Request {
     private String to;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValidityPeriod")
     private Long validityPeriod;
 
@@ -45,6 +54,7 @@ public class SendMessageToGlobeRequest extends Request {
         this.message = builder.message;
         this.taskId = builder.taskId;
         this.to = builder.to;
+        this.type = builder.type;
         this.validityPeriod = builder.validityPeriod;
     }
 
@@ -56,7 +66,7 @@ public class SendMessageToGlobeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,6 +107,13 @@ public class SendMessageToGlobeRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return validityPeriod
      */
     public Long getValidityPeriod() {
@@ -109,6 +126,7 @@ public class SendMessageToGlobeRequest extends Request {
         private String message; 
         private String taskId; 
         private String to; 
+        private String type; 
         private Long validityPeriod; 
 
         private Builder() {
@@ -122,6 +140,7 @@ public class SendMessageToGlobeRequest extends Request {
             this.message = request.message;
             this.taskId = request.taskId;
             this.to = request.to;
+            this.type = request.type;
             this.validityPeriod = request.validityPeriod;
         } 
 
@@ -188,6 +207,15 @@ public class SendMessageToGlobeRequest extends Request {
         public Builder to(String to) {
             this.putQueryParameter("To", to);
             this.to = to;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

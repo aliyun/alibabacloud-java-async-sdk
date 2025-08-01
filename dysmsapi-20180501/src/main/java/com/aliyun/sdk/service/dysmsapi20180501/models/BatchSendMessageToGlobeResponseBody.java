@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
 
     public static BatchSendMessageToGlobeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         private String responseDescription; 
         private String successCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchSendMessageToGlobeResponseBody model) {
+            this.failedList = model.failedList;
+            this.from = model.from;
+            this.messageIdList = model.messageIdList;
+            this.requestId = model.requestId;
+            this.responseCode = model.responseCode;
+            this.responseDescription = model.responseDescription;
+            this.successCount = model.successCount;
+        } 
+
         /**
-         * <p>The list of mobile phone numbers that failed to receive the message.</p>
+         * <p>The list of the mobile phone numbers that failed to receive the messages.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;931520581****&quot;,&quot;931530581****&quot;]</p>
@@ -121,7 +143,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sender ID returned.</p>
+         * <p>The sender ID that was returned. The API operation returns the sender ID that you have specified in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>Alicloud321</p>
@@ -132,7 +154,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the message.</p>
+         * <p>The ID of the sent message.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;123****&quot;,&quot;124****&quot;]</p>
@@ -154,7 +176,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/error-codes">Error codes</a>.</p>
+         * <p>The HTTP status code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/180674.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -176,7 +198,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of mobile phone numbers that received the message.</p>
+         * <p>The number of sent messages.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,6 +74,10 @@ public class QueryMessageResponseBody extends TeaModel {
 
     public static QueryMessageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -168,6 +177,24 @@ public class QueryMessageResponseBody extends TeaModel {
         private String sendDate; 
         private String status; 
         private String to; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMessageResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorDescription = model.errorDescription;
+            this.message = model.message;
+            this.messageId = model.messageId;
+            this.numberDetail = model.numberDetail;
+            this.receiveDate = model.receiveDate;
+            this.requestId = model.requestId;
+            this.responseCode = model.responseCode;
+            this.responseDescription = model.responseDescription;
+            this.sendDate = model.sendDate;
+            this.status = model.status;
+            this.to = model.to;
+        } 
 
         /**
          * <p>The status code of the message.</p>
@@ -364,6 +391,15 @@ public class QueryMessageResponseBody extends TeaModel {
             private String carrier; 
             private String country; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(NumberDetail model) {
+                this.carrier = model.carrier;
+                this.country = model.country;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The carrier that owns the mobile phone number.</p>
