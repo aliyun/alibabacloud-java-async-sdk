@@ -23,13 +23,25 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private AsyncCreateClipsTimeLineResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -59,16 +71,40 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
     }
 
     /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String code; 
         private Data data; 
+        private Integer httpStatusCode; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
@@ -76,7 +112,10 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
         private Builder(AsyncCreateClipsTimeLineResponseBody model) {
             this.code = model.code;
             this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
@@ -96,6 +135,22 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
         }
 
         /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +158,14 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
