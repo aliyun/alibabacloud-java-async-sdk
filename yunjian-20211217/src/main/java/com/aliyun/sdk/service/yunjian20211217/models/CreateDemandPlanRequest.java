@@ -28,6 +28,10 @@ public class CreateDemandPlanRequest extends Request {
     private String accountId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("demandType")
+    private String demandType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -63,6 +67,7 @@ public class CreateDemandPlanRequest extends Request {
         super(builder);
         this.yunUserId = builder.yunUserId;
         this.accountId = builder.accountId;
+        this.demandType = builder.demandType;
         this.description = builder.description;
         this.name = builder.name;
         this.period = builder.period;
@@ -97,6 +102,13 @@ public class CreateDemandPlanRequest extends Request {
      */
     public String getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return demandType
+     */
+    public String getDemandType() {
+        return this.demandType;
     }
 
     /**
@@ -151,6 +163,7 @@ public class CreateDemandPlanRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDemandPlanRequest, Builder> {
         private String yunUserId; 
         private String accountId; 
+        private String demandType; 
         private String description; 
         private String name; 
         private String period; 
@@ -167,6 +180,7 @@ public class CreateDemandPlanRequest extends Request {
             super(request);
             this.yunUserId = request.yunUserId;
             this.accountId = request.accountId;
+            this.demandType = request.demandType;
             this.description = request.description;
             this.name = request.name;
             this.period = request.period;
@@ -197,6 +211,15 @@ public class CreateDemandPlanRequest extends Request {
         public Builder accountId(String accountId) {
             this.putBodyParameter("accountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * demandType.
+         */
+        public Builder demandType(String demandType) {
+            this.putBodyParameter("demandType", demandType);
+            this.demandType = demandType;
             return this;
         }
 
