@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
 
     /**
+     * @param request the request parameters of SearchImage  SearchImageRequest
+     * @return SearchImageResponse
+     */
+    CompletableFuture<SearchImageResponse> searchImage(SearchImageRequest request);
+
+    /**
      * @param request the request parameters of SyncAppInstanceForPartner  SyncAppInstanceForPartnerRequest
      * @return SyncAppInstanceForPartnerResponse
      */
