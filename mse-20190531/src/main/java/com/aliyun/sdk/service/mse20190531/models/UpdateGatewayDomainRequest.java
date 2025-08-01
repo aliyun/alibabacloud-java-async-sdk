@@ -46,6 +46,10 @@ public class UpdateGatewayDomainRequest extends Request {
     private String protocol;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsCipherSuitesConfigJSON")
+    private TlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TlsMax")
     private String tlsMax;
 
@@ -62,6 +66,7 @@ public class UpdateGatewayDomainRequest extends Request {
         this.id = builder.id;
         this.mustHttps = builder.mustHttps;
         this.protocol = builder.protocol;
+        this.tlsCipherSuitesConfigJSON = builder.tlsCipherSuitesConfigJSON;
         this.tlsMax = builder.tlsMax;
         this.tlsMin = builder.tlsMin;
     }
@@ -129,6 +134,13 @@ public class UpdateGatewayDomainRequest extends Request {
     }
 
     /**
+     * @return tlsCipherSuitesConfigJSON
+     */
+    public TlsCipherSuitesConfigJSON getTlsCipherSuitesConfigJSON() {
+        return this.tlsCipherSuitesConfigJSON;
+    }
+
+    /**
      * @return tlsMax
      */
     public String getTlsMax() {
@@ -150,6 +162,7 @@ public class UpdateGatewayDomainRequest extends Request {
         private Long id; 
         private Boolean mustHttps; 
         private String protocol; 
+        private TlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON; 
         private String tlsMax; 
         private String tlsMin; 
 
@@ -166,6 +179,7 @@ public class UpdateGatewayDomainRequest extends Request {
             this.id = request.id;
             this.mustHttps = request.mustHttps;
             this.protocol = request.protocol;
+            this.tlsCipherSuitesConfigJSON = request.tlsCipherSuitesConfigJSON;
             this.tlsMax = request.tlsMax;
             this.tlsMin = request.tlsMin;
         } 
@@ -268,6 +282,16 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
+         * TlsCipherSuitesConfigJSON.
+         */
+        public Builder tlsCipherSuitesConfigJSON(TlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON) {
+            String tlsCipherSuitesConfigJSONShrink = shrink(tlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+            this.putQueryParameter("TlsCipherSuitesConfigJSON", tlsCipherSuitesConfigJSONShrink);
+            this.tlsCipherSuitesConfigJSON = tlsCipherSuitesConfigJSON;
+            return this;
+        }
+
+        /**
          * <p>The maximum version of Transport Layer Security (TLS).</p>
          * 
          * <strong>example:</strong>
@@ -298,4 +322,79 @@ public class UpdateGatewayDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayDomainRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayDomainRequest</p>
+     */
+    public static class TlsCipherSuitesConfigJSON extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
+        private String configType;
+
+        @com.aliyun.core.annotation.NameInMap("TlsCipherSuites")
+        private java.util.List<String> tlsCipherSuites;
+
+        private TlsCipherSuitesConfigJSON(Builder builder) {
+            this.configType = builder.configType;
+            this.tlsCipherSuites = builder.tlsCipherSuites;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TlsCipherSuitesConfigJSON create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configType
+         */
+        public String getConfigType() {
+            return this.configType;
+        }
+
+        /**
+         * @return tlsCipherSuites
+         */
+        public java.util.List<String> getTlsCipherSuites() {
+            return this.tlsCipherSuites;
+        }
+
+        public static final class Builder {
+            private String configType; 
+            private java.util.List<String> tlsCipherSuites; 
+
+            private Builder() {
+            } 
+
+            private Builder(TlsCipherSuitesConfigJSON model) {
+                this.configType = model.configType;
+                this.tlsCipherSuites = model.tlsCipherSuites;
+            } 
+
+            /**
+             * ConfigType.
+             */
+            public Builder configType(String configType) {
+                this.configType = configType;
+                return this;
+            }
+
+            /**
+             * TlsCipherSuites.
+             */
+            public Builder tlsCipherSuites(java.util.List<String> tlsCipherSuites) {
+                this.tlsCipherSuites = tlsCipherSuites;
+                return this;
+            }
+
+            public TlsCipherSuitesConfigJSON build() {
+                return new TlsCipherSuitesConfigJSON(this);
+            } 
+
+        } 
+
+    }
 }

@@ -197,6 +197,81 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
      *
      * <p>GetGatewayDomainDetailResponseBody</p>
      */
+    public static class TlsCipherSuitesConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
+        private String configType;
+
+        @com.aliyun.core.annotation.NameInMap("TlsCipherSuites")
+        private java.util.List<String> tlsCipherSuites;
+
+        private TlsCipherSuitesConfig(Builder builder) {
+            this.configType = builder.configType;
+            this.tlsCipherSuites = builder.tlsCipherSuites;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TlsCipherSuitesConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configType
+         */
+        public String getConfigType() {
+            return this.configType;
+        }
+
+        /**
+         * @return tlsCipherSuites
+         */
+        public java.util.List<String> getTlsCipherSuites() {
+            return this.tlsCipherSuites;
+        }
+
+        public static final class Builder {
+            private String configType; 
+            private java.util.List<String> tlsCipherSuites; 
+
+            private Builder() {
+            } 
+
+            private Builder(TlsCipherSuitesConfig model) {
+                this.configType = model.configType;
+                this.tlsCipherSuites = model.tlsCipherSuites;
+            } 
+
+            /**
+             * ConfigType.
+             */
+            public Builder configType(String configType) {
+                this.configType = configType;
+                return this;
+            }
+
+            /**
+             * TlsCipherSuites.
+             */
+            public Builder tlsCipherSuites(java.util.List<String> tlsCipherSuites) {
+                this.tlsCipherSuites = tlsCipherSuites;
+                return this;
+            }
+
+            public TlsCipherSuitesConfig build() {
+                return new TlsCipherSuitesConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayDomainDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
@@ -258,6 +333,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
+        @com.aliyun.core.annotation.NameInMap("TlsCipherSuitesConfig")
+        private TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
         @com.aliyun.core.annotation.NameInMap("TlsMax")
         private String tlsMax;
 
@@ -285,6 +363,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.name = builder.name;
             this.protocol = builder.protocol;
             this.sans = builder.sans;
+            this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
             this.tlsMax = builder.tlsMax;
             this.tlsMin = builder.tlsMin;
         }
@@ -438,6 +517,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return tlsCipherSuitesConfig
+         */
+        public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+            return this.tlsCipherSuitesConfig;
+        }
+
+        /**
          * @return tlsMax
          */
         public String getTlsMax() {
@@ -472,6 +558,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String name; 
             private String protocol; 
             private String sans; 
+            private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
             private String tlsMax; 
             private String tlsMin; 
 
@@ -499,6 +586,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.name = model.name;
                 this.protocol = model.protocol;
                 this.sans = model.sans;
+                this.tlsCipherSuitesConfig = model.tlsCipherSuitesConfig;
                 this.tlsMax = model.tlsMax;
                 this.tlsMin = model.tlsMin;
             } 
@@ -722,6 +810,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
              */
             public Builder sans(String sans) {
                 this.sans = sans;
+                return this;
+            }
+
+            /**
+             * TlsCipherSuitesConfig.
+             */
+            public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+                this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
                 return this;
             }
 

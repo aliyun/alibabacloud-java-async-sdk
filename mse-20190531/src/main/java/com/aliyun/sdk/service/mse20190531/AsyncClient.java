@@ -274,6 +274,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePluginConfigResponse> createPluginConfig(CreatePluginConfigRequest request);
 
     /**
+     * @param request the request parameters of CreateSentinelBlockFallbackDefinition  CreateSentinelBlockFallbackDefinitionRequest
+     * @return CreateSentinelBlockFallbackDefinitionResponse
+     */
+    CompletableFuture<CreateSentinelBlockFallbackDefinitionResponse> createSentinelBlockFallbackDefinition(CreateSentinelBlockFallbackDefinitionRequest request);
+
+    /**
      * @param request the request parameters of CreateWebFlowRule  CreateWebFlowRuleRequest
      * @return CreateWebFlowRuleResponse
      */
