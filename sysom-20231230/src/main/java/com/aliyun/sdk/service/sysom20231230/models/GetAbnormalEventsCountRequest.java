@@ -27,8 +27,11 @@ public class GetAbnormalEventsCountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instance")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instance;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("level")
+    private String level;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("namespace")
@@ -51,6 +54,7 @@ public class GetAbnormalEventsCountRequest extends Request {
         this.cluster = builder.cluster;
         this.end = builder.end;
         this.instance = builder.instance;
+        this.level = builder.level;
         this.namespace = builder.namespace;
         this.pod = builder.pod;
         this.showPod = builder.showPod;
@@ -92,6 +96,13 @@ public class GetAbnormalEventsCountRequest extends Request {
     }
 
     /**
+     * @return level
+     */
+    public String getLevel() {
+        return this.level;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -123,6 +134,7 @@ public class GetAbnormalEventsCountRequest extends Request {
         private String cluster; 
         private Float end; 
         private String instance; 
+        private String level; 
         private String namespace; 
         private String pod; 
         private Integer showPod; 
@@ -137,6 +149,7 @@ public class GetAbnormalEventsCountRequest extends Request {
             this.cluster = request.cluster;
             this.end = request.end;
             this.instance = request.instance;
+            this.level = request.level;
             this.namespace = request.namespace;
             this.pod = request.pod;
             this.showPod = request.showPod;
@@ -162,14 +175,20 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-wz9d00ut2ska3mlyhn6j</p>
+         * instance.
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
             this.instance = instance;
+            return this;
+        }
+
+        /**
+         * level.
+         */
+        public Builder level(String level) {
+            this.putQueryParameter("level", level);
+            this.level = level;
             return this;
         }
 

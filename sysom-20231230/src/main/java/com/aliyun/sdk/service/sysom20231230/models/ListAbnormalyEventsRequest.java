@@ -30,6 +30,10 @@ public class ListAbnormalyEventsRequest extends Request {
     private Float end;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("event")
+    private String event;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instance")
     private String instance;
 
@@ -62,6 +66,7 @@ public class ListAbnormalyEventsRequest extends Request {
         this.cluster = builder.cluster;
         this.current = builder.current;
         this.end = builder.end;
+        this.event = builder.event;
         this.instance = builder.instance;
         this.level = builder.level;
         this.namespace = builder.namespace;
@@ -103,6 +108,13 @@ public class ListAbnormalyEventsRequest extends Request {
      */
     public Float getEnd() {
         return this.end;
+    }
+
+    /**
+     * @return event
+     */
+    public String getEvent() {
+        return this.event;
     }
 
     /**
@@ -158,6 +170,7 @@ public class ListAbnormalyEventsRequest extends Request {
         private String cluster; 
         private Integer current; 
         private Float end; 
+        private String event; 
         private String instance; 
         private String level; 
         private String namespace; 
@@ -175,6 +188,7 @@ public class ListAbnormalyEventsRequest extends Request {
             this.cluster = request.cluster;
             this.current = request.current;
             this.end = request.end;
+            this.event = request.event;
             this.instance = request.instance;
             this.level = request.level;
             this.namespace = request.namespace;
@@ -208,6 +222,15 @@ public class ListAbnormalyEventsRequest extends Request {
         public Builder end(Float end) {
             this.putQueryParameter("end", end);
             this.end = end;
+            return this;
+        }
+
+        /**
+         * event.
+         */
+        public Builder event(String event) {
+            this.putQueryParameter("event", event);
+            this.event = event;
             return this;
         }
 

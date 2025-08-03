@@ -116,6 +116,9 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
      * <p>GetAbnormalEventsCountResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("eventList")
+        private java.util.List<String> eventList;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -123,6 +126,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         private Long value;
 
         private Data(Builder builder) {
+            this.eventList = builder.eventList;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -133,6 +137,13 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return eventList
+         */
+        public java.util.List<String> getEventList() {
+            return this.eventList;
         }
 
         /**
@@ -150,6 +161,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> eventList; 
             private String type; 
             private Long value; 
 
@@ -157,9 +169,18 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.eventList = model.eventList;
                 this.type = model.type;
                 this.value = model.value;
             } 
+
+            /**
+             * eventList.
+             */
+            public Builder eventList(java.util.List<String> eventList) {
+                this.eventList = eventList;
+                return this;
+            }
 
             /**
              * type.
