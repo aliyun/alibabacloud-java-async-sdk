@@ -201,6 +201,9 @@ public class ListIndicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChunkSize")
         private Integer chunkSize;
 
+        @com.aliyun.core.annotation.NameInMap("ConfgModel")
+        private String confgModel;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -209,6 +212,9 @@ public class ListIndicesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EmbeddingModelName")
         private String embeddingModelName;
+
+        @com.aliyun.core.annotation.NameInMap("EnableRewrite")
+        private Boolean enableRewrite;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -245,9 +251,11 @@ public class ListIndicesResponseBody extends TeaModel {
 
         private Indices(Builder builder) {
             this.chunkSize = builder.chunkSize;
+            this.confgModel = builder.confgModel;
             this.description = builder.description;
             this.documentIds = builder.documentIds;
             this.embeddingModelName = builder.embeddingModelName;
+            this.enableRewrite = builder.enableRewrite;
             this.id = builder.id;
             this.name = builder.name;
             this.overlapSize = builder.overlapSize;
@@ -277,6 +285,13 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return confgModel
+         */
+        public String getConfgModel() {
+            return this.confgModel;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -295,6 +310,13 @@ public class ListIndicesResponseBody extends TeaModel {
          */
         public String getEmbeddingModelName() {
             return this.embeddingModelName;
+        }
+
+        /**
+         * @return enableRewrite
+         */
+        public Boolean getEnableRewrite() {
+            return this.enableRewrite;
         }
 
         /**
@@ -376,9 +398,11 @@ public class ListIndicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer chunkSize; 
+            private String confgModel; 
             private String description; 
             private java.util.List<String> documentIds; 
             private String embeddingModelName; 
+            private Boolean enableRewrite; 
             private String id; 
             private String name; 
             private Integer overlapSize; 
@@ -396,9 +420,11 @@ public class ListIndicesResponseBody extends TeaModel {
 
             private Builder(Indices model) {
                 this.chunkSize = model.chunkSize;
+                this.confgModel = model.confgModel;
                 this.description = model.description;
                 this.documentIds = model.documentIds;
                 this.embeddingModelName = model.embeddingModelName;
+                this.enableRewrite = model.enableRewrite;
                 this.id = model.id;
                 this.name = model.name;
                 this.overlapSize = model.overlapSize;
@@ -420,6 +446,14 @@ public class ListIndicesResponseBody extends TeaModel {
              */
             public Builder chunkSize(Integer chunkSize) {
                 this.chunkSize = chunkSize;
+                return this;
+            }
+
+            /**
+             * ConfgModel.
+             */
+            public Builder confgModel(String confgModel) {
+                this.confgModel = confgModel;
                 return this;
             }
 
@@ -453,6 +487,14 @@ public class ListIndicesResponseBody extends TeaModel {
              */
             public Builder embeddingModelName(String embeddingModelName) {
                 this.embeddingModelName = embeddingModelName;
+                return this;
+            }
+
+            /**
+             * EnableRewrite.
+             */
+            public Builder enableRewrite(Boolean enableRewrite) {
+                this.enableRewrite = enableRewrite;
                 return this;
             }
 

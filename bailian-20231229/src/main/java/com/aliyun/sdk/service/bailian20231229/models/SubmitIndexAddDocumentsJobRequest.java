@@ -39,6 +39,10 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     private java.util.List<String> documentIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableHeaders")
+    private Boolean enableHeaders;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String indexId;
@@ -63,6 +67,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         this.chunkMode = builder.chunkMode;
         this.chunkSize = builder.chunkSize;
         this.documentIds = builder.documentIds;
+        this.enableHeaders = builder.enableHeaders;
         this.indexId = builder.indexId;
         this.overlapSize = builder.overlapSize;
         this.separator = builder.separator;
@@ -118,6 +123,13 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     }
 
     /**
+     * @return enableHeaders
+     */
+    public Boolean getEnableHeaders() {
+        return this.enableHeaders;
+    }
+
+    /**
      * @return indexId
      */
     public String getIndexId() {
@@ -151,6 +163,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         private String chunkMode; 
         private Integer chunkSize; 
         private java.util.List<String> documentIds; 
+        private Boolean enableHeaders; 
         private String indexId; 
         private Integer overlapSize; 
         private String separator; 
@@ -167,6 +180,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
             this.chunkMode = request.chunkMode;
             this.chunkSize = request.chunkSize;
             this.documentIds = request.documentIds;
+            this.enableHeaders = request.enableHeaders;
             this.indexId = request.indexId;
             this.overlapSize = request.overlapSize;
             this.separator = request.separator;
@@ -221,6 +235,15 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
             this.putQueryParameter("DocumentIds", documentIdsShrink);
             this.documentIds = documentIds;
+            return this;
+        }
+
+        /**
+         * EnableHeaders.
+         */
+        public Builder enableHeaders(Boolean enableHeaders) {
+            this.putQueryParameter("EnableHeaders", enableHeaders);
+            this.enableHeaders = enableHeaders;
             return this;
         }
 

@@ -35,6 +35,10 @@ public class CreateIndexRequest extends Request {
     private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateIndexType")
+    private String createIndexType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataSource")
     private DataSource dataSource;
 
@@ -49,6 +53,10 @@ public class CreateIndexRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EmbeddingModelName")
     private String embeddingModelName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRewrite")
+    private Boolean enableRewrite;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -94,6 +102,10 @@ public class CreateIndexRequest extends Request {
     private String structureType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableIds")
+    private java.util.List<String> tableIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("chunkMode")
     private String chunkMode;
 
@@ -111,10 +123,12 @@ public class CreateIndexRequest extends Request {
         this.categoryIds = builder.categoryIds;
         this.chunkSize = builder.chunkSize;
         this.columns = builder.columns;
+        this.createIndexType = builder.createIndexType;
         this.dataSource = builder.dataSource;
         this.description = builder.description;
         this.documentIds = builder.documentIds;
         this.embeddingModelName = builder.embeddingModelName;
+        this.enableRewrite = builder.enableRewrite;
         this.name = builder.name;
         this.overlapSize = builder.overlapSize;
         this.rerankMinScore = builder.rerankMinScore;
@@ -125,6 +139,7 @@ public class CreateIndexRequest extends Request {
         this.sinkType = builder.sinkType;
         this.sourceType = builder.sourceType;
         this.structureType = builder.structureType;
+        this.tableIds = builder.tableIds;
         this.chunkMode = builder.chunkMode;
         this.enableHeaders = builder.enableHeaders;
         this.metaExtractColumns = builder.metaExtractColumns;
@@ -172,6 +187,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return createIndexType
+     */
+    public String getCreateIndexType() {
+        return this.createIndexType;
+    }
+
+    /**
      * @return dataSource
      */
     public DataSource getDataSource() {
@@ -197,6 +219,13 @@ public class CreateIndexRequest extends Request {
      */
     public String getEmbeddingModelName() {
         return this.embeddingModelName;
+    }
+
+    /**
+     * @return enableRewrite
+     */
+    public Boolean getEnableRewrite() {
+        return this.enableRewrite;
     }
 
     /**
@@ -270,6 +299,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return tableIds
+     */
+    public java.util.List<String> getTableIds() {
+        return this.tableIds;
+    }
+
+    /**
      * @return chunkMode
      */
     public String getChunkMode() {
@@ -295,10 +331,12 @@ public class CreateIndexRequest extends Request {
         private java.util.List<String> categoryIds; 
         private Integer chunkSize; 
         private java.util.List<Columns> columns; 
+        private String createIndexType; 
         private DataSource dataSource; 
         private String description; 
         private java.util.List<String> documentIds; 
         private String embeddingModelName; 
+        private Boolean enableRewrite; 
         private String name; 
         private Integer overlapSize; 
         private Double rerankMinScore; 
@@ -309,6 +347,7 @@ public class CreateIndexRequest extends Request {
         private String sinkType; 
         private String sourceType; 
         private String structureType; 
+        private java.util.List<String> tableIds; 
         private String chunkMode; 
         private Boolean enableHeaders; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
@@ -323,10 +362,12 @@ public class CreateIndexRequest extends Request {
             this.categoryIds = request.categoryIds;
             this.chunkSize = request.chunkSize;
             this.columns = request.columns;
+            this.createIndexType = request.createIndexType;
             this.dataSource = request.dataSource;
             this.description = request.description;
             this.documentIds = request.documentIds;
             this.embeddingModelName = request.embeddingModelName;
+            this.enableRewrite = request.enableRewrite;
             this.name = request.name;
             this.overlapSize = request.overlapSize;
             this.rerankMinScore = request.rerankMinScore;
@@ -337,6 +378,7 @@ public class CreateIndexRequest extends Request {
             this.sinkType = request.sinkType;
             this.sourceType = request.sourceType;
             this.structureType = request.structureType;
+            this.tableIds = request.tableIds;
             this.chunkMode = request.chunkMode;
             this.enableHeaders = request.enableHeaders;
             this.metaExtractColumns = request.metaExtractColumns;
@@ -392,6 +434,15 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * CreateIndexType.
+         */
+        public Builder createIndexType(String createIndexType) {
+            this.putQueryParameter("CreateIndexType", createIndexType);
+            this.createIndexType = createIndexType;
+            return this;
+        }
+
+        /**
          * <blockquote>
          * <p> This parameter is not available. Do not specify this parameter.</p>
          * </blockquote>
@@ -435,6 +486,15 @@ public class CreateIndexRequest extends Request {
         public Builder embeddingModelName(String embeddingModelName) {
             this.putQueryParameter("EmbeddingModelName", embeddingModelName);
             this.embeddingModelName = embeddingModelName;
+            return this;
+        }
+
+        /**
+         * EnableRewrite.
+         */
+        public Builder enableRewrite(Boolean enableRewrite) {
+            this.putQueryParameter("EnableRewrite", enableRewrite);
+            this.enableRewrite = enableRewrite;
             return this;
         }
 
@@ -602,6 +662,16 @@ public class CreateIndexRequest extends Request {
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
             this.structureType = structureType;
+            return this;
+        }
+
+        /**
+         * TableIds.
+         */
+        public Builder tableIds(java.util.List<String> tableIds) {
+            String tableIdsShrink = shrink(tableIds, "TableIds", "json");
+            this.putQueryParameter("TableIds", tableIdsShrink);
+            this.tableIds = tableIds;
             return this;
         }
 

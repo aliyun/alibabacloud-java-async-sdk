@@ -597,6 +597,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListIndexFileDetails  ListIndexFileDetailsRequest
+     * @return ListIndexFileDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListIndexFileDetailsResponse> listIndexFileDetails(ListIndexFileDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListIndexFileDetails").setMethod(HttpMethod.POST).setPathRegex("/{WorkspaceId}/index/list_index_file_detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIndexFileDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIndexFileDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This interface is idempotent.</p>
      * 
@@ -797,6 +815,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAndPublishAgentSelectiveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateChunk  UpdateChunkRequest
+     * @return UpdateChunkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateChunkResponse> updateChunk(UpdateChunkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateChunk").setMethod(HttpMethod.POST).setPathRegex("/{WorkspaceId}/chunk/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateChunkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateChunkResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

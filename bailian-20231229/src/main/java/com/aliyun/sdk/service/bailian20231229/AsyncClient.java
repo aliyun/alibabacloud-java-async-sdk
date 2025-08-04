@@ -253,6 +253,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIndexDocumentsResponse> listIndexDocuments(ListIndexDocumentsRequest request);
 
     /**
+     * @param request the request parameters of ListIndexFileDetails  ListIndexFileDetailsRequest
+     * @return ListIndexFileDetailsResponse
+     */
+    CompletableFuture<ListIndexFileDetailsResponse> listIndexFileDetails(ListIndexFileDetailsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This interface is idempotent.</p>
      * 
@@ -337,6 +343,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAndPublishAgentSelectiveResponse
      */
     CompletableFuture<UpdateAndPublishAgentSelectiveResponse> updateAndPublishAgentSelective(UpdateAndPublishAgentSelectiveRequest request);
+
+    /**
+     * @param request the request parameters of UpdateChunk  UpdateChunkRequest
+     * @return UpdateChunkResponse
+     */
+    CompletableFuture<UpdateChunkResponse> updateChunk(UpdateChunkRequest request);
 
     /**
      * @param request the request parameters of UpdateFileTag  UpdateFileTagRequest
