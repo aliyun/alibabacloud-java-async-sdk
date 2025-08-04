@@ -22,6 +22,10 @@ public class DescribeDesktopInfoRequest extends Request {
     private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedExtraInfo")
+    private Boolean needExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -29,6 +33,7 @@ public class DescribeDesktopInfoRequest extends Request {
     private DescribeDesktopInfoRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
+        this.needExtraInfo = builder.needExtraInfo;
         this.regionId = builder.regionId;
     }
 
@@ -53,6 +58,13 @@ public class DescribeDesktopInfoRequest extends Request {
     }
 
     /**
+     * @return needExtraInfo
+     */
+    public Boolean getNeedExtraInfo() {
+        return this.needExtraInfo;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -61,6 +73,7 @@ public class DescribeDesktopInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDesktopInfoRequest, Builder> {
         private java.util.List<String> desktopId; 
+        private Boolean needExtraInfo; 
         private String regionId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DescribeDesktopInfoRequest extends Request {
         private Builder(DescribeDesktopInfoRequest request) {
             super(request);
             this.desktopId = request.desktopId;
+            this.needExtraInfo = request.needExtraInfo;
             this.regionId = request.regionId;
         } 
 
@@ -79,6 +93,15 @@ public class DescribeDesktopInfoRequest extends Request {
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * NeedExtraInfo.
+         */
+        public Builder needExtraInfo(Boolean needExtraInfo) {
+            this.putQueryParameter("NeedExtraInfo", needExtraInfo);
+            this.needExtraInfo = needExtraInfo;
             return this;
         }
 
