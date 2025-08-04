@@ -25,4 +25,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetEveryOneSellsFormListResponse> getEveryOneSellsFormList(GetEveryOneSellsFormListRequest request);
 
+    /**
+     * @param request the request parameters of PushEveryOneSellMsg  PushEveryOneSellMsgRequest
+     * @return PushEveryOneSellMsgResponse
+     */
+    CompletableFuture<PushEveryOneSellMsgResponse> pushEveryOneSellMsg(PushEveryOneSellMsgRequest request);
+
 }
