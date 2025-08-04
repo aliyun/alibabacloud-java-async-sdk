@@ -222,9 +222,13 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
+        @com.aliyun.core.annotation.NameInMap("UserInactivityTimeout")
+        private Integer userInactivityTimeout;
+
         private RtcConfig(Builder builder) {
             this.targetUserIds = builder.targetUserIds;
             this.userId = builder.userId;
+            this.userInactivityTimeout = builder.userInactivityTimeout;
         }
 
         public static Builder builder() {
@@ -249,9 +253,17 @@ public class StartAgentRequest extends Request {
             return this.userId;
         }
 
+        /**
+         * @return userInactivityTimeout
+         */
+        public Integer getUserInactivityTimeout() {
+            return this.userInactivityTimeout;
+        }
+
         public static final class Builder {
             private java.util.List<String> targetUserIds; 
             private String userId; 
+            private Integer userInactivityTimeout; 
 
             private Builder() {
             } 
@@ -259,6 +271,7 @@ public class StartAgentRequest extends Request {
             private Builder(RtcConfig model) {
                 this.targetUserIds = model.targetUserIds;
                 this.userId = model.userId;
+                this.userInactivityTimeout = model.userInactivityTimeout;
             } 
 
             /**
@@ -280,8 +293,70 @@ public class StartAgentRequest extends Request {
                 return this;
             }
 
+            /**
+             * UserInactivityTimeout.
+             */
+            public Builder userInactivityTimeout(Integer userInactivityTimeout) {
+                this.userInactivityTimeout = userInactivityTimeout;
+                return this;
+            }
+
             public RtcConfig build() {
                 return new RtcConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartAgentRequest} extends {@link TeaModel}
+     *
+     * <p>StartAgentRequest</p>
+     */
+    public static class VadConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InterruptSpeechDuration")
+        private Integer interruptSpeechDuration;
+
+        private VadConfig(Builder builder) {
+            this.interruptSpeechDuration = builder.interruptSpeechDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VadConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return interruptSpeechDuration
+         */
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
+        }
+
+        public static final class Builder {
+            private Integer interruptSpeechDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(VadConfig model) {
+                this.interruptSpeechDuration = model.interruptSpeechDuration;
+            } 
+
+            /**
+             * InterruptSpeechDuration.
+             */
+            public Builder interruptSpeechDuration(Integer interruptSpeechDuration) {
+                this.interruptSpeechDuration = interruptSpeechDuration;
+                return this;
+            }
+
+            public VadConfig build() {
+                return new VadConfig(this);
             } 
 
         } 
@@ -306,6 +381,9 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceLanguage")
         private String sourceLanguage;
 
+        @com.aliyun.core.annotation.NameInMap("VadConfig")
+        private VadConfig vadConfig;
+
         @com.aliyun.core.annotation.NameInMap("VocabularyId")
         private String vocabularyId;
 
@@ -314,6 +392,7 @@ public class StartAgentRequest extends Request {
             this.maxSentenceSilence = builder.maxSentenceSilence;
             this.semanticPunctuationEnabled = builder.semanticPunctuationEnabled;
             this.sourceLanguage = builder.sourceLanguage;
+            this.vadConfig = builder.vadConfig;
             this.vocabularyId = builder.vocabularyId;
         }
 
@@ -354,6 +433,13 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * @return vadConfig
+         */
+        public VadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
+        /**
          * @return vocabularyId
          */
         public String getVocabularyId() {
@@ -365,6 +451,7 @@ public class StartAgentRequest extends Request {
             private Integer maxSentenceSilence; 
             private Boolean semanticPunctuationEnabled; 
             private String sourceLanguage; 
+            private VadConfig vadConfig; 
             private String vocabularyId; 
 
             private Builder() {
@@ -375,6 +462,7 @@ public class StartAgentRequest extends Request {
                 this.maxSentenceSilence = model.maxSentenceSilence;
                 this.semanticPunctuationEnabled = model.semanticPunctuationEnabled;
                 this.sourceLanguage = model.sourceLanguage;
+                this.vadConfig = model.vadConfig;
                 this.vocabularyId = model.vocabularyId;
             } 
 
@@ -411,6 +499,14 @@ public class StartAgentRequest extends Request {
             }
 
             /**
+             * VadConfig.
+             */
+            public Builder vadConfig(VadConfig vadConfig) {
+                this.vadConfig = vadConfig;
+                return this;
+            }
+
+            /**
              * VocabularyId.
              */
             public Builder vocabularyId(String vocabularyId) {
@@ -431,9 +527,150 @@ public class StartAgentRequest extends Request {
      *
      * <p>StartAgentRequest</p>
      */
+    public static class AgentSilenceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertTimeout")
+        private Integer alertTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private Integer strategy;
+
+        @com.aliyun.core.annotation.NameInMap("WebhookTriggerTimeout")
+        private Integer webhookTriggerTimeout;
+
+        private AgentSilenceConfig(Builder builder) {
+            this.alertTimeout = builder.alertTimeout;
+            this.content = builder.content;
+            this.enable = builder.enable;
+            this.strategy = builder.strategy;
+            this.webhookTriggerTimeout = builder.webhookTriggerTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentSilenceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertTimeout
+         */
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return strategy
+         */
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        /**
+         * @return webhookTriggerTimeout
+         */
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
+        }
+
+        public static final class Builder {
+            private Integer alertTimeout; 
+            private String content; 
+            private Boolean enable; 
+            private Integer strategy; 
+            private Integer webhookTriggerTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentSilenceConfig model) {
+                this.alertTimeout = model.alertTimeout;
+                this.content = model.content;
+                this.enable = model.enable;
+                this.strategy = model.strategy;
+                this.webhookTriggerTimeout = model.webhookTriggerTimeout;
+            } 
+
+            /**
+             * AlertTimeout.
+             */
+            public Builder alertTimeout(Integer alertTimeout) {
+                this.alertTimeout = alertTimeout;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(Integer strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            /**
+             * WebhookTriggerTimeout.
+             */
+            public Builder webhookTriggerTimeout(Integer webhookTriggerTimeout) {
+                this.webhookTriggerTimeout = webhookTriggerTimeout;
+                return this;
+            }
+
+            public AgentSilenceConfig build() {
+                return new AgentSilenceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartAgentRequest} extends {@link TeaModel}
+     *
+     * <p>StartAgentRequest</p>
+     */
     public static class LLMConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
 
         @com.aliyun.core.annotation.NameInMap("HistoryDepth")
         private Integer historyDepth;
@@ -443,6 +680,9 @@ public class StartAgentRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("Params")
+        private java.util.Map<String, ?> params;
 
         @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
@@ -461,9 +701,11 @@ public class StartAgentRequest extends Request {
 
         private LLMConfig(Builder builder) {
             this.apiKey = builder.apiKey;
+            this.appId = builder.appId;
             this.historyDepth = builder.historyDepth;
             this.maxToken = builder.maxToken;
             this.model = builder.model;
+            this.params = builder.params;
             this.prompt = builder.prompt;
             this.temperature = builder.temperature;
             this.topP = builder.topP;
@@ -487,6 +729,13 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
          * @return historyDepth
          */
         public Integer getHistoryDepth() {
@@ -505,6 +754,13 @@ public class StartAgentRequest extends Request {
          */
         public String getModel() {
             return this.model;
+        }
+
+        /**
+         * @return params
+         */
+        public java.util.Map<String, ?> getParams() {
+            return this.params;
         }
 
         /**
@@ -544,9 +800,11 @@ public class StartAgentRequest extends Request {
 
         public static final class Builder {
             private String apiKey; 
+            private String appId; 
             private Integer historyDepth; 
             private Integer maxToken; 
             private String model; 
+            private java.util.Map<String, ?> params; 
             private String prompt; 
             private Double temperature; 
             private Double topP; 
@@ -558,9 +816,11 @@ public class StartAgentRequest extends Request {
 
             private Builder(LLMConfig model) {
                 this.apiKey = model.apiKey;
+                this.appId = model.appId;
                 this.historyDepth = model.historyDepth;
                 this.maxToken = model.maxToken;
                 this.model = model.model;
+                this.params = model.params;
                 this.prompt = model.prompt;
                 this.temperature = model.temperature;
                 this.topP = model.topP;
@@ -573,6 +833,17 @@ public class StartAgentRequest extends Request {
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aoe****</p>
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
                 return this;
             }
 
@@ -597,6 +868,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder model(String model) {
                 this.model = model;
+                return this;
+            }
+
+            /**
+             * Params.
+             */
+            public Builder params(java.util.Map<String, ?> params) {
+                this.params = params;
                 return this;
             }
 
@@ -858,6 +1137,9 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ASRConfig")
         private ASRConfig ASRConfig;
 
+        @com.aliyun.core.annotation.NameInMap("AgentSilenceConfig")
+        private AgentSilenceConfig agentSilenceConfig;
+
         @com.aliyun.core.annotation.NameInMap("ChatMode")
         private Integer chatMode;
 
@@ -875,6 +1157,7 @@ public class StartAgentRequest extends Request {
 
         private VoiceChatConfig(Builder builder) {
             this.ASRConfig = builder.ASRConfig;
+            this.agentSilenceConfig = builder.agentSilenceConfig;
             this.chatMode = builder.chatMode;
             this.greeting = builder.greeting;
             this.interruptMode = builder.interruptMode;
@@ -895,6 +1178,13 @@ public class StartAgentRequest extends Request {
          */
         public ASRConfig getASRConfig() {
             return this.ASRConfig;
+        }
+
+        /**
+         * @return agentSilenceConfig
+         */
+        public AgentSilenceConfig getAgentSilenceConfig() {
+            return this.agentSilenceConfig;
         }
 
         /**
@@ -934,6 +1224,7 @@ public class StartAgentRequest extends Request {
 
         public static final class Builder {
             private ASRConfig ASRConfig; 
+            private AgentSilenceConfig agentSilenceConfig; 
             private Integer chatMode; 
             private String greeting; 
             private Integer interruptMode; 
@@ -945,6 +1236,7 @@ public class StartAgentRequest extends Request {
 
             private Builder(VoiceChatConfig model) {
                 this.ASRConfig = model.ASRConfig;
+                this.agentSilenceConfig = model.agentSilenceConfig;
                 this.chatMode = model.chatMode;
                 this.greeting = model.greeting;
                 this.interruptMode = model.interruptMode;
@@ -957,6 +1249,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder ASRConfig(ASRConfig ASRConfig) {
                 this.ASRConfig = ASRConfig;
+                return this;
+            }
+
+            /**
+             * AgentSilenceConfig.
+             */
+            public Builder agentSilenceConfig(AgentSilenceConfig agentSilenceConfig) {
+                this.agentSilenceConfig = agentSilenceConfig;
                 return this;
             }
 

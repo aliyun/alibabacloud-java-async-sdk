@@ -139,6 +139,177 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
      *
      * <p>DescribeAppAgentTemplatesResponseBody</p>
      */
+    public static class AgentSilenceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertTimeout")
+        private Integer alertTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private Integer strategy;
+
+        @com.aliyun.core.annotation.NameInMap("WebhookTriggerTimeout")
+        private Integer webhookTriggerTimeout;
+
+        private AgentSilenceConfig(Builder builder) {
+            this.alertTimeout = builder.alertTimeout;
+            this.content = builder.content;
+            this.strategy = builder.strategy;
+            this.webhookTriggerTimeout = builder.webhookTriggerTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentSilenceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertTimeout
+         */
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return strategy
+         */
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        /**
+         * @return webhookTriggerTimeout
+         */
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
+        }
+
+        public static final class Builder {
+            private Integer alertTimeout; 
+            private String content; 
+            private Integer strategy; 
+            private Integer webhookTriggerTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentSilenceConfig model) {
+                this.alertTimeout = model.alertTimeout;
+                this.content = model.content;
+                this.strategy = model.strategy;
+                this.webhookTriggerTimeout = model.webhookTriggerTimeout;
+            } 
+
+            /**
+             * AlertTimeout.
+             */
+            public Builder alertTimeout(Integer alertTimeout) {
+                this.alertTimeout = alertTimeout;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(Integer strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            /**
+             * WebhookTriggerTimeout.
+             */
+            public Builder webhookTriggerTimeout(Integer webhookTriggerTimeout) {
+                this.webhookTriggerTimeout = webhookTriggerTimeout;
+                return this;
+            }
+
+            public AgentSilenceConfig build() {
+                return new AgentSilenceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppAgentTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAgentTemplatesResponseBody</p>
+     */
+    public static class VadConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InterruptSpeechDuration")
+        private Integer interruptSpeechDuration;
+
+        private VadConfig(Builder builder) {
+            this.interruptSpeechDuration = builder.interruptSpeechDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VadConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return interruptSpeechDuration
+         */
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
+        }
+
+        public static final class Builder {
+            private Integer interruptSpeechDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(VadConfig model) {
+                this.interruptSpeechDuration = model.interruptSpeechDuration;
+            } 
+
+            /**
+             * InterruptSpeechDuration.
+             */
+            public Builder interruptSpeechDuration(Integer interruptSpeechDuration) {
+                this.interruptSpeechDuration = interruptSpeechDuration;
+                return this;
+            }
+
+            public VadConfig build() {
+                return new VadConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppAgentTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAgentTemplatesResponseBody</p>
+     */
     public static class WordWeights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
@@ -242,6 +413,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("VadConfig")
+        private VadConfig vadConfig;
+
         @com.aliyun.core.annotation.NameInMap("VocabularyId")
         private String vocabularyId;
 
@@ -251,6 +425,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         private AsrConfig(Builder builder) {
             this.maxSentenceSilence = builder.maxSentenceSilence;
             this.name = builder.name;
+            this.vadConfig = builder.vadConfig;
             this.vocabularyId = builder.vocabularyId;
             this.wordWeights = builder.wordWeights;
         }
@@ -278,6 +453,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vadConfig
+         */
+        public VadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
+        /**
          * @return vocabularyId
          */
         public String getVocabularyId() {
@@ -294,6 +476,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer maxSentenceSilence; 
             private String name; 
+            private VadConfig vadConfig; 
             private String vocabularyId; 
             private java.util.List<WordWeights> wordWeights; 
 
@@ -303,6 +486,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             private Builder(AsrConfig model) {
                 this.maxSentenceSilence = model.maxSentenceSilence;
                 this.name = model.name;
+                this.vadConfig = model.vadConfig;
                 this.vocabularyId = model.vocabularyId;
                 this.wordWeights = model.wordWeights;
             } 
@@ -320,6 +504,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * VadConfig.
+             */
+            public Builder vadConfig(VadConfig vadConfig) {
+                this.vadConfig = vadConfig;
                 return this;
             }
 
@@ -353,6 +545,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
      * <p>DescribeAppAgentTemplatesResponseBody</p>
      */
     public static class LlmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentAppId")
+        private String agentAppId;
+
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
 
@@ -384,6 +579,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         private String vendor;
 
         private LlmConfig(Builder builder) {
+            this.agentAppId = builder.agentAppId;
             this.apiKey = builder.apiKey;
             this.historyDepth = builder.historyDepth;
             this.maxToken = builder.maxToken;
@@ -402,6 +598,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
         public static LlmConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentAppId
+         */
+        public String getAgentAppId() {
+            return this.agentAppId;
         }
 
         /**
@@ -475,6 +678,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentAppId; 
             private String apiKey; 
             private Integer historyDepth; 
             private Integer maxToken; 
@@ -490,6 +694,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(LlmConfig model) {
+                this.agentAppId = model.agentAppId;
                 this.apiKey = model.apiKey;
                 this.historyDepth = model.historyDepth;
                 this.maxToken = model.maxToken;
@@ -501,6 +706,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
                 this.url = model.url;
                 this.vendor = model.vendor;
             } 
+
+            /**
+             * AgentAppId.
+             */
+            public Builder agentAppId(String agentAppId) {
+                this.agentAppId = agentAppId;
+                return this;
+            }
 
             /**
              * ApiKey.
@@ -818,6 +1031,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
      * <p>DescribeAppAgentTemplatesResponseBody</p>
      */
     public static class Templates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentSilenceConfig")
+        private AgentSilenceConfig agentSilenceConfig;
+
         @com.aliyun.core.annotation.NameInMap("AsrConfig")
         private AsrConfig asrConfig;
 
@@ -849,6 +1065,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         private Integer type;
 
         private Templates(Builder builder) {
+            this.agentSilenceConfig = builder.agentSilenceConfig;
             this.asrConfig = builder.asrConfig;
             this.chatMode = builder.chatMode;
             this.createTime = builder.createTime;
@@ -867,6 +1084,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
         public static Templates create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentSilenceConfig
+         */
+        public AgentSilenceConfig getAgentSilenceConfig() {
+            return this.agentSilenceConfig;
         }
 
         /**
@@ -940,6 +1164,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AgentSilenceConfig agentSilenceConfig; 
             private AsrConfig asrConfig; 
             private Integer chatMode; 
             private String createTime; 
@@ -955,6 +1180,7 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(Templates model) {
+                this.agentSilenceConfig = model.agentSilenceConfig;
                 this.asrConfig = model.asrConfig;
                 this.chatMode = model.chatMode;
                 this.createTime = model.createTime;
@@ -966,6 +1192,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
                 this.ttsConfig = model.ttsConfig;
                 this.type = model.type;
             } 
+
+            /**
+             * AgentSilenceConfig.
+             */
+            public Builder agentSilenceConfig(AgentSilenceConfig agentSilenceConfig) {
+                this.agentSilenceConfig = agentSilenceConfig;
+                return this;
+            }
 
             /**
              * AsrConfig.

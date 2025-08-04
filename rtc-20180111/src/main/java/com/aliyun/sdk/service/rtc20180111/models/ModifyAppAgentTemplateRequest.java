@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyAppAgentTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentSilenceConfig")
+    private AgentSilenceConfig agentSilenceConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
@@ -62,6 +66,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
 
     private ModifyAppAgentTemplateRequest(Builder builder) {
         super(builder);
+        this.agentSilenceConfig = builder.agentSilenceConfig;
         this.appId = builder.appId;
         this.asrConfig = builder.asrConfig;
         this.chatMode = builder.chatMode;
@@ -85,6 +90,13 @@ public class ModifyAppAgentTemplateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentSilenceConfig
+     */
+    public AgentSilenceConfig getAgentSilenceConfig() {
+        return this.agentSilenceConfig;
     }
 
     /**
@@ -158,6 +170,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyAppAgentTemplateRequest, Builder> {
+        private AgentSilenceConfig agentSilenceConfig; 
         private String appId; 
         private AsrConfig asrConfig; 
         private Integer chatMode; 
@@ -175,6 +188,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
 
         private Builder(ModifyAppAgentTemplateRequest request) {
             super(request);
+            this.agentSilenceConfig = request.agentSilenceConfig;
             this.appId = request.appId;
             this.asrConfig = request.asrConfig;
             this.chatMode = request.chatMode;
@@ -186,6 +200,16 @@ public class ModifyAppAgentTemplateRequest extends Request {
             this.ttsConfig = request.ttsConfig;
             this.type = request.type;
         } 
+
+        /**
+         * AgentSilenceConfig.
+         */
+        public Builder agentSilenceConfig(AgentSilenceConfig agentSilenceConfig) {
+            String agentSilenceConfigShrink = shrink(agentSilenceConfig, "AgentSilenceConfig", "json");
+            this.putQueryParameter("AgentSilenceConfig", agentSilenceConfigShrink);
+            this.agentSilenceConfig = agentSilenceConfig;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -302,6 +326,180 @@ public class ModifyAppAgentTemplateRequest extends Request {
      *
      * <p>ModifyAppAgentTemplateRequest</p>
      */
+    public static class AgentSilenceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertTimeout")
+        private Integer alertTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(maxLength = 2500)
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        @com.aliyun.core.annotation.Validation(maximum = 2, minimum = 1)
+        private Integer strategy;
+
+        @com.aliyun.core.annotation.NameInMap("WebhookTriggerTimeout")
+        private Integer webhookTriggerTimeout;
+
+        private AgentSilenceConfig(Builder builder) {
+            this.alertTimeout = builder.alertTimeout;
+            this.content = builder.content;
+            this.strategy = builder.strategy;
+            this.webhookTriggerTimeout = builder.webhookTriggerTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentSilenceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertTimeout
+         */
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return strategy
+         */
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        /**
+         * @return webhookTriggerTimeout
+         */
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
+        }
+
+        public static final class Builder {
+            private Integer alertTimeout; 
+            private String content; 
+            private Integer strategy; 
+            private Integer webhookTriggerTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentSilenceConfig model) {
+                this.alertTimeout = model.alertTimeout;
+                this.content = model.content;
+                this.strategy = model.strategy;
+                this.webhookTriggerTimeout = model.webhookTriggerTimeout;
+            } 
+
+            /**
+             * AlertTimeout.
+             */
+            public Builder alertTimeout(Integer alertTimeout) {
+                this.alertTimeout = alertTimeout;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(Integer strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            /**
+             * WebhookTriggerTimeout.
+             */
+            public Builder webhookTriggerTimeout(Integer webhookTriggerTimeout) {
+                this.webhookTriggerTimeout = webhookTriggerTimeout;
+                return this;
+            }
+
+            public AgentSilenceConfig build() {
+                return new AgentSilenceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAppAgentTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppAgentTemplateRequest</p>
+     */
+    public static class VadConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InterruptSpeechDuration")
+        @com.aliyun.core.annotation.Validation(maximum = 3000)
+        private Integer interruptSpeechDuration;
+
+        private VadConfig(Builder builder) {
+            this.interruptSpeechDuration = builder.interruptSpeechDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VadConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return interruptSpeechDuration
+         */
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
+        }
+
+        public static final class Builder {
+            private Integer interruptSpeechDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(VadConfig model) {
+                this.interruptSpeechDuration = model.interruptSpeechDuration;
+            } 
+
+            /**
+             * InterruptSpeechDuration.
+             */
+            public Builder interruptSpeechDuration(Integer interruptSpeechDuration) {
+                this.interruptSpeechDuration = interruptSpeechDuration;
+                return this;
+            }
+
+            public VadConfig build() {
+                return new VadConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAppAgentTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppAgentTemplateRequest</p>
+     */
     public static class WordWeights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
@@ -311,7 +509,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
         private Integer weight;
 
         @com.aliyun.core.annotation.NameInMap("Word")
-        @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String word;
 
         private WordWeights(Builder builder) {
@@ -414,6 +612,9 @@ public class ModifyAppAgentTemplateRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("VadConfig")
+        private VadConfig vadConfig;
+
         @com.aliyun.core.annotation.NameInMap("VocabularyId")
         @com.aliyun.core.annotation.Validation(maxLength = 100)
         private String vocabularyId;
@@ -424,6 +625,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
         private AsrConfig(Builder builder) {
             this.maxSentenceSilence = builder.maxSentenceSilence;
             this.name = builder.name;
+            this.vadConfig = builder.vadConfig;
             this.vocabularyId = builder.vocabularyId;
             this.wordWeights = builder.wordWeights;
         }
@@ -451,6 +653,13 @@ public class ModifyAppAgentTemplateRequest extends Request {
         }
 
         /**
+         * @return vadConfig
+         */
+        public VadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
+        /**
          * @return vocabularyId
          */
         public String getVocabularyId() {
@@ -467,6 +676,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
         public static final class Builder {
             private Integer maxSentenceSilence; 
             private String name; 
+            private VadConfig vadConfig; 
             private String vocabularyId; 
             private java.util.List<WordWeights> wordWeights; 
 
@@ -476,6 +686,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
             private Builder(AsrConfig model) {
                 this.maxSentenceSilence = model.maxSentenceSilence;
                 this.name = model.name;
+                this.vadConfig = model.vadConfig;
                 this.vocabularyId = model.vocabularyId;
                 this.wordWeights = model.wordWeights;
             } 
@@ -496,6 +707,14 @@ public class ModifyAppAgentTemplateRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * VadConfig.
+             */
+            public Builder vadConfig(VadConfig vadConfig) {
+                this.vadConfig = vadConfig;
                 return this;
             }
 
@@ -529,6 +748,10 @@ public class ModifyAppAgentTemplateRequest extends Request {
      * <p>ModifyAppAgentTemplateRequest</p>
      */
     public static class LlmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentAppId")
+        @com.aliyun.core.annotation.Validation(maxLength = 500)
+        private String agentAppId;
+
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 200, minLength = 1)
         private String apiKey;
@@ -544,7 +767,6 @@ public class ModifyAppAgentTemplateRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Prompt")
-        @com.aliyun.core.annotation.Validation(maxLength = 5000, minLength = 1)
         private String prompt;
 
         @com.aliyun.core.annotation.NameInMap("Temperature")
@@ -561,6 +783,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
         private String vendor;
 
         private LlmConfig(Builder builder) {
+            this.agentAppId = builder.agentAppId;
             this.apiKey = builder.apiKey;
             this.historyDepth = builder.historyDepth;
             this.maxToken = builder.maxToken;
@@ -578,6 +801,13 @@ public class ModifyAppAgentTemplateRequest extends Request {
 
         public static LlmConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentAppId
+         */
+        public String getAgentAppId() {
+            return this.agentAppId;
         }
 
         /**
@@ -644,6 +874,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private String agentAppId; 
             private String apiKey; 
             private Integer historyDepth; 
             private Integer maxToken; 
@@ -658,6 +889,7 @@ public class ModifyAppAgentTemplateRequest extends Request {
             } 
 
             private Builder(LlmConfig model) {
+                this.agentAppId = model.agentAppId;
                 this.apiKey = model.apiKey;
                 this.historyDepth = model.historyDepth;
                 this.maxToken = model.maxToken;
@@ -668,6 +900,14 @@ public class ModifyAppAgentTemplateRequest extends Request {
                 this.url = model.url;
                 this.vendor = model.vendor;
             } 
+
+            /**
+             * AgentAppId.
+             */
+            public Builder agentAppId(String agentAppId) {
+                this.agentAppId = agentAppId;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>
