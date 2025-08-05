@@ -42,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddControlPolicyResponse> addControlPolicy(AddControlPolicyRequest request);
 
     /**
+     * @param request the request parameters of AddDnsFirewallPolicy  AddDnsFirewallPolicyRequest
+     * @return AddDnsFirewallPolicyResponse
+     */
+    CompletableFuture<AddDnsFirewallPolicyResponse> addDnsFirewallPolicy(AddDnsFirewallPolicyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to add members to Cloud Firewall.</p>
      * <h2><a href="#qps-"></a>Limits</h2>
@@ -51,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AddInstanceMembersResponse
      */
     CompletableFuture<AddInstanceMembersResponse> addInstanceMembers(AddInstanceMembersRequest request);
+
+    /**
+     * @param request the request parameters of AddPrivateDnsDomainName  AddPrivateDnsDomainNameRequest
+     * @return AddPrivateDnsDomainNameResponse
+     */
+    CompletableFuture<AddPrivateDnsDomainNameResponse> addPrivateDnsDomainName(AddPrivateDnsDomainNameRequest request);
 
     /**
      * <b>description</b> :
@@ -120,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcFirewallCenConfigureResponse> createVpcFirewallCenConfigure(CreateVpcFirewallCenConfigureRequest request);
 
     /**
+     * @param request the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
+     * @return CreateVpcFirewallCenManualConfigureResponse
+     */
+    CompletableFuture<CreateVpcFirewallCenManualConfigureResponse> createVpcFirewallCenManualConfigure(CreateVpcFirewallCenManualConfigureRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
      * <h3><a href="#qps"></a>QPS limit</h3>
@@ -170,6 +188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteControlPolicyTemplateResponse> deleteControlPolicyTemplate(DeleteControlPolicyTemplateRequest request);
 
     /**
+     * @param request the request parameters of DeleteDnsFirewallPolicy  DeleteDnsFirewallPolicyRequest
+     * @return DeleteDnsFirewallPolicyResponse
+     */
+    CompletableFuture<DeleteDnsFirewallPolicyResponse> deleteDnsFirewallPolicy(DeleteDnsFirewallPolicyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to delete file download tasks and delete the files.
      * **
@@ -211,6 +235,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNatFirewallControlPolicyBatchResponse
      */
     CompletableFuture<DeleteNatFirewallControlPolicyBatchResponse> deleteNatFirewallControlPolicyBatch(DeleteNatFirewallControlPolicyBatchRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrivateDnsAllDomainName  DeletePrivateDnsAllDomainNameRequest
+     * @return DeletePrivateDnsAllDomainNameResponse
+     */
+    CompletableFuture<DeletePrivateDnsAllDomainNameResponse> deletePrivateDnsAllDomainName(DeletePrivateDnsAllDomainNameRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrivateDnsDomainName  DeletePrivateDnsDomainNameRequest
+     * @return DeletePrivateDnsDomainNameResponse
+     */
+    CompletableFuture<DeletePrivateDnsDomainNameResponse> deletePrivateDnsDomainName(DeletePrivateDnsDomainNameRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrivateDnsEndpoint  DeletePrivateDnsEndpointRequest
+     * @return DeletePrivateDnsEndpointResponse
+     */
+    CompletableFuture<DeletePrivateDnsEndpointResponse> deletePrivateDnsEndpoint(DeletePrivateDnsEndpointRequest request);
 
     /**
      * @param request the request parameters of DeleteSecurityProxy  DeleteSecurityProxyRequest
@@ -262,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeACLProtectTrendResponse
      */
     CompletableFuture<DescribeACLProtectTrendResponse> describeACLProtectTrend(DescribeACLProtectTrendRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAITrafficAnalysisStatus  DescribeAITrafficAnalysisStatusRequest
+     * @return DescribeAITrafficAnalysisStatusResponse
+     */
+    CompletableFuture<DescribeAITrafficAnalysisStatusResponse> describeAITrafficAnalysisStatus(DescribeAITrafficAnalysisStatusRequest request);
 
     /**
      * <b>description</b> :
@@ -319,6 +367,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDefaultIPSConfigResponse
      */
     CompletableFuture<DescribeDefaultIPSConfigResponse> describeDefaultIPSConfig(DescribeDefaultIPSConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDnsFirewallPolicy  DescribeDnsFirewallPolicyRequest
+     * @return DescribeDnsFirewallPolicyResponse
+     */
+    CompletableFuture<DescribeDnsFirewallPolicyResponse> describeDnsFirewallPolicy(DescribeDnsFirewallPolicyRequest request);
 
     /**
      * @deprecated OpenAPI DescribeDomainResolve is deprecated  * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
@@ -477,6 +531,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePrefixListsResponse
      */
     CompletableFuture<DescribePrefixListsResponse> describePrefixLists(DescribePrefixListsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePrivateDnsDomainNameList  DescribePrivateDnsDomainNameListRequest
+     * @return DescribePrivateDnsDomainNameListResponse
+     */
+    CompletableFuture<DescribePrivateDnsDomainNameListResponse> describePrivateDnsDomainNameList(DescribePrivateDnsDomainNameListRequest request);
+
+    /**
+     * @param request the request parameters of DescribePrivateDnsEndpointDetail  DescribePrivateDnsEndpointDetailRequest
+     * @return DescribePrivateDnsEndpointDetailResponse
+     */
+    CompletableFuture<DescribePrivateDnsEndpointDetailResponse> describePrivateDnsEndpointDetail(DescribePrivateDnsEndpointDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribePrivateDnsEndpointList  DescribePrivateDnsEndpointListRequest
+     * @return DescribePrivateDnsEndpointListResponse
+     */
+    CompletableFuture<DescribePrivateDnsEndpointListResponse> describePrivateDnsEndpointList(DescribePrivateDnsEndpointListRequest request);
 
     /**
      * <b>description</b> :
@@ -700,10 +772,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyControlPolicyPositionResponse> modifyControlPolicyPosition(ModifyControlPolicyPositionRequest request);
 
     /**
+     * @param request the request parameters of ModifyControlPolicyPriority  ModifyControlPolicyPriorityRequest
+     * @return ModifyControlPolicyPriorityResponse
+     */
+    CompletableFuture<ModifyControlPolicyPriorityResponse> modifyControlPolicyPriority(ModifyControlPolicyPriorityRequest request);
+
+    /**
      * @param request the request parameters of ModifyDefaultIPSConfig  ModifyDefaultIPSConfigRequest
      * @return ModifyDefaultIPSConfigResponse
      */
     CompletableFuture<ModifyDefaultIPSConfigResponse> modifyDefaultIPSConfig(ModifyDefaultIPSConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDnsFirewallPolicy  ModifyDnsFirewallPolicyRequest
+     * @return ModifyDnsFirewallPolicyResponse
+     */
+    CompletableFuture<ModifyDnsFirewallPolicyResponse> modifyDnsFirewallPolicy(ModifyDnsFirewallPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyFirewallV2RoutePolicySwitch  ModifyFirewallV2RoutePolicySwitchRequest
@@ -753,6 +837,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyAdvancedConfigResponse
      */
     CompletableFuture<ModifyPolicyAdvancedConfigResponse> modifyPolicyAdvancedConfig(ModifyPolicyAdvancedConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyPrivateDnsEndpoint  ModifyPrivateDnsEndpointRequest
+     * @return ModifyPrivateDnsEndpointResponse
+     */
+    CompletableFuture<ModifyPrivateDnsEndpointResponse> modifyPrivateDnsEndpoint(ModifyPrivateDnsEndpointRequest request);
 
     /**
      * @param request the request parameters of ModifyTrFirewallV2Configuration  ModifyTrFirewallV2ConfigurationRequest
@@ -902,6 +992,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutEnableFwSwitchResponse> putEnableFwSwitch(PutEnableFwSwitchRequest request);
 
     /**
+     * @param request the request parameters of ReleaseExpiredInstance  ReleaseExpiredInstanceRequest
+     * @return ReleaseExpiredInstanceResponse
+     */
+    CompletableFuture<ReleaseExpiredInstanceResponse> releaseExpiredInstance(ReleaseExpiredInstanceRequest request);
+
+    /**
      * @param request the request parameters of ReleasePostInstance  ReleasePostInstanceRequest
      * @return ReleasePostInstanceResponse
      */
@@ -929,5 +1025,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SwitchSecurityProxyResponse
      */
     CompletableFuture<SwitchSecurityProxyResponse> switchSecurityProxy(SwitchSecurityProxyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAITrafficAnalysisStatus  UpdateAITrafficAnalysisStatusRequest
+     * @return UpdateAITrafficAnalysisStatusResponse
+     */
+    CompletableFuture<UpdateAITrafficAnalysisStatusResponse> updateAITrafficAnalysisStatus(UpdateAITrafficAnalysisStatusRequest request);
 
 }

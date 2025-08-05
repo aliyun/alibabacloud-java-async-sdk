@@ -102,7 +102,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the VPC firewalls.</p>
+         * <p>The VPC firewalls.</p>
          */
         public Builder vpcTrFirewalls(java.util.List<VpcTrFirewalls> vpcTrFirewalls) {
             this.vpcTrFirewalls = vpcTrFirewalls;
@@ -155,7 +155,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             } 
 
             /**
-             * StrictMode.
+             * <p>Whether to enable strict mode</p>
+             * <ul>
+             * <li>1: Enable strict mode</li>
+             * <li>0: Disable strict mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder strictMode(Integer strictMode) {
                 this.strictMode = strictMode;
@@ -887,7 +894,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             } 
 
             /**
-             * AclConfig.
+             * <p>ACL engine mode.</p>
              */
             public Builder aclConfig(AclConfig aclConfig) {
                 this.aclConfig = aclConfig;

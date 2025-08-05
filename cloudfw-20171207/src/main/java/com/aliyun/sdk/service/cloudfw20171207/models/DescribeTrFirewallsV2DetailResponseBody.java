@@ -474,7 +474,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrAttachmentMasterZone.
+         * <p>In automatic mode, the primary availability zone of the subnet in the firewall VPC used for connecting to TR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder trAttachmentMasterZone(String trAttachmentMasterZone) {
             this.trAttachmentMasterZone = trAttachmentMasterZone;
@@ -493,7 +496,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrAttachmentSlaveZone.
+         * <p>In automatic mode, the backup availability zone for the subnet used to connect TR in the firewall VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
             this.trAttachmentSlaveZone = trAttachmentSlaveZone;

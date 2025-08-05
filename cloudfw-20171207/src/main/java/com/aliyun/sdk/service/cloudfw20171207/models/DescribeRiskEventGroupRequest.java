@@ -22,6 +22,10 @@ public class DescribeRiskEventGroupRequest extends Request {
     private java.util.List<String> attackApp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttackAppCategory")
+    private java.util.List<String> attackAppCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttackType")
     private String attackType;
 
@@ -115,6 +119,7 @@ public class DescribeRiskEventGroupRequest extends Request {
     private DescribeRiskEventGroupRequest(Builder builder) {
         super(builder);
         this.attackApp = builder.attackApp;
+        this.attackAppCategory = builder.attackAppCategory;
         this.attackType = builder.attackType;
         this.buyVersion = builder.buyVersion;
         this.currentPage = builder.currentPage;
@@ -157,6 +162,13 @@ public class DescribeRiskEventGroupRequest extends Request {
      */
     public java.util.List<String> getAttackApp() {
         return this.attackApp;
+    }
+
+    /**
+     * @return attackAppCategory
+     */
+    public java.util.List<String> getAttackAppCategory() {
+        return this.attackAppCategory;
     }
 
     /**
@@ -315,6 +327,7 @@ public class DescribeRiskEventGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRiskEventGroupRequest, Builder> {
         private java.util.List<String> attackApp; 
+        private java.util.List<String> attackAppCategory; 
         private String attackType; 
         private Long buyVersion; 
         private String currentPage; 
@@ -345,6 +358,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         private Builder(DescribeRiskEventGroupRequest request) {
             super(request);
             this.attackApp = request.attackApp;
+            this.attackAppCategory = request.attackAppCategory;
             this.attackType = request.attackType;
             this.buyVersion = request.buyVersion;
             this.currentPage = request.currentPage;
@@ -370,7 +384,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         } 
 
         /**
-         * <p>The names of attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+         * <p>The names of the attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
@@ -378,6 +392,15 @@ public class DescribeRiskEventGroupRequest extends Request {
         public Builder attackApp(java.util.List<String> attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
             this.attackApp = attackApp;
+            return this;
+        }
+
+        /**
+         * <p>A list of categories of attacked applications, expressed in the format [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</p>
+         */
+        public Builder attackAppCategory(java.util.List<String> attackAppCategory) {
+            this.putQueryParameter("AttackAppCategory", attackAppCategory);
+            this.attackAppCategory = attackAppCategory;
             return this;
         }
 

@@ -103,7 +103,7 @@ public class ModifyPolicyAdvancedConfigRequest extends Request {
         } 
 
         /**
-         * Eips.
+         * <p>The IP addresses. The versions of the IP addresses must be the same. You can specify a maximum of 100 IP addresses.</p>
          */
         public Builder eips(java.util.List<String> eips) {
             this.putQueryParameter("Eips", eips);

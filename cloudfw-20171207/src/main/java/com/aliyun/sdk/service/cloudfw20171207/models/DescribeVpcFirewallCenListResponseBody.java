@@ -155,7 +155,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             } 
 
             /**
-             * StrictMode.
+             * <p>Specifies whether to enable the strict mode. Valid values:</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder strictMode(Integer strictMode) {
                 this.strictMode = strictMode;
@@ -1050,7 +1057,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             } 
 
             /**
-             * AclConfig.
+             * <p>ACL engine mode.</p>
              */
             public Builder aclConfig(AclConfig aclConfig) {
                 this.aclConfig = aclConfig;

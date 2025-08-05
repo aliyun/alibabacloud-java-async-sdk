@@ -102,7 +102,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the versions.</p>
+         * <p>The version information.</p>
          */
         public Builder version(java.util.List<Version> version) {
             this.version = version;
@@ -214,7 +214,10 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741067915</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

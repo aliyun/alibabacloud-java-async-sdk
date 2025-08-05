@@ -144,7 +144,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-5b202e7f0be64611****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);

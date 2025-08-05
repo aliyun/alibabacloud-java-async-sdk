@@ -304,7 +304,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * UnknownReason.
+             * <p>List of reasons for failing to analyze the protocol when it is identified as Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -1031,7 +1031,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * <p>Location name.</p>
              * 
              * <strong>example:</strong>
-             * <p>山东省青岛市</p>
+             * <p>Qingdao, Shandong</p>
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
