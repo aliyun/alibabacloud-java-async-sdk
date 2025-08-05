@@ -484,6 +484,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopMmsJobResponse> stopMmsJob(StopMmsJobRequest request);
 
     /**
+     * @param request the request parameters of SumStorageMetricsByDate  SumStorageMetricsByDateRequest
+     * @return SumStorageMetricsByDateResponse
+     */
+    CompletableFuture<SumStorageMetricsByDateResponse> sumStorageMetricsByDate(SumStorageMetricsByDateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
      * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>

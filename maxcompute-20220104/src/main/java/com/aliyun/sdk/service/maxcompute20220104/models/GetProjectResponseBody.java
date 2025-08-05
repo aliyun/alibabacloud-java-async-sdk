@@ -370,11 +370,31 @@ public class GetProjectResponseBody extends TeaModel {
      * <p>GetProjectResponseBody</p>
      */
     public static class ExternalProjectProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("externalCatalogId")
+        private String externalCatalogId;
+
+        @com.aliyun.core.annotation.NameInMap("foreignServerName")
+        private String foreignServerName;
+
+        @com.aliyun.core.annotation.NameInMap("foreignServerType")
+        private String foreignServerType;
+
         @com.aliyun.core.annotation.NameInMap("isExternalCatalogBound")
         private String isExternalCatalogBound;
 
+        @com.aliyun.core.annotation.NameInMap("tableFormat")
+        private String tableFormat;
+
+        @com.aliyun.core.annotation.NameInMap("warehouse")
+        private String warehouse;
+
         private ExternalProjectProperties(Builder builder) {
+            this.externalCatalogId = builder.externalCatalogId;
+            this.foreignServerName = builder.foreignServerName;
+            this.foreignServerType = builder.foreignServerType;
             this.isExternalCatalogBound = builder.isExternalCatalogBound;
+            this.tableFormat = builder.tableFormat;
+            this.warehouse = builder.warehouse;
         }
 
         public static Builder builder() {
@@ -386,21 +406,90 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return externalCatalogId
+         */
+        public String getExternalCatalogId() {
+            return this.externalCatalogId;
+        }
+
+        /**
+         * @return foreignServerName
+         */
+        public String getForeignServerName() {
+            return this.foreignServerName;
+        }
+
+        /**
+         * @return foreignServerType
+         */
+        public String getForeignServerType() {
+            return this.foreignServerType;
+        }
+
+        /**
          * @return isExternalCatalogBound
          */
         public String getIsExternalCatalogBound() {
             return this.isExternalCatalogBound;
         }
 
+        /**
+         * @return tableFormat
+         */
+        public String getTableFormat() {
+            return this.tableFormat;
+        }
+
+        /**
+         * @return warehouse
+         */
+        public String getWarehouse() {
+            return this.warehouse;
+        }
+
         public static final class Builder {
+            private String externalCatalogId; 
+            private String foreignServerName; 
+            private String foreignServerType; 
             private String isExternalCatalogBound; 
+            private String tableFormat; 
+            private String warehouse; 
 
             private Builder() {
             } 
 
             private Builder(ExternalProjectProperties model) {
+                this.externalCatalogId = model.externalCatalogId;
+                this.foreignServerName = model.foreignServerName;
+                this.foreignServerType = model.foreignServerType;
                 this.isExternalCatalogBound = model.isExternalCatalogBound;
+                this.tableFormat = model.tableFormat;
+                this.warehouse = model.warehouse;
             } 
+
+            /**
+             * externalCatalogId.
+             */
+            public Builder externalCatalogId(String externalCatalogId) {
+                this.externalCatalogId = externalCatalogId;
+                return this;
+            }
+
+            /**
+             * foreignServerName.
+             */
+            public Builder foreignServerName(String foreignServerName) {
+                this.foreignServerName = foreignServerName;
+                return this;
+            }
+
+            /**
+             * foreignServerType.
+             */
+            public Builder foreignServerType(String foreignServerType) {
+                this.foreignServerType = foreignServerType;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
@@ -410,6 +499,22 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder isExternalCatalogBound(String isExternalCatalogBound) {
                 this.isExternalCatalogBound = isExternalCatalogBound;
+                return this;
+            }
+
+            /**
+             * tableFormat.
+             */
+            public Builder tableFormat(String tableFormat) {
+                this.tableFormat = tableFormat;
+                return this;
+            }
+
+            /**
+             * warehouse.
+             */
+            public Builder warehouse(String warehouse) {
+                this.warehouse = warehouse;
                 return this;
             }
 
