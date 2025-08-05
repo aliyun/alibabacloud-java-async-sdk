@@ -490,18 +490,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
      * <p>ListEventStreamingsResponseBody</p>
      */
     public static class RetryStrategy extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("MaximumEventAgeInSeconds")
-        private Float maximumEventAgeInSeconds;
-
-        @com.aliyun.core.annotation.NameInMap("MaximumRetryAttempts")
-        private Float maximumRetryAttempts;
-
         @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
         private RetryStrategy(Builder builder) {
-            this.maximumEventAgeInSeconds = builder.maximumEventAgeInSeconds;
-            this.maximumRetryAttempts = builder.maximumRetryAttempts;
             this.pushRetryStrategy = builder.pushRetryStrategy;
         }
 
@@ -514,20 +506,6 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
-         * @return maximumEventAgeInSeconds
-         */
-        public Float getMaximumEventAgeInSeconds() {
-            return this.maximumEventAgeInSeconds;
-        }
-
-        /**
-         * @return maximumRetryAttempts
-         */
-        public Float getMaximumRetryAttempts() {
-            return this.maximumRetryAttempts;
-        }
-
-        /**
          * @return pushRetryStrategy
          */
         public String getPushRetryStrategy() {
@@ -535,40 +513,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Float maximumEventAgeInSeconds; 
-            private Float maximumRetryAttempts; 
             private String pushRetryStrategy; 
 
             private Builder() {
             } 
 
             private Builder(RetryStrategy model) {
-                this.maximumEventAgeInSeconds = model.maximumEventAgeInSeconds;
-                this.maximumRetryAttempts = model.maximumRetryAttempts;
                 this.pushRetryStrategy = model.pushRetryStrategy;
             } 
-
-            /**
-             * <p>The maximum timeout period for a retry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>512</p>
-             */
-            public Builder maximumEventAgeInSeconds(Float maximumEventAgeInSeconds) {
-                this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
-                return this;
-            }
-
-            /**
-             * <p>The maximum number of retries.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
-             */
-            public Builder maximumRetryAttempts(Float maximumRetryAttempts) {
-                this.maximumRetryAttempts = maximumRetryAttempts;
-                return this;
-            }
 
             /**
              * <p>The retry policy. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY.</p>
