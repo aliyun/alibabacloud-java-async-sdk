@@ -188,6 +188,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescDomainResponse> descDomain(DescDomainRequest request);
 
     /**
+     * @param request the request parameters of GetDedicatedIpWarmUpDetail  GetDedicatedIpWarmUpDetailRequest
+     * @return GetDedicatedIpWarmUpDetailResponse
+     */
+    CompletableFuture<GetDedicatedIpWarmUpDetailResponse> getDedicatedIpWarmUpDetail(GetDedicatedIpWarmUpDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetDedicatedIpWarmUpInfo  GetDedicatedIpWarmUpInfoRequest
+     * @return GetDedicatedIpWarmUpInfoResponse
+     */
+    CompletableFuture<GetDedicatedIpWarmUpInfoResponse> getDedicatedIpWarmUpInfo(GetDedicatedIpWarmUpInfoRequest request);
+
+    /**
      * @param request the request parameters of GetIpProtection  GetIpProtectionRequest
      * @return GetIpProtectionResponse
      */

@@ -200,9 +200,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasSendMail")
         private Boolean hasSendMail;
 
+        @com.aliyun.core.annotation.NameInMap("LastWarmUpTypeChangedTime")
+        private String lastWarmUpTypeChangedTime;
+
         private IpExt(Builder builder) {
             this.autoRenewal = builder.autoRenewal;
             this.hasSendMail = builder.hasSendMail;
+            this.lastWarmUpTypeChangedTime = builder.lastWarmUpTypeChangedTime;
         }
 
         public static Builder builder() {
@@ -227,9 +231,17 @@ public class DedicatedIpListResponseBody extends TeaModel {
             return this.hasSendMail;
         }
 
+        /**
+         * @return lastWarmUpTypeChangedTime
+         */
+        public String getLastWarmUpTypeChangedTime() {
+            return this.lastWarmUpTypeChangedTime;
+        }
+
         public static final class Builder {
             private Boolean autoRenewal; 
             private Boolean hasSendMail; 
+            private String lastWarmUpTypeChangedTime; 
 
             private Builder() {
             } 
@@ -237,6 +249,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
             private Builder(IpExt model) {
                 this.autoRenewal = model.autoRenewal;
                 this.hasSendMail = model.hasSendMail;
+                this.lastWarmUpTypeChangedTime = model.lastWarmUpTypeChangedTime;
             } 
 
             /**
@@ -258,6 +271,14 @@ public class DedicatedIpListResponseBody extends TeaModel {
              */
             public Builder hasSendMail(Boolean hasSendMail) {
                 this.hasSendMail = hasSendMail;
+                return this;
+            }
+
+            /**
+             * LastWarmUpTypeChangedTime.
+             */
+            public Builder lastWarmUpTypeChangedTime(String lastWarmUpTypeChangedTime) {
+                this.lastWarmUpTypeChangedTime = lastWarmUpTypeChangedTime;
                 return this;
             }
 

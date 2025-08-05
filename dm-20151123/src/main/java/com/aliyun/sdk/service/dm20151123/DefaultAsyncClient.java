@@ -544,6 +544,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDedicatedIpWarmUpDetail  GetDedicatedIpWarmUpDetailRequest
+     * @return GetDedicatedIpWarmUpDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetDedicatedIpWarmUpDetailResponse> getDedicatedIpWarmUpDetail(GetDedicatedIpWarmUpDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDedicatedIpWarmUpDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDedicatedIpWarmUpDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDedicatedIpWarmUpDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDedicatedIpWarmUpInfo  GetDedicatedIpWarmUpInfoRequest
+     * @return GetDedicatedIpWarmUpInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetDedicatedIpWarmUpInfoResponse> getDedicatedIpWarmUpInfo(GetDedicatedIpWarmUpInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDedicatedIpWarmUpInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDedicatedIpWarmUpInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDedicatedIpWarmUpInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetIpProtection  GetIpProtectionRequest
      * @return GetIpProtectionResponse
      */
