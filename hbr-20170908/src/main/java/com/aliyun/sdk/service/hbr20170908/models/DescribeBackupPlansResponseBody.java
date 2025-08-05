@@ -1175,6 +1175,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @com.aliyun.core.annotation.NameInMap("ChangeListPath")
         private String changeListPath;
 
@@ -1296,6 +1299,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             this.backupSourceGroupId = builder.backupSourceGroupId;
             this.backupType = builder.backupType;
             this.bucket = builder.bucket;
+            this.businessStatus = builder.businessStatus;
             this.changeListPath = builder.changeListPath;
             this.clientId = builder.clientId;
             this.clusterId = builder.clusterId;
@@ -1364,6 +1368,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
          */
         public String getBucket() {
             return this.bucket;
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -1643,6 +1654,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String backupSourceGroupId; 
             private String backupType; 
             private String bucket; 
+            private String businessStatus; 
             private String changeListPath; 
             private String clientId; 
             private String clusterId; 
@@ -1690,6 +1702,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
                 this.backupSourceGroupId = model.backupSourceGroupId;
                 this.backupType = model.backupType;
                 this.bucket = model.bucket;
+                this.businessStatus = model.businessStatus;
                 this.changeListPath = model.changeListPath;
                 this.clientId = model.clientId;
                 this.clusterId = model.clusterId;
@@ -1761,6 +1774,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
                 return this;
             }
 

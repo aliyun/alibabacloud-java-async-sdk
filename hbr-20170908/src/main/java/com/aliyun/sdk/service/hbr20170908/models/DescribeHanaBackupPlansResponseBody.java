@@ -252,6 +252,9 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
@@ -276,6 +279,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         private HanaBackupPlan(Builder builder) {
             this.backupPrefix = builder.backupPrefix;
             this.backupType = builder.backupType;
+            this.businessStatus = builder.businessStatus;
             this.clusterId = builder.clusterId;
             this.databaseName = builder.databaseName;
             this.disabled = builder.disabled;
@@ -305,6 +309,13 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
          */
         public String getBackupType() {
             return this.backupType;
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -359,6 +370,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         public static final class Builder {
             private String backupPrefix; 
             private String backupType; 
+            private String businessStatus; 
             private String clusterId; 
             private String databaseName; 
             private Boolean disabled; 
@@ -373,6 +385,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             private Builder(HanaBackupPlan model) {
                 this.backupPrefix = model.backupPrefix;
                 this.backupType = model.backupType;
+                this.businessStatus = model.businessStatus;
                 this.clusterId = model.clusterId;
                 this.databaseName = model.databaseName;
                 this.disabled = model.disabled;
@@ -406,6 +419,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
+                return this;
+            }
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
                 return this;
             }
 

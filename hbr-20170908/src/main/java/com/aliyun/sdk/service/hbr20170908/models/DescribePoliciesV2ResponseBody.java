@@ -900,6 +900,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
      * <p>DescribePoliciesV2ResponseBody</p>
      */
     public static class Policies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
@@ -925,6 +928,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private Long updatedTime;
 
         private Policies(Builder builder) {
+            this.businessStatus = builder.businessStatus;
             this.createdTime = builder.createdTime;
             this.policyBindingCount = builder.policyBindingCount;
             this.policyDescription = builder.policyDescription;
@@ -941,6 +945,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
         public static Policies create() {
             return builder().build();
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -1000,6 +1011,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String businessStatus; 
             private Long createdTime; 
             private Long policyBindingCount; 
             private String policyDescription; 
@@ -1013,6 +1025,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             } 
 
             private Builder(Policies model) {
+                this.businessStatus = model.businessStatus;
                 this.createdTime = model.createdTime;
                 this.policyBindingCount = model.policyBindingCount;
                 this.policyDescription = model.policyDescription;
@@ -1022,6 +1035,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
                 this.rules = model.rules;
                 this.updatedTime = model.updatedTime;
             } 
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
+                return this;
+            }
 
             /**
              * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
