@@ -491,11 +491,15 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorItemDetails")
         private java.util.List<ErrorItemDetails> errorItemDetails;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
             this.errorItemDetails = builder.errorItemDetails;
+            this.errorMessage = builder.errorMessage;
             this.status = builder.status;
         }
 
@@ -515,6 +519,13 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -523,6 +534,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ErrorItemDetails> errorItemDetails; 
+            private String errorMessage; 
             private String status; 
 
             private Builder() {
@@ -530,6 +542,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.errorItemDetails = model.errorItemDetails;
+                this.errorMessage = model.errorMessage;
                 this.status = model.status;
             } 
 
@@ -538,6 +551,14 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
              */
             public Builder errorItemDetails(java.util.List<ErrorItemDetails> errorItemDetails) {
                 this.errorItemDetails = errorItemDetails;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 

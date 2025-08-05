@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitSmartAuditRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrlList")
+    private java.util.List<ImageUrlList> imageUrlList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubCodes")
     private java.util.List<String> subCodes;
 
@@ -35,6 +39,7 @@ public class SubmitSmartAuditRequest extends Request {
 
     private SubmitSmartAuditRequest(Builder builder) {
         super(builder);
+        this.imageUrlList = builder.imageUrlList;
         this.subCodes = builder.subCodes;
         this.text = builder.text;
         this.workspaceId = builder.workspaceId;
@@ -52,6 +57,13 @@ public class SubmitSmartAuditRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return imageUrlList
+     */
+    public java.util.List<ImageUrlList> getImageUrlList() {
+        return this.imageUrlList;
     }
 
     /**
@@ -83,6 +95,7 @@ public class SubmitSmartAuditRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitSmartAuditRequest, Builder> {
+        private java.util.List<ImageUrlList> imageUrlList; 
         private java.util.List<String> subCodes; 
         private String text; 
         private String workspaceId; 
@@ -94,11 +107,22 @@ public class SubmitSmartAuditRequest extends Request {
 
         private Builder(SubmitSmartAuditRequest request) {
             super(request);
+            this.imageUrlList = request.imageUrlList;
             this.subCodes = request.subCodes;
             this.text = request.text;
             this.workspaceId = request.workspaceId;
             this.imageUrls = request.imageUrls;
         } 
+
+        /**
+         * ImageUrlList.
+         */
+        public Builder imageUrlList(java.util.List<ImageUrlList> imageUrlList) {
+            String imageUrlListShrink = shrink(imageUrlList, "ImageUrlList", "json");
+            this.putBodyParameter("ImageUrlList", imageUrlListShrink);
+            this.imageUrlList = imageUrlList;
+            return this;
+        }
 
         /**
          * SubCodes.
@@ -145,6 +169,81 @@ public class SubmitSmartAuditRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSmartAuditRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmartAuditRequest</p>
+     */
+    public static class ImageUrlList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private ImageUrlList(Builder builder) {
+            this.id = builder.id;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageUrlList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageUrlList model) {
+                this.id = model.id;
+                this.url = model.url;
+            } 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public ImageUrlList build() {
+                return new ImageUrlList(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link SubmitSmartAuditRequest} extends {@link TeaModel}
