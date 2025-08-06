@@ -36,6 +36,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
+    private String networkAccessEndpointId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProvisionPassword")
     private Boolean provisionPassword;
 
@@ -54,6 +58,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         this.applicationId = builder.applicationId;
         this.callbackProvisioningConfig = builder.callbackProvisioningConfig;
         this.instanceId = builder.instanceId;
+        this.networkAccessEndpointId = builder.networkAccessEndpointId;
         this.provisionPassword = builder.provisionPassword;
         this.provisionProtocolType = builder.provisionProtocolType;
         this.scimProvisioningConfig = builder.scimProvisioningConfig;
@@ -101,6 +106,13 @@ public class SetApplicationProvisioningConfigRequest extends Request {
     }
 
     /**
+     * @return networkAccessEndpointId
+     */
+    public String getNetworkAccessEndpointId() {
+        return this.networkAccessEndpointId;
+    }
+
+    /**
      * @return provisionPassword
      */
     public Boolean getProvisionPassword() {
@@ -126,6 +138,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         private String applicationId; 
         private CallbackProvisioningConfig callbackProvisioningConfig; 
         private String instanceId; 
+        private String networkAccessEndpointId; 
         private Boolean provisionPassword; 
         private String provisionProtocolType; 
         private ScimProvisioningConfig scimProvisioningConfig; 
@@ -140,6 +153,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             this.applicationId = request.applicationId;
             this.callbackProvisioningConfig = request.callbackProvisioningConfig;
             this.instanceId = request.instanceId;
+            this.networkAccessEndpointId = request.networkAccessEndpointId;
             this.provisionPassword = request.provisionPassword;
             this.provisionProtocolType = request.provisionProtocolType;
             this.scimProvisioningConfig = request.scimProvisioningConfig;
@@ -186,6 +200,15 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkAccessEndpointId.
+         */
+        public Builder networkAccessEndpointId(String networkAccessEndpointId) {
+            this.putQueryParameter("NetworkAccessEndpointId", networkAccessEndpointId);
+            this.networkAccessEndpointId = networkAccessEndpointId;
             return this;
         }
 

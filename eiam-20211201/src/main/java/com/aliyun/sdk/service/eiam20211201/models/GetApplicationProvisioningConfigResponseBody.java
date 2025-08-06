@@ -638,6 +638,9 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
+        private String networkAccessEndpointId;
+
         @com.aliyun.core.annotation.NameInMap("ProvisionJwksEndpoint")
         private String provisionJwksEndpoint;
 
@@ -658,6 +661,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             this.callbackProvisioningConfig = builder.callbackProvisioningConfig;
             this.configOperateMode = builder.configOperateMode;
             this.instanceId = builder.instanceId;
+            this.networkAccessEndpointId = builder.networkAccessEndpointId;
             this.provisionJwksEndpoint = builder.provisionJwksEndpoint;
             this.provisionPassword = builder.provisionPassword;
             this.provisionProtocolType = builder.provisionProtocolType;
@@ -702,6 +706,13 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkAccessEndpointId
+         */
+        public String getNetworkAccessEndpointId() {
+            return this.networkAccessEndpointId;
+        }
+
+        /**
          * @return provisionJwksEndpoint
          */
         public String getProvisionJwksEndpoint() {
@@ -741,6 +752,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private CallbackProvisioningConfig callbackProvisioningConfig; 
             private String configOperateMode; 
             private String instanceId; 
+            private String networkAccessEndpointId; 
             private String provisionJwksEndpoint; 
             private Boolean provisionPassword; 
             private String provisionProtocolType; 
@@ -755,6 +767,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
                 this.callbackProvisioningConfig = model.callbackProvisioningConfig;
                 this.configOperateMode = model.configOperateMode;
                 this.instanceId = model.instanceId;
+                this.networkAccessEndpointId = model.networkAccessEndpointId;
                 this.provisionJwksEndpoint = model.provisionJwksEndpoint;
                 this.provisionPassword = model.provisionPassword;
                 this.provisionProtocolType = model.provisionProtocolType;
@@ -804,6 +817,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * NetworkAccessEndpointId.
+             */
+            public Builder networkAccessEndpointId(String networkAccessEndpointId) {
+                this.networkAccessEndpointId = networkAccessEndpointId;
                 return this;
             }
 
