@@ -148,6 +148,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScreenshotResponse> createScreenshot(CreateScreenshotRequest request);
 
     /**
+     * @param request the request parameters of CreateSystemPropertyTemplate  CreateSystemPropertyTemplateRequest
+     * @return CreateSystemPropertyTemplateResponse
+     */
+    CompletableFuture<CreateSystemPropertyTemplateResponse> createSystemPropertyTemplate(CreateSystemPropertyTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can delete only pay-as-you-go instance groups.
      * You can delete subscription instance groups only after they expire.</p>
@@ -204,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolicyGroupResponse
      */
     CompletableFuture<DeletePolicyGroupResponse> deletePolicyGroup(DeletePolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSystemPropertyTemplates  DeleteSystemPropertyTemplatesRequest
+     * @return DeleteSystemPropertyTemplatesResponse
+     */
+    CompletableFuture<DeleteSystemPropertyTemplatesResponse> deleteSystemPropertyTemplates(DeleteSystemPropertyTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribeAndroidInstanceGroups  DescribeAndroidInstanceGroupsRequest
@@ -279,6 +291,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSpecResponse
      */
     CompletableFuture<DescribeSpecResponse> describeSpec(DescribeSpecRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSystemPropertyTemplates  DescribeSystemPropertyTemplatesRequest
+     * @return DescribeSystemPropertyTemplatesResponse
+     */
+    CompletableFuture<DescribeSystemPropertyTemplatesResponse> describeSystemPropertyTemplates(DescribeSystemPropertyTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -359,6 +377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateCoordinationCodeResponse> generateCoordinationCode(GenerateCoordinationCodeRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceProperties  GetInstancePropertiesRequest
+     * @return GetInstancePropertiesResponse
+     */
+    CompletableFuture<GetInstancePropertiesResponse> getInstanceProperties(GetInstancePropertiesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</p>
      * 
@@ -375,6 +399,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallAppResponse
      */
     CompletableFuture<InstallAppResponse> installApp(InstallAppRequest request);
+
+    /**
+     * @param request the request parameters of InstallMonitorAgent  InstallMonitorAgentRequest
+     * @return InstallMonitorAgentResponse
+     */
+    CompletableFuture<InstallMonitorAgentResponse> installMonitorAgent(InstallMonitorAgentRequest request);
 
     /**
      * @param request the request parameters of ListPolicyGroups  ListPolicyGroupsRequest
@@ -429,6 +459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyGroupResponse
      */
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifySystemPropertyTemplate  ModifySystemPropertyTemplateRequest
+     * @return ModifySystemPropertyTemplateResponse
+     */
+    CompletableFuture<ModifySystemPropertyTemplateResponse> modifySystemPropertyTemplate(ModifySystemPropertyTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -494,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendFileResponse> sendFile(SendFileRequest request);
 
     /**
+     * @param request the request parameters of SendSystemPropertyTemplate  SendSystemPropertyTemplateRequest
+     * @return SendSystemPropertyTemplateResponse
+     */
+    CompletableFuture<SendSystemPropertyTemplateResponse> sendSystemPropertyTemplate(SendSystemPropertyTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</p>
      * 
@@ -528,6 +570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallAppResponse
      */
     CompletableFuture<UninstallAppResponse> uninstallApp(UninstallAppRequest request);
+
+    /**
+     * @param request the request parameters of UninstallMonitorAgent  UninstallMonitorAgentRequest
+     * @return UninstallMonitorAgentResponse
+     */
+    CompletableFuture<UninstallMonitorAgentResponse> uninstallMonitorAgent(UninstallMonitorAgentRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomImageName  UpdateCustomImageNameRequest

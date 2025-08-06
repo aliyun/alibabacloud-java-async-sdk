@@ -23,6 +23,10 @@ public class SendFileRequest extends Request {
     private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
+    private Boolean autoInstall;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePath")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceFilePath;
@@ -48,6 +52,7 @@ public class SendFileRequest extends Request {
     private SendFileRequest(Builder builder) {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
+        this.autoInstall = builder.autoInstall;
         this.sourceFilePath = builder.sourceFilePath;
         this.targetFileName = builder.targetFileName;
         this.uploadEndpoint = builder.uploadEndpoint;
@@ -73,6 +78,13 @@ public class SendFileRequest extends Request {
      */
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    /**
+     * @return autoInstall
+     */
+    public Boolean getAutoInstall() {
+        return this.autoInstall;
     }
 
     /**
@@ -112,6 +124,7 @@ public class SendFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
+        private Boolean autoInstall; 
         private String sourceFilePath; 
         private String targetFileName; 
         private String uploadEndpoint; 
@@ -125,6 +138,7 @@ public class SendFileRequest extends Request {
         private Builder(SendFileRequest request) {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
+            this.autoInstall = request.autoInstall;
             this.sourceFilePath = request.sourceFilePath;
             this.targetFileName = request.targetFileName;
             this.uploadEndpoint = request.uploadEndpoint;
@@ -139,6 +153,15 @@ public class SendFileRequest extends Request {
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
+            return this;
+        }
+
+        /**
+         * AutoInstall.
+         */
+        public Builder autoInstall(Boolean autoInstall) {
+            this.putQueryParameter("AutoInstall", autoInstall);
+            this.autoInstall = autoInstall;
             return this;
         }
 

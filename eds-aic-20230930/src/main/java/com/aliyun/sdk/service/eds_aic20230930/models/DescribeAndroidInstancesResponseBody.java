@@ -220,6 +220,81 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeAndroidInstancesResponseBody</p>
      */
+    public static class BizTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private BizTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BizTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public BizTags build() {
+                return new BizTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
@@ -623,8 +698,17 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
         private String authorizedUserId;
 
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
+        private String bandwidthPackageType;
+
         @com.aliyun.core.annotation.NameInMap("BindUserId")
         private String bindUserId;
+
+        @com.aliyun.core.annotation.NameInMap("BizTags")
+        private java.util.List<BizTags> bizTags;
 
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -637,6 +721,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DisplayConfig")
         private DisplayConfig displayConfig;
+
+        @com.aliyun.core.annotation.NameInMap("DownBandwidthLimit")
+        private Integer downBandwidthLimit;
 
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -671,6 +758,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIpv6Address")
         private String networkInterfaceIpv6Address;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
@@ -701,6 +791,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingType")
         private String renderingType;
 
+        @com.aliyun.core.annotation.NameInMap("ServerStatus")
+        private String serverStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ServerType")
+        private String serverType;
+
         @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
@@ -709,6 +805,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpBandwidthLimit")
+        private Integer upBandwidthLimit;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -726,11 +825,15 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.appInstanceId = builder.appInstanceId;
             this.appManagePolicy = builder.appManagePolicy;
             this.authorizedUserId = builder.authorizedUserId;
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageType = builder.bandwidthPackageType;
             this.bindUserId = builder.bindUserId;
+            this.bizTags = builder.bizTags;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
             this.displayConfig = builder.displayConfig;
+            this.downBandwidthLimit = builder.downBandwidthLimit;
             this.errorCode = builder.errorCode;
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
@@ -742,6 +845,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.networkInterfaceIp = builder.networkInterfaceIp;
             this.networkInterfaceIpv6Address = builder.networkInterfaceIpv6Address;
+            this.networkType = builder.networkType;
             this.officeSiteId = builder.officeSiteId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.phoneDataInfo = builder.phoneDataInfo;
@@ -752,9 +856,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
+            this.serverStatus = builder.serverStatus;
+            this.serverType = builder.serverType;
             this.sessionStatus = builder.sessionStatus;
             this.streamMode = builder.streamMode;
             this.tags = builder.tags;
+            this.upBandwidthLimit = builder.upBandwidthLimit;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
         }
@@ -831,10 +938,31 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageType
+         */
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
+        /**
          * @return bindUserId
          */
         public String getBindUserId() {
             return this.bindUserId;
+        }
+
+        /**
+         * @return bizTags
+         */
+        public java.util.List<BizTags> getBizTags() {
+            return this.bizTags;
         }
 
         /**
@@ -863,6 +991,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public DisplayConfig getDisplayConfig() {
             return this.displayConfig;
+        }
+
+        /**
+         * @return downBandwidthLimit
+         */
+        public Integer getDownBandwidthLimit() {
+            return this.downBandwidthLimit;
         }
 
         /**
@@ -943,6 +1078,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return officeSiteId
          */
         public String getOfficeSiteId() {
@@ -1013,6 +1155,20 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverStatus
+         */
+        public String getServerStatus() {
+            return this.serverStatus;
+        }
+
+        /**
+         * @return serverType
+         */
+        public String getServerType() {
+            return this.serverType;
+        }
+
+        /**
          * @return sessionStatus
          */
         public String getSessionStatus() {
@@ -1031,6 +1187,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public java.util.List<Tags> getTags() {
             return this.tags;
+        }
+
+        /**
+         * @return upBandwidthLimit
+         */
+        public Integer getUpBandwidthLimit() {
+            return this.upBandwidthLimit;
         }
 
         /**
@@ -1057,11 +1220,15 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String appInstanceId; 
             private AppManagePolicy appManagePolicy; 
             private String authorizedUserId; 
+            private String bandwidthPackageId; 
+            private String bandwidthPackageType; 
             private String bindUserId; 
+            private java.util.List<BizTags> bizTags; 
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
             private DisplayConfig displayConfig; 
+            private Integer downBandwidthLimit; 
             private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
@@ -1073,6 +1240,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private Integer memory; 
             private String networkInterfaceIp; 
             private String networkInterfaceIpv6Address; 
+            private String networkType; 
             private String officeSiteId; 
             private String persistentAppInstanceId; 
             private PhoneDataInfo phoneDataInfo; 
@@ -1083,9 +1251,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
+            private String serverStatus; 
+            private String serverType; 
             private String sessionStatus; 
             private Integer streamMode; 
             private java.util.List<Tags> tags; 
+            private Integer upBandwidthLimit; 
             private String vSwitchId; 
             private String zoneId; 
 
@@ -1102,11 +1273,15 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.appInstanceId = model.appInstanceId;
                 this.appManagePolicy = model.appManagePolicy;
                 this.authorizedUserId = model.authorizedUserId;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageType = model.bandwidthPackageType;
                 this.bindUserId = model.bindUserId;
+                this.bizTags = model.bizTags;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.disks = model.disks;
                 this.displayConfig = model.displayConfig;
+                this.downBandwidthLimit = model.downBandwidthLimit;
                 this.errorCode = model.errorCode;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtExpired = model.gmtExpired;
@@ -1118,6 +1293,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.memory = model.memory;
                 this.networkInterfaceIp = model.networkInterfaceIp;
                 this.networkInterfaceIpv6Address = model.networkInterfaceIpv6Address;
+                this.networkType = model.networkType;
                 this.officeSiteId = model.officeSiteId;
                 this.persistentAppInstanceId = model.persistentAppInstanceId;
                 this.phoneDataInfo = model.phoneDataInfo;
@@ -1128,9 +1304,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.rate = model.rate;
                 this.regionId = model.regionId;
                 this.renderingType = model.renderingType;
+                this.serverStatus = model.serverStatus;
+                this.serverType = model.serverType;
                 this.sessionStatus = model.sessionStatus;
                 this.streamMode = model.streamMode;
                 this.tags = model.tags;
+                this.upBandwidthLimit = model.upBandwidthLimit;
                 this.vSwitchId = model.vSwitchId;
                 this.zoneId = model.zoneId;
             } 
@@ -1232,6 +1411,22 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageType.
+             */
+            public Builder bandwidthPackageType(String bandwidthPackageType) {
+                this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the bound user.</p>
              * 
              * <strong>example:</strong>
@@ -1239,6 +1434,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder bindUserId(String bindUserId) {
                 this.bindUserId = bindUserId;
+                return this;
+            }
+
+            /**
+             * BizTags.
+             */
+            public Builder bizTags(java.util.List<BizTags> bizTags) {
+                this.bizTags = bizTags;
                 return this;
             }
 
@@ -1277,6 +1480,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder displayConfig(DisplayConfig displayConfig) {
                 this.displayConfig = displayConfig;
+                return this;
+            }
+
+            /**
+             * DownBandwidthLimit.
+             */
+            public Builder downBandwidthLimit(Integer downBandwidthLimit) {
+                this.downBandwidthLimit = downBandwidthLimit;
                 return this;
             }
 
@@ -1401,6 +1612,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
              * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
@@ -1507,6 +1726,22 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ServerStatus.
+             */
+            public Builder serverStatus(String serverStatus) {
+                this.serverStatus = serverStatus;
+                return this;
+            }
+
+            /**
+             * ServerType.
+             */
+            public Builder serverType(String serverType) {
+                this.serverType = serverType;
+                return this;
+            }
+
+            /**
              * <p>The session status.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -1535,6 +1770,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UpBandwidthLimit.
+             */
+            public Builder upBandwidthLimit(Integer upBandwidthLimit) {
+                this.upBandwidthLimit = upBandwidthLimit;
                 return this;
             }
 

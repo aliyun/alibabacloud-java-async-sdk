@@ -173,15 +173,102 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
      *
      * <p>DescribeCloudPhoneNodesResponseBody</p>
      */
+    public static class BizTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private BizTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BizTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public BizTags build() {
+                return new BizTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudPhoneNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudPhoneNodesResponseBody</p>
+     */
     public static class NetworkInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
+        private String bandwidthPackageType;
+
         @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkInfos(Builder builder) {
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageType = builder.bandwidthPackageType;
             this.networkId = builder.networkId;
+            this.networkType = builder.networkType;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -194,10 +281,31 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageType
+         */
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
+        /**
          * @return networkId
          */
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         /**
@@ -208,22 +316,52 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bandwidthPackageId; 
+            private String bandwidthPackageType; 
             private String networkId; 
+            private String networkType; 
             private String vSwitchId; 
 
             private Builder() {
             } 
 
             private Builder(NetworkInfos model) {
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageType = model.bandwidthPackageType;
                 this.networkId = model.networkId;
+                this.networkType = model.networkType;
                 this.vSwitchId = model.vSwitchId;
             } 
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageType.
+             */
+            public Builder bandwidthPackageType(String bandwidthPackageType) {
+                this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
 
             /**
              * NetworkId.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 
@@ -324,6 +462,15 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
      * <p>DescribeCloudPhoneNodesResponseBody</p>
      */
     public static class NodeModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
+        private String bandwidthPackageType;
+
+        @com.aliyun.core.annotation.NameInMap("BizTags")
+        private java.util.List<BizTags> bizTags;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -350,6 +497,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NetworkInfos")
         private java.util.List<NetworkInfos> networkInfos;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
 
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -385,6 +535,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         private String vSwitchId;
 
         private NodeModel(Builder builder) {
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageType = builder.bandwidthPackageType;
+            this.bizTags = builder.bizTags;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.gmtCreate = builder.gmtCreate;
@@ -394,6 +547,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.networkId = builder.networkId;
             this.networkInfos = builder.networkInfos;
+            this.networkType = builder.networkType;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.phoneCount = builder.phoneCount;
@@ -413,6 +567,27 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         public static NodeModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageType
+         */
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
+        /**
+         * @return bizTags
+         */
+        public java.util.List<BizTags> getBizTags() {
+            return this.bizTags;
         }
 
         /**
@@ -476,6 +651,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         public java.util.List<NetworkInfos> getNetworkInfos() {
             return this.networkInfos;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         /**
@@ -556,6 +738,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bandwidthPackageId; 
+            private String bandwidthPackageType; 
+            private java.util.List<BizTags> bizTags; 
             private String chargeType; 
             private String cpu; 
             private String gmtCreate; 
@@ -565,6 +750,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private Integer memory; 
             private String networkId; 
             private java.util.List<NetworkInfos> networkInfos; 
+            private String networkType; 
             private String nodeId; 
             private String nodeName; 
             private Integer phoneCount; 
@@ -581,6 +767,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             } 
 
             private Builder(NodeModel model) {
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageType = model.bandwidthPackageType;
+                this.bizTags = model.bizTags;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.gmtCreate = model.gmtCreate;
@@ -590,6 +779,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.memory = model.memory;
                 this.networkId = model.networkId;
                 this.networkInfos = model.networkInfos;
+                this.networkType = model.networkType;
                 this.nodeId = model.nodeId;
                 this.nodeName = model.nodeName;
                 this.phoneCount = model.phoneCount;
@@ -602,6 +792,30 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.vSwitchId = model.vSwitchId;
             } 
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageType.
+             */
+            public Builder bandwidthPackageType(String bandwidthPackageType) {
+                this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
+
+            /**
+             * BizTags.
+             */
+            public Builder bizTags(java.util.List<BizTags> bizTags) {
+                this.bizTags = bizTags;
+                return this;
+            }
 
             /**
              * <p>The billing method.</p>
@@ -693,6 +907,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder networkInfos(java.util.List<NetworkInfos> networkInfos) {
                 this.networkInfos = networkInfos;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 

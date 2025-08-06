@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudPhoneNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    private String bandwidthPackageId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -51,6 +55,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
 
     private DescribeCloudPhoneNodesRequest(Builder builder) {
         super(builder);
+        this.bandwidthPackageId = builder.bandwidthPackageId;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.maxResults = builder.maxResults;
@@ -72,6 +77,13 @@ public class DescribeCloudPhoneNodesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidthPackageId
+     */
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
     }
 
     /**
@@ -131,6 +143,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCloudPhoneNodesRequest, Builder> {
+        private String bandwidthPackageId; 
         private String bizRegionId; 
         private String chargeType; 
         private String maxResults; 
@@ -146,6 +159,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
 
         private Builder(DescribeCloudPhoneNodesRequest request) {
             super(request);
+            this.bandwidthPackageId = request.bandwidthPackageId;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.maxResults = request.maxResults;
@@ -155,6 +169,15 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             this.serverType = request.serverType;
             this.status = request.status;
         } 
+
+        /**
+         * BandwidthPackageId.
+         */
+        public Builder bandwidthPackageId(String bandwidthPackageId) {
+            this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
 
         /**
          * <p>The region ID.</p>

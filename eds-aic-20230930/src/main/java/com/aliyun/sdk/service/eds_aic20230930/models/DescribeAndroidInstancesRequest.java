@@ -78,6 +78,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private java.util.List<String> officeSiteIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    private String privateIpAddress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QosRuleIds")
     private java.util.List<String> qosRuleIds;
 
@@ -110,6 +114,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.nodeId = builder.nodeId;
         this.nodeName = builder.nodeName;
         this.officeSiteIds = builder.officeSiteIds;
+        this.privateIpAddress = builder.privateIpAddress;
         this.qosRuleIds = builder.qosRuleIds;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
@@ -235,6 +240,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return privateIpAddress
+     */
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    /**
      * @return qosRuleIds
      */
     public java.util.List<String> getQosRuleIds() {
@@ -278,6 +290,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String nodeId; 
         private String nodeName; 
         private java.util.List<String> officeSiteIds; 
+        private String privateIpAddress; 
         private java.util.List<String> qosRuleIds; 
         private String saleMode; 
         private String status; 
@@ -304,6 +317,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.nodeId = request.nodeId;
             this.nodeName = request.nodeName;
             this.officeSiteIds = request.officeSiteIds;
+            this.privateIpAddress = request.privateIpAddress;
             this.qosRuleIds = request.qosRuleIds;
             this.saleMode = request.saleMode;
             this.status = request.status;
@@ -477,6 +491,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder officeSiteIds(java.util.List<String> officeSiteIds) {
             this.putQueryParameter("OfficeSiteIds", officeSiteIds);
             this.officeSiteIds = officeSiteIds;
+            return this;
+        }
+
+        /**
+         * PrivateIpAddress.
+         */
+        public Builder privateIpAddress(String privateIpAddress) {
+            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
+            this.privateIpAddress = privateIpAddress;
             return this;
         }
 

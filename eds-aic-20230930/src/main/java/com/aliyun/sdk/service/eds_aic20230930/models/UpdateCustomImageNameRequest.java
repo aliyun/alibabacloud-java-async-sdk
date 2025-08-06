@@ -23,6 +23,7 @@ public class UpdateCustomImageNameRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageName")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String imageName;
 
     private UpdateCustomImageNameRequest(Builder builder) {

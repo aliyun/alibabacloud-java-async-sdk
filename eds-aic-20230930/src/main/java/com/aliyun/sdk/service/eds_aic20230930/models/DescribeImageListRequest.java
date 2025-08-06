@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageListRequest</p>
  */
 public class DescribeImageListRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageBizTags")
+    private java.util.List<ImageBizTags> imageBizTags;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
@@ -34,6 +38,10 @@ public class DescribeImageListRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
@@ -49,10 +57,12 @@ public class DescribeImageListRequest extends Request {
 
     private DescribeImageListRequest(Builder builder) {
         super(builder);
+        this.imageBizTags = builder.imageBizTags;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.imagePackageType = builder.imagePackageType;
         this.imageType = builder.imageType;
+        this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.status = builder.status;
@@ -69,6 +79,13 @@ public class DescribeImageListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return imageBizTags
+     */
+    public java.util.List<ImageBizTags> getImageBizTags() {
+        return this.imageBizTags;
     }
 
     /**
@@ -100,6 +117,13 @@ public class DescribeImageListRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -121,10 +145,12 @@ public class DescribeImageListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImageListRequest, Builder> {
+        private java.util.List<ImageBizTags> imageBizTags; 
         private String imageId; 
         private String imageName; 
         private String imagePackageType; 
         private String imageType; 
+        private String instanceType; 
         private Integer maxResults; 
         private String nextToken; 
         private String status; 
@@ -135,14 +161,25 @@ public class DescribeImageListRequest extends Request {
 
         private Builder(DescribeImageListRequest request) {
             super(request);
+            this.imageBizTags = request.imageBizTags;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
             this.imagePackageType = request.imagePackageType;
             this.imageType = request.imageType;
+            this.instanceType = request.instanceType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.status = request.status;
         } 
+
+        /**
+         * ImageBizTags.
+         */
+        public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
+            this.putQueryParameter("ImageBizTags", imageBizTags);
+            this.imageBizTags = imageBizTags;
+            return this;
+        }
 
         /**
          * <p>The ID of the image.</p>
@@ -199,6 +236,15 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -249,4 +295,79 @@ public class DescribeImageListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListRequest</p>
+     */
+    public static class ImageBizTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ImageBizTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageBizTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageBizTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImageBizTags build() {
+                return new ImageBizTags(this);
+            } 
+
+        } 
+
+    }
 }

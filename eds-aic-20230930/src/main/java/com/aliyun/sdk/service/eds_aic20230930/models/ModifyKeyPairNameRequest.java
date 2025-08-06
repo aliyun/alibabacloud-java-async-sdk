@@ -24,7 +24,7 @@ public class ModifyKeyPairNameRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewKeyPairName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 2)
     private String newKeyPairName;
 
     private ModifyKeyPairNameRequest(Builder builder) {

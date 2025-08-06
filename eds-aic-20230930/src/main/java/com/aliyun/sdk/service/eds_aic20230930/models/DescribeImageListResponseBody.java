@@ -145,6 +145,81 @@ public class DescribeImageListResponseBody extends TeaModel {
      *
      * <p>DescribeImageListResponseBody</p>
      */
+    public static class ImageBizTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ImageBizTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageBizTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageBizTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImageBizTags build() {
+                return new ImageBizTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -157,6 +232,9 @@ public class DescribeImageListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("ImageBizTags")
+        private java.util.List<ImageBizTags> imageBizTags;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -196,6 +274,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             this.description = builder.description;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.imageBizTags = builder.imageBizTags;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageRegionDistributeMap = builder.imageRegionDistributeMap;
@@ -243,6 +322,13 @@ public class DescribeImageListResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return imageBizTags
+         */
+        public java.util.List<ImageBizTags> getImageBizTags() {
+            return this.imageBizTags;
         }
 
         /**
@@ -327,6 +413,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             private String description; 
             private String gmtCreate; 
             private String gmtModified; 
+            private java.util.List<ImageBizTags> imageBizTags; 
             private String imageId; 
             private String imageName; 
             private java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap; 
@@ -347,6 +434,7 @@ public class DescribeImageListResponseBody extends TeaModel {
                 this.description = model.description;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
+                this.imageBizTags = model.imageBizTags;
                 this.imageId = model.imageId;
                 this.imageName = model.imageName;
                 this.imageRegionDistributeMap = model.imageRegionDistributeMap;
@@ -401,6 +489,14 @@ public class DescribeImageListResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * ImageBizTags.
+             */
+            public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
+                this.imageBizTags = imageBizTags;
                 return this;
             }
 

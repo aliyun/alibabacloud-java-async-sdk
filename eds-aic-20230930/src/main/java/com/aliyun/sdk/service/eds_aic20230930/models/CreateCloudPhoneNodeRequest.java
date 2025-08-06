@@ -26,6 +26,14 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    private String bandwidthPackageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
+    private String bandwidthPackageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
@@ -43,6 +51,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private DisplayConfig displayConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownBandwidthLimit")
+    private Integer downBandwidthLimit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -53,6 +65,14 @@ public class CreateCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInfo")
+    private NetworkInfo networkInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    private String networkType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeName")
@@ -101,6 +121,14 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpBandwidthLimit")
+    private Integer upBandwidthLimit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseTemplate")
+    private String useTemplate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -108,13 +136,18 @@ public class CreateCloudPhoneNodeRequest extends Request {
         super(builder);
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.bandwidthPackageId = builder.bandwidthPackageId;
+        this.bandwidthPackageType = builder.bandwidthPackageType;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.count = builder.count;
         this.displayConfig = builder.displayConfig;
+        this.downBandwidthLimit = builder.downBandwidthLimit;
         this.imageId = builder.imageId;
         this.instanceType = builder.instanceType;
         this.networkId = builder.networkId;
+        this.networkInfo = builder.networkInfo;
+        this.networkType = builder.networkType;
         this.nodeName = builder.nodeName;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -126,6 +159,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.serverType = builder.serverType;
         this.streamMode = builder.streamMode;
         this.tag = builder.tag;
+        this.upBandwidthLimit = builder.upBandwidthLimit;
+        this.useTemplate = builder.useTemplate;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -157,6 +192,20 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return bandwidthPackageId
+     */
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    /**
+     * @return bandwidthPackageType
+     */
+    public String getBandwidthPackageType() {
+        return this.bandwidthPackageType;
+    }
+
+    /**
      * @return bizRegionId
      */
     public String getBizRegionId() {
@@ -185,6 +234,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return downBandwidthLimit
+     */
+    public Integer getDownBandwidthLimit() {
+        return this.downBandwidthLimit;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
@@ -203,6 +259,20 @@ public class CreateCloudPhoneNodeRequest extends Request {
      */
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    /**
+     * @return networkInfo
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.networkInfo;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     /**
@@ -283,6 +353,20 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return upBandwidthLimit
+     */
+    public Integer getUpBandwidthLimit() {
+        return this.upBandwidthLimit;
+    }
+
+    /**
+     * @return useTemplate
+     */
+    public String getUseTemplate() {
+        return this.useTemplate;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -292,13 +376,18 @@ public class CreateCloudPhoneNodeRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCloudPhoneNodeRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private String bandwidthPackageId; 
+        private String bandwidthPackageType; 
         private String bizRegionId; 
         private String chargeType; 
         private String count; 
         private DisplayConfig displayConfig; 
+        private Integer downBandwidthLimit; 
         private String imageId; 
         private String instanceType; 
         private String networkId; 
+        private NetworkInfo networkInfo; 
+        private String networkType; 
         private String nodeName; 
         private Integer period; 
         private String periodUnit; 
@@ -310,6 +399,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private String serverType; 
         private Integer streamMode; 
         private java.util.List<Tag> tag; 
+        private Integer upBandwidthLimit; 
+        private String useTemplate; 
         private String vSwitchId; 
 
         private Builder() {
@@ -320,13 +411,18 @@ public class CreateCloudPhoneNodeRequest extends Request {
             super(request);
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.bandwidthPackageType = request.bandwidthPackageType;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.count = request.count;
             this.displayConfig = request.displayConfig;
+            this.downBandwidthLimit = request.downBandwidthLimit;
             this.imageId = request.imageId;
             this.instanceType = request.instanceType;
             this.networkId = request.networkId;
+            this.networkInfo = request.networkInfo;
+            this.networkType = request.networkType;
             this.nodeName = request.nodeName;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -338,6 +434,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.serverType = request.serverType;
             this.streamMode = request.streamMode;
             this.tag = request.tag;
+            this.upBandwidthLimit = request.upBandwidthLimit;
+            this.useTemplate = request.useTemplate;
             this.vSwitchId = request.vSwitchId;
         } 
 
@@ -372,6 +470,24 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BandwidthPackageId.
+         */
+        public Builder bandwidthPackageId(String bandwidthPackageId) {
+            this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+
+        /**
+         * BandwidthPackageType.
+         */
+        public Builder bandwidthPackageType(String bandwidthPackageType) {
+            this.putQueryParameter("BandwidthPackageType", bandwidthPackageType);
+            this.bandwidthPackageType = bandwidthPackageType;
             return this;
         }
 
@@ -423,6 +539,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
+         * DownBandwidthLimit.
+         */
+        public Builder downBandwidthLimit(Integer downBandwidthLimit) {
+            this.putQueryParameter("DownBandwidthLimit", downBandwidthLimit);
+            this.downBandwidthLimit = downBandwidthLimit;
+            return this;
+        }
+
+        /**
          * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
@@ -460,6 +585,25 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
             this.networkId = networkId;
+            return this;
+        }
+
+        /**
+         * NetworkInfo.
+         */
+        public Builder networkInfo(NetworkInfo networkInfo) {
+            String networkInfoShrink = shrink(networkInfo, "NetworkInfo", "json");
+            this.putQueryParameter("NetworkInfo", networkInfoShrink);
+            this.networkInfo = networkInfo;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 
@@ -601,6 +745,24 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
+         * UpBandwidthLimit.
+         */
+        public Builder upBandwidthLimit(Integer upBandwidthLimit) {
+            this.putQueryParameter("UpBandwidthLimit", upBandwidthLimit);
+            this.upBandwidthLimit = upBandwidthLimit;
+            return this;
+        }
+
+        /**
+         * UseTemplate.
+         */
+        public Builder useTemplate(String useTemplate) {
+            this.putQueryParameter("UseTemplate", useTemplate);
+            this.useTemplate = useTemplate;
+            return this;
+        }
+
+        /**
          * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
@@ -710,6 +872,165 @@ public class CreateCloudPhoneNodeRequest extends Request {
 
             public DisplayConfig build() {
                 return new DisplayConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCloudPhoneNodeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCloudPhoneNodeRequest</p>
+     */
+    public static class NetworkInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageName")
+        private String bandwidthPackageName;
+
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
+        private String cidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+        private String internetChargeType;
+
+        @com.aliyun.core.annotation.NameInMap("IpRatio")
+        private Integer ipRatio;
+
+        @com.aliyun.core.annotation.NameInMap("Isp")
+        private String isp;
+
+        @com.aliyun.core.annotation.NameInMap("LimitedBandwidth")
+        private Integer limitedBandwidth;
+
+        private NetworkInfo(Builder builder) {
+            this.bandwidthPackageName = builder.bandwidthPackageName;
+            this.cidrBlock = builder.cidrBlock;
+            this.internetChargeType = builder.internetChargeType;
+            this.ipRatio = builder.ipRatio;
+            this.isp = builder.isp;
+            this.limitedBandwidth = builder.limitedBandwidth;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthPackageName
+         */
+        public String getBandwidthPackageName() {
+            return this.bandwidthPackageName;
+        }
+
+        /**
+         * @return cidrBlock
+         */
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        /**
+         * @return internetChargeType
+         */
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        /**
+         * @return ipRatio
+         */
+        public Integer getIpRatio() {
+            return this.ipRatio;
+        }
+
+        /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
+        }
+
+        /**
+         * @return limitedBandwidth
+         */
+        public Integer getLimitedBandwidth() {
+            return this.limitedBandwidth;
+        }
+
+        public static final class Builder {
+            private String bandwidthPackageName; 
+            private String cidrBlock; 
+            private String internetChargeType; 
+            private Integer ipRatio; 
+            private String isp; 
+            private Integer limitedBandwidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.bandwidthPackageName = model.bandwidthPackageName;
+                this.cidrBlock = model.cidrBlock;
+                this.internetChargeType = model.internetChargeType;
+                this.ipRatio = model.ipRatio;
+                this.isp = model.isp;
+                this.limitedBandwidth = model.limitedBandwidth;
+            } 
+
+            /**
+             * BandwidthPackageName.
+             */
+            public Builder bandwidthPackageName(String bandwidthPackageName) {
+                this.bandwidthPackageName = bandwidthPackageName;
+                return this;
+            }
+
+            /**
+             * CidrBlock.
+             */
+            public Builder cidrBlock(String cidrBlock) {
+                this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * InternetChargeType.
+             */
+            public Builder internetChargeType(String internetChargeType) {
+                this.internetChargeType = internetChargeType;
+                return this;
+            }
+
+            /**
+             * IpRatio.
+             */
+            public Builder ipRatio(Integer ipRatio) {
+                this.ipRatio = ipRatio;
+                return this;
+            }
+
+            /**
+             * Isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            /**
+             * LimitedBandwidth.
+             */
+            public Builder limitedBandwidth(Integer limitedBandwidth) {
+                this.limitedBandwidth = limitedBandwidth;
+                return this;
+            }
+
+            public NetworkInfo build() {
+                return new NetworkInfo(this);
             } 
 
         } 

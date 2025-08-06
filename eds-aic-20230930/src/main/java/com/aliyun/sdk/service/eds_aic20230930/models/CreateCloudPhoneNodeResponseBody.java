@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCloudPhoneNodeResponseBody</p>
  */
 public class CreateCloudPhoneNodeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NetworkPackageOrderModel")
+    private NetworkPackageOrderModel networkPackageOrderModel;
+
     @com.aliyun.core.annotation.NameInMap("NodeInfos")
     private java.util.List<NodeInfos> nodeInfos;
 
@@ -27,6 +30,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     private String requestId;
 
     private CreateCloudPhoneNodeResponseBody(Builder builder) {
+        this.networkPackageOrderModel = builder.networkPackageOrderModel;
         this.nodeInfos = builder.nodeInfos;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return networkPackageOrderModel
+     */
+    public NetworkPackageOrderModel getNetworkPackageOrderModel() {
+        return this.networkPackageOrderModel;
     }
 
     /**
@@ -66,6 +77,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private NetworkPackageOrderModel networkPackageOrderModel; 
         private java.util.List<NodeInfos> nodeInfos; 
         private String orderId; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         } 
 
         private Builder(CreateCloudPhoneNodeResponseBody model) {
+            this.networkPackageOrderModel = model.networkPackageOrderModel;
             this.nodeInfos = model.nodeInfos;
             this.orderId = model.orderId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * NetworkPackageOrderModel.
+         */
+        public Builder networkPackageOrderModel(NetworkPackageOrderModel networkPackageOrderModel) {
+            this.networkPackageOrderModel = networkPackageOrderModel;
+            return this;
+        }
 
         /**
          * <p>The cloud phone matrixes.</p>
@@ -115,6 +136,81 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCloudPhoneNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCloudPhoneNodeResponseBody</p>
+     */
+    public static class NetworkPackageOrderModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageOrderId")
+        private String bandwidthPackageOrderId;
+
+        private NetworkPackageOrderModel(Builder builder) {
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageOrderId = builder.bandwidthPackageOrderId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkPackageOrderModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageOrderId
+         */
+        public String getBandwidthPackageOrderId() {
+            return this.bandwidthPackageOrderId;
+        }
+
+        public static final class Builder {
+            private String bandwidthPackageId; 
+            private String bandwidthPackageOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkPackageOrderModel model) {
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageOrderId = model.bandwidthPackageOrderId;
+            } 
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageOrderId.
+             */
+            public Builder bandwidthPackageOrderId(String bandwidthPackageOrderId) {
+                this.bandwidthPackageOrderId = bandwidthPackageOrderId;
+                return this;
+            }
+
+            public NetworkPackageOrderModel build() {
+                return new NetworkPackageOrderModel(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateCloudPhoneNodeResponseBody} extends {@link TeaModel}
