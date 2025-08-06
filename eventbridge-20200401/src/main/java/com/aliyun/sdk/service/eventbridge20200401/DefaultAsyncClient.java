@@ -994,6 +994,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateEventStreamingBusinessOption  UpdateEventStreamingBusinessOptionRequest
+     * @return UpdateEventStreamingBusinessOptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEventStreamingBusinessOptionResponse> updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateEventStreamingBusinessOption").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEventStreamingBusinessOptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEventStreamingBusinessOptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to update the configurations of an event rule.</p>
      * 

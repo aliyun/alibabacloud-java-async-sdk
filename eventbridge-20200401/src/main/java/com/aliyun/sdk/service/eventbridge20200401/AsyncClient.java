@@ -422,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEventStreamingResponse> updateEventStreaming(UpdateEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of UpdateEventStreamingBusinessOption  UpdateEventStreamingBusinessOptionRequest
+     * @return UpdateEventStreamingBusinessOptionResponse
+     */
+    CompletableFuture<UpdateEventStreamingBusinessOptionResponse> updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to update the configurations of an event rule.</p>
      * 
