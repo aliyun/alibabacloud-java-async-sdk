@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryBagRemainingResponse> queryBagRemaining(QueryBagRemainingRequest request);
 
     /**
+     * @param request the request parameters of QueryCallRecordList  QueryCallRecordListRequest
+     * @return QueryCallRecordListResponse
+     */
+    CompletableFuture<QueryCallRecordListResponse> queryCallRecordList(QueryCallRecordListRequest request);
+
+    /**
      * @param request the request parameters of QueryInstance  QueryInstanceRequest
      * @return QueryInstanceResponse
      */
