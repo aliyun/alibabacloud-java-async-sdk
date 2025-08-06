@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastEipAddressRequest} extends {@link RequestModel}
  *
  * <p>DescribeAnycastEipAddressRequest</p>
  */
 public class DescribeAnycastEipAddressRequest extends Request {
-    @Query
-    @NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
     private String anycastId;
 
-    @Query
-    @NameInMap("BindInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceId")
     private String bindInstanceId;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
     private DescribeAnycastEipAddressRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class DescribeAnycastEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,10 +87,13 @@ public class DescribeAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the Anycast EIP.
-         * <p>
+         * <p>The ID of the Anycast EIP.</p>
+         * <blockquote>
+         * <p>You must specify <strong>Ip</strong> or <strong>AnycastId</strong>.</p>
+         * </blockquote>
          * 
-         * > You must specify **Ip** or **AnycastId**.
+         * <strong>example:</strong>
+         * <p>aeip-bp1ix34fralt4ykf3****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -94,7 +102,10 @@ public class DescribeAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint with which the Anycast EIP is associated.
+         * <p>The ID of the endpoint with which the Anycast EIP is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zebb08phyczzawe****</p>
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -103,10 +114,13 @@ public class DescribeAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The IP address of the Anycast EIP.
-         * <p>
+         * <p>The IP address of the Anycast EIP.</p>
+         * <blockquote>
+         * <p>You must specify <strong>Ip</strong> or <strong>AnycastId</strong>.</p>
+         * </blockquote>
          * 
-         * > You must specify **Ip** or **AnycastId**.
+         * <strong>example:</strong>
+         * <p>139.95.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);

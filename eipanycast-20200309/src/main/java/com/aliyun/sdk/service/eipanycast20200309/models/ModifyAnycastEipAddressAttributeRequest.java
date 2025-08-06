@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAnycastEipAddressAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAnycastEipAddressAttributeRequest</p>
  */
 public class ModifyAnycastEipAddressAttributeRequest extends Request {
-    @Query
-    @NameInMap("AnycastId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String anycastId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private ModifyAnycastEipAddressAttributeRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,11 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the Anycast EIP.
+         * <p>The ID of the Anycast EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-bp1ix34fralt4ykf3****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -92,10 +101,11 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The description of the Anycast EIP.
-         * <p>
+         * <p>The description of the Anycast EIP.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>docdesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -104,10 +114,11 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The name of the Anycast EIP.
-         * <p>
+         * <p>The name of the Anycast EIP.</p>
+         * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>docname</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

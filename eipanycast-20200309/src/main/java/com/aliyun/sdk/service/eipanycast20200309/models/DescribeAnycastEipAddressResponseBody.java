@@ -1,67 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastEipAddressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAnycastEipAddressResponseBody</p>
  */
 public class DescribeAnycastEipAddressResponseBody extends TeaModel {
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("AnycastEipBindInfoList")
-    private java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList;
+    @com.aliyun.core.annotation.NameInMap("AnycastEipBindInfoList")
+    private java.util.List<AnycastEipBindInfoList> anycastEipBindInfoList;
 
-    @NameInMap("AnycastId")
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
     private String anycastId;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("Bid")
+    @com.aliyun.core.annotation.NameInMap("Bid")
     private String bid;
 
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
     private String serviceLocation;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Integer serviceManaged;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private DescribeAnycastEipAddressResponseBody(Builder builder) {
         this.aliUid = builder.aliUid;
@@ -79,6 +87,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceLocation = builder.serviceLocation;
+        this.serviceManaged = builder.serviceManaged;
         this.status = builder.status;
         this.tags = builder.tags;
     }
@@ -91,6 +100,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -101,7 +114,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     /**
      * @return anycastEipBindInfoList
      */
-    public java.util.List < AnycastEipBindInfoList> getAnycastEipBindInfoList() {
+    public java.util.List<AnycastEipBindInfoList> getAnycastEipBindInfoList() {
         return this.anycastEipBindInfoList;
     }
 
@@ -197,6 +210,13 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Integer getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -206,13 +226,13 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private Long aliUid; 
-        private java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList; 
+        private java.util.List<AnycastEipBindInfoList> anycastEipBindInfoList; 
         private String anycastId; 
         private Integer bandwidth; 
         private String bid; 
@@ -226,11 +246,39 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String serviceLocation; 
+        private Integer serviceManaged; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnycastEipAddressResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.anycastEipBindInfoList = model.anycastEipBindInfoList;
+            this.anycastId = model.anycastId;
+            this.bandwidth = model.bandwidth;
+            this.bid = model.bid;
+            this.businessStatus = model.businessStatus;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.instanceChargeType = model.instanceChargeType;
+            this.internetChargeType = model.internetChargeType;
+            this.ipAddress = model.ipAddress;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceLocation = model.serviceLocation;
+            this.serviceManaged = model.serviceManaged;
+            this.status = model.status;
+            this.tags = model.tags;
+        } 
 
         /**
-         * The ID of the account to which the Anycast EIP belongs.
+         * <p>The ID of the account to which the Anycast EIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25346073170691****</p>
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -238,15 +286,18 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the endpoint with which the Anycast EIP is associated.
+         * <p>The information about the endpoint with which the Anycast EIP is associated.</p>
          */
-        public Builder anycastEipBindInfoList(java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList) {
+        public Builder anycastEipBindInfoList(java.util.List<AnycastEipBindInfoList> anycastEipBindInfoList) {
             this.anycastEipBindInfoList = anycastEipBindInfoList;
             return this;
         }
 
         /**
-         * The ID of the Anycast EIP.
+         * <p>The ID of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-bp1ix34fralt4ykf3****</p>
          */
         public Builder anycastId(String anycastId) {
             this.anycastId = anycastId;
@@ -254,7 +305,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
+         * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -262,7 +316,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The BID of the account to which the Anycast EIP belongs.
+         * <p>The BID of the account to which the Anycast EIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -270,11 +327,15 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The service status of the Anycast EIP. Valid values:
-         * <p>
+         * <p>The status of the Anycast EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: running as expected</li>
+         * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
+         * <li><strong>RiskExpired</strong>: locked due to security reasons.</li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
@@ -282,10 +343,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The point in time at which the Anycast EIP was created.
-         * <p>
+         * <p>The point in time at which the Anycast EIP was created.</p>
+         * <p>The time follows the ISO8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
          * 
-         * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+         * <strong>example:</strong>
+         * <p>2021-04-23T01:37:38Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -293,7 +355,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the Anycast EIP.
+         * <p>The description of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -301,10 +366,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the Anycast EIP.
-         * <p>
+         * <p>The billing method of the Anycast EIP.</p>
+         * <p>Only <strong>PostPaid</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
          * 
-         * Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -312,10 +378,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method of the Anycast EIP.
-         * <p>
+         * <p>The metering method of the Anycast EIP.</p>
+         * <p>Only <strong>PayByTraffic</strong> may be returned, which indicates the pay-by-data-transfer metering method.</p>
          * 
-         * Only **PayByTraffic** may be returned, which indicates the pay-by-data-transfer metering method.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -323,7 +390,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the Anycast EIP.
+         * <p>The IP address of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.95.XX.XX</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -331,7 +401,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Anycast EIP.
+         * <p>The name of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docname</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -339,7 +412,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -347,7 +423,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzssisocarfy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -355,10 +434,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The access area of the Anycast EIP.
-         * <p>
+         * <p>The access area of the Anycast EIP.</p>
+         * <p>Only <strong>international</strong> may be returned, which indicates the areas outside the Chinese mainland.</p>
          * 
-         * Only **international** may be returned, which indicates the areas outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.serviceLocation = serviceLocation;
@@ -366,16 +446,34 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the Anycast EIP.
-         * <p>
+         * <p>Indicates whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no.</li>
+         * </ul>
          * 
-         * *   **Associating**
-         * *   **Unassociating**
-         * *   **Allocated**
-         * *   **Associated**
-         * *   **Modifying**
-         * *   **Releasing**
-         * *   **Released**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder serviceManaged(Integer serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * <p>The status of the Anycast EIP.</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * <li><strong>Allocated</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * <li><strong>Released</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -383,9 +481,9 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tags.
+         * <p>The information about the tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -396,8 +494,14 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAnycastEipAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnycastEipAddressResponseBody</p>
+     */
     public static class PopLocations extends TeaModel {
-        @NameInMap("PopLocation")
+        @com.aliyun.core.annotation.NameInMap("PopLocation")
         private String popLocation;
 
         private PopLocations(Builder builder) {
@@ -422,11 +526,19 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         public static final class Builder {
             private String popLocation; 
 
+            private Builder() {
+            } 
+
+            private Builder(PopLocations model) {
+                this.popLocation = model.popLocation;
+            } 
+
             /**
-             * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
-             * <p>
+             * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+             * <p>If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.</p>
              * 
-             * If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
+             * <strong>example:</strong>
+             * <p>us-west-1-pop</p>
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;
@@ -440,29 +552,35 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAnycastEipAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnycastEipAddressResponseBody</p>
+     */
     public static class AnycastEipBindInfoList extends TeaModel {
-        @NameInMap("AssociationMode")
+        @com.aliyun.core.annotation.NameInMap("AssociationMode")
         private String associationMode;
 
-        @NameInMap("BindInstanceId")
+        @com.aliyun.core.annotation.NameInMap("BindInstanceId")
         private String bindInstanceId;
 
-        @NameInMap("BindInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("BindInstanceRegionId")
         private String bindInstanceRegionId;
 
-        @NameInMap("BindInstanceType")
+        @com.aliyun.core.annotation.NameInMap("BindInstanceType")
         private String bindInstanceType;
 
-        @NameInMap("BindTime")
+        @com.aliyun.core.annotation.NameInMap("BindTime")
         private String bindTime;
 
-        @NameInMap("PopLocations")
-        private java.util.List < PopLocations> popLocations;
+        @com.aliyun.core.annotation.NameInMap("PopLocations")
+        private java.util.List<PopLocations> popLocations;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AnycastEipBindInfoList(Builder builder) {
@@ -522,7 +640,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         /**
          * @return popLocations
          */
-        public java.util.List < PopLocations> getPopLocations() {
+        public java.util.List<PopLocations> getPopLocations() {
             return this.popLocations;
         }
 
@@ -546,16 +664,33 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             private String bindInstanceRegionId; 
             private String bindInstanceType; 
             private String bindTime; 
-            private java.util.List < PopLocations> popLocations; 
+            private java.util.List<PopLocations> popLocations; 
             private String privateIpAddress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnycastEipBindInfoList model) {
+                this.associationMode = model.associationMode;
+                this.bindInstanceId = model.bindInstanceId;
+                this.bindInstanceRegionId = model.bindInstanceRegionId;
+                this.bindInstanceType = model.bindInstanceType;
+                this.bindTime = model.bindTime;
+                this.popLocations = model.popLocations;
+                this.privateIpAddress = model.privateIpAddress;
+                this.status = model.status;
+            } 
+
             /**
-             * The association mode. Valid values:
-             * <p>
+             * <p>The association mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Default</strong>: the default mode. In this mode, the associated endpoint serves as the default origin server.</li>
+             * <li><strong>Normal</strong>: the standard mode. In this mode, the associated endpoint serves as a standard origin server.</li>
+             * </ul>
              * 
-             * *   **Default**: the default mode. In this mode, the associated endpoint serves as the default origin server.
-             * *   **Normal**: the standard mode. In this mode, the associated endpoint serves as a standard origin server.
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder associationMode(String associationMode) {
                 this.associationMode = associationMode;
@@ -563,7 +698,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint with which the Anycast EIP is associated.
+             * <p>The ID of the endpoint with which the Anycast EIP is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2zebb08phyczzawe****</p>
              */
             public Builder bindInstanceId(String bindInstanceId) {
                 this.bindInstanceId = bindInstanceId;
@@ -571,7 +709,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the endpoint is deployed.
+             * <p>The ID of the region in which the endpoint is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1</p>
              */
             public Builder bindInstanceRegionId(String bindInstanceRegionId) {
                 this.bindInstanceRegionId = bindInstanceRegionId;
@@ -579,11 +720,14 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The type of endpoint with which the Anycast EIP is associated. Valid values:
-             * <p>
+             * <p>The type of endpoint with which the Anycast EIP is associated. Valid values:</p>
+             * <ul>
+             * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
+             * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI).</li>
+             * </ul>
              * 
-             * *   **SlbInstance**: a CLB instance in a VPC.
-             * *   **NetworkInterface**: an elastic network interface (ENI).
+             * <strong>example:</strong>
+             * <p>SlbInstance</p>
              */
             public Builder bindInstanceType(String bindInstanceType) {
                 this.bindInstanceType = bindInstanceType;
@@ -591,10 +735,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Anycast EIP was associated.
-             * <p>
+             * <p>The time when the Anycast EIP was associated.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-04-23T02:37:38Z</p>
              */
             public Builder bindTime(String bindTime) {
                 this.bindTime = bindTime;
@@ -602,21 +747,20 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
-             * <p>
-             * 
-             * If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
+             * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+             * <p>If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.</p>
              */
-            public Builder popLocations(java.util.List < PopLocations> popLocations) {
+            public Builder popLocations(java.util.List<PopLocations> popLocations) {
                 this.popLocations = popLocations;
                 return this;
             }
 
             /**
-             * The secondary private IP address of the associated ENI.
-             * <p>
+             * <p>The secondary private IP address of the associated ENI.</p>
+             * <p>This parameter is valid only when <strong>BindInstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
              * 
-             * This parameter is valid only when **BindInstanceType** is set to **NetworkInterface**.
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -624,14 +768,17 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint. Valid values:
-             * <p>
+             * <p>The status of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>BINDING</strong></li>
+             * <li><strong>BINDED</strong></li>
+             * <li><strong>UNBINDING</strong></li>
+             * <li><strong>DELETED</strong></li>
+             * <li><strong>MODIFYING</strong></li>
+             * </ul>
              * 
-             * *   **BINDING**
-             * *   **BINDED**
-             * *   **UNBINDING**
-             * *   **DELETED**
-             * *   **MODIFYING**
+             * <strong>example:</strong>
+             * <p>BINDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -645,11 +792,17 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAnycastEipAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnycastEipAddressResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -683,8 +836,19 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -692,7 +856,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

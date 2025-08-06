@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AllocateAnycastEipAddress  AllocateAnycastEipAddressRequest
+     * @return AllocateAnycastEipAddressResponse
+     */
     @Override
     public CompletableFuture<AllocateAnycastEipAddressResponse> allocateAnycastEipAddress(AllocateAnycastEipAddressRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateAnycastEipAddress  AssociateAnycastEipAddressRequest
+     * @return AssociateAnycastEipAddressResponse
+     */
     @Override
     public CompletableFuture<AssociateAnycastEipAddressResponse> associateAnycastEipAddress(AssociateAnycastEipAddressRequest request) {
         try {
@@ -67,6 +75,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    @Override
+    public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeResourceGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeResourceGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAnycastEipAddress  DescribeAnycastEipAddressRequest
+     * @return DescribeAnycastEipAddressResponse
+     */
     @Override
     public CompletableFuture<DescribeAnycastEipAddressResponse> describeAnycastEipAddress(DescribeAnycastEipAddressRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAnycastPopLocations  DescribeAnycastPopLocationsRequest
+     * @return DescribeAnycastPopLocationsResponse
+     */
     @Override
     public CompletableFuture<DescribeAnycastPopLocationsResponse> describeAnycastPopLocations(DescribeAnycastPopLocationsRequest request) {
         try {
@@ -95,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAnycastServerRegions  DescribeAnycastServerRegionsRequest
+     * @return DescribeAnycastServerRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeAnycastServerRegionsResponse> describeAnycastServerRegions(DescribeAnycastServerRegionsRequest request) {
         try {
@@ -109,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAnycastEipAddresses  ListAnycastEipAddressesRequest
+     * @return ListAnycastEipAddressesResponse
+     */
     @Override
     public CompletableFuture<ListAnycastEipAddressesResponse> listAnycastEipAddresses(ListAnycastEipAddressesRequest request) {
         try {
@@ -123,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAnycastEipAddressAttribute  ModifyAnycastEipAddressAttributeRequest
+     * @return ModifyAnycastEipAddressAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyAnycastEipAddressAttributeResponse> modifyAnycastEipAddressAttribute(ModifyAnycastEipAddressAttributeRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAnycastEipAddressSpec  ModifyAnycastEipAddressSpecRequest
+     * @return ModifyAnycastEipAddressSpecResponse
+     */
     @Override
     public CompletableFuture<ModifyAnycastEipAddressSpecResponse> modifyAnycastEipAddressSpec(ModifyAnycastEipAddressSpecRequest request) {
         try {
@@ -165,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseAnycastEipAddress  ReleaseAnycastEipAddressRequest
+     * @return ReleaseAnycastEipAddressResponse
+     */
     @Override
     public CompletableFuture<ReleaseAnycastEipAddressResponse> releaseAnycastEipAddress(ReleaseAnycastEipAddressRequest request) {
         try {
@@ -179,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -193,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnassociateAnycastEipAddress  UnassociateAnycastEipAddressRequest
+     * @return UnassociateAnycastEipAddressResponse
+     */
     @Override
     public CompletableFuture<UnassociateAnycastEipAddressResponse> unassociateAnycastEipAddress(UnassociateAnycastEipAddressRequest request) {
         try {
@@ -207,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -221,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAnycastEipAddressAssociations  UpdateAnycastEipAddressAssociationsRequest
+     * @return UpdateAnycastEipAddressAssociationsResponse
+     */
     @Override
     public CompletableFuture<UpdateAnycastEipAddressAssociationsResponse> updateAnycastEipAddressAssociations(UpdateAnycastEipAddressAssociationsRequest request) {
         try {

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastServerRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAnycastServerRegionsRequest</p>
  */
 public class DescribeAnycastServerRegionsRequest extends Request {
-    @Query
-    @NameInMap("ServiceLocation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceLocation;
 
     private DescribeAnycastServerRegionsRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DescribeAnycastServerRegionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,10 +60,12 @@ public class DescribeAnycastServerRegionsRequest extends Request {
         } 
 
         /**
-         * The access area from which you use the Anycast EIP to communicate with the Internet.
-         * <p>
+         * <p>The access area from which you use the Anycast EIP to communicate with the Internet.</p>
+         * <p>Set the value to <strong>international</strong>, which specifies the areas outside the Chinese mainland.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **international**, which specifies the areas outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

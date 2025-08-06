@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnycastEipAddressesRequest} extends {@link RequestModel}
  *
  * <p>ListAnycastEipAddressesRequest</p>
  */
 public class ListAnycastEipAddressesRequest extends Request {
-    @Query
-    @NameInMap("AnycastEipAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastEipAddress")
     private String anycastEipAddress;
 
-    @Query
-    @NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
     private String anycastId;
 
-    @Query
-    @NameInMap("AnycastIds")
-    private java.util.List < String > anycastIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastIds")
+    private java.util.List<String> anycastIds;
 
-    @Query
-    @NameInMap("BindInstanceIds")
-    private java.util.List < String > bindInstanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceIds")
+    private java.util.List<String> bindInstanceIds;
 
-    @Query
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
     private String serviceLocation;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private ListAnycastEipAddressesRequest(Builder builder) {
         super(builder);
@@ -94,7 +99,7 @@ public class ListAnycastEipAddressesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,14 +121,14 @@ public class ListAnycastEipAddressesRequest extends Request {
     /**
      * @return anycastIds
      */
-    public java.util.List < String > getAnycastIds() {
+    public java.util.List<String> getAnycastIds() {
         return this.anycastIds;
     }
 
     /**
      * @return bindInstanceIds
      */
-    public java.util.List < String > getBindInstanceIds() {
+    public java.util.List<String> getBindInstanceIds() {
         return this.bindInstanceIds;
     }
 
@@ -193,15 +198,15 @@ public class ListAnycastEipAddressesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListAnycastEipAddressesRequest, Builder> {
         private String anycastEipAddress; 
         private String anycastId; 
-        private java.util.List < String > anycastIds; 
-        private java.util.List < String > bindInstanceIds; 
+        private java.util.List<String> anycastIds; 
+        private java.util.List<String> bindInstanceIds; 
         private String businessStatus; 
         private String instanceChargeType; 
         private String internetChargeType; 
@@ -211,7 +216,7 @@ public class ListAnycastEipAddressesRequest extends Request {
         private String resourceGroupId; 
         private String serviceLocation; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -236,7 +241,10 @@ public class ListAnycastEipAddressesRequest extends Request {
         } 
 
         /**
-         * The IP address that is allocated to the Anycast EIP.
+         * <p>The IP address that is allocated to the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.95.XX.XX</p>
          */
         public Builder anycastEipAddress(String anycastEipAddress) {
             this.putQueryParameter("AnycastEipAddress", anycastEipAddress);
@@ -245,10 +253,13 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the Anycast EIP.
-         * <p>
+         * <p>The ID of the Anycast EIP.</p>
+         * <blockquote>
+         * <p> To ensure the accuracy of the query result, we do not recommend that you specify <strong>AnycastIds</strong> and <strong>AnycastId</strong> at the same time.</p>
+         * </blockquote>
          * 
-         * >  To ensure the accuracy of the query result, we do not recommend that you specify **AnycastIds** and **AnycastId** at the same time.
+         * <strong>example:</strong>
+         * <p>aeip-2zeerraiwb7ujsxdc****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -257,37 +268,40 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The IDs of Anycast EIPs.
-         * <p>
-         * 
-         * You can enter at most 50 Anycast EIP IDs.
-         * 
-         * >  To ensure the accuracy of the query result, we do not recommend that you specify **AnycastIds** and **AnycastId** at the same time.
+         * <p>The IDs of Anycast EIPs.</p>
+         * <p>You can enter at most 50 Anycast EIP IDs.</p>
+         * <blockquote>
+         * <p> To ensure the accuracy of the query result, we do not recommend that you specify <strong>AnycastIds</strong> and <strong>AnycastId</strong> at the same time.</p>
+         * </blockquote>
          */
-        public Builder anycastIds(java.util.List < String > anycastIds) {
+        public Builder anycastIds(java.util.List<String> anycastIds) {
             this.putQueryParameter("AnycastIds", anycastIds);
             this.anycastIds = anycastIds;
             return this;
         }
 
         /**
-         * The IDs of the cloud resources with which the Anycast EIPs are associated.
-         * <p>
+         * <p>The IDs of the cloud resources with which the Anycast EIPs are associated.</p>
+         * <p>You can enter at most 100 cloud resource IDs.</p>
          * 
-         * You can enter at most 100 cloud resource IDs.
+         * <strong>example:</strong>
+         * <p>lb-2zebb08phyczzawe****</p>
          */
-        public Builder bindInstanceIds(java.util.List < String > bindInstanceIds) {
+        public Builder bindInstanceIds(java.util.List<String> bindInstanceIds) {
             this.putQueryParameter("BindInstanceIds", bindInstanceIds);
             this.bindInstanceIds = bindInstanceIds;
             return this;
         }
 
         /**
-         * The service status of the Anycast EIP. Valid values:
-         * <p>
+         * <p>The service status of the Anycast EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -296,10 +310,11 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The billing method of the Anycast EIP.
-         * <p>
+         * <p>The billing method of the Anycast EIP.</p>
+         * <p>Set the value to <strong>PostPaid</strong>, which specifies the pay-as-you-go billing method.</p>
          * 
-         * Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -308,10 +323,11 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The metering method of the Anycast EIP.
-         * <p>
+         * <p>The metering method of the Anycast EIP.</p>
+         * <p>Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer metering method.</p>
          * 
-         * Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer metering method.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -320,7 +336,10 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **20 to 100**. Default value: **50**.
+         * <p>The number of entries to return on each page. Valid values: <strong>20 to 100</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -329,10 +348,11 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The name of the Anycast EIP.
-         * <p>
+         * <p>The name of the Anycast EIP.</p>
+         * <p>The name must be 0 to 128 characters in length, and can contain digits, hyphens (-), and underscores (_). The name must start with a letter.</p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain digits, hyphens (-), and underscores (\_). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -341,11 +361,14 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -354,7 +377,10 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzthsmwsnfuni</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -363,10 +389,11 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The access area of the Anycast EIP.
-         * <p>
+         * <p>The access area of the Anycast EIP.</p>
+         * <p>Set the value to <strong>international</strong>, which specifies the regions outside the Chinese mainland.</p>
          * 
-         * Set the value to **international**, which specifies the regions outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);
@@ -375,16 +402,19 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The status of the Anycast EIP. Valid values:
-         * <p>
+         * <p>The status of the Anycast EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * <li><strong>Allocated</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * <li><strong>Released</strong></li>
+         * </ul>
          * 
-         * *   **Associating**
-         * *   **Unassociating**
-         * *   **Allocated**
-         * *   **Associated**
-         * *   **Modifying**
-         * *   **Releasing**
-         * *   **Released**
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -393,9 +423,9 @@ public class ListAnycastEipAddressesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -408,11 +438,17 @@ public class ListAnycastEipAddressesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnycastEipAddressesRequest} extends {@link TeaModel}
+     *
+     * <p>ListAnycastEipAddressesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -446,13 +482,23 @@ public class ListAnycastEipAddressesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.
-             * <p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</p>
+             * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * </blockquote>
              * 
-             * The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
-             * 
-             * >  You must specify at least one of **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -460,12 +506,14 @@ public class ListAnycastEipAddressesRequest extends Request {
             }
 
             /**
-             * The tag value of the resource. You can specify up to 20 tag values. It can be an empty string.
-             * <p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. It can be an empty string.</p>
+             * <p>The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * </blockquote>
              * 
-             * The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
-             * 
-             * >  You must specify at least one of **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAnycastEipAddressAssociationsRequest} extends {@link RequestModel}
  *
  * <p>UpdateAnycastEipAddressAssociationsRequest</p>
  */
 public class UpdateAnycastEipAddressAssociationsRequest extends Request {
-    @Query
-    @NameInMap("AnycastId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String anycastId;
 
-    @Query
-    @NameInMap("AssociationMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociationMode")
     private String associationMode;
 
-    @Query
-    @NameInMap("BindInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindInstanceId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("PopLocationAddList")
-    private java.util.List < PopLocationAddList> popLocationAddList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PopLocationAddList")
+    private java.util.List<PopLocationAddList> popLocationAddList;
 
-    @Query
-    @NameInMap("PopLocationDeleteList")
-    private java.util.List < PopLocationDeleteList> popLocationDeleteList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PopLocationDeleteList")
+    private java.util.List<PopLocationDeleteList> popLocationDeleteList;
 
     private UpdateAnycastEipAddressAssociationsRequest(Builder builder) {
         super(builder);
@@ -61,7 +66,7 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,14 +109,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
     /**
      * @return popLocationAddList
      */
-    public java.util.List < PopLocationAddList> getPopLocationAddList() {
+    public java.util.List<PopLocationAddList> getPopLocationAddList() {
         return this.popLocationAddList;
     }
 
     /**
      * @return popLocationDeleteList
      */
-    public java.util.List < PopLocationDeleteList> getPopLocationDeleteList() {
+    public java.util.List<PopLocationDeleteList> getPopLocationDeleteList() {
         return this.popLocationDeleteList;
     }
 
@@ -121,8 +126,8 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         private String bindInstanceId; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < PopLocationAddList> popLocationAddList; 
-        private java.util.List < PopLocationDeleteList> popLocationDeleteList; 
+        private java.util.List<PopLocationAddList> popLocationAddList; 
+        private java.util.List<PopLocationDeleteList> popLocationDeleteList; 
 
         private Builder() {
             super();
@@ -140,7 +145,11 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         } 
 
         /**
-         * The ID of the Anycast EIP.
+         * <p>The ID of the Anycast EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-bp1ix34fralt4ykf3****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -149,11 +158,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * The association mode. Valid values:
-         * <p>
+         * <p>The association mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Default</strong>: the default mode. In this mode, cloud resources to be associated are set as default origin servers.</li>
+         * <li><strong>Normal</strong>: the standard mode. In this mode, cloud resources to be associated are set as standard origin servers.</li>
+         * </ul>
          * 
-         * *   **Default**: the default mode. In this mode, cloud resources to be associated are set as default origin servers.
-         * *   **Normal**: the standard mode. In this mode, cloud resources to be associated are set as standard origin servers.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder associationMode(String associationMode) {
             this.putQueryParameter("AssociationMode", associationMode);
@@ -162,7 +174,11 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud resource with which you want to associate the Anycast EIP.
+         * <p>The ID of the cloud resource with which you want to associate the Anycast EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-d7oxbixhxv1uupnon****</p>
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -171,12 +187,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,11 +203,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without updating the association information. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request without updating the association information. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -198,18 +219,18 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * The access areas and access points to be added.
+         * <p>The access areas and access points to be added.</p>
          */
-        public Builder popLocationAddList(java.util.List < PopLocationAddList> popLocationAddList) {
+        public Builder popLocationAddList(java.util.List<PopLocationAddList> popLocationAddList) {
             this.putQueryParameter("PopLocationAddList", popLocationAddList);
             this.popLocationAddList = popLocationAddList;
             return this;
         }
 
         /**
-         * The access areas and access points to be deleted.
+         * <p>The access areas and access points to be deleted.</p>
          */
-        public Builder popLocationDeleteList(java.util.List < PopLocationDeleteList> popLocationDeleteList) {
+        public Builder popLocationDeleteList(java.util.List<PopLocationDeleteList> popLocationDeleteList) {
             this.putQueryParameter("PopLocationDeleteList", popLocationDeleteList);
             this.popLocationDeleteList = popLocationDeleteList;
             return this;
@@ -222,8 +243,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAnycastEipAddressAssociationsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAnycastEipAddressAssociationsRequest</p>
+     */
     public static class PopLocationAddList extends TeaModel {
-        @NameInMap("PopLocation")
+        @com.aliyun.core.annotation.NameInMap("PopLocation")
         private String popLocation;
 
         private PopLocationAddList(Builder builder) {
@@ -248,11 +275,19 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         public static final class Builder {
             private String popLocation; 
 
+            private Builder() {
+            } 
+
+            private Builder(PopLocationAddList model) {
+                this.popLocation = model.popLocation;
+            } 
+
             /**
-             * The access points in the access areas to be added.
-             * <p>
+             * <p>The access points in the access areas to be added.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/171938.html">DescribeAnycastPopLocations</a> operation to query the access points in supported access areas.</p>
              * 
-             * You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query the access points in supported access areas.
+             * <strong>example:</strong>
+             * <p>us-west-1-pop</p>
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;
@@ -266,8 +301,14 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAnycastEipAddressAssociationsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAnycastEipAddressAssociationsRequest</p>
+     */
     public static class PopLocationDeleteList extends TeaModel {
-        @NameInMap("PopLocation")
+        @com.aliyun.core.annotation.NameInMap("PopLocation")
         private String popLocation;
 
         private PopLocationDeleteList(Builder builder) {
@@ -292,11 +333,21 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         public static final class Builder {
             private String popLocation; 
 
+            private Builder() {
+            } 
+
+            private Builder(PopLocationDeleteList model) {
+                this.popLocation = model.popLocation;
+            } 
+
             /**
-             * The access points in the access areas to be deleted.
-             * <p>
+             * <p>The access points in the access areas to be deleted.</p>
+             * <blockquote>
+             * <p> If the access point in the access area is associated with a default origin server, you cannot delete the access point in the access area.</p>
+             * </blockquote>
              * 
-             * >  If the access point in the access area is associated with a default origin server, you cannot delete the access point in the access area.
+             * <strong>example:</strong>
+             * <p>eu-west-1-pop</p>
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;

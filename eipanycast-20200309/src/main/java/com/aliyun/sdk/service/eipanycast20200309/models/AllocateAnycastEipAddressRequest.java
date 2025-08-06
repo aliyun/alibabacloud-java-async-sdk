@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateAnycastEipAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocateAnycastEipAddressRequest</p>
  */
 public class AllocateAnycastEipAddressRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private String bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServiceLocation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceLocation;
 
     private AllocateAnycastEipAddressRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class AllocateAnycastEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,14 +158,15 @@ public class AllocateAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>200</strong> to <strong>1000</strong>.</p>
+         * <p>Default value: <strong>1000</strong>.</p>
+         * <blockquote>
+         * <p>The maximum bandwidth is not a guaranteed service and is for reference only.</p>
+         * </blockquote>
          * 
-         * Valid values: **200** to **1000**.
-         * 
-         * Default value: **1000**.
-         * 
-         * > The maximum bandwidth is not a guaranteed service and is for reference only.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -169,12 +175,14 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,10 +191,11 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The description of the Anycast EIP.
-         * <p>
+         * <p>The description of the Anycast EIP.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>docdesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,10 +204,11 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The billing method of the Anycast EIP.
-         * <p>
+         * <p>The billing method of the Anycast EIP.</p>
+         * <p>Set the value to <strong>PostPaid</strong>, which specifies the pay-as-you-go billing method.</p>
          * 
-         * Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -207,10 +217,11 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The metering method of the Anycast EIP.
-         * <p>
+         * <p>The metering method of the Anycast EIP.</p>
+         * <p>Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer metering method.</p>
          * 
-         * Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer metering method.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -219,10 +230,11 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The name of the Anycast EIP.
-         * <p>
+         * <p>The name of the Anycast EIP.</p>
+         * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -231,7 +243,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3obzjukv53a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -240,10 +255,12 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The access area of the Anycast EIP.
-         * <p>
+         * <p>The access area of the Anycast EIP.</p>
+         * <p>Set the value to <strong>international</strong>, which specifies the areas outside the Chinese mainland.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **international**, which specifies the areas outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

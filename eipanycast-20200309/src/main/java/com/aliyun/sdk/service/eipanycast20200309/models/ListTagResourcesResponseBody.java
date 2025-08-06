@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
  */
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    @com.aliyun.core.annotation.NameInMap("TagResources")
+    private java.util.List<TagResources> tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static ListTagResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,21 +61,33 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +95,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,9 +106,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources to which the tags are added.
+         * <p>The resources to which the tags are added.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
@@ -95,17 +119,23 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResources(Builder builder) {
@@ -157,8 +187,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aeip-2zeerraiwb7ujsxdc****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -166,7 +209,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. Only **ANYCASTEIPADDRESS** may be returned.
+             * <p>The resource type. Only <strong>ANYCASTEIPADDRESS</strong> may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANYCASTEIPADDRESS</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -174,7 +220,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -182,7 +231,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

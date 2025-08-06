@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateAnycastEipAddressAssociationsResponseBody} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAnycastEipAddressAssociationsResponseBody</p>
+ * <p>ChangeResourceGroupResponseBody</p>
  */
-public class UpdateAnycastEipAddressAssociationsResponseBody extends TeaModel {
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateAnycastEipAddressAssociationsResponseBody(Builder builder) {
+    private ChangeResourceGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateAnycastEipAddressAssociationsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateAnycastEipAddressAssociationsResponseBody create() {
+    public static ChangeResourceGroupResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,23 @@ public class UpdateAnycastEipAddressAssociationsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateAnycastEipAddressAssociationsResponseBody model) {
+        private Builder(ChangeResourceGroupResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
+         * <p>FBDB18D8-E91E-4978-8D6C-6E2E3EE10133</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateAnycastEipAddressAssociationsResponseBody build() {
-            return new UpdateAnycastEipAddressAssociationsResponseBody(this);
+        public ChangeResourceGroupResponseBody build() {
+            return new ChangeResourceGroupResponseBody(this);
         } 
 
     } 

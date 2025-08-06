@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastPopLocationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAnycastPopLocationsResponseBody</p>
  */
 public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
-    @NameInMap("AnycastPopLocationList")
-    private java.util.List < AnycastPopLocationList> anycastPopLocationList;
+    @com.aliyun.core.annotation.NameInMap("AnycastPopLocationList")
+    private java.util.List<AnycastPopLocationList> anycastPopLocationList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAnycastPopLocationsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return anycastPopLocationList
      */
-    public java.util.List < AnycastPopLocationList> getAnycastPopLocationList() {
+    public java.util.List<AnycastPopLocationList> getAnycastPopLocationList() {
         return this.anycastPopLocationList;
     }
 
@@ -57,20 +66,32 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AnycastPopLocationList> anycastPopLocationList; 
+        private java.util.List<AnycastPopLocationList> anycastPopLocationList; 
         private String count; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnycastPopLocationsResponseBody model) {
+            this.anycastPopLocationList = model.anycastPopLocationList;
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The list of access points in the specified access area.
+         * <p>The list of access points in the specified access area.</p>
          */
-        public Builder anycastPopLocationList(java.util.List < AnycastPopLocationList> anycastPopLocationList) {
+        public Builder anycastPopLocationList(java.util.List<AnycastPopLocationList> anycastPopLocationList) {
             this.anycastPopLocationList = anycastPopLocationList;
             return this;
         }
 
         /**
-         * The number of access points.
+         * <p>The number of access points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -78,7 +99,10 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +115,17 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAnycastPopLocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnycastPopLocationsResponseBody</p>
+     */
     public static class AnycastPopLocationList extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
         private AnycastPopLocationList(Builder builder) {
@@ -129,8 +159,19 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
             private String regionId; 
             private String regionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnycastPopLocationList model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+            } 
+
             /**
-             * The ID of the region where the access point is deployed.
+             * <p>The ID of the region where the access point is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1-pop</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +179,10 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region where the access point is deployed.
+             * <p>The name of the region where the access point is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1-pop</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

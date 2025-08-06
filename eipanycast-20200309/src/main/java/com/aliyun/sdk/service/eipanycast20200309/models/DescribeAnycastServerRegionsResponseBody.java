@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastServerRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAnycastServerRegionsResponseBody</p>
  */
 public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
-    @NameInMap("AnycastServerRegionList")
-    private java.util.List < AnycastServerRegionList> anycastServerRegionList;
+    @com.aliyun.core.annotation.NameInMap("AnycastServerRegionList")
+    private java.util.List<AnycastServerRegionList> anycastServerRegionList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAnycastServerRegionsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return anycastServerRegionList
      */
-    public java.util.List < AnycastServerRegionList> getAnycastServerRegionList() {
+    public java.util.List<AnycastServerRegionList> getAnycastServerRegionList() {
         return this.anycastServerRegionList;
     }
 
@@ -57,20 +66,32 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AnycastServerRegionList> anycastServerRegionList; 
+        private java.util.List<AnycastServerRegionList> anycastServerRegionList; 
         private String count; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnycastServerRegionsResponseBody model) {
+            this.anycastServerRegionList = model.anycastServerRegionList;
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The list of regions where you can associate Anycast EIPs with endpoints.
+         * <p>The list of regions where you can associate Anycast EIPs with endpoints.</p>
          */
-        public Builder anycastServerRegionList(java.util.List < AnycastServerRegionList> anycastServerRegionList) {
+        public Builder anycastServerRegionList(java.util.List<AnycastServerRegionList> anycastServerRegionList) {
             this.anycastServerRegionList = anycastServerRegionList;
             return this;
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -78,7 +99,10 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +115,17 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAnycastServerRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnycastServerRegionsResponseBody</p>
+     */
     public static class AnycastServerRegionList extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
         private AnycastServerRegionList(Builder builder) {
@@ -129,8 +159,19 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
             private String regionId; 
             private String regionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnycastServerRegionList model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+            } 
+
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eu-west-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +179,10 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eu-west-1-gb33-a01</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

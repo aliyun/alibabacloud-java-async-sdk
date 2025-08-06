@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnycastPopLocationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAnycastPopLocationsRequest</p>
  */
 public class DescribeAnycastPopLocationsRequest extends Request {
-    @Query
-    @NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
     private String serviceLocation;
 
     private DescribeAnycastPopLocationsRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class DescribeAnycastPopLocationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,10 +59,11 @@ public class DescribeAnycastPopLocationsRequest extends Request {
         } 
 
         /**
-         * The access area of the Anycast elastic IP address (EIP).
-         * <p>
+         * <p>The access area of the Anycast elastic IP address (EIP).</p>
+         * <p>Set the value to <strong>international</strong>, which specifies the areas outside the Chinese mainland.</p>
          * 
-         * Set the value to **international**, which specifies the areas outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

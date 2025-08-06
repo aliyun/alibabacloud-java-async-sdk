@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseAnycastEipAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleaseAnycastEipAddressRequest</p>
  */
 public class ReleaseAnycastEipAddressRequest extends Request {
-    @Query
-    @NameInMap("AnycastId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String anycastId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
     private ReleaseAnycastEipAddressRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ReleaseAnycastEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,11 @@ public class ReleaseAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the Anycast EIP to be released.
+         * <p>The ID of the Anycast EIP to be released.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-bp1ix34fralt4ykf3****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -78,10 +87,11 @@ public class ReleaseAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

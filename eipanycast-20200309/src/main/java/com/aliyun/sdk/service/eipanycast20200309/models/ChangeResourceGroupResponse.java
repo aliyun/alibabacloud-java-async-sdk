@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAnycastEipAddressesResponse} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponse} extends {@link TeaModel}
  *
- * <p>ListAnycastEipAddressesResponse</p>
+ * <p>ChangeResourceGroupResponse</p>
  */
-public class ListAnycastEipAddressesResponse extends Response {
+public class ChangeResourceGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListAnycastEipAddressesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListAnycastEipAddressesResponseBody body;
+    private ChangeResourceGroupResponseBody body;
 
-    private ListAnycastEipAddressesResponse(BuilderImpl builder) {
+    private ChangeResourceGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListAnycastEipAddressesResponse create() {
+    public static ChangeResourceGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListAnycastEipAddressesResponse extends Response {
     /**
      * @return body
      */
-    public ListAnycastEipAddressesResponseBody getBody() {
+    public ChangeResourceGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAnycastEipAddressesResponse, Builder> {
+    public interface Builder extends Response.Builder<ChangeResourceGroupResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListAnycastEipAddressesResponseBody body);
+        Builder body(ChangeResourceGroupResponseBody body);
 
         @Override
-        ListAnycastEipAddressesResponse build();
+        ChangeResourceGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAnycastEipAddressesResponse, Builder>
+            extends Response.BuilderImpl<ChangeResourceGroupResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListAnycastEipAddressesResponseBody body; 
+        private ChangeResourceGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAnycastEipAddressesResponse response) {
+        private BuilderImpl(ChangeResourceGroupResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListAnycastEipAddressesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAnycastEipAddressesResponseBody body) {
+        public Builder body(ChangeResourceGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAnycastEipAddressesResponse build() {
-            return new ListAnycastEipAddressesResponse(this);
+        public ChangeResourceGroupResponse build() {
+            return new ChangeResourceGroupResponse(this);
         } 
 
     } 

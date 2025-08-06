@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eipanycast20200309.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateAnycastEipAddressRequest} extends {@link RequestModel}
  *
  * <p>UnassociateAnycastEipAddressRequest</p>
  */
 public class UnassociateAnycastEipAddressRequest extends Request {
-    @Query
-    @NameInMap("AnycastId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnycastId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String anycastId;
 
-    @Query
-    @NameInMap("BindInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindInstanceId;
 
-    @Query
-    @NameInMap("BindInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindInstanceRegionId;
 
-    @Query
-    @NameInMap("BindInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindInstanceType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private String dryRun;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
     private UnassociateAnycastEipAddressRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,7 +147,11 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the Anycast EIP.
+         * <p>The ID of the Anycast EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-2zeerraiwb7ujsxdc****</p>
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -151,7 +160,11 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint from which you want to disassociate the Anycast EIP.
+         * <p>The ID of the endpoint from which you want to disassociate the Anycast EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zebb08phyczzawe****</p>
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -160,7 +173,11 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The region where the endpoint is deployed.
+         * <p>The region where the endpoint is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-west-1</p>
          */
         public Builder bindInstanceRegionId(String bindInstanceRegionId) {
             this.putQueryParameter("BindInstanceRegionId", bindInstanceRegionId);
@@ -169,11 +186,15 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The type of endpoint from which you want to disassociate the Anycast EIP. Valid values:
-         * <p>
+         * <p>The type of endpoint from which you want to disassociate the Anycast EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>SlbInstance</strong>: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</li>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
-         * *   **NetworkInterface**: elastic network interface (ENI)
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
          */
         public Builder bindInstanceType(String bindInstanceType) {
             this.putQueryParameter("BindInstanceType", bindInstanceType);
@@ -182,12 +203,14 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,11 +219,14 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -209,10 +235,11 @@ public class UnassociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * The secondary private IP address of the ENI from which you want to disassociate the Anycast EIP.
-         * <p>
+         * <p>The secondary private IP address of the ENI from which you want to disassociate the Anycast EIP.</p>
+         * <p>This parameter is valid only when you set <strong>BindInstanceType</strong> to <strong>NetworkInterface</strong>. If you do not specify this parameter, the primary private IP address of the ENI is used.</p>
          * 
-         * This parameter is valid only when you set **BindInstanceType** to **NetworkInterface**. If you do not specify this parameter, the primary private IP address of the ENI is used.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
