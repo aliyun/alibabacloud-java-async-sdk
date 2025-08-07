@@ -545,6 +545,9 @@ public class GetErrorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StructuredStack")
+        private String structuredStack;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
@@ -725,6 +728,7 @@ public class GetErrorResponseBody extends TeaModel {
             this.speedFlags = builder.speedFlags;
             this.stack = builder.stack;
             this.status = builder.status;
+            this.structuredStack = builder.structuredStack;
             this.summary = builder.summary;
             this.symbolicFileType = builder.symbolicFileType;
             this.sysLog = builder.sysLog;
@@ -1609,6 +1613,13 @@ public class GetErrorResponseBody extends TeaModel {
         }
 
         /**
+         * @return structuredStack
+         */
+        public String getStructuredStack() {
+            return this.structuredStack;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
@@ -1864,6 +1875,7 @@ public class GetErrorResponseBody extends TeaModel {
             private String speedFlags; 
             private String stack; 
             private String status; 
+            private String structuredStack; 
             private String summary; 
             private String symbolicFileType; 
             private String sysLog; 
@@ -2010,6 +2022,7 @@ public class GetErrorResponseBody extends TeaModel {
                 this.speedFlags = model.speedFlags;
                 this.stack = model.stack;
                 this.status = model.status;
+                this.structuredStack = model.structuredStack;
                 this.summary = model.summary;
                 this.symbolicFileType = model.symbolicFileType;
                 this.sysLog = model.sysLog;
@@ -3039,6 +3052,14 @@ public class GetErrorResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StructuredStack.
+             */
+            public Builder structuredStack(String structuredStack) {
+                this.structuredStack = structuredStack;
                 return this;
             }
 

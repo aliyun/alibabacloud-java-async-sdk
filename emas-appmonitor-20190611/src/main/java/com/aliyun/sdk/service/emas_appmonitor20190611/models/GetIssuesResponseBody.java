@@ -182,6 +182,18 @@ public class GetIssuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedUserCount")
         private Integer affectedUserCount;
 
+        @com.aliyun.core.annotation.NameInMap("AllocSizeMax")
+        private Long allocSizeMax;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct50")
+        private Long allocSizePct50;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct70")
+        private Long allocSizePct70;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct90")
+        private Long allocSizePct90;
+
         @com.aliyun.core.annotation.NameInMap("DigestHash")
         private String digestHash;
 
@@ -232,6 +244,10 @@ public class GetIssuesResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.affectedUserCount = builder.affectedUserCount;
+            this.allocSizeMax = builder.allocSizeMax;
+            this.allocSizePct50 = builder.allocSizePct50;
+            this.allocSizePct70 = builder.allocSizePct70;
+            this.allocSizePct90 = builder.allocSizePct90;
             this.digestHash = builder.digestHash;
             this.domScore = builder.domScore;
             this.errorColumn = builder.errorColumn;
@@ -263,6 +279,34 @@ public class GetIssuesResponseBody extends TeaModel {
          */
         public Integer getAffectedUserCount() {
             return this.affectedUserCount;
+        }
+
+        /**
+         * @return allocSizeMax
+         */
+        public Long getAllocSizeMax() {
+            return this.allocSizeMax;
+        }
+
+        /**
+         * @return allocSizePct50
+         */
+        public Long getAllocSizePct50() {
+            return this.allocSizePct50;
+        }
+
+        /**
+         * @return allocSizePct70
+         */
+        public Long getAllocSizePct70() {
+            return this.allocSizePct70;
+        }
+
+        /**
+         * @return allocSizePct90
+         */
+        public Long getAllocSizePct90() {
+            return this.allocSizePct90;
         }
 
         /**
@@ -379,6 +423,10 @@ public class GetIssuesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer affectedUserCount; 
+            private Long allocSizeMax; 
+            private Long allocSizePct50; 
+            private Long allocSizePct70; 
+            private Long allocSizePct90; 
             private String digestHash; 
             private String domScore; 
             private Integer errorColumn; 
@@ -401,6 +449,10 @@ public class GetIssuesResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.affectedUserCount = model.affectedUserCount;
+                this.allocSizeMax = model.allocSizeMax;
+                this.allocSizePct50 = model.allocSizePct50;
+                this.allocSizePct70 = model.allocSizePct70;
+                this.allocSizePct90 = model.allocSizePct90;
                 this.digestHash = model.digestHash;
                 this.domScore = model.domScore;
                 this.errorColumn = model.errorColumn;
@@ -424,6 +476,38 @@ public class GetIssuesResponseBody extends TeaModel {
              */
             public Builder affectedUserCount(Integer affectedUserCount) {
                 this.affectedUserCount = affectedUserCount;
+                return this;
+            }
+
+            /**
+             * AllocSizeMax.
+             */
+            public Builder allocSizeMax(Long allocSizeMax) {
+                this.allocSizeMax = allocSizeMax;
+                return this;
+            }
+
+            /**
+             * AllocSizePct50.
+             */
+            public Builder allocSizePct50(Long allocSizePct50) {
+                this.allocSizePct50 = allocSizePct50;
+                return this;
+            }
+
+            /**
+             * AllocSizePct70.
+             */
+            public Builder allocSizePct70(Long allocSizePct70) {
+                this.allocSizePct70 = allocSizePct70;
+                return this;
+            }
+
+            /**
+             * AllocSizePct90.
+             */
+            public Builder allocSizePct90(Long allocSizePct90) {
+                this.allocSizePct90 = allocSizePct90;
                 return this;
             }
 

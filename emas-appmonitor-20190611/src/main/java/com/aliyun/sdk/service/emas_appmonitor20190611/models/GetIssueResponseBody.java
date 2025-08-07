@@ -182,6 +182,18 @@ public class GetIssueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedVersions")
         private java.util.List<String> affectedVersions;
 
+        @com.aliyun.core.annotation.NameInMap("AllocSizeMax")
+        private Long allocSizeMax;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct50")
+        private Long allocSizePct50;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct70")
+        private Long allocSizePct70;
+
+        @com.aliyun.core.annotation.NameInMap("AllocSizePct90")
+        private Long allocSizePct90;
+
         @com.aliyun.core.annotation.NameInMap("CruxStack")
         private String cruxStack;
 
@@ -227,6 +239,9 @@ public class GetIssueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorType")
         private String errorType;
 
+        @com.aliyun.core.annotation.NameInMap("EventTime")
+        private Long eventTime;
+
         @com.aliyun.core.annotation.NameInMap("FirstVersion")
         private String firstVersion;
 
@@ -259,6 +274,10 @@ public class GetIssueResponseBody extends TeaModel {
 
         private Model(Builder builder) {
             this.affectedVersions = builder.affectedVersions;
+            this.allocSizeMax = builder.allocSizeMax;
+            this.allocSizePct50 = builder.allocSizePct50;
+            this.allocSizePct70 = builder.allocSizePct70;
+            this.allocSizePct90 = builder.allocSizePct90;
             this.cruxStack = builder.cruxStack;
             this.digestHash = builder.digestHash;
             this.errorColumn = builder.errorColumn;
@@ -274,6 +293,7 @@ public class GetIssueResponseBody extends TeaModel {
             this.errorRate = builder.errorRate;
             this.errorRateGrowthRate = builder.errorRateGrowthRate;
             this.errorType = builder.errorType;
+            this.eventTime = builder.eventTime;
             this.firstVersion = builder.firstVersion;
             this.gmtCreate = builder.gmtCreate;
             this.gmtLatest = builder.gmtLatest;
@@ -299,6 +319,34 @@ public class GetIssueResponseBody extends TeaModel {
          */
         public java.util.List<String> getAffectedVersions() {
             return this.affectedVersions;
+        }
+
+        /**
+         * @return allocSizeMax
+         */
+        public Long getAllocSizeMax() {
+            return this.allocSizeMax;
+        }
+
+        /**
+         * @return allocSizePct50
+         */
+        public Long getAllocSizePct50() {
+            return this.allocSizePct50;
+        }
+
+        /**
+         * @return allocSizePct70
+         */
+        public Long getAllocSizePct70() {
+            return this.allocSizePct70;
+        }
+
+        /**
+         * @return allocSizePct90
+         */
+        public Long getAllocSizePct90() {
+            return this.allocSizePct90;
         }
 
         /**
@@ -407,6 +455,13 @@ public class GetIssueResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventTime
+         */
+        public Long getEventTime() {
+            return this.eventTime;
+        }
+
+        /**
          * @return firstVersion
          */
         public String getFirstVersion() {
@@ -478,6 +533,10 @@ public class GetIssueResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> affectedVersions; 
+            private Long allocSizeMax; 
+            private Long allocSizePct50; 
+            private Long allocSizePct70; 
+            private Long allocSizePct90; 
             private String cruxStack; 
             private String digestHash; 
             private Integer errorColumn; 
@@ -493,6 +552,7 @@ public class GetIssueResponseBody extends TeaModel {
             private Double errorRate; 
             private Double errorRateGrowthRate; 
             private String errorType; 
+            private Long eventTime; 
             private String firstVersion; 
             private Long gmtCreate; 
             private Long gmtLatest; 
@@ -509,6 +569,10 @@ public class GetIssueResponseBody extends TeaModel {
 
             private Builder(Model model) {
                 this.affectedVersions = model.affectedVersions;
+                this.allocSizeMax = model.allocSizeMax;
+                this.allocSizePct50 = model.allocSizePct50;
+                this.allocSizePct70 = model.allocSizePct70;
+                this.allocSizePct90 = model.allocSizePct90;
                 this.cruxStack = model.cruxStack;
                 this.digestHash = model.digestHash;
                 this.errorColumn = model.errorColumn;
@@ -524,6 +588,7 @@ public class GetIssueResponseBody extends TeaModel {
                 this.errorRate = model.errorRate;
                 this.errorRateGrowthRate = model.errorRateGrowthRate;
                 this.errorType = model.errorType;
+                this.eventTime = model.eventTime;
                 this.firstVersion = model.firstVersion;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtLatest = model.gmtLatest;
@@ -541,6 +606,38 @@ public class GetIssueResponseBody extends TeaModel {
              */
             public Builder affectedVersions(java.util.List<String> affectedVersions) {
                 this.affectedVersions = affectedVersions;
+                return this;
+            }
+
+            /**
+             * AllocSizeMax.
+             */
+            public Builder allocSizeMax(Long allocSizeMax) {
+                this.allocSizeMax = allocSizeMax;
+                return this;
+            }
+
+            /**
+             * AllocSizePct50.
+             */
+            public Builder allocSizePct50(Long allocSizePct50) {
+                this.allocSizePct50 = allocSizePct50;
+                return this;
+            }
+
+            /**
+             * AllocSizePct70.
+             */
+            public Builder allocSizePct70(Long allocSizePct70) {
+                this.allocSizePct70 = allocSizePct70;
+                return this;
+            }
+
+            /**
+             * AllocSizePct90.
+             */
+            public Builder allocSizePct90(Long allocSizePct90) {
+                this.allocSizePct90 = allocSizePct90;
                 return this;
             }
 
@@ -661,6 +758,14 @@ public class GetIssueResponseBody extends TeaModel {
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
+                return this;
+            }
+
+            /**
+             * EventTime.
+             */
+            public Builder eventTime(Long eventTime) {
+                this.eventTime = eventTime;
                 return this;
             }
 

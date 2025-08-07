@@ -36,6 +36,10 @@ public class GetErrorRequest extends Request {
     private String did;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DigestHash")
+    private String digestHash;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
@@ -53,6 +57,7 @@ public class GetErrorRequest extends Request {
         this.bizModule = builder.bizModule;
         this.clientTime = builder.clientTime;
         this.did = builder.did;
+        this.digestHash = builder.digestHash;
         this.force = builder.force;
         this.os = builder.os;
         this.uuid = builder.uuid;
@@ -100,6 +105,13 @@ public class GetErrorRequest extends Request {
     }
 
     /**
+     * @return digestHash
+     */
+    public String getDigestHash() {
+        return this.digestHash;
+    }
+
+    /**
      * @return force
      */
     public Boolean getForce() {
@@ -125,6 +137,7 @@ public class GetErrorRequest extends Request {
         private String bizModule; 
         private Long clientTime; 
         private String did; 
+        private String digestHash; 
         private Boolean force; 
         private String os; 
         private String uuid; 
@@ -139,6 +152,7 @@ public class GetErrorRequest extends Request {
             this.bizModule = request.bizModule;
             this.clientTime = request.clientTime;
             this.did = request.did;
+            this.digestHash = request.digestHash;
             this.force = request.force;
             this.os = request.os;
             this.uuid = request.uuid;
@@ -184,6 +198,15 @@ public class GetErrorRequest extends Request {
         public Builder did(String did) {
             this.putBodyParameter("Did", did);
             this.did = did;
+            return this;
+        }
+
+        /**
+         * DigestHash.
+         */
+        public Builder digestHash(String digestHash) {
+            this.putBodyParameter("DigestHash", digestHash);
+            this.digestHash = digestHash;
             return this;
         }
 

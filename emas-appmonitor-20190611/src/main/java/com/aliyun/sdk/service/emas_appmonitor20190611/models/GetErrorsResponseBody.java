@@ -188,6 +188,9 @@ public class GetErrorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Did")
         private String did;
 
+        @com.aliyun.core.annotation.NameInMap("DigestHash")
+        private String digestHash;
+
         @com.aliyun.core.annotation.NameInMap("Utdid")
         private String utdid;
 
@@ -197,6 +200,7 @@ public class GetErrorsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.clientTime = builder.clientTime;
             this.did = builder.did;
+            this.digestHash = builder.digestHash;
             this.utdid = builder.utdid;
             this.uuid = builder.uuid;
         }
@@ -224,6 +228,13 @@ public class GetErrorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return digestHash
+         */
+        public String getDigestHash() {
+            return this.digestHash;
+        }
+
+        /**
          * @return utdid
          */
         public String getUtdid() {
@@ -240,6 +251,7 @@ public class GetErrorsResponseBody extends TeaModel {
         public static final class Builder {
             private Long clientTime; 
             private String did; 
+            private String digestHash; 
             private String utdid; 
             private String uuid; 
 
@@ -249,6 +261,7 @@ public class GetErrorsResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.clientTime = model.clientTime;
                 this.did = model.did;
+                this.digestHash = model.digestHash;
                 this.utdid = model.utdid;
                 this.uuid = model.uuid;
             } 
@@ -266,6 +279,14 @@ public class GetErrorsResponseBody extends TeaModel {
              */
             public Builder did(String did) {
                 this.did = did;
+                return this;
+            }
+
+            /**
+             * DigestHash.
+             */
+            public Builder digestHash(String digestHash) {
+                this.digestHash = digestHash;
                 return this;
             }
 
