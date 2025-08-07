@@ -232,6 +232,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     */
+    CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the cluster meets the following requirements:</p>
      * <ul>
@@ -342,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteParameterGroupResponse
      */
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterPerformance  DescribeAIDBClusterPerformanceRequest
+     * @return DescribeAIDBClusterPerformanceResponse
+     */
+    CompletableFuture<DescribeAIDBClusterPerformanceResponse> describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request);
 
     /**
      * @param request the request parameters of DescribeAITaskStatus  DescribeAITaskStatusRequest

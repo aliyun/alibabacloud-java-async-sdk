@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeParameterGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBType")
+    private String DBType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -49,6 +53,7 @@ public class DescribeParameterGroupRequest extends Request {
 
     private DescribeParameterGroupRequest(Builder builder) {
         super(builder);
+        this.DBType = builder.DBType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameterGroupId = builder.parameterGroupId;
@@ -69,6 +74,13 @@ public class DescribeParameterGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return DBType
+     */
+    public String getDBType() {
+        return this.DBType;
     }
 
     /**
@@ -121,6 +133,7 @@ public class DescribeParameterGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeParameterGroupRequest, Builder> {
+        private String DBType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String parameterGroupId; 
@@ -135,6 +148,7 @@ public class DescribeParameterGroupRequest extends Request {
 
         private Builder(DescribeParameterGroupRequest request) {
             super(request);
+            this.DBType = request.DBType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.parameterGroupId = request.parameterGroupId;
@@ -143,6 +157,15 @@ public class DescribeParameterGroupRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * DBType.
+         */
+        public Builder DBType(String DBType) {
+            this.putQueryParameter("DBType", DBType);
+            this.DBType = DBType;
+            return this;
+        }
 
         /**
          * OwnerAccount.
