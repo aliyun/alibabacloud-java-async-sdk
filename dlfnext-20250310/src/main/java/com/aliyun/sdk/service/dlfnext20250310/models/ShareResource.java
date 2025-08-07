@@ -26,9 +26,6 @@ public class ShareResource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("databaseName")
     private String databaseName;
 
-    @com.aliyun.core.annotation.NameInMap("shareId")
-    private String shareId;
-
     @com.aliyun.core.annotation.NameInMap("shareType")
     private String shareType;
 
@@ -45,7 +42,6 @@ public class ShareResource extends TeaModel {
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
         this.databaseName = builder.databaseName;
-        this.shareId = builder.shareId;
         this.shareType = builder.shareType;
         this.tableName = builder.tableName;
         this.updatedAt = builder.updatedAt;
@@ -86,13 +82,6 @@ public class ShareResource extends TeaModel {
     }
 
     /**
-     * @return shareId
-     */
-    public String getShareId() {
-        return this.shareId;
-    }
-
-    /**
      * @return shareType
      */
     public String getShareType() {
@@ -124,7 +113,6 @@ public class ShareResource extends TeaModel {
         private Long createdAt; 
         private String createdBy; 
         private String databaseName; 
-        private String shareId; 
         private String shareType; 
         private String tableName; 
         private Long updatedAt; 
@@ -137,7 +125,6 @@ public class ShareResource extends TeaModel {
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
             this.databaseName = model.databaseName;
-            this.shareId = model.shareId;
             this.shareType = model.shareType;
             this.tableName = model.tableName;
             this.updatedAt = model.updatedAt;
@@ -165,14 +152,6 @@ public class ShareResource extends TeaModel {
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * shareId.
-         */
-        public Builder shareId(String shareId) {
-            this.shareId = shareId;
             return this;
         }
 
