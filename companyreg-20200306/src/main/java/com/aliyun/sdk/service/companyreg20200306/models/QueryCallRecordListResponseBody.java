@@ -158,6 +158,9 @@ public class QueryCallRecordListResponseBody extends TeaModel {
      * <p>QueryCallRecordListResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContactDisposition")
+        private String contactDisposition;
+
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
@@ -167,10 +170,15 @@ public class QueryCallRecordListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
+        @com.aliyun.core.annotation.NameInMap("taskId")
+        private String taskId;
+
         private Data(Builder builder) {
+            this.contactDisposition = builder.contactDisposition;
             this.duration = builder.duration;
             this.signatureUrl = builder.signatureUrl;
             this.startTime = builder.startTime;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -179,6 +187,13 @@ public class QueryCallRecordListResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return contactDisposition
+         */
+        public String getContactDisposition() {
+            return this.contactDisposition;
         }
 
         /**
@@ -202,19 +217,38 @@ public class QueryCallRecordListResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
         public static final class Builder {
+            private String contactDisposition; 
             private Integer duration; 
             private String signatureUrl; 
             private Long startTime; 
+            private String taskId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.contactDisposition = model.contactDisposition;
                 this.duration = model.duration;
                 this.signatureUrl = model.signatureUrl;
                 this.startTime = model.startTime;
+                this.taskId = model.taskId;
             } 
+
+            /**
+             * ContactDisposition.
+             */
+            public Builder contactDisposition(String contactDisposition) {
+                this.contactDisposition = contactDisposition;
+                return this;
+            }
 
             /**
              * Duration.
@@ -237,6 +271,14 @@ public class QueryCallRecordListResponseBody extends TeaModel {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * taskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

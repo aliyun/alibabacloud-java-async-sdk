@@ -91,6 +91,9 @@ public class QueryCallRecordListRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P20210928095324000002</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -100,6 +103,9 @@ public class QueryCallRecordListRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esp.bookkeeping</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -109,6 +115,9 @@ public class QueryCallRecordListRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder skillType(Long skillType) {
             this.putQueryParameter("SkillType", skillType);
