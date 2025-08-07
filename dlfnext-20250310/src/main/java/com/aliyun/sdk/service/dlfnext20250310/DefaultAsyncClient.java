@@ -76,6 +76,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AlterReceiver  AlterReceiverRequest
+     * @return AlterReceiverResponse
+     */
+    @Override
+    public CompletableFuture<AlterReceiverResponse> alterReceiver(AlterReceiverRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AlterReceiver").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/receivers/{receiver}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AlterReceiverResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AlterReceiverResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AlterShare  AlterShareRequest
+     * @return AlterShareResponse
+     */
+    @Override
+    public CompletableFuture<AlterShareResponse> alterShare(AlterShareRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AlterShare").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/shares/{share}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AlterShareResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AlterShareResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AlterShareReceivers  AlterShareReceiversRequest
+     * @return AlterShareReceiversResponse
+     */
+    @Override
+    public CompletableFuture<AlterShareReceiversResponse> alterShareReceivers(AlterShareReceiversRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AlterShareReceivers").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/shares/{share}/receivers").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AlterShareReceiversResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AlterShareReceiversResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AlterShareResources  AlterShareResourcesRequest
+     * @return AlterShareResourcesResponse
+     */
+    @Override
+    public CompletableFuture<AlterShareResourcesResponse> alterShareResources(AlterShareResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AlterShareResources").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/shares/{share}/resources").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AlterShareResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AlterShareResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AlterTable  AlterTableRequest
      * @return AlterTableResponse
      */
@@ -166,6 +238,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateReceiver  CreateReceiverRequest
+     * @return CreateReceiverResponse
+     */
+    @Override
+    public CompletableFuture<CreateReceiverResponse> createReceiver(CreateReceiverRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateReceiver").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/receivers").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateReceiverResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateReceiverResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateRole  CreateRoleRequest
      * @return CreateRoleResponse
      */
@@ -178,6 +268,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateShare  CreateShareRequest
+     * @return CreateShareResponse
+     */
+    @Override
+    public CompletableFuture<CreateShareResponse> createShare(CreateShareRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateShare").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/share/shares").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateShareResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateShareResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -268,6 +376,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DropDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DropReceiver  DropReceiverRequest
+     * @return DropReceiverResponse
+     */
+    @Override
+    public CompletableFuture<DropReceiverResponse> dropReceiver(DropReceiverRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DropReceiver").setMethod(HttpMethod.DELETE).setPathRegex("/dlf/v1/share/receivers/{receiver}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DropReceiverResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DropReceiverResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DropShare  DropShareRequest
+     * @return DropShareResponse
+     */
+    @Override
+    public CompletableFuture<DropShareResponse> dropShare(DropShareRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DropShare").setMethod(HttpMethod.DELETE).setPathRegex("/dlf/v1/share/shares/{share}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DropShareResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DropShareResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -454,6 +598,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetReceiver  GetReceiverRequest
+     * @return GetReceiverResponse
+     */
+    @Override
+    public CompletableFuture<GetReceiverResponse> getReceiver(GetReceiverRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetReceiver").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/receivers/{receiver}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetReceiverResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetReceiverResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -490,6 +652,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetShare  GetShareRequest
+     * @return GetShareResponse
+     */
+    @Override
+    public CompletableFuture<GetShareResponse> getShare(GetShareRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetShare").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/shares/{share}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetShareResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetShareResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTable  GetTableRequest
      * @return GetTableResponse
      */
@@ -502,6 +682,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTableSnapshot  GetTableSnapshotRequest
+     * @return GetTableSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<GetTableSnapshotResponse> getTableSnapshot(GetTableSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTableSnapshot").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/snapshot").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -706,6 +904,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListProvidedShares  ListProvidedSharesRequest
+     * @return ListProvidedSharesResponse
+     */
+    @Override
+    public CompletableFuture<ListProvidedSharesResponse> listProvidedShares(ListProvidedSharesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProvidedShares").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/shares/list/provided").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProvidedSharesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListProvidedSharesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListReceivedShares  ListReceivedSharesRequest
+     * @return ListReceivedSharesResponse
+     */
+    @Override
+    public CompletableFuture<ListReceivedSharesResponse> listReceivedShares(ListReceivedSharesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListReceivedShares").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/shares/list/received").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListReceivedSharesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListReceivedSharesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListReceivers  ListReceiversRequest
+     * @return ListReceiversResponse
+     */
+    @Override
+    public CompletableFuture<ListReceiversResponse> listReceivers(ListReceiversRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListReceivers").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/receivers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListReceiversResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListReceiversResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListRoleUsers  ListRoleUsersRequest
      * @return ListRoleUsersResponse
      */
@@ -736,6 +988,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListShareReceivers  ListShareReceiversRequest
+     * @return ListShareReceiversResponse
+     */
+    @Override
+    public CompletableFuture<ListShareReceiversResponse> listShareReceivers(ListShareReceiversRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListShareReceivers").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/shares/{share}/receivers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListShareReceiversResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListShareReceiversResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListShareResources  ListShareResourcesRequest
+     * @return ListShareResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListShareResourcesResponse> listShareResources(ListShareResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListShareResources").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/share/shares/{share}/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListShareResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListShareResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSnapshots").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/snapshots").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSnapshotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -826,6 +1132,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RevokeRoleFromUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RollbackTable  RollbackTableRequest
+     * @return RollbackTableResponse
+     */
+    @Override
+    public CompletableFuture<RollbackTableResponse> rollbackTable(RollbackTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RollbackTable").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/rollback").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RollbackTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RollbackTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

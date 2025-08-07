@@ -32,11 +32,16 @@ public class GetTableSummaryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String table;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("date")
+    private String date;
+
     private GetTableSummaryRequest(Builder builder) {
         super(builder);
         this.catalogId = builder.catalogId;
         this.database = builder.database;
         this.table = builder.table;
+        this.date = builder.date;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class GetTableSummaryRequest extends Request {
         return this.table;
     }
 
+    /**
+     * @return date
+     */
+    public String getDate() {
+        return this.date;
+    }
+
     public static final class Builder extends Request.Builder<GetTableSummaryRequest, Builder> {
         private String catalogId; 
         private String database; 
         private String table; 
+        private String date; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class GetTableSummaryRequest extends Request {
             this.catalogId = request.catalogId;
             this.database = request.database;
             this.table = request.table;
+            this.date = request.date;
         } 
 
         /**
@@ -122,6 +136,15 @@ public class GetTableSummaryRequest extends Request {
         public Builder table(String table) {
             this.putPathParameter("table", table);
             this.table = table;
+            return this;
+        }
+
+        /**
+         * date.
+         */
+        public Builder date(String date) {
+            this.putQueryParameter("date", date);
+            this.date = date;
             return this;
         }
 

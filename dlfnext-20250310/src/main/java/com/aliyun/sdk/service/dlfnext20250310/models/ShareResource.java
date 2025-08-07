@@ -12,40 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Catalog} extends {@link TeaModel}
+ * {@link ShareResource} extends {@link TeaModel}
  *
- * <p>Catalog</p>
+ * <p>ShareResource</p>
  */
-public class Catalog extends TeaModel {
+public class ShareResource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private Long createdAt;
 
     @com.aliyun.core.annotation.NameInMap("createdBy")
     private String createdBy;
 
-    @com.aliyun.core.annotation.NameInMap("id")
-    private String id;
-
-    @com.aliyun.core.annotation.NameInMap("isShared")
-    private Boolean isShared;
-
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("options")
-    private java.util.Map<String, String> options;
-
-    @com.aliyun.core.annotation.NameInMap("owner")
-    private String owner;
+    @com.aliyun.core.annotation.NameInMap("databaseName")
+    private String databaseName;
 
     @com.aliyun.core.annotation.NameInMap("shareId")
     private String shareId;
 
-    @com.aliyun.core.annotation.NameInMap("status")
-    private String status;
+    @com.aliyun.core.annotation.NameInMap("shareType")
+    private String shareType;
 
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("tableName")
+    private String tableName;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
@@ -53,17 +41,13 @@ public class Catalog extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updatedBy")
     private String updatedBy;
 
-    private Catalog(Builder builder) {
+    private ShareResource(Builder builder) {
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
-        this.id = builder.id;
-        this.isShared = builder.isShared;
-        this.name = builder.name;
-        this.options = builder.options;
-        this.owner = builder.owner;
+        this.databaseName = builder.databaseName;
         this.shareId = builder.shareId;
-        this.status = builder.status;
-        this.type = builder.type;
+        this.shareType = builder.shareType;
+        this.tableName = builder.tableName;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -72,7 +56,7 @@ public class Catalog extends TeaModel {
         return new Builder();
     }
 
-    public static Catalog create() {
+    public static ShareResource create() {
         return builder().build();
     }
 
@@ -95,38 +79,10 @@ public class Catalog extends TeaModel {
     }
 
     /**
-     * @return id
+     * @return databaseName
      */
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     * @return isShared
-     */
-    public Boolean getIsShared() {
-        return this.isShared;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return options
-     */
-    public java.util.Map<String, String> getOptions() {
-        return this.options;
-    }
-
-    /**
-     * @return owner
-     */
-    public String getOwner() {
-        return this.owner;
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
     /**
@@ -137,17 +93,17 @@ public class Catalog extends TeaModel {
     }
 
     /**
-     * @return status
+     * @return shareType
      */
-    public String getStatus() {
-        return this.status;
+    public String getShareType() {
+        return this.shareType;
     }
 
     /**
-     * @return type
+     * @return tableName
      */
-    public String getType() {
-        return this.type;
+    public String getTableName() {
+        return this.tableName;
     }
 
     /**
@@ -167,31 +123,23 @@ public class Catalog extends TeaModel {
     public static final class Builder {
         private Long createdAt; 
         private String createdBy; 
-        private String id; 
-        private Boolean isShared; 
-        private String name; 
-        private java.util.Map<String, String> options; 
-        private String owner; 
+        private String databaseName; 
         private String shareId; 
-        private String status; 
-        private String type; 
+        private String shareType; 
+        private String tableName; 
         private Long updatedAt; 
         private String updatedBy; 
 
         private Builder() {
         } 
 
-        private Builder(Catalog model) {
+        private Builder(ShareResource model) {
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
-            this.id = model.id;
-            this.isShared = model.isShared;
-            this.name = model.name;
-            this.options = model.options;
-            this.owner = model.owner;
+            this.databaseName = model.databaseName;
             this.shareId = model.shareId;
-            this.status = model.status;
-            this.type = model.type;
+            this.shareType = model.shareType;
+            this.tableName = model.tableName;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
@@ -213,42 +161,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * id.
+         * databaseName.
          */
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * isShared.
-         */
-        public Builder isShared(Boolean isShared) {
-            this.isShared = isShared;
-            return this;
-        }
-
-        /**
-         * name.
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * options.
-         */
-        public Builder options(java.util.Map<String, String> options) {
-            this.options = options;
-            return this;
-        }
-
-        /**
-         * owner.
-         */
-        public Builder owner(String owner) {
-            this.owner = owner;
+        public Builder databaseName(String databaseName) {
+            this.databaseName = databaseName;
             return this;
         }
 
@@ -261,18 +177,18 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * status.
+         * shareType.
          */
-        public Builder status(String status) {
-            this.status = status;
+        public Builder shareType(String shareType) {
+            this.shareType = shareType;
             return this;
         }
 
         /**
-         * type.
+         * tableName.
          */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder tableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
 
@@ -292,8 +208,8 @@ public class Catalog extends TeaModel {
             return this;
         }
 
-        public Catalog build() {
-            return new Catalog(this);
+        public ShareResource build() {
+            return new ShareResource(this);
         } 
 
     } 

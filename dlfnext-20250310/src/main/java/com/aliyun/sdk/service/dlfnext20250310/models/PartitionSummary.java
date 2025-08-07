@@ -29,6 +29,15 @@ public class PartitionSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("partitionName")
     private String partitionName;
 
+    @com.aliyun.core.annotation.NameInMap("storageActionParams")
+    private java.util.Map<String, String> storageActionParams;
+
+    @com.aliyun.core.annotation.NameInMap("storageActionTimestamp")
+    private Long storageActionTimestamp;
+
+    @com.aliyun.core.annotation.NameInMap("storageClass")
+    private String storageClass;
+
     @com.aliyun.core.annotation.NameInMap("tableName")
     private String tableName;
 
@@ -46,6 +55,9 @@ public class PartitionSummary extends TeaModel {
         this.databaseName = builder.databaseName;
         this.lastAccessTime = builder.lastAccessTime;
         this.partitionName = builder.partitionName;
+        this.storageActionParams = builder.storageActionParams;
+        this.storageActionTimestamp = builder.storageActionTimestamp;
+        this.storageClass = builder.storageClass;
         this.tableName = builder.tableName;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
@@ -93,6 +105,27 @@ public class PartitionSummary extends TeaModel {
     }
 
     /**
+     * @return storageActionParams
+     */
+    public java.util.Map<String, String> getStorageActionParams() {
+        return this.storageActionParams;
+    }
+
+    /**
+     * @return storageActionTimestamp
+     */
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    /**
+     * @return storageClass
+     */
+    public String getStorageClass() {
+        return this.storageClass;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -125,6 +158,9 @@ public class PartitionSummary extends TeaModel {
         private String databaseName; 
         private Long lastAccessTime; 
         private String partitionName; 
+        private java.util.Map<String, String> storageActionParams; 
+        private Long storageActionTimestamp; 
+        private String storageClass; 
         private String tableName; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
@@ -138,6 +174,9 @@ public class PartitionSummary extends TeaModel {
             this.databaseName = model.databaseName;
             this.lastAccessTime = model.lastAccessTime;
             this.partitionName = model.partitionName;
+            this.storageActionParams = model.storageActionParams;
+            this.storageActionTimestamp = model.storageActionTimestamp;
+            this.storageClass = model.storageClass;
             this.tableName = model.tableName;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
@@ -173,6 +212,30 @@ public class PartitionSummary extends TeaModel {
          */
         public Builder partitionName(String partitionName) {
             this.partitionName = partitionName;
+            return this;
+        }
+
+        /**
+         * storageActionParams.
+         */
+        public Builder storageActionParams(java.util.Map<String, String> storageActionParams) {
+            this.storageActionParams = storageActionParams;
+            return this;
+        }
+
+        /**
+         * storageActionTimestamp.
+         */
+        public Builder storageActionTimestamp(Long storageActionTimestamp) {
+            this.storageActionTimestamp = storageActionTimestamp;
+            return this;
+        }
+
+        /**
+         * storageClass.
+         */
+        public Builder storageClass(String storageClass) {
+            this.storageClass = storageClass;
             return this;
         }
 

@@ -29,6 +29,18 @@ public class CatalogSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("generatedDate")
     private String generatedDate;
 
+    @com.aliyun.core.annotation.NameInMap("objTypeArchiveSize")
+    private Long objTypeArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeColdArchiveSize")
+    private Long objTypeColdArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeIaSize")
+    private Long objTypeIaSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeStandardSize")
+    private Long objTypeStandardSize;
+
     @com.aliyun.core.annotation.NameInMap("partitionCount")
     private MoMValues partitionCount;
 
@@ -49,6 +61,10 @@ public class CatalogSummary extends TeaModel {
         this.databaseCount = builder.databaseCount;
         this.fileAccessCountMonthly = builder.fileAccessCountMonthly;
         this.generatedDate = builder.generatedDate;
+        this.objTypeArchiveSize = builder.objTypeArchiveSize;
+        this.objTypeColdArchiveSize = builder.objTypeColdArchiveSize;
+        this.objTypeIaSize = builder.objTypeIaSize;
+        this.objTypeStandardSize = builder.objTypeStandardSize;
         this.partitionCount = builder.partitionCount;
         this.tableCount = builder.tableCount;
         this.throughputMonthly = builder.throughputMonthly;
@@ -97,6 +113,34 @@ public class CatalogSummary extends TeaModel {
     }
 
     /**
+     * @return objTypeArchiveSize
+     */
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    /**
+     * @return objTypeColdArchiveSize
+     */
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    /**
+     * @return objTypeIaSize
+     */
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    /**
+     * @return objTypeStandardSize
+     */
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
+    }
+
+    /**
      * @return partitionCount
      */
     public MoMValues getPartitionCount() {
@@ -136,6 +180,10 @@ public class CatalogSummary extends TeaModel {
         private MoMValues databaseCount; 
         private Long fileAccessCountMonthly; 
         private String generatedDate; 
+        private Long objTypeArchiveSize; 
+        private Long objTypeColdArchiveSize; 
+        private Long objTypeIaSize; 
+        private Long objTypeStandardSize; 
         private MoMValues partitionCount; 
         private MoMValues tableCount; 
         private Long throughputMonthly; 
@@ -150,6 +198,10 @@ public class CatalogSummary extends TeaModel {
             this.databaseCount = model.databaseCount;
             this.fileAccessCountMonthly = model.fileAccessCountMonthly;
             this.generatedDate = model.generatedDate;
+            this.objTypeArchiveSize = model.objTypeArchiveSize;
+            this.objTypeColdArchiveSize = model.objTypeColdArchiveSize;
+            this.objTypeIaSize = model.objTypeIaSize;
+            this.objTypeStandardSize = model.objTypeStandardSize;
             this.partitionCount = model.partitionCount;
             this.tableCount = model.tableCount;
             this.throughputMonthly = model.throughputMonthly;
@@ -186,6 +238,38 @@ public class CatalogSummary extends TeaModel {
          */
         public Builder generatedDate(String generatedDate) {
             this.generatedDate = generatedDate;
+            return this;
+        }
+
+        /**
+         * objTypeArchiveSize.
+         */
+        public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
+            this.objTypeArchiveSize = objTypeArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeColdArchiveSize.
+         */
+        public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+            this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeIaSize.
+         */
+        public Builder objTypeIaSize(Long objTypeIaSize) {
+            this.objTypeIaSize = objTypeIaSize;
+            return this;
+        }
+
+        /**
+         * objTypeStandardSize.
+         */
+        public Builder objTypeStandardSize(Long objTypeStandardSize) {
+            this.objTypeStandardSize = objTypeStandardSize;
             return this;
         }
 

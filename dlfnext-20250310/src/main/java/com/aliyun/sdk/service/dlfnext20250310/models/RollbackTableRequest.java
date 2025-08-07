@@ -12,37 +12,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDatabaseSummaryRequest} extends {@link RequestModel}
+ * {@link RollbackTableRequest} extends {@link RequestModel}
  *
- * <p>GetDatabaseSummaryRequest</p>
+ * <p>RollbackTableRequest</p>
  */
-public class GetDatabaseSummaryRequest extends Request {
+public class RollbackTableRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("catalogId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String catalogId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("database")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String database;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("date")
-    private String date;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("table")
+    private String table;
 
-    private GetDatabaseSummaryRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instant")
+    private FullInstant instant;
+
+    private RollbackTableRequest(Builder builder) {
         super(builder);
         this.catalogId = builder.catalogId;
         this.database = builder.database;
-        this.date = builder.date;
+        this.table = builder.table;
+        this.instant = builder.instant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDatabaseSummaryRequest create() {
+    public static RollbackTableRequest create() {
         return builder().build();
     }
 
@@ -66,33 +69,39 @@ public class GetDatabaseSummaryRequest extends Request {
     }
 
     /**
-     * @return date
+     * @return table
      */
-    public String getDate() {
-        return this.date;
+    public String getTable() {
+        return this.table;
     }
 
-    public static final class Builder extends Request.Builder<GetDatabaseSummaryRequest, Builder> {
+    /**
+     * @return instant
+     */
+    public FullInstant getInstant() {
+        return this.instant;
+    }
+
+    public static final class Builder extends Request.Builder<RollbackTableRequest, Builder> {
         private String catalogId; 
         private String database; 
-        private String date; 
+        private String table; 
+        private FullInstant instant; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDatabaseSummaryRequest request) {
+        private Builder(RollbackTableRequest request) {
             super(request);
             this.catalogId = request.catalogId;
             this.database = request.database;
-            this.date = request.date;
+            this.table = request.table;
+            this.instant = request.instant;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clg-paimon-xxxx</p>
+         * catalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -101,10 +110,7 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
+         * database.
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -113,17 +119,26 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * date.
+         * table.
          */
-        public Builder date(String date) {
-            this.putQueryParameter("date", date);
-            this.date = date;
+        public Builder table(String table) {
+            this.putPathParameter("table", table);
+            this.table = table;
+            return this;
+        }
+
+        /**
+         * instant.
+         */
+        public Builder instant(FullInstant instant) {
+            this.putBodyParameter("instant", instant);
+            this.instant = instant;
             return this;
         }
 
         @Override
-        public GetDatabaseSummaryRequest build() {
-            return new GetDatabaseSummaryRequest(this);
+        public RollbackTableRequest build() {
+            return new RollbackTableRequest(this);
         } 
 
     } 

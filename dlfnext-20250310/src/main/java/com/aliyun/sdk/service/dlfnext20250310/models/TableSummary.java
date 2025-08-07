@@ -29,11 +29,32 @@ public class TableSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastAccessTime")
     private Long lastAccessTime;
 
+    @com.aliyun.core.annotation.NameInMap("objTypeArchiveSize")
+    private Long objTypeArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeColdArchiveSize")
+    private Long objTypeColdArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeIaSize")
+    private Long objTypeIaSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeStandardSize")
+    private Long objTypeStandardSize;
+
     @com.aliyun.core.annotation.NameInMap("partitionCount")
     private Long partitionCount;
 
     @com.aliyun.core.annotation.NameInMap("path")
     private String path;
+
+    @com.aliyun.core.annotation.NameInMap("storageActionParams")
+    private java.util.Map<String, String> storageActionParams;
+
+    @com.aliyun.core.annotation.NameInMap("storageActionTimestamp")
+    private Long storageActionTimestamp;
+
+    @com.aliyun.core.annotation.NameInMap("storageClass")
+    private String storageClass;
 
     @com.aliyun.core.annotation.NameInMap("tableName")
     private String tableName;
@@ -44,16 +65,27 @@ public class TableSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private Long totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("updatedAt")
+    private Long updatedAt;
+
     private TableSummary(Builder builder) {
         this.createdAt = builder.createdAt;
         this.databaseName = builder.databaseName;
         this.generatedDate = builder.generatedDate;
         this.lastAccessTime = builder.lastAccessTime;
+        this.objTypeArchiveSize = builder.objTypeArchiveSize;
+        this.objTypeColdArchiveSize = builder.objTypeColdArchiveSize;
+        this.objTypeIaSize = builder.objTypeIaSize;
+        this.objTypeStandardSize = builder.objTypeStandardSize;
         this.partitionCount = builder.partitionCount;
         this.path = builder.path;
+        this.storageActionParams = builder.storageActionParams;
+        this.storageActionTimestamp = builder.storageActionTimestamp;
+        this.storageClass = builder.storageClass;
         this.tableName = builder.tableName;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.updatedAt = builder.updatedAt;
     }
 
     public static Builder builder() {
@@ -97,6 +129,34 @@ public class TableSummary extends TeaModel {
     }
 
     /**
+     * @return objTypeArchiveSize
+     */
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    /**
+     * @return objTypeColdArchiveSize
+     */
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    /**
+     * @return objTypeIaSize
+     */
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    /**
+     * @return objTypeStandardSize
+     */
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
+    }
+
+    /**
      * @return partitionCount
      */
     public Long getPartitionCount() {
@@ -108,6 +168,27 @@ public class TableSummary extends TeaModel {
      */
     public String getPath() {
         return this.path;
+    }
+
+    /**
+     * @return storageActionParams
+     */
+    public java.util.Map<String, String> getStorageActionParams() {
+        return this.storageActionParams;
+    }
+
+    /**
+     * @return storageActionTimestamp
+     */
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    /**
+     * @return storageClass
+     */
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
     /**
@@ -131,16 +212,31 @@ public class TableSummary extends TeaModel {
         return this.totalFileSizeInBytes;
     }
 
+    /**
+     * @return updatedAt
+     */
+    public Long getUpdatedAt() {
+        return this.updatedAt;
+    }
+
     public static final class Builder {
         private Long createdAt; 
         private String databaseName; 
         private String generatedDate; 
         private Long lastAccessTime; 
+        private Long objTypeArchiveSize; 
+        private Long objTypeColdArchiveSize; 
+        private Long objTypeIaSize; 
+        private Long objTypeStandardSize; 
         private Long partitionCount; 
         private String path; 
+        private java.util.Map<String, String> storageActionParams; 
+        private Long storageActionTimestamp; 
+        private String storageClass; 
         private String tableName; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
+        private Long updatedAt; 
 
         private Builder() {
         } 
@@ -150,11 +246,19 @@ public class TableSummary extends TeaModel {
             this.databaseName = model.databaseName;
             this.generatedDate = model.generatedDate;
             this.lastAccessTime = model.lastAccessTime;
+            this.objTypeArchiveSize = model.objTypeArchiveSize;
+            this.objTypeColdArchiveSize = model.objTypeColdArchiveSize;
+            this.objTypeIaSize = model.objTypeIaSize;
+            this.objTypeStandardSize = model.objTypeStandardSize;
             this.partitionCount = model.partitionCount;
             this.path = model.path;
+            this.storageActionParams = model.storageActionParams;
+            this.storageActionTimestamp = model.storageActionTimestamp;
+            this.storageClass = model.storageClass;
             this.tableName = model.tableName;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.updatedAt = model.updatedAt;
         } 
 
         /**
@@ -190,6 +294,38 @@ public class TableSummary extends TeaModel {
         }
 
         /**
+         * objTypeArchiveSize.
+         */
+        public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
+            this.objTypeArchiveSize = objTypeArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeColdArchiveSize.
+         */
+        public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+            this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeIaSize.
+         */
+        public Builder objTypeIaSize(Long objTypeIaSize) {
+            this.objTypeIaSize = objTypeIaSize;
+            return this;
+        }
+
+        /**
+         * objTypeStandardSize.
+         */
+        public Builder objTypeStandardSize(Long objTypeStandardSize) {
+            this.objTypeStandardSize = objTypeStandardSize;
+            return this;
+        }
+
+        /**
          * <p>Creation timestamp in milliseconds</p>
          */
         public Builder partitionCount(Long partitionCount) {
@@ -202,6 +338,30 @@ public class TableSummary extends TeaModel {
          */
         public Builder path(String path) {
             this.path = path;
+            return this;
+        }
+
+        /**
+         * storageActionParams.
+         */
+        public Builder storageActionParams(java.util.Map<String, String> storageActionParams) {
+            this.storageActionParams = storageActionParams;
+            return this;
+        }
+
+        /**
+         * storageActionTimestamp.
+         */
+        public Builder storageActionTimestamp(Long storageActionTimestamp) {
+            this.storageActionTimestamp = storageActionTimestamp;
+            return this;
+        }
+
+        /**
+         * storageClass.
+         */
+        public Builder storageClass(String storageClass) {
+            this.storageClass = storageClass;
             return this;
         }
 
@@ -226,6 +386,14 @@ public class TableSummary extends TeaModel {
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
+            return this;
+        }
+
+        /**
+         * updatedAt.
+         */
+        public Builder updatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
             return this;
         }
 

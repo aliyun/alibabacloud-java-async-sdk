@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCatalogRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isShared")
+    private Boolean isShared;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -26,13 +30,19 @@ public class CreateCatalogRequest extends Request {
     private java.util.Map<String, String> options;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("shareId")
+    private String shareId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private CreateCatalogRequest(Builder builder) {
         super(builder);
+        this.isShared = builder.isShared;
         this.name = builder.name;
         this.options = builder.options;
+        this.shareId = builder.shareId;
         this.type = builder.type;
     }
 
@@ -50,6 +60,13 @@ public class CreateCatalogRequest extends Request {
     }
 
     /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -64,6 +81,13 @@ public class CreateCatalogRequest extends Request {
     }
 
     /**
+     * @return shareId
+     */
+    public String getShareId() {
+        return this.shareId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -71,8 +95,10 @@ public class CreateCatalogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCatalogRequest, Builder> {
+        private Boolean isShared; 
         private String name; 
         private java.util.Map<String, String> options; 
+        private String shareId; 
         private String type; 
 
         private Builder() {
@@ -81,10 +107,21 @@ public class CreateCatalogRequest extends Request {
 
         private Builder(CreateCatalogRequest request) {
             super(request);
+            this.isShared = request.isShared;
             this.name = request.name;
             this.options = request.options;
+            this.shareId = request.shareId;
             this.type = request.type;
         } 
+
+        /**
+         * isShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.putBodyParameter("isShared", isShared);
+            this.isShared = isShared;
+            return this;
+        }
 
         /**
          * name.
@@ -101,6 +138,15 @@ public class CreateCatalogRequest extends Request {
         public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * shareId.
+         */
+        public Builder shareId(String shareId) {
+            this.putBodyParameter("shareId", shareId);
+            this.shareId = shareId;
             return this;
         }
 

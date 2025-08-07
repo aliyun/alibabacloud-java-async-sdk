@@ -29,6 +29,18 @@ public class DatabaseSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("location")
     private String location;
 
+    @com.aliyun.core.annotation.NameInMap("objTypeArchiveSize")
+    private Long objTypeArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeColdArchiveSize")
+    private Long objTypeColdArchiveSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeIaSize")
+    private Long objTypeIaSize;
+
+    @com.aliyun.core.annotation.NameInMap("objTypeStandardSize")
+    private Long objTypeStandardSize;
+
     @com.aliyun.core.annotation.NameInMap("partitionCount")
     private Long partitionCount;
 
@@ -46,6 +58,10 @@ public class DatabaseSummary extends TeaModel {
         this.databaseName = builder.databaseName;
         this.generatedDate = builder.generatedDate;
         this.location = builder.location;
+        this.objTypeArchiveSize = builder.objTypeArchiveSize;
+        this.objTypeColdArchiveSize = builder.objTypeColdArchiveSize;
+        this.objTypeIaSize = builder.objTypeIaSize;
+        this.objTypeStandardSize = builder.objTypeStandardSize;
         this.partitionCount = builder.partitionCount;
         this.tableCount = builder.tableCount;
         this.totalFileCount = builder.totalFileCount;
@@ -93,6 +109,34 @@ public class DatabaseSummary extends TeaModel {
     }
 
     /**
+     * @return objTypeArchiveSize
+     */
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    /**
+     * @return objTypeColdArchiveSize
+     */
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    /**
+     * @return objTypeIaSize
+     */
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    /**
+     * @return objTypeStandardSize
+     */
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
+    }
+
+    /**
      * @return partitionCount
      */
     public Long getPartitionCount() {
@@ -125,6 +169,10 @@ public class DatabaseSummary extends TeaModel {
         private String databaseName; 
         private String generatedDate; 
         private String location; 
+        private Long objTypeArchiveSize; 
+        private Long objTypeColdArchiveSize; 
+        private Long objTypeIaSize; 
+        private Long objTypeStandardSize; 
         private Long partitionCount; 
         private Long tableCount; 
         private Long totalFileCount; 
@@ -138,6 +186,10 @@ public class DatabaseSummary extends TeaModel {
             this.databaseName = model.databaseName;
             this.generatedDate = model.generatedDate;
             this.location = model.location;
+            this.objTypeArchiveSize = model.objTypeArchiveSize;
+            this.objTypeColdArchiveSize = model.objTypeColdArchiveSize;
+            this.objTypeIaSize = model.objTypeIaSize;
+            this.objTypeStandardSize = model.objTypeStandardSize;
             this.partitionCount = model.partitionCount;
             this.tableCount = model.tableCount;
             this.totalFileCount = model.totalFileCount;
@@ -173,6 +225,38 @@ public class DatabaseSummary extends TeaModel {
          */
         public Builder location(String location) {
             this.location = location;
+            return this;
+        }
+
+        /**
+         * objTypeArchiveSize.
+         */
+        public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
+            this.objTypeArchiveSize = objTypeArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeColdArchiveSize.
+         */
+        public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+            this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+            return this;
+        }
+
+        /**
+         * objTypeIaSize.
+         */
+        public Builder objTypeIaSize(Long objTypeIaSize) {
+            this.objTypeIaSize = objTypeIaSize;
+            return this;
+        }
+
+        /**
+         * objTypeStandardSize.
+         */
+        public Builder objTypeStandardSize(Long objTypeStandardSize) {
+            this.objTypeStandardSize = objTypeStandardSize;
             return this;
         }
 

@@ -32,6 +32,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AlterDatabaseResponse> alterDatabase(AlterDatabaseRequest request);
 
     /**
+     * @param request the request parameters of AlterReceiver  AlterReceiverRequest
+     * @return AlterReceiverResponse
+     */
+    CompletableFuture<AlterReceiverResponse> alterReceiver(AlterReceiverRequest request);
+
+    /**
+     * @param request the request parameters of AlterShare  AlterShareRequest
+     * @return AlterShareResponse
+     */
+    CompletableFuture<AlterShareResponse> alterShare(AlterShareRequest request);
+
+    /**
+     * @param request the request parameters of AlterShareReceivers  AlterShareReceiversRequest
+     * @return AlterShareReceiversResponse
+     */
+    CompletableFuture<AlterShareReceiversResponse> alterShareReceivers(AlterShareReceiversRequest request);
+
+    /**
+     * @param request the request parameters of AlterShareResources  AlterShareResourcesRequest
+     * @return AlterShareResourcesResponse
+     */
+    CompletableFuture<AlterShareResourcesResponse> alterShareResources(AlterShareResourcesRequest request);
+
+    /**
      * @param request the request parameters of AlterTable  AlterTableRequest
      * @return AlterTableResponse
      */
@@ -62,10 +86,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     /**
+     * @param request the request parameters of CreateReceiver  CreateReceiverRequest
+     * @return CreateReceiverResponse
+     */
+    CompletableFuture<CreateReceiverResponse> createReceiver(CreateReceiverRequest request);
+
+    /**
      * @param request the request parameters of CreateRole  CreateRoleRequest
      * @return CreateRoleResponse
      */
     CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request);
+
+    /**
+     * @param request the request parameters of CreateShare  CreateShareRequest
+     * @return CreateShareResponse
+     */
+    CompletableFuture<CreateShareResponse> createShare(CreateShareRequest request);
 
     /**
      * @param request the request parameters of CreateTable  CreateTableRequest
@@ -96,6 +132,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DropDatabaseResponse
      */
     CompletableFuture<DropDatabaseResponse> dropDatabase(DropDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DropReceiver  DropReceiverRequest
+     * @return DropReceiverResponse
+     */
+    CompletableFuture<DropReceiverResponse> dropReceiver(DropReceiverRequest request);
+
+    /**
+     * @param request the request parameters of DropShare  DropShareRequest
+     * @return DropShareResponse
+     */
+    CompletableFuture<DropShareResponse> dropShare(DropShareRequest request);
 
     /**
      * @param request the request parameters of DropTable  DropTableRequest
@@ -158,6 +206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIcebergTableResponse> getIcebergTable(GetIcebergTableRequest request);
 
     /**
+     * @param request the request parameters of GetReceiver  GetReceiverRequest
+     * @return GetReceiverResponse
+     */
+    CompletableFuture<GetReceiverResponse> getReceiver(GetReceiverRequest request);
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -170,10 +224,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request);
 
     /**
+     * @param request the request parameters of GetShare  GetShareRequest
+     * @return GetShareResponse
+     */
+    CompletableFuture<GetShareResponse> getShare(GetShareRequest request);
+
+    /**
      * @param request the request parameters of GetTable  GetTableRequest
      * @return GetTableResponse
      */
     CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
+
+    /**
+     * @param request the request parameters of GetTableSnapshot  GetTableSnapshotRequest
+     * @return GetTableSnapshotResponse
+     */
+    CompletableFuture<GetTableSnapshotResponse> getTableSnapshot(GetTableSnapshotRequest request);
 
     /**
      * @param request the request parameters of GetTableSummary  GetTableSummaryRequest
@@ -242,6 +308,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request);
 
     /**
+     * @param request the request parameters of ListProvidedShares  ListProvidedSharesRequest
+     * @return ListProvidedSharesResponse
+     */
+    CompletableFuture<ListProvidedSharesResponse> listProvidedShares(ListProvidedSharesRequest request);
+
+    /**
+     * @param request the request parameters of ListReceivedShares  ListReceivedSharesRequest
+     * @return ListReceivedSharesResponse
+     */
+    CompletableFuture<ListReceivedSharesResponse> listReceivedShares(ListReceivedSharesRequest request);
+
+    /**
+     * @param request the request parameters of ListReceivers  ListReceiversRequest
+     * @return ListReceiversResponse
+     */
+    CompletableFuture<ListReceiversResponse> listReceivers(ListReceiversRequest request);
+
+    /**
      * @param request the request parameters of ListRoleUsers  ListRoleUsersRequest
      * @return ListRoleUsersResponse
      */
@@ -252,6 +336,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRolesResponse
      */
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
+
+    /**
+     * @param request the request parameters of ListShareReceivers  ListShareReceiversRequest
+     * @return ListShareReceiversResponse
+     */
+    CompletableFuture<ListShareReceiversResponse> listShareReceivers(ListShareReceiversRequest request);
+
+    /**
+     * @param request the request parameters of ListShareResources  ListShareResourcesRequest
+     * @return ListShareResourcesResponse
+     */
+    CompletableFuture<ListShareResourcesResponse> listShareResources(ListShareResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
 
     /**
      * @param request the request parameters of ListTableDetails  ListTableDetailsRequest
@@ -282,6 +384,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeRoleFromUsersResponse
      */
     CompletableFuture<RevokeRoleFromUsersResponse> revokeRoleFromUsers(RevokeRoleFromUsersRequest request);
+
+    /**
+     * @param request the request parameters of RollbackTable  RollbackTableRequest
+     * @return RollbackTableResponse
+     */
+    CompletableFuture<RollbackTableResponse> rollbackTable(RollbackTableRequest request);
 
     /**
      * @param request the request parameters of Subscribe  SubscribeRequest

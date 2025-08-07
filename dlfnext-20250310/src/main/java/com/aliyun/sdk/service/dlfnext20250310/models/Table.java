@@ -44,6 +44,15 @@ public class Table extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("schemaId")
     private Long schemaId;
 
+    @com.aliyun.core.annotation.NameInMap("storageAction")
+    private String storageAction;
+
+    @com.aliyun.core.annotation.NameInMap("storageActionTimestamp")
+    private Long storageActionTimestamp;
+
+    @com.aliyun.core.annotation.NameInMap("storageClass")
+    private String storageClass;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
 
@@ -60,6 +69,9 @@ public class Table extends TeaModel {
         this.path = builder.path;
         this.schema = builder.schema;
         this.schemaId = builder.schemaId;
+        this.storageAction = builder.storageAction;
+        this.storageActionTimestamp = builder.storageActionTimestamp;
+        this.storageClass = builder.storageClass;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -140,6 +152,27 @@ public class Table extends TeaModel {
     }
 
     /**
+     * @return storageAction
+     */
+    public String getStorageAction() {
+        return this.storageAction;
+    }
+
+    /**
+     * @return storageActionTimestamp
+     */
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    /**
+     * @return storageClass
+     */
+    public String getStorageClass() {
+        return this.storageClass;
+    }
+
+    /**
      * @return updatedAt
      */
     public Long getUpdatedAt() {
@@ -163,6 +196,9 @@ public class Table extends TeaModel {
         private String path; 
         private Schema schema; 
         private Long schemaId; 
+        private String storageAction; 
+        private Long storageActionTimestamp; 
+        private String storageClass; 
         private Long updatedAt; 
         private String updatedBy; 
 
@@ -179,6 +215,9 @@ public class Table extends TeaModel {
             this.path = model.path;
             this.schema = model.schema;
             this.schemaId = model.schemaId;
+            this.storageAction = model.storageAction;
+            this.storageActionTimestamp = model.storageActionTimestamp;
+            this.storageClass = model.storageClass;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
@@ -252,6 +291,30 @@ public class Table extends TeaModel {
          */
         public Builder schemaId(Long schemaId) {
             this.schemaId = schemaId;
+            return this;
+        }
+
+        /**
+         * storageAction.
+         */
+        public Builder storageAction(String storageAction) {
+            this.storageAction = storageAction;
+            return this;
+        }
+
+        /**
+         * storageActionTimestamp.
+         */
+        public Builder storageActionTimestamp(Long storageActionTimestamp) {
+            this.storageActionTimestamp = storageActionTimestamp;
+            return this;
+        }
+
+        /**
+         * storageClass.
+         */
+        public Builder storageClass(String storageClass) {
+            this.storageClass = storageClass;
             return this;
         }
 

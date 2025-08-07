@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDatabaseSummaryRequest} extends {@link RequestModel}
+ * {@link ListSnapshotsRequest} extends {@link RequestModel}
  *
- * <p>GetDatabaseSummaryRequest</p>
+ * <p>ListSnapshotsRequest</p>
  */
-public class GetDatabaseSummaryRequest extends Request {
+public class ListSnapshotsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("catalogId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -27,22 +27,33 @@ public class GetDatabaseSummaryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String database;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("date")
-    private String date;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("table")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String table;
 
-    private GetDatabaseSummaryRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageToken")
+    private String pageToken;
+
+    private ListSnapshotsRequest(Builder builder) {
         super(builder);
         this.catalogId = builder.catalogId;
         this.database = builder.database;
-        this.date = builder.date;
+        this.table = builder.table;
+        this.maxResults = builder.maxResults;
+        this.pageToken = builder.pageToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDatabaseSummaryRequest create() {
+    public static ListSnapshotsRequest create() {
         return builder().build();
     }
 
@@ -66,26 +77,44 @@ public class GetDatabaseSummaryRequest extends Request {
     }
 
     /**
-     * @return date
+     * @return table
      */
-    public String getDate() {
-        return this.date;
+    public String getTable() {
+        return this.table;
     }
 
-    public static final class Builder extends Request.Builder<GetDatabaseSummaryRequest, Builder> {
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return pageToken
+     */
+    public String getPageToken() {
+        return this.pageToken;
+    }
+
+    public static final class Builder extends Request.Builder<ListSnapshotsRequest, Builder> {
         private String catalogId; 
         private String database; 
-        private String date; 
+        private String table; 
+        private Integer maxResults; 
+        private String pageToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDatabaseSummaryRequest request) {
+        private Builder(ListSnapshotsRequest request) {
             super(request);
             this.catalogId = request.catalogId;
             this.database = request.database;
-            this.date = request.date;
+            this.table = request.table;
+            this.maxResults = request.maxResults;
+            this.pageToken = request.pageToken;
         } 
 
         /**
@@ -104,7 +133,7 @@ public class GetDatabaseSummaryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>default</p>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -113,17 +142,38 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
-        public Builder date(String date) {
-            this.putQueryParameter("date", date);
-            this.date = date;
+        public Builder table(String table) {
+            this.putPathParameter("table", table);
+            this.table = table;
+            return this;
+        }
+
+        /**
+         * maxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * pageToken.
+         */
+        public Builder pageToken(String pageToken) {
+            this.putQueryParameter("pageToken", pageToken);
+            this.pageToken = pageToken;
             return this;
         }
 
         @Override
-        public GetDatabaseSummaryRequest build() {
-            return new GetDatabaseSummaryRequest(this);
+        public ListSnapshotsRequest build() {
+            return new ListSnapshotsRequest(this);
         } 
 
     } 

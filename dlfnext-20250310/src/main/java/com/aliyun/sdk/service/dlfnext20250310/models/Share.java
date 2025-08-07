@@ -12,40 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Catalog} extends {@link TeaModel}
+ * {@link Share} extends {@link TeaModel}
  *
- * <p>Catalog</p>
+ * <p>Share</p>
  */
-public class Catalog extends TeaModel {
+public class Share extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("comment")
+    private String comment;
+
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private Long createdAt;
 
     @com.aliyun.core.annotation.NameInMap("createdBy")
     private String createdBy;
 
-    @com.aliyun.core.annotation.NameInMap("id")
-    private String id;
-
-    @com.aliyun.core.annotation.NameInMap("isShared")
-    private Boolean isShared;
-
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("options")
-    private java.util.Map<String, String> options;
-
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
+
+    @com.aliyun.core.annotation.NameInMap("providerTenantId")
+    private Long providerTenantId;
 
     @com.aliyun.core.annotation.NameInMap("shareId")
     private String shareId;
 
-    @com.aliyun.core.annotation.NameInMap("status")
-    private String status;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
+    @com.aliyun.core.annotation.NameInMap("shareName")
+    private String shareName;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
@@ -53,17 +44,14 @@ public class Catalog extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updatedBy")
     private String updatedBy;
 
-    private Catalog(Builder builder) {
+    private Share(Builder builder) {
+        this.comment = builder.comment;
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
-        this.id = builder.id;
-        this.isShared = builder.isShared;
-        this.name = builder.name;
-        this.options = builder.options;
         this.owner = builder.owner;
+        this.providerTenantId = builder.providerTenantId;
         this.shareId = builder.shareId;
-        this.status = builder.status;
-        this.type = builder.type;
+        this.shareName = builder.shareName;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -72,12 +60,19 @@ public class Catalog extends TeaModel {
         return new Builder();
     }
 
-    public static Catalog create() {
+    public static Share create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
     }
 
     /**
@@ -95,38 +90,17 @@ public class Catalog extends TeaModel {
     }
 
     /**
-     * @return id
-     */
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     * @return isShared
-     */
-    public Boolean getIsShared() {
-        return this.isShared;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return options
-     */
-    public java.util.Map<String, String> getOptions() {
-        return this.options;
-    }
-
-    /**
      * @return owner
      */
     public String getOwner() {
         return this.owner;
+    }
+
+    /**
+     * @return providerTenantId
+     */
+    public Long getProviderTenantId() {
+        return this.providerTenantId;
     }
 
     /**
@@ -137,17 +111,10 @@ public class Catalog extends TeaModel {
     }
 
     /**
-     * @return status
+     * @return shareName
      */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
+    public String getShareName() {
+        return this.shareName;
     }
 
     /**
@@ -165,36 +132,38 @@ public class Catalog extends TeaModel {
     }
 
     public static final class Builder {
+        private String comment; 
         private Long createdAt; 
         private String createdBy; 
-        private String id; 
-        private Boolean isShared; 
-        private String name; 
-        private java.util.Map<String, String> options; 
         private String owner; 
+        private Long providerTenantId; 
         private String shareId; 
-        private String status; 
-        private String type; 
+        private String shareName; 
         private Long updatedAt; 
         private String updatedBy; 
 
         private Builder() {
         } 
 
-        private Builder(Catalog model) {
+        private Builder(Share model) {
+            this.comment = model.comment;
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
-            this.id = model.id;
-            this.isShared = model.isShared;
-            this.name = model.name;
-            this.options = model.options;
             this.owner = model.owner;
+            this.providerTenantId = model.providerTenantId;
             this.shareId = model.shareId;
-            this.status = model.status;
-            this.type = model.type;
+            this.shareName = model.shareName;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
+
+        /**
+         * comment.
+         */
+        public Builder comment(String comment) {
+            this.comment = comment;
+            return this;
+        }
 
         /**
          * createdAt.
@@ -213,42 +182,18 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * id.
-         */
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * isShared.
-         */
-        public Builder isShared(Boolean isShared) {
-            this.isShared = isShared;
-            return this;
-        }
-
-        /**
-         * name.
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * options.
-         */
-        public Builder options(java.util.Map<String, String> options) {
-            this.options = options;
-            return this;
-        }
-
-        /**
          * owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * providerTenantId.
+         */
+        public Builder providerTenantId(Long providerTenantId) {
+            this.providerTenantId = providerTenantId;
             return this;
         }
 
@@ -261,18 +206,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * status.
+         * shareName.
          */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder shareName(String shareName) {
+            this.shareName = shareName;
             return this;
         }
 
@@ -292,8 +229,8 @@ public class Catalog extends TeaModel {
             return this;
         }
 
-        public Catalog build() {
-            return new Catalog(this);
+        public Share build() {
+            return new Share(this);
         } 
 
     } 
