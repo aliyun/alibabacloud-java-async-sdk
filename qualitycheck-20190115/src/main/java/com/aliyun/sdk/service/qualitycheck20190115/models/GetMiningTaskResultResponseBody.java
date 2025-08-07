@@ -160,9 +160,87 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
      *
      * <p>GetMiningTaskResultResponseBody</p>
      */
+    public static class FilePathList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileType")
+        private String fileType;
+
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private String fileUrl;
+
+        private FilePathList(Builder builder) {
+            this.fileType = builder.fileType;
+            this.fileUrl = builder.fileUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FilePathList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileType
+         */
+        public String getFileType() {
+            return this.fileType;
+        }
+
+        /**
+         * @return fileUrl
+         */
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public static final class Builder {
+            private String fileType; 
+            private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilePathList model) {
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+            } 
+
+            /**
+             * FileType.
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * FileUrl.
+             */
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
+                return this;
+            }
+
+            public FilePathList build() {
+                return new FilePathList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMiningTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMiningTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
+
+        @com.aliyun.core.annotation.NameInMap("FilePathList")
+        private java.util.List<FilePathList> filePathList;
 
         @com.aliyun.core.annotation.NameInMap("FilePathMd")
         private String filePathMd;
@@ -175,6 +253,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.filePath = builder.filePath;
+            this.filePathList = builder.filePathList;
             this.filePathMd = builder.filePathMd;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
@@ -193,6 +272,13 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
          */
         public String getFilePath() {
             return this.filePath;
+        }
+
+        /**
+         * @return filePathList
+         */
+        public java.util.List<FilePathList> getFilePathList() {
+            return this.filePathList;
         }
 
         /**
@@ -218,6 +304,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String filePath; 
+            private java.util.List<FilePathList> filePathList; 
             private String filePathMd; 
             private String taskId; 
             private String taskStatus; 
@@ -227,6 +314,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.filePath = model.filePath;
+                this.filePathList = model.filePathList;
                 this.filePathMd = model.filePathMd;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
@@ -237,6 +325,14 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
+                return this;
+            }
+
+            /**
+             * FilePathList.
+             */
+            public Builder filePathList(java.util.List<FilePathList> filePathList) {
+                this.filePathList = filePathList;
                 return this;
             }
 
