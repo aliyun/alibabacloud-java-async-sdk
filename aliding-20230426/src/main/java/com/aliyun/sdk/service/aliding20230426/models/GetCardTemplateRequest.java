@@ -12,44 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InsertContentWithOptionsRequest} extends {@link RequestModel}
+ * {@link GetCardTemplateRequest} extends {@link RequestModel}
  *
- * <p>InsertContentWithOptionsRequest</p>
+ * <p>GetCardTemplateRequest</p>
  */
-public class InsertContentWithOptionsRequest extends Request {
+public class GetCardTemplateRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map<String, ?> content;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DocumentId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String documentId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Index")
-    private Integer index;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Path")
-    private java.util.List<Integer> path;
+    private String templateId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    private InsertContentWithOptionsRequest(Builder builder) {
+    private GetCardTemplateRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.content = builder.content;
-        this.documentId = builder.documentId;
-        this.index = builder.index;
-        this.path = builder.path;
+        this.templateId = builder.templateId;
         this.tenantContext = builder.tenantContext;
     }
 
@@ -57,7 +41,7 @@ public class InsertContentWithOptionsRequest extends Request {
         return new Builder();
     }
 
-    public static InsertContentWithOptionsRequest create() {
+    public static GetCardTemplateRequest create() {
         return builder().build();
     }
 
@@ -74,31 +58,10 @@ public class InsertContentWithOptionsRequest extends Request {
     }
 
     /**
-     * @return content
+     * @return templateId
      */
-    public java.util.Map<String, ?> getContent() {
-        return this.content;
-    }
-
-    /**
-     * @return documentId
-     */
-    public String getDocumentId() {
-        return this.documentId;
-    }
-
-    /**
-     * @return index
-     */
-    public Integer getIndex() {
-        return this.index;
-    }
-
-    /**
-     * @return path
-     */
-    public java.util.List<Integer> getPath() {
-        return this.path;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     /**
@@ -108,25 +71,19 @@ public class InsertContentWithOptionsRequest extends Request {
         return this.tenantContext;
     }
 
-    public static final class Builder extends Request.Builder<InsertContentWithOptionsRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetCardTemplateRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> content; 
-        private String documentId; 
-        private Integer index; 
-        private java.util.List<Integer> path; 
+        private String templateId; 
         private TenantContext tenantContext; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InsertContentWithOptionsRequest request) {
+        private Builder(GetCardTemplateRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.content = request.content;
-            this.documentId = request.documentId;
-            this.index = request.index;
-            this.path = request.path;
+            this.templateId = request.templateId;
             this.tenantContext = request.tenantContext;
         } 
 
@@ -144,43 +101,11 @@ public class InsertContentWithOptionsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>content</p>
+         * <p>123</p>
          */
-        public Builder content(java.util.Map<String, ?> content) {
-            String contentShrink = shrink(content, "Content", "json");
-            this.putBodyParameter("Content", contentShrink);
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>documentId</p>
-         */
-        public Builder documentId(String documentId) {
-            this.putBodyParameter("DocumentId", documentId);
-            this.documentId = documentId;
-            return this;
-        }
-
-        /**
-         * Index.
-         */
-        public Builder index(Integer index) {
-            this.putBodyParameter("Index", index);
-            this.index = index;
-            return this;
-        }
-
-        /**
-         * Path.
-         */
-        public Builder path(java.util.List<Integer> path) {
-            String pathShrink = shrink(path, "Path", "json");
-            this.putBodyParameter("Path", pathShrink);
-            this.path = path;
+        public Builder templateId(String templateId) {
+            this.putBodyParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
@@ -195,17 +120,17 @@ public class InsertContentWithOptionsRequest extends Request {
         }
 
         @Override
-        public InsertContentWithOptionsRequest build() {
-            return new InsertContentWithOptionsRequest(this);
+        public GetCardTemplateRequest build() {
+            return new GetCardTemplateRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link GetCardTemplateRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>GetCardTemplateRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
@@ -261,9 +186,9 @@ public class InsertContentWithOptionsRequest extends Request {
     }
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link GetCardTemplateRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>GetCardTemplateRequest</p>
      */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")

@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelScheduleConferenceResponse> cancelScheduleConference(CancelScheduleConferenceRequest request);
 
     /**
+     * @param request the request parameters of ChangeDingTalkId  ChangeDingTalkIdRequest
+     * @return ChangeDingTalkIdResponse
+     */
+    CompletableFuture<ChangeDingTalkIdResponse> changeDingTalkId(ChangeDingTalkIdRequest request);
+
+    /**
      * @param request the request parameters of CheckAlibabaStaff  CheckAlibabaStaffRequest
      * @return CheckAlibabaStaffResponse
      */
@@ -186,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CopyDentryResponse
      */
     CompletableFuture<CopyDentryResponse> copyDentry(CopyDentryRequest request);
+
+    /**
+     * @param request the request parameters of CreateAlidingAssistant  CreateAlidingAssistantRequest
+     * @return CreateAlidingAssistantResponse
+     */
+    CompletableFuture<CreateAlidingAssistantResponse> createAlidingAssistant(CreateAlidingAssistantRequest request);
 
     /**
      * @param request the request parameters of CreateDeliveryPlan  CreateDeliveryPlanRequest
@@ -338,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateWorkspaceDocResponse
      */
     CompletableFuture<CreateWorkspaceDocResponse> createWorkspaceDoc(CreateWorkspaceDocRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlidingAssistant  DeleteAlidingAssistantRequest
+     * @return DeleteAlidingAssistantResponse
+     */
+    CompletableFuture<DeleteAlidingAssistantResponse> deleteAlidingAssistant(DeleteAlidingAssistantRequest request);
 
     /**
      * @param request the request parameters of DeleteColumns  DeleteColumnsRequest
@@ -502,6 +520,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetActivityListResponse> getActivityList(GetActivityListRequest request);
 
     /**
+     * @param request the request parameters of GetAlidingAssistantInfo  GetAlidingAssistantInfoRequest
+     * @return GetAlidingAssistantInfoResponse
+     */
+    CompletableFuture<GetAlidingAssistantInfoResponse> getAlidingAssistantInfo(GetAlidingAssistantInfoRequest request);
+
+    /**
      * @param request the request parameters of GetAllSheets  GetAllSheetsRequest
      * @return GetAllSheetsResponse
      */
@@ -512,6 +536,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAssistantCapabilityResponse
      */
     CompletableFuture<GetAssistantCapabilityResponse> getAssistantCapability(GetAssistantCapabilityRequest request);
+
+    /**
+     * @param request the request parameters of GetCardTemplate  GetCardTemplateRequest
+     * @return GetCardTemplateResponse
+     */
+    CompletableFuture<GetCardTemplateResponse> getCardTemplate(GetCardTemplateRequest request);
 
     /**
      * @param request the request parameters of GetConversaionSpace  GetConversaionSpaceRequest
@@ -884,6 +914,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InsertContentWithOptionsResponse
      */
     CompletableFuture<InsertContentWithOptionsResponse> insertContentWithOptions(InsertContentWithOptionsRequest request);
+
+    /**
+     * @param request the request parameters of InsertDropDownList  InsertDropDownListRequest
+     * @return InsertDropDownListResponse
+     */
+    CompletableFuture<InsertDropDownListResponse> insertDropDownList(InsertDropDownListRequest request);
 
     /**
      * @param request the request parameters of InsertMultiDimTableRecord  InsertMultiDimTableRecordRequest
@@ -1422,6 +1458,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnsubscribeEventResponse
      */
     CompletableFuture<UnsubscribeEventResponse> unsubscribeEvent(UnsubscribeEventRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlidingAssistant  UpdateAlidingAssistantRequest
+     * @return UpdateAlidingAssistantResponse
+     */
+    CompletableFuture<UpdateAlidingAssistantResponse> updateAlidingAssistant(UpdateAlidingAssistantRequest request);
 
     /**
      * @param request the request parameters of UpdateConvExtension  UpdateConvExtensionRequest

@@ -401,6 +401,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeDingTalkId  ChangeDingTalkIdRequest
+     * @return ChangeDingTalkIdResponse
+     */
+    @Override
+    public CompletableFuture<ChangeDingTalkIdResponse> changeDingTalkId(ChangeDingTalkIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChangeDingTalkId").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/user/changeDingTalkId").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeDingTalkIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeDingTalkIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckAlibabaStaff  CheckAlibabaStaffRequest
      * @return CheckAlibabaStaffResponse
      */
@@ -539,6 +557,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CopyDentryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAlidingAssistant  CreateAlidingAssistantRequest
+     * @return CreateAlidingAssistantResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlidingAssistantResponse> createAlidingAssistant(CreateAlidingAssistantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlidingAssistant").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/aiagent/createAlidingAssistant").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlidingAssistantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlidingAssistantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -999,6 +1035,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateWorkspaceDocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlidingAssistant  DeleteAlidingAssistantRequest
+     * @return DeleteAlidingAssistantResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlidingAssistantResponse> deleteAlidingAssistant(DeleteAlidingAssistantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlidingAssistant").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/aiagent/deleteAlidingAssistant").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlidingAssistantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlidingAssistantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1491,6 +1545,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAlidingAssistantInfo  GetAlidingAssistantInfoRequest
+     * @return GetAlidingAssistantInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetAlidingAssistantInfoResponse> getAlidingAssistantInfo(GetAlidingAssistantInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAlidingAssistantInfo").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/aiagent/getAlidingAssistantInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAlidingAssistantInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAlidingAssistantInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAllSheets  GetAllSheetsRequest
      * @return GetAllSheetsResponse
      */
@@ -1521,6 +1593,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAssistantCapabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCardTemplate  GetCardTemplateRequest
+     * @return GetCardTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetCardTemplateResponse> getCardTemplate(GetCardTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCardTemplate").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/card/getCardTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCardTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCardTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2637,6 +2727,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InsertContentWithOptionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InsertDropDownList  InsertDropDownListRequest
+     * @return InsertDropDownListResponse
+     */
+    @Override
+    public CompletableFuture<InsertDropDownListResponse> insertDropDownList(InsertDropDownListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InsertDropDownList").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/insertDropDownList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InsertDropDownListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InsertDropDownListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4259,6 +4367,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnsubscribeEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlidingAssistant  UpdateAlidingAssistantRequest
+     * @return UpdateAlidingAssistantResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlidingAssistantResponse> updateAlidingAssistant(UpdateAlidingAssistantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlidingAssistant").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/aiagent/updateAlidingAssistant").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlidingAssistantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlidingAssistantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

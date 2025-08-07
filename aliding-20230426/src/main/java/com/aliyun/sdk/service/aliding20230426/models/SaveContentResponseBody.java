@@ -20,11 +20,15 @@ public class SaveContentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("result")
+    private String result;
+
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private SaveContentResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
         this.success = builder.success;
     }
 
@@ -48,6 +52,13 @@ public class SaveContentResponseBody extends TeaModel {
     }
 
     /**
+     * @return result
+     */
+    public String getResult() {
+        return this.result;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -56,6 +67,7 @@ public class SaveContentResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private String result; 
         private Boolean success; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class SaveContentResponseBody extends TeaModel {
 
         private Builder(SaveContentResponseBody model) {
             this.requestId = model.requestId;
+            this.result = model.result;
             this.success = model.success;
         } 
 
@@ -74,6 +87,14 @@ public class SaveContentResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * result.
+         */
+        public Builder result(String result) {
+            this.result = result;
             return this;
         }
 

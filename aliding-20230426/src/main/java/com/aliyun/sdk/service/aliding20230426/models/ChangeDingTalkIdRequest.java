@@ -12,44 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InsertContentWithOptionsRequest} extends {@link RequestModel}
+ * {@link ChangeDingTalkIdRequest} extends {@link RequestModel}
  *
- * <p>InsertContentWithOptionsRequest</p>
+ * <p>ChangeDingTalkIdRequest</p>
  */
-public class InsertContentWithOptionsRequest extends Request {
+public class ChangeDingTalkIdRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("DingTalkId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map<String, ?> content;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DocumentId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String documentId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Index")
-    private Integer index;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Path")
-    private java.util.List<Integer> path;
+    private String dingTalkId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    private InsertContentWithOptionsRequest(Builder builder) {
+    private ChangeDingTalkIdRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.content = builder.content;
-        this.documentId = builder.documentId;
-        this.index = builder.index;
-        this.path = builder.path;
+        this.dingTalkId = builder.dingTalkId;
         this.tenantContext = builder.tenantContext;
     }
 
@@ -57,7 +41,7 @@ public class InsertContentWithOptionsRequest extends Request {
         return new Builder();
     }
 
-    public static InsertContentWithOptionsRequest create() {
+    public static ChangeDingTalkIdRequest create() {
         return builder().build();
     }
 
@@ -74,31 +58,10 @@ public class InsertContentWithOptionsRequest extends Request {
     }
 
     /**
-     * @return content
+     * @return dingTalkId
      */
-    public java.util.Map<String, ?> getContent() {
-        return this.content;
-    }
-
-    /**
-     * @return documentId
-     */
-    public String getDocumentId() {
-        return this.documentId;
-    }
-
-    /**
-     * @return index
-     */
-    public Integer getIndex() {
-        return this.index;
-    }
-
-    /**
-     * @return path
-     */
-    public java.util.List<Integer> getPath() {
-        return this.path;
+    public String getDingTalkId() {
+        return this.dingTalkId;
     }
 
     /**
@@ -108,25 +71,19 @@ public class InsertContentWithOptionsRequest extends Request {
         return this.tenantContext;
     }
 
-    public static final class Builder extends Request.Builder<InsertContentWithOptionsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ChangeDingTalkIdRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> content; 
-        private String documentId; 
-        private Integer index; 
-        private java.util.List<Integer> path; 
+        private String dingTalkId; 
         private TenantContext tenantContext; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InsertContentWithOptionsRequest request) {
+        private Builder(ChangeDingTalkIdRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.content = request.content;
-            this.documentId = request.documentId;
-            this.index = request.index;
-            this.path = request.path;
+            this.dingTalkId = request.dingTalkId;
             this.tenantContext = request.tenantContext;
         } 
 
@@ -144,43 +101,11 @@ public class InsertContentWithOptionsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>content</p>
+         * <p>4uf_iw54grufg9</p>
          */
-        public Builder content(java.util.Map<String, ?> content) {
-            String contentShrink = shrink(content, "Content", "json");
-            this.putBodyParameter("Content", contentShrink);
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>documentId</p>
-         */
-        public Builder documentId(String documentId) {
-            this.putBodyParameter("DocumentId", documentId);
-            this.documentId = documentId;
-            return this;
-        }
-
-        /**
-         * Index.
-         */
-        public Builder index(Integer index) {
-            this.putBodyParameter("Index", index);
-            this.index = index;
-            return this;
-        }
-
-        /**
-         * Path.
-         */
-        public Builder path(java.util.List<Integer> path) {
-            String pathShrink = shrink(path, "Path", "json");
-            this.putBodyParameter("Path", pathShrink);
-            this.path = path;
+        public Builder dingTalkId(String dingTalkId) {
+            this.putBodyParameter("DingTalkId", dingTalkId);
+            this.dingTalkId = dingTalkId;
             return this;
         }
 
@@ -195,17 +120,17 @@ public class InsertContentWithOptionsRequest extends Request {
         }
 
         @Override
-        public InsertContentWithOptionsRequest build() {
-            return new InsertContentWithOptionsRequest(this);
+        public ChangeDingTalkIdRequest build() {
+            return new ChangeDingTalkIdRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link ChangeDingTalkIdRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>ChangeDingTalkIdRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
@@ -261,9 +186,9 @@ public class InsertContentWithOptionsRequest extends Request {
     }
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link ChangeDingTalkIdRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>ChangeDingTalkIdRequest</p>
      */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")

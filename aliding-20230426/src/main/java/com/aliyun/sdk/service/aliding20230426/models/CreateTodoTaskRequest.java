@@ -74,6 +74,14 @@ public class CreateTodoTaskRequest extends Request {
     private Integer priority;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remindNotifyConfigs")
+    private RemindNotifyConfigs remindNotifyConfigs;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reminderTimeStamp")
+    private Long reminderTimeStamp;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceId")
     private String sourceId;
 
@@ -98,6 +106,8 @@ public class CreateTodoTaskRequest extends Request {
         this.operatorId = builder.operatorId;
         this.participantIds = builder.participantIds;
         this.priority = builder.priority;
+        this.remindNotifyConfigs = builder.remindNotifyConfigs;
+        this.reminderTimeStamp = builder.reminderTimeStamp;
         this.sourceId = builder.sourceId;
         this.subject = builder.subject;
     }
@@ -214,6 +224,20 @@ public class CreateTodoTaskRequest extends Request {
     }
 
     /**
+     * @return remindNotifyConfigs
+     */
+    public RemindNotifyConfigs getRemindNotifyConfigs() {
+        return this.remindNotifyConfigs;
+    }
+
+    /**
+     * @return reminderTimeStamp
+     */
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -242,6 +266,8 @@ public class CreateTodoTaskRequest extends Request {
         private String operatorId; 
         private java.util.List<String> participantIds; 
         private Integer priority; 
+        private RemindNotifyConfigs remindNotifyConfigs; 
+        private Long reminderTimeStamp; 
         private String sourceId; 
         private String subject; 
 
@@ -265,6 +291,8 @@ public class CreateTodoTaskRequest extends Request {
             this.operatorId = request.operatorId;
             this.participantIds = request.participantIds;
             this.priority = request.priority;
+            this.remindNotifyConfigs = request.remindNotifyConfigs;
+            this.reminderTimeStamp = request.reminderTimeStamp;
             this.sourceId = request.sourceId;
             this.subject = request.subject;
         } 
@@ -400,6 +428,25 @@ public class CreateTodoTaskRequest extends Request {
         public Builder priority(Integer priority) {
             this.putBodyParameter("priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * remindNotifyConfigs.
+         */
+        public Builder remindNotifyConfigs(RemindNotifyConfigs remindNotifyConfigs) {
+            String remindNotifyConfigsShrink = shrink(remindNotifyConfigs, "remindNotifyConfigs", "json");
+            this.putBodyParameter("remindNotifyConfigs", remindNotifyConfigsShrink);
+            this.remindNotifyConfigs = remindNotifyConfigs;
+            return this;
+        }
+
+        /**
+         * reminderTimeStamp.
+         */
+        public Builder reminderTimeStamp(Long reminderTimeStamp) {
+            this.putBodyParameter("reminderTimeStamp", reminderTimeStamp);
+            this.reminderTimeStamp = reminderTimeStamp;
             return this;
         }
 
@@ -960,8 +1007,16 @@ public class CreateTodoTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("dingNotify")
         private String dingNotify;
 
+        @com.aliyun.core.annotation.NameInMap("sendAssistantChat")
+        private String sendAssistantChat;
+
+        @com.aliyun.core.annotation.NameInMap("sendTodoApn")
+        private String sendTodoApn;
+
         private NotifyConfigs(Builder builder) {
             this.dingNotify = builder.dingNotify;
+            this.sendAssistantChat = builder.sendAssistantChat;
+            this.sendTodoApn = builder.sendTodoApn;
         }
 
         public static Builder builder() {
@@ -979,14 +1034,32 @@ public class CreateTodoTaskRequest extends Request {
             return this.dingNotify;
         }
 
+        /**
+         * @return sendAssistantChat
+         */
+        public String getSendAssistantChat() {
+            return this.sendAssistantChat;
+        }
+
+        /**
+         * @return sendTodoApn
+         */
+        public String getSendTodoApn() {
+            return this.sendTodoApn;
+        }
+
         public static final class Builder {
             private String dingNotify; 
+            private String sendAssistantChat; 
+            private String sendTodoApn; 
 
             private Builder() {
             } 
 
             private Builder(NotifyConfigs model) {
                 this.dingNotify = model.dingNotify;
+                this.sendAssistantChat = model.sendAssistantChat;
+                this.sendTodoApn = model.sendTodoApn;
             } 
 
             /**
@@ -997,8 +1070,99 @@ public class CreateTodoTaskRequest extends Request {
                 return this;
             }
 
+            /**
+             * sendAssistantChat.
+             */
+            public Builder sendAssistantChat(String sendAssistantChat) {
+                this.sendAssistantChat = sendAssistantChat;
+                return this;
+            }
+
+            /**
+             * sendTodoApn.
+             */
+            public Builder sendTodoApn(String sendTodoApn) {
+                this.sendTodoApn = sendTodoApn;
+                return this;
+            }
+
             public NotifyConfigs build() {
                 return new NotifyConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
+    public static class RemindNotifyConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dingNotify")
+        private String dingNotify;
+
+        @com.aliyun.core.annotation.NameInMap("sendTodoApn")
+        private String sendTodoApn;
+
+        private RemindNotifyConfigs(Builder builder) {
+            this.dingNotify = builder.dingNotify;
+            this.sendTodoApn = builder.sendTodoApn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemindNotifyConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dingNotify
+         */
+        public String getDingNotify() {
+            return this.dingNotify;
+        }
+
+        /**
+         * @return sendTodoApn
+         */
+        public String getSendTodoApn() {
+            return this.sendTodoApn;
+        }
+
+        public static final class Builder {
+            private String dingNotify; 
+            private String sendTodoApn; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemindNotifyConfigs model) {
+                this.dingNotify = model.dingNotify;
+                this.sendTodoApn = model.sendTodoApn;
+            } 
+
+            /**
+             * dingNotify.
+             */
+            public Builder dingNotify(String dingNotify) {
+                this.dingNotify = dingNotify;
+                return this;
+            }
+
+            /**
+             * sendTodoApn.
+             */
+            public Builder sendTodoApn(String sendTodoApn) {
+                this.sendTodoApn = sendTodoApn;
+                return this;
+            }
+
+            public RemindNotifyConfigs build() {
+                return new RemindNotifyConfigs(this);
             } 
 
         } 

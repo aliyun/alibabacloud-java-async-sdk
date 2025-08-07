@@ -12,52 +12,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InsertContentWithOptionsRequest} extends {@link RequestModel}
+ * {@link InsertDropDownListRequest} extends {@link RequestModel}
  *
- * <p>InsertContentWithOptionsRequest</p>
+ * <p>InsertDropDownListRequest</p>
  */
-public class InsertContentWithOptionsRequest extends Request {
+public class InsertDropDownListRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Options")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map<String, ?> content;
+    private java.util.List<Options> options;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DocumentId")
+    @com.aliyun.core.annotation.NameInMap("RangeAddress")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String documentId;
+    private String rangeAddress;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Index")
-    private Integer index;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Path")
-    private java.util.List<Integer> path;
+    @com.aliyun.core.annotation.NameInMap("SheetId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sheetId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    private InsertContentWithOptionsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkbookId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workbookId;
+
+    private InsertDropDownListRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.content = builder.content;
-        this.documentId = builder.documentId;
-        this.index = builder.index;
-        this.path = builder.path;
+        this.options = builder.options;
+        this.rangeAddress = builder.rangeAddress;
+        this.sheetId = builder.sheetId;
         this.tenantContext = builder.tenantContext;
+        this.workbookId = builder.workbookId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InsertContentWithOptionsRequest create() {
+    public static InsertDropDownListRequest create() {
         return builder().build();
     }
 
@@ -74,31 +76,24 @@ public class InsertContentWithOptionsRequest extends Request {
     }
 
     /**
-     * @return content
+     * @return options
      */
-    public java.util.Map<String, ?> getContent() {
-        return this.content;
+    public java.util.List<Options> getOptions() {
+        return this.options;
     }
 
     /**
-     * @return documentId
+     * @return rangeAddress
      */
-    public String getDocumentId() {
-        return this.documentId;
+    public String getRangeAddress() {
+        return this.rangeAddress;
     }
 
     /**
-     * @return index
+     * @return sheetId
      */
-    public Integer getIndex() {
-        return this.index;
-    }
-
-    /**
-     * @return path
-     */
-    public java.util.List<Integer> getPath() {
-        return this.path;
+    public String getSheetId() {
+        return this.sheetId;
     }
 
     /**
@@ -108,26 +103,33 @@ public class InsertContentWithOptionsRequest extends Request {
         return this.tenantContext;
     }
 
-    public static final class Builder extends Request.Builder<InsertContentWithOptionsRequest, Builder> {
+    /**
+     * @return workbookId
+     */
+    public String getWorkbookId() {
+        return this.workbookId;
+    }
+
+    public static final class Builder extends Request.Builder<InsertDropDownListRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> content; 
-        private String documentId; 
-        private Integer index; 
-        private java.util.List<Integer> path; 
+        private java.util.List<Options> options; 
+        private String rangeAddress; 
+        private String sheetId; 
         private TenantContext tenantContext; 
+        private String workbookId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InsertContentWithOptionsRequest request) {
+        private Builder(InsertDropDownListRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.content = request.content;
-            this.documentId = request.documentId;
-            this.index = request.index;
-            this.path = request.path;
+            this.options = request.options;
+            this.rangeAddress = request.rangeAddress;
+            this.sheetId = request.sheetId;
             this.tenantContext = request.tenantContext;
+            this.workbookId = request.workbookId;
         } 
 
         /**
@@ -142,14 +144,11 @@ public class InsertContentWithOptionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>content</p>
          */
-        public Builder content(java.util.Map<String, ?> content) {
-            String contentShrink = shrink(content, "Content", "json");
-            this.putBodyParameter("Content", contentShrink);
-            this.content = content;
+        public Builder options(java.util.List<Options> options) {
+            String optionsShrink = shrink(options, "Options", "json");
+            this.putBodyParameter("Options", optionsShrink);
+            this.options = options;
             return this;
         }
 
@@ -157,30 +156,23 @@ public class InsertContentWithOptionsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>documentId</p>
+         * <p>A3:C3</p>
          */
-        public Builder documentId(String documentId) {
-            this.putBodyParameter("DocumentId", documentId);
-            this.documentId = documentId;
+        public Builder rangeAddress(String rangeAddress) {
+            this.putBodyParameter("RangeAddress", rangeAddress);
+            this.rangeAddress = rangeAddress;
             return this;
         }
 
         /**
-         * Index.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
-        public Builder index(Integer index) {
-            this.putBodyParameter("Index", index);
-            this.index = index;
-            return this;
-        }
-
-        /**
-         * Path.
-         */
-        public Builder path(java.util.List<Integer> path) {
-            String pathShrink = shrink(path, "Path", "json");
-            this.putBodyParameter("Path", pathShrink);
-            this.path = path;
+        public Builder sheetId(String sheetId) {
+            this.putBodyParameter("SheetId", sheetId);
+            this.sheetId = sheetId;
             return this;
         }
 
@@ -194,18 +186,30 @@ public class InsertContentWithOptionsRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
+         */
+        public Builder workbookId(String workbookId) {
+            this.putBodyParameter("WorkbookId", workbookId);
+            this.workbookId = workbookId;
+            return this;
+        }
+
         @Override
-        public InsertContentWithOptionsRequest build() {
-            return new InsertContentWithOptionsRequest(this);
+        public InsertDropDownListRequest build() {
+            return new InsertDropDownListRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link InsertDropDownListRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>InsertDropDownListRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
@@ -261,9 +265,92 @@ public class InsertContentWithOptionsRequest extends Request {
     }
     /**
      * 
-     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
+     * {@link InsertDropDownListRequest} extends {@link TeaModel}
      *
-     * <p>InsertContentWithOptionsRequest</p>
+     * <p>InsertDropDownListRequest</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Color")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String color;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String value;
+
+        private Options(Builder builder) {
+            this.color = builder.color;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.color = model.color;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#FF0000</p>
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InsertDropDownListRequest} extends {@link TeaModel}
+     *
+     * <p>InsertDropDownListRequest</p>
      */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
