@@ -112,6 +112,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteChunk  DeleteChunkRequest
+     * @return DeleteChunkResponse
+     */
+    CompletableFuture<DeleteChunkResponse> deleteChunk(DeleteChunkRequest request);
+
+    /**
      * @param request the request parameters of DeleteFile  DeleteFileRequest
      * @return DeleteFileResponse
      */

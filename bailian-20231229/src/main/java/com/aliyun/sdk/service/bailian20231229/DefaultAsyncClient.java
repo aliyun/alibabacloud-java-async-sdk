@@ -264,6 +264,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteChunk  DeleteChunkRequest
+     * @return DeleteChunkResponse
+     */
+    @Override
+    public CompletableFuture<DeleteChunkResponse> deleteChunk(DeleteChunkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteChunk").setMethod(HttpMethod.POST).setPathRegex("/{WorkspaceId}/chunk/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteChunkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteChunkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteFile  DeleteFileRequest
      * @return DeleteFileResponse
      */
