@@ -236,11 +236,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pending")
         private Integer pending;
 
+        @com.aliyun.core.annotation.NameInMap("Restarting")
+        private Integer restarting;
+
         @com.aliyun.core.annotation.NameInMap("Running")
         private Integer running;
 
         @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Integer succeeded;
+
+        @com.aliyun.core.annotation.NameInMap("Suspended")
+        private Integer suspended;
 
         private ExecutorStatus(Builder builder) {
             this.deleted = builder.deleted;
@@ -248,8 +254,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             this.failed = builder.failed;
             this.initing = builder.initing;
             this.pending = builder.pending;
+            this.restarting = builder.restarting;
             this.running = builder.running;
             this.succeeded = builder.succeeded;
+            this.suspended = builder.suspended;
         }
 
         public static Builder builder() {
@@ -296,6 +304,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return restarting
+         */
+        public Integer getRestarting() {
+            return this.restarting;
+        }
+
+        /**
          * @return running
          */
         public Integer getRunning() {
@@ -309,14 +324,23 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.succeeded;
         }
 
+        /**
+         * @return suspended
+         */
+        public Integer getSuspended() {
+            return this.suspended;
+        }
+
         public static final class Builder {
             private Integer deleted; 
             private Integer exception; 
             private Integer failed; 
             private Integer initing; 
             private Integer pending; 
+            private Integer restarting; 
             private Integer running; 
             private Integer succeeded; 
+            private Integer suspended; 
 
             private Builder() {
             } 
@@ -327,8 +351,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
                 this.failed = model.failed;
                 this.initing = model.initing;
                 this.pending = model.pending;
+                this.restarting = model.restarting;
                 this.running = model.running;
                 this.succeeded = model.succeeded;
+                this.suspended = model.suspended;
             } 
 
             /**
@@ -372,6 +398,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
+             * Restarting.
+             */
+            public Builder restarting(Integer restarting) {
+                this.restarting = restarting;
+                return this;
+            }
+
+            /**
              * Running.
              */
             public Builder running(Integer running) {
@@ -384,6 +418,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder succeeded(Integer succeeded) {
                 this.succeeded = succeeded;
+                return this;
+            }
+
+            /**
+             * Suspended.
+             */
+            public Builder suspended(Integer suspended) {
+                this.suspended = suspended;
                 return this;
             }
 
@@ -479,6 +521,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
 
+        @com.aliyun.core.annotation.NameInMap("BlockDuration")
+        private Integer blockDuration;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -500,6 +545,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List<String> ipAddress;
 
+        @com.aliyun.core.annotation.NameInMap("Preemptible")
+        private Boolean preemptible;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -514,6 +562,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
         private Executors(Builder builder) {
             this.arrayIndex = builder.arrayIndex;
+            this.blockDuration = builder.blockDuration;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
@@ -521,6 +570,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             this.externalIpAddress = builder.externalIpAddress;
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
+            this.preemptible = builder.preemptible;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
@@ -540,6 +590,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
          */
         public Integer getArrayIndex() {
             return this.arrayIndex;
+        }
+
+        /**
+         * @return blockDuration
+         */
+        public Integer getBlockDuration() {
+            return this.blockDuration;
         }
 
         /**
@@ -592,6 +649,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return preemptible
+         */
+        public Boolean getPreemptible() {
+            return this.preemptible;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -621,6 +685,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer arrayIndex; 
+            private Integer blockDuration; 
             private String createTime; 
             private String endTime; 
             private String executorId; 
@@ -628,6 +693,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private java.util.List<String> externalIpAddress; 
             private java.util.List<String> hostName; 
             private java.util.List<String> ipAddress; 
+            private Boolean preemptible; 
             private String startTime; 
             private String status; 
             private String statusReason; 
@@ -638,6 +704,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
             private Builder(Executors model) {
                 this.arrayIndex = model.arrayIndex;
+                this.blockDuration = model.blockDuration;
                 this.createTime = model.createTime;
                 this.endTime = model.endTime;
                 this.executorId = model.executorId;
@@ -645,6 +712,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
                 this.externalIpAddress = model.externalIpAddress;
                 this.hostName = model.hostName;
                 this.ipAddress = model.ipAddress;
+                this.preemptible = model.preemptible;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
@@ -656,6 +724,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder arrayIndex(Integer arrayIndex) {
                 this.arrayIndex = arrayIndex;
+                return this;
+            }
+
+            /**
+             * BlockDuration.
+             */
+            public Builder blockDuration(Integer blockDuration) {
+                this.blockDuration = blockDuration;
                 return this;
             }
 
@@ -712,6 +788,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * Preemptible.
+             */
+            public Builder preemptible(Boolean preemptible) {
+                this.preemptible = preemptible;
                 return this;
             }
 

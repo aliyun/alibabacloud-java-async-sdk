@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DependencyPolicy")
+    private DependencyPolicy dependencyPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploymentPolicy")
     private DeploymentPolicy deploymentPolicy;
 
@@ -45,6 +49,7 @@ public class CreateJobRequest extends Request {
 
     private CreateJobRequest(Builder builder) {
         super(builder);
+        this.dependencyPolicy = builder.dependencyPolicy;
         this.deploymentPolicy = builder.deploymentPolicy;
         this.jobDescription = builder.jobDescription;
         this.jobName = builder.jobName;
@@ -64,6 +69,13 @@ public class CreateJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dependencyPolicy
+     */
+    public DependencyPolicy getDependencyPolicy() {
+        return this.dependencyPolicy;
     }
 
     /**
@@ -109,6 +121,7 @@ public class CreateJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateJobRequest, Builder> {
+        private DependencyPolicy dependencyPolicy; 
         private DeploymentPolicy deploymentPolicy; 
         private String jobDescription; 
         private String jobName; 
@@ -122,6 +135,7 @@ public class CreateJobRequest extends Request {
 
         private Builder(CreateJobRequest request) {
             super(request);
+            this.dependencyPolicy = request.dependencyPolicy;
             this.deploymentPolicy = request.deploymentPolicy;
             this.jobDescription = request.jobDescription;
             this.jobName = request.jobName;
@@ -129,6 +143,16 @@ public class CreateJobRequest extends Request {
             this.securityPolicy = request.securityPolicy;
             this.tasks = request.tasks;
         } 
+
+        /**
+         * DependencyPolicy.
+         */
+        public Builder dependencyPolicy(DependencyPolicy dependencyPolicy) {
+            String dependencyPolicyShrink = shrink(dependencyPolicy, "DependencyPolicy", "json");
+            this.putQueryParameter("DependencyPolicy", dependencyPolicyShrink);
+            this.dependencyPolicy = dependencyPolicy;
+            return this;
+        }
 
         /**
          * DeploymentPolicy.
@@ -197,6 +221,136 @@ public class CreateJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class JobDependency extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String jobId;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private JobDependency(Builder builder) {
+            this.jobId = builder.jobId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static JobDependency create() {
+            return builder().build();
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String jobId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobDependency model) {
+                this.jobId = model.jobId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public JobDependency build() {
+                return new JobDependency(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class DependencyPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("JobDependency")
+        private java.util.List<JobDependency> jobDependency;
+
+        private DependencyPolicy(Builder builder) {
+            this.jobDependency = builder.jobDependency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DependencyPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return jobDependency
+         */
+        public java.util.List<JobDependency> getJobDependency() {
+            return this.jobDependency;
+        }
+
+        public static final class Builder {
+            private java.util.List<JobDependency> jobDependency; 
+
+            private Builder() {
+            } 
+
+            private Builder(DependencyPolicy model) {
+                this.jobDependency = model.jobDependency;
+            } 
+
+            /**
+             * JobDependency.
+             */
+            public Builder jobDependency(java.util.List<JobDependency> jobDependency) {
+                this.jobDependency = jobDependency;
+                return this;
+            }
+
+            public DependencyPolicy build() {
+                return new DependencyPolicy(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateJobRequest} extends {@link TeaModel}
@@ -984,6 +1138,158 @@ public class CreateJobRequest extends Request {
      *
      * <p>CreateJobRequest</p>
      */
+    public static class ExitCodeActions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long exitCode;
+
+        private ExitCodeActions(Builder builder) {
+            this.action = builder.action;
+            this.exitCode = builder.exitCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExitCodeActions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return exitCode
+         */
+        public Long getExitCode() {
+            return this.exitCode;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long exitCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExitCodeActions model) {
+                this.action = model.action;
+                this.exitCode = model.exitCode;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder exitCode(Long exitCode) {
+                this.exitCode = exitCode;
+                return this;
+            }
+
+            public ExitCodeActions build() {
+                return new ExitCodeActions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class RetryPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExitCodeActions")
+        private java.util.List<ExitCodeActions> exitCodeActions;
+
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
+        private Integer retryCount;
+
+        private RetryPolicy(Builder builder) {
+            this.exitCodeActions = builder.exitCodeActions;
+            this.retryCount = builder.retryCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RetryPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return exitCodeActions
+         */
+        public java.util.List<ExitCodeActions> getExitCodeActions() {
+            return this.exitCodeActions;
+        }
+
+        /**
+         * @return retryCount
+         */
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<ExitCodeActions> exitCodeActions; 
+            private Integer retryCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetryPolicy model) {
+                this.exitCodeActions = model.exitCodeActions;
+                this.retryCount = model.retryCount;
+            } 
+
+            /**
+             * ExitCodeActions.
+             */
+            public Builder exitCodeActions(java.util.List<ExitCodeActions> exitCodeActions) {
+                this.exitCodeActions = exitCodeActions;
+                return this;
+            }
+
+            /**
+             * RetryCount.
+             */
+            public Builder retryCount(Integer retryCount) {
+                this.retryCount = retryCount;
+                return this;
+            }
+
+            public RetryPolicy build() {
+                return new RetryPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class EnvironmentVars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1560,6 +1866,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
+        @com.aliyun.core.annotation.NameInMap("RetryPolicy")
+        private RetryPolicy retryPolicy;
+
         @com.aliyun.core.annotation.NameInMap("TaskExecutor")
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<TaskExecutor> taskExecutor;
@@ -1569,6 +1878,7 @@ public class CreateJobRequest extends Request {
 
         private TaskSpec(Builder builder) {
             this.resource = builder.resource;
+            this.retryPolicy = builder.retryPolicy;
             this.taskExecutor = builder.taskExecutor;
             this.volumeMount = builder.volumeMount;
         }
@@ -1589,6 +1899,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return retryPolicy
+         */
+        public RetryPolicy getRetryPolicy() {
+            return this.retryPolicy;
+        }
+
+        /**
          * @return taskExecutor
          */
         public java.util.List<TaskExecutor> getTaskExecutor() {
@@ -1604,6 +1921,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private Resource resource; 
+            private RetryPolicy retryPolicy; 
             private java.util.List<TaskExecutor> taskExecutor; 
             private java.util.List<VolumeMount> volumeMount; 
 
@@ -1612,6 +1930,7 @@ public class CreateJobRequest extends Request {
 
             private Builder(TaskSpec model) {
                 this.resource = model.resource;
+                this.retryPolicy = model.retryPolicy;
                 this.taskExecutor = model.taskExecutor;
                 this.volumeMount = model.volumeMount;
             } 
@@ -1621,6 +1940,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
+                return this;
+            }
+
+            /**
+             * RetryPolicy.
+             */
+            public Builder retryPolicy(RetryPolicy retryPolicy) {
+                this.retryPolicy = retryPolicy;
                 return this;
             }
 

@@ -239,12 +239,16 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Resource(Builder builder) {
             this.cores = builder.cores;
             this.disks = builder.disks;
+            this.instanceType = builder.instanceType;
             this.memory = builder.memory;
         }
 
@@ -271,6 +275,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -280,6 +291,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public static final class Builder {
             private Float cores; 
             private java.util.List<Disks> disks; 
+            private String instanceType; 
             private Float memory; 
 
             private Builder() {
@@ -288,6 +300,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private Builder(Resource model) {
                 this.cores = model.cores;
                 this.disks = model.disks;
+                this.instanceType = model.instanceType;
                 this.memory = model.memory;
             } 
 
@@ -304,6 +317,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
@@ -410,6 +431,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
 
+        @com.aliyun.core.annotation.NameInMap("BlockDuration")
+        private Integer blockDuration;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -439,6 +463,9 @@ public class ListExecutorsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
+
+        @com.aliyun.core.annotation.NameInMap("Preemptible")
+        private Boolean preemptible;
 
         @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
@@ -470,6 +497,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         private Executors(Builder builder) {
             this.appName = builder.appName;
             this.arrayIndex = builder.arrayIndex;
+            this.blockDuration = builder.blockDuration;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
@@ -480,6 +508,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             this.ipAddress = builder.ipAddress;
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
+            this.preemptible = builder.preemptible;
             this.resource = builder.resource;
             this.resourceType = builder.resourceType;
             this.startTime = builder.startTime;
@@ -511,6 +540,13 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         public Integer getArrayIndex() {
             return this.arrayIndex;
+        }
+
+        /**
+         * @return blockDuration
+         */
+        public Integer getBlockDuration() {
+            return this.blockDuration;
         }
 
         /**
@@ -584,6 +620,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return preemptible
+         */
+        public Boolean getPreemptible() {
+            return this.preemptible;
+        }
+
+        /**
          * @return resource
          */
         public Resource getResource() {
@@ -649,6 +692,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public static final class Builder {
             private String appName; 
             private Integer arrayIndex; 
+            private Integer blockDuration; 
             private String createTime; 
             private String endTime; 
             private String executorId; 
@@ -659,6 +703,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private java.util.List<String> ipAddress; 
             private String jobId; 
             private String jobName; 
+            private Boolean preemptible; 
             private Resource resource; 
             private String resourceType; 
             private String startTime; 
@@ -675,6 +720,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private Builder(Executors model) {
                 this.appName = model.appName;
                 this.arrayIndex = model.arrayIndex;
+                this.blockDuration = model.blockDuration;
                 this.createTime = model.createTime;
                 this.endTime = model.endTime;
                 this.executorId = model.executorId;
@@ -685,6 +731,7 @@ public class ListExecutorsResponseBody extends TeaModel {
                 this.ipAddress = model.ipAddress;
                 this.jobId = model.jobId;
                 this.jobName = model.jobName;
+                this.preemptible = model.preemptible;
                 this.resource = model.resource;
                 this.resourceType = model.resourceType;
                 this.startTime = model.startTime;
@@ -709,6 +756,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder arrayIndex(Integer arrayIndex) {
                 this.arrayIndex = arrayIndex;
+                return this;
+            }
+
+            /**
+             * BlockDuration.
+             */
+            public Builder blockDuration(Integer blockDuration) {
+                this.blockDuration = blockDuration;
                 return this;
             }
 
@@ -789,6 +844,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * Preemptible.
+             */
+            public Builder preemptible(Boolean preemptible) {
+                this.preemptible = preemptible;
                 return this;
             }
 
