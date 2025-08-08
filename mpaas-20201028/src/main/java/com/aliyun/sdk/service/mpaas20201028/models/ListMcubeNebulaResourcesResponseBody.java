@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeNebulaResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeNebulaResourcesResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
 
     public static ListMcubeNebulaResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeNebulaResourcesResponseBody model) {
+            this.listMcubeNebulaResourceResult = model.listMcubeNebulaResourceResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMcubeNebulaResourceResult.
@@ -110,6 +130,12 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeNebulaResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaResourcesResponseBody</p>
+     */
     public static class NebulaResourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -496,6 +522,43 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
             private Integer status; 
             private String vhost; 
 
+            private Builder() {
+            } 
+
+            private Builder(NebulaResourceInfo model) {
+                this.appCode = model.appCode;
+                this.autoInstall = model.autoInstall;
+                this.clientVersionMax = model.clientVersionMax;
+                this.clientVersionMin = model.clientVersionMin;
+                this.creator = model.creator;
+                this.debugUrl = model.debugUrl;
+                this.downloadUrl = model.downloadUrl;
+                this.extendInfo = model.extendInfo;
+                this.extraData = model.extraData;
+                this.fallbackBaseUrl = model.fallbackBaseUrl;
+                this.fileSize = model.fileSize;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.h5Version = model.h5Version;
+                this.id = model.id;
+                this.installType = model.installType;
+                this.lazyLoad = model.lazyLoad;
+                this.mainUrl = model.mainUrl;
+                this.md5 = model.md5;
+                this.memo = model.memo;
+                this.metaId = model.metaId;
+                this.modifier = model.modifier;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.publishPeriod = model.publishPeriod;
+                this.releaseVersion = model.releaseVersion;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.vhost = model.vhost;
+            } 
+
             /**
              * AppCode.
              */
@@ -751,6 +814,12 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeNebulaResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaResourcesResponseBody</p>
+     */
     public static class ListMcubeNebulaResourceResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -762,7 +831,7 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("NebulaResourceInfo")
-        private java.util.List < NebulaResourceInfo> nebulaResourceInfo;
+        private java.util.List<NebulaResourceInfo> nebulaResourceInfo;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -823,7 +892,7 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         /**
          * @return nebulaResourceInfo
          */
-        public java.util.List < NebulaResourceInfo> getNebulaResourceInfo() {
+        public java.util.List<NebulaResourceInfo> getNebulaResourceInfo() {
             return this.nebulaResourceInfo;
         }
 
@@ -866,12 +935,27 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
             private Integer currentPage; 
             private String errorCode; 
             private Boolean hasMore; 
-            private java.util.List < NebulaResourceInfo> nebulaResourceInfo; 
+            private java.util.List<NebulaResourceInfo> nebulaResourceInfo; 
             private Integer pageSize; 
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMcubeNebulaResourceResult model) {
+                this.currentPage = model.currentPage;
+                this.errorCode = model.errorCode;
+                this.hasMore = model.hasMore;
+                this.nebulaResourceInfo = model.nebulaResourceInfo;
+                this.pageSize = model.pageSize;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -900,7 +984,7 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
             /**
              * NebulaResourceInfo.
              */
-            public Builder nebulaResourceInfo(java.util.List < NebulaResourceInfo> nebulaResourceInfo) {
+            public Builder nebulaResourceInfo(java.util.List<NebulaResourceInfo> nebulaResourceInfo) {
                 this.nebulaResourceInfo = nebulaResourceInfo;
                 return this;
             }

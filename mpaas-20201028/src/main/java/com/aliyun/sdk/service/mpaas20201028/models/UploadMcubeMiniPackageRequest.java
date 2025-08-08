@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMcubeMiniPackageRequest} extends {@link RequestModel}
  *
  * <p>UploadMcubeMiniPackageRequest</p>
@@ -173,7 +179,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -432,7 +438,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -441,7 +447,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * AutoInstall.
+         * <p>This parameter is required.</p>
          */
         public Builder autoInstall(Long autoInstall) {
             this.putBodyParameter("AutoInstall", autoInstall);
@@ -459,7 +465,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * ClientVersionMin.
+         * <p>This parameter is required.</p>
          */
         public Builder clientVersionMin(String clientVersionMin) {
             this.putBodyParameter("ClientVersionMin", clientVersionMin);
@@ -468,7 +474,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * EnableKeepAlive.
+         * <p>This parameter is required.</p>
          */
         public Builder enableKeepAlive(String enableKeepAlive) {
             this.putBodyParameter("EnableKeepAlive", enableKeepAlive);
@@ -477,7 +483,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * EnableOptionMenu.
+         * <p>This parameter is required.</p>
          */
         public Builder enableOptionMenu(String enableOptionMenu) {
             this.putBodyParameter("EnableOptionMenu", enableOptionMenu);
@@ -486,7 +492,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * EnableTabBar.
+         * <p>This parameter is required.</p>
          */
         public Builder enableTabBar(Long enableTabBar) {
             this.putBodyParameter("EnableTabBar", enableTabBar);
@@ -504,7 +510,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * H5Id.
+         * <p>This parameter is required.</p>
          */
         public Builder h5Id(String h5Id) {
             this.putBodyParameter("H5Id", h5Id);
@@ -513,7 +519,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * H5Name.
+         * <p>This parameter is required.</p>
          */
         public Builder h5Name(String h5Name) {
             this.putBodyParameter("H5Name", h5Name);
@@ -522,7 +528,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * H5Version.
+         * <p>This parameter is required.</p>
          */
         public Builder h5Version(String h5Version) {
             this.putBodyParameter("H5Version", h5Version);
@@ -549,7 +555,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * InstallType.
+         * <p>This parameter is required.</p>
          */
         public Builder installType(Long installType) {
             this.putBodyParameter("InstallType", installType);
@@ -558,7 +564,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * MainUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder mainUrl(String mainUrl) {
             this.putBodyParameter("MainUrl", mainUrl);
@@ -567,7 +573,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * OnexFlag.
+         * <p>This parameter is required.</p>
          */
         public Builder onexFlag(Boolean onexFlag) {
             this.putBodyParameter("OnexFlag", onexFlag);
@@ -576,7 +582,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>This parameter is required.</p>
          */
         public Builder packageType(Long packageType) {
             this.putBodyParameter("PackageType", packageType);
@@ -585,7 +591,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>This parameter is required.</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
@@ -594,7 +600,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * ResourceFileUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceFileUrl(String resourceFileUrl) {
             this.putBodyParameter("ResourceFileUrl", resourceFileUrl);
@@ -603,7 +609,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceType(Long resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -612,7 +618,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -621,7 +627,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -639,7 +645,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * Vhost.
+         * <p>This parameter is required.</p>
          */
         public Builder vhost(String vhost) {
             this.putBodyParameter("Vhost", vhost);
@@ -648,7 +654,7 @@ public class UploadMcubeMiniPackageRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

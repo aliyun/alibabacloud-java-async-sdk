@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeMcubePublicTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeMcubePublicTaskStatusResponseBody</p>
@@ -36,6 +42,10 @@ public class ChangeMcubePublicTaskStatusResponseBody extends TeaModel {
 
     public static ChangeMcubePublicTaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ChangeMcubePublicTaskStatusResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeMcubePublicTaskStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class ChangeMcubePublicTaskStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeMcubePublicTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeMcubePublicTaskStatusResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -183,6 +209,17 @@ public class ChangeMcubePublicTaskStatusResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * Data.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpenGlobalDataResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOpenGlobalDataResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
 
     public static CreateOpenGlobalDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
         private Boolean result; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOpenGlobalDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.

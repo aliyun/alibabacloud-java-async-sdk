@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushTemplateRequest} extends {@link RequestModel}
  *
  * <p>PushTemplateRequest</p>
@@ -115,8 +121,20 @@ public class PushTemplateRequest extends Request {
     private String templateName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdChannelCategory")
-    private java.util.Map < String, ? > thirdChannelCategory;
+    private java.util.Map<String, ?> thirdChannelCategory;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransparentMessagePayload")
+    private Object transparentMessagePayload;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransparentMessageUrgency")
+    private String transparentMessageUrgency;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -149,7 +167,10 @@ public class PushTemplateRequest extends Request {
         this.taskName = builder.taskName;
         this.templateKeyValue = builder.templateKeyValue;
         this.templateName = builder.templateName;
+        this.tenantId = builder.tenantId;
         this.thirdChannelCategory = builder.thirdChannelCategory;
+        this.transparentMessagePayload = builder.transparentMessagePayload;
+        this.transparentMessageUrgency = builder.transparentMessageUrgency;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -161,7 +182,7 @@ public class PushTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -335,10 +356,31 @@ public class PushTemplateRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return thirdChannelCategory
      */
-    public java.util.Map < String, ? > getThirdChannelCategory() {
+    public java.util.Map<String, ?> getThirdChannelCategory() {
         return this.thirdChannelCategory;
+    }
+
+    /**
+     * @return transparentMessagePayload
+     */
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    /**
+     * @return transparentMessageUrgency
+     */
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     /**
@@ -373,7 +415,10 @@ public class PushTemplateRequest extends Request {
         private String taskName; 
         private String templateKeyValue; 
         private String templateName; 
-        private java.util.Map < String, ? > thirdChannelCategory; 
+        private String tenantId; 
+        private java.util.Map<String, ?> thirdChannelCategory; 
+        private Object transparentMessagePayload; 
+        private String transparentMessageUrgency; 
         private String workspaceId; 
 
         private Builder() {
@@ -406,7 +451,10 @@ public class PushTemplateRequest extends Request {
             this.taskName = request.taskName;
             this.templateKeyValue = request.templateKeyValue;
             this.templateName = request.templateName;
+            this.tenantId = request.tenantId;
             this.thirdChannelCategory = request.thirdChannelCategory;
+            this.transparentMessagePayload = request.transparentMessagePayload;
+            this.transparentMessageUrgency = request.transparentMessageUrgency;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -438,7 +486,7 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -465,7 +513,7 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * DeliveryType.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryType(Long deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
@@ -483,7 +531,7 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * ExpiredSeconds.
+         * <p>This parameter is required.</p>
          */
         public Builder expiredSeconds(Long expiredSeconds) {
             this.putBodyParameter("ExpiredSeconds", expiredSeconds);
@@ -591,7 +639,7 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * TargetMsgkey.
+         * <p>This parameter is required.</p>
          */
         public Builder targetMsgkey(String targetMsgkey) {
             this.putBodyParameter("TargetMsgkey", targetMsgkey);
@@ -618,7 +666,7 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -627,9 +675,18 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
          * ThirdChannelCategory.
          */
-        public Builder thirdChannelCategory(java.util.Map < String, ? > thirdChannelCategory) {
+        public Builder thirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
             String thirdChannelCategoryShrink = shrink(thirdChannelCategory, "ThirdChannelCategory", "json");
             this.putBodyParameter("ThirdChannelCategory", thirdChannelCategoryShrink);
             this.thirdChannelCategory = thirdChannelCategory;
@@ -637,7 +694,25 @@ public class PushTemplateRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * TransparentMessagePayload.
+         */
+        public Builder transparentMessagePayload(Object transparentMessagePayload) {
+            this.putBodyParameter("TransparentMessagePayload", transparentMessagePayload);
+            this.transparentMessagePayload = transparentMessagePayload;
+            return this;
+        }
+
+        /**
+         * TransparentMessageUrgency.
+         */
+        public Builder transparentMessageUrgency(String transparentMessageUrgency) {
+            this.putBodyParameter("TransparentMessageUrgency", transparentMessageUrgency);
+            this.transparentMessageUrgency = transparentMessageUrgency;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

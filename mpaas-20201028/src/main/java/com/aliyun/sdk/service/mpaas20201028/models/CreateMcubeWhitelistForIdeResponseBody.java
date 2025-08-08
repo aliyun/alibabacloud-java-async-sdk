@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeWhitelistForIdeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeWhitelistForIdeResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeWhitelistForIdeResponseBody extends TeaModel {
 
     public static CreateMcubeWhitelistForIdeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeWhitelistForIdeResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeWhitelistForIdeResponseBody model) {
+            this.createWhitelistForIdeResult = model.createWhitelistForIdeResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateWhitelistForIdeResult.
@@ -110,6 +130,12 @@ public class CreateMcubeWhitelistForIdeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeWhitelistForIdeResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeWhitelistForIdeResponseBody</p>
+     */
     public static class CreateWhitelistForIdeResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -159,6 +185,15 @@ public class CreateMcubeWhitelistForIdeResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
             private String whitelistId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateWhitelistForIdeResult model) {
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.whitelistId = model.whitelistId;
+            } 
 
             /**
              * ResultMsg.

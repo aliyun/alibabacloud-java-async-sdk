@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMcubeMiniPackageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMcubeMiniPackageResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
 
     public static QueryMcubeMiniPackageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMcubeMiniPackageResponseBody model) {
+            this.queryMiniPackageResult = model.queryMiniPackageResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * QueryMiniPackageResult.
@@ -110,6 +130,12 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMcubeMiniPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMcubeMiniPackageResponseBody</p>
+     */
     public static class MiniPackageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -388,6 +414,34 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
             private Long resourceType; 
             private Long status; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiniPackageInfo model) {
+                this.appCode = model.appCode;
+                this.autoInstall = model.autoInstall;
+                this.clientVersionMax = model.clientVersionMax;
+                this.clientVersionMin = model.clientVersionMin;
+                this.downloadUrl = model.downloadUrl;
+                this.extendInfo = model.extendInfo;
+                this.extraData = model.extraData;
+                this.fallbackBaseUrl = model.fallbackBaseUrl;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.h5Version = model.h5Version;
+                this.id = model.id;
+                this.installType = model.installType;
+                this.mainUrl = model.mainUrl;
+                this.memo = model.memo;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.publishPeriod = model.publishPeriod;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
+
             /**
              * AppCode.
              */
@@ -571,6 +625,12 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMcubeMiniPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMcubeMiniPackageResponseBody</p>
+     */
     public static class QueryMiniPackageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniPackageInfo")
         private MiniPackageInfo miniPackageInfo;
@@ -620,6 +680,15 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
             private MiniPackageInfo miniPackageInfo; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryMiniPackageResult model) {
+                this.miniPackageInfo = model.miniPackageInfo;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MiniPackageInfo.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeVhostRequest} extends {@link RequestModel}
  *
  * <p>CreateMcubeVhostRequest</p>
@@ -52,7 +58,7 @@ public class CreateMcubeVhostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,7 +128,7 @@ public class CreateMcubeVhostRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -131,7 +137,7 @@ public class CreateMcubeVhostRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -140,7 +146,7 @@ public class CreateMcubeVhostRequest extends Request {
         }
 
         /**
-         * Vhost.
+         * <p>This parameter is required.</p>
          */
         public Builder vhost(String vhost) {
             this.putBodyParameter("Vhost", vhost);
@@ -149,7 +155,7 @@ public class CreateMcubeVhostRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

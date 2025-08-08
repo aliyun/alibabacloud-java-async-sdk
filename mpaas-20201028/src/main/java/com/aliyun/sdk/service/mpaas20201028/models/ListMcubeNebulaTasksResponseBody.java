@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeNebulaTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeNebulaTasksResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
 
     public static ListMcubeNebulaTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeNebulaTasksResponseBody model) {
+            this.listMcubeNebulaTaskResult = model.listMcubeNebulaTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMcubeNebulaTaskResult.
@@ -110,6 +130,12 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeNebulaTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaTasksResponseBody</p>
+     */
     public static class NebulaTaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -508,6 +534,44 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
             private String upgradeProgress; 
             private String whitelistIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(NebulaTaskInfo model) {
+                this.appCode = model.appCode;
+                this.bizType = model.bizType;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedStr = model.gmtModifiedStr;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtime = model.greyEndtime;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyEndtimeStr = model.greyEndtimeStr;
+                this.greyNum = model.greyNum;
+                this.greyUrl = model.greyUrl;
+                this.id = model.id;
+                this.memo = model.memo;
+                this.modifier = model.modifier;
+                this.packageId = model.packageId;
+                this.percent = model.percent;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.releaseVersion = model.releaseVersion;
+                this.status = model.status;
+                this.syncResult = model.syncResult;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+                this.taskVersion = model.taskVersion;
+                this.upgradeNoticeNum = model.upgradeNoticeNum;
+                this.upgradeProgress = model.upgradeProgress;
+                this.whitelistIds = model.whitelistIds;
+            } 
+
             /**
              * AppCode.
              */
@@ -771,12 +835,18 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeNebulaTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaTasksResponseBody</p>
+     */
     public static class ListMcubeNebulaTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
         @com.aliyun.core.annotation.NameInMap("NebulaTaskInfo")
-        private java.util.List < NebulaTaskInfo> nebulaTaskInfo;
+        private java.util.List<NebulaTaskInfo> nebulaTaskInfo;
 
         @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
@@ -813,7 +883,7 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
         /**
          * @return nebulaTaskInfo
          */
-        public java.util.List < NebulaTaskInfo> getNebulaTaskInfo() {
+        public java.util.List<NebulaTaskInfo> getNebulaTaskInfo() {
             return this.nebulaTaskInfo;
         }
 
@@ -840,10 +910,21 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String errorCode; 
-            private java.util.List < NebulaTaskInfo> nebulaTaskInfo; 
+            private java.util.List<NebulaTaskInfo> nebulaTaskInfo; 
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMcubeNebulaTaskResult model) {
+                this.errorCode = model.errorCode;
+                this.nebulaTaskInfo = model.nebulaTaskInfo;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.
@@ -856,7 +937,7 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
             /**
              * NebulaTaskInfo.
              */
-            public Builder nebulaTaskInfo(java.util.List < NebulaTaskInfo> nebulaTaskInfo) {
+            public Builder nebulaTaskInfo(java.util.List<NebulaTaskInfo> nebulaTaskInfo) {
                 this.nebulaTaskInfo = nebulaTaskInfo;
                 return this;
             }

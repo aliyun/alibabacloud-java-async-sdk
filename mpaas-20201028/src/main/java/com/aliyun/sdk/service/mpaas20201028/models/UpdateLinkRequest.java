@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateLinkRequest} extends {@link RequestModel}
+ * {@link UpdateLinkRequest} extends {@link RequestModel}
  *
- * <p>CreateLinkRequest</p>
+ * <p>UpdateLinkRequest</p>
  */
-public class CreateLinkRequest extends Request {
+public class UpdateLinkRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,17 +40,23 @@ public class CreateLinkRequest extends Request {
     private String targetUrl;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String url;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private CreateLinkRequest(Builder builder) {
+    private UpdateLinkRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.cors = builder.cors;
         this.domain = builder.domain;
         this.dynamicfield = builder.dynamicfield;
         this.targetUrl = builder.targetUrl;
+        this.url = builder.url;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -58,7 +64,7 @@ public class CreateLinkRequest extends Request {
         return new Builder();
     }
 
-    public static CreateLinkRequest create() {
+    public static UpdateLinkRequest create() {
         return builder().build();
     }
 
@@ -103,31 +109,40 @@ public class CreateLinkRequest extends Request {
     }
 
     /**
+     * @return url
+     */
+    public String getUrl() {
+        return this.url;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<CreateLinkRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateLinkRequest, Builder> {
         private String appId; 
         private Boolean cors; 
         private String domain; 
         private String dynamicfield; 
         private String targetUrl; 
+        private String url; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLinkRequest request) {
+        private Builder(UpdateLinkRequest request) {
             super(request);
             this.appId = request.appId;
             this.cors = request.cors;
             this.domain = request.domain;
             this.dynamicfield = request.dynamicfield;
             this.targetUrl = request.targetUrl;
+            this.url = request.url;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -186,6 +201,18 @@ public class CreateLinkRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
+         * <p><a href="https://xxx/8hGb9SyJARqp7V4PGP92X">https://xxx/8hGb9SyJARqp7V4PGP92X</a></p>
+         */
+        public Builder url(String url) {
+            this.putBodyParameter("Url", url);
+            this.url = url;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
          * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
@@ -195,8 +222,8 @@ public class CreateLinkRequest extends Request {
         }
 
         @Override
-        public CreateLinkRequest build() {
-            return new CreateLinkRequest(this);
+        public UpdateLinkRequest build() {
+            return new UpdateLinkRequest(this);
         } 
 
     } 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeMiniAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeMiniAppsResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
 
     public static ListMcubeMiniAppsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeMiniAppsResponseBody model) {
+            this.listMiniResult = model.listMiniResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMiniResult.
@@ -110,6 +130,12 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeMiniAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniAppsResponseBody</p>
+     */
     public static class MiniProgramList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -184,6 +210,17 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
             private String h5Id; 
             private String h5Name; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiniProgramList model) {
+                this.appCode = model.appCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+            } 
+
             /**
              * AppCode.
              */
@@ -231,6 +268,12 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeMiniAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniAppsResponseBody</p>
+     */
     public static class ListMiniResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -239,7 +282,7 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("MiniProgramList")
-        private java.util.List < MiniProgramList> miniProgramList;
+        private java.util.List<MiniProgramList> miniProgramList;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -288,7 +331,7 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         /**
          * @return miniProgramList
          */
-        public java.util.List < MiniProgramList> getMiniProgramList() {
+        public java.util.List<MiniProgramList> getMiniProgramList() {
             return this.miniProgramList;
         }
 
@@ -323,11 +366,24 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Boolean hasMore; 
-            private java.util.List < MiniProgramList> miniProgramList; 
+            private java.util.List<MiniProgramList> miniProgramList; 
             private Integer pageSize; 
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMiniResult model) {
+                this.currentPage = model.currentPage;
+                this.hasMore = model.hasMore;
+                this.miniProgramList = model.miniProgramList;
+                this.pageSize = model.pageSize;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -348,7 +404,7 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
             /**
              * MiniProgramList.
              */
-            public Builder miniProgramList(java.util.List < MiniProgramList> miniProgramList) {
+            public Builder miniProgramList(java.util.List<MiniProgramList> miniProgramList) {
                 this.miniProgramList = miniProgramList;
                 return this;
             }

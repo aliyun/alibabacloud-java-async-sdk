@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushAnalysisCoreIndexRequest} extends {@link RequestModel}
  *
  * <p>QueryPushAnalysisCoreIndexRequest</p>
@@ -43,6 +49,10 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -60,6 +70,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         this.platform = builder.platform;
         this.startTime = builder.startTime;
         this.taskId = builder.taskId;
+        this.tenantId = builder.tenantId;
         this.type = builder.type;
         this.workspaceId = builder.workspaceId;
     }
@@ -72,7 +83,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,6 +138,13 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -148,6 +166,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         private String platform; 
         private Long startTime; 
         private String taskId; 
+        private String tenantId; 
         private String type; 
         private String workspaceId; 
 
@@ -164,6 +183,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
             this.platform = request.platform;
             this.startTime = request.startTime;
             this.taskId = request.taskId;
+            this.tenantId = request.tenantId;
             this.type = request.type;
             this.workspaceId = request.workspaceId;
         } 
@@ -178,7 +198,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -196,7 +216,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -214,7 +234,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -232,6 +252,15 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         }
 
         /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
          * Type.
          */
         public Builder type(String type) {
@@ -241,7 +270,7 @@ public class QueryPushAnalysisCoreIndexRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

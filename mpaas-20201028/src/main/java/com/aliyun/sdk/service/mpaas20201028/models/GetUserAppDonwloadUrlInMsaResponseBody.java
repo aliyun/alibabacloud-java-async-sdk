@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserAppDonwloadUrlInMsaResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserAppDonwloadUrlInMsaResponseBody</p>
@@ -36,6 +42,10 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
 
     public static GetUserAppDonwloadUrlInMsaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserAppDonwloadUrlInMsaResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserAppDonwloadUrlInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppDonwloadUrlInMsaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filename")
         private String filename;
@@ -148,6 +174,14 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
             private String filename; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.filename = model.filename;
+                this.url = model.url;
+            } 
+
             /**
              * Filename.
              */
@@ -171,6 +205,12 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserAppDonwloadUrlInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppDonwloadUrlInMsaResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -232,6 +272,16 @@ public class GetUserAppDonwloadUrlInMsaResponseBody extends TeaModel {
             private Data data; 
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * Code.

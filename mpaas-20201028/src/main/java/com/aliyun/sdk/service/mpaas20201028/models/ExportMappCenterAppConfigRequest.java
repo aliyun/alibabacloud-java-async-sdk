@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportMappCenterAppConfigRequest} extends {@link RequestModel}
  *
  * <p>ExportMappCenterAppConfigRequest</p>
@@ -66,7 +72,7 @@ public class ExportMappCenterAppConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,7 +196,7 @@ public class ExportMappCenterAppConfigRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * <p>This parameter is required.</p>
          */
         public Builder identifier(String identifier) {
             this.putBodyParameter("Identifier", identifier);
@@ -199,7 +205,7 @@ public class ExportMappCenterAppConfigRequest extends Request {
         }
 
         /**
-         * OnexFlag.
+         * <p>This parameter is required.</p>
          */
         public Builder onexFlag(Boolean onexFlag) {
             this.putBodyParameter("OnexFlag", onexFlag);
@@ -208,7 +214,7 @@ public class ExportMappCenterAppConfigRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * <p>This parameter is required.</p>
          */
         public Builder systemType(String systemType) {
             this.putBodyParameter("SystemType", systemType);

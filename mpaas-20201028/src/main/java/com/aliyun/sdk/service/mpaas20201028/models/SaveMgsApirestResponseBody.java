@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveMgsApirestResponseBody} extends {@link TeaModel}
  *
  * <p>SaveMgsApirestResponseBody</p>
@@ -36,6 +42,10 @@ public class SaveMgsApirestResponseBody extends TeaModel {
 
     public static SaveMgsApirestResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class SaveMgsApirestResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveMgsApirestResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class SaveMgsApirestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SaveMgsApirestResponseBody} extends {@link TeaModel}
+     *
+     * <p>SaveMgsApirestResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -159,6 +185,15 @@ public class SaveMgsApirestResponseBody extends TeaModel {
             private String errorMessage; 
             private Boolean success; 
             private Boolean value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.errorMessage = model.errorMessage;
+                this.success = model.success;
+                this.value = model.value;
+            } 
 
             /**
              * ErrorMessage.

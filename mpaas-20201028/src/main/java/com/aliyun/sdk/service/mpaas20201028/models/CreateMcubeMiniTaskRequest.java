@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeMiniTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateMcubeMiniTaskRequest</p>
@@ -90,7 +96,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,7 +229,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -259,7 +265,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * Memo.
+         * <p>This parameter is required.</p>
          */
         public Builder memo(String memo) {
             this.putBodyParameter("Memo", memo);
@@ -268,7 +274,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * PackageId.
+         * <p>This parameter is required.</p>
          */
         public Builder packageId(Long packageId) {
             this.putBodyParameter("PackageId", packageId);
@@ -277,7 +283,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * PublishMode.
+         * <p>This parameter is required.</p>
          */
         public Builder publishMode(Long publishMode) {
             this.putBodyParameter("PublishMode", publishMode);
@@ -286,7 +292,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * PublishType.
+         * <p>This parameter is required.</p>
          */
         public Builder publishType(Long publishType) {
             this.putBodyParameter("PublishType", publishType);
@@ -295,7 +301,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -313,7 +319,7 @@ public class CreateMcubeMiniTaskRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

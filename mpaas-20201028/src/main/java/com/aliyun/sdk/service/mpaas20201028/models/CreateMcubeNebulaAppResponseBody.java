@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeNebulaAppResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeNebulaAppResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeNebulaAppResponseBody extends TeaModel {
 
     public static CreateMcubeNebulaAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeNebulaAppResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeNebulaAppResponseBody model) {
+            this.createNebulaAppResult = model.createNebulaAppResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateNebulaAppResult.
@@ -110,6 +130,12 @@ public class CreateMcubeNebulaAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeNebulaAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeNebulaAppResponseBody</p>
+     */
     public static class CreateNebulaAppResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -171,6 +197,16 @@ public class CreateMcubeNebulaAppResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateNebulaAppResult model) {
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

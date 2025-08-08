@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokePushMessageRequest} extends {@link RequestModel}
  *
  * <p>RevokePushMessageRequest</p>
@@ -31,6 +37,10 @@ public class RevokePushMessageRequest extends Request {
     private String targetId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -41,6 +51,7 @@ public class RevokePushMessageRequest extends Request {
         this.appId = builder.appId;
         this.messageId = builder.messageId;
         this.targetId = builder.targetId;
+        this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,7 +63,7 @@ public class RevokePushMessageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,6 +97,13 @@ public class RevokePushMessageRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -97,6 +115,7 @@ public class RevokePushMessageRequest extends Request {
         private String appId; 
         private String messageId; 
         private String targetId; 
+        private String tenantId; 
         private String workspaceId; 
 
         private Builder() {
@@ -109,6 +128,7 @@ public class RevokePushMessageRequest extends Request {
             this.appId = request.appId;
             this.messageId = request.messageId;
             this.targetId = request.targetId;
+            this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -122,7 +142,7 @@ public class RevokePushMessageRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -131,7 +151,7 @@ public class RevokePushMessageRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>This parameter is required.</p>
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);
@@ -140,7 +160,7 @@ public class RevokePushMessageRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * <p>This parameter is required.</p>
          */
         public Builder targetId(String targetId) {
             this.putBodyParameter("TargetId", targetId);
@@ -149,7 +169,16 @@ public class RevokePushMessageRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

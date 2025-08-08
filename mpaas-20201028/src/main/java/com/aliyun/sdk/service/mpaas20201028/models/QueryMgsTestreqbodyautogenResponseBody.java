@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMgsTestreqbodyautogenResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMgsTestreqbodyautogenResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMgsTestreqbodyautogenResponseBody extends TeaModel {
 
     public static QueryMgsTestreqbodyautogenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMgsTestreqbodyautogenResponseBody extends TeaModel {
         private String resultCode; 
         private String resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMgsTestreqbodyautogenResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.

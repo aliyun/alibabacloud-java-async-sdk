@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMcubeMiniAppResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMcubeMiniAppResponseBody</p>
@@ -36,6 +42,10 @@ public class DeleteMcubeMiniAppResponseBody extends TeaModel {
 
     public static DeleteMcubeMiniAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class DeleteMcubeMiniAppResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMcubeMiniAppResponseBody model) {
+            this.deleteMiniResult = model.deleteMiniResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * DeleteMiniResult.
@@ -110,6 +130,12 @@ public class DeleteMcubeMiniAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteMcubeMiniAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteMcubeMiniAppResponseBody</p>
+     */
     public static class DeleteMiniResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -159,6 +185,15 @@ public class DeleteMcubeMiniAppResponseBody extends TeaModel {
             private String data; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteMiniResult model) {
+                this.data = model.data;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * Data.

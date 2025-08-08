@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeMcubeMiniTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>ChangeMcubeMiniTaskStatusRequest</p>
@@ -70,7 +76,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -167,7 +173,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -176,7 +182,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -185,7 +191,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * PackageId.
+         * <p>This parameter is required.</p>
          */
         public Builder packageId(Long packageId) {
             this.putBodyParameter("PackageId", packageId);
@@ -194,7 +200,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -203,7 +209,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>This parameter is required.</p>
          */
         public Builder taskStatus(Long taskStatus) {
             this.putBodyParameter("TaskStatus", taskStatus);
@@ -212,7 +218,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -221,7 +227,7 @@ public class ChangeMcubeMiniTaskStatusRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

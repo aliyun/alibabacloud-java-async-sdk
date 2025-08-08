@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeWhitelistResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeWhitelistResponseBody extends TeaModel {
 
     public static CreateMcubeWhitelistResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeWhitelistResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeWhitelistResponseBody model) {
+            this.createWhitelistResult = model.createWhitelistResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateWhitelistResult.
@@ -110,6 +130,12 @@ public class CreateMcubeWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeWhitelistResponseBody</p>
+     */
     public static class CreateWhitelistResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -159,6 +185,15 @@ public class CreateMcubeWhitelistResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
             private String whitelistId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateWhitelistResult model) {
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.whitelistId = model.whitelistId;
+            } 
 
             /**
              * ResultMsg.

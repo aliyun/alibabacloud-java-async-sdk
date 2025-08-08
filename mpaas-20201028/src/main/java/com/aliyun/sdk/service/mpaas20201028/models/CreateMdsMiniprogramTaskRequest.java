@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMdsMiniprogramTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateMdsMiniprogramTaskRequest</p>
@@ -96,7 +102,7 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -283,7 +289,7 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -301,7 +307,7 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         }
 
         /**
-         * PackageId.
+         * <p>This parameter is required.</p>
          */
         public Builder packageId(Long packageId) {
             this.putBodyParameter("PackageId", packageId);
@@ -319,7 +325,7 @@ public class CreateMdsMiniprogramTaskRequest extends Request {
         }
 
         /**
-         * PublishType.
+         * <p>This parameter is required.</p>
          */
         public Builder publishType(Long publishType) {
             this.putBodyParameter("PublishType", publishType);

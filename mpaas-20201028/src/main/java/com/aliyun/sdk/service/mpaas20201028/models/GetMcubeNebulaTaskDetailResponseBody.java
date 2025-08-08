@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMcubeNebulaTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetMcubeNebulaTaskDetailResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
 
     public static GetMcubeNebulaTaskDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMcubeNebulaTaskDetailResponseBody model) {
+            this.getMcubeNebulaTaskDetailResult = model.getMcubeNebulaTaskDetailResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * GetMcubeNebulaTaskDetailResult.
@@ -110,6 +130,12 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcubeNebulaTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeNebulaTaskDetailResponseBody</p>
+     */
     public static class RuleJsonList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
@@ -172,6 +198,16 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
             private String ruleType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleJsonList model) {
+                this.operation = model.operation;
+                this.ruleElement = model.ruleElement;
+                this.ruleType = model.ruleType;
+                this.value = model.value;
+            } 
+
             /**
              * Operation.
              */
@@ -211,6 +247,12 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeNebulaTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeNebulaTaskDetailResponseBody</p>
+     */
     public static class NebulaTaskDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -318,7 +360,7 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
         private String releaseVersion;
 
         @com.aliyun.core.annotation.NameInMap("RuleJsonList")
-        private java.util.List < RuleJsonList> ruleJsonList;
+        private java.util.List<RuleJsonList> ruleJsonList;
 
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
@@ -671,7 +713,7 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
         /**
          * @return ruleJsonList
          */
-        public java.util.List < RuleJsonList> getRuleJsonList() {
+        public java.util.List<RuleJsonList> getRuleJsonList() {
             return this.ruleJsonList;
         }
 
@@ -809,7 +851,7 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
             private Integer publishType; 
             private Integer quickRollback; 
             private String releaseVersion; 
-            private java.util.List < RuleJsonList> ruleJsonList; 
+            private java.util.List<RuleJsonList> ruleJsonList; 
             private String sourceId; 
             private String sourceName; 
             private String sourceType; 
@@ -824,6 +866,62 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
             private String upgradeProgress; 
             private String whitelistIds; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NebulaTaskDetail model) {
+                this.appCode = model.appCode;
+                this.appId = model.appId;
+                this.atomic = model.atomic;
+                this.baseInfoId = model.baseInfoId;
+                this.bizType = model.bizType;
+                this.creator = model.creator;
+                this.cronexpress = model.cronexpress;
+                this.downloadUrl = model.downloadUrl;
+                this.extraData = model.extraData;
+                this.fileSize = model.fileSize;
+                this.fullRepair = model.fullRepair;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedStr = model.gmtModifiedStr;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtime = model.greyEndtime;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyEndtimeStr = model.greyEndtimeStr;
+                this.greyNum = model.greyNum;
+                this.greyUrl = model.greyUrl;
+                this.id = model.id;
+                this.issueDesc = model.issueDesc;
+                this.memo = model.memo;
+                this.modifier = model.modifier;
+                this.ossPath = model.ossPath;
+                this.packageId = model.packageId;
+                this.percent = model.percent;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishPeriod = model.publishPeriod;
+                this.publishType = model.publishType;
+                this.quickRollback = model.quickRollback;
+                this.releaseVersion = model.releaseVersion;
+                this.ruleJsonList = model.ruleJsonList;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.sourceType = model.sourceType;
+                this.status = model.status;
+                this.syncResult = model.syncResult;
+                this.syncType = model.syncType;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+                this.taskVersion = model.taskVersion;
+                this.upgradeNoticeNum = model.upgradeNoticeNum;
+                this.upgradeProgress = model.upgradeProgress;
+                this.whitelistIds = model.whitelistIds;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * AppCode.
@@ -1108,7 +1206,7 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
             /**
              * RuleJsonList.
              */
-            public Builder ruleJsonList(java.util.List < RuleJsonList> ruleJsonList) {
+            public Builder ruleJsonList(java.util.List<RuleJsonList> ruleJsonList) {
                 this.ruleJsonList = ruleJsonList;
                 return this;
             }
@@ -1232,6 +1330,12 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeNebulaTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeNebulaTaskDetailResponseBody</p>
+     */
     public static class GetMcubeNebulaTaskDetailResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -1305,6 +1409,17 @@ public class GetMcubeNebulaTaskDetailResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetMcubeNebulaTaskDetailResult model) {
+                this.errorCode = model.errorCode;
+                this.nebulaTaskDetail = model.nebulaTaskDetail;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

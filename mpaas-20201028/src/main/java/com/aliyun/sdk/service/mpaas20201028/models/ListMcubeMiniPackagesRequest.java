@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeMiniPackagesRequest} extends {@link RequestModel}
  *
  * <p>ListMcubeMiniPackagesRequest</p>
@@ -68,7 +74,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -174,7 +180,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         }
 
         /**
-         * H5Id.
+         * <p>This parameter is required.</p>
          */
         public Builder h5Id(String h5Id) {
             this.putBodyParameter("H5Id", h5Id);
@@ -183,7 +189,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         }
 
         /**
-         * PackageTypes.
+         * <p>This parameter is required.</p>
          */
         public Builder packageTypes(String packageTypes) {
             this.putBodyParameter("PackageTypes", packageTypes);
@@ -210,7 +216,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -219,7 +225,7 @@ public class ListMcubeMiniPackagesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

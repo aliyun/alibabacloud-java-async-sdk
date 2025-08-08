@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLinkResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLinkResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateLinkResponseBody extends TeaModel {
 
     public static CreateLinkResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class CreateLinkResponseBody extends TeaModel {
         private ResultContent resultContent; 
         private String resultMessage; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateLinkResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
+
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +133,12 @@ public class CreateLinkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateLinkResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -159,6 +188,15 @@ public class CreateLinkResponseBody extends TeaModel {
             private String data; 
             private String target; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.target = model.target;
+                this.version = model.version;
+            } 
 
             /**
              * Data.

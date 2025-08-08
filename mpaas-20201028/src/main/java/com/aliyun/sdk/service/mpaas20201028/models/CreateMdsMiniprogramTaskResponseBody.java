@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMdsMiniprogramTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMdsMiniprogramTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
 
     public static CreateMdsMiniprogramTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMdsMiniprogramTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMdsMiniprogramTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMdsMiniprogramTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -184,6 +210,17 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
+
             /**
              * Content.
              */
@@ -231,6 +268,12 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMdsMiniprogramTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMdsMiniprogramTaskResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -268,6 +311,14 @@ public class CreateMdsMiniprogramTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Data data; 
             private String requestId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.requestId = model.requestId;
+            } 
 
             /**
              * Data.

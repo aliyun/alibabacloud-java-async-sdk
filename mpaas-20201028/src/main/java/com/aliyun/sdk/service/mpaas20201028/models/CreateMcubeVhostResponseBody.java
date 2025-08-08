@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeVhostResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeVhostResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeVhostResponseBody extends TeaModel {
 
     public static CreateMcubeVhostResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeVhostResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeVhostResponseBody model) {
+            this.createVhostResult = model.createVhostResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateVhostResult.
@@ -110,6 +130,12 @@ public class CreateMcubeVhostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeVhostResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeVhostResponseBody</p>
+     */
     public static class CreateVhostResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -159,6 +185,15 @@ public class CreateMcubeVhostResponseBody extends TeaModel {
             private String data; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateVhostResult model) {
+                this.data = model.data;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * Data.

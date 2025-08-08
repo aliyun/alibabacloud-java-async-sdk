@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeMcubeNebulaTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeMcubeNebulaTaskStatusResponseBody</p>
@@ -36,6 +42,10 @@ public class ChangeMcubeNebulaTaskStatusResponseBody extends TeaModel {
 
     public static ChangeMcubeNebulaTaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ChangeMcubeNebulaTaskStatusResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeMcubeNebulaTaskStatusResponseBody model) {
+            this.changeMcubeNebulaTaskStatusResult = model.changeMcubeNebulaTaskStatusResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ChangeMcubeNebulaTaskStatusResult.
@@ -110,6 +130,12 @@ public class ChangeMcubeNebulaTaskStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeMcubeNebulaTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeMcubeNebulaTaskStatusResponseBody</p>
+     */
     public static class ChangeMcubeNebulaTaskStatusResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -171,6 +197,16 @@ public class ChangeMcubeNebulaTaskStatusResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeMcubeNebulaTaskStatusResult model) {
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

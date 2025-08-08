@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelPushSchedulerRequest} extends {@link RequestModel}
  *
  * <p>CancelPushSchedulerRequest</p>
@@ -19,6 +25,10 @@ public class CancelPushSchedulerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -38,6 +48,7 @@ public class CancelPushSchedulerRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.appId = builder.appId;
+        this.tenantId = builder.tenantId;
         this.type = builder.type;
         this.uniqueIds = builder.uniqueIds;
         this.workspaceId = builder.workspaceId;
@@ -51,7 +62,7 @@ public class CancelPushSchedulerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,6 +79,13 @@ public class CancelPushSchedulerRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     /**
@@ -94,6 +112,7 @@ public class CancelPushSchedulerRequest extends Request {
     public static final class Builder extends Request.Builder<CancelPushSchedulerRequest, Builder> {
         private String regionId; 
         private String appId; 
+        private String tenantId; 
         private Integer type; 
         private String uniqueIds; 
         private String workspaceId; 
@@ -106,6 +125,7 @@ public class CancelPushSchedulerRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.appId = request.appId;
+            this.tenantId = request.tenantId;
             this.type = request.type;
             this.uniqueIds = request.uniqueIds;
             this.workspaceId = request.workspaceId;
@@ -121,11 +141,20 @@ public class CancelPushSchedulerRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
@@ -139,7 +168,7 @@ public class CancelPushSchedulerRequest extends Request {
         }
 
         /**
-         * UniqueIds.
+         * <p>This parameter is required.</p>
          */
         public Builder uniqueIds(String uniqueIds) {
             this.putBodyParameter("UniqueIds", uniqueIds);
@@ -148,7 +177,7 @@ public class CancelPushSchedulerRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

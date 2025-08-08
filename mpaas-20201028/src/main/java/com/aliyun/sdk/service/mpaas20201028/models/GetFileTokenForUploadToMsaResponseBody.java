@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileTokenForUploadToMsaResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileTokenForUploadToMsaResponseBody</p>
@@ -36,6 +42,10 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
 
     public static GetFileTokenForUploadToMsaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileTokenForUploadToMsaResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileTokenForUploadToMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileTokenForUploadToMsaResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accessid")
         private String accessid;
@@ -196,6 +222,18 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
             private String policy; 
             private String signature; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.accessid = model.accessid;
+                this.dir = model.dir;
+                this.expire = model.expire;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
+
             /**
              * Accessid.
              */
@@ -251,6 +289,12 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileTokenForUploadToMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileTokenForUploadToMsaResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -324,6 +368,17 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private String success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.content = model.content;
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * Content.

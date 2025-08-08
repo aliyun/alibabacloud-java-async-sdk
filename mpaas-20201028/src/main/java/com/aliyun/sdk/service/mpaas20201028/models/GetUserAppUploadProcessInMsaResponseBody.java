@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserAppUploadProcessInMsaResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserAppUploadProcessInMsaResponseBody</p>
@@ -36,6 +42,10 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
 
     public static GetUserAppUploadProcessInMsaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserAppUploadProcessInMsaResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserAppUploadProcessInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppUploadProcessInMsaResponseBody</p>
+     */
     public static class EnhanceMapping extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
@@ -160,6 +186,15 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnhanceMapping model) {
+                this.info = model.info;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * Info.
              */
@@ -191,6 +226,12 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserAppUploadProcessInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppUploadProcessInMsaResponseBody</p>
+     */
     public static class ApkInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterMd5")
         private String afterMd5;
@@ -205,7 +246,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         private String appPackage;
 
         @com.aliyun.core.annotation.NameInMap("AssetsFileList")
-        private java.util.List < String > assetsFileList;
+        private java.util.List<String> assetsFileList;
 
         @com.aliyun.core.annotation.NameInMap("BeforeMd5")
         private String beforeMd5;
@@ -217,19 +258,19 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         private String classForest;
 
         @com.aliyun.core.annotation.NameInMap("EnhanceMapping")
-        private java.util.List < EnhanceMapping> enhanceMapping;
+        private java.util.List<EnhanceMapping> enhanceMapping;
 
         @com.aliyun.core.annotation.NameInMap("EnhanceRules")
-        private java.util.List < String > enhanceRules;
+        private java.util.List<String> enhanceRules;
 
         @com.aliyun.core.annotation.NameInMap("EnhancedAssetsFiles")
-        private java.util.List < String > enhancedAssetsFiles;
+        private java.util.List<String> enhancedAssetsFiles;
 
         @com.aliyun.core.annotation.NameInMap("EnhancedClasses")
-        private java.util.List < String > enhancedClasses;
+        private java.util.List<String> enhancedClasses;
 
         @com.aliyun.core.annotation.NameInMap("EnhancedSoFiles")
-        private java.util.List < String > enhancedSoFiles;
+        private java.util.List<String> enhancedSoFiles;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -241,7 +282,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         private Long progress;
 
         @com.aliyun.core.annotation.NameInMap("SoFileList")
-        private java.util.List < String > soFileList;
+        private java.util.List<String> soFileList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
@@ -318,7 +359,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         /**
          * @return assetsFileList
          */
-        public java.util.List < String > getAssetsFileList() {
+        public java.util.List<String> getAssetsFileList() {
             return this.assetsFileList;
         }
 
@@ -346,35 +387,35 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         /**
          * @return enhanceMapping
          */
-        public java.util.List < EnhanceMapping> getEnhanceMapping() {
+        public java.util.List<EnhanceMapping> getEnhanceMapping() {
             return this.enhanceMapping;
         }
 
         /**
          * @return enhanceRules
          */
-        public java.util.List < String > getEnhanceRules() {
+        public java.util.List<String> getEnhanceRules() {
             return this.enhanceRules;
         }
 
         /**
          * @return enhancedAssetsFiles
          */
-        public java.util.List < String > getEnhancedAssetsFiles() {
+        public java.util.List<String> getEnhancedAssetsFiles() {
             return this.enhancedAssetsFiles;
         }
 
         /**
          * @return enhancedClasses
          */
-        public java.util.List < String > getEnhancedClasses() {
+        public java.util.List<String> getEnhancedClasses() {
             return this.enhancedClasses;
         }
 
         /**
          * @return enhancedSoFiles
          */
-        public java.util.List < String > getEnhancedSoFiles() {
+        public java.util.List<String> getEnhancedSoFiles() {
             return this.enhancedSoFiles;
         }
 
@@ -402,7 +443,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         /**
          * @return soFileList
          */
-        public java.util.List < String > getSoFileList() {
+        public java.util.List<String> getSoFileList() {
             return this.soFileList;
         }
 
@@ -439,23 +480,50 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             private Long afterSize; 
             private String appCode; 
             private String appPackage; 
-            private java.util.List < String > assetsFileList; 
+            private java.util.List<String> assetsFileList; 
             private String beforeMd5; 
             private Long beforeSize; 
             private String classForest; 
-            private java.util.List < EnhanceMapping> enhanceMapping; 
-            private java.util.List < String > enhanceRules; 
-            private java.util.List < String > enhancedAssetsFiles; 
-            private java.util.List < String > enhancedClasses; 
-            private java.util.List < String > enhancedSoFiles; 
+            private java.util.List<EnhanceMapping> enhanceMapping; 
+            private java.util.List<String> enhanceRules; 
+            private java.util.List<String> enhancedAssetsFiles; 
+            private java.util.List<String> enhancedClasses; 
+            private java.util.List<String> enhancedSoFiles; 
             private Long id; 
             private String label; 
             private Long progress; 
-            private java.util.List < String > soFileList; 
+            private java.util.List<String> soFileList; 
             private Long status; 
             private String taskType; 
             private String versionCode; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApkInfo model) {
+                this.afterMd5 = model.afterMd5;
+                this.afterSize = model.afterSize;
+                this.appCode = model.appCode;
+                this.appPackage = model.appPackage;
+                this.assetsFileList = model.assetsFileList;
+                this.beforeMd5 = model.beforeMd5;
+                this.beforeSize = model.beforeSize;
+                this.classForest = model.classForest;
+                this.enhanceMapping = model.enhanceMapping;
+                this.enhanceRules = model.enhanceRules;
+                this.enhancedAssetsFiles = model.enhancedAssetsFiles;
+                this.enhancedClasses = model.enhancedClasses;
+                this.enhancedSoFiles = model.enhancedSoFiles;
+                this.id = model.id;
+                this.label = model.label;
+                this.progress = model.progress;
+                this.soFileList = model.soFileList;
+                this.status = model.status;
+                this.taskType = model.taskType;
+                this.versionCode = model.versionCode;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * AfterMd5.
@@ -492,7 +560,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * AssetsFileList.
              */
-            public Builder assetsFileList(java.util.List < String > assetsFileList) {
+            public Builder assetsFileList(java.util.List<String> assetsFileList) {
                 this.assetsFileList = assetsFileList;
                 return this;
             }
@@ -524,7 +592,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * EnhanceMapping.
              */
-            public Builder enhanceMapping(java.util.List < EnhanceMapping> enhanceMapping) {
+            public Builder enhanceMapping(java.util.List<EnhanceMapping> enhanceMapping) {
                 this.enhanceMapping = enhanceMapping;
                 return this;
             }
@@ -532,7 +600,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * EnhanceRules.
              */
-            public Builder enhanceRules(java.util.List < String > enhanceRules) {
+            public Builder enhanceRules(java.util.List<String> enhanceRules) {
                 this.enhanceRules = enhanceRules;
                 return this;
             }
@@ -540,7 +608,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * EnhancedAssetsFiles.
              */
-            public Builder enhancedAssetsFiles(java.util.List < String > enhancedAssetsFiles) {
+            public Builder enhancedAssetsFiles(java.util.List<String> enhancedAssetsFiles) {
                 this.enhancedAssetsFiles = enhancedAssetsFiles;
                 return this;
             }
@@ -548,7 +616,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * EnhancedClasses.
              */
-            public Builder enhancedClasses(java.util.List < String > enhancedClasses) {
+            public Builder enhancedClasses(java.util.List<String> enhancedClasses) {
                 this.enhancedClasses = enhancedClasses;
                 return this;
             }
@@ -556,7 +624,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * EnhancedSoFiles.
              */
-            public Builder enhancedSoFiles(java.util.List < String > enhancedSoFiles) {
+            public Builder enhancedSoFiles(java.util.List<String> enhancedSoFiles) {
                 this.enhancedSoFiles = enhancedSoFiles;
                 return this;
             }
@@ -588,7 +656,7 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             /**
              * SoFileList.
              */
-            public Builder soFileList(java.util.List < String > soFileList) {
+            public Builder soFileList(java.util.List<String> soFileList) {
                 this.soFileList = soFileList;
                 return this;
             }
@@ -632,6 +700,12 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserAppUploadProcessInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppUploadProcessInMsaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApkInfo")
         private ApkInfo apkInfo;
@@ -706,6 +780,17 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             private Long progress; 
             private Long status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apkInfo = model.apkInfo;
+                this.enhanceTaskId = model.enhanceTaskId;
+                this.id = model.id;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * ApkInfo.
              */
@@ -753,6 +838,12 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserAppUploadProcessInMsaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserAppUploadProcessInMsaResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -814,6 +905,16 @@ public class GetUserAppUploadProcessInMsaResponseBody extends TeaModel {
             private Data data; 
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * Code.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMpaasAppInfoResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMpaasAppInfoResponseBody</p>
@@ -36,6 +42,10 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
 
     public static UpdateMpaasAppInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMpaasAppInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMpaasAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMpaasAppInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -184,6 +210,17 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.code = model.code;
+                this.data = model.data;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * AppId.
              */
@@ -231,6 +268,12 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMpaasAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMpaasAppInfoResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -268,6 +311,14 @@ public class UpdateMpaasAppInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Data data; 
             private String requestId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.requestId = model.requestId;
+            } 
 
             /**
              * Data.

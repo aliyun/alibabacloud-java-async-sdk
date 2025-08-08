@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMcubeMiniTaskResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMcubeMiniTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
 
     public static QueryMcubeMiniTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMcubeMiniTaskResponseBody model) {
+            this.queryMiniTaskResult = model.queryMiniTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * QueryMiniTaskResult.
@@ -110,6 +130,12 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMcubeMiniTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMcubeMiniTaskResponseBody</p>
+     */
     public static class MiniTaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -328,6 +354,29 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
             private Long taskStatus; 
             private String whitelistIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiniTaskInfo model) {
+                this.appCode = model.appCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtime = model.greyEndtime;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyNum = model.greyNum;
+                this.id = model.id;
+                this.memo = model.memo;
+                this.packageId = model.packageId;
+                this.platform = model.platform;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.status = model.status;
+                this.taskStatus = model.taskStatus;
+                this.whitelistIds = model.whitelistIds;
+            } 
+
             /**
              * AppCode.
              */
@@ -471,6 +520,12 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMcubeMiniTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMcubeMiniTaskResponseBody</p>
+     */
     public static class QueryMiniTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniTaskInfo")
         private MiniTaskInfo miniTaskInfo;
@@ -520,6 +575,15 @@ public class QueryMcubeMiniTaskResponseBody extends TeaModel {
             private MiniTaskInfo miniTaskInfo; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryMiniTaskResult model) {
+                this.miniTaskInfo = model.miniTaskInfo;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MiniTaskInfo.

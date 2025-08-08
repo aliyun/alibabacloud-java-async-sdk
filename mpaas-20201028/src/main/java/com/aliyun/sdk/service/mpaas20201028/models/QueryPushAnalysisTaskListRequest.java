@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushAnalysisTaskListRequest} extends {@link RequestModel}
  *
  * <p>QueryPushAnalysisTaskListRequest</p>
@@ -43,6 +49,10 @@ public class QueryPushAnalysisTaskListRequest extends Request {
     private String taskName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -56,6 +66,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         this.startTime = builder.startTime;
         this.taskId = builder.taskId;
         this.taskName = builder.taskName;
+        this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -67,7 +78,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,6 +133,13 @@ public class QueryPushAnalysisTaskListRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -136,6 +154,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         private Long startTime; 
         private String taskId; 
         private String taskName; 
+        private String tenantId; 
         private String workspaceId; 
 
         private Builder() {
@@ -151,6 +170,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
             this.startTime = request.startTime;
             this.taskId = request.taskId;
             this.taskName = request.taskName;
+            this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -164,7 +184,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -191,7 +211,7 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -218,7 +238,16 @@ public class QueryPushAnalysisTaskListRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeMiniPackagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeMiniPackagesResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
 
     public static ListMcubeMiniPackagesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeMiniPackagesResponseBody model) {
+            this.listMiniPackageResult = model.listMiniPackageResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMiniPackageResult.
@@ -110,6 +130,12 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeMiniPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniPackagesResponseBody</p>
+     */
     public static class MiniPackageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -388,6 +414,34 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
             private Long resourceType; 
             private Long status; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiniPackageList model) {
+                this.appCode = model.appCode;
+                this.autoInstall = model.autoInstall;
+                this.clientVersionMax = model.clientVersionMax;
+                this.clientVersionMin = model.clientVersionMin;
+                this.downloadUrl = model.downloadUrl;
+                this.extendInfo = model.extendInfo;
+                this.extraData = model.extraData;
+                this.fallbackBaseUrl = model.fallbackBaseUrl;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.h5Version = model.h5Version;
+                this.id = model.id;
+                this.installType = model.installType;
+                this.mainUrl = model.mainUrl;
+                this.memo = model.memo;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.publishPeriod = model.publishPeriod;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
+
             /**
              * AppCode.
              */
@@ -571,6 +625,12 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeMiniPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniPackagesResponseBody</p>
+     */
     public static class ListMiniPackageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -579,7 +639,7 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("MiniPackageList")
-        private java.util.List < MiniPackageList> miniPackageList;
+        private java.util.List<MiniPackageList> miniPackageList;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -628,7 +688,7 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         /**
          * @return miniPackageList
          */
-        public java.util.List < MiniPackageList> getMiniPackageList() {
+        public java.util.List<MiniPackageList> getMiniPackageList() {
             return this.miniPackageList;
         }
 
@@ -663,11 +723,24 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Boolean hasMore; 
-            private java.util.List < MiniPackageList> miniPackageList; 
+            private java.util.List<MiniPackageList> miniPackageList; 
             private Integer pageSize; 
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMiniPackageResult model) {
+                this.currentPage = model.currentPage;
+                this.hasMore = model.hasMore;
+                this.miniPackageList = model.miniPackageList;
+                this.pageSize = model.pageSize;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -688,7 +761,7 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
             /**
              * MiniPackageList.
              */
-            public Builder miniPackageList(java.util.List < MiniPackageList> miniPackageList) {
+            public Builder miniPackageList(java.util.List<MiniPackageList> miniPackageList) {
                 this.miniPackageList = miniPackageList;
                 return this;
             }

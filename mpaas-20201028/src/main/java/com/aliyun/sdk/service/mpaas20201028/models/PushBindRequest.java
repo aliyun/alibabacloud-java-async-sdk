@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushBindRequest} extends {@link RequestModel}
  *
  * <p>PushBindRequest</p>
@@ -35,6 +41,10 @@ public class PushBindRequest extends Request {
     private String phoneNumber;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
@@ -51,6 +61,7 @@ public class PushBindRequest extends Request {
         this.deliveryToken = builder.deliveryToken;
         this.osType = builder.osType;
         this.phoneNumber = builder.phoneNumber;
+        this.tenantId = builder.tenantId;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
@@ -63,7 +74,7 @@ public class PushBindRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,6 +115,13 @@ public class PushBindRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -123,6 +141,7 @@ public class PushBindRequest extends Request {
         private String deliveryToken; 
         private Integer osType; 
         private String phoneNumber; 
+        private String tenantId; 
         private String userId; 
         private String workspaceId; 
 
@@ -137,6 +156,7 @@ public class PushBindRequest extends Request {
             this.deliveryToken = request.deliveryToken;
             this.osType = request.osType;
             this.phoneNumber = request.phoneNumber;
+            this.tenantId = request.tenantId;
             this.userId = request.userId;
             this.workspaceId = request.workspaceId;
         } 
@@ -151,7 +171,7 @@ public class PushBindRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -160,7 +180,7 @@ public class PushBindRequest extends Request {
         }
 
         /**
-         * DeliveryToken.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryToken(String deliveryToken) {
             this.putBodyParameter("DeliveryToken", deliveryToken);
@@ -169,7 +189,7 @@ public class PushBindRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>This parameter is required.</p>
          */
         public Builder osType(Integer osType) {
             this.putBodyParameter("OsType", osType);
@@ -187,7 +207,16 @@ public class PushBindRequest extends Request {
         }
 
         /**
-         * UserId.
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -196,7 +225,7 @@ public class PushBindRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpenSingleDataRequest} extends {@link RequestModel}
  *
  * <p>CreateOpenSingleDataRequest</p>
@@ -56,6 +62,10 @@ public class CreateOpenSingleDataRequest extends Request {
     private String payload;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdMsgId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String thirdMsgId;
@@ -87,6 +97,7 @@ public class CreateOpenSingleDataRequest extends Request {
         this.linkToken = builder.linkToken;
         this.osType = builder.osType;
         this.payload = builder.payload;
+        this.tenantId = builder.tenantId;
         this.thirdMsgId = builder.thirdMsgId;
         this.validTimeEnd = builder.validTimeEnd;
         this.validTimeStart = builder.validTimeStart;
@@ -101,7 +112,7 @@ public class CreateOpenSingleDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,6 +188,13 @@ public class CreateOpenSingleDataRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return thirdMsgId
      */
     public String getThirdMsgId() {
@@ -215,6 +233,7 @@ public class CreateOpenSingleDataRequest extends Request {
         private String linkToken; 
         private String osType; 
         private String payload; 
+        private String tenantId; 
         private String thirdMsgId; 
         private Long validTimeEnd; 
         private Long validTimeStart; 
@@ -236,6 +255,7 @@ public class CreateOpenSingleDataRequest extends Request {
             this.linkToken = request.linkToken;
             this.osType = request.osType;
             this.payload = request.payload;
+            this.tenantId = request.tenantId;
             this.thirdMsgId = request.thirdMsgId;
             this.validTimeEnd = request.validTimeEnd;
             this.validTimeStart = request.validTimeStart;
@@ -252,7 +272,7 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -279,7 +299,7 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -306,7 +326,7 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * LinkToken.
+         * <p>This parameter is required.</p>
          */
         public Builder linkToken(String linkToken) {
             this.putBodyParameter("LinkToken", linkToken);
@@ -324,7 +344,7 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(String payload) {
             this.putBodyParameter("Payload", payload);
@@ -333,7 +353,16 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * ThirdMsgId.
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder thirdMsgId(String thirdMsgId) {
             this.putBodyParameter("ThirdMsgId", thirdMsgId);
@@ -360,7 +389,7 @@ public class CreateOpenSingleDataRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

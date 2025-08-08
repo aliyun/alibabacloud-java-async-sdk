@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushReportRequest} extends {@link RequestModel}
  *
  * <p>PushReportRequest</p>
@@ -59,6 +65,10 @@ public class PushReportRequest extends Request {
     private String pushVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdChannel")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer thirdChannel;
@@ -85,6 +95,7 @@ public class PushReportRequest extends Request {
         this.model = builder.model;
         this.osType = builder.osType;
         this.pushVersion = builder.pushVersion;
+        this.tenantId = builder.tenantId;
         this.thirdChannel = builder.thirdChannel;
         this.thirdChannelDeviceToken = builder.thirdChannelDeviceToken;
         this.workspaceId = builder.workspaceId;
@@ -98,7 +109,7 @@ public class PushReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +192,13 @@ public class PushReportRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return thirdChannel
      */
     public Integer getThirdChannel() {
@@ -213,6 +231,7 @@ public class PushReportRequest extends Request {
         private String model; 
         private Integer osType; 
         private String pushVersion; 
+        private String tenantId; 
         private Integer thirdChannel; 
         private String thirdChannelDeviceToken; 
         private String workspaceId; 
@@ -234,6 +253,7 @@ public class PushReportRequest extends Request {
             this.model = request.model;
             this.osType = request.osType;
             this.pushVersion = request.pushVersion;
+            this.tenantId = request.tenantId;
             this.thirdChannel = request.thirdChannel;
             this.thirdChannelDeviceToken = request.thirdChannelDeviceToken;
             this.workspaceId = request.workspaceId;
@@ -249,7 +269,7 @@ public class PushReportRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -285,7 +305,7 @@ public class PushReportRequest extends Request {
         }
 
         /**
-         * DeliveryToken.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryToken(String deliveryToken) {
             this.putBodyParameter("DeliveryToken", deliveryToken);
@@ -321,7 +341,7 @@ public class PushReportRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>This parameter is required.</p>
          */
         public Builder osType(Integer osType) {
             this.putBodyParameter("OsType", osType);
@@ -335,6 +355,15 @@ public class PushReportRequest extends Request {
         public Builder pushVersion(String pushVersion) {
             this.putBodyParameter("PushVersion", pushVersion);
             this.pushVersion = pushVersion;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
@@ -357,7 +386,7 @@ public class PushReportRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

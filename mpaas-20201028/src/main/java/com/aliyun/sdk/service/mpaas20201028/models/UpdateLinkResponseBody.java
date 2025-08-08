@@ -1,16 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateMasFunnelResponseBody} extends {@link TeaModel}
+ * 
+ * {@link UpdateLinkResponseBody} extends {@link TeaModel}
  *
- * <p>CreateMasFunnelResponseBody</p>
+ * <p>UpdateLinkResponseBody</p>
  */
-public class CreateMasFunnelResponseBody extends TeaModel {
+public class UpdateLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -23,7 +29,7 @@ public class CreateMasFunnelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    private CreateMasFunnelResponseBody(Builder builder) {
+    private UpdateLinkResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
         this.resultContent = builder.resultContent;
@@ -34,8 +40,12 @@ public class CreateMasFunnelResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateMasFunnelResponseBody create() {
+    public static UpdateLinkResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class CreateMasFunnelResponseBody extends TeaModel {
         private ResultContent resultContent; 
         private String resultMessage; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateLinkResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,30 +127,32 @@ public class CreateMasFunnelResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateMasFunnelResponseBody build() {
-            return new CreateMasFunnelResponseBody(this);
+        public UpdateLinkResponseBody build() {
+            return new UpdateLinkResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateLinkResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private String code;
-
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
+        @com.aliyun.core.annotation.NameInMap("Target")
+        private String target;
 
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
 
         private ResultContent(Builder builder) {
-            this.code = builder.code;
             this.data = builder.data;
-            this.message = builder.message;
-            this.success = builder.success;
+            this.target = builder.target;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -139,13 +164,6 @@ public class CreateMasFunnelResponseBody extends TeaModel {
         }
 
         /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
          * @return data
          */
         public String getData() {
@@ -153,32 +171,32 @@ public class CreateMasFunnelResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
+         * @return target
          */
-        public String getMessage() {
-            return this.message;
+        public String getTarget() {
+            return this.target;
         }
 
         /**
-         * @return success
+         * @return version
          */
-        public Boolean getSuccess() {
-            return this.success;
+        public String getVersion() {
+            return this.version;
         }
 
         public static final class Builder {
-            private String code; 
             private String data; 
-            private String message; 
-            private Boolean success; 
+            private String target; 
+            private String version; 
 
-            /**
-             * Code.
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.target = model.target;
+                this.version = model.version;
+            } 
 
             /**
              * Data.
@@ -189,18 +207,18 @@ public class CreateMasFunnelResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Target.
              */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder target(String target) {
+                this.target = target;
                 return this;
             }
 
             /**
-             * Success.
+             * Version.
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

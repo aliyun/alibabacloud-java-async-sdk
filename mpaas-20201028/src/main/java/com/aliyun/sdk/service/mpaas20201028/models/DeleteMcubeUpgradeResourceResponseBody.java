@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMcubeUpgradeResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMcubeUpgradeResourceResponseBody</p>
@@ -36,6 +42,10 @@ public class DeleteMcubeUpgradeResourceResponseBody extends TeaModel {
 
     public static DeleteMcubeUpgradeResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class DeleteMcubeUpgradeResourceResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMcubeUpgradeResourceResponseBody model) {
+            this.deleteResult = model.deleteResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * DeleteResult.
@@ -110,6 +130,12 @@ public class DeleteMcubeUpgradeResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteMcubeUpgradeResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteMcubeUpgradeResourceResponseBody</p>
+     */
     public static class DeleteResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -171,6 +197,16 @@ public class DeleteMcubeUpgradeResourceResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteResult model) {
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

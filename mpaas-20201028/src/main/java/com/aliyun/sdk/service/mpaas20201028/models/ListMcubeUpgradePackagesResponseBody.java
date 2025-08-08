@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeUpgradePackagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeUpgradePackagesResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
 
     public static ListMcubeUpgradePackagesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeUpgradePackagesResponseBody model) {
+            this.listPackagesResult = model.listPackagesResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListPackagesResult.
@@ -110,6 +130,12 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeUpgradePackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeUpgradePackagesResponseBody</p>
+     */
     public static class Packages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCreateTask")
         private Boolean allowCreateTask;
@@ -604,6 +630,52 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
             private Integer verifyResult; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Packages model) {
+                this.allowCreateTask = model.allowCreateTask;
+                this.appCode = model.appCode;
+                this.appstoreUrl = model.appstoreUrl;
+                this.backLog = model.backLog;
+                this.changeLog = model.changeLog;
+                this.clientFileSize = model.clientFileSize;
+                this.clientName = model.clientName;
+                this.cpId = model.cpId;
+                this.creator = model.creator;
+                this.downloadUrl = model.downloadUrl;
+                this.globalVariables = model.globalVariables;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateStr = model.gmtCreateStr;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedStr = model.gmtModifiedStr;
+                this.id = model.id;
+                this.innerVersion = model.innerVersion;
+                this.iosSymbol = model.iosSymbol;
+                this.isEnterprise = model.isEnterprise;
+                this.isRc = model.isRc;
+                this.isRelease = model.isRelease;
+                this.maxVersion = model.maxVersion;
+                this.md5 = model.md5;
+                this.modifier = model.modifier;
+                this.needCheck = model.needCheck;
+                this.ossPath = model.ossPath;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productVersion = model.productVersion;
+                this.publishPeriod = model.publishPeriod;
+                this.qrcodeUrl = model.qrcodeUrl;
+                this.releaseType = model.releaseType;
+                this.releaseWindow = model.releaseWindow;
+                this.scmDownloadUrl = model.scmDownloadUrl;
+                this.serverVersion = model.serverVersion;
+                this.verificationCode = model.verificationCode;
+                this.verifyResult = model.verifyResult;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * AllowCreateTask.
              */
@@ -931,6 +1003,12 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeUpgradePackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeUpgradePackagesResponseBody</p>
+     */
     public static class ListPackagesResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -942,7 +1020,7 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("Packages")
-        private java.util.List < Packages> packages;
+        private java.util.List<Packages> packages;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -1003,7 +1081,7 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         /**
          * @return packages
          */
-        public java.util.List < Packages> getPackages() {
+        public java.util.List<Packages> getPackages() {
             return this.packages;
         }
 
@@ -1046,12 +1124,27 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
             private Integer currentPage; 
             private String errorCode; 
             private Boolean hasMore; 
-            private java.util.List < Packages> packages; 
+            private java.util.List<Packages> packages; 
             private Integer pageSize; 
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListPackagesResult model) {
+                this.currentPage = model.currentPage;
+                this.errorCode = model.errorCode;
+                this.hasMore = model.hasMore;
+                this.packages = model.packages;
+                this.pageSize = model.pageSize;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -1080,7 +1173,7 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
             /**
              * Packages.
              */
-            public Builder packages(java.util.List < Packages> packages) {
+            public Builder packages(java.util.List<Packages> packages) {
                 this.packages = packages;
                 return this;
             }

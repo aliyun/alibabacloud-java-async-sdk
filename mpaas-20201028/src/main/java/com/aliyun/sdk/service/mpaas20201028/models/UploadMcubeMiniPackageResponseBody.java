@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMcubeMiniPackageResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMcubeMiniPackageResponseBody</p>
@@ -36,6 +42,10 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
 
     public static UploadMcubeMiniPackageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
         private String resultCode; 
         private String resultMessage; 
         private UploadMiniPackageResult uploadMiniPackageResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadMcubeMiniPackageResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+            this.uploadMiniPackageResult = model.uploadMiniPackageResult;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMcubeMiniPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMcubeMiniPackageResponseBody</p>
+     */
     public static class ReturnPackageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DebugUrl")
         private String debugUrl;
@@ -160,6 +186,15 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
             private String packageId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReturnPackageResult model) {
+                this.debugUrl = model.debugUrl;
+                this.packageId = model.packageId;
+                this.userId = model.userId;
+            } 
+
             /**
              * DebugUrl.
              */
@@ -191,6 +226,12 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UploadMcubeMiniPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMcubeMiniPackageResponseBody</p>
+     */
     public static class UploadMiniPackageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -240,6 +281,15 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
             private String resultMsg; 
             private ReturnPackageResult returnPackageResult; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadMiniPackageResult model) {
+                this.resultMsg = model.resultMsg;
+                this.returnPackageResult = model.returnPackageResult;
+                this.success = model.success;
+            } 
 
             /**
              * ResultMsg.

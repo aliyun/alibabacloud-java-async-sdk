@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpenGlobalDataRequest} extends {@link RequestModel}
  *
  * <p>CreateOpenGlobalDataRequest</p>
@@ -57,6 +63,10 @@ public class CreateOpenGlobalDataRequest extends Request {
     private String payload;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdMsgId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String thirdMsgId;
@@ -92,6 +102,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         this.minUid = builder.minUid;
         this.osType = builder.osType;
         this.payload = builder.payload;
+        this.tenantId = builder.tenantId;
         this.thirdMsgId = builder.thirdMsgId;
         this.uids = builder.uids;
         this.validTimeEnd = builder.validTimeEnd;
@@ -107,7 +118,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,6 +194,13 @@ public class CreateOpenGlobalDataRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return thirdMsgId
      */
     public String getThirdMsgId() {
@@ -228,6 +246,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         private Long minUid; 
         private String osType; 
         private String payload; 
+        private String tenantId; 
         private String thirdMsgId; 
         private String uids; 
         private Long validTimeEnd; 
@@ -250,6 +269,7 @@ public class CreateOpenGlobalDataRequest extends Request {
             this.minUid = request.minUid;
             this.osType = request.osType;
             this.payload = request.payload;
+            this.tenantId = request.tenantId;
             this.thirdMsgId = request.thirdMsgId;
             this.uids = request.uids;
             this.validTimeEnd = request.validTimeEnd;
@@ -267,7 +287,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -294,7 +314,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -339,7 +359,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         }
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(String payload) {
             this.putBodyParameter("Payload", payload);
@@ -348,7 +368,16 @@ public class CreateOpenGlobalDataRequest extends Request {
         }
 
         /**
-         * ThirdMsgId.
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder thirdMsgId(String thirdMsgId) {
             this.putBodyParameter("ThirdMsgId", thirdMsgId);
@@ -384,7 +413,7 @@ public class CreateOpenGlobalDataRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

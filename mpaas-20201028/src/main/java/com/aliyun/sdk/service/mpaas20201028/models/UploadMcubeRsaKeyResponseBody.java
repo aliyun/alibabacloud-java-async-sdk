@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMcubeRsaKeyResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMcubeRsaKeyResponseBody</p>
@@ -36,6 +42,10 @@ public class UploadMcubeRsaKeyResponseBody extends TeaModel {
 
     public static UploadMcubeRsaKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class UploadMcubeRsaKeyResponseBody extends TeaModel {
         private String resultCode; 
         private String resultMessage; 
         private UploadRsaResult uploadRsaResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadMcubeRsaKeyResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+            this.uploadRsaResult = model.uploadRsaResult;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class UploadMcubeRsaKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMcubeRsaKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMcubeRsaKeyResponseBody</p>
+     */
     public static class UploadRsaResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -159,6 +185,15 @@ public class UploadMcubeRsaKeyResponseBody extends TeaModel {
             private String data; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadRsaResult model) {
+                this.data = model.data;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * Data.

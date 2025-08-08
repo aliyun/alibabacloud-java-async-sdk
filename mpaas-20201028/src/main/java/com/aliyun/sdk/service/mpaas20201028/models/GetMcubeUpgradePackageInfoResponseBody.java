@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMcubeUpgradePackageInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMcubeUpgradePackageInfoResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
 
     public static GetMcubeUpgradePackageInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMcubeUpgradePackageInfoResponseBody model) {
+            this.getPackageResult = model.getPackageResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * GetPackageResult.
@@ -110,6 +130,12 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcubeUpgradePackageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradePackageInfoResponseBody</p>
+     */
     public static class MobileTestFlightConfigDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -196,6 +222,18 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
             private String invalidTime; 
             private Long upgradeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MobileTestFlightConfigDO model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.installAmount = model.installAmount;
+                this.invalidTime = model.invalidTime;
+                this.upgradeId = model.upgradeId;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -251,6 +289,12 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradePackageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradePackageInfoResponseBody</p>
+     */
     public static class UpgradeBaseInfoDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCreateTask")
         private Boolean allowCreateTask;
@@ -745,6 +789,52 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
             private Integer verifyResult; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpgradeBaseInfoDO model) {
+                this.allowCreateTask = model.allowCreateTask;
+                this.appCode = model.appCode;
+                this.appstoreUrl = model.appstoreUrl;
+                this.backLog = model.backLog;
+                this.changeLog = model.changeLog;
+                this.clientFileSize = model.clientFileSize;
+                this.clientName = model.clientName;
+                this.cpId = model.cpId;
+                this.creator = model.creator;
+                this.downloadUrl = model.downloadUrl;
+                this.globalVariables = model.globalVariables;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateStr = model.gmtCreateStr;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedStr = model.gmtModifiedStr;
+                this.id = model.id;
+                this.innerVersion = model.innerVersion;
+                this.iosSymbol = model.iosSymbol;
+                this.isEnterprise = model.isEnterprise;
+                this.isRc = model.isRc;
+                this.isRelease = model.isRelease;
+                this.maxVersion = model.maxVersion;
+                this.md5 = model.md5;
+                this.modifier = model.modifier;
+                this.needCheck = model.needCheck;
+                this.ossPath = model.ossPath;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productVersion = model.productVersion;
+                this.publishPeriod = model.publishPeriod;
+                this.qrcodeUrl = model.qrcodeUrl;
+                this.releaseType = model.releaseType;
+                this.releaseWindow = model.releaseWindow;
+                this.scmDownloadUrl = model.scmDownloadUrl;
+                this.serverVersion = model.serverVersion;
+                this.verificationCode = model.verificationCode;
+                this.verifyResult = model.verifyResult;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * AllowCreateTask.
              */
@@ -1072,6 +1162,12 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradePackageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradePackageInfoResponseBody</p>
+     */
     public static class PackageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MobileTestFlightConfigDO")
         private MobileTestFlightConfigDO mobileTestFlightConfigDO;
@@ -1110,6 +1206,14 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
             private MobileTestFlightConfigDO mobileTestFlightConfigDO; 
             private UpgradeBaseInfoDO upgradeBaseInfoDO; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageInfo model) {
+                this.mobileTestFlightConfigDO = model.mobileTestFlightConfigDO;
+                this.upgradeBaseInfoDO = model.upgradeBaseInfoDO;
+            } 
+
             /**
              * MobileTestFlightConfigDO.
              */
@@ -1133,6 +1237,12 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradePackageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradePackageInfoResponseBody</p>
+     */
     public static class GetPackageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -1206,6 +1316,17 @@ public class GetMcubeUpgradePackageInfoResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetPackageResult model) {
+                this.errorCode = model.errorCode;
+                this.packageInfo = model.packageInfo;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

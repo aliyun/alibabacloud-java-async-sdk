@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportMappCenterAppConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ExportMappCenterAppConfigResponseBody</p>
@@ -36,6 +42,10 @@ public class ExportMappCenterAppConfigResponseBody extends TeaModel {
 
     public static ExportMappCenterAppConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ExportMappCenterAppConfigResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportMappCenterAppConfigResponseBody model) {
+            this.exportMappCenterAppConfigResult = model.exportMappCenterAppConfigResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ExportMappCenterAppConfigResult.
@@ -110,6 +130,12 @@ public class ExportMappCenterAppConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportMappCenterAppConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportMappCenterAppConfigResponseBody</p>
+     */
     public static class ExportMappCenterAppConfigResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigDownloadUrl")
         private String configDownloadUrl;
@@ -159,6 +185,15 @@ public class ExportMappCenterAppConfigResponseBody extends TeaModel {
             private String configDownloadUrl; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExportMappCenterAppConfigResult model) {
+                this.configDownloadUrl = model.configDownloadUrl;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ConfigDownloadUrl.

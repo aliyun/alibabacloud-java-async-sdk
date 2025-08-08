@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMcubeUpgradeTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMcubeUpgradeTaskInfoResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
 
     public static GetMcubeUpgradeTaskInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMcubeUpgradeTaskInfoResponseBody model) {
+            this.getTaskResult = model.getTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * GetTaskResult.
@@ -110,6 +130,12 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcubeUpgradeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradeTaskInfoResponseBody</p>
+     */
     public static class RuleJsonList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
@@ -172,6 +198,16 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             private String ruleType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleJsonList model) {
+                this.operation = model.operation;
+                this.ruleElement = model.ruleElement;
+                this.ruleType = model.ruleType;
+                this.value = model.value;
+            } 
+
             /**
              * Operation.
              */
@@ -211,6 +247,12 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradeTaskInfoResponseBody</p>
+     */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -333,6 +375,21 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             private String whiteListName; 
             private String whitelistType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Whitelist model) {
+                this.appCode = model.appCode;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.platform = model.platform;
+                this.status = model.status;
+                this.userType = model.userType;
+                this.whiteListCount = model.whiteListCount;
+                this.whiteListName = model.whiteListName;
+                this.whitelistType = model.whitelistType;
+            } 
+
             /**
              * AppCode.
              */
@@ -412,6 +469,12 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradeTaskInfoResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -495,7 +558,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         private String qrcodeUrl;
 
         @com.aliyun.core.annotation.NameInMap("RuleJsonList")
-        private java.util.List < RuleJsonList> ruleJsonList;
+        private java.util.List<RuleJsonList> ruleJsonList;
 
         @com.aliyun.core.annotation.NameInMap("SilentType")
         private Integer silentType;
@@ -513,7 +576,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         private Integer upgradeValidTime;
 
         @com.aliyun.core.annotation.NameInMap("Whitelist")
-        private java.util.List < Whitelist> whitelist;
+        private java.util.List<Whitelist> whitelist;
 
         @com.aliyun.core.annotation.NameInMap("WhitelistIds")
         private String whitelistIds;
@@ -760,7 +823,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         /**
          * @return ruleJsonList
          */
-        public java.util.List < RuleJsonList> getRuleJsonList() {
+        public java.util.List<RuleJsonList> getRuleJsonList() {
             return this.ruleJsonList;
         }
 
@@ -802,7 +865,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         /**
          * @return whitelist
          */
-        public java.util.List < Whitelist> getWhitelist() {
+        public java.util.List<Whitelist> getWhitelist() {
             return this.whitelist;
         }
 
@@ -848,15 +911,57 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             private Integer publishType; 
             private String pushContent; 
             private String qrcodeUrl; 
-            private java.util.List < RuleJsonList> ruleJsonList; 
+            private java.util.List<RuleJsonList> ruleJsonList; 
             private Integer silentType; 
             private Integer taskStatus; 
             private String upgradeContent; 
             private Integer upgradeType; 
             private Integer upgradeValidTime; 
-            private java.util.List < Whitelist> whitelist; 
+            private java.util.List<Whitelist> whitelist; 
             private String whitelistIds; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.appCode = model.appCode;
+                this.appId = model.appId;
+                this.appstoreUrl = model.appstoreUrl;
+                this.creater = model.creater;
+                this.creator = model.creator;
+                this.downloadUrl = model.downloadUrl;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyNum = model.greyNum;
+                this.historyForce = model.historyForce;
+                this.id = model.id;
+                this.isEnterprise = model.isEnterprise;
+                this.isOfficial = model.isOfficial;
+                this.isRc = model.isRc;
+                this.isRelease = model.isRelease;
+                this.memo = model.memo;
+                this.modifier = model.modifier;
+                this.netType = model.netType;
+                this.osVersion = model.osVersion;
+                this.packageInfoId = model.packageInfoId;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.pushContent = model.pushContent;
+                this.qrcodeUrl = model.qrcodeUrl;
+                this.ruleJsonList = model.ruleJsonList;
+                this.silentType = model.silentType;
+                this.taskStatus = model.taskStatus;
+                this.upgradeContent = model.upgradeContent;
+                this.upgradeType = model.upgradeType;
+                this.upgradeValidTime = model.upgradeValidTime;
+                this.whitelist = model.whitelist;
+                this.whitelistIds = model.whitelistIds;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * AppCode.
@@ -1077,7 +1182,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             /**
              * RuleJsonList.
              */
-            public Builder ruleJsonList(java.util.List < RuleJsonList> ruleJsonList) {
+            public Builder ruleJsonList(java.util.List<RuleJsonList> ruleJsonList) {
                 this.ruleJsonList = ruleJsonList;
                 return this;
             }
@@ -1125,7 +1230,7 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             /**
              * Whitelist.
              */
-            public Builder whitelist(java.util.List < Whitelist> whitelist) {
+            public Builder whitelist(java.util.List<Whitelist> whitelist) {
                 this.whitelist = whitelist;
                 return this;
             }
@@ -1153,6 +1258,12 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeUpgradeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeUpgradeTaskInfoResponseBody</p>
+     */
     public static class GetTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -1226,6 +1337,17 @@ public class GetMcubeUpgradeTaskInfoResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
             private TaskInfo taskInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetTaskResult model) {
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.taskInfo = model.taskInfo;
+            } 
 
             /**
              * ErrorCode.

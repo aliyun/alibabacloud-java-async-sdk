@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushAnalysisTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushAnalysisTaskDetailResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
 
     public static QueryPushAnalysisTaskDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPushAnalysisTaskDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushAnalysisTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisTaskDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -208,6 +234,19 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
             private Long startTime; 
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.pushArrivalNum = model.pushArrivalNum;
+                this.pushNum = model.pushNum;
+                this.pushSuccessNum = model.pushSuccessNum;
+                this.startTime = model.startTime;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Duration.
              */
@@ -271,6 +310,12 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushAnalysisTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisTaskDetailResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -296,6 +341,13 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Data data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMcdpCrowdRequest} extends {@link RequestModel}
  *
  * <p>DeleteMcdpCrowdRequest</p>
@@ -49,7 +55,7 @@ public class DeleteMcdpCrowdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +134,7 @@ public class DeleteMcdpCrowdRequest extends Request {
         }
 
         /**
-         * MpaasMappcenterMcdpCrowdDeleteJsonStr.
+         * <p>This parameter is required.</p>
          */
         public Builder mpaasMappcenterMcdpCrowdDeleteJsonStr(String mpaasMappcenterMcdpCrowdDeleteJsonStr) {
             this.putBodyParameter("MpaasMappcenterMcdpCrowdDeleteJsonStr", mpaasMappcenterMcdpCrowdDeleteJsonStr);

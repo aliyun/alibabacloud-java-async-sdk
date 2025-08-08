@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeMiniTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeMiniTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeMiniTaskResponseBody extends TeaModel {
 
     public static CreateMcubeMiniTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeMiniTaskResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeMiniTaskResponseBody model) {
+            this.createMiniTaskResult = model.createMiniTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateMiniTaskResult.
@@ -110,6 +130,12 @@ public class CreateMcubeMiniTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeMiniTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeMiniTaskResponseBody</p>
+     */
     public static class CreateMiniTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniTaskId")
         private String miniTaskId;
@@ -159,6 +185,15 @@ public class CreateMcubeMiniTaskResponseBody extends TeaModel {
             private String miniTaskId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateMiniTaskResult model) {
+                this.miniTaskId = model.miniTaskId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MiniTaskId.

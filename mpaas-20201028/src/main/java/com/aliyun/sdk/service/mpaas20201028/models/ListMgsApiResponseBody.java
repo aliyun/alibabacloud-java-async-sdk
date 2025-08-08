@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMgsApiResponseBody} extends {@link TeaModel}
  *
  * <p>ListMgsApiResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMgsApiResponseBody extends TeaModel {
 
     public static ListMgsApiResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMgsApiResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMgsApiResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class ListMgsApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class HttpInvoker extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
@@ -184,6 +210,17 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String method; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpInvoker model) {
+                this.charset = model.charset;
+                this.contentType = model.contentType;
+                this.host = model.host;
+                this.method = model.method;
+                this.path = model.path;
+            } 
+
             /**
              * Charset.
              */
@@ -231,6 +268,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class ApiInvoker extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpInvoker")
         private HttpInvoker httpInvoker;
@@ -269,6 +312,14 @@ public class ListMgsApiResponseBody extends TeaModel {
             private HttpInvoker httpInvoker; 
             private String rpcInvoker; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiInvoker model) {
+                this.httpInvoker = model.httpInvoker;
+                this.rpcInvoker = model.rpcInvoker;
+            } 
+
             /**
              * HttpInvoker.
              */
@@ -292,6 +343,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class CacheRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheKey")
         private String cacheKey;
@@ -342,6 +399,15 @@ public class ListMgsApiResponseBody extends TeaModel {
             private Boolean needCache; 
             private Long ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(CacheRule model) {
+                this.cacheKey = model.cacheKey;
+                this.needCache = model.needCache;
+                this.ttl = model.ttl;
+            } 
+
             /**
              * CacheKey.
              */
@@ -373,6 +439,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class CircuitBreakerRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -507,6 +579,22 @@ public class ListMgsApiResponseBody extends TeaModel {
             private Long windowsInSeconds; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CircuitBreakerRule model) {
+                this.appId = model.appId;
+                this.defaultResponse = model.defaultResponse;
+                this.errorThreshold = model.errorThreshold;
+                this.id = model.id;
+                this.model = model.model;
+                this.openTimeoutSeconds = model.openTimeoutSeconds;
+                this.slowRatioThreshold = model.slowRatioThreshold;
+                this.switchStatus = model.switchStatus;
+                this.windowsInSeconds = model.windowsInSeconds;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
              * AppId.
              */
@@ -594,6 +682,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class HeaderRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
@@ -656,6 +750,16 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderRule model) {
+                this.headerKey = model.headerKey;
+                this.location = model.location;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * HeaderKey.
              */
@@ -695,6 +799,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class HeaderRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
@@ -757,6 +867,16 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderRules model) {
+                this.headerKey = model.headerKey;
+                this.location = model.location;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * HeaderKey.
              */
@@ -796,6 +916,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class LimitRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultResponse")
         private String defaultResponse;
@@ -870,6 +996,17 @@ public class ListMgsApiResponseBody extends TeaModel {
             private Long limit; 
             private String mode; 
 
+            private Builder() {
+            } 
+
+            private Builder(LimitRule model) {
+                this.defaultResponse = model.defaultResponse;
+                this.i18nResponse = model.i18nResponse;
+                this.interval = model.interval;
+                this.limit = model.limit;
+                this.mode = model.mode;
+            } 
+
             /**
              * DefaultResponse.
              */
@@ -917,6 +1054,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class MigrateRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowPercent")
         private Long flowPercent;
@@ -1003,6 +1146,18 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String sysName; 
             private String upstreamType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrateRule model) {
+                this.flowPercent = model.flowPercent;
+                this.needMigrate = model.needMigrate;
+                this.needSwitchCompletely = model.needSwitchCompletely;
+                this.sysId = model.sysId;
+                this.sysName = model.sysName;
+                this.upstreamType = model.upstreamType;
+            } 
+
             /**
              * FlowPercent.
              */
@@ -1058,6 +1213,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class MockRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MockData")
         private String mockData;
@@ -1120,6 +1281,16 @@ public class ListMgsApiResponseBody extends TeaModel {
             private Long percentage; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MockRule model) {
+                this.mockData = model.mockData;
+                this.needMock = model.needMock;
+                this.percentage = model.percentage;
+                this.type = model.type;
+            } 
+
             /**
              * MockData.
              */
@@ -1159,6 +1330,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class RequestParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -1293,6 +1470,22 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String type; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParams model) {
+                this.apiId = model.apiId;
+                this.appId = model.appId;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+                this.refType = model.refType;
+                this.type = model.type;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
              * ApiId.
              */
@@ -1380,6 +1573,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInvoker")
         private ApiInvoker apiInvoker;
@@ -1421,10 +1620,10 @@ public class ListMgsApiResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("HeaderRule")
-        private java.util.List < HeaderRule> headerRule;
+        private java.util.List<HeaderRule> headerRule;
 
         @com.aliyun.core.annotation.NameInMap("HeaderRules")
-        private java.util.List < HeaderRules> headerRules;
+        private java.util.List<HeaderRules> headerRules;
 
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -1475,7 +1674,7 @@ public class ListMgsApiResponseBody extends TeaModel {
         private String requestBodyModel;
 
         @com.aliyun.core.annotation.NameInMap("RequestParams")
-        private java.util.List < RequestParams> requestParams;
+        private java.util.List<RequestParams> requestParams;
 
         @com.aliyun.core.annotation.NameInMap("ResponseBodyModel")
         private String responseBodyModel;
@@ -1634,14 +1833,14 @@ public class ListMgsApiResponseBody extends TeaModel {
         /**
          * @return headerRule
          */
-        public java.util.List < HeaderRule> getHeaderRule() {
+        public java.util.List<HeaderRule> getHeaderRule() {
             return this.headerRule;
         }
 
         /**
          * @return headerRules
          */
-        public java.util.List < HeaderRules> getHeaderRules() {
+        public java.util.List<HeaderRules> getHeaderRules() {
             return this.headerRules;
         }
 
@@ -1760,7 +1959,7 @@ public class ListMgsApiResponseBody extends TeaModel {
         /**
          * @return requestParams
          */
-        public java.util.List < RequestParams> getRequestParams() {
+        public java.util.List<RequestParams> getRequestParams() {
             return this.requestParams;
         }
 
@@ -1813,8 +2012,8 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String description; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.List < HeaderRule> headerRule; 
-            private java.util.List < HeaderRules> headerRules; 
+            private java.util.List<HeaderRule> headerRule; 
+            private java.util.List<HeaderRules> headerRules; 
             private String host; 
             private Long id; 
             private String interfaceType; 
@@ -1831,12 +2030,55 @@ public class ListMgsApiResponseBody extends TeaModel {
             private String paramGetMethod; 
             private String path; 
             private String requestBodyModel; 
-            private java.util.List < RequestParams> requestParams; 
+            private java.util.List<RequestParams> requestParams; 
             private String responseBodyModel; 
             private Long sysId; 
             private String sysName; 
             private String timeout; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.apiInvoker = model.apiInvoker;
+                this.apiName = model.apiName;
+                this.apiStatus = model.apiStatus;
+                this.apiType = model.apiType;
+                this.appId = model.appId;
+                this.authRuleName = model.authRuleName;
+                this.cacheRule = model.cacheRule;
+                this.charset = model.charset;
+                this.circuitBreakerRule = model.circuitBreakerRule;
+                this.contentType = model.contentType;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.headerRule = model.headerRule;
+                this.headerRules = model.headerRules;
+                this.host = model.host;
+                this.id = model.id;
+                this.interfaceType = model.interfaceType;
+                this.limitRule = model.limitRule;
+                this.method = model.method;
+                this.methodName = model.methodName;
+                this.migrateRule = model.migrateRule;
+                this.mockRule = model.mockRule;
+                this.needETag = model.needETag;
+                this.needEncrypt = model.needEncrypt;
+                this.needJsonp = model.needJsonp;
+                this.needSign = model.needSign;
+                this.operationType = model.operationType;
+                this.paramGetMethod = model.paramGetMethod;
+                this.path = model.path;
+                this.requestBodyModel = model.requestBodyModel;
+                this.requestParams = model.requestParams;
+                this.responseBodyModel = model.responseBodyModel;
+                this.sysId = model.sysId;
+                this.sysName = model.sysName;
+                this.timeout = model.timeout;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * ApiInvoker.
@@ -1945,7 +2187,7 @@ public class ListMgsApiResponseBody extends TeaModel {
             /**
              * HeaderRule.
              */
-            public Builder headerRule(java.util.List < HeaderRule> headerRule) {
+            public Builder headerRule(java.util.List<HeaderRule> headerRule) {
                 this.headerRule = headerRule;
                 return this;
             }
@@ -1953,7 +2195,7 @@ public class ListMgsApiResponseBody extends TeaModel {
             /**
              * HeaderRules.
              */
-            public Builder headerRules(java.util.List < HeaderRules> headerRules) {
+            public Builder headerRules(java.util.List<HeaderRules> headerRules) {
                 this.headerRules = headerRules;
                 return this;
             }
@@ -2089,7 +2331,7 @@ public class ListMgsApiResponseBody extends TeaModel {
             /**
              * RequestParams.
              */
-            public Builder requestParams(java.util.List < RequestParams> requestParams) {
+            public Builder requestParams(java.util.List<RequestParams> requestParams) {
                 this.requestParams = requestParams;
                 return this;
             }
@@ -2141,6 +2383,12 @@ public class ListMgsApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMgsApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMgsApiResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -2149,7 +2397,7 @@ public class ListMgsApiResponseBody extends TeaModel {
         private Boolean success;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < Value> value;
+        private java.util.List<Value> value;
 
         private ResultContent(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -2182,14 +2430,23 @@ public class ListMgsApiResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < Value> getValue() {
+        public java.util.List<Value> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String errorMessage; 
             private Boolean success; 
-            private java.util.List < Value> value; 
+            private java.util.List<Value> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.errorMessage = model.errorMessage;
+                this.success = model.success;
+                this.value = model.value;
+            } 
 
             /**
              * ErrorMessage.
@@ -2210,7 +2467,7 @@ public class ListMgsApiResponseBody extends TeaModel {
             /**
              * Value.
              */
-            public Builder value(java.util.List < Value> value) {
+            public Builder value(java.util.List<Value> value) {
                 this.value = value;
                 return this;
             }

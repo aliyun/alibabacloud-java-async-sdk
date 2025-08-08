@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushAnalysisCoreIndexResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushAnalysisCoreIndexResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
 
     public static QueryPushAnalysisCoreIndexResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPushAnalysisCoreIndexResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushAnalysisCoreIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisCoreIndexResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrivalNum")
         private Float arrivalNum;
@@ -220,6 +246,20 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
             private Float pushNum; 
             private Float pushTotalNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.arrivalNum = model.arrivalNum;
+                this.arrivalRate = model.arrivalRate;
+                this.ignoreNum = model.ignoreNum;
+                this.ignoreRate = model.ignoreRate;
+                this.openNum = model.openNum;
+                this.openRate = model.openRate;
+                this.pushNum = model.pushNum;
+                this.pushTotalNum = model.pushTotalNum;
+            } 
+
             /**
              * ArrivalNum.
              */
@@ -291,6 +331,12 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushAnalysisCoreIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisCoreIndexResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -316,6 +362,13 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
 
         public static final class Builder {
             private Data data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.

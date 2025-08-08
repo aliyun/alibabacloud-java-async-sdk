@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMcubeFileTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetMcubeFileTokenResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
 
     public static GetMcubeFileTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMcubeFileTokenResponseBody model) {
+            this.getFileTokenResult = model.getFileTokenResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * GetFileTokenResult.
@@ -110,6 +130,12 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcubeFileTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeFileTokenResponseBody</p>
+     */
     public static class FileToken extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accessid")
         private String accessid;
@@ -196,6 +222,18 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
             private String policy; 
             private String signature; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileToken model) {
+                this.accessid = model.accessid;
+                this.dir = model.dir;
+                this.expire = model.expire;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
+
             /**
              * Accessid.
              */
@@ -251,6 +289,12 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeFileTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeFileTokenResponseBody</p>
+     */
     public static class GetFileTokenResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileToken")
         private FileToken fileToken;
@@ -300,6 +344,15 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
             private FileToken fileToken; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetFileTokenResult model) {
+                this.fileToken = model.fileToken;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * FileToken.

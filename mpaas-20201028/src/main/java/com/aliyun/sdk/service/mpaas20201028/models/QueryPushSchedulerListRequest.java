@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushSchedulerListRequest} extends {@link RequestModel}
  *
  * <p>QueryPushSchedulerListRequest</p>
@@ -39,6 +45,10 @@ public class QueryPushSchedulerListRequest extends Request {
     private Long startTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
@@ -60,6 +70,7 @@ public class QueryPushSchedulerListRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
+        this.tenantId = builder.tenantId;
         this.type = builder.type;
         this.uniqueId = builder.uniqueId;
         this.workspaceId = builder.workspaceId;
@@ -73,7 +84,7 @@ public class QueryPushSchedulerListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -121,6 +132,13 @@ public class QueryPushSchedulerListRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -148,6 +166,7 @@ public class QueryPushSchedulerListRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long startTime; 
+        private String tenantId; 
         private Integer type; 
         private String uniqueId; 
         private String workspaceId; 
@@ -164,6 +183,7 @@ public class QueryPushSchedulerListRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
+            this.tenantId = request.tenantId;
             this.type = request.type;
             this.uniqueId = request.uniqueId;
             this.workspaceId = request.workspaceId;
@@ -179,7 +199,7 @@ public class QueryPushSchedulerListRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -188,7 +208,7 @@ public class QueryPushSchedulerListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -215,11 +235,20 @@ public class QueryPushSchedulerListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
@@ -242,7 +271,7 @@ public class QueryPushSchedulerListRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

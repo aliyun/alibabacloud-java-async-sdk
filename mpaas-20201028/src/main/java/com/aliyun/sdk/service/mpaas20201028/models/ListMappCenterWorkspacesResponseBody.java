@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMappCenterWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMappCenterWorkspacesResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
 
     public static ListMappCenterWorkspacesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMappCenterWorkspacesResponseBody model) {
+            this.listMappCenterWorkspaceResult = model.listMappCenterWorkspaceResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMappCenterWorkspaceResult.
@@ -110,6 +130,12 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMappCenterWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterWorkspacesResponseBody</p>
+     */
     public static class MappCenterWorkspaceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompatibleId")
         private String compatibleId;
@@ -268,6 +294,24 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
             private String workspaceId; 
             private String zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(MappCenterWorkspaceList model) {
+                this.compatibleId = model.compatibleId;
+                this.createTime = model.createTime;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.region = model.region;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.uid = model.uid;
+                this.updateTime = model.updateTime;
+                this.workspaceId = model.workspaceId;
+                this.zones = model.zones;
+            } 
+
             /**
              * CompatibleId.
              */
@@ -371,9 +415,15 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMappCenterWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterWorkspacesResponseBody</p>
+     */
     public static class ListMappCenterWorkspaceResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MappCenterWorkspaceList")
-        private java.util.List < MappCenterWorkspaceList> mappCenterWorkspaceList;
+        private java.util.List<MappCenterWorkspaceList> mappCenterWorkspaceList;
 
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -402,7 +452,7 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
         /**
          * @return mappCenterWorkspaceList
          */
-        public java.util.List < MappCenterWorkspaceList> getMappCenterWorkspaceList() {
+        public java.util.List<MappCenterWorkspaceList> getMappCenterWorkspaceList() {
             return this.mappCenterWorkspaceList;
         }
 
@@ -428,15 +478,25 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MappCenterWorkspaceList> mappCenterWorkspaceList; 
+            private java.util.List<MappCenterWorkspaceList> mappCenterWorkspaceList; 
             private String resultMsg; 
             private Boolean success; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListMappCenterWorkspaceResult model) {
+                this.mappCenterWorkspaceList = model.mappCenterWorkspaceList;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.userId = model.userId;
+            } 
+
             /**
              * MappCenterWorkspaceList.
              */
-            public Builder mappCenterWorkspaceList(java.util.List < MappCenterWorkspaceList> mappCenterWorkspaceList) {
+            public Builder mappCenterWorkspaceList(java.util.List<MappCenterWorkspaceList> mappCenterWorkspaceList) {
                 this.mappCenterWorkspaceList = mappCenterWorkspaceList;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MTRSOCRServiceResponseBody} extends {@link TeaModel}
  *
  * <p>MTRSOCRServiceResponseBody</p>
@@ -44,6 +50,10 @@ public class MTRSOCRServiceResponseBody extends TeaModel {
 
     public static MTRSOCRServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class MTRSOCRServiceResponseBody extends TeaModel {
         private String result; 
         private Boolean status; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MTRSOCRServiceResponseBody model) {
+            this.code = model.code;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * Code.

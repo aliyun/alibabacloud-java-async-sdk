@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
 
     public static QueryMdsUpgradeTaskDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMdsUpgradeTaskDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
+     */
     public static class RuleJsonList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
@@ -172,6 +198,16 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private String ruleType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleJsonList model) {
+                this.operation = model.operation;
+                this.ruleElement = model.ruleElement;
+                this.ruleType = model.ruleType;
+                this.value = model.value;
+            } 
+
             /**
              * Operation.
              */
@@ -211,6 +247,12 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
+     */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -333,6 +375,21 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private Long whiteListCount; 
             private String whiteListName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Whitelist model) {
+                this.appCode = model.appCode;
+                this.business = model.business;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.platform = model.platform;
+                this.status = model.status;
+                this.whiteListCount = model.whiteListCount;
+                this.whiteListName = model.whiteListName;
+            } 
+
             /**
              * AppCode.
              */
@@ -412,6 +469,12 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -537,7 +600,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         private String releaseType;
 
         @com.aliyun.core.annotation.NameInMap("RuleJsonList")
-        private java.util.List < RuleJsonList> ruleJsonList;
+        private java.util.List<RuleJsonList> ruleJsonList;
 
         @com.aliyun.core.annotation.NameInMap("SilentType")
         private Long silentType;
@@ -561,7 +624,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         private Long upgradeValidTime;
 
         @com.aliyun.core.annotation.NameInMap("Whitelist")
-        private java.util.List < Whitelist> whitelist;
+        private java.util.List<Whitelist> whitelist;
 
         @com.aliyun.core.annotation.NameInMap("WhitelistIds")
         private String whitelistIds;
@@ -918,7 +981,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         /**
          * @return ruleJsonList
          */
-        public java.util.List < RuleJsonList> getRuleJsonList() {
+        public java.util.List<RuleJsonList> getRuleJsonList() {
             return this.ruleJsonList;
         }
 
@@ -974,7 +1037,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         /**
          * @return whitelist
          */
-        public java.util.List < Whitelist> getWhitelist() {
+        public java.util.List<Whitelist> getWhitelist() {
             return this.whitelist;
         }
 
@@ -1027,7 +1090,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private String pushContent; 
             private String qrcodeUrl; 
             private String releaseType; 
-            private java.util.List < RuleJsonList> ruleJsonList; 
+            private java.util.List<RuleJsonList> ruleJsonList; 
             private Long silentType; 
             private String syncMode; 
             private String syncResult; 
@@ -1035,8 +1098,65 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private String upgradeContent; 
             private Long upgradeType; 
             private Long upgradeValidTime; 
-            private java.util.List < Whitelist> whitelist; 
+            private java.util.List<Whitelist> whitelist; 
             private String whitelistIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.appCode = model.appCode;
+                this.appId = model.appId;
+                this.appstoreurl = model.appstoreurl;
+                this.channelContains = model.channelContains;
+                this.channelExcludes = model.channelExcludes;
+                this.cityContains = model.cityContains;
+                this.cityExcludes = model.cityExcludes;
+                this.creator = model.creator;
+                this.deviceGreyNum = model.deviceGreyNum;
+                this.devicePercent = model.devicePercent;
+                this.downloadUrl = model.downloadUrl;
+                this.executionOrder = model.executionOrder;
+                this.gmtCreateStr = model.gmtCreateStr;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyNotice = model.greyNotice;
+                this.greyNum = model.greyNum;
+                this.greyUv = model.greyUv;
+                this.id = model.id;
+                this.innerVersion = model.innerVersion;
+                this.isEnterprise = model.isEnterprise;
+                this.isOfficial = model.isOfficial;
+                this.isPush = model.isPush;
+                this.isRc = model.isRc;
+                this.isRelease = model.isRelease;
+                this.memo = model.memo;
+                this.mobileModelContains = model.mobileModelContains;
+                this.mobileModelExcludes = model.mobileModelExcludes;
+                this.modifier = model.modifier;
+                this.netType = model.netType;
+                this.osVersion = model.osVersion;
+                this.packageInfoId = model.packageInfoId;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.pushContent = model.pushContent;
+                this.qrcodeUrl = model.qrcodeUrl;
+                this.releaseType = model.releaseType;
+                this.ruleJsonList = model.ruleJsonList;
+                this.silentType = model.silentType;
+                this.syncMode = model.syncMode;
+                this.syncResult = model.syncResult;
+                this.taskStatus = model.taskStatus;
+                this.upgradeContent = model.upgradeContent;
+                this.upgradeType = model.upgradeType;
+                this.upgradeValidTime = model.upgradeValidTime;
+                this.whitelist = model.whitelist;
+                this.whitelistIds = model.whitelistIds;
+            } 
 
             /**
              * AppCode.
@@ -1369,7 +1489,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             /**
              * RuleJsonList.
              */
-            public Builder ruleJsonList(java.util.List < RuleJsonList> ruleJsonList) {
+            public Builder ruleJsonList(java.util.List<RuleJsonList> ruleJsonList) {
                 this.ruleJsonList = ruleJsonList;
                 return this;
             }
@@ -1433,7 +1553,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             /**
              * Whitelist.
              */
-            public Builder whitelist(java.util.List < Whitelist> whitelist) {
+            public Builder whitelist(java.util.List<Whitelist> whitelist) {
                 this.whitelist = whitelist;
                 return this;
             }
@@ -1453,6 +1573,12 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -1527,6 +1653,17 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
+
             /**
              * Content.
              */
@@ -1574,6 +1711,12 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMdsUpgradeTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMdsUpgradeTaskDetailResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -1611,6 +1754,14 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Data data; 
             private String requestId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.requestId = model.requestId;
+            } 
 
             /**
              * Data.

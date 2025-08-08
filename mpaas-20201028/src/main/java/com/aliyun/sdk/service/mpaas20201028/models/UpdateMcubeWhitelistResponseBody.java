@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMcubeWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMcubeWhitelistResponseBody</p>
@@ -36,6 +42,10 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
 
     public static UpdateMcubeWhitelistResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMcubeWhitelistResponseBody model) {
+            this.addWhitelistResult = model.addWhitelistResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * AddWhitelistResult.
@@ -110,6 +130,12 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMcubeWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMcubeWhitelistResponseBody</p>
+     */
     public static class AddWhitelistInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailNum")
         private Long failNum;
@@ -160,6 +186,15 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
             private String failUserIds; 
             private Long successNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddWhitelistInfo model) {
+                this.failNum = model.failNum;
+                this.failUserIds = model.failUserIds;
+                this.successNum = model.successNum;
+            } 
+
             /**
              * FailNum.
              */
@@ -191,6 +226,12 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMcubeWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMcubeWhitelistResponseBody</p>
+     */
     public static class AddWhitelistResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddWhitelistInfo")
         private AddWhitelistInfo addWhitelistInfo;
@@ -240,6 +281,15 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
             private AddWhitelistInfo addWhitelistInfo; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddWhitelistResult model) {
+                this.addWhitelistInfo = model.addWhitelistInfo;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * AddWhitelistInfo.

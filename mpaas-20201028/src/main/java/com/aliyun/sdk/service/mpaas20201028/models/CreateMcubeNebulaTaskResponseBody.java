@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeNebulaTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeNebulaTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
 
     public static CreateMcubeNebulaTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeNebulaTaskResponseBody model) {
+            this.createMcubeNebulaTaskResult = model.createMcubeNebulaTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateMcubeNebulaTaskResult.
@@ -110,6 +130,12 @@ public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeNebulaTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeNebulaTaskResponseBody</p>
+     */
     public static class CreateMcubeNebulaTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -183,6 +209,17 @@ public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateMcubeNebulaTaskResult model) {
+                this.errorCode = model.errorCode;
+                this.nebulaTaskId = model.nebulaTaskId;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

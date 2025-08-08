@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeWhitelistsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeWhitelistsResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
 
     public static ListMcubeWhitelistsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeWhitelistsResponseBody model) {
+            this.listWhitelistResult = model.listWhitelistResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListWhitelistResult.
@@ -110,6 +130,12 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeWhitelistsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeWhitelistsResponseBody</p>
+     */
     public static class Whitelists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -208,6 +234,19 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
             private String whiteListName; 
             private String whitelistType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Whitelists model) {
+                this.appCode = model.appCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.whiteListCount = model.whiteListCount;
+                this.whiteListName = model.whiteListName;
+                this.whitelistType = model.whitelistType;
+            } 
+
             /**
              * AppCode.
              */
@@ -271,6 +310,12 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeWhitelistsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeWhitelistsResponseBody</p>
+     */
     public static class ListWhitelistResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -291,7 +336,7 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         private Long totalCount;
 
         @com.aliyun.core.annotation.NameInMap("Whitelists")
-        private java.util.List < Whitelists> whitelists;
+        private java.util.List<Whitelists> whitelists;
 
         private ListWhitelistResult(Builder builder) {
             this.currentPage = builder.currentPage;
@@ -356,7 +401,7 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         /**
          * @return whitelists
          */
-        public java.util.List < Whitelists> getWhitelists() {
+        public java.util.List<Whitelists> getWhitelists() {
             return this.whitelists;
         }
 
@@ -367,7 +412,20 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
-            private java.util.List < Whitelists> whitelists; 
+            private java.util.List<Whitelists> whitelists; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListWhitelistResult model) {
+                this.currentPage = model.currentPage;
+                this.hasMore = model.hasMore;
+                this.pageSize = model.pageSize;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+                this.whitelists = model.whitelists;
+            } 
 
             /**
              * CurrentPage.
@@ -420,7 +478,7 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
             /**
              * Whitelists.
              */
-            public Builder whitelists(java.util.List < Whitelists> whitelists) {
+            public Builder whitelists(java.util.List<Whitelists> whitelists) {
                 this.whitelists = whitelists;
                 return this;
             }

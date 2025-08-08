@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushAnalysisTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushAnalysisTaskListResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
 
     public static QueryPushAnalysisTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPushAnalysisTaskListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushAnalysisTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisTaskListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -196,6 +222,18 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
             private String templateName; 
             private Long type; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.gmtCreate = model.gmtCreate;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -251,12 +289,18 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushAnalysisTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisTaskListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -301,7 +345,7 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -342,12 +386,25 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long gmtCreate; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private String taskId; 
             private String taskName; 
             private String templateId; 
             private String templateName; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.list = model.list;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+            } 
 
             /**
              * GmtCreate.
@@ -360,7 +417,7 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
@@ -412,9 +469,15 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushAnalysisTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushAnalysisTaskListResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         private ResultContent(Builder builder) {
             this.data = builder.data;
@@ -431,17 +494,24 @@ public class QueryPushAnalysisTaskListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

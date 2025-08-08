@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddMdsMiniConfig  AddMdsMiniConfigRequest
+     * @return AddMdsMiniConfigResponse
+     */
     @Override
     public CompletableFuture<AddMdsMiniConfigResponse> addMdsMiniConfig(AddMdsMiniConfigRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelPushScheduler  CancelPushSchedulerRequest
+     * @return CancelPushSchedulerResponse
+     */
     @Override
     public CompletableFuture<CancelPushSchedulerResponse> cancelPushScheduler(CancelPushSchedulerRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeMcubeMiniTaskStatus  ChangeMcubeMiniTaskStatusRequest
+     * @return ChangeMcubeMiniTaskStatusResponse
+     */
     @Override
     public CompletableFuture<ChangeMcubeMiniTaskStatusResponse> changeMcubeMiniTaskStatus(ChangeMcubeMiniTaskStatusRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeMcubeNebulaTaskStatus  ChangeMcubeNebulaTaskStatusRequest
+     * @return ChangeMcubeNebulaTaskStatusResponse
+     */
     @Override
     public CompletableFuture<ChangeMcubeNebulaTaskStatusResponse> changeMcubeNebulaTaskStatus(ChangeMcubeNebulaTaskStatusRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeMcubePublicTaskStatus  ChangeMcubePublicTaskStatusRequest
+     * @return ChangeMcubePublicTaskStatusResponse
+     */
     @Override
     public CompletableFuture<ChangeMcubePublicTaskStatusResponse> changeMcubePublicTaskStatus(ChangeMcubePublicTaskStatusRequest request) {
         try {
@@ -164,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyMcdpGroup  CopyMcdpGroupRequest
+     * @return CopyMcdpGroupResponse
+     */
     @Override
     public CompletableFuture<CopyMcdpGroupResponse> copyMcdpGroup(CopyMcdpGroupRequest request) {
         try {
@@ -178,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLink  CreateLinkRequest
+     * @return CreateLinkResponse
+     */
     @Override
     public CompletableFuture<CreateLinkResponse> createLink(CreateLinkRequest request) {
         try {
@@ -192,62 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateMasCrowdResponse> createMasCrowd(CreateMasCrowdRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMasCrowd").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMasCrowdResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMasCrowdResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateMasFunnelResponse> createMasFunnel(CreateMasFunnelRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMasFunnel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMasFunnelResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMasFunnelResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateMcdpEventResponse> createMcdpEvent(CreateMcdpEventRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMcdpEvent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMcdpEventResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMcdpEventResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateMcdpEventAttributeResponse> createMcdpEventAttribute(CreateMcdpEventAttributeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMcdpEventAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMcdpEventAttributeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMcdpEventAttributeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateMcdpGroup  CreateMcdpGroupRequest
+     * @return CreateMcdpGroupResponse
+     */
     @Override
     public CompletableFuture<CreateMcdpGroupResponse> createMcdpGroup(CreateMcdpGroupRequest request) {
         try {
@@ -262,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcdpMaterial  CreateMcdpMaterialRequest
+     * @return CreateMcdpMaterialResponse
+     */
     @Override
     public CompletableFuture<CreateMcdpMaterialResponse> createMcdpMaterial(CreateMcdpMaterialRequest request) {
         try {
@@ -276,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcdpZone  CreateMcdpZoneRequest
+     * @return CreateMcdpZoneResponse
+     */
     @Override
     public CompletableFuture<CreateMcdpZoneResponse> createMcdpZone(CreateMcdpZoneRequest request) {
         try {
@@ -290,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeMiniApp  CreateMcubeMiniAppRequest
+     * @return CreateMcubeMiniAppResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeMiniAppResponse> createMcubeMiniApp(CreateMcubeMiniAppRequest request) {
         try {
@@ -304,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeMiniTask  CreateMcubeMiniTaskRequest
+     * @return CreateMcubeMiniTaskResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeMiniTaskResponse> createMcubeMiniTask(CreateMcubeMiniTaskRequest request) {
         try {
@@ -318,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeNebulaApp  CreateMcubeNebulaAppRequest
+     * @return CreateMcubeNebulaAppResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeNebulaAppResponse> createMcubeNebulaApp(CreateMcubeNebulaAppRequest request) {
         try {
@@ -332,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeNebulaResource  CreateMcubeNebulaResourceRequest
+     * @return CreateMcubeNebulaResourceResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeNebulaResourceResponse> createMcubeNebulaResource(CreateMcubeNebulaResourceRequest request) {
         try {
@@ -346,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeNebulaTask  CreateMcubeNebulaTaskRequest
+     * @return CreateMcubeNebulaTaskResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeNebulaTaskResponse> createMcubeNebulaTask(CreateMcubeNebulaTaskRequest request) {
         try {
@@ -360,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeUpgradePackage  CreateMcubeUpgradePackageRequest
+     * @return CreateMcubeUpgradePackageResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeUpgradePackageResponse> createMcubeUpgradePackage(CreateMcubeUpgradePackageRequest request) {
         try {
@@ -374,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeUpgradeTask  CreateMcubeUpgradeTaskRequest
+     * @return CreateMcubeUpgradeTaskResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeUpgradeTaskResponse> createMcubeUpgradeTask(CreateMcubeUpgradeTaskRequest request) {
         try {
@@ -388,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeVhost  CreateMcubeVhostRequest
+     * @return CreateMcubeVhostResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeVhostResponse> createMcubeVhost(CreateMcubeVhostRequest request) {
         try {
@@ -402,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeWhitelist  CreateMcubeWhitelistRequest
+     * @return CreateMcubeWhitelistResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeWhitelistResponse> createMcubeWhitelist(CreateMcubeWhitelistRequest request) {
         try {
@@ -416,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMcubeWhitelistForIde  CreateMcubeWhitelistForIdeRequest
+     * @return CreateMcubeWhitelistForIdeResponse
+     */
     @Override
     public CompletableFuture<CreateMcubeWhitelistForIdeResponse> createMcubeWhitelistForIde(CreateMcubeWhitelistForIdeRequest request) {
         try {
@@ -430,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMdsMiniprogramTask  CreateMdsMiniprogramTaskRequest
+     * @return CreateMdsMiniprogramTaskResponse
+     */
     @Override
     public CompletableFuture<CreateMdsMiniprogramTaskResponse> createMdsMiniprogramTask(CreateMdsMiniprogramTaskRequest request) {
         try {
@@ -444,20 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateMsaEnhanceResponse> createMsaEnhance(CreateMsaEnhanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMsaEnhance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMsaEnhanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMsaEnhanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateOpenGlobalData  CreateOpenGlobalDataRequest
+     * @return CreateOpenGlobalDataResponse
+     */
     @Override
     public CompletableFuture<CreateOpenGlobalDataResponse> createOpenGlobalData(CreateOpenGlobalDataRequest request) {
         try {
@@ -472,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOpenSingleData  CreateOpenSingleDataRequest
+     * @return CreateOpenSingleDataResponse
+     */
     @Override
     public CompletableFuture<CreateOpenSingleDataResponse> createOpenSingleData(CreateOpenSingleDataRequest request) {
         try {
@@ -486,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCubecardWhitelistContent  DeleteCubecardWhitelistContentRequest
+     * @return DeleteCubecardWhitelistContentResponse
+     */
     @Override
     public CompletableFuture<DeleteCubecardWhitelistContentResponse> deleteCubecardWhitelistContent(DeleteCubecardWhitelistContentRequest request) {
         try {
@@ -500,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcdpAim  DeleteMcdpAimRequest
+     * @return DeleteMcdpAimResponse
+     */
     @Override
     public CompletableFuture<DeleteMcdpAimResponse> deleteMcdpAim(DeleteMcdpAimRequest request) {
         try {
@@ -514,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcdpCrowd  DeleteMcdpCrowdRequest
+     * @return DeleteMcdpCrowdResponse
+     */
     @Override
     public CompletableFuture<DeleteMcdpCrowdResponse> deleteMcdpCrowd(DeleteMcdpCrowdRequest request) {
         try {
@@ -528,48 +562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteMcdpEventAttributeByIdResponse> deleteMcdpEventAttributeById(DeleteMcdpEventAttributeByIdRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMcdpEventAttributeById").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMcdpEventAttributeByIdResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteMcdpEventAttributeByIdResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteMcdpEventByIdResponse> deleteMcdpEventById(DeleteMcdpEventByIdRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMcdpEventById").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMcdpEventByIdResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteMcdpEventByIdResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteMcdpMaterialResponse> deleteMcdpMaterial(DeleteMcdpMaterialRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMcdpMaterial").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMcdpMaterialResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteMcdpMaterialResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteMcdpZone  DeleteMcdpZoneRequest
+     * @return DeleteMcdpZoneResponse
+     */
     @Override
     public CompletableFuture<DeleteMcdpZoneResponse> deleteMcdpZone(DeleteMcdpZoneRequest request) {
         try {
@@ -584,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcubeMiniApp  DeleteMcubeMiniAppRequest
+     * @return DeleteMcubeMiniAppResponse
+     */
     @Override
     public CompletableFuture<DeleteMcubeMiniAppResponse> deleteMcubeMiniApp(DeleteMcubeMiniAppRequest request) {
         try {
@@ -598,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcubeNebulaApp  DeleteMcubeNebulaAppRequest
+     * @return DeleteMcubeNebulaAppResponse
+     */
     @Override
     public CompletableFuture<DeleteMcubeNebulaAppResponse> deleteMcubeNebulaApp(DeleteMcubeNebulaAppRequest request) {
         try {
@@ -612,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcubeUpgradeResource  DeleteMcubeUpgradeResourceRequest
+     * @return DeleteMcubeUpgradeResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteMcubeUpgradeResourceResponse> deleteMcubeUpgradeResource(DeleteMcubeUpgradeResourceRequest request) {
         try {
@@ -626,6 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMcubeWhitelist  DeleteMcubeWhitelistRequest
+     * @return DeleteMcubeWhitelistResponse
+     */
     @Override
     public CompletableFuture<DeleteMcubeWhitelistResponse> deleteMcubeWhitelist(DeleteMcubeWhitelistRequest request) {
         try {
@@ -640,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMdsWhitelistContent  DeleteMdsWhitelistContentRequest
+     * @return DeleteMdsWhitelistContentResponse
+     */
     @Override
     public CompletableFuture<DeleteMdsWhitelistContentResponse> deleteMdsWhitelistContent(DeleteMdsWhitelistContentRequest request) {
         try {
@@ -654,6 +670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExistMcubeRsaKey  ExistMcubeRsaKeyRequest
+     * @return ExistMcubeRsaKeyResponse
+     */
     @Override
     public CompletableFuture<ExistMcubeRsaKeyResponse> existMcubeRsaKey(ExistMcubeRsaKeyRequest request) {
         try {
@@ -668,6 +688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportMappCenterAppConfig  ExportMappCenterAppConfigRequest
+     * @return ExportMappCenterAppConfigResponse
+     */
     @Override
     public CompletableFuture<ExportMappCenterAppConfigResponse> exportMappCenterAppConfig(ExportMappCenterAppConfigRequest request) {
         try {
@@ -682,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileTokenForUploadToMsa  GetFileTokenForUploadToMsaRequest
+     * @return GetFileTokenForUploadToMsaResponse
+     */
     @Override
     public CompletableFuture<GetFileTokenForUploadToMsaResponse> getFileTokenForUploadToMsa(GetFileTokenForUploadToMsaRequest request) {
         try {
@@ -696,6 +724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLogUrlInMsa  GetLogUrlInMsaRequest
+     * @return GetLogUrlInMsaResponse
+     */
     @Override
     public CompletableFuture<GetLogUrlInMsaResponse> getLogUrlInMsa(GetLogUrlInMsaRequest request) {
         try {
@@ -710,6 +742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMcubeFileToken  GetMcubeFileTokenRequest
+     * @return GetMcubeFileTokenResponse
+     */
     @Override
     public CompletableFuture<GetMcubeFileTokenResponse> getMcubeFileToken(GetMcubeFileTokenRequest request) {
         try {
@@ -724,6 +760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMcubeNebulaResource  GetMcubeNebulaResourceRequest
+     * @return GetMcubeNebulaResourceResponse
+     */
     @Override
     public CompletableFuture<GetMcubeNebulaResourceResponse> getMcubeNebulaResource(GetMcubeNebulaResourceRequest request) {
         try {
@@ -738,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMcubeNebulaTaskDetail  GetMcubeNebulaTaskDetailRequest
+     * @return GetMcubeNebulaTaskDetailResponse
+     */
     @Override
     public CompletableFuture<GetMcubeNebulaTaskDetailResponse> getMcubeNebulaTaskDetail(GetMcubeNebulaTaskDetailRequest request) {
         try {
@@ -752,6 +796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMcubeUpgradePackageInfo  GetMcubeUpgradePackageInfoRequest
+     * @return GetMcubeUpgradePackageInfoResponse
+     */
     @Override
     public CompletableFuture<GetMcubeUpgradePackageInfoResponse> getMcubeUpgradePackageInfo(GetMcubeUpgradePackageInfoRequest request) {
         try {
@@ -766,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMcubeUpgradeTaskInfo  GetMcubeUpgradeTaskInfoRequest
+     * @return GetMcubeUpgradeTaskInfoResponse
+     */
     @Override
     public CompletableFuture<GetMcubeUpgradeTaskInfoResponse> getMcubeUpgradeTaskInfo(GetMcubeUpgradeTaskInfoRequest request) {
         try {
@@ -780,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMdsMiniConfig  GetMdsMiniConfigRequest
+     * @return GetMdsMiniConfigResponse
+     */
     @Override
     public CompletableFuture<GetMdsMiniConfigResponse> getMdsMiniConfig(GetMdsMiniConfigRequest request) {
         try {
@@ -794,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserAppDonwloadUrlInMsa  GetUserAppDonwloadUrlInMsaRequest
+     * @return GetUserAppDonwloadUrlInMsaResponse
+     */
     @Override
     public CompletableFuture<GetUserAppDonwloadUrlInMsaResponse> getUserAppDonwloadUrlInMsa(GetUserAppDonwloadUrlInMsaRequest request) {
         try {
@@ -808,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserAppEnhanceProcessInMsa  GetUserAppEnhanceProcessInMsaRequest
+     * @return GetUserAppEnhanceProcessInMsaResponse
+     */
     @Override
     public CompletableFuture<GetUserAppEnhanceProcessInMsaResponse> getUserAppEnhanceProcessInMsa(GetUserAppEnhanceProcessInMsaRequest request) {
         try {
@@ -822,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserAppUploadProcessInMsa  GetUserAppUploadProcessInMsaRequest
+     * @return GetUserAppUploadProcessInMsaResponse
+     */
     @Override
     public CompletableFuture<GetUserAppUploadProcessInMsaResponse> getUserAppUploadProcessInMsa(GetUserAppUploadProcessInMsaRequest request) {
         try {
@@ -836,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMappCenterApps  ListMappCenterAppsRequest
+     * @return ListMappCenterAppsResponse
+     */
     @Override
     public CompletableFuture<ListMappCenterAppsResponse> listMappCenterApps(ListMappCenterAppsRequest request) {
         try {
@@ -850,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMappCenterWorkspaces  ListMappCenterWorkspacesRequest
+     * @return ListMappCenterWorkspacesResponse
+     */
     @Override
     public CompletableFuture<ListMappCenterWorkspacesResponse> listMappCenterWorkspaces(ListMappCenterWorkspacesRequest request) {
         try {
@@ -864,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcdpAim  ListMcdpAimRequest
+     * @return ListMcdpAimResponse
+     */
     @Override
     public CompletableFuture<ListMcdpAimResponse> listMcdpAim(ListMcdpAimRequest request) {
         try {
@@ -878,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeMiniApps  ListMcubeMiniAppsRequest
+     * @return ListMcubeMiniAppsResponse
+     */
     @Override
     public CompletableFuture<ListMcubeMiniAppsResponse> listMcubeMiniApps(ListMcubeMiniAppsRequest request) {
         try {
@@ -892,6 +976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeMiniPackages  ListMcubeMiniPackagesRequest
+     * @return ListMcubeMiniPackagesResponse
+     */
     @Override
     public CompletableFuture<ListMcubeMiniPackagesResponse> listMcubeMiniPackages(ListMcubeMiniPackagesRequest request) {
         try {
@@ -906,6 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeMiniTasks  ListMcubeMiniTasksRequest
+     * @return ListMcubeMiniTasksResponse
+     */
     @Override
     public CompletableFuture<ListMcubeMiniTasksResponse> listMcubeMiniTasks(ListMcubeMiniTasksRequest request) {
         try {
@@ -920,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeNebulaApps  ListMcubeNebulaAppsRequest
+     * @return ListMcubeNebulaAppsResponse
+     */
     @Override
     public CompletableFuture<ListMcubeNebulaAppsResponse> listMcubeNebulaApps(ListMcubeNebulaAppsRequest request) {
         try {
@@ -934,6 +1030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeNebulaResources  ListMcubeNebulaResourcesRequest
+     * @return ListMcubeNebulaResourcesResponse
+     */
     @Override
     public CompletableFuture<ListMcubeNebulaResourcesResponse> listMcubeNebulaResources(ListMcubeNebulaResourcesRequest request) {
         try {
@@ -948,6 +1048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeNebulaTasks  ListMcubeNebulaTasksRequest
+     * @return ListMcubeNebulaTasksResponse
+     */
     @Override
     public CompletableFuture<ListMcubeNebulaTasksResponse> listMcubeNebulaTasks(ListMcubeNebulaTasksRequest request) {
         try {
@@ -962,6 +1066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeUpgradePackages  ListMcubeUpgradePackagesRequest
+     * @return ListMcubeUpgradePackagesResponse
+     */
     @Override
     public CompletableFuture<ListMcubeUpgradePackagesResponse> listMcubeUpgradePackages(ListMcubeUpgradePackagesRequest request) {
         try {
@@ -976,6 +1084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeUpgradeTasks  ListMcubeUpgradeTasksRequest
+     * @return ListMcubeUpgradeTasksResponse
+     */
     @Override
     public CompletableFuture<ListMcubeUpgradeTasksResponse> listMcubeUpgradeTasks(ListMcubeUpgradeTasksRequest request) {
         try {
@@ -990,6 +1102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMcubeWhitelists  ListMcubeWhitelistsRequest
+     * @return ListMcubeWhitelistsResponse
+     */
     @Override
     public CompletableFuture<ListMcubeWhitelistsResponse> listMcubeWhitelists(ListMcubeWhitelistsRequest request) {
         try {
@@ -1004,6 +1120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMgsApi  ListMgsApiRequest
+     * @return ListMgsApiResponse
+     */
     @Override
     public CompletableFuture<ListMgsApiResponse> listMgsApi(ListMgsApiRequest request) {
         try {
@@ -1018,20 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<LogMsaQueryResponse> logMsaQuery(LogMsaQueryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LogMsaQuery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LogMsaQueryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<LogMsaQueryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of MTRSOCRService  MTRSOCRServiceRequest
+     * @return MTRSOCRServiceResponse
+     */
     @Override
     public CompletableFuture<MTRSOCRServiceResponse> mTRSOCRService(MTRSOCRServiceRequest request) {
         try {
@@ -1046,160 +1156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<OpenApiAddActiveCodeResponse> openApiAddActiveCode(OpenApiAddActiveCodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiAddActiveCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiAddActiveCodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiAddActiveCodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiAddActiveSceneResponse> openApiAddActiveScene(OpenApiAddActiveSceneRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiAddActiveScene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiAddActiveSceneResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiAddActiveSceneResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiCallbackResponse> openApiCallback(OpenApiCallbackRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiCallback").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiCallbackResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiCallbackResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiDecodeResponse> openApiDecode(OpenApiDecodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiDecode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiDecodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiDecodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiDeleteActiveCodeResponse> openApiDeleteActiveCode(OpenApiDeleteActiveCodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiDeleteActiveCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiDeleteActiveCodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiDeleteActiveCodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiEncodeResponse> openApiEncode(OpenApiEncodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiEncode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiEncodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiEncodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiQueryActiveCodeResponse> openApiQueryActiveCode(OpenApiQueryActiveCodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiQueryActiveCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiQueryActiveCodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiQueryActiveCodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiQueryActiveSceneResponse> openApiQueryActiveScene(OpenApiQueryActiveSceneRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiQueryActiveScene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiQueryActiveSceneResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiQueryActiveSceneResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiUniqueEncodeResponse> openApiUniqueEncode(OpenApiUniqueEncodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiUniqueEncode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiUniqueEncodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiUniqueEncodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiUpdateActiveCodeResponse> openApiUpdateActiveCode(OpenApiUpdateActiveCodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiUpdateActiveCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiUpdateActiveCodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiUpdateActiveCodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<OpenApiUpdateActiveSceneResponse> openApiUpdateActiveScene(OpenApiUpdateActiveSceneRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenApiUpdateActiveScene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenApiUpdateActiveSceneResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<OpenApiUpdateActiveSceneResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of PushBind  PushBindRequest
+     * @return PushBindResponse
+     */
     @Override
     public CompletableFuture<PushBindResponse> pushBind(PushBindRequest request) {
         try {
@@ -1214,6 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushBroadcast  PushBroadcastRequest
+     * @return PushBroadcastResponse
+     */
     @Override
     public CompletableFuture<PushBroadcastResponse> pushBroadcast(PushBroadcastRequest request) {
         try {
@@ -1228,6 +1192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushMultiple  PushMultipleRequest
+     * @return PushMultipleResponse
+     */
     @Override
     public CompletableFuture<PushMultipleResponse> pushMultiple(PushMultipleRequest request) {
         try {
@@ -1242,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushReport  PushReportRequest
+     * @return PushReportResponse
+     */
     @Override
     public CompletableFuture<PushReportResponse> pushReport(PushReportRequest request) {
         try {
@@ -1256,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushSimple  PushSimpleRequest
+     * @return PushSimpleResponse
+     */
     @Override
     public CompletableFuture<PushSimpleResponse> pushSimple(PushSimpleRequest request) {
         try {
@@ -1270,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushTemplate  PushTemplateRequest
+     * @return PushTemplateResponse
+     */
     @Override
     public CompletableFuture<PushTemplateResponse> pushTemplate(PushTemplateRequest request) {
         try {
@@ -1284,6 +1264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushUnBind  PushUnBindRequest
+     * @return PushUnBindResponse
+     */
     @Override
     public CompletableFuture<PushUnBindResponse> pushUnBind(PushUnBindRequest request) {
         try {
@@ -1298,6 +1282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInfoFromMdp  QueryInfoFromMdpRequest
+     * @return QueryInfoFromMdpResponse
+     */
     @Override
     public CompletableFuture<QueryInfoFromMdpResponse> queryInfoFromMdp(QueryInfoFromMdpRequest request) {
         try {
@@ -1312,6 +1300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryLink  QueryLinkRequest
+     * @return QueryLinkResponse
+     */
     @Override
     public CompletableFuture<QueryLinkResponse> queryLink(QueryLinkRequest request) {
         try {
@@ -1326,6 +1318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMappCenterApp  QueryMappCenterAppRequest
+     * @return QueryMappCenterAppResponse
+     */
     @Override
     public CompletableFuture<QueryMappCenterAppResponse> queryMappCenterApp(QueryMappCenterAppRequest request) {
         try {
@@ -1340,6 +1336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMcdpAim  QueryMcdpAimRequest
+     * @return QueryMcdpAimResponse
+     */
     @Override
     public CompletableFuture<QueryMcdpAimResponse> queryMcdpAim(QueryMcdpAimRequest request) {
         try {
@@ -1354,6 +1354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMcdpZone  QueryMcdpZoneRequest
+     * @return QueryMcdpZoneResponse
+     */
     @Override
     public CompletableFuture<QueryMcdpZoneResponse> queryMcdpZone(QueryMcdpZoneRequest request) {
         try {
@@ -1368,6 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMcubeMiniPackage  QueryMcubeMiniPackageRequest
+     * @return QueryMcubeMiniPackageResponse
+     */
     @Override
     public CompletableFuture<QueryMcubeMiniPackageResponse> queryMcubeMiniPackage(QueryMcubeMiniPackageRequest request) {
         try {
@@ -1382,6 +1390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMcubeMiniTask  QueryMcubeMiniTaskRequest
+     * @return QueryMcubeMiniTaskResponse
+     */
     @Override
     public CompletableFuture<QueryMcubeMiniTaskResponse> queryMcubeMiniTask(QueryMcubeMiniTaskRequest request) {
         try {
@@ -1396,6 +1408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMcubeVhost  QueryMcubeVhostRequest
+     * @return QueryMcubeVhostResponse
+     */
     @Override
     public CompletableFuture<QueryMcubeVhostResponse> queryMcubeVhost(QueryMcubeVhostRequest request) {
         try {
@@ -1410,6 +1426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMdsUpgradeTaskDetail  QueryMdsUpgradeTaskDetailRequest
+     * @return QueryMdsUpgradeTaskDetailResponse
+     */
     @Override
     public CompletableFuture<QueryMdsUpgradeTaskDetailResponse> queryMdsUpgradeTaskDetail(QueryMdsUpgradeTaskDetailRequest request) {
         try {
@@ -1424,6 +1444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMgsApipage  QueryMgsApipageRequest
+     * @return QueryMgsApipageResponse
+     */
     @Override
     public CompletableFuture<QueryMgsApipageResponse> queryMgsApipage(QueryMgsApipageRequest request) {
         try {
@@ -1438,6 +1462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMgsApirest  QueryMgsApirestRequest
+     * @return QueryMgsApirestResponse
+     */
     @Override
     public CompletableFuture<QueryMgsApirestResponse> queryMgsApirest(QueryMgsApirestRequest request) {
         try {
@@ -1452,6 +1480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMgsTestreqbodyautogen  QueryMgsTestreqbodyautogenRequest
+     * @return QueryMgsTestreqbodyautogenResponse
+     */
     @Override
     public CompletableFuture<QueryMgsTestreqbodyautogenResponse> queryMgsTestreqbodyautogen(QueryMgsTestreqbodyautogenRequest request) {
         try {
@@ -1466,6 +1498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMpsSchedulerList  QueryMpsSchedulerListRequest
+     * @return QueryMpsSchedulerListResponse
+     */
     @Override
     public CompletableFuture<QueryMpsSchedulerListResponse> queryMpsSchedulerList(QueryMpsSchedulerListRequest request) {
         try {
@@ -1480,6 +1516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushAnalysisCoreIndex  QueryPushAnalysisCoreIndexRequest
+     * @return QueryPushAnalysisCoreIndexResponse
+     */
     @Override
     public CompletableFuture<QueryPushAnalysisCoreIndexResponse> queryPushAnalysisCoreIndex(QueryPushAnalysisCoreIndexRequest request) {
         try {
@@ -1494,6 +1534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushAnalysisTaskDetail  QueryPushAnalysisTaskDetailRequest
+     * @return QueryPushAnalysisTaskDetailResponse
+     */
     @Override
     public CompletableFuture<QueryPushAnalysisTaskDetailResponse> queryPushAnalysisTaskDetail(QueryPushAnalysisTaskDetailRequest request) {
         try {
@@ -1508,6 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushAnalysisTaskList  QueryPushAnalysisTaskListRequest
+     * @return QueryPushAnalysisTaskListResponse
+     */
     @Override
     public CompletableFuture<QueryPushAnalysisTaskListResponse> queryPushAnalysisTaskList(QueryPushAnalysisTaskListRequest request) {
         try {
@@ -1522,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushSchedulerList  QueryPushSchedulerListRequest
+     * @return QueryPushSchedulerListResponse
+     */
     @Override
     public CompletableFuture<QueryPushSchedulerListResponse> queryPushSchedulerList(QueryPushSchedulerListRequest request) {
         try {
@@ -1536,6 +1588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokePushMessage  RevokePushMessageRequest
+     * @return RevokePushMessageResponse
+     */
     @Override
     public CompletableFuture<RevokePushMessageResponse> revokePushMessage(RevokePushMessageRequest request) {
         try {
@@ -1550,6 +1606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokePushTask  RevokePushTaskRequest
+     * @return RevokePushTaskResponse
+     */
     @Override
     public CompletableFuture<RevokePushTaskResponse> revokePushTask(RevokePushTaskRequest request) {
         try {
@@ -1564,6 +1624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunMsaDiff  RunMsaDiffRequest
+     * @return RunMsaDiffResponse
+     */
     @Override
     public CompletableFuture<RunMsaDiffResponse> runMsaDiff(RunMsaDiffRequest request) {
         try {
@@ -1578,6 +1642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveMgsApirest  SaveMgsApirestRequest
+     * @return SaveMgsApirestResponse
+     */
     @Override
     public CompletableFuture<SaveMgsApirestResponse> saveMgsApirest(SaveMgsApirestRequest request) {
         try {
@@ -1592,6 +1660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartUserAppAsyncEnhanceInMsa  StartUserAppAsyncEnhanceInMsaRequest
+     * @return StartUserAppAsyncEnhanceInMsaResponse
+     */
     @Override
     public CompletableFuture<StartUserAppAsyncEnhanceInMsaResponse> startUserAppAsyncEnhanceInMsa(StartUserAppAsyncEnhanceInMsaRequest request) {
         try {
@@ -1606,6 +1678,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLink  UpdateLinkRequest
+     * @return UpdateLinkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLinkResponse> updateLink(UpdateLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMcubeWhitelist  UpdateMcubeWhitelistRequest
+     * @return UpdateMcubeWhitelistResponse
+     */
     @Override
     public CompletableFuture<UpdateMcubeWhitelistResponse> updateMcubeWhitelist(UpdateMcubeWhitelistRequest request) {
         try {
@@ -1620,6 +1714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMpaasAppInfo  UpdateMpaasAppInfoRequest
+     * @return UpdateMpaasAppInfoResponse
+     */
     @Override
     public CompletableFuture<UpdateMpaasAppInfoResponse> updateMpaasAppInfo(UpdateMpaasAppInfoRequest request) {
         try {
@@ -1634,6 +1732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadBitcodeToMsa  UploadBitcodeToMsaRequest
+     * @return UploadBitcodeToMsaResponse
+     */
     @Override
     public CompletableFuture<UploadBitcodeToMsaResponse> uploadBitcodeToMsa(UploadBitcodeToMsaRequest request) {
         try {
@@ -1648,6 +1750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadMcubeMiniPackage  UploadMcubeMiniPackageRequest
+     * @return UploadMcubeMiniPackageResponse
+     */
     @Override
     public CompletableFuture<UploadMcubeMiniPackageResponse> uploadMcubeMiniPackage(UploadMcubeMiniPackageRequest request) {
         try {
@@ -1662,6 +1768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadMcubeRsaKey  UploadMcubeRsaKeyRequest
+     * @return UploadMcubeRsaKeyResponse
+     */
     @Override
     public CompletableFuture<UploadMcubeRsaKeyResponse> uploadMcubeRsaKey(UploadMcubeRsaKeyRequest request) {
         try {
@@ -1676,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadUserAppToMsa  UploadUserAppToMsaRequest
+     * @return UploadUserAppToMsaResponse
+     */
     @Override
     public CompletableFuture<UploadUserAppToMsaResponse> uploadUserAppToMsa(UploadUserAppToMsaRequest request) {
         try {

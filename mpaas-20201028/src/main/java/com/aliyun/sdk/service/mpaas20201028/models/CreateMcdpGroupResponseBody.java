@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcdpGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcdpGroupResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcdpGroupResponseBody extends TeaModel {
 
     public static CreateMcdpGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcdpGroupResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcdpGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class CreateMcdpGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcdpGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcdpGroupResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -171,6 +197,16 @@ public class CreateMcdpGroupResponseBody extends TeaModel {
             private String data; 
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * Code.

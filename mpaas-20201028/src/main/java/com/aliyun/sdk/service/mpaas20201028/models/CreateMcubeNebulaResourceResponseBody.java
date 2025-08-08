@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMcubeNebulaResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMcubeNebulaResourceResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateMcubeNebulaResourceResponseBody extends TeaModel {
 
     public static CreateMcubeNebulaResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateMcubeNebulaResourceResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeNebulaResourceResponseBody model) {
+            this.createMcubeNebulaResourceReslult = model.createMcubeNebulaResourceReslult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * CreateMcubeNebulaResourceReslult.
@@ -110,6 +130,12 @@ public class CreateMcubeNebulaResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMcubeNebulaResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeNebulaResourceResponseBody</p>
+     */
     public static class CreateMcubeNebulaResourceReslult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -183,6 +209,17 @@ public class CreateMcubeNebulaResourceResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateMcubeNebulaResourceReslult model) {
+                this.errorCode = model.errorCode;
+                this.nebulaResourceId = model.nebulaResourceId;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

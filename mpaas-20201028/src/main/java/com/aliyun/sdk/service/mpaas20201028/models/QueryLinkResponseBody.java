@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLinkResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLinkResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryLinkResponseBody extends TeaModel {
 
     public static QueryLinkResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class QueryLinkResponseBody extends TeaModel {
         private ResultContent resultContent; 
         private String resultMessage; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryLinkResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
+
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9B3C4E7-BEC7-1E2C-86A3-EA985B4FFD73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +133,12 @@ public class QueryLinkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLinkResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;
@@ -159,6 +188,15 @@ public class QueryLinkResponseBody extends TeaModel {
             private Object data; 
             private String target; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.target = model.target;
+                this.version = model.version;
+            } 
 
             /**
              * Data.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMpsSchedulerListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMpsSchedulerListResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
 
     public static QueryMpsSchedulerListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMpsSchedulerListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMpsSchedulerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMpsSchedulerListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateType")
         private Integer createType;
@@ -256,6 +282,23 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
             private Integer type; 
             private String uniqueId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createType = model.createType;
+                this.deliveryType = model.deliveryType;
+                this.executedStatus = model.executedStatus;
+                this.gmtCreate = model.gmtCreate;
+                this.parentId = model.parentId;
+                this.pushContent = model.pushContent;
+                this.pushTime = model.pushTime;
+                this.pushTitle = model.pushTitle;
+                this.strategyType = model.strategyType;
+                this.type = model.type;
+                this.uniqueId = model.uniqueId;
+            } 
+
             /**
              * CreateType.
              */
@@ -351,9 +394,15 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMpsSchedulerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMpsSchedulerListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -374,7 +423,7 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -386,13 +435,21 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
@@ -412,6 +469,12 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMpsSchedulerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMpsSchedulerListResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -437,6 +500,13 @@ public class QueryMpsSchedulerListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Data data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.

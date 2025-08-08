@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeMiniTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeMiniTasksResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
 
     public static ListMcubeMiniTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeMiniTasksResponseBody model) {
+            this.listMiniTaskResult = model.listMiniTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMiniTaskResult.
@@ -110,6 +130,12 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeMiniTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniTasksResponseBody</p>
+     */
     public static class MiniTaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -328,6 +354,29 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
             private Long taskStatus; 
             private String whitelistIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiniTaskList model) {
+                this.appCode = model.appCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtime = model.greyEndtime;
+                this.greyEndtimeData = model.greyEndtimeData;
+                this.greyNum = model.greyNum;
+                this.id = model.id;
+                this.memo = model.memo;
+                this.packageId = model.packageId;
+                this.platform = model.platform;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.status = model.status;
+                this.taskStatus = model.taskStatus;
+                this.whitelistIds = model.whitelistIds;
+            } 
+
             /**
              * AppCode.
              */
@@ -471,9 +520,15 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeMiniTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeMiniTasksResponseBody</p>
+     */
     public static class ListMiniTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniTaskList")
-        private java.util.List < MiniTaskList> miniTaskList;
+        private java.util.List<MiniTaskList> miniTaskList;
 
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -498,7 +553,7 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
         /**
          * @return miniTaskList
          */
-        public java.util.List < MiniTaskList> getMiniTaskList() {
+        public java.util.List<MiniTaskList> getMiniTaskList() {
             return this.miniTaskList;
         }
 
@@ -517,14 +572,23 @@ public class ListMcubeMiniTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MiniTaskList> miniTaskList; 
+            private java.util.List<MiniTaskList> miniTaskList; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMiniTaskResult model) {
+                this.miniTaskList = model.miniTaskList;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MiniTaskList.
              */
-            public Builder miniTaskList(java.util.List < MiniTaskList> miniTaskList) {
+            public Builder miniTaskList(java.util.List<MiniTaskList> miniTaskList) {
                 this.miniTaskList = miniTaskList;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInfoFromMdpRequest} extends {@link RequestModel}
  *
  * <p>QueryInfoFromMdpRequest</p>
@@ -33,13 +39,13 @@ public class QueryInfoFromMdpRequest extends Request {
     private String mobileSha256;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MobileSm3")
+    private String mobileSm3;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RiskScene")
     @com.aliyun.core.annotation.Validation(required = true)
     private String riskScene;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TenantId")
-    private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -53,8 +59,8 @@ public class QueryInfoFromMdpRequest extends Request {
         this.mobile = builder.mobile;
         this.mobileMd5 = builder.mobileMd5;
         this.mobileSha256 = builder.mobileSha256;
+        this.mobileSm3 = builder.mobileSm3;
         this.riskScene = builder.riskScene;
-        this.tenantId = builder.tenantId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -66,7 +72,7 @@ public class QueryInfoFromMdpRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -107,17 +113,17 @@ public class QueryInfoFromMdpRequest extends Request {
     }
 
     /**
+     * @return mobileSm3
+     */
+    public String getMobileSm3() {
+        return this.mobileSm3;
+    }
+
+    /**
      * @return riskScene
      */
     public String getRiskScene() {
         return this.riskScene;
-    }
-
-    /**
-     * @return tenantId
-     */
-    public String getTenantId() {
-        return this.tenantId;
     }
 
     /**
@@ -133,8 +139,8 @@ public class QueryInfoFromMdpRequest extends Request {
         private String mobile; 
         private String mobileMd5; 
         private String mobileSha256; 
+        private String mobileSm3; 
         private String riskScene; 
-        private String tenantId; 
         private String workspaceId; 
 
         private Builder() {
@@ -148,8 +154,8 @@ public class QueryInfoFromMdpRequest extends Request {
             this.mobile = request.mobile;
             this.mobileMd5 = request.mobileMd5;
             this.mobileSha256 = request.mobileSha256;
+            this.mobileSm3 = request.mobileSm3;
             this.riskScene = request.riskScene;
-            this.tenantId = request.tenantId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -163,7 +169,10 @@ public class QueryInfoFromMdpRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIPUBE5C3F6D091419</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -199,7 +208,19 @@ public class QueryInfoFromMdpRequest extends Request {
         }
 
         /**
-         * RiskScene.
+         * MobileSm3.
+         */
+        public Builder mobileSm3(String mobileSm3) {
+            this.putBodyParameter("MobileSm3", mobileSm3);
+            this.mobileSm3 = mobileSm3;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder riskScene(String riskScene) {
             this.putBodyParameter("RiskScene", riskScene);
@@ -208,16 +229,10 @@ public class QueryInfoFromMdpRequest extends Request {
         }
 
         /**
-         * TenantId.
-         */
-        public Builder tenantId(String tenantId) {
-            this.putBodyParameter("TenantId", tenantId);
-            this.tenantId = tenantId;
-            return this;
-        }
-
-        /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

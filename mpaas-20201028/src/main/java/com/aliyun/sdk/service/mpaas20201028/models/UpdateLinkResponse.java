@@ -1,37 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateMsaEnhanceResponse} extends {@link TeaModel}
+ * 
+ * {@link UpdateLinkResponse} extends {@link TeaModel}
  *
- * <p>CreateMsaEnhanceResponse</p>
+ * <p>UpdateLinkResponse</p>
  */
-public class CreateMsaEnhanceResponse extends Response {
+public class UpdateLinkResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateMsaEnhanceResponseBody body;
+    private UpdateLinkResponseBody body;
 
-    private CreateMsaEnhanceResponse(BuilderImpl builder) {
+    private UpdateLinkResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateMsaEnhanceResponse create() {
+    public static UpdateLinkResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -39,7 +45,7 @@ public class CreateMsaEnhanceResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class CreateMsaEnhanceResponse extends Response {
     /**
      * @return body
      */
-    public CreateMsaEnhanceResponseBody getBody() {
+    public UpdateLinkResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateMsaEnhanceResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateLinkResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateMsaEnhanceResponseBody body);
+        Builder body(UpdateLinkResponseBody body);
 
         @Override
-        CreateMsaEnhanceResponse build();
+        UpdateLinkResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateMsaEnhanceResponse, Builder>
+            extends Response.BuilderImpl<UpdateLinkResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateMsaEnhanceResponseBody body; 
+        private UpdateLinkResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateMsaEnhanceResponse response) {
+        private BuilderImpl(UpdateLinkResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class CreateMsaEnhanceResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class CreateMsaEnhanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateMsaEnhanceResponseBody body) {
+        public Builder body(UpdateLinkResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateMsaEnhanceResponse build() {
-            return new CreateMsaEnhanceResponse(this);
+        public UpdateLinkResponse build() {
+            return new UpdateLinkResponse(this);
         } 
 
     } 

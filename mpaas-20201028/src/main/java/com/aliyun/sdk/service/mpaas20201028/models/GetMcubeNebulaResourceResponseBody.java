@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMcubeNebulaResourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetMcubeNebulaResourceResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
 
     public static GetMcubeNebulaResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMcubeNebulaResourceResponseBody model) {
+            this.getNebulaResourceResult = model.getNebulaResourceResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * GetNebulaResourceResult.
@@ -110,6 +130,12 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcubeNebulaResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeNebulaResourceResponseBody</p>
+     */
     public static class NebulaResourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -448,6 +474,39 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
             private Integer status; 
             private String vhost; 
 
+            private Builder() {
+            } 
+
+            private Builder(NebulaResourceInfo model) {
+                this.appCode = model.appCode;
+                this.autoInstall = model.autoInstall;
+                this.clientVersionMax = model.clientVersionMax;
+                this.clientVersionMin = model.clientVersionMin;
+                this.creator = model.creator;
+                this.downloadUrl = model.downloadUrl;
+                this.extendInfo = model.extendInfo;
+                this.extraData = model.extraData;
+                this.fallbackBaseUrl = model.fallbackBaseUrl;
+                this.fileSize = model.fileSize;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.h5Version = model.h5Version;
+                this.id = model.id;
+                this.installType = model.installType;
+                this.mainUrl = model.mainUrl;
+                this.memo = model.memo;
+                this.metaId = model.metaId;
+                this.modifier = model.modifier;
+                this.packageType = model.packageType;
+                this.platform = model.platform;
+                this.publishPeriod = model.publishPeriod;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.vhost = model.vhost;
+            } 
+
             /**
              * AppCode.
              */
@@ -671,6 +730,12 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMcubeNebulaResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcubeNebulaResourceResponseBody</p>
+     */
     public static class GetNebulaResourceResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -744,6 +809,17 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetNebulaResourceResult model) {
+                this.errorCode = model.errorCode;
+                this.nebulaResourceInfo = model.nebulaResourceInfo;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * ErrorCode.

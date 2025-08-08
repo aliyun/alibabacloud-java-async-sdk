@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMappCenterAppResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMappCenterAppResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
 
     public static QueryMappCenterAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMappCenterAppResponseBody model) {
+            this.queryMappCenterAppResult = model.queryMappCenterAppResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * QueryMappCenterAppResult.
@@ -110,6 +130,12 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMappCenterAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMappCenterAppResponseBody</p>
+     */
     public static class AndroidConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertRSA")
         private String certRSA;
@@ -148,6 +174,14 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
             private String certRSA; 
             private String packageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AndroidConfig model) {
+                this.certRSA = model.certRSA;
+                this.packageName = model.packageName;
+            } 
+
             /**
              * CertRSA.
              */
@@ -171,6 +205,12 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMappCenterAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMappCenterAppResponseBody</p>
+     */
     public static class IosConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
@@ -197,6 +237,13 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
         public static final class Builder {
             private String bundleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IosConfig model) {
+                this.bundleId = model.bundleId;
+            } 
+
             /**
              * BundleId.
              */
@@ -212,6 +259,12 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMappCenterAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMappCenterAppResponseBody</p>
+     */
     public static class MappCenterApp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidConfig")
         private AndroidConfig androidConfig;
@@ -418,6 +471,28 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
             private String tenantId; 
             private Long type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MappCenterApp model) {
+                this.androidConfig = model.androidConfig;
+                this.appDesc = model.appDesc;
+                this.appIcon = model.appIcon;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appSecret = model.appSecret;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.iosConfig = model.iosConfig;
+                this.modifier = model.modifier;
+                this.monitorJson = model.monitorJson;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+            } 
+
             /**
              * AndroidConfig.
              */
@@ -553,6 +628,12 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMappCenterAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMappCenterAppResponseBody</p>
+     */
     public static class QueryMappCenterAppResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MappCenterApp")
         private MappCenterApp mappCenterApp;
@@ -602,6 +683,15 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
             private MappCenterApp mappCenterApp; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryMappCenterAppResult model) {
+                this.mappCenterApp = model.mappCenterApp;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MappCenterApp.

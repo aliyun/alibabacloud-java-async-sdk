@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeUpgradeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeUpgradeTasksResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
 
     public static ListMcubeUpgradeTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeUpgradeTasksResponseBody model) {
+            this.listTaskResult = model.listTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListTaskResult.
@@ -110,6 +130,12 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeUpgradeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeUpgradeTasksResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -676,6 +702,58 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
             private Integer upgradeValidTime; 
             private String whitelistIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.appCode = model.appCode;
+                this.creator = model.creator;
+                this.devicePercent = model.devicePercent;
+                this.executionOrder = model.executionOrder;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateStr = model.gmtCreateStr;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedStr = model.gmtModifiedStr;
+                this.greyConfigInfo = model.greyConfigInfo;
+                this.greyEndtime = model.greyEndtime;
+                this.greyNotice = model.greyNotice;
+                this.greyNum = model.greyNum;
+                this.greyPausePoint = model.greyPausePoint;
+                this.greyPauseType = model.greyPauseType;
+                this.greyUv = model.greyUv;
+                this.historyForce = model.historyForce;
+                this.huobanNoticeId = model.huobanNoticeId;
+                this.huobanUrl = model.huobanUrl;
+                this.id = model.id;
+                this.innerVersion = model.innerVersion;
+                this.isEnterprise = model.isEnterprise;
+                this.isOfficial = model.isOfficial;
+                this.isPush = model.isPush;
+                this.isRelease = model.isRelease;
+                this.maxVersion = model.maxVersion;
+                this.memo = model.memo;
+                this.modifier = model.modifier;
+                this.packageInfoId = model.packageInfoId;
+                this.platform = model.platform;
+                this.productId = model.productId;
+                this.productVersion = model.productVersion;
+                this.publishMode = model.publishMode;
+                this.publishType = model.publishType;
+                this.pushContent = model.pushContent;
+                this.realGreyEndtime = model.realGreyEndtime;
+                this.realGreyEndtimeStr = model.realGreyEndtimeStr;
+                this.realGreyEndtype = model.realGreyEndtype;
+                this.realGreyNum = model.realGreyNum;
+                this.realGreyUv = model.realGreyUv;
+                this.silentType = model.silentType;
+                this.syncResult = model.syncResult;
+                this.taskStatus = model.taskStatus;
+                this.upgradeContent = model.upgradeContent;
+                this.upgradeType = model.upgradeType;
+                this.upgradeValidTime = model.upgradeValidTime;
+                this.whitelistIds = model.whitelistIds;
+            } 
+
             /**
              * AppCode.
              */
@@ -1051,6 +1129,12 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeUpgradeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeUpgradeTasksResponseBody</p>
+     */
     public static class ListTaskResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -1065,7 +1149,7 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
         private Boolean success;
 
         @com.aliyun.core.annotation.NameInMap("TaskInfo")
-        private java.util.List < TaskInfo> taskInfo;
+        private java.util.List<TaskInfo> taskInfo;
 
         private ListTaskResult(Builder builder) {
             this.errorCode = builder.errorCode;
@@ -1114,7 +1198,7 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
         /**
          * @return taskInfo
          */
-        public java.util.List < TaskInfo> getTaskInfo() {
+        public java.util.List<TaskInfo> getTaskInfo() {
             return this.taskInfo;
         }
 
@@ -1123,7 +1207,18 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
-            private java.util.List < TaskInfo> taskInfo; 
+            private java.util.List<TaskInfo> taskInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListTaskResult model) {
+                this.errorCode = model.errorCode;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.taskInfo = model.taskInfo;
+            } 
 
             /**
              * ErrorCode.
@@ -1160,7 +1255,7 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
             /**
              * TaskInfo.
              */
-            public Builder taskInfo(java.util.List < TaskInfo> taskInfo) {
+            public Builder taskInfo(java.util.List<TaskInfo> taskInfo) {
                 this.taskInfo = taskInfo;
                 return this;
             }

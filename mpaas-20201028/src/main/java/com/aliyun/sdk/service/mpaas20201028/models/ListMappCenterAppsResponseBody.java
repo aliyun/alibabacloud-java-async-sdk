@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMappCenterAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMappCenterAppsResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
 
     public static ListMappCenterAppsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMappCenterAppsResponseBody model) {
+            this.listMappCenterAppResult = model.listMappCenterAppResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMappCenterAppResult.
@@ -110,6 +130,12 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMappCenterAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterAppsResponseBody</p>
+     */
     public static class AndroidConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertRSA")
         private String certRSA;
@@ -148,6 +174,14 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
             private String certRSA; 
             private String packageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AndroidConfig model) {
+                this.certRSA = model.certRSA;
+                this.packageName = model.packageName;
+            } 
+
             /**
              * CertRSA.
              */
@@ -171,6 +205,12 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMappCenterAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterAppsResponseBody</p>
+     */
     public static class IosConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
@@ -197,6 +237,13 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         public static final class Builder {
             private String bundleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IosConfig model) {
+                this.bundleId = model.bundleId;
+            } 
+
             /**
              * BundleId.
              */
@@ -212,6 +259,12 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMappCenterAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterAppsResponseBody</p>
+     */
     public static class MappCenterAppList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidConfig")
         private AndroidConfig androidConfig;
@@ -418,6 +471,28 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
             private String tenantId; 
             private Long type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MappCenterAppList model) {
+                this.androidConfig = model.androidConfig;
+                this.appDesc = model.appDesc;
+                this.appIcon = model.appIcon;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appSecret = model.appSecret;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.iosConfig = model.iosConfig;
+                this.modifier = model.modifier;
+                this.monitorJson = model.monitorJson;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+            } 
+
             /**
              * AndroidConfig.
              */
@@ -553,9 +628,15 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMappCenterAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMappCenterAppsResponseBody</p>
+     */
     public static class ListMappCenterAppResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MappCenterAppList")
-        private java.util.List < MappCenterAppList> mappCenterAppList;
+        private java.util.List<MappCenterAppList> mappCenterAppList;
 
         @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
@@ -580,7 +661,7 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         /**
          * @return mappCenterAppList
          */
-        public java.util.List < MappCenterAppList> getMappCenterAppList() {
+        public java.util.List<MappCenterAppList> getMappCenterAppList() {
             return this.mappCenterAppList;
         }
 
@@ -599,14 +680,23 @@ public class ListMappCenterAppsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MappCenterAppList> mappCenterAppList; 
+            private java.util.List<MappCenterAppList> mappCenterAppList; 
             private String resultMsg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMappCenterAppResult model) {
+                this.mappCenterAppList = model.mappCenterAppList;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
 
             /**
              * MappCenterAppList.
              */
-            public Builder mappCenterAppList(java.util.List < MappCenterAppList> mappCenterAppList) {
+            public Builder mappCenterAppList(java.util.List<MappCenterAppList> mappCenterAppList) {
                 this.mappCenterAppList = mappCenterAppList;
                 return this;
             }

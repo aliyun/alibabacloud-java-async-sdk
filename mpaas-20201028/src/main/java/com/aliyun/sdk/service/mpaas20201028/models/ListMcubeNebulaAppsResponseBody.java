@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMcubeNebulaAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMcubeNebulaAppsResponseBody</p>
@@ -36,6 +42,10 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
 
     public static ListMcubeNebulaAppsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         private String requestId; 
         private String resultCode; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMcubeNebulaAppsResponseBody model) {
+            this.listMcubeNebulaAppsResult = model.listMcubeNebulaAppsResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * ListMcubeNebulaAppsResult.
@@ -110,6 +130,12 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMcubeNebulaAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaAppsResponseBody</p>
+     */
     public static class NebulaAppInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
@@ -148,6 +174,14 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
             private String h5Id; 
             private String h5Name; 
 
+            private Builder() {
+            } 
+
+            private Builder(NebulaAppInfos model) {
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+            } 
+
             /**
              * H5Id.
              */
@@ -171,6 +205,12 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMcubeNebulaAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcubeNebulaAppsResponseBody</p>
+     */
     public static class ListMcubeNebulaAppsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -182,7 +222,7 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("NebulaAppInfos")
-        private java.util.List < NebulaAppInfos> nebulaAppInfos;
+        private java.util.List<NebulaAppInfos> nebulaAppInfos;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -243,7 +283,7 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         /**
          * @return nebulaAppInfos
          */
-        public java.util.List < NebulaAppInfos> getNebulaAppInfos() {
+        public java.util.List<NebulaAppInfos> getNebulaAppInfos() {
             return this.nebulaAppInfos;
         }
 
@@ -286,12 +326,27 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
             private Integer currentPage; 
             private String errorCode; 
             private Boolean hasMore; 
-            private java.util.List < NebulaAppInfos> nebulaAppInfos; 
+            private java.util.List<NebulaAppInfos> nebulaAppInfos; 
             private Integer pageSize; 
             private String requestId; 
             private String resultMsg; 
             private Boolean success; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListMcubeNebulaAppsResult model) {
+                this.currentPage = model.currentPage;
+                this.errorCode = model.errorCode;
+                this.hasMore = model.hasMore;
+                this.nebulaAppInfos = model.nebulaAppInfos;
+                this.pageSize = model.pageSize;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -320,7 +375,7 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
             /**
              * NebulaAppInfos.
              */
-            public Builder nebulaAppInfos(java.util.List < NebulaAppInfos> nebulaAppInfos) {
+            public Builder nebulaAppInfos(java.util.List<NebulaAppInfos> nebulaAppInfos) {
                 this.nebulaAppInfos = nebulaAppInfos;
                 return this;
             }

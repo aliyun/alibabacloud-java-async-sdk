@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetMdsMiniConfigResponseBody</p>
@@ -36,6 +42,10 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     public static GetMdsMiniConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         private String resultCode; 
         private ResultContent resultContent; 
         private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMdsMiniConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultContent = model.resultContent;
+            this.resultMessage = model.resultMessage;
+        } 
 
         /**
          * RequestId.
@@ -110,6 +130,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class ApiConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -244,6 +270,22 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             private String h5Name; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiConfigList model) {
+                this.appCode = model.appCode;
+                this.configStatus = model.configStatus;
+                this.configType = model.configType;
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.id = model.id;
+            } 
+
             /**
              * AppCode.
              */
@@ -331,6 +373,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class PrivilegeSwitch extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -465,6 +513,22 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             private String h5Name; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivilegeSwitch model) {
+                this.appCode = model.appCode;
+                this.configStatus = model.configStatus;
+                this.configType = model.configType;
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.id = model.id;
+            } 
+
             /**
              * AppCode.
              */
@@ -552,6 +616,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class ServerDomainConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -686,6 +756,22 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             private String h5Name; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerDomainConfigList model) {
+                this.appCode = model.appCode;
+                this.configStatus = model.configStatus;
+                this.configType = model.configType;
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.id = model.id;
+            } 
+
             /**
              * AppCode.
              */
@@ -773,6 +859,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class WebviewDomainConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -907,6 +999,22 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             private String h5Name; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebviewDomainConfigList model) {
+                this.appCode = model.appCode;
+                this.configStatus = model.configStatus;
+                this.configType = model.configType;
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.id = model.id;
+            } 
+
             /**
              * AppCode.
              */
@@ -994,9 +1102,15 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiConfigList")
-        private java.util.List < ApiConfigList> apiConfigList;
+        private java.util.List<ApiConfigList> apiConfigList;
 
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -1014,10 +1128,10 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         private PrivilegeSwitch privilegeSwitch;
 
         @com.aliyun.core.annotation.NameInMap("ServerDomainConfigList")
-        private java.util.List < ServerDomainConfigList> serverDomainConfigList;
+        private java.util.List<ServerDomainConfigList> serverDomainConfigList;
 
         @com.aliyun.core.annotation.NameInMap("WebviewDomainConfigList")
-        private java.util.List < WebviewDomainConfigList> webviewDomainConfigList;
+        private java.util.List<WebviewDomainConfigList> webviewDomainConfigList;
 
         private Content(Builder builder) {
             this.apiConfigList = builder.apiConfigList;
@@ -1041,7 +1155,7 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         /**
          * @return apiConfigList
          */
-        public java.util.List < ApiConfigList> getApiConfigList() {
+        public java.util.List<ApiConfigList> getApiConfigList() {
             return this.apiConfigList;
         }
 
@@ -1083,31 +1197,45 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         /**
          * @return serverDomainConfigList
          */
-        public java.util.List < ServerDomainConfigList> getServerDomainConfigList() {
+        public java.util.List<ServerDomainConfigList> getServerDomainConfigList() {
             return this.serverDomainConfigList;
         }
 
         /**
          * @return webviewDomainConfigList
          */
-        public java.util.List < WebviewDomainConfigList> getWebviewDomainConfigList() {
+        public java.util.List<WebviewDomainConfigList> getWebviewDomainConfigList() {
             return this.webviewDomainConfigList;
         }
 
         public static final class Builder {
-            private java.util.List < ApiConfigList> apiConfigList; 
+            private java.util.List<ApiConfigList> apiConfigList; 
             private String appCode; 
             private String enableServerDomainCount; 
             private String h5Id; 
             private String h5Name; 
             private PrivilegeSwitch privilegeSwitch; 
-            private java.util.List < ServerDomainConfigList> serverDomainConfigList; 
-            private java.util.List < WebviewDomainConfigList> webviewDomainConfigList; 
+            private java.util.List<ServerDomainConfigList> serverDomainConfigList; 
+            private java.util.List<WebviewDomainConfigList> webviewDomainConfigList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.apiConfigList = model.apiConfigList;
+                this.appCode = model.appCode;
+                this.enableServerDomainCount = model.enableServerDomainCount;
+                this.h5Id = model.h5Id;
+                this.h5Name = model.h5Name;
+                this.privilegeSwitch = model.privilegeSwitch;
+                this.serverDomainConfigList = model.serverDomainConfigList;
+                this.webviewDomainConfigList = model.webviewDomainConfigList;
+            } 
 
             /**
              * ApiConfigList.
              */
-            public Builder apiConfigList(java.util.List < ApiConfigList> apiConfigList) {
+            public Builder apiConfigList(java.util.List<ApiConfigList> apiConfigList) {
                 this.apiConfigList = apiConfigList;
                 return this;
             }
@@ -1155,7 +1283,7 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             /**
              * ServerDomainConfigList.
              */
-            public Builder serverDomainConfigList(java.util.List < ServerDomainConfigList> serverDomainConfigList) {
+            public Builder serverDomainConfigList(java.util.List<ServerDomainConfigList> serverDomainConfigList) {
                 this.serverDomainConfigList = serverDomainConfigList;
                 return this;
             }
@@ -1163,7 +1291,7 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             /**
              * WebviewDomainConfigList.
              */
-            public Builder webviewDomainConfigList(java.util.List < WebviewDomainConfigList> webviewDomainConfigList) {
+            public Builder webviewDomainConfigList(java.util.List<WebviewDomainConfigList> webviewDomainConfigList) {
                 this.webviewDomainConfigList = webviewDomainConfigList;
                 return this;
             }
@@ -1175,6 +1303,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -1237,6 +1371,16 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
             private String resultMsg; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.requestId = model.requestId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
+
             /**
              * Content.
              */
@@ -1276,6 +1420,12 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMdsMiniConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMdsMiniConfigResponseBody</p>
+     */
     public static class ResultContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -1313,6 +1463,14 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Data data; 
             private String requestId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultContent model) {
+                this.data = model.data;
+                this.requestId = model.requestId;
+            } 
 
             /**
              * Data.

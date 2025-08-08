@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushSimpleRequest} extends {@link RequestModel}
  *
  * <p>PushSimpleRequest</p>
@@ -123,13 +129,25 @@ public class PushSimpleRequest extends Request {
     private String taskName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdChannelCategory")
-    private java.util.Map < String, ? > thirdChannelCategory;
+    private java.util.Map<String, ?> thirdChannelCategory;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Title")
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransparentMessagePayload")
+    private Object transparentMessagePayload;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransparentMessageUrgency")
+    private String transparentMessageUrgency;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Uri")
@@ -168,8 +186,11 @@ public class PushSimpleRequest extends Request {
         this.strategyType = builder.strategyType;
         this.targetMsgkey = builder.targetMsgkey;
         this.taskName = builder.taskName;
+        this.tenantId = builder.tenantId;
         this.thirdChannelCategory = builder.thirdChannelCategory;
         this.title = builder.title;
+        this.transparentMessagePayload = builder.transparentMessagePayload;
+        this.transparentMessageUrgency = builder.transparentMessageUrgency;
         this.uri = builder.uri;
         this.workspaceId = builder.workspaceId;
     }
@@ -182,7 +203,7 @@ public class PushSimpleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -370,9 +391,16 @@ public class PushSimpleRequest extends Request {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return thirdChannelCategory
      */
-    public java.util.Map < String, ? > getThirdChannelCategory() {
+    public java.util.Map<String, ?> getThirdChannelCategory() {
         return this.thirdChannelCategory;
     }
 
@@ -381,6 +409,20 @@ public class PushSimpleRequest extends Request {
      */
     public String getTitle() {
         return this.title;
+    }
+
+    /**
+     * @return transparentMessagePayload
+     */
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    /**
+     * @return transparentMessageUrgency
+     */
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     /**
@@ -424,8 +466,11 @@ public class PushSimpleRequest extends Request {
         private Integer strategyType; 
         private String targetMsgkey; 
         private String taskName; 
-        private java.util.Map < String, ? > thirdChannelCategory; 
+        private String tenantId; 
+        private java.util.Map<String, ?> thirdChannelCategory; 
         private String title; 
+        private Object transparentMessagePayload; 
+        private String transparentMessageUrgency; 
         private String uri; 
         private String workspaceId; 
 
@@ -461,8 +506,11 @@ public class PushSimpleRequest extends Request {
             this.strategyType = request.strategyType;
             this.targetMsgkey = request.targetMsgkey;
             this.taskName = request.taskName;
+            this.tenantId = request.tenantId;
             this.thirdChannelCategory = request.thirdChannelCategory;
             this.title = request.title;
+            this.transparentMessagePayload = request.transparentMessagePayload;
+            this.transparentMessageUrgency = request.transparentMessageUrgency;
             this.uri = request.uri;
             this.workspaceId = request.workspaceId;
         } 
@@ -495,7 +543,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -522,7 +570,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -531,7 +579,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * DeliveryType.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryType(Long deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
@@ -549,7 +597,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * ExpiredSeconds.
+         * <p>This parameter is required.</p>
          */
         public Builder expiredSeconds(Long expiredSeconds) {
             this.putBodyParameter("ExpiredSeconds", expiredSeconds);
@@ -684,7 +732,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * TargetMsgkey.
+         * <p>This parameter is required.</p>
          */
         public Builder targetMsgkey(String targetMsgkey) {
             this.putBodyParameter("TargetMsgkey", targetMsgkey);
@@ -702,9 +750,18 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
          * ThirdChannelCategory.
          */
-        public Builder thirdChannelCategory(java.util.Map < String, ? > thirdChannelCategory) {
+        public Builder thirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
             String thirdChannelCategoryShrink = shrink(thirdChannelCategory, "ThirdChannelCategory", "json");
             this.putBodyParameter("ThirdChannelCategory", thirdChannelCategoryShrink);
             this.thirdChannelCategory = thirdChannelCategory;
@@ -712,11 +769,29 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * TransparentMessagePayload.
+         */
+        public Builder transparentMessagePayload(Object transparentMessagePayload) {
+            this.putBodyParameter("TransparentMessagePayload", transparentMessagePayload);
+            this.transparentMessagePayload = transparentMessagePayload;
+            return this;
+        }
+
+        /**
+         * TransparentMessageUrgency.
+         */
+        public Builder transparentMessageUrgency(String transparentMessageUrgency) {
+            this.putBodyParameter("TransparentMessageUrgency", transparentMessageUrgency);
+            this.transparentMessageUrgency = transparentMessageUrgency;
             return this;
         }
 
@@ -730,7 +805,7 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
