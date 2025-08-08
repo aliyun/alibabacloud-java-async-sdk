@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ToolsetSpec</p>
  */
 public class ToolsetSpec extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("authConfig")
+    private Authorization authConfig;
+
     @com.aliyun.core.annotation.NameInMap("schema")
     private ToolsetSchema schema;
 
     private ToolsetSpec(Builder builder) {
+        this.authConfig = builder.authConfig;
         this.schema = builder.schema;
     }
 
@@ -37,6 +41,13 @@ public class ToolsetSpec extends TeaModel {
     }
 
     /**
+     * @return authConfig
+     */
+    public Authorization getAuthConfig() {
+        return this.authConfig;
+    }
+
+    /**
      * @return schema
      */
     public ToolsetSchema getSchema() {
@@ -44,14 +55,24 @@ public class ToolsetSpec extends TeaModel {
     }
 
     public static final class Builder {
+        private Authorization authConfig; 
         private ToolsetSchema schema; 
 
         private Builder() {
         } 
 
         private Builder(ToolsetSpec model) {
+            this.authConfig = model.authConfig;
             this.schema = model.schema;
         } 
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(Authorization authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
 
         /**
          * schema.

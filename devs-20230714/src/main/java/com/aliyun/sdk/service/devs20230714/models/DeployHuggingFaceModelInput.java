@@ -38,6 +38,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, ?> environmentVariables;
 
+    @com.aliyun.core.annotation.NameInMap("featureGates")
+    private FeatureGates featureGates;
+
     @com.aliyun.core.annotation.NameInMap("gpuConfig")
     private GpuConfig gpuConfig;
 
@@ -102,6 +105,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         this.diskSize = builder.diskSize;
         this.envName = builder.envName;
         this.environmentVariables = builder.environmentVariables;
+        this.featureGates = builder.featureGates;
         this.gpuConfig = builder.gpuConfig;
         this.httpTrigger = builder.httpTrigger;
         this.imageName = builder.imageName;
@@ -181,6 +185,13 @@ public class DeployHuggingFaceModelInput extends TeaModel {
      */
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    /**
+     * @return featureGates
+     */
+    public FeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     /**
@@ -317,6 +328,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         private Integer diskSize; 
         private String envName; 
         private java.util.Map<String, ?> environmentVariables; 
+        private FeatureGates featureGates; 
         private GpuConfig gpuConfig; 
         private HttpTrigger httpTrigger; 
         private String imageName; 
@@ -347,6 +359,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
             this.diskSize = model.diskSize;
             this.envName = model.envName;
             this.environmentVariables = model.environmentVariables;
+            this.featureGates = model.featureGates;
             this.gpuConfig = model.gpuConfig;
             this.httpTrigger = model.httpTrigger;
             this.imageName = model.imageName;
@@ -420,6 +433,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
          */
         public Builder environmentVariables(java.util.Map<String, ?> environmentVariables) {
             this.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * featureGates.
+         */
+        public Builder featureGates(FeatureGates featureGates) {
+            this.featureGates = featureGates;
             return this;
         }
 
@@ -633,6 +654,81 @@ public class DeployHuggingFaceModelInput extends TeaModel {
      *
      * <p>DeployHuggingFaceModelInput</p>
      */
+    public static class FeatureGates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("asyncProvisionCheck")
+        private Boolean asyncProvisionCheck;
+
+        @com.aliyun.core.annotation.NameInMap("disableRollbackOnProvisionFailure")
+        private Boolean disableRollbackOnProvisionFailure;
+
+        private FeatureGates(Builder builder) {
+            this.asyncProvisionCheck = builder.asyncProvisionCheck;
+            this.disableRollbackOnProvisionFailure = builder.disableRollbackOnProvisionFailure;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureGates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asyncProvisionCheck
+         */
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        /**
+         * @return disableRollbackOnProvisionFailure
+         */
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+        public static final class Builder {
+            private Boolean asyncProvisionCheck; 
+            private Boolean disableRollbackOnProvisionFailure; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureGates model) {
+                this.asyncProvisionCheck = model.asyncProvisionCheck;
+                this.disableRollbackOnProvisionFailure = model.disableRollbackOnProvisionFailure;
+            } 
+
+            /**
+             * asyncProvisionCheck.
+             */
+            public Builder asyncProvisionCheck(Boolean asyncProvisionCheck) {
+                this.asyncProvisionCheck = asyncProvisionCheck;
+                return this;
+            }
+
+            /**
+             * disableRollbackOnProvisionFailure.
+             */
+            public Builder disableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+                this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+                return this;
+            }
+
+            public FeatureGates build() {
+                return new FeatureGates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployHuggingFaceModelInput} extends {@link TeaModel}
+     *
+     * <p>DeployHuggingFaceModelInput</p>
+     */
     public static class GpuConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
         private Integer gpuMemorySize;
@@ -709,6 +805,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
      * <p>DeployHuggingFaceModelInput</p>
      */
     public static class TriggerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private String authConfig;
+
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
@@ -722,6 +821,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         private java.util.List<String> methods;
 
         private TriggerConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
             this.authType = builder.authType;
             this.disableURLInternet = builder.disableURLInternet;
             this.dsableURLInternet = builder.dsableURLInternet;
@@ -734,6 +834,13 @@ public class DeployHuggingFaceModelInput extends TeaModel {
 
         public static TriggerConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         /**
@@ -765,6 +872,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         }
 
         public static final class Builder {
+            private String authConfig; 
             private String authType; 
             private Boolean disableURLInternet; 
             private Boolean dsableURLInternet; 
@@ -774,11 +882,20 @@ public class DeployHuggingFaceModelInput extends TeaModel {
             } 
 
             private Builder(TriggerConfig model) {
+                this.authConfig = model.authConfig;
                 this.authType = model.authType;
                 this.disableURLInternet = model.disableURLInternet;
                 this.dsableURLInternet = model.dsableURLInternet;
                 this.methods = model.methods;
             } 
+
+            /**
+             * authConfig.
+             */
+            public Builder authConfig(String authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
 
             /**
              * authType.
@@ -1126,6 +1243,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("prefix")
         private String prefix;
 
+        @com.aliyun.core.annotation.NameInMap("skipDownload")
+        private Boolean skipDownload;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -1150,11 +1270,18 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("syncStrategy")
         private String syncStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("withPPU")
+        private Boolean withPPU;
+
+        @com.aliyun.core.annotation.NameInMap("workingDir")
+        private String workingDir;
+
         private ModelConfig(Builder builder) {
             this.fmkHuggingFaceConfig = builder.fmkHuggingFaceConfig;
             this.framework = builder.framework;
             this.multiModelConfig = builder.multiModelConfig;
             this.prefix = builder.prefix;
+            this.skipDownload = builder.skipDownload;
             this.sourceType = builder.sourceType;
             this.srcModelScopeModelID = builder.srcModelScopeModelID;
             this.srcModelScopeModelRevision = builder.srcModelScopeModelRevision;
@@ -1163,6 +1290,8 @@ public class DeployHuggingFaceModelInput extends TeaModel {
             this.srcOssPath = builder.srcOssPath;
             this.srcOssRegion = builder.srcOssRegion;
             this.syncStrategy = builder.syncStrategy;
+            this.withPPU = builder.withPPU;
+            this.workingDir = builder.workingDir;
         }
 
         public static Builder builder() {
@@ -1199,6 +1328,13 @@ public class DeployHuggingFaceModelInput extends TeaModel {
          */
         public String getPrefix() {
             return this.prefix;
+        }
+
+        /**
+         * @return skipDownload
+         */
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         /**
@@ -1257,11 +1393,26 @@ public class DeployHuggingFaceModelInput extends TeaModel {
             return this.syncStrategy;
         }
 
+        /**
+         * @return withPPU
+         */
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        /**
+         * @return workingDir
+         */
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
         public static final class Builder {
             private FmkHuggingFaceConfig fmkHuggingFaceConfig; 
             private String framework; 
             private java.util.List<ModelConfig> multiModelConfig; 
             private String prefix; 
+            private Boolean skipDownload; 
             private String sourceType; 
             private String srcModelScopeModelID; 
             private String srcModelScopeModelRevision; 
@@ -1270,6 +1421,8 @@ public class DeployHuggingFaceModelInput extends TeaModel {
             private String srcOssPath; 
             private String srcOssRegion; 
             private String syncStrategy; 
+            private Boolean withPPU; 
+            private String workingDir; 
 
             private Builder() {
             } 
@@ -1279,6 +1432,7 @@ public class DeployHuggingFaceModelInput extends TeaModel {
                 this.framework = model.framework;
                 this.multiModelConfig = model.multiModelConfig;
                 this.prefix = model.prefix;
+                this.skipDownload = model.skipDownload;
                 this.sourceType = model.sourceType;
                 this.srcModelScopeModelID = model.srcModelScopeModelID;
                 this.srcModelScopeModelRevision = model.srcModelScopeModelRevision;
@@ -1287,6 +1441,8 @@ public class DeployHuggingFaceModelInput extends TeaModel {
                 this.srcOssPath = model.srcOssPath;
                 this.srcOssRegion = model.srcOssRegion;
                 this.syncStrategy = model.syncStrategy;
+                this.withPPU = model.withPPU;
+                this.workingDir = model.workingDir;
             } 
 
             /**
@@ -1318,6 +1474,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
+                return this;
+            }
+
+            /**
+             * skipDownload.
+             */
+            public Builder skipDownload(Boolean skipDownload) {
+                this.skipDownload = skipDownload;
                 return this;
             }
 
@@ -1382,6 +1546,22 @@ public class DeployHuggingFaceModelInput extends TeaModel {
              */
             public Builder syncStrategy(String syncStrategy) {
                 this.syncStrategy = syncStrategy;
+                return this;
+            }
+
+            /**
+             * withPPU.
+             */
+            public Builder withPPU(Boolean withPPU) {
+                this.withPPU = withPPU;
+                return this;
+            }
+
+            /**
+             * workingDir.
+             */
+            public Builder workingDir(String workingDir) {
+                this.workingDir = workingDir;
                 return this;
             }
 

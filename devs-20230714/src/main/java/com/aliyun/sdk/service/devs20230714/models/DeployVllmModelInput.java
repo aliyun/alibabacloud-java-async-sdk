@@ -26,6 +26,9 @@ public class DeployVllmModelInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
 
+    @com.aliyun.core.annotation.NameInMap("customContainerConfig")
+    private CustomContainerConfig customContainerConfig;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -37,6 +40,9 @@ public class DeployVllmModelInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, ?> environmentVariables;
+
+    @com.aliyun.core.annotation.NameInMap("featureGates")
+    private FeatureGates featureGates;
 
     @com.aliyun.core.annotation.NameInMap("gpuConfig")
     private GpuConfig gpuConfig;
@@ -69,6 +75,9 @@ public class DeployVllmModelInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("originalName")
     private String originalName;
 
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OssMountConfig ossMountConfig;
+
     @com.aliyun.core.annotation.NameInMap("projectName")
     private String projectName;
 
@@ -98,10 +107,12 @@ public class DeployVllmModelInput extends TeaModel {
         this.accountID = builder.accountID;
         this.concurrencyConfig = builder.concurrencyConfig;
         this.cpu = builder.cpu;
+        this.customContainerConfig = builder.customContainerConfig;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
         this.envName = builder.envName;
         this.environmentVariables = builder.environmentVariables;
+        this.featureGates = builder.featureGates;
         this.gpuConfig = builder.gpuConfig;
         this.httpTrigger = builder.httpTrigger;
         this.imageName = builder.imageName;
@@ -112,6 +123,7 @@ public class DeployVllmModelInput extends TeaModel {
         this.name = builder.name;
         this.nasConfig = builder.nasConfig;
         this.originalName = builder.originalName;
+        this.ossMountConfig = builder.ossMountConfig;
         this.projectName = builder.projectName;
         this.provisionConfig = builder.provisionConfig;
         this.region = builder.region;
@@ -156,6 +168,13 @@ public class DeployVllmModelInput extends TeaModel {
     }
 
     /**
+     * @return customContainerConfig
+     */
+    public CustomContainerConfig getCustomContainerConfig() {
+        return this.customContainerConfig;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -181,6 +200,13 @@ public class DeployVllmModelInput extends TeaModel {
      */
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    /**
+     * @return featureGates
+     */
+    public FeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     /**
@@ -254,6 +280,13 @@ public class DeployVllmModelInput extends TeaModel {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OssMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -313,10 +346,12 @@ public class DeployVllmModelInput extends TeaModel {
         private String accountID; 
         private ConcurrencyConfig concurrencyConfig; 
         private Float cpu; 
+        private CustomContainerConfig customContainerConfig; 
         private String description; 
         private Integer diskSize; 
         private String envName; 
         private java.util.Map<String, ?> environmentVariables; 
+        private FeatureGates featureGates; 
         private GpuConfig gpuConfig; 
         private HttpTrigger httpTrigger; 
         private String imageName; 
@@ -327,6 +362,7 @@ public class DeployVllmModelInput extends TeaModel {
         private String name; 
         private NasConfig nasConfig; 
         private String originalName; 
+        private OssMountConfig ossMountConfig; 
         private String projectName; 
         private ProvisionConfig provisionConfig; 
         private String region; 
@@ -343,10 +379,12 @@ public class DeployVllmModelInput extends TeaModel {
             this.accountID = model.accountID;
             this.concurrencyConfig = model.concurrencyConfig;
             this.cpu = model.cpu;
+            this.customContainerConfig = model.customContainerConfig;
             this.description = model.description;
             this.diskSize = model.diskSize;
             this.envName = model.envName;
             this.environmentVariables = model.environmentVariables;
+            this.featureGates = model.featureGates;
             this.gpuConfig = model.gpuConfig;
             this.httpTrigger = model.httpTrigger;
             this.imageName = model.imageName;
@@ -357,6 +395,7 @@ public class DeployVllmModelInput extends TeaModel {
             this.name = model.name;
             this.nasConfig = model.nasConfig;
             this.originalName = model.originalName;
+            this.ossMountConfig = model.ossMountConfig;
             this.projectName = model.projectName;
             this.provisionConfig = model.provisionConfig;
             this.region = model.region;
@@ -392,6 +431,14 @@ public class DeployVllmModelInput extends TeaModel {
         }
 
         /**
+         * customContainerConfig.
+         */
+        public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
+            this.customContainerConfig = customContainerConfig;
+            return this;
+        }
+
+        /**
          * description.
          */
         public Builder description(String description) {
@@ -420,6 +467,14 @@ public class DeployVllmModelInput extends TeaModel {
          */
         public Builder environmentVariables(java.util.Map<String, ?> environmentVariables) {
             this.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * featureGates.
+         */
+        public Builder featureGates(FeatureGates featureGates) {
+            this.featureGates = featureGates;
             return this;
         }
 
@@ -500,6 +555,14 @@ public class DeployVllmModelInput extends TeaModel {
          */
         public Builder originalName(String originalName) {
             this.originalName = originalName;
+            return this;
+        }
+
+        /**
+         * ossMountConfig.
+         */
+        public Builder ossMountConfig(OssMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
             return this;
         }
 
@@ -633,6 +696,135 @@ public class DeployVllmModelInput extends TeaModel {
      *
      * <p>DeployVllmModelInput</p>
      */
+    public static class CustomContainerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("role")
+        private String role;
+
+        private CustomContainerConfig(Builder builder) {
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomContainerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomContainerConfig model) {
+                this.role = model.role;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public CustomContainerConfig build() {
+                return new CustomContainerConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployVllmModelInput} extends {@link TeaModel}
+     *
+     * <p>DeployVllmModelInput</p>
+     */
+    public static class FeatureGates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("asyncProvisionCheck")
+        private Boolean asyncProvisionCheck;
+
+        @com.aliyun.core.annotation.NameInMap("disableRollbackOnProvisionFailure")
+        private Boolean disableRollbackOnProvisionFailure;
+
+        private FeatureGates(Builder builder) {
+            this.asyncProvisionCheck = builder.asyncProvisionCheck;
+            this.disableRollbackOnProvisionFailure = builder.disableRollbackOnProvisionFailure;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureGates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asyncProvisionCheck
+         */
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        /**
+         * @return disableRollbackOnProvisionFailure
+         */
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+        public static final class Builder {
+            private Boolean asyncProvisionCheck; 
+            private Boolean disableRollbackOnProvisionFailure; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureGates model) {
+                this.asyncProvisionCheck = model.asyncProvisionCheck;
+                this.disableRollbackOnProvisionFailure = model.disableRollbackOnProvisionFailure;
+            } 
+
+            /**
+             * asyncProvisionCheck.
+             */
+            public Builder asyncProvisionCheck(Boolean asyncProvisionCheck) {
+                this.asyncProvisionCheck = asyncProvisionCheck;
+                return this;
+            }
+
+            /**
+             * disableRollbackOnProvisionFailure.
+             */
+            public Builder disableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+                this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+                return this;
+            }
+
+            public FeatureGates build() {
+                return new FeatureGates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployVllmModelInput} extends {@link TeaModel}
+     *
+     * <p>DeployVllmModelInput</p>
+     */
     public static class GpuConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
         private Integer gpuMemorySize;
@@ -709,6 +901,9 @@ public class DeployVllmModelInput extends TeaModel {
      * <p>DeployVllmModelInput</p>
      */
     public static class TriggerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private String authConfig;
+
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
@@ -722,6 +917,7 @@ public class DeployVllmModelInput extends TeaModel {
         private java.util.List<String> methods;
 
         private TriggerConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
             this.authType = builder.authType;
             this.disableURLInternet = builder.disableURLInternet;
             this.dsableURLInternet = builder.dsableURLInternet;
@@ -734,6 +930,13 @@ public class DeployVllmModelInput extends TeaModel {
 
         public static TriggerConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         /**
@@ -765,6 +968,7 @@ public class DeployVllmModelInput extends TeaModel {
         }
 
         public static final class Builder {
+            private String authConfig; 
             private String authType; 
             private Boolean disableURLInternet; 
             private Boolean dsableURLInternet; 
@@ -774,11 +978,20 @@ public class DeployVllmModelInput extends TeaModel {
             } 
 
             private Builder(TriggerConfig model) {
+                this.authConfig = model.authConfig;
                 this.authType = model.authType;
                 this.disableURLInternet = model.disableURLInternet;
                 this.dsableURLInternet = model.dsableURLInternet;
                 this.methods = model.methods;
             } 
+
+            /**
+             * authConfig.
+             */
+            public Builder authConfig(String authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
 
             /**
              * authType.
@@ -1336,6 +1549,9 @@ public class DeployVllmModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("prefix")
         private String prefix;
 
+        @com.aliyun.core.annotation.NameInMap("skipDownload")
+        private Boolean skipDownload;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -1360,11 +1576,18 @@ public class DeployVllmModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("syncStrategy")
         private String syncStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("withPPU")
+        private Boolean withPPU;
+
+        @com.aliyun.core.annotation.NameInMap("workingDir")
+        private String workingDir;
+
         private ModelConfig(Builder builder) {
             this.fmkVllmConfig = builder.fmkVllmConfig;
             this.framework = builder.framework;
             this.multiModelConfig = builder.multiModelConfig;
             this.prefix = builder.prefix;
+            this.skipDownload = builder.skipDownload;
             this.sourceType = builder.sourceType;
             this.srcModelScopeModelID = builder.srcModelScopeModelID;
             this.srcModelScopeModelRevision = builder.srcModelScopeModelRevision;
@@ -1373,6 +1596,8 @@ public class DeployVllmModelInput extends TeaModel {
             this.srcOssPath = builder.srcOssPath;
             this.srcOssRegion = builder.srcOssRegion;
             this.syncStrategy = builder.syncStrategy;
+            this.withPPU = builder.withPPU;
+            this.workingDir = builder.workingDir;
         }
 
         public static Builder builder() {
@@ -1409,6 +1634,13 @@ public class DeployVllmModelInput extends TeaModel {
          */
         public String getPrefix() {
             return this.prefix;
+        }
+
+        /**
+         * @return skipDownload
+         */
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         /**
@@ -1467,11 +1699,26 @@ public class DeployVllmModelInput extends TeaModel {
             return this.syncStrategy;
         }
 
+        /**
+         * @return withPPU
+         */
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        /**
+         * @return workingDir
+         */
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
         public static final class Builder {
             private FmkVllmConfig fmkVllmConfig; 
             private String framework; 
             private java.util.List<ModelConfig> multiModelConfig; 
             private String prefix; 
+            private Boolean skipDownload; 
             private String sourceType; 
             private String srcModelScopeModelID; 
             private String srcModelScopeModelRevision; 
@@ -1480,6 +1727,8 @@ public class DeployVllmModelInput extends TeaModel {
             private String srcOssPath; 
             private String srcOssRegion; 
             private String syncStrategy; 
+            private Boolean withPPU; 
+            private String workingDir; 
 
             private Builder() {
             } 
@@ -1489,6 +1738,7 @@ public class DeployVllmModelInput extends TeaModel {
                 this.framework = model.framework;
                 this.multiModelConfig = model.multiModelConfig;
                 this.prefix = model.prefix;
+                this.skipDownload = model.skipDownload;
                 this.sourceType = model.sourceType;
                 this.srcModelScopeModelID = model.srcModelScopeModelID;
                 this.srcModelScopeModelRevision = model.srcModelScopeModelRevision;
@@ -1497,6 +1747,8 @@ public class DeployVllmModelInput extends TeaModel {
                 this.srcOssPath = model.srcOssPath;
                 this.srcOssRegion = model.srcOssRegion;
                 this.syncStrategy = model.syncStrategy;
+                this.withPPU = model.withPPU;
+                this.workingDir = model.workingDir;
             } 
 
             /**
@@ -1528,6 +1780,14 @@ public class DeployVllmModelInput extends TeaModel {
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
+                return this;
+            }
+
+            /**
+             * skipDownload.
+             */
+            public Builder skipDownload(Boolean skipDownload) {
+                this.skipDownload = skipDownload;
                 return this;
             }
 
@@ -1592,6 +1852,22 @@ public class DeployVllmModelInput extends TeaModel {
              */
             public Builder syncStrategy(String syncStrategy) {
                 this.syncStrategy = syncStrategy;
+                return this;
+            }
+
+            /**
+             * withPPU.
+             */
+            public Builder withPPU(Boolean withPPU) {
+                this.withPPU = withPPU;
+                return this;
+            }
+
+            /**
+             * workingDir.
+             */
+            public Builder workingDir(String workingDir) {
+                this.workingDir = workingDir;
                 return this;
             }
 
@@ -1789,6 +2065,198 @@ public class DeployVllmModelInput extends TeaModel {
 
             public NasConfig build() {
                 return new NasConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployVllmModelInput} extends {@link TeaModel}
+     *
+     * <p>DeployVllmModelInput</p>
+     */
+    public static class OssMountConfigMountPoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("bucketPath")
+        private String bucketPath;
+
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("mountDir")
+        private String mountDir;
+
+        @com.aliyun.core.annotation.NameInMap("readOnly")
+        private Boolean readOnly;
+
+        private OssMountConfigMountPoints(Builder builder) {
+            this.bucketName = builder.bucketName;
+            this.bucketPath = builder.bucketPath;
+            this.endpoint = builder.endpoint;
+            this.mountDir = builder.mountDir;
+            this.readOnly = builder.readOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OssMountConfigMountPoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return bucketPath
+         */
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return mountDir
+         */
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        public static final class Builder {
+            private String bucketName; 
+            private String bucketPath; 
+            private String endpoint; 
+            private String mountDir; 
+            private Boolean readOnly; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssMountConfigMountPoints model) {
+                this.bucketName = model.bucketName;
+                this.bucketPath = model.bucketPath;
+                this.endpoint = model.endpoint;
+                this.mountDir = model.mountDir;
+                this.readOnly = model.readOnly;
+            } 
+
+            /**
+             * bucketName.
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * bucketPath.
+             */
+            public Builder bucketPath(String bucketPath) {
+                this.bucketPath = bucketPath;
+                return this;
+            }
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * mountDir.
+             */
+            public Builder mountDir(String mountDir) {
+                this.mountDir = mountDir;
+                return this;
+            }
+
+            /**
+             * readOnly.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            public OssMountConfigMountPoints build() {
+                return new OssMountConfigMountPoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployVllmModelInput} extends {@link TeaModel}
+     *
+     * <p>DeployVllmModelInput</p>
+     */
+    public static class OssMountConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mountPoints")
+        private java.util.List<OssMountConfigMountPoints> mountPoints;
+
+        private OssMountConfig(Builder builder) {
+            this.mountPoints = builder.mountPoints;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OssMountConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPoints
+         */
+        public java.util.List<OssMountConfigMountPoints> getMountPoints() {
+            return this.mountPoints;
+        }
+
+        public static final class Builder {
+            private java.util.List<OssMountConfigMountPoints> mountPoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssMountConfig model) {
+                this.mountPoints = model.mountPoints;
+            } 
+
+            /**
+             * mountPoints.
+             */
+            public Builder mountPoints(java.util.List<OssMountConfigMountPoints> mountPoints) {
+                this.mountPoints = mountPoints;
+                return this;
+            }
+
+            public OssMountConfig build() {
+                return new OssMountConfig(this);
             } 
 
         } 

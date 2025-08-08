@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Toolset} extends {@link TeaModel}
+ * {@link ModelSet} extends {@link TeaModel}
  *
- * <p>Toolset</p>
+ * <p>ModelSet</p>
  */
-public class Toolset extends TeaModel {
+public class ModelSet extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
@@ -36,23 +36,19 @@ public class Toolset extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @com.aliyun.core.annotation.NameInMap("spec")
-    private ToolsetSpec spec;
-
     @com.aliyun.core.annotation.NameInMap("status")
-    private ToolsetStatus status;
+    private ModelSetStatus status;
 
     @com.aliyun.core.annotation.NameInMap("uid")
     private String uid;
 
-    private Toolset(Builder builder) {
+    private ModelSet(Builder builder) {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
         this.generation = builder.generation;
         this.kind = builder.kind;
         this.labels = builder.labels;
         this.name = builder.name;
-        this.spec = builder.spec;
         this.status = builder.status;
         this.uid = builder.uid;
     }
@@ -61,7 +57,7 @@ public class Toolset extends TeaModel {
         return new Builder();
     }
 
-    public static Toolset create() {
+    public static ModelSet create() {
         return builder().build();
     }
 
@@ -112,16 +108,9 @@ public class Toolset extends TeaModel {
     }
 
     /**
-     * @return spec
-     */
-    public ToolsetSpec getSpec() {
-        return this.spec;
-    }
-
-    /**
      * @return status
      */
-    public ToolsetStatus getStatus() {
+    public ModelSetStatus getStatus() {
         return this.status;
     }
 
@@ -139,21 +128,19 @@ public class Toolset extends TeaModel {
         private String kind; 
         private java.util.Map<String, String> labels; 
         private String name; 
-        private ToolsetSpec spec; 
-        private ToolsetStatus status; 
+        private ModelSetStatus status; 
         private String uid; 
 
         private Builder() {
         } 
 
-        private Builder(Toolset model) {
+        private Builder(ModelSet model) {
             this.createdTime = model.createdTime;
             this.description = model.description;
             this.generation = model.generation;
             this.kind = model.kind;
             this.labels = model.labels;
             this.name = model.name;
-            this.spec = model.spec;
             this.status = model.status;
             this.uid = model.uid;
         } 
@@ -202,7 +189,7 @@ public class Toolset extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-toolset</p>
+         * <p>my-modelset</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -210,17 +197,9 @@ public class Toolset extends TeaModel {
         }
 
         /**
-         * spec.
-         */
-        public Builder spec(ToolsetSpec spec) {
-            this.spec = spec;
-            return this;
-        }
-
-        /**
          * status.
          */
-        public Builder status(ToolsetStatus status) {
+        public Builder status(ModelSetStatus status) {
             this.status = status;
             return this;
         }
@@ -233,8 +212,8 @@ public class Toolset extends TeaModel {
             return this;
         }
 
-        public Toolset build() {
-            return new Toolset(this);
+        public ModelSet build() {
+            return new ModelSet(this);
         } 
 
     } 

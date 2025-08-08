@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GitLabConfig</p>
  */
 public class GitLabConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("isFixedIP")
+    private Boolean isFixedIP;
+
     @com.aliyun.core.annotation.NameInMap("token")
     private String token;
 
@@ -24,6 +27,7 @@ public class GitLabConfig extends TeaModel {
     private String uri;
 
     private GitLabConfig(Builder builder) {
+        this.isFixedIP = builder.isFixedIP;
         this.token = builder.token;
         this.uri = builder.uri;
     }
@@ -41,6 +45,13 @@ public class GitLabConfig extends TeaModel {
     }
 
     /**
+     * @return isFixedIP
+     */
+    public Boolean getIsFixedIP() {
+        return this.isFixedIP;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -55,6 +66,7 @@ public class GitLabConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean isFixedIP; 
         private String token; 
         private String uri; 
 
@@ -62,9 +74,18 @@ public class GitLabConfig extends TeaModel {
         } 
 
         private Builder(GitLabConfig model) {
+            this.isFixedIP = model.isFixedIP;
             this.token = model.token;
             this.uri = model.uri;
         } 
+
+        /**
+         * isFixedIP.
+         */
+        public Builder isFixedIP(Boolean isFixedIP) {
+            this.isFixedIP = isFixedIP;
+            return this;
+        }
 
         /**
          * token.

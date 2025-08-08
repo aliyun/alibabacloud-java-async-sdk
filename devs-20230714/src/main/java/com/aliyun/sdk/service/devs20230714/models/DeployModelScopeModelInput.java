@@ -709,6 +709,9 @@ public class DeployModelScopeModelInput extends TeaModel {
      * <p>DeployModelScopeModelInput</p>
      */
     public static class TriggerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private String authConfig;
+
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
@@ -722,6 +725,7 @@ public class DeployModelScopeModelInput extends TeaModel {
         private java.util.List<String> methods;
 
         private TriggerConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
             this.authType = builder.authType;
             this.disableURLInternet = builder.disableURLInternet;
             this.dsableURLInternet = builder.dsableURLInternet;
@@ -734,6 +738,13 @@ public class DeployModelScopeModelInput extends TeaModel {
 
         public static TriggerConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         /**
@@ -765,6 +776,7 @@ public class DeployModelScopeModelInput extends TeaModel {
         }
 
         public static final class Builder {
+            private String authConfig; 
             private String authType; 
             private Boolean disableURLInternet; 
             private Boolean dsableURLInternet; 
@@ -774,11 +786,20 @@ public class DeployModelScopeModelInput extends TeaModel {
             } 
 
             private Builder(TriggerConfig model) {
+                this.authConfig = model.authConfig;
                 this.authType = model.authType;
                 this.disableURLInternet = model.disableURLInternet;
                 this.dsableURLInternet = model.dsableURLInternet;
                 this.methods = model.methods;
             } 
+
+            /**
+             * authConfig.
+             */
+            public Builder authConfig(String authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
 
             /**
              * authType.
