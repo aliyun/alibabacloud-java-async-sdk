@@ -215,6 +215,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("GroupResourceType")
+        private String groupResourceType;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -257,6 +260,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             this.desktopName = builder.desktopName;
             this.desktopType = builder.desktopType;
             this.endTime = builder.endTime;
+            this.groupResourceType = builder.groupResourceType;
             this.instanceId = builder.instanceId;
             this.instanceState = builder.instanceState;
             this.instanceType = builder.instanceType;
@@ -312,6 +316,13 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return groupResourceType
+         */
+        public String getGroupResourceType() {
+            return this.groupResourceType;
         }
 
         /**
@@ -404,6 +415,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             private String desktopName; 
             private String desktopType; 
             private String endTime; 
+            private String groupResourceType; 
             private String instanceId; 
             private String instanceState; 
             private String instanceType; 
@@ -426,6 +438,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
                 this.desktopName = model.desktopName;
                 this.desktopType = model.desktopType;
                 this.endTime = model.endTime;
+                this.groupResourceType = model.groupResourceType;
                 this.instanceId = model.instanceId;
                 this.instanceState = model.instanceState;
                 this.instanceType = model.instanceType;
@@ -477,6 +490,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * GroupResourceType.
+             */
+            public Builder groupResourceType(String groupResourceType) {
+                this.groupResourceType = groupResourceType;
                 return this;
             }
 
