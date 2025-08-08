@@ -40,6 +40,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCurrentNodeInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -307,6 +320,28 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             private Long previousNodeId; 
             private Integer stepNo; 
             private String templateForm; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.allowRollbackNode = model.allowRollbackNode;
+                this.autoFinishNode = model.autoFinishNode;
+                this.finalStepNo = model.finalStepNo;
+                this.gmtExpired = model.gmtExpired;
+                this.gmtFinished = model.gmtFinished;
+                this.gmtStart = model.gmtStart;
+                this.needAttachment = model.needAttachment;
+                this.nextNodeId = model.nextNodeId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeStatus = model.nodeStatus;
+                this.operatorRole = model.operatorRole;
+                this.parentNodeId = model.parentNodeId;
+                this.previousNodeId = model.previousNodeId;
+                this.stepNo = model.stepNo;
+                this.templateForm = model.templateForm;
+            } 
 
             /**
              * AllowRollbackNode.

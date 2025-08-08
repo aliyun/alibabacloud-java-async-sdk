@@ -36,6 +36,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return license
      */
@@ -53,6 +57,14 @@ public class DescribeLicenseResponseBody extends TeaModel {
     public static final class Builder {
         private License license; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLicenseResponseBody model) {
+            this.license = model.license;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * License.
@@ -120,6 +132,14 @@ public class DescribeLicenseResponseBody extends TeaModel {
             private String code; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LicenseAttribute model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
+
             /**
              * Code.
              */
@@ -174,6 +194,13 @@ public class DescribeLicenseResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LicenseAttribute> licenseAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendArray model) {
+                this.licenseAttribute = model.licenseAttribute;
+            } 
 
             /**
              * LicenseAttribute.
@@ -257,6 +284,16 @@ public class DescribeLicenseResponseBody extends TeaModel {
             private Long aliUid; 
             private String email; 
             private String mobile; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendInfo model) {
+                this.accountQuantity = model.accountQuantity;
+                this.aliUid = model.aliUid;
+                this.email = model.email;
+                this.mobile = model.mobile;
+            } 
 
             /**
              * AccountQuantity.
@@ -460,6 +497,24 @@ public class DescribeLicenseResponseBody extends TeaModel {
             private String productName; 
             private String productSkuId; 
             private String supplierName; 
+
+            private Builder() {
+            } 
+
+            private Builder(License model) {
+                this.activateTime = model.activateTime;
+                this.createTime = model.createTime;
+                this.expiredTime = model.expiredTime;
+                this.extendArray = model.extendArray;
+                this.extendInfo = model.extendInfo;
+                this.instanceId = model.instanceId;
+                this.licenseCode = model.licenseCode;
+                this.licenseStatus = model.licenseStatus;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.productSkuId = model.productSkuId;
+                this.supplierName = model.supplierName;
+            } 
 
             /**
              * ActivateTime.

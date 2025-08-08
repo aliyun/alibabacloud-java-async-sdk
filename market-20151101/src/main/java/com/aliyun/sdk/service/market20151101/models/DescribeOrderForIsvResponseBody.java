@@ -108,6 +108,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountQuantity
      */
@@ -269,6 +273,32 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         private Integer quantity; 
         private String requestId; 
         private Float totalPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOrderForIsvResponseBody model) {
+            this.accountQuantity = model.accountQuantity;
+            this.aliUid = model.aliUid;
+            this.components = model.components;
+            this.couponPrice = model.couponPrice;
+            this.createdOn = model.createdOn;
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.orderStatus = model.orderStatus;
+            this.orderType = model.orderType;
+            this.originalPrice = model.originalPrice;
+            this.paidOn = model.paidOn;
+            this.payStatus = model.payStatus;
+            this.paymentPrice = model.paymentPrice;
+            this.periodType = model.periodType;
+            this.productCode = model.productCode;
+            this.productName = model.productName;
+            this.productSkuCode = model.productSkuCode;
+            this.quantity = model.quantity;
+            this.requestId = model.requestId;
+            this.totalPrice = model.totalPrice;
+        } 
 
         /**
          * AccountQuantity.

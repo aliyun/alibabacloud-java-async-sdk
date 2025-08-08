@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AutoRenewInstanceResponse> autoRenewInstance(AutoRenewInstanceRequest request);
 
     /**
+     * @param request the request parameters of ConfirmNotification  ConfirmNotificationRequest
+     * @return ConfirmNotificationResponse
+     */
+    CompletableFuture<ConfirmNotificationResponse> confirmNotification(ConfirmNotificationRequest request);
+
+    /**
      * @param request the request parameters of CreateOrder  CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDistributionProductsLinkResponse> describeDistributionProductsLink(DescribeDistributionProductsLinkRequest request);
 
     /**
+     * @param request the request parameters of DescribeFailedNotifications  DescribeFailedNotificationsRequest
+     * @return DescribeFailedNotificationsResponse
+     */
+    CompletableFuture<DescribeFailedNotificationsResponse> describeFailedNotifications(DescribeFailedNotificationsRequest request);
+
+    /**
      * @param request the request parameters of DescribeImageInstanceForIsv  DescribeImageInstanceForIsvRequest
      * @return DescribeImageInstanceForIsvResponse
      */
@@ -90,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstancesResponse
      */
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInvoiceForIsv  DescribeInvoiceForIsvRequest
+     * @return DescribeInvoiceForIsvResponse
+     */
+    CompletableFuture<DescribeInvoiceForIsvResponse> describeInvoiceForIsv(DescribeInvoiceForIsvRequest request);
 
     /**
      * @param request the request parameters of DescribeLicense  DescribeLicenseRequest
@@ -167,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FinishCurrentProjectNodeResponse
      */
     CompletableFuture<FinishCurrentProjectNodeResponse> finishCurrentProjectNode(FinishCurrentProjectNodeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInvoiceForIsv  ModifyInvoiceForIsvRequest
+     * @return ModifyInvoiceForIsvResponse
+     */
+    CompletableFuture<ModifyInvoiceForIsvResponse> modifyInvoiceForIsv(ModifyInvoiceForIsvRequest request);
 
     /**
      * @param request the request parameters of PauseProject  PauseProjectRequest

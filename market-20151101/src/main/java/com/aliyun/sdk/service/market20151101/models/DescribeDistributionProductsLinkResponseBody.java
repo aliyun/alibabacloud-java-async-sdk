@@ -44,6 +44,10 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDistributionProductsLinkResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -174,6 +188,15 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
             private String code; 
             private String name; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.url = model.url;
+            } 
 
             /**
              * Code.

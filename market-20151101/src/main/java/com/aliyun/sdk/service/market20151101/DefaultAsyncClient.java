@@ -100,6 +100,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ConfirmNotification  ConfirmNotificationRequest
+     * @return ConfirmNotificationResponse
+     */
+    @Override
+    public CompletableFuture<ConfirmNotificationResponse> confirmNotification(ConfirmNotificationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfirmNotification").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmNotificationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfirmNotificationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateOrder  CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -208,6 +226,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeFailedNotifications  DescribeFailedNotificationsRequest
+     * @return DescribeFailedNotificationsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFailedNotificationsResponse> describeFailedNotifications(DescribeFailedNotificationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFailedNotifications").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFailedNotificationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFailedNotificationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeImageInstanceForIsv  DescribeImageInstanceForIsvRequest
      * @return DescribeImageInstanceForIsvResponse
      */
@@ -274,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInvoiceForIsv  DescribeInvoiceForIsvRequest
+     * @return DescribeInvoiceForIsvResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInvoiceForIsvResponse> describeInvoiceForIsv(DescribeInvoiceForIsvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInvoiceForIsv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInvoiceForIsvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInvoiceForIsvResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -495,6 +549,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<FinishCurrentProjectNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyInvoiceForIsv  ModifyInvoiceForIsvRequest
+     * @return ModifyInvoiceForIsvResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInvoiceForIsvResponse> modifyInvoiceForIsv(ModifyInvoiceForIsvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInvoiceForIsv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInvoiceForIsvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInvoiceForIsvResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

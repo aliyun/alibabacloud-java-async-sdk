@@ -40,6 +40,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectAttachmentsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -295,6 +308,27 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             private String operatorName; 
             private String operatorRole; 
             private Integer stepNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.attachmentToken = model.attachmentToken;
+                this.attachmentType = model.attachmentType;
+                this.content = model.content;
+                this.fileLink = model.fileLink;
+                this.fileLinkGmtExpired = model.fileLinkGmtExpired;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileSuffix = model.fileSuffix;
+                this.gmtCreate = model.gmtCreate;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+                this.operatorRole = model.operatorRole;
+                this.stepNo = model.stepNo;
+            } 
 
             /**
              * AttachmentToken.

@@ -40,6 +40,10 @@ public class CreateOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -65,6 +69,15 @@ public class CreateOrderResponseBody extends TeaModel {
         private InstanceIds instanceIds; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrderResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceIds.
@@ -127,6 +140,13 @@ public class CreateOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.

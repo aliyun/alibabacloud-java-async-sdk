@@ -48,6 +48,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeProductsResponseBody extends TeaModel {
         private ProductItems productItems; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProductsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.productItems = model.productItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -348,6 +363,28 @@ public class DescribeProductsResponseBody extends TeaModel {
             private String targetUrl; 
             private String warrantyDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductItem model) {
+                this.categoryId = model.categoryId;
+                this.code = model.code;
+                this.deliveryDate = model.deliveryDate;
+                this.deliveryWay = model.deliveryWay;
+                this.imageUrl = model.imageUrl;
+                this.name = model.name;
+                this.operationSystem = model.operationSystem;
+                this.priceInfo = model.priceInfo;
+                this.score = model.score;
+                this.shortDescription = model.shortDescription;
+                this.suggestedPrice = model.suggestedPrice;
+                this.supplierId = model.supplierId;
+                this.supplierName = model.supplierName;
+                this.tags = model.tags;
+                this.targetUrl = model.targetUrl;
+                this.warrantyDate = model.warrantyDate;
+            } 
+
             /**
              * CategoryId.
              */
@@ -514,6 +551,13 @@ public class DescribeProductsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ProductItem> productItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductItems model) {
+                this.productItem = model.productItem;
+            } 
 
             /**
              * ProductItem.

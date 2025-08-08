@@ -108,6 +108,10 @@ public class DescribeProductResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auditFailMsg
      */
@@ -269,6 +273,32 @@ public class DescribeProductResponseBody extends TeaModel {
         private Long supplierPk; 
         private String type; 
         private Long useCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProductResponseBody model) {
+            this.auditFailMsg = model.auditFailMsg;
+            this.auditStatus = model.auditStatus;
+            this.auditTime = model.auditTime;
+            this.code = model.code;
+            this.description = model.description;
+            this.frontCategoryId = model.frontCategoryId;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.name = model.name;
+            this.picUrl = model.picUrl;
+            this.productExtras = model.productExtras;
+            this.productSkus = model.productSkus;
+            this.requestId = model.requestId;
+            this.score = model.score;
+            this.shopInfo = model.shopInfo;
+            this.shortDescription = model.shortDescription;
+            this.status = model.status;
+            this.supplierPk = model.supplierPk;
+            this.type = model.type;
+            this.useCount = model.useCount;
+        } 
 
         /**
          * AuditFailMsg.
@@ -516,6 +546,17 @@ public class DescribeProductResponseBody extends TeaModel {
             private String type; 
             private String values; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductExtra model) {
+                this.key = model.key;
+                this.label = model.label;
+                this.order = model.order;
+                this.type = model.type;
+                this.values = model.values;
+            } 
+
             /**
              * Key.
              */
@@ -594,6 +635,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ProductExtra> productExtra; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductExtras model) {
+                this.productExtra = model.productExtra;
+            } 
 
             /**
              * ProductExtra.
@@ -714,6 +762,19 @@ public class DescribeProductResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyValue model) {
+                this.displayName = model.displayName;
+                this.max = model.max;
+                this.min = model.min;
+                this.remark = model.remark;
+                this.step = model.step;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * DisplayName.
              */
@@ -808,6 +869,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PropertyValue> propertyValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+            } 
 
             /**
              * PropertyValue.
@@ -904,6 +972,17 @@ public class DescribeProductResponseBody extends TeaModel {
             private PropertyValues propertyValues; 
             private String showType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.displayUnit = model.displayUnit;
+                this.key = model.key;
+                this.name = model.name;
+                this.propertyValues = model.propertyValues;
+                this.showType = model.showType;
+            } 
+
             /**
              * DisplayUnit.
              */
@@ -982,6 +1061,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Property> property; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.property = model.property;
+            } 
 
             /**
              * Property.
@@ -1066,6 +1152,16 @@ public class DescribeProductResponseBody extends TeaModel {
             private String name; 
             private Properties properties; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.name = model.name;
+                this.properties = model.properties;
+            } 
+
             /**
              * Code.
              */
@@ -1137,6 +1233,13 @@ public class DescribeProductResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Module> module; 
 
+            private Builder() {
+            } 
+
+            private Builder(Modules model) {
+                this.module = model.module;
+            } 
+
             /**
              * Module.
              */
@@ -1196,6 +1299,14 @@ public class DescribeProductResponseBody extends TeaModel {
             private String name; 
             private String periodType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderPeriod model) {
+                this.name = model.name;
+                this.periodType = model.periodType;
+            } 
+
             /**
              * Name.
              */
@@ -1250,6 +1361,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OrderPeriod> orderPeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderPeriods model) {
+                this.orderPeriod = model.orderPeriod;
+            } 
 
             /**
              * OrderPeriod.
@@ -1370,6 +1488,19 @@ public class DescribeProductResponseBody extends TeaModel {
             private String name; 
             private OrderPeriods orderPeriods; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductSku model) {
+                this.chargeType = model.chargeType;
+                this.code = model.code;
+                this.constraints = model.constraints;
+                this.hidden = model.hidden;
+                this.modules = model.modules;
+                this.name = model.name;
+                this.orderPeriods = model.orderPeriods;
+            } 
+
             /**
              * ChargeType.
              */
@@ -1465,6 +1596,13 @@ public class DescribeProductResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ProductSku> productSku; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductSkus model) {
+                this.productSku = model.productSku;
+            } 
+
             /**
              * ProductSku.
              */
@@ -1511,6 +1649,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> telephone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Telephones model) {
+                this.telephone = model.telephone;
+            } 
 
             /**
              * Telephone.
@@ -1571,6 +1716,14 @@ public class DescribeProductResponseBody extends TeaModel {
             private String remark; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WangWang model) {
+                this.remark = model.remark;
+                this.userName = model.userName;
+            } 
+
             /**
              * Remark.
              */
@@ -1625,6 +1778,13 @@ public class DescribeProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WangWang> wangWang; 
+
+            private Builder() {
+            } 
+
+            private Builder(WangWangs model) {
+                this.wangWang = model.wangWang;
+            } 
 
             /**
              * WangWang.
@@ -1720,6 +1880,17 @@ public class DescribeProductResponseBody extends TeaModel {
             private String name; 
             private Telephones telephones; 
             private WangWangs wangWangs; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShopInfo model) {
+                this.emails = model.emails;
+                this.id = model.id;
+                this.name = model.name;
+                this.telephones = model.telephones;
+                this.wangWangs = model.wangWangs;
+            } 
 
             /**
              * Emails.

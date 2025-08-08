@@ -116,6 +116,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activeAddress
      */
@@ -293,6 +297,34 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String supplierName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceForIsvResponseBody model) {
+            this.activeAddress = model.activeAddress;
+            this.appJson = model.appJson;
+            this.autoRenewal = model.autoRenewal;
+            this.beganOn = model.beganOn;
+            this.componentJson = model.componentJson;
+            this.createdOn = model.createdOn;
+            this.endOn = model.endOn;
+            this.extendJson = model.extendJson;
+            this.hostJson = model.hostJson;
+            this.imageJson = model.imageJson;
+            this.instanceId = model.instanceId;
+            this.isTrial = model.isTrial;
+            this.licenseCode = model.licenseCode;
+            this.orderId = model.orderId;
+            this.productCode = model.productCode;
+            this.productName = model.productName;
+            this.productSkuCode = model.productSkuCode;
+            this.productType = model.productType;
+            this.relationalData = model.relationalData;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.supplierName = model.supplierName;
+        } 
 
         /**
          * ActiveAddress.
@@ -507,6 +539,13 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
 
         public static final class Builder {
             private String serviceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelationalData model) {
+                this.serviceStatus = model.serviceStatus;
+            } 
 
             /**
              * ServiceStatus.

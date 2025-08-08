@@ -116,6 +116,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activeAddress
      */
@@ -293,6 +297,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private RelationalData relationalData; 
         private String status; 
         private String supplierName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.activeAddress = model.activeAddress;
+            this.appJson = model.appJson;
+            this.autoRenewal = model.autoRenewal;
+            this.beganOn = model.beganOn;
+            this.componentJson = model.componentJson;
+            this.constraints = model.constraints;
+            this.createdOn = model.createdOn;
+            this.endOn = model.endOn;
+            this.extendJson = model.extendJson;
+            this.hostJson = model.hostJson;
+            this.instanceId = model.instanceId;
+            this.isTrial = model.isTrial;
+            this.licenseCode = model.licenseCode;
+            this.modules = model.modules;
+            this.orderId = model.orderId;
+            this.productCode = model.productCode;
+            this.productName = model.productName;
+            this.productSkuCode = model.productSkuCode;
+            this.productType = model.productType;
+            this.relationalData = model.relationalData;
+            this.status = model.status;
+            this.supplierName = model.supplierName;
+        } 
 
         /**
          * ActiveAddress.
@@ -580,6 +612,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyValue model) {
+                this.displayName = model.displayName;
+                this.max = model.max;
+                this.min = model.min;
+                this.remark = model.remark;
+                this.step = model.step;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * DisplayName.
              */
@@ -674,6 +719,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PropertyValue> propertyValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+            } 
 
             /**
              * PropertyValue.
@@ -770,6 +822,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private PropertyValues propertyValues; 
             private String showType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.displayUnit = model.displayUnit;
+                this.key = model.key;
+                this.name = model.name;
+                this.propertyValues = model.propertyValues;
+                this.showType = model.showType;
+            } 
+
             /**
              * DisplayUnit.
              */
@@ -848,6 +911,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Property> property; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.property = model.property;
+            } 
 
             /**
              * Property.
@@ -932,6 +1002,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String name; 
             private Properties properties; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.name = model.name;
+                this.properties = model.properties;
+            } 
+
             /**
              * Code.
              */
@@ -1003,6 +1083,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Module> module; 
 
+            private Builder() {
+            } 
+
+            private Builder(Modules model) {
+                this.module = model.module;
+            } 
+
             /**
              * Module.
              */
@@ -1049,6 +1136,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String serviceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelationalData model) {
+                this.serviceStatus = model.serviceStatus;
+            } 
 
             /**
              * ServiceStatus.

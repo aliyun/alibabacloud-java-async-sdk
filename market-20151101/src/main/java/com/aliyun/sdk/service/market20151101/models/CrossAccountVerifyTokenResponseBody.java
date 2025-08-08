@@ -48,6 +48,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CrossAccountVerifyTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -206,6 +221,16 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             private Long authTime; 
             private String name; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authRoles = model.authRoles;
+                this.authTime = model.authTime;
+                this.name = model.name;
+                this.uid = model.uid;
+            } 
 
             /**
              * AuthRoles.

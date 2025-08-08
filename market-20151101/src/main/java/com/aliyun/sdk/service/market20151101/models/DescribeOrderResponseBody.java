@@ -116,6 +116,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountQuantity
      */
@@ -293,6 +297,34 @@ public class DescribeOrderResponseBody extends TeaModel {
         private String supplierCompanyName; 
         private SupplierTelephones supplierTelephones; 
         private Float totalPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOrderResponseBody model) {
+            this.accountQuantity = model.accountQuantity;
+            this.aliUid = model.aliUid;
+            this.components = model.components;
+            this.couponPrice = model.couponPrice;
+            this.createdOn = model.createdOn;
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.orderStatus = model.orderStatus;
+            this.orderType = model.orderType;
+            this.originalPrice = model.originalPrice;
+            this.paidOn = model.paidOn;
+            this.payStatus = model.payStatus;
+            this.paymentPrice = model.paymentPrice;
+            this.periodType = model.periodType;
+            this.productCode = model.productCode;
+            this.productName = model.productName;
+            this.productSkuCode = model.productSkuCode;
+            this.quantity = model.quantity;
+            this.requestId = model.requestId;
+            this.supplierCompanyName = model.supplierCompanyName;
+            this.supplierTelephones = model.supplierTelephones;
+            this.totalPrice = model.totalPrice;
+        } 
 
         /**
          * AccountQuantity.
@@ -508,6 +540,13 @@ public class DescribeOrderResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * InstanceId.
              */
@@ -554,6 +593,13 @@ public class DescribeOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> telephone; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupplierTelephones model) {
+                this.telephone = model.telephone;
+            } 
 
             /**
              * Telephone.

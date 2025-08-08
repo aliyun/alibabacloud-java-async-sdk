@@ -48,6 +48,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Results> results; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDistributionProductsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -323,6 +338,26 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             private String tradeCount; 
             private String type; 
             private String userCommentCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.firstCategoryName = model.firstCategoryName;
+                this.imageUrl = model.imageUrl;
+                this.name = model.name;
+                this.price = model.price;
+                this.score = model.score;
+                this.secondCategoryName = model.secondCategoryName;
+                this.shortDescription = model.shortDescription;
+                this.submissionRadio = model.submissionRadio;
+                this.supplierName = model.supplierName;
+                this.supplierUId = model.supplierUId;
+                this.tradeCount = model.tradeCount;
+                this.type = model.type;
+                this.userCommentCount = model.userCommentCount;
+            } 
 
             /**
              * Code.

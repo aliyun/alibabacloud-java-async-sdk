@@ -40,6 +40,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -319,6 +332,29 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             private Long supplierAliUid; 
             private Long templateId; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.currentStepNo = model.currentStepNo;
+                this.customerAliUid = model.customerAliUid;
+                this.finalStepNo = model.finalStepNo;
+                this.finishType = model.finishType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtExpired = model.gmtExpired;
+                this.gmtFinished = model.gmtFinished;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.productSkuCode = model.productSkuCode;
+                this.productSkuName = model.productSkuName;
+                this.projectStatus = model.projectStatus;
+                this.supplierAliUid = model.supplierAliUid;
+                this.templateId = model.templateId;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * CurrentStepNo.

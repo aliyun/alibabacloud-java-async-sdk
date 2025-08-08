@@ -48,6 +48,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceItems
      */
@@ -89,6 +93,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instanceItems = model.instanceItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * InstanceItems.
@@ -360,6 +375,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String status; 
             private String supplierName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceItem model) {
+                this.apiJson = model.apiJson;
+                this.appJson = model.appJson;
+                this.beganOn = model.beganOn;
+                this.createdOn = model.createdOn;
+                this.endOn = model.endOn;
+                this.extendJson = model.extendJson;
+                this.hostJson = model.hostJson;
+                this.idaasJson = model.idaasJson;
+                this.imageJson = model.imageJson;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.productSkuCode = model.productSkuCode;
+                this.productType = model.productType;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+            } 
+
             /**
              * ApiJson.
              */
@@ -534,6 +572,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceItem> instanceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceItems model) {
+                this.instanceItem = model.instanceItem;
+            } 
 
             /**
              * InstanceItem.

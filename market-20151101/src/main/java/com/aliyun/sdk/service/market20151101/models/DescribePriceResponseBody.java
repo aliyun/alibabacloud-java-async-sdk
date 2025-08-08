@@ -80,6 +80,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coupons
      */
@@ -185,6 +189,25 @@ public class DescribePriceResponseBody extends TeaModel {
         private String productCode; 
         private PromotionRules promotionRules; 
         private Float tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.coupons = model.coupons;
+            this.currency = model.currency;
+            this.cuxiao = model.cuxiao;
+            this.cycle = model.cycle;
+            this.discountPrice = model.discountPrice;
+            this.duration = model.duration;
+            this.expressionCode = model.expressionCode;
+            this.expressionMessage = model.expressionMessage;
+            this.infoTitle = model.infoTitle;
+            this.originalPrice = model.originalPrice;
+            this.productCode = model.productCode;
+            this.promotionRules = model.promotionRules;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * Coupons.
@@ -388,6 +411,18 @@ public class DescribePriceResponseBody extends TeaModel {
             private String couponOptionNo; 
             private Boolean isSelected; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.canPromFee = model.canPromFee;
+                this.couponDesc = model.couponDesc;
+                this.couponName = model.couponName;
+                this.couponOptionCode = model.couponOptionCode;
+                this.couponOptionNo = model.couponOptionNo;
+                this.isSelected = model.isSelected;
+            } 
+
             /**
              * CanPromFee.
              */
@@ -475,6 +510,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
+
             /**
              * Coupon.
              */
@@ -546,6 +588,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private String ruleId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromotionRule model) {
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+                this.title = model.title;
+            } 
+
             /**
              * Name.
              */
@@ -608,6 +659,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PromotionRule> promotionRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionRules model) {
+                this.promotionRule = model.promotionRule;
+            } 
 
             /**
              * PromotionRule.

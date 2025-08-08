@@ -68,6 +68,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiMeteringResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.fatal = model.fatal;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.version = model.version;
+        } 
 
         /**
          * Code.
@@ -342,6 +362,19 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             private Long totalQuota; 
             private Long totalUsage; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.aliyunPk = model.aliyunPk;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.totalCapacity = model.totalCapacity;
+                this.totalQuota = model.totalQuota;
+                this.totalUsage = model.totalUsage;
+                this.unit = model.unit;
+            } 
 
             /**
              * AliyunPk.

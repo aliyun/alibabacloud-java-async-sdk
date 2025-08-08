@@ -44,6 +44,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectMessagesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -195,6 +209,17 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             private Long operator; 
             private String operatorName; 
             private String operatorRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.gmtCreate = model.gmtCreate;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+                this.operatorRole = model.operatorRole;
+            } 
 
             /**
              * Content.
