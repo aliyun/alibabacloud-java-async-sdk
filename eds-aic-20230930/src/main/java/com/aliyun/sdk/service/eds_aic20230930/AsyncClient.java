@@ -413,6 +413,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPolicyGroupsResponse> listPolicyGroups(ListPolicyGroupsRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * @param request the request parameters of ModifyAndroidInstance  ModifyAndroidInstanceRequest
      * @return ModifyAndroidInstanceResponse
      */
@@ -563,6 +569,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAndroidInstanceResponse> stopAndroidInstance(StopAndroidInstanceRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
@@ -576,6 +588,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallMonitorAgentResponse
      */
     CompletableFuture<UninstallMonitorAgentResponse> uninstallMonitorAgent(UninstallMonitorAgentRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomImageName  UpdateCustomImageNameRequest

@@ -30,6 +30,10 @@ public class ExpandDataVolumeRequest extends Request {
     private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
+    private Integer phoneDataVolume;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShareDataVolume")
     private Integer shareDataVolume;
 
@@ -38,6 +42,7 @@ public class ExpandDataVolumeRequest extends Request {
         this.autoPay = builder.autoPay;
         this.bizRegionId = builder.bizRegionId;
         this.nodeIds = builder.nodeIds;
+        this.phoneDataVolume = builder.phoneDataVolume;
         this.shareDataVolume = builder.shareDataVolume;
     }
 
@@ -76,6 +81,13 @@ public class ExpandDataVolumeRequest extends Request {
     }
 
     /**
+     * @return phoneDataVolume
+     */
+    public Integer getPhoneDataVolume() {
+        return this.phoneDataVolume;
+    }
+
+    /**
      * @return shareDataVolume
      */
     public Integer getShareDataVolume() {
@@ -86,6 +98,7 @@ public class ExpandDataVolumeRequest extends Request {
         private Boolean autoPay; 
         private String bizRegionId; 
         private java.util.List<String> nodeIds; 
+        private Integer phoneDataVolume; 
         private Integer shareDataVolume; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class ExpandDataVolumeRequest extends Request {
             this.autoPay = request.autoPay;
             this.bizRegionId = request.bizRegionId;
             this.nodeIds = request.nodeIds;
+            this.phoneDataVolume = request.phoneDataVolume;
             this.shareDataVolume = request.shareDataVolume;
         } 
 
@@ -124,6 +138,15 @@ public class ExpandDataVolumeRequest extends Request {
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
             this.nodeIds = nodeIds;
+            return this;
+        }
+
+        /**
+         * PhoneDataVolume.
+         */
+        public Builder phoneDataVolume(Integer phoneDataVolume) {
+            this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
+            this.phoneDataVolume = phoneDataVolume;
             return this;
         }
 

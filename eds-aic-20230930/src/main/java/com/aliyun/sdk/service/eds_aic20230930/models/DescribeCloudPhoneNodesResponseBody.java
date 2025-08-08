@@ -465,6 +465,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageStatus")
+        private String bandwidthPackageStatus;
+
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
         private String bandwidthPackageType;
 
@@ -536,6 +539,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         private NodeModel(Builder builder) {
             this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageStatus = builder.bandwidthPackageStatus;
             this.bandwidthPackageType = builder.bandwidthPackageType;
             this.bizTags = builder.bizTags;
             this.chargeType = builder.chargeType;
@@ -574,6 +578,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageStatus
+         */
+        public String getBandwidthPackageStatus() {
+            return this.bandwidthPackageStatus;
         }
 
         /**
@@ -739,6 +750,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bandwidthPackageId; 
+            private String bandwidthPackageStatus; 
             private String bandwidthPackageType; 
             private java.util.List<BizTags> bizTags; 
             private String chargeType; 
@@ -768,6 +780,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
             private Builder(NodeModel model) {
                 this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageStatus = model.bandwidthPackageStatus;
                 this.bandwidthPackageType = model.bandwidthPackageType;
                 this.bizTags = model.bizTags;
                 this.chargeType = model.chargeType;
@@ -798,6 +811,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageStatus.
+             */
+            public Builder bandwidthPackageStatus(String bandwidthPackageStatus) {
+                this.bandwidthPackageStatus = bandwidthPackageStatus;
                 return this;
             }
 

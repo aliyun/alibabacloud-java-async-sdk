@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownBandwidthLimit")
+    private Integer downBandwidthLimit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -29,11 +37,23 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PhoneCount")
     private Integer phoneCount;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
+    private Integer phoneDataVolume;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpBandwidthLimit")
+    private Integer upBandwidthLimit;
+
     private ChangeCloudPhoneNodeRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
+        this.downBandwidthLimit = builder.downBandwidthLimit;
         this.instanceType = builder.instanceType;
         this.nodeId = builder.nodeId;
         this.phoneCount = builder.phoneCount;
+        this.phoneDataVolume = builder.phoneDataVolume;
+        this.upBandwidthLimit = builder.upBandwidthLimit;
     }
 
     public static Builder builder() {
@@ -47,6 +67,20 @@ public class ChangeCloudPhoneNodeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
+     * @return downBandwidthLimit
+     */
+    public Integer getDownBandwidthLimit() {
+        return this.downBandwidthLimit;
     }
 
     /**
@@ -70,10 +104,28 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         return this.phoneCount;
     }
 
+    /**
+     * @return phoneDataVolume
+     */
+    public Integer getPhoneDataVolume() {
+        return this.phoneDataVolume;
+    }
+
+    /**
+     * @return upBandwidthLimit
+     */
+    public Integer getUpBandwidthLimit() {
+        return this.upBandwidthLimit;
+    }
+
     public static final class Builder extends Request.Builder<ChangeCloudPhoneNodeRequest, Builder> {
+        private Boolean autoPay; 
+        private Integer downBandwidthLimit; 
         private String instanceType; 
         private String nodeId; 
         private Integer phoneCount; 
+        private Integer phoneDataVolume; 
+        private Integer upBandwidthLimit; 
 
         private Builder() {
             super();
@@ -81,10 +133,32 @@ public class ChangeCloudPhoneNodeRequest extends Request {
 
         private Builder(ChangeCloudPhoneNodeRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
+            this.downBandwidthLimit = request.downBandwidthLimit;
             this.instanceType = request.instanceType;
             this.nodeId = request.nodeId;
             this.phoneCount = request.phoneCount;
+            this.phoneDataVolume = request.phoneDataVolume;
+            this.upBandwidthLimit = request.upBandwidthLimit;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * DownBandwidthLimit.
+         */
+        public Builder downBandwidthLimit(Integer downBandwidthLimit) {
+            this.putQueryParameter("DownBandwidthLimit", downBandwidthLimit);
+            this.downBandwidthLimit = downBandwidthLimit;
+            return this;
+        }
 
         /**
          * InstanceType.
@@ -110,6 +184,24 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         public Builder phoneCount(Integer phoneCount) {
             this.putQueryParameter("PhoneCount", phoneCount);
             this.phoneCount = phoneCount;
+            return this;
+        }
+
+        /**
+         * PhoneDataVolume.
+         */
+        public Builder phoneDataVolume(Integer phoneDataVolume) {
+            this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
+            this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+
+        /**
+         * UpBandwidthLimit.
+         */
+        public Builder upBandwidthLimit(Integer upBandwidthLimit) {
+            this.putQueryParameter("UpBandwidthLimit", upBandwidthLimit);
+            this.upBandwidthLimit = upBandwidthLimit;
             return this;
         }
 
