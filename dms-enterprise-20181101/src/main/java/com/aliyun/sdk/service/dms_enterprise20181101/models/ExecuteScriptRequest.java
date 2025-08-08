@@ -32,6 +32,10 @@ public class ExecuteScriptRequest extends Request {
     private Boolean logic;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Script")
     @com.aliyun.core.annotation.Validation(required = true)
     private String script;
@@ -45,6 +49,7 @@ public class ExecuteScriptRequest extends Request {
         this.regionId = builder.regionId;
         this.dbId = builder.dbId;
         this.logic = builder.logic;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.script = builder.script;
         this.tid = builder.tid;
     }
@@ -84,6 +89,13 @@ public class ExecuteScriptRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return script
      */
     public String getScript() {
@@ -101,6 +113,7 @@ public class ExecuteScriptRequest extends Request {
         private String regionId; 
         private Integer dbId; 
         private Boolean logic; 
+        private String realLoginUserUid; 
         private String script; 
         private Long tid; 
 
@@ -113,6 +126,7 @@ public class ExecuteScriptRequest extends Request {
             this.regionId = request.regionId;
             this.dbId = request.dbId;
             this.logic = request.logic;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.script = request.script;
             this.tid = request.tid;
         } 
@@ -152,6 +166,15 @@ public class ExecuteScriptRequest extends Request {
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
             this.logic = logic;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

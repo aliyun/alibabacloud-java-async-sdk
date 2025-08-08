@@ -22,6 +22,10 @@ public class GetMetaTableDetailInfoRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableGuid")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
@@ -34,6 +38,7 @@ public class GetMetaTableDetailInfoRequest extends Request {
     private GetMetaTableDetailInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tableGuid = builder.tableGuid;
         this.tid = builder.tid;
     }
@@ -59,6 +64,13 @@ public class GetMetaTableDetailInfoRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tableGuid
      */
     public String getTableGuid() {
@@ -74,6 +86,7 @@ public class GetMetaTableDetailInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMetaTableDetailInfoRequest, Builder> {
         private String regionId; 
+        private String realLoginUserUid; 
         private String tableGuid; 
         private Long tid; 
 
@@ -84,6 +97,7 @@ public class GetMetaTableDetailInfoRequest extends Request {
         private Builder(GetMetaTableDetailInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tableGuid = request.tableGuid;
             this.tid = request.tid;
         } 
@@ -94,6 +108,15 @@ public class GetMetaTableDetailInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

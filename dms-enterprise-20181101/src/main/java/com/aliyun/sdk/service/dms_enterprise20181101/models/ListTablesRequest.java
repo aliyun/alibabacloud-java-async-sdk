@@ -35,6 +35,10 @@ public class ListTablesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReturnGuid")
     private Boolean returnGuid;
 
@@ -52,6 +56,7 @@ public class ListTablesRequest extends Request {
         this.databaseId = builder.databaseId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.returnGuid = builder.returnGuid;
         this.searchName = builder.searchName;
         this.tid = builder.tid;
@@ -99,6 +104,13 @@ public class ListTablesRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return returnGuid
      */
     public Boolean getReturnGuid() {
@@ -124,6 +136,7 @@ public class ListTablesRequest extends Request {
         private String databaseId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String realLoginUserUid; 
         private Boolean returnGuid; 
         private String searchName; 
         private Long tid; 
@@ -138,6 +151,7 @@ public class ListTablesRequest extends Request {
             this.databaseId = request.databaseId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.returnGuid = request.returnGuid;
             this.searchName = request.searchName;
             this.tid = request.tid;
@@ -186,6 +200,15 @@ public class ListTablesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

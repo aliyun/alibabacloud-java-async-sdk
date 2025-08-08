@@ -32,6 +32,10 @@ public class GetInstanceRequest extends Request {
     private Integer port;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sid")
     private String sid;
 
@@ -44,6 +48,7 @@ public class GetInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.host = builder.host;
         this.port = builder.port;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.sid = builder.sid;
         this.tid = builder.tid;
     }
@@ -83,6 +88,13 @@ public class GetInstanceRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return sid
      */
     public String getSid() {
@@ -100,6 +112,7 @@ public class GetInstanceRequest extends Request {
         private String regionId; 
         private String host; 
         private Integer port; 
+        private String realLoginUserUid; 
         private String sid; 
         private Long tid; 
 
@@ -112,6 +125,7 @@ public class GetInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.host = request.host;
             this.port = request.port;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.sid = request.sid;
             this.tid = request.tid;
         } 
@@ -148,6 +162,15 @@ public class GetInstanceRequest extends Request {
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
             this.port = port;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

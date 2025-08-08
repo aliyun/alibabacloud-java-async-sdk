@@ -48,6 +48,10 @@ public class GenerateSqlFromNLRequest extends Request {
     private String question;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableNames")
     private String tableNames;
 
@@ -60,6 +64,7 @@ public class GenerateSqlFromNLRequest extends Request {
         this.level = builder.level;
         this.model = builder.model;
         this.question = builder.question;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tableNames = builder.tableNames;
     }
 
@@ -126,6 +131,13 @@ public class GenerateSqlFromNLRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tableNames
      */
     public String getTableNames() {
@@ -140,6 +152,7 @@ public class GenerateSqlFromNLRequest extends Request {
         private String level; 
         private String model; 
         private String question; 
+        private String realLoginUserUid; 
         private String tableNames; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class GenerateSqlFromNLRequest extends Request {
             this.level = request.level;
             this.model = request.model;
             this.question = request.question;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tableNames = request.tableNames;
         } 
 
@@ -221,6 +235,15 @@ public class GenerateSqlFromNLRequest extends Request {
         public Builder question(String question) {
             this.putQueryParameter("Question", question);
             this.question = question;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

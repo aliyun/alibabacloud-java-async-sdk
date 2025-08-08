@@ -420,6 +420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of DeleteAbacAuthorization  DeleteAbacAuthorizationRequest
      * @return DeleteAbacAuthorizationResponse
      */
@@ -566,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserResponse
      */
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
      * <b>description</b> :
@@ -1176,6 +1188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserUploadFileJobResponse> getUserUploadFileJob(GetUserUploadFileJobRequest request);
 
     /**
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
      * 
@@ -1671,6 +1689,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkFlowTemplatesResponse> listWorkFlowTemplates(ListWorkFlowTemplatesRequest request);
 
     /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of MakeTaskFlowInstanceSuccess  MakeTaskFlowInstanceSuccessRequest
      * @return MakeTaskFlowInstanceSuccessResponse
      */
@@ -2141,5 +2165,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserResponse
      */
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request);
 
 }

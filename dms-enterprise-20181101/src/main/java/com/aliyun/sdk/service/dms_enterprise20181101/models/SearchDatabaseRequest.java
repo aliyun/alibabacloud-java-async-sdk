@@ -39,6 +39,10 @@ public class SearchDatabaseRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
@@ -61,6 +65,7 @@ public class SearchDatabaseRequest extends Request {
         this.envType = builder.envType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.searchKey = builder.searchKey;
         this.searchRange = builder.searchRange;
         this.searchTarget = builder.searchTarget;
@@ -116,6 +121,13 @@ public class SearchDatabaseRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -149,6 +161,7 @@ public class SearchDatabaseRequest extends Request {
         private String envType; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String realLoginUserUid; 
         private String searchKey; 
         private String searchRange; 
         private String searchTarget; 
@@ -165,6 +178,7 @@ public class SearchDatabaseRequest extends Request {
             this.envType = request.envType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.searchKey = request.searchKey;
             this.searchRange = request.searchRange;
             this.searchTarget = request.searchTarget;
@@ -225,6 +239,15 @@ public class SearchDatabaseRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 
