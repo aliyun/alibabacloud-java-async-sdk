@@ -36,6 +36,10 @@ public class LlmSmartCallRequest extends Request {
     private String callerNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerLineCode")
+    private String customerLineCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extension")
     @com.aliyun.core.annotation.Validation(maxLength = 5)
     private String extension;
@@ -76,6 +80,7 @@ public class LlmSmartCallRequest extends Request {
         this.bizParam = builder.bizParam;
         this.calledNumber = builder.calledNumber;
         this.callerNumber = builder.callerNumber;
+        this.customerLineCode = builder.customerLineCode;
         this.extension = builder.extension;
         this.outId = builder.outId;
         this.promptParam = builder.promptParam;
@@ -125,6 +130,13 @@ public class LlmSmartCallRequest extends Request {
      */
     public String getCallerNumber() {
         return this.callerNumber;
+    }
+
+    /**
+     * @return customerLineCode
+     */
+    public String getCustomerLineCode() {
+        return this.customerLineCode;
     }
 
     /**
@@ -188,6 +200,7 @@ public class LlmSmartCallRequest extends Request {
         private java.util.Map<String, ?> bizParam; 
         private String calledNumber; 
         private String callerNumber; 
+        private String customerLineCode; 
         private String extension; 
         private String outId; 
         private java.util.Map<String, ?> promptParam; 
@@ -207,6 +220,7 @@ public class LlmSmartCallRequest extends Request {
             this.bizParam = request.bizParam;
             this.calledNumber = request.calledNumber;
             this.callerNumber = request.callerNumber;
+            this.customerLineCode = request.customerLineCode;
             this.extension = request.extension;
             this.outId = request.outId;
             this.promptParam = request.promptParam;
@@ -257,6 +271,15 @@ public class LlmSmartCallRequest extends Request {
         public Builder callerNumber(String callerNumber) {
             this.putQueryParameter("CallerNumber", callerNumber);
             this.callerNumber = callerNumber;
+            return this;
+        }
+
+        /**
+         * CustomerLineCode.
+         */
+        public Builder customerLineCode(String customerLineCode) {
+            this.putQueryParameter("CustomerLineCode", customerLineCode);
+            this.customerLineCode = customerLineCode;
             return this;
         }
 

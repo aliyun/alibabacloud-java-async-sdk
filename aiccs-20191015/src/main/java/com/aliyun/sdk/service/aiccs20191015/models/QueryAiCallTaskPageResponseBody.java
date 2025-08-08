@@ -189,7 +189,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         private Long callingCount;
 
         @com.aliyun.core.annotation.NameInMap("CompleteRate")
-        private Double completeRate;
+        private String completeRate;
 
         @com.aliyun.core.annotation.NameInMap("ConcurrentCount")
         private Long concurrentCount;
@@ -201,7 +201,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         private Long dayCallCount;
 
         @com.aliyun.core.annotation.NameInMap("DayConnectRate")
-        private Double dayConnectRate;
+        private String dayConnectRate;
 
         @com.aliyun.core.annotation.NameInMap("DayImportCount")
         private Long dayImportCount;
@@ -210,7 +210,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         private Long failedCount;
 
         @com.aliyun.core.annotation.NameInMap("HistoryConnectRate")
-        private Double historyConnectRate;
+        private String historyConnectRate;
 
         @com.aliyun.core.annotation.NameInMap("RealStartTime")
         private Long realStartTime;
@@ -294,7 +294,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         /**
          * @return completeRate
          */
-        public Double getCompleteRate() {
+        public String getCompleteRate() {
             return this.completeRate;
         }
 
@@ -322,7 +322,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         /**
          * @return dayConnectRate
          */
-        public Double getDayConnectRate() {
+        public String getDayConnectRate() {
             return this.dayConnectRate;
         }
 
@@ -343,7 +343,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         /**
          * @return historyConnectRate
          */
-        public Double getHistoryConnectRate() {
+        public String getHistoryConnectRate() {
             return this.historyConnectRate;
         }
 
@@ -414,14 +414,14 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             private String agentId; 
             private String agentName; 
             private Long callingCount; 
-            private Double completeRate; 
+            private String completeRate; 
             private Long concurrentCount; 
             private Long createTime; 
             private Long dayCallCount; 
-            private Double dayConnectRate; 
+            private String dayConnectRate; 
             private Long dayImportCount; 
             private Long failedCount; 
-            private Double historyConnectRate; 
+            private String historyConnectRate; 
             private Long realStartTime; 
             private String startFailedReason; 
             private Long startTime; 
@@ -485,7 +485,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             /**
              * CompleteRate.
              */
-            public Builder completeRate(Double completeRate) {
+            public Builder completeRate(String completeRate) {
                 this.completeRate = completeRate;
                 return this;
             }
@@ -517,7 +517,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             /**
              * DayConnectRate.
              */
-            public Builder dayConnectRate(Double dayConnectRate) {
+            public Builder dayConnectRate(String dayConnectRate) {
                 this.dayConnectRate = dayConnectRate;
                 return this;
             }
@@ -541,7 +541,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             /**
              * HistoryConnectRate.
              */
-            public Builder historyConnectRate(Double historyConnectRate) {
+            public Builder historyConnectRate(String historyConnectRate) {
                 this.historyConnectRate = historyConnectRate;
                 return this;
             }

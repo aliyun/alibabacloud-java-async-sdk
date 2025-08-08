@@ -66,6 +66,10 @@ public class CreateAiCallTaskRequest extends Request {
     private String startType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskCps")
+    private Long taskCps;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
@@ -92,6 +96,7 @@ public class CreateAiCallTaskRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startType = builder.startType;
+        this.taskCps = builder.taskCps;
         this.taskName = builder.taskName;
         this.taskStartTime = builder.taskStartTime;
         this.virtualNumber = builder.virtualNumber;
@@ -188,6 +193,13 @@ public class CreateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return taskCps
+     */
+    public Long getTaskCps() {
+        return this.taskCps;
+    }
+
+    /**
      * @return taskName
      */
     public String getTaskName() {
@@ -220,6 +232,7 @@ public class CreateAiCallTaskRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startType; 
+        private Long taskCps; 
         private String taskName; 
         private Long taskStartTime; 
         private String virtualNumber; 
@@ -241,6 +254,7 @@ public class CreateAiCallTaskRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startType = request.startType;
+            this.taskCps = request.taskCps;
             this.taskName = request.taskName;
             this.taskStartTime = request.taskStartTime;
             this.virtualNumber = request.virtualNumber;
@@ -351,6 +365,15 @@ public class CreateAiCallTaskRequest extends Request {
         public Builder startType(String startType) {
             this.putQueryParameter("StartType", startType);
             this.startType = startType;
+            return this;
+        }
+
+        /**
+         * TaskCps.
+         */
+        public Builder taskCps(Long taskCps) {
+            this.putQueryParameter("TaskCps", taskCps);
+            this.taskCps = taskCps;
             return this;
         }
 
