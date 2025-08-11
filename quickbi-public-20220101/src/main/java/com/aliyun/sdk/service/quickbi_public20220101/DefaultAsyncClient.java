@@ -1190,6 +1190,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryDashboardNl2sql  QueryDashboardNl2sqlRequest
+     * @return QueryDashboardNl2sqlResponse
+     */
+    @Override
+    public CompletableFuture<QueryDashboardNl2sqlResponse> queryDashboardNl2sql(QueryDashboardNl2sqlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryDashboardNl2sql").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDashboardNl2sqlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDashboardNl2sqlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Prerequisites</h3>
      * <p>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
@@ -1403,6 +1421,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryEmbeddedStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryLastAccelerationEngineJob  QueryLastAccelerationEngineJobRequest
+     * @return QueryLastAccelerationEngineJobResponse
+     */
+    @Override
+    public CompletableFuture<QueryLastAccelerationEngineJobResponse> queryLastAccelerationEngineJob(QueryLastAccelerationEngineJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryLastAccelerationEngineJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryLastAccelerationEngineJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryLastAccelerationEngineJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

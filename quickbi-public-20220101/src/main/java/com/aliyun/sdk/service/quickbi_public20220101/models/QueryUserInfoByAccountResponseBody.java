@@ -361,7 +361,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户绑定的组织角色ID列表。</p>
+             * <p>List of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;

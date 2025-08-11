@@ -129,7 +129,7 @@ public class QueryDataServiceRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;area&quot;: [&quot;华东&quot;, &quot;华北&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</p>
+         * <p>{ &quot;area&quot;: [&quot;asdf&quot;, &quot;west&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);

@@ -80,7 +80,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C********05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the query result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the directory to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3eecab7-618d-4f9f-*****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -196,7 +209,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the directory to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +220,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * PathId.
+             * <p>The hierarchical structure of directory IDs, separated by『/』.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88b680****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -212,7 +231,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * PathName.
+             * <p>The hierarchical structure of directory names, separated by『/』.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas/safas</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -448,7 +470,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>Timestamp of creation in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611023338000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +481,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Work remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +492,7 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory structure where the work is located.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -472,7 +500,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyName.
+             * <p>Alibaba Cloud account name of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -480,7 +511,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Timestamp of the last modification in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1530078690000</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -488,7 +522,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The UserID of the work owner in Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe67f61a35a94b7da1a34ba174a7****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -496,7 +533,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>Alibaba Cloud account name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -504,7 +544,15 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>Security policy for collaborative work. Values: - 0: Private - 12: Authorize specific members - 1 or 11: Authorize all space members</p>
+             * <blockquote>
+             * <ul>
+             * <li>If you are using the old version of permissions, the return value is 1. - If you are using the new version of permissions, the return value is 11.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -512,7 +560,16 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Report status. Possible values:</p>
+             * <ul>
+             * <li>0: Unpublished</li>
+             * <li>1: Published</li>
+             * <li>2: Modified but not published</li>
+             * <li>3: Offline</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -520,7 +577,14 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ThirdPartAuthFlag.
+             * <p>Third-party embedding status. Possible values:</p>
+             * <ul>
+             * <li>0: Embedding not enabled</li>
+             * <li>1: Embedding enabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
                 this.thirdPartAuthFlag = thirdPartAuthFlag;
@@ -528,7 +592,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * WorkName.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -536,7 +603,19 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * WorkType.
+             * <p>Work type. Possible values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: Data Portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>REPORT: Spreadsheet</li>
+             * <li>dashboardOfflineQuery: Self-service Data Extraction</li>
+             * <li>SCREEN: Data Wall</li>
+             * <li>DATAFORM: Data Entry</li>
+             * <li>ANALYSIS: Ad-hoc Analysis</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -544,7 +623,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -552,7 +634,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5f86ad2-ef53-4c51-8720-162ecfdb****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -560,7 +645,10 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdas</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

@@ -12,28 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryReadableResourcesListByUserIdV2Request} extends {@link RequestModel}
+ * {@link QueryDashboardNl2sqlRequest} extends {@link RequestModel}
  *
- * <p>QueryReadableResourcesListByUserIdV2Request</p>
+ * <p>QueryDashboardNl2sqlRequest</p>
  */
-public class QueryReadableResourcesListByUserIdV2Request extends Request {
+public class QueryDashboardNl2sqlRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("WorkType")
-    private String workType;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private QueryReadableResourcesListByUserIdV2Request(Builder builder) {
+    private QueryDashboardNl2sqlRequest(Builder builder) {
         super(builder);
         this.userId = builder.userId;
-        this.workType = builder.workType;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -41,7 +37,7 @@ public class QueryReadableResourcesListByUserIdV2Request extends Request {
         return new Builder();
     }
 
-    public static QueryReadableResourcesListByUserIdV2Request create() {
+    public static QueryDashboardNl2sqlRequest create() {
         return builder().build();
     }
 
@@ -58,41 +54,31 @@ public class QueryReadableResourcesListByUserIdV2Request extends Request {
     }
 
     /**
-     * @return workType
-     */
-    public String getWorkType() {
-        return this.workType;
-    }
-
-    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<QueryReadableResourcesListByUserIdV2Request, Builder> {
+    public static final class Builder extends Request.Builder<QueryDashboardNl2sqlRequest, Builder> {
         private String userId; 
-        private String workType; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryReadableResourcesListByUserIdV2Request request) {
+        private Builder(QueryDashboardNl2sqlRequest request) {
             super(request);
             this.userId = request.userId;
-            this.workType = request.workType;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>asdas*********sdsddf</p>
+         * <p>3d7ebb8***********500078f4</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -101,31 +87,10 @@ public class QueryReadableResourcesListByUserIdV2Request extends Request {
         }
 
         /**
-         * <p>Work type. Possible values:</p>
-         * <ul>
-         * <li>DATAPRODUCT: Data Portal</li>
-         * <li>PAGE: Dashboard</li>
-         * <li>REPORT: Spreadsheet</li>
-         * <li>dashboardOfflineQuery: Self-service Data Extraction</li>
-         * <li>SCREEN: Data Wall</li>
-         * <li>DATAFORM: Data Entry</li>
-         * <li>ANALYSIS: Ad-hoc Analysis</li>
-         * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DATAFORM</p>
-         */
-        public Builder workType(String workType) {
-            this.putQueryParameter("WorkType", workType);
-            this.workType = workType;
-            return this;
-        }
-
-        /**
-         * <p>Workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
+         * <p>3d7ebb8***********500078f4</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -134,8 +99,8 @@ public class QueryReadableResourcesListByUserIdV2Request extends Request {
         }
 
         @Override
-        public QueryReadableResourcesListByUserIdV2Request build() {
-            return new QueryReadableResourcesListByUserIdV2Request(this);
+        public QueryDashboardNl2sqlRequest build() {
+            return new QueryDashboardNl2sqlRequest(this);
         } 
 
     } 

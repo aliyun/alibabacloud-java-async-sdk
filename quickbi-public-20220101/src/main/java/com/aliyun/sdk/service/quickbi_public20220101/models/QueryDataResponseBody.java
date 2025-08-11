@@ -145,6 +145,9 @@ public class QueryDataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
+        @com.aliyun.core.annotation.NameInMap("OriginalColumn")
+        private String originalColumn;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -154,6 +157,7 @@ public class QueryDataResponseBody extends TeaModel {
             this.dataType = builder.dataType;
             this.granularity = builder.granularity;
             this.label = builder.label;
+            this.originalColumn = builder.originalColumn;
             this.type = builder.type;
         }
 
@@ -201,6 +205,13 @@ public class QueryDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalColumn
+         */
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -213,6 +224,7 @@ public class QueryDataResponseBody extends TeaModel {
             private String dataType; 
             private String granularity; 
             private String label; 
+            private String originalColumn; 
             private String type; 
 
             private Builder() {
@@ -224,6 +236,7 @@ public class QueryDataResponseBody extends TeaModel {
                 this.dataType = model.dataType;
                 this.granularity = model.granularity;
                 this.label = model.label;
+                this.originalColumn = model.originalColumn;
                 this.type = model.type;
             } 
 
@@ -298,6 +311,14 @@ public class QueryDataResponseBody extends TeaModel {
              */
             public Builder label(String label) {
                 this.label = label;
+                return this;
+            }
+
+            /**
+             * OriginalColumn.
+             */
+            public Builder originalColumn(String originalColumn) {
+                this.originalColumn = originalColumn;
                 return this;
             }
 

@@ -426,6 +426,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCubePerformanceResponse> queryCubePerformance(QueryCubePerformanceRequest request);
 
     /**
+     * @param request the request parameters of QueryDashboardNl2sql  QueryDashboardNl2sqlRequest
+     * @return QueryDashboardNl2sqlResponse
+     */
+    CompletableFuture<QueryDashboardNl2sqlResponse> queryDashboardNl2sql(QueryDashboardNl2sqlRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Prerequisites</h3>
      * <p>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
@@ -511,6 +517,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryEmbeddedStatusResponse
      */
     CompletableFuture<QueryEmbeddedStatusResponse> queryEmbeddedStatus(QueryEmbeddedStatusRequest request);
+
+    /**
+     * @param request the request parameters of QueryLastAccelerationEngineJob  QueryLastAccelerationEngineJobRequest
+     * @return QueryLastAccelerationEngineJobResponse
+     */
+    CompletableFuture<QueryLastAccelerationEngineJobResponse> queryLastAccelerationEngineJob(QueryLastAccelerationEngineJobRequest request);
 
     /**
      * @param request the request parameters of QueryLlmCubeWithThemeListByUserId  QueryLlmCubeWithThemeListByUserIdRequest

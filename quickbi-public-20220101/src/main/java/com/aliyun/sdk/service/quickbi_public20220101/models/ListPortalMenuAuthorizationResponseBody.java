@@ -126,6 +126,9 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
      * <p>ListPortalMenuAuthorizationResponseBody</p>
      */
     public static class Receivers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthPointsValue")
+        private Integer authPointsValue;
+
         @com.aliyun.core.annotation.NameInMap("ReceiverId")
         private String receiverId;
 
@@ -133,6 +136,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         private Integer receiverType;
 
         private Receivers(Builder builder) {
+            this.authPointsValue = builder.authPointsValue;
             this.receiverId = builder.receiverId;
             this.receiverType = builder.receiverType;
         }
@@ -143,6 +147,13 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
         public static Receivers create() {
             return builder().build();
+        }
+
+        /**
+         * @return authPointsValue
+         */
+        public Integer getAuthPointsValue() {
+            return this.authPointsValue;
         }
 
         /**
@@ -160,6 +171,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer authPointsValue; 
             private String receiverId; 
             private Integer receiverType; 
 
@@ -167,9 +179,18 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             } 
 
             private Builder(Receivers model) {
+                this.authPointsValue = model.authPointsValue;
                 this.receiverId = model.receiverId;
                 this.receiverType = model.receiverType;
             } 
+
+            /**
+             * AuthPointsValue.
+             */
+            public Builder authPointsValue(Integer authPointsValue) {
+                this.authPointsValue = authPointsValue;
+                return this;
+            }
 
             /**
              * <p>The ID of the authorization object.</p>
