@@ -46,6 +46,7 @@ public class ListTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagList")
+    @Deprecated
     @com.aliyun.core.annotation.Validation()
     private Integer tagList;
 

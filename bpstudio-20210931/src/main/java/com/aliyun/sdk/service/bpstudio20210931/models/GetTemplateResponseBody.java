@@ -302,6 +302,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DocumentUrl")
+        private String documentUrl;
+
         @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
@@ -320,6 +323,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.documentUrl = builder.documentUrl;
             this.imageURL = builder.imageURL;
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
@@ -347,6 +351,13 @@ public class GetTemplateResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return documentUrl
+         */
+        public String getDocumentUrl() {
+            return this.documentUrl;
         }
 
         /**
@@ -387,6 +398,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String description; 
+            private String documentUrl; 
             private String imageURL; 
             private String name; 
             private String resourceGroupId; 
@@ -399,6 +411,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.documentUrl = model.documentUrl;
                 this.imageURL = model.imageURL;
                 this.name = model.name;
                 this.resourceGroupId = model.resourceGroupId;
@@ -425,6 +438,14 @@ public class GetTemplateResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DocumentUrl.
+             */
+            public Builder documentUrl(String documentUrl) {
+                this.documentUrl = documentUrl;
                 return this;
             }
 
