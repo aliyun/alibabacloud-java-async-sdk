@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveImageResponse> removeImage(RemoveImageRequest request);
 
     /**
+     * @param request the request parameters of SynchronizeApp  SynchronizeAppRequest
+     * @return SynchronizeAppResponse
+     */
+    CompletableFuture<SynchronizeAppResponse> synchronizeApp(SynchronizeAppRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
