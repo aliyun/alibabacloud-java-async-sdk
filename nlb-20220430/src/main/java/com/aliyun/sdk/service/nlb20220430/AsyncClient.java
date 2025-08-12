@@ -195,6 +195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLoadBalancerAttributeResponse> getLoadBalancerAttribute(GetLoadBalancerAttributeRequest request);
 
     /**
+     * @param request the request parameters of ListAsynJobs  ListAsynJobsRequest
+     * @return ListAsynJobsResponse
+     */
+    CompletableFuture<ListAsynJobsResponse> listAsynJobs(ListAsynJobsRequest request);
+
+    /**
      * @param request the request parameters of ListListenerCertificates  ListListenerCertificatesRequest
      * @return ListListenerCertificatesResponse
      */

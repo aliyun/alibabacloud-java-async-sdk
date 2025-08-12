@@ -290,7 +290,7 @@ public class CreateServerGroupRequest extends Request {
         /**
          * <p>Specifies whether to enable multi-port forwarding. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong></li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * 
@@ -322,7 +322,7 @@ public class CreateServerGroupRequest extends Request {
         /**
          * <p>Specifies whether to enable connection draining. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong></li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * 
@@ -336,7 +336,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies a timeout period for connection draining. Unit: seconds Valid values: <strong>0</strong> to <strong>900</strong>.</p>
+         * <p>Specifies a timeout period for connection draining. Unit: seconds. Valid values: <strong>0</strong> to <strong>900</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -748,7 +748,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for a health check response. Unit: seconds Valid values: <strong>1</strong> to <strong>300</strong> Default value: <strong>5</strong>.</p>
+             * <p>The timeout period for a health check response. Unit: seconds. Valid values: <strong>1</strong> to <strong>300</strong>. Default value: <strong>5</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -814,7 +814,13 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * HealthCheckHttpVersion.
+             * <p>The HTTP version used for health checks. Valid values: <strong>HTTP1.0</strong> (default) and <strong>HTTP1.1</strong>.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP1.0</p>
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -822,7 +828,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The interval at which health checks are performed. Unit: seconds Default value: <strong>5</strong></p>
+             * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong>.</p>
              * <ul>
              * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1</strong> to <strong>50</strong>.</li>
              * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1</strong> to <strong>300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
@@ -880,8 +886,8 @@ public class CreateServerGroupRequest extends Request {
 
             /**
              * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
-             * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
-             * <p>Default value: <strong>2</strong></p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * <p>Default value: <strong>2</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -907,8 +913,8 @@ public class CreateServerGroupRequest extends Request {
 
             /**
              * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
-             * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
-             * <p>Default value: <strong>2</strong></p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * <p>Default value: <strong>2</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
