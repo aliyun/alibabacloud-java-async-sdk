@@ -34,12 +34,17 @@ public class DescribeOrgsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ParentOrgId")
     private String parentOrgId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowExtras")
+    private java.util.Map<String, ?> showExtras;
+
     private DescribeOrgsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgName = builder.orgName;
         this.parentOrgId = builder.parentOrgId;
+        this.showExtras = builder.showExtras;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class DescribeOrgsRequest extends Request {
         return this.parentOrgId;
     }
 
+    /**
+     * @return showExtras
+     */
+    public java.util.Map<String, ?> getShowExtras() {
+        return this.showExtras;
+    }
+
     public static final class Builder extends Request.Builder<DescribeOrgsRequest, Builder> {
         private Long maxResults; 
         private String nextToken; 
         private String orgName; 
         private String parentOrgId; 
+        private java.util.Map<String, ?> showExtras; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class DescribeOrgsRequest extends Request {
             this.nextToken = request.nextToken;
             this.orgName = request.orgName;
             this.parentOrgId = request.parentOrgId;
+            this.showExtras = request.showExtras;
         } 
 
         /**
@@ -146,6 +160,16 @@ public class DescribeOrgsRequest extends Request {
         public Builder parentOrgId(String parentOrgId) {
             this.putQueryParameter("ParentOrgId", parentOrgId);
             this.parentOrgId = parentOrgId;
+            return this;
+        }
+
+        /**
+         * ShowExtras.
+         */
+        public Builder showExtras(java.util.Map<String, ?> showExtras) {
+            String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");
+            this.putQueryParameter("ShowExtras", showExtrasShrink);
+            this.showExtras = showExtras;
             return this;
         }
 

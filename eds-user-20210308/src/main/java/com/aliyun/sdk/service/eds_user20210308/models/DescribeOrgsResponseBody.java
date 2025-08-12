@@ -128,12 +128,16 @@ public class DescribeOrgsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgName")
         private String orgName;
 
+        @com.aliyun.core.annotation.NameInMap("OrgNamePath")
+        private String orgNamePath;
+
         @com.aliyun.core.annotation.NameInMap("ParentOrgId")
         private String parentOrgId;
 
         private Orgs(Builder builder) {
             this.orgId = builder.orgId;
             this.orgName = builder.orgName;
+            this.orgNamePath = builder.orgNamePath;
             this.parentOrgId = builder.parentOrgId;
         }
 
@@ -160,6 +164,13 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
+         * @return orgNamePath
+         */
+        public String getOrgNamePath() {
+            return this.orgNamePath;
+        }
+
+        /**
          * @return parentOrgId
          */
         public String getParentOrgId() {
@@ -169,6 +180,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         public static final class Builder {
             private String orgId; 
             private String orgName; 
+            private String orgNamePath; 
             private String parentOrgId; 
 
             private Builder() {
@@ -177,6 +189,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             private Builder(Orgs model) {
                 this.orgId = model.orgId;
                 this.orgName = model.orgName;
+                this.orgNamePath = model.orgNamePath;
                 this.parentOrgId = model.parentOrgId;
             } 
 
@@ -199,6 +212,14 @@ public class DescribeOrgsResponseBody extends TeaModel {
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
+                return this;
+            }
+
+            /**
+             * OrgNamePath.
+             */
+            public Builder orgNamePath(String orgNamePath) {
+                this.orgNamePath = orgNamePath;
                 return this;
             }
 
