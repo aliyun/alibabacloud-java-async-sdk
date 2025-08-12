@@ -29,11 +29,16 @@ public class LlmStreamChatRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TopP")
     private Float topP;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private LlmStreamChatRequest(Builder builder) {
         super(builder);
         this.messages = builder.messages;
         this.temperature = builder.temperature;
         this.topP = builder.topP;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class LlmStreamChatRequest extends Request {
         return this.topP;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<LlmStreamChatRequest, Builder> {
         private Object messages; 
         private Float temperature; 
         private Float topP; 
+        private String type; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class LlmStreamChatRequest extends Request {
             this.messages = request.messages;
             this.temperature = request.temperature;
             this.topP = request.topP;
+            this.type = request.type;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class LlmStreamChatRequest extends Request {
         public Builder topP(Float topP) {
             this.putBodyParameter("TopP", topP);
             this.topP = topP;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 
