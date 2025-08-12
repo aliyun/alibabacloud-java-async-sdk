@@ -254,6 +254,9 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyContent")
         private String notifyContent;
 
+        @com.aliyun.core.annotation.NameInMap("NotifyResponse")
+        private String notifyResponse;
+
         @com.aliyun.core.annotation.NameInMap("NotifyResult")
         private String notifyResult;
 
@@ -274,6 +277,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
             this.description = builder.description;
             this.domainName = builder.domainName;
             this.notifyContent = builder.notifyContent;
+            this.notifyResponse = builder.notifyResponse;
             this.notifyResult = builder.notifyResult;
             this.notifyTime = builder.notifyTime;
             this.notifyType = builder.notifyType;
@@ -318,6 +322,13 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notifyResponse
+         */
+        public String getNotifyResponse() {
+            return this.notifyResponse;
+        }
+
+        /**
          * @return notifyResult
          */
         public String getNotifyResult() {
@@ -357,6 +368,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
             private String description; 
             private String domainName; 
             private String notifyContent; 
+            private String notifyResponse; 
             private String notifyResult; 
             private String notifyTime; 
             private String notifyType; 
@@ -371,6 +383,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.domainName = model.domainName;
                 this.notifyContent = model.notifyContent;
+                this.notifyResponse = model.notifyResponse;
                 this.notifyResult = model.notifyResult;
                 this.notifyTime = model.notifyTime;
                 this.notifyType = model.notifyType;
@@ -419,6 +432,14 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
              */
             public Builder notifyContent(String notifyContent) {
                 this.notifyContent = notifyContent;
+                return this;
+            }
+
+            /**
+             * NotifyResponse.
+             */
+            public Builder notifyResponse(String notifyResponse) {
+                this.notifyResponse = notifyResponse;
                 return this;
             }
 

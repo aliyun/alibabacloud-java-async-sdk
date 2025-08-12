@@ -28,12 +28,21 @@ public class StartRtcCloudRecordingRequest extends Request {
     private String channelId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 10)
+    private Long maxIdleTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MixLayoutParams")
     private MixLayoutParams mixLayoutParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MixTranscodeParams")
     private MixTranscodeParams mixTranscodeParams;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyAuthKey")
+    private String notifyAuthKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotifyUrl")
@@ -58,8 +67,10 @@ public class StartRtcCloudRecordingRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.channelId = builder.channelId;
+        this.maxIdleTime = builder.maxIdleTime;
         this.mixLayoutParams = builder.mixLayoutParams;
         this.mixTranscodeParams = builder.mixTranscodeParams;
+        this.notifyAuthKey = builder.notifyAuthKey;
         this.notifyUrl = builder.notifyUrl;
         this.recordParams = builder.recordParams;
         this.storageParams = builder.storageParams;
@@ -94,6 +105,13 @@ public class StartRtcCloudRecordingRequest extends Request {
     }
 
     /**
+     * @return maxIdleTime
+     */
+    public Long getMaxIdleTime() {
+        return this.maxIdleTime;
+    }
+
+    /**
      * @return mixLayoutParams
      */
     public MixLayoutParams getMixLayoutParams() {
@@ -105,6 +123,13 @@ public class StartRtcCloudRecordingRequest extends Request {
      */
     public MixTranscodeParams getMixTranscodeParams() {
         return this.mixTranscodeParams;
+    }
+
+    /**
+     * @return notifyAuthKey
+     */
+    public String getNotifyAuthKey() {
+        return this.notifyAuthKey;
     }
 
     /**
@@ -138,8 +163,10 @@ public class StartRtcCloudRecordingRequest extends Request {
     public static final class Builder extends Request.Builder<StartRtcCloudRecordingRequest, Builder> {
         private String appId; 
         private String channelId; 
+        private Long maxIdleTime; 
         private MixLayoutParams mixLayoutParams; 
         private MixTranscodeParams mixTranscodeParams; 
+        private String notifyAuthKey; 
         private String notifyUrl; 
         private RecordParams recordParams; 
         private StorageParams storageParams; 
@@ -153,8 +180,10 @@ public class StartRtcCloudRecordingRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.channelId = request.channelId;
+            this.maxIdleTime = request.maxIdleTime;
             this.mixLayoutParams = request.mixLayoutParams;
             this.mixTranscodeParams = request.mixTranscodeParams;
+            this.notifyAuthKey = request.notifyAuthKey;
             this.notifyUrl = request.notifyUrl;
             this.recordParams = request.recordParams;
             this.storageParams = request.storageParams;
@@ -186,6 +215,15 @@ public class StartRtcCloudRecordingRequest extends Request {
         }
 
         /**
+         * MaxIdleTime.
+         */
+        public Builder maxIdleTime(Long maxIdleTime) {
+            this.putQueryParameter("MaxIdleTime", maxIdleTime);
+            this.maxIdleTime = maxIdleTime;
+            return this;
+        }
+
+        /**
          * MixLayoutParams.
          */
         public Builder mixLayoutParams(MixLayoutParams mixLayoutParams) {
@@ -202,6 +240,15 @@ public class StartRtcCloudRecordingRequest extends Request {
             String mixTranscodeParamsShrink = shrink(mixTranscodeParams, "MixTranscodeParams", "json");
             this.putQueryParameter("MixTranscodeParams", mixTranscodeParamsShrink);
             this.mixTranscodeParams = mixTranscodeParams;
+            return this;
+        }
+
+        /**
+         * NotifyAuthKey.
+         */
+        public Builder notifyAuthKey(String notifyAuthKey) {
+            this.putQueryParameter("NotifyAuthKey", notifyAuthKey);
+            this.notifyAuthKey = notifyAuthKey;
             return this;
         }
 
@@ -1050,6 +1097,9 @@ public class StartRtcCloudRecordingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("FileNamePattern")
         private String fileNamePattern;
 
+        @com.aliyun.core.annotation.NameInMap("FilePathPrefix")
+        private java.util.List<String> filePathPrefix;
+
         @com.aliyun.core.annotation.NameInMap("Format")
         @com.aliyun.core.annotation.Validation(required = true)
         private String format;
@@ -1059,6 +1109,7 @@ public class StartRtcCloudRecordingRequest extends Request {
 
         private FileInfo(Builder builder) {
             this.fileNamePattern = builder.fileNamePattern;
+            this.filePathPrefix = builder.filePathPrefix;
             this.format = builder.format;
             this.sliceNamePattern = builder.sliceNamePattern;
         }
@@ -1079,6 +1130,13 @@ public class StartRtcCloudRecordingRequest extends Request {
         }
 
         /**
+         * @return filePathPrefix
+         */
+        public java.util.List<String> getFilePathPrefix() {
+            return this.filePathPrefix;
+        }
+
+        /**
          * @return format
          */
         public String getFormat() {
@@ -1094,6 +1152,7 @@ public class StartRtcCloudRecordingRequest extends Request {
 
         public static final class Builder {
             private String fileNamePattern; 
+            private java.util.List<String> filePathPrefix; 
             private String format; 
             private String sliceNamePattern; 
 
@@ -1102,6 +1161,7 @@ public class StartRtcCloudRecordingRequest extends Request {
 
             private Builder(FileInfo model) {
                 this.fileNamePattern = model.fileNamePattern;
+                this.filePathPrefix = model.filePathPrefix;
                 this.format = model.format;
                 this.sliceNamePattern = model.sliceNamePattern;
             } 
@@ -1111,6 +1171,14 @@ public class StartRtcCloudRecordingRequest extends Request {
              */
             public Builder fileNamePattern(String fileNamePattern) {
                 this.fileNamePattern = fileNamePattern;
+                return this;
+            }
+
+            /**
+             * FilePathPrefix.
+             */
+            public Builder filePathPrefix(java.util.List<String> filePathPrefix) {
+                this.filePathPrefix = filePathPrefix;
                 return this;
             }
 
@@ -1229,6 +1297,123 @@ public class StartRtcCloudRecordingRequest extends Request {
      *
      * <p>StartRtcCloudRecordingRequest</p>
      */
+    public static class VodParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoCompose")
+        private Integer autoCompose;
+
+        @com.aliyun.core.annotation.NameInMap("ComposeVodTranscodeGroupId")
+        private String composeVodTranscodeGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
+        private String storageLocation;
+
+        @com.aliyun.core.annotation.NameInMap("VodTranscodeGroupId")
+        private String vodTranscodeGroupId;
+
+        private VodParams(Builder builder) {
+            this.autoCompose = builder.autoCompose;
+            this.composeVodTranscodeGroupId = builder.composeVodTranscodeGroupId;
+            this.storageLocation = builder.storageLocation;
+            this.vodTranscodeGroupId = builder.vodTranscodeGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VodParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoCompose
+         */
+        public Integer getAutoCompose() {
+            return this.autoCompose;
+        }
+
+        /**
+         * @return composeVodTranscodeGroupId
+         */
+        public String getComposeVodTranscodeGroupId() {
+            return this.composeVodTranscodeGroupId;
+        }
+
+        /**
+         * @return storageLocation
+         */
+        public String getStorageLocation() {
+            return this.storageLocation;
+        }
+
+        /**
+         * @return vodTranscodeGroupId
+         */
+        public String getVodTranscodeGroupId() {
+            return this.vodTranscodeGroupId;
+        }
+
+        public static final class Builder {
+            private Integer autoCompose; 
+            private String composeVodTranscodeGroupId; 
+            private String storageLocation; 
+            private String vodTranscodeGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VodParams model) {
+                this.autoCompose = model.autoCompose;
+                this.composeVodTranscodeGroupId = model.composeVodTranscodeGroupId;
+                this.storageLocation = model.storageLocation;
+                this.vodTranscodeGroupId = model.vodTranscodeGroupId;
+            } 
+
+            /**
+             * AutoCompose.
+             */
+            public Builder autoCompose(Integer autoCompose) {
+                this.autoCompose = autoCompose;
+                return this;
+            }
+
+            /**
+             * ComposeVodTranscodeGroupId.
+             */
+            public Builder composeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
+                this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
+                return this;
+            }
+
+            /**
+             * StorageLocation.
+             */
+            public Builder storageLocation(String storageLocation) {
+                this.storageLocation = storageLocation;
+                return this;
+            }
+
+            /**
+             * VodTranscodeGroupId.
+             */
+            public Builder vodTranscodeGroupId(String vodTranscodeGroupId) {
+                this.vodTranscodeGroupId = vodTranscodeGroupId;
+                return this;
+            }
+
+            public VodParams build() {
+                return new VodParams(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartRtcCloudRecordingRequest} extends {@link TeaModel}
+     *
+     * <p>StartRtcCloudRecordingRequest</p>
+     */
     public static class StorageParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileInfo")
         private java.util.List<FileInfo> fileInfo;
@@ -1240,10 +1425,14 @@ public class StartRtcCloudRecordingRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer storageType;
 
+        @com.aliyun.core.annotation.NameInMap("VodParams")
+        private VodParams vodParams;
+
         private StorageParams(Builder builder) {
             this.fileInfo = builder.fileInfo;
             this.OSSParams = builder.OSSParams;
             this.storageType = builder.storageType;
+            this.vodParams = builder.vodParams;
         }
 
         public static Builder builder() {
@@ -1275,10 +1464,18 @@ public class StartRtcCloudRecordingRequest extends Request {
             return this.storageType;
         }
 
+        /**
+         * @return vodParams
+         */
+        public VodParams getVodParams() {
+            return this.vodParams;
+        }
+
         public static final class Builder {
             private java.util.List<FileInfo> fileInfo; 
             private OSSParams OSSParams; 
             private Integer storageType; 
+            private VodParams vodParams; 
 
             private Builder() {
             } 
@@ -1287,6 +1484,7 @@ public class StartRtcCloudRecordingRequest extends Request {
                 this.fileInfo = model.fileInfo;
                 this.OSSParams = model.OSSParams;
                 this.storageType = model.storageType;
+                this.vodParams = model.vodParams;
             } 
 
             /**
@@ -1313,6 +1511,14 @@ public class StartRtcCloudRecordingRequest extends Request {
              */
             public Builder storageType(Integer storageType) {
                 this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * VodParams.
+             */
+            public Builder vodParams(VodParams vodParams) {
+                this.vodParams = vodParams;
                 return this;
             }
 

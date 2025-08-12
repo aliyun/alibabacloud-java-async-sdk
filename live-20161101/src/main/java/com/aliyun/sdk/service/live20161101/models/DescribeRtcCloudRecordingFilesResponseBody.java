@@ -94,6 +94,102 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
      *
      * <p>DescribeRtcCloudRecordingFilesResponseBody</p>
      */
+    public static class VodMediaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaIds")
+        private java.util.List<String> mediaIds;
+
+        @com.aliyun.core.annotation.NameInMap("MergedIds")
+        private java.util.List<String> mergedIds;
+
+        @com.aliyun.core.annotation.NameInMap("Stream")
+        private String stream;
+
+        private VodMediaList(Builder builder) {
+            this.mediaIds = builder.mediaIds;
+            this.mergedIds = builder.mergedIds;
+            this.stream = builder.stream;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VodMediaList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mediaIds
+         */
+        public java.util.List<String> getMediaIds() {
+            return this.mediaIds;
+        }
+
+        /**
+         * @return mergedIds
+         */
+        public java.util.List<String> getMergedIds() {
+            return this.mergedIds;
+        }
+
+        /**
+         * @return stream
+         */
+        public String getStream() {
+            return this.stream;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> mediaIds; 
+            private java.util.List<String> mergedIds; 
+            private String stream; 
+
+            private Builder() {
+            } 
+
+            private Builder(VodMediaList model) {
+                this.mediaIds = model.mediaIds;
+                this.mergedIds = model.mergedIds;
+                this.stream = model.stream;
+            } 
+
+            /**
+             * MediaIds.
+             */
+            public Builder mediaIds(java.util.List<String> mediaIds) {
+                this.mediaIds = mediaIds;
+                return this;
+            }
+
+            /**
+             * MergedIds.
+             */
+            public Builder mergedIds(java.util.List<String> mergedIds) {
+                this.mergedIds = mergedIds;
+                return this;
+            }
+
+            /**
+             * Stream.
+             */
+            public Builder stream(String stream) {
+                this.stream = stream;
+                return this;
+            }
+
+            public VodMediaList build() {
+                return new VodMediaList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRtcCloudRecordingFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcCloudRecordingFilesResponseBody</p>
+     */
     public static class RecordFileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HlsFileList")
         private java.util.List<String> hlsFileList;
@@ -104,10 +200,14 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mp4FileList")
         private java.util.List<String> mp4FileList;
 
+        @com.aliyun.core.annotation.NameInMap("VodMediaList")
+        private java.util.List<VodMediaList> vodMediaList;
+
         private RecordFileList(Builder builder) {
             this.hlsFileList = builder.hlsFileList;
             this.mp3FileList = builder.mp3FileList;
             this.mp4FileList = builder.mp4FileList;
+            this.vodMediaList = builder.vodMediaList;
         }
 
         public static Builder builder() {
@@ -139,10 +239,18 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
             return this.mp4FileList;
         }
 
+        /**
+         * @return vodMediaList
+         */
+        public java.util.List<VodMediaList> getVodMediaList() {
+            return this.vodMediaList;
+        }
+
         public static final class Builder {
             private java.util.List<String> hlsFileList; 
             private java.util.List<String> mp3FileList; 
             private java.util.List<String> mp4FileList; 
+            private java.util.List<VodMediaList> vodMediaList; 
 
             private Builder() {
             } 
@@ -151,6 +259,7 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
                 this.hlsFileList = model.hlsFileList;
                 this.mp3FileList = model.mp3FileList;
                 this.mp4FileList = model.mp4FileList;
+                this.vodMediaList = model.vodMediaList;
             } 
 
             /**
@@ -174,6 +283,14 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
              */
             public Builder mp4FileList(java.util.List<String> mp4FileList) {
                 this.mp4FileList = mp4FileList;
+                return this;
+            }
+
+            /**
+             * VodMediaList.
+             */
+            public Builder vodMediaList(java.util.List<VodMediaList> vodMediaList) {
+                this.vodMediaList = vodMediaList;
                 return this;
             }
 
