@@ -186,6 +186,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFileResponse> describeFile(DescribeFileRequest request);
 
     /**
+     * @param request the request parameters of GetAlipayTransferStatus  GetAlipayTransferStatusRequest
+     * @return GetAlipayTransferStatusResponse
+     */
+    CompletableFuture<GetAlipayTransferStatusResponse> getAlipayTransferStatus(GetAlipayTransferStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetAlipayUrl  GetAlipayUrlRequest
+     * @return GetAlipayUrlResponse
+     */
+    CompletableFuture<GetAlipayUrlResponse> getAlipayUrl(GetAlipayUrlRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
