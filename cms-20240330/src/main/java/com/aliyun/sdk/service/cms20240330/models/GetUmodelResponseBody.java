@@ -161,15 +161,11 @@ public class GetUmodelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("group")
         private String group;
 
-        @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List<String> items;
-
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private CommonSchemaRef(Builder builder) {
             this.group = builder.group;
-            this.items = builder.items;
             this.version = builder.version;
         }
 
@@ -189,13 +185,6 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * @return items
-         */
-        public java.util.List<String> getItems() {
-            return this.items;
-        }
-
-        /**
          * @return version
          */
         public String getVersion() {
@@ -204,7 +193,6 @@ public class GetUmodelResponseBody extends TeaModel {
 
         public static final class Builder {
             private String group; 
-            private java.util.List<String> items; 
             private String version; 
 
             private Builder() {
@@ -212,7 +200,6 @@ public class GetUmodelResponseBody extends TeaModel {
 
             private Builder(CommonSchemaRef model) {
                 this.group = model.group;
-                this.items = model.items;
                 this.version = model.version;
             } 
 
@@ -221,14 +208,6 @@ public class GetUmodelResponseBody extends TeaModel {
              */
             public Builder group(String group) {
                 this.group = group;
-                return this;
-            }
-
-            /**
-             * items.
-             */
-            public Builder items(java.util.List<String> items) {
-                this.items = items;
                 return this;
             }
 

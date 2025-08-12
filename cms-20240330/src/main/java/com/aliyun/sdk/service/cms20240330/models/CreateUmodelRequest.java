@@ -23,17 +23,12 @@ public class CreateUmodelRequest extends Request {
     private String workspace;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("commonSchemaRef")
-    private java.util.List<CommonSchemaRef> commonSchemaRef;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
     private CreateUmodelRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
-        this.commonSchemaRef = builder.commonSchemaRef;
         this.description = builder.description;
     }
 
@@ -58,13 +53,6 @@ public class CreateUmodelRequest extends Request {
     }
 
     /**
-     * @return commonSchemaRef
-     */
-    public java.util.List<CommonSchemaRef> getCommonSchemaRef() {
-        return this.commonSchemaRef;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
@@ -73,7 +61,6 @@ public class CreateUmodelRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateUmodelRequest, Builder> {
         private String workspace; 
-        private java.util.List<CommonSchemaRef> commonSchemaRef; 
         private String description; 
 
         private Builder() {
@@ -83,7 +70,6 @@ public class CreateUmodelRequest extends Request {
         private Builder(CreateUmodelRequest request) {
             super(request);
             this.workspace = request.workspace;
-            this.commonSchemaRef = request.commonSchemaRef;
             this.description = request.description;
         } 
 
@@ -96,15 +82,6 @@ public class CreateUmodelRequest extends Request {
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
             this.workspace = workspace;
-            return this;
-        }
-
-        /**
-         * commonSchemaRef.
-         */
-        public Builder commonSchemaRef(java.util.List<CommonSchemaRef> commonSchemaRef) {
-            this.putBodyParameter("commonSchemaRef", commonSchemaRef);
-            this.commonSchemaRef = commonSchemaRef;
             return this;
         }
 
@@ -124,100 +101,4 @@ public class CreateUmodelRequest extends Request {
 
     } 
 
-    /**
-     * 
-     * {@link CreateUmodelRequest} extends {@link TeaModel}
-     *
-     * <p>CreateUmodelRequest</p>
-     */
-    public static class CommonSchemaRef extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("group")
-        private String group;
-
-        @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List<String> items;
-
-        @com.aliyun.core.annotation.NameInMap("version")
-        private String version;
-
-        private CommonSchemaRef(Builder builder) {
-            this.group = builder.group;
-            this.items = builder.items;
-            this.version = builder.version;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CommonSchemaRef create() {
-            return builder().build();
-        }
-
-        /**
-         * @return group
-         */
-        public String getGroup() {
-            return this.group;
-        }
-
-        /**
-         * @return items
-         */
-        public java.util.List<String> getItems() {
-            return this.items;
-        }
-
-        /**
-         * @return version
-         */
-        public String getVersion() {
-            return this.version;
-        }
-
-        public static final class Builder {
-            private String group; 
-            private java.util.List<String> items; 
-            private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(CommonSchemaRef model) {
-                this.group = model.group;
-                this.items = model.items;
-                this.version = model.version;
-            } 
-
-            /**
-             * group.
-             */
-            public Builder group(String group) {
-                this.group = group;
-                return this;
-            }
-
-            /**
-             * items.
-             */
-            public Builder items(java.util.List<String> items) {
-                this.items = items;
-                return this;
-            }
-
-            /**
-             * version.
-             */
-            public Builder version(String version) {
-                this.version = version;
-                return this;
-            }
-
-            public CommonSchemaRef build() {
-                return new CommonSchemaRef(this);
-            } 
-
-        } 
-
-    }
 }
