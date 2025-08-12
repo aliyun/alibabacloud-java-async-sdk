@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
 
     public static CreateGroupMetricRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         private String requestId; 
         private Resources resources; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupMetricRulesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -230,6 +250,17 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             private String ruleName; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertResult model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The status code that is returned for the alert rule.</p>
              * <blockquote>
@@ -307,7 +338,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertResult")
-        private java.util.List < AlertResult> alertResult;
+        private java.util.List<AlertResult> alertResult;
 
         private Resources(Builder builder) {
             this.alertResult = builder.alertResult;
@@ -324,17 +355,24 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         /**
          * @return alertResult
          */
-        public java.util.List < AlertResult> getAlertResult() {
+        public java.util.List<AlertResult> getAlertResult() {
             return this.alertResult;
         }
 
         public static final class Builder {
-            private java.util.List < AlertResult> alertResult; 
+            private java.util.List<AlertResult> alertResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.alertResult = model.alertResult;
+            } 
 
             /**
              * AlertResult.
              */
-            public Builder alertResult(java.util.List < AlertResult> alertResult) {
+            public Builder alertResult(java.util.List<AlertResult> alertResult) {
                 this.alertResult = alertResult;
                 return this;
             }

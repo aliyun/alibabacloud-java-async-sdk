@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DisableActiveMetricRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,19 +60,19 @@ public class DisableActiveMetricRuleRequest extends Request {
         } 
 
         /**
-         * <p>The service for which you want to disable one-click alert. Valid values:</p>
+         * <p>The cloud service for which you want to disable proactive alerting. Valid values:</p>
          * <ul>
-         * <li>ecs: Elastic Compute Service (ECS)</li>
+         * <li>ECS: Elastic Compute Service (ECS)</li>
          * <li>rds: ApsaraDB RDS</li>
          * <li>slb: Server Load Balancer (SLB)</li>
-         * <li>redis_standard: ApsaraDB for Redis of the standard architecture</li>
-         * <li>redis_sharding: ApsaraDB for Redis of the cluster architecture</li>
-         * <li>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</li>
+         * <li>redis_standard: Redis Open-Source Edition (standard architecture)</li>
+         * <li>redis_sharding: Redis Open-Source Edition (cluster architecture)</li>
+         * <li>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</li>
          * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
          * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
          * <li>hbase: ApsaraDB for HBase</li>
          * <li>elasticsearch: Elasticsearch</li>
-         * <li>opensearch: Open Search</li>
+         * <li>opensearch: OpenSearch</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

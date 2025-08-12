@@ -94,9 +94,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Prerequisites</h1>
+     * <h2><a href="#"></a>Prerequisites</h2>
      * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h1><a href="#"></a>Description</h1>
+     * <h2><a href="#"></a>Operation description</h2>
      * <p>This topic provides an example on how to create a namespace named <code>aliyun</code>. In this example, the data retention period of the namespace is set to <code>cms.s1.3xlarge</code>. The returned result indicates that the namespace is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorNamespace  CreateHybridMonitorNamespaceRequest
@@ -106,9 +106,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <p>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</p>
-     * <h2><a href="#"></a>Description</h2>
+     * <h3><a href="#"></a>Operation description</h3>
      * <p>This topic provides an example on how to create a Logstore group named <code>Logstore_test</code>. The region ID is <code>cn-hangzhou</code>. The project is <code>aliyun-project</code>. The Logstore is <code>Logstore-ECS</code>. The response shows that the Logstore group is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorSLSGroup  CreateHybridMonitorSLSGroupRequest
@@ -203,7 +203,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>If the policy is valid, no alert notifications are sent for the application group.
-     * This topic describes how to create the <code>PauseNotify</code> policy to pause alert notifications for the <code>7301****</code> application group. The StartTime parameter is set to <code>1622949300000</code> and the EndTime parameter is set to <code>1623208500000</code>. This indicates that the policy is valid from <code>2021-06-06 11:15:00 UTC+8</code> to <code>2021-06-09 11:15:00 UTC+8</code>.</p>
+     * This topic describes how to create a <code>PauseNotify</code> policy to pause alert notifications for the <code>7301****</code> application group. The StartTime parameter is set to <code>1622949300000</code> and the EndTime parameter is set to <code>1623208500000</code>. This indicates that the policy is valid from <code>2021-06-06 11:15:00 UTC+8</code> to <code>2021-06-09 11:15:00 UTC+8</code>.</p>
      * 
      * @param request the request parameters of CreateMonitorGroupNotifyPolicy  CreateMonitorGroupNotifyPolicyRequest
      * @return CreateMonitorGroupNotifyPolicyResponse
@@ -478,7 +478,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation counts the number of times that a custom event occurred for each service.</p>
+     * <p> This operation queries the number of times that a custom event occurred for each service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeCustomEventCount  DescribeCustomEventCountRequest
@@ -568,11 +568,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Prerequisites</h1>
+     * <h2><a href="#"></a>Prerequisites</h2>
      * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h1><a href="#"></a>Limits</h1>
+     * <h2><a href="#"></a>Limits</h2>
      * <p>The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.</p>
-     * <h1><a href="#"></a>Description</h1>
+     * <h2><a href="#"></a>Operation description</h2>
      * <p>This topic provides an example to show how to query the monitoring data of the <code>AliyunEcs_cpu_total</code> metric in the <code>default-aliyun</code> namespace from <code>1653804865</code> (14:14:25 on May 29, 2022) to <code>1653805225</code> (14:20:25 on May 29, 2022).</p>
      * 
      * @param request the request parameters of DescribeHybridMonitorDataList  DescribeHybridMonitorDataListRequest
@@ -622,11 +622,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Limits</h3>
-     * <p>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</p>
+     * <ul>
+     * <li>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. If the free quota is used up, you are automatically charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</li>
+     * <li>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</li>
+     * </ul>
      * <h3><a href="#"></a>Description</h3>
      * <blockquote>
      * <p> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <code>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</code> to aggregate all data of your Alibaba Cloud account.
-     * This topic provides an example to show how to query the monitoring data of the <code>cpu_idle</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>.</p>
+     * This topic provides an example on how to query the monitoring data of the <code>cpu_idle</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeMetricData  DescribeMetricDataRequest
@@ -637,18 +640,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Limits</h3>
-     * <p>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</p>
-     * <blockquote>
+     * <ul>
+     * <li>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</li>
+     * <li>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<blockquote>
      * <p> If <code>Throttling.User</code> or <code>Request was denied due to user flow control</code> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <p>The storage duration of the monitoring data of each cloud service is related to the <code>Period</code> parameter (statistical period). A larger value of the <code>Period</code> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</p>
      * <ul>
-     * <li>If the value of the <code>Period</code> parameter is less than 60 seconds, the storage duration is seven days.</li>
-     * <li>If the value of the <code>Period</code> parameter is 60 seconds, the storage duration is 31 days.</li>
-     * <li>If the value of the <code>Period</code> parameter is 300 seconds, the storage duration is 91 days.</li>
+     * <li>The storage duration is 7 days if the value of the <code>Period</code> parameter is less than 60 seconds.</li>
+     * <li>The storage duration is 31 days if the value of the <code>Period</code> parameter is 60 seconds.</li>
+     * <li>The storage duration is 91 days if the value of the <code>Period</code> parameter is greater than or equal to 300 seconds.</li>
      * </ul>
-     * <h3><a href="#"></a>Description</h3>
+     * <h3><a href="#"></a>Operation description</h3>
      * <p>This topic provides an example on how to query the latest monitoring data of the <code>CPUUtilization</code> metric for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The returned result indicates that the monitoring data for the instance <code>i-abcdefgh12****</code> of the account <code>123456789876****</code> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</p>
      * 
      * @param request the request parameters of DescribeMetricLast  DescribeMetricLastRequest
@@ -733,16 +739,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Limits</h3>
-     * <p>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</p>
+     * <ul>
+     * <li>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</li>
+     * <li>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</li>
+     * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <p>The storage duration of the monitoring data of each cloud service is related to the <code>Period</code> parameter (statistical period). A larger value of the <code>Period</code> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</p>
      * <ul>
-     * <li>If the value of the <code>Period</code> parameter is less than 60 seconds, the storage duration is seven days.</li>
-     * <li>If the value of the <code>Period</code> parameter is 60 seconds, the storage duration is 31 days.</li>
-     * <li>If the value of the <code>Period</code> parameter is 300 seconds, the storage duration is 91 days.</li>
+     * <li>The storage duration is 7 days if the value of the <code>Period</code> parameter is less than 60 seconds.</li>
+     * <li>The storage duration is 31 days if the value of the <code>Period</code> parameter is 60 seconds.</li>
+     * <li>The storage duration is 91 days if the value of the <code>Period</code> is greater than or equal to 300 seconds.</li>
      * </ul>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example to show how to query the monitoring data of the <code>cpu_idle</code> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The monitoring data is sorted in the descending order based on the <code>Average</code> field.</p>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>This topic provides an example on how to query the monitoring data of the <code>cpu_idle</code> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <code>acs_ecs_dashboard</code>. The monitoring data is sorted in descending order based on the <code>Average</code> field.</p>
      * 
      * @param request the request parameters of DescribeMetricTop  DescribeMetricTopRequest
      * @return DescribeMetricTopResponse
@@ -1144,13 +1153,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySiteMonitorResponse> modifySiteMonitor(ModifySiteMonitorRequest request);
 
     /**
-     * @deprecated OpenAPI OpenCmsService is deprecated  * @param request  the request parameters of OpenCmsService  OpenCmsServiceRequest
-     * @return OpenCmsServiceResponse
-     */
-    @Deprecated
-    CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request);
-
-    /**
      * @param request the request parameters of PutContact  PutContactRequest
      * @return PutContactResponse
      */
@@ -1244,11 +1246,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Prerequisites</h1>
+     * <h2><a href="#"></a>Prerequisites</h2>
      * <p>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h1><a href="#"></a>Limits</h1>
+     * <h2><a href="#"></a>Limits</h2>
      * <p>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</p>
-     * <h1><a href="#"></a>Description</h1>
+     * <h2><a href="#"></a>Operation description</h2>
      * <p>This topic provides an example on how to import the monitoring data of the <code>CPU_Usage</code> metric to the <code>default-aliyun</code> namespace of Hybrid Cloud Monitoring.</p>
      * 
      * @param request the request parameters of PutHybridMonitorMetricData  PutHybridMonitorMetricDataRequest
@@ -1319,7 +1321,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.</p>
+     * <p>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</p>
      * 
      * @param request the request parameters of SendDryRunSystemEvent  SendDryRunSystemEventRequest
      * @return SendDryRunSystemEventResponse
@@ -1329,7 +1331,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the Cloud Monitor agent</a>.</p>
+     * <p> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UninstallMonitoringAgent  UninstallMonitoringAgentRequest

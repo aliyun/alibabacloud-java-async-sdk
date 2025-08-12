@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeTagValueListResponseBody extends TeaModel {
 
     public static DescribeTagValueListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,10 +94,21 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         private Boolean success; 
         private TagValues tagValues; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagValueListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagValues = model.tagValues;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The value 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,7 +131,7 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
@@ -122,10 +142,10 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +157,7 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag values returned.</p>
+         * TagValues.
          */
         public Builder tagValues(TagValues tagValues) {
             this.tagValues = tagValues;
@@ -158,7 +178,7 @@ public class DescribeTagValueListResponseBody extends TeaModel {
      */
     public static class TagValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValue")
-        private java.util.List < String > tagValue;
+        private java.util.List<String> tagValue;
 
         private TagValues(Builder builder) {
             this.tagValue = builder.tagValue;
@@ -175,17 +195,24 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         /**
          * @return tagValue
          */
-        public java.util.List < String > getTagValue() {
+        public java.util.List<String> getTagValue() {
             return this.tagValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > tagValue; 
+            private java.util.List<String> tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagValues model) {
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagValue.
              */
-            public Builder tagValue(java.util.List < String > tagValue) {
+            public Builder tagValue(java.util.List<String> tagValue) {
                 this.tagValue = tagValue;
                 return this;
             }

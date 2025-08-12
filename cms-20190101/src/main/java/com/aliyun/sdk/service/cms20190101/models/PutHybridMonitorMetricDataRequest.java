@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MetricList> metricList;
+    private java.util.List<MetricList> metricList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -36,7 +41,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
     /**
      * @return metricList
      */
-    public java.util.List < MetricList> getMetricList() {
+    public java.util.List<MetricList> getMetricList() {
         return this.metricList;
     }
 
@@ -56,7 +61,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutHybridMonitorMetricDataRequest, Builder> {
-        private java.util.List < MetricList> metricList; 
+        private java.util.List<MetricList> metricList; 
         private String namespace; 
 
         private Builder() {
@@ -74,7 +79,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
          * <p>Valid values of N: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder metricList(java.util.List < MetricList> metricList) {
+        public Builder metricList(java.util.List<MetricList> metricList) {
             this.putQueryParameter("MetricList", metricList);
             this.metricList = metricList;
             return this;
@@ -145,6 +150,14 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the metric.</p>
              * <p>Valid values of N: 1 to 100.</p>
@@ -191,7 +204,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
      */
     public static class MetricList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
@@ -222,7 +235,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -248,10 +261,20 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
             private Long ts; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricList model) {
+                this.labels = model.labels;
+                this.name = model.name;
+                this.ts = model.ts;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tags of the metric.</p>
@@ -260,7 +283,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
              * <strong>example:</strong>
              * <p>app、ip、hostName等标识信息</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

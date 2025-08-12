@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     public static DescribeEventRuleTargetListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         private String requestId; 
         private SlsParameters slsParameters; 
         private WebhookParameters webhookParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventRuleTargetListResponseBody model) {
+            this.code = model.code;
+            this.contactParameters = model.contactParameters;
+            this.fcParameters = model.fcParameters;
+            this.message = model.message;
+            this.mnsParameters = model.mnsParameters;
+            this.openApiParameters = model.openApiParameters;
+            this.requestId = model.requestId;
+            this.slsParameters = model.slsParameters;
+            this.webhookParameters = model.webhookParameters;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -279,6 +303,15 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String id; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactParameter model) {
+                this.contactGroupName = model.contactGroupName;
+                this.id = model.id;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The name of the alert group.</p>
              */
@@ -325,7 +358,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class ContactParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactParameter")
-        private java.util.List < ContactParameter> contactParameter;
+        private java.util.List<ContactParameter> contactParameter;
 
         private ContactParameters(Builder builder) {
             this.contactParameter = builder.contactParameter;
@@ -342,17 +375,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return contactParameter
          */
-        public java.util.List < ContactParameter> getContactParameter() {
+        public java.util.List<ContactParameter> getContactParameter() {
             return this.contactParameter;
         }
 
         public static final class Builder {
-            private java.util.List < ContactParameter> contactParameter; 
+            private java.util.List<ContactParameter> contactParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactParameters model) {
+                this.contactParameter = model.contactParameter;
+            } 
 
             /**
              * ContactParameter.
              */
-            public Builder contactParameter(java.util.List < ContactParameter> contactParameter) {
+            public Builder contactParameter(java.util.List<ContactParameter> contactParameter) {
                 this.contactParameter = contactParameter;
                 return this;
             }
@@ -444,6 +484,17 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String region; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FCParameter model) {
+                this.arn = model.arn;
+                this.functionName = model.functionName;
+                this.id = model.id;
+                this.region = model.region;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the function. </p>
              * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
@@ -519,7 +570,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class FcParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FCParameter")
-        private java.util.List < FCParameter> FCParameter;
+        private java.util.List<FCParameter> FCParameter;
 
         private FcParameters(Builder builder) {
             this.FCParameter = builder.FCParameter;
@@ -536,17 +587,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return FCParameter
          */
-        public java.util.List < FCParameter> getFCParameter() {
+        public java.util.List<FCParameter> getFCParameter() {
             return this.FCParameter;
         }
 
         public static final class Builder {
-            private java.util.List < FCParameter> FCParameter; 
+            private java.util.List<FCParameter> FCParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(FcParameters model) {
+                this.FCParameter = model.FCParameter;
+            } 
 
             /**
              * FCParameter.
              */
-            public Builder FCParameter(java.util.List < FCParameter> FCParameter) {
+            public Builder FCParameter(java.util.List<FCParameter> FCParameter) {
                 this.FCParameter = FCParameter;
                 return this;
             }
@@ -638,6 +696,17 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String region; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(MnsParameter model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.queue = model.queue;
+                this.region = model.region;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The ARN of the MNS queue. </p>
              * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
@@ -713,7 +782,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class MnsParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MnsParameter")
-        private java.util.List < MnsParameter> mnsParameter;
+        private java.util.List<MnsParameter> mnsParameter;
 
         private MnsParameters(Builder builder) {
             this.mnsParameter = builder.mnsParameter;
@@ -730,17 +799,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return mnsParameter
          */
-        public java.util.List < MnsParameter> getMnsParameter() {
+        public java.util.List<MnsParameter> getMnsParameter() {
             return this.mnsParameter;
         }
 
         public static final class Builder {
-            private java.util.List < MnsParameter> mnsParameter; 
+            private java.util.List<MnsParameter> mnsParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(MnsParameters model) {
+                this.mnsParameter = model.mnsParameter;
+            } 
 
             /**
              * MnsParameter.
              */
-            public Builder mnsParameter(java.util.List < MnsParameter> mnsParameter) {
+            public Builder mnsParameter(java.util.List<MnsParameter> mnsParameter) {
                 this.mnsParameter = mnsParameter;
                 return this;
             }
@@ -856,6 +932,19 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String role; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenApiParametersOpenApiParameters model) {
+                this.action = model.action;
+                this.arn = model.arn;
+                this.id = model.id;
+                this.product = model.product;
+                this.region = model.region;
+                this.role = model.role;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the API operation.</p>
              * 
@@ -961,7 +1050,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class OpenApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
-        private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters;
+        private java.util.List<OpenApiParametersOpenApiParameters> openApiParameters;
 
         private OpenApiParameters(Builder builder) {
             this.openApiParameters = builder.openApiParameters;
@@ -978,17 +1067,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return openApiParameters
          */
-        public java.util.List < OpenApiParametersOpenApiParameters> getOpenApiParameters() {
+        public java.util.List<OpenApiParametersOpenApiParameters> getOpenApiParameters() {
             return this.openApiParameters;
         }
 
         public static final class Builder {
-            private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters; 
+            private java.util.List<OpenApiParametersOpenApiParameters> openApiParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpenApiParameters model) {
+                this.openApiParameters = model.openApiParameters;
+            } 
 
             /**
              * <p>The information about the recipients in OpenAPI Explorer.</p>
              */
-            public Builder openApiParameters(java.util.List < OpenApiParametersOpenApiParameters> openApiParameters) {
+            public Builder openApiParameters(java.util.List<OpenApiParametersOpenApiParameters> openApiParameters) {
                 this.openApiParameters = openApiParameters;
                 return this;
             }
@@ -1080,6 +1176,17 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String project; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlsParameter model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.region = model.region;
+            } 
+
             /**
              * <p>The ARN of the Log Service Logstore. </p>
              * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
@@ -1155,7 +1262,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class SlsParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsParameter")
-        private java.util.List < SlsParameter> slsParameter;
+        private java.util.List<SlsParameter> slsParameter;
 
         private SlsParameters(Builder builder) {
             this.slsParameter = builder.slsParameter;
@@ -1172,17 +1279,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return slsParameter
          */
-        public java.util.List < SlsParameter> getSlsParameter() {
+        public java.util.List<SlsParameter> getSlsParameter() {
             return this.slsParameter;
         }
 
         public static final class Builder {
-            private java.util.List < SlsParameter> slsParameter; 
+            private java.util.List<SlsParameter> slsParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsParameters model) {
+                this.slsParameter = model.slsParameter;
+            } 
 
             /**
              * SlsParameter.
              */
-            public Builder slsParameter(java.util.List < SlsParameter> slsParameter) {
+            public Builder slsParameter(java.util.List<SlsParameter> slsParameter) {
                 this.slsParameter = slsParameter;
                 return this;
             }
@@ -1262,6 +1376,16 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String protocol; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebhookParameter model) {
+                this.id = model.id;
+                this.method = model.method;
+                this.protocol = model.protocol;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The ID of the recipient.</p>
              * 
@@ -1321,7 +1445,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
      */
     public static class WebhookParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WebhookParameter")
-        private java.util.List < WebhookParameter> webhookParameter;
+        private java.util.List<WebhookParameter> webhookParameter;
 
         private WebhookParameters(Builder builder) {
             this.webhookParameter = builder.webhookParameter;
@@ -1338,17 +1462,24 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         /**
          * @return webhookParameter
          */
-        public java.util.List < WebhookParameter> getWebhookParameter() {
+        public java.util.List<WebhookParameter> getWebhookParameter() {
             return this.webhookParameter;
         }
 
         public static final class Builder {
-            private java.util.List < WebhookParameter> webhookParameter; 
+            private java.util.List<WebhookParameter> webhookParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebhookParameters model) {
+                this.webhookParameter = model.webhookParameter;
+            } 
 
             /**
              * WebhookParameter.
              */
-            public Builder webhookParameter(java.util.List < WebhookParameter> webhookParameter) {
+            public Builder webhookParameter(java.util.List<WebhookParameter> webhookParameter) {
                 this.webhookParameter = webhookParameter;
                 return this;
             }

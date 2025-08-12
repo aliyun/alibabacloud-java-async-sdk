@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
 
     public static DescribeMonitorGroupInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         private Resources resources; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupInstancesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -295,6 +318,17 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.category = model.category;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The abbreviation of the service name.</p>
              * 
@@ -365,7 +399,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -382,17 +416,24 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

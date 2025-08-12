@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     private String success;
 
     @com.aliyun.core.annotation.NameInMap("TaskList")
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
@@ -53,6 +58,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static DescribeHybridMonitorTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -100,7 +109,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
@@ -118,8 +127,22 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private String success; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridMonitorTaskListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskList = model.taskList;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -201,7 +224,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The metric import tasks.</p>
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }
@@ -266,6 +289,14 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachLabels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -351,6 +382,15 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String function; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchExpress model) {
+                this.function = model.function;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to match the instance name. Valid values:</p>
@@ -444,6 +484,14 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String alias; 
             private String express; 
 
+            private Builder() {
+            } 
+
+            private Builder(Express model) {
+                this.alias = model.alias;
+                this.express = model.express;
+            } 
+
             /**
              * <p>The alias of the extended field that indicates the result of basic operations that are performed on aggregation results.</p>
              * 
@@ -529,6 +577,15 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String SLSKeyName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.operator = model.operator;
+                this.SLSKeyName = model.SLSKeyName;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
              * <ul>
@@ -587,7 +644,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
@@ -608,7 +665,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -620,13 +677,21 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private String relation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.filters = model.filters;
+                this.relation = model.relation;
+            } 
 
             /**
              * <p>The conditions that are used to filter logs imported from Log Service.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -696,6 +761,14 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         public static final class Builder {
             private String alias; 
             private String SLSKeyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupBy model) {
+                this.alias = model.alias;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
 
             /**
              * <p>The alias of the aggregation result.</p>
@@ -806,6 +879,17 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String parameter2; 
             private String SLSKeyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.alias = model.alias;
+                this.function = model.function;
+                this.parameter1 = model.parameter1;
+                this.parameter2 = model.parameter2;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
+
             /**
              * <p>The alias of the aggregation result.</p>
              * 
@@ -896,16 +980,16 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
      */
     public static class SLSProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Express")
-        private java.util.List < Express> express;
+        private java.util.List<Express> express;
 
         @com.aliyun.core.annotation.NameInMap("Filter")
         private Filter filter;
 
         @com.aliyun.core.annotation.NameInMap("GroupBy")
-        private java.util.List < GroupBy> groupBy;
+        private java.util.List<GroupBy> groupBy;
 
         @com.aliyun.core.annotation.NameInMap("Statistics")
-        private java.util.List < Statistics> statistics;
+        private java.util.List<Statistics> statistics;
 
         private SLSProcessConfig(Builder builder) {
             this.express = builder.express;
@@ -925,7 +1009,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return express
          */
-        public java.util.List < Express> getExpress() {
+        public java.util.List<Express> getExpress() {
             return this.express;
         }
 
@@ -939,27 +1023,37 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return groupBy
          */
-        public java.util.List < GroupBy> getGroupBy() {
+        public java.util.List<GroupBy> getGroupBy() {
             return this.groupBy;
         }
 
         /**
          * @return statistics
          */
-        public java.util.List < Statistics> getStatistics() {
+        public java.util.List<Statistics> getStatistics() {
             return this.statistics;
         }
 
         public static final class Builder {
-            private java.util.List < Express> express; 
+            private java.util.List<Express> express; 
             private Filter filter; 
-            private java.util.List < GroupBy> groupBy; 
-            private java.util.List < Statistics> statistics; 
+            private java.util.List<GroupBy> groupBy; 
+            private java.util.List<Statistics> statistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(SLSProcessConfig model) {
+                this.express = model.express;
+                this.filter = model.filter;
+                this.groupBy = model.groupBy;
+                this.statistics = model.statistics;
+            } 
 
             /**
              * <p>The extended fields that indicate the results of basic operations that are performed on aggregation results.</p>
              */
-            public Builder express(java.util.List < Express> express) {
+            public Builder express(java.util.List<Express> express) {
                 this.express = express;
                 return this;
             }
@@ -975,7 +1069,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             /**
              * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
              */
-            public Builder groupBy(java.util.List < GroupBy> groupBy) {
+            public Builder groupBy(java.util.List<GroupBy> groupBy) {
                 this.groupBy = groupBy;
                 return this;
             }
@@ -983,7 +1077,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             /**
              * <p>The methods that are used to aggregate logs imported from Log Service.</p>
              */
-            public Builder statistics(java.util.List < Statistics> statistics) {
+            public Builder statistics(java.util.List<Statistics> statistics) {
                 this.statistics = statistics;
                 return this;
             }
@@ -1003,7 +1097,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
      */
     public static class TaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachLabels")
-        private java.util.List < AttachLabels> attachLabels;
+        private java.util.List<AttachLabels> attachLabels;
 
         @com.aliyun.core.annotation.NameInMap("CollectInterval")
         private Integer collectInterval;
@@ -1033,7 +1127,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         private String groupId;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < String > instances;
+        private java.util.List<String> instances;
 
         @com.aliyun.core.annotation.NameInMap("LogFilePath")
         private String logFilePath;
@@ -1048,7 +1142,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         private String logSplit;
 
         @com.aliyun.core.annotation.NameInMap("MatchExpress")
-        private java.util.List < MatchExpress> matchExpress;
+        private java.util.List<MatchExpress> matchExpress;
 
         @com.aliyun.core.annotation.NameInMap("MatchExpressRelation")
         private String matchExpressRelation;
@@ -1124,7 +1218,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return attachLabels
          */
-        public java.util.List < AttachLabels> getAttachLabels() {
+        public java.util.List<AttachLabels> getAttachLabels() {
             return this.attachLabels;
         }
 
@@ -1194,7 +1288,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < String > getInstances() {
+        public java.util.List<String> getInstances() {
             return this.instances;
         }
 
@@ -1229,7 +1323,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * @return matchExpress
          */
-        public java.util.List < MatchExpress> getMatchExpress() {
+        public java.util.List<MatchExpress> getMatchExpress() {
             return this.matchExpress;
         }
 
@@ -1311,7 +1405,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AttachLabels> attachLabels; 
+            private java.util.List<AttachLabels> attachLabels; 
             private Integer collectInterval; 
             private String collectTargetEndpoint; 
             private String collectTargetPath; 
@@ -1321,12 +1415,12 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String description; 
             private String extraInfo; 
             private String groupId; 
-            private java.util.List < String > instances; 
+            private java.util.List<String> instances; 
             private String logFilePath; 
             private String logProcess; 
             private String logSample; 
             private String logSplit; 
-            private java.util.List < MatchExpress> matchExpress; 
+            private java.util.List<MatchExpress> matchExpress; 
             private String matchExpressRelation; 
             private String namespace; 
             private String networkType; 
@@ -1339,10 +1433,43 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String uploadRegion; 
             private String YARMConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.attachLabels = model.attachLabels;
+                this.collectInterval = model.collectInterval;
+                this.collectTargetEndpoint = model.collectTargetEndpoint;
+                this.collectTargetPath = model.collectTargetPath;
+                this.collectTargetType = model.collectTargetType;
+                this.collectTimout = model.collectTimout;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.extraInfo = model.extraInfo;
+                this.groupId = model.groupId;
+                this.instances = model.instances;
+                this.logFilePath = model.logFilePath;
+                this.logProcess = model.logProcess;
+                this.logSample = model.logSample;
+                this.logSplit = model.logSplit;
+                this.matchExpress = model.matchExpress;
+                this.matchExpressRelation = model.matchExpressRelation;
+                this.namespace = model.namespace;
+                this.networkType = model.networkType;
+                this.SLSProcess = model.SLSProcess;
+                this.SLSProcessConfig = model.SLSProcessConfig;
+                this.targetUserId = model.targetUserId;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.uploadRegion = model.uploadRegion;
+                this.YARMConfig = model.YARMConfig;
+            } 
+
             /**
              * <p>The tags of the metric import task.</p>
              */
-            public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
+            public Builder attachLabels(java.util.List<AttachLabels> attachLabels) {
                 this.attachLabels = attachLabels;
                 return this;
             }
@@ -1463,7 +1590,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             /**
              * <p>The instances where monitoring data is collected in batches.</p>
              */
-            public Builder instances(java.util.List < String > instances) {
+            public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;
                 return this;
             }
@@ -1515,7 +1642,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             /**
              * <p>The conditions that are used to match the instances in the application group.</p>
              */
-            public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+            public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
                 this.matchExpress = matchExpress;
                 return this;
             }

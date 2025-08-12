@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class DescribeMetricRuleBlackListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < String > ids;
+    private java.util.List<String> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsEnable")
@@ -74,7 +79,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,14 +94,14 @@ public class DescribeMetricRuleBlackListRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < String > getIds() {
+    public java.util.List<String> getIds() {
         return this.ids;
     }
 
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -151,8 +156,8 @@ public class DescribeMetricRuleBlackListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeMetricRuleBlackListRequest, Builder> {
         private String category; 
-        private java.util.List < String > ids; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> ids; 
+        private java.util.List<String> instanceIds; 
         private Boolean isEnable; 
         private String name; 
         private String namespace; 
@@ -194,7 +199,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         /**
          * Ids.
          */
-        public Builder ids(java.util.List < String > ids) {
+        public Builder ids(java.util.List<String> ids) {
             this.putQueryParameter("Ids", ids);
             this.ids = ids;
             return this;
@@ -204,7 +209,7 @@ public class DescribeMetricRuleBlackListRequest extends Request {
          * <p>The IDs of the instances in the blacklist policy.</p>
          * <p>Valid values of N: 0 to 10.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

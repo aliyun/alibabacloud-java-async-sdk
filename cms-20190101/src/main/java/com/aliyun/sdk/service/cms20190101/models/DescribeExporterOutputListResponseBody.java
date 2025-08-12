@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
 
     public static DescribeExporterOutputListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExporterOutputListResponseBody model) {
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -264,6 +286,16 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             private String logstore; 
             private String project; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigJson model) {
+                this.ak = model.ak;
+                this.endpoint = model.endpoint;
+                this.logstore = model.logstore;
+                this.project = model.project;
+            } 
+
             /**
              * <p>The AccessKey ID.</p>
              * 
@@ -383,6 +415,16 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             private String destName; 
             private String destType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datapoint model) {
+                this.configJson = model.configJson;
+                this.createTime = model.createTime;
+                this.destName = model.destName;
+                this.destType = model.destType;
+            } 
+
             /**
              * <p>The JSON object that contains the details about the destination to which the monitoring data is exported.</p>
              */
@@ -442,7 +484,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
      */
     public static class Datapoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoint")
-        private java.util.List < Datapoint> datapoint;
+        private java.util.List<Datapoint> datapoint;
 
         private Datapoints(Builder builder) {
             this.datapoint = builder.datapoint;
@@ -459,17 +501,24 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         /**
          * @return datapoint
          */
-        public java.util.List < Datapoint> getDatapoint() {
+        public java.util.List<Datapoint> getDatapoint() {
             return this.datapoint;
         }
 
         public static final class Builder {
-            private java.util.List < Datapoint> datapoint; 
+            private java.util.List<Datapoint> datapoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datapoints model) {
+                this.datapoint = model.datapoint;
+            } 
 
             /**
              * Datapoint.
              */
-            public Builder datapoint(java.util.List < Datapoint> datapoint) {
+            public Builder datapoint(java.util.List<Datapoint> datapoint) {
                 this.datapoint = datapoint;
                 return this;
             }

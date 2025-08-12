@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     public static CreateSiteMonitorResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSiteMonitorResponseBody model) {
+            this.code = model.code;
+            this.createResultList = model.createResultList;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -215,6 +236,14 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateResultListCreateResultList model) {
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * <p>The ID of the site monitoring task.</p>
              * 
@@ -252,7 +281,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
      */
     public static class CreateResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateResultList")
-        private java.util.List < CreateResultListCreateResultList> createResultList;
+        private java.util.List<CreateResultListCreateResultList> createResultList;
 
         private CreateResultList(Builder builder) {
             this.createResultList = builder.createResultList;
@@ -269,18 +298,25 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         /**
          * @return createResultList
          */
-        public java.util.List < CreateResultListCreateResultList> getCreateResultList() {
+        public java.util.List<CreateResultListCreateResultList> getCreateResultList() {
             return this.createResultList;
         }
 
         public static final class Builder {
-            private java.util.List < CreateResultListCreateResultList> createResultList; 
+            private java.util.List<CreateResultListCreateResultList> createResultList; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResultList model) {
+                this.createResultList = model.createResultList;
+            } 
 
             /**
              * <p>The returned result.</p>
              * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
              */
-            public Builder createResultList(java.util.List < CreateResultListCreateResultList> createResultList) {
+            public Builder createResultList(java.util.List<CreateResultListCreateResultList> createResultList) {
                 this.createResultList = createResultList;
                 return this;
             }
@@ -372,6 +408,17 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private String ruleId; 
             private String success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.requestId = model.requestId;
+                this.ruleId = model.ruleId;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The status code that is returned after you associate the existing alert rule with the site monitoring task.</p>
              * <blockquote>
@@ -449,7 +496,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
      */
     public static class AttachAlertResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
-        private java.util.List < Contact> contact;
+        private java.util.List<Contact> contact;
 
         private AttachAlertResult(Builder builder) {
             this.contact = builder.contact;
@@ -466,17 +513,24 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         /**
          * @return contact
          */
-        public java.util.List < Contact> getContact() {
+        public java.util.List<Contact> getContact() {
             return this.contact;
         }
 
         public static final class Builder {
-            private java.util.List < Contact> contact; 
+            private java.util.List<Contact> contact; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachAlertResult model) {
+                this.contact = model.contact;
+            } 
 
             /**
              * Contact.
              */
-            public Builder contact(java.util.List < Contact> contact) {
+            public Builder contact(java.util.List<Contact> contact) {
                 this.contact = contact;
                 return this;
             }
@@ -519,6 +573,13 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
         public static final class Builder {
             private AttachAlertResult attachAlertResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attachAlertResult = model.attachAlertResult;
+            } 
 
             /**
              * <p>The result that is returned after you associate the existing alert rule with the site monitoring task.</p>

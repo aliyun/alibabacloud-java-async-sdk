@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertLogHistogramList")
-    private java.util.List < AlertLogHistogramList> alertLogHistogramList;
+    private java.util.List<AlertLogHistogramList> alertLogHistogramList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -43,10 +48,14 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertLogHistogramList
      */
-    public java.util.List < AlertLogHistogramList> getAlertLogHistogramList() {
+    public java.util.List<AlertLogHistogramList> getAlertLogHistogramList() {
         return this.alertLogHistogramList;
     }
 
@@ -79,16 +88,27 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlertLogHistogramList> alertLogHistogramList; 
+        private java.util.List<AlertLogHistogramList> alertLogHistogramList; 
         private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertLogHistogramResponseBody model) {
+            this.alertLogHistogramList = model.alertLogHistogramList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The number of alert logs that were generated during each interval of a time period.</p>
          */
-        public Builder alertLogHistogramList(java.util.List < AlertLogHistogramList> alertLogHistogramList) {
+        public Builder alertLogHistogramList(java.util.List<AlertLogHistogramList> alertLogHistogramList) {
             this.alertLogHistogramList = alertLogHistogramList;
             return this;
         }
@@ -205,6 +225,15 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             private Integer count; 
             private Long from; 
             private Long to; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertLogHistogramList model) {
+                this.count = model.count;
+                this.from = model.from;
+                this.to = model.to;
+            } 
 
             /**
              * <p>The number of alert logs.</p>

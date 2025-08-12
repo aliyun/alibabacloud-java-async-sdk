@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,12 +20,12 @@ public class RemoveTagsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > groupIds;
+    private java.util.List<String> groupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private RemoveTagsRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class RemoveTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,20 +49,20 @@ public class RemoveTagsRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<RemoveTagsRequest, Builder> {
-        private java.util.List < String > groupIds; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> groupIds; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -76,7 +81,7 @@ public class RemoveTagsRequest extends Request {
          * <strong>example:</strong>
          * <p>12345</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
@@ -86,7 +91,7 @@ public class RemoveTagsRequest extends Request {
          * <p>The tags.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -144,6 +149,14 @@ public class RemoveTagsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

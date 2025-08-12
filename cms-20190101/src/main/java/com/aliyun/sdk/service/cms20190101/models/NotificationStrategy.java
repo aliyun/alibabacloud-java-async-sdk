@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,6 +75,10 @@ public class NotificationStrategy extends TeaModel {
 
     public static NotificationStrategy create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -169,6 +178,24 @@ public class NotificationStrategy extends TeaModel {
         private String updateTime; 
         private String userId; 
         private String uuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(NotificationStrategy model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.escalationSetting = model.escalationSetting;
+            this.filterSetting = model.filterSetting;
+            this.groupingSetting = model.groupingSetting;
+            this.name = model.name;
+            this.product = model.product;
+            this.pushingSetting = model.pushingSetting;
+            this.routeSetting = model.routeSetting;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+        } 
 
         /**
          * CreateTime.
@@ -284,7 +311,7 @@ public class NotificationStrategy extends TeaModel {
         private String channelType;
 
         @com.aliyun.core.annotation.NameInMap("Severities")
-        private java.util.List < String > severities;
+        private java.util.List<String> severities;
 
         @com.aliyun.core.annotation.NameInMap("TemplateUuid")
         private String templateUuid;
@@ -313,7 +340,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return severities
          */
-        public java.util.List < String > getSeverities() {
+        public java.util.List<String> getSeverities() {
             return this.severities;
         }
 
@@ -326,8 +353,17 @@ public class NotificationStrategy extends TeaModel {
 
         public static final class Builder {
             private String channelType; 
-            private java.util.List < String > severities; 
+            private java.util.List<String> severities; 
             private String templateUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomChannels model) {
+                this.channelType = model.channelType;
+                this.severities = model.severities;
+                this.templateUuid = model.templateUuid;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -340,7 +376,7 @@ public class NotificationStrategy extends TeaModel {
             /**
              * Severities.
              */
-            public Builder severities(java.util.List < String > severities) {
+            public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;
                 return this;
             }
@@ -371,7 +407,7 @@ public class NotificationStrategy extends TeaModel {
         private Long autoResolveMin;
 
         @com.aliyun.core.annotation.NameInMap("CustomChannels")
-        private java.util.List < CustomChannels> customChannels;
+        private java.util.List<CustomChannels> customChannels;
 
         @com.aliyun.core.annotation.NameInMap("EscalationLevel")
         private String escalationLevel;
@@ -412,7 +448,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return customChannels
          */
-        public java.util.List < CustomChannels> getCustomChannels() {
+        public java.util.List<CustomChannels> getCustomChannels() {
             return this.customChannels;
         }
 
@@ -446,11 +482,23 @@ public class NotificationStrategy extends TeaModel {
 
         public static final class Builder {
             private Long autoResolveMin; 
-            private java.util.List < CustomChannels> customChannels; 
+            private java.util.List<CustomChannels> customChannels; 
             private String escalationLevel; 
             private String escalationUuid; 
             private String range; 
             private Long retriggerMin; 
+
+            private Builder() {
+            } 
+
+            private Builder(EscalationSetting model) {
+                this.autoResolveMin = model.autoResolveMin;
+                this.customChannels = model.customChannels;
+                this.escalationLevel = model.escalationLevel;
+                this.escalationUuid = model.escalationUuid;
+                this.range = model.range;
+                this.retriggerMin = model.retriggerMin;
+            } 
 
             /**
              * AutoResolveMin.
@@ -463,7 +511,7 @@ public class NotificationStrategy extends TeaModel {
             /**
              * CustomChannels.
              */
-            public Builder customChannels(java.util.List < CustomChannels> customChannels) {
+            public Builder customChannels(java.util.List<CustomChannels> customChannels) {
                 this.customChannels = customChannels;
                 return this;
             }
@@ -566,6 +614,15 @@ public class NotificationStrategy extends TeaModel {
             private String op; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlackList model) {
+                this.field = model.field;
+                this.op = model.op;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -656,6 +713,15 @@ public class NotificationStrategy extends TeaModel {
             private String op; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(WhiteList model) {
+                this.field = model.field;
+                this.op = model.op;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -695,10 +761,10 @@ public class NotificationStrategy extends TeaModel {
      */
     public static class FilterSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackList")
-        private java.util.List < java.util.List < BlackList> > blackList;
+        private java.util.List<java.util.List<BlackList>> blackList;
 
         @com.aliyun.core.annotation.NameInMap("WhiteList")
-        private java.util.List < java.util.List < WhiteList> > whiteList;
+        private java.util.List<java.util.List<WhiteList>> whiteList;
 
         private FilterSetting(Builder builder) {
             this.blackList = builder.blackList;
@@ -716,25 +782,33 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return blackList
          */
-        public java.util.List < java.util.List < BlackList> > getBlackList() {
+        public java.util.List<java.util.List<BlackList>> getBlackList() {
             return this.blackList;
         }
 
         /**
          * @return whiteList
          */
-        public java.util.List < java.util.List < WhiteList> > getWhiteList() {
+        public java.util.List<java.util.List<WhiteList>> getWhiteList() {
             return this.whiteList;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.List < BlackList> > blackList; 
-            private java.util.List < java.util.List < WhiteList> > whiteList; 
+            private java.util.List<java.util.List<BlackList>> blackList; 
+            private java.util.List<java.util.List<WhiteList>> whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterSetting model) {
+                this.blackList = model.blackList;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * BlackList.
              */
-            public Builder blackList(java.util.List < java.util.List < BlackList> > blackList) {
+            public Builder blackList(java.util.List<java.util.List<BlackList>> blackList) {
                 this.blackList = blackList;
                 return this;
             }
@@ -742,7 +816,7 @@ public class NotificationStrategy extends TeaModel {
             /**
              * WhiteList.
              */
-            public Builder whiteList(java.util.List < java.util.List < WhiteList> > whiteList) {
+            public Builder whiteList(java.util.List<java.util.List<WhiteList>> whiteList) {
                 this.whiteList = whiteList;
                 return this;
             }
@@ -762,7 +836,7 @@ public class NotificationStrategy extends TeaModel {
      */
     public static class GroupingItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keys")
-        private java.util.List < String > keys;
+        private java.util.List<String> keys;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -783,7 +857,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return keys
          */
-        public java.util.List < String > getKeys() {
+        public java.util.List<String> getKeys() {
             return this.keys;
         }
 
@@ -795,13 +869,21 @@ public class NotificationStrategy extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > keys; 
+            private java.util.List<String> keys; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupingItems model) {
+                this.keys = model.keys;
+                this.type = model.type;
+            } 
 
             /**
              * Keys.
              */
-            public Builder keys(java.util.List < String > keys) {
+            public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
                 return this;
             }
@@ -832,7 +914,7 @@ public class NotificationStrategy extends TeaModel {
         private Boolean enableRawAlertDispatching;
 
         @com.aliyun.core.annotation.NameInMap("GroupingItems")
-        private java.util.List < GroupingItems> groupingItems;
+        private java.util.List<GroupingItems> groupingItems;
 
         @com.aliyun.core.annotation.NameInMap("PeriodMin")
         private Integer periodMin;
@@ -869,7 +951,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return groupingItems
          */
-        public java.util.List < GroupingItems> getGroupingItems() {
+        public java.util.List<GroupingItems> getGroupingItems() {
             return this.groupingItems;
         }
 
@@ -896,10 +978,21 @@ public class NotificationStrategy extends TeaModel {
 
         public static final class Builder {
             private Boolean enableRawAlertDispatching; 
-            private java.util.List < GroupingItems> groupingItems; 
+            private java.util.List<GroupingItems> groupingItems; 
             private Integer periodMin; 
             private Integer silenceSec; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupingSetting model) {
+                this.enableRawAlertDispatching = model.enableRawAlertDispatching;
+                this.groupingItems = model.groupingItems;
+                this.periodMin = model.periodMin;
+                this.silenceSec = model.silenceSec;
+                this.times = model.times;
+            } 
 
             /**
              * EnableRawAlertDispatching.
@@ -912,7 +1005,7 @@ public class NotificationStrategy extends TeaModel {
             /**
              * GroupingItems.
              */
-            public Builder groupingItems(java.util.List < GroupingItems> groupingItems) {
+            public Builder groupingItems(java.util.List<GroupingItems> groupingItems) {
                 this.groupingItems = groupingItems;
                 return this;
             }
@@ -962,7 +1055,7 @@ public class NotificationStrategy extends TeaModel {
         private String range;
 
         @com.aliyun.core.annotation.NameInMap("TargetUuids")
-        private java.util.List < String > targetUuids;
+        private java.util.List<String> targetUuids;
 
         @com.aliyun.core.annotation.NameInMap("TemplateUuid")
         private String templateUuid;
@@ -999,7 +1092,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return targetUuids
          */
-        public java.util.List < String > getTargetUuids() {
+        public java.util.List<String> getTargetUuids() {
             return this.targetUuids;
         }
 
@@ -1013,8 +1106,18 @@ public class NotificationStrategy extends TeaModel {
         public static final class Builder {
             private String pushingDataFormat; 
             private String range; 
-            private java.util.List < String > targetUuids; 
+            private java.util.List<String> targetUuids; 
             private String templateUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushingSetting model) {
+                this.pushingDataFormat = model.pushingDataFormat;
+                this.range = model.range;
+                this.targetUuids = model.targetUuids;
+                this.templateUuid = model.templateUuid;
+            } 
 
             /**
              * PushingDataFormat.
@@ -1035,7 +1138,7 @@ public class NotificationStrategy extends TeaModel {
             /**
              * TargetUuids.
              */
-            public Builder targetUuids(java.util.List < String > targetUuids) {
+            public Builder targetUuids(java.util.List<String> targetUuids) {
                 this.targetUuids = targetUuids;
                 return this;
             }
@@ -1111,6 +1214,15 @@ public class NotificationStrategy extends TeaModel {
             private String op; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.op = model.op;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -1150,7 +1262,7 @@ public class NotificationStrategy extends TeaModel {
      */
     public static class Routes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("EscalationUuid")
         private String escalationUuid;
@@ -1171,7 +1283,7 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -1183,13 +1295,21 @@ public class NotificationStrategy extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String escalationUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Routes model) {
+                this.conditions = model.conditions;
+                this.escalationUuid = model.escalationUuid;
+            } 
 
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -1217,7 +1337,7 @@ public class NotificationStrategy extends TeaModel {
      */
     public static class RouteSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Routes")
-        private java.util.List < Routes> routes;
+        private java.util.List<Routes> routes;
 
         private RouteSetting(Builder builder) {
             this.routes = builder.routes;
@@ -1234,17 +1354,24 @@ public class NotificationStrategy extends TeaModel {
         /**
          * @return routes
          */
-        public java.util.List < Routes> getRoutes() {
+        public java.util.List<Routes> getRoutes() {
             return this.routes;
         }
 
         public static final class Builder {
-            private java.util.List < Routes> routes; 
+            private java.util.List<Routes> routes; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteSetting model) {
+                this.routes = model.routes;
+            } 
 
             /**
              * Routes.
              */
-            public Builder routes(java.util.List < Routes> routes) {
+            public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
 
     public static DescribeSystemEventHistogramResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private SystemEventHistograms systemEventHistograms; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSystemEventHistogramResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.systemEventHistograms = model.systemEventHistograms;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -202,6 +222,15 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemEventHistogram model) {
+                this.count = model.count;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The number of times the system event occurred.</p>
              * 
@@ -252,7 +281,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
      */
     public static class SystemEventHistograms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemEventHistogram")
-        private java.util.List < SystemEventHistogram> systemEventHistogram;
+        private java.util.List<SystemEventHistogram> systemEventHistogram;
 
         private SystemEventHistograms(Builder builder) {
             this.systemEventHistogram = builder.systemEventHistogram;
@@ -269,17 +298,24 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         /**
          * @return systemEventHistogram
          */
-        public java.util.List < SystemEventHistogram> getSystemEventHistogram() {
+        public java.util.List<SystemEventHistogram> getSystemEventHistogram() {
             return this.systemEventHistogram;
         }
 
         public static final class Builder {
-            private java.util.List < SystemEventHistogram> systemEventHistogram; 
+            private java.util.List<SystemEventHistogram> systemEventHistogram; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemEventHistograms model) {
+                this.systemEventHistogram = model.systemEventHistogram;
+            } 
 
             /**
              * SystemEventHistogram.
              */
-            public Builder systemEventHistogram(java.util.List < SystemEventHistogram> systemEventHistogram) {
+            public Builder systemEventHistogram(java.util.List<SystemEventHistogram> systemEventHistogram) {
                 this.systemEventHistogram = systemEventHistogram;
                 return this;
             }

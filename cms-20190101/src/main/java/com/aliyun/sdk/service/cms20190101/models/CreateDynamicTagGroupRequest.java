@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateDynamicTagGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactGroupList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > contactGroupList;
+    private java.util.List<String> contactGroupList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableInstallAgent")
@@ -28,7 +33,7 @@ public class CreateDynamicTagGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchExpress")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MatchExpress> matchExpress;
+    private java.util.List<MatchExpress> matchExpress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
@@ -45,7 +50,7 @@ public class CreateDynamicTagGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateIdList")
-    private java.util.List < String > templateIdList;
+    private java.util.List<String> templateIdList;
 
     private CreateDynamicTagGroupRequest(Builder builder) {
         super(builder);
@@ -67,7 +72,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +80,7 @@ public class CreateDynamicTagGroupRequest extends Request {
     /**
      * @return contactGroupList
      */
-    public java.util.List < String > getContactGroupList() {
+    public java.util.List<String> getContactGroupList() {
         return this.contactGroupList;
     }
 
@@ -96,7 +101,7 @@ public class CreateDynamicTagGroupRequest extends Request {
     /**
      * @return matchExpress
      */
-    public java.util.List < MatchExpress> getMatchExpress() {
+    public java.util.List<MatchExpress> getMatchExpress() {
         return this.matchExpress;
     }
 
@@ -124,19 +129,19 @@ public class CreateDynamicTagGroupRequest extends Request {
     /**
      * @return templateIdList
      */
-    public java.util.List < String > getTemplateIdList() {
+    public java.util.List<String> getTemplateIdList() {
         return this.templateIdList;
     }
 
     public static final class Builder extends Request.Builder<CreateDynamicTagGroupRequest, Builder> {
-        private java.util.List < String > contactGroupList; 
+        private java.util.List<String> contactGroupList; 
         private Boolean enableInstallAgent; 
         private Boolean enableSubscribeEvent; 
-        private java.util.List < MatchExpress> matchExpress; 
+        private java.util.List<MatchExpress> matchExpress; 
         private String matchExpressFilterRelation; 
         private String tagKey; 
         private String tagRegionId; 
-        private java.util.List < String > templateIdList; 
+        private java.util.List<String> templateIdList; 
 
         private Builder() {
             super();
@@ -160,7 +165,7 @@ public class CreateDynamicTagGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>ECS_Group</p>
          */
-        public Builder contactGroupList(java.util.List < String > contactGroupList) {
+        public Builder contactGroupList(java.util.List<String> contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
             this.contactGroupList = contactGroupList;
             return this;
@@ -202,7 +207,7 @@ public class CreateDynamicTagGroupRequest extends Request {
          * <p>The conditional expressions used to create an application group based on the tag.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+        public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
             this.putQueryParameter("MatchExpress", matchExpress);
             this.matchExpress = matchExpress;
             return this;
@@ -211,7 +216,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         /**
          * <p>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</p>
          * <ul>
-         * <li>and (default value)</li>
+         * <li>and (default)</li>
          * <li>or</li>
          * </ul>
          * 
@@ -253,7 +258,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         /**
          * TemplateIdList.
          */
-        public Builder templateIdList(java.util.List < String > templateIdList) {
+        public Builder templateIdList(java.util.List<String> templateIdList) {
             this.putQueryParameter("TemplateIdList", templateIdList);
             this.templateIdList = templateIdList;
             return this;
@@ -321,6 +326,15 @@ public class CreateDynamicTagGroupRequest extends Request {
             private String tagName; 
             private String tagValue; 
             private String tagValueMatchFunction; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchExpress model) {
+                this.tagName = model.tagName;
+                this.tagValue = model.tagValue;
+                this.tagValueMatchFunction = model.tagValueMatchFunction;
+            } 
 
             /**
              * <p>The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.</p>

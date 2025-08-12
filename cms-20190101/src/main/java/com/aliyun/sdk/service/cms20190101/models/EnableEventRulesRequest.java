@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class EnableEventRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ruleNames;
+    private java.util.List<String> ruleNames;
 
     private EnableEventRulesRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class EnableEventRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class EnableEventRulesRequest extends Request {
     /**
      * @return ruleNames
      */
-    public java.util.List < String > getRuleNames() {
+    public java.util.List<String> getRuleNames() {
         return this.ruleNames;
     }
 
     public static final class Builder extends Request.Builder<EnableEventRulesRequest, Builder> {
-        private java.util.List < String > ruleNames; 
+        private java.util.List<String> ruleNames; 
 
         private Builder() {
             super();
@@ -60,7 +65,7 @@ public class EnableEventRulesRequest extends Request {
          * <strong>example:</strong>
          * <p>ruleName1</p>
          */
-        public Builder ruleNames(java.util.List < String > ruleNames) {
+        public Builder ruleNames(java.util.List<String> ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);
             this.ruleNames = ruleNames;
             return this;

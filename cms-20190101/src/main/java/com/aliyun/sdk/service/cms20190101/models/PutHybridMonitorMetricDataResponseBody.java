@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("ErrorDetail")
-    private java.util.List < ErrorDetail> errorDetail;
+    private java.util.List<ErrorDetail> errorDetail;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -45,7 +54,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     /**
      * @return errorDetail
      */
-    public java.util.List < ErrorDetail> getErrorDetail() {
+    public java.util.List<ErrorDetail> getErrorDetail() {
         return this.errorDetail;
     }
 
@@ -58,8 +67,17 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < ErrorDetail> errorDetail; 
+        private java.util.List<ErrorDetail> errorDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutHybridMonitorMetricDataResponseBody model) {
+            this.code = model.code;
+            this.errorDetail = model.errorDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -79,7 +97,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
          * <p>The details of invalid parameters.</p>
          * <p>If a request parameter is invalid, the details of the invalid parameter are returned.</p>
          */
-        public Builder errorDetail(java.util.List < ErrorDetail> errorDetail) {
+        public Builder errorDetail(java.util.List<ErrorDetail> errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
@@ -144,6 +162,14 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         public static final class Builder {
             private String errorMessage; 
             private Long index; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.errorMessage = model.errorMessage;
+                this.index = model.index;
+            } 
 
             /**
              * <p>The error message of the invalid parameter.</p>

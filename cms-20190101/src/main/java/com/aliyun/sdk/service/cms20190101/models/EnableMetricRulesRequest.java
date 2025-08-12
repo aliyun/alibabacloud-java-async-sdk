@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class EnableMetricRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ruleId;
+    private java.util.List<String> ruleId;
 
     private EnableMetricRulesRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class EnableMetricRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class EnableMetricRulesRequest extends Request {
     /**
      * @return ruleId
      */
-    public java.util.List < String > getRuleId() {
+    public java.util.List<String> getRuleId() {
         return this.ruleId;
     }
 
     public static final class Builder extends Request.Builder<EnableMetricRulesRequest, Builder> {
-        private java.util.List < String > ruleId; 
+        private java.util.List<String> ruleId; 
 
         private Builder() {
             super();
@@ -63,7 +68,7 @@ public class EnableMetricRulesRequest extends Request {
          * <strong>example:</strong>
          * <p>ab05733c97b7ce239fb1b53393dc1697c123****</p>
          */
-        public Builder ruleId(java.util.List < String > ruleId) {
+        public Builder ruleId(java.util.List<String> ruleId) {
             this.putQueryParameter("RuleId", ruleId);
             this.ruleId = ruleId;
             return this;

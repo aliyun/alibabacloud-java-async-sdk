@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyMetricRuleTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertTemplates")
-    private java.util.List < AlertTemplates> alertTemplates;
+    private java.util.List<AlertTemplates> alertTemplates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -51,7 +56,7 @@ public class ModifyMetricRuleTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class ModifyMetricRuleTemplateRequest extends Request {
     /**
      * @return alertTemplates
      */
-    public java.util.List < AlertTemplates> getAlertTemplates() {
+    public java.util.List<AlertTemplates> getAlertTemplates() {
         return this.alertTemplates;
     }
 
@@ -92,7 +97,7 @@ public class ModifyMetricRuleTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyMetricRuleTemplateRequest, Builder> {
-        private java.util.List < AlertTemplates> alertTemplates; 
+        private java.util.List<AlertTemplates> alertTemplates; 
         private String description; 
         private String name; 
         private Long restVersion; 
@@ -114,7 +119,7 @@ public class ModifyMetricRuleTemplateRequest extends Request {
         /**
          * <p>The details of the alert template.</p>
          */
-        public Builder alertTemplates(java.util.List < AlertTemplates> alertTemplates) {
+        public Builder alertTemplates(java.util.List<AlertTemplates> alertTemplates) {
             this.putQueryParameter("AlertTemplates", alertTemplates);
             this.alertTemplates = alertTemplates;
             return this;
@@ -260,6 +265,17 @@ public class ModifyMetricRuleTemplateRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -386,6 +402,17 @@ public class ModifyMetricRuleTemplateRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * ComparisonOperator.
@@ -514,6 +541,17 @@ public class ModifyMetricRuleTemplateRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -620,6 +658,15 @@ public class ModifyMetricRuleTemplateRequest extends Request {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * Critical.
              */
@@ -659,7 +706,6 @@ public class ModifyMetricRuleTemplateRequest extends Request {
      */
     public static class AlertTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -767,6 +813,20 @@ public class ModifyMetricRuleTemplateRequest extends Request {
             private String ruleName; 
             private String selector; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplates model) {
+                this.escalations = model.escalations;
+                this.category = model.category;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.period = model.period;
+                this.ruleName = model.ruleName;
+                this.selector = model.selector;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * Escalations.

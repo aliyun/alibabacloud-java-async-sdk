@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class PutContactGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactNames")
-    private java.util.List < String > contactNames;
+    private java.util.List<String> contactNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Describe")
@@ -45,7 +50,7 @@ public class PutContactGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +65,7 @@ public class PutContactGroupRequest extends Request {
     /**
      * @return contactNames
      */
-    public java.util.List < String > getContactNames() {
+    public java.util.List<String> getContactNames() {
         return this.contactNames;
     }
 
@@ -80,7 +85,7 @@ public class PutContactGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutContactGroupRequest, Builder> {
         private String contactGroupName; 
-        private java.util.List < String > contactNames; 
+        private java.util.List<String> contactNames; 
         private String describe; 
         private Boolean enableSubscribed; 
 
@@ -111,9 +116,12 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * ContactNames.
+         * <p>The name of the alert contact. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
-        public Builder contactNames(java.util.List < String > contactNames) {
+        public Builder contactNames(java.util.List<String> contactNames) {
             this.putQueryParameter("ContactNames", contactNames);
             this.contactNames = contactNames;
             return this;
@@ -138,7 +146,7 @@ public class PutContactGroupRequest extends Request {
          * <li>false: The weekly report subscription feature is disabled.</li>
          * </ul>
          * <blockquote>
-         * <p> You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
+         * <p> You can enable the weekly report subscription feature only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

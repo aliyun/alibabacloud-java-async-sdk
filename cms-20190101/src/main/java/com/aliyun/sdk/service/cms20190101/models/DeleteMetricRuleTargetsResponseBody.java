@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
 
     public static DeleteMetricRuleTargetsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMetricRuleTargetsResponseBody model) {
+            this.code = model.code;
+            this.failIds = model.failIds;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -157,7 +177,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
      */
     public static class TargetIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetId")
-        private java.util.List < String > targetId;
+        private java.util.List<String> targetId;
 
         private TargetIds(Builder builder) {
             this.targetId = builder.targetId;
@@ -174,17 +194,24 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         /**
          * @return targetId
          */
-        public java.util.List < String > getTargetId() {
+        public java.util.List<String> getTargetId() {
             return this.targetId;
         }
 
         public static final class Builder {
-            private java.util.List < String > targetId; 
+            private java.util.List<String> targetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetIds model) {
+                this.targetId = model.targetId;
+            } 
 
             /**
              * TargetId.
              */
-            public Builder targetId(java.util.List < String > targetId) {
+            public Builder targetId(java.util.List<String> targetId) {
                 this.targetId = targetId;
                 return this;
             }
@@ -227,6 +254,13 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private TargetIds targetIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailIds model) {
+                this.targetIds = model.targetIds;
+            } 
 
             /**
              * <p>The IDs of the resources that failed to be deleted.</p>

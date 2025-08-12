@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class Incident extends TeaModel {
     private Long endTime;
 
     @com.aliyun.core.annotation.NameInMap("GroupingData")
-    private java.util.Map < String, ? > groupingData;
+    private java.util.Map<String, ?> groupingData;
 
     @com.aliyun.core.annotation.NameInMap("GroupingId")
     private String groupingId;
@@ -71,6 +76,10 @@ public class Incident extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionTime
      */
@@ -95,7 +104,7 @@ public class Incident extends TeaModel {
     /**
      * @return groupingData
      */
-    public java.util.Map < String, ? > getGroupingData() {
+    public java.util.Map<String, ?> getGroupingData() {
         return this.groupingData;
     }
 
@@ -159,7 +168,7 @@ public class Incident extends TeaModel {
         private Long actionTime; 
         private Long alertCount; 
         private Long endTime; 
-        private java.util.Map < String, ? > groupingData; 
+        private java.util.Map<String, ?> groupingData; 
         private String groupingId; 
         private String groupingKey; 
         private String incidentId; 
@@ -168,6 +177,24 @@ public class Incident extends TeaModel {
         private Long startTime; 
         private String strategyUuid; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Incident model) {
+            this.actionTime = model.actionTime;
+            this.alertCount = model.alertCount;
+            this.endTime = model.endTime;
+            this.groupingData = model.groupingData;
+            this.groupingId = model.groupingId;
+            this.groupingKey = model.groupingKey;
+            this.incidentId = model.incidentId;
+            this.incidentStatus = model.incidentStatus;
+            this.severity = model.severity;
+            this.startTime = model.startTime;
+            this.strategyUuid = model.strategyUuid;
+            this.userId = model.userId;
+        } 
 
         /**
          * ActionTime.
@@ -196,7 +223,7 @@ public class Incident extends TeaModel {
         /**
          * GroupingData.
          */
-        public Builder groupingData(java.util.Map < String, ? > groupingData) {
+        public Builder groupingData(java.util.Map<String, ?> groupingData) {
             this.groupingData = groupingData;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -55,6 +60,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,7 +74,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -113,13 +122,27 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridMonitorSLSGroupResponseBody model) {
+            this.code = model.code;
+            this.list = model.list;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -138,7 +161,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         /**
          * <p>The queried Logstore groups.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -284,6 +307,16 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             private String SLSRegion; 
             private String SLSUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SLSGroupConfig model) {
+                this.SLSLogstore = model.SLSLogstore;
+                this.SLSProject = model.SLSProject;
+                this.SLSRegion = model.SLSRegion;
+                this.SLSUserId = model.SLSUserId;
+            } 
+
             /**
              * <p>The Logstore.</p>
              * 
@@ -347,7 +380,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("SLSGroupConfig")
-        private java.util.List < SLSGroupConfig> SLSGroupConfig;
+        private java.util.List<SLSGroupConfig> SLSGroupConfig;
 
         @com.aliyun.core.annotation.NameInMap("SLSGroupDescription")
         private String SLSGroupDescription;
@@ -384,7 +417,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         /**
          * @return SLSGroupConfig
          */
-        public java.util.List < SLSGroupConfig> getSLSGroupConfig() {
+        public java.util.List<SLSGroupConfig> getSLSGroupConfig() {
             return this.SLSGroupConfig;
         }
 
@@ -411,10 +444,21 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private java.util.List < SLSGroupConfig> SLSGroupConfig; 
+            private java.util.List<SLSGroupConfig> SLSGroupConfig; 
             private String SLSGroupDescription; 
             private String SLSGroupName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.SLSGroupConfig = model.SLSGroupConfig;
+                this.SLSGroupDescription = model.SLSGroupDescription;
+                this.SLSGroupName = model.SLSGroupName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the Logstore group was created.</p>
@@ -431,7 +475,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             /**
              * <p>The configurations of the Logstore group.</p>
              */
-            public Builder SLSGroupConfig(java.util.List < SLSGroupConfig> SLSGroupConfig) {
+            public Builder SLSGroupConfig(java.util.List<SLSGroupConfig> SLSGroupConfig) {
                 this.SLSGroupConfig = SLSGroupConfig;
                 return this;
             }

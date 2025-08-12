@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
 
     public static DescribeExporterRuleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExporterRuleListResponseBody model) {
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -204,7 +226,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
      */
     public static class DstName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstName")
-        private java.util.List < String > dstName;
+        private java.util.List<String> dstName;
 
         private DstName(Builder builder) {
             this.dstName = builder.dstName;
@@ -221,17 +243,24 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         /**
          * @return dstName
          */
-        public java.util.List < String > getDstName() {
+        public java.util.List<String> getDstName() {
             return this.dstName;
         }
 
         public static final class Builder {
-            private java.util.List < String > dstName; 
+            private java.util.List<String> dstName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DstName model) {
+                this.dstName = model.dstName;
+            } 
 
             /**
              * DstName.
              */
-            public Builder dstName(java.util.List < String > dstName) {
+            public Builder dstName(java.util.List<String> dstName) {
                 this.dstName = dstName;
                 return this;
             }
@@ -371,6 +400,21 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             private String ruleName; 
             private String targetWindows; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datapoint model) {
+                this.createTime = model.createTime;
+                this.describe = model.describe;
+                this.dimension = model.dimension;
+                this.dstName = model.dstName;
+                this.enabled = model.enabled;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.ruleName = model.ruleName;
+                this.targetWindows = model.targetWindows;
+            } 
+
             /**
              * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
              * 
@@ -491,7 +535,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
      */
     public static class Datapoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoint")
-        private java.util.List < Datapoint> datapoint;
+        private java.util.List<Datapoint> datapoint;
 
         private Datapoints(Builder builder) {
             this.datapoint = builder.datapoint;
@@ -508,17 +552,24 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         /**
          * @return datapoint
          */
-        public java.util.List < Datapoint> getDatapoint() {
+        public java.util.List<Datapoint> getDatapoint() {
             return this.datapoint;
         }
 
         public static final class Builder {
-            private java.util.List < Datapoint> datapoint; 
+            private java.util.List<Datapoint> datapoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datapoints model) {
+                this.datapoint = model.datapoint;
+            } 
 
             /**
              * Datapoint.
              */
-            public Builder datapoint(java.util.List < Datapoint> datapoint) {
+            public Builder datapoint(java.util.List<Datapoint> datapoint) {
                 this.datapoint = datapoint;
                 return this;
             }

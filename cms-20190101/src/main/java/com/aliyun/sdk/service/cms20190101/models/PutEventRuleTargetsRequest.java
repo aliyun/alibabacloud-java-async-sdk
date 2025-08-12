@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,19 +19,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PutEventRuleTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactParameters")
-    private java.util.List < ContactParameters> contactParameters;
+    private java.util.List<ContactParameters> contactParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FcParameters")
-    private java.util.List < FcParameters> fcParameters;
+    private java.util.List<FcParameters> fcParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MnsParameters")
-    private java.util.List < MnsParameters> mnsParameters;
+    private java.util.List<MnsParameters> mnsParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
-    private java.util.List < OpenApiParameters> openApiParameters;
+    private java.util.List<OpenApiParameters> openApiParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
@@ -35,11 +40,11 @@ public class PutEventRuleTargetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlsParameters")
-    private java.util.List < SlsParameters> slsParameters;
+    private java.util.List<SlsParameters> slsParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WebhookParameters")
-    private java.util.List < WebhookParameters> webhookParameters;
+    private java.util.List<WebhookParameters> webhookParameters;
 
     private PutEventRuleTargetsRequest(Builder builder) {
         super(builder);
@@ -60,7 +65,7 @@ public class PutEventRuleTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,28 +73,28 @@ public class PutEventRuleTargetsRequest extends Request {
     /**
      * @return contactParameters
      */
-    public java.util.List < ContactParameters> getContactParameters() {
+    public java.util.List<ContactParameters> getContactParameters() {
         return this.contactParameters;
     }
 
     /**
      * @return fcParameters
      */
-    public java.util.List < FcParameters> getFcParameters() {
+    public java.util.List<FcParameters> getFcParameters() {
         return this.fcParameters;
     }
 
     /**
      * @return mnsParameters
      */
-    public java.util.List < MnsParameters> getMnsParameters() {
+    public java.util.List<MnsParameters> getMnsParameters() {
         return this.mnsParameters;
     }
 
     /**
      * @return openApiParameters
      */
-    public java.util.List < OpenApiParameters> getOpenApiParameters() {
+    public java.util.List<OpenApiParameters> getOpenApiParameters() {
         return this.openApiParameters;
     }
 
@@ -103,25 +108,25 @@ public class PutEventRuleTargetsRequest extends Request {
     /**
      * @return slsParameters
      */
-    public java.util.List < SlsParameters> getSlsParameters() {
+    public java.util.List<SlsParameters> getSlsParameters() {
         return this.slsParameters;
     }
 
     /**
      * @return webhookParameters
      */
-    public java.util.List < WebhookParameters> getWebhookParameters() {
+    public java.util.List<WebhookParameters> getWebhookParameters() {
         return this.webhookParameters;
     }
 
     public static final class Builder extends Request.Builder<PutEventRuleTargetsRequest, Builder> {
-        private java.util.List < ContactParameters> contactParameters; 
-        private java.util.List < FcParameters> fcParameters; 
-        private java.util.List < MnsParameters> mnsParameters; 
-        private java.util.List < OpenApiParameters> openApiParameters; 
+        private java.util.List<ContactParameters> contactParameters; 
+        private java.util.List<FcParameters> fcParameters; 
+        private java.util.List<MnsParameters> mnsParameters; 
+        private java.util.List<OpenApiParameters> openApiParameters; 
         private String ruleName; 
-        private java.util.List < SlsParameters> slsParameters; 
-        private java.util.List < WebhookParameters> webhookParameters; 
+        private java.util.List<SlsParameters> slsParameters; 
+        private java.util.List<WebhookParameters> webhookParameters; 
 
         private Builder() {
             super();
@@ -141,7 +146,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The information about the alert contact groups that receive alert notifications.</p>
          */
-        public Builder contactParameters(java.util.List < ContactParameters> contactParameters) {
+        public Builder contactParameters(java.util.List<ContactParameters> contactParameters) {
             this.putQueryParameter("ContactParameters", contactParameters);
             this.contactParameters = contactParameters;
             return this;
@@ -150,7 +155,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The information about the recipients in Function Compute.</p>
          */
-        public Builder fcParameters(java.util.List < FcParameters> fcParameters) {
+        public Builder fcParameters(java.util.List<FcParameters> fcParameters) {
             this.putQueryParameter("FcParameters", fcParameters);
             this.fcParameters = fcParameters;
             return this;
@@ -159,7 +164,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The notifications of Simple Message Queue (formerly MNS) (SMQ).</p>
          */
-        public Builder mnsParameters(java.util.List < MnsParameters> mnsParameters) {
+        public Builder mnsParameters(java.util.List<MnsParameters> mnsParameters) {
             this.putQueryParameter("MnsParameters", mnsParameters);
             this.mnsParameters = mnsParameters;
             return this;
@@ -168,7 +173,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The parameters of API callback notification.</p>
          */
-        public Builder openApiParameters(java.util.List < OpenApiParameters> openApiParameters) {
+        public Builder openApiParameters(java.util.List<OpenApiParameters> openApiParameters) {
             this.putQueryParameter("OpenApiParameters", openApiParameters);
             this.openApiParameters = openApiParameters;
             return this;
@@ -190,7 +195,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The information about the recipients in Simple Log Service.</p>
          */
-        public Builder slsParameters(java.util.List < SlsParameters> slsParameters) {
+        public Builder slsParameters(java.util.List<SlsParameters> slsParameters) {
             this.putQueryParameter("SlsParameters", slsParameters);
             this.slsParameters = slsParameters;
             return this;
@@ -199,7 +204,7 @@ public class PutEventRuleTargetsRequest extends Request {
         /**
          * <p>The information about the callback URLs that are used to receive alert notifications.</p>
          */
-        public Builder webhookParameters(java.util.List < WebhookParameters> webhookParameters) {
+        public Builder webhookParameters(java.util.List<WebhookParameters> webhookParameters) {
             this.putQueryParameter("WebhookParameters", webhookParameters);
             this.webhookParameters = webhookParameters;
             return this;
@@ -267,6 +272,15 @@ public class PutEventRuleTargetsRequest extends Request {
             private String contactGroupName; 
             private String id; 
             private String level; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactParameters model) {
+                this.contactGroupName = model.contactGroupName;
+                this.id = model.id;
+                this.level = model.level;
+            } 
 
             /**
              * <p>The name of the alert contact group. Valid values of N: 1 to 5.</p>
@@ -373,6 +387,16 @@ public class PutEventRuleTargetsRequest extends Request {
             private String id; 
             private String region; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(FcParameters model) {
+                this.functionName = model.functionName;
+                this.id = model.id;
+                this.region = model.region;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The name of the function. Valid values of N: 1 to 5.</p>
@@ -492,6 +516,16 @@ public class PutEventRuleTargetsRequest extends Request {
             private String queue; 
             private String region; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(MnsParameters model) {
+                this.id = model.id;
+                this.queue = model.queue;
+                this.region = model.region;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
@@ -660,6 +694,20 @@ public class PutEventRuleTargetsRequest extends Request {
             private String role; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenApiParameters model) {
+                this.action = model.action;
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.product = model.product;
+                this.region = model.region;
+                this.role = model.role;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The API name.</p>
              * 
@@ -827,6 +875,16 @@ public class PutEventRuleTargetsRequest extends Request {
             private String project; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlsParameters model) {
+                this.id = model.id;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.region = model.region;
+            } 
+
             /**
              * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
              * 
@@ -945,6 +1003,16 @@ public class PutEventRuleTargetsRequest extends Request {
             private String method; 
             private String protocol; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebhookParameters model) {
+                this.id = model.id;
+                this.method = model.method;
+                this.protocol = model.protocol;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>

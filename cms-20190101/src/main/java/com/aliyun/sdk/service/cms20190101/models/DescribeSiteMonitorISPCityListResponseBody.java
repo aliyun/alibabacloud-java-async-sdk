@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
     public static DescribeSiteMonitorISPCityListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSiteMonitorISPCityListResponseBody model) {
+            this.code = model.code;
+            this.ispCityList = model.ispCityList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -158,7 +178,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
      */
     public static class IPPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPPool")
-        private java.util.List < String > IPPool;
+        private java.util.List<String> IPPool;
 
         private IPPool(Builder builder) {
             this.IPPool = builder.IPPool;
@@ -175,17 +195,24 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         /**
          * @return IPPool
          */
-        public java.util.List < String > getIPPool() {
+        public java.util.List<String> getIPPool() {
             return this.IPPool;
         }
 
         public static final class Builder {
-            private java.util.List < String > IPPool; 
+            private java.util.List<String> IPPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPPool model) {
+                this.IPPool = model.IPPool;
+            } 
 
             /**
              * IPPool.
              */
-            public Builder IPPool(java.util.List < String > IPPool) {
+            public Builder IPPool(java.util.List<String> IPPool) {
                 this.IPPool = IPPool;
                 return this;
             }
@@ -421,6 +448,29 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             private String region_en; 
             private String region_zh_cN; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCity model) {
+                this.area_en = model.area_en;
+                this.area_zh_cN = model.area_zh_cN;
+                this.city = model.city;
+                this.cityName_en = model.cityName_en;
+                this.cityName_zh_cN = model.cityName_zh_cN;
+                this.country = model.country;
+                this.country_en = model.country_en;
+                this.country_zh_cN = model.country_zh_cN;
+                this.IPPool = model.IPPool;
+                this.IPV4ProbeCount = model.IPV4ProbeCount;
+                this.IPV6ProbeCount = model.IPV6ProbeCount;
+                this.isp = model.isp;
+                this.ispName_en = model.ispName_en;
+                this.ispName_zh_cN = model.ispName_zh_cN;
+                this.region = model.region;
+                this.region_en = model.region_en;
+                this.region_zh_cN = model.region_zh_cN;
+            } 
+
             /**
              * Area.en.
              */
@@ -593,7 +643,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
      */
     public static class IspCityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspCity")
-        private java.util.List < IspCity> ispCity;
+        private java.util.List<IspCity> ispCity;
 
         private IspCityList(Builder builder) {
             this.ispCity = builder.ispCity;
@@ -610,17 +660,24 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         /**
          * @return ispCity
          */
-        public java.util.List < IspCity> getIspCity() {
+        public java.util.List<IspCity> getIspCity() {
             return this.ispCity;
         }
 
         public static final class Builder {
-            private java.util.List < IspCity> ispCity; 
+            private java.util.List<IspCity> ispCity; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityList model) {
+                this.ispCity = model.ispCity;
+            } 
 
             /**
              * IspCity.
              */
-            public Builder ispCity(java.util.List < IspCity> ispCity) {
+            public Builder ispCity(java.util.List<IspCity> ispCity) {
                 this.ispCity = ispCity;
                 return this;
             }

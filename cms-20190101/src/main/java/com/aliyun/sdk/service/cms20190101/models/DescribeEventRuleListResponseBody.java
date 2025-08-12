@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     public static DescribeEventRuleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventRuleListResponseBody model) {
+            this.code = model.code;
+            this.eventRules = model.eventRules;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -181,7 +202,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class EventTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventTypeList")
-        private java.util.List < String > eventTypeList;
+        private java.util.List<String> eventTypeList;
 
         private EventTypeList(Builder builder) {
             this.eventTypeList = builder.eventTypeList;
@@ -198,17 +219,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return eventTypeList
          */
-        public java.util.List < String > getEventTypeList() {
+        public java.util.List<String> getEventTypeList() {
             return this.eventTypeList;
         }
 
         public static final class Builder {
-            private java.util.List < String > eventTypeList; 
+            private java.util.List<String> eventTypeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventTypeList model) {
+                this.eventTypeList = model.eventTypeList;
+            } 
 
             /**
              * EventTypeList.
              */
-            public Builder eventTypeList(java.util.List < String > eventTypeList) {
+            public Builder eventTypeList(java.util.List<String> eventTypeList) {
                 this.eventTypeList = eventTypeList;
                 return this;
             }
@@ -228,7 +256,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class Keywords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         private Keywords(Builder builder) {
             this.keywords = builder.keywords;
@@ -245,17 +273,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
         public static final class Builder {
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keywords model) {
+                this.keywords = model.keywords;
+            } 
 
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -311,6 +346,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private Keywords keywords; 
             private String relation; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeywordFilter model) {
+                this.keywords = model.keywords;
+                this.relation = model.relation;
+            } 
+
             /**
              * <p>The keywords that are used to match events.</p>
              */
@@ -349,7 +392,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class LevelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LevelList")
-        private java.util.List < String > levelList;
+        private java.util.List<String> levelList;
 
         private LevelList(Builder builder) {
             this.levelList = builder.levelList;
@@ -366,17 +409,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return levelList
          */
-        public java.util.List < String > getLevelList() {
+        public java.util.List<String> getLevelList() {
             return this.levelList;
         }
 
         public static final class Builder {
-            private java.util.List < String > levelList; 
+            private java.util.List<String> levelList; 
+
+            private Builder() {
+            } 
+
+            private Builder(LevelList model) {
+                this.levelList = model.levelList;
+            } 
 
             /**
              * LevelList.
              */
-            public Builder levelList(java.util.List < String > levelList) {
+            public Builder levelList(java.util.List<String> levelList) {
                 this.levelList = levelList;
                 return this;
             }
@@ -396,7 +446,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class NameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         private NameList(Builder builder) {
             this.nameList = builder.nameList;
@@ -413,17 +463,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NameList model) {
+                this.nameList = model.nameList;
+            } 
 
             /**
              * NameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -539,6 +596,19 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String product; 
             private String SQLFilter; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventPattern model) {
+                this.customFilters = model.customFilters;
+                this.eventTypeList = model.eventTypeList;
+                this.keywordFilter = model.keywordFilter;
+                this.levelList = model.levelList;
+                this.nameList = model.nameList;
+                this.product = model.product;
+                this.SQLFilter = model.SQLFilter;
+            } 
+
             /**
              * <p>The custom filter conditions.</p>
              * 
@@ -619,7 +689,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class EventRuleEventPattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventPattern")
-        private java.util.List < EventPattern> eventPattern;
+        private java.util.List<EventPattern> eventPattern;
 
         private EventRuleEventPattern(Builder builder) {
             this.eventPattern = builder.eventPattern;
@@ -636,17 +706,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return eventPattern
          */
-        public java.util.List < EventPattern> getEventPattern() {
+        public java.util.List<EventPattern> getEventPattern() {
             return this.eventPattern;
         }
 
         public static final class Builder {
-            private java.util.List < EventPattern> eventPattern; 
+            private java.util.List<EventPattern> eventPattern; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventRuleEventPattern model) {
+                this.eventPattern = model.eventPattern;
+            } 
 
             /**
              * EventPattern.
              */
-            public Builder eventPattern(java.util.List < EventPattern> eventPattern) {
+            public Builder eventPattern(java.util.List<EventPattern> eventPattern) {
                 this.eventPattern = eventPattern;
                 return this;
             }
@@ -762,6 +839,19 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private Long silenceTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventRule model) {
+                this.description = model.description;
+                this.eventPattern = model.eventPattern;
+                this.eventType = model.eventType;
+                this.groupId = model.groupId;
+                this.name = model.name;
+                this.silenceTime = model.silenceTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The description of the event-triggered alert rule.</p>
              * 
@@ -859,7 +949,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
      */
     public static class EventRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventRule")
-        private java.util.List < EventRule> eventRule;
+        private java.util.List<EventRule> eventRule;
 
         private EventRules(Builder builder) {
             this.eventRule = builder.eventRule;
@@ -876,17 +966,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         /**
          * @return eventRule
          */
-        public java.util.List < EventRule> getEventRule() {
+        public java.util.List<EventRule> getEventRule() {
             return this.eventRule;
         }
 
         public static final class Builder {
-            private java.util.List < EventRule> eventRule; 
+            private java.util.List<EventRule> eventRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventRules model) {
+                this.eventRule = model.eventRule;
+            } 
 
             /**
              * EventRule.
              */
-            public Builder eventRule(java.util.List < EventRule> eventRule) {
+            public Builder eventRule(java.util.List<EventRule> eventRule) {
                 this.eventRule = eventRule;
                 return this;
             }

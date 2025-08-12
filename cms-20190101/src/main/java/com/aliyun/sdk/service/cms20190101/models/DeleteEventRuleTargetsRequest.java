@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ids;
+    private java.util.List<String> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
@@ -36,7 +41,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < String > getIds() {
+    public java.util.List<String> getIds() {
         return this.ids;
     }
 
@@ -56,7 +61,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEventRuleTargetsRequest, Builder> {
-        private java.util.List < String > ids; 
+        private java.util.List<String> ids; 
         private String ruleName; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder ids(java.util.List < String > ids) {
+        public Builder ids(java.util.List<String> ids) {
             this.putQueryParameter("Ids", ids);
             this.ids = ids;
             return this;

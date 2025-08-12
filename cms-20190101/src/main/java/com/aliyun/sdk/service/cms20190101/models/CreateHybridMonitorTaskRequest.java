@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateHybridMonitorTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttachLabels")
-    private java.util.List < AttachLabels> attachLabels;
+    private java.util.List<AttachLabels> attachLabels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAccessId")
-    private java.util.List < String > cloudAccessId;
+    private java.util.List<String> cloudAccessId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CollectInterval")
@@ -92,7 +97,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,14 +105,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
     /**
      * @return attachLabels
      */
-    public java.util.List < AttachLabels> getAttachLabels() {
+    public java.util.List<AttachLabels> getAttachLabels() {
         return this.attachLabels;
     }
 
     /**
      * @return cloudAccessId
      */
-    public java.util.List < String > getCloudAccessId() {
+    public java.util.List<String> getCloudAccessId() {
         return this.cloudAccessId;
     }
 
@@ -189,8 +194,8 @@ public class CreateHybridMonitorTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateHybridMonitorTaskRequest, Builder> {
-        private java.util.List < AttachLabels> attachLabels; 
-        private java.util.List < String > cloudAccessId; 
+        private java.util.List<AttachLabels> attachLabels; 
+        private java.util.List<String> cloudAccessId; 
         private String collectInterval; 
         private String collectTargetType; 
         private String description; 
@@ -230,7 +235,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
          * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
          * </blockquote>
          */
-        public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
+        public Builder attachLabels(java.util.List<AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
             this.attachLabels = attachLabels;
             return this;
@@ -239,7 +244,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         /**
          * CloudAccessId.
          */
-        public Builder cloudAccessId(java.util.List < String > cloudAccessId) {
+        public Builder cloudAccessId(java.util.List<String> cloudAccessId) {
             this.putQueryParameter("CloudAccessId", cloudAccessId);
             this.cloudAccessId = cloudAccessId;
             return this;
@@ -486,6 +491,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttachLabels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the metric.</p>
              * 
@@ -558,6 +571,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
         public static final class Builder {
             private String alias; 
             private String express; 
+
+            private Builder() {
+            } 
+
+            private Builder(Express model) {
+                this.alias = model.alias;
+                this.express = model.express;
+            } 
 
             /**
              * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
@@ -644,6 +665,15 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.operator = model.operator;
+                this.SLSKeyName = model.SLSKeyName;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
              * <ul>
@@ -702,7 +732,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
@@ -723,7 +753,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -735,13 +765,21 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private String relation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.filters = model.filters;
+                this.relation = model.relation;
+            } 
 
             /**
              * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -811,6 +849,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
         public static final class Builder {
             private String alias; 
             private String SLSKeyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupBy model) {
+                this.alias = model.alias;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
 
             /**
              * <p>The alias of the aggregation result.</p>
@@ -921,6 +967,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String parameter2; 
             private String SLSKeyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.alias = model.alias;
+                this.function = model.function;
+                this.parameter1 = model.parameter1;
+                this.parameter2 = model.parameter2;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
+
             /**
              * <p>The alias of the aggregation result.</p>
              * 
@@ -1011,16 +1068,16 @@ public class CreateHybridMonitorTaskRequest extends Request {
      */
     public static class SLSProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Express")
-        private java.util.List < Express> express;
+        private java.util.List<Express> express;
 
         @com.aliyun.core.annotation.NameInMap("Filter")
         private Filter filter;
 
         @com.aliyun.core.annotation.NameInMap("GroupBy")
-        private java.util.List < GroupBy> groupBy;
+        private java.util.List<GroupBy> groupBy;
 
         @com.aliyun.core.annotation.NameInMap("Statistics")
-        private java.util.List < Statistics> statistics;
+        private java.util.List<Statistics> statistics;
 
         private SLSProcessConfig(Builder builder) {
             this.express = builder.express;
@@ -1040,7 +1097,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         /**
          * @return express
          */
-        public java.util.List < Express> getExpress() {
+        public java.util.List<Express> getExpress() {
             return this.express;
         }
 
@@ -1054,27 +1111,37 @@ public class CreateHybridMonitorTaskRequest extends Request {
         /**
          * @return groupBy
          */
-        public java.util.List < GroupBy> getGroupBy() {
+        public java.util.List<GroupBy> getGroupBy() {
             return this.groupBy;
         }
 
         /**
          * @return statistics
          */
-        public java.util.List < Statistics> getStatistics() {
+        public java.util.List<Statistics> getStatistics() {
             return this.statistics;
         }
 
         public static final class Builder {
-            private java.util.List < Express> express; 
+            private java.util.List<Express> express; 
             private Filter filter; 
-            private java.util.List < GroupBy> groupBy; 
-            private java.util.List < Statistics> statistics; 
+            private java.util.List<GroupBy> groupBy; 
+            private java.util.List<Statistics> statistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(SLSProcessConfig model) {
+                this.express = model.express;
+                this.filter = model.filter;
+                this.groupBy = model.groupBy;
+                this.statistics = model.statistics;
+            } 
 
             /**
              * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
              */
-            public Builder express(java.util.List < Express> express) {
+            public Builder express(java.util.List<Express> express) {
                 this.express = express;
                 return this;
             }
@@ -1090,7 +1157,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             /**
              * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
              */
-            public Builder groupBy(java.util.List < GroupBy> groupBy) {
+            public Builder groupBy(java.util.List<GroupBy> groupBy) {
                 this.groupBy = groupBy;
                 return this;
             }
@@ -1098,7 +1165,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             /**
              * <p>The method that is used to aggregate logs imported from Simple Log Service.</p>
              */
-            public Builder statistics(java.util.List < Statistics> statistics) {
+            public Builder statistics(java.util.List<Statistics> statistics) {
                 this.statistics = statistics;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
 
     public static DeleteMetricRuleTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,10 +94,21 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         private Resource resource; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteMetricRuleTemplateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,7 +131,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B63F8CF-D48D-4608-A402-04FB5B2B4B6A</p>
@@ -122,7 +142,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the alert template.</p>
+         * <p>The template information.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -130,7 +150,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -177,6 +197,13 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The ID of the template.</p>

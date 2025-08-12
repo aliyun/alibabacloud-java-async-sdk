@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
 
     public static DescribeMonitorGroupDynamicRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         private String requestId; 
         private Resource resource; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupDynamicRulesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -206,6 +226,15 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.function = model.function;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to filter the instances. Valid values:</p>
              * <ul>
@@ -259,7 +288,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
      */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filter")
-        private java.util.List < Filter> filter;
+        private java.util.List<Filter> filter;
 
         private Filters(Builder builder) {
             this.filter = builder.filter;
@@ -276,17 +305,24 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         /**
          * @return filter
          */
-        public java.util.List < Filter> getFilter() {
+        public java.util.List<Filter> getFilter() {
             return this.filter;
         }
 
         public static final class Builder {
-            private java.util.List < Filter> filter; 
+            private java.util.List<Filter> filter; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.filter = model.filter;
+            } 
 
             /**
              * Filter.
              */
-            public Builder filter(java.util.List < Filter> filter) {
+            public Builder filter(java.util.List<Filter> filter) {
                 this.filter = filter;
                 return this;
             }
@@ -354,6 +390,15 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private String filterRelation; 
             private Filters filters; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceResource model) {
+                this.category = model.category;
+                this.filterRelation = model.filterRelation;
+                this.filters = model.filters;
+            } 
+
             /**
              * <p>The type of the cloud service to which the dynamic rule belongs. Valid values:</p>
              * <ul>
@@ -408,7 +453,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
      */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < ResourceResource> resource;
+        private java.util.List<ResourceResource> resource;
 
         private Resource(Builder builder) {
             this.resource = builder.resource;
@@ -425,17 +470,24 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < ResourceResource> getResource() {
+        public java.util.List<ResourceResource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceResource> resource; 
+            private java.util.List<ResourceResource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The resources that are associated with the application group.</p>
              */
-            public Builder resource(java.util.List < ResourceResource> resource) {
+            public Builder resource(java.util.List<ResourceResource> resource) {
                 this.resource = resource;
                 return this;
             }

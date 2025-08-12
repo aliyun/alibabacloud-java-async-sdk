@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class PutContactRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,7 @@ public class PutContactRequest extends Request {
          * <li>en: English</li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+         * <p> If you do not specify this parameter, CloudMonitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,9 +231,19 @@ public class PutContactRequest extends Request {
             private String mail; 
             private String SMS; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.aliIM = model.aliIM;
+                this.dingWebHook = model.dingWebHook;
+                this.mail = model.mail;
+                this.SMS = model.SMS;
+            } 
+
             /**
              * <p>The TradeManager ID of the alert contact.</p>
-             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+             * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>Jim</p>
@@ -240,7 +255,7 @@ public class PutContactRequest extends Request {
 
             /**
              * <p>The webhook URL of the DingTalk chatbot.</p>
-             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+             * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565">https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565</a>****</p>
@@ -251,8 +266,8 @@ public class PutContactRequest extends Request {
             }
 
             /**
-             * <p>The email address of the alert contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
-             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+             * <p>The email address. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
+             * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -264,7 +279,7 @@ public class PutContactRequest extends Request {
 
             /**
              * <p>The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.</p>
-             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+             * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>1333333****</p>

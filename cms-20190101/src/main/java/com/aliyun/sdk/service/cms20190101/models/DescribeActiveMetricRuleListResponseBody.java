@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
 
     public static DescribeActiveMetricRuleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveMetricRuleListResponseBody model) {
+            this.alertList = model.alertList;
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the alert rules. The result is in the same structure as that returned by the DescribeMetricRuleList operation.</p>
@@ -238,6 +259,16 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String threshold; 
             private String times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
              * <ul>
@@ -369,6 +400,16 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
             private String times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
@@ -503,6 +544,16 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String threshold; 
             private String times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
              * <ul>
@@ -623,6 +674,15 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private Critical critical; 
             private Info info; 
             private Warn warn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
 
             /**
              * <p>The trigger condition for Critical-level alerts.</p>
@@ -867,6 +927,28 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String silenceTime; 
             private String webhook; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alert model) {
+                this.alertState = model.alertState;
+                this.contactGroups = model.contactGroups;
+                this.dimensions = model.dimensions;
+                this.effectiveInterval = model.effectiveInterval;
+                this.enableState = model.enableState;
+                this.escalations = model.escalations;
+                this.mailSubject = model.mailSubject;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.period = model.period;
+                this.resources = model.resources;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.silenceTime = model.silenceTime;
+                this.webhook = model.webhook;
+            } 
+
             /**
              * <p>The status of the alert rule. Valid values:</p>
              * <ul>
@@ -1066,7 +1148,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
      */
     public static class AlertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alert")
-        private java.util.List < Alert> alert;
+        private java.util.List<Alert> alert;
 
         private AlertList(Builder builder) {
             this.alert = builder.alert;
@@ -1083,17 +1165,24 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         /**
          * @return alert
          */
-        public java.util.List < Alert> getAlert() {
+        public java.util.List<Alert> getAlert() {
             return this.alert;
         }
 
         public static final class Builder {
-            private java.util.List < Alert> alert; 
+            private java.util.List<Alert> alert; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertList model) {
+                this.alert = model.alert;
+            } 
 
             /**
              * Alert.
              */
-            public Builder alert(java.util.List < Alert> alert) {
+            public Builder alert(java.util.List<Alert> alert) {
                 this.alert = alert;
                 return this;
             }
@@ -1317,6 +1406,28 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String threshold; 
             private String webhook; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alarm model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.contactGroups = model.contactGroups;
+                this.enable = model.enable;
+                this.endTime = model.endTime;
+                this.evaluationCount = model.evaluationCount;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.period = model.period;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.silenceTime = model.silenceTime;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.webhook = model.webhook;
+            } 
+
             /**
              * <p>The comparison operator that is used in the alert rule. Valid values:</p>
              * <ul>
@@ -1525,7 +1636,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
      */
     public static class Datapoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alarm")
-        private java.util.List < Alarm> alarm;
+        private java.util.List<Alarm> alarm;
 
         private Datapoints(Builder builder) {
             this.alarm = builder.alarm;
@@ -1542,17 +1653,24 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         /**
          * @return alarm
          */
-        public java.util.List < Alarm> getAlarm() {
+        public java.util.List<Alarm> getAlarm() {
             return this.alarm;
         }
 
         public static final class Builder {
-            private java.util.List < Alarm> alarm; 
+            private java.util.List<Alarm> alarm; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datapoints model) {
+                this.alarm = model.alarm;
+            } 
 
             /**
              * Alarm.
              */
-            public Builder alarm(java.util.List < Alarm> alarm) {
+            public Builder alarm(java.util.List<Alarm> alarm) {
                 this.alarm = alarm;
                 return this;
             }

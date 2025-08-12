@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     public static DescribeContactGroupListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContactGroupListResponseBody model) {
+            this.code = model.code;
+            this.contactGroupList = model.contactGroupList;
+            this.contactGroups = model.contactGroups;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -201,7 +223,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
      */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
-        private java.util.List < String > contact;
+        private java.util.List<String> contact;
 
         private Contacts(Builder builder) {
             this.contact = builder.contact;
@@ -218,17 +240,24 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         /**
          * @return contact
          */
-        public java.util.List < String > getContact() {
+        public java.util.List<String> getContact() {
             return this.contact;
         }
 
         public static final class Builder {
-            private java.util.List < String > contact; 
+            private java.util.List<String> contact; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contact = model.contact;
+            } 
 
             /**
              * Contact.
              */
-            public Builder contact(java.util.List < String > contact) {
+            public Builder contact(java.util.List<String> contact) {
                 this.contact = contact;
                 return this;
             }
@@ -344,6 +373,19 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             private String name; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactGroup model) {
+                this.contacts = model.contacts;
+                this.createTime = model.createTime;
+                this.describe = model.describe;
+                this.enableSubscribed = model.enableSubscribed;
+                this.enabledWeeklyReport = model.enabledWeeklyReport;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The alert contacts in the alert group.</p>
              */
@@ -441,7 +483,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
      */
     public static class ContactGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < ContactGroup> contactGroup;
+        private java.util.List<ContactGroup> contactGroup;
 
         private ContactGroupList(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -458,17 +500,24 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < ContactGroup> getContactGroup() {
+        public java.util.List<ContactGroup> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ContactGroup> contactGroup; 
+            private java.util.List<ContactGroup> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroupList model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < ContactGroup> contactGroup) {
+            public Builder contactGroup(java.util.List<ContactGroup> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }
@@ -488,7 +537,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
      */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < String > contactGroup;
+        private java.util.List<String> contactGroup;
 
         private ContactGroups(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -505,17 +554,24 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < String > getContactGroup() {
+        public java.util.List<String> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroup; 
+            private java.util.List<String> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < String > contactGroup) {
+            public Builder contactGroup(java.util.List<String> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }

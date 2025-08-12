@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
 
     public static DescribeMetricMetaListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         private Resources resources; 
         private Boolean success; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricMetaListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -289,6 +310,20 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             private String statistics; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.description = model.description;
+                this.dimensions = model.dimensions;
+                this.labels = model.labels;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.periods = model.periods;
+                this.statistics = model.statistics;
+                this.unit = model.unit;
+            } 
+
             /**
              * <p>The metric description.</p>
              * 
@@ -402,7 +437,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -419,17 +454,24 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

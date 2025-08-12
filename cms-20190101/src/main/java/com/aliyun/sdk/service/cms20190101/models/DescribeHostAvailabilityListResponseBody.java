@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     public static DescribeHostAvailabilityListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         private Boolean success; 
         private TaskList taskList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHostAvailabilityListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskList = model.taskList;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -253,6 +274,17 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String times; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EscalationList model) {
+                this.aggregate = model.aggregate;
+                this.metricName = model.metricName;
+                this.operator = model.operator;
+                this.times = model.times;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method used to calculate metric values that trigger alerts. Valid values:</p>
              * <ul>
@@ -344,7 +376,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
      */
     public static class AlertConfigEscalationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("escalationList")
-        private java.util.List < EscalationList> escalationList;
+        private java.util.List<EscalationList> escalationList;
 
         private AlertConfigEscalationList(Builder builder) {
             this.escalationList = builder.escalationList;
@@ -361,17 +393,24 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         /**
          * @return escalationList
          */
-        public java.util.List < EscalationList> getEscalationList() {
+        public java.util.List<EscalationList> getEscalationList() {
             return this.escalationList;
         }
 
         public static final class Builder {
-            private java.util.List < EscalationList> escalationList; 
+            private java.util.List<EscalationList> escalationList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfigEscalationList model) {
+                this.escalationList = model.escalationList;
+            } 
 
             /**
              * escalationList.
              */
-            public Builder escalationList(java.util.List < EscalationList> escalationList) {
+            public Builder escalationList(java.util.List<EscalationList> escalationList) {
                 this.escalationList = escalationList;
                 return this;
             }
@@ -451,6 +490,16 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String jsonParams; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
              * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields:</p>
@@ -523,7 +572,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
      */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
-        private java.util.List < Target> target;
+        private java.util.List<Target> target;
 
         private TargetList(Builder builder) {
             this.target = builder.target;
@@ -540,17 +589,24 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         /**
          * @return target
          */
-        public java.util.List < Target> getTarget() {
+        public java.util.List<Target> getTarget() {
             return this.target;
         }
 
         public static final class Builder {
-            private java.util.List < Target> target; 
+            private java.util.List<Target> target; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.target = model.target;
+            } 
 
             /**
              * Target.
              */
-            public Builder target(java.util.List < Target> target) {
+            public Builder target(java.util.List<Target> target) {
                 this.target = target;
                 return this;
             }
@@ -666,6 +722,19 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private TargetList targetList; 
             private String webHook; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.endTime = model.endTime;
+                this.escalationList = model.escalationList;
+                this.notifyType = model.notifyType;
+                this.silenceTime = model.silenceTime;
+                this.startTime = model.startTime;
+                this.targetList = model.targetList;
+                this.webHook = model.webHook;
+            } 
+
             /**
              * <p>The end of the time period during which the alert rule is effective. Valid values: 0 to 23.</p>
              * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
@@ -766,7 +835,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < String > instance;
+        private java.util.List<String> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -783,17 +852,24 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < String > getInstance() {
+        public java.util.List<String> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < String > instance; 
+            private java.util.List<String> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < String > instance) {
+            public Builder instance(java.util.List<String> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -920,6 +996,20 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String httpURI; 
             private Integer interval; 
             private String telnetOrPingHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOption model) {
+                this.httpKeyword = model.httpKeyword;
+                this.httpMethod = model.httpMethod;
+                this.httpNegative = model.httpNegative;
+                this.httpPostContent = model.httpPostContent;
+                this.httpResponseCharset = model.httpResponseCharset;
+                this.httpURI = model.httpURI;
+                this.interval = model.interval;
+                this.telnetOrPingHost = model.telnetOrPingHost;
+            } 
 
             /**
              * <p>The response to the HTTP request.</p>
@@ -1165,6 +1255,22 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String taskScope; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeTaskConfig model) {
+                this.alertConfig = model.alertConfig;
+                this.disabled = model.disabled;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.instances = model.instances;
+                this.taskName = model.taskName;
+                this.taskOption = model.taskOption;
+                this.taskScope = model.taskScope;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>The configurations of the alert rule.</p>
              */
@@ -1294,7 +1400,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
      */
     public static class TaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeTaskConfig")
-        private java.util.List < NodeTaskConfig> nodeTaskConfig;
+        private java.util.List<NodeTaskConfig> nodeTaskConfig;
 
         private TaskList(Builder builder) {
             this.nodeTaskConfig = builder.nodeTaskConfig;
@@ -1311,17 +1417,24 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         /**
          * @return nodeTaskConfig
          */
-        public java.util.List < NodeTaskConfig> getNodeTaskConfig() {
+        public java.util.List<NodeTaskConfig> getNodeTaskConfig() {
             return this.nodeTaskConfig;
         }
 
         public static final class Builder {
-            private java.util.List < NodeTaskConfig> nodeTaskConfig; 
+            private java.util.List<NodeTaskConfig> nodeTaskConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.nodeTaskConfig = model.nodeTaskConfig;
+            } 
 
             /**
              * NodeTaskConfig.
              */
-            public Builder nodeTaskConfig(java.util.List < NodeTaskConfig> nodeTaskConfig) {
+            public Builder nodeTaskConfig(java.util.List<NodeTaskConfig> nodeTaskConfig) {
                 this.nodeTaskConfig = nodeTaskConfig;
                 return this;
             }

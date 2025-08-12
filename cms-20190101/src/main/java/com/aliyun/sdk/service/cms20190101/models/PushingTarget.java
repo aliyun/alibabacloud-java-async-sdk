@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,6 +71,10 @@ public class PushingTarget extends TeaModel {
 
     public static PushingTarget create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -157,6 +166,23 @@ public class PushingTarget extends TeaModel {
         private String updateTime; 
         private String userId; 
         private String uuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(PushingTarget model) {
+            this.arn = model.arn;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.httpRequestTarget = model.httpRequestTarget;
+            this.name = model.name;
+            this.range = model.range;
+            this.templateUuid = model.templateUuid;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+        } 
 
         /**
          * Arn.
@@ -296,6 +322,14 @@ public class PushingTarget extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -329,11 +363,17 @@ public class PushingTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptSignatureKey")
+        private String encryptSignatureKey;
+
         @com.aliyun.core.annotation.NameInMap("EncryptString")
         private String encryptString;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptTimestampKey")
+        private String encryptTimestampKey;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
-        private java.util.List < Headers> headers;
+        private java.util.List<Headers> headers;
 
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
@@ -343,7 +383,9 @@ public class PushingTarget extends TeaModel {
 
         private HttpRequestTarget(Builder builder) {
             this.contentType = builder.contentType;
+            this.encryptSignatureKey = builder.encryptSignatureKey;
             this.encryptString = builder.encryptString;
+            this.encryptTimestampKey = builder.encryptTimestampKey;
             this.headers = builder.headers;
             this.method = builder.method;
             this.url = builder.url;
@@ -365,6 +407,13 @@ public class PushingTarget extends TeaModel {
         }
 
         /**
+         * @return encryptSignatureKey
+         */
+        public String getEncryptSignatureKey() {
+            return this.encryptSignatureKey;
+        }
+
+        /**
          * @return encryptString
          */
         public String getEncryptString() {
@@ -372,9 +421,16 @@ public class PushingTarget extends TeaModel {
         }
 
         /**
+         * @return encryptTimestampKey
+         */
+        public String getEncryptTimestampKey() {
+            return this.encryptTimestampKey;
+        }
+
+        /**
          * @return headers
          */
-        public java.util.List < Headers> getHeaders() {
+        public java.util.List<Headers> getHeaders() {
             return this.headers;
         }
 
@@ -394,16 +450,39 @@ public class PushingTarget extends TeaModel {
 
         public static final class Builder {
             private String contentType; 
+            private String encryptSignatureKey; 
             private String encryptString; 
-            private java.util.List < Headers> headers; 
+            private String encryptTimestampKey; 
+            private java.util.List<Headers> headers; 
             private String method; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpRequestTarget model) {
+                this.contentType = model.contentType;
+                this.encryptSignatureKey = model.encryptSignatureKey;
+                this.encryptString = model.encryptString;
+                this.encryptTimestampKey = model.encryptTimestampKey;
+                this.headers = model.headers;
+                this.method = model.method;
+                this.url = model.url;
+            } 
 
             /**
              * ContentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
+                return this;
+            }
+
+            /**
+             * EncryptSignatureKey.
+             */
+            public Builder encryptSignatureKey(String encryptSignatureKey) {
+                this.encryptSignatureKey = encryptSignatureKey;
                 return this;
             }
 
@@ -416,9 +495,17 @@ public class PushingTarget extends TeaModel {
             }
 
             /**
+             * EncryptTimestampKey.
+             */
+            public Builder encryptTimestampKey(String encryptTimestampKey) {
+                this.encryptTimestampKey = encryptTimestampKey;
+                return this;
+            }
+
+            /**
              * Headers.
              */
-            public Builder headers(java.util.List < Headers> headers) {
+            public Builder headers(java.util.List<Headers> headers) {
                 this.headers = headers;
                 return this;
             }

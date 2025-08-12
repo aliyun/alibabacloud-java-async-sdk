@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAlertLogCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertLogCount")
-    private java.util.List < AlertLogCount> alertLogCount;
+    private java.util.List<AlertLogCount> alertLogCount;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -43,10 +48,14 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertLogCount
      */
-    public java.util.List < AlertLogCount> getAlertLogCount() {
+    public java.util.List<AlertLogCount> getAlertLogCount() {
         return this.alertLogCount;
     }
 
@@ -79,16 +88,27 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlertLogCount> alertLogCount; 
+        private java.util.List<AlertLogCount> alertLogCount; 
         private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertLogCountResponseBody model) {
+            this.alertLogCount = model.alertLogCount;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The statistics of alert logs.</p>
          */
-        public Builder alertLogCount(java.util.List < AlertLogCount> alertLogCount) {
+        public Builder alertLogCount(java.util.List<AlertLogCount> alertLogCount) {
             this.alertLogCount = alertLogCount;
             return this;
         }
@@ -194,6 +214,14 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the dimension field based on which alert logs are aggregated.</p>
              * 
@@ -234,7 +262,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         private Integer count;
 
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < Logs> logs;
+        private java.util.List<Logs> logs;
 
         private AlertLogCount(Builder builder) {
             this.count = builder.count;
@@ -259,13 +287,21 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         /**
          * @return logs
          */
-        public java.util.List < Logs> getLogs() {
+        public java.util.List<Logs> getLogs() {
             return this.logs;
         }
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < Logs> logs; 
+            private java.util.List<Logs> logs; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertLogCount model) {
+                this.count = model.count;
+                this.logs = model.logs;
+            } 
 
             /**
              * <p>The number of alert logs.</p>
@@ -281,7 +317,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             /**
              * <p>The details about alert logs.</p>
              */
-            public Builder logs(java.util.List < Logs> logs) {
+            public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
                 return this;
             }

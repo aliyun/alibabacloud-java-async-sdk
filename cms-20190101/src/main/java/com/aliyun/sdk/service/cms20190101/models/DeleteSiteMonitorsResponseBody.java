@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
 
     public static DeleteSiteMonitorsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSiteMonitorsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -177,6 +197,13 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+            } 
 
             /**
              * <p>The number of the site monitoring tasks that were deleted.</p>

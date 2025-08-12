@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
 
     public static DescribeMonitoringAgentAccessKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         private String requestId; 
         private String secretKey; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitoringAgentAccessKeyResponseBody model) {
+            this.accessKey = model.accessKey;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretKey = model.secretKey;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The AccessKey ID that is required to install the agent.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     private BatchCreateInstantSiteMonitorRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
     public static final class Builder extends Request.Builder<BatchCreateInstantSiteMonitorRequest, Builder> {
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
 
         private Builder() {
             super();
@@ -61,7 +66,7 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.putQueryParameter("TaskList", taskList);
             this.taskList = taskList;
             return this;
@@ -153,6 +158,17 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             private String optionsJson; 
             private String taskName; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.address = model.address;
+                this.ispCities = model.ispCities;
+                this.optionsJson = model.optionsJson;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The URL or IP address that is monitored by the task.</p>

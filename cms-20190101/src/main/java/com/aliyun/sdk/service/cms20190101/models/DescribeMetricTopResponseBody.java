@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
 
     public static DescribeMetricTopResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         private String message; 
         private String period; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricTopResponseBody model) {
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.period = model.period;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>

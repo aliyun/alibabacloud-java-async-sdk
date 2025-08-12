@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class BatchExportResponseBody extends TeaModel {
     private String cursor;
 
     @com.aliyun.core.annotation.NameInMap("DataResults")
-    private java.util.List < MetricStat > dataResults;
+    private java.util.List<MetricStat> dataResults;
 
     @com.aliyun.core.annotation.NameInMap("HasNext")
     private Boolean hasNext;
@@ -59,6 +64,10 @@ public class BatchExportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return anchor
      */
@@ -83,7 +92,7 @@ public class BatchExportResponseBody extends TeaModel {
     /**
      * @return dataResults
      */
-    public java.util.List < MetricStat > getDataResults() {
+    public java.util.List<MetricStat> getDataResults() {
         return this.dataResults;
     }
 
@@ -126,12 +135,27 @@ public class BatchExportResponseBody extends TeaModel {
         private Long anchor; 
         private Integer code; 
         private String cursor; 
-        private java.util.List < MetricStat > dataResults; 
+        private java.util.List<MetricStat> dataResults; 
         private Boolean hasNext; 
         private Integer length; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchExportResponseBody model) {
+            this.anchor = model.anchor;
+            this.code = model.code;
+            this.cursor = model.cursor;
+            this.dataResults = model.dataResults;
+            this.hasNext = model.hasNext;
+            this.length = model.length;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.</p>
@@ -175,7 +199,7 @@ public class BatchExportResponseBody extends TeaModel {
         /**
          * <p>The data returned in this call.</p>
          */
-        public Builder dataResults(java.util.List < MetricStat > dataResults) {
+        public Builder dataResults(java.util.List<MetricStat> dataResults) {
             this.dataResults = dataResults;
             return this;
         }

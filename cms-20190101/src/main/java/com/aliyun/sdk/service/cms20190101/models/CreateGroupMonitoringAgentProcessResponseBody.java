@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static CreateGroupMonitoringAgentProcessResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private String requestId; 
         private Resource resource; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupMonitoringAgentProcessResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -181,6 +201,13 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupProcessId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.groupProcessId = model.groupProcessId;
+            } 
 
             /**
              * <p>The ID of the group process.</p>

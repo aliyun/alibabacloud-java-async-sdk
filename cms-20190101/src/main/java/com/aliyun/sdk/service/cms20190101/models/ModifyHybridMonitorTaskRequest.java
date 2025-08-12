@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyHybridMonitorTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttachLabels")
-    private java.util.List < AttachLabels> attachLabels;
+    private java.util.List<AttachLabels> attachLabels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CollectInterval")
@@ -55,7 +60,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,7 +68,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
     /**
      * @return attachLabels
      */
-    public java.util.List < AttachLabels> getAttachLabels() {
+    public java.util.List<AttachLabels> getAttachLabels() {
         return this.attachLabels;
     }
 
@@ -103,7 +108,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyHybridMonitorTaskRequest, Builder> {
-        private java.util.List < AttachLabels> attachLabels; 
+        private java.util.List<AttachLabels> attachLabels; 
         private String collectInterval; 
         private String description; 
         private SLSProcessConfig SLSProcessConfig; 
@@ -127,7 +132,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         /**
          * <p>The tags of the metric.</p>
          */
-        public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
+        public Builder attachLabels(java.util.List<AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
             this.attachLabels = attachLabels;
             return this;
@@ -160,7 +165,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the logs that are imported from Log Service.</p>
+         * <p>The configurations of the logs that are imported from Simple Log Service.</p>
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
             this.putQueryParameter("SLSProcessConfig", SLSProcessConfig);
@@ -246,6 +251,14 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttachLabels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the metric.</p>
              * 
@@ -318,6 +331,14 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         public static final class Builder {
             private String alias; 
             private String express; 
+
+            private Builder() {
+            } 
+
+            private Builder(Express model) {
+                this.alias = model.alias;
+                this.express = model.express;
+            } 
 
             /**
              * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
@@ -404,8 +425,17 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.operator = model.operator;
+                this.SLSKeyName = model.SLSKeyName;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+             * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
              * <ul>
              * <li><code>contain</code>: contains</li>
              * <li><code>notContain</code>: does not contain</li>
@@ -426,7 +456,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to filter logs imported from Log Service.</p>
+             * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -437,7 +467,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+             * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -462,7 +492,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
@@ -483,7 +513,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -495,13 +525,21 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private String relation; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.filters = model.filters;
+                this.relation = model.relation;
+            } 
+
             /**
-             * <p>None</p>
+             * <p>None.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -572,6 +610,14 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String alias; 
             private String SLSKeyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupBy model) {
+                this.alias = model.alias;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
+
             /**
              * <p>The alias of the aggregation result.</p>
              * 
@@ -584,7 +630,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -681,6 +727,17 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String parameter2; 
             private String SLSKeyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.alias = model.alias;
+                this.function = model.function;
+                this.parameter1 = model.parameter1;
+                this.parameter2 = model.parameter2;
+                this.SLSKeyName = model.SLSKeyName;
+            } 
+
             /**
              * <p>The alias of the aggregation result.</p>
              * 
@@ -701,10 +758,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
              * <li>max: calculates the maximum value.</li>
              * <li>min: calculates the minimum value.</li>
              * <li>value: collects samples within the statistical period.</li>
-             * <li>countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.</li>
-             * <li>sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.</li>
-             * <li>distinct: counts the number of logs where the specified field appears within the statistical period.</li>
-             * <li>distribution: counts the number of logs that meet a specified condition within the statistical period.</li>
+             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within the statistical period.</li>
+             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within the statistical period.</li>
+             * <li>distinct: calculates the number of unique values of the specified field within the statistical period.</li>
+             * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
              * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
              * </ul>
              * 
@@ -717,10 +774,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
              * <ul>
              * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
-             * <li>If you set the <code>Function</code> parameter to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+             * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -732,9 +789,9 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
              * <blockquote>
-             * <p>This parameter must be specified when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+             * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -746,7 +803,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -771,16 +828,16 @@ public class ModifyHybridMonitorTaskRequest extends Request {
      */
     public static class SLSProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Express")
-        private java.util.List < Express> express;
+        private java.util.List<Express> express;
 
         @com.aliyun.core.annotation.NameInMap("Filter")
         private Filter filter;
 
         @com.aliyun.core.annotation.NameInMap("GroupBy")
-        private java.util.List < GroupBy> groupBy;
+        private java.util.List<GroupBy> groupBy;
 
         @com.aliyun.core.annotation.NameInMap("Statistics")
-        private java.util.List < Statistics> statistics;
+        private java.util.List<Statistics> statistics;
 
         private SLSProcessConfig(Builder builder) {
             this.express = builder.express;
@@ -800,7 +857,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         /**
          * @return express
          */
-        public java.util.List < Express> getExpress() {
+        public java.util.List<Express> getExpress() {
             return this.express;
         }
 
@@ -814,33 +871,43 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         /**
          * @return groupBy
          */
-        public java.util.List < GroupBy> getGroupBy() {
+        public java.util.List<GroupBy> getGroupBy() {
             return this.groupBy;
         }
 
         /**
          * @return statistics
          */
-        public java.util.List < Statistics> getStatistics() {
+        public java.util.List<Statistics> getStatistics() {
             return this.statistics;
         }
 
         public static final class Builder {
-            private java.util.List < Express> express; 
+            private java.util.List<Express> express; 
             private Filter filter; 
-            private java.util.List < GroupBy> groupBy; 
-            private java.util.List < Statistics> statistics; 
+            private java.util.List<GroupBy> groupBy; 
+            private java.util.List<Statistics> statistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(SLSProcessConfig model) {
+                this.express = model.express;
+                this.filter = model.filter;
+                this.groupBy = model.groupBy;
+                this.statistics = model.statistics;
+            } 
 
             /**
              * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
              */
-            public Builder express(java.util.List < Express> express) {
+            public Builder express(java.util.List<Express> express) {
                 this.express = express;
                 return this;
             }
 
             /**
-             * <p>The conditions that are used to filter logs imported from Log Service.</p>
+             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -848,17 +915,17 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
+             * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
              */
-            public Builder groupBy(java.util.List < GroupBy> groupBy) {
+            public Builder groupBy(java.util.List<GroupBy> groupBy) {
                 this.groupBy = groupBy;
                 return this;
             }
 
             /**
-             * <p>None</p>
+             * <p>None.</p>
              */
-            public Builder statistics(java.util.List < Statistics> statistics) {
+            public Builder statistics(java.util.List<Statistics> statistics) {
                 this.statistics = statistics;
                 return this;
             }

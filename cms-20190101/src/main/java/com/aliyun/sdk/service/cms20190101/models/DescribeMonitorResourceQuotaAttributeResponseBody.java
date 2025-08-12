@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         private String message; 
         private String requestId; 
         private ResourceQuota resourceQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorResourceQuotaAttributeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resourceQuota = model.resourceQuota;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -179,6 +198,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(Api model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of API calls. Unit: 10,000 calls.</p>
              * 
@@ -275,6 +303,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomMonitor model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of the time series for custom monitoring.</p>
              * 
@@ -358,6 +395,14 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         public static final class Builder {
             private String instanceId; 
             private String suitInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnterpriseQuota model) {
+                this.instanceId = model.instanceId;
+                this.suitInfo = model.suitInfo;
+            } 
 
             /**
              * <p>The ID of the instance monitored by Hybrid Cloud Monitoring.</p>
@@ -443,6 +488,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaLimit; 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventMonitor model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
 
             /**
              * <p>The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.</p>
@@ -540,6 +594,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogMonitor model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of processed log data in log monitoring. Unit: MB/min.</p>
              * 
@@ -635,6 +698,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaLimit; 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(Phone model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
 
             /**
              * <p>The total quota of alert phone calls. Unit: calls.</p>
@@ -732,6 +804,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(SMS model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of alert text messages. Unit: messages.</p>
              * 
@@ -828,6 +909,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitorBrowser model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of browser detection tasks.</p>
              * 
@@ -923,6 +1013,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaLimit; 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitorEcsProbe model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
 
             /**
              * <p>The total quota of ECS detection points for site monitoring.</p>
@@ -1026,6 +1125,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitorMobile model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of mobile detection tasks.</p>
              * 
@@ -1122,6 +1230,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitorOperatorProbe model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
+
             /**
              * <p>The total quota of carrier detection points for site monitoring.</p>
              * 
@@ -1217,6 +1334,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaLimit; 
             private Integer quotaPackage; 
             private Integer quotaUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitorTask model) {
+                this.quotaLimit = model.quotaLimit;
+                this.quotaPackage = model.quotaPackage;
+                this.quotaUsed = model.quotaUsed;
+            } 
 
             /**
              * <p>The total quota of site monitoring tasks.</p>
@@ -1457,6 +1583,27 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private SiteMonitorOperatorProbe siteMonitorOperatorProbe; 
             private SiteMonitorTask siteMonitorTask; 
             private String suitInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceQuota model) {
+                this.api = model.api;
+                this.customMonitor = model.customMonitor;
+                this.enterpriseQuota = model.enterpriseQuota;
+                this.eventMonitor = model.eventMonitor;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.logMonitor = model.logMonitor;
+                this.phone = model.phone;
+                this.SMS = model.SMS;
+                this.siteMonitorBrowser = model.siteMonitorBrowser;
+                this.siteMonitorEcsProbe = model.siteMonitorEcsProbe;
+                this.siteMonitorMobile = model.siteMonitorMobile;
+                this.siteMonitorOperatorProbe = model.siteMonitorOperatorProbe;
+                this.siteMonitorTask = model.siteMonitorTask;
+                this.suitInfo = model.suitInfo;
+            } 
 
             /**
              * <p>The details about the quota of API calls.</p>

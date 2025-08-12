@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class PutResourceMetricRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private PutResourceMetricRulesRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class PutResourceMetricRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class PutResourceMetricRulesRequest extends Request {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
     public static final class Builder extends Request.Builder<PutResourceMetricRulesRequest, Builder> {
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
 
         private Builder() {
             super();
@@ -59,7 +64,7 @@ public class PutResourceMetricRulesRequest extends Request {
          * <p>Valid values of N: 1 to 500.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.putQueryParameter("Rules", rules);
             this.rules = rules;
             return this;
@@ -163,6 +168,18 @@ public class PutResourceMetricRulesRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * ComparisonOperator.
@@ -311,6 +328,18 @@ public class PutResourceMetricRulesRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -458,6 +487,18 @@ public class PutResourceMetricRulesRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -572,6 +613,15 @@ public class PutResourceMetricRulesRequest extends Request {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * Critical.
              */
@@ -647,6 +697,14 @@ public class PutResourceMetricRulesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -687,7 +745,6 @@ public class PutResourceMetricRulesRequest extends Request {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
@@ -704,7 +761,7 @@ public class PutResourceMetricRulesRequest extends Request {
         private String interval;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
@@ -805,7 +862,7 @@ public class PutResourceMetricRulesRequest extends Request {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -885,7 +942,7 @@ public class PutResourceMetricRulesRequest extends Request {
             private String effectiveInterval; 
             private String emailSubject; 
             private String interval; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String metricName; 
             private String namespace; 
             private String noDataPolicy; 
@@ -896,6 +953,28 @@ public class PutResourceMetricRulesRequest extends Request {
             private String ruleName; 
             private Integer silenceTime; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.escalations = model.escalations;
+                this.contactGroups = model.contactGroups;
+                this.effectiveInterval = model.effectiveInterval;
+                this.emailSubject = model.emailSubject;
+                this.interval = model.interval;
+                this.labels = model.labels;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.noDataPolicy = model.noDataPolicy;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.period = model.period;
+                this.resources = model.resources;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.silenceTime = model.silenceTime;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * Escalations.
@@ -961,7 +1040,7 @@ public class PutResourceMetricRulesRequest extends Request {
             /**
              * <p>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

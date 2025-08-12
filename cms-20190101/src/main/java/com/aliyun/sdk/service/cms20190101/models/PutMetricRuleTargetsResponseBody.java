@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     public static PutMetricRuleTargetsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutMetricRuleTargetsResponseBody model) {
+            this.code = model.code;
+            this.failData = model.failData;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -206,6 +226,15 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private String id; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of SMQ and the parameters in the ARN:</p>
              * <ul>
@@ -279,7 +308,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
      */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
-        private java.util.List < Target> target;
+        private java.util.List<Target> target;
 
         private Targets(Builder builder) {
             this.target = builder.target;
@@ -296,17 +325,24 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         /**
          * @return target
          */
-        public java.util.List < Target> getTarget() {
+        public java.util.List<Target> getTarget() {
             return this.target;
         }
 
         public static final class Builder {
-            private java.util.List < Target> target; 
+            private java.util.List<Target> target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.target = model.target;
+            } 
 
             /**
              * Target.
              */
-            public Builder target(java.util.List < Target> target) {
+            public Builder target(java.util.List<Target> target) {
                 this.target = target;
                 return this;
             }
@@ -349,6 +385,13 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Targets targets; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailData model) {
+                this.targets = model.targets;
+            } 
 
             /**
              * <p>The information about the resources for which alerts are triggered.</p>

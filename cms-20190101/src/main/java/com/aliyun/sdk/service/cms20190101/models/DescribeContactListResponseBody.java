@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     public static DescribeContactListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeContactListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContactListResponseBody model) {
+            this.code = model.code;
+            this.contacts = model.contacts;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -241,6 +262,16 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String mail; 
             private String SMS; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.aliIM = model.aliIM;
+                this.dingWebHook = model.dingWebHook;
+                this.mail = model.mail;
+                this.SMS = model.SMS;
+            } 
+
             /**
              * <p>The TradeManager ID of the alert contact.</p>
              * 
@@ -360,6 +391,16 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String mail; 
             private String SMS; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelsState model) {
+                this.aliIM = model.aliIM;
+                this.dingWebHook = model.dingWebHook;
+                this.mail = model.mail;
+                this.SMS = model.SMS;
+            } 
+
             /**
              * <p>The status of the TradeManager ID.</p>
              * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
@@ -435,7 +476,7 @@ public class DescribeContactListResponseBody extends TeaModel {
      */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < String > contactGroup;
+        private java.util.List<String> contactGroup;
 
         private ContactGroups(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -452,17 +493,24 @@ public class DescribeContactListResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < String > getContactGroup() {
+        public java.util.List<String> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroup; 
+            private java.util.List<String> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < String > contactGroup) {
+            public Builder contactGroup(java.util.List<String> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }
@@ -590,6 +638,20 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String name; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.channels = model.channels;
+                this.channelsState = model.channelsState;
+                this.contactGroups = model.contactGroups;
+                this.createTime = model.createTime;
+                this.desc = model.desc;
+                this.lang = model.lang;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The alert notification method.</p>
              */
@@ -688,7 +750,7 @@ public class DescribeContactListResponseBody extends TeaModel {
      */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
-        private java.util.List < Contact> contact;
+        private java.util.List<Contact> contact;
 
         private Contacts(Builder builder) {
             this.contact = builder.contact;
@@ -705,17 +767,24 @@ public class DescribeContactListResponseBody extends TeaModel {
         /**
          * @return contact
          */
-        public java.util.List < Contact> getContact() {
+        public java.util.List<Contact> getContact() {
             return this.contact;
         }
 
         public static final class Builder {
-            private java.util.List < Contact> contact; 
+            private java.util.List<Contact> contact; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contact = model.contact;
+            } 
 
             /**
              * Contact.
              */
-            public Builder contact(java.util.List < Contact> contact) {
+            public Builder contact(java.util.List<Contact> contact) {
                 this.contact = contact;
                 return this;
             }

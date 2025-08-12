@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class PutResourceMetricRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricName")
@@ -119,7 +124,7 @@ public class PutResourceMetricRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,7 +174,7 @@ public class PutResourceMetricRuleRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -257,7 +262,7 @@ public class PutResourceMetricRuleRequest extends Request {
         private String effectiveInterval; 
         private String emailSubject; 
         private String interval; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String metricName; 
         private String namespace; 
         private String noDataPolicy; 
@@ -376,7 +381,7 @@ public class PutResourceMetricRuleRequest extends Request {
          * <p> This parameter is equivalent to the Label parameter of Prometheus alerts.</p>
          * </blockquote>
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putQueryParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -620,6 +625,16 @@ public class PutResourceMetricRuleRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid value:</p>
              * <ul>
@@ -765,6 +780,16 @@ public class PutResourceMetricRuleRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid value:</p>
@@ -912,6 +937,16 @@ public class PutResourceMetricRuleRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid value:</p>
              * <ul>
@@ -998,15 +1033,12 @@ public class PutResourceMetricRuleRequest extends Request {
      */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
         @com.aliyun.core.annotation.NameInMap("Info")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
         @com.aliyun.core.annotation.NameInMap("Warn")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -1048,6 +1080,15 @@ public class PutResourceMetricRuleRequest extends Request {
             private Critical critical; 
             private Info info; 
             private Warn warn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
 
             /**
              * Critical.
@@ -1160,6 +1201,17 @@ public class PutResourceMetricRuleRequest extends Request {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionList model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid value:</p>
              * <ul>
@@ -1254,7 +1306,7 @@ public class PutResourceMetricRuleRequest extends Request {
      */
     public static class CompositeExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpressionList")
-        private java.util.List < ExpressionList> expressionList;
+        private java.util.List<ExpressionList> expressionList;
 
         @com.aliyun.core.annotation.NameInMap("ExpressionListJoin")
         private String expressionListJoin;
@@ -1287,7 +1339,7 @@ public class PutResourceMetricRuleRequest extends Request {
         /**
          * @return expressionList
          */
-        public java.util.List < ExpressionList> getExpressionList() {
+        public java.util.List<ExpressionList> getExpressionList() {
             return this.expressionList;
         }
 
@@ -1320,16 +1372,27 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ExpressionList> expressionList; 
+            private java.util.List<ExpressionList> expressionList; 
             private String expressionListJoin; 
             private String expressionRaw; 
             private String level; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompositeExpression model) {
+                this.expressionList = model.expressionList;
+                this.expressionListJoin = model.expressionListJoin;
+                this.expressionRaw = model.expressionRaw;
+                this.level = model.level;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The trigger conditions that are created in standard mode.</p>
              */
-            public Builder expressionList(java.util.List < ExpressionList> expressionList) {
+            public Builder expressionList(java.util.List<ExpressionList> expressionList) {
                 this.expressionList = expressionList;
                 return this;
             }
@@ -1443,6 +1506,14 @@ public class PutResourceMetricRuleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -1519,6 +1590,14 @@ public class PutResourceMetricRuleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the annotation.</p>
              * 
@@ -1556,7 +1635,7 @@ public class PutResourceMetricRuleRequest extends Request {
      */
     public static class Prometheus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        private java.util.List<Annotations> annotations;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -1585,7 +1664,7 @@ public class PutResourceMetricRuleRequest extends Request {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -1611,10 +1690,20 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private String level; 
             private String promQL; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Prometheus model) {
+                this.annotations = model.annotations;
+                this.level = model.level;
+                this.promQL = model.promQL;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The annotations of the Prometheus alert rule. When a Prometheus alert is triggered, the system renders the annotated keys and values to help you understand the metrics and alert rule.</p>
@@ -1622,7 +1711,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * <p> This parameter is equivalent to the annotations parameter of open source Prometheus.</p>
              * </blockquote>
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }

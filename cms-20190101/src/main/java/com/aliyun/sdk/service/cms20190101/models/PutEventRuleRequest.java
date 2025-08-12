@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class PutEventRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventPattern")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < EventPattern> eventPattern;
+    private java.util.List<EventPattern> eventPattern;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
@@ -61,7 +66,7 @@ public class PutEventRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,7 +81,7 @@ public class PutEventRuleRequest extends Request {
     /**
      * @return eventPattern
      */
-    public java.util.List < EventPattern> getEventPattern() {
+    public java.util.List<EventPattern> getEventPattern() {
         return this.eventPattern;
     }
 
@@ -117,7 +122,7 @@ public class PutEventRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutEventRuleRequest, Builder> {
         private String description; 
-        private java.util.List < EventPattern> eventPattern; 
+        private java.util.List<EventPattern> eventPattern; 
         private String eventType; 
         private String groupId; 
         private String ruleName; 
@@ -151,7 +156,7 @@ public class PutEventRuleRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder eventPattern(java.util.List < EventPattern> eventPattern) {
+        public Builder eventPattern(java.util.List<EventPattern> eventPattern) {
             this.putQueryParameter("EventPattern", eventPattern);
             this.eventPattern = eventPattern;
             return this;
@@ -244,13 +249,13 @@ public class PutEventRuleRequest extends Request {
         private String customFilters;
 
         @com.aliyun.core.annotation.NameInMap("EventTypeList")
-        private java.util.List < String > eventTypeList;
+        private java.util.List<String> eventTypeList;
 
         @com.aliyun.core.annotation.NameInMap("LevelList")
-        private java.util.List < String > levelList;
+        private java.util.List<String> levelList;
 
         @com.aliyun.core.annotation.NameInMap("NameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("Product")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -260,7 +265,7 @@ public class PutEventRuleRequest extends Request {
         private String SQLFilter;
 
         @com.aliyun.core.annotation.NameInMap("StatusList")
-        private java.util.List < String > statusList;
+        private java.util.List<String> statusList;
 
         private EventPattern(Builder builder) {
             this.customFilters = builder.customFilters;
@@ -290,21 +295,21 @@ public class PutEventRuleRequest extends Request {
         /**
          * @return eventTypeList
          */
-        public java.util.List < String > getEventTypeList() {
+        public java.util.List<String> getEventTypeList() {
             return this.eventTypeList;
         }
 
         /**
          * @return levelList
          */
-        public java.util.List < String > getLevelList() {
+        public java.util.List<String> getLevelList() {
             return this.levelList;
         }
 
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -325,18 +330,31 @@ public class PutEventRuleRequest extends Request {
         /**
          * @return statusList
          */
-        public java.util.List < String > getStatusList() {
+        public java.util.List<String> getStatusList() {
             return this.statusList;
         }
 
         public static final class Builder {
             private String customFilters; 
-            private java.util.List < String > eventTypeList; 
-            private java.util.List < String > levelList; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> eventTypeList; 
+            private java.util.List<String> levelList; 
+            private java.util.List<String> nameList; 
             private String product; 
             private String SQLFilter; 
-            private java.util.List < String > statusList; 
+            private java.util.List<String> statusList; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventPattern model) {
+                this.customFilters = model.customFilters;
+                this.eventTypeList = model.eventTypeList;
+                this.levelList = model.levelList;
+                this.nameList = model.nameList;
+                this.product = model.product;
+                this.SQLFilter = model.SQLFilter;
+                this.statusList = model.statusList;
+            } 
 
             /**
              * <p>The keyword that is used to filter events. If the content of an event contains the specified keyword, an alert is automatically triggered.</p>
@@ -352,7 +370,7 @@ public class PutEventRuleRequest extends Request {
             /**
              * EventTypeList.
              */
-            public Builder eventTypeList(java.util.List < String > eventTypeList) {
+            public Builder eventTypeList(java.util.List<String> eventTypeList) {
                 this.eventTypeList = eventTypeList;
                 return this;
             }
@@ -360,7 +378,7 @@ public class PutEventRuleRequest extends Request {
             /**
              * LevelList.
              */
-            public Builder levelList(java.util.List < String > levelList) {
+            public Builder levelList(java.util.List<String> levelList) {
                 this.levelList = levelList;
                 return this;
             }
@@ -368,7 +386,7 @@ public class PutEventRuleRequest extends Request {
             /**
              * NameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -405,7 +423,7 @@ public class PutEventRuleRequest extends Request {
             /**
              * StatusList.
              */
-            public Builder statusList(java.util.List < String > statusList) {
+            public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
                 return this;
             }

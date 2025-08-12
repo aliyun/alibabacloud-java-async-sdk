@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Instances")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     private CreateMonitorGroupInstancesRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,13 +56,13 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
     public static final class Builder extends Request.Builder<CreateMonitorGroupInstancesRequest, Builder> {
         private String groupId; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
          * <p>The instances that you want to add to the application group.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.putQueryParameter("Instances", instances);
             this.instances = instances;
             return this;
@@ -170,6 +175,16 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.category = model.category;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The abbreviation of the Alibaba Cloud service name.</p>

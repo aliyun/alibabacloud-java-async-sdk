@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     public static DescribeDynamicTagRuleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         private Boolean success; 
         private TagGroupList tagGroupList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDynamicTagRuleListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagGroupList = model.tagGroupList;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -227,7 +250,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
      */
     public static class ContactGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupList")
-        private java.util.List < String > contactGroupList;
+        private java.util.List<String> contactGroupList;
 
         private ContactGroupList(Builder builder) {
             this.contactGroupList = builder.contactGroupList;
@@ -244,17 +267,24 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         /**
          * @return contactGroupList
          */
-        public java.util.List < String > getContactGroupList() {
+        public java.util.List<String> getContactGroupList() {
             return this.contactGroupList;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroupList; 
+            private java.util.List<String> contactGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroupList model) {
+                this.contactGroupList = model.contactGroupList;
+            } 
 
             /**
              * ContactGroupList.
              */
-            public Builder contactGroupList(java.util.List < String > contactGroupList) {
+            public Builder contactGroupList(java.util.List<String> contactGroupList) {
                 this.contactGroupList = contactGroupList;
                 return this;
             }
@@ -322,6 +352,15 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private String tagValue; 
             private String tagValueMatchFunction; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchExpress model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+                this.tagValueMatchFunction = model.tagValueMatchFunction;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -381,7 +420,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
      */
     public static class TagGroupMatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchExpress")
-        private java.util.List < MatchExpress> matchExpress;
+        private java.util.List<MatchExpress> matchExpress;
 
         private TagGroupMatchExpress(Builder builder) {
             this.matchExpress = builder.matchExpress;
@@ -398,17 +437,24 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         /**
          * @return matchExpress
          */
-        public java.util.List < MatchExpress> getMatchExpress() {
+        public java.util.List<MatchExpress> getMatchExpress() {
             return this.matchExpress;
         }
 
         public static final class Builder {
-            private java.util.List < MatchExpress> matchExpress; 
+            private java.util.List<MatchExpress> matchExpress; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagGroupMatchExpress model) {
+                this.matchExpress = model.matchExpress;
+            } 
 
             /**
              * MatchExpress.
              */
-            public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+            public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
                 this.matchExpress = matchExpress;
                 return this;
             }
@@ -428,7 +474,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
      */
     public static class TagValueBlacklist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueBlacklist")
-        private java.util.List < String > tagValueBlacklist;
+        private java.util.List<String> tagValueBlacklist;
 
         private TagValueBlacklist(Builder builder) {
             this.tagValueBlacklist = builder.tagValueBlacklist;
@@ -445,17 +491,24 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         /**
          * @return tagValueBlacklist
          */
-        public java.util.List < String > getTagValueBlacklist() {
+        public java.util.List<String> getTagValueBlacklist() {
             return this.tagValueBlacklist;
         }
 
         public static final class Builder {
-            private java.util.List < String > tagValueBlacklist; 
+            private java.util.List<String> tagValueBlacklist; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagValueBlacklist model) {
+                this.tagValueBlacklist = model.tagValueBlacklist;
+            } 
 
             /**
              * TagValueBlacklist.
              */
-            public Builder tagValueBlacklist(java.util.List < String > tagValueBlacklist) {
+            public Builder tagValueBlacklist(java.util.List<String> tagValueBlacklist) {
                 this.tagValueBlacklist = tagValueBlacklist;
                 return this;
             }
@@ -475,7 +528,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
      */
     public static class TemplateIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateIdList")
-        private java.util.List < String > templateIdList;
+        private java.util.List<String> templateIdList;
 
         private TemplateIdList(Builder builder) {
             this.templateIdList = builder.templateIdList;
@@ -492,17 +545,24 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         /**
          * @return templateIdList
          */
-        public java.util.List < String > getTemplateIdList() {
+        public java.util.List<String> getTemplateIdList() {
             return this.templateIdList;
         }
 
         public static final class Builder {
-            private java.util.List < String > templateIdList; 
+            private java.util.List<String> templateIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateIdList model) {
+                this.templateIdList = model.templateIdList;
+            } 
 
             /**
              * TemplateIdList.
              */
-            public Builder templateIdList(java.util.List < String > templateIdList) {
+            public Builder templateIdList(java.util.List<String> templateIdList) {
                 this.templateIdList = templateIdList;
                 return this;
             }
@@ -642,6 +702,21 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private TagValueBlacklist tagValueBlacklist; 
             private TemplateIdList templateIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagGroup model) {
+                this.contactGroupList = model.contactGroupList;
+                this.dynamicTagRuleId = model.dynamicTagRuleId;
+                this.matchExpress = model.matchExpress;
+                this.matchExpressFilterRelation = model.matchExpressFilterRelation;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tagKey = model.tagKey;
+                this.tagValueBlacklist = model.tagValueBlacklist;
+                this.templateIdList = model.templateIdList;
+            } 
+
             /**
              * <p>The alert contact group.</p>
              */
@@ -755,7 +830,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
      */
     public static class TagGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagGroup")
-        private java.util.List < TagGroup> tagGroup;
+        private java.util.List<TagGroup> tagGroup;
 
         private TagGroupList(Builder builder) {
             this.tagGroup = builder.tagGroup;
@@ -772,17 +847,24 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         /**
          * @return tagGroup
          */
-        public java.util.List < TagGroup> getTagGroup() {
+        public java.util.List<TagGroup> getTagGroup() {
             return this.tagGroup;
         }
 
         public static final class Builder {
-            private java.util.List < TagGroup> tagGroup; 
+            private java.util.List<TagGroup> tagGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagGroupList model) {
+                this.tagGroup = model.tagGroup;
+            } 
 
             /**
              * TagGroup.
              */
-            public Builder tagGroup(java.util.List < TagGroup> tagGroup) {
+            public Builder tagGroup(java.util.List<TagGroup> tagGroup) {
                 this.tagGroup = tagGroup;
                 return this;
             }

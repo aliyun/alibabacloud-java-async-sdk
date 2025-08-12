@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class PutExporterRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DstNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > dstNames;
+    private java.util.List<String> dstNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricName")
@@ -55,7 +60,7 @@ public class PutExporterRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class PutExporterRuleRequest extends Request {
     /**
      * @return dstNames
      */
-    public java.util.List < String > getDstNames() {
+    public java.util.List<String> getDstNames() {
         return this.dstNames;
     }
 
@@ -104,7 +109,7 @@ public class PutExporterRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutExporterRuleRequest, Builder> {
         private String describe; 
-        private java.util.List < String > dstNames; 
+        private java.util.List<String> dstNames; 
         private String metricName; 
         private String namespace; 
         private String ruleName; 
@@ -143,7 +148,7 @@ public class PutExporterRuleRequest extends Request {
          * <strong>example:</strong>
          * <p>distName1</p>
          */
-        public Builder dstNames(java.util.List < String > dstNames) {
+        public Builder dstNames(java.util.List<String> dstNames) {
             this.putQueryParameter("DstNames", dstNames);
             this.dstNames = dstNames;
             return this;

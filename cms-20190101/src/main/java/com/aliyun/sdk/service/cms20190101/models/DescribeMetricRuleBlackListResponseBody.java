@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DescribeMetricRuleBlackList")
-    private java.util.List < DescribeMetricRuleBlackList> describeMetricRuleBlackList;
+    private java.util.List<DescribeMetricRuleBlackList> describeMetricRuleBlackList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -47,6 +52,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     /**
      * @return describeMetricRuleBlackList
      */
-    public java.util.List < DescribeMetricRuleBlackList> getDescribeMetricRuleBlackList() {
+    public java.util.List<DescribeMetricRuleBlackList> getDescribeMetricRuleBlackList() {
         return this.describeMetricRuleBlackList;
     }
 
@@ -91,11 +100,23 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DescribeMetricRuleBlackList> describeMetricRuleBlackList; 
+        private java.util.List<DescribeMetricRuleBlackList> describeMetricRuleBlackList; 
         private String message; 
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleBlackListResponseBody model) {
+            this.code = model.code;
+            this.describeMetricRuleBlackList = model.describeMetricRuleBlackList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
@@ -111,7 +132,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         /**
          * <p>The queried blacklist policies.</p>
          */
-        public Builder describeMetricRuleBlackList(java.util.List < DescribeMetricRuleBlackList> describeMetricRuleBlackList) {
+        public Builder describeMetricRuleBlackList(java.util.List<DescribeMetricRuleBlackList> describeMetricRuleBlackList) {
             this.describeMetricRuleBlackList = describeMetricRuleBlackList;
             return this;
         }
@@ -212,6 +233,14 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             private String metricName; 
             private String resource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.metricName = model.metricName;
+                this.resource = model.resource;
+            } 
+
             /**
              * <p>The metric name.</p>
              * 
@@ -267,13 +296,13 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < String > instances;
+        private java.util.List<String> instances;
 
         @com.aliyun.core.annotation.NameInMap("IsEnable")
         private Boolean isEnable;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -285,7 +314,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         private String scopeType;
 
         @com.aliyun.core.annotation.NameInMap("ScopeValue")
-        private java.util.List < String > scopeValue;
+        private java.util.List<String> scopeValue;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -360,7 +389,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < String > getInstances() {
+        public java.util.List<String> getInstances() {
             return this.instances;
         }
 
@@ -374,7 +403,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -402,7 +431,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         /**
          * @return scopeValue
          */
-        public java.util.List < String > getScopeValue() {
+        public java.util.List<String> getScopeValue() {
             return this.scopeValue;
         }
 
@@ -420,14 +449,34 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             private Long enableEndTime; 
             private Long enableStartTime; 
             private String id; 
-            private java.util.List < String > instances; 
+            private java.util.List<String> instances; 
             private Boolean isEnable; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private String name; 
             private String namespace; 
             private String scopeType; 
-            private java.util.List < String > scopeValue; 
+            private java.util.List<String> scopeValue; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeMetricRuleBlackList model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.effectiveTime = model.effectiveTime;
+                this.enableEndTime = model.enableEndTime;
+                this.enableStartTime = model.enableStartTime;
+                this.id = model.id;
+                this.instances = model.instances;
+                this.isEnable = model.isEnable;
+                this.metrics = model.metrics;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.scopeType = model.scopeType;
+                this.scopeValue = model.scopeValue;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
@@ -501,7 +550,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             /**
              * <p>The IDs of the instances that belong to the specified cloud service.</p>
              */
-            public Builder instances(java.util.List < String > instances) {
+            public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;
                 return this;
             }
@@ -524,7 +573,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             /**
              * <p>The metrics of the instance.</p>
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -569,7 +618,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             /**
              * <p>The IDs of the application groups.</p>
              */
-            public Builder scopeValue(java.util.List < String > scopeValue) {
+            public Builder scopeValue(java.util.List<String> scopeValue) {
                 this.scopeValue = scopeValue;
                 return this;
             }

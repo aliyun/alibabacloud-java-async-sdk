@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
 
     public static DescribeMonitorGroupNotifyPolicyListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupNotifyPolicyListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.notifyPolicyList = model.notifyPolicyList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -253,6 +274,17 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             private Long startTime; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotifyPolicy model) {
+                this.endTime = model.endTime;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The end of the time range to query.</p>
              * <p>Unit: milliseconds.</p>
@@ -325,7 +357,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
      */
     public static class NotifyPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyPolicy")
-        private java.util.List < NotifyPolicy> notifyPolicy;
+        private java.util.List<NotifyPolicy> notifyPolicy;
 
         private NotifyPolicyList(Builder builder) {
             this.notifyPolicy = builder.notifyPolicy;
@@ -342,17 +374,24 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         /**
          * @return notifyPolicy
          */
-        public java.util.List < NotifyPolicy> getNotifyPolicy() {
+        public java.util.List<NotifyPolicy> getNotifyPolicy() {
             return this.notifyPolicy;
         }
 
         public static final class Builder {
-            private java.util.List < NotifyPolicy> notifyPolicy; 
+            private java.util.List<NotifyPolicy> notifyPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyPolicyList model) {
+                this.notifyPolicy = model.notifyPolicy;
+            } 
 
             /**
              * NotifyPolicy.
              */
-            public Builder notifyPolicy(java.util.List < NotifyPolicy> notifyPolicy) {
+            public Builder notifyPolicy(java.util.List<NotifyPolicy> notifyPolicy) {
                 this.notifyPolicy = notifyPolicy;
                 return this;
             }

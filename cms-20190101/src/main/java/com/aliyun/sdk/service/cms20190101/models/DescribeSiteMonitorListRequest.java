@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorListRequest</p>
  */
 public class DescribeSiteMonitorListRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentGroup")
+    private String agentGroup;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
@@ -38,6 +47,7 @@ public class DescribeSiteMonitorListRequest extends Request {
 
     private DescribeSiteMonitorListRequest(Builder builder) {
         super(builder);
+        this.agentGroup = builder.agentGroup;
         this.keyword = builder.keyword;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -54,9 +64,16 @@ public class DescribeSiteMonitorListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentGroup
+     */
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     /**
@@ -102,6 +119,7 @@ public class DescribeSiteMonitorListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSiteMonitorListRequest, Builder> {
+        private String agentGroup; 
         private String keyword; 
         private Integer page; 
         private Integer pageSize; 
@@ -115,6 +133,7 @@ public class DescribeSiteMonitorListRequest extends Request {
 
         private Builder(DescribeSiteMonitorListRequest request) {
             super(request);
+            this.agentGroup = request.agentGroup;
             this.keyword = request.keyword;
             this.page = request.page;
             this.pageSize = request.pageSize;
@@ -122,6 +141,15 @@ public class DescribeSiteMonitorListRequest extends Request {
             this.taskState = request.taskState;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * AgentGroup.
+         */
+        public Builder agentGroup(String agentGroup) {
+            this.putQueryParameter("AgentGroup", agentGroup);
+            this.agentGroup = agentGroup;
+            return this;
+        }
 
         /**
          * <p>The keyword to be matched.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
 
     public static DescribeProductsOfActiveMetricRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,6 +106,18 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeProductsOfActiveMetricRuleResponseBody model) {
+            this.allProductInitMetricRuleList = model.allProductInitMetricRuleList;
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The information about the services for which one-click alert is enabled.</p>
          */
@@ -120,14 +141,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:</p>
+         * <p>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</p>
          * <ul>
-         * <li>ecs: Elastic Compute Service (ECS)</li>
+         * <li>ECS: Elastic Compute Service (ECS)</li>
          * <li>rds: ApsaraDB RDS</li>
          * <li>slb: Server Load Balancer (SLB)</li>
-         * <li>redis_standard: ApsaraDB for Redis of the standard architecture</li>
-         * <li>redis_sharding: ApsaraDB for Redis of the cluster architecture</li>
-         * <li>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</li>
+         * <li>redis_standard: Redis Open-Source Edition (standard architecture)</li>
+         * <li>redis_sharding: Redis Open-Source Edition (cluster architecture)</li>
+         * <li>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</li>
          * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
          * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
          * <li>hbase: ApsaraDB for HBase</li>
@@ -302,6 +323,20 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertInitConfig model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.evaluationCount = model.evaluationCount;
+                this.level = model.level;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts.</p>
              * <p>Valid values:</p>
@@ -453,7 +488,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
      */
     public static class AlertInitConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertInitConfig")
-        private java.util.List < AlertInitConfig> alertInitConfig;
+        private java.util.List<AlertInitConfig> alertInitConfig;
 
         private AlertInitConfigList(Builder builder) {
             this.alertInitConfig = builder.alertInitConfig;
@@ -470,17 +505,24 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         /**
          * @return alertInitConfig
          */
-        public java.util.List < AlertInitConfig> getAlertInitConfig() {
+        public java.util.List<AlertInitConfig> getAlertInitConfig() {
             return this.alertInitConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AlertInitConfig> alertInitConfig; 
+            private java.util.List<AlertInitConfig> alertInitConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertInitConfigList model) {
+                this.alertInitConfig = model.alertInitConfig;
+            } 
 
             /**
              * AlertInitConfig.
              */
-            public Builder alertInitConfig(java.util.List < AlertInitConfig> alertInitConfig) {
+            public Builder alertInitConfig(java.util.List<AlertInitConfig> alertInitConfig) {
                 this.alertInitConfig = alertInitConfig;
                 return this;
             }
@@ -536,6 +578,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             private AlertInitConfigList alertInitConfigList; 
             private String product; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllProductInitMetricRule model) {
+                this.alertInitConfigList = model.alertInitConfigList;
+                this.product = model.product;
+            } 
+
             /**
              * <p>The initial alert rules that are generated after one-click alert is enabled for a service.</p>
              */
@@ -570,7 +620,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
      */
     public static class AllProductInitMetricRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllProductInitMetricRule")
-        private java.util.List < AllProductInitMetricRule> allProductInitMetricRule;
+        private java.util.List<AllProductInitMetricRule> allProductInitMetricRule;
 
         private AllProductInitMetricRuleList(Builder builder) {
             this.allProductInitMetricRule = builder.allProductInitMetricRule;
@@ -587,17 +637,24 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         /**
          * @return allProductInitMetricRule
          */
-        public java.util.List < AllProductInitMetricRule> getAllProductInitMetricRule() {
+        public java.util.List<AllProductInitMetricRule> getAllProductInitMetricRule() {
             return this.allProductInitMetricRule;
         }
 
         public static final class Builder {
-            private java.util.List < AllProductInitMetricRule> allProductInitMetricRule; 
+            private java.util.List<AllProductInitMetricRule> allProductInitMetricRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllProductInitMetricRuleList model) {
+                this.allProductInitMetricRule = model.allProductInitMetricRule;
+            } 
 
             /**
              * AllProductInitMetricRule.
              */
-            public Builder allProductInitMetricRule(java.util.List < AllProductInitMetricRule> allProductInitMetricRule) {
+            public Builder allProductInitMetricRule(java.util.List<AllProductInitMetricRule> allProductInitMetricRule) {
                 this.allProductInitMetricRule = allProductInitMetricRule;
                 return this;
             }

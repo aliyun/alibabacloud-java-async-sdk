@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     public static PutResourceMetricRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutResourceMetricRulesResponseBody model) {
+            this.code = model.code;
+            this.failedListResult = model.failedListResult;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -206,6 +226,15 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The response code.</p>
              * 
@@ -294,6 +323,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private Result result; 
             private String ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.result = model.result;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The alert rule that failed to be created.</p>
              */
@@ -328,7 +365,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
      */
     public static class FailedListResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
-        private java.util.List < Target> target;
+        private java.util.List<Target> target;
 
         private FailedListResult(Builder builder) {
             this.target = builder.target;
@@ -345,17 +382,24 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         /**
          * @return target
          */
-        public java.util.List < Target> getTarget() {
+        public java.util.List<Target> getTarget() {
             return this.target;
         }
 
         public static final class Builder {
-            private java.util.List < Target> target; 
+            private java.util.List<Target> target; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedListResult model) {
+                this.target = model.target;
+            } 
 
             /**
              * Target.
              */
-            public Builder target(java.util.List < Target> target) {
+            public Builder target(java.util.List<Target> target) {
                 this.target = target;
                 return this;
             }

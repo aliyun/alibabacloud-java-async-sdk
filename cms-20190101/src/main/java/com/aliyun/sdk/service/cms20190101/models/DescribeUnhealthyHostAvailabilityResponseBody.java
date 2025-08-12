@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
 
     public static DescribeUnhealthyHostAvailabilityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,10 +94,21 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         private Boolean success; 
         private UnhealthyList unhealthyList; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUnhealthyHostAvailabilityResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.unhealthyList = model.unhealthyList;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -100,7 +120,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>User not authorized to operate on the specified resource.</p>
@@ -111,7 +131,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</p>
@@ -122,10 +142,10 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +178,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
      */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private InstanceList(Builder builder) {
             this.string = builder.string;
@@ -175,17 +195,24 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -241,6 +268,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
             private Long id; 
             private InstanceList instanceList; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeTaskInstance model) {
+                this.id = model.id;
+                this.instanceList = model.instanceList;
+            } 
+
             /**
              * <p>The ID of the availability monitoring task.</p>
              * 
@@ -253,7 +288,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unhealthy instances that are detected by the availability monitoring task.</p>
+             * InstanceList.
              */
             public Builder instanceList(InstanceList instanceList) {
                 this.instanceList = instanceList;
@@ -275,7 +310,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
      */
     public static class UnhealthyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeTaskInstance")
-        private java.util.List < NodeTaskInstance> nodeTaskInstance;
+        private java.util.List<NodeTaskInstance> nodeTaskInstance;
 
         private UnhealthyList(Builder builder) {
             this.nodeTaskInstance = builder.nodeTaskInstance;
@@ -292,17 +327,24 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         /**
          * @return nodeTaskInstance
          */
-        public java.util.List < NodeTaskInstance> getNodeTaskInstance() {
+        public java.util.List<NodeTaskInstance> getNodeTaskInstance() {
             return this.nodeTaskInstance;
         }
 
         public static final class Builder {
-            private java.util.List < NodeTaskInstance> nodeTaskInstance; 
+            private java.util.List<NodeTaskInstance> nodeTaskInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnhealthyList model) {
+                this.nodeTaskInstance = model.nodeTaskInstance;
+            } 
 
             /**
              * NodeTaskInstance.
              */
-            public Builder nodeTaskInstance(java.util.List < NodeTaskInstance> nodeTaskInstance) {
+            public Builder nodeTaskInstance(java.util.List<NodeTaskInstance> nodeTaskInstance) {
                 this.nodeTaskInstance = nodeTaskInstance;
                 return this;
             }

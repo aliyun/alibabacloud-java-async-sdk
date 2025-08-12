@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MetricStat extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Associated")
-    private java.util.Map < String, String > associated;
+    private java.util.Map<String, String> associated;
 
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimension > dimensions;
+    private java.util.List<Dimension> dimensions;
 
     @com.aliyun.core.annotation.NameInMap("LogTime")
     private Long logTime;
 
     @com.aliyun.core.annotation.NameInMap("Measurements")
-    private java.util.Map < String, ? > measurements;
+    private java.util.Map<String, ?> measurements;
 
     @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
@@ -55,17 +60,21 @@ public class MetricStat extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associated
      */
-    public java.util.Map < String, String > getAssociated() {
+    public java.util.Map<String, String> getAssociated() {
         return this.associated;
     }
 
     /**
      * @return dimensions
      */
-    public java.util.List < Dimension > getDimensions() {
+    public java.util.List<Dimension> getDimensions() {
         return this.dimensions;
     }
 
@@ -79,7 +88,7 @@ public class MetricStat extends TeaModel {
     /**
      * @return measurements
      */
-    public java.util.Map < String, ? > getMeasurements() {
+    public java.util.Map<String, ?> getMeasurements() {
         return this.measurements;
     }
 
@@ -112,19 +121,33 @@ public class MetricStat extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > associated; 
-        private java.util.List < Dimension > dimensions; 
+        private java.util.Map<String, String> associated; 
+        private java.util.List<Dimension> dimensions; 
         private Long logTime; 
-        private java.util.Map < String, ? > measurements; 
+        private java.util.Map<String, ?> measurements; 
         private String metric; 
         private String namespace; 
         private Integer period; 
         private Long timestamp; 
 
+        private Builder() {
+        } 
+
+        private Builder(MetricStat model) {
+            this.associated = model.associated;
+            this.dimensions = model.dimensions;
+            this.logTime = model.logTime;
+            this.measurements = model.measurements;
+            this.metric = model.metric;
+            this.namespace = model.namespace;
+            this.period = model.period;
+            this.timestamp = model.timestamp;
+        } 
+
         /**
          * Associated.
          */
-        public Builder associated(java.util.Map < String, String > associated) {
+        public Builder associated(java.util.Map<String, String> associated) {
             this.associated = associated;
             return this;
         }
@@ -132,7 +155,7 @@ public class MetricStat extends TeaModel {
         /**
          * Dimensions.
          */
-        public Builder dimensions(java.util.List < Dimension > dimensions) {
+        public Builder dimensions(java.util.List<Dimension> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
@@ -148,7 +171,7 @@ public class MetricStat extends TeaModel {
         /**
          * Measurements.
          */
-        public Builder measurements(java.util.Map < String, ? > measurements) {
+        public Builder measurements(java.util.Map<String, ?> measurements) {
             this.measurements = measurements;
             return this;
         }

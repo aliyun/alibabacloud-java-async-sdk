@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class PutLogMonitorRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Aggregates")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Aggregates> aggregates;
+    private java.util.List<Aggregates> aggregates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -23,7 +28,7 @@ public class PutLogMonitorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Groupbys")
-    private java.util.List < Groupbys> groupbys;
+    private java.util.List<Groupbys> groupbys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogId")
@@ -63,7 +68,7 @@ public class PutLogMonitorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValueFilter")
-    private java.util.List < ValueFilter> valueFilter;
+    private java.util.List<ValueFilter> valueFilter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
@@ -95,7 +100,7 @@ public class PutLogMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +108,7 @@ public class PutLogMonitorRequest extends Request {
     /**
      * @return aggregates
      */
-    public java.util.List < Aggregates> getAggregates() {
+    public java.util.List<Aggregates> getAggregates() {
         return this.aggregates;
     }
 
@@ -117,7 +122,7 @@ public class PutLogMonitorRequest extends Request {
     /**
      * @return groupbys
      */
-    public java.util.List < Groupbys> getGroupbys() {
+    public java.util.List<Groupbys> getGroupbys() {
         return this.groupbys;
     }
 
@@ -180,7 +185,7 @@ public class PutLogMonitorRequest extends Request {
     /**
      * @return valueFilter
      */
-    public java.util.List < ValueFilter> getValueFilter() {
+    public java.util.List<ValueFilter> getValueFilter() {
         return this.valueFilter;
     }
 
@@ -192,9 +197,9 @@ public class PutLogMonitorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutLogMonitorRequest, Builder> {
-        private java.util.List < Aggregates> aggregates; 
+        private java.util.List<Aggregates> aggregates; 
         private String groupId; 
-        private java.util.List < Groupbys> groupbys; 
+        private java.util.List<Groupbys> groupbys; 
         private String logId; 
         private String metricExpress; 
         private String metricName; 
@@ -203,7 +208,7 @@ public class PutLogMonitorRequest extends Request {
         private String slsRegionId; 
         private String tumblingwindows; 
         private String unit; 
-        private java.util.List < ValueFilter> valueFilter; 
+        private java.util.List<ValueFilter> valueFilter; 
         private String valueFilterRelation; 
 
         private Builder() {
@@ -231,7 +236,7 @@ public class PutLogMonitorRequest extends Request {
          * <p>The aggregation logic.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aggregates(java.util.List < Aggregates> aggregates) {
+        public Builder aggregates(java.util.List<Aggregates> aggregates) {
             this.putQueryParameter("Aggregates", aggregates);
             this.aggregates = aggregates;
             return this;
@@ -252,7 +257,7 @@ public class PutLogMonitorRequest extends Request {
         /**
          * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
          */
-        public Builder groupbys(java.util.List < Groupbys> groupbys) {
+        public Builder groupbys(java.util.List<Groupbys> groupbys) {
             this.putQueryParameter("Groupbys", groupbys);
             this.groupbys = groupbys;
             return this;
@@ -368,7 +373,7 @@ public class PutLogMonitorRequest extends Request {
         /**
          * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
          */
-        public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
+        public Builder valueFilter(java.util.List<ValueFilter> valueFilter) {
             this.putQueryParameter("ValueFilter", valueFilter);
             this.valueFilter = valueFilter;
             return this;
@@ -459,6 +464,15 @@ public class PutLogMonitorRequest extends Request {
             private String alias; 
             private String fieldName; 
             private String function; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aggregates model) {
+                this.alias = model.alias;
+                this.fieldName = model.fieldName;
+                this.function = model.function;
+            } 
 
             /**
              * <p>The alias of the aggregate function. Valid values of N: 1 to 10.</p>
@@ -557,6 +571,14 @@ public class PutLogMonitorRequest extends Request {
             private String alias; 
             private String fieldName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Groupbys model) {
+                this.alias = model.alias;
+                this.fieldName = model.fieldName;
+            } 
+
             /**
              * <p>The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.</p>
              * 
@@ -641,6 +663,15 @@ public class PutLogMonitorRequest extends Request {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueFilter model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.</p>

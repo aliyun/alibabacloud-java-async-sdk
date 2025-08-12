@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
 
     public static DescribeSiteMonitorQuotaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSiteMonitorQuotaResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -238,6 +258,18 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             private Integer siteMonitorQuotaTaskUsed; 
             private Integer siteMonitorTaskQuota; 
             private String siteMonitorVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.secondMonitor = model.secondMonitor;
+                this.siteMonitorIdcQuota = model.siteMonitorIdcQuota;
+                this.siteMonitorOperatorQuotaQuota = model.siteMonitorOperatorQuotaQuota;
+                this.siteMonitorQuotaTaskUsed = model.siteMonitorQuotaTaskUsed;
+                this.siteMonitorTaskQuota = model.siteMonitorTaskQuota;
+                this.siteMonitorVersion = model.siteMonitorVersion;
+            } 
 
             /**
              * <p>Indicates whether second-level monitoring is enabled. Valid values:</p>

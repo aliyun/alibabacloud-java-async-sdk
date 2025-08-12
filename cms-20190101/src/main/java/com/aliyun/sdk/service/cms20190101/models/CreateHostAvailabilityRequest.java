@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class CreateHostAvailabilityRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertConfigEscalationList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AlertConfigEscalationList> alertConfigEscalationList;
+    private java.util.List<AlertConfigEscalationList> alertConfigEscalationList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertConfigTargetList")
-    private java.util.List < AlertConfigTargetList> alertConfigTargetList;
+    private java.util.List<AlertConfigTargetList> alertConfigTargetList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -36,7 +41,7 @@ public class CreateHostAvailabilityRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < String > instanceList;
+    private java.util.List<String> instanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskName")
@@ -73,7 +78,7 @@ public class CreateHostAvailabilityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,14 +100,14 @@ public class CreateHostAvailabilityRequest extends Request {
     /**
      * @return alertConfigEscalationList
      */
-    public java.util.List < AlertConfigEscalationList> getAlertConfigEscalationList() {
+    public java.util.List<AlertConfigEscalationList> getAlertConfigEscalationList() {
         return this.alertConfigEscalationList;
     }
 
     /**
      * @return alertConfigTargetList
      */
-    public java.util.List < AlertConfigTargetList> getAlertConfigTargetList() {
+    public java.util.List<AlertConfigTargetList> getAlertConfigTargetList() {
         return this.alertConfigTargetList;
     }
 
@@ -116,7 +121,7 @@ public class CreateHostAvailabilityRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < String > getInstanceList() {
+    public java.util.List<String> getInstanceList() {
         return this.instanceList;
     }
 
@@ -144,10 +149,10 @@ public class CreateHostAvailabilityRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHostAvailabilityRequest, Builder> {
         private AlertConfig alertConfig; 
         private TaskOption taskOption; 
-        private java.util.List < AlertConfigEscalationList> alertConfigEscalationList; 
-        private java.util.List < AlertConfigTargetList> alertConfigTargetList; 
+        private java.util.List<AlertConfigEscalationList> alertConfigEscalationList; 
+        private java.util.List<AlertConfigTargetList> alertConfigTargetList; 
         private Long groupId; 
-        private java.util.List < String > instanceList; 
+        private java.util.List<String> instanceList; 
         private String taskName; 
         private String taskScope; 
         private String taskType; 
@@ -191,7 +196,7 @@ public class CreateHostAvailabilityRequest extends Request {
          * <p>None</p>
          * <p>This parameter is required.</p>
          */
-        public Builder alertConfigEscalationList(java.util.List < AlertConfigEscalationList> alertConfigEscalationList) {
+        public Builder alertConfigEscalationList(java.util.List<AlertConfigEscalationList> alertConfigEscalationList) {
             this.putQueryParameter("AlertConfigEscalationList", alertConfigEscalationList);
             this.alertConfigEscalationList = alertConfigEscalationList;
             return this;
@@ -200,7 +205,7 @@ public class CreateHostAvailabilityRequest extends Request {
         /**
          * <p>The resources for which alerts are triggered.</p>
          */
-        public Builder alertConfigTargetList(java.util.List < AlertConfigTargetList> alertConfigTargetList) {
+        public Builder alertConfigTargetList(java.util.List<AlertConfigTargetList> alertConfigTargetList) {
             this.putQueryParameter("AlertConfigTargetList", alertConfigTargetList);
             this.alertConfigTargetList = alertConfigTargetList;
             return this;
@@ -228,7 +233,7 @@ public class CreateHostAvailabilityRequest extends Request {
          * <strong>example:</strong>
          * <p>i-absdfkwl321****</p>
          */
-        public Builder instanceList(java.util.List < String > instanceList) {
+        public Builder instanceList(java.util.List<String> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
             return this;
@@ -250,8 +255,8 @@ public class CreateHostAvailabilityRequest extends Request {
         /**
          * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
          * <ul>
-         * <li>GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.</li>
-         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.</li>
+         * <li>GROUP: All ECS instances in the application group are monitored.</li>
+         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList parameter. The InstanceList parameter specifies the ECS instances to be monitored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,6 +373,17 @@ public class CreateHostAvailabilityRequest extends Request {
             private Integer silenceTime; 
             private Integer startTime; 
             private String webHook; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.endTime = model.endTime;
+                this.notifyType = model.notifyType;
+                this.silenceTime = model.silenceTime;
+                this.startTime = model.startTime;
+                this.webHook = model.webHook;
+            } 
 
             /**
              * <p>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
@@ -568,6 +584,21 @@ public class CreateHostAvailabilityRequest extends Request {
             private String httpURI; 
             private Integer interval; 
             private String telnetOrPingHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOption model) {
+                this.httpHeader = model.httpHeader;
+                this.httpMethod = model.httpMethod;
+                this.httpNegative = model.httpNegative;
+                this.httpPostContent = model.httpPostContent;
+                this.httpResponseCharset = model.httpResponseCharset;
+                this.httpResponseMatchContent = model.httpResponseMatchContent;
+                this.httpURI = model.httpURI;
+                this.interval = model.interval;
+                this.telnetOrPingHost = model.telnetOrPingHost;
+            } 
 
             /**
              * <p>The header of the HTTP request. Format: <code>Parameter name:Parameter value</code>. Separate multiple parameters with carriage return characters. Example:</p>
@@ -783,6 +814,17 @@ public class CreateHostAvailabilityRequest extends Request {
             private Integer times; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfigEscalationList model) {
+                this.aggregate = model.aggregate;
+                this.metricName = model.metricName;
+                this.operator = model.operator;
+                this.times = model.times;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:</p>
              * <ul>
@@ -938,6 +980,16 @@ public class CreateHostAvailabilityRequest extends Request {
             private String id; 
             private String jsonParams; 
             private String level; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfigTargetList model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.level = model.level;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>

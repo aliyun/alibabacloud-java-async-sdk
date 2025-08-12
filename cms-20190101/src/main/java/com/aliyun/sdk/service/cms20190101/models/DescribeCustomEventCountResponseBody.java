@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
 
     public static DescribeCustomEventCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,10 +94,21 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomEventCountResponseBody model) {
+            this.code = model.code;
+            this.customEventCounts = model.customEventCounts;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -108,7 +128,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -119,7 +139,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
@@ -130,7 +150,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -202,8 +222,17 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             private Integer num; 
             private Long time; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomEventCount model) {
+                this.name = model.name;
+                this.num = model.num;
+                this.time = model.time;
+            } 
+
             /**
-             * <p>The name of the custom event.</p>
+             * <p>The event name.</p>
              * 
              * <strong>example:</strong>
              * <p>BABEL_BUY</p>
@@ -214,7 +243,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the custom event occurred in the specified time period.</p>
+             * <p>The number of times that the custom event occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -225,8 +254,8 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the custom event occurred.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the event occurred.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1552267615000</p>
@@ -251,7 +280,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
      */
     public static class CustomEventCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomEventCount")
-        private java.util.List < CustomEventCount> customEventCount;
+        private java.util.List<CustomEventCount> customEventCount;
 
         private CustomEventCounts(Builder builder) {
             this.customEventCount = builder.customEventCount;
@@ -268,17 +297,24 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         /**
          * @return customEventCount
          */
-        public java.util.List < CustomEventCount> getCustomEventCount() {
+        public java.util.List<CustomEventCount> getCustomEventCount() {
             return this.customEventCount;
         }
 
         public static final class Builder {
-            private java.util.List < CustomEventCount> customEventCount; 
+            private java.util.List<CustomEventCount> customEventCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomEventCounts model) {
+                this.customEventCount = model.customEventCount;
+            } 
 
             /**
              * CustomEventCount.
              */
-            public Builder customEventCount(java.util.List < CustomEventCount> customEventCount) {
+            public Builder customEventCount(java.util.List<CustomEventCount> customEventCount) {
                 this.customEventCount = customEventCount;
                 return this;
             }

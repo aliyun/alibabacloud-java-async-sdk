@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
 
     public static DescribeMonitoringAgentHostsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitoringAgentHostsResponseBody model) {
+            this.code = model.code;
+            this.hosts = model.hosts;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pageTotal = model.pageTotal;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -430,6 +454,26 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             private String serialNumber; 
             private Boolean isAliyunHost; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostsHost model) {
+                this.agentVersion = model.agentVersion;
+                this.aliUid = model.aliUid;
+                this.eipAddress = model.eipAddress;
+                this.eipId = model.eipId;
+                this.hostName = model.hostName;
+                this.instanceId = model.instanceId;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.ipGroup = model.ipGroup;
+                this.natIp = model.natIp;
+                this.networkType = model.networkType;
+                this.operatingSystem = model.operatingSystem;
+                this.region = model.region;
+                this.serialNumber = model.serialNumber;
+                this.isAliyunHost = model.isAliyunHost;
+            } 
+
             /**
              * <p>The version of the CloudMonitor agent.</p>
              * 
@@ -609,7 +653,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
      */
     public static class Hosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
-        private java.util.List < HostsHost> host;
+        private java.util.List<HostsHost> host;
 
         private Hosts(Builder builder) {
             this.host = builder.host;
@@ -626,17 +670,24 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         /**
          * @return host
          */
-        public java.util.List < HostsHost> getHost() {
+        public java.util.List<HostsHost> getHost() {
             return this.host;
         }
 
         public static final class Builder {
-            private java.util.List < HostsHost> host; 
+            private java.util.List<HostsHost> host; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.host = model.host;
+            } 
 
             /**
              * Host.
              */
-            public Builder host(java.util.List < HostsHost> host) {
+            public Builder host(java.util.List<HostsHost> host) {
                 this.host = host;
                 return this;
             }

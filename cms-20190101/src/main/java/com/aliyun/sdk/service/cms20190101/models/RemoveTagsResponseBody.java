@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class RemoveTagsResponseBody extends TeaModel {
 
     public static RemoveTagsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class RemoveTagsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Tag tag; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveTagsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tag = model.tag;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -158,7 +178,7 @@ public class RemoveTagsResponseBody extends TeaModel {
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private Tag(Builder builder) {
             this.tags = builder.tags;
@@ -175,17 +195,24 @@ public class RemoveTagsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

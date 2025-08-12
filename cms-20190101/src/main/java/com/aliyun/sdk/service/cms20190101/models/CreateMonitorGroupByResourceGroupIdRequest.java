@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactGroupList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > contactGroupList;
+    private java.util.List<String> contactGroupList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableInstallAgent")
@@ -58,7 +63,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +71,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
     /**
      * @return contactGroupList
      */
-    public java.util.List < String > getContactGroupList() {
+    public java.util.List<String> getContactGroupList() {
         return this.contactGroupList;
     }
 
@@ -106,7 +111,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMonitorGroupByResourceGroupIdRequest, Builder> {
-        private java.util.List < String > contactGroupList; 
+        private java.util.List<String> contactGroupList; 
         private Boolean enableInstallAgent; 
         private Boolean enableSubscribeEvent; 
         private String regionId; 
@@ -135,7 +140,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
          * <strong>example:</strong>
          * <p>ECS_Group</p>
          */
-        public Builder contactGroupList(java.util.List < String > contactGroupList) {
+        public Builder contactGroupList(java.util.List<String> contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
             this.contactGroupList = contactGroupList;
             return this;

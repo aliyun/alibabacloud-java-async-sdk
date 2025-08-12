@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class MigrationJob extends TeaModel {
     private Plan plan;
 
     @com.aliyun.core.annotation.NameInMap("RuleNames")
-    private java.util.List < String > ruleNames;
+    private java.util.List<String> ruleNames;
 
     @com.aliyun.core.annotation.NameInMap("Source")
-    private java.util.List < Source> source;
+    private java.util.List<Source> source;
 
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
@@ -53,6 +58,10 @@ public class MigrationJob extends TeaModel {
 
     public static MigrationJob create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -86,14 +95,14 @@ public class MigrationJob extends TeaModel {
     /**
      * @return ruleNames
      */
-    public java.util.List < String > getRuleNames() {
+    public java.util.List<String> getRuleNames() {
         return this.ruleNames;
     }
 
     /**
      * @return source
      */
-    public java.util.List < Source> getSource() {
+    public java.util.List<Source> getSource() {
         return this.source;
     }
 
@@ -116,10 +125,24 @@ public class MigrationJob extends TeaModel {
         private String detail; 
         private String jobStatus; 
         private Plan plan; 
-        private java.util.List < String > ruleNames; 
-        private java.util.List < Source> source; 
+        private java.util.List<String> ruleNames; 
+        private java.util.List<Source> source; 
         private String updateTime; 
         private String uuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(MigrationJob model) {
+            this.createTime = model.createTime;
+            this.detail = model.detail;
+            this.jobStatus = model.jobStatus;
+            this.plan = model.plan;
+            this.ruleNames = model.ruleNames;
+            this.source = model.source;
+            this.updateTime = model.updateTime;
+            this.uuid = model.uuid;
+        } 
 
         /**
          * CreateTime.
@@ -156,7 +179,7 @@ public class MigrationJob extends TeaModel {
         /**
          * RuleNames.
          */
-        public Builder ruleNames(java.util.List < String > ruleNames) {
+        public Builder ruleNames(java.util.List<String> ruleNames) {
             this.ruleNames = ruleNames;
             return this;
         }
@@ -164,7 +187,7 @@ public class MigrationJob extends TeaModel {
         /**
          * Source.
          */
-        public Builder source(java.util.List < Source> source) {
+        public Builder source(java.util.List<Source> source) {
             this.source = source;
             return this;
         }
@@ -247,6 +270,15 @@ public class MigrationJob extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.level = model.level;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Level.
              */
@@ -286,7 +318,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
-        private java.util.List < Channels> channels;
+        private java.util.List<Channels> channels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -307,7 +339,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return channels
          */
-        public java.util.List < Channels> getChannels() {
+        public java.util.List<Channels> getChannels() {
             return this.channels;
         }
 
@@ -319,13 +351,21 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Channels> channels; 
+            private java.util.List<Channels> channels; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.channels = model.channels;
+                this.name = model.name;
+            } 
 
             /**
              * Channels.
              */
-            public Builder channels(java.util.List < Channels> channels) {
+            public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -353,16 +393,16 @@ public class MigrationJob extends TeaModel {
      */
     public static class LevelGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
-        private java.util.List < String > critical;
+        private java.util.List<String> critical;
 
         @com.aliyun.core.annotation.NameInMap("Info")
-        private java.util.List < String > info;
+        private java.util.List<String> info;
 
         @com.aliyun.core.annotation.NameInMap("Resolved")
-        private java.util.List < String > resolved;
+        private java.util.List<String> resolved;
 
         @com.aliyun.core.annotation.NameInMap("Warning")
-        private java.util.List < String > warning;
+        private java.util.List<String> warning;
 
         private LevelGroups(Builder builder) {
             this.critical = builder.critical;
@@ -382,41 +422,51 @@ public class MigrationJob extends TeaModel {
         /**
          * @return critical
          */
-        public java.util.List < String > getCritical() {
+        public java.util.List<String> getCritical() {
             return this.critical;
         }
 
         /**
          * @return info
          */
-        public java.util.List < String > getInfo() {
+        public java.util.List<String> getInfo() {
             return this.info;
         }
 
         /**
          * @return resolved
          */
-        public java.util.List < String > getResolved() {
+        public java.util.List<String> getResolved() {
             return this.resolved;
         }
 
         /**
          * @return warning
          */
-        public java.util.List < String > getWarning() {
+        public java.util.List<String> getWarning() {
             return this.warning;
         }
 
         public static final class Builder {
-            private java.util.List < String > critical; 
-            private java.util.List < String > info; 
-            private java.util.List < String > resolved; 
-            private java.util.List < String > warning; 
+            private java.util.List<String> critical; 
+            private java.util.List<String> info; 
+            private java.util.List<String> resolved; 
+            private java.util.List<String> warning; 
+
+            private Builder() {
+            } 
+
+            private Builder(LevelGroups model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.resolved = model.resolved;
+                this.warning = model.warning;
+            } 
 
             /**
              * Critical.
              */
-            public Builder critical(java.util.List < String > critical) {
+            public Builder critical(java.util.List<String> critical) {
                 this.critical = critical;
                 return this;
             }
@@ -424,7 +474,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Info.
              */
-            public Builder info(java.util.List < String > info) {
+            public Builder info(java.util.List<String> info) {
                 this.info = info;
                 return this;
             }
@@ -432,7 +482,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Resolved.
              */
-            public Builder resolved(java.util.List < String > resolved) {
+            public Builder resolved(java.util.List<String> resolved) {
                 this.resolved = resolved;
                 return this;
             }
@@ -440,7 +490,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Warning.
              */
-            public Builder warning(java.util.List < String > warning) {
+            public Builder warning(java.util.List<String> warning) {
                 this.warning = warning;
                 return this;
             }
@@ -460,7 +510,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < String > groups;
+        private java.util.List<String> groups;
 
         @com.aliyun.core.annotation.NameInMap("LevelGroups")
         private LevelGroups levelGroups;
@@ -481,7 +531,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
@@ -493,13 +543,21 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > groups; 
+            private java.util.List<String> groups; 
             private LevelGroups levelGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.groups = model.groups;
+                this.levelGroups = model.levelGroups;
+            } 
 
             /**
              * Groups.
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -527,7 +585,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class PlanEscalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        private java.util.List < Escalations> escalations;
+        private java.util.List<Escalations> escalations;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -552,7 +610,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return escalations
          */
-        public java.util.List < Escalations> getEscalations() {
+        public java.util.List<Escalations> getEscalations() {
             return this.escalations;
         }
 
@@ -571,14 +629,23 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Escalations> escalations; 
+            private java.util.List<Escalations> escalations; 
             private String name; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlanEscalations model) {
+                this.escalations = model.escalations;
+                this.name = model.name;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Escalations.
              */
-            public Builder escalations(java.util.List < Escalations> escalations) {
+            public Builder escalations(java.util.List<Escalations> escalations) {
                 this.escalations = escalations;
                 return this;
             }
@@ -614,7 +681,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
-        private java.util.List < String > contacts;
+        private java.util.List<String> contacts;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -635,7 +702,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < String > getContacts() {
+        public java.util.List<String> getContacts() {
             return this.contacts;
         }
 
@@ -647,13 +714,21 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > contacts; 
+            private java.util.List<String> contacts; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.contacts = model.contacts;
+                this.name = model.name;
+            } 
 
             /**
              * Contacts.
              */
-            public Builder contacts(java.util.List < String > contacts) {
+            public Builder contacts(java.util.List<String> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -705,6 +780,13 @@ public class MigrationJob extends TeaModel {
         public static final class Builder {
             private String escalationUuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(EscalationSetting model) {
+                this.escalationUuid = model.escalationUuid;
+            } 
+
             /**
              * escalationUuid.
              */
@@ -728,7 +810,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class PushingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetUuids")
-        private java.util.List < String > targetUuids;
+        private java.util.List<String> targetUuids;
 
         private PushingSetting(Builder builder) {
             this.targetUuids = builder.targetUuids;
@@ -745,17 +827,24 @@ public class MigrationJob extends TeaModel {
         /**
          * @return targetUuids
          */
-        public java.util.List < String > getTargetUuids() {
+        public java.util.List<String> getTargetUuids() {
             return this.targetUuids;
         }
 
         public static final class Builder {
-            private java.util.List < String > targetUuids; 
+            private java.util.List<String> targetUuids; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushingSetting model) {
+                this.targetUuids = model.targetUuids;
+            } 
 
             /**
              * TargetUuids.
              */
-            public Builder targetUuids(java.util.List < String > targetUuids) {
+            public Builder targetUuids(java.util.List<String> targetUuids) {
                 this.targetUuids = targetUuids;
                 return this;
             }
@@ -822,6 +911,15 @@ public class MigrationJob extends TeaModel {
             private EscalationSetting escalationSetting; 
             private String name; 
             private PushingSetting pushingSetting; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategies model) {
+                this.escalationSetting = model.escalationSetting;
+                this.name = model.name;
+                this.pushingSetting = model.pushingSetting;
+            } 
 
             /**
              * EscalationSetting.
@@ -910,6 +1008,15 @@ public class MigrationJob extends TeaModel {
             private String op; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.op = model.op;
+                this.value = model.value;
+            } 
+
             /**
              * Field.
              */
@@ -949,7 +1056,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class Subscriptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -974,7 +1081,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -993,14 +1100,23 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String name; 
             private String strategyUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subscriptions model) {
+                this.conditions = model.conditions;
+                this.name = model.name;
+                this.strategyUuid = model.strategyUuid;
+            } 
 
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -1083,6 +1199,15 @@ public class MigrationJob extends TeaModel {
             private String contentType; 
             private String method; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpRequestTarget model) {
+                this.contentType = model.contentType;
+                this.method = model.method;
+                this.url = model.url;
+            } 
 
             /**
              * ContentType.
@@ -1195,6 +1320,17 @@ public class MigrationJob extends TeaModel {
             private String type; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.arn = model.arn;
+                this.httpRequestTarget = model.httpRequestTarget;
+                this.name = model.name;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * Arn.
              */
@@ -1250,25 +1386,25 @@ public class MigrationJob extends TeaModel {
      */
     public static class Plan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        private java.util.List<Contacts> contacts;
 
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        private java.util.List < PlanEscalations> escalations;
+        private java.util.List<PlanEscalations> escalations;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        private java.util.List<Groups> groups;
 
         @com.aliyun.core.annotation.NameInMap("RuleNames")
-        private java.util.List < String > ruleNames;
+        private java.util.List<String> ruleNames;
 
         @com.aliyun.core.annotation.NameInMap("Strategies")
-        private java.util.List < Strategies> strategies;
+        private java.util.List<Strategies> strategies;
 
         @com.aliyun.core.annotation.NameInMap("Subscriptions")
-        private java.util.List < Subscriptions> subscriptions;
+        private java.util.List<Subscriptions> subscriptions;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        private java.util.List<Targets> targets;
 
         private Plan(Builder builder) {
             this.contacts = builder.contacts;
@@ -1291,65 +1427,78 @@ public class MigrationJob extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
         /**
          * @return escalations
          */
-        public java.util.List < PlanEscalations> getEscalations() {
+        public java.util.List<PlanEscalations> getEscalations() {
             return this.escalations;
         }
 
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
         /**
          * @return ruleNames
          */
-        public java.util.List < String > getRuleNames() {
+        public java.util.List<String> getRuleNames() {
             return this.ruleNames;
         }
 
         /**
          * @return strategies
          */
-        public java.util.List < Strategies> getStrategies() {
+        public java.util.List<Strategies> getStrategies() {
             return this.strategies;
         }
 
         /**
          * @return subscriptions
          */
-        public java.util.List < Subscriptions> getSubscriptions() {
+        public java.util.List<Subscriptions> getSubscriptions() {
             return this.subscriptions;
         }
 
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
         public static final class Builder {
-            private java.util.List < Contacts> contacts; 
-            private java.util.List < PlanEscalations> escalations; 
-            private java.util.List < Groups> groups; 
-            private java.util.List < String > ruleNames; 
-            private java.util.List < Strategies> strategies; 
-            private java.util.List < Subscriptions> subscriptions; 
-            private java.util.List < Targets> targets; 
+            private java.util.List<Contacts> contacts; 
+            private java.util.List<PlanEscalations> escalations; 
+            private java.util.List<Groups> groups; 
+            private java.util.List<String> ruleNames; 
+            private java.util.List<Strategies> strategies; 
+            private java.util.List<Subscriptions> subscriptions; 
+            private java.util.List<Targets> targets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plan model) {
+                this.contacts = model.contacts;
+                this.escalations = model.escalations;
+                this.groups = model.groups;
+                this.ruleNames = model.ruleNames;
+                this.strategies = model.strategies;
+                this.subscriptions = model.subscriptions;
+                this.targets = model.targets;
+            } 
 
             /**
              * Contacts.
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -1357,7 +1506,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Escalations.
              */
-            public Builder escalations(java.util.List < PlanEscalations> escalations) {
+            public Builder escalations(java.util.List<PlanEscalations> escalations) {
                 this.escalations = escalations;
                 return this;
             }
@@ -1365,7 +1514,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Groups.
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -1373,7 +1522,7 @@ public class MigrationJob extends TeaModel {
             /**
              * RuleNames.
              */
-            public Builder ruleNames(java.util.List < String > ruleNames) {
+            public Builder ruleNames(java.util.List<String> ruleNames) {
                 this.ruleNames = ruleNames;
                 return this;
             }
@@ -1381,7 +1530,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Strategies.
              */
-            public Builder strategies(java.util.List < Strategies> strategies) {
+            public Builder strategies(java.util.List<Strategies> strategies) {
                 this.strategies = strategies;
                 return this;
             }
@@ -1389,7 +1538,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Subscriptions.
              */
-            public Builder subscriptions(java.util.List < Subscriptions> subscriptions) {
+            public Builder subscriptions(java.util.List<Subscriptions> subscriptions) {
                 this.subscriptions = subscriptions;
                 return this;
             }
@@ -1397,7 +1546,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Targets.
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }
@@ -1417,7 +1566,7 @@ public class MigrationJob extends TeaModel {
      */
     public static class KeywordFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
@@ -1438,7 +1587,7 @@ public class MigrationJob extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -1450,13 +1599,21 @@ public class MigrationJob extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private String relation; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeywordFilter model) {
+                this.keywords = model.keywords;
+                this.relation = model.relation;
+            } 
 
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -1532,6 +1689,15 @@ public class MigrationJob extends TeaModel {
             private String opType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrimaryFilters model) {
+                this.field = model.field;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
+
             /**
              * Field.
              */
@@ -1577,7 +1743,7 @@ public class MigrationJob extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryFilters")
-        private java.util.List < PrimaryFilters> primaryFilters;
+        private java.util.List<PrimaryFilters> primaryFilters;
 
         private Rule(Builder builder) {
             this.keywordFilter = builder.keywordFilter;
@@ -1610,14 +1776,23 @@ public class MigrationJob extends TeaModel {
         /**
          * @return primaryFilters
          */
-        public java.util.List < PrimaryFilters> getPrimaryFilters() {
+        public java.util.List<PrimaryFilters> getPrimaryFilters() {
             return this.primaryFilters;
         }
 
         public static final class Builder {
             private KeywordFilter keywordFilter; 
             private String name; 
-            private java.util.List < PrimaryFilters> primaryFilters; 
+            private java.util.List<PrimaryFilters> primaryFilters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.keywordFilter = model.keywordFilter;
+                this.name = model.name;
+                this.primaryFilters = model.primaryFilters;
+            } 
 
             /**
              * KeywordFilter.
@@ -1638,7 +1813,7 @@ public class MigrationJob extends TeaModel {
             /**
              * PrimaryFilters.
              */
-            public Builder primaryFilters(java.util.List < PrimaryFilters> primaryFilters) {
+            public Builder primaryFilters(java.util.List<PrimaryFilters> primaryFilters) {
                 this.primaryFilters = primaryFilters;
                 return this;
             }
@@ -1742,6 +1917,18 @@ public class MigrationJob extends TeaModel {
             private String resourcePath; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.group = model.group;
+                this.level = model.level;
+                this.method = model.method;
+                this.region = model.region;
+                this.resourcePath = model.resourcePath;
+                this.url = model.url;
+            } 
+
             /**
              * Group.
              */
@@ -1841,6 +2028,14 @@ public class MigrationJob extends TeaModel {
             private Content content; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceTargets model) {
+                this.content = model.content;
+                this.type = model.type;
+            } 
+
             /**
              * Content.
              */
@@ -1875,7 +2070,7 @@ public class MigrationJob extends TeaModel {
         private Rule rule;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < SourceTargets> targets;
+        private java.util.List<SourceTargets> targets;
 
         private Source(Builder builder) {
             this.rule = builder.rule;
@@ -1900,13 +2095,21 @@ public class MigrationJob extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < SourceTargets> getTargets() {
+        public java.util.List<SourceTargets> getTargets() {
             return this.targets;
         }
 
         public static final class Builder {
             private Rule rule; 
-            private java.util.List < SourceTargets> targets; 
+            private java.util.List<SourceTargets> targets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.rule = model.rule;
+                this.targets = model.targets;
+            } 
 
             /**
              * Rule.
@@ -1919,7 +2122,7 @@ public class MigrationJob extends TeaModel {
             /**
              * Targets.
              */
-            public Builder targets(java.util.List < SourceTargets> targets) {
+            public Builder targets(java.util.List<SourceTargets> targets) {
                 this.targets = targets;
                 return this;
             }

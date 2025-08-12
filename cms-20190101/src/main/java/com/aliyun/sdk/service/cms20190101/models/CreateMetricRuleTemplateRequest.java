@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateMetricRuleTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertTemplates")
-    private java.util.List < AlertTemplates> alertTemplates;
+    private java.util.List<AlertTemplates> alertTemplates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -40,7 +45,7 @@ public class CreateMetricRuleTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +53,7 @@ public class CreateMetricRuleTemplateRequest extends Request {
     /**
      * @return alertTemplates
      */
-    public java.util.List < AlertTemplates> getAlertTemplates() {
+    public java.util.List<AlertTemplates> getAlertTemplates() {
         return this.alertTemplates;
     }
 
@@ -67,7 +72,7 @@ public class CreateMetricRuleTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMetricRuleTemplateRequest, Builder> {
-        private java.util.List < AlertTemplates> alertTemplates; 
+        private java.util.List<AlertTemplates> alertTemplates; 
         private String description; 
         private String name; 
 
@@ -83,9 +88,9 @@ public class CreateMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * AlertTemplates.
+         * <p>The details of the alert template.</p>
          */
-        public Builder alertTemplates(java.util.List < AlertTemplates> alertTemplates) {
+        public Builder alertTemplates(java.util.List<AlertTemplates> alertTemplates) {
             this.putQueryParameter("AlertTemplates", alertTemplates);
             this.alertTemplates = alertTemplates;
             return this;
@@ -202,6 +207,17 @@ public class CreateMetricRuleTemplateRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * ComparisonOperator.
@@ -330,6 +346,17 @@ public class CreateMetricRuleTemplateRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -457,6 +484,17 @@ public class CreateMetricRuleTemplateRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -563,6 +601,15 @@ public class CreateMetricRuleTemplateRequest extends Request {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * Critical.
              */
@@ -602,7 +649,6 @@ public class CreateMetricRuleTemplateRequest extends Request {
      */
     public static class AlertTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -715,6 +761,20 @@ public class CreateMetricRuleTemplateRequest extends Request {
             private String selector; 
             private String webhook; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplates model) {
+                this.escalations = model.escalations;
+                this.category = model.category;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.period = model.period;
+                this.ruleName = model.ruleName;
+                this.selector = model.selector;
+                this.webhook = model.webhook;
+            } 
+
             /**
              * Escalations.
              */
@@ -724,8 +784,9 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The abbreviation of the Alibaba Cloud service name.</p>
-             * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+             * <p>The abbreviation of the cloud service name.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -737,10 +798,9 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of the metric. Valid values of N: 1 to 200.</p>
-             * <blockquote>
-             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-             * </blockquote>
+             * <p>The metric name.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -752,10 +812,9 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
-             * <blockquote>
-             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-             * </blockquote>
+             * <p>The namespace of the cloud service.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -780,8 +839,12 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+             * <p>The name of the alert rule.</p>
+             * <p>Valid values of N: 1 to 200.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Rule1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -789,7 +852,12 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The extended field selectors. Valid values of N: 1 to 200.</p>
+             * <p>The dimension of the alert. It is an extended field.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>For example, an alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>. In this case, the generated alert rule is applied to the root disk partition (<code>&quot;/&quot;</code>) of all instances in the application group to which the alert template is applied.</p>
+             * <blockquote>
+             * <p> For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
@@ -800,7 +868,9 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+             * <p>The callback URL.</p>
+             * <p>Valid values of N: 1 to 200.</p>
+             * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://ww.aliyun.com">http://ww.aliyun.com</a></p>

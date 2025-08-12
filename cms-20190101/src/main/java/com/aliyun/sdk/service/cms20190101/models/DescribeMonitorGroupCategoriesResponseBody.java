@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     public static DescribeMonitorGroupCategoriesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         private MonitorGroupCategories monitorGroupCategories; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupCategoriesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.monitorGroupCategories = model.monitorGroupCategories;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -194,6 +214,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             private String category; 
             private Integer count; 
 
+            private Builder() {
+            } 
+
+            private Builder(CategoryItem model) {
+                this.category = model.category;
+                this.count = model.count;
+            } 
+
             /**
              * <p>The abbreviation of the cloud service name.</p>
              * <blockquote>
@@ -234,7 +262,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
      */
     public static class MonitorGroupCategory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryItem")
-        private java.util.List < CategoryItem> categoryItem;
+        private java.util.List<CategoryItem> categoryItem;
 
         private MonitorGroupCategory(Builder builder) {
             this.categoryItem = builder.categoryItem;
@@ -251,17 +279,24 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         /**
          * @return categoryItem
          */
-        public java.util.List < CategoryItem> getCategoryItem() {
+        public java.util.List<CategoryItem> getCategoryItem() {
             return this.categoryItem;
         }
 
         public static final class Builder {
-            private java.util.List < CategoryItem> categoryItem; 
+            private java.util.List<CategoryItem> categoryItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorGroupCategory model) {
+                this.categoryItem = model.categoryItem;
+            } 
 
             /**
              * CategoryItem.
              */
-            public Builder categoryItem(java.util.List < CategoryItem> categoryItem) {
+            public Builder categoryItem(java.util.List<CategoryItem> categoryItem) {
                 this.categoryItem = categoryItem;
                 return this;
             }
@@ -316,6 +351,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         public static final class Builder {
             private Long groupId; 
             private MonitorGroupCategory monitorGroupCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorGroupCategories model) {
+                this.groupId = model.groupId;
+                this.monitorGroupCategory = model.monitorGroupCategory;
+            } 
 
             /**
              * <p>The ID of the application group.</p>

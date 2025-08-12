@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
 
     public static DescribeCustomEventAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,10 +94,21 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomEventAttributeResponseBody model) {
+            this.code = model.code;
+            this.customEvents = model.customEvents;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -100,7 +120,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the custom event.</p>
+         * <p>The event details.</p>
          */
         public Builder customEvents(CustomEvents customEvents) {
             this.customEvents = customEvents;
@@ -119,7 +139,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
@@ -130,10 +150,10 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,8 +250,19 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             private String name; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomEvent model) {
+                this.content = model.content;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.time = model.time;
+            } 
+
             /**
-             * <p>The content of the custom event.</p>
+             * <p>The content of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>requestId:4975A6F3-19AC-4C01-BAD2-034DA07FEBB5, info:{&quot;autoPay&quot;:false,&quot;autoUseCoupon&quot;:false,&quot;bid&quot;:&quot;26842&quot;,&quot;buyerId&quot;:118935342242****,&quot;commodities&quot;:[{&quot;aliyunProduceCode&quot;:&quot;cms&quot;,&quot;chargeType&quot;:&quot;PREPAY&quot;,&quot;commodityCode&quot;:&quot;cms_call_num&quot;,&quot;components&quot;:[{&quot;componentCode&quot;:&quot;phone_count&quot;,&quot;instanceProperty&quot;:[{&quot;code&quot;:&quot;phone_count&quot;,&quot;value&quot;:&quot;500&quot;}],&quot;moduleAttrStatus&quot;:1}],&quot;duration&quot;:6,&quot;free&quot;:false,&quot;orderParams&quot;:{&quot;aliyunProduceCode&quot;:&quot;cms&quot;},&quot;orderType&quot;:&quot;BUY&quot;,&quot;prePayPostCharge&quot;:false,&quot;pricingCycle&quot;:&quot;Month&quot;,&quot;quantity&quot;:1,&quot;refundSpecCode&quot;:&quot;&quot;,&quot;renewChange&quot;:false,&quot;specCode&quot;:&quot;cms_call_num&quot;,&quot;specUpdate&quot;:false,&quot;syncToSubscription&quot;:false,&quot;upgradeInquireFinancialValue&quot;:true}],&quot;fromApp&quot;:&quot;commonbuy&quot;,&quot;orderParams&quot;:{&quot;priceCheck&quot;:&quot;true&quot;},&quot;payerId&quot;:118935342242****,&quot;requestId&quot;:&quot;ade3ad32-f58b-45d7-add4-ac542be3d8ec&quot;,&quot;skipChannel&quot;:false,&quot;userId&quot;:118935342242****}</p>
@@ -253,7 +284,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom event.</p>
+             * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -264,7 +295,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom event.</p>
+             * <p>The event name.</p>
              * 
              * <strong>example:</strong>
              * <p>BABEL_CHECK</p>
@@ -275,8 +306,8 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the custom event occurred.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the event occurred.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1552199984000</p>
@@ -301,7 +332,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
      */
     public static class CustomEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomEvent")
-        private java.util.List < CustomEvent> customEvent;
+        private java.util.List<CustomEvent> customEvent;
 
         private CustomEvents(Builder builder) {
             this.customEvent = builder.customEvent;
@@ -318,17 +349,24 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         /**
          * @return customEvent
          */
-        public java.util.List < CustomEvent> getCustomEvent() {
+        public java.util.List<CustomEvent> getCustomEvent() {
             return this.customEvent;
         }
 
         public static final class Builder {
-            private java.util.List < CustomEvent> customEvent; 
+            private java.util.List<CustomEvent> customEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomEvents model) {
+                this.customEvent = model.customEvent;
+            } 
 
             /**
              * CustomEvent.
              */
-            public Builder customEvent(java.util.List < CustomEvent> customEvent) {
+            public Builder customEvent(java.util.List<CustomEvent> customEvent) {
                 this.customEvent = customEvent;
                 return this;
             }

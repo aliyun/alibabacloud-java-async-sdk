@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
 
     public static DescribeMonitoringAgentProcessesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         private NodeProcesses nodeProcesses; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitoringAgentProcessesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.nodeProcesses = model.nodeProcesses;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -242,6 +262,18 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             private String processName; 
             private String processUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeProcess model) {
+                this.command = model.command;
+                this.groupId = model.groupId;
+                this.instanceId = model.instanceId;
+                this.processId = model.processId;
+                this.processName = model.processName;
+                this.processUser = model.processUser;
+            } 
+
             /**
              * <p>The command used to obtain the number of processes. Valid value: <code>number</code>.</p>
              * <blockquote>
@@ -326,7 +358,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
      */
     public static class NodeProcesses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeProcess")
-        private java.util.List < NodeProcess> nodeProcess;
+        private java.util.List<NodeProcess> nodeProcess;
 
         private NodeProcesses(Builder builder) {
             this.nodeProcess = builder.nodeProcess;
@@ -343,17 +375,24 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         /**
          * @return nodeProcess
          */
-        public java.util.List < NodeProcess> getNodeProcess() {
+        public java.util.List<NodeProcess> getNodeProcess() {
             return this.nodeProcess;
         }
 
         public static final class Builder {
-            private java.util.List < NodeProcess> nodeProcess; 
+            private java.util.List<NodeProcess> nodeProcess; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeProcesses model) {
+                this.nodeProcess = model.nodeProcess;
+            } 
 
             /**
              * NodeProcess.
              */
-            public Builder nodeProcess(java.util.List < NodeProcess> nodeProcess) {
+            public Builder nodeProcess(java.util.List<NodeProcess> nodeProcess) {
                 this.nodeProcess = nodeProcess;
                 return this;
             }

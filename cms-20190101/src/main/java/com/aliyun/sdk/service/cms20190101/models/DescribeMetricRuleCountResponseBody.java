@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
 
     public static DescribeMetricRuleCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         private MetricRuleCount metricRuleCount; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleCountResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.metricRuleCount = model.metricRuleCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -229,6 +249,17 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             private Integer nodata; 
             private Integer ok; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricRuleCount model) {
+                this.alarm = model.alarm;
+                this.disable = model.disable;
+                this.nodata = model.nodata;
+                this.ok = model.ok;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The number of alert rules with active alerts.</p>

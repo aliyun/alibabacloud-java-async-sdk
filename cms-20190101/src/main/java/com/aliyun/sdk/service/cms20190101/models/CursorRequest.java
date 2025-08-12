@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CursorRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Matchers")
-    private java.util.List < Matcher > matchers;
+    private java.util.List<Matcher> matchers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Metric")
@@ -58,7 +63,7 @@ public class CursorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +78,7 @@ public class CursorRequest extends Request {
     /**
      * @return matchers
      */
-    public java.util.List < Matcher > getMatchers() {
+    public java.util.List<Matcher> getMatchers() {
         return this.matchers;
     }
 
@@ -107,7 +112,7 @@ public class CursorRequest extends Request {
 
     public static final class Builder extends Request.Builder<CursorRequest, Builder> {
         private String endTime; 
-        private java.util.List < Matcher > matchers; 
+        private java.util.List<Matcher> matchers; 
         private String metric; 
         private String namespace; 
         private Integer period; 
@@ -153,7 +158,7 @@ public class CursorRequest extends Request {
         /**
          * <p>The dimension information of the metric.</p>
          */
-        public Builder matchers(java.util.List < Matcher > matchers) {
+        public Builder matchers(java.util.List<Matcher> matchers) {
             String matchersShrink = shrink(matchers, "Matchers", "json");
             this.putBodyParameter("Matchers", matchersShrink);
             this.matchers = matchers;

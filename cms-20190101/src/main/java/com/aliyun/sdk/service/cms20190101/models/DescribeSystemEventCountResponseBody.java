@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
     public static DescribeSystemEventCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private SystemEventCounts systemEventCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSystemEventCountResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.systemEventCounts = model.systemEventCounts;
+        } 
 
         /**
          * <p>The HTTP status codes.</p>
@@ -303,6 +323,23 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             private String status; 
             private Long time; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemEventCount model) {
+                this.content = model.content;
+                this.groupId = model.groupId;
+                this.instanceName = model.instanceName;
+                this.level = model.level;
+                this.name = model.name;
+                this.num = model.num;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+                this.time = model.time;
+            } 
+
             /**
              * <p>The description of the system event.</p>
              */
@@ -441,7 +478,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
      */
     public static class SystemEventCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemEventCount")
-        private java.util.List < SystemEventCount> systemEventCount;
+        private java.util.List<SystemEventCount> systemEventCount;
 
         private SystemEventCounts(Builder builder) {
             this.systemEventCount = builder.systemEventCount;
@@ -458,17 +495,24 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         /**
          * @return systemEventCount
          */
-        public java.util.List < SystemEventCount> getSystemEventCount() {
+        public java.util.List<SystemEventCount> getSystemEventCount() {
             return this.systemEventCount;
         }
 
         public static final class Builder {
-            private java.util.List < SystemEventCount> systemEventCount; 
+            private java.util.List<SystemEventCount> systemEventCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemEventCounts model) {
+                this.systemEventCount = model.systemEventCount;
+            } 
 
             /**
              * SystemEventCount.
              */
-            public Builder systemEventCount(java.util.List < SystemEventCount> systemEventCount) {
+            public Builder systemEventCount(java.util.List<SystemEventCount> systemEventCount) {
                 this.systemEventCount = systemEventCount;
                 return this;
             }

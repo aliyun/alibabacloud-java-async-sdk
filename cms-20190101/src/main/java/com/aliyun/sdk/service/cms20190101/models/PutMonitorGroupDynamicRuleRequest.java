@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupRules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < GroupRules> groupRules;
+    private java.util.List<GroupRules> groupRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsAsync")
@@ -41,7 +46,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
     /**
      * @return groupRules
      */
-    public java.util.List < GroupRules> getGroupRules() {
+    public java.util.List<GroupRules> getGroupRules() {
         return this.groupRules;
     }
 
@@ -69,7 +74,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutMonitorGroupDynamicRuleRequest, Builder> {
         private Long groupId; 
-        private java.util.List < GroupRules> groupRules; 
+        private java.util.List<GroupRules> groupRules; 
         private Boolean isAsync; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
          * <p>None.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder groupRules(java.util.List < GroupRules> groupRules) {
+        public Builder groupRules(java.util.List<GroupRules> groupRules) {
             this.putQueryParameter("GroupRules", groupRules);
             this.groupRules = groupRules;
             return this;
@@ -188,6 +193,15 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.function = model.function;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
              * <ul>
@@ -255,7 +269,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Filters")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         private GroupRules(Builder builder) {
             this.category = builder.category;
@@ -288,14 +302,23 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
         public static final class Builder {
             private String category; 
             private String filterRelation; 
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupRules model) {
+                this.category = model.category;
+                this.filterRelation = model.filterRelation;
+                this.filters = model.filters;
+            } 
 
             /**
              * <p>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</p>
@@ -334,7 +357,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
              * <p>None.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }

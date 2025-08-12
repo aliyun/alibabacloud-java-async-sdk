@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
 
     public static ApplyMetricRuleTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Resource resource; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyMetricRuleTemplateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -230,6 +250,17 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             private String ruleName; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertResults model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The responses code.</p>
              * <blockquote>
@@ -307,7 +338,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
      */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertResults")
-        private java.util.List < AlertResults> alertResults;
+        private java.util.List<AlertResults> alertResults;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -328,7 +359,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         /**
          * @return alertResults
          */
-        public java.util.List < AlertResults> getAlertResults() {
+        public java.util.List<AlertResults> getAlertResults() {
             return this.alertResults;
         }
 
@@ -340,13 +371,21 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertResults> alertResults; 
+            private java.util.List<AlertResults> alertResults; 
             private Long groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.alertResults = model.alertResults;
+                this.groupId = model.groupId;
+            } 
 
             /**
              * <p>The details of the generated alert rule.</p>
              */
-            public Builder alertResults(java.util.List < AlertResults> alertResults) {
+            public Builder alertResults(java.util.List<AlertResults> alertResults) {
                 this.alertResults = alertResults;
                 return this;
             }

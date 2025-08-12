@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     public static DescribeMonitorGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         private Resources resources; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -251,6 +274,13 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactGroup model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the alert contact group.</p>
              * 
@@ -277,7 +307,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
      */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < ContactGroup> contactGroup;
+        private java.util.List<ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -294,17 +324,24 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < ContactGroup> getContactGroup() {
+        public java.util.List<ContactGroup> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ContactGroup> contactGroup; 
+            private java.util.List<ContactGroup> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < ContactGroup> contactGroup) {
+            public Builder contactGroup(java.util.List<ContactGroup> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }
@@ -360,6 +397,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the application group.</p>
              * 
@@ -397,7 +442,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -414,17 +459,24 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -444,7 +496,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
      */
     public static class TemplateIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateId")
-        private java.util.List < String > templateId;
+        private java.util.List<String> templateId;
 
         private TemplateIds(Builder builder) {
             this.templateId = builder.templateId;
@@ -461,23 +513,180 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         /**
          * @return templateId
          */
-        public java.util.List < String > getTemplateId() {
+        public java.util.List<String> getTemplateId() {
             return this.templateId;
         }
 
         public static final class Builder {
-            private java.util.List < String > templateId; 
+            private java.util.List<String> templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateIds model) {
+                this.templateId = model.templateId;
+            } 
 
             /**
              * TemplateId.
              */
-            public Builder templateId(java.util.List < String > templateId) {
+            public Builder templateId(java.util.List<String> templateId) {
                 this.templateId = templateId;
                 return this;
             }
 
             public TemplateIds build() {
                 return new TemplateIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
+    public static class TemplateInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EffectTime")
+        private Long effectTime;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("Ver")
+        private String ver;
+
+        private TemplateInfo(Builder builder) {
+            this.effectTime = builder.effectTime;
+            this.templateId = builder.templateId;
+            this.ver = builder.ver;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TemplateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return effectTime
+         */
+        public Long getEffectTime() {
+            return this.effectTime;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return ver
+         */
+        public String getVer() {
+            return this.ver;
+        }
+
+        public static final class Builder {
+            private Long effectTime; 
+            private String templateId; 
+            private String ver; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateInfo model) {
+                this.effectTime = model.effectTime;
+                this.templateId = model.templateId;
+                this.ver = model.ver;
+            } 
+
+            /**
+             * EffectTime.
+             */
+            public Builder effectTime(Long effectTime) {
+                this.effectTime = effectTime;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * Ver.
+             */
+            public Builder ver(String ver) {
+                this.ver = ver;
+                return this;
+            }
+
+            public TemplateInfo build() {
+                return new TemplateInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
+    public static class TemplateInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TemplateInfo")
+        private java.util.List<TemplateInfo> templateInfo;
+
+        private TemplateInfos(Builder builder) {
+            this.templateInfo = builder.templateInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TemplateInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return templateInfo
+         */
+        public java.util.List<TemplateInfo> getTemplateInfo() {
+            return this.templateInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List<TemplateInfo> templateInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateInfos model) {
+                this.templateInfo = model.templateInfo;
+            } 
+
+            /**
+             * TemplateInfo.
+             */
+            public Builder templateInfo(java.util.List<TemplateInfo> templateInfo) {
+                this.templateInfo = templateInfo;
+                return this;
+            }
+
+            public TemplateInfos build() {
+                return new TemplateInfos(this);
             } 
 
         } 
@@ -529,6 +738,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateIds")
         private TemplateIds templateIds;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateInfos")
+        private TemplateInfos templateInfos;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -546,6 +758,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             this.serviceId = builder.serviceId;
             this.tags = builder.tags;
             this.templateIds = builder.templateIds;
+            this.templateInfos = builder.templateInfos;
             this.type = builder.type;
         }
 
@@ -649,6 +862,13 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateInfos
+         */
+        public TemplateInfos getTemplateInfos() {
+            return this.templateInfos;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -669,7 +889,29 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             private String serviceId; 
             private Tags tags; 
             private TemplateIds templateIds; 
+            private TemplateInfos templateInfos; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.bindUrl = model.bindUrl;
+                this.contactGroups = model.contactGroups;
+                this.dynamicTagRuleId = model.dynamicTagRuleId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupFounderTagKey = model.groupFounderTagKey;
+                this.groupFounderTagValue = model.groupFounderTagValue;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceId = model.serviceId;
+                this.tags = model.tags;
+                this.templateIds = model.templateIds;
+                this.templateInfos = model.templateInfos;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
@@ -806,6 +1048,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * TemplateInfos.
+             */
+            public Builder templateInfos(TemplateInfos templateInfos) {
+                this.templateInfos = templateInfos;
+                return this;
+            }
+
+            /**
              * <p>The type of the application group. Valid values:</p>
              * <ul>
              * <li>custom: a self-managed application group</li>
@@ -836,7 +1086,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -853,17 +1103,24 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

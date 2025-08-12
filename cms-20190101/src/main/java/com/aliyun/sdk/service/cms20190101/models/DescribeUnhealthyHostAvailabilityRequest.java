@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DescribeUnhealthyHostAvailabilityRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > id;
+    private java.util.List<Long> id;
 
     private DescribeUnhealthyHostAvailabilityRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class DescribeUnhealthyHostAvailabilityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class DescribeUnhealthyHostAvailabilityRequest extends Request {
     /**
      * @return id
      */
-    public java.util.List < Long > getId() {
+    public java.util.List<Long> getId() {
         return this.id;
     }
 
     public static final class Builder extends Request.Builder<DescribeUnhealthyHostAvailabilityRequest, Builder> {
-        private java.util.List < Long > id; 
+        private java.util.List<Long> id; 
 
         private Builder() {
             super();
@@ -55,12 +60,13 @@ public class DescribeUnhealthyHostAvailabilityRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the availability monitoring task. Valid values of N: 1 to 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
-        public Builder id(java.util.List < Long > id) {
+        public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

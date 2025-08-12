@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class PutCustomEventRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventInfo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < EventInfo> eventInfo;
+    private java.util.List<EventInfo> eventInfo;
 
     private PutCustomEventRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class PutCustomEventRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class PutCustomEventRequest extends Request {
     /**
      * @return eventInfo
      */
-    public java.util.List < EventInfo> getEventInfo() {
+    public java.util.List<EventInfo> getEventInfo() {
         return this.eventInfo;
     }
 
     public static final class Builder extends Request.Builder<PutCustomEventRequest, Builder> {
-        private java.util.List < EventInfo> eventInfo; 
+        private java.util.List<EventInfo> eventInfo; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class PutCustomEventRequest extends Request {
          * <p>The event details.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder eventInfo(java.util.List < EventInfo> eventInfo) {
+        public Builder eventInfo(java.util.List<EventInfo> eventInfo) {
             this.putQueryParameter("EventInfo", eventInfo);
             this.eventInfo = eventInfo;
             return this;
@@ -140,6 +145,16 @@ public class PutCustomEventRequest extends Request {
             private String eventName; 
             private String groupId; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventInfo model) {
+                this.content = model.content;
+                this.eventName = model.eventName;
+                this.groupId = model.groupId;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The event content. Valid values of N: 1 to 50.</p>

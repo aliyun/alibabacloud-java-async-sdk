@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class AlertEvent extends TeaModel {
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("DeDupId")
     private String deDupId;
@@ -43,13 +48,13 @@ public class AlertEvent extends TeaModel {
     private String expression;
 
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < Metrics> metrics;
+    private java.util.List<Metrics> metrics;
 
     @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
     @com.aliyun.core.annotation.NameInMap("ResourceInfo")
-    private java.util.Map < String, ? > resourceInfo;
+    private java.util.Map<String, ?> resourceInfo;
 
     @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
@@ -103,6 +108,10 @@ public class AlertEvent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertName
      */
@@ -134,7 +143,7 @@ public class AlertEvent extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -176,7 +185,7 @@ public class AlertEvent extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metrics> getMetrics() {
+    public java.util.List<Metrics> getMetrics() {
         return this.metrics;
     }
 
@@ -190,7 +199,7 @@ public class AlertEvent extends TeaModel {
     /**
      * @return resourceInfo
      */
-    public java.util.Map < String, ? > getResourceInfo() {
+    public java.util.Map<String, ?> getResourceInfo() {
         return this.resourceInfo;
     }
 
@@ -248,15 +257,15 @@ public class AlertEvent extends TeaModel {
         private String alertStatus; 
         private String arn; 
         private String content; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String deDupId; 
         private String details; 
         private String eventName; 
         private String eventType; 
         private String expression; 
-        private java.util.List < Metrics> metrics; 
+        private java.util.List<Metrics> metrics; 
         private String product; 
-        private java.util.Map < String, ? > resourceInfo; 
+        private java.util.Map<String, ?> resourceInfo; 
         private String ruleName; 
         private String severity; 
         private String source; 
@@ -264,6 +273,32 @@ public class AlertEvent extends TeaModel {
         private Long timestamp; 
         private String traceId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertEvent model) {
+            this.alertName = model.alertName;
+            this.alertStatus = model.alertStatus;
+            this.arn = model.arn;
+            this.content = model.content;
+            this.customLabels = model.customLabels;
+            this.deDupId = model.deDupId;
+            this.details = model.details;
+            this.eventName = model.eventName;
+            this.eventType = model.eventType;
+            this.expression = model.expression;
+            this.metrics = model.metrics;
+            this.product = model.product;
+            this.resourceInfo = model.resourceInfo;
+            this.ruleName = model.ruleName;
+            this.severity = model.severity;
+            this.source = model.source;
+            this.summary = model.summary;
+            this.timestamp = model.timestamp;
+            this.traceId = model.traceId;
+            this.userId = model.userId;
+        } 
 
         /**
          * AlertName.
@@ -300,7 +335,7 @@ public class AlertEvent extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -348,7 +383,7 @@ public class AlertEvent extends TeaModel {
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metrics> metrics) {
+        public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
             return this;
         }
@@ -364,7 +399,7 @@ public class AlertEvent extends TeaModel {
         /**
          * ResourceInfo.
          */
-        public Builder resourceInfo(java.util.Map < String, ? > resourceInfo) {
+        public Builder resourceInfo(java.util.Map<String, ?> resourceInfo) {
             this.resourceInfo = resourceInfo;
             return this;
         }
@@ -558,6 +593,21 @@ public class AlertEvent extends TeaModel {
             private String threshold; 
             private String unit; 
             private Float unitFactor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.curValue = model.curValue;
+                this.metricName = model.metricName;
+                this.metricNameEn = model.metricNameEn;
+                this.metricNameZh = model.metricNameZh;
+                this.operator = model.operator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.unit = model.unit;
+                this.unitFactor = model.unitFactor;
+            } 
 
             /**
              * CurValue.

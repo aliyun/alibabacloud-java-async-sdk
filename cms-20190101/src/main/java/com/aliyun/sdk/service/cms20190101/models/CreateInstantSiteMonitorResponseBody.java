@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("CreateResultList")
-    private java.util.List < CreateResultList> createResultList;
+    private java.util.List<CreateResultList> createResultList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -43,6 +48,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * @return createResultList
      */
-    public java.util.List < CreateResultList> getCreateResultList() {
+    public java.util.List<CreateResultList> getCreateResultList() {
         return this.createResultList;
     }
 
@@ -80,10 +89,21 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < CreateResultList> createResultList; 
+        private java.util.List<CreateResultList> createResultList; 
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstantSiteMonitorResponseBody model) {
+            this.code = model.code;
+            this.createResultList = model.createResultList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -102,7 +122,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         /**
          * <p>The results for creating the instant test task.</p>
          */
-        public Builder createResultList(java.util.List < CreateResultList> createResultList) {
+        public Builder createResultList(java.util.List<CreateResultList> createResultList) {
             this.createResultList = createResultList;
             return this;
         }
@@ -130,10 +150,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,6 +213,14 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         public static final class Builder {
             private String taskId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResultList model) {
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The ID of the instant test task.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     public static DescribeAlertHistoryListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertHistoryListResponseBody model) {
+            this.alarmHistoryList = model.alarmHistoryList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The details of historical alerts.</p>
@@ -181,7 +202,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class ContactALIIMs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactALIIM")
-        private java.util.List < String > contactALIIM;
+        private java.util.List<String> contactALIIM;
 
         private ContactALIIMs(Builder builder) {
             this.contactALIIM = builder.contactALIIM;
@@ -198,17 +219,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return contactALIIM
          */
-        public java.util.List < String > getContactALIIM() {
+        public java.util.List<String> getContactALIIM() {
             return this.contactALIIM;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactALIIM; 
+            private java.util.List<String> contactALIIM; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactALIIMs model) {
+                this.contactALIIM = model.contactALIIM;
+            } 
 
             /**
              * ContactALIIM.
              */
-            public Builder contactALIIM(java.util.List < String > contactALIIM) {
+            public Builder contactALIIM(java.util.List<String> contactALIIM) {
                 this.contactALIIM = contactALIIM;
                 return this;
             }
@@ -228,7 +256,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < String > contactGroup;
+        private java.util.List<String> contactGroup;
 
         private ContactGroups(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -245,17 +273,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < String > getContactGroup() {
+        public java.util.List<String> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroup; 
+            private java.util.List<String> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < String > contactGroup) {
+            public Builder contactGroup(java.util.List<String> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }
@@ -275,7 +310,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class ContactMails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactMail")
-        private java.util.List < String > contactMail;
+        private java.util.List<String> contactMail;
 
         private ContactMails(Builder builder) {
             this.contactMail = builder.contactMail;
@@ -292,17 +327,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return contactMail
          */
-        public java.util.List < String > getContactMail() {
+        public java.util.List<String> getContactMail() {
             return this.contactMail;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactMail; 
+            private java.util.List<String> contactMail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactMails model) {
+                this.contactMail = model.contactMail;
+            } 
 
             /**
              * ContactMail.
              */
-            public Builder contactMail(java.util.List < String > contactMail) {
+            public Builder contactMail(java.util.List<String> contactMail) {
                 this.contactMail = contactMail;
                 return this;
             }
@@ -322,7 +364,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class ContactSmses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactSms")
-        private java.util.List < String > contactSms;
+        private java.util.List<String> contactSms;
 
         private ContactSmses(Builder builder) {
             this.contactSms = builder.contactSms;
@@ -339,17 +381,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return contactSms
          */
-        public java.util.List < String > getContactSms() {
+        public java.util.List<String> getContactSms() {
             return this.contactSms;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactSms; 
+            private java.util.List<String> contactSms; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactSmses model) {
+                this.contactSms = model.contactSms;
+            } 
 
             /**
              * ContactSms.
              */
-            public Builder contactSms(java.util.List < String > contactSms) {
+            public Builder contactSms(java.util.List<String> contactSms) {
                 this.contactSms = contactSms;
                 return this;
             }
@@ -369,7 +418,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
-        private java.util.List < String > contact;
+        private java.util.List<String> contact;
 
         private Contacts(Builder builder) {
             this.contact = builder.contact;
@@ -386,17 +435,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return contact
          */
-        public java.util.List < String > getContact() {
+        public java.util.List<String> getContact() {
             return this.contact;
         }
 
         public static final class Builder {
-            private java.util.List < String > contact; 
+            private java.util.List<String> contact; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contact = model.contact;
+            } 
 
             /**
              * Contact.
              */
-            public Builder contact(java.util.List < String > contact) {
+            public Builder contact(java.util.List<String> contact) {
                 this.contact = contact;
                 return this;
             }
@@ -680,6 +736,33 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             private String value; 
             private String webhooks; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmHistory model) {
+                this.alertTime = model.alertTime;
+                this.contactALIIMs = model.contactALIIMs;
+                this.contactGroups = model.contactGroups;
+                this.contactMails = model.contactMails;
+                this.contactSmses = model.contactSmses;
+                this.contacts = model.contacts;
+                this.dimensions = model.dimensions;
+                this.evaluationCount = model.evaluationCount;
+                this.expression = model.expression;
+                this.groupId = model.groupId;
+                this.instanceName = model.instanceName;
+                this.lastTime = model.lastTime;
+                this.level = model.level;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.state = model.state;
+                this.status = model.status;
+                this.value = model.value;
+                this.webhooks = model.webhooks;
+            } 
+
             /**
              * <p>The timestamp when the alert was triggered. Unit: milliseconds.</p>
              * 
@@ -930,7 +1013,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
      */
     public static class AlarmHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmHistory")
-        private java.util.List < AlarmHistory> alarmHistory;
+        private java.util.List<AlarmHistory> alarmHistory;
 
         private AlarmHistoryList(Builder builder) {
             this.alarmHistory = builder.alarmHistory;
@@ -947,17 +1030,24 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         /**
          * @return alarmHistory
          */
-        public java.util.List < AlarmHistory> getAlarmHistory() {
+        public java.util.List<AlarmHistory> getAlarmHistory() {
             return this.alarmHistory;
         }
 
         public static final class Builder {
-            private java.util.List < AlarmHistory> alarmHistory; 
+            private java.util.List<AlarmHistory> alarmHistory; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmHistoryList model) {
+                this.alarmHistory = model.alarmHistory;
+            } 
 
             /**
              * AlarmHistory.
              */
-            public Builder alarmHistory(java.util.List < AlarmHistory> alarmHistory) {
+            public Builder alarmHistory(java.util.List<AlarmHistory> alarmHistory) {
                 this.alarmHistory = alarmHistory;
                 return this;
             }

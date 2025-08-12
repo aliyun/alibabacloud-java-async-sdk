@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertConfig")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AlertConfig> alertConfig;
+    private java.util.List<AlertConfig> alertConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -24,7 +29,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchExpress")
-    private java.util.List < MatchExpress> matchExpress;
+    private java.util.List<MatchExpress> matchExpress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
@@ -52,7 +57,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +65,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
     /**
      * @return alertConfig
      */
-    public java.util.List < AlertConfig> getAlertConfig() {
+    public java.util.List<AlertConfig> getAlertConfig() {
         return this.alertConfig;
     }
 
@@ -74,7 +79,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
     /**
      * @return matchExpress
      */
-    public java.util.List < MatchExpress> getMatchExpress() {
+    public java.util.List<MatchExpress> getMatchExpress() {
         return this.matchExpress;
     }
 
@@ -93,9 +98,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupMonitoringAgentProcessRequest, Builder> {
-        private java.util.List < AlertConfig> alertConfig; 
+        private java.util.List<AlertConfig> alertConfig; 
         private String groupId; 
-        private java.util.List < MatchExpress> matchExpress; 
+        private java.util.List<MatchExpress> matchExpress; 
         private String matchExpressFilterRelation; 
         private String processName; 
 
@@ -117,7 +122,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
          * <p>Valid values of N: 1 to 3.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+        public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
             this.putQueryParameter("AlertConfig", alertConfig);
             this.alertConfig = alertConfig;
             return this;
@@ -141,7 +146,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
          * <p>The expressions used to match instances.</p>
          * <p>Valid values of N: 1 to 3.</p>
          */
-        public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+        public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
             this.putQueryParameter("MatchExpress", matchExpress);
             this.matchExpress = matchExpress;
             return this;
@@ -252,6 +257,16 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             private String jsonParams; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
              * <p>For more information about how to query the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
@@ -360,7 +375,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         private String statistics;
 
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < TargetList> targetList;
+        private java.util.List<TargetList> targetList;
 
         @com.aliyun.core.annotation.NameInMap("Threshold")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -439,7 +454,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         /**
          * @return targetList
          */
-        public java.util.List < TargetList> getTargetList() {
+        public java.util.List<TargetList> getTargetList() {
             return this.targetList;
         }
 
@@ -471,10 +486,26 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             private String noEffectiveInterval; 
             private String silenceTime; 
             private String statistics; 
-            private java.util.List < TargetList> targetList; 
+            private java.util.List<TargetList> targetList; 
             private String threshold; 
             private String times; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.effectiveInterval = model.effectiveInterval;
+                this.escalationsLevel = model.escalationsLevel;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.silenceTime = model.silenceTime;
+                this.statistics = model.statistics;
+                this.targetList = model.targetList;
+                this.threshold = model.threshold;
+                this.times = model.times;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
@@ -577,7 +608,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert triggers.</p>
              */
-            public Builder targetList(java.util.List < TargetList> targetList) {
+            public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
                 return this;
             }
@@ -685,6 +716,15 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             private String function; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchExpress model) {
+                this.function = model.function;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The matching condition. Valid values:</p>

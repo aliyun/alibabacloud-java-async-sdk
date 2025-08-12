@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SLSGroupConfig")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SLSGroupConfig> SLSGroupConfig;
+    private java.util.List<SLSGroupConfig> SLSGroupConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SLSGroupDescription")
@@ -41,7 +46,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
     /**
      * @return SLSGroupConfig
      */
-    public java.util.List < SLSGroupConfig> getSLSGroupConfig() {
+    public java.util.List<SLSGroupConfig> getSLSGroupConfig() {
         return this.SLSGroupConfig;
     }
 
@@ -68,7 +73,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateHybridMonitorSLSGroupRequest, Builder> {
-        private java.util.List < SLSGroupConfig> SLSGroupConfig; 
+        private java.util.List<SLSGroupConfig> SLSGroupConfig; 
         private String SLSGroupDescription; 
         private String SLSGroupName; 
 
@@ -88,7 +93,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
          * <p>Valid values of N: 1 to 25.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder SLSGroupConfig(java.util.List < SLSGroupConfig> SLSGroupConfig) {
+        public Builder SLSGroupConfig(java.util.List<SLSGroupConfig> SLSGroupConfig) {
             this.putQueryParameter("SLSGroupConfig", SLSGroupConfig);
             this.SLSGroupConfig = SLSGroupConfig;
             return this;
@@ -194,6 +199,16 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
             private String SLSProject; 
             private String SLSRegion; 
             private String SLSUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SLSGroupConfig model) {
+                this.SLSLogstore = model.SLSLogstore;
+                this.SLSProject = model.SLSProject;
+                this.SLSRegion = model.SLSRegion;
+                this.SLSUserId = model.SLSUserId;
+            } 
 
             /**
              * <p>The Logstore.</p>

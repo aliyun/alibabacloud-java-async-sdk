@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     public static DescribeMetricRuleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,20 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         private Boolean success; 
         private String total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleListResponseBody model) {
+            this.alarms = model.alarms;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * <p>The alert rules.</p>
+         * <p>The queried alert rules.</p>
          */
         public Builder alarms(Alarms alarms) {
             this.alarms = alarms;
@@ -253,6 +274,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionList model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
@@ -346,7 +378,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
      */
     public static class CompositeExpressionExpressionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpressionList")
-        private java.util.List < ExpressionList> expressionList;
+        private java.util.List<ExpressionList> expressionList;
 
         private CompositeExpressionExpressionList(Builder builder) {
             this.expressionList = builder.expressionList;
@@ -363,17 +395,24 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         /**
          * @return expressionList
          */
-        public java.util.List < ExpressionList> getExpressionList() {
+        public java.util.List<ExpressionList> getExpressionList() {
             return this.expressionList;
         }
 
         public static final class Builder {
-            private java.util.List < ExpressionList> expressionList; 
+            private java.util.List<ExpressionList> expressionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompositeExpressionExpressionList model) {
+                this.expressionList = model.expressionList;
+            } 
 
             /**
              * ExpressionList.
              */
-            public Builder expressionList(java.util.List < ExpressionList> expressionList) {
+            public Builder expressionList(java.util.List<ExpressionList> expressionList) {
                 this.expressionList = expressionList;
                 return this;
             }
@@ -464,6 +503,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String expressionRaw; 
             private String level; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompositeExpression model) {
+                this.expressionList = model.expressionList;
+                this.expressionListJoin = model.expressionListJoin;
+                this.expressionRaw = model.expressionRaw;
+                this.level = model.level;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The trigger conditions that are created in standard mode.</p>
@@ -617,6 +667,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
@@ -777,6 +838,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
@@ -936,6 +1008,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
@@ -1071,6 +1154,15 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * <p>The conditions for triggering Critical-level alerts.</p>
              */
@@ -1146,6 +1238,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the alert rule.</p>
              * 
@@ -1183,7 +1283,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
      */
     public static class AlarmLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         private AlarmLabels(Builder builder) {
             this.labels = builder.labels;
@@ -1200,17 +1300,24 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmLabels model) {
+                this.labels = model.labels;
+            } 
 
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -1266,6 +1373,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the annotation.</p>
              * 
@@ -1303,7 +1418,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
      */
     public static class PrometheusAnnotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        private java.util.List<Annotations> annotations;
 
         private PrometheusAnnotations(Builder builder) {
             this.annotations = builder.annotations;
@@ -1320,17 +1435,24 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
         public static final class Builder {
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrometheusAnnotations model) {
+                this.annotations = model.annotations;
+            } 
 
             /**
              * Annotations.
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -1409,6 +1531,16 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String level; 
             private String promQL; 
             private Long times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Prometheus model) {
+                this.annotations = model.annotations;
+                this.level = model.level;
+                this.promQL = model.promQL;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The annotations of the Prometheus alert rule. When a Prometheus alert is triggered, the system renders the annotated keys and values to help you understand the metrics and alert rule.</p>
@@ -1497,6 +1629,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
         private Escalations escalations;
 
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private Long gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("GmtUpdate")
+        private String gmtUpdate;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -1523,6 +1661,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
+
+        @com.aliyun.core.annotation.NameInMap("ProductCategory")
+        private String productCategory;
 
         @com.aliyun.core.annotation.NameInMap("Prometheus")
         private Prometheus prometheus;
@@ -1553,6 +1694,8 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             this.effectiveInterval = builder.effectiveInterval;
             this.enableState = builder.enableState;
             this.escalations = builder.escalations;
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtUpdate = builder.gmtUpdate;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
             this.labels = builder.labels;
@@ -1562,6 +1705,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             this.noDataPolicy = builder.noDataPolicy;
             this.noEffectiveInterval = builder.noEffectiveInterval;
             this.period = builder.period;
+            this.productCategory = builder.productCategory;
             this.prometheus = builder.prometheus;
             this.resources = builder.resources;
             this.ruleId = builder.ruleId;
@@ -1629,6 +1773,20 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtCreate
+         */
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtUpdate
+         */
+        public String getGmtUpdate() {
+            return this.gmtUpdate;
+        }
+
+        /**
          * @return groupId
          */
         public String getGroupId() {
@@ -1692,6 +1850,13 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
+         * @return productCategory
+         */
+        public String getProductCategory() {
+            return this.productCategory;
+        }
+
+        /**
          * @return prometheus
          */
         public Prometheus getPrometheus() {
@@ -1748,6 +1913,8 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String effectiveInterval; 
             private Boolean enableState; 
             private Escalations escalations; 
+            private Long gmtCreate; 
+            private String gmtUpdate; 
             private String groupId; 
             private String groupName; 
             private AlarmLabels labels; 
@@ -1757,6 +1924,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String noDataPolicy; 
             private String noEffectiveInterval; 
             private String period; 
+            private String productCategory; 
             private Prometheus prometheus; 
             private String resources; 
             private String ruleId; 
@@ -1764,6 +1932,38 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private Integer silenceTime; 
             private String sourceType; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alarm model) {
+                this.alertState = model.alertState;
+                this.compositeExpression = model.compositeExpression;
+                this.contactGroups = model.contactGroups;
+                this.dimensions = model.dimensions;
+                this.effectiveInterval = model.effectiveInterval;
+                this.enableState = model.enableState;
+                this.escalations = model.escalations;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtUpdate = model.gmtUpdate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.labels = model.labels;
+                this.mailSubject = model.mailSubject;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.noDataPolicy = model.noDataPolicy;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.period = model.period;
+                this.productCategory = model.productCategory;
+                this.prometheus = model.prometheus;
+                this.resources = model.resources;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.silenceTime = model.silenceTime;
+                this.sourceType = model.sourceType;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The status of the alert rule. Valid values:</p>
@@ -1845,6 +2045,22 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
              */
             public Builder escalations(Escalations escalations) {
                 this.escalations = escalations;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtUpdate.
+             */
+            public Builder gmtUpdate(String gmtUpdate) {
+                this.gmtUpdate = gmtUpdate;
                 return this;
             }
 
@@ -1953,6 +2169,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
+             * ProductCategory.
+             */
+            public Builder productCategory(String productCategory) {
+                this.productCategory = productCategory;
+                return this;
+            }
+
+            /**
              * <p>The Prometheus alerts.</p>
              * <blockquote>
              * <p> This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
@@ -2045,7 +2269,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
      */
     public static class Alarms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alarm")
-        private java.util.List < Alarm> alarm;
+        private java.util.List<Alarm> alarm;
 
         private Alarms(Builder builder) {
             this.alarm = builder.alarm;
@@ -2062,17 +2286,24 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         /**
          * @return alarm
          */
-        public java.util.List < Alarm> getAlarm() {
+        public java.util.List<Alarm> getAlarm() {
             return this.alarm;
         }
 
         public static final class Builder {
-            private java.util.List < Alarm> alarm; 
+            private java.util.List<Alarm> alarm; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alarms model) {
+                this.alarm = model.alarm;
+            } 
 
             /**
              * Alarm.
              */
-            public Builder alarm(java.util.List < Alarm> alarm) {
+            public Builder alarm(java.util.List<Alarm> alarm) {
                 this.alarm = alarm;
                 return this;
             }

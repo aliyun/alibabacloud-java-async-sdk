@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("IspCityList")
-    private java.util.List < IspCityList> ispCityList;
+    private java.util.List<IspCityList> ispCityList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -43,6 +48,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     /**
      * @return ispCityList
      */
-    public java.util.List < IspCityList> getIspCityList() {
+    public java.util.List<IspCityList> getIspCityList() {
         return this.ispCityList;
     }
 
@@ -80,10 +89,21 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < IspCityList> ispCityList; 
+        private java.util.List<IspCityList> ispCityList; 
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyntheticProbeListResponseBody model) {
+            this.code = model.code;
+            this.ispCityList = model.ispCityList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -94,9 +114,9 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         }
 
         /**
-         * IspCityList.
+         * <p>The queried detection points.</p>
          */
-        public Builder ispCityList(java.util.List < IspCityList> ispCityList) {
+        public Builder ispCityList(java.util.List<IspCityList> ispCityList) {
             this.ispCityList = ispCityList;
             return this;
         }
@@ -169,7 +189,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         private Integer idcV6ProbeCount;
 
         @com.aliyun.core.annotation.NameInMap("IpPool")
-        private java.util.List < String > ipPool;
+        private java.util.List<String> ipPool;
 
         @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
@@ -298,7 +318,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         /**
          * @return ipPool
          */
-        public java.util.List < String > getIpPool() {
+        public java.util.List<String> getIpPool() {
             return this.ipPool;
         }
 
@@ -369,7 +389,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             private String countryEn; 
             private Integer idcV4ProbeCount; 
             private Integer idcV6ProbeCount; 
-            private java.util.List < String > ipPool; 
+            private java.util.List<String> ipPool; 
             private String isp; 
             private String ispCn; 
             private String ispEn; 
@@ -378,6 +398,31 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             private String region; 
             private String regionCn; 
             private String regionEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityList model) {
+                this.areaCn = model.areaCn;
+                this.areaEn = model.areaEn;
+                this.city = model.city;
+                this.cityCn = model.cityCn;
+                this.cityEn = model.cityEn;
+                this.country = model.country;
+                this.countryCn = model.countryCn;
+                this.countryEn = model.countryEn;
+                this.idcV4ProbeCount = model.idcV4ProbeCount;
+                this.idcV6ProbeCount = model.idcV6ProbeCount;
+                this.ipPool = model.ipPool;
+                this.isp = model.isp;
+                this.ispCn = model.ispCn;
+                this.ispEn = model.ispEn;
+                this.lmProbeCount = model.lmProbeCount;
+                this.mbProbeCount = model.mbProbeCount;
+                this.region = model.region;
+                this.regionCn = model.regionCn;
+                this.regionEn = model.regionEn;
+            } 
 
             /**
              * AreaCn.
@@ -452,7 +497,10 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * IdcV6ProbeCount.
+             * <p>The number of IPv6 nodes in data centers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder idcV6ProbeCount(Integer idcV6ProbeCount) {
                 this.idcV6ProbeCount = idcV6ProbeCount;
@@ -460,9 +508,9 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
             }
 
             /**
-             * IpPool.
+             * <p>The IP addresses of the monitored nodes.</p>
              */
-            public Builder ipPool(java.util.List < String > ipPool) {
+            public Builder ipPool(java.util.List<String> ipPool) {
                 this.ipPool = ipPool;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAlertLogListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertLogList")
-    private java.util.List < AlertLogList> alertLogList;
+    private java.util.List<AlertLogList> alertLogList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -51,10 +56,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertLogList
      */
-    public java.util.List < AlertLogList> getAlertLogList() {
+    public java.util.List<AlertLogList> getAlertLogList() {
         return this.alertLogList;
     }
 
@@ -101,7 +110,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlertLogList> alertLogList; 
+        private java.util.List<AlertLogList> alertLogList; 
         private String code; 
         private String message; 
         private Integer pageNumber; 
@@ -109,10 +118,23 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertLogListResponseBody model) {
+            this.alertLogList = model.alertLogList;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The queried alert logs.</p>
          */
-        public Builder alertLogList(java.util.List < AlertLogList> alertLogList) {
+        public Builder alertLogList(java.util.List<AlertLogList> alertLogList) {
             this.alertLogList = alertLogList;
             return this;
         }
@@ -240,6 +262,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the dimension.</p>
              * 
@@ -324,6 +354,15 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String expression; 
             private String level; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalation model) {
+                this.expression = model.expression;
+                this.level = model.level;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The description of the alert rule.</p>
@@ -416,6 +455,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendedInfo model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the extended field.</p>
              * 
@@ -465,7 +512,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private Boolean success;
 
         @com.aliyun.core.annotation.NameInMap("notifyTargetList")
-        private java.util.List < String > notifyTargetList;
+        private java.util.List<String> notifyTargetList;
 
         private ResultList(Builder builder) {
             this.code = builder.code;
@@ -514,7 +561,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return notifyTargetList
          */
-        public java.util.List < String > getNotifyTargetList() {
+        public java.util.List<String> getNotifyTargetList() {
             return this.notifyTargetList;
         }
 
@@ -523,7 +570,18 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String detail; 
             private String requestId; 
             private Boolean success; 
-            private java.util.List < String > notifyTargetList; 
+            private java.util.List<String> notifyTargetList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.code = model.code;
+                this.detail = model.detail;
+                this.requestId = model.requestId;
+                this.success = model.success;
+                this.notifyTargetList = model.notifyTargetList;
+            } 
 
             /**
              * <p>The HTTP status code.</p>
@@ -580,7 +638,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * notifyTargetList.
              */
-            public Builder notifyTargetList(java.util.List < String > notifyTargetList) {
+            public Builder notifyTargetList(java.util.List<String> notifyTargetList) {
                 this.notifyTargetList = notifyTargetList;
                 return this;
             }
@@ -603,7 +661,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private String channel;
 
         @com.aliyun.core.annotation.NameInMap("ResultList")
-        private java.util.List < ResultList> resultList;
+        private java.util.List<ResultList> resultList;
 
         private ChannelResultList(Builder builder) {
             this.channel = builder.channel;
@@ -628,13 +686,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return resultList
          */
-        public java.util.List < ResultList> getResultList() {
+        public java.util.List<ResultList> getResultList() {
             return this.resultList;
         }
 
         public static final class Builder {
             private String channel; 
-            private java.util.List < ResultList> resultList; 
+            private java.util.List<ResultList> resultList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelResultList model) {
+                this.channel = model.channel;
+                this.resultList = model.resultList;
+            } 
 
             /**
              * <p>The method that is used to send alert notifications. Valid values:</p>
@@ -659,7 +725,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The sending results of alert notifications.</p>
              */
-            public Builder resultList(java.util.List < ResultList> resultList) {
+            public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
                 return this;
             }
@@ -679,7 +745,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
      */
     public static class SendDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelResultList")
-        private java.util.List < ChannelResultList> channelResultList;
+        private java.util.List<ChannelResultList> channelResultList;
 
         @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
@@ -700,7 +766,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return channelResultList
          */
-        public java.util.List < ChannelResultList> getChannelResultList() {
+        public java.util.List<ChannelResultList> getChannelResultList() {
             return this.channelResultList;
         }
 
@@ -712,13 +778,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChannelResultList> channelResultList; 
+            private java.util.List<ChannelResultList> channelResultList; 
             private String resultCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SendDetail model) {
+                this.channelResultList = model.channelResultList;
+                this.resultCode = model.resultCode;
+            } 
 
             /**
              * <p>The list of sending results that are categorized by notification method.</p>
              */
-            public Builder channelResultList(java.util.List < ChannelResultList> channelResultList) {
+            public Builder channelResultList(java.util.List<ChannelResultList> channelResultList) {
                 this.channelResultList = channelResultList;
                 return this;
             }
@@ -756,7 +830,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private SendResultList(Builder builder) {
             this.key = builder.key;
@@ -781,13 +855,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SendResultList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The category of the alert notification method. Valid values:</p>
@@ -811,7 +893,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The notification object corresponding to the alert notification method.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }
@@ -879,6 +961,15 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String message; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebhookList model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The status code of the alert callback.</p>
              * 
@@ -939,28 +1030,28 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private String blackListUUID;
 
         @com.aliyun.core.annotation.NameInMap("ContactALIIWWList")
-        private java.util.List < String > contactALIIWWList;
+        private java.util.List<String> contactALIIWWList;
 
         @com.aliyun.core.annotation.NameInMap("ContactDingList")
-        private java.util.List < String > contactDingList;
+        private java.util.List<String> contactDingList;
 
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
-        private java.util.List < String > contactGroups;
+        private java.util.List<String> contactGroups;
 
         @com.aliyun.core.annotation.NameInMap("ContactMailList")
-        private java.util.List < String > contactMailList;
+        private java.util.List<String> contactMailList;
 
         @com.aliyun.core.annotation.NameInMap("ContactOnCallList")
-        private java.util.List < String > contactOnCallList;
+        private java.util.List<String> contactOnCallList;
 
         @com.aliyun.core.annotation.NameInMap("ContactSMSList")
-        private java.util.List < String > contactSMSList;
+        private java.util.List<String> contactSMSList;
 
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("DingdingWebhookList")
-        private java.util.List < String > dingdingWebhookList;
+        private java.util.List<String> dingdingWebhookList;
 
         @com.aliyun.core.annotation.NameInMap("Escalation")
         private Escalation escalation;
@@ -969,7 +1060,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private String eventName;
 
         @com.aliyun.core.annotation.NameInMap("ExtendedInfo")
-        private java.util.List < ExtendedInfo> extendedInfo;
+        private java.util.List<ExtendedInfo> extendedInfo;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
@@ -1014,13 +1105,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private SendDetail sendDetail;
 
         @com.aliyun.core.annotation.NameInMap("SendResultList")
-        private java.util.List < SendResultList> sendResultList;
+        private java.util.List<SendResultList> sendResultList;
 
         @com.aliyun.core.annotation.NameInMap("SendStatus")
         private String sendStatus;
 
         @com.aliyun.core.annotation.NameInMap("WebhookList")
-        private java.util.List < WebhookList> webhookList;
+        private java.util.List<WebhookList> webhookList;
 
         private AlertLogList(Builder builder) {
             this.alertTime = builder.alertTime;
@@ -1096,56 +1187,56 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return contactALIIWWList
          */
-        public java.util.List < String > getContactALIIWWList() {
+        public java.util.List<String> getContactALIIWWList() {
             return this.contactALIIWWList;
         }
 
         /**
          * @return contactDingList
          */
-        public java.util.List < String > getContactDingList() {
+        public java.util.List<String> getContactDingList() {
             return this.contactDingList;
         }
 
         /**
          * @return contactGroups
          */
-        public java.util.List < String > getContactGroups() {
+        public java.util.List<String> getContactGroups() {
             return this.contactGroups;
         }
 
         /**
          * @return contactMailList
          */
-        public java.util.List < String > getContactMailList() {
+        public java.util.List<String> getContactMailList() {
             return this.contactMailList;
         }
 
         /**
          * @return contactOnCallList
          */
-        public java.util.List < String > getContactOnCallList() {
+        public java.util.List<String> getContactOnCallList() {
             return this.contactOnCallList;
         }
 
         /**
          * @return contactSMSList
          */
-        public java.util.List < String > getContactSMSList() {
+        public java.util.List<String> getContactSMSList() {
             return this.contactSMSList;
         }
 
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
         /**
          * @return dingdingWebhookList
          */
-        public java.util.List < String > getDingdingWebhookList() {
+        public java.util.List<String> getDingdingWebhookList() {
             return this.dingdingWebhookList;
         }
 
@@ -1166,7 +1257,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return extendedInfo
          */
-        public java.util.List < ExtendedInfo> getExtendedInfo() {
+        public java.util.List<ExtendedInfo> getExtendedInfo() {
             return this.extendedInfo;
         }
 
@@ -1271,7 +1362,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return sendResultList
          */
-        public java.util.List < SendResultList> getSendResultList() {
+        public java.util.List<SendResultList> getSendResultList() {
             return this.sendResultList;
         }
 
@@ -1285,7 +1376,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * @return webhookList
          */
-        public java.util.List < WebhookList> getWebhookList() {
+        public java.util.List<WebhookList> getWebhookList() {
             return this.webhookList;
         }
 
@@ -1294,17 +1385,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String blackListDetail; 
             private String blackListName; 
             private String blackListUUID; 
-            private java.util.List < String > contactALIIWWList; 
-            private java.util.List < String > contactDingList; 
-            private java.util.List < String > contactGroups; 
-            private java.util.List < String > contactMailList; 
-            private java.util.List < String > contactOnCallList; 
-            private java.util.List < String > contactSMSList; 
-            private java.util.List < Dimensions> dimensions; 
-            private java.util.List < String > dingdingWebhookList; 
+            private java.util.List<String> contactALIIWWList; 
+            private java.util.List<String> contactDingList; 
+            private java.util.List<String> contactGroups; 
+            private java.util.List<String> contactMailList; 
+            private java.util.List<String> contactOnCallList; 
+            private java.util.List<String> contactSMSList; 
+            private java.util.List<Dimensions> dimensions; 
+            private java.util.List<String> dingdingWebhookList; 
             private Escalation escalation; 
             private String eventName; 
-            private java.util.List < ExtendedInfo> extendedInfo; 
+            private java.util.List<ExtendedInfo> extendedInfo; 
             private String groupId; 
             private String groupName; 
             private String instanceId; 
@@ -1319,9 +1410,47 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
             private SendDetail sendDetail; 
-            private java.util.List < SendResultList> sendResultList; 
+            private java.util.List<SendResultList> sendResultList; 
             private String sendStatus; 
-            private java.util.List < WebhookList> webhookList; 
+            private java.util.List<WebhookList> webhookList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertLogList model) {
+                this.alertTime = model.alertTime;
+                this.blackListDetail = model.blackListDetail;
+                this.blackListName = model.blackListName;
+                this.blackListUUID = model.blackListUUID;
+                this.contactALIIWWList = model.contactALIIWWList;
+                this.contactDingList = model.contactDingList;
+                this.contactGroups = model.contactGroups;
+                this.contactMailList = model.contactMailList;
+                this.contactOnCallList = model.contactOnCallList;
+                this.contactSMSList = model.contactSMSList;
+                this.dimensions = model.dimensions;
+                this.dingdingWebhookList = model.dingdingWebhookList;
+                this.escalation = model.escalation;
+                this.eventName = model.eventName;
+                this.extendedInfo = model.extendedInfo;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.level = model.level;
+                this.levelChange = model.levelChange;
+                this.logId = model.logId;
+                this.message = model.message;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.product = model.product;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.sendDetail = model.sendDetail;
+                this.sendResultList = model.sendResultList;
+                this.sendStatus = model.sendStatus;
+                this.webhookList = model.webhookList;
+            } 
 
             /**
              * <p>The timestamp that was generated when the alert was triggered.</p>
@@ -1371,7 +1500,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactALIIWWList.
              */
-            public Builder contactALIIWWList(java.util.List < String > contactALIIWWList) {
+            public Builder contactALIIWWList(java.util.List<String> contactALIIWWList) {
                 this.contactALIIWWList = contactALIIWWList;
                 return this;
             }
@@ -1379,7 +1508,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactDingList.
              */
-            public Builder contactDingList(java.util.List < String > contactDingList) {
+            public Builder contactDingList(java.util.List<String> contactDingList) {
                 this.contactDingList = contactDingList;
                 return this;
             }
@@ -1387,7 +1516,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactGroups.
              */
-            public Builder contactGroups(java.util.List < String > contactGroups) {
+            public Builder contactGroups(java.util.List<String> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
@@ -1395,7 +1524,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactMailList.
              */
-            public Builder contactMailList(java.util.List < String > contactMailList) {
+            public Builder contactMailList(java.util.List<String> contactMailList) {
                 this.contactMailList = contactMailList;
                 return this;
             }
@@ -1403,7 +1532,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactOnCallList.
              */
-            public Builder contactOnCallList(java.util.List < String > contactOnCallList) {
+            public Builder contactOnCallList(java.util.List<String> contactOnCallList) {
                 this.contactOnCallList = contactOnCallList;
                 return this;
             }
@@ -1411,7 +1540,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * ContactSMSList.
              */
-            public Builder contactSMSList(java.util.List < String > contactSMSList) {
+            public Builder contactSMSList(java.util.List<String> contactSMSList) {
                 this.contactSMSList = contactSMSList;
                 return this;
             }
@@ -1419,7 +1548,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The dimensions of the resource that triggered alerts.</p>
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -1427,7 +1556,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * DingdingWebhookList.
              */
-            public Builder dingdingWebhookList(java.util.List < String > dingdingWebhookList) {
+            public Builder dingdingWebhookList(java.util.List<String> dingdingWebhookList) {
                 this.dingdingWebhookList = dingdingWebhookList;
                 return this;
             }
@@ -1454,7 +1583,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The extended fields.</p>
              */
-            public Builder extendedInfo(java.util.List < ExtendedInfo> extendedInfo) {
+            public Builder extendedInfo(java.util.List<ExtendedInfo> extendedInfo) {
                 this.extendedInfo = extendedInfo;
                 return this;
             }
@@ -1622,7 +1751,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The sending results of alert notifications.</p>
              */
-            public Builder sendResultList(java.util.List < SendResultList> sendResultList) {
+            public Builder sendResultList(java.util.List<SendResultList> sendResultList) {
                 this.sendResultList = sendResultList;
                 return this;
             }
@@ -1649,7 +1778,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             /**
              * <p>The callback URLs.</p>
              */
-            public Builder webhookList(java.util.List < WebhookList> webhookList) {
+            public Builder webhookList(java.util.List<WebhookList> webhookList) {
                 this.webhookList = webhookList;
                 return this;
             }

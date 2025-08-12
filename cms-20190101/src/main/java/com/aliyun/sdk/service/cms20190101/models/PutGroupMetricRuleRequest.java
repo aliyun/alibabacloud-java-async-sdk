@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class PutGroupMetricRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricName")
@@ -129,7 +134,7 @@ public class PutGroupMetricRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,7 +205,7 @@ public class PutGroupMetricRuleRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -284,7 +289,7 @@ public class PutGroupMetricRuleRequest extends Request {
         private String extraDimensionJson; 
         private String groupId; 
         private String interval; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String metricName; 
         private String namespace; 
         private String noDataPolicy; 
@@ -439,7 +444,7 @@ public class PutGroupMetricRuleRequest extends Request {
          * <p>The tags of the alert rule.</p>
          * <p>The specified tag is contained in alert notifications.</p>
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putQueryParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -659,6 +664,16 @@ public class PutGroupMetricRuleRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
              * <ul>
@@ -791,6 +806,16 @@ public class PutGroupMetricRuleRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
@@ -925,6 +950,16 @@ public class PutGroupMetricRuleRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
              * <ul>
@@ -998,15 +1033,12 @@ public class PutGroupMetricRuleRequest extends Request {
      */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
         @com.aliyun.core.annotation.NameInMap("Info")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
         @com.aliyun.core.annotation.NameInMap("Warn")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -1048,6 +1080,15 @@ public class PutGroupMetricRuleRequest extends Request {
             private Critical critical; 
             private Info info; 
             private Warn warn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
 
             /**
              * Critical.
@@ -1123,6 +1164,14 @@ public class PutGroupMetricRuleRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the alert rule.</p>

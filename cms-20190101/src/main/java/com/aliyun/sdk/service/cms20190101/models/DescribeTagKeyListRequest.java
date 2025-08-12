@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeTagKeyListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class DescribeTagKeyListRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -81,8 +86,8 @@ public class DescribeTagKeyListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100. Default value: 50.</p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

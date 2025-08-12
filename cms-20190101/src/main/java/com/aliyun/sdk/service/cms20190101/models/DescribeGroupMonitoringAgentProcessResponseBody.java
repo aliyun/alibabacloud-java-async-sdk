@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static DescribeGroupMonitoringAgentProcessResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupMonitoringAgentProcessResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.processes = model.processes;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status codes.</p>
@@ -283,6 +306,16 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String jsonParmas; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParmas = model.jsonParmas;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861****:/queues/test123/message. Fields:</p>
              * <ul>
@@ -367,7 +400,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
      */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
-        private java.util.List < Target> target;
+        private java.util.List<Target> target;
 
         private TargetList(Builder builder) {
             this.target = builder.target;
@@ -384,17 +417,24 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         /**
          * @return target
          */
-        public java.util.List < Target> getTarget() {
+        public java.util.List<Target> getTarget() {
             return this.target;
         }
 
         public static final class Builder {
-            private java.util.List < Target> target; 
+            private java.util.List<Target> target; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.target = model.target;
+            } 
 
             /**
              * Target.
              */
-            public Builder target(java.util.List < Target> target) {
+            public Builder target(java.util.List<Target> target) {
                 this.target = target;
                 return this;
             }
@@ -546,6 +586,22 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String times; 
             private String webhook; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.effectiveInterval = model.effectiveInterval;
+                this.escalationsLevel = model.escalationsLevel;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.silenceTime = model.silenceTime;
+                this.statistics = model.statistics;
+                this.targetList = model.targetList;
+                this.threshold = model.threshold;
+                this.times = model.times;
+                this.webhook = model.webhook;
+            } 
+
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
@@ -692,7 +748,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
      */
     public static class ProcessAlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
-        private java.util.List < AlertConfig> alertConfig;
+        private java.util.List<AlertConfig> alertConfig;
 
         private ProcessAlertConfig(Builder builder) {
             this.alertConfig = builder.alertConfig;
@@ -709,17 +765,24 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         /**
          * @return alertConfig
          */
-        public java.util.List < AlertConfig> getAlertConfig() {
+        public java.util.List<AlertConfig> getAlertConfig() {
             return this.alertConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AlertConfig> alertConfig; 
+            private java.util.List<AlertConfig> alertConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessAlertConfig model) {
+                this.alertConfig = model.alertConfig;
+            } 
 
             /**
              * AlertConfig.
              */
-            public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+            public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
                 return this;
             }
@@ -787,6 +850,15 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchExpress model) {
+                this.function = model.function;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The matching condition. Valid values:</p>
              * <ul>
@@ -849,7 +921,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
      */
     public static class ProcessMatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchExpress")
-        private java.util.List < MatchExpress> matchExpress;
+        private java.util.List<MatchExpress> matchExpress;
 
         private ProcessMatchExpress(Builder builder) {
             this.matchExpress = builder.matchExpress;
@@ -866,17 +938,24 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         /**
          * @return matchExpress
          */
-        public java.util.List < MatchExpress> getMatchExpress() {
+        public java.util.List<MatchExpress> getMatchExpress() {
             return this.matchExpress;
         }
 
         public static final class Builder {
-            private java.util.List < MatchExpress> matchExpress; 
+            private java.util.List<MatchExpress> matchExpress; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessMatchExpress model) {
+                this.matchExpress = model.matchExpress;
+            } 
 
             /**
              * MatchExpress.
              */
-            public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+            public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
                 this.matchExpress = matchExpress;
                 return this;
             }
@@ -980,6 +1059,18 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String matchExpressFilterRelation; 
             private String processName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Process model) {
+                this.alertConfig = model.alertConfig;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.matchExpress = model.matchExpress;
+                this.matchExpressFilterRelation = model.matchExpressFilterRelation;
+                this.processName = model.processName;
+            } 
+
             /**
              * <p>The alert rule configurations.</p>
              */
@@ -1063,7 +1154,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
      */
     public static class Processes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Process")
-        private java.util.List < Process> process;
+        private java.util.List<Process> process;
 
         private Processes(Builder builder) {
             this.process = builder.process;
@@ -1080,17 +1171,24 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         /**
          * @return process
          */
-        public java.util.List < Process> getProcess() {
+        public java.util.List<Process> getProcess() {
             return this.process;
         }
 
         public static final class Builder {
-            private java.util.List < Process> process; 
+            private java.util.List<Process> process; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.process = model.process;
+            } 
 
             /**
              * Process.
              */
-            public Builder process(java.util.List < Process> process) {
+            public Builder process(java.util.List<Process> process) {
                 this.process = process;
                 return this;
             }

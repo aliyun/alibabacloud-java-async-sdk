@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     public static DescribeMetricRuleTemplateListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         private Boolean success; 
         private Templates templates; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleTemplateListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templates = model.templates;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -229,6 +250,15 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private Long groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplyHistory model) {
+                this.applyTime = model.applyTime;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>The timestamp when the alert template was applied to the application group.</p>
              * <p>Unit: milliseconds.</p>
@@ -278,7 +308,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
      */
     public static class ApplyHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyHistory")
-        private java.util.List < ApplyHistory> applyHistory;
+        private java.util.List<ApplyHistory> applyHistory;
 
         private ApplyHistories(Builder builder) {
             this.applyHistory = builder.applyHistory;
@@ -295,17 +325,24 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         /**
          * @return applyHistory
          */
-        public java.util.List < ApplyHistory> getApplyHistory() {
+        public java.util.List<ApplyHistory> getApplyHistory() {
             return this.applyHistory;
         }
 
         public static final class Builder {
-            private java.util.List < ApplyHistory> applyHistory; 
+            private java.util.List<ApplyHistory> applyHistory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyHistories model) {
+                this.applyHistory = model.applyHistory;
+            } 
 
             /**
              * ApplyHistory.
              */
-            public Builder applyHistory(java.util.List < ApplyHistory> applyHistory) {
+            public Builder applyHistory(java.util.List<ApplyHistory> applyHistory) {
                 this.applyHistory = applyHistory;
                 return this;
             }
@@ -421,6 +458,19 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private Long restVersion; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.applyHistories = model.applyHistories;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.name = model.name;
+                this.restVersion = model.restVersion;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The history of applying the alert templates to application groups.</p>
              */
@@ -510,7 +560,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
      */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
-        private java.util.List < Template> template;
+        private java.util.List<Template> template;
 
         private Templates(Builder builder) {
             this.template = builder.template;
@@ -527,17 +577,24 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         /**
          * @return template
          */
-        public java.util.List < Template> getTemplate() {
+        public java.util.List<Template> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
-            private java.util.List < Template> template; 
+            private java.util.List<Template> template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.template = model.template;
+            } 
 
             /**
              * Template.
              */
-            public Builder template(java.util.List < Template> template) {
+            public Builder template(java.util.List<Template> template) {
                 this.template = template;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     private String success;
 
     @com.aliyun.core.annotation.NameInMap("TimeSeries")
-    private java.util.List < TimeSeries> timeSeries;
+    private java.util.List<TimeSeries> timeSeries;
 
     private DescribeHybridMonitorDataListResponseBody(Builder builder) {
         this.code = builder.code;
@@ -41,6 +46,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
 
     public static DescribeHybridMonitorDataListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     /**
      * @return timeSeries
      */
-    public java.util.List < TimeSeries> getTimeSeries() {
+    public java.util.List<TimeSeries> getTimeSeries() {
         return this.timeSeries;
     }
 
@@ -83,7 +92,18 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
-        private java.util.List < TimeSeries> timeSeries; 
+        private java.util.List<TimeSeries> timeSeries; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridMonitorDataListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timeSeries = model.timeSeries;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -139,7 +159,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         /**
          * <p>The returned monitoring data.</p>
          */
-        public Builder timeSeries(java.util.List < TimeSeries> timeSeries) {
+        public Builder timeSeries(java.util.List<TimeSeries> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
@@ -193,6 +213,14 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         public static final class Builder {
             private String k; 
             private String v; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.k = model.k;
+                this.v = model.v;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -267,6 +295,14 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private String ts; 
             private String v; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.ts = model.ts;
+                this.v = model.v;
+            } 
+
             /**
              * <p>The timestamp that indicates the time when the metric value is collected.</p>
              * <p>Unit: seconds.</p>
@@ -305,13 +341,13 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
      */
     public static class TimeSeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private TimeSeries(Builder builder) {
             this.labels = builder.labels;
@@ -330,7 +366,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -344,19 +380,28 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String metricName; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeSeries model) {
+                this.labels = model.labels;
+                this.metricName = model.metricName;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The tags of the time dimension.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -375,7 +420,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             /**
              * <p>The metric values that are collected at different timestamps.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

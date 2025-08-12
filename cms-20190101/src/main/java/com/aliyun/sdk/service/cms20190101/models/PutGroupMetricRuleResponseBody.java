@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
 
     public static PutGroupMetricRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutGroupMetricRuleResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -181,6 +201,13 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>The ID of the alert rule.</p>

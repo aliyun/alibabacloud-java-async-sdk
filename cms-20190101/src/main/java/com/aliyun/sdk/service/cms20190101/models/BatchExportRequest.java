@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class BatchExportRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Measurements")
-    private java.util.List < String > measurements;
+    private java.util.List<String> measurements;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Metric")
@@ -53,7 +58,7 @@ public class BatchExportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +80,7 @@ public class BatchExportRequest extends Request {
     /**
      * @return measurements
      */
-    public java.util.List < String > getMeasurements() {
+    public java.util.List<String> getMeasurements() {
         return this.measurements;
     }
 
@@ -96,7 +101,7 @@ public class BatchExportRequest extends Request {
     public static final class Builder extends Request.Builder<BatchExportRequest, Builder> {
         private String cursor; 
         private Integer length; 
-        private java.util.List < String > measurements; 
+        private java.util.List<String> measurements; 
         private String metric; 
         private String namespace; 
 
@@ -149,7 +154,7 @@ public class BatchExportRequest extends Request {
          * <p>For example, the <code>cpu_idle</code> metric of ECS (<code>acs_ecs_dashboard</code>) has three statistical methods: <code>Average</code>, <code>Maximum</code>, and <code>Minimum</code>. If you want to return only the measurements based on the <code>Average</code> and <code>Maximum</code> statistical methods, set this parameter to <code>[&quot;Average&quot;, &quot;Maximum&quot;]</code>.</p>
          * <p>The statistical methods of metrics are displayed in the <code>Statistics</code> column on the Metrics page of each cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          */
-        public Builder measurements(java.util.List < String > measurements) {
+        public Builder measurements(java.util.List<String> measurements) {
             String measurementsShrink = shrink(measurements, "Measurements", "json");
             this.putBodyParameter("Measurements", measurementsShrink);
             this.measurements = measurements;

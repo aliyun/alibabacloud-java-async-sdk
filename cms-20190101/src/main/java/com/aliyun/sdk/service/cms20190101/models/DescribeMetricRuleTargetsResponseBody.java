@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
 
     public static DescribeMetricRuleTargetsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Targets targets; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleTargetsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.targets = model.targets;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -218,6 +238,16 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             private String jsonParams; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
              * <ul>
@@ -288,7 +318,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
      */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
-        private java.util.List < Target> target;
+        private java.util.List<Target> target;
 
         private Targets(Builder builder) {
             this.target = builder.target;
@@ -305,17 +335,24 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         /**
          * @return target
          */
-        public java.util.List < Target> getTarget() {
+        public java.util.List<Target> getTarget() {
             return this.target;
         }
 
         public static final class Builder {
-            private java.util.List < Target> target; 
+            private java.util.List<Target> target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.target = model.target;
+            } 
 
             /**
              * Target.
              */
-            public Builder target(java.util.List < Target> target) {
+            public Builder target(java.util.List<Target> target) {
                 this.target = target;
                 return this;
             }

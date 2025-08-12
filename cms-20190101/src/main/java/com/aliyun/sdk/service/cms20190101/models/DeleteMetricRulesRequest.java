@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteMetricRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > id;
+    private java.util.List<String> id;
 
     private DeleteMetricRulesRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class DeleteMetricRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class DeleteMetricRulesRequest extends Request {
     /**
      * @return id
      */
-    public java.util.List < String > getId() {
+    public java.util.List<String> getId() {
         return this.id;
     }
 
     public static final class Builder extends Request.Builder<DeleteMetricRulesRequest, Builder> {
-        private java.util.List < String > id; 
+        private java.util.List<String> id; 
 
         private Builder() {
             super();
@@ -60,7 +65,7 @@ public class DeleteMetricRulesRequest extends Request {
          * <strong>example:</strong>
          * <p>ab05733c97b7ce239fb1b53393dc1697c7e12****</p>
          */
-        public Builder id(java.util.List < String > id) {
+        public Builder id(java.util.List<String> id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
 
     public static DescribeMonitoringConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,20 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitoringConfigResponseBody model) {
+            this.autoInstall = model.autoInstall;
+            this.code = model.code;
+            this.enableInstallAgentNewECS = model.enableInstallAgentNewECS;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>Indicates whether the Cloud Monitor agent is automatically installed on existing ECS instances. Valid values:</p>
+         * <p>Indicates whether the CloudMonitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -113,9 +134,9 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -127,7 +148,7 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Cloud Monitor agent is automatically installed on new Elastic Compute Service (ECS) instances. Valid values:</p>
+         * <p>Indicates whether the CloudMonitor agent is automatically installed on new ECS instances. Valid values: Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -153,7 +174,7 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F35654DB-0C9D-4FB3-903F-479BA7663061</p>
@@ -164,10 +185,10 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>

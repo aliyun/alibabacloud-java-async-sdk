@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -78,6 +83,10 @@ public class NotificationTemplate extends TeaModel {
 
     public static NotificationTemplate create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -193,6 +202,26 @@ public class NotificationTemplate extends TeaModel {
         private String zhContent; 
         private String zhItemContent; 
         private String zhTitle; 
+
+        private Builder() {
+        } 
+
+        private Builder(NotificationTemplate model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.enContent = model.enContent;
+            this.enItemContent = model.enItemContent;
+            this.enTitle = model.enTitle;
+            this.name = model.name;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+            this.wraperType = model.wraperType;
+            this.zhContent = model.zhContent;
+            this.zhItemContent = model.zhItemContent;
+            this.zhTitle = model.zhTitle;
+        } 
 
         /**
          * CreateTime.

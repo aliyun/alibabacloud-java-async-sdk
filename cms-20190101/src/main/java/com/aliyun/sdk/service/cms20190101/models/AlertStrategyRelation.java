@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AlertStrategyRelation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertName
      */
@@ -48,6 +57,14 @@ public class AlertStrategyRelation extends TeaModel {
     public static final class Builder {
         private String alertName; 
         private String strategyUuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertStrategyRelation model) {
+            this.alertName = model.alertName;
+            this.strategyUuid = model.strategyUuid;
+        } 
 
         /**
          * AlertName.

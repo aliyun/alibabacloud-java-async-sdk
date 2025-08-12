@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
 
     public static DescribeAlertingMetricRuleResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         private Resources resources; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertingMetricRuleResourcesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -253,6 +274,17 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionList model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
              * <ul>
@@ -341,7 +373,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
      */
     public static class ResourceExpressionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpressionList")
-        private java.util.List < ExpressionList> expressionList;
+        private java.util.List<ExpressionList> expressionList;
 
         private ResourceExpressionList(Builder builder) {
             this.expressionList = builder.expressionList;
@@ -358,17 +390,24 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         /**
          * @return expressionList
          */
-        public java.util.List < ExpressionList> getExpressionList() {
+        public java.util.List<ExpressionList> getExpressionList() {
             return this.expressionList;
         }
 
         public static final class Builder {
-            private java.util.List < ExpressionList> expressionList; 
+            private java.util.List<ExpressionList> expressionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceExpressionList model) {
+                this.expressionList = model.expressionList;
+            } 
 
             /**
              * ExpressionList.
              */
-            public Builder expressionList(java.util.List < ExpressionList> expressionList) {
+            public Builder expressionList(java.util.List<ExpressionList> expressionList) {
                 this.expressionList = expressionList;
                 return this;
             }
@@ -519,6 +558,22 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             private String tag; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.expression = model.expression;
+                this.expressionList = model.expressionList;
+                this.expressionListJoin = model.expressionListJoin;
+                this.expressionRaw = model.expressionRaw;
+                this.level = model.level;
+                this.preCondition = model.preCondition;
+                this.tag = model.tag;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
@@ -681,7 +736,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
      */
     public static class Escalation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Escalation(Builder builder) {
             this.resource = builder.resource;
@@ -698,17 +753,24 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalation model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }
@@ -956,6 +1018,30 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesResource model) {
+                this.dimensions = model.dimensions;
+                this.enable = model.enable;
+                this.escalation = model.escalation;
+                this.groupId = model.groupId;
+                this.lastAlertTime = model.lastAlertTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.level = model.level;
+                this.metricName = model.metricName;
+                this.metricValues = model.metricValues;
+                this.namespace = model.namespace;
+                this.productCategory = model.productCategory;
+                this.resource = model.resource;
+                this.retryTimes = model.retryTimes;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.startTime = model.startTime;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The dimensions based on which the resources are queried.</p>
              * 
@@ -1180,7 +1266,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < ResourcesResource> resource;
+        private java.util.List<ResourcesResource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -1197,12 +1283,19 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < ResourcesResource> getResource() {
+        public java.util.List<ResourcesResource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcesResource> resource; 
+            private java.util.List<ResourcesResource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The resources that are monitored.</p>
@@ -1210,7 +1303,7 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>userId=120886317861****,region=cn-huhehaote,queue=test-0128</p>
              */
-            public Builder resource(java.util.List < ResourcesResource> resource) {
+            public Builder resource(java.util.List<ResourcesResource> resource) {
                 this.resource = resource;
                 return this;
             }

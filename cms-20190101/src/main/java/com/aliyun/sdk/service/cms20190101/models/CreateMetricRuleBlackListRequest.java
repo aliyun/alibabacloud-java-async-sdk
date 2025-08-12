@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,11 +37,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Instances")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instances;
+    private java.util.List<String> instances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < Metrics> metrics;
+    private java.util.List<Metrics> metrics;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -78,7 +83,7 @@ public class CreateMetricRuleBlackListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,14 +119,14 @@ public class CreateMetricRuleBlackListRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
     /**
      * @return metrics
      */
-    public java.util.List < Metrics> getMetrics() {
+    public java.util.List<Metrics> getMetrics() {
         return this.metrics;
     }
 
@@ -158,8 +163,8 @@ public class CreateMetricRuleBlackListRequest extends Request {
         private String effectiveTime; 
         private String enableEndTime; 
         private String enableStartTime; 
-        private java.util.List < String > instances; 
-        private java.util.List < Metrics> metrics; 
+        private java.util.List<String> instances; 
+        private java.util.List<Metrics> metrics; 
         private String name; 
         private String namespace; 
         private String scopeType; 
@@ -248,7 +253,7 @@ public class CreateMetricRuleBlackListRequest extends Request {
          * <p>The IDs of the instances that belong to the specified cloud service.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putQueryParameter("Instances", instances);
             this.instances = instances;
             return this;
@@ -261,7 +266,7 @@ public class CreateMetricRuleBlackListRequest extends Request {
          * <li>If you configure this parameter, the blacklist policy applies only to the current metric.</li>
          * </ul>
          */
-        public Builder metrics(java.util.List < Metrics> metrics) {
+        public Builder metrics(java.util.List<Metrics> metrics) {
             this.putQueryParameter("Metrics", metrics);
             this.metrics = metrics;
             return this;
@@ -376,6 +381,14 @@ public class CreateMetricRuleBlackListRequest extends Request {
         public static final class Builder {
             private String metricName; 
             private String resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.metricName = model.metricName;
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The metric name.</p>

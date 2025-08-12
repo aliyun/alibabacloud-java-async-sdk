@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateGroupMetricRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupMetricRules")
-    private java.util.List < GroupMetricRules> groupMetricRules;
+    private java.util.List<GroupMetricRules> groupMetricRules;
 
     private CreateGroupMetricRulesRequest(Builder builder) {
         super(builder);
@@ -35,7 +40,7 @@ public class CreateGroupMetricRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,13 +55,13 @@ public class CreateGroupMetricRulesRequest extends Request {
     /**
      * @return groupMetricRules
      */
-    public java.util.List < GroupMetricRules> getGroupMetricRules() {
+    public java.util.List<GroupMetricRules> getGroupMetricRules() {
         return this.groupMetricRules;
     }
 
     public static final class Builder extends Request.Builder<CreateGroupMetricRulesRequest, Builder> {
         private Long groupId; 
-        private java.util.List < GroupMetricRules> groupMetricRules; 
+        private java.util.List<GroupMetricRules> groupMetricRules; 
 
         private Builder() {
             super();
@@ -85,7 +90,7 @@ public class CreateGroupMetricRulesRequest extends Request {
         /**
          * GroupMetricRules.
          */
-        public Builder groupMetricRules(java.util.List < GroupMetricRules> groupMetricRules) {
+        public Builder groupMetricRules(java.util.List<GroupMetricRules> groupMetricRules) {
             this.putQueryParameter("GroupMetricRules", groupMetricRules);
             this.groupMetricRules = groupMetricRules;
             return this;
@@ -189,6 +194,18 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * ComparisonOperator.
@@ -337,6 +354,18 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -484,6 +513,18 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.n = model.n;
+                this.preCondition = model.preCondition;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * ComparisonOperator.
              */
@@ -598,6 +639,15 @@ public class CreateGroupMetricRulesRequest extends Request {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * Critical.
              */
@@ -673,6 +723,14 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the alert rule. The specified tag is contained in alert notifications.</p>
              * <p>Valid values of N: 1 to 200.</p>
@@ -712,7 +770,6 @@ public class CreateGroupMetricRulesRequest extends Request {
      */
     public static class GroupMetricRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -735,7 +792,7 @@ public class CreateGroupMetricRulesRequest extends Request {
         private String interval;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("MetricName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -852,7 +909,7 @@ public class CreateGroupMetricRulesRequest extends Request {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -934,7 +991,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String effectiveInterval; 
             private String emailSubject; 
             private String interval; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String metricName; 
             private String namespace; 
             private String noDataPolicy; 
@@ -945,6 +1002,30 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String ruleName; 
             private Integer silenceTime; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupMetricRules model) {
+                this.escalations = model.escalations;
+                this.category = model.category;
+                this.contactGroups = model.contactGroups;
+                this.dimensions = model.dimensions;
+                this.effectiveInterval = model.effectiveInterval;
+                this.emailSubject = model.emailSubject;
+                this.interval = model.interval;
+                this.labels = model.labels;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.noDataPolicy = model.noDataPolicy;
+                this.noEffectiveInterval = model.noEffectiveInterval;
+                this.options = model.options;
+                this.period = model.period;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.silenceTime = model.silenceTime;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * Escalations.
@@ -1156,7 +1237,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

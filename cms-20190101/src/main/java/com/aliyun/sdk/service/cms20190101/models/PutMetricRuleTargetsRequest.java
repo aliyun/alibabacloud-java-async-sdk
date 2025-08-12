@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class PutMetricRuleTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Targets> targets;
+    private java.util.List<Targets> targets;
 
     private PutMetricRuleTargetsRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class PutMetricRuleTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,13 +56,13 @@ public class PutMetricRuleTargetsRequest extends Request {
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
     public static final class Builder extends Request.Builder<PutMetricRuleTargetsRequest, Builder> {
         private String ruleId; 
-        private java.util.List < Targets> targets; 
+        private java.util.List<Targets> targets; 
 
         private Builder() {
             super();
@@ -87,7 +92,7 @@ public class PutMetricRuleTargetsRequest extends Request {
          * <p>None.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             this.putQueryParameter("Targets", targets);
             this.targets = targets;
             return this;
@@ -169,6 +174,16 @@ public class PutMetricRuleTargetsRequest extends Request {
             private String id; 
             private String jsonParams; 
             private String level; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.arn = model.arn;
+                this.id = model.id;
+                this.jsonParams = model.jsonParams;
+                this.level = model.level;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS) (SMQ), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>

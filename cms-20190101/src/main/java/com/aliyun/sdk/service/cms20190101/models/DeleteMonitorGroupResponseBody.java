@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     public static DeleteMonitorGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMonitorGroupResponseBody model) {
+            this.code = model.code;
+            this.group = model.group;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -178,6 +198,13 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactGroup model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the alert group.</p>
              * 
@@ -204,7 +231,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
      */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
-        private java.util.List < ContactGroup> contactGroup;
+        private java.util.List<ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
             this.contactGroup = builder.contactGroup;
@@ -221,17 +248,24 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         /**
          * @return contactGroup
          */
-        public java.util.List < ContactGroup> getContactGroup() {
+        public java.util.List<ContactGroup> getContactGroup() {
             return this.contactGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ContactGroup> contactGroup; 
+            private java.util.List<ContactGroup> contactGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroup = model.contactGroup;
+            } 
 
             /**
              * ContactGroup.
              */
-            public Builder contactGroup(java.util.List < ContactGroup> contactGroup) {
+            public Builder contactGroup(java.util.List<ContactGroup> contactGroup) {
                 this.contactGroup = contactGroup;
                 return this;
             }
@@ -286,6 +320,14 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         public static final class Builder {
             private ContactGroups contactGroups; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.contactGroups = model.contactGroups;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The alert groups that receive alert notifications for the application group.</p>

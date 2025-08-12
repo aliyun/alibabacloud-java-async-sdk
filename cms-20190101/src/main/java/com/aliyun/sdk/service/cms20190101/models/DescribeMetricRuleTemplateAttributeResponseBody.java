@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
     public static DescribeMetricRuleTemplateAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         private String requestId; 
         private Resource resource; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricRuleTemplateAttributeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -218,6 +238,16 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
              * <ul>
@@ -350,6 +380,16 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
             private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
@@ -484,6 +524,16 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String threshold; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
             /**
              * <p>The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
              * <ul>
@@ -605,6 +655,15 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Info info; 
             private Warn warn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.critical = model.critical;
+                this.info = model.info;
+                this.warn = model.warn;
+            } 
+
             /**
              * <p>The conditions for triggering Critical-level alerts.</p>
              */
@@ -680,6 +739,14 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the alert template.</p>
              * 
@@ -717,7 +784,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
      */
     public static class AlertTemplateLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         private AlertTemplateLabels(Builder builder) {
             this.labels = builder.labels;
@@ -734,17 +801,24 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplateLabels model) {
+                this.labels = model.labels;
+            } 
 
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -787,6 +861,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Selector")
         private String selector;
 
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
+        private Integer silenceTime;
+
         @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
@@ -799,6 +876,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             this.noDataPolicy = builder.noDataPolicy;
             this.ruleName = builder.ruleName;
             this.selector = builder.selector;
+            this.silenceTime = builder.silenceTime;
             this.webhook = builder.webhook;
         }
 
@@ -867,6 +945,13 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return silenceTime
+         */
+        public Integer getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        /**
          * @return webhook
          */
         public String getWebhook() {
@@ -882,7 +967,24 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String noDataPolicy; 
             private String ruleName; 
             private String selector; 
+            private Integer silenceTime; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplate model) {
+                this.category = model.category;
+                this.escalations = model.escalations;
+                this.labels = model.labels;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.noDataPolicy = model.noDataPolicy;
+                this.ruleName = model.ruleName;
+                this.selector = model.selector;
+                this.silenceTime = model.silenceTime;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The abbreviation of the Alibaba Cloud service name.</p>
@@ -972,6 +1074,14 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * SilenceTime.
+             */
+            public Builder silenceTime(Integer silenceTime) {
+                this.silenceTime = silenceTime;
+                return this;
+            }
+
+            /**
              * <p>The callback URL to which a request is sent when an alert is triggered.</p>
              * 
              * <strong>example:</strong>
@@ -997,7 +1107,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
      */
     public static class AlertTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertTemplate")
-        private java.util.List < AlertTemplate> alertTemplate;
+        private java.util.List<AlertTemplate> alertTemplate;
 
         private AlertTemplates(Builder builder) {
             this.alertTemplate = builder.alertTemplate;
@@ -1014,17 +1124,24 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         /**
          * @return alertTemplate
          */
-        public java.util.List < AlertTemplate> getAlertTemplate() {
+        public java.util.List<AlertTemplate> getAlertTemplate() {
             return this.alertTemplate;
         }
 
         public static final class Builder {
-            private java.util.List < AlertTemplate> alertTemplate; 
+            private java.util.List<AlertTemplate> alertTemplate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplates model) {
+                this.alertTemplate = model.alertTemplate;
+            } 
 
             /**
              * AlertTemplate.
              */
-            public Builder alertTemplate(java.util.List < AlertTemplate> alertTemplate) {
+            public Builder alertTemplate(java.util.List<AlertTemplate> alertTemplate) {
                 this.alertTemplate = alertTemplate;
                 return this;
             }
@@ -1115,6 +1232,17 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String name; 
             private String restVersion; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.alertTemplates = model.alertTemplates;
+                this.description = model.description;
+                this.name = model.name;
+                this.restVersion = model.restVersion;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The queried alert templates.</p>

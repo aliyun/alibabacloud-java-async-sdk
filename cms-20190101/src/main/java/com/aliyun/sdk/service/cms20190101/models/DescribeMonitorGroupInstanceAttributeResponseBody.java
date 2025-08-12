@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
 
     public static DescribeMonitorGroupInstanceAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         private Resources resources; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorGroupInstanceAttributeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The responses code.</p>
@@ -263,6 +286,14 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private String availabilityZone; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.availabilityZone = model.availabilityZone;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The zone.</p>
              * 
@@ -336,6 +367,14 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -373,7 +412,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -390,17 +429,24 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -455,6 +501,14 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         public static final class Builder {
             private String vpcInstanceId; 
             private String vswitchInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vpc model) {
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.vswitchInstanceId = model.vswitchInstanceId;
+            } 
 
             /**
              * <p>The VPC ID.</p>
@@ -613,6 +667,21 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private Tags tags; 
             private Vpc vpc; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.category = model.category;
+                this.desc = model.desc;
+                this.dimension = model.dimension;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.networkType = model.networkType;
+                this.region = model.region;
+                this.tags = model.tags;
+                this.vpc = model.vpc;
+            } 
+
             /**
              * <p>The name of the cloud service.</p>
              * 
@@ -718,7 +787,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -735,17 +804,24 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

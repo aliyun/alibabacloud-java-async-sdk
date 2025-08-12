@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("LogMonitorList")
-    private java.util.List < LogMonitorList> logMonitorList;
+    private java.util.List<LogMonitorList> logMonitorList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -55,6 +60,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,7 +74,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     /**
      * @return logMonitorList
      */
-    public java.util.List < LogMonitorList> getLogMonitorList() {
+    public java.util.List<LogMonitorList> getLogMonitorList() {
         return this.logMonitorList;
     }
 
@@ -113,7 +122,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < LogMonitorList> logMonitorList; 
+        private java.util.List<LogMonitorList> logMonitorList; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -121,10 +130,24 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         private Boolean success; 
         private Long total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogMonitorListResponseBody model) {
+            this.code = model.code;
+            this.logMonitorList = model.logMonitorList;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p> The status code 200 indicates that the call was successful.</p>
+         * <p> The status code 200 indicates that the request was successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,7 +161,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         /**
          * <p>The log monitoring metrics.</p>
          */
-        public Builder logMonitorList(java.util.List < LogMonitorList> logMonitorList) {
+        public Builder logMonitorList(java.util.List<LogMonitorList> logMonitorList) {
             this.logMonitorList = logMonitorList;
             return this;
         }
@@ -155,7 +178,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +189,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +200,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01E90080-4300-4FAA-B9AE-161956BC350D</p>
@@ -188,10 +211,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +226,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the returned entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -275,6 +298,15 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueFilter model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the log field used for matching in the filter condition.</p>
              * 
@@ -289,8 +321,8 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             /**
              * <p>The method that is used to match the field value. Valid values:</p>
              * <ul>
-             * <li>contain</li>
-             * <li>notContain</li>
+             * <li>contain: contains</li>
+             * <li>notContain: does not contain</li>
              * <li><code>&gt;</code>: greater than</li>
              * <li><code>&lt;</code>: less than</li>
              * <li><code>&gt;=</code>: greater than or equal to</li>
@@ -352,7 +384,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         private String slsRegionId;
 
         @com.aliyun.core.annotation.NameInMap("ValueFilter")
-        private java.util.List < ValueFilter> valueFilter;
+        private java.util.List<ValueFilter> valueFilter;
 
         @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
         private String valueFilterRelation;
@@ -429,7 +461,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         /**
          * @return valueFilter
          */
-        public java.util.List < ValueFilter> getValueFilter() {
+        public java.util.List<ValueFilter> getValueFilter() {
             return this.valueFilter;
         }
 
@@ -448,12 +480,27 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String slsLogstore; 
             private String slsProject; 
             private String slsRegionId; 
-            private java.util.List < ValueFilter> valueFilter; 
+            private java.util.List<ValueFilter> valueFilter; 
             private String valueFilterRelation; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogMonitorList model) {
+                this.gmtCreate = model.gmtCreate;
+                this.groupId = model.groupId;
+                this.logId = model.logId;
+                this.metricName = model.metricName;
+                this.slsLogstore = model.slsLogstore;
+                this.slsProject = model.slsProject;
+                this.slsRegionId = model.slsRegionId;
+                this.valueFilter = model.valueFilter;
+                this.valueFilterRelation = model.valueFilterRelation;
+            } 
 
             /**
              * <p>The time when the log monitoring metric was created.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1577766395000</p>
@@ -475,7 +522,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID returned by Log Service.</p>
+             * <p>The ID of the log monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -486,7 +533,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu_total</p>
@@ -497,7 +544,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service Logstore.</p>
+             * <p>The name of the Simple Log Service (SLS) Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>testSlS****</p>
@@ -508,7 +555,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service project.</p>
+             * <p>The name of the SLS project.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-project-test****</p>
@@ -519,7 +566,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the Log Service Logstore resides.</p>
+             * <p>The ID of the region where the SLS Logstore resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -530,10 +577,9 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
-             * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
+             * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
              */
-            public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
+            public Builder valueFilter(java.util.List<ValueFilter> valueFilter) {
                 this.valueFilter = valueFilter;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +158,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
 
         /**
          * <p>The end of the time range to query.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1552227965971</p>
@@ -165,7 +170,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom event.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123****</p>
@@ -189,7 +194,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom event.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -201,7 +206,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +218,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -225,7 +230,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</p>
+         * <p>The keywords that are used to search for the event.</p>
          * <ul>
          * <li>If you need to query the custom event whose content contains a and b, set the value to a and b.</li>
          * <li>If you need to query the custom event whose content contains a or b, set the value to a or b.</li>
@@ -242,7 +247,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
 
         /**
          * <p>The beginning of the time range to query.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1552224365971</p>

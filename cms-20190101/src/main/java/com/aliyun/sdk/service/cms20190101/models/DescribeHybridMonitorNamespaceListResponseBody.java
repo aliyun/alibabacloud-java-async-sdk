@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DescribeHybridMonitorNamespace")
-    private java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
+    private java.util.List<DescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -55,6 +60,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,7 +74,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     /**
      * @return describeHybridMonitorNamespace
      */
-    public java.util.List < DescribeHybridMonitorNamespace> getDescribeHybridMonitorNamespace() {
+    public java.util.List<DescribeHybridMonitorNamespace> getDescribeHybridMonitorNamespace() {
         return this.describeHybridMonitorNamespace;
     }
 
@@ -113,13 +122,27 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace; 
+        private java.util.List<DescribeHybridMonitorNamespace> describeHybridMonitorNamespace; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private String success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridMonitorNamespaceListResponseBody model) {
+            this.code = model.code;
+            this.describeHybridMonitorNamespace = model.describeHybridMonitorNamespace;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -135,7 +158,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         /**
          * <p>The details of the namespaces.</p>
          */
-        public Builder describeHybridMonitorNamespace(java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace) {
+        public Builder describeHybridMonitorNamespace(java.util.List<DescribeHybridMonitorNamespace> describeHybridMonitorNamespace) {
             this.describeHybridMonitorNamespace = describeHybridMonitorNamespace;
             return this;
         }
@@ -224,7 +247,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
      */
     public static class MetricList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < String > list;
+        private java.util.List<String> list;
 
         @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
@@ -245,7 +268,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < String > getList() {
+        public java.util.List<String> getList() {
             return this.list;
         }
 
@@ -257,13 +280,21 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > list; 
+            private java.util.List<String> list; 
             private Long period; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricList model) {
+                this.list = model.list;
+                this.period = model.period;
+            } 
 
             /**
              * <p>The metrics.</p>
              */
-            public Builder list(java.util.List < String > list) {
+            public Builder list(java.util.List<String> list) {
                 this.list = list;
                 return this;
             }
@@ -295,7 +326,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
      */
     public static class NamespaceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricList")
-        private java.util.List < MetricList> metricList;
+        private java.util.List<MetricList> metricList;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
@@ -316,7 +347,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         /**
          * @return metricList
          */
-        public java.util.List < MetricList> getMetricList() {
+        public java.util.List<MetricList> getMetricList() {
             return this.metricList;
         }
 
@@ -328,13 +359,21 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MetricList> metricList; 
+            private java.util.List<MetricList> metricList; 
             private String namespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespaceList model) {
+                this.metricList = model.metricList;
+                this.namespace = model.namespace;
+            } 
 
             /**
              * <p>The metrics for the Alibaba Cloud service.</p>
              */
-            public Builder metricList(java.util.List < MetricList> metricList) {
+            public Builder metricList(java.util.List<MetricList> metricList) {
                 this.metricList = metricList;
                 return this;
             }
@@ -365,7 +404,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
      */
     public static class AliyunProductMetricList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceList")
-        private java.util.List < NamespaceList> namespaceList;
+        private java.util.List<NamespaceList> namespaceList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
@@ -390,7 +429,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         /**
          * @return namespaceList
          */
-        public java.util.List < NamespaceList> getNamespaceList() {
+        public java.util.List<NamespaceList> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -409,14 +448,23 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NamespaceList> namespaceList; 
+            private java.util.List<NamespaceList> namespaceList; 
             private Long userId; 
             private String YAMLConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliyunProductMetricList model) {
+                this.namespaceList = model.namespaceList;
+                this.userId = model.userId;
+                this.YAMLConfig = model.YAMLConfig;
+            } 
 
             /**
              * <p>The namespaces.</p>
              */
-            public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
+            public Builder namespaceList(java.util.List<NamespaceList> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }
@@ -465,6 +513,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceRegion")
         private String namespaceRegion;
 
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstanceId")
+        private String prometheusInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
@@ -473,6 +524,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
         private Detail(Builder builder) {
             this.namespaceRegion = builder.namespaceRegion;
+            this.prometheusInstanceId = builder.prometheusInstanceId;
             this.SLSProject = builder.SLSProject;
             this.spec = builder.spec;
         }
@@ -493,6 +545,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return prometheusInstanceId
+         */
+        public String getPrometheusInstanceId() {
+            return this.prometheusInstanceId;
+        }
+
+        /**
          * @return SLSProject
          */
         public String getSLSProject() {
@@ -508,8 +567,19 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String namespaceRegion; 
+            private String prometheusInstanceId; 
             private String SLSProject; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.namespaceRegion = model.namespaceRegion;
+                this.prometheusInstanceId = model.prometheusInstanceId;
+                this.SLSProject = model.SLSProject;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The region where the metric data is stored.</p>
@@ -522,6 +592,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
              */
             public Builder namespaceRegion(String namespaceRegion) {
                 this.namespaceRegion = namespaceRegion;
+                return this;
+            }
+
+            /**
+             * PrometheusInstanceId.
+             */
+            public Builder prometheusInstanceId(String prometheusInstanceId) {
+                this.prometheusInstanceId = prometheusInstanceId;
                 return this;
             }
 
@@ -573,7 +651,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
      */
     public static class DescribeHybridMonitorNamespace extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunProductMetricList")
-        private java.util.List < AliyunProductMetricList> aliyunProductMetricList;
+        private java.util.List<AliyunProductMetricList> aliyunProductMetricList;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -626,7 +704,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         /**
          * @return aliyunProductMetricList
          */
-        public java.util.List < AliyunProductMetricList> getAliyunProductMetricList() {
+        public java.util.List<AliyunProductMetricList> getAliyunProductMetricList() {
             return this.aliyunProductMetricList;
         }
 
@@ -694,7 +772,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AliyunProductMetricList> aliyunProductMetricList; 
+            private java.util.List<AliyunProductMetricList> aliyunProductMetricList; 
             private String createTime; 
             private String description; 
             private Detail detail; 
@@ -705,10 +783,26 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String namespaceType; 
             private Long notAliyunTaskNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(DescribeHybridMonitorNamespace model) {
+                this.aliyunProductMetricList = model.aliyunProductMetricList;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.detail = model.detail;
+                this.id = model.id;
+                this.isDelete = model.isDelete;
+                this.modifyTime = model.modifyTime;
+                this.namespace = model.namespace;
+                this.namespaceType = model.namespaceType;
+                this.notAliyunTaskNumber = model.notAliyunTaskNumber;
+            } 
+
             /**
              * <p>The configuration details of metric import tasks for Alibaba Cloud services.</p>
              */
-            public Builder aliyunProductMetricList(java.util.List < AliyunProductMetricList> aliyunProductMetricList) {
+            public Builder aliyunProductMetricList(java.util.List<AliyunProductMetricList> aliyunProductMetricList) {
                 this.aliyunProductMetricList = aliyunProductMetricList;
                 return this;
             }

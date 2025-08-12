@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static DescribeSiteMonitorAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,6 +106,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private SiteMonitors siteMonitors; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSiteMonitorAttributeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.metricRules = model.metricRules;
+            this.requestId = model.requestId;
+            this.siteMonitors = model.siteMonitors;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The response code.</p>
          * <blockquote>
@@ -123,7 +144,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the alert rules that are configured for the site monitoring task.</p>
+         * <p>The alert rules that are configured for the site monitoring task.</p>
          */
         public Builder metricRules(MetricRules metricRules) {
             this.metricRules = metricRules;
@@ -382,6 +403,28 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String statistics; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetricRule model) {
+                this.actionEnable = model.actionEnable;
+                this.alarmActions = model.alarmActions;
+                this.comparisonOperator = model.comparisonOperator;
+                this.dimensions = model.dimensions;
+                this.evaluationCount = model.evaluationCount;
+                this.expression = model.expression;
+                this.level = model.level;
+                this.metricName = model.metricName;
+                this.namespace = model.namespace;
+                this.okActions = model.okActions;
+                this.period = model.period;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.stateValue = model.stateValue;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>Indicates whether the alert rule is enabled. Valid values:</p>
              * <ul>
@@ -611,7 +654,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class MetricRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricRule")
-        private java.util.List < MetricRule> metricRule;
+        private java.util.List<MetricRule> metricRule;
 
         private MetricRules(Builder builder) {
             this.metricRule = builder.metricRule;
@@ -628,17 +671,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return metricRule
          */
-        public java.util.List < MetricRule> getMetricRule() {
+        public java.util.List<MetricRule> getMetricRule() {
             return this.metricRule;
         }
 
         public static final class Builder {
-            private java.util.List < MetricRule> metricRule; 
+            private java.util.List<MetricRule> metricRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricRules model) {
+                this.metricRule = model.metricRule;
+            } 
 
             /**
              * MetricRule.
              */
-            public Builder metricRule(java.util.List < MetricRule> metricRule) {
+            public Builder metricRule(java.util.List<MetricRule> metricRule) {
                 this.metricRule = metricRule;
                 return this;
             }
@@ -658,7 +708,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class Days extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("days")
-        private java.util.List < Integer > days;
+        private java.util.List<Integer> days;
 
         private Days(Builder builder) {
             this.days = builder.days;
@@ -675,17 +725,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return days
          */
-        public java.util.List < Integer > getDays() {
+        public java.util.List<Integer> getDays() {
             return this.days;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > days; 
+            private java.util.List<Integer> days; 
+
+            private Builder() {
+            } 
+
+            private Builder(Days model) {
+                this.days = model.days;
+            } 
 
             /**
              * days.
              */
-            public Builder days(java.util.List < Integer > days) {
+            public Builder days(java.util.List<Integer> days) {
                 this.days = days;
                 return this;
             }
@@ -765,8 +822,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private Integer startHour; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomSchedule model) {
+                this.days = model.days;
+                this.endHour = model.endHour;
+                this.startHour = model.startHour;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
-             * days.
+             * <p>The days in a week.</p>
              */
             public Builder days(Days days) {
                 this.days = days;
@@ -774,7 +841,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * end_hour.
+             * <p>The end time of the detection. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -782,7 +852,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * start_hour.
+             * <p>The start time of the detection. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;
@@ -790,7 +863,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * time_zone.
+             * <p>The time zone of the detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -884,6 +960,17 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String ispName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCity model) {
+                this.city = model.city;
+                this.cityName = model.cityName;
+                this.isp = model.isp;
+                this.ispName = model.ispName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The city ID.</p>
              * 
@@ -923,10 +1010,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>探测点网络类型。取值：
-             * IDC: IDC机房
-             * LASTMILE: 网民家宽
-             * MOBILE: 移动蜂窝网</p>
+             * <p>The network type of the detection point. Valid values: IDC, LASTMILE, and MOBILE.</p>
              * 
              * <strong>example:</strong>
              * <p>IDC</p>
@@ -951,7 +1035,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class IspCities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspCity")
-        private java.util.List < IspCity> ispCity;
+        private java.util.List<IspCity> ispCity;
 
         private IspCities(Builder builder) {
             this.ispCity = builder.ispCity;
@@ -968,17 +1052,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return ispCity
          */
-        public java.util.List < IspCity> getIspCity() {
+        public java.util.List<IspCity> getIspCity() {
             return this.ispCity;
         }
 
         public static final class Builder {
-            private java.util.List < IspCity> ispCity; 
+            private java.util.List<IspCity> ispCity; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCities model) {
+                this.ispCity = model.ispCity;
+            } 
 
             /**
              * IspCity.
              */
-            public Builder ispCity(java.util.List < IspCity> ispCity) {
+            public Builder ispCity(java.util.List<IspCity> ispCity) {
                 this.ispCity = ispCity;
                 return this;
             }
@@ -1058,8 +1149,31 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String target; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Assertions model) {
+                this.operator = model.operator;
+                this.property = model.property;
+                this.target = model.target;
+                this.type = model.type;
+            } 
+
             /**
-             * operator.
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li>contains: contains</li>
+             * <li>doesNotContain: does not contain</li>
+             * <li>matches: matches a regular expression</li>
+             * <li>doesNotMatch: does not match a regular expression</li>
+             * <li>is: equal to</li>
+             * <li>isNot: not equal to</li>
+             * <li>lessThan: less than</li>
+             * <li>moreThan: greater than</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lessThan</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1067,7 +1181,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * property.
+             * <p>The path to the assertion.</p>
+             * <ul>
+             * <li>If the assertion type is body_json, the path is json path.</li>
+             * <li>If the assertion type is body_xml, the path is xml path.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>json path</p>
              */
             public Builder property(String property) {
                 this.property = property;
@@ -1075,7 +1196,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * <p>The value or character to which the condition of the assertion is compared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -1083,7 +1207,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The assertion type. Valid values:</p>
+             * <ul>
+             * <li>response_time: checks whether the response time meets expectations.</li>
+             * <li>status_code: checks whether the HTTP status code meets expectations.</li>
+             * <li>header: checks whether the fields in the response header meet expectations.</li>
+             * <li>body_text: check whether the content in the response body meets expectations by using text matching.</li>
+             * <li>body_json: check whether the content in the response body meets expectations by using JSON parsing (JSONPath).</li>
+             * <li>body_xml: check whether the content in the response body meets expectations by using XML parsing (XPath).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>response_time</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1105,7 +1240,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class OptionJsonAssertions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assertions")
-        private java.util.List < Assertions> assertions;
+        private java.util.List<Assertions> assertions;
 
         private OptionJsonAssertions(Builder builder) {
             this.assertions = builder.assertions;
@@ -1122,17 +1257,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return assertions
          */
-        public java.util.List < Assertions> getAssertions() {
+        public java.util.List<Assertions> getAssertions() {
             return this.assertions;
         }
 
         public static final class Builder {
-            private java.util.List < Assertions> assertions; 
+            private java.util.List<Assertions> assertions; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionJsonAssertions model) {
+                this.assertions = model.assertions;
+            } 
 
             /**
              * assertions.
              */
-            public Builder assertions(java.util.List < Assertions> assertions) {
+            public Builder assertions(java.util.List<Assertions> assertions) {
                 this.assertions = assertions;
                 return this;
             }
@@ -1150,9 +1292,485 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeSiteMonitorAttributeResponseBody</p>
      */
+    public static class Scopes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("scopes")
+        private java.util.List<String> scopes;
+
+        private Scopes(Builder builder) {
+            this.scopes = builder.scopes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Scopes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scopes
+         */
+        public java.util.List<String> getScopes() {
+            return this.scopes;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> scopes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scopes model) {
+                this.scopes = model.scopes;
+            } 
+
+            /**
+             * scopes.
+             */
+            public Builder scopes(java.util.List<String> scopes) {
+                this.scopes = scopes;
+                return this;
+            }
+
+            public Scopes build() {
+                return new Scopes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class AuthInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("access_key_id")
+        private String accessKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("access_key_secret")
+        private String accessKeySecret;
+
+        @com.aliyun.core.annotation.NameInMap("api_action")
+        private String apiAction;
+
+        @com.aliyun.core.annotation.NameInMap("api_version")
+        private String apiVersion;
+
+        @com.aliyun.core.annotation.NameInMap("auth_style")
+        private String authStyle;
+
+        @com.aliyun.core.annotation.NameInMap("client_id")
+        private String clientId;
+
+        @com.aliyun.core.annotation.NameInMap("client_secret")
+        private String clientSecret;
+
+        @com.aliyun.core.annotation.NameInMap("grant_type")
+        private String grantType;
+
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("region_id")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("scopes")
+        private Scopes scopes;
+
+        @com.aliyun.core.annotation.NameInMap("service_name")
+        private String serviceName;
+
+        @com.aliyun.core.annotation.NameInMap("session_token")
+        private String sessionToken;
+
+        @com.aliyun.core.annotation.NameInMap("token_url")
+        private String tokenUrl;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("use_cookie_session_key")
+        private Boolean useCookieSessionKey;
+
+        @com.aliyun.core.annotation.NameInMap("username")
+        private String username;
+
+        @com.aliyun.core.annotation.NameInMap("with_addon_resources")
+        private Boolean withAddonResources;
+
+        private AuthInfo(Builder builder) {
+            this.accessKeyId = builder.accessKeyId;
+            this.accessKeySecret = builder.accessKeySecret;
+            this.apiAction = builder.apiAction;
+            this.apiVersion = builder.apiVersion;
+            this.authStyle = builder.authStyle;
+            this.clientId = builder.clientId;
+            this.clientSecret = builder.clientSecret;
+            this.grantType = builder.grantType;
+            this.password = builder.password;
+            this.regionId = builder.regionId;
+            this.scopes = builder.scopes;
+            this.serviceName = builder.serviceName;
+            this.sessionToken = builder.sessionToken;
+            this.tokenUrl = builder.tokenUrl;
+            this.type = builder.type;
+            this.useCookieSessionKey = builder.useCookieSessionKey;
+            this.username = builder.username;
+            this.withAddonResources = builder.withAddonResources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessKeyId
+         */
+        public String getAccessKeyId() {
+            return this.accessKeyId;
+        }
+
+        /**
+         * @return accessKeySecret
+         */
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
+        /**
+         * @return apiAction
+         */
+        public String getApiAction() {
+            return this.apiAction;
+        }
+
+        /**
+         * @return apiVersion
+         */
+        public String getApiVersion() {
+            return this.apiVersion;
+        }
+
+        /**
+         * @return authStyle
+         */
+        public String getAuthStyle() {
+            return this.authStyle;
+        }
+
+        /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        /**
+         * @return clientSecret
+         */
+        public String getClientSecret() {
+            return this.clientSecret;
+        }
+
+        /**
+         * @return grantType
+         */
+        public String getGrantType() {
+            return this.grantType;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return scopes
+         */
+        public Scopes getScopes() {
+            return this.scopes;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return sessionToken
+         */
+        public String getSessionToken() {
+            return this.sessionToken;
+        }
+
+        /**
+         * @return tokenUrl
+         */
+        public String getTokenUrl() {
+            return this.tokenUrl;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return useCookieSessionKey
+         */
+        public Boolean getUseCookieSessionKey() {
+            return this.useCookieSessionKey;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        /**
+         * @return withAddonResources
+         */
+        public Boolean getWithAddonResources() {
+            return this.withAddonResources;
+        }
+
+        public static final class Builder {
+            private String accessKeyId; 
+            private String accessKeySecret; 
+            private String apiAction; 
+            private String apiVersion; 
+            private String authStyle; 
+            private String clientId; 
+            private String clientSecret; 
+            private String grantType; 
+            private String password; 
+            private String regionId; 
+            private Scopes scopes; 
+            private String serviceName; 
+            private String sessionToken; 
+            private String tokenUrl; 
+            private String type; 
+            private Boolean useCookieSessionKey; 
+            private String username; 
+            private Boolean withAddonResources; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthInfo model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.apiAction = model.apiAction;
+                this.apiVersion = model.apiVersion;
+                this.authStyle = model.authStyle;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.grantType = model.grantType;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.scopes = model.scopes;
+                this.serviceName = model.serviceName;
+                this.sessionToken = model.sessionToken;
+                this.tokenUrl = model.tokenUrl;
+                this.type = model.type;
+                this.useCookieSessionKey = model.useCookieSessionKey;
+                this.username = model.username;
+                this.withAddonResources = model.withAddonResources;
+            } 
+
+            /**
+             * access_key_id.
+             */
+            public Builder accessKeyId(String accessKeyId) {
+                this.accessKeyId = accessKeyId;
+                return this;
+            }
+
+            /**
+             * access_key_secret.
+             */
+            public Builder accessKeySecret(String accessKeySecret) {
+                this.accessKeySecret = accessKeySecret;
+                return this;
+            }
+
+            /**
+             * api_action.
+             */
+            public Builder apiAction(String apiAction) {
+                this.apiAction = apiAction;
+                return this;
+            }
+
+            /**
+             * api_version.
+             */
+            public Builder apiVersion(String apiVersion) {
+                this.apiVersion = apiVersion;
+                return this;
+            }
+
+            /**
+             * auth_style.
+             */
+            public Builder authStyle(String authStyle) {
+                this.authStyle = authStyle;
+                return this;
+            }
+
+            /**
+             * client_id.
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * client_secret.
+             */
+            public Builder clientSecret(String clientSecret) {
+                this.clientSecret = clientSecret;
+                return this;
+            }
+
+            /**
+             * grant_type.
+             */
+            public Builder grantType(String grantType) {
+                this.grantType = grantType;
+                return this;
+            }
+
+            /**
+             * password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * region_id.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * scopes.
+             */
+            public Builder scopes(Scopes scopes) {
+                this.scopes = scopes;
+                return this;
+            }
+
+            /**
+             * service_name.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * session_token.
+             */
+            public Builder sessionToken(String sessionToken) {
+                this.sessionToken = sessionToken;
+                return this;
+            }
+
+            /**
+             * token_url.
+             */
+            public Builder tokenUrl(String tokenUrl) {
+                this.tokenUrl = tokenUrl;
+                return this;
+            }
+
+            /**
+             * <p>The assertion type. Valid values:</p>
+             * <ul>
+             * <li>response_time: checks whether the response time meets expectations.</li>
+             * <li>status_code: checks whether the HTTP status code meets expectations.</li>
+             * <li>header: checks whether the fields in the response header meet expectations.</li>
+             * <li>body_text: check whether the content in the response body meets expectations by using text matching.</li>
+             * <li>body_json: check whether the content in the response body meets expectations by using JSON parsing (JSONPath).</li>
+             * <li>body_xml: check whether the content in the response body meets expectations by using XML parsing (XPath).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>response_time</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * use_cookie_session_key.
+             */
+            public Builder useCookieSessionKey(Boolean useCookieSessionKey) {
+                this.useCookieSessionKey = useCookieSessionKey;
+                return this;
+            }
+
+            /**
+             * username.
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            /**
+             * with_addon_resources.
+             */
+            public Builder withAddonResources(Boolean withAddonResources) {
+                this.withAddonResources = withAddonResources;
+                return this;
+            }
+
+            public AuthInfo build() {
+                return new AuthInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class BlockedUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("blocked_url_list")
-        private java.util.List < String > blockedUrlList;
+        private java.util.List<String> blockedUrlList;
 
         private BlockedUrlList(Builder builder) {
             this.blockedUrlList = builder.blockedUrlList;
@@ -1169,17 +1787,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return blockedUrlList
          */
-        public java.util.List < String > getBlockedUrlList() {
+        public java.util.List<String> getBlockedUrlList() {
             return this.blockedUrlList;
         }
 
         public static final class Builder {
-            private java.util.List < String > blockedUrlList; 
+            private java.util.List<String> blockedUrlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockedUrlList model) {
+                this.blockedUrlList = model.blockedUrlList;
+            } 
 
             /**
              * blocked_url_list.
              */
-            public Builder blockedUrlList(java.util.List < String > blockedUrlList) {
+            public Builder blockedUrlList(java.util.List<String> blockedUrlList) {
                 this.blockedUrlList = blockedUrlList;
                 return this;
             }
@@ -1199,7 +1824,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class BrowserHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("browser_headers")
-        private java.util.List < java.util.Map<String, ?>> browserHeaders;
+        private java.util.List<java.util.Map<String, ?>> browserHeaders;
 
         private BrowserHeaders(Builder builder) {
             this.browserHeaders = builder.browserHeaders;
@@ -1216,17 +1841,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return browserHeaders
          */
-        public java.util.List < java.util.Map<String, ?>> getBrowserHeaders() {
+        public java.util.List<java.util.Map<String, ?>> getBrowserHeaders() {
             return this.browserHeaders;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> browserHeaders; 
+            private java.util.List<java.util.Map<String, ?>> browserHeaders; 
+
+            private Builder() {
+            } 
+
+            private Builder(BrowserHeaders model) {
+                this.browserHeaders = model.browserHeaders;
+            } 
 
             /**
              * browser_headers.
              */
-            public Builder browserHeaders(java.util.List < java.util.Map<String, ?>> browserHeaders) {
+            public Builder browserHeaders(java.util.List<java.util.Map<String, ?>> browserHeaders) {
                 this.browserHeaders = browserHeaders;
                 return this;
             }
@@ -1246,7 +1878,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class BrowserHosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("browser_hosts")
-        private java.util.List < String > browserHosts;
+        private java.util.List<String> browserHosts;
 
         private BrowserHosts(Builder builder) {
             this.browserHosts = builder.browserHosts;
@@ -1263,17 +1895,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return browserHosts
          */
-        public java.util.List < String > getBrowserHosts() {
+        public java.util.List<String> getBrowserHosts() {
             return this.browserHosts;
         }
 
         public static final class Builder {
-            private java.util.List < String > browserHosts; 
+            private java.util.List<String> browserHosts; 
+
+            private Builder() {
+            } 
+
+            private Builder(BrowserHosts model) {
+                this.browserHosts = model.browserHosts;
+            } 
 
             /**
              * browser_hosts.
              */
-            public Builder browserHosts(java.util.List < String > browserHosts) {
+            public Builder browserHosts(java.util.List<String> browserHosts) {
                 this.browserHosts = browserHosts;
                 return this;
             }
@@ -1329,8 +1968,19 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String browser; 
             private String device; 
 
+            private Builder() {
+            } 
+
+            private Builder(BrowserInfo model) {
+                this.browser = model.browser;
+                this.device = model.device;
+            } 
+
             /**
-             * browser.
+             * <p>The browser type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chrome</p>
              */
             public Builder browser(String browser) {
                 this.browser = browser;
@@ -1338,7 +1988,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * device.
+             * <p>The device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>laptop</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1360,7 +2013,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class OptionJsonBrowserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("browser_info")
-        private java.util.List < BrowserInfo> browserInfo;
+        private java.util.List<BrowserInfo> browserInfo;
 
         private OptionJsonBrowserInfo(Builder builder) {
             this.browserInfo = builder.browserInfo;
@@ -1377,17 +2030,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return browserInfo
          */
-        public java.util.List < BrowserInfo> getBrowserInfo() {
+        public java.util.List<BrowserInfo> getBrowserInfo() {
             return this.browserInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BrowserInfo> browserInfo; 
+            private java.util.List<BrowserInfo> browserInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionJsonBrowserInfo model) {
+                this.browserInfo = model.browserInfo;
+            } 
 
             /**
              * browser_info.
              */
-            public Builder browserInfo(java.util.List < BrowserInfo> browserInfo) {
+            public Builder browserInfo(java.util.List<BrowserInfo> browserInfo) {
                 this.browserInfo = browserInfo;
                 return this;
             }
@@ -1405,9 +2065,159 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeSiteMonitorAttributeResponseBody</p>
      */
+    public static class ConfigVariables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("secure")
+        private Boolean secure;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private ConfigVariables(Builder builder) {
+            this.name = builder.name;
+            this.secure = builder.secure;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigVariables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return secure
+         */
+        public Boolean getSecure() {
+            return this.secure;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private Boolean secure; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigVariables model) {
+                this.name = model.name;
+                this.secure = model.secure;
+                this.value = model.value;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * secure.
+             */
+            public Builder secure(Boolean secure) {
+                this.secure = secure;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ConfigVariables build() {
+                return new ConfigVariables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class OptionJsonConfigVariables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config_variables")
+        private java.util.List<ConfigVariables> configVariables;
+
+        private OptionJsonConfigVariables(Builder builder) {
+            this.configVariables = builder.configVariables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionJsonConfigVariables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configVariables
+         */
+        public java.util.List<ConfigVariables> getConfigVariables() {
+            return this.configVariables;
+        }
+
+        public static final class Builder {
+            private java.util.List<ConfigVariables> configVariables; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionJsonConfigVariables model) {
+                this.configVariables = model.configVariables;
+            } 
+
+            /**
+             * config_variables.
+             */
+            public Builder configVariables(java.util.List<ConfigVariables> configVariables) {
+                this.configVariables = configVariables;
+                return this;
+            }
+
+            public OptionJsonConfigVariables build() {
+                return new OptionJsonConfigVariables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class ExpectExistString extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expect_exist_string")
-        private java.util.List < String > expectExistString;
+        private java.util.List<String> expectExistString;
 
         private ExpectExistString(Builder builder) {
             this.expectExistString = builder.expectExistString;
@@ -1424,17 +2234,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return expectExistString
          */
-        public java.util.List < String > getExpectExistString() {
+        public java.util.List<String> getExpectExistString() {
             return this.expectExistString;
         }
 
         public static final class Builder {
-            private java.util.List < String > expectExistString; 
+            private java.util.List<String> expectExistString; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpectExistString model) {
+                this.expectExistString = model.expectExistString;
+            } 
 
             /**
              * expect_exist_string.
              */
-            public Builder expectExistString(java.util.List < String > expectExistString) {
+            public Builder expectExistString(java.util.List<String> expectExistString) {
                 this.expectExistString = expectExistString;
                 return this;
             }
@@ -1454,7 +2271,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class ExpectNonExistString extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expect_non_exist_string")
-        private java.util.List < String > expectNonExistString;
+        private java.util.List<String> expectNonExistString;
 
         private ExpectNonExistString(Builder builder) {
             this.expectNonExistString = builder.expectNonExistString;
@@ -1471,17 +2288,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return expectNonExistString
          */
-        public java.util.List < String > getExpectNonExistString() {
+        public java.util.List<String> getExpectNonExistString() {
             return this.expectNonExistString;
         }
 
         public static final class Builder {
-            private java.util.List < String > expectNonExistString; 
+            private java.util.List<String> expectNonExistString; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpectNonExistString model) {
+                this.expectNonExistString = model.expectNonExistString;
+            } 
 
             /**
              * expect_non_exist_string.
              */
-            public Builder expectNonExistString(java.util.List < String > expectNonExistString) {
+            public Builder expectNonExistString(java.util.List<String> expectNonExistString) {
                 this.expectNonExistString = expectNonExistString;
                 return this;
             }
@@ -1501,7 +2325,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class QuicTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("quic_target")
-        private java.util.List < String > quicTarget;
+        private java.util.List<String> quicTarget;
 
         private QuicTarget(Builder builder) {
             this.quicTarget = builder.quicTarget;
@@ -1518,17 +2342,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return quicTarget
          */
-        public java.util.List < String > getQuicTarget() {
+        public java.util.List<String> getQuicTarget() {
             return this.quicTarget;
         }
 
         public static final class Builder {
-            private java.util.List < String > quicTarget; 
+            private java.util.List<String> quicTarget; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuicTarget model) {
+                this.quicTarget = model.quicTarget;
+            } 
 
             /**
              * quic_target.
              */
-            public Builder quicTarget(java.util.List < String > quicTarget) {
+            public Builder quicTarget(java.util.List<String> quicTarget) {
                 this.quicTarget = quicTarget;
                 return this;
             }
@@ -1546,9 +2377,574 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeSiteMonitorAttributeResponseBody</p>
      */
+    public static class Parser extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("parser_type")
+        private String parserType;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Parser(Builder builder) {
+            this.parserType = builder.parserType;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parser create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parserType
+         */
+        public String getParserType() {
+            return this.parserType;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String parserType; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parser model) {
+                this.parserType = model.parserType;
+                this.value = model.value;
+            } 
+
+            /**
+             * parser_type.
+             */
+            public Builder parserType(String parserType) {
+                this.parserType = parserType;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Parser build() {
+                return new Parser(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class ExtractedVariables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extracted_type")
+        private String extractedType;
+
+        @com.aliyun.core.annotation.NameInMap("field")
+        private String field;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("parser")
+        private Parser parser;
+
+        private ExtractedVariables(Builder builder) {
+            this.extractedType = builder.extractedType;
+            this.field = builder.field;
+            this.name = builder.name;
+            this.parser = builder.parser;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtractedVariables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extractedType
+         */
+        public String getExtractedType() {
+            return this.extractedType;
+        }
+
+        /**
+         * @return field
+         */
+        public String getField() {
+            return this.field;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return parser
+         */
+        public Parser getParser() {
+            return this.parser;
+        }
+
+        public static final class Builder {
+            private String extractedType; 
+            private String field; 
+            private String name; 
+            private Parser parser; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtractedVariables model) {
+                this.extractedType = model.extractedType;
+                this.field = model.field;
+                this.name = model.name;
+                this.parser = model.parser;
+            } 
+
+            /**
+             * extracted_type.
+             */
+            public Builder extractedType(String extractedType) {
+                this.extractedType = extractedType;
+                return this;
+            }
+
+            /**
+             * field.
+             */
+            public Builder field(String field) {
+                this.field = field;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * parser.
+             */
+            public Builder parser(Parser parser) {
+                this.parser = parser;
+                return this;
+            }
+
+            public ExtractedVariables build() {
+                return new ExtractedVariables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class StepsExtractedVariables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extracted_variables")
+        private java.util.List<ExtractedVariables> extractedVariables;
+
+        private StepsExtractedVariables(Builder builder) {
+            this.extractedVariables = builder.extractedVariables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StepsExtractedVariables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extractedVariables
+         */
+        public java.util.List<ExtractedVariables> getExtractedVariables() {
+            return this.extractedVariables;
+        }
+
+        public static final class Builder {
+            private java.util.List<ExtractedVariables> extractedVariables; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepsExtractedVariables model) {
+                this.extractedVariables = model.extractedVariables;
+            } 
+
+            /**
+             * extracted_variables.
+             */
+            public Builder extractedVariables(java.util.List<ExtractedVariables> extractedVariables) {
+                this.extractedVariables = extractedVariables;
+                return this;
+            }
+
+            public StepsExtractedVariables build() {
+                return new StepsExtractedVariables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class Steps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allow_failure")
+        private Boolean allowFailure;
+
+        @com.aliyun.core.annotation.NameInMap("auto_extract_cookie")
+        private Boolean autoExtractCookie;
+
+        @com.aliyun.core.annotation.NameInMap("extracted_variables")
+        private StepsExtractedVariables extractedVariables;
+
+        @com.aliyun.core.annotation.NameInMap("is_critical")
+        private Boolean isCritical;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        @Deprecated
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("option")
+        private String option;
+
+        @com.aliyun.core.annotation.NameInMap("step_name")
+        private String stepName;
+
+        @com.aliyun.core.annotation.NameInMap("step_type")
+        private String stepType;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("use_generated_cookie")
+        private Boolean useGeneratedCookie;
+
+        @com.aliyun.core.annotation.NameInMap("wait_time_in_secs")
+        private Integer waitTimeInSecs;
+
+        private Steps(Builder builder) {
+            this.allowFailure = builder.allowFailure;
+            this.autoExtractCookie = builder.autoExtractCookie;
+            this.extractedVariables = builder.extractedVariables;
+            this.isCritical = builder.isCritical;
+            this.name = builder.name;
+            this.option = builder.option;
+            this.stepName = builder.stepName;
+            this.stepType = builder.stepType;
+            this.url = builder.url;
+            this.useGeneratedCookie = builder.useGeneratedCookie;
+            this.waitTimeInSecs = builder.waitTimeInSecs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Steps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowFailure
+         */
+        public Boolean getAllowFailure() {
+            return this.allowFailure;
+        }
+
+        /**
+         * @return autoExtractCookie
+         */
+        public Boolean getAutoExtractCookie() {
+            return this.autoExtractCookie;
+        }
+
+        /**
+         * @return extractedVariables
+         */
+        public StepsExtractedVariables getExtractedVariables() {
+            return this.extractedVariables;
+        }
+
+        /**
+         * @return isCritical
+         */
+        public Boolean getIsCritical() {
+            return this.isCritical;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return option
+         */
+        public String getOption() {
+            return this.option;
+        }
+
+        /**
+         * @return stepName
+         */
+        public String getStepName() {
+            return this.stepName;
+        }
+
+        /**
+         * @return stepType
+         */
+        public String getStepType() {
+            return this.stepType;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return useGeneratedCookie
+         */
+        public Boolean getUseGeneratedCookie() {
+            return this.useGeneratedCookie;
+        }
+
+        /**
+         * @return waitTimeInSecs
+         */
+        public Integer getWaitTimeInSecs() {
+            return this.waitTimeInSecs;
+        }
+
+        public static final class Builder {
+            private Boolean allowFailure; 
+            private Boolean autoExtractCookie; 
+            private StepsExtractedVariables extractedVariables; 
+            private Boolean isCritical; 
+            private String name; 
+            private String option; 
+            private String stepName; 
+            private String stepType; 
+            private String url; 
+            private Boolean useGeneratedCookie; 
+            private Integer waitTimeInSecs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.allowFailure = model.allowFailure;
+                this.autoExtractCookie = model.autoExtractCookie;
+                this.extractedVariables = model.extractedVariables;
+                this.isCritical = model.isCritical;
+                this.name = model.name;
+                this.option = model.option;
+                this.stepName = model.stepName;
+                this.stepType = model.stepType;
+                this.url = model.url;
+                this.useGeneratedCookie = model.useGeneratedCookie;
+                this.waitTimeInSecs = model.waitTimeInSecs;
+            } 
+
+            /**
+             * allow_failure.
+             */
+            public Builder allowFailure(Boolean allowFailure) {
+                this.allowFailure = allowFailure;
+                return this;
+            }
+
+            /**
+             * auto_extract_cookie.
+             */
+            public Builder autoExtractCookie(Boolean autoExtractCookie) {
+                this.autoExtractCookie = autoExtractCookie;
+                return this;
+            }
+
+            /**
+             * extracted_variables.
+             */
+            public Builder extractedVariables(StepsExtractedVariables extractedVariables) {
+                this.extractedVariables = extractedVariables;
+                return this;
+            }
+
+            /**
+             * is_critical.
+             */
+            public Builder isCritical(Boolean isCritical) {
+                this.isCritical = isCritical;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * option.
+             */
+            public Builder option(String option) {
+                this.option = option;
+                return this;
+            }
+
+            /**
+             * step_name.
+             */
+            public Builder stepName(String stepName) {
+                this.stepName = stepName;
+                return this;
+            }
+
+            /**
+             * step_type.
+             */
+            public Builder stepType(String stepType) {
+                this.stepType = stepType;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * use_generated_cookie.
+             */
+            public Builder useGeneratedCookie(Boolean useGeneratedCookie) {
+                this.useGeneratedCookie = useGeneratedCookie;
+                return this;
+            }
+
+            /**
+             * wait_time_in_secs.
+             */
+            public Builder waitTimeInSecs(Integer waitTimeInSecs) {
+                this.waitTimeInSecs = waitTimeInSecs;
+                return this;
+            }
+
+            public Steps build() {
+                return new Steps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class OptionJsonSteps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("steps")
+        private java.util.List<Steps> steps;
+
+        private OptionJsonSteps(Builder builder) {
+            this.steps = builder.steps;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionJsonSteps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return steps
+         */
+        public java.util.List<Steps> getSteps() {
+            return this.steps;
+        }
+
+        public static final class Builder {
+            private java.util.List<Steps> steps; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionJsonSteps model) {
+                this.steps = model.steps;
+            } 
+
+            /**
+             * steps.
+             */
+            public Builder steps(java.util.List<Steps> steps) {
+                this.steps = steps;
+                return this;
+            }
+
+            public OptionJsonSteps build() {
+                return new OptionJsonSteps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class TrafficHijackElementBlacklist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
-        private java.util.List < String > trafficHijackElementBlacklist;
+        private java.util.List<String> trafficHijackElementBlacklist;
 
         private TrafficHijackElementBlacklist(Builder builder) {
             this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
@@ -1565,17 +2961,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return trafficHijackElementBlacklist
          */
-        public java.util.List < String > getTrafficHijackElementBlacklist() {
+        public java.util.List<String> getTrafficHijackElementBlacklist() {
             return this.trafficHijackElementBlacklist;
         }
 
         public static final class Builder {
-            private java.util.List < String > trafficHijackElementBlacklist; 
+            private java.util.List<String> trafficHijackElementBlacklist; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficHijackElementBlacklist model) {
+                this.trafficHijackElementBlacklist = model.trafficHijackElementBlacklist;
+            } 
 
             /**
              * traffic_hijack_element_blacklist.
              */
-            public Builder trafficHijackElementBlacklist(java.util.List < String > trafficHijackElementBlacklist) {
+            public Builder trafficHijackElementBlacklist(java.util.List<String> trafficHijackElementBlacklist) {
                 this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
                 return this;
             }
@@ -1595,7 +2998,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
      */
     public static class TrafficHijackElementWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
-        private java.util.List < String > trafficHijackElementWhitelist;
+        private java.util.List<String> trafficHijackElementWhitelist;
 
         private TrafficHijackElementWhitelist(Builder builder) {
             this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
@@ -1612,17 +3015,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * @return trafficHijackElementWhitelist
          */
-        public java.util.List < String > getTrafficHijackElementWhitelist() {
+        public java.util.List<String> getTrafficHijackElementWhitelist() {
             return this.trafficHijackElementWhitelist;
         }
 
         public static final class Builder {
-            private java.util.List < String > trafficHijackElementWhitelist; 
+            private java.util.List<String> trafficHijackElementWhitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficHijackElementWhitelist model) {
+                this.trafficHijackElementWhitelist = model.trafficHijackElementWhitelist;
+            } 
 
             /**
              * traffic_hijack_element_whitelist.
              */
-            public Builder trafficHijackElementWhitelist(java.util.List < String > trafficHijackElementWhitelist) {
+            public Builder trafficHijackElementWhitelist(java.util.List<String> trafficHijackElementWhitelist) {
                 this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
                 return this;
             }
@@ -1647,8 +3057,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attempts")
         private Long attempts;
 
-        @com.aliyun.core.annotation.NameInMap("authentication")
-        private Integer authentication;
+        @com.aliyun.core.annotation.NameInMap("auth_info")
+        private AuthInfo authInfo;
 
         @com.aliyun.core.annotation.NameInMap("blocked_url_list")
         private BlockedUrlList blockedUrlList;
@@ -1667,6 +3077,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("browser_task_version")
         private String browserTaskVersion;
+
+        @com.aliyun.core.annotation.NameInMap("config_variables")
+        private OptionJsonConfigVariables configVariables;
 
         @com.aliyun.core.annotation.NameInMap("cookie")
         private String cookie;
@@ -1707,6 +3120,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("header")
         private String header;
 
+        @com.aliyun.core.annotation.NameInMap("hops")
+        private Integer hops;
+
         @com.aliyun.core.annotation.NameInMap("host_binding")
         private String hostBinding;
 
@@ -1715,6 +3131,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("http_method")
         private String httpMethod;
+
+        @com.aliyun.core.annotation.NameInMap("icmp_timeout_millis")
+        private Integer icmpTimeoutMillis;
 
         @com.aliyun.core.annotation.NameInMap("ip_network")
         private String ipNetwork;
@@ -1773,11 +3192,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scroll_end")
         private Boolean scrollEnd;
 
+        @com.aliyun.core.annotation.NameInMap("steps")
+        private OptionJsonSteps steps;
+
         @com.aliyun.core.annotation.NameInMap("strict_mode")
         private Boolean strictMode;
 
         @com.aliyun.core.annotation.NameInMap("time_out")
         private Long timeOut;
+
+        @com.aliyun.core.annotation.NameInMap("trace_region")
+        private String traceRegion;
+
+        @com.aliyun.core.annotation.NameInMap("trace_type")
+        private String traceType;
 
         @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
         private TrafficHijackElementBlacklist trafficHijackElementBlacklist;
@@ -1797,13 +3225,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private OptionJson(Builder builder) {
             this.assertions = builder.assertions;
             this.attempts = builder.attempts;
-            this.authentication = builder.authentication;
+            this.authInfo = builder.authInfo;
             this.blockedUrlList = builder.blockedUrlList;
             this.browserHeaders = builder.browserHeaders;
             this.browserHosts = builder.browserHosts;
             this.browserInfo = builder.browserInfo;
             this.browserInsecure = builder.browserInsecure;
             this.browserTaskVersion = builder.browserTaskVersion;
+            this.configVariables = builder.configVariables;
             this.cookie = builder.cookie;
             this.diagnosisMtr = builder.diagnosisMtr;
             this.diagnosisPing = builder.diagnosisPing;
@@ -1817,9 +3246,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.expectValue = builder.expectValue;
             this.failureRate = builder.failureRate;
             this.header = builder.header;
+            this.hops = builder.hops;
             this.hostBinding = builder.hostBinding;
             this.hostBindingType = builder.hostBindingType;
             this.httpMethod = builder.httpMethod;
+            this.icmpTimeoutMillis = builder.icmpTimeoutMillis;
             this.ipNetwork = builder.ipNetwork;
             this.isBase64Encode = builder.isBase64Encode;
             this.matchRule = builder.matchRule;
@@ -1839,8 +3270,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.retryDelay = builder.retryDelay;
             this.screenShot = builder.screenShot;
             this.scrollEnd = builder.scrollEnd;
+            this.steps = builder.steps;
             this.strictMode = builder.strictMode;
             this.timeOut = builder.timeOut;
+            this.traceRegion = builder.traceRegion;
+            this.traceType = builder.traceType;
             this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
             this.trafficHijackElementCount = builder.trafficHijackElementCount;
             this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
@@ -1871,10 +3305,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return authentication
+         * @return authInfo
          */
-        public Integer getAuthentication() {
-            return this.authentication;
+        public AuthInfo getAuthInfo() {
+            return this.authInfo;
         }
 
         /**
@@ -1917,6 +3351,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getBrowserTaskVersion() {
             return this.browserTaskVersion;
+        }
+
+        /**
+         * @return configVariables
+         */
+        public OptionJsonConfigVariables getConfigVariables() {
+            return this.configVariables;
         }
 
         /**
@@ -2011,6 +3452,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return hops
+         */
+        public Integer getHops() {
+            return this.hops;
+        }
+
+        /**
          * @return hostBinding
          */
         public String getHostBinding() {
@@ -2029,6 +3477,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        /**
+         * @return icmpTimeoutMillis
+         */
+        public Integer getIcmpTimeoutMillis() {
+            return this.icmpTimeoutMillis;
         }
 
         /**
@@ -2165,6 +3620,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return steps
+         */
+        public OptionJsonSteps getSteps() {
+            return this.steps;
+        }
+
+        /**
          * @return strictMode
          */
         public Boolean getStrictMode() {
@@ -2176,6 +3638,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public Long getTimeOut() {
             return this.timeOut;
+        }
+
+        /**
+         * @return traceRegion
+         */
+        public String getTraceRegion() {
+            return this.traceRegion;
+        }
+
+        /**
+         * @return traceType
+         */
+        public String getTraceType() {
+            return this.traceType;
         }
 
         /**
@@ -2216,13 +3692,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private OptionJsonAssertions assertions; 
             private Long attempts; 
-            private Integer authentication; 
+            private AuthInfo authInfo; 
             private BlockedUrlList blockedUrlList; 
             private BrowserHeaders browserHeaders; 
             private BrowserHosts browserHosts; 
             private OptionJsonBrowserInfo browserInfo; 
             private Boolean browserInsecure; 
             private String browserTaskVersion; 
+            private OptionJsonConfigVariables configVariables; 
             private String cookie; 
             private Boolean diagnosisMtr; 
             private Boolean diagnosisPing; 
@@ -2236,9 +3713,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String expectValue; 
             private Float failureRate; 
             private String header; 
+            private Integer hops; 
             private String hostBinding; 
             private Integer hostBindingType; 
             private String httpMethod; 
+            private Integer icmpTimeoutMillis; 
             private String ipNetwork; 
             private String isBase64Encode; 
             private Integer matchRule; 
@@ -2258,16 +3737,82 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private Integer retryDelay; 
             private Boolean screenShot; 
             private Boolean scrollEnd; 
+            private OptionJsonSteps steps; 
             private Boolean strictMode; 
             private Long timeOut; 
+            private String traceRegion; 
+            private String traceType; 
             private TrafficHijackElementBlacklist trafficHijackElementBlacklist; 
             private Integer trafficHijackElementCount; 
             private TrafficHijackElementWhitelist trafficHijackElementWhitelist; 
             private String username; 
             private Integer waitTimeAfterCompletion; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionJson model) {
+                this.assertions = model.assertions;
+                this.attempts = model.attempts;
+                this.authInfo = model.authInfo;
+                this.blockedUrlList = model.blockedUrlList;
+                this.browserHeaders = model.browserHeaders;
+                this.browserHosts = model.browserHosts;
+                this.browserInfo = model.browserInfo;
+                this.browserInsecure = model.browserInsecure;
+                this.browserTaskVersion = model.browserTaskVersion;
+                this.configVariables = model.configVariables;
+                this.cookie = model.cookie;
+                this.diagnosisMtr = model.diagnosisMtr;
+                this.diagnosisPing = model.diagnosisPing;
+                this.dnsHijackWhitelist = model.dnsHijackWhitelist;
+                this.dnsMatchRule = model.dnsMatchRule;
+                this.dnsServer = model.dnsServer;
+                this.dnsType = model.dnsType;
+                this.emptyMessage = model.emptyMessage;
+                this.expectExistString = model.expectExistString;
+                this.expectNonExistString = model.expectNonExistString;
+                this.expectValue = model.expectValue;
+                this.failureRate = model.failureRate;
+                this.header = model.header;
+                this.hops = model.hops;
+                this.hostBinding = model.hostBinding;
+                this.hostBindingType = model.hostBindingType;
+                this.httpMethod = model.httpMethod;
+                this.icmpTimeoutMillis = model.icmpTimeoutMillis;
+                this.ipNetwork = model.ipNetwork;
+                this.isBase64Encode = model.isBase64Encode;
+                this.matchRule = model.matchRule;
+                this.minTlsVersion = model.minTlsVersion;
+                this.password = model.password;
+                this.pingNum = model.pingNum;
+                this.pingPort = model.pingPort;
+                this.pingType = model.pingType;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.quicEnabled = model.quicEnabled;
+                this.quicTarget = model.quicTarget;
+                this.requestContent = model.requestContent;
+                this.requestFormat = model.requestFormat;
+                this.responseContent = model.responseContent;
+                this.responseFormat = model.responseFormat;
+                this.retryDelay = model.retryDelay;
+                this.screenShot = model.screenShot;
+                this.scrollEnd = model.scrollEnd;
+                this.steps = model.steps;
+                this.strictMode = model.strictMode;
+                this.timeOut = model.timeOut;
+                this.traceRegion = model.traceRegion;
+                this.traceType = model.traceType;
+                this.trafficHijackElementBlacklist = model.trafficHijackElementBlacklist;
+                this.trafficHijackElementCount = model.trafficHijackElementCount;
+                this.trafficHijackElementWhitelist = model.trafficHijackElementWhitelist;
+                this.username = model.username;
+                this.waitTimeAfterCompletion = model.waitTimeAfterCompletion;
+            } 
+
             /**
-             * assertions.
+             * <p>The assertions.</p>
              */
             public Builder assertions(OptionJsonAssertions assertions) {
                 this.assertions = assertions;
@@ -2286,22 +3831,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>0: The feature is disabled.</li>
-             * <li>1: The feature is enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * auth_info.
              */
-            public Builder authentication(Integer authentication) {
-                this.authentication = authentication;
+            public Builder authInfo(AuthInfo authInfo) {
+                this.authInfo = authInfo;
                 return this;
             }
 
             /**
-             * blocked_url_list.
+             * <p>The blocked URLs. Wildcards are supported in paths.</p>
              */
             public Builder blockedUrlList(BlockedUrlList blockedUrlList) {
                 this.blockedUrlList = blockedUrlList;
@@ -2309,7 +3847,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * browser_headers.
+             * <p>The custom headers. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</p>
              */
             public Builder browserHeaders(BrowserHeaders browserHeaders) {
                 this.browserHeaders = browserHeaders;
@@ -2317,7 +3855,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * browser_hosts.
+             * <p>The custom hosts. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</p>
              */
             public Builder browserHosts(BrowserHosts browserHosts) {
                 this.browserHosts = browserHosts;
@@ -2325,7 +3863,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * browser_info.
+             * <p>The browser information.</p>
              */
             public Builder browserInfo(OptionJsonBrowserInfo browserInfo) {
                 this.browserInfo = browserInfo;
@@ -2333,7 +3871,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * browser_insecure.
+             * <p>Indicates whether certificate errors are ignored. Valid values:</p>
+             * <ul>
+             * <li>false: Certificate errors are not ignored.</li>
+             * <li>true: Certificate errors are ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder browserInsecure(Boolean browserInsecure) {
                 this.browserInsecure = browserInsecure;
@@ -2341,10 +3886,25 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * browser_task_version.
+             * <p>The version of the browser test task. Valid values:</p>
+             * <ul>
+             * <li>1: browser test for a single page</li>
+             * <li>2: browser test for multiple pages</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder browserTaskVersion(String browserTaskVersion) {
                 this.browserTaskVersion = browserTaskVersion;
+                return this;
+            }
+
+            /**
+             * config_variables.
+             */
+            public Builder configVariables(OptionJsonConfigVariables configVariables) {
+                this.configVariables = configVariables;
                 return this;
             }
 
@@ -2360,7 +3920,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosis_mtr.
+             * <p>Indicates whether the automatic MTR diagnostics feature is enabled for a failed task. Valid values:</p>
+             * <ul>
+             * <li>false: The automatic MTR diagnostics feature is disabled for a failed task.</li>
+             * <li>true: The automatic MTR diagnostics feature is enabled for a failed task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder diagnosisMtr(Boolean diagnosisMtr) {
                 this.diagnosisMtr = diagnosisMtr;
@@ -2368,7 +3935,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosis_ping.
+             * <p>Indicates whether the automatic ping latency detection feature is enabled for a failed task. Valid values:</p>
+             * <ul>
+             * <li>false: The automatic ping latency detection feature is disabled for a failed task.</li>
+             * <li>true: The automatic ping latency detection feature is enabled for a failed task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder diagnosisPing(Boolean diagnosisPing) {
                 this.diagnosisPing = diagnosisPing;
@@ -2376,7 +3950,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * dns_hijack_whitelist.
+             * <p>The DNS hijack whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.taobao.com:www.taobao.com.danuoyi.tbcache.com">www.taobao.com:www.taobao.com.danuoyi.tbcache.com</a></p>
              */
             public Builder dnsHijackWhitelist(String dnsHijackWhitelist) {
                 this.dnsHijackWhitelist = dnsHijackWhitelist;
@@ -2433,7 +4010,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * empty_message.
+             * <p>Indicates whether the WebSocket task is allowed to return no response or return an empty response. Default value: false. Valid values: false and true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder emptyMessage(Boolean emptyMessage) {
                 this.emptyMessage = emptyMessage;
@@ -2441,7 +4021,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * expect_exist_string.
+             * <p>The string that is expected to exist on the page.</p>
              */
             public Builder expectExistString(ExpectExistString expectExistString) {
                 this.expectExistString = expectExistString;
@@ -2449,7 +4029,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * expect_non_exist_string.
+             * <p>The string that is not expected to exist on the page.</p>
              */
             public Builder expectNonExistString(ExpectNonExistString expectNonExistString) {
                 this.expectNonExistString = expectNonExistString;
@@ -2496,7 +4076,21 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * host_binding.
+             * <p>The number of hops to perform traceroute diagnostics if the PING task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder hops(Integer hops) {
+                this.hops = hops;
+                return this;
+            }
+
+            /**
+             * <p>The custom hosts for the HTTP test task. Format: ip1,ip2:address. You can specify values in multiple lines. Specify the A record or CNAME record that can be resolved by the domain name at the left of the colon. Separate multiple records with commas (,). Specify the domain name at the right of the colon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1:<a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder hostBinding(String hostBinding) {
                 this.hostBinding = hostBinding;
@@ -2504,7 +4098,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * host_binding_type.
+             * <p>The host binding type. Valid values: 0 and 1. 0 indicates random. 1 indicates polling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hostBindingType(Integer hostBindingType) {
                 this.hostBindingType = hostBindingType;
@@ -2528,6 +4125,17 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timeout period of a PING task that uses ICMP. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
+             */
+            public Builder icmpTimeoutMillis(Integer icmpTimeoutMillis) {
+                this.icmpTimeoutMillis = icmpTimeoutMillis;
+                return this;
+            }
+
+            /**
              * <p>ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.</p>
              * 
              * <strong>example:</strong>
@@ -2539,7 +4147,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * isBase64Encode.
+             * <p>Indicates whether to perform Base64 decoding and then store the password. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBase64Encode(String isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -2562,7 +4173,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * min_tls_version.
+             * <p>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tlsv1.2</p>
              */
             public Builder minTlsVersion(String minTlsVersion) {
                 this.minTlsVersion = minTlsVersion;
@@ -2592,7 +4206,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ping_port.
+             * <p>The port number for TCP pings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder pingPort(Integer pingPort) {
                 this.pingPort = pingPort;
@@ -2709,7 +4326,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * retry_delay.
+             * <p>The number of retries for failed detections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryDelay(Integer retryDelay) {
                 this.retryDelay = retryDelay;
@@ -2717,7 +4337,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否开启页面截图</p>
+             * <p>Indicates whether page screenshot is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2728,7 +4348,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * scroll_end.
+             * <p>Indicates whether to scroll to the bottom of the page after opening the page. This parameter is valid for a browser test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder scrollEnd(Boolean scrollEnd) {
                 this.scrollEnd = scrollEnd;
@@ -2736,7 +4359,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * strict_mode.
+             * steps.
+             */
+            public Builder steps(OptionJsonSteps steps) {
+                this.steps = steps;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether to allow the loading failures of some page elements. Valid values: false and true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder strictMode(Boolean strictMode) {
                 this.strictMode = strictMode;
@@ -2755,7 +4389,23 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * traffic_hijack_element_blacklist.
+             * trace_region.
+             */
+            public Builder traceRegion(String traceRegion) {
+                this.traceRegion = traceRegion;
+                return this;
+            }
+
+            /**
+             * trace_type.
+             */
+            public Builder traceType(String traceType) {
+                this.traceType = traceType;
+                return this;
+            }
+
+            /**
+             * <p>The traffic hijacking blacklist. When redirection occurs, if the URL of the resource loaded by the browser matches the expression in the blacklist, traffic hijacking is considered to have occurred.</p>
              */
             public Builder trafficHijackElementBlacklist(TrafficHijackElementBlacklist trafficHijackElementBlacklist) {
                 this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
@@ -2763,7 +4413,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * traffic_hijack_element_count.
+             * <p>When redirection occurs, if the browser loads more than the specified number of resources, traffic hijacking is considered to have occurred. If you set the value to 0, no validation is performed. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficHijackElementCount(Integer trafficHijackElementCount) {
                 this.trafficHijackElementCount = trafficHijackElementCount;
@@ -2771,7 +4424,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * traffic_hijack_element_whitelist.
+             * <p>The traffic hijacking whitelist. When redirection occurs, if the URL of the resource loaded by the browser does not match any expression in the whitelist, traffic hijacking is considered to have occurred.</p>
              */
             public Builder trafficHijackElementWhitelist(TrafficHijackElementWhitelist trafficHijackElementWhitelist) {
                 this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
@@ -2790,7 +4443,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * waitTime_after_completion.
+             * <p>The additional waiting time after a page is opened in a browser test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder waitTimeAfterCompletion(Integer waitTimeAfterCompletion) {
                 this.waitTimeAfterCompletion = waitTimeAfterCompletion;
@@ -2872,8 +4528,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcConfig model) {
+                this.region = model.region;
+                this.securityGroupId = model.securityGroupId;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
-             * <p>内网拨测任务的目标站点所在地域。</p>
+             * <p>The region of the website for synthetic monitoring.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -2884,7 +4550,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2892,7 +4561,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC used by the synthetic test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2900,7 +4572,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The ID of the vSwitch used by the synthetic test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -3066,6 +4741,23 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String taskType; 
             private VpcConfig vpcConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitors model) {
+                this.address = model.address;
+                this.agentGroup = model.agentGroup;
+                this.customSchedule = model.customSchedule;
+                this.interval = model.interval;
+                this.ispCities = model.ispCities;
+                this.optionJson = model.optionJson;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskState = model.taskState;
+                this.taskType = model.taskType;
+                this.vpcConfig = model.vpcConfig;
+            } 
+
             /**
              * <p>The URL that is monitored by the site monitoring task.</p>
              * 
@@ -3078,7 +4770,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentGroup.
+             * <p>The type of the detection point. Default value: PC. Valid values:</p>
+             * <ul>
+             * <li>PC</li>
+             * <li>MOBILE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PC</p>
              */
             public Builder agentGroup(String agentGroup) {
                 this.agentGroup = agentGroup;
@@ -3086,7 +4785,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSchedule.
+             * <p>The custom detection cycle. You can specify only a time range within a week (from Monday to Sunday).</p>
              */
             public Builder customSchedule(CustomSchedule customSchedule) {
                 this.customSchedule = customSchedule;
@@ -3169,7 +4868,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcConfig.
+             * <p>The VPC configurations of the synthetic test task.</p>
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;

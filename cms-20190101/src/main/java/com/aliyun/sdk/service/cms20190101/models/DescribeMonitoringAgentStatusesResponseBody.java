@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
 
     public static DescribeMonitoringAgentStatusesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         private NodeStatusList nodeStatusList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitoringAgentStatusesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.nodeStatusList = model.nodeStatusList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -278,6 +298,21 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private String osMonitorVersion; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeStatus model) {
+                this.agentInstallErrorCode = model.agentInstallErrorCode;
+                this.autoInstall = model.autoInstall;
+                this.instanceId = model.instanceId;
+                this.osMonitorConfig = model.osMonitorConfig;
+                this.osMonitorErrorCode = model.osMonitorErrorCode;
+                this.osMonitorErrorDetail = model.osMonitorErrorDetail;
+                this.osMonitorStatus = model.osMonitorStatus;
+                this.osMonitorVersion = model.osMonitorVersion;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error code returned when the CloudMonitor agent is installed. Valid values:</p>
              * <ul>
@@ -434,7 +469,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
      */
     public static class NodeStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeStatus")
-        private java.util.List < NodeStatus> nodeStatus;
+        private java.util.List<NodeStatus> nodeStatus;
 
         private NodeStatusList(Builder builder) {
             this.nodeStatus = builder.nodeStatus;
@@ -451,17 +486,24 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         /**
          * @return nodeStatus
          */
-        public java.util.List < NodeStatus> getNodeStatus() {
+        public java.util.List<NodeStatus> getNodeStatus() {
             return this.nodeStatus;
         }
 
         public static final class Builder {
-            private java.util.List < NodeStatus> nodeStatus; 
+            private java.util.List<NodeStatus> nodeStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeStatusList model) {
+                this.nodeStatus = model.nodeStatus;
+            } 
 
             /**
              * NodeStatus.
              */
-            public Builder nodeStatus(java.util.List < NodeStatus> nodeStatus) {
+            public Builder nodeStatus(java.util.List<NodeStatus> nodeStatus) {
                 this.nodeStatus = nodeStatus;
                 return this;
             }

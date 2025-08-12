@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     public static DescribeSiteMonitorListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         private SiteMonitors siteMonitors; 
         private String success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSiteMonitorListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.siteMonitors = model.siteMonitors;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -287,6 +310,16 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private String target; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Assertions model) {
+                this.operator = model.operator;
+                this.property = model.property;
+                this.target = model.target;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The comparison operator of the assertion. Valid values:</p>
              * <ul>
@@ -368,7 +401,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
      */
     public static class OptionsJsonAssertions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assertions")
-        private java.util.List < Assertions> assertions;
+        private java.util.List<Assertions> assertions;
 
         private OptionsJsonAssertions(Builder builder) {
             this.assertions = builder.assertions;
@@ -385,17 +418,24 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         /**
          * @return assertions
          */
-        public java.util.List < Assertions> getAssertions() {
+        public java.util.List<Assertions> getAssertions() {
             return this.assertions;
         }
 
         public static final class Builder {
-            private java.util.List < Assertions> assertions; 
+            private java.util.List<Assertions> assertions; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionsJsonAssertions model) {
+                this.assertions = model.assertions;
+            } 
 
             /**
              * assertions.
              */
-            public Builder assertions(java.util.List < Assertions> assertions) {
+            public Builder assertions(java.util.List<Assertions> assertions) {
                 this.assertions = assertions;
                 return this;
             }
@@ -786,6 +826,42 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private Long timeOut; 
             private Boolean unfollowRedirect; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionsJson model) {
+                this.acceptableResponseCode = model.acceptableResponseCode;
+                this.assertions = model.assertions;
+                this.attempts = model.attempts;
+                this.authentication = model.authentication;
+                this.certVerify = model.certVerify;
+                this.cookie = model.cookie;
+                this.diagnosisMtr = model.diagnosisMtr;
+                this.diagnosisPing = model.diagnosisPing;
+                this.dnsMatchRule = model.dnsMatchRule;
+                this.dnsServer = model.dnsServer;
+                this.dnsType = model.dnsType;
+                this.enableOperatorDns = model.enableOperatorDns;
+                this.failureRate = model.failureRate;
+                this.header = model.header;
+                this.httpMethod = model.httpMethod;
+                this.isBase64Encode = model.isBase64Encode;
+                this.matchRule = model.matchRule;
+                this.password = model.password;
+                this.pingNum = model.pingNum;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.proxyProtocol = model.proxyProtocol;
+                this.requestContent = model.requestContent;
+                this.requestFormat = model.requestFormat;
+                this.responseContent = model.responseContent;
+                this.responseFormat = model.responseFormat;
+                this.retryDelay = model.retryDelay;
+                this.timeOut = model.timeOut;
+                this.unfollowRedirect = model.unfollowRedirect;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The acceptable status code.</p>
@@ -1339,6 +1415,22 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private String taskType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitor model) {
+                this.address = model.address;
+                this.agentGroup = model.agentGroup;
+                this.createTime = model.createTime;
+                this.interval = model.interval;
+                this.optionsJson = model.optionsJson;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskState = model.taskState;
+                this.taskType = model.taskType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The URL or IP address that is monitored by the site monitoring task.</p>
              * 
@@ -1466,7 +1558,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
      */
     public static class SiteMonitors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SiteMonitor")
-        private java.util.List < SiteMonitor> siteMonitor;
+        private java.util.List<SiteMonitor> siteMonitor;
 
         private SiteMonitors(Builder builder) {
             this.siteMonitor = builder.siteMonitor;
@@ -1483,17 +1575,24 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         /**
          * @return siteMonitor
          */
-        public java.util.List < SiteMonitor> getSiteMonitor() {
+        public java.util.List<SiteMonitor> getSiteMonitor() {
             return this.siteMonitor;
         }
 
         public static final class Builder {
-            private java.util.List < SiteMonitor> siteMonitor; 
+            private java.util.List<SiteMonitor> siteMonitor; 
+
+            private Builder() {
+            } 
+
+            private Builder(SiteMonitors model) {
+                this.siteMonitor = model.siteMonitor;
+            } 
 
             /**
              * SiteMonitor.
              */
-            public Builder siteMonitor(java.util.List < SiteMonitor> siteMonitor) {
+            public Builder siteMonitor(java.util.List<SiteMonitor> siteMonitor) {
                 this.siteMonitor = siteMonitor;
                 return this;
             }

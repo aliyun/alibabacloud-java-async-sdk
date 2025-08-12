@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
 
     public static DescribeProjectMetaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         private Resources resources; 
         private Boolean success; 
         private String total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectMetaResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -271,6 +294,15 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
             private String labels; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.description = model.description;
+                this.labels = model.labels;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -326,7 +358,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -343,17 +375,24 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

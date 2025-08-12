@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Subscription extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < Conditions> conditions;
+    private java.util.List<Conditions> conditions;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -64,10 +69,14 @@ public class Subscription extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -135,7 +144,7 @@ public class Subscription extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private String createTime; 
         private String description; 
         private Boolean enabled; 
@@ -146,10 +155,26 @@ public class Subscription extends TeaModel {
         private String updateTime; 
         private String uuid; 
 
+        private Builder() {
+        } 
+
+        private Builder(Subscription model) {
+            this.conditions = model.conditions;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.enabled = model.enabled;
+            this.name = model.name;
+            this.product = model.product;
+            this.relation = model.relation;
+            this.strategyUuid = model.strategyUuid;
+            this.updateTime = model.updateTime;
+            this.uuid = model.uuid;
+        } 
+
         /**
          * Conditions.
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -287,6 +312,15 @@ public class Subscription extends TeaModel {
             private String field; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * Field.
