@@ -561,15 +561,23 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpList")
         private java.util.List<String> ipList;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6List")
+        private java.util.List<String> ipv6List;
+
         @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         private GatewayEntry(Builder builder) {
             this.entryDomain = builder.entryDomain;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
             this.ipList = builder.ipList;
+            this.ipv6List = builder.ipv6List;
             this.netType = builder.netType;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -609,10 +617,24 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6List
+         */
+        public java.util.List<String> getIpv6List() {
+            return this.ipv6List;
+        }
+
+        /**
          * @return netType
          */
         public String getNetType() {
             return this.netType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         public static final class Builder {
@@ -620,7 +642,9 @@ public class ListGatewayResponseBody extends TeaModel {
             private java.util.List<Integer> httpPorts; 
             private java.util.List<Integer> httpsPorts; 
             private java.util.List<String> ipList; 
+            private java.util.List<String> ipv6List; 
             private String netType; 
+            private String status; 
 
             private Builder() {
             } 
@@ -630,7 +654,9 @@ public class ListGatewayResponseBody extends TeaModel {
                 this.httpPorts = model.httpPorts;
                 this.httpsPorts = model.httpsPorts;
                 this.ipList = model.ipList;
+                this.ipv6List = model.ipv6List;
                 this.netType = model.netType;
+                this.status = model.status;
             } 
 
             /**
@@ -666,10 +692,26 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
+             * Ipv6List.
+             */
+            public Builder ipv6List(java.util.List<String> ipv6List) {
+                this.ipv6List = ipv6List;
+                return this;
+            }
+
+            /**
              * NetType.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
