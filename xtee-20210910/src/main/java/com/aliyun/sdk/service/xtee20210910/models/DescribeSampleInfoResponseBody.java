@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSampleInfoResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSampleInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSampleInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSampleInfoResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -156,8 +183,23 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             private String updateTime; 
             private Integer version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.id = model.id;
+                this.sampleTags = model.sampleTags;
+                this.sampleType = model.sampleType;
+                this.sampleValue = model.sampleValue;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
+
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3144</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -165,7 +207,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * sampleTags.
+             * <p>Sample tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>em0102</p>
              */
             public Builder sampleTags(String sampleTags) {
                 this.sampleTags = sampleTags;
@@ -173,7 +218,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * sampleType.
+             * <p>Sample type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHONE</p>
              */
             public Builder sampleType(String sampleType) {
                 this.sampleType = sampleType;
@@ -181,7 +229,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * sampleValue.
+             * <p>Sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17700000000</p>
              */
             public Builder sampleValue(String sampleValue) {
                 this.sampleValue = sampleValue;
@@ -189,7 +240,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753804800000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -197,7 +251,10 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

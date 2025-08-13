@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSampleBatchRequest} extends {@link RequestModel}
  *
  * <p>UpdateSampleBatchRequest</p>
@@ -48,7 +54,7 @@ public class UpdateSampleBatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,14 @@ public class UpdateSampleBatchRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +131,10 @@ public class UpdateSampleBatchRequest extends Request {
         }
 
         /**
-         * ids.
+         * <p>Batch operation IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324,343</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("ids", ids);
@@ -127,7 +143,10 @@ public class UpdateSampleBatchRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -136,7 +155,10 @@ public class UpdateSampleBatchRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Tags (comma-separated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm0102,rm0103</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -145,7 +167,10 @@ public class UpdateSampleBatchRequest extends Request {
         }
 
         /**
-         * versions.
+         * <p>Version number (latest).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,1</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("versions", versions);

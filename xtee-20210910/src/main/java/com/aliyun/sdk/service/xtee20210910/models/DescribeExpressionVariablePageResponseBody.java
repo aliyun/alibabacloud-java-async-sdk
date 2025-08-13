@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressionVariablePageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressionVariablePageResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
 
     public static DescribeExpressionVariablePageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressionVariablePageResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressionVariablePageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressionVariablePageResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -260,8 +303,25 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             private String title; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.description = model.description;
+                this.eventName = model.eventName;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.outputs = model.outputs;
+                this.status = model.status;
+                this.title = model.title;
+                this.version = model.version;
+            } 
+
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>变量描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -269,7 +329,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -277,7 +340,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -285,7 +351,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key of custom variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2793</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -293,7 +362,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>Variable return type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -301,7 +373,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +384,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>获取手机号前7位自定义变量</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -317,7 +395,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;

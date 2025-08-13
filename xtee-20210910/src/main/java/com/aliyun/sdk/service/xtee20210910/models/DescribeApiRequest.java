@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiRequest</p>
@@ -51,7 +57,7 @@ public class DescribeApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,14 @@ public class DescribeApiRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -121,7 +134,11 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * apiId.
+         * <p>API unique ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("apiId", apiId);
@@ -130,7 +147,11 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * apiRegionId.
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou、cn-shanghai</p>
          */
         public Builder apiRegionId(String apiRegionId) {
             this.putQueryParameter("apiRegionId", apiRegionId);
@@ -139,7 +160,11 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * apiType.
+         * <p>API type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF</p>
          */
         public Builder apiType(String apiType) {
             this.putQueryParameter("apiType", apiType);
@@ -148,7 +173,10 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssTokenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssTokenResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
 
     public static DescribeOssTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         private String signature; 
         private String stsToken; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeOssTokenResponseBody model) {
+            this.accessId = model.accessId;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.stsToken = model.stsToken;
+        } 
+
         /**
-         * AccessId.
+         * <p>AccessKeyId for OSS file upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tJWSnmmTpJGN6sJCNG3</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -117,7 +143,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>Host address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kf.sunwoosoft.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -125,7 +154,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The Key required for file upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/de/namelist/e924/ufzgsedX9bd3a7</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -133,7 +165,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>Permission policy for ossbucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -141,7 +176,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +187,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>OSS signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n29by5MWBmAjcweVoPEY/OHktog=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -157,7 +198,10 @@ public class DescribeOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * StsToken.
+         * <p>Temporary identity credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tT44bMQxxxxxxxxxxxxxxx</p>
          */
         public Builder stsToken(String stsToken) {
             this.stsToken = stsToken;

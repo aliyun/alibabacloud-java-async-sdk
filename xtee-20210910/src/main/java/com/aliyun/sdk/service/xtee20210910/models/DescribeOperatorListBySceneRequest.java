@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOperatorListBySceneRequest} extends {@link RequestModel}
  *
  * <p>DescribeOperatorListBySceneRequest</p>
@@ -38,7 +44,7 @@ public class DescribeOperatorListBySceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,14 @@ public class DescribeOperatorListBySceneRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -90,7 +103,10 @@ public class DescribeOperatorListBySceneRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -99,7 +115,10 @@ public class DescribeOperatorListBySceneRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Scene type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VELOCITY</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);

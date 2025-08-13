@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFieldRequest} extends {@link RequestModel}
  *
  * <p>ModifyFieldRequest</p>
@@ -64,7 +70,7 @@ public class ModifyFieldRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +158,14 @@ public class ModifyFieldRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +174,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * classify.
+         * <p>Field classification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REQUEST_PARAM</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("classify", classify);
@@ -170,7 +186,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -179,7 +198,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * enumData.
+         * <p>Enum type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;ENABLE&quot;,&quot;value&quot;:&quot;禁用&quot;}]</p>
          */
         public Builder enumData(String enumData) {
             this.putQueryParameter("enumData", enumData);
@@ -188,7 +210,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>376773</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -197,7 +222,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -206,7 +234,11 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -215,7 +247,10 @@ public class ModifyFieldRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSafStartStepsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSafStartStepsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeSafStartStepsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSafStartStepsResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSafStartStepsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSafStartStepsResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -120,8 +147,20 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.content = model.content;
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
-             * content.
+             * <p>Step content</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://help.aliyun.com/document_detail/177689.html">https://help.aliyun.com/document_detail/177689.html</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -129,7 +168,10 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Step title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ios</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -137,7 +179,10 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder type(String type) {
                 this.type = type;

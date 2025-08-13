@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSampleDataRequest} extends {@link RequestModel}
  *
  * <p>CreateSampleDataRequest</p>
@@ -68,7 +74,7 @@ public class CreateSampleDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class CreateSampleDataRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -183,7 +199,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * encryptType.
+         * <p>Encryption type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("encryptType", encryptType);
@@ -192,7 +211,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册样本</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -201,7 +223,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -210,7 +235,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * riskValue.
+         * <p>Specified risk value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>black</p>
          */
         public Builder riskValue(String riskValue) {
             this.putQueryParameter("riskValue", riskValue);
@@ -219,7 +247,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Scene</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHONE</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);
@@ -228,7 +259,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * storePath.
+         * <p>Storage path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/de/sample/3dc2spspHKq4G3YI9d08</p>
          */
         public Builder storePath(String storePath) {
             this.putQueryParameter("storePath", storePath);
@@ -237,7 +271,10 @@ public class CreateSampleDataRequest extends Request {
         }
 
         /**
-         * storeType.
+         * <p>Storage type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storeType(String storeType) {
             this.putQueryParameter("storeType", storeType);

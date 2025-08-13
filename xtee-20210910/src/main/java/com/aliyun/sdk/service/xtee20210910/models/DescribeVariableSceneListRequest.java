@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableSceneListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVariableSceneListRequest</p>
@@ -60,7 +66,7 @@ public class DescribeVariableSceneListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +145,14 @@ public class DescribeVariableSceneListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +161,11 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * bizType.
+         * <p>Business type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>variable_scene</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("bizType", bizType);
@@ -157,7 +174,10 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * configKey.
+         * <p>Configuration key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_detection</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("configKey", configKey);
@@ -166,7 +186,10 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -175,7 +198,10 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -184,7 +210,11 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * paging.
+         * <p>Paging flag, default is true.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paging(Boolean paging) {
             this.putQueryParameter("paging", paging);
@@ -193,7 +223,10 @@ public class DescribeVariableSceneListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

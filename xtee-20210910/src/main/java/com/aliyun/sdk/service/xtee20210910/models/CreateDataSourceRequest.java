@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateDataSourceRequest</p>
@@ -57,7 +63,7 @@ public class CreateDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,14 @@ public class CreateDataSourceRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +149,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据源描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -145,7 +161,11 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Data source name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDispatch</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -154,7 +174,11 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * ossKey.
+         * <p>OSS file key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss上传key</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("ossKey", ossKey);
@@ -163,7 +187,11 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -172,7 +200,11 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Data source type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

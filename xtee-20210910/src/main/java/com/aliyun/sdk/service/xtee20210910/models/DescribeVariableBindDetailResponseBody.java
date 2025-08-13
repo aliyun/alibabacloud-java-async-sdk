@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableBindDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVariableBindDetailResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeVariableBindDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVariableBindDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableBindDetailResponseBody</p>
+     */
     public static class Params extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventFieldName")
         private String eventFieldName;
@@ -120,8 +147,20 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             private Boolean required; 
             private String variableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.eventFieldName = model.eventFieldName;
+                this.required = model.required;
+                this.variableName = model.variableName;
+            } 
+
             /**
-             * eventFieldName.
+             * <p>Event field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder eventFieldName(String eventFieldName) {
                 this.eventFieldName = eventFieldName;
@@ -129,7 +168,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * required.
+             * <p>Whether it is required, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -137,7 +179,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * variableName.
+             * <p>Bound variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder variableName(String variableName) {
                 this.variableName = variableName;
@@ -151,6 +196,12 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVariableBindDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableBindDetailResponseBody</p>
+     */
     public static class RelationRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -189,8 +240,19 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationRules model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * key.
+             * <p>Policy rule ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104566</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +260,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,6 +277,12 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVariableBindDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableBindDetailResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowModify")
         private Boolean allowModify;
@@ -232,10 +303,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("params")
-        private java.util.List < Params> params;
+        private java.util.List<Params> params;
 
         @com.aliyun.core.annotation.NameInMap("relationRules")
-        private java.util.List < RelationRules> relationRules;
+        private java.util.List<RelationRules> relationRules;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -305,14 +376,14 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.List < Params> getParams() {
+        public java.util.List<Params> getParams() {
             return this.params;
         }
 
         /**
          * @return relationRules
          */
-        public java.util.List < RelationRules> getRelationRules() {
+        public java.util.List<RelationRules> getRelationRules() {
             return this.relationRules;
         }
 
@@ -330,12 +401,30 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             private String description; 
             private String eventCode; 
             private Long id; 
-            private java.util.List < Params> params; 
-            private java.util.List < RelationRules> relationRules; 
+            private java.util.List<Params> params; 
+            private java.util.List<RelationRules> relationRules; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.allowModify = model.allowModify;
+                this.defineId = model.defineId;
+                this.defineTitle = model.defineTitle;
+                this.description = model.description;
+                this.eventCode = model.eventCode;
+                this.id = model.id;
+                this.params = model.params;
+                this.relationRules = model.relationRules;
+                this.title = model.title;
+            } 
+
             /**
-             * allowModify.
+             * <p>Whether modification is allowed, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowModify(Boolean allowModify) {
                 this.allowModify = allowModify;
@@ -343,7 +432,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * defineId.
+             * <p>Variable definition ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder defineId(Long defineId) {
                 this.defineId = defineId;
@@ -351,7 +443,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * defineTitle.
+             * <p>Variable definition title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP所在地_城市Code</p>
              */
             public Builder defineTitle(String defineTitle) {
                 this.defineTitle = defineTitle;
@@ -359,7 +454,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Variable description information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -367,7 +465,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -375,7 +476,10 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Variable ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -383,23 +487,26 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * <p>Bound parameters.</p>
              */
-            public Builder params(java.util.List < Params> params) {
+            public Builder params(java.util.List<Params> params) {
                 this.params = params;
                 return this;
             }
 
             /**
-             * relationRules.
+             * <p>List of associated policies</p>
              */
-            public Builder relationRules(java.util.List < RelationRules> relationRules) {
+            public Builder relationRules(java.util.List<RelationRules> relationRules) {
                 this.relationRules = relationRules;
                 return this;
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>变量title</p>
              */
             public Builder title(String title) {
                 this.title = title;

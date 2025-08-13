@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScoreSectionNumLineChartRequest} extends {@link RequestModel}
  *
  * <p>DescribeScoreSectionNumLineChartRequest</p>
@@ -60,7 +66,7 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +145,14 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +161,11 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * beginTime.
+         * <p>Start timestamp, in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751249559000</p>
          */
         public Builder beginTime(String beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -157,7 +174,10 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * byPassEventCodes.
+         * <p>Bypass event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_amnhke2482</p>
          */
         public Builder byPassEventCodes(String byPassEventCodes) {
             this.putQueryParameter("byPassEventCodes", byPassEventCodes);
@@ -166,7 +186,11 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>End timestamp, in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751249559000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -175,7 +199,10 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * mainEventCodes.
+         * <p>Main event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_avcqzc3714</p>
          */
         public Builder mainEventCodes(String mainEventCodes) {
             this.putQueryParameter("mainEventCodes", mainEventCodes);
@@ -184,7 +211,10 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -193,7 +223,10 @@ public class DescribeScoreSectionNumLineChartRequest extends Request {
         }
 
         /**
-         * shuntEventCodes.
+         * <p>Diversion event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_amnhke2488</p>
          */
         public Builder shuntEventCodes(String shuntEventCodes) {
             this.putQueryParameter("shuntEventCodes", shuntEventCodes);

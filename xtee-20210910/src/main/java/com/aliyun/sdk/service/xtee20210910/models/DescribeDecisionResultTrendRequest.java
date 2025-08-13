@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDecisionResultTrendRequest} extends {@link RequestModel}
  *
  * <p>DescribeDecisionResultTrendRequest</p>
@@ -48,7 +54,7 @@ public class DescribeDecisionResultTrendRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,14 @@ public class DescribeDecisionResultTrendRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +131,10 @@ public class DescribeDecisionResultTrendRequest extends Request {
         }
 
         /**
-         * beginTime.
+         * <p>Start timestamp, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1737101348000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -127,7 +143,10 @@ public class DescribeDecisionResultTrendRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747101348000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -136,7 +155,10 @@ public class DescribeDecisionResultTrendRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahqhsw7665,de_agbzfi5134</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -145,7 +167,10 @@ public class DescribeDecisionResultTrendRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

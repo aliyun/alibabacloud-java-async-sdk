@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateRuleRequest</p>
@@ -40,6 +46,10 @@ public class UpdateRuleRequest extends Request {
     private String ruleActions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ruleBody")
+    private String ruleBody;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ruleExpressions")
     private String ruleExpressions;
 
@@ -56,6 +66,10 @@ public class UpdateRuleRequest extends Request {
     private String ruleStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ruleType")
+    private String ruleType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ruleVersionId")
     private Long ruleVersionId;
 
@@ -68,10 +82,12 @@ public class UpdateRuleRequest extends Request {
         this.memo = builder.memo;
         this.regId = builder.regId;
         this.ruleActions = builder.ruleActions;
+        this.ruleBody = builder.ruleBody;
         this.ruleExpressions = builder.ruleExpressions;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.ruleStatus = builder.ruleStatus;
+        this.ruleType = builder.ruleType;
         this.ruleVersionId = builder.ruleVersionId;
     }
 
@@ -83,7 +99,7 @@ public class UpdateRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,6 +154,13 @@ public class UpdateRuleRequest extends Request {
     }
 
     /**
+     * @return ruleBody
+     */
+    public String getRuleBody() {
+        return this.ruleBody;
+    }
+
+    /**
      * @return ruleExpressions
      */
     public String getRuleExpressions() {
@@ -166,6 +189,13 @@ public class UpdateRuleRequest extends Request {
     }
 
     /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
+    }
+
+    /**
      * @return ruleVersionId
      */
     public Long getRuleVersionId() {
@@ -180,10 +210,12 @@ public class UpdateRuleRequest extends Request {
         private String memo; 
         private String regId; 
         private String ruleActions; 
+        private String ruleBody; 
         private String ruleExpressions; 
         private String ruleId; 
         private String ruleName; 
         private String ruleStatus; 
+        private String ruleType; 
         private Long ruleVersionId; 
 
         private Builder() {
@@ -199,15 +231,24 @@ public class UpdateRuleRequest extends Request {
             this.memo = request.memo;
             this.regId = request.regId;
             this.ruleActions = request.ruleActions;
+            this.ruleBody = request.ruleBody;
             this.ruleExpressions = request.ruleExpressions;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.ruleStatus = request.ruleStatus;
+            this.ruleType = request.ruleType;
             this.ruleVersionId = request.ruleVersionId;
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -216,7 +257,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Primary key ID of the policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6843</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -225,7 +269,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_agdxgz0246</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -234,7 +281,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * logicExpression.
+         * <p>Execution logic</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1&amp;2</p>
          */
         public Builder logicExpression(String logicExpression) {
             this.putQueryParameter("logicExpression", logicExpression);
@@ -243,7 +293,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * memo.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("memo", memo);
@@ -252,7 +305,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -261,7 +317,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleActions.
+         * <p>Output action</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;inputs&quot;:[&quot;rn0301&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]</p>
          */
         public Builder ruleActions(String ruleActions) {
             this.putQueryParameter("ruleActions", ruleActions);
@@ -270,7 +329,163 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleExpressions.
+         * <p>DSL policy expression</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;elseIfStatement&quot;: [
+         *             {
+         *                 &quot;condition&quot;: {
+         *                     &quot;currentId&quot;: 0,
+         *                     &quot;deepCount&quot;: 1,
+         *                     &quot;list&quot;: [
+         *                         {
+         *                             &quot;currentId&quot;: 0,
+         *                             &quot;deepCount&quot;: 1,
+         *                             &quot;left&quot;: {
+         *                                 &quot;code&quot;: &quot;getLbsRegion(longitude, latitude)?.prov&quot;,
+         *                                 &quot;description&quot;: &quot;根据经纬度得到省份信息，比如经度：111.878062，纬度：22.585409，则经过运算，输出”广东省“&quot;,
+         *                                 &quot;displayType&quot;: &quot;SELF_BIND&quot;,
+         *                                 &quot;fieldType&quot;: &quot;STRING&quot;,
+         *                                 &quot;functionCode&quot;: &quot;&quot;,
+         *                                 &quot;functionName&quot;: &quot;&quot;,
+         *                                 &quot;hasRightVariable&quot;: true,
+         *                                 &quot;name&quot;: &quot;sl_S02sHLFT7818&quot;,
+         *                                 &quot;outputThreshold&quot;: {</p>
+         * <pre><code>                            },
+         *                             &quot;sourceType&quot;: &quot;SAF&quot;,
+         *                             &quot;title&quot;: &quot;经纬度自定义系统变量&quot;,
+         *                             &quot;type&quot;: &quot;SELF_BIND&quot;
+         *                         },
+         *                         &quot;operatorCode&quot;: &quot;equals&quot;,
+         *                         &quot;operatorName&quot;: &quot;等于&quot;,
+         *                         &quot;parentId&quot;: 0,
+         *                         &quot;right&quot;: {
+         *                             &quot;name&quot;: &quot;v&quot;,
+         *                             &quot;rightVariableType&quot;: &quot;constant&quot;
+         *                         },
+         *                         &quot;sequence&quot;: 2
+         *                     },
+         *                     {
+         *                         &quot;currentId&quot;: 0,
+         *                         &quot;deepCount&quot;: 1,
+         *                         &quot;list&quot;: [
+         *                             {
+         *                                 &quot;currentId&quot;: 0,
+         *                                 &quot;deepCount&quot;: 1,
+         *                                 &quot;left&quot;: {
+         *                                     &quot;code&quot;: &quot;deReadVelocity(userId,&quot;hK1DMAp1d97&quot;,1,&quot;H&quot;,0,true,&quot;COUNT&quot;)&quot;,
+         *                                     &quot;description&quot;: &quot;测试系统变量累计&quot;,
+         *                                     &quot;displayType&quot;: &quot;SELF_BIND&quot;,
+         *                                     &quot;fieldType&quot;: &quot;DOUBLE&quot;,
+         *                                     &quot;functionCode&quot;: &quot;&quot;,
+         *                                     &quot;functionName&quot;: &quot;&quot;,
+         *                                     &quot;hasRightVariable&quot;: true,
+         *                                     &quot;name&quot;: &quot;hK1DMAp1d97&quot;,
+         *                                     &quot;outputThreshold&quot;: {
+         * 
+         *                                     },
+         *                                     &quot;sourceType&quot;: &quot;SAF_SELF&quot;,
+         *                                     &quot;title&quot;: &quot;测试系统变量累计&quot;,
+         *                                     &quot;type&quot;: &quot;SELF_BIND&quot;
+         *                                 },
+         *                                 &quot;operatorCode&quot;: &quot;equals&quot;,
+         *                                 &quot;operatorName&quot;: &quot;等于&quot;,
+         *                                 &quot;parentId&quot;: 0,
+         *                                 &quot;right&quot;: {
+         *                                     &quot;name&quot;: &quot;a&quot;,
+         *                                     &quot;rightVariableType&quot;: &quot;constant&quot;
+         *                                 },
+         *                                 &quot;sequence&quot;: 3
+         *                             }
+         *                         ],
+         *                         &quot;parentId&quot;: 0,
+         *                         &quot;relationship&quot;: &quot;and&quot;
+         *                     }
+         *                 ],
+         *                 &quot;parentId&quot;: 0,
+         *                 &quot;relationship&quot;: &quot;and&quot;
+         *             },
+         *             &quot;then&quot;: [
+         *                 {
+         *                     &quot;inputs&quot;: [
+         *                         &quot;123&quot;
+         *                     ],
+         *                     &quot;name&quot;: &quot;__addDeScore__&quot;,
+         *                     &quot;actionType&quot;: &quot;SCORE&quot;,
+         *                     &quot;outputType&quot;: &quot;const&quot;,
+         *                     &quot;inputTitle&quot;: &quot;123&quot;
+         *                 }
+         *             ]
+         *         }
+         *     ],
+         *     &quot;elseStatement&quot;: {
+         * 
+         *     },
+         *     &quot;ifStatement&quot;: {
+         *         &quot;condition&quot;: {
+         *             &quot;currentId&quot;: 0,
+         *             &quot;deepCount&quot;: 1,
+         *             &quot;list&quot;: [
+         *                 {
+         *                     &quot;currentId&quot;: 0,
+         *                     &quot;deepCount&quot;: 1,
+         *                     &quot;left&quot;: {
+         *                         &quot;code&quot;: &quot;deFunctionProcess(ip,&quot;isIp&quot;)&quot;,
+         *                         &quot;description&quot;: &quot;判断是否符合IPv4标准&quot;,
+         *                         &quot;displayType&quot;: &quot;SYSTEM_BIND&quot;,
+         *                         &quot;fieldType&quot;: &quot;BOOLEAN&quot;,
+         *                         &quot;functionCode&quot;: &quot;&quot;,
+         *                         &quot;functionName&quot;: &quot;&quot;,
+         *                         &quot;hasRightVariable&quot;: true,
+         *                         &quot;name&quot;: &quot;__isIpAddressV4__&quot;,
+         *                         &quot;outputThreshold&quot;: {
+         * 
+         *                         },
+         *                         &quot;sourceType&quot;: &quot;SAF&quot;,
+         *                         &quot;title&quot;: &quot;IP是否符合IPV4格式&quot;,
+         *                         &quot;type&quot;: &quot;SYSTEM_BIND&quot;
+         *                     },
+         *                     &quot;operatorCode&quot;: &quot;equals&quot;,
+         *                     &quot;operatorName&quot;: &quot;等于&quot;,
+         *                     &quot;parentId&quot;: 0,
+         *                     &quot;right&quot;: {
+         *                         &quot;name&quot;: &quot;c
+         * </code></pre>
+         * <p>d
+         * s&quot;,
+         *                             &quot;rightVariableType&quot;: &quot;constant&quot;
+         *                         },
+         *                         &quot;sequence&quot;: 1
+         *                     }
+         *                 ],
+         *                 &quot;parentId&quot;: 0,
+         *                 &quot;relationship&quot;: &quot;and&quot;
+         *             },
+         *             &quot;then&quot;: [
+         *                 {
+         *                     &quot;inputs&quot;: [
+         *                         &quot;22&quot;
+         *                     ],
+         *                     &quot;name&quot;: &quot;<strong>addDeTags</strong>&quot;,
+         *                     &quot;actionType&quot;: &quot;TAG&quot;,
+         *                     &quot;outputType&quot;: &quot;const&quot;
+         *                 }
+         *             ]
+         *         }
+         *     }</p>
+         */
+        public Builder ruleBody(String ruleBody) {
+            this.putQueryParameter("ruleBody", ruleBody);
+            this.ruleBody = ruleBody;
+            return this;
+        }
+
+        /**
+         * <p>Policy expression</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;expressionName&quot;:&quot;手机号MD5命中人脸测试名单&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;mobileMd5&quot;},&quot;operatorCode&quot;:&quot;deInNameList&quot;,&quot;operatorName&quot;:&quot;在名单中&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;nl_5tolf69W138c&quot;}}]</p>
          */
         public Builder ruleExpressions(String ruleExpressions) {
             this.putQueryParameter("ruleExpressions", ruleExpressions);
@@ -279,7 +494,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102224</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("ruleId", ruleId);
@@ -288,7 +506,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleName.
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分析中心事件测试_策略01</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("ruleName", ruleName);
@@ -297,7 +518,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleStatus.
+         * <p>Policy status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("ruleStatus", ruleStatus);
@@ -306,7 +530,22 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ruleVersionId.
+         * <p>Policy type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
+        public Builder ruleType(String ruleType) {
+            this.putQueryParameter("ruleType", ruleType);
+            this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * <p>Primary key ID of the policy version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11519</p>
          */
         public Builder ruleVersionId(Long ruleVersionId) {
             this.putQueryParameter("ruleVersionId", ruleVersionId);

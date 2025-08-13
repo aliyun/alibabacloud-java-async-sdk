@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventLogPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventLogPageResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
 
     public static DescribeEventLogPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,9 +102,21 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventLogPageResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * RequestId.
@@ -123,7 +145,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         /**
          * resultObject.
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -150,6 +172,12 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventLogPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventLogPageResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -296,6 +324,23 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             private String timestamp; 
             private String umid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.accountId = model.accountId;
+                this.email = model.email;
+                this.ip = model.ip;
+                this.mobile = model.mobile;
+                this.nickName = model.nickName;
+                this.requestId = model.requestId;
+                this.score = model.score;
+                this.service = model.service;
+                this.tags = model.tags;
+                this.timestamp = model.timestamp;
+                this.umid = model.umid;
+            } 
+
             /**
              * accountId.
              */
@@ -313,7 +358,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * ip.
+             * <p>ip。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.200.5.100</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

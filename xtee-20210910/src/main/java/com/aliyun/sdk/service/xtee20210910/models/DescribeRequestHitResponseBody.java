@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRequestHitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRequestHitResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRequestHitResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeRequestHitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRequestHitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRequestHitResponseBody</p>
+     */
     public static class RuleHitRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost")
         private Integer cost;
@@ -180,8 +207,25 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             private String ruleSnapshotId; 
             private String ruleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleHitRecords model) {
+                this.cost = model.cost;
+                this.hitSuccessful = model.hitSuccessful;
+                this.isShowDetail = model.isShowDetail;
+                this.order = model.order;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleSnapshotId = model.ruleSnapshotId;
+                this.ruleStatus = model.ruleStatus;
+            } 
+
             /**
-             * cost.
+             * <p>Duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -189,7 +233,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * hitSuccessful.
+             * <p>Whether the rule was hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hitSuccessful(Boolean hitSuccessful) {
                 this.hitSuccessful = hitSuccessful;
@@ -197,7 +244,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * isShowDetail.
+             * <p>Whether to show details</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShowDetail(Boolean isShowDetail) {
                 this.isShowDetail = isShowDetail;
@@ -205,7 +255,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * order.
+             * <p>Order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -213,7 +266,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101544</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -221,7 +277,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册手机号是11位数字</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -229,7 +288,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleSnapshotId.
+             * <p>Rule snapshot ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder ruleSnapshotId(String ruleSnapshotId) {
                 this.ruleSnapshotId = ruleSnapshotId;
@@ -237,7 +299,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Policy status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -251,6 +316,12 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRequestHitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRequestHitResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventCode")
         private String eventCode;
@@ -268,7 +339,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         private Long requestTime;
 
         @com.aliyun.core.annotation.NameInMap("ruleHitRecords")
-        private java.util.List < RuleHitRecords> ruleHitRecords;
+        private java.util.List<RuleHitRecords> ruleHitRecords;
 
         @com.aliyun.core.annotation.NameInMap("sRequestId")
         private String sRequestId;
@@ -333,7 +404,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         /**
          * @return ruleHitRecords
          */
-        public java.util.List < RuleHitRecords> getRuleHitRecords() {
+        public java.util.List<RuleHitRecords> getRuleHitRecords() {
             return this.ruleHitRecords;
         }
 
@@ -357,12 +428,29 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             private String inputs; 
             private String outputs; 
             private Long requestTime; 
-            private java.util.List < RuleHitRecords> ruleHitRecords; 
+            private java.util.List<RuleHitRecords> ruleHitRecords; 
             private String sRequestId; 
             private Long totalCost; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.inputs = model.inputs;
+                this.outputs = model.outputs;
+                this.requestTime = model.requestTime;
+                this.ruleHitRecords = model.ruleHitRecords;
+                this.sRequestId = model.sRequestId;
+                this.totalCost = model.totalCost;
+            } 
+
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -370,7 +458,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -378,7 +469,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * inputs.
+             * <p>Input parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;eventCode&quot;:&quot;de_afghcf6411&quot;,&quot;ip&quot;:&quot;196.168.0.1&quot;,&quot;DEtest222&quot;:9007199254740999,&quot;age&quot;:20}</p>
              */
             public Builder inputs(String inputs) {
                 this.inputs = inputs;
@@ -386,7 +480,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>Output parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tags&quot;:&quot;rm0102,test_tag,age&quot;,&quot;score&quot;:&quot;30.0&quot;,&quot;extend&quot;:&quot;{\&quot;OUT_V01\&quot;:\&quot;Maritime\&quot;,\&quot;OUT_V02\&quot;:\&quot;Lome\&quot;,\&quot;OUT_V03\&quot;:\&quot;196.168.0.1_A\&quot;}&quot;,&quot;finalDecision&quot;:&quot;REJECT&quot;}</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -394,7 +491,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * requestTime.
+             * <p>Timestamp of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752571330000</p>
              */
             public Builder requestTime(Long requestTime) {
                 this.requestTime = requestTime;
@@ -402,15 +502,18 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleHitRecords.
+             * <p>Details of the executed rules.</p>
              */
-            public Builder ruleHitRecords(java.util.List < RuleHitRecords> ruleHitRecords) {
+            public Builder ruleHitRecords(java.util.List<RuleHitRecords> ruleHitRecords) {
                 this.ruleHitRecords = ruleHitRecords;
                 return this;
             }
 
             /**
-             * sRequestId.
+             * <p>Request ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60C97040-D5D5-4906-9522-B9B413730CAA</p>
              */
             public Builder sRequestId(String sRequestId) {
                 this.sRequestId = sRequestId;
@@ -418,7 +521,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * totalCost.
+             * <p>Total amount of the request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCost(Long totalCost) {
                 this.totalCost = totalCost;

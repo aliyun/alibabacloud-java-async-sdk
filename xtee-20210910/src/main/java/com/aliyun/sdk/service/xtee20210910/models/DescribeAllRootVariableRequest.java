@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllRootVariableRequest} extends {@link RequestModel}
  *
  * <p>DescribeAllRootVariableRequest</p>
@@ -73,7 +79,7 @@ public class DescribeAllRootVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,7 +185,14 @@ public class DescribeAllRootVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +201,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>Request source IP. No need to fill in, the system will automatically obtain it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.169.104.202</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -197,7 +213,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * deviceVariableIds.
+         * <p>Device variable list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[180]</p>
          */
         public Builder deviceVariableIds(String deviceVariableIds) {
             this.putQueryParameter("deviceVariableIds", deviceVariableIds);
@@ -206,7 +225,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_arqbuy7206</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -215,7 +237,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * expressionVariableIds.
+         * <p>Custom variable list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[6780]</p>
          */
         public Builder expressionVariableIds(String expressionVariableIds) {
             this.putQueryParameter("expressionVariableIds", expressionVariableIds);
@@ -224,7 +249,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2557</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -233,7 +261,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * nativeVariableIds.
+         * <p>Event field list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[106780]</p>
          */
         public Builder nativeVariableIds(String nativeVariableIds) {
             this.putQueryParameter("nativeVariableIds", nativeVariableIds);
@@ -242,7 +273,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * queryVariableIds.
+         * <p>Custom query variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[2678]</p>
          */
         public Builder queryVariableIds(String queryVariableIds) {
             this.putQueryParameter("queryVariableIds", queryVariableIds);
@@ -251,7 +285,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -260,7 +297,10 @@ public class DescribeAllRootVariableRequest extends Request {
         }
 
         /**
-         * velocityVariableIds.
+         * <p>Custom cumulative variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[780]</p>
          */
         public Builder velocityVariableIds(String velocityVariableIds) {
             this.putQueryParameter("velocityVariableIds", velocityVariableIds);

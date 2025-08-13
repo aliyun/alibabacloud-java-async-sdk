@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressionVariablePageRequest} extends {@link RequestModel}
  *
  * <p>DescribeExpressionVariablePageRequest</p>
@@ -66,7 +72,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,14 @@ public class DescribeExpressionVariablePageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,7 +176,11 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -172,7 +189,10 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aamexg3015,de_aamexg3342</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -181,7 +201,10 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Variable return type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -190,7 +213,11 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -199,7 +226,11 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -208,7 +239,10 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -217,7 +251,10 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>Variable name/description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义变量</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("value", value);

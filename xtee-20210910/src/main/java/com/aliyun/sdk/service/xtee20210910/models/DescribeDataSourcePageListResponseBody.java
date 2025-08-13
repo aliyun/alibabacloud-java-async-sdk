@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSourcePageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSourcePageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
 
     public static DescribeDataSourcePageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataSourcePageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSourcePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourcePageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
@@ -272,8 +315,26 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             private Long total; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.total = model.total;
+                this.type = model.type;
+            } 
+
             /**
-             * creator.
+             * <p>Creator of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -281,7 +342,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Data source description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +353,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Time when the data source was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -297,7 +364,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Time when the data source was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -305,7 +375,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -313,7 +386,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * modifier.
+             * <p>Last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -321,7 +397,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_source</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +408,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>Total pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -337,7 +419,10 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE</p>
              */
             public Builder type(String type) {
                 this.type = type;

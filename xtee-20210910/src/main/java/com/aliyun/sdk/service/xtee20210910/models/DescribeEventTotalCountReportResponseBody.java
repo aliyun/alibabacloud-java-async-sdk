@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventTotalCountReportResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventTotalCountReportResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
 
     public static DescribeEventTotalCountReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventTotalCountReportResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,7 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +171,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether this operation was successful, <code>true</code> means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventTotalCountReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventTotalCountReportResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ratio")
         private String ratio;
@@ -188,8 +231,19 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
             private String ratio; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.ratio = model.ratio;
+                this.value = model.value;
+            } 
+
             /**
-             * ratio.
+             * <p>Comparison with yesterday&quot;s event invocation count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder ratio(String ratio) {
                 this.ratio = ratio;
@@ -197,7 +251,10 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Today&quot;s event invocation count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppKeyPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppKeyPageResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
 
     public static DescribeAppKeyPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppKeyPageResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E01E1B4A-6747-5329-9046-B6D6B2D91349</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppKeyPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppKeyPageResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("androidSdkUrl")
         private String androidSdkUrl;
@@ -272,8 +315,26 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             private String sdkItems; 
             private String used; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.androidSdkUrl = model.androidSdkUrl;
+                this.androidSdkVersion = model.androidSdkVersion;
+                this.appKey = model.appKey;
+                this.gmtCreate = model.gmtCreate;
+                this.iosSdkUrl = model.iosSdkUrl;
+                this.iosSdkVersion = model.iosSdkVersion;
+                this.memo = model.memo;
+                this.sdkItems = model.sdkItems;
+                this.used = model.used;
+            } 
+
             /**
-             * androidSdkUrl.
+             * <p>Android SDK download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
              */
             public Builder androidSdkUrl(String androidSdkUrl) {
                 this.androidSdkUrl = androidSdkUrl;
@@ -281,7 +342,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * androidSdkVersion.
+             * <p>Android SDK version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder androidSdkVersion(String androidSdkVersion) {
                 this.androidSdkVersion = androidSdkVersion;
@@ -289,7 +353,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * appKey.
+             * <p>Application appkey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh9a71f07fhs556bd767586307e82795</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -297,7 +364,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -305,7 +375,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * iosSdkUrl.
+             * <p>iOS SDK download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
              */
             public Builder iosSdkUrl(String iosSdkUrl) {
                 this.iosSdkUrl = iosSdkUrl;
@@ -313,7 +386,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * iosSdkVersion.
+             * <p>iOS SDK version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder iosSdkVersion(String iosSdkVersion) {
                 this.iosSdkVersion = iosSdkVersion;
@@ -321,7 +397,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Memo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -329,7 +408,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * sdkItems.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已作废</p>
              */
             public Builder sdkItems(String sdkItems) {
                 this.sdkItems = sdkItems;
@@ -337,7 +419,10 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
             }
 
             /**
-             * used.
+             * <p>Whether this appKey is integrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder used(String used) {
                 this.used = used;

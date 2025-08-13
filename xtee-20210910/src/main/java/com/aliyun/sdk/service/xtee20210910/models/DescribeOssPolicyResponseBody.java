@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssPolicyResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
 
     public static DescribeOssPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         private String signature; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeOssPolicyResponseBody model) {
+            this.accessId = model.accessId;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.signature = model.signature;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessId.
+         * <p>accessId, a parameter used in OSS SDK uploads, corresponding to OSSAccessKeyId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAIpeYTKEbC0v10</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -105,7 +130,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>OSS host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvm.biubiubiuu.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -113,7 +141,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>Key required for file upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/a/uid/ccc</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -121,7 +152,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>OSS security policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -129,7 +163,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>Signature data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tzl1wL4q8rR/xxxxxx</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -137,7 +174,10 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

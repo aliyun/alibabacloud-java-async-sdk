@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNameListVariablePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeNameListVariablePageListRequest</p>
@@ -58,7 +64,7 @@ public class DescribeNameListVariablePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeNameListVariablePageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -155,7 +171,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -164,7 +183,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * nameListType.
+         * <p>Variable type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountId</p>
          */
         public Builder nameListType(String nameListType) {
             this.putQueryParameter("nameListType", nameListType);
@@ -173,7 +195,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -182,7 +207,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -191,7 +219,10 @@ public class DescribeNameListVariablePageListRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>Name list value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valuexxx</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("value", value);

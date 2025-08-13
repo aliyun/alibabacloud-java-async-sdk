@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSampleListRequest</p>
@@ -53,7 +59,7 @@ public class DescribeSampleListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,14 @@ public class DescribeSampleListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +145,10 @@ public class DescribeSampleListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -141,7 +157,10 @@ public class DescribeSampleListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -150,7 +169,10 @@ public class DescribeSampleListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -159,7 +181,10 @@ public class DescribeSampleListRequest extends Request {
         }
 
         /**
-         * sampleType.
+         * <p>Sample type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHONE</p>
          */
         public Builder sampleType(String sampleType) {
             this.putQueryParameter("sampleType", sampleType);
@@ -168,7 +193,10 @@ public class DescribeSampleListRequest extends Request {
         }
 
         /**
-         * sampleValue.
+         * <p>Sample data value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770000000</p>
          */
         public Builder sampleValue(String sampleValue) {
             this.putQueryParameter("sampleValue", sampleValue);

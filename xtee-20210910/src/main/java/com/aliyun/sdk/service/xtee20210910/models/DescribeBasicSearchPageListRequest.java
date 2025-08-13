@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBasicSearchPageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeBasicSearchPageListRequest</p>
@@ -74,7 +80,7 @@ public class DescribeBasicSearchPageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +177,14 @@ public class DescribeBasicSearchPageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +193,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -189,7 +206,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * eventBeginTime.
+         * <p>Query start time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753372800000</p>
          */
         public Builder eventBeginTime(Long eventBeginTime) {
             this.putQueryParameter("eventBeginTime", eventBeginTime);
@@ -198,7 +219,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;de_ahqhsw7665&quot;]</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -207,7 +232,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * eventEndTime.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753459199059</p>
          */
         public Builder eventEndTime(Long eventEndTime) {
             this.putQueryParameter("eventEndTime", eventEndTime);
@@ -216,7 +245,10 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * fieldName.
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("fieldName", fieldName);
@@ -225,7 +257,10 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * fieldValue.
+         * <p>Field value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("fieldValue", fieldValue);
@@ -234,7 +269,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -243,7 +282,11 @@ public class DescribeBasicSearchPageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

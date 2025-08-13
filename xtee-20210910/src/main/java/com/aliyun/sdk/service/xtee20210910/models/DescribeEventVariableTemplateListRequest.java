@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventVariableTemplateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventVariableTemplateListRequest</p>
@@ -48,7 +54,7 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,14 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for the request and response messages. The default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +131,10 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         }
 
         /**
-         * inputs.
+         * <p>Input parameters, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age,ip</p>
          */
         public Builder inputs(String inputs) {
             this.putQueryParameter("inputs", inputs);
@@ -127,7 +143,10 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -136,7 +155,10 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         }
 
         /**
-         * templateCode.
+         * <p>Template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("templateCode", templateCode);
@@ -145,7 +167,10 @@ public class DescribeEventVariableTemplateListRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

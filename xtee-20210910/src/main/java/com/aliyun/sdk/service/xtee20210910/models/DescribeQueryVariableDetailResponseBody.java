@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQueryVariableDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQueryVariableDetailResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeQueryVariableDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeQueryVariableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQueryVariableDetailResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataSourceCode")
         private Long dataSourceCode;
@@ -216,8 +243,28 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             private String outputs; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.dataSourceCode = model.dataSourceCode;
+                this.dataSourceName = model.dataSourceName;
+                this.description = model.description;
+                this.eventCode = model.eventCode;
+                this.expression = model.expression;
+                this.expressionTitle = model.expressionTitle;
+                this.expressionVariable = model.expressionVariable;
+                this.id = model.id;
+                this.outlier = model.outlier;
+                this.outputs = model.outputs;
+                this.title = model.title;
+            } 
+
             /**
-             * dataSourceCode.
+             * <p>Data source code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_vcaoii1697</p>
              */
             public Builder dataSourceCode(Long dataSourceCode) {
                 this.dataSourceCode = dataSourceCode;
@@ -225,7 +272,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataSourceName.
+             * <p>Data source name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>名称数据源</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -233,7 +283,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>变量描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -241,7 +294,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -249,7 +305,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expression.
+             * <p>Expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -257,7 +316,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expressionTitle.
+             * <p>Expression title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
              */
             public Builder expressionTitle(String expressionTitle) {
                 this.expressionTitle = expressionTitle;
@@ -265,7 +327,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expressionVariable.
+             * <p>Expression variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[96426]</p>
              */
             public Builder expressionVariable(String expressionVariable) {
                 this.expressionVariable = expressionVariable;
@@ -273,7 +338,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Variable ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>355</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -281,7 +349,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * outlier.
+             * <p>Outlier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder outlier(String outlier) {
                 this.outlier = outlier;
@@ -289,7 +360,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>Output results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -297,7 +371,10 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自定义查询变量标题</p>
              */
             public Builder title(String title) {
                 this.title = title;

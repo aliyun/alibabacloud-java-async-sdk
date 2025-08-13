@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarkPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeMarkPageRequest</p>
@@ -63,7 +69,7 @@ public class DescribeMarkPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +157,14 @@ public class DescribeMarkPageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -160,7 +173,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -169,7 +185,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>Order direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -178,7 +197,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * isPage.
+         * <p>Whether to paginate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPage(Boolean isPage) {
             this.putQueryParameter("isPage", isPage);
@@ -187,7 +209,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * order.
+         * <p>Sorting condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("order", order);
@@ -196,7 +221,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -205,7 +233,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -214,7 +245,10 @@ public class DescribeMarkPageRequest extends Request {
         }
 
         /**
-         * taskLogId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder taskLogId(String taskLogId) {
             this.putQueryParameter("taskLogId", taskLogId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupConditionListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupConditionListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeGroupConditionListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupConditionListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupConditionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupConditionListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldKey")
         private String fieldKey;
@@ -108,8 +135,19 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
             private String fieldKey; 
             private String fieldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.fieldKey = model.fieldKey;
+                this.fieldValue = model.fieldValue;
+            } 
+
             /**
-             * fieldKey.
+             * <p>Field key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -117,7 +155,10 @@ public class DescribeGroupConditionListResponseBody extends TeaModel {
             }
 
             /**
-             * fieldValue.
+             * <p>Field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

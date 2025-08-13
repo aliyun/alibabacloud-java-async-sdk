@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventBaseInfoByEventCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventBaseInfoByEventCodeResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventBaseInfoByEventCodeResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventBaseInfoByEventCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventBaseInfoByEventCodeResponseBody</p>
+     */
     public static class InputFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -156,8 +183,23 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             private String fieldType; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputFields model) {
+                this.description = model.description;
+                this.fieldCode = model.fieldCode;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.title = model.title;
+            } 
+
             /**
-             * description.
+             * <p>Field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -165,7 +207,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * fieldCode.
+             * <p>Field code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder fieldCode(String fieldCode) {
                 this.fieldCode = fieldCode;
@@ -173,7 +218,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * fieldRank.
+             * <p>Field ranking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fieldRank(String fieldRank) {
                 this.fieldRank = fieldRank;
@@ -181,7 +229,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * fieldSource.
+             * <p>Field source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder fieldSource(String fieldSource) {
                 this.fieldSource = fieldSource;
@@ -189,7 +240,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * fieldType.
+             * <p>Field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -197,7 +251,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -211,6 +268,12 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventBaseInfoByEventCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventBaseInfoByEventCodeResponseBody</p>
+     */
     public static class RuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logicExpression")
         private String logicExpression;
@@ -321,8 +384,25 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleDetails model) {
+                this.logicExpression = model.logicExpression;
+                this.memo = model.memo;
+                this.ruleActions = model.ruleActions;
+                this.ruleAuthType = model.ruleAuthType;
+                this.ruleExpressions = model.ruleExpressions;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
+
             /**
-             * logicExpression.
+             * <p>Policy Execution Logic</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3&amp;((1&amp;2&amp;4)</p>
              */
             public Builder logicExpression(String logicExpression) {
                 this.logicExpression = logicExpression;
@@ -330,7 +410,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Memo</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -338,7 +421,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleActions.
+             * <p>Rule Actions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;inputs&quot;:[&quot;auto_accselist&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]</p>
              */
             public Builder ruleActions(String ruleActions) {
                 this.ruleActions = ruleActions;
@@ -346,7 +432,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleAuthType.
+             * <p>Policy Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder ruleAuthType(String ruleAuthType) {
                 this.ruleAuthType = ruleAuthType;
@@ -354,7 +443,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleExpressions.
+             * <p>Event Expressions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;expressionName&quot;:&quot;同一设备同一IP上的注册用户数&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;dK7EXHr490f&quot;},&quot;operatorCode&quot;:&quot;gte&quot;,&quot;operatorName&quot;:&quot;大于等于&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;2&quot;}}]</p>
              */
             public Builder ruleExpressions(String ruleExpressions) {
                 this.ruleExpressions = ruleExpressions;
@@ -362,7 +454,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101544</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -370,7 +465,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>手机号MD5命中人脸测试名单</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -378,7 +476,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Policy Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFT</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -392,6 +493,12 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventBaseInfoByEventCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventBaseInfoByEventCodeResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizVersion")
         private Integer bizVersion;
@@ -406,13 +513,13 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         private String eventStauts;
 
         @com.aliyun.core.annotation.NameInMap("inputFields")
-        private java.util.List < InputFields> inputFields;
+        private java.util.List<InputFields> inputFields;
 
         @com.aliyun.core.annotation.NameInMap("memo")
         private String memo;
 
         @com.aliyun.core.annotation.NameInMap("ruleDetails")
-        private java.util.List < RuleDetails> ruleDetails;
+        private java.util.List<RuleDetails> ruleDetails;
 
         @com.aliyun.core.annotation.NameInMap("templateCode")
         private String templateCode;
@@ -475,7 +582,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         /**
          * @return inputFields
          */
-        public java.util.List < InputFields> getInputFields() {
+        public java.util.List<InputFields> getInputFields() {
             return this.inputFields;
         }
 
@@ -489,7 +596,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         /**
          * @return ruleDetails
          */
-        public java.util.List < RuleDetails> getRuleDetails() {
+        public java.util.List<RuleDetails> getRuleDetails() {
             return this.ruleDetails;
         }
 
@@ -519,15 +626,34 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             private String eventCode; 
             private String eventName; 
             private String eventStauts; 
-            private java.util.List < InputFields> inputFields; 
+            private java.util.List<InputFields> inputFields; 
             private String memo; 
-            private java.util.List < RuleDetails> ruleDetails; 
+            private java.util.List<RuleDetails> ruleDetails; 
             private String templateCode; 
             private String templateName; 
             private String templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.bizVersion = model.bizVersion;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventStauts = model.eventStauts;
+                this.inputFields = model.inputFields;
+                this.memo = model.memo;
+                this.ruleDetails = model.ruleDetails;
+                this.templateCode = model.templateCode;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * bizVersion.
+             * <p>Business version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizVersion(Integer bizVersion) {
                 this.bizVersion = bizVersion;
@@ -535,7 +661,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -543,7 +672,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -551,7 +683,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * eventStauts.
+             * <p>Event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder eventStauts(String eventStauts) {
                 this.eventStauts = eventStauts;
@@ -559,15 +694,18 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * inputFields.
+             * <p>Field list.</p>
              */
-            public Builder inputFields(java.util.List < InputFields> inputFields) {
+            public Builder inputFields(java.util.List<InputFields> inputFields) {
                 this.inputFields = inputFields;
                 return this;
             }
 
             /**
-             * memo.
+             * <p>Memo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -575,15 +713,18 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ruleDetails.
+             * <p>Policy Information</p>
              */
-            public Builder ruleDetails(java.util.List < RuleDetails> ruleDetails) {
+            public Builder ruleDetails(java.util.List<RuleDetails> ruleDetails) {
                 this.ruleDetails = ruleDetails;
                 return this;
             }
 
             /**
-             * templateCode.
+             * <p>Operation template code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>register</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -591,7 +732,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * templateName.
+             * <p>Template name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册事件模板</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -599,7 +743,10 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * templateType.
+             * <p>Template type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

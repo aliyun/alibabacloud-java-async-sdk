@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParamByEventCodesRequest} extends {@link RequestModel}
  *
  * <p>DescribeParamByEventCodesRequest</p>
@@ -44,7 +50,7 @@ public class DescribeParamByEventCodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +102,14 @@ public class DescribeParamByEventCodesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +118,11 @@ public class DescribeParamByEventCodesRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_pro,account_abuse</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -114,7 +131,10 @@ public class DescribeParamByEventCodesRequest extends Request {
         }
 
         /**
-         * parma.
+         * <p>Query condition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题/描述</p>
          */
         public Builder parma(String parma) {
             this.putQueryParameter("parma", parma);
@@ -123,7 +143,10 @@ public class DescribeParamByEventCodesRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

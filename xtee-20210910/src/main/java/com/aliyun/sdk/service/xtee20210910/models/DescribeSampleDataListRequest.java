@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleDataListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSampleDataListRequest</p>
@@ -68,7 +74,7 @@ public class DescribeSampleDataListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class DescribeSampleDataListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -183,7 +199,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * deleteTag.
+         * <p>Deletion status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
          */
         public Builder deleteTag(String deleteTag) {
             this.putQueryParameter("deleteTag", deleteTag);
@@ -192,7 +211,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -201,7 +223,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * queryContent.
+         * <p>Query content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号</p>
          */
         public Builder queryContent(String queryContent) {
             this.putQueryParameter("queryContent", queryContent);
@@ -210,7 +235,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -219,7 +247,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * sampleId.
+         * <p>Sample ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5467</p>
          */
         public Builder sampleId(Long sampleId) {
             this.putQueryParameter("sampleId", sampleId);
@@ -228,7 +259,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Scene</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);
@@ -237,7 +271,10 @@ public class DescribeSampleDataListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

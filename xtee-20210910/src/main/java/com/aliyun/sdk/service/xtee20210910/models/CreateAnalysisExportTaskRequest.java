@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAnalysisExportTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateAnalysisExportTaskRequest</p>
@@ -90,7 +96,7 @@ public class CreateAnalysisExportTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,7 +220,14 @@ public class CreateAnalysisExportTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for the request and response messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -223,7 +236,47 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * columns.
+         * <p>Custom columns</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;requestId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;RequestId&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;eventTime&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;事件时间&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;accountId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;账号&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;deviceId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;设备ID&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;eventCode&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;事件编码&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;ip&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;IP&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;score&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;分值&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;tags&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;标签&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;DEtest222&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;测试222&quot;
+         *                 }
+         *             ]</p>
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -232,7 +285,13 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * conditions.
+         * <p>Query expression</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *      &quot;fieldName&quot;: null, 
+         *       &quot;fieldValue&quot;: null 
+         *       }</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("conditions", conditions);
@@ -241,7 +300,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * eventBeginTime.
+         * <p>Start time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752076800000</p>
          */
         public Builder eventBeginTime(Long eventBeginTime) {
             this.putQueryParameter("eventBeginTime", eventBeginTime);
@@ -250,7 +313,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_afghcf6411</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -259,7 +326,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * eventEndTime.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753891199000</p>
          */
         public Builder eventEndTime(Long eventEndTime) {
             this.putQueryParameter("eventEndTime", eventEndTime);
@@ -268,7 +339,10 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * fieldName.
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("fieldName", fieldName);
@@ -277,7 +351,10 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * fieldValue.
+         * <p>Field value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("fieldValue", fieldValue);
@@ -286,7 +363,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * fileFormat.
+         * <p>File format, Excel, CSV</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         public Builder fileFormat(String fileFormat) {
             this.putQueryParameter("fileFormat", fileFormat);
@@ -295,7 +376,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -304,7 +389,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>Export scope: ALL: All, SELECT: Selected rows</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -313,7 +402,11 @@ public class CreateAnalysisExportTaskRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

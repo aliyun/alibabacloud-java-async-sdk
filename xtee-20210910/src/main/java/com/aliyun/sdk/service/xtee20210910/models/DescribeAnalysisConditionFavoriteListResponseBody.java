@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnalysisConditionFavoriteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAnalysisConditionFavoriteListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeAnalysisConditionFavoriteListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnalysisConditionFavoriteListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAnalysisConditionFavoriteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnalysisConditionFavoriteListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -192,8 +219,26 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.condition = model.condition;
+                this.eventBeginTime = model.eventBeginTime;
+                this.eventCodes = model.eventCodes;
+                this.eventEndTime = model.eventEndTime;
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * condition.
+             * <p>Condition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;currentId&quot;:1,&quot;deepCount&quot;:0,&quot;list&quot;:[{&quot;currentId&quot;:2,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;accountId&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;accountId&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;parentId&quot;:1,&quot;right&quot;:{&quot;code&quot;:&quot;&quot;A\nB\nC&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;}</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -201,7 +246,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * eventBeginTime.
+             * <p>Event start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752076800000</p>
              */
             public Builder eventBeginTime(Long eventBeginTime) {
                 this.eventBeginTime = eventBeginTime;
@@ -209,7 +257,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * eventCodes.
+             * <p>Event codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_ahespg8137</p>
              */
             public Builder eventCodes(String eventCodes) {
                 this.eventCodes = eventCodes;
@@ -217,7 +268,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * eventEndTime.
+             * <p>Event end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753891199000</p>
              */
             public Builder eventEndTime(Long eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -225,7 +279,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * fieldName.
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -233,7 +290,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * fieldValue.
+             * <p>Field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -241,7 +301,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -249,7 +312,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * name.
+             * <p>Condition name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询条件1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +323,10 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
             }
 
             /**
-             * type.
+             * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder type(String type) {
                 this.type = type;

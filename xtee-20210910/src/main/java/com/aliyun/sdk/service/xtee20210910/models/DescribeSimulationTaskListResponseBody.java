@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimulationTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSimulationTaskListResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
 
     public static DescribeSimulationTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSimulationTaskListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +152,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;
@@ -129,7 +163,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * totalItem.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +174,10 @@ public class DescribeSimulationTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;

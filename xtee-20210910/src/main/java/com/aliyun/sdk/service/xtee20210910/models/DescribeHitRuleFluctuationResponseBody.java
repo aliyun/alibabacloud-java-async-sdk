@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHitRuleFluctuationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHitRuleFluctuationResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -44,6 +50,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
 
     public static DescribeHitRuleFluctuationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -77,7 +87,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -93,11 +103,26 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeHitRuleFluctuationResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,15 +163,18 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHitRuleFluctuationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHitRuleFluctuationResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleId")
         private String ruleId;
@@ -248,8 +291,24 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             private String withinThreeDayNum; 
             private Long yesterdayNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.todayNum = model.todayNum;
+                this.withinSevenDayNum = model.withinSevenDayNum;
+                this.withinThirtyDayNum = model.withinThirtyDayNum;
+                this.withinThreeDayNum = model.withinThreeDayNum;
+                this.yesterdayNum = model.yesterdayNum;
+            } 
+
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115019</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -257,7 +316,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -265,7 +327,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * todayNum.
+             * <p>Today&quot;s count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder todayNum(Long todayNum) {
                 this.todayNum = todayNum;
@@ -273,7 +338,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * withinSevenDayNum.
+             * <p>Count within seven days</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder withinSevenDayNum(String withinSevenDayNum) {
                 this.withinSevenDayNum = withinSevenDayNum;
@@ -281,7 +349,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * withinThirtyDayNum.
+             * <p>Count within thirty days</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder withinThirtyDayNum(String withinThirtyDayNum) {
                 this.withinThirtyDayNum = withinThirtyDayNum;
@@ -289,7 +360,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * withinThreeDayNum.
+             * <p>Count within three days</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder withinThreeDayNum(String withinThreeDayNum) {
                 this.withinThreeDayNum = withinThreeDayNum;
@@ -297,7 +371,10 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
             }
 
             /**
-             * yesterdayNum.
+             * <p>Yesterday&quot;s count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder yesterdayNum(Long yesterdayNum) {
                 this.yesterdayNum = yesterdayNum;

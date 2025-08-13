@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDecisionResultTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDecisionResultTrendResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     public static DescribeDecisionResultTrendResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDecisionResultTrendResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +171,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDecisionResultTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDecisionResultTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("num")
         private Long num;
@@ -188,8 +231,19 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
             private Long num; 
             private String scale; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.num = model.num;
+                this.scale = model.scale;
+            } 
+
             /**
-             * num.
+             * <p>Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -197,7 +251,10 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
             }
 
             /**
-             * scale.
+             * <p>ratio</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.56%</p>
              */
             public Builder scale(String scale) {
                 this.scale = scale;
@@ -211,9 +268,15 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDecisionResultTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDecisionResultTrendResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -234,7 +297,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -246,19 +309,30 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
+
             /**
-             * data.
+             * <p>Returned data object</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IpTag_FFF</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,9 +346,15 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDecisionResultTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDecisionResultTrendResponseBody</p>
+     */
     public static class Xaxis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < String > data;
+        private java.util.List<String> data;
 
         private Xaxis(Builder builder) {
             this.data = builder.data;
@@ -291,17 +371,24 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Xaxis model) {
+                this.data = model.data;
+            } 
 
             /**
-             * data.
+             * <p>X-axis data structure.</p>
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
@@ -313,9 +400,15 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDecisionResultTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDecisionResultTrendResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("xaxis")
         private Xaxis xaxis;
@@ -336,7 +429,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -348,19 +441,27 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private Xaxis xaxis; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.series = model.series;
+                this.xaxis = model.xaxis;
+            } 
+
             /**
-             * series.
+             * <p>Chart data</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * xaxis.
+             * <p>X-axis data</p>
              */
             public Builder xaxis(Xaxis xaxis) {
                 this.xaxis = xaxis;

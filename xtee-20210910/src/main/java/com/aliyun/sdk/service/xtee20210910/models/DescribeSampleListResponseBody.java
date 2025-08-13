@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSampleListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
 
     public static DescribeSampleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeSampleListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSampleListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeSampleListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeSampleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSampleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSampleListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -236,8 +279,23 @@ public class DescribeSampleListResponseBody extends TeaModel {
             private Long updateTime; 
             private Integer version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.id = model.id;
+                this.sampleTags = model.sampleTags;
+                this.sampleType = model.sampleType;
+                this.sampleValue = model.sampleValue;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
+
             /**
-             * id.
+             * <p>Database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -245,7 +303,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
             }
 
             /**
-             * sampleTags.
+             * <p>Sample tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm0102</p>
              */
             public Builder sampleTags(String sampleTags) {
                 this.sampleTags = sampleTags;
@@ -253,7 +314,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
             }
 
             /**
-             * sampleType.
+             * <p>Sample type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHONE</p>
              */
             public Builder sampleType(Integer sampleType) {
                 this.sampleType = sampleType;
@@ -261,7 +325,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
             }
 
             /**
-             * sampleValue.
+             * <p>Sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770000000</p>
              */
             public Builder sampleValue(String sampleValue) {
                 this.sampleValue = sampleValue;
@@ -269,7 +336,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699450018265</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -277,7 +347,10 @@ public class DescribeSampleListResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

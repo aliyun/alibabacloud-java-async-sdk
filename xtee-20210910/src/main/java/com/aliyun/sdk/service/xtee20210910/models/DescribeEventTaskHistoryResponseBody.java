@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventTaskHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventTaskHistoryResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeEventTaskHistoryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventTaskHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventTaskHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventTaskHistoryResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskCode")
         private String taskCode;
@@ -132,8 +159,21 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
             private String taskStatus; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.taskCode = model.taskCode;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+                this.url = model.url;
+            } 
+
             /**
-             * taskCode.
+             * <p>Task code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aoxcdy9473</p>
              */
             public Builder taskCode(String taskCode) {
                 this.taskCode = taskCode;
@@ -141,7 +181,10 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>Task name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>仿真任务</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -149,7 +192,10 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * <p>Task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -157,7 +203,10 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>OSS download URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

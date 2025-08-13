@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllRootVariableResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllRootVariableResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeAllRootVariableResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllRootVariableResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllRootVariableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllRootVariableResponseBody</p>
+     */
     public static class OutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -108,8 +135,19 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
-             * maxValue.
+             * <p>Maximum value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxValue(Double maxValue) {
                 this.maxValue = maxValue;
@@ -117,7 +155,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * minValue.
+             * <p>Minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minValue(Double minValue) {
                 this.minValue = minValue;
@@ -131,6 +172,12 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllRootVariableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllRootVariableResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -313,8 +360,31 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             private String title; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldRank = model.fieldRank;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outputThreshold = model.outputThreshold;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
-             * code.
+             * <p>Variable code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +392,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Variable description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +403,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * displayType.
+             * <p>Display type and group label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -338,7 +414,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * favoriteFlag.
+             * <p>Favorite flag</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favoriteFlag(Boolean favoriteFlag) {
                 this.favoriteFlag = favoriteFlag;
@@ -346,7 +425,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * fieldRank.
+             * <p>Field ranking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fieldRank(Long fieldRank) {
                 this.fieldRank = fieldRank;
@@ -354,7 +436,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * fieldType.
+             * <p>Field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -362,7 +447,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Variable ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +458,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * inputFieldType.
+             * <p>Input field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder inputFieldType(String inputFieldType) {
                 this.inputFieldType = inputFieldType;
@@ -378,7 +469,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * inputs.
+             * <p>Variable input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder inputs(String inputs) {
                 this.inputs = inputs;
@@ -386,7 +480,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -394,7 +491,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * outputThreshold.
+             * <p>Maximum cross-sectional area of the checkbox.</p>
              */
             public Builder outputThreshold(OutputThreshold outputThreshold) {
                 this.outputThreshold = outputThreshold;
@@ -402,7 +499,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>Data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAF</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -410,7 +510,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -418,7 +521,10 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Variable type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;

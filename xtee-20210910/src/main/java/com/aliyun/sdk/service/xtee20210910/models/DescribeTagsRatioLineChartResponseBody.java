@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsRatioLineChartResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsRatioLineChartResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagsRatioLineChartResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,9 +91,15 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsRatioLineChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsRatioLineChartResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < String > data;
+        private java.util.List<String> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -93,7 +120,7 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
@@ -105,19 +132,30 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
+
             /**
-             * data.
+             * <p>Result data.</p>
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Series name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rn101</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,9 +169,15 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsRatioLineChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsRatioLineChartResponseBody</p>
+     */
     public static class Xaxis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < String > data;
+        private java.util.List<String> data;
 
         private Xaxis(Builder builder) {
             this.data = builder.data;
@@ -150,17 +194,24 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Xaxis model) {
+                this.data = model.data;
+            } 
 
             /**
-             * data.
+             * <p>X-axis data</p>
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
@@ -172,9 +223,15 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsRatioLineChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsRatioLineChartResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("xaxis")
         private Xaxis xaxis;
@@ -195,7 +252,7 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -207,19 +264,27 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private Xaxis xaxis; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.series = model.series;
+                this.xaxis = model.xaxis;
+            } 
+
             /**
-             * series.
+             * <p>Data list</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * xaxis.
+             * <p>xaxis node.</p>
              */
             public Builder xaxis(Xaxis xaxis) {
                 this.xaxis = xaxis;

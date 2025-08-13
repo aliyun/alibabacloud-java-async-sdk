@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressionVariableFunctionListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressionVariableFunctionListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeExpressionVariableFunctionListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressionVariableFunctionListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E8817D5-5354-5953-84B1-D98379F036DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressionVariableFunctionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressionVariableFunctionListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -180,8 +207,25 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             private String returnTypes; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.description = model.description;
+                this.key = model.key;
+                this.maxParamSize = model.maxParamSize;
+                this.minParamSize = model.minParamSize;
+                this.paramTypes = model.paramTypes;
+                this.redirect = model.redirect;
+                this.returnTypes = model.returnTypes;
+                this.value = model.value;
+            } 
+
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -189,7 +233,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * key.
+             * <p>Function name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>concat</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -197,7 +244,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * maxParamSize.
+             * <p>Maximum number of parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxParamSize(Long maxParamSize) {
                 this.maxParamSize = maxParamSize;
@@ -205,7 +255,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * minParamSize.
+             * <p>Minimum number of parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minParamSize(Long minParamSize) {
                 this.minParamSize = minParamSize;
@@ -213,7 +266,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * paramTypes.
+             * <p>Parameter types</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*STRING</p>
              */
             public Builder paramTypes(String paramTypes) {
                 this.paramTypes = paramTypes;
@@ -221,7 +277,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * redirect.
+             * <p>Whether it is directly invoked</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder redirect(Boolean redirect) {
                 this.redirect = redirect;
@@ -229,7 +288,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * returnTypes.
+             * <p>Method return types</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder returnTypes(String returnTypes) {
                 this.returnTypes = returnTypes;
@@ -237,7 +299,10 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
             }
 
             /**
-             * value.
+             * <p>Function value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>concat</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFieldListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
 
     public static DescribeFieldListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeFieldListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeFieldListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeFieldListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeFieldListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFieldListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFieldListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("classify")
         private String classify;
@@ -272,8 +315,26 @@ public class DescribeFieldListResponseBody extends TeaModel {
             private String title; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.classify = model.classify;
+                this.description = model.description;
+                this.enumData = model.enumData;
+                this.id = model.id;
+                this.name = model.name;
+                this.source = model.source;
+                this.status = model.status;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
-             * classify.
+             * <p>Field classification</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REQUEST_PARAM</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -281,7 +342,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +353,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * enumData.
+             * <p>Enum data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATUS</p>
              */
             public Builder enumData(String enumData) {
                 this.enumData = enumData;
@@ -297,7 +364,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -305,7 +375,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -313,7 +386,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>Field source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFINE</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -321,7 +397,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +408,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -337,7 +419,10 @@ public class DescribeFieldListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Field type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;

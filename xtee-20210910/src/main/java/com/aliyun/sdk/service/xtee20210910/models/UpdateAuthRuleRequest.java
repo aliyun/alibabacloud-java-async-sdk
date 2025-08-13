@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAuthRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateAuthRuleRequest</p>
@@ -66,7 +72,7 @@ public class UpdateAuthRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,14 @@ public class UpdateAuthRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,7 +176,10 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Policy primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7088</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -172,7 +188,10 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_afghcf6411</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -181,7 +200,11 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -190,7 +213,10 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * ruleActions.
+         * <p>Policy output action</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;inputs&quot;:[&quot;auto_accselist&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]</p>
          */
         public Builder ruleActions(String ruleActions) {
             this.putQueryParameter("ruleActions", ruleActions);
@@ -199,7 +225,11 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * ruleExpressions.
+         * <p>Expression</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;expressionName&quot;:&quot;设备token不为空&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;deviceToken&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;operatorName&quot;:&quot;不为空&quot;}]</p>
          */
         public Builder ruleExpressions(String ruleExpressions) {
             this.putQueryParameter("ruleExpressions", ruleExpressions);
@@ -208,7 +238,11 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101544</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("ruleId", ruleId);
@@ -217,7 +251,10 @@ public class UpdateAuthRuleRequest extends Request {
         }
 
         /**
-         * ruleVersionId.
+         * <p>Policy version primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5190</p>
          */
         public Builder ruleVersionId(Long ruleVersionId) {
             this.putQueryParameter("ruleVersionId", ruleVersionId);

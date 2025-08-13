@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBasicStartResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBasicStartResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
 
     public static DescribeBasicStartResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         private Boolean resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBasicStartResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +174,10 @@ public class DescribeBasicStartResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

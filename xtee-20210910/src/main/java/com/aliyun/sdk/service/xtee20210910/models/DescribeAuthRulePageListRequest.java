@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuthRulePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuthRulePageListRequest</p>
@@ -49,7 +55,7 @@ public class DescribeAuthRulePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +116,14 @@ public class DescribeAuthRulePageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +132,10 @@ public class DescribeAuthRulePageListRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_arcehq4370</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -128,7 +144,11 @@ public class DescribeAuthRulePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -137,7 +157,10 @@ public class DescribeAuthRulePageListRequest extends Request {
         }
 
         /**
-         * ruleName.
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分析中心事件测试_策略01</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("ruleName", ruleName);
@@ -146,7 +169,10 @@ public class DescribeAuthRulePageListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

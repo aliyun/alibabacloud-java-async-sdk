@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvanceSearchLeftVariableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvanceSearchLeftVariableListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeAdvanceSearchLeftVariableListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdvanceSearchLeftVariableListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvanceSearchLeftVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvanceSearchLeftVariableListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -216,8 +243,28 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             private String title; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.fieldRank = model.fieldRank;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.name = model.name;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
-             * code.
+             * <p>Variable code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -225,7 +272,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +283,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * displayType.
+             * <p>Display type and grouping label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -241,7 +294,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * fieldRank.
+             * <p>Variable return value type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder fieldRank(Long fieldRank) {
                 this.fieldRank = fieldRank;
@@ -249,7 +305,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * fieldType.
+             * <p>Field table sorting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -257,7 +316,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2453</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -265,7 +327,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * name.
+             * <p>Variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,7 +338,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * parentName.
+             * <p>Parent node</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder parentName(String parentName) {
                 this.parentName = parentName;
@@ -281,7 +349,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * sourceType.
+             * <p>Data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAF</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -289,7 +360,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -297,7 +371,10 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
             }
 
             /**
-             * type.
+             * <p>Variable type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;

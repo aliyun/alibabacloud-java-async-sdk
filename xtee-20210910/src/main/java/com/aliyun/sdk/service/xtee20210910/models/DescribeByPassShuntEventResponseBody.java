@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeByPassShuntEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeByPassShuntEventResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
 
     public static DescribeByPassShuntEventResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeByPassShuntEventResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,7 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +171,10 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether it was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeByPassShuntEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeByPassShuntEventResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventName")
         private String eventName;
@@ -176,8 +219,18 @@ public class DescribeByPassShuntEventResponseBody extends TeaModel {
         public static final class Builder {
             private String eventName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.eventName = model.eventName;
+            } 
+
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别_增强版</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAnalysisConditionFavoriteRequest} extends {@link RequestModel}
  *
  * <p>UpdateAnalysisConditionFavoriteRequest</p>
@@ -80,7 +86,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,7 +201,14 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -204,7 +217,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * condition.
+         * <p>Condition value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;relationship&quot;:&quot;and&quot;,&quot;list&quot;:[{&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;hasRightVariable&quot;:true,&quot;fieldType&quot;:&quot;INT&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;leftVariableType&quot;:&quot;NATIVE&quot;,&quot;name&quot;:&quot;DEtest222&quot;,&quot;operatorCode&quot;:&quot;equals&quot;},&quot;right&quot;:{&quot;rightVariableType&quot;:&quot;constant&quot;,&quot;name&quot;:&quot;9007199254&quot;,&quot;functionName&quot;:&quot;&quot;},&quot;operatorCode&quot;:&quot;equals&quot;}]}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("condition", condition);
@@ -213,7 +229,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * eventBeginTime.
+         * <p>Start time, accurate to milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752076800000</p>
          */
         public Builder eventBeginTime(Long eventBeginTime) {
             this.putQueryParameter("eventBeginTime", eventBeginTime);
@@ -222,7 +241,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ajnoqe2016</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -231,7 +253,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * eventEndTime.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753891199000</p>
          */
         public Builder eventEndTime(Long eventEndTime) {
             this.putQueryParameter("eventEndTime", eventEndTime);
@@ -240,7 +265,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * fieldName.
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("fieldName", fieldName);
@@ -249,7 +277,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * fieldValue.
+         * <p>Field value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("fieldValue", fieldValue);
@@ -258,7 +289,11 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Primary key ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -267,7 +302,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Condition name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询条件1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -276,7 +314,11 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -285,7 +327,10 @@ public class UpdateAnalysisConditionFavoriteRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

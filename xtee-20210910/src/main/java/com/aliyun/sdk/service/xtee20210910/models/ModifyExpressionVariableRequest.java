@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyExpressionVariableRequest} extends {@link RequestModel}
  *
  * <p>ModifyExpressionVariableRequest</p>
@@ -49,6 +55,10 @@ public class ModifyExpressionVariableRequest extends Request {
     private Long id;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("outlier")
     @com.aliyun.core.annotation.Validation(required = true)
     private String outlier;
@@ -78,6 +88,7 @@ public class ModifyExpressionVariableRequest extends Request {
         this.expressionTitle = builder.expressionTitle;
         this.expressionVariable = builder.expressionVariable;
         this.id = builder.id;
+        this.name = builder.name;
         this.outlier = builder.outlier;
         this.outputs = builder.outputs;
         this.regId = builder.regId;
@@ -92,7 +103,7 @@ public class ModifyExpressionVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,6 +165,13 @@ public class ModifyExpressionVariableRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return outlier
      */
     public String getOutlier() {
@@ -190,6 +208,7 @@ public class ModifyExpressionVariableRequest extends Request {
         private String expressionTitle; 
         private String expressionVariable; 
         private Long id; 
+        private String name; 
         private String outlier; 
         private String outputs; 
         private String regId; 
@@ -209,6 +228,7 @@ public class ModifyExpressionVariableRequest extends Request {
             this.expressionTitle = request.expressionTitle;
             this.expressionVariable = request.expressionVariable;
             this.id = request.id;
+            this.name = request.name;
             this.outlier = request.outlier;
             this.outputs = request.outputs;
             this.regId = request.regId;
@@ -216,7 +236,14 @@ public class ModifyExpressionVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -225,7 +252,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * dataVersion.
+         * <p>Data version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder dataVersion(Long dataVersion) {
             this.putQueryParameter("dataVersion", dataVersion);
@@ -234,7 +265,10 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -243,7 +277,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_acytyt7036</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -252,7 +290,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * expression.
+         * <p>Expression</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@ex_GX9rrlTq4b67 + 1001</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("expression", expression);
@@ -261,7 +303,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * expressionTitle.
+         * <p>Expression display</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@selfvariable_02 + 1001</p>
          */
         public Builder expressionTitle(String expressionTitle) {
             this.putQueryParameter("expressionTitle", expressionTitle);
@@ -270,7 +316,10 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * expressionVariable.
+         * <p>Calculation expression variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_GX9rrlTq4b67</p>
          */
         public Builder expressionVariable(String expressionVariable) {
             this.putQueryParameter("expressionVariable", expressionVariable);
@@ -279,7 +328,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -288,7 +341,23 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * outlier.
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_NgR6nDVD821c</p>
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>Outlier</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder outlier(String outlier) {
             this.putQueryParameter("outlier", outlier);
@@ -297,7 +366,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Output</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -306,7 +379,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -315,7 +392,11 @@ public class ModifyExpressionVariableRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量标题</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

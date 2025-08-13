@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleBarChartResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleBarChartResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     public static DescribeRuleBarChartResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleBarChartResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +171,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleBarChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleBarChartResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventName")
         private String eventName;
@@ -212,8 +255,21 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
             private String ruleName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventName = model.eventName;
+                this.num = model.num;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+            } 
+
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销事件</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -221,7 +277,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
             }
 
             /**
-             * num.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -229,7 +288,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别评分_高风险_拒绝</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -237,7 +299,10 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,9 +316,15 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRuleBarChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleBarChartResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -274,7 +345,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -286,19 +357,30 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
+
             /**
-             * data.
+             * <p>Response data.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * type.
+             * <p>Bar chart type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bar</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,9 +394,15 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRuleBarChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleBarChartResponseBody</p>
+     */
     public static class Yaxis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < String > data;
+        private java.util.List<String> data;
 
         private Yaxis(Builder builder) {
             this.data = builder.data;
@@ -331,17 +419,24 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Yaxis model) {
+                this.data = model.data;
+            } 
 
             /**
-             * data.
+             * <p>yaxis data items</p>
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
@@ -353,9 +448,15 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRuleBarChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleBarChartResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("yaxis")
         private Yaxis yaxis;
@@ -376,7 +477,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -388,19 +489,27 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private Yaxis yaxis; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.series = model.series;
+                this.yaxis = model.yaxis;
+            } 
+
             /**
-             * series.
+             * <p>Data list</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * yaxis.
+             * <p>yaxis related results.</p>
              */
             public Builder yaxis(Yaxis yaxis) {
                 this.yaxis = yaxis;

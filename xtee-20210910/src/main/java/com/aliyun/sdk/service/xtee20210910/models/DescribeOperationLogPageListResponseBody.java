@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOperationLogPageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOperationLogPageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
 
     public static DescribeOperationLogPageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeOperationLogPageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOperationLogPageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOperationLogPageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientIp")
         private String clientIp;
@@ -248,8 +291,24 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             private String operationType; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.clientIp = model.clientIp;
+                this.gmtCreate = model.gmtCreate;
+                this.newContent = model.newContent;
+                this.oldContent = model.oldContent;
+                this.operationSummary = model.operationSummary;
+                this.operationType = model.operationType;
+                this.userName = model.userName;
+            } 
+
             /**
-             * clientIp.
+             * <p>Client IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.68.***.166</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -257,7 +316,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -265,7 +327,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * newContent.
+             * <p>Content after operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@selfvariable_02</p>
              */
             public Builder newContent(String newContent) {
                 this.newContent = newContent;
@@ -273,7 +338,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * oldContent.
+             * <p>Content before operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@selfvariable_02 + 1001</p>
              */
             public Builder oldContent(String oldContent) {
                 this.oldContent = oldContent;
@@ -281,7 +349,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * operationSummary.
+             * <p>Operation summary</p>
+             * 
+             * <strong>example:</strong>
+             * <p>更新事件:决策引擎可观测性持续建设_事件A(de_afghcf6411)</p>
              */
             public Builder operationSummary(String operationSummary) {
                 this.operationSummary = operationSummary;
@@ -289,7 +360,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * operationType.
+             * <p>Operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_EVENT</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -297,7 +371,10 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>Operator</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

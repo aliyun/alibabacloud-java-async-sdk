@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimulationTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateSimulationTaskRequest</p>
@@ -84,7 +90,7 @@ public class CreateSimulationTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,7 +205,14 @@ public class CreateSimulationTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -208,7 +221,10 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * dataSourceConfig.
+         * <p>Data source configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder dataSourceConfig(String dataSourceConfig) {
             this.putQueryParameter("dataSourceConfig", dataSourceConfig);
@@ -217,7 +233,10 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * dataSourceType.
+         * <p>Data source type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("dataSourceType", dataSourceType);
@@ -226,7 +245,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735541040000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -235,7 +258,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_anbwns2231</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -244,7 +271,10 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * filtersStr.
+         * <p>Filters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;left&quot;:&quot;score&quot;,&quot;operate&quot;:&quot;bw&quot;,&quot;right&quot;:&quot;222,333&quot;}</p>
          */
         public Builder filtersStr(String filtersStr) {
             this.putQueryParameter("filtersStr", filtersStr);
@@ -253,7 +283,10 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -262,7 +295,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * rulesStr.
+         * <p>Rules list</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;100234&quot;]</p>
          */
         public Builder rulesStr(String rulesStr) {
             this.putQueryParameter("rulesStr", rulesStr);
@@ -271,7 +308,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * runTask.
+         * <p>Whether to run the task directly</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder runTask(Boolean runTask) {
             this.putQueryParameter("runTask", runTask);
@@ -280,7 +321,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>Start time, accurate to milliseconds (ms).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1730448000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -289,7 +334,11 @@ public class CreateSimulationTaskRequest extends Request {
         }
 
         /**
-         * taskName.
+         * <p>Task name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>仿真任务</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("taskName", taskName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventResultListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventResultListResponseBody</p>
@@ -30,7 +36,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -60,6 +66,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
 
     public static DescribeEventResultListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,7 +117,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -139,13 +149,32 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         private String message; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Boolean success; 
         private Long totalItem; 
         private Long totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventResultListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +182,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -161,7 +193,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +204,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +215,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +226,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,15 +237,18 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * success.
+         * <p>Whether the query was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -209,7 +256,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalItem(Long totalItem) {
             this.totalItem = totalItem;
@@ -217,7 +267,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -230,6 +283,12 @@ public class DescribeEventResultListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventResultListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventResultListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventCode")
         private String eventCode;
@@ -316,8 +375,23 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             private Long rejectNum; 
             private Long totalNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.passNum = model.passNum;
+                this.pendingNum = model.pendingNum;
+                this.rejectNum = model.rejectNum;
+                this.totalNum = model.totalNum;
+            } 
+
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -325,7 +399,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -333,7 +410,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             }
 
             /**
-             * passNum.
+             * <p>Number of passed checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder passNum(Long passNum) {
                 this.passNum = passNum;
@@ -341,7 +421,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             }
 
             /**
-             * pendingNum.
+             * <p>Number of pending items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pendingNum(Long pendingNum) {
                 this.pendingNum = pendingNum;
@@ -349,7 +432,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             }
 
             /**
-             * rejectNum.
+             * <p>Number of rejected approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder rejectNum(Long rejectNum) {
                 this.rejectNum = rejectNum;
@@ -357,7 +443,10 @@ public class DescribeEventResultListResponseBody extends TeaModel {
             }
 
             /**
-             * totalNum.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

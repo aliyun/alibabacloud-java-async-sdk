@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
 
     public static DescribeTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeTaskListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("completionTime")
         private Long completionTime;
@@ -272,8 +315,26 @@ public class DescribeTaskListResponseBody extends TeaModel {
             private Long taskLogId; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.completionTime = model.completionTime;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.mark = model.mark;
+                this.remark = model.remark;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+                this.taskLogId = model.taskLogId;
+                this.taskType = model.taskType;
+            } 
+
             /**
-             * completionTime.
+             * <p>Completion time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753804800000</p>
              */
             public Builder completionTime(Long completionTime) {
                 this.completionTime = completionTime;
@@ -281,7 +342,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753804800000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -289,7 +353,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -297,7 +364,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * mark.
+             * <p>Total number of mark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder mark(Integer mark) {
                 this.mark = mark;
@@ -305,7 +375,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>Remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -313,7 +386,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * sceneName.
+             * <p>Scene name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>样本调度</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -321,7 +397,14 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Data status.</p>
+             * <p>-1: Failed
+             * 0: Deleted
+             * 1: Pending
+             * 2: Success</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +412,10 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * taskLogId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1102</p>
              */
             public Builder taskLogId(Long taskLogId) {
                 this.taskLogId = taskLogId;
@@ -337,7 +423,13 @@ public class DescribeTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>Task type
+             * 1: Data upload
+             * 2: Supplemental upload
+             * 3: Labeling</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcuteNumResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExcuteNumResponseBody</p>
  */
 public class DescribeExcuteNumResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,17 +40,21 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -56,14 +66,23 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > categories; 
-        private java.util.List < String > data; 
+        private java.util.List<String> categories; 
+        private java.util.List<String> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExcuteNumResponseBody model) {
+            this.categories = model.categories;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Categories.
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
             return this;
         }
@@ -71,7 +90,7 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

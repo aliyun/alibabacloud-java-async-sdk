@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleUploadPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSampleUploadPolicyResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
 
     public static DescribeSampleUploadPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         private String signature; 
         private String stsToken; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSampleUploadPolicyResponseBody model) {
+            this.accessId = model.accessId;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.stsToken = model.stsToken;
+        } 
+
         /**
-         * AccessId.
+         * <p>OSS access key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5t9k9MsS9TipR9yW5urk</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -117,7 +143,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>OSS domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emseu.cxy8uoq4aafx.eu-central-1.rds.amazonaws.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -125,7 +154,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The key of OSS upload policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/de/namelist/e924/ufzgsedX9bd3a7</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -133,7 +165,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>OSS upload policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -141,7 +176,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +187,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>Signature information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3Es5j/9Xm/zwPcM9cwEr5pa0Wsc=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -157,7 +198,10 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * StsToken.
+         * <p>Temporary identity credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tT44bMQxxxxxxxxxxxxxxx</p>
          */
         public Builder stsToken(String stsToken) {
             this.stsToken = stsToken;

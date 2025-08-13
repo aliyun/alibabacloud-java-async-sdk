@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustVariableRequest} extends {@link RequestModel}
  *
  * <p>CreateCustVariableRequest</p>
@@ -104,7 +110,7 @@ public class CreateCustVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -255,7 +261,14 @@ public class CreateCustVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -264,7 +277,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * condition.
+         * <p>Condition value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;relationship&quot;:&quot;and&quot;,&quot;list&quot;:[{&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;hasRightVariable&quot;:true,&quot;fieldType&quot;:&quot;INT&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;leftVariableType&quot;:&quot;NATIVE&quot;,&quot;name&quot;:&quot;DEtest222&quot;,&quot;operatorCode&quot;:&quot;equals&quot;},&quot;right&quot;:{&quot;rightVariableType&quot;:&quot;constant&quot;,&quot;name&quot;:&quot;11&quot;,&quot;functionName&quot;:&quot;&quot;},&quot;operatorCode&quot;:&quot;equals&quot;}]}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("condition", condition);
@@ -273,7 +289,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -282,7 +301,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip调用次数累计描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -291,7 +313,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahqhsw7665,de_agbzfi5134</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -300,7 +326,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * historyValueType.
+         * <p>Value type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EARLIEST</p>
          */
         public Builder historyValueType(String historyValueType) {
             this.putQueryParameter("historyValueType", historyValueType);
@@ -309,7 +338,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * object.
+         * <p>Accumulative object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder object(String object) {
             this.putQueryParameter("object", object);
@@ -318,7 +350,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Variable return type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -327,7 +362,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -336,7 +374,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * subject.
+         * <p>Primary object</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("subject", subject);
@@ -345,7 +387,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * timeType.
+         * <p>Time slice type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CURRENT</p>
          */
         public Builder timeType(String timeType) {
             this.putQueryParameter("timeType", timeType);
@@ -354,7 +400,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip调用次数累计</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);
@@ -363,7 +413,10 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * twCount.
+         * <p>Number of time units</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder twCount(Integer twCount) {
             this.putQueryParameter("twCount", twCount);
@@ -372,7 +425,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * velocityFC.
+         * <p>Variable type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DISTINCT</p>
          */
         public Builder velocityFC(String velocityFC) {
             this.putQueryParameter("velocityFC", velocityFC);
@@ -381,7 +438,11 @@ public class CreateCustVariableRequest extends Request {
         }
 
         /**
-         * velocityTW.
+         * <p>Time slice unit</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY_1</p>
          */
         public Builder velocityTW(String velocityTW) {
             this.putQueryParameter("velocityTW", velocityTW);

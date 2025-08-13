@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoanExecListRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoanExecListRequest</p>
@@ -58,7 +64,7 @@ public class DescribeLoanExecListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeLoanExecListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * batchNo.
+         * <p>Import batch number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder batchNo(String batchNo) {
             this.putQueryParameter("batchNo", batchNo);
@@ -155,7 +171,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -164,7 +183,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * monitorObj.
+         * <p>Monitoring metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_afghcf6411</p>
          */
         public Builder monitorObj(String monitorObj) {
             this.putQueryParameter("monitorObj", monitorObj);
@@ -173,7 +195,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * monitorStatus.
+         * <p>Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT</p>
          */
         public Builder monitorStatus(String monitorStatus) {
             this.putQueryParameter("monitorStatus", monitorStatus);
@@ -182,7 +207,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -191,7 +219,10 @@ public class DescribeLoanExecListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

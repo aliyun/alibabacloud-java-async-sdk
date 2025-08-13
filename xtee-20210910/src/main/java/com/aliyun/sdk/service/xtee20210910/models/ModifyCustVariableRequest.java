@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustVariableRequest} extends {@link RequestModel}
  *
  * <p>ModifyCustVariableRequest</p>
@@ -71,7 +77,7 @@ public class ModifyCustVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,7 +174,14 @@ public class ModifyCustVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,7 +190,10 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * condition.
+         * <p>Condition value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;currentId&quot;:1,&quot;deepCount&quot;:0,&quot;list&quot;:[{&quot;currentId&quot;:2,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;__hit_rules&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:true,&quot;name&quot;:&quot;hitRules&quot;,&quot;operatorCode&quot;:&quot;deNotInNameList&quot;},&quot;operatorCode&quot;:&quot;deNotInNameList&quot;,&quot;parentId&quot;:1,&quot;right&quot;:{&quot;code&quot;:&quot;&quot;nl_Xcufc8wV6624&quot;&quot;,&quot;name&quot;:&quot;nl_Xcufc8wV6624&quot;,&quot;rightVariableType&quot;:&quot;variable&quot;}},{&quot;currentId&quot;:3,&quot;deepCount&quot;:1,&quot;list&quot;:[{&quot;currentId&quot;:4,&quot;deepCount&quot;:2,&quot;left&quot;:{&quot;code&quot;:&quot;__v_safde&quot;,&quot;fieldType&quot;:&quot;DOUBLE&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:true,&quot;name&quot;:&quot;score&quot;,&quot;operatorCode&quot;:&quot;equals&quot;},&quot;operatorCode&quot;:&quot;equals&quot;,&quot;parentId&quot;:3,&quot;right&quot;:{&quot;code&quot;:&quot;&quot;99&quot;&quot;,&quot;name&quot;:&quot;99&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}},{&quot;currentId&quot;:5,&quot;deepCount&quot;:2,&quot;left&quot;:{&quot;code&quot;:&quot;queryPhoneSimulatorInfo(deviceToken)?&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;<strong>device-test01</strong>&quot;,&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;parentId&quot;:3,&quot;right&quot;:{&quot;functionName&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}}],&quot;parentId&quot;:1,&quot;relationship&quot;:&quot;and&quot;}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("condition", condition);
@@ -186,7 +202,11 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * dataVersion.
+         * <p>Data version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder dataVersion(Long dataVersion) {
             this.putQueryParameter("dataVersion", dataVersion);
@@ -195,7 +215,10 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -204,7 +227,10 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_pro,account_abuse</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -213,7 +239,11 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>376773</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -222,7 +252,11 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Variable name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dxkkLw8fe18</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -231,7 +265,10 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Output</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -240,7 +277,10 @@ public class ModifyCustVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

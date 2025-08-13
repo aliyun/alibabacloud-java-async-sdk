@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyEventStatusRequest</p>
@@ -53,7 +59,7 @@ public class ModifyEventStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,14 @@ public class ModifyEventStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +145,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -141,7 +157,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aamexg3015</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -150,7 +169,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * fromEventSatus.
+         * <p>Initial event status, to avoid duplicate submissions or historical replays</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         public Builder fromEventSatus(String fromEventSatus) {
             this.putQueryParameter("fromEventSatus", fromEventSatus);
@@ -159,7 +181,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -168,7 +193,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * toEventSatus.
+         * <p>Updated event status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
          */
         public Builder toEventSatus(String toEventSatus) {
             this.putQueryParameter("toEventSatus", toEventSatus);

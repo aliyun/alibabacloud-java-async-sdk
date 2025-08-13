@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAuditRequest} extends {@link RequestModel}
  *
  * <p>UpdateAuditRequest</p>
@@ -53,7 +59,7 @@ public class UpdateAuditRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,14 @@ public class UpdateAuditRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +145,10 @@ public class UpdateAuditRequest extends Request {
         }
 
         /**
-         * auditMsg.
+         * <p>Approval comments</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
          */
         public Builder auditMsg(String auditMsg) {
             this.putQueryParameter("auditMsg", auditMsg);
@@ -141,7 +157,10 @@ public class UpdateAuditRequest extends Request {
         }
 
         /**
-         * auditRelationType.
+         * <p>Associated type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RULE</p>
          */
         public Builder auditRelationType(String auditRelationType) {
             this.putQueryParameter("auditRelationType", auditRelationType);
@@ -150,7 +169,10 @@ public class UpdateAuditRequest extends Request {
         }
 
         /**
-         * auditStatus.
+         * <p>Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGREE</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("auditStatus", auditStatus);
@@ -159,7 +181,10 @@ public class UpdateAuditRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The ID of the approval to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>376773</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -168,7 +193,10 @@ public class UpdateAuditRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

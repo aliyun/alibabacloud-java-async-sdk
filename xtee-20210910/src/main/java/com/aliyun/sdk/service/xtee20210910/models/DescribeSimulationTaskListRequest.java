@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimulationTaskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSimulationTaskListRequest</p>
@@ -58,7 +64,7 @@ public class DescribeSimulationTaskListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeSimulationTaskListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -155,7 +171,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("id", id);
@@ -164,7 +183,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMULATION</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -173,7 +195,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -182,7 +207,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -191,7 +219,10 @@ public class DescribeSimulationTaskListRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>仿真任务</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

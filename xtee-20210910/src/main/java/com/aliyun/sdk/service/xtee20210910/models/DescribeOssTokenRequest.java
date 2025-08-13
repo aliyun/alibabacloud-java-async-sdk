@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssTokenRequest} extends {@link RequestModel}
  *
  * <p>DescribeOssTokenRequest</p>
@@ -43,7 +49,7 @@ public class DescribeOssTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +101,14 @@ public class DescribeOssTokenRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +117,10 @@ public class DescribeOssTokenRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.csv</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -113,7 +129,10 @@ public class DescribeOssTokenRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -122,7 +141,10 @@ public class DescribeOssTokenRequest extends Request {
         }
 
         /**
-         * uploadType.
+         * <p>Upload type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMUNITY_SAMPLE</p>
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("uploadType", uploadType);

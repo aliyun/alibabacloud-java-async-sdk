@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSampleRequest} extends {@link RequestModel}
  *
  * <p>CreateSampleRequest</p>
@@ -68,7 +74,7 @@ public class CreateSampleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class CreateSampleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * clientFileName.
+         * <p>OSS client uploaded file name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>样本文件.csv</p>
          */
         public Builder clientFileName(String clientFileName) {
             this.putQueryParameter("clientFileName", clientFileName);
@@ -183,7 +199,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * clientPath.
+         * <p>OSS client address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample/path</p>
          */
         public Builder clientPath(String clientPath) {
             this.putQueryParameter("clientPath", clientPath);
@@ -192,7 +211,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * fileType.
+         * <p>File type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("fileType", fileType);
@@ -201,7 +223,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -210,7 +235,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * sampleTag.
+         * <p>Sample tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm0102</p>
          */
         public Builder sampleTag(String sampleTag) {
             this.putQueryParameter("sampleTag", sampleTag);
@@ -219,7 +247,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * sampleType.
+         * <p>Sample type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHONE</p>
          */
         public Builder sampleType(String sampleType) {
             this.putQueryParameter("sampleType", sampleType);
@@ -228,7 +259,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * sampleValues.
+         * <p>Sample values</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1777000000,1777000001</p>
          */
         public Builder sampleValues(String sampleValues) {
             this.putQueryParameter("sampleValues", sampleValues);
@@ -237,7 +271,10 @@ public class CreateSampleRequest extends Request {
         }
 
         /**
-         * uploadType.
+         * <p>Upload type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANNEX</p>
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("uploadType", uploadType);

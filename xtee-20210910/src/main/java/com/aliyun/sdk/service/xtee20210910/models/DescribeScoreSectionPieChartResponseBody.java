@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScoreSectionPieChartResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScoreSectionPieChartResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeScoreSectionPieChartResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScoreSectionPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScoreSectionPieChartResponseBody</p>
+     */
     public static class Grid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("show")
         private Boolean show;
@@ -96,8 +123,18 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(Grid model) {
+                this.show = model.show;
+            } 
+
             /**
-             * show.
+             * <p>Chart field, default false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -111,6 +148,12 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeScoreSectionPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScoreSectionPieChartResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -149,8 +192,19 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>Category item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +212,10 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Result value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -172,9 +229,15 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeScoreSectionPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScoreSectionPieChartResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -199,7 +262,7 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -218,20 +281,32 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String name; 
             private Boolean roseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.data = model.data;
+                this.name = model.name;
+                this.roseType = model.roseType;
+            } 
+
             /**
-             * data.
+             * <p>Chart data list</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>分值区间占比</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,7 +314,10 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * roseType.
+             * <p>Chart field, default false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder roseType(Boolean roseType) {
                 this.roseType = roseType;
@@ -253,6 +331,12 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeScoreSectionPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScoreSectionPieChartResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("animation")
         private Boolean animation;
@@ -261,7 +345,7 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         private Grid grid;
 
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         private ResultObject(Builder builder) {
             this.animation = builder.animation;
@@ -294,17 +378,29 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private Boolean animation; 
             private Grid grid; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.animation = model.animation;
+                this.grid = model.grid;
+                this.series = model.series;
+            } 
 
             /**
-             * animation.
+             * <p>Chart field, default true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder animation(Boolean animation) {
                 this.animation = animation;
@@ -312,7 +408,7 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * grid.
+             * <p>Belongs to grid.</p>
              */
             public Builder grid(Grid grid) {
                 this.grid = grid;
@@ -320,9 +416,9 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>Data list</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }

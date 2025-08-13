@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRecommendEventRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateRecommendEventRuleRequest</p>
@@ -53,7 +59,7 @@ public class CreateRecommendEventRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,14 @@ public class CreateRecommendEventRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +145,10 @@ public class CreateRecommendEventRuleRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahqido8038</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -141,7 +157,10 @@ public class CreateRecommendEventRuleRequest extends Request {
         }
 
         /**
-         * eventName.
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户昵称文本审核检测结果</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("eventName", eventName);
@@ -150,7 +169,10 @@ public class CreateRecommendEventRuleRequest extends Request {
         }
 
         /**
-         * recommendRuleIdsStr.
+         * <p>Strategy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;100234&quot;,&quot;100235&quot;]</p>
          */
         public Builder recommendRuleIdsStr(String recommendRuleIdsStr) {
             this.putQueryParameter("recommendRuleIdsStr", recommendRuleIdsStr);
@@ -159,7 +181,10 @@ public class CreateRecommendEventRuleRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -168,7 +193,10 @@ public class CreateRecommendEventRuleRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6770764</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("taskId", taskId);

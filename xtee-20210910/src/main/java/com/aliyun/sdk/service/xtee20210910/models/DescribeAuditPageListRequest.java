@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditPageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuditPageListRequest</p>
@@ -58,7 +64,7 @@ public class DescribeAuditPageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeAuditPageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * auditStatus.
+         * <p>Audit status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("auditStatus", auditStatus);
@@ -155,7 +171,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -164,7 +183,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_awukck7117</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -173,7 +195,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -182,7 +207,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -191,7 +219,10 @@ public class DescribeAuditPageListRequest extends Request {
         }
 
         /**
-         * ruleName.
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号MD5命中人脸测试名单</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("ruleName", ruleName);

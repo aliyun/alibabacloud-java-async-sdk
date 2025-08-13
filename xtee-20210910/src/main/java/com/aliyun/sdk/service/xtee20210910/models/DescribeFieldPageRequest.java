@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeFieldPageRequest</p>
@@ -78,7 +84,7 @@ public class DescribeFieldPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,7 +199,14 @@ public class DescribeFieldPageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -202,7 +215,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * classify.
+         * <p>Field classification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REQUEST_PARAM</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("classify", classify);
@@ -211,7 +227,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * condition.
+         * <p>Query input parameter name or title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age/年龄</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("condition", condition);
@@ -220,7 +239,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -229,7 +251,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -238,7 +263,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -247,7 +275,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -256,7 +287,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>Field source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFINE</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -265,7 +299,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -274,7 +311,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);
@@ -283,7 +323,10 @@ public class DescribeFieldPageRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Field type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

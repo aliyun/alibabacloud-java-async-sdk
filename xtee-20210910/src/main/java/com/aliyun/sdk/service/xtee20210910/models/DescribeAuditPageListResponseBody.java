@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditPageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditPageListResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
 
     public static DescribeAuditPageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         private Integer totalItem; 
         private Long totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditPageListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -105,7 +130,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page, default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +141,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +152,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;
@@ -129,7 +163,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalItem.
+         * <p>Total items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +174,10 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;

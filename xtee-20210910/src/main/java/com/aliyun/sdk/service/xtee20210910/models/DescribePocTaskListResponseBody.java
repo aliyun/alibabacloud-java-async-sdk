@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePocTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePocTaskListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
 
     public static DescribePocTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePocTaskListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribePocTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePocTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePocTaskListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -260,8 +303,25 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             private String taskName; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.createTime = model.createTime;
+                this.downloadUrl = model.downloadUrl;
+                this.fileType = model.fileType;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * createTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753804800000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +329,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * downloadUrl.
+             * <p>Download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -277,7 +340,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>File type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXCEL</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -285,7 +351,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险识别</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -293,7 +362,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAIT_CHECK</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -301,7 +373,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -309,7 +384,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>Task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>任务</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -317,7 +395,10 @@ public class DescribePocTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753804800000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

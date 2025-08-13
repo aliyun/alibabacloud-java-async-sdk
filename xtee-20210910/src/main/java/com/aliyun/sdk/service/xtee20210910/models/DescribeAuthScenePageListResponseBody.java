@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuthScenePageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuthScenePageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Long totalItem;
@@ -44,6 +50,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
 
     public static DescribeAuthScenePageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         private String requestId; 
         private Long currentPage; 
         private Long pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Long totalItem; 
         private Long totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuthScenePageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Long totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuthScenePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthScenePageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commonRuleCount")
         private Long commonRuleCount;
@@ -224,8 +267,22 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
             private String sceneName; 
             private String serverName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.commonRuleCount = model.commonRuleCount;
+                this.customRuleCount = model.customRuleCount;
+                this.eventCode = model.eventCode;
+                this.sceneName = model.sceneName;
+                this.serverName = model.serverName;
+            } 
+
             /**
-             * commonRuleCount.
+             * <p>Number of common rules</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder commonRuleCount(Long commonRuleCount) {
                 this.commonRuleCount = commonRuleCount;
@@ -233,7 +290,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
             }
 
             /**
-             * customRuleCount.
+             * <p>Number of custom rules</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder customRuleCount(Long customRuleCount) {
                 this.customRuleCount = customRuleCount;
@@ -241,7 +301,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_avypfd8253</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -249,7 +312,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
             }
 
             /**
-             * sceneName.
+             * <p>Scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险识别服务</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -257,7 +323,10 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
             }
 
             /**
-             * serverName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account_abuse</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;

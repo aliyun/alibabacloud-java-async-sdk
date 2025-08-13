@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVariableListRequest</p>
@@ -73,7 +79,7 @@ public class DescribeVariableListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,7 +185,14 @@ public class DescribeVariableListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and responses, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +201,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -197,7 +213,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -206,7 +225,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -215,7 +237,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * refObjId.
+         * <p>Associated event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_avypfd8253</p>
          */
         public Builder refObjId(String refObjId) {
             this.putQueryParameter("refObjId", refObjId);
@@ -224,7 +249,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -233,7 +261,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);
@@ -242,7 +273,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDENTIFY_SERVICE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -251,7 +285,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * typesStr.
+         * <p>JSON array string of types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;coupon_abuse_detection&quot;]</p>
          */
         public Builder typesStr(String typesStr) {
             this.putQueryParameter("typesStr", typesStr);
@@ -260,7 +297,10 @@ public class DescribeVariableListRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>Value for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("value", value);

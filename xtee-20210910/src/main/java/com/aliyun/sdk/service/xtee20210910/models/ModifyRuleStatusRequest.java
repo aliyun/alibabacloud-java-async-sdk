@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyRuleStatusRequest</p>
@@ -83,7 +89,7 @@ public class ModifyRuleStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,7 +213,14 @@ public class ModifyRuleStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -216,7 +229,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * applyUserId.
+         * <p>UID of the applicant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
          */
         public Builder applyUserId(String applyUserId) {
             this.putQueryParameter("applyUserId", applyUserId);
@@ -225,7 +241,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * applyUserName.
+         * <p>Name of the applicant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder applyUserName(String applyUserName) {
             this.putQueryParameter("applyUserName", applyUserName);
@@ -234,7 +253,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * auditRemark.
+         * <p>Approval remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>申请发布上线</p>
          */
         public Builder auditRemark(String auditRemark) {
             this.putQueryParameter("auditRemark", auditRemark);
@@ -243,7 +265,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * auditUserId.
+         * <p>UID of the auditor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
          */
         public Builder auditUserId(String auditUserId) {
             this.putQueryParameter("auditUserId", auditUserId);
@@ -252,7 +277,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * auditUserName.
+         * <p>Name of the auditor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder auditUserName(String auditUserName) {
             this.putQueryParameter("auditUserName", auditUserName);
@@ -261,7 +289,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Primary key ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6843</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -270,7 +301,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * eventType.
+         * <p>Event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("eventType", eventType);
@@ -279,7 +313,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -288,7 +325,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * ruleAuditType.
+         * <p>Audit status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT_TO_RUNNING</p>
          */
         public Builder ruleAuditType(String ruleAuditType) {
             this.putQueryParameter("ruleAuditType", ruleAuditType);
@@ -297,7 +337,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101544</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("ruleId", ruleId);
@@ -306,7 +349,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * ruleVersionId.
+         * <p>Primary key ID of the policy version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11519</p>
          */
         public Builder ruleVersionId(Long ruleVersionId) {
             this.putQueryParameter("ruleVersionId", ruleVersionId);

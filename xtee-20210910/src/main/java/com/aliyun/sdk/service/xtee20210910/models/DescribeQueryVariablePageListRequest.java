@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQueryVariablePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeQueryVariablePageListRequest</p>
@@ -59,7 +65,7 @@ public class DescribeQueryVariablePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +144,14 @@ public class DescribeQueryVariablePageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -147,7 +160,10 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -156,7 +172,10 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * dataSourceCode.
+         * <p>Data source code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_vcaoii1697</p>
          */
         public Builder dataSourceCode(String dataSourceCode) {
             this.putQueryParameter("dataSourceCode", dataSourceCode);
@@ -165,7 +184,10 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahpayh4121</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -174,7 +196,10 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Query variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -183,7 +208,10 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -192,7 +220,11 @@ public class DescribeQueryVariablePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

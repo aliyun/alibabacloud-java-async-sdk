@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleSnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleSnapshotResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleSnapshotResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleSnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleSnapshotResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizVersion")
         private String bizVersion;
@@ -228,8 +255,29 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.bizVersion = model.bizVersion;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.logicExpression = model.logicExpression;
+                this.memo = model.memo;
+                this.ruleActions = model.ruleActions;
+                this.ruleExpressions = model.ruleExpressions;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
+
             /**
-             * bizVersion.
+             * <p>Business version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizVersion(String bizVersion) {
                 this.bizVersion = bizVersion;
@@ -237,7 +285,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -245,7 +296,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -253,7 +307,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -261,7 +318,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -269,7 +329,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * logicExpression.
+             * <p>Expression for analysis results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1&amp;2</p>
              */
             public Builder logicExpression(String logicExpression) {
                 this.logicExpression = logicExpression;
@@ -277,7 +340,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Memo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -285,7 +351,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ruleActions.
+             * <p>Rule actions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;inputs&quot;:[&quot;LdShop&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]</p>
              */
             public Builder ruleActions(String ruleActions) {
                 this.ruleActions = ruleActions;
@@ -293,7 +362,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ruleExpressions.
+             * <p>Expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;expressionName&quot;:&quot;代下单_记录日志&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;dhcfX2v7670&quot;},&quot;operatorCode&quot;:&quot;gte&quot;,&quot;operatorName&quot;:&quot;大于等于&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;2&quot;}}]</p>
              */
             public Builder ruleExpressions(String ruleExpressions) {
                 this.ruleExpressions = ruleExpressions;
@@ -301,7 +373,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101804</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -309,7 +384,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -317,7 +395,10 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Policy status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;

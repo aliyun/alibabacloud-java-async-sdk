@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEventRequest} extends {@link RequestModel}
  *
  * <p>CreateEventRequest</p>
@@ -68,7 +74,7 @@ public class CreateEventRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class CreateEventRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -183,7 +199,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * eventName.
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>登录事件</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("eventName", eventName);
@@ -192,7 +211,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * inputFieldsStr.
+         * <p>Input parameters, JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;fieldCode&quot;:&quot;accountId&quot;,&quot;description&quot;:&quot;用户的账户ID，唯一标识一个账户的id&quot;,&quot;fieldRank&quot;:1,&quot;title&quot;:&quot;账户ID&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;hitRules&quot;,&quot;fieldRank&quot;:2,&quot;title&quot;:&quot;命中策略&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;age&quot;,&quot;description&quot;:&quot;&quot;,&quot;fieldRank&quot;:3,&quot;title&quot;:&quot;年龄&quot;,&quot;fieldType&quot;:&quot;INT&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;ip&quot;,&quot;description&quot;:&quot;IP地址&quot;,&quot;fieldRank&quot;:4,&quot;title&quot;:&quot;IP地址&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;tags&quot;,&quot;fieldRank&quot;:5,&quot;title&quot;:&quot;风险标签&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;score&quot;,&quot;fieldRank&quot;:6,&quot;title&quot;:&quot;风险分值&quot;,&quot;fieldType&quot;:&quot;DOUBLE&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;hitList&quot;,&quot;fieldRank&quot;:7}]</p>
          */
         public Builder inputFieldsStr(String inputFieldsStr) {
             this.putQueryParameter("inputFieldsStr", inputFieldsStr);
@@ -201,7 +223,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * memo.
+         * <p>Memo information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>登录事件描述</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("memo", memo);
@@ -210,7 +235,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -219,7 +247,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * templateCode.
+         * <p>Input field template type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("templateCode", templateCode);
@@ -228,7 +259,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * templateName.
+         * <p>Published template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册事件模版</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("templateName", templateName);
@@ -237,7 +271,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * templateType.
+         * <p>Template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("templateType", templateType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVariableDetailResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeVariableDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVariableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableDetailResponseBody</p>
+     */
     public static class BaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowBind")
         private String allowBind;
@@ -141,10 +168,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         private String outputsDesc;
 
         @com.aliyun.core.annotation.NameInMap("scene")
-        private java.util.List < String > scene;
+        private java.util.List<String> scene;
 
         @com.aliyun.core.annotation.NameInMap("sceneDesc")
-        private java.util.List < String > sceneDesc;
+        private java.util.List<String> sceneDesc;
 
         @com.aliyun.core.annotation.NameInMap("showOrder")
         private String showOrder;
@@ -159,7 +186,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("supportRegions")
-        private java.util.List < String > supportRegions;
+        private java.util.List<String> supportRegions;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -386,14 +413,14 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         /**
          * @return scene
          */
-        public java.util.List < String > getScene() {
+        public java.util.List<String> getScene() {
             return this.scene;
         }
 
         /**
          * @return sceneDesc
          */
-        public java.util.List < String > getSceneDesc() {
+        public java.util.List<String> getSceneDesc() {
             return this.sceneDesc;
         }
 
@@ -428,7 +455,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         /**
          * @return supportRegions
          */
-        public java.util.List < String > getSupportRegions() {
+        public java.util.List<String> getSupportRegions() {
             return this.supportRegions;
         }
 
@@ -491,21 +518,65 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             private String name; 
             private String outputs; 
             private String outputsDesc; 
-            private java.util.List < String > scene; 
-            private java.util.List < String > sceneDesc; 
+            private java.util.List<String> scene; 
+            private java.util.List<String> sceneDesc; 
             private String showOrder; 
             private String source; 
             private String sourceDesc; 
             private String status; 
-            private java.util.List < String > supportRegions; 
+            private java.util.List<String> supportRegions; 
             private String title; 
             private String type; 
             private String typeDesc; 
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaseInfo model) {
+                this.allowBind = model.allowBind;
+                this.chargingMode = model.chargingMode;
+                this.chargingModeDesc = model.chargingModeDesc;
+                this.creator = model.creator;
+                this.dataDisplay = model.dataDisplay;
+                this.dataThreshold = model.dataThreshold;
+                this.deductionFactor = model.deductionFactor;
+                this.description = model.description;
+                this.frontAllowBind = model.frontAllowBind;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.inputsDesc = model.inputsDesc;
+                this.invokeKey = model.invokeKey;
+                this.invokeRt = model.invokeRt;
+                this.invokeSuccessRate = model.invokeSuccessRate;
+                this.invokeTimes = model.invokeTimes;
+                this.lastModifiedOperator = model.lastModifiedOperator;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.outputsDesc = model.outputsDesc;
+                this.scene = model.scene;
+                this.sceneDesc = model.sceneDesc;
+                this.showOrder = model.showOrder;
+                this.source = model.source;
+                this.sourceDesc = model.sourceDesc;
+                this.status = model.status;
+                this.supportRegions = model.supportRegions;
+                this.title = model.title;
+                this.type = model.type;
+                this.typeDesc = model.typeDesc;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
-             * allowBind.
+             * <p>Whether variable binding is allowed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder allowBind(String allowBind) {
                 this.allowBind = allowBind;
@@ -513,7 +584,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * chargingMode.
+             * <p>Charging mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE</p>
              */
             public Builder chargingMode(String chargingMode) {
                 this.chargingMode = chargingMode;
@@ -521,7 +595,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * chargingModeDesc.
+             * <p>Charging mode description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>免费</p>
              */
             public Builder chargingModeDesc(String chargingModeDesc) {
                 this.chargingModeDesc = chargingModeDesc;
@@ -529,7 +606,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>Creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176020</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -537,7 +617,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataDisplay.
+             * <p>Data distribution display, in JSON format</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder dataDisplay(String dataDisplay) {
                 this.dataDisplay = dataDisplay;
@@ -545,7 +628,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataThreshold.
+             * <p>Data valid range, left-closed and right-closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(0,10)</p>
              */
             public Builder dataThreshold(String dataThreshold) {
                 this.dataThreshold = dataThreshold;
@@ -553,7 +639,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * deductionFactor.
+             * <p>Deduction factor</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder deductionFactor(Integer deductionFactor) {
                 this.deductionFactor = deductionFactor;
@@ -561,7 +650,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -569,7 +661,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * frontAllowBind.
+             * <p>Front-end binding allowed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder frontAllowBind(String frontAllowBind) {
                 this.frontAllowBind = frontAllowBind;
@@ -577,7 +672,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698143758000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -585,7 +683,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698143758000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -593,7 +694,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3144</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -601,7 +705,14 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * inputRequired.
+             * <p>Required parameters</p>
+             * <pre><code> When inputRequired=__all__, it means all parameters are required
+             *  When inputRequired=__one__, it means only one input is needed
+             *  Required fields are separated by commas, e.g., mobile,ip,email
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>one</strong></p>
              */
             public Builder inputRequired(String inputRequired) {
                 this.inputRequired = inputRequired;
@@ -609,7 +720,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * inputs.
+             * <p>Input parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip,age,mobile</p>
              */
             public Builder inputs(String inputs) {
                 this.inputs = inputs;
@@ -617,7 +731,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * inputsDesc.
+             * <p>Input parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip,年龄,手机号</p>
              */
             public Builder inputsDesc(String inputsDesc) {
                 this.inputsDesc = inputsDesc;
@@ -625,7 +742,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * invokeKey.
+             * <p>Invoke key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onlineScamDetectionTags_v</p>
              */
             public Builder invokeKey(String invokeKey) {
                 this.invokeKey = invokeKey;
@@ -633,7 +753,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * invokeRt.
+             * <p>Invoke RT, unit: milliseconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder invokeRt(Integer invokeRt) {
                 this.invokeRt = invokeRt;
@@ -641,7 +764,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * invokeSuccessRate.
+             * <p>Invocation success rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder invokeSuccessRate(String invokeSuccessRate) {
                 this.invokeSuccessRate = invokeSuccessRate;
@@ -649,7 +775,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * invokeTimes.
+             * <p>Number of invocations</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder invokeTimes(Long invokeTimes) {
                 this.invokeTimes = invokeTimes;
@@ -657,7 +786,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * lastModifiedOperator.
+             * <p>Last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder lastModifiedOperator(String lastModifiedOperator) {
                 this.lastModifiedOperator = lastModifiedOperator;
@@ -665,7 +797,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>onlineScamDetectionTags</strong></p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -673,7 +808,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>Output</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -681,7 +819,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * outputsDesc.
+             * <p>Output description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>字符串</p>
              */
             public Builder outputsDesc(String outputsDesc) {
                 this.outputsDesc = outputsDesc;
@@ -689,23 +830,26 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * scene.
+             * <p>Code of applicable scenarios</p>
              */
-            public Builder scene(java.util.List < String > scene) {
+            public Builder scene(java.util.List<String> scene) {
                 this.scene = scene;
                 return this;
             }
 
             /**
-             * sceneDesc.
+             * <p>Applicable scenario description</p>
              */
-            public Builder sceneDesc(java.util.List < String > sceneDesc) {
+            public Builder sceneDesc(java.util.List<String> sceneDesc) {
                 this.sceneDesc = sceneDesc;
                 return this;
             }
 
             /**
-             * showOrder.
+             * <p>Display order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder showOrder(String showOrder) {
                 this.showOrder = showOrder;
@@ -713,7 +857,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>Source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAF</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -721,7 +868,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * sourceDesc.
+             * <p>Source description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>风险识别</p>
              */
             public Builder sourceDesc(String sourceDesc) {
                 this.sourceDesc = sourceDesc;
@@ -729,7 +879,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -737,15 +890,18 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * supportRegions.
+             * <p>List of supported regions.</p>
              */
-            public Builder supportRegions(java.util.List < String > supportRegions) {
+            public Builder supportRegions(java.util.List<String> supportRegions) {
                 this.supportRegions = supportRegions;
                 return this;
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>诈骗引流识别_标签</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -753,7 +909,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -761,7 +920,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * typeDesc.
+             * <p>Category description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>事件字段</p>
              */
             public Builder typeDesc(String typeDesc) {
                 this.typeDesc = typeDesc;
@@ -769,7 +931,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * xLabel.
+             * <p>X-axis label for data distribution display</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder xLabel(String xLabel) {
                 this.xLabel = xLabel;
@@ -777,7 +942,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * yLabel.
+             * <p>Data distribution display y-axis label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder yLabel(String yLabel) {
                 this.yLabel = yLabel;
@@ -791,6 +959,12 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVariableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableDetailResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baseInfo")
         private BaseInfo baseInfo;
@@ -817,8 +991,15 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public static final class Builder {
             private BaseInfo baseInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.baseInfo = model.baseInfo;
+            } 
+
             /**
-             * baseInfo.
+             * <p>Basic attributes.</p>
              */
             public Builder baseInfo(BaseInfo baseInfo) {
                 this.baseInfo = baseInfo;

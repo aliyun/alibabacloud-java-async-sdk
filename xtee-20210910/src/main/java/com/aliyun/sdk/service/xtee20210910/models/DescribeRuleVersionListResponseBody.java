@@ -1,25 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleVersionListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleVersionListResponseBody</p>
  */
 public class DescribeRuleVersionListResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("currentPage")
+    private Integer currentPage;
+
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
+
+    @com.aliyun.core.annotation.NameInMap("totalItem")
+    private Integer totalItem;
+
+    @com.aliyun.core.annotation.NameInMap("totalPage")
+    private Integer totalPage;
 
     private DescribeRuleVersionListResponseBody(Builder builder) {
+        this.currentPage = builder.currentPage;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.resultObject = builder.resultObject;
+        this.totalItem = builder.totalItem;
+        this.totalPage = builder.totalPage;
     }
 
     public static Builder builder() {
@@ -28,6 +50,24 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
 
     public static DescribeRuleVersionListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -40,16 +80,71 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
+    /**
+     * @return totalItem
+     */
+    public Integer getTotalItem() {
+        return this.totalItem;
+    }
+
+    /**
+     * @return totalPage
+     */
+    public Integer getTotalPage() {
+        return this.totalPage;
+    }
+
     public static final class Builder {
+        private Integer currentPage; 
+        private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+        private Integer totalItem; 
+        private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleVersionListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
-         * requestId.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +152,32 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
+            return this;
+        }
+
+        /**
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        public Builder totalItem(Integer totalItem) {
+            this.totalItem = totalItem;
+            return this;
+        }
+
+        /**
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        public Builder totalPage(Integer totalPage) {
+            this.totalPage = totalPage;
             return this;
         }
 
@@ -70,6 +187,12 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleVersionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleVersionListResponseBody</p>
+     */
     public static class ConsoleAudit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applyUserId")
         private String applyUserId;
@@ -276,8 +399,33 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             private String relationName; 
             private String relationType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsoleAudit model) {
+                this.applyUserId = model.applyUserId;
+                this.applyUserName = model.applyUserName;
+                this.auditMsg = model.auditMsg;
+                this.auditRealUserId = model.auditRealUserId;
+                this.auditRealUserName = model.auditRealUserName;
+                this.auditRemark = model.auditRemark;
+                this.auditStatus = model.auditStatus;
+                this.auditTime = model.auditTime;
+                this.auditUserId = model.auditUserId;
+                this.auditUserName = model.auditUserName;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.relationExt = model.relationExt;
+                this.relationId = model.relationId;
+                this.relationName = model.relationName;
+                this.relationType = model.relationType;
+            } 
+
             /**
-             * applyUserId.
+             * <p>Initiator UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder applyUserId(String applyUserId) {
                 this.applyUserId = applyUserId;
@@ -285,7 +433,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * applyUserName.
+             * <p>Initiator name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder applyUserName(String applyUserName) {
                 this.applyUserName = applyUserName;
@@ -293,7 +444,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditMsg.
+             * <p>Approval comment</p>
+             * 
+             * <strong>example:</strong>
+             * <p>同意</p>
              */
             public Builder auditMsg(String auditMsg) {
                 this.auditMsg = auditMsg;
@@ -301,7 +455,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRealUserId.
+             * <p>Final approver UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder auditRealUserId(String auditRealUserId) {
                 this.auditRealUserId = auditRealUserId;
@@ -309,7 +466,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRealUserName.
+             * <p>Final approver name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder auditRealUserName(String auditRealUserName) {
                 this.auditRealUserName = auditRealUserName;
@@ -317,7 +477,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRemark.
+             * <p>Approver&quot;s remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder auditRemark(String auditRemark) {
                 this.auditRemark = auditRemark;
@@ -325,7 +488,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditStatus.
+             * <p>Approval status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGREE</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -333,7 +499,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditTime.
+             * <p>Approval time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545726028000</p>
              */
             public Builder auditTime(Long auditTime) {
                 this.auditTime = auditTime;
@@ -341,7 +510,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditUserId.
+             * <p>Designated approver UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder auditUserId(String auditUserId) {
                 this.auditUserId = auditUserId;
@@ -349,7 +521,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * auditUserName.
+             * <p>Designated auditor&quot;s name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder auditUserName(String auditUserName) {
                 this.auditUserName = auditUserName;
@@ -357,7 +532,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545726028000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -365,7 +543,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1728</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -373,7 +554,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * relationExt.
+             * <p>Information of related others (in JSON format)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder relationExt(String relationExt) {
                 this.relationExt = relationExt;
@@ -381,7 +565,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * relationId.
+             * <p>ID of the associated transaction</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder relationId(Long relationId) {
                 this.relationId = relationId;
@@ -389,7 +576,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * relationName.
+             * <p>Name of the associated item</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -397,7 +587,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * relationType.
+             * <p>Type of approval (e.g., <code>rule</code> for policy approval)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RULE</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -411,6 +604,12 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRuleVersionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleVersionListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consoleAudit")
         private ConsoleAudit consoleAudit;
@@ -451,6 +650,9 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleStatus")
         private String ruleStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ruleType")
+        private String ruleType;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
@@ -468,6 +670,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.ruleId = builder.ruleId;
             this.ruleStatus = builder.ruleStatus;
+            this.ruleType = builder.ruleType;
             this.version = builder.version;
         }
 
@@ -571,6 +774,13 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
          * @return version
          */
         public Long getVersion() {
@@ -591,10 +801,32 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             private Long priority; 
             private String ruleId; 
             private String ruleStatus; 
+            private String ruleType; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.consoleAudit = model.consoleAudit;
+                this.consoleRuleId = model.consoleRuleId;
+                this.consoleRuleMemo = model.consoleRuleMemo;
+                this.consoleRuleName = model.consoleRuleName;
+                this.eventCode = model.eventCode;
+                this.eventType = model.eventType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastOperator = model.lastOperator;
+                this.priority = model.priority;
+                this.ruleId = model.ruleId;
+                this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
+                this.version = model.version;
+            } 
+
             /**
-             * consoleAudit.
+             * <p>Audit object</p>
              */
             public Builder consoleAudit(ConsoleAudit consoleAudit) {
                 this.consoleAudit = consoleAudit;
@@ -602,7 +834,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * consoleRuleId.
+             * <p>Console rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6715</p>
              */
             public Builder consoleRuleId(Long consoleRuleId) {
                 this.consoleRuleId = consoleRuleId;
@@ -610,7 +845,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * consoleRuleMemo.
+             * <p>Associated policy remarks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder consoleRuleMemo(String consoleRuleMemo) {
                 this.consoleRuleMemo = consoleRuleMemo;
@@ -618,7 +856,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * consoleRuleName.
+             * <p>Associated policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder consoleRuleName(String consoleRuleName) {
                 this.consoleRuleName = consoleRuleName;
@@ -626,7 +867,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -634,7 +878,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -642,7 +889,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -650,7 +900,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -658,7 +911,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID of the policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>376773</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -666,7 +922,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * lastOperator.
+             * <p>The user who last operated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder lastOperator(String lastOperator) {
                 this.lastOperator = lastOperator;
@@ -674,7 +933,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>Policy priority, the higher the number, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -682,7 +944,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102224</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -690,7 +955,10 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Policy status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -698,7 +966,21 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Rule Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * <p>Version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder version(Long version) {
                 this.version = version;

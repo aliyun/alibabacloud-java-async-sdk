@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSampleBatchRequest} extends {@link RequestModel}
  *
  * <p>DeleteSampleBatchRequest</p>
@@ -44,7 +50,7 @@ public class DeleteSampleBatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +102,14 @@ public class DeleteSampleBatchRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +118,10 @@ public class DeleteSampleBatchRequest extends Request {
         }
 
         /**
-         * ids.
+         * <p>IDs for batch deletion operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324,343</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("ids", ids);
@@ -114,7 +130,10 @@ public class DeleteSampleBatchRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -123,7 +142,11 @@ public class DeleteSampleBatchRequest extends Request {
         }
 
         /**
-         * versions.
+         * <p>List of versions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,1</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("versions", versions);

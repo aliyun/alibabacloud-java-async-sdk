@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustVariablePageRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustVariablePageRequest</p>
@@ -58,7 +64,7 @@ public class DescribeCustVariablePageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeCustVariablePageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -155,7 +171,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Pagination parameter, current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -164,7 +183,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>累计变量描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -173,7 +195,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aheldm3876</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -182,7 +207,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page, default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -191,7 +219,10 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

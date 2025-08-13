@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRulePriorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyRulePriorityRequest</p>
@@ -48,7 +54,7 @@ public class ModifyRulePriorityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,14 @@ public class ModifyRulePriorityRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +131,10 @@ public class ModifyRulePriorityRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Primary key ID of the policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3581</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -127,7 +143,10 @@ public class ModifyRulePriorityRequest extends Request {
         }
 
         /**
-         * priority.
+         * <p>Policy priority, the higher the number, the higher the priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("priority", priority);
@@ -136,7 +155,10 @@ public class ModifyRulePriorityRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -145,7 +167,10 @@ public class ModifyRulePriorityRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101796</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("ruleId", ruleId);

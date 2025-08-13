@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateFavoriteVariableRequest} extends {@link RequestModel}
  *
  * <p>OperateFavoriteVariableRequest</p>
@@ -45,7 +51,7 @@ public class OperateFavoriteVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,14 @@ public class OperateFavoriteVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +119,11 @@ public class OperateFavoriteVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -115,7 +132,11 @@ public class OperateFavoriteVariableRequest extends Request {
         }
 
         /**
-         * operate.
+         * <p>Favorite operation</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder operate(String operate) {
             this.putQueryParameter("operate", operate);
@@ -124,7 +145,10 @@ public class OperateFavoriteVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

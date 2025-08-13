@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressionVariableRequest} extends {@link RequestModel}
  *
  * <p>CreateExpressionVariableRequest</p>
@@ -80,7 +86,7 @@ public class CreateExpressionVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,7 +192,14 @@ public class CreateExpressionVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -195,7 +208,10 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取入参的手机号前7位</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -204,7 +220,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahpayh4121</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -213,7 +233,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * expression.
+         * <p>Calculation expression</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@ex_GX9rrlTq4b67 + 1001</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("expression", expression);
@@ -222,7 +246,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * expressionTitle.
+         * <p>Display value of calculation expression</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@selfvariable_02 + 1001</p>
          */
         public Builder expressionTitle(String expressionTitle) {
             this.putQueryParameter("expressionTitle", expressionTitle);
@@ -231,7 +259,10 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * expressionVariable.
+         * <p>Calculation expression variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;ex_GX9rrlTq4b67&quot;,&quot;code&quot;:&quot;deInvokeSelfVariable(44659)&quot;,&quot;fieldType&quot;:&quot;INT&quot;}]</p>
          */
         public Builder expressionVariable(String expressionVariable) {
             this.putQueryParameter("expressionVariable", expressionVariable);
@@ -240,7 +271,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * outlier.
+         * <p>Outlier</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder outlier(String outlier) {
             this.putQueryParameter("outlier", outlier);
@@ -249,7 +284,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Variable return type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -258,7 +297,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -267,7 +310,11 @@ public class CreateExpressionVariableRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取手机号前7位</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

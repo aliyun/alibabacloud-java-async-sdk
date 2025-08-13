@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOperatorListBySceneResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOperatorListBySceneResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeOperatorListBySceneResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOperatorListBySceneResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOperatorListBySceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOperatorListBySceneResponseBody</p>
+     */
     public static class RightVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldName")
         private String fieldName;
@@ -120,8 +147,20 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             private String fieldType; 
             private String fieldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RightVariables model) {
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.fieldValue = model.fieldValue;
+            } 
+
             /**
-             * fieldName.
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -129,7 +168,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * fieldType.
+             * <p>Field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INT</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -137,7 +179,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * fieldValue.
+             * <p>Field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -151,6 +196,12 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOperatorListBySceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOperatorListBySceneResponseBody</p>
+     */
     public static class Operators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -165,7 +216,7 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("rightVariables")
-        private java.util.List < RightVariables> rightVariables;
+        private java.util.List<RightVariables> rightVariables;
 
         private Operators(Builder builder) {
             this.code = builder.code;
@@ -214,7 +265,7 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         /**
          * @return rightVariables
          */
-        public java.util.List < RightVariables> getRightVariables() {
+        public java.util.List<RightVariables> getRightVariables() {
             return this.rightVariables;
         }
 
@@ -223,10 +274,24 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             private Boolean hasRightVariable; 
             private String memo; 
             private String name; 
-            private java.util.List < RightVariables> rightVariables; 
+            private java.util.List<RightVariables> rightVariables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Operators model) {
+                this.code = model.code;
+                this.hasRightVariable = model.hasRightVariable;
+                this.memo = model.memo;
+                this.name = model.name;
+                this.rightVariables = model.rightVariables;
+            } 
 
             /**
-             * code.
+             * <p>Operator code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>equals</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -234,7 +299,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * hasRightVariable.
+             * <p>Whether it contains a right variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasRightVariable(Boolean hasRightVariable) {
                 this.hasRightVariable = hasRightVariable;
@@ -242,7 +310,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>等于</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -250,7 +321,10 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Operator name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>等于</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,9 +332,9 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * rightVariables.
+             * <p>Right variable object</p>
              */
-            public Builder rightVariables(java.util.List < RightVariables> rightVariables) {
+            public Builder rightVariables(java.util.List<RightVariables> rightVariables) {
                 this.rightVariables = rightVariables;
                 return this;
             }
@@ -272,12 +346,18 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOperatorListBySceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOperatorListBySceneResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldType")
         private String fieldType;
 
         @com.aliyun.core.annotation.NameInMap("operators")
-        private java.util.List < Operators> operators;
+        private java.util.List<Operators> operators;
 
         private ResultObject(Builder builder) {
             this.fieldType = builder.fieldType;
@@ -302,16 +382,27 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
         /**
          * @return operators
          */
-        public java.util.List < Operators> getOperators() {
+        public java.util.List<Operators> getOperators() {
             return this.operators;
         }
 
         public static final class Builder {
             private String fieldType; 
-            private java.util.List < Operators> operators; 
+            private java.util.List<Operators> operators; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.fieldType = model.fieldType;
+                this.operators = model.operators;
+            } 
 
             /**
-             * fieldType.
+             * <p>Return value type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -319,9 +410,9 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
             }
 
             /**
-             * operators.
+             * <p>Operator list</p>
              */
-            public Builder operators(java.util.List < Operators> operators) {
+            public Builder operators(java.util.List<Operators> operators) {
                 this.operators = operators;
                 return this;
             }

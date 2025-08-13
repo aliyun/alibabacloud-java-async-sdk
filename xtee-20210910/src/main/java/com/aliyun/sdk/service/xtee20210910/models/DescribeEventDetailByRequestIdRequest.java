@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventDetailByRequestIdRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventDetailByRequestIdRequest</p>
@@ -50,7 +56,7 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +117,14 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -120,7 +133,10 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_azywkh7523</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -129,7 +145,10 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         }
 
         /**
-         * eventTime.
+         * <p>Event execution time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752571330000</p>
          */
         public Builder eventTime(Long eventTime) {
             this.putQueryParameter("eventTime", eventTime);
@@ -138,7 +157,11 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -147,7 +170,11 @@ public class DescribeEventDetailByRequestIdRequest extends Request {
         }
 
         /**
-         * sRequestId.
+         * <p>Request ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD6B08EC-1B44-5378-8838-C76A36415C55</p>
          */
         public Builder sRequestId(String sRequestId) {
             this.putQueryParameter("sRequestId", sRequestId);

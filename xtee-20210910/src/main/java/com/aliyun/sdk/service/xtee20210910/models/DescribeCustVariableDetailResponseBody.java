@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustVariableDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustVariableDetailResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeCustVariableDetailResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustVariableDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustVariableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustVariableDetailResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -252,8 +279,31 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             private String velocityFC; 
             private String velocityTW; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.condition = model.condition;
+                this.dataVersion = model.dataVersion;
+                this.description = model.description;
+                this.eventCodes = model.eventCodes;
+                this.historyValueType = model.historyValueType;
+                this.id = model.id;
+                this.object = model.object;
+                this.outputs = model.outputs;
+                this.subject = model.subject;
+                this.timeType = model.timeType;
+                this.title = model.title;
+                this.twCount = model.twCount;
+                this.velocityFC = model.velocityFC;
+                this.velocityTW = model.velocityTW;
+            } 
+
             /**
-             * condition.
+             * <p>Condition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;currentId&quot;:1,&quot;deepCount&quot;:0,&quot;list&quot;:[{&quot;currentId&quot;:2,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;accountId&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;accountId&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;parentId&quot;:1,&quot;right&quot;:{&quot;code&quot;:&quot;&quot;A\nB\nC&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;}</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -261,7 +311,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataVersion.
+             * <p>Data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataVersion(Long dataVersion) {
                 this.dataVersion = dataVersion;
@@ -269,7 +322,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>变量描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +333,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * eventCodes.
+             * <p>Event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_ahespg8137</p>
              */
             public Builder eventCodes(String eventCodes) {
                 this.eventCodes = eventCodes;
@@ -285,7 +344,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * historyValueType.
+             * <p>Value type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EARLIEST</p>
              */
             public Builder historyValueType(String historyValueType) {
                 this.historyValueType = historyValueType;
@@ -293,7 +355,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID of the cumulative variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2793</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -301,7 +366,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * object.
+             * <p>Cumulative object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEpage</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -309,7 +377,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>Variable return type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -317,7 +388,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * subject.
+             * <p>Main object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEpname</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -325,7 +399,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * timeType.
+             * <p>Time slice type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEAR</p>
              */
             public Builder timeType(String timeType) {
                 this.timeType = timeType;
@@ -333,7 +410,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>累计变量求平均值</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -341,7 +421,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * twCount.
+             * <p>Time count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder twCount(String twCount) {
                 this.twCount = twCount;
@@ -349,7 +432,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * velocityFC.
+             * <p>Variable type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISTINCT</p>
              */
             public Builder velocityFC(String velocityFC) {
                 this.velocityFC = velocityFC;
@@ -357,7 +443,10 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * velocityTW.
+             * <p>Time slice unit</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOUR_1</p>
              */
             public Builder velocityTW(String velocityTW) {
                 this.velocityTW = velocityTW;

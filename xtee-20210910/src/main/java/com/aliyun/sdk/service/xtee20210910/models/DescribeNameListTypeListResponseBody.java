@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNameListTypeListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNameListTypeListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeNameListTypeListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNameListTypeListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNameListTypeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNameListTypeListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -108,8 +135,19 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * key.
+             * <p>Match Key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +155,10 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Variable value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>账号ID</p>
              */
             public Builder value(String value) {
                 this.value = value;

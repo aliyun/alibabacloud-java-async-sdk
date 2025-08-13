@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeRuleHitResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.Map < String, ? > resultObject;
+    private java.util.Map<String, ?> resultObject;
 
     private DescribeRuleHitResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeRuleHitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeRuleHitResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.Map < String, ? > getResultObject() {
+    public java.util.Map<String, ?> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > resultObject; 
+        private java.util.Map<String, ?> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleHitResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,12 @@ public class DescribeRuleHitResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
-        public Builder resultObject(java.util.Map < String, ? > resultObject) {
+        public Builder resultObject(java.util.Map<String, ?> resultObject) {
             this.resultObject = resultObject;
             return this;
         }

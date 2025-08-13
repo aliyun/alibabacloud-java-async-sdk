@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVariableListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
 
     public static DescribeVariableListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeVariableListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeVariableListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeVariableListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeVariableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVariableListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("capacity")
         private Long capacity;
@@ -161,7 +204,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("extendInfo")
-        private java.util.Map < String, ? > extendInfo;
+        private java.util.Map<String, ?> extendInfo;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -254,7 +297,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         /**
          * @return extendInfo
          */
-        public java.util.Map < String, ? > getExtendInfo() {
+        public java.util.Map<String, ?> getExtendInfo() {
             return this.extendInfo;
         }
 
@@ -353,7 +396,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
             private Long capacity; 
             private String defineId; 
             private String description; 
-            private java.util.Map < String, ? > extendInfo; 
+            private java.util.Map<String, ?> extendInfo; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
@@ -368,8 +411,34 @@ public class DescribeVariableListResponseBody extends TeaModel {
             private String type; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.capacity = model.capacity;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.extendInfo = model.extendInfo;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.leftCapacity = model.leftCapacity;
+                this.name = model.name;
+                this.outputsType = model.outputsType;
+                this.refObjId = model.refObjId;
+                this.refObjName = model.refObjName;
+                this.refObjType = model.refObjType;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
+
             /**
-             * capacity.
+             * <p>Capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -377,7 +446,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * defineId.
+             * <p>Variable definition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder defineId(String defineId) {
                 this.defineId = defineId;
@@ -385,7 +457,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>变量描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -393,15 +468,21 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * extendInfo.
+             * <p>Extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无</p>
              */
-            public Builder extendInfo(java.util.Map < String, ? > extendInfo) {
+            public Builder extendInfo(java.util.Map<String, ?> extendInfo) {
                 this.extendInfo = extendInfo;
                 return this;
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -409,7 +490,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -417,7 +501,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Variable ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -425,7 +512,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * leftCapacity.
+             * <p>Remaining capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder leftCapacity(Long leftCapacity) {
                 this.leftCapacity = leftCapacity;
@@ -433,7 +523,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>ipLocationCityCode</strong></p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,7 +534,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * outputsType.
+             * <p>Variable output type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder outputsType(String outputsType) {
                 this.outputsType = outputsType;
@@ -449,7 +545,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * refObjId.
+             * <p>Associated event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_agdxgz0246</p>
              */
             public Builder refObjId(String refObjId) {
                 this.refObjId = refObjId;
@@ -457,7 +556,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * refObjName.
+             * <p>Associated event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册事件</p>
              */
             public Builder refObjName(String refObjName) {
                 this.refObjName = refObjName;
@@ -465,7 +567,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * refObjType.
+             * <p>Associated object type of the variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EVENT</p>
              */
             public Builder refObjType(String refObjType) {
                 this.refObjType = refObjType;
@@ -473,7 +578,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>Source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAF</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -481,7 +589,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>设备风险识别_标签</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -489,7 +600,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Variable type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -497,7 +611,10 @@ public class DescribeVariableListResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID to which the data belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

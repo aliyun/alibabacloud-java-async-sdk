@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSafConsoleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSafConsoleResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("bizData")
-    private java.util.List < String > bizData;
+    private java.util.List<String> bizData;
 
     private DescribeSafConsoleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,13 +50,21 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
     /**
      * @return bizData
      */
-    public java.util.List < String > getBizData() {
+    public java.util.List<String> getBizData() {
         return this.bizData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > bizData; 
+        private java.util.List<String> bizData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSafConsoleResponseBody model) {
+            this.requestId = model.requestId;
+            this.bizData = model.bizData;
+        } 
 
         /**
          * RequestId.
@@ -59,7 +77,7 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
         /**
          * bizData.
          */
-        public Builder bizData(java.util.List < String > bizData) {
+        public Builder bizData(java.util.List<String> bizData) {
             this.bizData = bizData;
             return this;
         }

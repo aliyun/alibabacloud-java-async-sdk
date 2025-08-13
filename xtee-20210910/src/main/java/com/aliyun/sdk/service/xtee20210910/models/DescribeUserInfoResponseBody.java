@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserInfoResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
 
     public static DescribeUserInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserInfoResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +128,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -117,7 +147,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +163,12 @@ public class DescribeUserInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserInfoResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientIp")
         private String clientIp;
@@ -192,8 +231,21 @@ public class DescribeUserInfoResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.clientIp = model.clientIp;
+                this.subId = model.subId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
-             * clientIp.
+             * <p>Client IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -201,7 +253,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * subId.
+             * <p>Sub-account ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>555666</p>
              */
             public Builder subId(String subId) {
                 this.subId = subId;
@@ -209,7 +264,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15633333331111</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -217,7 +275,10 @@ public class DescribeUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>User name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventLogPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventLogPageRequest</p>
@@ -173,7 +179,7 @@ public class DescribeEventLogPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -657,7 +663,10 @@ public class DescribeEventLogPageRequest extends Request {
         }
 
         /**
-         * reqIdPBS.
+         * <p>requestId。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD6B08EC-1B44-5378-8838-C76A36415C55</p>
          */
         public Builder reqIdPBS(String reqIdPBS) {
             this.putQueryParameter("reqIdPBS", reqIdPBS);

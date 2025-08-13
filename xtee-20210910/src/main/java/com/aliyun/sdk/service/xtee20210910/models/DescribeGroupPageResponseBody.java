@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupPageResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
 
     public static DescribeGroupPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupPageResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeGroupPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupPageResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("communityNo")
         private String communityNo;
@@ -260,8 +303,25 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             private Long taskId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.communityNo = model.communityNo;
+                this.createTime = model.createTime;
+                this.groupRisk = model.groupRisk;
+                this.groupScale = model.groupScale;
+                this.id = model.id;
+                this.sceneName = model.sceneName;
+                this.taskId = model.taskId;
+                this.userId = model.userId;
+            } 
+
             /**
-             * communityNo.
+             * <p>Community number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129838420210118141502RaMMIgVG</p>
              */
             public Builder communityNo(String communityNo) {
                 this.communityNo = communityNo;
@@ -269,7 +329,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699450018265</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -277,7 +340,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * groupRisk.
+             * <p>Group risk concentration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder groupRisk(String groupRisk) {
                 this.groupRisk = groupRisk;
@@ -285,7 +351,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * groupScale.
+             * <p>Group scale.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder groupScale(String groupScale) {
                 this.groupScale = groupScale;
@@ -293,7 +362,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -301,7 +373,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * sceneName.
+             * <p>Scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通用图计算</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -309,7 +384,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6770764</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -317,7 +395,10 @@ public class DescribeGroupPageResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

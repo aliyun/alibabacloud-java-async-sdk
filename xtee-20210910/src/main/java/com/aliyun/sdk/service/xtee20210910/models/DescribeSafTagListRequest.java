@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSafTagListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSafTagListRequest</p>
@@ -14,6 +20,10 @@ public class DescribeSafTagListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    private String tagName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("apiId")
@@ -34,6 +44,7 @@ public class DescribeSafTagListRequest extends Request {
     private DescribeSafTagListRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.tagName = builder.tagName;
         this.apiId = builder.apiId;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
@@ -48,7 +59,7 @@ public class DescribeSafTagListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -58,6 +69,13 @@ public class DescribeSafTagListRequest extends Request {
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return tagName
+     */
+    public String getTagName() {
+        return this.tagName;
     }
 
     /**
@@ -90,6 +108,7 @@ public class DescribeSafTagListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSafTagListRequest, Builder> {
         private String lang; 
+        private String tagName; 
         private String apiId; 
         private String currentPage; 
         private String pageSize; 
@@ -102,6 +121,7 @@ public class DescribeSafTagListRequest extends Request {
         private Builder(DescribeSafTagListRequest request) {
             super(request);
             this.lang = request.lang;
+            this.tagName = request.tagName;
             this.apiId = request.apiId;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
@@ -109,7 +129,14 @@ public class DescribeSafTagListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +145,22 @@ public class DescribeSafTagListRequest extends Request {
         }
 
         /**
-         * apiId.
+         * <p>Tag name. Fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn0301</p>
+         */
+        public Builder tagName(String tagName) {
+            this.putQueryParameter("TagName", tagName);
+            this.tagName = tagName;
+            return this;
+        }
+
+        /**
+         * <p>API service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("apiId", apiId);
@@ -127,7 +169,10 @@ public class DescribeSafTagListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -136,7 +181,10 @@ public class DescribeSafTagListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -145,7 +193,10 @@ public class DescribeSafTagListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

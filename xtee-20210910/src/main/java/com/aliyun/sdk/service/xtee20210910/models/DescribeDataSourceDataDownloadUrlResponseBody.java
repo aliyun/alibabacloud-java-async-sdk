@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSourceDataDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSourceDataDownloadUrlResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataSourceDataDownloadUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSourceDataDownloadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceDataDownloadUrlResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("downloadFileUrl")
         private String downloadFileUrl;
@@ -96,8 +123,18 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
         public static final class Builder {
             private String downloadFileUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.downloadFileUrl = model.downloadFileUrl;
+            } 
+
             /**
-             * downloadFileUrl.
+             * <p>Download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https:/xxxxx.oss-cn-xxxxxx.aliyuncs.com/xxxx/xxx/xxxxxx/xxx/xxxxxxxxxx?Expires=1753421064&amp;OSSAccessKeyId=xxxxxxx&amp;Signature=xxxxxxx%3D</p>
              */
             public Builder downloadFileUrl(String downloadFileUrl) {
                 this.downloadFileUrl = downloadFileUrl;

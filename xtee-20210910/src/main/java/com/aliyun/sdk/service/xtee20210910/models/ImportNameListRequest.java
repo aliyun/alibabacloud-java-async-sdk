@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportNameListRequest} extends {@link RequestModel}
  *
  * <p>ImportNameListRequest</p>
@@ -33,6 +39,10 @@ public class ImportNameListRequest extends Request {
     private String importType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("memo")
+    private String memo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nameListType")
     private String nameListType;
 
@@ -56,6 +66,7 @@ public class ImportNameListRequest extends Request {
         this.data = builder.data;
         this.description = builder.description;
         this.importType = builder.importType;
+        this.memo = builder.memo;
         this.nameListType = builder.nameListType;
         this.regId = builder.regId;
         this.title = builder.title;
@@ -70,7 +81,7 @@ public class ImportNameListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,6 +122,13 @@ public class ImportNameListRequest extends Request {
     }
 
     /**
+     * @return memo
+     */
+    public String getMemo() {
+        return this.memo;
+    }
+
+    /**
      * @return nameListType
      */
     public String getNameListType() {
@@ -144,6 +162,7 @@ public class ImportNameListRequest extends Request {
         private String data; 
         private String description; 
         private String importType; 
+        private String memo; 
         private String nameListType; 
         private String regId; 
         private String title; 
@@ -160,6 +179,7 @@ public class ImportNameListRequest extends Request {
             this.data = request.data;
             this.description = request.description;
             this.importType = request.importType;
+            this.memo = request.memo;
             this.nameListType = request.nameListType;
             this.regId = request.regId;
             this.title = request.title;
@@ -167,7 +187,14 @@ public class ImportNameListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,7 +203,10 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -185,7 +215,10 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * data.
+         * <p>Import name list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa\nbb\ncc</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("data", data);
@@ -194,7 +227,10 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -203,7 +239,14 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * importType.
+         * <p>Document import type:</p>
+         * <p>INPUT: Text input
+         * CSV: CSV upload
+         * NONE: Do not upload for now</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         public Builder importType(String importType) {
             this.putQueryParameter("importType", importType);
@@ -212,7 +255,22 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * nameListType.
+         * <p>name content memo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名单内容描述</p>
+         */
+        public Builder memo(String memo) {
+            this.putQueryParameter("memo", memo);
+            this.memo = memo;
+            return this;
+        }
+
+        /**
+         * <p>nameListType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountId</p>
          */
         public Builder nameListType(String nameListType) {
             this.putQueryParameter("nameListType", nameListType);
@@ -221,7 +279,10 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -230,7 +291,11 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);
@@ -239,7 +304,10 @@ public class ImportNameListRequest extends Request {
         }
 
         /**
-         * variableId.
+         * <p>Variable ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393314</p>
          */
         public Builder variableId(Long variableId) {
             this.putQueryParameter("variableId", variableId);

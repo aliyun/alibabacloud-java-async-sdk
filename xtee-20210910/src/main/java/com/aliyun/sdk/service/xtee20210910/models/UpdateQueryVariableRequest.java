@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQueryVariableRequest} extends {@link RequestModel}
  *
  * <p>UpdateQueryVariableRequest</p>
@@ -93,7 +99,7 @@ public class UpdateQueryVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,7 +223,14 @@ public class UpdateQueryVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -226,7 +239,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * dataSourceCode.
+         * <p>Data source code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_vcaoii1697</p>
          */
         public Builder dataSourceCode(String dataSourceCode) {
             this.putQueryParameter("dataSourceCode", dataSourceCode);
@@ -235,7 +252,10 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -244,7 +264,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ajnoqe2016</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -253,7 +277,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * expression.
+         * <p>Expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("expression", expression);
@@ -262,7 +290,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * expressionTitle.
+         * <p>Display expression</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
          */
         public Builder expressionTitle(String expressionTitle) {
             this.putQueryParameter("expressionTitle", expressionTitle);
@@ -271,7 +303,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * expressionVariable.
+         * <p>Expression associated variable</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder expressionVariable(String expressionVariable) {
             this.putQueryParameter("expressionVariable", expressionVariable);
@@ -280,7 +316,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Primary key ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -289,7 +329,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * outlier.
+         * <p>Outlier</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder outlier(String outlier) {
             this.putQueryParameter("outlier", outlier);
@@ -298,7 +342,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * outputs.
+         * <p>Variable return type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputs(String outputs) {
             this.putQueryParameter("outputs", outputs);
@@ -307,7 +355,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -316,7 +368,11 @@ public class UpdateQueryVariableRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取年龄大于30的数据</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

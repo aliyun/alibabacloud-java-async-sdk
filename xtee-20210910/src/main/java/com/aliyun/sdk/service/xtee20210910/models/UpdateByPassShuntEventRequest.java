@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateByPassShuntEventRequest} extends {@link RequestModel}
  *
  * <p>UpdateByPassShuntEventRequest</p>
@@ -43,7 +49,7 @@ public class UpdateByPassShuntEventRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +101,14 @@ public class UpdateByPassShuntEventRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +117,10 @@ public class UpdateByPassShuntEventRequest extends Request {
         }
 
         /**
-         * eventId.
+         * <p>Event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("eventId", eventId);
@@ -113,7 +129,10 @@ public class UpdateByPassShuntEventRequest extends Request {
         }
 
         /**
-         * eventName.
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户昵称文本审核检测结果</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("eventName", eventName);
@@ -122,7 +141,10 @@ public class UpdateByPassShuntEventRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

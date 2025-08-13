@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileUploadRequest} extends {@link RequestModel}
  *
  * <p>FileUploadRequest</p>
@@ -43,7 +49,7 @@ public class FileUploadRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +101,10 @@ public class FileUploadRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P4911_2707.csv</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -104,7 +113,10 @@ public class FileUploadRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>File URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7">https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -113,7 +125,14 @@ public class FileUploadRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,7 +141,10 @@ public class FileUploadRequest extends Request {
         }
 
         /**
-         * Tab.
+         * <p>Scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FNNCIEA</p>
          */
         public Builder tab(String tab) {
             this.putQueryParameter("Tab", tab);

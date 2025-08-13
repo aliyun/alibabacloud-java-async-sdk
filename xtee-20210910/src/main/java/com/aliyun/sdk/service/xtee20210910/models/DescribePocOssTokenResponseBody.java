@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePocOssTokenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePocOssTokenResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
 
     public static DescribePocOssTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         private String signature; 
         private Boolean resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePocOssTokenResponseBody model) {
+            this.accessId = model.accessId;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * AccessId.
+         * <p>AccessKeyId for OSS file upload</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tE7sActovY6Hvpu5oTh</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -117,7 +143,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>Host address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.34.191</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -125,7 +154,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The Key required for file upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/de/namelist/e924/ufzgsedX9bd3a7</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -133,7 +165,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>OSS security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -141,7 +176,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +187,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>Upload signature information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0lxQEWM0BqHd476JJE0fNXdS3UA=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -157,7 +198,10 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;

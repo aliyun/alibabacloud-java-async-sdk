@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSampleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSampleResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateSampleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateSampleResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateSampleResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateSampleResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class CreateSampleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSampleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSampleResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("communityCount")
         private Integer communityCount;
@@ -156,8 +183,23 @@ public class CreateSampleResponseBody extends TeaModel {
             private Integer sampleCount; 
             private Integer successCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.communityCount = model.communityCount;
+                this.failCount = model.failCount;
+                this.recallProbability = model.recallProbability;
+                this.riskDensity = model.riskDensity;
+                this.sampleCount = model.sampleCount;
+                this.successCount = model.successCount;
+            } 
+
             /**
-             * communityCount.
+             * <p>Number of colored groups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder communityCount(Integer communityCount) {
                 this.communityCount = communityCount;
@@ -165,7 +207,10 @@ public class CreateSampleResponseBody extends TeaModel {
             }
 
             /**
-             * failCount.
+             * <p>Number of failed samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -173,7 +218,10 @@ public class CreateSampleResponseBody extends TeaModel {
             }
 
             /**
-             * recallProbability.
+             * <p>Recall probability</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5%</p>
              */
             public Builder recallProbability(String recallProbability) {
                 this.recallProbability = recallProbability;
@@ -181,7 +229,10 @@ public class CreateSampleResponseBody extends TeaModel {
             }
 
             /**
-             * riskDensity.
+             * <p>Risk density</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5%</p>
              */
             public Builder riskDensity(String riskDensity) {
                 this.riskDensity = riskDensity;
@@ -189,7 +240,10 @@ public class CreateSampleResponseBody extends TeaModel {
             }
 
             /**
-             * sampleCount.
+             * <p>Number of samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sampleCount(Integer sampleCount) {
                 this.sampleCount = sampleCount;
@@ -197,7 +251,10 @@ public class CreateSampleResponseBody extends TeaModel {
             }
 
             /**
-             * successCount.
+             * <p>Number of successful samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;

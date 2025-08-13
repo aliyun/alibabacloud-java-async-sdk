@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventVariableListResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventVariableListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * RequestId.
@@ -70,6 +88,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class OutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -108,6 +132,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -131,6 +163,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class VariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -157,6 +195,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(VariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -172,6 +217,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -486,6 +537,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -693,6 +775,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class DeviceVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -731,6 +819,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -754,6 +850,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class DeviceVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -780,6 +882,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -795,6 +904,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class DeviceVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -1109,6 +1224,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -1316,6 +1462,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ExpressionVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -1354,6 +1506,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -1377,6 +1537,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ExpressionVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -1403,6 +1569,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -1418,6 +1591,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ExpressionVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -1732,6 +1911,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpressionVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -1939,6 +2149,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class FavoriteVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -1977,6 +2193,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(FavoriteVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -2000,6 +2224,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class FavoriteVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -2026,6 +2256,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(FavoriteVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -2041,6 +2278,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class FavoriteVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -2355,6 +2598,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(FavoriteVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -2562,6 +2836,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class MiddleVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -2600,6 +2880,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiddleVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -2623,6 +2911,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class MiddleVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -2649,6 +2943,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiddleVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -2664,6 +2965,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class MiddleVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -2978,6 +3285,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(MiddleVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -3185,6 +3523,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ModelVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -3223,6 +3567,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -3246,6 +3598,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ModelVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -3272,6 +3630,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -3287,6 +3652,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ModelVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -3601,6 +3972,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -3808,6 +4210,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NameListOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -3846,6 +4254,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(NameListOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -3869,6 +4285,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NameListVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -3895,6 +4317,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(NameListVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -3910,6 +4339,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -4224,6 +4659,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(NameList model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -4431,6 +4897,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariableFunctionsOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -4469,6 +4941,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariableFunctionsOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -4492,6 +4972,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariableFunctionsVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -4518,6 +5004,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariableFunctionsVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -4533,6 +5026,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariableFunctions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -4847,6 +5346,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariableFunctions model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -5054,6 +5584,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -5092,6 +5628,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -5115,6 +5659,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -5141,6 +5691,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -5156,6 +5713,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class NativeVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -5470,6 +6033,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(NativeVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -5677,6 +6271,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class QueryVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -5715,6 +6315,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -5738,6 +6346,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class QueryVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -5764,6 +6378,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -5779,6 +6400,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class QueryVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -6093,6 +6720,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -6300,6 +6958,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SelfVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -6338,6 +7002,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelfVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -6361,6 +7033,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SelfVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -6387,6 +7065,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelfVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -6402,6 +7087,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SelfVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -6716,6 +7407,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelfVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -6923,6 +7645,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SysVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -6961,6 +7689,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(SysVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -6984,6 +7720,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SysVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -7010,6 +7752,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(SysVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -7025,6 +7774,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class SysVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -7339,6 +8094,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(SysVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -7546,6 +8332,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class VelocityVariablesOutputThreshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Double maxValue;
@@ -7584,6 +8376,14 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private Double maxValue; 
             private Double minValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(VelocityVariablesOutputThreshold model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+            } 
+
             /**
              * maxValue.
              */
@@ -7607,6 +8407,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class VelocityVariablesVariableVelocity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iv")
         private String iv;
@@ -7633,6 +8439,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public static final class Builder {
             private String iv; 
 
+            private Builder() {
+            } 
+
+            private Builder(VelocityVariablesVariableVelocity model) {
+                this.iv = model.iv;
+            } 
+
             /**
              * iv.
              */
@@ -7648,6 +8461,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class VelocityVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -7962,6 +8781,37 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
 
+            private Builder() {
+            } 
+
+            private Builder(VelocityVariables model) {
+                this.code = model.code;
+                this.dataDisplay = model.dataDisplay;
+                this.defineId = model.defineId;
+                this.description = model.description;
+                this.displayType = model.displayType;
+                this.expressionTitle = model.expressionTitle;
+                this.favoriteFlag = model.favoriteFlag;
+                this.fieldDetail = model.fieldDetail;
+                this.fieldRank = model.fieldRank;
+                this.fieldSource = model.fieldSource;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.inputFieldType = model.inputFieldType;
+                this.inputRequired = model.inputRequired;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outlier = model.outlier;
+                this.outputThreshold = model.outputThreshold;
+                this.parentName = model.parentName;
+                this.sourceType = model.sourceType;
+                this.title = model.title;
+                this.type = model.type;
+                this.variableVelocity = model.variableVelocity;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+            } 
+
             /**
              * code.
              */
@@ -8169,48 +9019,54 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("deviceVariables")
-        private java.util.List < DeviceVariables> deviceVariables;
+        private java.util.List<DeviceVariables> deviceVariables;
 
         @com.aliyun.core.annotation.NameInMap("expressionVariables")
-        private java.util.List < ExpressionVariables> expressionVariables;
+        private java.util.List<ExpressionVariables> expressionVariables;
 
         @com.aliyun.core.annotation.NameInMap("favoriteVariables")
-        private java.util.List < FavoriteVariables> favoriteVariables;
+        private java.util.List<FavoriteVariables> favoriteVariables;
 
         @com.aliyun.core.annotation.NameInMap("middleVariables")
-        private java.util.List < MiddleVariables> middleVariables;
+        private java.util.List<MiddleVariables> middleVariables;
 
         @com.aliyun.core.annotation.NameInMap("modelVariables")
-        private java.util.List < ModelVariables> modelVariables;
+        private java.util.List<ModelVariables> modelVariables;
 
         @com.aliyun.core.annotation.NameInMap("nameList")
-        private java.util.List < NameList> nameList;
+        private java.util.List<NameList> nameList;
 
         @com.aliyun.core.annotation.NameInMap("nativeVariableFunctions")
-        private java.util.List < NativeVariableFunctions> nativeVariableFunctions;
+        private java.util.List<NativeVariableFunctions> nativeVariableFunctions;
 
         @com.aliyun.core.annotation.NameInMap("nativeVariables")
-        private java.util.List < NativeVariables> nativeVariables;
+        private java.util.List<NativeVariables> nativeVariables;
 
         @com.aliyun.core.annotation.NameInMap("queryVariables")
-        private java.util.List < QueryVariables> queryVariables;
+        private java.util.List<QueryVariables> queryVariables;
 
         @com.aliyun.core.annotation.NameInMap("selfVariables")
-        private java.util.List < SelfVariables> selfVariables;
+        private java.util.List<SelfVariables> selfVariables;
 
         @com.aliyun.core.annotation.NameInMap("sysVariables")
-        private java.util.List < SysVariables> sysVariables;
+        private java.util.List<SysVariables> sysVariables;
 
         @com.aliyun.core.annotation.NameInMap("thirdVariables")
-        private java.util.Map < String, ? > thirdVariables;
+        private java.util.Map<String, ?> thirdVariables;
 
         @com.aliyun.core.annotation.NameInMap("velocityVariables")
-        private java.util.List < VelocityVariables> velocityVariables;
+        private java.util.List<VelocityVariables> velocityVariables;
 
         private ResultObject(Builder builder) {
             this.actions = builder.actions;
@@ -8240,121 +9096,141 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
         /**
          * @return deviceVariables
          */
-        public java.util.List < DeviceVariables> getDeviceVariables() {
+        public java.util.List<DeviceVariables> getDeviceVariables() {
             return this.deviceVariables;
         }
 
         /**
          * @return expressionVariables
          */
-        public java.util.List < ExpressionVariables> getExpressionVariables() {
+        public java.util.List<ExpressionVariables> getExpressionVariables() {
             return this.expressionVariables;
         }
 
         /**
          * @return favoriteVariables
          */
-        public java.util.List < FavoriteVariables> getFavoriteVariables() {
+        public java.util.List<FavoriteVariables> getFavoriteVariables() {
             return this.favoriteVariables;
         }
 
         /**
          * @return middleVariables
          */
-        public java.util.List < MiddleVariables> getMiddleVariables() {
+        public java.util.List<MiddleVariables> getMiddleVariables() {
             return this.middleVariables;
         }
 
         /**
          * @return modelVariables
          */
-        public java.util.List < ModelVariables> getModelVariables() {
+        public java.util.List<ModelVariables> getModelVariables() {
             return this.modelVariables;
         }
 
         /**
          * @return nameList
          */
-        public java.util.List < NameList> getNameList() {
+        public java.util.List<NameList> getNameList() {
             return this.nameList;
         }
 
         /**
          * @return nativeVariableFunctions
          */
-        public java.util.List < NativeVariableFunctions> getNativeVariableFunctions() {
+        public java.util.List<NativeVariableFunctions> getNativeVariableFunctions() {
             return this.nativeVariableFunctions;
         }
 
         /**
          * @return nativeVariables
          */
-        public java.util.List < NativeVariables> getNativeVariables() {
+        public java.util.List<NativeVariables> getNativeVariables() {
             return this.nativeVariables;
         }
 
         /**
          * @return queryVariables
          */
-        public java.util.List < QueryVariables> getQueryVariables() {
+        public java.util.List<QueryVariables> getQueryVariables() {
             return this.queryVariables;
         }
 
         /**
          * @return selfVariables
          */
-        public java.util.List < SelfVariables> getSelfVariables() {
+        public java.util.List<SelfVariables> getSelfVariables() {
             return this.selfVariables;
         }
 
         /**
          * @return sysVariables
          */
-        public java.util.List < SysVariables> getSysVariables() {
+        public java.util.List<SysVariables> getSysVariables() {
             return this.sysVariables;
         }
 
         /**
          * @return thirdVariables
          */
-        public java.util.Map < String, ? > getThirdVariables() {
+        public java.util.Map<String, ?> getThirdVariables() {
             return this.thirdVariables;
         }
 
         /**
          * @return velocityVariables
          */
-        public java.util.List < VelocityVariables> getVelocityVariables() {
+        public java.util.List<VelocityVariables> getVelocityVariables() {
             return this.velocityVariables;
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
-            private java.util.List < DeviceVariables> deviceVariables; 
-            private java.util.List < ExpressionVariables> expressionVariables; 
-            private java.util.List < FavoriteVariables> favoriteVariables; 
-            private java.util.List < MiddleVariables> middleVariables; 
-            private java.util.List < ModelVariables> modelVariables; 
-            private java.util.List < NameList> nameList; 
-            private java.util.List < NativeVariableFunctions> nativeVariableFunctions; 
-            private java.util.List < NativeVariables> nativeVariables; 
-            private java.util.List < QueryVariables> queryVariables; 
-            private java.util.List < SelfVariables> selfVariables; 
-            private java.util.List < SysVariables> sysVariables; 
-            private java.util.Map < String, ? > thirdVariables; 
-            private java.util.List < VelocityVariables> velocityVariables; 
+            private java.util.List<Actions> actions; 
+            private java.util.List<DeviceVariables> deviceVariables; 
+            private java.util.List<ExpressionVariables> expressionVariables; 
+            private java.util.List<FavoriteVariables> favoriteVariables; 
+            private java.util.List<MiddleVariables> middleVariables; 
+            private java.util.List<ModelVariables> modelVariables; 
+            private java.util.List<NameList> nameList; 
+            private java.util.List<NativeVariableFunctions> nativeVariableFunctions; 
+            private java.util.List<NativeVariables> nativeVariables; 
+            private java.util.List<QueryVariables> queryVariables; 
+            private java.util.List<SelfVariables> selfVariables; 
+            private java.util.List<SysVariables> sysVariables; 
+            private java.util.Map<String, ?> thirdVariables; 
+            private java.util.List<VelocityVariables> velocityVariables; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.actions = model.actions;
+                this.deviceVariables = model.deviceVariables;
+                this.expressionVariables = model.expressionVariables;
+                this.favoriteVariables = model.favoriteVariables;
+                this.middleVariables = model.middleVariables;
+                this.modelVariables = model.modelVariables;
+                this.nameList = model.nameList;
+                this.nativeVariableFunctions = model.nativeVariableFunctions;
+                this.nativeVariables = model.nativeVariables;
+                this.queryVariables = model.queryVariables;
+                this.selfVariables = model.selfVariables;
+                this.sysVariables = model.sysVariables;
+                this.thirdVariables = model.thirdVariables;
+                this.velocityVariables = model.velocityVariables;
+            } 
 
             /**
              * actions.
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -8362,7 +9238,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * deviceVariables.
              */
-            public Builder deviceVariables(java.util.List < DeviceVariables> deviceVariables) {
+            public Builder deviceVariables(java.util.List<DeviceVariables> deviceVariables) {
                 this.deviceVariables = deviceVariables;
                 return this;
             }
@@ -8370,7 +9246,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * expressionVariables.
              */
-            public Builder expressionVariables(java.util.List < ExpressionVariables> expressionVariables) {
+            public Builder expressionVariables(java.util.List<ExpressionVariables> expressionVariables) {
                 this.expressionVariables = expressionVariables;
                 return this;
             }
@@ -8378,7 +9254,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * favoriteVariables.
              */
-            public Builder favoriteVariables(java.util.List < FavoriteVariables> favoriteVariables) {
+            public Builder favoriteVariables(java.util.List<FavoriteVariables> favoriteVariables) {
                 this.favoriteVariables = favoriteVariables;
                 return this;
             }
@@ -8386,7 +9262,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * middleVariables.
              */
-            public Builder middleVariables(java.util.List < MiddleVariables> middleVariables) {
+            public Builder middleVariables(java.util.List<MiddleVariables> middleVariables) {
                 this.middleVariables = middleVariables;
                 return this;
             }
@@ -8394,7 +9270,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * modelVariables.
              */
-            public Builder modelVariables(java.util.List < ModelVariables> modelVariables) {
+            public Builder modelVariables(java.util.List<ModelVariables> modelVariables) {
                 this.modelVariables = modelVariables;
                 return this;
             }
@@ -8402,7 +9278,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < NameList> nameList) {
+            public Builder nameList(java.util.List<NameList> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -8410,7 +9286,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * nativeVariableFunctions.
              */
-            public Builder nativeVariableFunctions(java.util.List < NativeVariableFunctions> nativeVariableFunctions) {
+            public Builder nativeVariableFunctions(java.util.List<NativeVariableFunctions> nativeVariableFunctions) {
                 this.nativeVariableFunctions = nativeVariableFunctions;
                 return this;
             }
@@ -8418,7 +9294,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * nativeVariables.
              */
-            public Builder nativeVariables(java.util.List < NativeVariables> nativeVariables) {
+            public Builder nativeVariables(java.util.List<NativeVariables> nativeVariables) {
                 this.nativeVariables = nativeVariables;
                 return this;
             }
@@ -8426,7 +9302,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * queryVariables.
              */
-            public Builder queryVariables(java.util.List < QueryVariables> queryVariables) {
+            public Builder queryVariables(java.util.List<QueryVariables> queryVariables) {
                 this.queryVariables = queryVariables;
                 return this;
             }
@@ -8434,7 +9310,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * selfVariables.
              */
-            public Builder selfVariables(java.util.List < SelfVariables> selfVariables) {
+            public Builder selfVariables(java.util.List<SelfVariables> selfVariables) {
                 this.selfVariables = selfVariables;
                 return this;
             }
@@ -8442,7 +9318,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * sysVariables.
              */
-            public Builder sysVariables(java.util.List < SysVariables> sysVariables) {
+            public Builder sysVariables(java.util.List<SysVariables> sysVariables) {
                 this.sysVariables = sysVariables;
                 return this;
             }
@@ -8450,7 +9326,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * thirdVariables.
              */
-            public Builder thirdVariables(java.util.Map < String, ? > thirdVariables) {
+            public Builder thirdVariables(java.util.Map<String, ?> thirdVariables) {
                 this.thirdVariables = thirdVariables;
                 return this;
             }
@@ -8458,7 +9334,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
             /**
              * velocityVariables.
              */
-            public Builder velocityVariables(java.util.List < VelocityVariables> velocityVariables) {
+            public Builder velocityVariables(java.util.List<VelocityVariables> velocityVariables) {
                 this.velocityVariables = velocityVariables;
                 return this;
             }

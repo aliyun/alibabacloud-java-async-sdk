@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExpressionTestRequest} extends {@link RequestModel}
  *
  * <p>ExpressionTestRequest</p>
@@ -62,7 +68,7 @@ public class ExpressionTestRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,7 +147,14 @@ public class ExpressionTestRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -150,7 +163,11 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * expression.
+         * <p>Test expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@ex_GX9rrlTq4b67 + 1001</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("expression", expression);
@@ -159,7 +176,11 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * expressionVariable.
+         * <p>Calculation expression variable</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;age&quot;,&quot;code&quot;:&quot;age&quot;,&quot;fieldType&quot;:&quot;INT&quot;,&quot;id&quot;:44809,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         public Builder expressionVariable(String expressionVariable) {
             this.putQueryParameter("expressionVariable", expressionVariable);
@@ -168,7 +189,10 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * expressionVariableIds.
+         * <p>Associated variable ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[44659]</p>
          */
         public Builder expressionVariableIds(String expressionVariableIds) {
             this.putQueryParameter("expressionVariableIds", expressionVariableIds);
@@ -177,7 +201,10 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -186,7 +213,11 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -195,7 +226,11 @@ public class ExpressionTestRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Scene</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSION</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);

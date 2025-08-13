@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRecommendTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateRecommendTaskRequest</p>
@@ -57,7 +63,7 @@ public class CreateRecommendTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,14 @@ public class CreateRecommendTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +149,11 @@ public class CreateRecommendTaskRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册样本</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -145,7 +162,10 @@ public class CreateRecommendTaskRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -154,7 +174,11 @@ public class CreateRecommendTaskRequest extends Request {
         }
 
         /**
-         * sampleId.
+         * <p>Task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5467</p>
          */
         public Builder sampleId(Long sampleId) {
             this.putQueryParameter("sampleId", sampleId);
@@ -163,7 +187,11 @@ public class CreateRecommendTaskRequest extends Request {
         }
 
         /**
-         * variablesStr.
+         * <p>Variables to be calculated, variables</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1112&quot;,&quot;1113&quot;]</p>
          */
         public Builder variablesStr(String variablesStr) {
             this.putQueryParameter("variablesStr", variablesStr);
@@ -172,7 +200,11 @@ public class CreateRecommendTaskRequest extends Request {
         }
 
         /**
-         * velocitiesStr.
+         * <p>Indicator effect</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;dxkkLw8fe18&quot;,&quot;dxUxSCM26d7&quot;]</p>
          */
         public Builder velocitiesStr(String velocitiesStr) {
             this.putQueryParameter("velocitiesStr", velocitiesStr);

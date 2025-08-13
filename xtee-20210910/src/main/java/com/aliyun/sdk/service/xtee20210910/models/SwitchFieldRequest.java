@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchFieldRequest} extends {@link RequestModel}
  *
  * <p>SwitchFieldRequest</p>
@@ -54,7 +60,7 @@ public class SwitchFieldRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +130,14 @@ public class SwitchFieldRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +146,10 @@ public class SwitchFieldRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Primary Key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250002</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -142,7 +158,10 @@ public class SwitchFieldRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Parameter Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -151,7 +170,11 @@ public class SwitchFieldRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region Code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -160,7 +183,10 @@ public class SwitchFieldRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>Field Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFINE</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -169,7 +195,10 @@ public class SwitchFieldRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

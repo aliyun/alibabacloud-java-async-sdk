@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeListPocResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeListPocResponseBody</p>
@@ -56,6 +62,10 @@ public class DescribeListPocResponseBody extends TeaModel {
 
     public static DescribeListPocResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,8 +142,26 @@ public class DescribeListPocResponseBody extends TeaModel {
         private String totalItem; 
         private String totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeListPocResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +169,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.currentPage = currentPage;
@@ -149,7 +180,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -157,7 +191,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +202,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -173,7 +213,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +224,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;
@@ -189,7 +235,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItem.
+         * <p>Total number of items returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalItem(String totalItem) {
             this.totalItem = totalItem;
@@ -197,7 +246,10 @@ public class DescribeListPocResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalPage(String totalPage) {
             this.totalPage = totalPage;

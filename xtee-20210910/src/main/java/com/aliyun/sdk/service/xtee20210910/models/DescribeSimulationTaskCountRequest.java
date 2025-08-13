@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimulationTaskCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeSimulationTaskCountRequest</p>
@@ -66,7 +72,7 @@ public class DescribeSimulationTaskCountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,14 @@ public class DescribeSimulationTaskCountRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,7 +176,10 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * dataSourceConfig.
+         * <p>Data source configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder dataSourceConfig(String dataSourceConfig) {
             this.putQueryParameter("dataSourceConfig", dataSourceConfig);
@@ -172,7 +188,10 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * dataSourceType.
+         * <p>Data source type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("dataSourceType", dataSourceType);
@@ -181,7 +200,11 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>Task end time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1740016411000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -190,7 +213,11 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ayfofy4941</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -199,7 +226,10 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * filtersStr.
+         * <p>Filter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;left&quot;:&quot;score&quot;,&quot;operate&quot;:&quot;bw&quot;,&quot;right&quot;:&quot;222,333&quot;}</p>
          */
         public Builder filtersStr(String filtersStr) {
             this.putQueryParameter("filtersStr", filtersStr);
@@ -208,7 +238,10 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -217,7 +250,11 @@ public class DescribeSimulationTaskCountRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>Task start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1739496651000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableMarketListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVariableMarketListRequest</p>
@@ -73,7 +79,7 @@ public class DescribeVariableMarketListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,7 +185,14 @@ public class DescribeVariableMarketListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +201,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * chargingMode.
+         * <p>Charging mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREE</p>
          */
         public Builder chargingMode(String chargingMode) {
             this.putQueryParameter("chargingMode", chargingMode);
@@ -197,7 +213,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -206,7 +225,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -215,7 +237,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * paging.
+         * <p>Paging indicator, default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paging(String paging) {
             this.putQueryParameter("paging", paging);
@@ -224,7 +249,11 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * queryContent.
+         * <p>Query content, supports fuzzy search.</p>
+         * <p> Title/Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号</p>
          */
         public Builder queryContent(String queryContent) {
             this.putQueryParameter("queryContent", queryContent);
@@ -233,7 +262,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -242,7 +274,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * scenesStr.
+         * <p>Scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;coupon_abuse_detection&quot;]</p>
          */
         public Builder scenesStr(String scenesStr) {
             this.putQueryParameter("scenesStr", scenesStr);
@@ -251,7 +286,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -260,7 +298,10 @@ public class DescribeVariableMarketListRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>设备风险识别_标签</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

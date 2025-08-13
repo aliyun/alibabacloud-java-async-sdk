@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindVariableRequest} extends {@link RequestModel}
  *
  * <p>BindVariableRequest</p>
@@ -110,7 +116,7 @@ public class BindVariableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -279,7 +285,14 @@ public class BindVariableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -288,7 +301,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * apiRegionId.
+         * <p>API region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder apiRegionId(String apiRegionId) {
             this.putQueryParameter("apiRegionId", apiRegionId);
@@ -297,7 +313,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * apiType.
+         * <p>API type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF</p>
          */
         public Builder apiType(String apiType) {
             this.putQueryParameter("apiType", apiType);
@@ -306,7 +325,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -315,7 +337,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * defineId.
+         * <p>Associated variable definition primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2438</p>
          */
         public Builder defineId(String defineId) {
             this.putQueryParameter("defineId", defineId);
@@ -324,7 +349,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * defineIds.
+         * <p>Variable definition IDs, can be multiple. If binding multiple IDs, separate them with commas</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1546, 1547</p>
          */
         public Builder defineIds(String defineIds) {
             this.putQueryParameter("defineIds", defineIds);
@@ -333,7 +361,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -342,7 +373,11 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_agbzfi5134</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -351,7 +386,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * exceptionValue.
+         * <p>Exception value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYS_ERROR</p>
          */
         public Builder exceptionValue(String exceptionValue) {
             this.putQueryParameter("exceptionValue", exceptionValue);
@@ -360,7 +398,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>Variable primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106875</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);
@@ -369,7 +410,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * outputField.
+         * <p>Output field path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOOLEAN</p>
          */
         public Builder outputField(String outputField) {
             this.putQueryParameter("outputField", outputField);
@@ -378,7 +422,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * outputType.
+         * <p>Output type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("outputType", outputType);
@@ -387,7 +434,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * params.
+         * <p>Binding input parameter information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;accountId&quot;:&quot;accountId&quot;,&quot;mobile&quot;:&quot;&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);
@@ -396,7 +446,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * paramsList.
+         * <p>Event parameter mapping 2.0, either params or paramsList must not be empty. List, JSON structure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;eventFieldName&quot;:&quot;accountId&quot;,&quot;required&quot;:false}]</p>
          */
         public Builder paramsList(String paramsList) {
             this.putQueryParameter("paramsList", paramsList);
@@ -405,7 +458,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -414,7 +470,10 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>Variable source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);
@@ -423,7 +482,11 @@ public class BindVariableRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Title</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

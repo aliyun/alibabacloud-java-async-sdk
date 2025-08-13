@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustVariableConfigListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustVariableConfigListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeCustVariableConfigListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustVariableConfigListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustVariableConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustVariableConfigListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configKey")
         private String configKey;
@@ -108,8 +135,19 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
             private String configKey; 
             private String configValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.configKey = model.configKey;
+                this.configValue = model.configValue;
+            } 
+
             /**
-             * configKey.
+             * <p>Configuration key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COUNT</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -117,7 +155,10 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * configValue.
+             * <p>Configuration value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>累计</p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;

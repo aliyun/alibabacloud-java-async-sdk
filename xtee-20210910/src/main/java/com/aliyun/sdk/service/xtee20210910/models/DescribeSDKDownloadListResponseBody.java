@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDKDownloadListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSDKDownloadListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeSDKDownloadListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSDKDownloadListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSDKDownloadListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDKDownloadListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -204,8 +231,27 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             private String sdkVersion; 
             private String size; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.description = model.description;
+                this.developer = model.developer;
+                this.deviceType = model.deviceType;
+                this.downloadUrl = model.downloadUrl;
+                this.md5 = model.md5;
+                this.packageName = model.packageName;
+                this.privacyLink = model.privacyLink;
+                this.pushTime = model.pushTime;
+                this.sdkVersion = model.sdkVersion;
+                this.size = model.size;
+            } 
+
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +259,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * developer.
+             * <p>Developer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云安全-风险识别</p>
              */
             public Builder developer(String developer) {
                 this.developer = developer;
@@ -221,7 +270,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * deviceType.
+             * <p>Device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANDROID</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -229,7 +281,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * downloadUrl.
+             * <p>Download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz">https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -237,7 +292,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * md5.
+             * <p>File MD5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E582EEB6B4BC9B5CB168AA5A7DD0EE93</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -245,7 +303,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * packageName.
+             * <p>Package name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>net.security.device</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -253,7 +314,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * privacyLink.
+             * <p>Risk recognition SDK privacy policy link</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html">https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html</a></p>
              */
             public Builder privacyLink(String privacyLink) {
                 this.privacyLink = privacyLink;
@@ -261,7 +325,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * pushTime.
+             * <p>Release time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751212800000</p>
              */
             public Builder pushTime(String pushTime) {
                 this.pushTime = pushTime;
@@ -269,7 +336,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * sdkVersion.
+             * <p>SDK version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -277,7 +347,10 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>Size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.12 MB</p>
              */
             public Builder size(String size) {
                 this.size = size;

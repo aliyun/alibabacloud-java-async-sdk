@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuthRulePageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuthRulePageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Long totalItem;
@@ -44,6 +50,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
 
     public static DescribeAuthRulePageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         private String requestId; 
         private Long currentPage; 
         private Long pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Long totalItem; 
         private Long totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuthRulePageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Long totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuthRulePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthRulePageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consoleRuleId")
         private Long consoleRuleId;
@@ -284,8 +327,27 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             private String status; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.consoleRuleId = model.consoleRuleId;
+                this.createType = model.createType;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.memo = model.memo;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleVersionId = model.ruleVersionId;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
-             * consoleRuleId.
+             * <p>Console rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6715</p>
              */
             public Builder consoleRuleId(Long consoleRuleId) {
                 this.consoleRuleId = consoleRuleId;
@@ -293,7 +355,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * createType.
+             * <p>Creation type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MORMAL</p>
              */
             public Builder createType(String createType) {
                 this.createType = createType;
@@ -301,7 +366,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -309,7 +377,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Policy primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -317,7 +388,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Memo</p>
+             * 
+             * <strong>example:</strong>
+             * <p>分析中心事件测试_策略01</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -325,7 +399,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102059</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -333,7 +410,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Policy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -341,7 +421,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleVersionId.
+             * <p>Policy version primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3823</p>
              */
             public Builder ruleVersionId(Long ruleVersionId) {
                 this.ruleVersionId = ruleVersionId;
@@ -349,7 +432,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,7 +443,10 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder version(Long version) {
                 this.version = version;

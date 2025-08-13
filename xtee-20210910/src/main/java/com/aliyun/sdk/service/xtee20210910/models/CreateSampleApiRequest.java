@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSampleApiRequest} extends {@link RequestModel}
  *
  * <p>CreateSampleApiRequest</p>
@@ -53,7 +59,7 @@ public class CreateSampleApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,10 @@ public class CreateSampleApiRequest extends Request {
         } 
 
         /**
-         * DataType.
+         * <p>Same as input parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip/accountID</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -132,7 +141,10 @@ public class CreateSampleApiRequest extends Request {
         }
 
         /**
-         * DataValue.
+         * <p>Specific data value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同参数</p>
          */
         public Builder dataValue(String dataValue) {
             this.putQueryParameter("DataValue", dataValue);
@@ -141,7 +153,14 @@ public class CreateSampleApiRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -150,7 +169,10 @@ public class CreateSampleApiRequest extends Request {
         }
 
         /**
-         * regionId
+         * <p>regionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("RegId", regId);
@@ -159,7 +181,10 @@ public class CreateSampleApiRequest extends Request {
         }
 
         /**
-         * SampleBatchType.
+         * <p>Sample batch type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单/黑名单/混合</p>
          */
         public Builder sampleBatchType(String sampleBatchType) {
             this.putQueryParameter("SampleBatchType", sampleBatchType);
@@ -168,7 +193,10 @@ public class CreateSampleApiRequest extends Request {
         }
 
         /**
-         * ServiceList.
+         * <p>Service list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同参数</p>
          */
         public Builder serviceList(String serviceList) {
             this.putQueryParameter("ServiceList", serviceList);

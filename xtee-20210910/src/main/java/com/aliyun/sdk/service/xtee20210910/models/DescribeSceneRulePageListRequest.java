@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneRulePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSceneRulePageListRequest</p>
@@ -68,7 +74,7 @@ public class DescribeSceneRulePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class DescribeSceneRulePageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages. Default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -183,7 +199,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -192,7 +211,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahgctb7098</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -201,7 +223,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page in the returned results. Default value: 20, minimum value: 1, maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -210,7 +235,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -219,7 +247,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * ruleAuthType.
+         * <p>Strategy type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTMER</p>
          */
         public Builder ruleAuthType(String ruleAuthType) {
             this.putQueryParameter("ruleAuthType", ruleAuthType);
@@ -228,7 +259,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * ruleName.
+         * <p>Strategy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("ruleName", ruleName);
@@ -237,7 +271,10 @@ public class DescribeSceneRulePageListRequest extends Request {
         }
 
         /**
-         * ruleStatus.
+         * <p>Strategy status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("ruleStatus", ruleStatus);

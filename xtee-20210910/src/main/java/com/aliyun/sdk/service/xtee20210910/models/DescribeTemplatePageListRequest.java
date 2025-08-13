@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeTemplatePageListRequest</p>
@@ -68,7 +74,7 @@ public class DescribeTemplatePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +171,14 @@ public class DescribeTemplatePageListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +187,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -183,7 +199,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d6_h1fe4cfa1g</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -192,7 +211,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -201,7 +223,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -210,7 +235,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * templateName.
+         * <p>Event name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册事件</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("templateName", templateName);
@@ -219,7 +247,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * templateSearchItem.
+         * <p>Event template search field</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder templateSearchItem(String templateSearchItem) {
             this.putQueryParameter("templateSearchItem", templateSearchItem);
@@ -228,7 +259,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * templateStatus.
+         * <p>Event status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         public Builder templateStatus(String templateStatus) {
             this.putQueryParameter("templateStatus", templateStatus);
@@ -237,7 +271,10 @@ public class DescribeTemplatePageListRequest extends Request {
         }
 
         /**
-         * templateType.
+         * <p>Template type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_SERVICE</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("templateType", templateType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupAccountPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupAccountPageRequest</p>
@@ -78,7 +84,7 @@ public class DescribeGroupAccountPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,7 +199,14 @@ public class DescribeGroupAccountPageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -202,7 +215,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * communityNo.
+         * <p>Community number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129838420210118141502KiJ1SZL2</p>
          */
         public Builder communityNo(String communityNo) {
             this.putQueryParameter("communityNo", communityNo);
@@ -211,7 +227,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -220,7 +239,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>Order direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -229,7 +251,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * fieldKey.
+         * <p>fieldKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mobile</p>
          */
         public Builder fieldKey(String fieldKey) {
             this.putQueryParameter("fieldKey", fieldKey);
@@ -238,7 +263,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * fieldVal.
+         * <p>fieldVal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18000000000</p>
          */
         public Builder fieldVal(String fieldVal) {
             this.putQueryParameter("fieldVal", fieldVal);
@@ -247,7 +275,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * isPage.
+         * <p>Whether to paginate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPage(Boolean isPage) {
             this.putQueryParameter("isPage", isPage);
@@ -256,7 +287,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * order.
+         * <p>Sorting condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("order", order);
@@ -265,7 +299,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -274,7 +311,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -283,7 +323,10 @@ public class DescribeGroupAccountPageRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6770764</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("taskId", taskId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarkPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMarkPageResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
 
     public static DescribeMarkPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMarkPageResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeMarkPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMarkPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMarkPageResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldName")
         private String fieldName;
@@ -212,8 +255,21 @@ public class DescribeMarkPageResponseBody extends TeaModel {
             private Long id; 
             private String markType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+                this.id = model.id;
+                this.markType = model.markType;
+            } 
+
             /**
-             * fieldName.
+             * <p>Field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mobile</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -221,7 +277,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
             }
 
             /**
-             * fieldValue.
+             * <p>Field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18000000000</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -229,7 +288,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2793</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -237,7 +299,10 @@ public class DescribeMarkPageResponseBody extends TeaModel {
             }
 
             /**
-             * markType.
+             * <p>Mark (0 No / 1 Yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder markType(String markType) {
                 this.markType = markType;

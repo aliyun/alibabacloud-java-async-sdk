@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustVariableResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCustVariableResponseBody</p>
@@ -15,7 +21,7 @@ public class ModifyCustVariableResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private ModifyCustVariableResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ModifyCustVariableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ModifyCustVariableResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCustVariableResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class ModifyCustVariableResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class ModifyCustVariableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCustVariableResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCustVariableResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("failType")
         private String failType;
@@ -120,8 +147,20 @@ public class ModifyCustVariableResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.failType = model.failType;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
-             * failType.
+             * <p>Failure type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder failType(String failType) {
                 this.failType = failType;
@@ -129,7 +168,10 @@ public class ModifyCustVariableResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Detailed information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -137,7 +179,10 @@ public class ModifyCustVariableResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Whether the operation was successful</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

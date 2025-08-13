@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecommendTaskPageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecommendTaskPageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
 
     public static DescribeRecommendTaskPageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecommendTaskPageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,9 +187,15 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecommendTaskPageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendTaskPageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expectVelocities")
-        private java.util.List < String > expectVelocities;
+        private java.util.List<String> expectVelocities;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -209,7 +252,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         /**
          * @return expectVelocities
          */
-        public java.util.List < String > getExpectVelocities() {
+        public java.util.List<String> getExpectVelocities() {
             return this.expectVelocities;
         }
 
@@ -284,7 +327,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > expectVelocities; 
+            private java.util.List<String> expectVelocities; 
             private Long gmtCreate; 
             private Long normalCount; 
             private Long normalSize; 
@@ -296,16 +339,36 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             private String taskName; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.expectVelocities = model.expectVelocities;
+                this.gmtCreate = model.gmtCreate;
+                this.normalCount = model.normalCount;
+                this.normalSize = model.normalSize;
+                this.riskCount = model.riskCount;
+                this.riskSize = model.riskSize;
+                this.sampleName = model.sampleName;
+                this.sampleScene = model.sampleScene;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
-             * expectVelocities.
+             * <p>Impact indicators</p>
              */
-            public Builder expectVelocities(java.util.List < String > expectVelocities) {
+            public Builder expectVelocities(java.util.List<String> expectVelocities) {
                 this.expectVelocities = expectVelocities;
                 return this;
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -313,7 +376,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * normalCount.
+             * <p>Number of samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder normalCount(Long normalCount) {
                 this.normalCount = normalCount;
@@ -321,7 +387,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * normalSize.
+             * <p>Number of normal samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder normalSize(Long normalSize) {
                 this.normalSize = normalSize;
@@ -329,7 +398,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * riskCount.
+             * <p>Number of records displayed on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -337,7 +409,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * riskSize.
+             * <p>Number of risk samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder riskSize(Long riskSize) {
                 this.riskSize = riskSize;
@@ -345,7 +420,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * sampleName.
+             * <p>Sample name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>白样本</p>
              */
             public Builder sampleName(String sampleName) {
                 this.sampleName = sampleName;
@@ -353,7 +431,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * sampleScene.
+             * <p>Sample scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account_abuse_detection</p>
              */
             public Builder sampleScene(String sampleScene) {
                 this.sampleScene = sampleScene;
@@ -361,7 +442,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240c93ddffa74e38be3a00375eb3041d</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -369,7 +453,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>Task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>策略推荐任务</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -377,7 +464,10 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * <p>Task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

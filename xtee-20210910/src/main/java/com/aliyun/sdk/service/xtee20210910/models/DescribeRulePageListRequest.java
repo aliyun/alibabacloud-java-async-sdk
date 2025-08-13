@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRulePageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRulePageListRequest</p>
@@ -47,6 +53,10 @@ public class DescribeRulePageListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ruleStatus")
     private String ruleStatus;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
+    private String sort;
+
     private DescribeRulePageListRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
@@ -58,6 +68,7 @@ public class DescribeRulePageListRequest extends Request {
         this.ruleAuthType = builder.ruleAuthType;
         this.ruleName = builder.ruleName;
         this.ruleStatus = builder.ruleStatus;
+        this.sort = builder.sort;
     }
 
     public static Builder builder() {
@@ -68,7 +79,7 @@ public class DescribeRulePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -136,6 +147,13 @@ public class DescribeRulePageListRequest extends Request {
         return this.ruleStatus;
     }
 
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRulePageListRequest, Builder> {
         private String lang; 
         private String createType; 
@@ -146,6 +164,7 @@ public class DescribeRulePageListRequest extends Request {
         private String ruleAuthType; 
         private String ruleName; 
         private String ruleStatus; 
+        private String sort; 
 
         private Builder() {
             super();
@@ -162,10 +181,18 @@ public class DescribeRulePageListRequest extends Request {
             this.ruleAuthType = request.ruleAuthType;
             this.ruleName = request.ruleName;
             this.ruleStatus = request.ruleStatus;
+            this.sort = request.sort;
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and responses, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +201,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -183,7 +213,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -192,7 +225,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * eventCode.
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_asssce8122</p>
          */
         public Builder eventCode(String eventCode) {
             this.putQueryParameter("eventCode", eventCode);
@@ -201,7 +237,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -210,7 +249,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -219,7 +261,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * ruleAuthType.
+         * <p>Policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOMAL</p>
          */
         public Builder ruleAuthType(String ruleAuthType) {
             this.putQueryParameter("ruleAuthType", ruleAuthType);
@@ -228,7 +273,10 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * ruleName.
+         * <p>Policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别评分</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("ruleName", ruleName);
@@ -237,11 +285,30 @@ public class DescribeRulePageListRequest extends Request {
         }
 
         /**
-         * ruleStatus.
+         * <p>Policy status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("ruleStatus", ruleStatus);
             this.ruleStatus = ruleStatus;
+            return this;
+        }
+
+        /**
+         * <p>Sorting method, default value is desc.</p>
+         * <ul>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("sort", sort);
+            this.sort = sort;
             return this;
         }
 

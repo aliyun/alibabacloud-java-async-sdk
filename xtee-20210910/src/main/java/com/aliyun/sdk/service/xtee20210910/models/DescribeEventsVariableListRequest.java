@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsVariableListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventsVariableListRequest</p>
@@ -55,7 +61,7 @@ public class DescribeEventsVariableListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +131,14 @@ public class DescribeEventsVariableListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -134,7 +147,10 @@ public class DescribeEventsVariableListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -143,7 +159,11 @@ public class DescribeEventsVariableListRequest extends Request {
         }
 
         /**
-         * eventCodes.
+         * <p>Event code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_afghcf6411</p>
          */
         public Builder eventCodes(String eventCodes) {
             this.putQueryParameter("eventCodes", eventCodes);
@@ -152,7 +172,10 @@ public class DescribeEventsVariableListRequest extends Request {
         }
 
         /**
-         * filterDTO.
+         * <p>Filter object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;EXPRESSION&quot;,&quot;name&quot;:&quot;ex_NgR6nDVD821c&quot;}</p>
          */
         public Builder filterDTO(String filterDTO) {
             this.putQueryParameter("filterDTO", filterDTO);
@@ -161,7 +184,10 @@ public class DescribeEventsVariableListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -170,7 +196,11 @@ public class DescribeEventsVariableListRequest extends Request {
         }
 
         /**
-         * scene.
+         * <p>Applicable scene code</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VELOCITY</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("scene", scene);

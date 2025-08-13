@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSafOrderRequest} extends {@link RequestModel}
  *
  * <p>DescribeSafOrderRequest</p>
@@ -58,7 +64,7 @@ public class DescribeSafOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,14 @@ public class DescribeSafOrderRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -155,7 +171,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * endDate.
+         * <p>End date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755076800000</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);
@@ -164,7 +183,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * exactProductCode.
+         * <p>Product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf_de</p>
          */
         public Builder exactProductCode(String exactProductCode) {
             this.putQueryParameter("exactProductCode", exactProductCode);
@@ -173,7 +195,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -182,7 +207,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -191,7 +219,10 @@ public class DescribeSafOrderRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>Start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752076800000</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("startDate", startDate);

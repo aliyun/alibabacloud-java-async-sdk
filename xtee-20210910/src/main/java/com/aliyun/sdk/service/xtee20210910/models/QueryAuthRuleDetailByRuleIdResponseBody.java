@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAuthRuleDetailByRuleIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAuthRuleDetailByRuleIdResponseBody</p>
@@ -30,6 +36,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryAuthRuleDetailByRuleIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAuthRuleDetailByRuleIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAuthRuleDetailByRuleIdResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auditId")
         private Long auditId;
@@ -105,7 +132,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         private Long priority;
 
         @com.aliyun.core.annotation.NameInMap("ruleActionMap")
-        private java.util.Map < String, String > ruleActionMap;
+        private java.util.Map<String, String> ruleActionMap;
 
         @com.aliyun.core.annotation.NameInMap("ruleActions")
         private String ruleActions;
@@ -124,6 +151,9 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ruleStatus")
         private String ruleStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ruleType")
+        private String ruleType;
 
         @com.aliyun.core.annotation.NameInMap("ruleVersionId")
         private Long ruleVersionId;
@@ -153,6 +183,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
             this.ruleStatus = builder.ruleStatus;
+            this.ruleType = builder.ruleType;
             this.ruleVersionId = builder.ruleVersionId;
             this.templateType = builder.templateType;
             this.version = builder.version;
@@ -246,7 +277,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         /**
          * @return ruleActionMap
          */
-        public java.util.Map < String, String > getRuleActionMap() {
+        public java.util.Map<String, String> getRuleActionMap() {
             return this.ruleActionMap;
         }
 
@@ -293,6 +324,13 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
          * @return ruleVersionId
          */
         public Long getRuleVersionId() {
@@ -325,19 +363,51 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             private String logicExpression; 
             private String memo; 
             private Long priority; 
-            private java.util.Map < String, String > ruleActionMap; 
+            private java.util.Map<String, String> ruleActionMap; 
             private String ruleActions; 
             private String ruleAuthType; 
             private String ruleExpressions; 
             private String ruleId; 
             private String ruleName; 
             private String ruleStatus; 
+            private String ruleType; 
             private Long ruleVersionId; 
             private String templateType; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.auditId = model.auditId;
+                this.authType = model.authType;
+                this.authUsers = model.authUsers;
+                this.consoleRuleId = model.consoleRuleId;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.logicExpression = model.logicExpression;
+                this.memo = model.memo;
+                this.priority = model.priority;
+                this.ruleActionMap = model.ruleActionMap;
+                this.ruleActions = model.ruleActions;
+                this.ruleAuthType = model.ruleAuthType;
+                this.ruleExpressions = model.ruleExpressions;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
+                this.ruleVersionId = model.ruleVersionId;
+                this.templateType = model.templateType;
+                this.version = model.version;
+            } 
+
             /**
-             * auditId.
+             * <p>Audit ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>225</p>
              */
             public Builder auditId(Long auditId) {
                 this.auditId = auditId;
@@ -345,7 +415,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * authType.
+             * <p>Authorization type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -353,7 +426,12 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * authUsers.
+             * <p>Authorized user UID</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder authUsers(String authUsers) {
                 this.authUsers = authUsers;
@@ -361,7 +439,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * consoleRuleId.
+             * <p>Primary key ID of the strategy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6843</p>
              */
             public Builder consoleRuleId(Long consoleRuleId) {
                 this.consoleRuleId = consoleRuleId;
@@ -369,7 +450,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -377,7 +461,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -385,7 +472,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -393,7 +483,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -401,7 +494,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * logicExpression.
+             * <p>Execution logic</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1&amp;2</p>
              */
             public Builder logicExpression(String logicExpression) {
                 this.logicExpression = logicExpression;
@@ -409,7 +505,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -417,7 +516,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>Rule priority, the higher the number, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -425,15 +527,18 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleActionMap.
+             * <p>Returned rule action structure.</p>
              */
-            public Builder ruleActionMap(java.util.Map < String, String > ruleActionMap) {
+            public Builder ruleActionMap(java.util.Map<String, String> ruleActionMap) {
                 this.ruleActionMap = ruleActionMap;
                 return this;
             }
 
             /**
-             * ruleActions.
+             * <p>Output actions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;inputs&quot;:[&quot;unusualBrand&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]</p>
              */
             public Builder ruleActions(String ruleActions) {
                 this.ruleActions = ruleActions;
@@ -441,7 +546,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleAuthType.
+             * <p>Rule authorization type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WHITE_BOX</p>
              */
             public Builder ruleAuthType(String ruleAuthType) {
                 this.ruleAuthType = ruleAuthType;
@@ -449,7 +557,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleExpressions.
+             * <p>Rule expressions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;expressionName&quot;:&quot;同一设备同一IP上的注册用户数&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;dK7EXHr490f&quot;},&quot;operatorCode&quot;:&quot;gte&quot;,&quot;operatorName&quot;:&quot;大于等于&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;2&quot;}}]</p>
              */
             public Builder ruleExpressions(String ruleExpressions) {
                 this.ruleExpressions = ruleExpressions;
@@ -457,7 +568,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Strategy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102224</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -465,7 +579,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Strategy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -473,7 +590,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Strategy status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -481,7 +601,21 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * ruleVersionId.
+             * <p>Rule type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * <p>Primary key ID of the strategy version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11519</p>
              */
             public Builder ruleVersionId(Long ruleVersionId) {
                 this.ruleVersionId = ruleVersionId;
@@ -489,7 +623,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * templateType.
+             * <p>Template type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUB_SERVICE</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -497,7 +634,10 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;

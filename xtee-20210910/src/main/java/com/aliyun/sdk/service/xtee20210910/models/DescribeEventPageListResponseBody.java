@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventPageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventPageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
 
     public static DescribeEventPageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventPageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +130,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +141,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, with a default value of 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,15 +152,18 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeEventPageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventPageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventPageListResponseBody</p>
+     */
     public static class Children extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventCode")
         private String eventCode;
@@ -260,8 +303,25 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             private Long id; 
             private Long ruleCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventStatus = model.eventStatus;
+                this.eventType = model.eventType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleCount = model.ruleCount;
+            } 
+
             /**
-             * eventCode.
+             * <p>Event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aamexg3015</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -269,7 +329,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -277,7 +340,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventStatus.
+             * <p>Event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -285,7 +351,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BYPASS</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -293,7 +362,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -301,7 +373,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -309,7 +384,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>334</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -317,7 +395,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleCount.
+             * <p>Total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ruleCount(Long ruleCount) {
                 this.ruleCount = ruleCount;
@@ -331,9 +412,15 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventPageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventPageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
-        private java.util.List < Children> children;
+        private java.util.List<Children> children;
 
         @com.aliyun.core.annotation.NameInMap("eventCode")
         private String eventCode;
@@ -398,7 +485,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < Children> getChildren() {
+        public java.util.List<Children> getChildren() {
             return this.children;
         }
 
@@ -487,7 +574,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Children> children; 
+            private java.util.List<Children> children; 
             private String eventCode; 
             private String eventName; 
             private String eventStatus; 
@@ -501,16 +588,38 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             private String templateType; 
             private Integer userCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.children = model.children;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventStatus = model.eventStatus;
+                this.eventType = model.eventType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleCount = model.ruleCount;
+                this.templateCode = model.templateCode;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+                this.userCount = model.userCount;
+            } 
+
             /**
-             * children.
+             * <p>Object</p>
              */
-            public Builder children(java.util.List < Children> children) {
+            public Builder children(java.util.List<Children> children) {
                 this.children = children;
                 return this;
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -518,7 +627,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -526,7 +638,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventStatus.
+             * <p>Event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -534,7 +649,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -542,7 +660,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -550,7 +671,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -558,7 +682,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -566,7 +693,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleCount.
+             * <p>Total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -574,7 +704,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * templateCode.
+             * <p>Template code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>register</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -582,7 +715,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * templateName.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册模版</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -590,7 +726,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * templateType.
+             * <p>Template type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNIVERSAL</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -598,7 +737,10 @@ public class DescribeEventPageListResponseBody extends TeaModel {
             }
 
             /**
-             * userCount.
+             * <p>Number of customer authorizations</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInputFeildCountByEventCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInputFeildCountByEventCodeResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInputFeildCountByEventCodeResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInputFeildCountByEventCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInputFeildCountByEventCodeResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limit")
         private Boolean limit;
@@ -120,8 +147,20 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
             private Integer maxTotalItem; 
             private Integer totalItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.limit = model.limit;
+                this.maxTotalItem = model.maxTotalItem;
+                this.totalItem = model.totalItem;
+            } 
+
             /**
-             * limit.
+             * <p>Whether it exceeds the maximum quantity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder limit(Boolean limit) {
                 this.limit = limit;
@@ -129,7 +168,10 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * maxTotalItem.
+             * <p>Maximum number of created items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTotalItem(Integer maxTotalItem) {
                 this.maxTotalItem = maxTotalItem;
@@ -137,7 +179,10 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
             }
 
             /**
-             * totalItem.
+             * <p>Total number of items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalItem(Integer totalItem) {
                 this.totalItem = totalItem;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleVersionListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRuleVersionListRequest</p>
@@ -20,6 +26,14 @@ public class DescribeRuleVersionListRequest extends Request {
     private Long consoleRuleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("currentPage")
+    private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regId")
     private String regId;
 
@@ -31,6 +45,8 @@ public class DescribeRuleVersionListRequest extends Request {
         super(builder);
         this.lang = builder.lang;
         this.consoleRuleId = builder.consoleRuleId;
+        this.currentPage = builder.currentPage;
+        this.pageSize = builder.pageSize;
         this.regId = builder.regId;
         this.ruleId = builder.ruleId;
     }
@@ -43,7 +59,7 @@ public class DescribeRuleVersionListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,6 +79,20 @@ public class DescribeRuleVersionListRequest extends Request {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regId
      */
     public String getRegId() {
@@ -79,6 +109,8 @@ public class DescribeRuleVersionListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRuleVersionListRequest, Builder> {
         private String lang; 
         private Long consoleRuleId; 
+        private Integer currentPage; 
+        private Integer pageSize; 
         private String regId; 
         private String ruleId; 
 
@@ -90,12 +122,21 @@ public class DescribeRuleVersionListRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.consoleRuleId = request.consoleRuleId;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
             this.regId = request.regId;
             this.ruleId = request.ruleId;
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +145,10 @@ public class DescribeRuleVersionListRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Policy primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6851</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -113,7 +157,34 @@ public class DescribeRuleVersionListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("currentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * <p>Page size, default value is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -122,7 +193,10 @@ public class DescribeRuleVersionListRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101804</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("ruleId", ruleId);

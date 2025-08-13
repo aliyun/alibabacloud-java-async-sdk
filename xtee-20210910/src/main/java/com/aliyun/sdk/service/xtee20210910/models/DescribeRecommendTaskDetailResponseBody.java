@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecommendTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecommendTaskDetailResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecommendTaskDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return result</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecommendTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendTaskDetailResponseBody</p>
+     */
     public static class RecommendRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("left")
         private String left;
@@ -120,8 +147,20 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             private String operator; 
             private String right; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecommendRules model) {
+                this.left = model.left;
+                this.operator = model.operator;
+                this.right = model.right;
+            } 
+
             /**
-             * left.
+             * <p>Left variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder left(String left) {
                 this.left = left;
@@ -129,7 +168,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>Operator</p>
+             * 
+             * <strong>example:</strong>
+             * <p>equals</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -137,7 +179,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * right.
+             * <p>Right variable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder right(String right) {
                 this.right = right;
@@ -151,6 +196,12 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendTaskDetailResponseBody</p>
+     */
     public static class RecommendRuleDTOs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeExpression")
         private String computeExpression;
@@ -165,7 +216,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         private Long notHitSample;
 
         @com.aliyun.core.annotation.NameInMap("recommendRules")
-        private java.util.List < RecommendRules> recommendRules;
+        private java.util.List<RecommendRules> recommendRules;
 
         @com.aliyun.core.annotation.NameInMap("ruleId")
         private String ruleId;
@@ -230,7 +281,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         /**
          * @return recommendRules
          */
-        public java.util.List < RecommendRules> getRecommendRules() {
+        public java.util.List<RecommendRules> getRecommendRules() {
             return this.recommendRules;
         }
 
@@ -267,14 +318,32 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             private Long hitSample; 
             private Long id; 
             private Long notHitSample; 
-            private java.util.List < RecommendRules> recommendRules; 
+            private java.util.List<RecommendRules> recommendRules; 
             private String ruleId; 
             private String ruleName; 
             private String status; 
             private String velocities; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecommendRuleDTOs model) {
+                this.computeExpression = model.computeExpression;
+                this.hitSample = model.hitSample;
+                this.id = model.id;
+                this.notHitSample = model.notHitSample;
+                this.recommendRules = model.recommendRules;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.velocities = model.velocities;
+            } 
+
             /**
-             * computeExpression.
+             * <p>Calculation path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1&amp;2</p>
              */
             public Builder computeExpression(String computeExpression) {
                 this.computeExpression = computeExpression;
@@ -282,7 +351,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * hitSample.
+             * <p>Number of hit samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder hitSample(Long hitSample) {
                 this.hitSample = hitSample;
@@ -290,7 +362,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID of the rule</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -298,7 +373,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * notHitSample.
+             * <p>Number of unhit samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notHitSample(Long notHitSample) {
                 this.notHitSample = notHitSample;
@@ -306,15 +384,18 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * recommendRules.
+             * <p>List of candidate rules</p>
              */
-            public Builder recommendRules(java.util.List < RecommendRules> recommendRules) {
+            public Builder recommendRules(java.util.List<RecommendRules> recommendRules) {
                 this.recommendRules = recommendRules;
                 return this;
             }
 
             /**
-             * ruleId.
+             * <p>Strategy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102224</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -322,7 +403,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Rule name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别评分_高风险_拒绝_副本</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -330,7 +414,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO_RULE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +425,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * velocities.
+             * <p>List of indicators in JSON string format</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;key&quot;:&quot;dxkkLw8fe18&quot;,&quot;value&quot;:&quot;2&quot;}]</p>
              */
             public Builder velocities(String velocities) {
                 this.velocities = velocities;
@@ -352,6 +442,12 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendTaskDetailResponseBody</p>
+     */
     public static class RecommendVariableDTOs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -390,8 +486,19 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             private Long id; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecommendVariableDTOs model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
+
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -399,7 +506,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>手机号</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -413,6 +523,12 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendTaskDetailResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eventCode")
         private String eventCode;
@@ -421,7 +537,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         private String eventName;
 
         @com.aliyun.core.annotation.NameInMap("expectVelocities")
-        private java.util.List < String > expectVelocities;
+        private java.util.List<String> expectVelocities;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -430,10 +546,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         private Long normalSize;
 
         @com.aliyun.core.annotation.NameInMap("recommendRuleDTOs")
-        private java.util.List < RecommendRuleDTOs> recommendRuleDTOs;
+        private java.util.List<RecommendRuleDTOs> recommendRuleDTOs;
 
         @com.aliyun.core.annotation.NameInMap("recommendVariableDTOs")
-        private java.util.List < RecommendVariableDTOs> recommendVariableDTOs;
+        private java.util.List<RecommendVariableDTOs> recommendVariableDTOs;
 
         @com.aliyun.core.annotation.NameInMap("riskSize")
         private Long riskSize;
@@ -498,7 +614,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         /**
          * @return expectVelocities
          */
-        public java.util.List < String > getExpectVelocities() {
+        public java.util.List<String> getExpectVelocities() {
             return this.expectVelocities;
         }
 
@@ -519,14 +635,14 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         /**
          * @return recommendRuleDTOs
          */
-        public java.util.List < RecommendRuleDTOs> getRecommendRuleDTOs() {
+        public java.util.List<RecommendRuleDTOs> getRecommendRuleDTOs() {
             return this.recommendRuleDTOs;
         }
 
         /**
          * @return recommendVariableDTOs
          */
-        public java.util.List < RecommendVariableDTOs> getRecommendVariableDTOs() {
+        public java.util.List<RecommendVariableDTOs> getRecommendVariableDTOs() {
             return this.recommendVariableDTOs;
         }
 
@@ -582,11 +698,11 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String eventCode; 
             private String eventName; 
-            private java.util.List < String > expectVelocities; 
+            private java.util.List<String> expectVelocities; 
             private Long gmtCreate; 
             private Long normalSize; 
-            private java.util.List < RecommendRuleDTOs> recommendRuleDTOs; 
-            private java.util.List < RecommendVariableDTOs> recommendVariableDTOs; 
+            private java.util.List<RecommendRuleDTOs> recommendRuleDTOs; 
+            private java.util.List<RecommendVariableDTOs> recommendVariableDTOs; 
             private Long riskSize; 
             private String sampleName; 
             private String sampleScene; 
@@ -595,8 +711,31 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             private String taskName; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.expectVelocities = model.expectVelocities;
+                this.gmtCreate = model.gmtCreate;
+                this.normalSize = model.normalSize;
+                this.recommendRuleDTOs = model.recommendRuleDTOs;
+                this.recommendVariableDTOs = model.recommendVariableDTOs;
+                this.riskSize = model.riskSize;
+                this.sampleName = model.sampleName;
+                this.sampleScene = model.sampleScene;
+                this.sampleSceneName = model.sampleSceneName;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -604,7 +743,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -612,15 +754,18 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expectVelocities.
+             * <p>Comparison indicators</p>
              */
-            public Builder expectVelocities(java.util.List < String > expectVelocities) {
+            public Builder expectVelocities(java.util.List<String> expectVelocities) {
                 this.expectVelocities = expectVelocities;
                 return this;
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -628,7 +773,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * normalSize.
+             * <p>Number of normal samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder normalSize(Long normalSize) {
                 this.normalSize = normalSize;
@@ -636,23 +784,26 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * recommendRuleDTOs.
+             * <p>Recommended strategy list</p>
              */
-            public Builder recommendRuleDTOs(java.util.List < RecommendRuleDTOs> recommendRuleDTOs) {
+            public Builder recommendRuleDTOs(java.util.List<RecommendRuleDTOs> recommendRuleDTOs) {
                 this.recommendRuleDTOs = recommendRuleDTOs;
                 return this;
             }
 
             /**
-             * recommendVariableDTOs.
+             * <p>Selected variable list</p>
              */
-            public Builder recommendVariableDTOs(java.util.List < RecommendVariableDTOs> recommendVariableDTOs) {
+            public Builder recommendVariableDTOs(java.util.List<RecommendVariableDTOs> recommendVariableDTOs) {
                 this.recommendVariableDTOs = recommendVariableDTOs;
                 return this;
             }
 
             /**
-             * riskSize.
+             * <p>Number of risk samples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder riskSize(Long riskSize) {
                 this.riskSize = riskSize;
@@ -660,7 +811,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * sampleName.
+             * <p>Sample name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>白样本</p>
              */
             public Builder sampleName(String sampleName) {
                 this.sampleName = sampleName;
@@ -668,7 +822,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * sampleScene.
+             * <p>Sample scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account_abuse_detection</p>
              */
             public Builder sampleScene(String sampleScene) {
                 this.sampleScene = sampleScene;
@@ -676,7 +833,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * sampleSceneName.
+             * <p>Sample scenario name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>防虚假账号</p>
              */
             public Builder sampleSceneName(String sampleSceneName) {
                 this.sampleSceneName = sampleSceneName;
@@ -684,7 +844,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>887</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -692,7 +855,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>Task name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>策略推荐任务</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -700,7 +866,10 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * <p>Task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

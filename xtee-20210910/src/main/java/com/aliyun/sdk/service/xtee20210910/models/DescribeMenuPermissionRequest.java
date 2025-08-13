@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMenuPermissionRequest} extends {@link RequestModel}
  *
  * <p>DescribeMenuPermissionRequest</p>
@@ -38,7 +44,7 @@ public class DescribeMenuPermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,14 @@ public class DescribeMenuPermissionRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -90,7 +103,10 @@ public class DescribeMenuPermissionRequest extends Request {
         }
 
         /**
-         * permissionType.
+         * <p>Permission type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MENU</p>
          */
         public Builder permissionType(String permissionType) {
             this.putQueryParameter("permissionType", permissionType);
@@ -99,7 +115,10 @@ public class DescribeMenuPermissionRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

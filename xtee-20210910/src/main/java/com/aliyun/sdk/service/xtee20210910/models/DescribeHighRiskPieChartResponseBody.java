@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHighRiskPieChartResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static DescribeHighRiskPieChartResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         private ResultObject resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeHighRiskPieChartResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +163,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -137,7 +171,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class Grid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("show")
         private Boolean show;
@@ -176,8 +219,18 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(Grid model) {
+                this.show = model.show;
+            } 
+
             /**
-             * show.
+             * <p>Chart flag, default false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -191,6 +244,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -229,8 +288,19 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +308,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Data value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,9 +325,15 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -279,7 +358,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -298,20 +377,32 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String name; 
             private String roseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.data = model.data;
+                this.name = model.name;
+                this.roseType = model.roseType;
+            } 
+
             /**
-             * data.
+             * <p>Returned data object</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -319,7 +410,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * roseType.
+             * <p>Chart identifier, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder roseType(String roseType) {
                 this.roseType = roseType;
@@ -333,6 +427,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskIPCity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("animation")
         private Boolean animation;
@@ -341,7 +441,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         private Grid grid;
 
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         private HighRiskIPCity(Builder builder) {
             this.animation = builder.animation;
@@ -374,17 +474,29 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private Boolean animation; 
             private Grid grid; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighRiskIPCity model) {
+                this.animation = model.animation;
+                this.grid = model.grid;
+                this.series = model.series;
+            } 
 
             /**
-             * animation.
+             * <p>Chart flag, default true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder animation(Boolean animation) {
                 this.animation = animation;
@@ -392,7 +504,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * grid.
+             * <p>Belonging grid.</p>
              */
             public Builder grid(Grid grid) {
                 this.grid = grid;
@@ -400,9 +512,9 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>Chart data</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }
@@ -414,6 +526,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskIPProvinceGrid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("show")
         private Boolean show;
@@ -440,8 +558,18 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskIPProvinceGrid model) {
+                this.show = model.show;
+            } 
+
             /**
-             * show.
+             * <p>Chart identifier, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -455,6 +583,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class SeriesData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -493,8 +627,19 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SeriesData model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>Variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -502,7 +647,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Data value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -516,9 +664,15 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskIPProvinceSeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < SeriesData> data;
+        private java.util.List<SeriesData> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -543,7 +697,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < SeriesData> getData() {
+        public java.util.List<SeriesData> getData() {
             return this.data;
         }
 
@@ -562,20 +716,32 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SeriesData> data; 
+            private java.util.List<SeriesData> data; 
             private String name; 
             private String roseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskIPProvinceSeries model) {
+                this.data = model.data;
+                this.name = model.name;
+                this.roseType = model.roseType;
+            } 
+
             /**
-             * data.
+             * <p>Returned data object</p>
              */
-            public Builder data(java.util.List < SeriesData> data) {
+            public Builder data(java.util.List<SeriesData> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -583,7 +749,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * roseType.
+             * <p>Chart identifier, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder roseType(String roseType) {
                 this.roseType = roseType;
@@ -597,6 +766,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskIPProvince extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("animation")
         private Boolean animation;
@@ -605,7 +780,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         private HighRiskIPProvinceGrid grid;
 
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < HighRiskIPProvinceSeries> series;
+        private java.util.List<HighRiskIPProvinceSeries> series;
 
         private HighRiskIPProvince(Builder builder) {
             this.animation = builder.animation;
@@ -638,17 +813,29 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < HighRiskIPProvinceSeries> getSeries() {
+        public java.util.List<HighRiskIPProvinceSeries> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private Boolean animation; 
             private HighRiskIPProvinceGrid grid; 
-            private java.util.List < HighRiskIPProvinceSeries> series; 
+            private java.util.List<HighRiskIPProvinceSeries> series; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighRiskIPProvince model) {
+                this.animation = model.animation;
+                this.grid = model.grid;
+                this.series = model.series;
+            } 
 
             /**
-             * animation.
+             * <p>Chart identifier, default is true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder animation(Boolean animation) {
                 this.animation = animation;
@@ -656,7 +843,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * grid.
+             * <p>Belonging grid.</p>
              */
             public Builder grid(HighRiskIPProvinceGrid grid) {
                 this.grid = grid;
@@ -664,9 +851,9 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>Chart data</p>
              */
-            public Builder series(java.util.List < HighRiskIPProvinceSeries> series) {
+            public Builder series(java.util.List<HighRiskIPProvinceSeries> series) {
                 this.series = series;
                 return this;
             }
@@ -678,6 +865,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileCityGrid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("show")
         private Boolean show;
@@ -704,8 +897,18 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileCityGrid model) {
+                this.show = model.show;
+            } 
+
             /**
-             * show.
+             * <p>Chart flag, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -719,6 +922,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileCitySeriesData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -757,8 +966,19 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileCitySeriesData model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -766,7 +986,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Data value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -780,9 +1003,15 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileCitySeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < HighRiskMobileCitySeriesData> data;
+        private java.util.List<HighRiskMobileCitySeriesData> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -807,7 +1036,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < HighRiskMobileCitySeriesData> getData() {
+        public java.util.List<HighRiskMobileCitySeriesData> getData() {
             return this.data;
         }
 
@@ -826,20 +1055,32 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HighRiskMobileCitySeriesData> data; 
+            private java.util.List<HighRiskMobileCitySeriesData> data; 
             private String name; 
             private String roseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileCitySeries model) {
+                this.data = model.data;
+                this.name = model.name;
+                this.roseType = model.roseType;
+            } 
+
             /**
-             * data.
+             * <p>Returned data object</p>
              */
-            public Builder data(java.util.List < HighRiskMobileCitySeriesData> data) {
+            public Builder data(java.util.List<HighRiskMobileCitySeriesData> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -847,7 +1088,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * roseType.
+             * <p>Chart flag, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder roseType(String roseType) {
                 this.roseType = roseType;
@@ -861,6 +1105,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileCity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("animation")
         private Boolean animation;
@@ -869,7 +1119,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         private HighRiskMobileCityGrid grid;
 
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < HighRiskMobileCitySeries> series;
+        private java.util.List<HighRiskMobileCitySeries> series;
 
         private HighRiskMobileCity(Builder builder) {
             this.animation = builder.animation;
@@ -902,17 +1152,29 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < HighRiskMobileCitySeries> getSeries() {
+        public java.util.List<HighRiskMobileCitySeries> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private Boolean animation; 
             private HighRiskMobileCityGrid grid; 
-            private java.util.List < HighRiskMobileCitySeries> series; 
+            private java.util.List<HighRiskMobileCitySeries> series; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileCity model) {
+                this.animation = model.animation;
+                this.grid = model.grid;
+                this.series = model.series;
+            } 
 
             /**
-             * animation.
+             * <p>Chart flag, default is true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder animation(Boolean animation) {
                 this.animation = animation;
@@ -920,7 +1182,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * grid.
+             * <p>Belongs to grid.</p>
              */
             public Builder grid(HighRiskMobileCityGrid grid) {
                 this.grid = grid;
@@ -928,9 +1190,9 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>Chart data</p>
              */
-            public Builder series(java.util.List < HighRiskMobileCitySeries> series) {
+            public Builder series(java.util.List<HighRiskMobileCitySeries> series) {
                 this.series = series;
                 return this;
             }
@@ -942,6 +1204,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileProvinceGrid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("show")
         private Boolean show;
@@ -968,8 +1236,18 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileProvinceGrid model) {
+                this.show = model.show;
+            } 
+
             /**
-             * show.
+             * <p>Chart flag, default is false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -983,6 +1261,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileProvinceSeriesData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1021,8 +1305,19 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileProvinceSeriesData model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1030,7 +1325,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Data value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1044,9 +1342,15 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileProvinceSeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < HighRiskMobileProvinceSeriesData> data;
+        private java.util.List<HighRiskMobileProvinceSeriesData> data;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1071,7 +1375,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < HighRiskMobileProvinceSeriesData> getData() {
+        public java.util.List<HighRiskMobileProvinceSeriesData> getData() {
             return this.data;
         }
 
@@ -1090,20 +1394,32 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HighRiskMobileProvinceSeriesData> data; 
+            private java.util.List<HighRiskMobileProvinceSeriesData> data; 
             private String name; 
             private String roseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileProvinceSeries model) {
+                this.data = model.data;
+                this.name = model.name;
+                this.roseType = model.roseType;
+            } 
+
             /**
-             * data.
+             * <p>High-risk position data.</p>
              */
-            public Builder data(java.util.List < HighRiskMobileProvinceSeriesData> data) {
+            public Builder data(java.util.List<HighRiskMobileProvinceSeriesData> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * name.
+             * <p>Display title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>分值区间占比</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1111,7 +1427,10 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * roseType.
+             * <p>Chart identifier, default false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder roseType(String roseType) {
                 this.roseType = roseType;
@@ -1125,6 +1444,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class HighRiskMobileProvince extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("animation")
         private Boolean animation;
@@ -1133,7 +1458,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         private HighRiskMobileProvinceGrid grid;
 
         @com.aliyun.core.annotation.NameInMap("series")
-        private java.util.List < HighRiskMobileProvinceSeries> series;
+        private java.util.List<HighRiskMobileProvinceSeries> series;
 
         private HighRiskMobileProvince(Builder builder) {
             this.animation = builder.animation;
@@ -1166,17 +1491,29 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < HighRiskMobileProvinceSeries> getSeries() {
+        public java.util.List<HighRiskMobileProvinceSeries> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private Boolean animation; 
             private HighRiskMobileProvinceGrid grid; 
-            private java.util.List < HighRiskMobileProvinceSeries> series; 
+            private java.util.List<HighRiskMobileProvinceSeries> series; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighRiskMobileProvince model) {
+                this.animation = model.animation;
+                this.grid = model.grid;
+                this.series = model.series;
+            } 
 
             /**
-             * animation.
+             * <p>Indicator, default true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder animation(Boolean animation) {
                 this.animation = animation;
@@ -1184,7 +1521,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * grid.
+             * <p>Belongs to grid.</p>
              */
             public Builder grid(HighRiskMobileProvinceGrid grid) {
                 this.grid = grid;
@@ -1192,9 +1529,9 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>Chart data</p>
              */
-            public Builder series(java.util.List < HighRiskMobileProvinceSeries> series) {
+            public Builder series(java.util.List<HighRiskMobileProvinceSeries> series) {
                 this.series = series;
                 return this;
             }
@@ -1206,6 +1543,12 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHighRiskPieChartResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighRiskPieChartResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("highRiskIPCity")
         private HighRiskIPCity highRiskIPCity;
@@ -1268,8 +1611,18 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             private HighRiskMobileCity highRiskMobileCity; 
             private HighRiskMobileProvince highRiskMobileProvince; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.highRiskIPCity = model.highRiskIPCity;
+                this.highRiskIPProvince = model.highRiskIPProvince;
+                this.highRiskMobileCity = model.highRiskMobileCity;
+                this.highRiskMobileProvince = model.highRiskMobileProvince;
+            } 
+
             /**
-             * highRiskIPCity.
+             * <p>High-risk IP city</p>
              */
             public Builder highRiskIPCity(HighRiskIPCity highRiskIPCity) {
                 this.highRiskIPCity = highRiskIPCity;
@@ -1277,7 +1630,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * highRiskIPProvince.
+             * <p>High-risk IP归属province</p>
              */
             public Builder highRiskIPProvince(HighRiskIPProvince highRiskIPProvince) {
                 this.highRiskIPProvince = highRiskIPProvince;
@@ -1285,7 +1638,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * highRiskMobileCity.
+             * <p>High-risk mobile phone归属city</p>
              */
             public Builder highRiskMobileCity(HighRiskMobileCity highRiskMobileCity) {
                 this.highRiskMobileCity = highRiskMobileCity;
@@ -1293,7 +1646,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
             }
 
             /**
-             * highRiskMobileProvince.
+             * <p>High-risk mobile phone&quot;s province of origin</p>
              */
             public Builder highRiskMobileProvince(HighRiskMobileProvince highRiskMobileProvince) {
                 this.highRiskMobileProvince = highRiskMobileProvince;

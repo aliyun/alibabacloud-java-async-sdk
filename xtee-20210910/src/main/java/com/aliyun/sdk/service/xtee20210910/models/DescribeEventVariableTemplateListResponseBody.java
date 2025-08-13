@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventVariableTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventVariableTemplateListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     private DescribeEventVariableTemplateListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventVariableTemplateListResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Return object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventVariableTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableTemplateListResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -168,8 +195,24 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             private String title; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.fieldType = model.fieldType;
+                this.id = model.id;
+                this.name = model.name;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
-             * code.
+             * <p>Variable code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -177,7 +220,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -185,7 +231,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * fieldType.
+             * <p>Variable input type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -193,7 +242,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>454</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -201,7 +253,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Variable name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -209,7 +264,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>年龄</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -217,7 +275,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Variable type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -231,6 +292,12 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventVariableTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventVariableTemplateListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("templateCode")
         private String templateCode;
@@ -239,7 +306,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         private String templateName;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private ResultObject(Builder builder) {
             this.templateCode = builder.templateCode;
@@ -272,17 +339,29 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
             private String templateCode; 
             private String templateName; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.templateCode = model.templateCode;
+                this.templateName = model.templateName;
+                this.variables = model.variables;
+            } 
 
             /**
-             * templateCode.
+             * <p>Template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>register</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -290,7 +369,10 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * templateName.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册模版</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -298,9 +380,9 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * variables.
+             * <p>Variable list.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }

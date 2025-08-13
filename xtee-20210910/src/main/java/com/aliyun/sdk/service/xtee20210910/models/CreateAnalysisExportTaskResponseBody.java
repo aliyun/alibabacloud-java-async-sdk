@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAnalysisExportTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAnalysisExportTaskResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateAnalysisExportTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAnalysisExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAnalysisExportTaskResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("columns")
         private String columns;
@@ -216,8 +243,65 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             private String type; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.columns = model.columns;
+                this.conditions = model.conditions;
+                this.eventBeginTime = model.eventBeginTime;
+                this.eventCodes = model.eventCodes;
+                this.eventEndTime = model.eventEndTime;
+                this.fileFormat = model.fileFormat;
+                this.ossKey = model.ossKey;
+                this.scope = model.scope;
+                this.status = model.status;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
+
             /**
-             * columns.
+             * <p>Export list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;requestId&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;RequestId&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;eventTime&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;事件时间&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;accountId&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;账号&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;deviceId&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;设备ID&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;eventCode&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;事件编码&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;ip&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;IP&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;score&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;分值&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;tags&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;标签&quot;
+             *                 },
+             *                 {
+             *                     &quot;fieldName&quot;: &quot;DEtest222&quot;,
+             *                     &quot;fieldTitle&quot;: &quot;测试222&quot;
+             *                 }
+             *             ]</p>
              */
             public Builder columns(String columns) {
                 this.columns = columns;
@@ -225,7 +309,13 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * conditions.
+             * <p>Export task conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *      &quot;fieldName&quot;: null, 
+             *       &quot;fieldValue&quot;: null 
+             *       }</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -233,7 +323,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * eventBeginTime.
+             * <p>Event start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752076800000</p>
              */
             public Builder eventBeginTime(Long eventBeginTime) {
                 this.eventBeginTime = eventBeginTime;
@@ -241,7 +334,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * eventCodes.
+             * <p>Event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_ahespg8137</p>
              */
             public Builder eventCodes(String eventCodes) {
                 this.eventCodes = eventCodes;
@@ -249,7 +345,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * eventEndTime.
+             * <p>End time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753891199000</p>
              */
             public Builder eventEndTime(Long eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -257,7 +356,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * fileFormat.
+             * <p>File format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
@@ -265,7 +367,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ossKey.
+             * <p>OSS-generated key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -273,7 +378,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>Export task scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -281,7 +389,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,7 +400,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Export task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -297,7 +411,10 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1519714049632764</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

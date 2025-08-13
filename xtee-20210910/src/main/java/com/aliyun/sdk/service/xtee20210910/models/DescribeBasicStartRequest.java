@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBasicStartRequest} extends {@link RequestModel}
  *
  * <p>DescribeBasicStartRequest</p>
@@ -48,7 +54,7 @@ public class DescribeBasicStartRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,10 @@ public class DescribeBasicStartRequest extends Request {
         } 
 
         /**
-         * appKey.
+         * <p>Application appkey.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("appKey", appKey);
@@ -118,7 +127,10 @@ public class DescribeBasicStartRequest extends Request {
         }
 
         /**
-         * endDs.
+         * <p>End time, accurate to milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250320</p>
          */
         public Builder endDs(String endDs) {
             this.putQueryParameter("endDs", endDs);
@@ -127,7 +139,10 @@ public class DescribeBasicStartRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -136,7 +151,10 @@ public class DescribeBasicStartRequest extends Request {
         }
 
         /**
-         * service.
+         * <p>Service to call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service_tender_cee</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("service", service);
@@ -145,7 +163,10 @@ public class DescribeBasicStartRequest extends Request {
         }
 
         /**
-         * startDs.
+         * <p>Start time, accurate to milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250310</p>
          */
         public Builder startDs(String startDs) {
             this.putQueryParameter("startDs", startDs);

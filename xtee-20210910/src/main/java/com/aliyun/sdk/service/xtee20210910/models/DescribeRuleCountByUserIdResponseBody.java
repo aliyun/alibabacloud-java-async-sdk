@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleCountByUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleCountByUserIdResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
         private String requestId; 
         private ResultObject resultObject; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleCountByUserIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -70,6 +91,12 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleCountByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleCountByUserIdResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limit")
         private Boolean limit;
@@ -120,8 +147,20 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
             private Integer maxTotalItem; 
             private Integer totalItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.limit = model.limit;
+                this.maxTotalItem = model.maxTotalItem;
+                this.totalItem = model.totalItem;
+            } 
+
             /**
-             * limit.
+             * <p>Whether the limit condition is reached. Values: -<strong>true</strong>: Yes-<strong>false</strong>: No</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder limit(Boolean limit) {
                 this.limit = limit;
@@ -129,7 +168,10 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * maxTotalItem.
+             * <p>Maximum number of items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTotalItem(Integer maxTotalItem) {
                 this.maxTotalItem = maxTotalItem;
@@ -137,7 +179,10 @@ public class DescribeRuleCountByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * totalItem.
+             * <p>Total number of items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder totalItem(Integer totalItem) {
                 this.totalItem = totalItem;

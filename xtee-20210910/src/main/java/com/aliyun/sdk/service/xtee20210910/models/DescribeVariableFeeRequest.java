@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVariableFeeRequest} extends {@link RequestModel}
  *
  * <p>DescribeVariableFeeRequest</p>
@@ -18,7 +24,7 @@ public class DescribeVariableFeeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regId")
@@ -39,7 +45,7 @@ public class DescribeVariableFeeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class DescribeVariableFeeRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -67,7 +73,7 @@ public class DescribeVariableFeeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVariableFeeRequest, Builder> {
         private String lang; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private String regId; 
 
         private Builder() {
@@ -82,7 +88,14 @@ public class DescribeVariableFeeRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,16 +104,20 @@ public class DescribeVariableFeeRequest extends Request {
         }
 
         /**
-         * ids.
+         * <p>Variable ID</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             this.putQueryParameter("ids", ids);
             this.ids = ids;
             return this;
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

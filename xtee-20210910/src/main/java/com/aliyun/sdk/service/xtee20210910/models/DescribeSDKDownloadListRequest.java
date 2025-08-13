@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDKDownloadListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSDKDownloadListRequest</p>
@@ -43,7 +49,7 @@ public class DescribeSDKDownloadListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +101,14 @@ public class DescribeSDKDownloadListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +117,10 @@ public class DescribeSDKDownloadListRequest extends Request {
         }
 
         /**
-         * deviceType.
+         * <p>Device type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANDROID</p>
          */
         public Builder deviceType(String deviceType) {
             this.putQueryParameter("deviceType", deviceType);
@@ -113,7 +129,10 @@ public class DescribeSDKDownloadListRequest extends Request {
         }
 
         /**
-         * listType.
+         * <p>Download type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OLD</p>
          */
         public Builder listType(String listType) {
             this.putQueryParameter("listType", listType);
@@ -122,7 +141,10 @@ public class DescribeSDKDownloadListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);

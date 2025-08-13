@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneRulePageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSceneRulePageListResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("totalItem")
     private Integer totalItem;
@@ -44,6 +50,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
 
     public static DescribeSceneRulePageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -92,12 +102,27 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Integer totalItem; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSceneRulePageListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -105,7 +130,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page in the returned results. Default value: 20, minimum value: 1, maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +141,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, which is unique for each request, facilitating subsequent troubleshooting</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,15 +152,18 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -137,7 +171,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -150,6 +187,12 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSceneRulePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneRulePageListResponseBody</p>
+     */
     public static class ConsoleAudit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applyUserId")
         private String applyUserId;
@@ -356,8 +399,33 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             private String relationName; 
             private String relationType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsoleAudit model) {
+                this.applyUserId = model.applyUserId;
+                this.applyUserName = model.applyUserName;
+                this.auditMsg = model.auditMsg;
+                this.auditRealUserId = model.auditRealUserId;
+                this.auditRealUserName = model.auditRealUserName;
+                this.auditRemark = model.auditRemark;
+                this.auditStatus = model.auditStatus;
+                this.auditTime = model.auditTime;
+                this.auditUserId = model.auditUserId;
+                this.auditUserName = model.auditUserName;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.relationExt = model.relationExt;
+                this.relationId = model.relationId;
+                this.relationName = model.relationName;
+                this.relationType = model.relationType;
+            } 
+
             /**
-             * applyUserId.
+             * <p>Initiator account ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890999</p>
              */
             public Builder applyUserId(String applyUserId) {
                 this.applyUserId = applyUserId;
@@ -365,7 +433,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * applyUserName.
+             * <p>Initiator account name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder applyUserName(String applyUserName) {
                 this.applyUserName = applyUserName;
@@ -373,7 +444,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditMsg.
+             * <p>Approval comments</p>
+             * 
+             * <strong>example:</strong>
+             * <p>同意</p>
              */
             public Builder auditMsg(String auditMsg) {
                 this.auditMsg = auditMsg;
@@ -381,7 +455,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRealUserId.
+             * <p>Final approver ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder auditRealUserId(String auditRealUserId) {
                 this.auditRealUserId = auditRealUserId;
@@ -389,7 +466,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRealUserName.
+             * <p>Approver account name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王五</p>
              */
             public Builder auditRealUserName(String auditRealUserName) {
                 this.auditRealUserName = auditRealUserName;
@@ -397,7 +477,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditRemark.
+             * <p>Approval application remarks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder auditRemark(String auditRemark) {
                 this.auditRemark = auditRemark;
@@ -405,7 +488,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditStatus.
+             * <p>Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGREE</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -413,7 +499,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditTime.
+             * <p>Approval time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545726028000</p>
              */
             public Builder auditTime(Long auditTime) {
                 this.auditTime = auditTime;
@@ -421,7 +510,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditUserId.
+             * <p>Designated auditor account IDs (comma-separated for multiple)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder auditUserId(String auditUserId) {
                 this.auditUserId = auditUserId;
@@ -429,7 +521,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * auditUserName.
+             * <p>Designated auditor account names (comma-separated for multiple)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder auditUserName(String auditUserName) {
                 this.auditUserName = auditUserName;
@@ -437,7 +532,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time in UTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545726028000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -445,7 +543,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1728</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -453,7 +554,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * relationExt.
+             * <p>Information about other related parties (in JSON format)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder relationExt(String relationExt) {
                 this.relationExt = relationExt;
@@ -461,7 +565,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * relationId.
+             * <p>审批关联的事务ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder relationId(Long relationId) {
                 this.relationId = relationId;
@@ -469,7 +576,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * relationName.
+             * <p>The name of the associated transaction (can be null)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -477,7 +587,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * relationType.
+             * <p>审批的类型（如rule代表策略的审批）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RULE</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -491,6 +604,12 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSceneRulePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneRulePageListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
@@ -540,6 +659,9 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleStatus")
         private String ruleStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ruleType")
+        private String ruleType;
+
         @com.aliyun.core.annotation.NameInMap("ruleVersionId")
         private Long ruleVersionId;
 
@@ -566,6 +688,7 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             this.ruleMemo = builder.ruleMemo;
             this.ruleName = builder.ruleName;
             this.ruleStatus = builder.ruleStatus;
+            this.ruleType = builder.ruleType;
             this.ruleVersionId = builder.ruleVersionId;
             this.templateId = builder.templateId;
             this.version = builder.version;
@@ -692,6 +815,13 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
          * @return ruleVersionId
          */
         public Long getRuleVersionId() {
@@ -729,12 +859,42 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             private String ruleMemo; 
             private String ruleName; 
             private String ruleStatus; 
+            private String ruleType; 
             private Long ruleVersionId; 
             private Long templateId; 
             private Integer version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.authType = model.authType;
+                this.consoleAudit = model.consoleAudit;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+                this.externalRuleName = model.externalRuleName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mainRuleId = model.mainRuleId;
+                this.priority = model.priority;
+                this.ruleAuthType = model.ruleAuthType;
+                this.ruleId = model.ruleId;
+                this.ruleMemo = model.ruleMemo;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
+                this.ruleVersionId = model.ruleVersionId;
+                this.templateId = model.templateId;
+                this.version = model.version;
+            } 
+
             /**
-             * authType.
+             * <p>Service authorization type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -742,7 +902,7 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * consoleAudit.
+             * <p>Audit object</p>
              */
             public Builder consoleAudit(ConsoleAudit consoleAudit) {
                 this.consoleAudit = consoleAudit;
@@ -750,7 +910,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -758,7 +921,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册风险</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -766,7 +932,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -774,7 +943,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * externalRuleName.
+             * <p>External rule name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>策略1</p>
              */
             public Builder externalRuleName(String externalRuleName) {
                 this.externalRuleName = externalRuleName;
@@ -782,7 +954,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621578648000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -790,7 +965,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565701886000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -798,7 +976,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Primary key ID of the rule</p>
+             * 
+             * <strong>example:</strong>
+             * <p>497</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -806,7 +987,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * mainRuleId.
+             * <p>Main rule ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4399</p>
              */
             public Builder mainRuleId(String mainRuleId) {
                 this.mainRuleId = mainRuleId;
@@ -814,7 +998,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>Strategy priority, where a higher number indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -822,7 +1009,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleAuthType.
+             * <p>Rule Auth type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTMER</p>
              */
             public Builder ruleAuthType(String ruleAuthType) {
                 this.ruleAuthType = ruleAuthType;
@@ -830,7 +1020,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Strategy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4730</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -838,7 +1031,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleMemo.
+             * <p>Strategy description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述信息</p>
              */
             public Builder ruleMemo(String ruleMemo) {
                 this.ruleMemo = ruleMemo;
@@ -846,7 +1042,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>Strategy name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -854,7 +1053,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>Strategy status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -862,7 +1064,21 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * ruleVersionId.
+             * <p>Rule type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * <p>Primary key ID of the rule version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3823</p>
              */
             public Builder ruleVersionId(Long ruleVersionId) {
                 this.ruleVersionId = ruleVersionId;
@@ -870,7 +1086,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * templateId.
+             * <p>Template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -878,7 +1097,10 @@ public class DescribeSceneRulePageListResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

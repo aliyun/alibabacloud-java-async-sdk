@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteRuleRequest</p>
@@ -48,7 +54,7 @@ public class DeleteRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,14 @@ public class DeleteRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +131,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * consoleRuleId.
+         * <p>Policy primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7035</p>
          */
         public Builder consoleRuleId(Long consoleRuleId) {
             this.putQueryParameter("consoleRuleId", consoleRuleId);
@@ -127,7 +143,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -136,7 +155,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102059</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("ruleId", ruleId);
@@ -145,7 +167,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * ruleVersionId.
+         * <p>Policy version primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10203</p>
          */
         public Builder ruleVersionId(Long ruleVersionId) {
             this.putQueryParameter("ruleVersionId", ruleVersionId);

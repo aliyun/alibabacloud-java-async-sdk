@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtee20210910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneAllEventNameCodeListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSceneAllEventNameCodeListResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -44,6 +50,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
 
     public static DescribeSceneAllEventNameCodeListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -77,7 +87,7 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -93,11 +103,26 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSceneAllEventNameCodeListResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +141,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +152,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, which is unique for each request, facilitating subsequent troubleshooting</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,15 +163,18 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object</p>
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation was successful, where true means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +187,12 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSceneAllEventNameCodeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneAllEventNameCodeListResponseBody</p>
+     */
     public static class Children extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createType")
         private String createType;
@@ -212,8 +255,21 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             private String eventName; 
             private String eventType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.createType = model.createType;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+            } 
+
             /**
-             * createType.
+             * <p>Creation type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder createType(String createType) {
                 this.createType = createType;
@@ -221,7 +277,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aamexg3015</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -229,7 +288,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -237,7 +299,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BYPASS</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -251,9 +316,15 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSceneAllEventNameCodeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneAllEventNameCodeListResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
-        private java.util.List < Children> children;
+        private java.util.List<Children> children;
 
         @com.aliyun.core.annotation.NameInMap("createType")
         private String createType;
@@ -286,7 +357,7 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < Children> getChildren() {
+        public java.util.List<Children> getChildren() {
             return this.children;
         }
 
@@ -319,22 +390,36 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Children> children; 
+            private java.util.List<Children> children; 
             private String createType; 
             private String eventCode; 
             private String eventName; 
             private String eventType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.children = model.children;
+                this.createType = model.createType;
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+            } 
+
             /**
-             * children.
+             * <p>Child objects</p>
              */
-            public Builder children(java.util.List < Children> children) {
+            public Builder children(java.util.List<Children> children) {
                 this.children = children;
                 return this;
             }
 
             /**
-             * createType.
+             * <p>Creation type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MORMAL</p>
              */
             public Builder createType(String createType) {
                 this.createType = createType;
@@ -342,7 +427,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventCode.
+             * <p>Event code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de_aszbjb7236</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -350,7 +438,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventName.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销风险识别_增强版</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -358,7 +449,10 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>Event type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
