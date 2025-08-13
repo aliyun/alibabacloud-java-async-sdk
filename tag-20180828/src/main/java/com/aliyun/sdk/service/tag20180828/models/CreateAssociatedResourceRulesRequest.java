@@ -54,7 +54,7 @@ public class CreateAssociatedResourceRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,7 @@ public class CreateAssociatedResourceRulesRequest extends Request {
         } 
 
         /**
-         * CreateRulesList.
+         * <p>The associated resource tagging rules that you want to create.</p>
          */
         public Builder createRulesList(java.util.List<CreateRulesList> createRulesList) {
             this.putQueryParameter("CreateRulesList", createRulesList);
@@ -142,7 +142,10 @@ public class CreateAssociatedResourceRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,6 +176,9 @@ public class CreateAssociatedResourceRulesRequest extends Request {
      * <p>CreateAssociatedResourceRulesRequest</p>
      */
     public static class CreateRulesList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExistingStatus")
+        private String existingStatus;
+
         @com.aliyun.core.annotation.NameInMap("SettingName")
         @com.aliyun.core.annotation.Validation(required = true)
         private String settingName;
@@ -185,6 +191,7 @@ public class CreateAssociatedResourceRulesRequest extends Request {
         private java.util.List<String> tagKeys;
 
         private CreateRulesList(Builder builder) {
+            this.existingStatus = builder.existingStatus;
             this.settingName = builder.settingName;
             this.status = builder.status;
             this.tagKeys = builder.tagKeys;
@@ -196,6 +203,13 @@ public class CreateAssociatedResourceRulesRequest extends Request {
 
         public static CreateRulesList create() {
             return builder().build();
+        }
+
+        /**
+         * @return existingStatus
+         */
+        public String getExistingStatus() {
+            return this.existingStatus;
         }
 
         /**
@@ -220,11 +234,32 @@ public class CreateAssociatedResourceRulesRequest extends Request {
         }
 
         public static final class Builder {
+            private String existingStatus; 
             private String settingName; 
             private String status; 
             private java.util.List<String> tagKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateRulesList model) {
+                this.existingStatus = model.existingStatus;
+                this.settingName = model.settingName;
+                this.status = model.status;
+                this.tagKeys = model.tagKeys;
+            } 
+
             /**
+             * ExistingStatus.
+             */
+            public Builder existingStatus(String existingStatus) {
+                this.existingStatus = existingStatus;
+                return this;
+            }
+
+            /**
+             * <p>The name of the associated resource tagging rule.</p>
+             * <p>For more information, see the <strong>Rule Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resource types that support the Associated Resource Tagging feature</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -236,6 +271,11 @@ public class CreateAssociatedResourceRulesRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to enable the associated resource tagging rule. Valid values:</p>
+             * <ul>
+             * <li>Enable (default)</li>
+             * <li>Disable</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -247,7 +287,7 @@ public class CreateAssociatedResourceRulesRequest extends Request {
             }
 
             /**
-             * TagKeys.
+             * <p>The tag keys to which the associated resource tagging rule applies.</p>
              */
             public Builder tagKeys(java.util.List<String> tagKeys) {
                 this.tagKeys = tagKeys;

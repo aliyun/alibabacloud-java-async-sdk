@@ -48,6 +48,10 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isRd
      */
@@ -89,6 +93,17 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         private String rdId; 
         private String requestId; 
         private java.util.List<Targets> targets; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTargetsForPolicyResponseBody model) {
+            this.isRd = model.isRd;
+            this.nextToken = model.nextToken;
+            this.rdId = model.rdId;
+            this.requestId = model.requestId;
+            this.targets = model.targets;
+        } 
 
         /**
          * <p>Indicates whether the object belongs to the resource directory. Valid values:</p>
@@ -202,6 +217,14 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String targetId; 
             private Integer targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the object.</p>

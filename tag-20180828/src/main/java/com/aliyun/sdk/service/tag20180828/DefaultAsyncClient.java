@@ -275,6 +275,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h3></h3>
      * <p>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
      * This topic provides an example on how to call the API operation to detach the tag policy with an ID of <code>p-a3381efe2fe34a75****</code> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
@@ -658,6 +659,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a></h3>
      * <p>This topic provides an example on how to call the API operation to change the name of a tag policy to <code>test</code>.</p>
      * 
      * @param request the request parameters of ModifyPolicy  ModifyPolicyRequest

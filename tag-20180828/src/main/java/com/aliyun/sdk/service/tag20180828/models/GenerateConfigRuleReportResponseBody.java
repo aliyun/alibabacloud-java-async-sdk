@@ -36,6 +36,10 @@ public class GenerateConfigRuleReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reportId
      */
@@ -53,6 +57,14 @@ public class GenerateConfigRuleReportResponseBody extends TeaModel {
     public static final class Builder {
         private String reportId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateConfigRuleReportResponseBody model) {
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the resource non-compliance report.</p>

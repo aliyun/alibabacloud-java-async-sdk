@@ -1,3 +1,6 @@
+2025-08-13 Version: 1.0.5
+- Generated java-async 2018-08-28 for Tag.
+
 2025-02-19 Version: 1.0.4
 - Generated java-async 2018-08-28 for Tag.
 

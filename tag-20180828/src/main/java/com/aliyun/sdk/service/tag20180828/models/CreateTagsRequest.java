@@ -56,7 +56,7 @@ public class CreateTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -220,6 +220,14 @@ public class CreateTagsRequest extends Request {
             private String description; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagValueParamList model) {
+                this.description = model.description;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the value for tag N.</p>
              * <p>Valid values of N: 1 to 10.</p>
@@ -308,6 +316,15 @@ public class CreateTagsRequest extends Request {
             private String description; 
             private String key; 
             private java.util.List<TagValueParamList> tagValueParamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagKeyValueParamList model) {
+                this.description = model.description;
+                this.key = model.key;
+                this.tagValueParamList = model.tagValueParamList;
+            } 
 
             /**
              * <p>The description of the key for tag N.</p>

@@ -36,6 +36,10 @@ public class GetPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -53,6 +57,14 @@ public class GetPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Policy policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the tag policy.</p>
@@ -146,6 +158,16 @@ public class GetPolicyResponseBody extends TeaModel {
             private String policyDesc; 
             private String policyName; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.policyContent = model.policyContent;
+                this.policyDesc = model.policyDesc;
+                this.policyName = model.policyName;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>The document of the tag policy.</p>

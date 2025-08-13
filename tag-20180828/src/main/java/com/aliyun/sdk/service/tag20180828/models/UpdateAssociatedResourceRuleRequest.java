@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateAssociatedResourceRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistingStatus")
+    private String existingStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -48,6 +52,7 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
 
     private UpdateAssociatedResourceRuleRequest(Builder builder) {
         super(builder);
+        this.existingStatus = builder.existingStatus;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -65,9 +70,16 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return existingStatus
+     */
+    public String getExistingStatus() {
+        return this.existingStatus;
     }
 
     /**
@@ -120,6 +132,7 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAssociatedResourceRuleRequest, Builder> {
+        private String existingStatus; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -134,6 +147,7 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
 
         private Builder(UpdateAssociatedResourceRuleRequest request) {
             super(request);
+            this.existingStatus = request.existingStatus;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -142,6 +156,15 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
             this.status = request.status;
             this.tagKeys = request.tagKeys;
         } 
+
+        /**
+         * ExistingStatus.
+         */
+        public Builder existingStatus(String existingStatus) {
+            this.putQueryParameter("ExistingStatus", existingStatus);
+            this.existingStatus = existingStatus;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -162,7 +185,10 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -180,6 +206,8 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
         }
 
         /**
+         * <p>The setting name of the associated resource tag rule.</p>
+         * <p>For specific values, see the <strong>Rule Setting Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that Support Associated Resource Tag Settings</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +220,14 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether to enable the associated resource tag rule. Values:</p>
+         * <ul>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -201,7 +236,7 @@ public class UpdateAssociatedResourceRuleRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * <p>List of tag keys affected by the associated resource tag rule.</p>
          */
         public Builder tagKeys(java.util.List<String> tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

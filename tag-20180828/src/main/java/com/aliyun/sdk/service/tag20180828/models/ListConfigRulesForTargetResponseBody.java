@@ -40,6 +40,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigRulesForTargetResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The tag detection tasks.</p>
@@ -221,6 +234,20 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             private String tagValue; 
             private String targetId; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aggregatorId = model.aggregatorId;
+                this.configRuleId = model.configRuleId;
+                this.policyType = model.policyType;
+                this.remediation = model.remediation;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the account group.</p>

@@ -69,7 +69,7 @@ public class ListAssociatedResourceRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +157,11 @@ public class ListAssociatedResourceRulesRequest extends Request {
         } 
 
         /**
-         * MaxResult.
+         * <p>Number of data entries to display per page during pagination.</p>
+         * <p>Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -166,7 +170,10 @@ public class ListAssociatedResourceRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token for the next query start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,7 +200,10 @@ public class ListAssociatedResourceRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +221,7 @@ public class ListAssociatedResourceRulesRequest extends Request {
         }
 
         /**
-         * SettingName.
+         * <p>Setting name of the associated resource tag rule.</p>
          */
         public Builder settingName(java.util.List<String> settingName) {
             this.putQueryParameter("SettingName", settingName);
@@ -220,7 +230,14 @@ public class ListAssociatedResourceRulesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Whether the associated resource tag rule is enabled. Values:</p>
+         * <ul>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

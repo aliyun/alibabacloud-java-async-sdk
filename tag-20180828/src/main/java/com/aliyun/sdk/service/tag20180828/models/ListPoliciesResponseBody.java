@@ -40,6 +40,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListPoliciesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<PolicyList> policyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.policyList = model.policyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the next query is required.</p>
@@ -185,6 +198,17 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String policyId; 
             private String policyName; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyList model) {
+                this.policyContent = model.policyContent;
+                this.policyDesc = model.policyDesc;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>The document of the tag policy.</p>

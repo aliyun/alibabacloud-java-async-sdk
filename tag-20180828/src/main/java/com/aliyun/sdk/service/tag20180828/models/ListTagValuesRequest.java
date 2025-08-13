@@ -86,7 +86,7 @@ public class ListTagValuesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -378,6 +378,13 @@ public class ListTagValuesRequest extends Request {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagFilter model) {
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag value for a fuzzy query.</p>

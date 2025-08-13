@@ -36,6 +36,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedResources
      */
@@ -53,6 +57,14 @@ public class UntagResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private FailedResources failedResources; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UntagResourcesResponseBody model) {
+            this.failedResources = model.failedResources;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the resources from which tags fail to be removed.</p>
@@ -131,6 +143,14 @@ public class UntagResourcesResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -204,6 +224,14 @@ public class UntagResourcesResponseBody extends TeaModel {
             private String resourceARN; 
             private Result result; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedResource model) {
+                this.resourceARN = model.resourceARN;
+                this.result = model.result;
+            } 
+
             /**
              * <p>The ARN of the resource.</p>
              * 
@@ -261,6 +289,13 @@ public class UntagResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FailedResource> failedResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedResources model) {
+                this.failedResource = model.failedResource;
+            } 
 
             /**
              * FailedResource.

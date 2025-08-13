@@ -44,6 +44,10 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConfigRuleReportResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The basic information of the resource non-compliance report that is last generated.</p>
@@ -196,6 +210,16 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             private String reportId; 
             private String targetId; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdTime = model.createdTime;
+                this.reportId = model.reportId;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The time when the report was generated. This value is a UNIX timestamp.</p>

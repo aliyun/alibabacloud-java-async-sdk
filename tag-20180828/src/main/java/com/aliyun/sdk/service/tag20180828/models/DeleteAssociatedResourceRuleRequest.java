@@ -54,7 +54,7 @@ public class DeleteAssociatedResourceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,7 +133,10 @@ public class DeleteAssociatedResourceRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +154,11 @@ public class DeleteAssociatedResourceRuleRequest extends Request {
         }
 
         /**
-         * SettingName.
+         * <p>The name of the associated resource tagging rule.</p>
+         * <p>For more information, see the <strong>Rule Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resource types that support the Associated Resource Tagging feature</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule:AttachEni-DetachEni-TagInstance:Ecs-Instance:Ecs-Eni</p>
          */
         public Builder settingName(String settingName) {
             this.putQueryParameter("SettingName", settingName);

@@ -85,7 +85,7 @@ public class ListTagKeysRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,6 +384,13 @@ public class ListTagKeysRequest extends Request {
 
         public static final class Builder {
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagFilter model) {
+                this.key = model.key;
+            } 
 
             /**
              * <p>The tag key for a fuzzy query.</p>

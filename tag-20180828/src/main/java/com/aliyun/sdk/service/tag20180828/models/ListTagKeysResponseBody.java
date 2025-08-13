@@ -40,6 +40,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keys
      */
@@ -65,6 +69,15 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Keys keys; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagKeysResponseBody model) {
+            this.keys = model.keys;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the tag keys.</p>
@@ -162,6 +175,15 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String description; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Key model) {
+                this.category = model.category;
+                this.description = model.description;
+                this.key = model.key;
+            } 
+
             /**
              * <p>The type of the resource tag. Valid values:</p>
              * <ul>
@@ -237,6 +259,13 @@ public class ListTagKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Key> key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.key = model.key;
+            } 
 
             /**
              * <p>The tag key.</p>

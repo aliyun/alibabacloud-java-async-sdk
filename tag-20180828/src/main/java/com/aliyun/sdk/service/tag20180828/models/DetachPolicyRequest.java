@@ -65,7 +65,7 @@ public class DetachPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -198,7 +198,7 @@ public class DetachPolicyRequest extends Request {
         /**
          * <p>The ID of the object.</p>
          * <blockquote>
-         * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</p>
+         * <p>If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class DetachPolicyRequest extends Request {
          * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
          * </ul>
          * <blockquote>
-         * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</p>
+         * <p>If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this parameter is required. The value of this parameter is not case-sensitive.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

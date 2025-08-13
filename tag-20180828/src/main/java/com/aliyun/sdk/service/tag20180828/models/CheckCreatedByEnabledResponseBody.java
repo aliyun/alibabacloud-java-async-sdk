@@ -36,6 +36,10 @@ public class CheckCreatedByEnabledResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return openStatus
      */
@@ -53,6 +57,14 @@ public class CheckCreatedByEnabledResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean openStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckCreatedByEnabledResponseBody model) {
+            this.openStatus = model.openStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * OpenStatus.

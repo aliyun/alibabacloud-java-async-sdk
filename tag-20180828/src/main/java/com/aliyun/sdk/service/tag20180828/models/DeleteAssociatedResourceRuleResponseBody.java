@@ -32,6 +32,10 @@ public class DeleteAssociatedResourceRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class DeleteAssociatedResourceRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteAssociatedResourceRuleResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB532282-94F5-5F56-877F-32D5E2A04F3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

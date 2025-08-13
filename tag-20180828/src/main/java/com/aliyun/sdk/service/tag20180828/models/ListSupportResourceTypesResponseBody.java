@@ -40,6 +40,10 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<SupportResourceTypes> supportResourceTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSupportResourceTypesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.supportResourceTypes = model.supportResourceTypes;
+        } 
 
         /**
          * <p>Indicates whether the next query is required.</p>
@@ -161,6 +174,15 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             private Boolean support; 
             private String supportCode; 
             private java.util.List<java.util.Map<String, String>> supportDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportItems model) {
+                this.support = model.support;
+                this.supportCode = model.supportCode;
+                this.supportDetails = model.supportDetails;
+            } 
 
             /**
              * <p>Indicates whether the tag-related capability item is supported. Valid values:</p>
@@ -270,6 +292,16 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             private String productCode; 
             private String resourceType; 
             private java.util.List<SupportItems> supportItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResourceTypes model) {
+                this.arnTemplate = model.arnTemplate;
+                this.productCode = model.productCode;
+                this.resourceType = model.resourceType;
+                this.supportItems = model.supportItems;
+            } 
 
             /**
              * <p>The resource ARN template.</p>

@@ -40,6 +40,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyId
      */
@@ -65,6 +69,15 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String policyId; 
         private String policyName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyResponseBody model) {
+            this.policyId = model.policyId;
+            this.policyName = model.policyName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the tag policy.</p>

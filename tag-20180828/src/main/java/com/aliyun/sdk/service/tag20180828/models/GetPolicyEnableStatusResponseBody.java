@@ -36,6 +36,10 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StatusModels> statusModels; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyEnableStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.statusModels = model.statusModels;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusModels model) {
+                this.status = model.status;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>The status of the Tag Policy feature. Valid values:</p>

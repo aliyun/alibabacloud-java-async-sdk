@@ -40,6 +40,10 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return effectivePolicy
      */
@@ -65,6 +69,15 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
         private String effectivePolicy; 
         private java.util.List<PolicyAttachments> policyAttachments; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEffectivePolicyResponseBody model) {
+            this.effectivePolicy = model.effectivePolicy;
+            this.policyAttachments = model.policyAttachments;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The effective tag policy.</p>
@@ -194,6 +207,18 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
             private String targetId; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyList model) {
+                this.attachSeq = model.attachSeq;
+                this.attachTime = model.attachTime;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * AttachSeq.
              */
@@ -304,6 +329,15 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
             private java.util.List<PolicyList> policyList; 
             private String policyType; 
             private String tagKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyAttachments model) {
+                this.policyList = model.policyList;
+                this.policyType = model.policyType;
+                this.tagKey = model.tagKey;
+            } 
 
             /**
              * PolicyList.
