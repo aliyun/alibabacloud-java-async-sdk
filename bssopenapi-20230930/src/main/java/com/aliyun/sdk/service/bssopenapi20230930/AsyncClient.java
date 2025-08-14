@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCouponDeductTagResponse> addCouponDeductTag(AddCouponDeductTagRequest request);
 
     /**
+     * @param request the request parameters of AllocateCostCenterResource  AllocateCostCenterResourceRequest
+     * @return AllocateCostCenterResourceResponse
+     */
+    CompletableFuture<AllocateCostCenterResourceResponse> allocateCostCenterResource(AllocateCostCenterResourceRequest request);
+
+    /**
      * @param request the request parameters of CancelFundAccountLowAvailableAmountAlarm  CancelFundAccountLowAvailableAmountAlarmRequest
      * @return CancelFundAccountLowAvailableAmountAlarmResponse
      */
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCostCenterResponse
      */
     CompletableFuture<CreateCostCenterResponse> createCostCenter(CreateCostCenterRequest request);
+
+    /**
+     * @param request the request parameters of CreateCostCenterRule  CreateCostCenterRuleRequest
+     * @return CreateCostCenterRuleResponse
+     */
+    CompletableFuture<CreateCostCenterRuleResponse> createCostCenterRule(CreateCostCenterRuleRequest request);
 
     /**
      * @param request the request parameters of CreateFundAccountPayRelation  CreateFundAccountPayRelationRequest
@@ -50,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFundAccountTransferResponse> createFundAccountTransfer(CreateFundAccountTransferRequest request);
 
     /**
+     * @param request the request parameters of CreateInvoice  CreateInvoiceRequest
+     * @return CreateInvoiceResponse
+     */
+    CompletableFuture<CreateInvoiceResponse> createInvoice(CreateInvoiceRequest request);
+
+    /**
      * @param request the request parameters of CreateReportDefinition  CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse
      */
@@ -60,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCostCenterResponse
      */
     CompletableFuture<DeleteCostCenterResponse> deleteCostCenter(DeleteCostCenterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCostCenterRule  DeleteCostCenterRuleRequest
+     * @return DeleteCostCenterRuleResponse
+     */
+    CompletableFuture<DeleteCostCenterRuleResponse> deleteCostCenterRule(DeleteCostCenterRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteCouponDeductTag  DeleteCouponDeductTagRequest
@@ -134,6 +158,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFundAccountTransactionDetailsResponse> getFundAccountTransactionDetails(GetFundAccountTransactionDetailsRequest request);
 
     /**
+     * @param request the request parameters of GetOrderDetail  GetOrderDetailRequest
+     * @return GetOrderDetailResponse
+     */
+    CompletableFuture<GetOrderDetailResponse> getOrderDetail(GetOrderDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetOrders  GetOrdersRequest
+     * @return GetOrdersResponse
+     */
+    CompletableFuture<GetOrdersResponse> getOrders(GetOrdersRequest request);
+
+    /**
      * @param request the request parameters of GetSavingPlanDeductableCommodity  GetSavingPlanDeductableCommodityRequest
      * @return GetSavingPlanDeductableCommodityResponse
      */
@@ -170,6 +206,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFundAccountPayRelationResponse> listFundAccountPayRelation(ListFundAccountPayRelationRequest request);
 
     /**
+     * @param request the request parameters of ListInvoiceCandidate  ListInvoiceCandidateRequest
+     * @return ListInvoiceCandidateResponse
+     */
+    CompletableFuture<ListInvoiceCandidateResponse> listInvoiceCandidate(ListInvoiceCandidateRequest request);
+
+    /**
+     * @param request the request parameters of ListInvoiceTitle  ListInvoiceTitleRequest
+     * @return ListInvoiceTitleResponse
+     */
+    CompletableFuture<ListInvoiceTitleResponse> listInvoiceTitle(ListInvoiceTitleRequest request);
+
+    /**
      * @param request the request parameters of ListReportDefinitions  ListReportDefinitionsRequest
      * @return ListReportDefinitionsResponse
      */
@@ -182,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCostCenterResponse> modifyCostCenter(ModifyCostCenterRequest request);
 
     /**
+     * @param request the request parameters of ModifyCostCenterRule  ModifyCostCenterRuleRequest
+     * @return ModifyCostCenterRuleResponse
+     */
+    CompletableFuture<ModifyCostCenterRuleResponse> modifyCostCenterRule(ModifyCostCenterRuleRequest request);
+
+    /**
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
      * @return QueryCostCenterResponse
      */
@@ -192,6 +246,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryCostCenterResourceResponse
      */
     CompletableFuture<QueryCostCenterResourceResponse> queryCostCenterResource(QueryCostCenterResourceRequest request);
+
+    /**
+     * @param request the request parameters of QueryCostCenterRule  QueryCostCenterRuleRequest
+     * @return QueryCostCenterRuleResponse
+     */
+    CompletableFuture<QueryCostCenterRuleResponse> queryCostCenterRule(QueryCostCenterRuleRequest request);
+
+    /**
+     * @param request the request parameters of QueryCostCenterShareRule  QueryCostCenterShareRuleRequest
+     * @return QueryCostCenterShareRuleResponse
+     */
+    CompletableFuture<QueryCostCenterShareRuleResponse> queryCostCenterShareRule(QueryCostCenterShareRuleRequest request);
+
+    /**
+     * @param request the request parameters of SaveCostCenterShareRule  SaveCostCenterShareRuleRequest
+     * @return SaveCostCenterShareRuleResponse
+     */
+    CompletableFuture<SaveCostCenterShareRuleResponse> saveCostCenterShareRule(SaveCostCenterShareRuleRequest request);
 
     /**
      * @param request the request parameters of SetFundAccountCreditAmount  SetFundAccountCreditAmountRequest

@@ -257,6 +257,9 @@ public class DescribeCouponResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("FirstBuy")
+        private Boolean firstBuy;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -314,6 +317,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             this.couponTypeName = builder.couponTypeName;
             this.currency = builder.currency;
             this.endTime = builder.endTime;
+            this.firstBuy = builder.firstBuy;
             this.gmtCreate = builder.gmtCreate;
             this.itemNames = builder.itemNames;
             this.moneyLimit = builder.moneyLimit;
@@ -394,6 +398,13 @@ public class DescribeCouponResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return firstBuy
+         */
+        public Boolean getFirstBuy() {
+            return this.firstBuy;
         }
 
         /**
@@ -517,6 +528,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             private String couponTypeName; 
             private String currency; 
             private String endTime; 
+            private Boolean firstBuy; 
             private String gmtCreate; 
             private java.util.List<String> itemNames; 
             private String moneyLimit; 
@@ -546,6 +558,7 @@ public class DescribeCouponResponseBody extends TeaModel {
                 this.couponTypeName = model.couponTypeName;
                 this.currency = model.currency;
                 this.endTime = model.endTime;
+                this.firstBuy = model.firstBuy;
                 this.gmtCreate = model.gmtCreate;
                 this.itemNames = model.itemNames;
                 this.moneyLimit = model.moneyLimit;
@@ -625,6 +638,14 @@ public class DescribeCouponResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * FirstBuy.
+             */
+            public Builder firstBuy(Boolean firstBuy) {
+                this.firstBuy = firstBuy;
                 return this;
             }
 

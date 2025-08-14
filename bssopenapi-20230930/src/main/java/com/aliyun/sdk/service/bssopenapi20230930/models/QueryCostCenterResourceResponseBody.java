@@ -210,6 +210,9 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostCenterUpdateTime")
         private String costCenterUpdateTime;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("OwnerAccountId")
         private Long ownerAccountId;
 
@@ -265,6 +268,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             this.costCenterId = builder.costCenterId;
             this.costCenterName = builder.costCenterName;
             this.costCenterUpdateTime = builder.costCenterUpdateTime;
+            this.instanceId = builder.instanceId;
             this.ownerAccountId = builder.ownerAccountId;
             this.ownerAccountName = builder.ownerAccountName;
             this.parentCostCenterId = builder.parentCostCenterId;
@@ -351,6 +355,13 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
          */
         public String getCostCenterUpdateTime() {
             return this.costCenterUpdateTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -468,6 +479,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             private Long costCenterId; 
             private String costCenterName; 
             private String costCenterUpdateTime; 
+            private String instanceId; 
             private Long ownerAccountId; 
             private String ownerAccountName; 
             private Long parentCostCenterId; 
@@ -497,6 +509,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
                 this.costCenterId = model.costCenterId;
                 this.costCenterName = model.costCenterName;
                 this.costCenterUpdateTime = model.costCenterUpdateTime;
+                this.instanceId = model.instanceId;
                 this.ownerAccountId = model.ownerAccountId;
                 this.ownerAccountName = model.ownerAccountName;
                 this.parentCostCenterId = model.parentCostCenterId;
@@ -583,6 +596,14 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
              */
             public Builder costCenterUpdateTime(String costCenterUpdateTime) {
                 this.costCenterUpdateTime = costCenterUpdateTime;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
