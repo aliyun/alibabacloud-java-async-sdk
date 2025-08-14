@@ -239,6 +239,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateNacosMcpServer  CreateNacosMcpServerRequest
+     * @return CreateNacosMcpServerResponse
+     */
+    CompletableFuture<CreateNacosMcpServerResponse> createNacosMcpServer(CreateNacosMcpServerRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
@@ -431,6 +437,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNacosInstanceResponse
      */
     CompletableFuture<DeleteNacosInstanceResponse> deleteNacosInstance(DeleteNacosInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNacosMcpServer  DeleteNacosMcpServerRequest
+     * @return DeleteNacosMcpServerResponse
+     */
+    CompletableFuture<DeleteNacosMcpServerResponse> deleteNacosMcpServer(DeleteNacosMcpServerRequest request);
 
     /**
      * <b>description</b> :
@@ -698,6 +710,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNacosHistoryConfigResponse
      */
     CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetNacosMcpServer  GetNacosMcpServerRequest
+     * @return GetNacosMcpServerResponse
+     */
+    CompletableFuture<GetNacosMcpServerResponse> getNacosMcpServer(GetNacosMcpServerRequest request);
 
     /**
      * <b>description</b> :
@@ -1053,6 +1071,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNacosHistoryConfigsResponse
      */
     CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListNacosMcpServers  ListNacosMcpServersRequest
+     * @return ListNacosMcpServersResponse
+     */
+    CompletableFuture<ListNacosMcpServersResponse> listNacosMcpServers(ListNacosMcpServersRequest request);
 
     /**
      * @param request the request parameters of ListNamespaces  ListNamespacesRequest
