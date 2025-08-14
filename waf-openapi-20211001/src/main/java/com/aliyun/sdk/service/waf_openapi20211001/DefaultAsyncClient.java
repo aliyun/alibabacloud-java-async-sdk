@@ -1274,6 +1274,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDefenseSceneConfig  DescribeDefenseSceneConfigRequest
+     * @return DescribeDefenseSceneConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDefenseSceneConfigResponse> describeDefenseSceneConfig(DescribeDefenseSceneConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDefenseSceneConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDefenseSceneConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDefenseSceneConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDefenseTemplate  DescribeDefenseTemplateRequest
      * @return DescribeDefenseTemplateResponse
      */
@@ -2894,6 +2912,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDefenseRuleStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDefenseSceneConfig  ModifyDefenseSceneConfigRequest
+     * @return ModifyDefenseSceneConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDefenseSceneConfigResponse> modifyDefenseSceneConfig(ModifyDefenseSceneConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDefenseSceneConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDefenseSceneConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDefenseSceneConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

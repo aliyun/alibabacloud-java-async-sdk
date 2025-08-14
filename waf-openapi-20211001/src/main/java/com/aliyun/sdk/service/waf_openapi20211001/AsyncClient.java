@@ -425,6 +425,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefenseRulesResponse> describeDefenseRules(DescribeDefenseRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeDefenseSceneConfig  DescribeDefenseSceneConfigRequest
+     * @return DescribeDefenseSceneConfigResponse
+     */
+    CompletableFuture<DescribeDefenseSceneConfigResponse> describeDefenseSceneConfig(DescribeDefenseSceneConfigRequest request);
+
+    /**
      * @param request the request parameters of DescribeDefenseTemplate  DescribeDefenseTemplateRequest
      * @return DescribeDefenseTemplateResponse
      */
@@ -981,6 +987,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDefenseRuleStatusResponse
      */
     CompletableFuture<ModifyDefenseRuleStatusResponse> modifyDefenseRuleStatus(ModifyDefenseRuleStatusRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDefenseSceneConfig  ModifyDefenseSceneConfigRequest
+     * @return ModifyDefenseSceneConfigResponse
+     */
+    CompletableFuture<ModifyDefenseSceneConfigResponse> modifyDefenseSceneConfig(ModifyDefenseSceneConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyDefenseTemplate  ModifyDefenseTemplateRequest

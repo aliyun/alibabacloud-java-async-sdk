@@ -751,6 +751,102 @@ public class CreateDomainRequest extends Request {
      *
      * <p>CreateDomainRequest</p>
      */
+    public static class BackendPorts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
+        private Integer backendPort;
+
+        @com.aliyun.core.annotation.NameInMap("ListenPort")
+        private Integer listenPort;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private BackendPorts(Builder builder) {
+            this.backendPort = builder.backendPort;
+            this.listenPort = builder.listenPort;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendPorts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backendPort
+         */
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        /**
+         * @return listenPort
+         */
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private Integer backendPort; 
+            private Integer listenPort; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendPorts model) {
+                this.backendPort = model.backendPort;
+                this.listenPort = model.listenPort;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * BackendPort.
+             */
+            public Builder backendPort(Integer backendPort) {
+                this.backendPort = backendPort;
+                return this;
+            }
+
+            /**
+             * ListenPort.
+             */
+            public Builder listenPort(Integer listenPort) {
+                this.listenPort = listenPort;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public BackendPorts build() {
+                return new BackendPorts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDomainRequest</p>
+     */
     public static class RequestHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -833,6 +929,9 @@ public class CreateDomainRequest extends Request {
      * <p>CreateDomainRequest</p>
      */
     public static class Redirect extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendPorts")
+        private java.util.List<BackendPorts> backendPorts;
+
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List<String> backends;
 
@@ -891,6 +990,7 @@ public class CreateDomainRequest extends Request {
         private Boolean xffProto;
 
         private Redirect(Builder builder) {
+            this.backendPorts = builder.backendPorts;
             this.backends = builder.backends;
             this.backupBackends = builder.backupBackends;
             this.cnameEnabled = builder.cnameEnabled;
@@ -916,6 +1016,13 @@ public class CreateDomainRequest extends Request {
 
         public static Redirect create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendPorts
+         */
+        public java.util.List<BackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         /**
@@ -1038,6 +1145,7 @@ public class CreateDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<BackendPorts> backendPorts; 
             private java.util.List<String> backends; 
             private java.util.List<String> backupBackends; 
             private Boolean cnameEnabled; 
@@ -1060,6 +1168,7 @@ public class CreateDomainRequest extends Request {
             } 
 
             private Builder(Redirect model) {
+                this.backendPorts = model.backendPorts;
                 this.backends = model.backends;
                 this.backupBackends = model.backupBackends;
                 this.cnameEnabled = model.cnameEnabled;
@@ -1078,6 +1187,14 @@ public class CreateDomainRequest extends Request {
                 this.writeTimeout = model.writeTimeout;
                 this.xffProto = model.xffProto;
             } 
+
+            /**
+             * BackendPorts.
+             */
+            public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
+                this.backendPorts = backendPorts;
+                return this;
+            }
 
             /**
              * <p>The IP addresses or domain names of the origin server.</p>

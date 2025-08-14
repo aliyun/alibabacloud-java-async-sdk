@@ -934,6 +934,102 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      *
      * <p>DescribeDomainDetailResponseBody</p>
      */
+    public static class BackendPorts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
+        private Integer backendPort;
+
+        @com.aliyun.core.annotation.NameInMap("ListenPort")
+        private Integer listenPort;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private BackendPorts(Builder builder) {
+            this.backendPort = builder.backendPort;
+            this.listenPort = builder.listenPort;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendPorts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backendPort
+         */
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        /**
+         * @return listenPort
+         */
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private Integer backendPort; 
+            private Integer listenPort; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendPorts model) {
+                this.backendPort = model.backendPort;
+                this.listenPort = model.listenPort;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * BackendPort.
+             */
+            public Builder backendPort(Integer backendPort) {
+                this.backendPort = backendPort;
+                return this;
+            }
+
+            /**
+             * ListenPort.
+             */
+            public Builder listenPort(Integer listenPort) {
+                this.listenPort = listenPort;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public BackendPorts build() {
+                return new BackendPorts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class Backends extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
@@ -1133,10 +1229,21 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      * <p>DescribeDomainDetailResponseBody</p>
      */
     public static class Redirect extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackUpBackendList")
+        private java.util.List<String> backUpBackendList;
+
+        @com.aliyun.core.annotation.NameInMap("BackendList")
+        private java.util.List<String> backendList;
+
+        @com.aliyun.core.annotation.NameInMap("BackendPorts")
+        private java.util.List<BackendPorts> backendPorts;
+
         @com.aliyun.core.annotation.NameInMap("Backends")
+        @Deprecated
         private java.util.List<Backends> backends;
 
         @com.aliyun.core.annotation.NameInMap("BackupBackends")
+        @Deprecated
         private java.util.List<BackupBackends> backupBackends;
 
         @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
@@ -1179,6 +1286,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Boolean xffProto;
 
         private Redirect(Builder builder) {
+            this.backUpBackendList = builder.backUpBackendList;
+            this.backendList = builder.backendList;
+            this.backendPorts = builder.backendPorts;
             this.backends = builder.backends;
             this.backupBackends = builder.backupBackends;
             this.connectTimeout = builder.connectTimeout;
@@ -1202,6 +1312,27 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         public static Redirect create() {
             return builder().build();
+        }
+
+        /**
+         * @return backUpBackendList
+         */
+        public java.util.List<String> getBackUpBackendList() {
+            return this.backUpBackendList;
+        }
+
+        /**
+         * @return backendList
+         */
+        public java.util.List<String> getBackendList() {
+            return this.backendList;
+        }
+
+        /**
+         * @return backendPorts
+         */
+        public java.util.List<BackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         /**
@@ -1310,6 +1441,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> backUpBackendList; 
+            private java.util.List<String> backendList; 
+            private java.util.List<BackendPorts> backendPorts; 
             private java.util.List<Backends> backends; 
             private java.util.List<BackupBackends> backupBackends; 
             private Integer connectTimeout; 
@@ -1330,6 +1464,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Redirect model) {
+                this.backUpBackendList = model.backUpBackendList;
+                this.backendList = model.backendList;
+                this.backendPorts = model.backendPorts;
                 this.backends = model.backends;
                 this.backupBackends = model.backupBackends;
                 this.connectTimeout = model.connectTimeout;
@@ -1346,6 +1483,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
                 this.writeTimeout = model.writeTimeout;
                 this.xffProto = model.xffProto;
             } 
+
+            /**
+             * BackUpBackendList.
+             */
+            public Builder backUpBackendList(java.util.List<String> backUpBackendList) {
+                this.backUpBackendList = backUpBackendList;
+                return this;
+            }
+
+            /**
+             * BackendList.
+             */
+            public Builder backendList(java.util.List<String> backendList) {
+                this.backendList = backendList;
+                return this;
+            }
+
+            /**
+             * BackendPorts.
+             */
+            public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
+                this.backendPorts = backendPorts;
+                return this;
+            }
 
             /**
              * <p>An array of addresses of origin servers.</p>
