@@ -45,7 +45,6 @@ public class CreateFlowlogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String logStoreName;
 
     @com.aliyun.core.annotation.Query
@@ -58,7 +57,6 @@ public class CreateFlowlogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     @com.aliyun.core.annotation.Query
@@ -371,7 +369,6 @@ public class CreateFlowlogRequest extends Request {
          * </ul>
          * </li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogStore</p>
@@ -415,7 +412,6 @@ public class CreateFlowlogRequest extends Request {
          * </ul>
          * </li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogProject</p>
