@@ -260,6 +260,15 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutBizId")
         private String outBizId;
 
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
+        private String productCode;
+
+        @com.aliyun.core.annotation.NameInMap("ProductName")
+        private String productName;
+
+        @com.aliyun.core.annotation.NameInMap("RealAliyunId")
+        private String realAliyunId;
+
         @com.aliyun.core.annotation.NameInMap("RealAliyunPk")
         private String realAliyunPk;
 
@@ -270,6 +279,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             this.id = builder.id;
             this.orderType = builder.orderType;
             this.outBizId = builder.outBizId;
+            this.productCode = builder.productCode;
+            this.productName = builder.productName;
+            this.realAliyunId = builder.realAliyunId;
             this.realAliyunPk = builder.realAliyunPk;
         }
 
@@ -324,6 +336,27 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
+         * @return productCode
+         */
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        /**
+         * @return productName
+         */
+        public String getProductName() {
+            return this.productName;
+        }
+
+        /**
+         * @return realAliyunId
+         */
+        public String getRealAliyunId() {
+            return this.realAliyunId;
+        }
+
+        /**
          * @return realAliyunPk
          */
         public String getRealAliyunPk() {
@@ -337,6 +370,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             private String id; 
             private String orderType; 
             private String outBizId; 
+            private String productCode; 
+            private String productName; 
+            private String realAliyunId; 
             private String realAliyunPk; 
 
             private Builder() {
@@ -349,6 +385,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
                 this.id = model.id;
                 this.orderType = model.orderType;
                 this.outBizId = model.outBizId;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.realAliyunId = model.realAliyunId;
                 this.realAliyunPk = model.realAliyunPk;
             } 
 
@@ -397,6 +436,30 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
              */
             public Builder outBizId(String outBizId) {
                 this.outBizId = outBizId;
+                return this;
+            }
+
+            /**
+             * ProductCode.
+             */
+            public Builder productCode(String productCode) {
+                this.productCode = productCode;
+                return this;
+            }
+
+            /**
+             * ProductName.
+             */
+            public Builder productName(String productName) {
+                this.productName = productName;
+                return this;
+            }
+
+            /**
+             * RealAliyunId.
+             */
+            public Builder realAliyunId(String realAliyunId) {
+                this.realAliyunId = realAliyunId;
                 return this;
             }
 
@@ -734,6 +797,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunPk")
         private String aliyunPk;
 
+        @com.aliyun.core.annotation.NameInMap("CheckNotice")
+        private String checkNotice;
+
         @com.aliyun.core.annotation.NameInMap("CreateTimeStr")
         private String createTimeStr;
 
@@ -776,8 +842,12 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserAddressDto")
         private UserAddressDto userAddressDto;
 
+        @com.aliyun.core.annotation.NameInMap("UserNotice")
+        private String userNotice;
+
         private Result(Builder builder) {
             this.aliyunPk = builder.aliyunPk;
+            this.checkNotice = builder.checkNotice;
             this.createTimeStr = builder.createTimeStr;
             this.evaluateList = builder.evaluateList;
             this.id = builder.id;
@@ -792,6 +862,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             this.title = builder.title;
             this.type = builder.type;
             this.userAddressDto = builder.userAddressDto;
+            this.userNotice = builder.userNotice;
         }
 
         public static Builder builder() {
@@ -807,6 +878,13 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
          */
         public String getAliyunPk() {
             return this.aliyunPk;
+        }
+
+        /**
+         * @return checkNotice
+         */
+        public String getCheckNotice() {
+            return this.checkNotice;
         }
 
         /**
@@ -907,8 +985,16 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             return this.userAddressDto;
         }
 
+        /**
+         * @return userNotice
+         */
+        public String getUserNotice() {
+            return this.userNotice;
+        }
+
         public static final class Builder {
             private String aliyunPk; 
+            private String checkNotice; 
             private String createTimeStr; 
             private java.util.List<EvaluateList> evaluateList; 
             private String id; 
@@ -923,12 +1009,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             private String title; 
             private String type; 
             private UserAddressDto userAddressDto; 
+            private String userNotice; 
 
             private Builder() {
             } 
 
             private Builder(Result model) {
                 this.aliyunPk = model.aliyunPk;
+                this.checkNotice = model.checkNotice;
                 this.createTimeStr = model.createTimeStr;
                 this.evaluateList = model.evaluateList;
                 this.id = model.id;
@@ -943,6 +1031,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
                 this.title = model.title;
                 this.type = model.type;
                 this.userAddressDto = model.userAddressDto;
+                this.userNotice = model.userNotice;
             } 
 
             /**
@@ -950,6 +1039,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
+                return this;
+            }
+
+            /**
+             * CheckNotice.
+             */
+            public Builder checkNotice(String checkNotice) {
+                this.checkNotice = checkNotice;
                 return this;
             }
 
@@ -1062,6 +1159,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
              */
             public Builder userAddressDto(UserAddressDto userAddressDto) {
                 this.userAddressDto = userAddressDto;
+                return this;
+            }
+
+            /**
+             * UserNotice.
+             */
+            public Builder userNotice(String userNotice) {
+                this.userNotice = userNotice;
                 return this;
             }
 
