@@ -1,0 +1,127 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ossmfd20231017.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ExportRecordRequest} extends {@link RequestModel}
+ *
+ * <p>ExportRecordRequest</p>
+ */
+public class ExportRecordRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String exportType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private String params;
+
+    private ExportRecordRequest(Builder builder) {
+        super(builder);
+        this.exportType = builder.exportType;
+        this.lang = builder.lang;
+        this.params = builder.params;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ExportRecordRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return exportType
+     */
+    public String getExportType() {
+        return this.exportType;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
+    }
+
+    public static final class Builder extends Request.Builder<ExportRecordRequest, Builder> {
+        private String exportType; 
+        private String lang; 
+        private String params; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ExportRecordRequest request) {
+            super(request);
+            this.exportType = request.exportType;
+            this.lang = request.lang;
+            this.params = request.params;
+        } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exportObjectScanEvents</p>
+         */
+        public Builder exportType(String exportType) {
+            this.putQueryParameter("ExportType", exportType);
+            this.exportType = exportType;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Params.
+         */
+        public Builder params(String params) {
+            this.putQueryParameter("Params", params);
+            this.params = params;
+            return this;
+        }
+
+        @Override
+        public ExportRecordRequest build() {
+            return new ExportRecordRequest(this);
+        } 
+
+    } 
+
+}
