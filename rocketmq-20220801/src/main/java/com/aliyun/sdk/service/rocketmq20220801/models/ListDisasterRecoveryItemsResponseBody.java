@@ -158,7 +158,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details, provided only when access is denied due to lack of RAM permissions</p>
+         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -169,7 +169,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -188,7 +188,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceId</p>
@@ -199,7 +199,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message</p>
+         * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>instanceId</p>
@@ -210,7 +210,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -221,7 +221,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -232,7 +232,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C115601B-8736-5BBF-AC99-7FEAE12xxxx</p>
@@ -243,7 +243,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -365,7 +365,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Consumer group ID</p>
+             * <p>The ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>group-test</p>
@@ -376,11 +376,11 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order in which messages are delivered to the target instance.</p>
-             * <p>Parameter values are as follows:</p>
+             * <p>The method used to deliver messages to the destination instance.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li>Concurrently: concurrent delivery</li>
-             * <li>Orderly: sequential delivery</li>
+             * <li>Orderly: ordered delivery</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-kh43w0olz0c</p>
@@ -403,7 +403,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN_ROCKETMQ</p>
@@ -414,7 +414,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>regionId</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -560,7 +560,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time</p>
+             * <p>The time when the query task was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-20 03:38:28</p>
@@ -571,7 +571,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extended information</p>
+             * <p>The extended information.</p>
              */
             public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
@@ -579,7 +579,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup plan ID</p>
+             * <p>The ID of the Global Replicator task.</p>
              * 
              * <strong>example:</strong>
              * <p>100070284</p>
@@ -590,13 +590,13 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup mapping status:</p>
+             * <p>The status of the topic mapping. Valid values:</p>
              * <ul>
-             * <li>CREATING (Creating)</li>
-             * <li>CHANGING (Changing)</li>
-             * <li>RUNNING (Running)</li>
-             * <li>MANUAL_STOPPED (Manually Stopped)</li>
-             * <li>OVERDUE_STOPPED (Stopped Due to Overdue)</li>
+             * <li>CREATING</li>
+             * <li>CHANGING</li>
+             * <li>RUNNING</li>
+             * <li>MANUAL_STOPPED</li>
+             * <li>OVERDUE_STOPPED</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -608,7 +608,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Mapping ID</p>
+             * <p>The ID of the topic mapping.</p>
              * 
              * <strong>example:</strong>
              * <p>1300000016</p>
@@ -619,7 +619,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Topics included in the backup mapping</p>
+             * <p>The topics involved in the topic mapping.</p>
              */
             public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
@@ -627,7 +627,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update time</p>
+             * <p>The time when the query task was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-04 02:19:44</p>
@@ -736,7 +736,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Paged data</p>
+             * <p>The Global Replicator tasks.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -744,7 +744,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current page number</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -755,7 +755,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -766,8 +766,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request scroll ID.
-             * Automatically generated by the system, subsequent pagination requests need to include this return value to continue pagination.</p>
+             * <p>The scroll ID of the request. The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</p>
              * 
              * <strong>example:</strong>
              * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
@@ -778,7 +777,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>

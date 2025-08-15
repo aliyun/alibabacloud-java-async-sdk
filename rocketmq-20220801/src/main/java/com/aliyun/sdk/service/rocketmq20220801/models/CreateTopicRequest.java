@@ -33,6 +33,7 @@ public class CreateTopicRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageType;
 
     @com.aliyun.core.annotation.Body
@@ -172,6 +173,7 @@ public class CreateTopicRequest extends Request {
          * <blockquote>
          * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

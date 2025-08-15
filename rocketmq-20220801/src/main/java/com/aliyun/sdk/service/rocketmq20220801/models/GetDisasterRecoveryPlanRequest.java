@@ -60,7 +60,7 @@ public class GetDisasterRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the global message backup plan.</p>
+         * <p>The ID of the Global Replicator task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -326,7 +326,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * fixedIntervalRetryTime.
+             * <p>Fixed interval retry time,Value range, unit: seconds</p>
+             * <ul>
+             * <li>Concurrently:10-1800</li>
+             * <li>Orderly:1-600</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fixedIntervalRetryTime(Integer fixedIntervalRetryTime) {
                 this.fixedIntervalRetryTime = fixedIntervalRetryTime;
@@ -348,28 +355,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
              * <p>The retry policy.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>FixedRetryPolicy</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>Failed messages are retried at a fixed interval</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>DefaultRetryPolicy</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>Failed messages are retried at incremental intervals as the number of retries increases</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
+             * <li>FixedRetryPolicy: fixed-interval retry</li>
+             * <li>DefaultRetryPolicy: exponential backoff retry</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -544,7 +531,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+             * <p>The consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
              */
             public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
                 this.consumeRetryPolicy = consumeRetryPolicy;
@@ -574,26 +561,11 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message delivery order of the consumer group.</p>
+             * <p>The message delivery method of the consumer group.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>Concurrently</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>concurrent delivery</p>
-             * <!-- -->
-             * </li>
-             * <li><p>Orderly</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>ordered delivery</p>
-             * <!-- --></li>
+             * <li>Concurrently: concurrent delivery</li>
+             * <li>Orderly: ordered delivery</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,31 +621,11 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the consumer group.</p>
+             * <p>The status of the consumer group.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>RUNNING</p>
-             * <!-- -->
-             * 
-             * <p>: The consumer group is</p>
-             * <!-- -->
-             * 
-             * <p>running</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>CREATING</p>
-             * <!-- -->
-             * 
-             * <p>: The consumer group is</p>
-             * <!-- -->
-             * 
-             * <p>being created</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
+             * <li>RUNNING</li>
+             * <li>CREATING</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -118,7 +118,7 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         } 
 
         /**
-         * <p>Backup plan ID</p>
+         * <p>The ID of the Global Replicator task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * <p>Filter condition, filter by topicName</p>
+         * <p>The filter condition. Topics are filtered by topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -143,7 +143,7 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * <p>Page number, indicating which page of the results to query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * <p>Page size, the maximum number of results displayed per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +167,10 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic-test920</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("topicName", topicName);

@@ -129,10 +129,15 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * <p>Whether to enable automatic synchronization of consumption progress.</p>
+         * <p>Specifies whether to enable automatic consumer progress synchronization.</p>
          * <blockquote>
-         * <p>This is effective only when consumption progress synchronization is enabled, i.e., the value of <code>syncCheckpointEnabled</code> is true.</p>
+         * <p> This parameter takes effect only when you set <code>syncCheckpointEnabled</code> to true.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -144,7 +149,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * <p>Instances involved in the backup plan. Required</p>
+         * <p>The instances involved in the Global Replicator task. You must specify this parameter.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
@@ -153,7 +158,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * <p>Plan description</p>
+         * <p>The description of the Global Replicator task.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -165,7 +170,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * <p>Plan name, required</p>
+         * <p>The name of the Global Replicator task. You must specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -177,11 +182,10 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * <p>Backup plan type, required. Please refer to the <a href="https://help.aliyun.com/document_detail/2843187.html">documentation</a>.
-         * Parameter values are as follows:</p>
+         * <p>The type of the Global Replicator task. You must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/2843187.html">Global Replicator</a>. Valid values:</p>
          * <ul>
-         * <li>ACTIVE_PASSIVE: One-way backup</li>
-         * <li>ACTIVE_ACTIVE: Two-way backup</li>
+         * <li>ACTIVE_PASSIVE: one-way backup</li>
+         * <li>ACTIVE_ACTIVE: two-way backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +198,12 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * <p>Switch for synchronizing consumption progress</p>
+         * <p>Specifies whether to enable consumer progress synchronization.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -265,7 +274,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             } 
 
             /**
-             * <p>Property key</p>
+             * <p>The attribute key.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa</p>
@@ -276,7 +285,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Property value</p>
+             * <p>The attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>bbb</p>
@@ -502,10 +511,15 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             } 
 
             /**
-             * <p>Authentication method. Not required for instanceType of ALIYUN_ROCKETMQ and version 4.0</p>
+             * <p>The authentication method. If you set instanceType to ALIYUN_ROCKETMQ and the instance is an ApsaraMQ for RocketMQ 4.0 instance, you do not need to specify this parameter.</p>
              * <ul>
-             * <li>NO_AUTH: No authentication required</li>
-             * <li>ACL_AUTH: ACL authentication</li>
+             * <li>NO_AUTH: no authentication</li>
+             * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NO_AUTH: no authentication</li>
+             * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -517,7 +531,10 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * consumerGroupId.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_DS_XXX_YYY</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -525,7 +542,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Endpoint URL, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ</p>
+             * <p>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -536,7 +553,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Instance ID, not required for instanceType of EXTERNAL_ROCKETMQ, but required for ALIYUN_ROCKETMQ</p>
+             * <p>The instance ID. This parameter is required only if you set instanceType to ALIYUN_ROCKETMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-******</p>
@@ -547,10 +564,10 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Instance role, either primary or secondary</p>
+             * <p>The instance role. Valid values:</p>
              * <ul>
-             * <li>ACTIVE: Primary</li>
-             * <li>PASSIVE: Secondary</li>
+             * <li>ACTIVE: primary instance</li>
+             * <li>Passive: secondary instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -562,10 +579,15 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Instance type</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
+             * <li>EXTERNAL_ROCKETMQ: external RocketMQ instance</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
+             * <li>EXTERNAL_ROCKETMQ: external RocketMQ instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -577,7 +599,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Message filtering properties. When messages are synchronized to the target cluster, this property will be automatically added for SQL filtering during message consumption.</p>
+             * <p>The message attribute. When you synchronize a message to the destination cluster, the system automatically adds the attribute to the message for SQL-based filtering.</p>
              */
             public Builder messageProperty(MessageProperty messageProperty) {
                 this.messageProperty = messageProperty;
@@ -585,11 +607,10 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Network type, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ
-             * Parameter values are as follows:</p>
+             * <p>The network type. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ. Valid values:</p>
              * <ul>
-             * <li>TCP_INTERNET: TCP public network</li>
-             * <li>TCP_VPC: TCP VPC (Virtual Private Cloud)</li>
+             * <li>TCP_INTERNET: Internet over TCP</li>
+             * <li>TCP_VPC: virtual private cloud (VPC) over TCP.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -601,7 +622,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Authentication password, required when authType is ACL_AUTH. Not required for instanceType of ALIYUN_ROCKETMQ</p>
+             * <p>The password used for authentication. This parameter is required only if you set authType to ACL_AUTH. If you set instanceType to ALIYUN_ROCKETMQ, you do not need to specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -612,7 +633,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Region where the instance is located</p>
+             * <p>The region where the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -623,7 +644,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Security group ID, required only when the <code>instanceType</code> is EXTERNAL_ROCKETMQ and <code>networkType</code> is TCP_VPC.</p>
+             * <p>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp17hpmgz9******</p>
@@ -634,7 +655,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>Authentication username, required when authType is ACL_AUTH</p>
+             * <p>The username used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -645,7 +666,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>The ID of the switch associated with the instance, required only when the <code>instanceType</code> is EXTERNAL_ROCKETMQ and <code>networkType</code> is TCP_VPC.</p>
+             * <p>The ID of the vSwitch with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-uf6gwtbn6etadpv******</p>
@@ -656,7 +677,7 @@ public class CreateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * <p>The ID of the private network associated with the created instance. The instanceType instance type is only EXTERNAL_ROCKETMQ. It is required when the networkType is TCP_VPC.</p>
+             * <p>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz9qt50xhtj9krb******</p>

@@ -32,11 +32,21 @@ public class GetTraceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    private String startTime;
+
     private GetTraceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
         this.messageId = builder.messageId;
+        this.endTime = builder.endTime;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -73,10 +83,26 @@ public class GetTraceRequest extends Request {
         return this.messageId;
     }
 
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<GetTraceRequest, Builder> {
         private String instanceId; 
         private String topicName; 
         private String messageId; 
+        private String endTime; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -87,6 +113,8 @@ public class GetTraceRequest extends Request {
             this.instanceId = request.instanceId;
             this.topicName = request.topicName;
             this.messageId = request.messageId;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -125,6 +153,24 @@ public class GetTraceRequest extends Request {
         public Builder messageId(String messageId) {
             this.putPathParameter("messageId", messageId);
             this.messageId = messageId;
+            return this;
+        }
+
+        /**
+         * endTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("endTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * startTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

@@ -967,7 +967,6 @@ public class CreateInstanceRequest extends Request {
         private Integer messageRetentionTime;
 
         @com.aliyun.core.annotation.NameInMap("msgProcessSpec")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String msgProcessSpec;
 
         @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
@@ -1093,7 +1092,6 @@ public class CreateInstanceRequest extends Request {
 
             /**
              * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq.s2.2xlarge</p>

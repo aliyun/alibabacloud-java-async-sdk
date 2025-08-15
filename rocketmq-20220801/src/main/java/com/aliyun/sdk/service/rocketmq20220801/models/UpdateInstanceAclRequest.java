@@ -173,14 +173,14 @@ public class UpdateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The following items describe the types of permissions that can be granted based on the resource type:</p>
+         * <p>The following types of operations are supported based on the resource type:</p>
          * <ul>
          * <li>Topic: Pub, Sub, and Pub|Sub</li>
-         * <li>Consumer group: Sub</li>
+         * <li>Group: Sub</li>
          * </ul>
          * <p>Valid values:</p>
          * <ul>
-         * <li>SUB: subscribe</li>
+         * <li>Sub: subscribe</li>
          * <li>Pub|Sub: publish and subscribe</li>
          * <li>Pub: publish</li>
          * </ul>
@@ -212,7 +212,7 @@ public class UpdateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelists.</p>
+         * <p>The IP addresses in the whitelist.</p>
          */
         public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
             this.putBodyParameter("ipWhitelists", ipWhitelists);
