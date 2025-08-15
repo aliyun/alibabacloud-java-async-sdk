@@ -562,6 +562,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSqlStatementContents  ListSqlStatementContentsRequest
+     * @return ListSqlStatementContentsResponse
+     */
+    @Override
+    public CompletableFuture<ListSqlStatementContentsResponse> listSqlStatementContents(ListSqlStatementContentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSqlStatementContents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/action/listSqlStatementContents").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSqlStatementContentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSqlStatementContentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListWorkspaceQueues  ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
      */

@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSessionClustersResponse> listSessionClusters(ListSessionClustersRequest request);
 
     /**
+     * @param request the request parameters of ListSqlStatementContents  ListSqlStatementContentsRequest
+     * @return ListSqlStatementContentsResponse
+     */
+    CompletableFuture<ListSqlStatementContentsResponse> listSqlStatementContents(ListSqlStatementContentsRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaceQueues  ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
      */

@@ -503,6 +503,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoStopConfiguration")
         private AutoStopConfiguration autoStopConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("connectionToken")
+        private String connectionToken;
+
         @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
         private String displayReleaseVersion;
 
@@ -567,6 +570,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.applicationConfigs = builder.applicationConfigs;
             this.autoStartConfiguration = builder.autoStartConfiguration;
             this.autoStopConfiguration = builder.autoStopConfiguration;
+            this.connectionToken = builder.connectionToken;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.domain = builder.domain;
             this.domainInner = builder.domainInner;
@@ -616,6 +620,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public AutoStopConfiguration getAutoStopConfiguration() {
             return this.autoStopConfiguration;
+        }
+
+        /**
+         * @return connectionToken
+         */
+        public String getConnectionToken() {
+            return this.connectionToken;
         }
 
         /**
@@ -762,6 +773,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private java.util.List<ApplicationConfigs> applicationConfigs; 
             private AutoStartConfiguration autoStartConfiguration; 
             private AutoStopConfiguration autoStopConfiguration; 
+            private String connectionToken; 
             private String displayReleaseVersion; 
             private String domain; 
             private String domainInner; 
@@ -790,6 +802,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
                 this.applicationConfigs = model.applicationConfigs;
                 this.autoStartConfiguration = model.autoStartConfiguration;
                 this.autoStopConfiguration = model.autoStopConfiguration;
+                this.connectionToken = model.connectionToken;
                 this.displayReleaseVersion = model.displayReleaseVersion;
                 this.domain = model.domain;
                 this.domainInner = model.domainInner;
@@ -833,6 +846,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
+                return this;
+            }
+
+            /**
+             * connectionToken.
+             */
+            public Builder connectionToken(String connectionToken) {
+                this.connectionToken = connectionToken;
                 return this;
             }
 
