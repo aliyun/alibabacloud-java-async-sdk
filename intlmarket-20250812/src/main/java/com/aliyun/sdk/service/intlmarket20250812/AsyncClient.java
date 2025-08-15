@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateOrder  CreateOrderRequest
+     * @return CreateOrderResponse
+     */
+    CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
+
+    /**
      * @param request the request parameters of DescribePrice  DescribePriceRequest
      * @return DescribePriceResponse
      */
