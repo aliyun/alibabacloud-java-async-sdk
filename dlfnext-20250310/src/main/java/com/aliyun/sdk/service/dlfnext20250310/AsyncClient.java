@@ -380,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     /**
+     * @param request the request parameters of RefreshUserSync  RefreshUserSyncRequest
+     * @return RefreshUserSyncResponse
+     */
+    CompletableFuture<RefreshUserSyncResponse> refreshUserSync(RefreshUserSyncRequest request);
+
+    /**
      * @param request the request parameters of RevokeRoleFromUsers  RevokeRoleFromUsersRequest
      * @return RevokeRoleFromUsersResponse
      */

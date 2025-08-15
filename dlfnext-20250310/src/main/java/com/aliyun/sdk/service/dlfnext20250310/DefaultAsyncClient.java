@@ -1120,6 +1120,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RefreshUserSync  RefreshUserSyncRequest
+     * @return RefreshUserSyncResponse
+     */
+    @Override
+    public CompletableFuture<RefreshUserSyncResponse> refreshUserSync(RefreshUserSyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RefreshUserSync").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/auth/usersync").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshUserSyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshUserSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RevokeRoleFromUsers  RevokeRoleFromUsersRequest
      * @return RevokeRoleFromUsersResponse
      */
