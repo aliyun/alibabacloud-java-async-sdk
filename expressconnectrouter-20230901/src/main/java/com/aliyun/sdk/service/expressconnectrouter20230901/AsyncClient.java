@@ -216,10 +216,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyExpressConnectRouterResponse> modifyExpressConnectRouter(ModifyExpressConnectRouterRequest request);
 
     /**
+     * @param request the request parameters of ModifyExpressConnectRouterAssociation  ModifyExpressConnectRouterAssociationRequest
+     * @return ModifyExpressConnectRouterAssociationResponse
+     */
+    CompletableFuture<ModifyExpressConnectRouterAssociationResponse> modifyExpressConnectRouterAssociation(ModifyExpressConnectRouterAssociationRequest request);
+
+    /**
      * @param request the request parameters of ModifyExpressConnectRouterAssociationAllowedPrefix  ModifyExpressConnectRouterAssociationAllowedPrefixRequest
      * @return ModifyExpressConnectRouterAssociationAllowedPrefixResponse
      */
     CompletableFuture<ModifyExpressConnectRouterAssociationAllowedPrefixResponse> modifyExpressConnectRouterAssociationAllowedPrefix(ModifyExpressConnectRouterAssociationAllowedPrefixRequest request);
+
+    /**
+     * @param request the request parameters of ModifyExpressConnectRouterChildInstance  ModifyExpressConnectRouterChildInstanceRequest
+     * @return ModifyExpressConnectRouterChildInstanceResponse
+     */
+    CompletableFuture<ModifyExpressConnectRouterChildInstanceResponse> modifyExpressConnectRouterChildInstance(ModifyExpressConnectRouterChildInstanceRequest request);
 
     /**
      * @param request the request parameters of ModifyExpressConnectRouterInterRegionTransitMode  ModifyExpressConnectRouterInterRegionTransitModeRequest

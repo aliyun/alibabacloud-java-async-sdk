@@ -572,6 +572,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyExpressConnectRouterAssociation  ModifyExpressConnectRouterAssociationRequest
+     * @return ModifyExpressConnectRouterAssociationResponse
+     */
+    @Override
+    public CompletableFuture<ModifyExpressConnectRouterAssociationResponse> modifyExpressConnectRouterAssociation(ModifyExpressConnectRouterAssociationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyExpressConnectRouterAssociation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyExpressConnectRouterAssociationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyExpressConnectRouterAssociationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyExpressConnectRouterAssociationAllowedPrefix  ModifyExpressConnectRouterAssociationAllowedPrefixRequest
      * @return ModifyExpressConnectRouterAssociationAllowedPrefixResponse
      */
@@ -584,6 +602,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyExpressConnectRouterAssociationAllowedPrefixResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyExpressConnectRouterChildInstance  ModifyExpressConnectRouterChildInstanceRequest
+     * @return ModifyExpressConnectRouterChildInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyExpressConnectRouterChildInstanceResponse> modifyExpressConnectRouterChildInstance(ModifyExpressConnectRouterChildInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyExpressConnectRouterChildInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyExpressConnectRouterChildInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyExpressConnectRouterChildInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

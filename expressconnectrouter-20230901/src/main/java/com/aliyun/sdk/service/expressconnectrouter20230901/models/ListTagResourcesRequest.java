@@ -27,7 +27,6 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Body
@@ -146,7 +145,6 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The ECR IDs.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
