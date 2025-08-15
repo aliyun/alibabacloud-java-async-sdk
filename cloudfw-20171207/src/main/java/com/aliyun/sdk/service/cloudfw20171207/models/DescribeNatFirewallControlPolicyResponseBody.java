@@ -177,7 +177,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private Long hitLastTime;
 
         @com.aliyun.core.annotation.NameInMap("HitTimes")
-        private Integer hitTimes;
+        private Long hitTimes;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -398,7 +398,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return hitTimes
          */
-        public Integer getHitTimes() {
+        public Long getHitTimes() {
             return this.hitTimes;
         }
 
@@ -526,7 +526,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             private Integer domainResolveType; 
             private Long endTime; 
             private Long hitLastTime; 
-            private Integer hitTimes; 
+            private Long hitTimes; 
             private Long modifyTime; 
             private String natGatewayId; 
             private Integer order; 
@@ -811,7 +811,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>100</p>
              */
-            public Builder hitTimes(Integer hitTimes) {
+            public Builder hitTimes(Long hitTimes) {
                 this.hitTimes = hitTimes;
                 return this;
             }
