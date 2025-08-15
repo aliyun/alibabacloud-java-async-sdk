@@ -158,6 +158,9 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
+        @com.aliyun.core.annotation.NameInMap("FlowRegion")
+        private String flowRegion;
+
         @com.aliyun.core.annotation.NameInMap("FlowStatus")
         private String flowStatus;
 
@@ -169,6 +172,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             this.flowFailover = builder.flowFailover;
             this.flowId = builder.flowId;
             this.flowName = builder.flowName;
+            this.flowRegion = builder.flowRegion;
             this.flowStatus = builder.flowStatus;
             this.startTime = builder.startTime;
         }
@@ -210,6 +214,13 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowRegion
+         */
+        public String getFlowRegion() {
+            return this.flowRegion;
+        }
+
+        /**
          * @return flowStatus
          */
         public String getFlowStatus() {
@@ -228,6 +239,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             private String flowFailover; 
             private String flowId; 
             private String flowName; 
+            private String flowRegion; 
             private String flowStatus; 
             private String startTime; 
 
@@ -239,6 +251,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
                 this.flowFailover = model.flowFailover;
                 this.flowId = model.flowId;
                 this.flowName = model.flowName;
+                this.flowRegion = model.flowRegion;
                 this.flowStatus = model.flowStatus;
                 this.startTime = model.startTime;
             } 
@@ -281,6 +294,14 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
+                return this;
+            }
+
+            /**
+             * FlowRegion.
+             */
+            public Builder flowRegion(String flowRegion) {
+                this.flowRegion = flowRegion;
                 return this;
             }
 

@@ -141,7 +141,7 @@ public class CreateMediaLiveInputRequest extends Request {
         }
 
         /**
-         * <p>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, and SRT_PULL.</p>
+         * <p>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, SRT_PULL, and MEDIA_CONNECT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +176,18 @@ public class CreateMediaLiveInputRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
+        @com.aliyun.core.annotation.NameInMap("SrtLatency")
+        private Integer srtLatency;
+
+        @com.aliyun.core.annotation.NameInMap("SrtMaxBitrate")
+        private Integer srtMaxBitrate;
+
+        @com.aliyun.core.annotation.NameInMap("SrtPassphrase")
+        private String srtPassphrase;
+
+        @com.aliyun.core.annotation.NameInMap("SrtPbKeyLen")
+        private Integer srtPbKeyLen;
+
         @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
@@ -183,6 +195,10 @@ public class CreateMediaLiveInputRequest extends Request {
             this.flowId = builder.flowId;
             this.flowOutputName = builder.flowOutputName;
             this.sourceUrl = builder.sourceUrl;
+            this.srtLatency = builder.srtLatency;
+            this.srtMaxBitrate = builder.srtMaxBitrate;
+            this.srtPassphrase = builder.srtPassphrase;
+            this.srtPbKeyLen = builder.srtPbKeyLen;
             this.streamName = builder.streamName;
         }
 
@@ -216,6 +232,34 @@ public class CreateMediaLiveInputRequest extends Request {
         }
 
         /**
+         * @return srtLatency
+         */
+        public Integer getSrtLatency() {
+            return this.srtLatency;
+        }
+
+        /**
+         * @return srtMaxBitrate
+         */
+        public Integer getSrtMaxBitrate() {
+            return this.srtMaxBitrate;
+        }
+
+        /**
+         * @return srtPassphrase
+         */
+        public String getSrtPassphrase() {
+            return this.srtPassphrase;
+        }
+
+        /**
+         * @return srtPbKeyLen
+         */
+        public Integer getSrtPbKeyLen() {
+            return this.srtPbKeyLen;
+        }
+
+        /**
          * @return streamName
          */
         public String getStreamName() {
@@ -226,6 +270,10 @@ public class CreateMediaLiveInputRequest extends Request {
             private String flowId; 
             private String flowOutputName; 
             private String sourceUrl; 
+            private Integer srtLatency; 
+            private Integer srtMaxBitrate; 
+            private String srtPassphrase; 
+            private Integer srtPbKeyLen; 
             private String streamName; 
 
             private Builder() {
@@ -235,11 +283,18 @@ public class CreateMediaLiveInputRequest extends Request {
                 this.flowId = model.flowId;
                 this.flowOutputName = model.flowOutputName;
                 this.sourceUrl = model.sourceUrl;
+                this.srtLatency = model.srtLatency;
+                this.srtMaxBitrate = model.srtMaxBitrate;
+                this.srtPassphrase = model.srtPassphrase;
+                this.srtPbKeyLen = model.srtPbKeyLen;
                 this.streamName = model.streamName;
             } 
 
             /**
-             * FlowId.
+             * <p>The ID of the flow from MediaConnect. This parameter is required when Type is set to MEDIA_CONNECT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>81-9693-40dc-bbab-db5e49</strong></strong></strong></p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -247,7 +302,10 @@ public class CreateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * FlowOutputName.
+             * <p>The output name of the MediaConnect flow. This parameter is required when Type is set to MEDIA_CONNECT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myFlowOutputName</p>
              */
             public Builder flowOutputName(String flowOutputName) {
                 this.flowOutputName = flowOutputName;
@@ -255,13 +313,45 @@ public class CreateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * <p>The source URL where the stream is pulled from. This parameter is required for PULL inputs.</p>
+             * <p>The source URL from which the stream is pulled. This parameter is required for PULL inputs.</p>
              * 
              * <strong>example:</strong>
              * <p>rtmp://domain/app/stream</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
+                return this;
+            }
+
+            /**
+             * SrtLatency.
+             */
+            public Builder srtLatency(Integer srtLatency) {
+                this.srtLatency = srtLatency;
+                return this;
+            }
+
+            /**
+             * SrtMaxBitrate.
+             */
+            public Builder srtMaxBitrate(Integer srtMaxBitrate) {
+                this.srtMaxBitrate = srtMaxBitrate;
+                return this;
+            }
+
+            /**
+             * SrtPassphrase.
+             */
+            public Builder srtPassphrase(String srtPassphrase) {
+                this.srtPassphrase = srtPassphrase;
+                return this;
+            }
+
+            /**
+             * SrtPbKeyLen.
+             */
+            public Builder srtPbKeyLen(Integer srtPbKeyLen) {
+                this.srtPbKeyLen = srtPbKeyLen;
                 return this;
             }
 

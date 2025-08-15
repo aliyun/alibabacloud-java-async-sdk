@@ -22,6 +22,10 @@ public class GetMediaInfoRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
+    private Long authTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputURL")
     private String inputURL;
 
@@ -40,6 +44,7 @@ public class GetMediaInfoRequest extends Request {
     private GetMediaInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.authTimeout = builder.authTimeout;
         this.inputURL = builder.inputURL;
         this.mediaId = builder.mediaId;
         this.outputType = builder.outputType;
@@ -64,6 +69,13 @@ public class GetMediaInfoRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return authTimeout
+     */
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     /**
@@ -96,6 +108,7 @@ public class GetMediaInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMediaInfoRequest, Builder> {
         private String regionId; 
+        private Long authTimeout; 
         private String inputURL; 
         private String mediaId; 
         private String outputType; 
@@ -108,6 +121,7 @@ public class GetMediaInfoRequest extends Request {
         private Builder(GetMediaInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.authTimeout = request.authTimeout;
             this.inputURL = request.inputURL;
             this.mediaId = request.mediaId;
             this.outputType = request.outputType;
@@ -120,6 +134,15 @@ public class GetMediaInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AuthTimeout.
+         */
+        public Builder authTimeout(Long authTimeout) {
+            this.putQueryParameter("AuthTimeout", authTimeout);
+            this.authTimeout = authTimeout;
             return this;
         }
 

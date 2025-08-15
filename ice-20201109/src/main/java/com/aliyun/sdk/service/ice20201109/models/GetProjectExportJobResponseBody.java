@@ -95,10 +95,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
      * <p>GetProjectExportJobResponseBody</p>
      */
     public static class ExportResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ProjectUrl")
+        private String projectUrl;
+
         @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
         private ExportResult(Builder builder) {
+            this.projectUrl = builder.projectUrl;
             this.timeline = builder.timeline;
         }
 
@@ -111,6 +115,13 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectUrl
+         */
+        public String getProjectUrl() {
+            return this.projectUrl;
+        }
+
+        /**
          * @return timeline
          */
         public String getTimeline() {
@@ -118,14 +129,24 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String projectUrl; 
             private String timeline; 
 
             private Builder() {
             } 
 
             private Builder(ExportResult model) {
+                this.projectUrl = model.projectUrl;
                 this.timeline = model.timeline;
             } 
+
+            /**
+             * ProjectUrl.
+             */
+            public Builder projectUrl(String projectUrl) {
+                this.projectUrl = projectUrl;
+                return this;
+            }
 
             /**
              * Timeline.

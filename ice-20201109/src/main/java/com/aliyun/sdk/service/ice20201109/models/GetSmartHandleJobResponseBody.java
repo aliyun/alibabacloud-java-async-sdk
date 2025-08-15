@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSmartHandleJobResponseBody</p>
  */
 public class GetSmartHandleJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    private String errorMessage;
+
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
@@ -39,6 +45,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     private String userData;
 
     private GetSmartHandleJobResponseBody(Builder builder) {
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
         this.jobId = builder.jobId;
         this.jobResult = builder.jobResult;
         this.output = builder.output;
@@ -58,6 +66,20 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     /**
@@ -110,6 +132,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String errorCode; 
+        private String errorMessage; 
         private String jobId; 
         private JobResult jobResult; 
         private String output; 
@@ -122,6 +146,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
         private Builder(GetSmartHandleJobResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
             this.jobId = model.jobId;
             this.jobResult = model.jobResult;
             this.output = model.output;
@@ -130,6 +156,22 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             this.state = model.state;
             this.userData = model.userData;
         } 
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
 
         /**
          * <p>The job ID.</p>

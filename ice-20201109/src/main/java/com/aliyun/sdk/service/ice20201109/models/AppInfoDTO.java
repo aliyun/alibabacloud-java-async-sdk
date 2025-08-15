@@ -23,11 +23,20 @@ public class AppInfoDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppType")
     private Integer appType;
 
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
+    private String creationTime;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
+    private String gmtModified;
+
     @com.aliyun.core.annotation.NameInMap("ItemId")
     private String itemId;
+
+    @com.aliyun.core.annotation.NameInMap("ModificationTime")
+    private String modificationTime;
 
     @com.aliyun.core.annotation.NameInMap("Platforms")
     private java.util.List<Platforms> platforms;
@@ -38,8 +47,11 @@ public class AppInfoDTO extends TeaModel {
     private AppInfoDTO(Builder builder) {
         this.appName = builder.appName;
         this.appType = builder.appType;
+        this.creationTime = builder.creationTime;
         this.gmtCreate = builder.gmtCreate;
+        this.gmtModified = builder.gmtModified;
         this.itemId = builder.itemId;
+        this.modificationTime = builder.modificationTime;
         this.platforms = builder.platforms;
         this.userId = builder.userId;
     }
@@ -71,6 +83,13 @@ public class AppInfoDTO extends TeaModel {
     }
 
     /**
+     * @return creationTime
+     */
+    public String getCreationTime() {
+        return this.creationTime;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -78,10 +97,24 @@ public class AppInfoDTO extends TeaModel {
     }
 
     /**
+     * @return gmtModified
+     */
+    public String getGmtModified() {
+        return this.gmtModified;
+    }
+
+    /**
      * @return itemId
      */
     public String getItemId() {
         return this.itemId;
+    }
+
+    /**
+     * @return modificationTime
+     */
+    public String getModificationTime() {
+        return this.modificationTime;
     }
 
     /**
@@ -101,8 +134,11 @@ public class AppInfoDTO extends TeaModel {
     public static final class Builder {
         private String appName; 
         private Integer appType; 
+        private String creationTime; 
         private String gmtCreate; 
+        private String gmtModified; 
         private String itemId; 
+        private String modificationTime; 
         private java.util.List<Platforms> platforms; 
         private Long userId; 
 
@@ -112,8 +148,11 @@ public class AppInfoDTO extends TeaModel {
         private Builder(AppInfoDTO model) {
             this.appName = model.appName;
             this.appType = model.appType;
+            this.creationTime = model.creationTime;
             this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
             this.itemId = model.itemId;
+            this.modificationTime = model.modificationTime;
             this.platforms = model.platforms;
             this.userId = model.userId;
         } 
@@ -135,6 +174,14 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
+         * CreationTime.
+         */
+        public Builder creationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+
+        /**
          * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
@@ -143,10 +190,26 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
+         * GmtModified.
+         */
+        public Builder gmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
          * ItemId.
          */
         public Builder itemId(String itemId) {
             this.itemId = itemId;
+            return this;
+        }
+
+        /**
+         * ModificationTime.
+         */
+        public Builder modificationTime(String modificationTime) {
+            this.modificationTime = modificationTime;
             return this;
         }
 

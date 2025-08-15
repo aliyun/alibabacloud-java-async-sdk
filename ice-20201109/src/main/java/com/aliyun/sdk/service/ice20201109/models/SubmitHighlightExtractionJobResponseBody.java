@@ -67,7 +67,10 @@ public class SubmitHighlightExtractionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the highlight extraction task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,7 @@ public class SubmitHighlightExtractionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>

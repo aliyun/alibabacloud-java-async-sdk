@@ -26,6 +26,10 @@ public class BatchGetMediaInfosRequest extends Request {
     private String additionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
+    private Long authTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaIds")
     private String mediaIds;
 
@@ -33,6 +37,7 @@ public class BatchGetMediaInfosRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.additionType = builder.additionType;
+        this.authTimeout = builder.authTimeout;
         this.mediaIds = builder.mediaIds;
     }
 
@@ -64,6 +69,13 @@ public class BatchGetMediaInfosRequest extends Request {
     }
 
     /**
+     * @return authTimeout
+     */
+    public Long getAuthTimeout() {
+        return this.authTimeout;
+    }
+
+    /**
      * @return mediaIds
      */
     public String getMediaIds() {
@@ -73,6 +85,7 @@ public class BatchGetMediaInfosRequest extends Request {
     public static final class Builder extends Request.Builder<BatchGetMediaInfosRequest, Builder> {
         private String regionId; 
         private String additionType; 
+        private Long authTimeout; 
         private String mediaIds; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class BatchGetMediaInfosRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.additionType = request.additionType;
+            this.authTimeout = request.authTimeout;
             this.mediaIds = request.mediaIds;
         } 
 
@@ -106,6 +120,15 @@ public class BatchGetMediaInfosRequest extends Request {
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
             this.additionType = additionType;
+            return this;
+        }
+
+        /**
+         * AuthTimeout.
+         */
+        public Builder authTimeout(Long authTimeout) {
+            this.putQueryParameter("AuthTimeout", authTimeout);
+            this.authTimeout = authTimeout;
             return this;
         }
 

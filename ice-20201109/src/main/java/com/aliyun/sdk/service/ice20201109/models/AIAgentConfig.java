@@ -65,6 +65,9 @@ public class AIAgentConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserOnlineTimeout")
     private Integer userOnlineTimeout;
 
+    @com.aliyun.core.annotation.NameInMap("VcrConfig")
+    private VcrConfig vcrConfig;
+
     @com.aliyun.core.annotation.NameInMap("VoiceprintConfig")
     private VoiceprintConfig voiceprintConfig;
 
@@ -94,6 +97,7 @@ public class AIAgentConfig extends TeaModel {
         this.turnDetectionConfig = builder.turnDetectionConfig;
         this.userOfflineTimeout = builder.userOfflineTimeout;
         this.userOnlineTimeout = builder.userOnlineTimeout;
+        this.vcrConfig = builder.vcrConfig;
         this.voiceprintConfig = builder.voiceprintConfig;
         this.volume = builder.volume;
         this.wakeUpQuery = builder.wakeUpQuery;
@@ -225,6 +229,13 @@ public class AIAgentConfig extends TeaModel {
     }
 
     /**
+     * @return vcrConfig
+     */
+    public VcrConfig getVcrConfig() {
+        return this.vcrConfig;
+    }
+
+    /**
      * @return voiceprintConfig
      */
     public VoiceprintConfig getVoiceprintConfig() {
@@ -269,6 +280,7 @@ public class AIAgentConfig extends TeaModel {
         private TurnDetectionConfig turnDetectionConfig; 
         private Integer userOfflineTimeout; 
         private Integer userOnlineTimeout; 
+        private VcrConfig vcrConfig; 
         private VoiceprintConfig voiceprintConfig; 
         private Long volume; 
         private String wakeUpQuery; 
@@ -294,6 +306,7 @@ public class AIAgentConfig extends TeaModel {
             this.turnDetectionConfig = model.turnDetectionConfig;
             this.userOfflineTimeout = model.userOfflineTimeout;
             this.userOnlineTimeout = model.userOnlineTimeout;
+            this.vcrConfig = model.vcrConfig;
             this.voiceprintConfig = model.voiceprintConfig;
             this.volume = model.volume;
             this.wakeUpQuery = model.wakeUpQuery;
@@ -429,6 +442,14 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * VcrConfig.
+         */
+        public Builder vcrConfig(VcrConfig vcrConfig) {
+            this.vcrConfig = vcrConfig;
+            return this;
+        }
+
+        /**
          * VoiceprintConfig.
          */
         public Builder voiceprintConfig(VoiceprintConfig voiceprintConfig) {
@@ -482,6 +503,12 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
+        @com.aliyun.core.annotation.NameInMap("CustomParams")
+        private String customParams;
+
+        @com.aliyun.core.annotation.NameInMap("VadDuration")
+        private Integer vadDuration;
+
         @com.aliyun.core.annotation.NameInMap("VadLevel")
         private Integer vadLevel;
 
@@ -489,6 +516,8 @@ public class AIAgentConfig extends TeaModel {
             this.asrHotWords = builder.asrHotWords;
             this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
+            this.customParams = builder.customParams;
+            this.vadDuration = builder.vadDuration;
             this.vadLevel = builder.vadLevel;
         }
 
@@ -522,6 +551,20 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * @return customParams
+         */
+        public String getCustomParams() {
+            return this.customParams;
+        }
+
+        /**
+         * @return vadDuration
+         */
+        public Integer getVadDuration() {
+            return this.vadDuration;
+        }
+
+        /**
          * @return vadLevel
          */
         public Integer getVadLevel() {
@@ -532,6 +575,8 @@ public class AIAgentConfig extends TeaModel {
             private java.util.List<String> asrHotWords; 
             private String asrLanguageId; 
             private Integer asrMaxSilence; 
+            private String customParams; 
+            private Integer vadDuration; 
             private Integer vadLevel; 
 
             private Builder() {
@@ -541,6 +586,8 @@ public class AIAgentConfig extends TeaModel {
                 this.asrHotWords = model.asrHotWords;
                 this.asrLanguageId = model.asrLanguageId;
                 this.asrMaxSilence = model.asrMaxSilence;
+                this.customParams = model.customParams;
+                this.vadDuration = model.vadDuration;
                 this.vadLevel = model.vadLevel;
             } 
 
@@ -565,6 +612,22 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
+                return this;
+            }
+
+            /**
+             * CustomParams.
+             */
+            public Builder customParams(String customParams) {
+                this.customParams = customParams;
+                return this;
+            }
+
+            /**
+             * VadDuration.
+             */
+            public Builder vadDuration(Integer vadDuration) {
+                this.vadDuration = vadDuration;
                 return this;
             }
 
@@ -718,6 +781,81 @@ public class AIAgentConfig extends TeaModel {
      *
      * <p>AIAgentConfig</p>
      */
+    public static class FunctionMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Function")
+        private String function;
+
+        @com.aliyun.core.annotation.NameInMap("MatchFunction")
+        private String matchFunction;
+
+        private FunctionMap(Builder builder) {
+            this.function = builder.function;
+            this.matchFunction = builder.matchFunction;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FunctionMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return function
+         */
+        public String getFunction() {
+            return this.function;
+        }
+
+        /**
+         * @return matchFunction
+         */
+        public String getMatchFunction() {
+            return this.matchFunction;
+        }
+
+        public static final class Builder {
+            private String function; 
+            private String matchFunction; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionMap model) {
+                this.function = model.function;
+                this.matchFunction = model.matchFunction;
+            } 
+
+            /**
+             * Function.
+             */
+            public Builder function(String function) {
+                this.function = function;
+                return this;
+            }
+
+            /**
+             * MatchFunction.
+             */
+            public Builder matchFunction(String matchFunction) {
+                this.matchFunction = matchFunction;
+                return this;
+            }
+
+            public FunctionMap build() {
+                return new FunctionMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
     public static class LlmHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -797,6 +935,12 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
 
+        @com.aliyun.core.annotation.NameInMap("FunctionMap")
+        private java.util.List<FunctionMap> functionMap;
+
+        @com.aliyun.core.annotation.NameInMap("LlmCompleteReply")
+        private Boolean llmCompleteReply;
+
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
         private java.util.List<LlmHistory> llmHistory;
 
@@ -806,11 +950,25 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LlmSystemPrompt")
         private String llmSystemPrompt;
 
+        @com.aliyun.core.annotation.NameInMap("OpenAIExtraQuery")
+        private String openAIExtraQuery;
+
+        @com.aliyun.core.annotation.NameInMap("OutputMaxDelay")
+        private Integer outputMaxDelay;
+
+        @com.aliyun.core.annotation.NameInMap("OutputMinLength")
+        private Integer outputMinLength;
+
         private LlmConfig(Builder builder) {
             this.bailianAppParams = builder.bailianAppParams;
+            this.functionMap = builder.functionMap;
+            this.llmCompleteReply = builder.llmCompleteReply;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
             this.llmSystemPrompt = builder.llmSystemPrompt;
+            this.openAIExtraQuery = builder.openAIExtraQuery;
+            this.outputMaxDelay = builder.outputMaxDelay;
+            this.outputMinLength = builder.outputMinLength;
         }
 
         public static Builder builder() {
@@ -826,6 +984,20 @@ public class AIAgentConfig extends TeaModel {
          */
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        /**
+         * @return functionMap
+         */
+        public java.util.List<FunctionMap> getFunctionMap() {
+            return this.functionMap;
+        }
+
+        /**
+         * @return llmCompleteReply
+         */
+        public Boolean getLlmCompleteReply() {
+            return this.llmCompleteReply;
         }
 
         /**
@@ -849,20 +1021,51 @@ public class AIAgentConfig extends TeaModel {
             return this.llmSystemPrompt;
         }
 
+        /**
+         * @return openAIExtraQuery
+         */
+        public String getOpenAIExtraQuery() {
+            return this.openAIExtraQuery;
+        }
+
+        /**
+         * @return outputMaxDelay
+         */
+        public Integer getOutputMaxDelay() {
+            return this.outputMaxDelay;
+        }
+
+        /**
+         * @return outputMinLength
+         */
+        public Integer getOutputMinLength() {
+            return this.outputMinLength;
+        }
+
         public static final class Builder {
             private String bailianAppParams; 
+            private java.util.List<FunctionMap> functionMap; 
+            private Boolean llmCompleteReply; 
             private java.util.List<LlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
             private String llmSystemPrompt; 
+            private String openAIExtraQuery; 
+            private Integer outputMaxDelay; 
+            private Integer outputMinLength; 
 
             private Builder() {
             } 
 
             private Builder(LlmConfig model) {
                 this.bailianAppParams = model.bailianAppParams;
+                this.functionMap = model.functionMap;
+                this.llmCompleteReply = model.llmCompleteReply;
                 this.llmHistory = model.llmHistory;
                 this.llmHistoryLimit = model.llmHistoryLimit;
                 this.llmSystemPrompt = model.llmSystemPrompt;
+                this.openAIExtraQuery = model.openAIExtraQuery;
+                this.outputMaxDelay = model.outputMaxDelay;
+                this.outputMinLength = model.outputMinLength;
             } 
 
             /**
@@ -870,6 +1073,22 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * FunctionMap.
+             */
+            public Builder functionMap(java.util.List<FunctionMap> functionMap) {
+                this.functionMap = functionMap;
+                return this;
+            }
+
+            /**
+             * LlmCompleteReply.
+             */
+            public Builder llmCompleteReply(Boolean llmCompleteReply) {
+                this.llmCompleteReply = llmCompleteReply;
                 return this;
             }
 
@@ -897,6 +1116,30 @@ public class AIAgentConfig extends TeaModel {
                 return this;
             }
 
+            /**
+             * OpenAIExtraQuery.
+             */
+            public Builder openAIExtraQuery(String openAIExtraQuery) {
+                this.openAIExtraQuery = openAIExtraQuery;
+                return this;
+            }
+
+            /**
+             * OutputMaxDelay.
+             */
+            public Builder outputMaxDelay(Integer outputMaxDelay) {
+                this.outputMaxDelay = outputMaxDelay;
+                return this;
+            }
+
+            /**
+             * OutputMinLength.
+             */
+            public Builder outputMinLength(Integer outputMinLength) {
+                this.outputMinLength = outputMinLength;
+                return this;
+            }
+
             public LlmConfig build() {
                 return new LlmConfig(this);
             } 
@@ -910,7 +1153,118 @@ public class AIAgentConfig extends TeaModel {
      *
      * <p>AIAgentConfig</p>
      */
+    public static class PronunciationRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pronunciation")
+        private String pronunciation;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Word")
+        private String word;
+
+        private PronunciationRules(Builder builder) {
+            this.pronunciation = builder.pronunciation;
+            this.type = builder.type;
+            this.word = builder.word;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PronunciationRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pronunciation
+         */
+        public String getPronunciation() {
+            return this.pronunciation;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return word
+         */
+        public String getWord() {
+            return this.word;
+        }
+
+        public static final class Builder {
+            private String pronunciation; 
+            private String type; 
+            private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(PronunciationRules model) {
+                this.pronunciation = model.pronunciation;
+                this.type = model.type;
+                this.word = model.word;
+            } 
+
+            /**
+             * Pronunciation.
+             */
+            public Builder pronunciation(String pronunciation) {
+                this.pronunciation = pronunciation;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Word.
+             */
+            public Builder word(String word) {
+                this.word = word;
+                return this;
+            }
+
+            public PronunciationRules build() {
+                return new PronunciationRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
     public static class TtsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("LanguageId")
+        private String languageId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("PronunciationRules")
+        private java.util.List<PronunciationRules> pronunciationRules;
+
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
+        private Double speechRate;
+
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
@@ -918,6 +1272,11 @@ public class AIAgentConfig extends TeaModel {
         private java.util.List<String> voiceIdList;
 
         private TtsConfig(Builder builder) {
+            this.emotion = builder.emotion;
+            this.languageId = builder.languageId;
+            this.modelId = builder.modelId;
+            this.pronunciationRules = builder.pronunciationRules;
+            this.speechRate = builder.speechRate;
             this.voiceId = builder.voiceId;
             this.voiceIdList = builder.voiceIdList;
         }
@@ -928,6 +1287,41 @@ public class AIAgentConfig extends TeaModel {
 
         public static TtsConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return languageId
+         */
+        public String getLanguageId() {
+            return this.languageId;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return pronunciationRules
+         */
+        public java.util.List<PronunciationRules> getPronunciationRules() {
+            return this.pronunciationRules;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Double getSpeechRate() {
+            return this.speechRate;
         }
 
         /**
@@ -945,6 +1339,11 @@ public class AIAgentConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String emotion; 
+            private String languageId; 
+            private String modelId; 
+            private java.util.List<PronunciationRules> pronunciationRules; 
+            private Double speechRate; 
             private String voiceId; 
             private java.util.List<String> voiceIdList; 
 
@@ -952,9 +1351,54 @@ public class AIAgentConfig extends TeaModel {
             } 
 
             private Builder(TtsConfig model) {
+                this.emotion = model.emotion;
+                this.languageId = model.languageId;
+                this.modelId = model.modelId;
+                this.pronunciationRules = model.pronunciationRules;
+                this.speechRate = model.speechRate;
                 this.voiceId = model.voiceId;
                 this.voiceIdList = model.voiceIdList;
             } 
+
+            /**
+             * Emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * LanguageId.
+             */
+            public Builder languageId(String languageId) {
+                this.languageId = languageId;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * PronunciationRules.
+             */
+            public Builder pronunciationRules(java.util.List<PronunciationRules> pronunciationRules) {
+                this.pronunciationRules = pronunciationRules;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Double speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
 
             /**
              * VoiceId.
@@ -986,10 +1430,18 @@ public class AIAgentConfig extends TeaModel {
      * <p>AIAgentConfig</p>
      */
     public static class TurnDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("SemanticWaitDuration")
+        private Integer semanticWaitDuration;
+
         @com.aliyun.core.annotation.NameInMap("TurnEndWords")
         private java.util.List<String> turnEndWords;
 
         private TurnDetectionConfig(Builder builder) {
+            this.mode = builder.mode;
+            this.semanticWaitDuration = builder.semanticWaitDuration;
             this.turnEndWords = builder.turnEndWords;
         }
 
@@ -1002,6 +1454,20 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return semanticWaitDuration
+         */
+        public Integer getSemanticWaitDuration() {
+            return this.semanticWaitDuration;
+        }
+
+        /**
          * @return turnEndWords
          */
         public java.util.List<String> getTurnEndWords() {
@@ -1009,14 +1475,34 @@ public class AIAgentConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String mode; 
+            private Integer semanticWaitDuration; 
             private java.util.List<String> turnEndWords; 
 
             private Builder() {
             } 
 
             private Builder(TurnDetectionConfig model) {
+                this.mode = model.mode;
+                this.semanticWaitDuration = model.semanticWaitDuration;
                 this.turnEndWords = model.turnEndWords;
             } 
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * SemanticWaitDuration.
+             */
+            public Builder semanticWaitDuration(Integer semanticWaitDuration) {
+                this.semanticWaitDuration = semanticWaitDuration;
+                return this;
+            }
 
             /**
              * TurnEndWords.
@@ -1028,6 +1514,456 @@ public class AIAgentConfig extends TeaModel {
 
             public TurnDetectionConfig build() {
                 return new TurnDetectionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class Equipment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private Equipment(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Equipment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Equipment model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public Equipment build() {
+                return new Equipment(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class HeadMotion extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private HeadMotion(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HeadMotion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(HeadMotion model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public HeadMotion build() {
+                return new HeadMotion(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class InvalidFrameMotion extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallbackDelay")
+        private Integer callbackDelay;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private InvalidFrameMotion(Builder builder) {
+            this.callbackDelay = builder.callbackDelay;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InvalidFrameMotion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callbackDelay
+         */
+        public Integer getCallbackDelay() {
+            return this.callbackDelay;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Integer callbackDelay; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvalidFrameMotion model) {
+                this.callbackDelay = model.callbackDelay;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * CallbackDelay.
+             */
+            public Builder callbackDelay(Integer callbackDelay) {
+                this.callbackDelay = callbackDelay;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public InvalidFrameMotion build() {
+                return new InvalidFrameMotion(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class PeopleCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private PeopleCount(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PeopleCount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeopleCount model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public PeopleCount build() {
+                return new PeopleCount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class StillFrameMotion extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallbackDelay")
+        private Integer callbackDelay;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private StillFrameMotion(Builder builder) {
+            this.callbackDelay = builder.callbackDelay;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StillFrameMotion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callbackDelay
+         */
+        public Integer getCallbackDelay() {
+            return this.callbackDelay;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Integer callbackDelay; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(StillFrameMotion model) {
+                this.callbackDelay = model.callbackDelay;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * CallbackDelay.
+             */
+            public Builder callbackDelay(Integer callbackDelay) {
+                this.callbackDelay = callbackDelay;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public StillFrameMotion build() {
+                return new StillFrameMotion(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class VcrConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Equipment")
+        private Equipment equipment;
+
+        @com.aliyun.core.annotation.NameInMap("HeadMotion")
+        private HeadMotion headMotion;
+
+        @com.aliyun.core.annotation.NameInMap("InvalidFrameMotion")
+        private InvalidFrameMotion invalidFrameMotion;
+
+        @com.aliyun.core.annotation.NameInMap("PeopleCount")
+        private PeopleCount peopleCount;
+
+        @com.aliyun.core.annotation.NameInMap("StillFrameMotion")
+        private StillFrameMotion stillFrameMotion;
+
+        private VcrConfig(Builder builder) {
+            this.equipment = builder.equipment;
+            this.headMotion = builder.headMotion;
+            this.invalidFrameMotion = builder.invalidFrameMotion;
+            this.peopleCount = builder.peopleCount;
+            this.stillFrameMotion = builder.stillFrameMotion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VcrConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return equipment
+         */
+        public Equipment getEquipment() {
+            return this.equipment;
+        }
+
+        /**
+         * @return headMotion
+         */
+        public HeadMotion getHeadMotion() {
+            return this.headMotion;
+        }
+
+        /**
+         * @return invalidFrameMotion
+         */
+        public InvalidFrameMotion getInvalidFrameMotion() {
+            return this.invalidFrameMotion;
+        }
+
+        /**
+         * @return peopleCount
+         */
+        public PeopleCount getPeopleCount() {
+            return this.peopleCount;
+        }
+
+        /**
+         * @return stillFrameMotion
+         */
+        public StillFrameMotion getStillFrameMotion() {
+            return this.stillFrameMotion;
+        }
+
+        public static final class Builder {
+            private Equipment equipment; 
+            private HeadMotion headMotion; 
+            private InvalidFrameMotion invalidFrameMotion; 
+            private PeopleCount peopleCount; 
+            private StillFrameMotion stillFrameMotion; 
+
+            private Builder() {
+            } 
+
+            private Builder(VcrConfig model) {
+                this.equipment = model.equipment;
+                this.headMotion = model.headMotion;
+                this.invalidFrameMotion = model.invalidFrameMotion;
+                this.peopleCount = model.peopleCount;
+                this.stillFrameMotion = model.stillFrameMotion;
+            } 
+
+            /**
+             * Equipment.
+             */
+            public Builder equipment(Equipment equipment) {
+                this.equipment = equipment;
+                return this;
+            }
+
+            /**
+             * HeadMotion.
+             */
+            public Builder headMotion(HeadMotion headMotion) {
+                this.headMotion = headMotion;
+                return this;
+            }
+
+            /**
+             * InvalidFrameMotion.
+             */
+            public Builder invalidFrameMotion(InvalidFrameMotion invalidFrameMotion) {
+                this.invalidFrameMotion = invalidFrameMotion;
+                return this;
+            }
+
+            /**
+             * PeopleCount.
+             */
+            public Builder peopleCount(PeopleCount peopleCount) {
+                this.peopleCount = peopleCount;
+                return this;
+            }
+
+            /**
+             * StillFrameMotion.
+             */
+            public Builder stillFrameMotion(StillFrameMotion stillFrameMotion) {
+                this.stillFrameMotion = stillFrameMotion;
+                return this;
+            }
+
+            public VcrConfig build() {
+                return new VcrConfig(this);
             } 
 
         } 

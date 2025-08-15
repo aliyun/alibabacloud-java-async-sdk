@@ -27,6 +27,10 @@ public class SearchIndexJobRerunRequest extends Request {
     private String mediaIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
@@ -38,6 +42,7 @@ public class SearchIndexJobRerunRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.mediaIds = builder.mediaIds;
+        this.namespace = builder.namespace;
         this.searchLibName = builder.searchLibName;
         this.task = builder.task;
     }
@@ -70,6 +75,13 @@ public class SearchIndexJobRerunRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return searchLibName
      */
     public String getSearchLibName() {
@@ -86,6 +98,7 @@ public class SearchIndexJobRerunRequest extends Request {
     public static final class Builder extends Request.Builder<SearchIndexJobRerunRequest, Builder> {
         private String regionId; 
         private String mediaIds; 
+        private String namespace; 
         private String searchLibName; 
         private String task; 
 
@@ -97,6 +110,7 @@ public class SearchIndexJobRerunRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.mediaIds = request.mediaIds;
+            this.namespace = request.namespace;
             this.searchLibName = request.searchLibName;
             this.task = request.task;
         } 
@@ -120,6 +134,15 @@ public class SearchIndexJobRerunRequest extends Request {
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
             this.mediaIds = mediaIds;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

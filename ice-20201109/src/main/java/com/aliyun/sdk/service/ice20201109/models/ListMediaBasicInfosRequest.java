@@ -22,6 +22,10 @@ public class ListMediaBasicInfosRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
+    private Long authTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessType")
     private String businessType;
 
@@ -69,6 +73,7 @@ public class ListMediaBasicInfosRequest extends Request {
     private ListMediaBasicInfosRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.authTimeout = builder.authTimeout;
         this.businessType = builder.businessType;
         this.endTime = builder.endTime;
         this.includeFileBasicInfo = builder.includeFileBasicInfo;
@@ -100,6 +105,13 @@ public class ListMediaBasicInfosRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return authTimeout
+     */
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     /**
@@ -181,6 +193,7 @@ public class ListMediaBasicInfosRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListMediaBasicInfosRequest, Builder> {
         private String regionId; 
+        private Long authTimeout; 
         private String businessType; 
         private String endTime; 
         private Boolean includeFileBasicInfo; 
@@ -200,6 +213,7 @@ public class ListMediaBasicInfosRequest extends Request {
         private Builder(ListMediaBasicInfosRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.authTimeout = request.authTimeout;
             this.businessType = request.businessType;
             this.endTime = request.endTime;
             this.includeFileBasicInfo = request.includeFileBasicInfo;
@@ -219,6 +233,15 @@ public class ListMediaBasicInfosRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AuthTimeout.
+         */
+        public Builder authTimeout(Long authTimeout) {
+            this.putQueryParameter("AuthTimeout", authTimeout);
+            this.authTimeout = authTimeout;
             return this;
         }
 

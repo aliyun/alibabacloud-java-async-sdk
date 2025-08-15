@@ -67,7 +67,10 @@ public class SubmitScreenMediaHighlightsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +78,10 @@ public class SubmitScreenMediaHighlightsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

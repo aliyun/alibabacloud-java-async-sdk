@@ -32,6 +32,10 @@ public class UpdateMediaToSearchLibRequest extends Request {
     private String msgBody;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
@@ -40,6 +44,7 @@ public class UpdateMediaToSearchLibRequest extends Request {
         this.regionId = builder.regionId;
         this.mediaId = builder.mediaId;
         this.msgBody = builder.msgBody;
+        this.namespace = builder.namespace;
         this.searchLibName = builder.searchLibName;
     }
 
@@ -78,6 +83,13 @@ public class UpdateMediaToSearchLibRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return searchLibName
      */
     public String getSearchLibName() {
@@ -88,6 +100,7 @@ public class UpdateMediaToSearchLibRequest extends Request {
         private String regionId; 
         private String mediaId; 
         private String msgBody; 
+        private String namespace; 
         private String searchLibName; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class UpdateMediaToSearchLibRequest extends Request {
             this.regionId = request.regionId;
             this.mediaId = request.mediaId;
             this.msgBody = request.msgBody;
+            this.namespace = request.namespace;
             this.searchLibName = request.searchLibName;
         } 
 
@@ -134,6 +148,15 @@ public class UpdateMediaToSearchLibRequest extends Request {
         public Builder msgBody(String msgBody) {
             this.putQueryParameter("MsgBody", msgBody);
             this.msgBody = msgBody;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

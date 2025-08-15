@@ -104,6 +104,12 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallLogUrl")
         private String callLogUrl;
 
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private String gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("RuntimeConfig")
         private AIAgentRuntimeConfig runtimeConfig;
 
@@ -123,6 +129,8 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         private Instance(Builder builder) {
             this.agentConfig = builder.agentConfig;
             this.callLogUrl = builder.callLogUrl;
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
             this.runtimeConfig = builder.runtimeConfig;
             this.sessionId = builder.sessionId;
             this.status = builder.status;
@@ -150,6 +158,20 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
          */
         public String getCallLogUrl() {
             return this.callLogUrl;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         /**
@@ -190,6 +212,8 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private AIAgentConfig agentConfig; 
             private String callLogUrl; 
+            private String gmtCreate; 
+            private String gmtModified; 
             private AIAgentRuntimeConfig runtimeConfig; 
             private String sessionId; 
             private String status; 
@@ -202,6 +226,8 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             private Builder(Instance model) {
                 this.agentConfig = model.agentConfig;
                 this.callLogUrl = model.callLogUrl;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
                 this.runtimeConfig = model.runtimeConfig;
                 this.sessionId = model.sessionId;
                 this.status = model.status;
@@ -225,6 +251,22 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
              */
             public Builder callLogUrl(String callLogUrl) {
                 this.callLogUrl = callLogUrl;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 

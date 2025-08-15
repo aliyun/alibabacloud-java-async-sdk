@@ -1,0 +1,100 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ice20201109.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ResumeMediaConnectFlowOutputRequest} extends {@link RequestModel}
+ *
+ * <p>ResumeMediaConnectFlowOutputRequest</p>
+ */
+public class ResumeMediaConnectFlowOutputRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowId")
+    private String flowId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputName")
+    private String outputName;
+
+    private ResumeMediaConnectFlowOutputRequest(Builder builder) {
+        super(builder);
+        this.flowId = builder.flowId;
+        this.outputName = builder.outputName;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ResumeMediaConnectFlowOutputRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return flowId
+     */
+    public String getFlowId() {
+        return this.flowId;
+    }
+
+    /**
+     * @return outputName
+     */
+    public String getOutputName() {
+        return this.outputName;
+    }
+
+    public static final class Builder extends Request.Builder<ResumeMediaConnectFlowOutputRequest, Builder> {
+        private String flowId; 
+        private String outputName; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ResumeMediaConnectFlowOutputRequest request) {
+            super(request);
+            this.flowId = request.flowId;
+            this.outputName = request.outputName;
+        } 
+
+        /**
+         * FlowId.
+         */
+        public Builder flowId(String flowId) {
+            this.putQueryParameter("FlowId", flowId);
+            this.flowId = flowId;
+            return this;
+        }
+
+        /**
+         * OutputName.
+         */
+        public Builder outputName(String outputName) {
+            this.putQueryParameter("OutputName", outputName);
+            this.outputName = outputName;
+            return this;
+        }
+
+        @Override
+        public ResumeMediaConnectFlowOutputRequest build() {
+            return new ResumeMediaConnectFlowOutputRequest(this);
+        } 
+
+    } 
+
+}

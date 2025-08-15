@@ -124,7 +124,18 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * EditingConfig.
+         * <p>The editing configuration. For detailed parameters, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;MediaConfig&quot;: {
+         *         &quot;Volume&quot;: 1
+         *     },
+         *     &quot;ProcessConfig&quot;: {
+         *         &quot;AllowTransition&quot;: true,
+         *         &quot;TransitionList&quot;: [&quot;fadecolor&quot;]
+         *     }
+         * }</p>
          */
         public Builder editingConfig(String editingConfig) {
             this.putBodyParameter("EditingConfig", editingConfig);
@@ -133,7 +144,15 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <p>The input configuration. For detailed parameters, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>9d46c886b45481030f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>6c886b4549d481030f6e</strong></strong>&quot;
+         *     ]
+         * }</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putBodyParameter("InputConfig", inputConfig);
@@ -142,7 +161,15 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>The output configuration. For detailed parameters, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
+         *   &quot;Count&quot;: 1,
+         *   &quot;Width&quot;: 1080,
+         *   &quot;Height&quot;: 1920
+         * }</p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -151,7 +178,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

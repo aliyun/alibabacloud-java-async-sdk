@@ -26,6 +26,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Greeting")
     private String greeting;
 
+    @com.aliyun.core.annotation.NameInMap("GreetingDelay")
+    private Integer greetingDelay;
+
     @com.aliyun.core.annotation.NameInMap("InterruptConfig")
     private InterruptConfig interruptConfig;
 
@@ -42,6 +45,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         this.asrConfig = builder.asrConfig;
         this.enableIntelligentSegment = builder.enableIntelligentSegment;
         this.greeting = builder.greeting;
+        this.greetingDelay = builder.greetingDelay;
         this.interruptConfig = builder.interruptConfig;
         this.llmConfig = builder.llmConfig;
         this.ttsConfig = builder.ttsConfig;
@@ -82,6 +86,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
 
     /**
+     * @return greetingDelay
+     */
+    public Integer getGreetingDelay() {
+        return this.greetingDelay;
+    }
+
+    /**
      * @return interruptConfig
      */
     public InterruptConfig getInterruptConfig() {
@@ -113,6 +124,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         private AsrConfig asrConfig; 
         private Boolean enableIntelligentSegment; 
         private String greeting; 
+        private Integer greetingDelay; 
         private InterruptConfig interruptConfig; 
         private LlmConfig llmConfig; 
         private TtsConfig ttsConfig; 
@@ -125,6 +137,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             this.asrConfig = model.asrConfig;
             this.enableIntelligentSegment = model.enableIntelligentSegment;
             this.greeting = model.greeting;
+            this.greetingDelay = model.greetingDelay;
             this.interruptConfig = model.interruptConfig;
             this.llmConfig = model.llmConfig;
             this.ttsConfig = model.ttsConfig;
@@ -152,6 +165,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
          */
         public Builder greeting(String greeting) {
             this.greeting = greeting;
+            return this;
+        }
+
+        /**
+         * GreetingDelay.
+         */
+        public Builder greetingDelay(Integer greetingDelay) {
+            this.greetingDelay = greetingDelay;
             return this;
         }
 
@@ -209,6 +230,12 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
+        @com.aliyun.core.annotation.NameInMap("CustomParams")
+        private String customParams;
+
+        @com.aliyun.core.annotation.NameInMap("VadDuration")
+        private Integer vadDuration;
+
         @com.aliyun.core.annotation.NameInMap("VadLevel")
         private Integer vadLevel;
 
@@ -216,6 +243,8 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             this.asrHotWords = builder.asrHotWords;
             this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
+            this.customParams = builder.customParams;
+            this.vadDuration = builder.vadDuration;
             this.vadLevel = builder.vadLevel;
         }
 
@@ -249,6 +278,20 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
 
         /**
+         * @return customParams
+         */
+        public String getCustomParams() {
+            return this.customParams;
+        }
+
+        /**
+         * @return vadDuration
+         */
+        public Integer getVadDuration() {
+            return this.vadDuration;
+        }
+
+        /**
          * @return vadLevel
          */
         public Integer getVadLevel() {
@@ -259,6 +302,8 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             private java.util.List<String> asrHotWords; 
             private String asrLanguageId; 
             private Integer asrMaxSilence; 
+            private String customParams; 
+            private Integer vadDuration; 
             private Integer vadLevel; 
 
             private Builder() {
@@ -268,6 +313,8 @@ public class AIAgentOutboundCallConfig extends TeaModel {
                 this.asrHotWords = model.asrHotWords;
                 this.asrLanguageId = model.asrLanguageId;
                 this.asrMaxSilence = model.asrMaxSilence;
+                this.customParams = model.customParams;
+                this.vadDuration = model.vadDuration;
                 this.vadLevel = model.vadLevel;
             } 
 
@@ -292,6 +339,22 @@ public class AIAgentOutboundCallConfig extends TeaModel {
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
+                return this;
+            }
+
+            /**
+             * CustomParams.
+             */
+            public Builder customParams(String customParams) {
+                this.customParams = customParams;
+                return this;
+            }
+
+            /**
+             * VadDuration.
+             */
+            public Builder vadDuration(Integer vadDuration) {
+                this.vadDuration = vadDuration;
                 return this;
             }
 
@@ -391,6 +454,81 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      *
      * <p>AIAgentOutboundCallConfig</p>
      */
+    public static class FunctionMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Function")
+        private String function;
+
+        @com.aliyun.core.annotation.NameInMap("MatchFunction")
+        private String matchFunction;
+
+        private FunctionMap(Builder builder) {
+            this.function = builder.function;
+            this.matchFunction = builder.matchFunction;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FunctionMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return function
+         */
+        public String getFunction() {
+            return this.function;
+        }
+
+        /**
+         * @return matchFunction
+         */
+        public String getMatchFunction() {
+            return this.matchFunction;
+        }
+
+        public static final class Builder {
+            private String function; 
+            private String matchFunction; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionMap model) {
+                this.function = model.function;
+                this.matchFunction = model.matchFunction;
+            } 
+
+            /**
+             * Function.
+             */
+            public Builder function(String function) {
+                this.function = function;
+                return this;
+            }
+
+            /**
+             * MatchFunction.
+             */
+            public Builder matchFunction(String matchFunction) {
+                this.matchFunction = matchFunction;
+                return this;
+            }
+
+            public FunctionMap build() {
+                return new FunctionMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentOutboundCallConfig</p>
+     */
     public static class LlmHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -470,6 +608,12 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
 
+        @com.aliyun.core.annotation.NameInMap("FunctionMap")
+        private java.util.List<FunctionMap> functionMap;
+
+        @com.aliyun.core.annotation.NameInMap("LlmCompleteReply")
+        private Boolean llmCompleteReply;
+
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
         private java.util.List<LlmHistory> llmHistory;
 
@@ -479,11 +623,25 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LlmSystemPrompt")
         private String llmSystemPrompt;
 
+        @com.aliyun.core.annotation.NameInMap("OpenAIExtraQuery")
+        private String openAIExtraQuery;
+
+        @com.aliyun.core.annotation.NameInMap("OutputMaxDelay")
+        private String outputMaxDelay;
+
+        @com.aliyun.core.annotation.NameInMap("OutputMinLength")
+        private Integer outputMinLength;
+
         private LlmConfig(Builder builder) {
             this.bailianAppParams = builder.bailianAppParams;
+            this.functionMap = builder.functionMap;
+            this.llmCompleteReply = builder.llmCompleteReply;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
             this.llmSystemPrompt = builder.llmSystemPrompt;
+            this.openAIExtraQuery = builder.openAIExtraQuery;
+            this.outputMaxDelay = builder.outputMaxDelay;
+            this.outputMinLength = builder.outputMinLength;
         }
 
         public static Builder builder() {
@@ -499,6 +657,20 @@ public class AIAgentOutboundCallConfig extends TeaModel {
          */
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        /**
+         * @return functionMap
+         */
+        public java.util.List<FunctionMap> getFunctionMap() {
+            return this.functionMap;
+        }
+
+        /**
+         * @return llmCompleteReply
+         */
+        public Boolean getLlmCompleteReply() {
+            return this.llmCompleteReply;
         }
 
         /**
@@ -522,20 +694,51 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             return this.llmSystemPrompt;
         }
 
+        /**
+         * @return openAIExtraQuery
+         */
+        public String getOpenAIExtraQuery() {
+            return this.openAIExtraQuery;
+        }
+
+        /**
+         * @return outputMaxDelay
+         */
+        public String getOutputMaxDelay() {
+            return this.outputMaxDelay;
+        }
+
+        /**
+         * @return outputMinLength
+         */
+        public Integer getOutputMinLength() {
+            return this.outputMinLength;
+        }
+
         public static final class Builder {
             private String bailianAppParams; 
+            private java.util.List<FunctionMap> functionMap; 
+            private Boolean llmCompleteReply; 
             private java.util.List<LlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
             private String llmSystemPrompt; 
+            private String openAIExtraQuery; 
+            private String outputMaxDelay; 
+            private Integer outputMinLength; 
 
             private Builder() {
             } 
 
             private Builder(LlmConfig model) {
                 this.bailianAppParams = model.bailianAppParams;
+                this.functionMap = model.functionMap;
+                this.llmCompleteReply = model.llmCompleteReply;
                 this.llmHistory = model.llmHistory;
                 this.llmHistoryLimit = model.llmHistoryLimit;
                 this.llmSystemPrompt = model.llmSystemPrompt;
+                this.openAIExtraQuery = model.openAIExtraQuery;
+                this.outputMaxDelay = model.outputMaxDelay;
+                this.outputMinLength = model.outputMinLength;
             } 
 
             /**
@@ -543,6 +746,22 @@ public class AIAgentOutboundCallConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * FunctionMap.
+             */
+            public Builder functionMap(java.util.List<FunctionMap> functionMap) {
+                this.functionMap = functionMap;
+                return this;
+            }
+
+            /**
+             * LlmCompleteReply.
+             */
+            public Builder llmCompleteReply(Boolean llmCompleteReply) {
+                this.llmCompleteReply = llmCompleteReply;
                 return this;
             }
 
@@ -570,6 +789,30 @@ public class AIAgentOutboundCallConfig extends TeaModel {
                 return this;
             }
 
+            /**
+             * OpenAIExtraQuery.
+             */
+            public Builder openAIExtraQuery(String openAIExtraQuery) {
+                this.openAIExtraQuery = openAIExtraQuery;
+                return this;
+            }
+
+            /**
+             * OutputMaxDelay.
+             */
+            public Builder outputMaxDelay(String outputMaxDelay) {
+                this.outputMaxDelay = outputMaxDelay;
+                return this;
+            }
+
+            /**
+             * OutputMinLength.
+             */
+            public Builder outputMinLength(Integer outputMinLength) {
+                this.outputMinLength = outputMinLength;
+                return this;
+            }
+
             public LlmConfig build() {
                 return new LlmConfig(this);
             } 
@@ -583,7 +826,118 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      *
      * <p>AIAgentOutboundCallConfig</p>
      */
+    public static class PronunciationRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pronunciation")
+        private String pronunciation;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Word")
+        private String word;
+
+        private PronunciationRules(Builder builder) {
+            this.pronunciation = builder.pronunciation;
+            this.type = builder.type;
+            this.word = builder.word;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PronunciationRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pronunciation
+         */
+        public String getPronunciation() {
+            return this.pronunciation;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return word
+         */
+        public String getWord() {
+            return this.word;
+        }
+
+        public static final class Builder {
+            private String pronunciation; 
+            private String type; 
+            private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(PronunciationRules model) {
+                this.pronunciation = model.pronunciation;
+                this.type = model.type;
+                this.word = model.word;
+            } 
+
+            /**
+             * Pronunciation.
+             */
+            public Builder pronunciation(String pronunciation) {
+                this.pronunciation = pronunciation;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Word.
+             */
+            public Builder word(String word) {
+                this.word = word;
+                return this;
+            }
+
+            public PronunciationRules build() {
+                return new PronunciationRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentOutboundCallConfig</p>
+     */
     public static class TtsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("LanguageId")
+        private String languageId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("PronunciationRules")
+        private java.util.List<PronunciationRules> pronunciationRules;
+
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
+        private Double speechRate;
+
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
@@ -591,6 +945,11 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         private java.util.List<String> voiceIdList;
 
         private TtsConfig(Builder builder) {
+            this.emotion = builder.emotion;
+            this.languageId = builder.languageId;
+            this.modelId = builder.modelId;
+            this.pronunciationRules = builder.pronunciationRules;
+            this.speechRate = builder.speechRate;
             this.voiceId = builder.voiceId;
             this.voiceIdList = builder.voiceIdList;
         }
@@ -601,6 +960,41 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
         public static TtsConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return languageId
+         */
+        public String getLanguageId() {
+            return this.languageId;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return pronunciationRules
+         */
+        public java.util.List<PronunciationRules> getPronunciationRules() {
+            return this.pronunciationRules;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Double getSpeechRate() {
+            return this.speechRate;
         }
 
         /**
@@ -618,6 +1012,11 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String emotion; 
+            private String languageId; 
+            private String modelId; 
+            private java.util.List<PronunciationRules> pronunciationRules; 
+            private Double speechRate; 
             private String voiceId; 
             private java.util.List<String> voiceIdList; 
 
@@ -625,9 +1024,54 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             } 
 
             private Builder(TtsConfig model) {
+                this.emotion = model.emotion;
+                this.languageId = model.languageId;
+                this.modelId = model.modelId;
+                this.pronunciationRules = model.pronunciationRules;
+                this.speechRate = model.speechRate;
                 this.voiceId = model.voiceId;
                 this.voiceIdList = model.voiceIdList;
             } 
+
+            /**
+             * Emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * LanguageId.
+             */
+            public Builder languageId(String languageId) {
+                this.languageId = languageId;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * PronunciationRules.
+             */
+            public Builder pronunciationRules(java.util.List<PronunciationRules> pronunciationRules) {
+                this.pronunciationRules = pronunciationRules;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Double speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
 
             /**
              * VoiceId.
@@ -659,10 +1103,18 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      * <p>AIAgentOutboundCallConfig</p>
      */
     public static class TurnDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("SemanticWaitDuration")
+        private Integer semanticWaitDuration;
+
         @com.aliyun.core.annotation.NameInMap("TurnEndWords")
         private java.util.List<String> turnEndWords;
 
         private TurnDetectionConfig(Builder builder) {
+            this.mode = builder.mode;
+            this.semanticWaitDuration = builder.semanticWaitDuration;
             this.turnEndWords = builder.turnEndWords;
         }
 
@@ -675,6 +1127,20 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return semanticWaitDuration
+         */
+        public Integer getSemanticWaitDuration() {
+            return this.semanticWaitDuration;
+        }
+
+        /**
          * @return turnEndWords
          */
         public java.util.List<String> getTurnEndWords() {
@@ -682,14 +1148,34 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String mode; 
+            private Integer semanticWaitDuration; 
             private java.util.List<String> turnEndWords; 
 
             private Builder() {
             } 
 
             private Builder(TurnDetectionConfig model) {
+                this.mode = model.mode;
+                this.semanticWaitDuration = model.semanticWaitDuration;
                 this.turnEndWords = model.turnEndWords;
             } 
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * SemanticWaitDuration.
+             */
+            public Builder semanticWaitDuration(Integer semanticWaitDuration) {
+                this.semanticWaitDuration = semanticWaitDuration;
+                return this;
+            }
 
             /**
              * TurnEndWords.

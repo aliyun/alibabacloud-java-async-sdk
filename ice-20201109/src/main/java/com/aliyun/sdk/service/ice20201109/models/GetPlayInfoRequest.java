@@ -22,6 +22,10 @@ public class GetPlayInfoRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
+    private Long authTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputURL")
     private String inputURL;
 
@@ -32,6 +36,7 @@ public class GetPlayInfoRequest extends Request {
     private GetPlayInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.authTimeout = builder.authTimeout;
         this.inputURL = builder.inputURL;
         this.mediaId = builder.mediaId;
     }
@@ -57,6 +62,13 @@ public class GetPlayInfoRequest extends Request {
     }
 
     /**
+     * @return authTimeout
+     */
+    public Long getAuthTimeout() {
+        return this.authTimeout;
+    }
+
+    /**
      * @return inputURL
      */
     public String getInputURL() {
@@ -72,6 +84,7 @@ public class GetPlayInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetPlayInfoRequest, Builder> {
         private String regionId; 
+        private Long authTimeout; 
         private String inputURL; 
         private String mediaId; 
 
@@ -82,6 +95,7 @@ public class GetPlayInfoRequest extends Request {
         private Builder(GetPlayInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.authTimeout = request.authTimeout;
             this.inputURL = request.inputURL;
             this.mediaId = request.mediaId;
         } 
@@ -92,6 +106,15 @@ public class GetPlayInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AuthTimeout.
+         */
+        public Builder authTimeout(Long authTimeout) {
+            this.putQueryParameter("AuthTimeout", authTimeout);
+            this.authTimeout = authTimeout;
             return this;
         }
 

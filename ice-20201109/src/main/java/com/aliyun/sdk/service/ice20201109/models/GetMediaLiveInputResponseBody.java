@@ -113,6 +113,18 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
+        @com.aliyun.core.annotation.NameInMap("SrtLatency")
+        private Integer srtLatency;
+
+        @com.aliyun.core.annotation.NameInMap("SrtMaxBitrate")
+        private Integer srtMaxBitrate;
+
+        @com.aliyun.core.annotation.NameInMap("SrtPassphrase")
+        private String srtPassphrase;
+
+        @com.aliyun.core.annotation.NameInMap("SrtPbKeyLen")
+        private Integer srtPbKeyLen;
+
         @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
@@ -122,6 +134,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             this.flowOutputName = builder.flowOutputName;
             this.monitorUrl = builder.monitorUrl;
             this.sourceUrl = builder.sourceUrl;
+            this.srtLatency = builder.srtLatency;
+            this.srtMaxBitrate = builder.srtMaxBitrate;
+            this.srtPassphrase = builder.srtPassphrase;
+            this.srtPbKeyLen = builder.srtPbKeyLen;
             this.streamName = builder.streamName;
         }
 
@@ -169,6 +185,34 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
         }
 
         /**
+         * @return srtLatency
+         */
+        public Integer getSrtLatency() {
+            return this.srtLatency;
+        }
+
+        /**
+         * @return srtMaxBitrate
+         */
+        public Integer getSrtMaxBitrate() {
+            return this.srtMaxBitrate;
+        }
+
+        /**
+         * @return srtPassphrase
+         */
+        public String getSrtPassphrase() {
+            return this.srtPassphrase;
+        }
+
+        /**
+         * @return srtPbKeyLen
+         */
+        public Integer getSrtPbKeyLen() {
+            return this.srtPbKeyLen;
+        }
+
+        /**
          * @return streamName
          */
         public String getStreamName() {
@@ -181,6 +225,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             private String flowOutputName; 
             private String monitorUrl; 
             private String sourceUrl; 
+            private Integer srtLatency; 
+            private Integer srtMaxBitrate; 
+            private String srtPassphrase; 
+            private Integer srtPbKeyLen; 
             private String streamName; 
 
             private Builder() {
@@ -192,6 +240,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
                 this.flowOutputName = model.flowOutputName;
                 this.monitorUrl = model.monitorUrl;
                 this.sourceUrl = model.sourceUrl;
+                this.srtLatency = model.srtLatency;
+                this.srtMaxBitrate = model.srtMaxBitrate;
+                this.srtPassphrase = model.srtPassphrase;
+                this.srtPbKeyLen = model.srtPbKeyLen;
                 this.streamName = model.streamName;
             } 
 
@@ -207,7 +259,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>The ID of the flow from MediaConnect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>81-9693-40dc-bbab-db5e49</strong></strong></strong></p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -215,7 +270,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             }
 
             /**
-             * FlowOutputName.
+             * <p>The output name of the MediaConnect flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myFlowOutputName</p>
              */
             public Builder flowOutputName(String flowOutputName) {
                 this.flowOutputName = flowOutputName;
@@ -241,6 +299,38 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
+                return this;
+            }
+
+            /**
+             * SrtLatency.
+             */
+            public Builder srtLatency(Integer srtLatency) {
+                this.srtLatency = srtLatency;
+                return this;
+            }
+
+            /**
+             * SrtMaxBitrate.
+             */
+            public Builder srtMaxBitrate(Integer srtMaxBitrate) {
+                this.srtMaxBitrate = srtMaxBitrate;
+                return this;
+            }
+
+            /**
+             * SrtPassphrase.
+             */
+            public Builder srtPassphrase(String srtPassphrase) {
+                this.srtPassphrase = srtPassphrase;
+                return this;
+            }
+
+            /**
+             * SrtPbKeyLen.
+             */
+            public Builder srtPbKeyLen(Integer srtPbKeyLen) {
+                this.srtPbKeyLen = srtPbKeyLen;
                 return this;
             }
 

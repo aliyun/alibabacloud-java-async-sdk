@@ -144,6 +144,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelFavoritePublicMediaResponse> cancelFavoritePublicMedia(CancelFavoritePublicMediaRequest request);
 
     /**
+     * @param request the request parameters of CancelIProductionJob  CancelIProductionJobRequest
+     * @return CancelIProductionJobResponse
+     */
+    CompletableFuture<CancelIProductionJobResponse> cancelIProductionJob(CancelIProductionJobRequest request);
+
+    /**
+     * @param request the request parameters of ClearAIAgentVoiceprint  ClearAIAgentVoiceprintRequest
+     * @return ClearAIAgentVoiceprintResponse
+     */
+    CompletableFuture<ClearAIAgentVoiceprintResponse> clearAIAgentVoiceprint(ClearAIAgentVoiceprintRequest request);
+
+    /**
+     * @param request the request parameters of CloseMediaConnectFlowFailover  CloseMediaConnectFlowFailoverRequest
+     * @return CloseMediaConnectFlowFailoverResponse
+     */
+    CompletableFuture<CloseMediaConnectFlowFailoverResponse> closeMediaConnectFlowFailover(CloseMediaConnectFlowFailoverRequest request);
+
+    /**
      * @param request the request parameters of CreateAudit  CreateAuditRequest
      * @return CreateAuditResponse
      */
@@ -806,6 +824,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request);
 
     /**
+     * @param request the request parameters of ForbidMediaConnectFlowOutput  ForbidMediaConnectFlowOutputRequest
+     * @return ForbidMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<ForbidMediaConnectFlowOutputResponse> forbidMediaConnectFlowOutput(ForbidMediaConnectFlowOutputRequest request);
+
+    /**
+     * @param request the request parameters of ForwardAIAgentCall  ForwardAIAgentCallRequest
+     * @return ForwardAIAgentCallResponse
+     */
+    CompletableFuture<ForwardAIAgentCallResponse> forwardAIAgentCall(ForwardAIAgentCallRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Request description</h2>
      * <p>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
@@ -1043,6 +1073,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLiveTranscodeTemplateResponse> getLiveTranscodeTemplate(GetLiveTranscodeTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetMediaConnectAvailableRegion  GetMediaConnectAvailableRegionRequest
+     * @return GetMediaConnectAvailableRegionResponse
+     */
+    CompletableFuture<GetMediaConnectAvailableRegionResponse> getMediaConnectAvailableRegion(GetMediaConnectAvailableRegionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
@@ -1053,6 +1089,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMediaConnectFlowResponse
      */
     CompletableFuture<GetMediaConnectFlowResponse> getMediaConnectFlow(GetMediaConnectFlowRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaConnectFlowAllOutputName  GetMediaConnectFlowAllOutputNameRequest
+     * @return GetMediaConnectFlowAllOutputNameResponse
+     */
+    CompletableFuture<GetMediaConnectFlowAllOutputNameResponse> getMediaConnectFlowAllOutputName(GetMediaConnectFlowAllOutputNameRequest request);
 
     /**
      * <b>description</b> :
@@ -1321,6 +1363,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAIAgentPhoneNumberResponse
      */
     CompletableFuture<ListAIAgentPhoneNumberResponse> listAIAgentPhoneNumber(ListAIAgentPhoneNumberRequest request);
+
+    /**
+     * @param request the request parameters of ListAIAgentVoiceprints  ListAIAgentVoiceprintsRequest
+     * @return ListAIAgentVoiceprintsResponse
+     */
+    CompletableFuture<ListAIAgentVoiceprintsResponse> listAIAgentVoiceprints(ListAIAgentVoiceprintsRequest request);
 
     /**
      * @param request the request parameters of ListAdInsertions  ListAdInsertionsRequest
@@ -1733,6 +1781,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVodPackagingGroupsResponse> listVodPackagingGroups(ListVodPackagingGroupsRequest request);
 
     /**
+     * @param request the request parameters of ListWorkflowTasks  ListWorkflowTasksRequest
+     * @return ListWorkflowTasksResponse
+     */
+    CompletableFuture<ListWorkflowTasksResponse> listWorkflowTasks(ListWorkflowTasksRequest request);
+
+    /**
+     * @param request the request parameters of OpenMediaConnectFlowFailover  OpenMediaConnectFlowFailoverRequest
+     * @return OpenMediaConnectFlowFailoverResponse
+     */
+    CompletableFuture<OpenMediaConnectFlowFailoverResponse> openMediaConnectFlowFailover(OpenMediaConnectFlowFailoverRequest request);
+
+    /**
      * @param request the request parameters of QueryCopyrightExtractJob  QueryCopyrightExtractJobRequest
      * @return QueryCopyrightExtractJobResponse
      */
@@ -1817,6 +1877,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTraceM3u8JobListResponse> queryTraceM3u8JobList(QueryTraceM3u8JobListRequest request);
 
     /**
+     * @param request the request parameters of QueryVideoCognitionJob  QueryVideoCognitionJobRequest
+     * @return QueryVideoCognitionJobResponse
+     */
+    CompletableFuture<QueryVideoCognitionJobResponse> queryVideoCognitionJob(QueryVideoCognitionJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
      * 
@@ -1842,6 +1908,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RegisterMediaStreamResponse
      */
     CompletableFuture<RegisterMediaStreamResponse> registerMediaStream(RegisterMediaStreamRequest request);
+
+    /**
+     * @param request the request parameters of ResumeMediaConnectFlowOutput  ResumeMediaConnectFlowOutputRequest
+     * @return ResumeMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<ResumeMediaConnectFlowOutputResponse> resumeMediaConnectFlowOutput(ResumeMediaConnectFlowOutputRequest request);
 
     /**
      * @param request the request parameters of SearchEditingProject  SearchEditingProjectRequest
@@ -1956,6 +2028,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SendMessageChatTextResponse
      */
     CompletableFuture<SendMessageChatTextResponse> sendMessageChatText(SendMessageChatTextRequest request);
+
+    /**
+     * @param request the request parameters of SetAIAgentVoiceprint  SetAIAgentVoiceprintRequest
+     * @return SetAIAgentVoiceprintResponse
+     */
+    CompletableFuture<SetAIAgentVoiceprintResponse> setAIAgentVoiceprint(SetAIAgentVoiceprintRequest request);
 
     /**
      * @param request the request parameters of SetContentAnalyzeConfig  SetContentAnalyzeConfigRequest
@@ -2370,6 +2448,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitTranscodeJobResponse
      */
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitVideoCognitionJob  SubmitVideoCognitionJobRequest
+     * @return SubmitVideoCognitionJobResponse
+     */
+    CompletableFuture<SubmitVideoCognitionJobResponse> submitVideoCognitionJob(SubmitVideoCognitionJobRequest request);
 
     /**
      * <b>description</b> :

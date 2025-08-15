@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAIAgentPhoneNumberRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Number")
+    private String number;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -25,10 +29,16 @@ public class ListAIAgentPhoneNumberRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
     private ListAIAgentPhoneNumberRequest(Builder builder) {
         super(builder);
+        this.number = builder.number;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -45,6 +55,13 @@ public class ListAIAgentPhoneNumberRequest extends Request {
     }
 
     /**
+     * @return number
+     */
+    public String getNumber() {
+        return this.number;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -58,9 +75,18 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListAIAgentPhoneNumberRequest, Builder> {
+        private String number; 
         private Long pageNumber; 
         private Long pageSize; 
+        private Integer status; 
 
         private Builder() {
             super();
@@ -68,9 +94,20 @@ public class ListAIAgentPhoneNumberRequest extends Request {
 
         private Builder(ListAIAgentPhoneNumberRequest request) {
             super(request);
+            this.number = request.number;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
+
+        /**
+         * Number.
+         */
+        public Builder number(String number) {
+            this.putQueryParameter("Number", number);
+            this.number = number;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -87,6 +124,15 @@ public class ListAIAgentPhoneNumberRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class StartAIAgentOutboundCallRequest extends Request {
     private AIAgentOutboundCallConfig config;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImsAIAgentFreeObCall")
+    private String imsAIAgentFreeObCall;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
@@ -50,6 +54,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         this.calledNumber = builder.calledNumber;
         this.callerNumber = builder.callerNumber;
         this.config = builder.config;
+        this.imsAIAgentFreeObCall = builder.imsAIAgentFreeObCall;
         this.sessionId = builder.sessionId;
         this.userData = builder.userData;
     }
@@ -96,6 +101,13 @@ public class StartAIAgentOutboundCallRequest extends Request {
     }
 
     /**
+     * @return imsAIAgentFreeObCall
+     */
+    public String getImsAIAgentFreeObCall() {
+        return this.imsAIAgentFreeObCall;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -114,6 +126,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
         private String calledNumber; 
         private String callerNumber; 
         private AIAgentOutboundCallConfig config; 
+        private String imsAIAgentFreeObCall; 
         private String sessionId; 
         private String userData; 
 
@@ -127,6 +140,7 @@ public class StartAIAgentOutboundCallRequest extends Request {
             this.calledNumber = request.calledNumber;
             this.callerNumber = request.callerNumber;
             this.config = request.config;
+            this.imsAIAgentFreeObCall = request.imsAIAgentFreeObCall;
             this.sessionId = request.sessionId;
             this.userData = request.userData;
         } 
@@ -174,6 +188,15 @@ public class StartAIAgentOutboundCallRequest extends Request {
             String configShrink = shrink(config, "Config", "json");
             this.putQueryParameter("Config", configShrink);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * ImsAIAgentFreeObCall.
+         */
+        public Builder imsAIAgentFreeObCall(String imsAIAgentFreeObCall) {
+            this.putQueryParameter("ImsAIAgentFreeObCall", imsAIAgentFreeObCall);
+            this.imsAIAgentFreeObCall = imsAIAgentFreeObCall;
             return this;
         }
 
