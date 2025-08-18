@@ -2165,6 +2165,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeUrlObservationData  DescribeUrlObservationDataRequest
+     * @return DescribeUrlObservationDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeUrlObservationDataResponse> describeUrlObservationData(DescribeUrlObservationDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUrlObservationData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUrlObservationDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeUrlObservationDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
      * @return DisableCustomScenePolicyResponse
      */

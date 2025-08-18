@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateUrlObservationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigId")
-    private String configId;
+    private Long configId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,7 +43,7 @@ public class CreateUrlObservationResponseBody extends TeaModel {
     /**
      * @return configId
      */
-    public String getConfigId() {
+    public Long getConfigId() {
         return this.configId;
     }
 
@@ -55,7 +55,7 @@ public class CreateUrlObservationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String configId; 
+        private Long configId; 
         private String requestId; 
 
         private Builder() {
@@ -69,7 +69,7 @@ public class CreateUrlObservationResponseBody extends TeaModel {
         /**
          * ConfigId.
          */
-        public Builder configId(String configId) {
+        public Builder configId(Long configId) {
             this.configId = configId;
             return this;
         }

@@ -765,6 +765,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeUrlObservationData  DescribeUrlObservationDataRequest
+     * @return DescribeUrlObservationDataResponse
+     */
+    CompletableFuture<DescribeUrlObservationDataResponse> describeUrlObservationData(DescribeUrlObservationDataRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
      * @return DisableCustomScenePolicyResponse
      */

@@ -188,6 +188,9 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
+        @com.aliyun.core.annotation.NameInMap("Fallback")
+        private String fallback;
+
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
@@ -213,6 +216,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             this.bypass = builder.bypass;
             this.configId = builder.configId;
             this.configType = builder.configType;
+            this.fallback = builder.fallback;
             this.mode = builder.mode;
             this.routeEnable = builder.routeEnable;
             this.routeName = builder.routeName;
@@ -249,6 +253,13 @@ public class ListSiteRoutesResponseBody extends TeaModel {
          */
         public String getConfigType() {
             return this.configType;
+        }
+
+        /**
+         * @return fallback
+         */
+        public String getFallback() {
+            return this.fallback;
         }
 
         /**
@@ -304,6 +315,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             private String bypass; 
             private Long configId; 
             private String configType; 
+            private String fallback; 
             private String mode; 
             private String routeEnable; 
             private String routeName; 
@@ -319,6 +331,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
                 this.bypass = model.bypass;
                 this.configId = model.configId;
                 this.configType = model.configType;
+                this.fallback = model.fallback;
                 this.mode = model.mode;
                 this.routeEnable = model.routeEnable;
                 this.routeName = model.routeName;
@@ -349,6 +362,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
              */
             public Builder configType(String configType) {
                 this.configType = configType;
+                return this;
+            }
+
+            /**
+             * Fallback.
+             */
+            public Builder fallback(String fallback) {
+                this.fallback = fallback;
                 return this;
             }
 

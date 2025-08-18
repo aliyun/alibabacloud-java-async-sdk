@@ -95,6 +95,12 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
      * <p>GetEdgeContainerAppResourceStatusResponseBody</p>
      */
     public static class Regions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsOffline")
+        private Boolean isOffline;
+
+        @com.aliyun.core.annotation.NameInMap("IsStaging")
+        private Boolean isStaging;
+
         @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
@@ -108,6 +114,8 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
         private Integer total;
 
         private Regions(Builder builder) {
+            this.isOffline = builder.isOffline;
+            this.isStaging = builder.isStaging;
             this.isp = builder.isp;
             this.ready = builder.ready;
             this.region = builder.region;
@@ -120,6 +128,20 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
 
         public static Regions create() {
             return builder().build();
+        }
+
+        /**
+         * @return isOffline
+         */
+        public Boolean getIsOffline() {
+            return this.isOffline;
+        }
+
+        /**
+         * @return isStaging
+         */
+        public Boolean getIsStaging() {
+            return this.isStaging;
         }
 
         /**
@@ -151,6 +173,8 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean isOffline; 
+            private Boolean isStaging; 
             private String isp; 
             private Integer ready; 
             private String region; 
@@ -160,11 +184,29 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
             } 
 
             private Builder(Regions model) {
+                this.isOffline = model.isOffline;
+                this.isStaging = model.isStaging;
                 this.isp = model.isp;
                 this.ready = model.ready;
                 this.region = model.region;
                 this.total = model.total;
             } 
+
+            /**
+             * IsOffline.
+             */
+            public Builder isOffline(Boolean isOffline) {
+                this.isOffline = isOffline;
+                return this;
+            }
+
+            /**
+             * IsStaging.
+             */
+            public Builder isStaging(Boolean isStaging) {
+                this.isStaging = isStaging;
+                return this;
+            }
 
             /**
              * Isp.

@@ -27,6 +27,10 @@ public class UpdateRoutineRouteRequest extends Request {
     private Long configId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fallback")
+    private String fallback;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteEnable")
     private String routeEnable;
 
@@ -55,6 +59,7 @@ public class UpdateRoutineRouteRequest extends Request {
         super(builder);
         this.bypass = builder.bypass;
         this.configId = builder.configId;
+        this.fallback = builder.fallback;
         this.routeEnable = builder.routeEnable;
         this.routeName = builder.routeName;
         this.routineName = builder.routineName;
@@ -88,6 +93,13 @@ public class UpdateRoutineRouteRequest extends Request {
      */
     public Long getConfigId() {
         return this.configId;
+    }
+
+    /**
+     * @return fallback
+     */
+    public String getFallback() {
+        return this.fallback;
     }
 
     /**
@@ -135,6 +147,7 @@ public class UpdateRoutineRouteRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateRoutineRouteRequest, Builder> {
         private String bypass; 
         private Long configId; 
+        private String fallback; 
         private String routeEnable; 
         private String routeName; 
         private String routineName; 
@@ -150,6 +163,7 @@ public class UpdateRoutineRouteRequest extends Request {
             super(request);
             this.bypass = request.bypass;
             this.configId = request.configId;
+            this.fallback = request.fallback;
             this.routeEnable = request.routeEnable;
             this.routeName = request.routeName;
             this.routineName = request.routineName;
@@ -176,6 +190,15 @@ public class UpdateRoutineRouteRequest extends Request {
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
             this.configId = configId;
+            return this;
+        }
+
+        /**
+         * Fallback.
+         */
+        public Builder fallback(String fallback) {
+            this.putQueryParameter("Fallback", fallback);
+            this.fallback = fallback;
             return this;
         }
 
