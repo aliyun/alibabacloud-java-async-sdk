@@ -634,6 +634,177 @@ public class GetInstanceListResponseBody extends TeaModel {
      *
      * <p>GetInstanceListResponseBody</p>
      */
+    public static class ConfluentInstanceComponentVO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
+        private String componentType;
+
+        @com.aliyun.core.annotation.NameInMap("DeployModule")
+        private String deployModule;
+
+        @com.aliyun.core.annotation.NameInMap("PubEndpoint")
+        private String pubEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("VpcEndpoint")
+        private String vpcEndpoint;
+
+        private ConfluentInstanceComponentVO(Builder builder) {
+            this.componentType = builder.componentType;
+            this.deployModule = builder.deployModule;
+            this.pubEndpoint = builder.pubEndpoint;
+            this.vpcEndpoint = builder.vpcEndpoint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfluentInstanceComponentVO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentType
+         */
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        /**
+         * @return deployModule
+         */
+        public String getDeployModule() {
+            return this.deployModule;
+        }
+
+        /**
+         * @return pubEndpoint
+         */
+        public String getPubEndpoint() {
+            return this.pubEndpoint;
+        }
+
+        /**
+         * @return vpcEndpoint
+         */
+        public String getVpcEndpoint() {
+            return this.vpcEndpoint;
+        }
+
+        public static final class Builder {
+            private String componentType; 
+            private String deployModule; 
+            private String pubEndpoint; 
+            private String vpcEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfluentInstanceComponentVO model) {
+                this.componentType = model.componentType;
+                this.deployModule = model.deployModule;
+                this.pubEndpoint = model.pubEndpoint;
+                this.vpcEndpoint = model.vpcEndpoint;
+            } 
+
+            /**
+             * ComponentType.
+             */
+            public Builder componentType(String componentType) {
+                this.componentType = componentType;
+                return this;
+            }
+
+            /**
+             * DeployModule.
+             */
+            public Builder deployModule(String deployModule) {
+                this.deployModule = deployModule;
+                return this;
+            }
+
+            /**
+             * PubEndpoint.
+             */
+            public Builder pubEndpoint(String pubEndpoint) {
+                this.pubEndpoint = pubEndpoint;
+                return this;
+            }
+
+            /**
+             * VpcEndpoint.
+             */
+            public Builder vpcEndpoint(String vpcEndpoint) {
+                this.vpcEndpoint = vpcEndpoint;
+                return this;
+            }
+
+            public ConfluentInstanceComponentVO build() {
+                return new ConfluentInstanceComponentVO(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
+    public static class ConfluentInstanceComponents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfluentInstanceComponentVO")
+        private java.util.List<ConfluentInstanceComponentVO> confluentInstanceComponentVO;
+
+        private ConfluentInstanceComponents(Builder builder) {
+            this.confluentInstanceComponentVO = builder.confluentInstanceComponentVO;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfluentInstanceComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confluentInstanceComponentVO
+         */
+        public java.util.List<ConfluentInstanceComponentVO> getConfluentInstanceComponentVO() {
+            return this.confluentInstanceComponentVO;
+        }
+
+        public static final class Builder {
+            private java.util.List<ConfluentInstanceComponentVO> confluentInstanceComponentVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfluentInstanceComponents model) {
+                this.confluentInstanceComponentVO = model.confluentInstanceComponentVO;
+            } 
+
+            /**
+             * ConfluentInstanceComponentVO.
+             */
+            public Builder confluentInstanceComponentVO(java.util.List<ConfluentInstanceComponentVO> confluentInstanceComponentVO) {
+                this.confluentInstanceComponentVO = confluentInstanceComponentVO;
+                return this;
+            }
+
+            public ConfluentInstanceComponents build() {
+                return new ConfluentInstanceComponents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class TagVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -896,6 +1067,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
         private ConfluentConfig confluentConfig;
 
+        @com.aliyun.core.annotation.NameInMap("ConfluentInstanceComponents")
+        private ConfluentInstanceComponents confluentInstanceComponents;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -949,6 +1123,9 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PaidType")
         private Integer paidType;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendedPartitionCount")
+        private Integer recommendedPartitionCount;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -1034,6 +1211,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.autoCreateTopicEnable = builder.autoCreateTopicEnable;
             this.backupZoneId = builder.backupZoneId;
             this.confluentConfig = builder.confluentConfig;
+            this.confluentInstanceComponents = builder.confluentInstanceComponents;
             this.createTime = builder.createTime;
             this.defaultPartitionNum = builder.defaultPartitionNum;
             this.deployType = builder.deployType;
@@ -1052,6 +1230,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.msgRetain = builder.msgRetain;
             this.name = builder.name;
             this.paidType = builder.paidType;
+            this.recommendedPartitionCount = builder.recommendedPartitionCount;
             this.regionId = builder.regionId;
             this.reservedPublishCapacity = builder.reservedPublishCapacity;
             this.reservedSubscribeCapacity = builder.reservedSubscribeCapacity;
@@ -1121,6 +1300,13 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         public ConfluentConfig getConfluentConfig() {
             return this.confluentConfig;
+        }
+
+        /**
+         * @return confluentInstanceComponents
+         */
+        public ConfluentInstanceComponents getConfluentInstanceComponents() {
+            return this.confluentInstanceComponents;
         }
 
         /**
@@ -1247,6 +1433,13 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         public Integer getPaidType() {
             return this.paidType;
+        }
+
+        /**
+         * @return recommendedPartitionCount
+         */
+        public Integer getRecommendedPartitionCount() {
+            return this.recommendedPartitionCount;
         }
 
         /**
@@ -1437,6 +1630,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Boolean autoCreateTopicEnable; 
             private String backupZoneId; 
             private ConfluentConfig confluentConfig; 
+            private ConfluentInstanceComponents confluentInstanceComponents; 
             private Long createTime; 
             private Integer defaultPartitionNum; 
             private Integer deployType; 
@@ -1455,6 +1649,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer msgRetain; 
             private String name; 
             private Integer paidType; 
+            private Integer recommendedPartitionCount; 
             private String regionId; 
             private Integer reservedPublishCapacity; 
             private Integer reservedSubscribeCapacity; 
@@ -1491,6 +1686,7 @@ public class GetInstanceListResponseBody extends TeaModel {
                 this.autoCreateTopicEnable = model.autoCreateTopicEnable;
                 this.backupZoneId = model.backupZoneId;
                 this.confluentConfig = model.confluentConfig;
+                this.confluentInstanceComponents = model.confluentInstanceComponents;
                 this.createTime = model.createTime;
                 this.defaultPartitionNum = model.defaultPartitionNum;
                 this.deployType = model.deployType;
@@ -1509,6 +1705,7 @@ public class GetInstanceListResponseBody extends TeaModel {
                 this.msgRetain = model.msgRetain;
                 this.name = model.name;
                 this.paidType = model.paidType;
+                this.recommendedPartitionCount = model.recommendedPartitionCount;
                 this.regionId = model.regionId;
                 this.reservedPublishCapacity = model.reservedPublishCapacity;
                 this.reservedSubscribeCapacity = model.reservedSubscribeCapacity;
@@ -1586,6 +1783,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder confluentConfig(ConfluentConfig confluentConfig) {
                 this.confluentConfig = confluentConfig;
+                return this;
+            }
+
+            /**
+             * ConfluentInstanceComponents.
+             */
+            public Builder confluentInstanceComponents(ConfluentInstanceComponents confluentInstanceComponents) {
+                this.confluentInstanceComponents = confluentInstanceComponents;
                 return this;
             }
 
@@ -1806,6 +2011,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder paidType(Integer paidType) {
                 this.paidType = paidType;
+                return this;
+            }
+
+            /**
+             * RecommendedPartitionCount.
+             */
+            public Builder recommendedPartitionCount(Integer recommendedPartitionCount) {
+                this.recommendedPartitionCount = recommendedPartitionCount;
                 return this;
             }
 

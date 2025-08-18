@@ -173,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableAutoTopicCreationResponse> enableAutoTopicCreation(EnableAutoTopicCreationRequest request);
 
     /**
+     * @param request the request parameters of FailoverTest  FailoverTestRequest
+     * @return FailoverTestResponse
+     */
+    CompletableFuture<FailoverTestResponse> failoverTest(FailoverTestRequest request);
+
+    /**
      * @param request the request parameters of GetAllInstanceIdList  GetAllInstanceIdListRequest
      * @return GetAllInstanceIdListResponse
      */
@@ -229,6 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetQuotaTipResponse
      */
     CompletableFuture<GetQuotaTipResponse> getQuotaTip(GetQuotaTipRequest request);
+
+    /**
+     * @param request the request parameters of GetRiskList  GetRiskListRequest
+     * @return GetRiskListResponse
+     */
+    CompletableFuture<GetRiskListResponse> getRiskList(GetRiskListRequest request);
 
     /**
      * @param request the request parameters of GetTopicList  GetTopicListRequest
