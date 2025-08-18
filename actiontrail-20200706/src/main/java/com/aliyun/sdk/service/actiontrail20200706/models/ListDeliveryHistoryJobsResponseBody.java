@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeliveryHistoryJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeliveryHistoryJobsResponseBody</p>
  */
 public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
-    @NameInMap("DeliveryHistoryJobs")
-    private java.util.List < DeliveryHistoryJobs> deliveryHistoryJobs;
+    @com.aliyun.core.annotation.NameInMap("DeliveryHistoryJobs")
+    private java.util.List<DeliveryHistoryJobs> deliveryHistoryJobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDeliveryHistoryJobsResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryHistoryJobs
      */
-    public java.util.List < DeliveryHistoryJobs> getDeliveryHistoryJobs() {
+    public java.util.List<DeliveryHistoryJobs> getDeliveryHistoryJobs() {
         return this.deliveryHistoryJobs;
     }
 
@@ -79,22 +88,36 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeliveryHistoryJobs> deliveryHistoryJobs; 
+        private java.util.List<DeliveryHistoryJobs> deliveryHistoryJobs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDeliveryHistoryJobsResponseBody model) {
+            this.deliveryHistoryJobs = model.deliveryHistoryJobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of historical event delivery tasks.
+         * <p>The list of historical event delivery tasks.</p>
          */
-        public Builder deliveryHistoryJobs(java.util.List < DeliveryHistoryJobs> deliveryHistoryJobs) {
+        public Builder deliveryHistoryJobs(java.util.List<DeliveryHistoryJobs> deliveryHistoryJobs) {
             this.deliveryHistoryJobs = deliveryHistoryJobs;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B190816C-6DCA-4DC5-9B8E-EE0367B57CFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of historical event delivery tasks returned.
+         * <p>The number of historical event delivery tasks returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +163,35 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeliveryHistoryJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryHistoryJobsResponseBody</p>
+     */
     public static class DeliveryHistoryJobs extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("HomeRegion")
+        @com.aliyun.core.annotation.NameInMap("HomeRegion")
         private String homeRegion;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private Integer jobStatus;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TrailName")
+        @com.aliyun.core.annotation.NameInMap("TrailName")
         private String trailName;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private String updatedTime;
 
         private DeliveryHistoryJobs(Builder builder) {
@@ -241,8 +279,25 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             private String trailName; 
             private String updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeliveryHistoryJobs model) {
+                this.createdTime = model.createdTime;
+                this.endTime = model.endTime;
+                this.homeRegion = model.homeRegion;
+                this.jobId = model.jobId;
+                this.jobStatus = model.jobStatus;
+                this.startTime = model.startTime;
+                this.trailName = model.trailName;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-26T03:17:04Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +305,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task ended.
+             * <p>The time when the task ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-26T03:22:04Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -258,7 +316,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The home region of the trail.
+             * <p>The home region of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder homeRegion(String homeRegion) {
                 this.homeRegion = homeRegion;
@@ -266,7 +327,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16602</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -274,13 +338,16 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>0: The task is initializing.</li>
+             * <li>1: The task is delivering historical events.</li>
+             * <li>2: The task is complete.</li>
+             * <li>3: The task fails.</li>
+             * </ul>
              * 
-             * *   0: The task is initializing.
-             * *   1: The task is delivering historical events.
-             * *   2: The task is complete.
-             * *   3: The task fails.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder jobStatus(Integer jobStatus) {
                 this.jobStatus = jobStatus;
@@ -288,7 +355,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task started.
+             * <p>The time when the task started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-26T03:17:04Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -296,7 +366,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the trail.
+             * <p>The name of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trail-name</p>
              */
             public Builder trailName(String trailName) {
                 this.trailName = trailName;
@@ -304,7 +377,10 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was updated.
+             * <p>The time when the task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-26T03:20:08Z</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

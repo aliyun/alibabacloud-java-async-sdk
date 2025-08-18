@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeliveryHistoryJobsRequest} extends {@link RequestModel}
  *
  * <p>ListDeliveryHistoryJobsRequest</p>
  */
 public class ListDeliveryHistoryJobsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
     private ListDeliveryHistoryJobsRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListDeliveryHistoryJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,11 +75,14 @@ public class ListDeliveryHistoryJobsRequest extends Request {
         } 
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -83,11 +91,14 @@ public class ListDeliveryHistoryJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100.</li>
+         * <li>Default value: 20.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100.
-         * *   Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

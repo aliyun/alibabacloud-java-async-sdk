@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrailsResponseBody</p>
  */
 public class DescribeTrailsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrailList")
-    private java.util.List < TrailList> trailList;
+    @com.aliyun.core.annotation.NameInMap("TrailList")
+    private java.util.List<TrailList> trailList;
 
     private DescribeTrailsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class DescribeTrailsResponseBody extends TeaModel {
     /**
      * @return trailList
      */
-    public java.util.List < TrailList> getTrailList() {
+    public java.util.List<TrailList> getTrailList() {
         return this.trailList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TrailList> trailList; 
+        private java.util.List<TrailList> trailList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrailsResponseBody model) {
+            this.requestId = model.requestId;
+            this.trailList = model.trailList;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED8BC689-69DA-42AC-855E-3B06C1271194</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class DescribeTrailsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of returned trails.
+         * <p>The trails.</p>
          */
-        public Builder trailList(java.util.List < TrailList> trailList) {
+        public Builder trailList(java.util.List<TrailList> trailList) {
             this.trailList = trailList;
             return this;
         }
@@ -71,68 +91,74 @@ public class DescribeTrailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrailsResponseBody</p>
+     */
     public static class TrailList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EventRW")
+        @com.aliyun.core.annotation.NameInMap("EventRW")
         private String eventRW;
 
-        @NameInMap("HomeRegion")
+        @com.aliyun.core.annotation.NameInMap("HomeRegion")
         private String homeRegion;
 
-        @NameInMap("IsOrganizationTrail")
+        @com.aliyun.core.annotation.NameInMap("IsOrganizationTrail")
         private Boolean isOrganizationTrail;
 
-        @NameInMap("MaxComputeProjectArn")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeProjectArn")
         private String maxComputeProjectArn;
 
-        @NameInMap("MaxComputeWriteRoleArn")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeWriteRoleArn")
         private String maxComputeWriteRoleArn;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("OssBucketLocation")
+        @com.aliyun.core.annotation.NameInMap("OssBucketLocation")
         private String ossBucketLocation;
 
-        @NameInMap("OssBucketName")
+        @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
 
-        @NameInMap("OssKeyPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssKeyPrefix")
         private String ossKeyPrefix;
 
-        @NameInMap("OssWriteRoleArn")
+        @com.aliyun.core.annotation.NameInMap("OssWriteRoleArn")
         private String ossWriteRoleArn;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SlsProjectArn")
+        @com.aliyun.core.annotation.NameInMap("SlsProjectArn")
         private String slsProjectArn;
 
-        @NameInMap("SlsWriteRoleArn")
+        @com.aliyun.core.annotation.NameInMap("SlsWriteRoleArn")
         private String slsWriteRoleArn;
 
-        @NameInMap("StartLoggingTime")
+        @com.aliyun.core.annotation.NameInMap("StartLoggingTime")
         private String startLoggingTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopLoggingTime")
+        @com.aliyun.core.annotation.NameInMap("StopLoggingTime")
         private String stopLoggingTime;
 
-        @NameInMap("TrailArn")
+        @com.aliyun.core.annotation.NameInMap("TrailArn")
         private String trailArn;
 
-        @NameInMap("TrailRegion")
+        @com.aliyun.core.annotation.NameInMap("TrailRegion")
         private String trailRegion;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TrailList(Builder builder) {
@@ -337,8 +363,38 @@ public class DescribeTrailsResponseBody extends TeaModel {
             private String trailRegion; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrailList model) {
+                this.createTime = model.createTime;
+                this.eventRW = model.eventRW;
+                this.homeRegion = model.homeRegion;
+                this.isOrganizationTrail = model.isOrganizationTrail;
+                this.maxComputeProjectArn = model.maxComputeProjectArn;
+                this.maxComputeWriteRoleArn = model.maxComputeWriteRoleArn;
+                this.name = model.name;
+                this.organizationId = model.organizationId;
+                this.ossBucketLocation = model.ossBucketLocation;
+                this.ossBucketName = model.ossBucketName;
+                this.ossKeyPrefix = model.ossKeyPrefix;
+                this.ossWriteRoleArn = model.ossWriteRoleArn;
+                this.region = model.region;
+                this.slsProjectArn = model.slsProjectArn;
+                this.slsWriteRoleArn = model.slsWriteRoleArn;
+                this.startLoggingTime = model.startLoggingTime;
+                this.status = model.status;
+                this.stopLoggingTime = model.stopLoggingTime;
+                this.trailArn = model.trailArn;
+                this.trailRegion = model.trailRegion;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The time when the trail was created.
+             * <p>The time when the trail was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-01T06:27:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -346,12 +402,15 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The read/write type of the events that are delivered. Valid values:
-             * <p>
+             * <p>The read/write type of the events that are delivered. Valid values:</p>
+             * <ul>
+             * <li>Write: write events. This is the default value.</li>
+             * <li>Read: read events.</li>
+             * <li>All: read and write events.</li>
+             * </ul>
              * 
-             * *   Write: write events. This is the default value.
-             * *   Read: read events.
-             * *   All: read and write events.
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder eventRW(String eventRW) {
                 this.eventRW = eventRW;
@@ -359,7 +418,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The home region of the trail.
+             * <p>The home region of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder homeRegion(String homeRegion) {
                 this.homeRegion = homeRegion;
@@ -367,11 +429,14 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the trail is a multi-account trail. Valid values:
-             * <p>
+             * <p>Indicates whether the trail is a multi-account trail. Valid values:</p>
+             * <ul>
+             * <li>false (default)</li>
+             * <li>true</li>
+             * </ul>
              * 
-             * *   false (default)
-             * *   true
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
                 this.isOrganizationTrail = isOrganizationTrail;
@@ -379,7 +444,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxComputeProjectArn.
+             * <p>The ARN of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:odps:cn-hangzhou:141266687691****:project/actiontrail_****</p>
              */
             public Builder maxComputeProjectArn(String maxComputeProjectArn) {
                 this.maxComputeProjectArn = maxComputeProjectArn;
@@ -387,7 +455,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxComputeWriteRoleArn.
+             * <p>The ARN of the role that is assumed by ActionTrail to deliver events to the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::141266687691****:role/aliyunserviceroleforactiontrail</p>
              */
             public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
                 this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
@@ -395,7 +466,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the trail.
+             * <p>The name of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-4</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -403,10 +477,13 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
-             * <p>
+             * <p>The ID of the resource directory.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the trail is a multi-account trail.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the trail is a multi-account trail.
+             * <strong>example:</strong>
+             * <p>rd-EV****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -414,7 +491,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the OSS bucket resides.
+             * <p>The region where the OSS bucket resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder ossBucketLocation(String ossBucketLocation) {
                 this.ossBucketLocation = ossBucketLocation;
@@ -422,7 +502,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS bucket to which events are delivered.
+             * <p>The name of the OSS bucket to which events are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secloud</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -430,7 +513,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the files that are stored in the Object Storage Service (OSS) bucket.
+             * <p>The prefix of the files that are stored in the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trail1</p>
              */
             public Builder ossKeyPrefix(String ossKeyPrefix) {
                 this.ossKeyPrefix = ossKeyPrefix;
@@ -438,7 +524,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
              */
             public Builder ossWriteRoleArn(String ossWriteRoleArn) {
                 this.ossWriteRoleArn = ossWriteRoleArn;
@@ -446,7 +535,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the trail resides.
+             * <p>The region where the trail resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -454,7 +546,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the Log Service project to which events are delivered.
+             * <p>The ARN of the Log Service project to which events are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-qingdao:159498693826****:project/zhengze-audit-log</p>
              */
             public Builder slsProjectArn(String slsProjectArn) {
                 this.slsProjectArn = slsProjectArn;
@@ -462,7 +557,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.
+             * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::159498693826****:role/aliyunserviceroleforactiontrail</p>
              */
             public Builder slsWriteRoleArn(String slsWriteRoleArn) {
                 this.slsWriteRoleArn = slsWriteRoleArn;
@@ -470,7 +568,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the trail was last enabled.
+             * <p>The time when the trail was last enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-06T02:08:38Z</p>
              */
             public Builder startLoggingTime(String startLoggingTime) {
                 this.startLoggingTime = startLoggingTime;
@@ -478,12 +579,15 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the trail. Valid values:
-             * <p>
+             * <p>The status of the trail. Valid values:</p>
+             * <ul>
+             * <li>Disable: disabled.</li>
+             * <li>Enable: enabled.</li>
+             * <li>Fresh: The trail is created but is not enabled.</li>
+             * </ul>
              * 
-             * *   Disable: disabled.
-             * *   Enable: enabled.
-             * *   Fresh: The trail is created but is not enabled.
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -491,7 +595,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the trail was last disabled.
+             * <p>The time when the trail was last disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-06T02:09:04Z</p>
              */
             public Builder stopLoggingTime(String stopLoggingTime) {
                 this.stopLoggingTime = stopLoggingTime;
@@ -499,7 +606,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the trail.
+             * <p>The ARN of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:actiontrail:cn-hangzhou:159498693826****:trail/test-delivery-other</p>
              */
             public Builder trailArn(String trailArn) {
                 this.trailArn = trailArn;
@@ -507,7 +617,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the trail.
+             * <p>The region of the trail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder trailRegion(String trailRegion) {
                 this.trailRegion = trailRegion;
@@ -515,7 +628,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configurations of the trail were last updated.
+             * <p>The time when the configurations of the trail were last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-06T02:16:24Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

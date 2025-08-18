@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeliveryHistoryJobRequest} extends {@link RequestModel}
  *
  * <p>GetDeliveryHistoryJobRequest</p>
  */
 public class GetDeliveryHistoryJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long jobId;
 
     private GetDeliveryHistoryJobRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetDeliveryHistoryJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetDeliveryHistoryJobRequest extends Request {
         } 
 
         /**
-         * The ID of the historical event delivery task.
+         * <p>The ID of the historical event delivery task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16602</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

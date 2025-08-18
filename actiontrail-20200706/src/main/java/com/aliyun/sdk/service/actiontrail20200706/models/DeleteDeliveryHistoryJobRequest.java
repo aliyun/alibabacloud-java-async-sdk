@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDeliveryHistoryJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteDeliveryHistoryJobRequest</p>
  */
 public class DeleteDeliveryHistoryJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true, maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647)
     private Integer jobId;
 
     private DeleteDeliveryHistoryJobRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DeleteDeliveryHistoryJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,10 +60,12 @@ public class DeleteDeliveryHistoryJobRequest extends Request {
         } 
 
         /**
-         * The ID of the historical event delivery task to be deleted.
-         * <p>
+         * <p>The ID of the historical event delivery task to be deleted.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188101.html">ListDeliveryHistoryJobs</a> operation to query task IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListDeliveryHistoryJobs](~~188101~~) operation to query task IDs.
+         * <strong>example:</strong>
+         * <p>16602</p>
          */
         public Builder jobId(Integer jobId) {
             this.putQueryParameter("JobId", jobId);

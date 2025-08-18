@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrailRequest} extends {@link RequestModel}
  *
  * <p>CreateTrailRequest</p>
  */
 public class CreateTrailRequest extends Request {
-    @Query
-    @NameInMap("EventRW")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventRW")
     private String eventRW;
 
-    @Query
-    @NameInMap("IsOrganizationTrail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOrganizationTrail")
     private Boolean isOrganizationTrail;
 
-    @Query
-    @NameInMap("MaxComputeProjectArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectArn")
     private String maxComputeProjectArn;
 
-    @Query
-    @NameInMap("MaxComputeWriteRoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeWriteRoleArn")
     private String maxComputeWriteRoleArn;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssBucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
-    @Query
-    @NameInMap("OssKeyPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssKeyPrefix")
     private String ossKeyPrefix;
 
-    @Query
-    @NameInMap("OssWriteRoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssWriteRoleArn")
     private String ossWriteRoleArn;
 
-    @Query
-    @NameInMap("SlsProjectArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsProjectArn")
     private String slsProjectArn;
 
-    @Query
-    @NameInMap("SlsWriteRoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsWriteRoleArn")
     private String slsWriteRoleArn;
 
-    @Query
-    @NameInMap("TrailRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrailRegion")
     private String trailRegion;
 
     private CreateTrailRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class CreateTrailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,12 +200,15 @@ public class CreateTrailRequest extends Request {
         } 
 
         /**
-         * The read/write type of the events to be delivered. Valid values:
-         * <p>
+         * <p>The read/write type of the events to be delivered. Valid values:</p>
+         * <ul>
+         * <li>Write: write events. It is the default value.</li>
+         * <li>Read: read events.</li>
+         * <li>All: read and write events.</li>
+         * </ul>
          * 
-         * *   Write: write events. It is the default value.
-         * *   Read: read events.
-         * *   All: read and write events.
+         * <strong>example:</strong>
+         * <p>Write</p>
          */
         public Builder eventRW(String eventRW) {
             this.putQueryParameter("EventRW", eventRW);
@@ -209,11 +217,14 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a multi-account trail. Valid values:
-         * <p>
+         * <p>Specifies whether to create a multi-account trail. Valid values:</p>
+         * <ul>
+         * <li>true: creates a multi-account trail.</li>
+         * <li>false (default): creates a single-account trail.</li>
+         * </ul>
          * 
-         * *   true: creates a multi-account trail.
-         * *   false (default): creates a single-account trail.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
             this.putQueryParameter("IsOrganizationTrail", isOrganizationTrail);
@@ -222,7 +233,16 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * MaxComputeProjectArn.
+         * <p>The ARN of the MaxCompute project to which you want to deliver events.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the following parameters: OssBucketName, SlsProjectArn, and MaxComputeProjectArn.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> The name of the MaxCompute project must be prefixed with actiontrail_.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:odps:cn-hangzhou:15127787691****:project/actiontrail_****</p>
          */
         public Builder maxComputeProjectArn(String maxComputeProjectArn) {
             this.putQueryParameter("MaxComputeProjectArn", maxComputeProjectArn);
@@ -231,7 +251,14 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * MaxComputeWriteRoleArn.
+         * <p>The ARN of the role that is assumed by ActionTrail to deliver events to the MaxCompute project.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
+         * <li>If you specify this parameter and deliver events to the current account, you must grant the RAM role the permissions on the service-linked role for ActionTrail. If you want to deliver events to other accounts, you must attach a system policy to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::15127787691****:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
             this.putQueryParameter("MaxComputeWriteRoleArn", maxComputeWriteRoleArn);
@@ -240,12 +267,15 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The name of the trail to be created.
-         * <p>
+         * <p>The name of the trail to be created.</p>
+         * <p>The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
+         * <blockquote>
+         * <p>The name must be unique within your Alibaba Cloud account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * > The name must be unique within your Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>trail-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -254,12 +284,14 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The name of the OSS bucket to which events are to be delivered.
-         * <p>
+         * <p>The name of the OSS bucket to which events are to be delivered.</p>
+         * <p>The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <blockquote>
+         * <p>You must specify at least one of the OssBucketName and SlsProjectArn parameters.</p>
+         * </blockquote>
          * 
-         * The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).
-         * 
-         * > You must specify at least one of the OssBucketName and SlsProjectArn parameters.
+         * <strong>example:</strong>
+         * <p>audit-log</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -268,10 +300,11 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The prefix of the log files to be stored in the destination OSS bucket. This parameter can be left empty.
-         * <p>
+         * <p>The prefix of the log files to be stored in the destination OSS bucket. This parameter can be left empty.</p>
+         * <p>The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (_).</p>
          * 
-         * The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>at-product-account-audit-B</p>
          */
         public Builder ossKeyPrefix(String ossKeyPrefix) {
             this.putQueryParameter("OssKeyPrefix", ossKeyPrefix);
@@ -280,11 +313,14 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the service-linked role that is assumed by ActionTrail to deliver events to the destination Object Storage Service (OSS) bucket.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
+         * <li>If you specify this parameter and deliver events to the current account, you must grant the RAM role the permissions on the service-linked role for ActionTrail. If you want to deliver events to other accounts, you must attach a system policy to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the required resources. For more information, see [Manage the service-linked role](~~169244~~).
-         * *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
+         * <strong>example:</strong>
+         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder ossWriteRoleArn(String ossWriteRoleArn) {
             this.putQueryParameter("OssWriteRoleArn", ossWriteRoleArn);
@@ -293,10 +329,13 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The ARN of the Log Service project to which events are to be delivered.
-         * <p>
+         * <p>The ARN of the Log Service project to which events are to be delivered.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the OssBucketName and SlsProjectArn parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the OssBucketName and SlsProjectArn parameters.
+         * <strong>example:</strong>
+         * <p>acs:log:cn-shanghai::project/***</p>
          */
         public Builder slsProjectArn(String slsProjectArn) {
             this.putQueryParameter("SlsProjectArn", slsProjectArn);
@@ -305,11 +344,14 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.
-         * <p>
+         * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
+         * <li>If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see [Manage the service-linked role](~~169244~~).
-         * *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
+         * <strong>example:</strong>
+         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder slsWriteRoleArn(String slsWriteRoleArn) {
             this.putQueryParameter("SlsWriteRoleArn", slsWriteRoleArn);
@@ -318,12 +360,12 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * The one or more regions from which the trail delivers events.
-         * <p>
+         * <p>The one or more regions from which the trail delivers events.</p>
+         * <p>The default value is All, which indicates that the trail delivers events from all regions.</p>
+         * <p>You can also specify specific regions. You can call the <a href="https://help.aliyun.com/document_detail/213597.html">DescribeRegions</a> operation to query all the supported regions.</p>
          * 
-         * The default value is All, which indicates that the trail delivers events from all regions.
-         * 
-         * You can also specify specific regions. You can call the [DescribeRegions](~~213597~~) operation to query all the supported regions.
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder trailRegion(String trailRegion) {
             this.putQueryParameter("TrailRegion", trailRegion);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static DescribeRegionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private Regions regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The regions returned.
+         * <p>A list of regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +75,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACA7C814-12BC-4D81-A0D2-72071C9D6D2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +91,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Region extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Region(Builder builder) {
@@ -121,11 +147,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionEndpoint; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * The name of the region.
-             * <p>
+             * <p>The name of the region.</p>
+             * <blockquote>
+             * <p> If AcceptLanguage is set to zh-CN, the Chinese name of the region is returned. If AcceptLanguage is set to en-US or left empty, the English name of the region is returned.</p>
+             * </blockquote>
              * 
-             * > If the AcceptLanguage parameter is set to zh-CN, the Chinese name of the region is returned. If the AcceptLanguage parameter is set to zh-US or left empty, the English name of the region is returned.
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -133,7 +171,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of ActionTrail in the region.
+             * <p>The endpoint of ActionTrail in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>actiontrail.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -141,7 +182,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -155,9 +199,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
-        private java.util.List < Region> region;
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private java.util.List<Region> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -174,17 +224,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < Region> getRegion() {
+        public java.util.List<Region> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < Region> region; 
+            private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < Region> region) {
+            public Builder region(java.util.List<Region> region) {
                 this.region = region;
                 return this;
             }

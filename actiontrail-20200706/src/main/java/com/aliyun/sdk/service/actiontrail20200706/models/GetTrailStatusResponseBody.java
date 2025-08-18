@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrailStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrailStatusResponseBody</p>
  */
 public class GetTrailStatusResponseBody extends TeaModel {
-    @NameInMap("IsLogging")
+    @com.aliyun.core.annotation.NameInMap("IsLogging")
     private Boolean isLogging;
 
-    @NameInMap("LatestDeliveryError")
+    @com.aliyun.core.annotation.NameInMap("LatestDeliveryError")
     private String latestDeliveryError;
 
-    @NameInMap("LatestDeliveryLogServiceError")
+    @com.aliyun.core.annotation.NameInMap("LatestDeliveryLogServiceError")
     private String latestDeliveryLogServiceError;
 
-    @NameInMap("LatestDeliveryLogServiceTime")
+    @com.aliyun.core.annotation.NameInMap("LatestDeliveryLogServiceTime")
     private String latestDeliveryLogServiceTime;
 
-    @NameInMap("LatestDeliveryTime")
+    @com.aliyun.core.annotation.NameInMap("LatestDeliveryTime")
     private String latestDeliveryTime;
 
-    @NameInMap("OssBucketStatus")
+    @com.aliyun.core.annotation.NameInMap("OssBucketStatus")
     private Boolean ossBucketStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsLogStoreStatus")
+    @com.aliyun.core.annotation.NameInMap("SlsLogStoreStatus")
     private Boolean slsLogStoreStatus;
 
-    @NameInMap("StartLoggingTime")
+    @com.aliyun.core.annotation.NameInMap("StartLoggingTime")
     private String startLoggingTime;
 
-    @NameInMap("StopLoggingTime")
+    @com.aliyun.core.annotation.NameInMap("StopLoggingTime")
     private String stopLoggingTime;
 
     private GetTrailStatusResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
 
     public static GetTrailStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,12 +154,31 @@ public class GetTrailStatusResponseBody extends TeaModel {
         private String startLoggingTime; 
         private String stopLoggingTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTrailStatusResponseBody model) {
+            this.isLogging = model.isLogging;
+            this.latestDeliveryError = model.latestDeliveryError;
+            this.latestDeliveryLogServiceError = model.latestDeliveryLogServiceError;
+            this.latestDeliveryLogServiceTime = model.latestDeliveryLogServiceTime;
+            this.latestDeliveryTime = model.latestDeliveryTime;
+            this.ossBucketStatus = model.ossBucketStatus;
+            this.requestId = model.requestId;
+            this.slsLogStoreStatus = model.slsLogStoreStatus;
+            this.startLoggingTime = model.startLoggingTime;
+            this.stopLoggingTime = model.stopLoggingTime;
+        } 
+
         /**
-         * Indicates whether logging is enabled for the trail. Valid values:
-         * <p>
+         * <p>Indicates whether logging is enabled for the trail. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLogging(Boolean isLogging) {
             this.isLogging = isLogging;
@@ -158,7 +186,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The log of the last failed delivery.
+         * <p>The log of the last failed delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>write sls failed, exception: the parent of sub user must be project owner, itemscount: 1</p>
          */
         public Builder latestDeliveryError(String latestDeliveryError) {
             this.latestDeliveryError = latestDeliveryError;
@@ -166,7 +197,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The log of the last failed delivery to Log Service.
+         * <p>The log of the last failed delivery to Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>write sls failed, exception: the parent of sub user must be project owner, itemscount: 1</p>
          */
         public Builder latestDeliveryLogServiceError(String latestDeliveryLogServiceError) {
             this.latestDeliveryLogServiceError = latestDeliveryLogServiceError;
@@ -174,7 +208,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The most recent time when an event was delivered to Log Service.
+         * <p>The most recent time when an event was delivered to Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-26T09:19:44Z</p>
          */
         public Builder latestDeliveryLogServiceTime(String latestDeliveryLogServiceTime) {
             this.latestDeliveryLogServiceTime = latestDeliveryLogServiceTime;
@@ -182,7 +219,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The most recent time when an event was delivered by the trail.
+         * <p>The most recent time when an event was delivered by the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-26T09:19:44Z</p>
          */
         public Builder latestDeliveryTime(String latestDeliveryTime) {
             this.latestDeliveryTime = latestDeliveryTime;
@@ -190,11 +230,14 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the destination Object Storage Service (OSS) bucket is available. Valid values:
-         * <p>
+         * <p>Indicates whether the destination Object Storage Service (OSS) bucket is available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ossBucketStatus(Boolean ossBucketStatus) {
             this.ossBucketStatus = ossBucketStatus;
@@ -202,7 +245,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8067369B-B923-4D26-85BC-61BF33922505</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,11 +256,14 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the destination Log Service Logstore is available. Valid values:
-         * <p>
+         * <p>Indicates whether the destination Log Service Logstore is available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slsLogStoreStatus(Boolean slsLogStoreStatus) {
             this.slsLogStoreStatus = slsLogStoreStatus;
@@ -222,7 +271,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The time when logging was last enabled for the trail.
+         * <p>The time when logging was last enabled for the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-24T09:19:44Z</p>
          */
         public Builder startLoggingTime(String startLoggingTime) {
             this.startLoggingTime = startLoggingTime;
@@ -230,7 +282,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The time when logging was last disabled for the trail.
+         * <p>The time when logging was last disabled for the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-25T09:19:44Z</p>
          */
         public Builder stopLoggingTime(String stopLoggingTime) {
             this.stopLoggingTime = stopLoggingTime;

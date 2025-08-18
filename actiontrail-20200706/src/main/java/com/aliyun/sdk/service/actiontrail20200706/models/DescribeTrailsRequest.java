@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrailsRequest</p>
  */
 public class DescribeTrailsRequest extends Request {
-    @Query
-    @NameInMap("IncludeOrganizationTrail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeOrganizationTrail")
     private Boolean includeOrganizationTrail;
 
-    @Query
-    @NameInMap("IncludeShadowTrails")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeShadowTrails")
     private Boolean includeShadowTrails;
 
-    @Query
-    @NameInMap("NameList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NameList")
     private String nameList;
 
     private DescribeTrailsRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class DescribeTrailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,11 +87,14 @@ public class DescribeTrailsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the information about multi-account trails. Valid values:
-         * <p>
+         * <p>Specifies whether to query the information about multi-account trails. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeOrganizationTrail(Boolean includeOrganizationTrail) {
             this.putQueryParameter("IncludeOrganizationTrail", includeOrganizationTrail);
@@ -95,11 +103,14 @@ public class DescribeTrailsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information about shadow trails. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information about shadow trails. Valid values:</p>
+         * <ul>
+         * <li>false: Do not return the information about shadow trails. It is the default value.</li>
+         * <li>true: Return the information about shadow trails.</li>
+         * </ul>
          * 
-         * *   false: Do not return the information about shadow trails. It is the default value.
-         * *   true: Return the information about shadow trails.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeShadowTrails(Boolean includeShadowTrails) {
             this.putQueryParameter("IncludeShadowTrails", includeShadowTrails);
@@ -108,7 +119,10 @@ public class DescribeTrailsRequest extends Request {
         }
 
         /**
-         * The names of the trails whose information you want to query. Separate multiple trail names with commas (,).
+         * <p>The names of the trails whose information you want to query. Separate multiple trail names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc,def</p>
          */
         public Builder nameList(String nameList) {
             this.putQueryParameter("NameList", nameList);

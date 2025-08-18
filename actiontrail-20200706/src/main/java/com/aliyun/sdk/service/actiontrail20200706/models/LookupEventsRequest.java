@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupEventsRequest} extends {@link RequestModel}
  *
  * <p>LookupEventsRequest</p>
  */
 public class LookupEventsRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("LookupAttribute")
-    private java.util.List < LookupAttribute> lookupAttribute;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LookupAttribute")
+    private java.util.List<LookupAttribute> lookupAttribute;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private LookupEventsRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class LookupEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,7 +81,7 @@ public class LookupEventsRequest extends Request {
     /**
      * @return lookupAttribute
      */
-    public java.util.List < LookupAttribute> getLookupAttribute() {
+    public java.util.List<LookupAttribute> getLookupAttribute() {
         return this.lookupAttribute;
     }
 
@@ -104,7 +109,7 @@ public class LookupEventsRequest extends Request {
     public static final class Builder extends Request.Builder<LookupEventsRequest, Builder> {
         private String direction; 
         private String endTime; 
-        private java.util.List < LookupAttribute> lookupAttribute; 
+        private java.util.List<LookupAttribute> lookupAttribute; 
         private String maxResults; 
         private String nextToken; 
         private String startTime; 
@@ -124,11 +129,14 @@ public class LookupEventsRequest extends Request {
         } 
 
         /**
-         * The order in which details of events are to be retrieved. Valid values:
-         * <p>
+         * <p>The order in which details of events are to be retrieved. Valid values:</p>
+         * <ul>
+         * <li>FORWARD: ascending order.</li>
+         * <li>BACKWARD: descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   FORWARD: ascending order.
-         * *   BACKWARD: descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>BACKWARD</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -137,7 +145,10 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The default time is the current time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. The default time is the current time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T11:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,19 +157,20 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * Query conditions.
+         * <p>Query conditions.</p>
          */
-        public Builder lookupAttribute(java.util.List < LookupAttribute> lookupAttribute) {
+        public Builder lookupAttribute(java.util.List<LookupAttribute> lookupAttribute) {
             this.putQueryParameter("LookupAttribute", lookupAttribute);
             this.lookupAttribute = lookupAttribute;
             return this;
         }
 
         /**
-         * The maximum number of entries to be returned.
-         * <p>
+         * <p>The maximum number of entries to be returned.</p>
+         * <p>Valid values: 0 to 50.</p>
          * 
-         * Valid values: 0 to 50.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -167,10 +179,13 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * The token used to request the next page of query results.
-         * <p>
+         * <p>The token used to request the next page of query results.</p>
+         * <blockquote>
+         * <p>The request parameters must be the same as those of the last request.</p>
+         * </blockquote>
          * 
-         * > The request parameters must be the same as those of the last request.
+         * <strong>example:</strong>
+         * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +194,10 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The default time is seven days prior to the current time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. The default time is seven days prior to the current time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-08T11:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -194,11 +212,17 @@ public class LookupEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link LookupEventsRequest} extends {@link TeaModel}
+     *
+     * <p>LookupEventsRequest</p>
+     */
     public static class LookupAttribute extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LookupAttribute(Builder builder) {
@@ -232,20 +256,32 @@ public class LookupEventsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LookupAttribute model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the query condition. Valid values:
-             * <p>
+             * <p>The key of the query condition. Valid values:</p>
+             * <ul>
+             * <li>ServiceName: the name of a specific Alibaba Cloud service.</li>
+             * <li>EventName: the name of a specific event.</li>
+             * <li>User: the name of the RAM user who calls a specific operation.</li>
+             * <li>EventId: the ID of a specific event.</li>
+             * <li>ResourceType: the type of resources.</li>
+             * <li>ResourceName: the name of a specific resource.</li>
+             * <li>EventRW: the read/write type of events.</li>
+             * <li>EventAccessKeyId: the AccessKey ID used in events.</li>
+             * </ul>
+             * <blockquote>
+             * <p>You can use only one query condition for each query.</p>
+             * </blockquote>
              * 
-             * *  ServiceName: the name of a specific Alibaba Cloud service.
-             * *  EventName: the name of a specific event.
-             * *  User: the name of the RAM user who calls a specific operation.
-             * *  EventId: the ID of a specific event.
-             * *  ResourceType: the type of resources.
-             * *   ResourceName: the name of a specific resource.
-             * *   EventRW: the read/write type of events.
-             * *  EventAccessKeyId: the AccessKey ID used in events.
-             * 
-             * > You can use only one query condition for each query.
+             * <strong>example:</strong>
+             * <p>ServiceName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -253,17 +289,20 @@ public class LookupEventsRequest extends Request {
             }
 
             /**
-             * The value of the query condition. Valid values:
-             * <p>
+             * <p>The value of the query condition. Valid values:</p>
+             * <ul>
+             * <li>When the LookupAttribute.N.Key parameter is set to ServiceName, you can set this parameter to a value such as <code>Ecs</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to EventName, you can set this parameter to a value such as <code>ConsoleSignin</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to User, you can set this parameter to a value such as <code>Alice</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to EventId, you can set this parameter to a value such as <code>B702AFA3-FD4B-40E3-88E4-C0752FAA****</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to ResourceType, you can set this parameter to a value such as <code>ACS::ECS::Instance</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to ResourceName, you can set this parameter to a value such as <code>i-bp14664y88udkt45****</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to EventRW, you can set this parameter to <code>Read</code> or <code>Write</code>.</li>
+             * <li>When the LookupAttribute.N.Key parameter is set to EventAccessKeyId, you can set this parameter to a value such as <code>LTAI****************</code>.</li>
+             * </ul>
              * 
-             * *   When the LookupAttribute.N.Key parameter is set to ServiceName, you can set this parameter to a value such as `Ecs`.
-             * *   When the LookupAttribute.N.Key parameter is set to EventName, you can set this parameter to a value such as `ConsoleSignin`.
-             * *   When the LookupAttribute.N.Key parameter is set to User, you can set this parameter to a value such as `Alice`.
-             * *   When the LookupAttribute.N.Key parameter is set to EventId, you can set this parameter to a value such as `B702AFA3-FD4B-40E3-88E4-C0752FAA****`.
-             * *   When the LookupAttribute.N.Key parameter is set to ResourceType, you can set this parameter to a value such as `ACS::ECS::Instance`.
-             * *   When the LookupAttribute.N.Key parameter is set to ResourceName, you can set this parameter to a value such as `i-bp14664y88udkt45****`.
-             * *   When the LookupAttribute.N.Key parameter is set to EventRW, you can set this parameter to `Read` or `Write`.
-             * *   When the LookupAttribute.N.Key parameter is set to EventAccessKeyId, you can set this parameter to a value such as `LTAI4FoDkCf4DU1bic1V****`.
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder value(String value) {
                 this.value = value;

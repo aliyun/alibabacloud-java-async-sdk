@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGlobalEventsStorageRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetGlobalEventsStorageRegionResponseBody</p>
  */
 public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageRegion")
+    @com.aliyun.core.annotation.NameInMap("StorageRegion")
     private String storageRegion;
 
     private GetGlobalEventsStorageRegionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
 
     public static GetGlobalEventsStorageRegionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
         private String requestId; 
         private String storageRegion; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetGlobalEventsStorageRegionResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageRegion = model.storageRegion;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0474CD9D-DF37-55D4-8383-D978CFBE13A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,34 +78,30 @@ public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The region where global events are stored.
-         * <p>
+         * <p>The region where global events are stored.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>ap-southeast-1</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   ap-southeast-1
+         * <p>the Singapore region</p>
+         * <!-- -->
+         * </li>
+         * <li><p>cn-hangzhou</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>the China (Hangzhou) region</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     the Singapore region
-         * 
-         *     <!-- -->
-         * 
-         * *   cn-hangzhou
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     the China (Hangzhou) region
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder storageRegion(String storageRegion) {
             this.storageRegion = storageRegion;

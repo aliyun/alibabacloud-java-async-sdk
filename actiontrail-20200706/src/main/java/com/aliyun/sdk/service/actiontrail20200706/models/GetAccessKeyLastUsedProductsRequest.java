@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessKeyLastUsedProductsRequest} extends {@link RequestModel}
  *
  * <p>GetAccessKeyLastUsedProductsRequest</p>
  */
 public class GetAccessKeyLastUsedProductsRequest extends Request {
-    @Query
-    @NameInMap("AccessKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessKey;
 
     private GetAccessKeyLastUsedProductsRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetAccessKeyLastUsedProductsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetAccessKeyLastUsedProductsRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID.
+         * <p>The AccessKey ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI****************</p>
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);

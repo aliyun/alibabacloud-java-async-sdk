@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableInsightRequest} extends {@link RequestModel}
  *
  * <p>EnableInsightRequest</p>
  */
 public class EnableInsightRequest extends Request {
-    @Query
-    @NameInMap("InsightType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InsightType")
     private String insightType;
 
     private EnableInsightRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class EnableInsightRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,15 @@ public class EnableInsightRequest extends Request {
         } 
 
         /**
-         * InsightType.
+         * <p>The type of the Insights event. Valid values:</p>
+         * <ul>
+         * <li>IpInsight: Insights event on IP address</li>
+         * <li>ApiCallRateInsight: Insights event on API call rate</li>
+         * <li>ApiErrorRateInsight: Insights event on API error rate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IpInsight</p>
          */
         public Builder insightType(String insightType) {
             this.putQueryParameter("InsightType", insightType);

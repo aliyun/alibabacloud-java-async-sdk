@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeliveryHistoryJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeliveryHistoryJobResponseBody</p>
  */
 public class GetDeliveryHistoryJobResponseBody extends TeaModel {
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("HomeRegion")
+    @com.aliyun.core.annotation.NameInMap("HomeRegion")
     private String homeRegion;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private Long jobId;
 
-    @NameInMap("JobStatus")
+    @com.aliyun.core.annotation.NameInMap("JobStatus")
     private Integer jobStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
-    private java.util.List < Status> status;
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<Status> status;
 
-    @NameInMap("TrailName")
+    @com.aliyun.core.annotation.NameInMap("TrailName")
     private String trailName;
 
-    @NameInMap("UpdatedTime")
+    @com.aliyun.core.annotation.NameInMap("UpdatedTime")
     private String updatedTime;
 
     private GetDeliveryHistoryJobResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
 
     public static GetDeliveryHistoryJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -115,7 +124,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     /**
      * @return status
      */
-    public java.util.List < Status> getStatus() {
+    public java.util.List<Status> getStatus() {
         return this.status;
     }
 
@@ -141,12 +150,31 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         private Integer jobStatus; 
         private String requestId; 
         private String startTime; 
-        private java.util.List < Status> status; 
+        private java.util.List<Status> status; 
         private String trailName; 
         private String updatedTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDeliveryHistoryJobResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.endTime = model.endTime;
+            this.homeRegion = model.homeRegion;
+            this.jobId = model.jobId;
+            this.jobStatus = model.jobStatus;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.trailName = model.trailName;
+            this.updatedTime = model.updatedTime;
+        } 
+
         /**
-         * The time when the task was created.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T07:15:03Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -154,7 +182,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task ended.
+         * <p>The time when the task ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T07:20:03Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -162,7 +193,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The home region of the trail.
+         * <p>The home region of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = homeRegion;
@@ -170,7 +204,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16602</p>
          */
         public Builder jobId(Long jobId) {
             this.jobId = jobId;
@@ -178,13 +215,16 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The task status. Valid values:
-         * <p>
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>0: The task is initializing.</li>
+         * <li>1: The task is delivering historical events.</li>
+         * <li>2: The task is complete.</li>
+         * <li>3: The task fails.</li>
+         * </ul>
          * 
-         * *   0: The task is initializing.
-         * *   1: The task is delivering historical events.
-         * *   2: The task is complete.
-         * *   3: The task fails.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder jobStatus(Integer jobStatus) {
             this.jobStatus = jobStatus;
@@ -192,7 +232,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAFEC427-A00D-5653-B837-D0FA52220D8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,7 +243,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task started.
+         * <p>The time when the task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-26T07:15:03Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -208,15 +254,18 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * A list of task statuses in each region.
+         * <p>A list of task statuses in each region.</p>
          */
-        public Builder status(java.util.List < Status> status) {
+        public Builder status(java.util.List<Status> status) {
             this.status = status;
             return this;
         }
 
         /**
-         * The name of the trail based on which the task delivers events.
+         * <p>The name of the trail based on which the task delivers events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trail-name</p>
          */
         public Builder trailName(String trailName) {
             this.trailName = trailName;
@@ -224,7 +273,10 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was updated.
+         * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T07:28:47Z</p>
          */
         public Builder updatedTime(String updatedTime) {
             this.updatedTime = updatedTime;
@@ -237,11 +289,17 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeliveryHistoryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeliveryHistoryJobResponseBody</p>
+     */
     public static class Status extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Status(Builder builder) {
@@ -275,8 +333,19 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
             private String region; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.region = model.region;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -284,13 +353,16 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
             }
 
             /**
-             * The task status in each region. Valid values:
-             * <p>
+             * <p>The task status in each region. Valid values:</p>
+             * <ul>
+             * <li>0: The task is initializing.</li>
+             * <li>1: The task is delivering historical events.</li>
+             * <li>2: The task is complete.</li>
+             * <li>3: The task fails.</li>
+             * </ul>
              * 
-             * *   0: The task is initializing.
-             * *   1: The task is delivering historical events.
-             * *   2: The task is complete.
-             * *   3: The task fails.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

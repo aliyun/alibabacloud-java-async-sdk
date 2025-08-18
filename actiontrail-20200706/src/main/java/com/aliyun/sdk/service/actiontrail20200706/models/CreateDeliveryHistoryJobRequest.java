@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeliveryHistoryJobRequest} extends {@link RequestModel}
  *
  * <p>CreateDeliveryHistoryJobRequest</p>
  */
 public class CreateDeliveryHistoryJobRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("TrailName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrailName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trailName;
 
     private CreateDeliveryHistoryJobRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class CreateDeliveryHistoryJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,12 +74,12 @@ public class CreateDeliveryHistoryJobRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and can be up to 64 characters in length.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
-         * The token can contain only ASCII characters and can be up to 64 characters in length.
-         * 
-         * For more information, see [How to ensure idempotence](~~25693~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -83,7 +88,11 @@ public class CreateDeliveryHistoryJobRequest extends Request {
         }
 
         /**
-         * The name of the trail for which you want to create a historical event delivery task.
+         * <p>The name of the trail for which you want to create a historical event delivery task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trail-name</p>
          */
         public Builder trailName(String trailName) {
             this.putQueryParameter("TrailName", trailName);

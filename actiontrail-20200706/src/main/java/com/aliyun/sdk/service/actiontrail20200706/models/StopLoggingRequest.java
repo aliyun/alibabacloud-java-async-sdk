@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopLoggingRequest} extends {@link RequestModel}
  *
  * <p>StopLoggingRequest</p>
  */
 public class StopLoggingRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private StopLoggingRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class StopLoggingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,12 +60,15 @@ public class StopLoggingRequest extends Request {
         } 
 
         /**
-         * The name of the trail that you want to disable.
-         * <p>
+         * <p>The name of the trail that you want to disable.</p>
+         * <p>The name must be 6 to 36 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_). It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p>The name must be unique within your Alibaba Cloud account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 6 to 36 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). It must start with a lowercase letter.
-         * 
-         * > The name must be unique within your Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>trail-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

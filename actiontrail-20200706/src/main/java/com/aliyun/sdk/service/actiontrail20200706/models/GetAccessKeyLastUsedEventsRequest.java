@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessKeyLastUsedEventsRequest} extends {@link RequestModel}
  *
  * <p>GetAccessKeyLastUsedEventsRequest</p>
  */
 public class GetAccessKeyLastUsedEventsRequest extends Request {
-    @Query
-    @NameInMap("AccessKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessKey;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
     private GetAccessKeyLastUsedEventsRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class GetAccessKeyLastUsedEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class GetAccessKeyLastUsedEventsRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID.
+         * <p>The AccessKey ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI****************</p>
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);
@@ -107,10 +116,13 @@ public class GetAccessKeyLastUsedEventsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
-         * <p>
+         * <p>The token that determines the start point of the query.</p>
+         * <blockquote>
+         * <p>The request parameters must be the same as those of the last request.</p>
+         * </blockquote>
          * 
-         * > The request parameters must be the same as those of the last request.
+         * <strong>example:</strong>
+         * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -119,12 +131,12 @@ public class GetAccessKeyLastUsedEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 0 to 100.</p>
+         * <p>Default value: 20.</p>
          * 
-         * Valid values: 0 to 100.
-         * 
-         * Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,7 +145,11 @@ public class GetAccessKeyLastUsedEventsRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see [Supported Alibaba Cloud services](~~28829~~).
+         * <p>The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see <a href="https://help.aliyun.com/document_detail/28829.html">Supported Alibaba Cloud services</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

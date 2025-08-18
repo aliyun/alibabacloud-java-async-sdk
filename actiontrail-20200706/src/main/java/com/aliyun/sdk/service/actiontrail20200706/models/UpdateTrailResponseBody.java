@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.actiontrail20200706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrailResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTrailResponseBody</p>
  */
 public class UpdateTrailResponseBody extends TeaModel {
-    @NameInMap("EventRW")
+    @com.aliyun.core.annotation.NameInMap("EventRW")
     private String eventRW;
 
-    @NameInMap("HomeRegion")
+    @com.aliyun.core.annotation.NameInMap("HomeRegion")
     private String homeRegion;
 
-    @NameInMap("MaxComputeProjectArn")
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectArn")
     private String maxComputeProjectArn;
 
-    @NameInMap("MaxComputeWriteRoleArn")
+    @com.aliyun.core.annotation.NameInMap("MaxComputeWriteRoleArn")
     private String maxComputeWriteRoleArn;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OssBucketName")
+    @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
-    @NameInMap("OssKeyPrefix")
+    @com.aliyun.core.annotation.NameInMap("OssKeyPrefix")
     private String ossKeyPrefix;
 
-    @NameInMap("OssWriteRoleArn")
+    @com.aliyun.core.annotation.NameInMap("OssWriteRoleArn")
     private String ossWriteRoleArn;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsProjectArn")
+    @com.aliyun.core.annotation.NameInMap("SlsProjectArn")
     private String slsProjectArn;
 
-    @NameInMap("SlsWriteRoleArn")
+    @com.aliyun.core.annotation.NameInMap("SlsWriteRoleArn")
     private String slsWriteRoleArn;
 
-    @NameInMap("TrailRegion")
+    @com.aliyun.core.annotation.NameInMap("TrailRegion")
     private String trailRegion;
 
     private UpdateTrailResponseBody(Builder builder) {
@@ -69,6 +74,10 @@ public class UpdateTrailResponseBody extends TeaModel {
 
     public static UpdateTrailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -169,8 +178,29 @@ public class UpdateTrailResponseBody extends TeaModel {
         private String slsWriteRoleArn; 
         private String trailRegion; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateTrailResponseBody model) {
+            this.eventRW = model.eventRW;
+            this.homeRegion = model.homeRegion;
+            this.maxComputeProjectArn = model.maxComputeProjectArn;
+            this.maxComputeWriteRoleArn = model.maxComputeWriteRoleArn;
+            this.name = model.name;
+            this.ossBucketName = model.ossBucketName;
+            this.ossKeyPrefix = model.ossKeyPrefix;
+            this.ossWriteRoleArn = model.ossWriteRoleArn;
+            this.requestId = model.requestId;
+            this.slsProjectArn = model.slsProjectArn;
+            this.slsWriteRoleArn = model.slsWriteRoleArn;
+            this.trailRegion = model.trailRegion;
+        } 
+
         /**
-         * The read/write type of the events to be delivered.
+         * <p>The read/write type of the events to be delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Write</p>
          */
         public Builder eventRW(String eventRW) {
             this.eventRW = eventRW;
@@ -178,7 +208,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The home region of the trail.
+         * <p>The home region of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = homeRegion;
@@ -186,7 +219,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * MaxComputeProjectArn.
+         * <p>ARN of the Big Data Compute Service project for tracking delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:odps:cn-hangzhou:151266687691****:project/actiontrail_****</p>
          */
         public Builder maxComputeProjectArn(String maxComputeProjectArn) {
             this.maxComputeProjectArn = maxComputeProjectArn;
@@ -194,7 +230,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * MaxComputeWriteRoleArn.
+         * <p>The ARN of the role that Operation Audit assumes when delivering operation events to the Big Data Compute Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
             this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
@@ -202,7 +241,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trail.
+         * <p>The name of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trail-test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -210,7 +252,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the OSS bucket.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-log</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -218,7 +263,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The prefix of the log files to be stored in the destination OSS bucket.
+         * <p>The prefix of the log files to be stored in the destination OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-product-account-audit-B</p>
          */
         public Builder ossKeyPrefix(String ossKeyPrefix) {
             this.ossKeyPrefix = ossKeyPrefix;
@@ -226,7 +274,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
+         * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder ossWriteRoleArn(String ossWriteRoleArn) {
             this.ossWriteRoleArn = ossWriteRoleArn;
@@ -234,7 +285,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2599A180-5236-44D8-9490-50B6F4F8BA35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +296,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the Log Service project to which events are to be delivered.
+         * <p>The ARN of the Log Service project to which events are to be delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:log:cn-hangzhou:151266687691****:project/test-project</p>
          */
         public Builder slsProjectArn(String slsProjectArn) {
             this.slsProjectArn = slsProjectArn;
@@ -250,7 +307,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.
+         * <p>The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
          */
         public Builder slsWriteRoleArn(String slsWriteRoleArn) {
             this.slsWriteRoleArn = slsWriteRoleArn;
@@ -258,7 +318,10 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The one or more regions from which the trail delivers events.
+         * <p>The one or more regions from which the trail delivers events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder trailRegion(String trailRegion) {
             this.trailRegion = trailRegion;
