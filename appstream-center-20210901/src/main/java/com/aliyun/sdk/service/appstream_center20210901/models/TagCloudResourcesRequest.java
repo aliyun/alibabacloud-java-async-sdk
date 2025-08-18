@@ -137,7 +137,7 @@ public class TagCloudResourcesRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
         private String value;
 
         private Tags(Builder builder) {

@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateWuyingServer  CreateWuyingServerRequest
+     * @return CreateWuyingServerResponse
+     */
+    CompletableFuture<CreateWuyingServerResponse> createWuyingServer(CreateWuyingServerRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> You cannot call this operation to delete a subscription delivery group.</p>
@@ -176,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTenantConfigResponse> listTenantConfig(ListTenantConfigRequest request);
 
     /**
+     * @param request the request parameters of ListWuyingServer  ListWuyingServerRequest
+     * @return ListWuyingServerResponse
+     */
+    CompletableFuture<ListWuyingServerResponse> listWuyingServer(ListWuyingServerRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
@@ -217,6 +229,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyTenantConfigResponse> modifyTenantConfig(ModifyTenantConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyWuyingServerAttribute  ModifyWuyingServerAttributeRequest
+     * @return ModifyWuyingServerAttributeResponse
+     */
+    CompletableFuture<ModifyWuyingServerAttributeResponse> modifyWuyingServerAttribute(ModifyWuyingServerAttributeRequest request);
+
+    /**
      * @param request the request parameters of PageListAppInstanceGroupUser  PageListAppInstanceGroupUserRequest
      * @return PageListAppInstanceGroupUserResponse
      */
@@ -230,6 +248,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewAppInstanceGroupResponse
      */
     CompletableFuture<RenewAppInstanceGroupResponse> renewAppInstanceGroup(RenewAppInstanceGroupRequest request);
+
+    /**
+     * @param request the request parameters of RenewWuyingServer  RenewWuyingServerRequest
+     * @return RenewWuyingServerResponse
+     */
+    CompletableFuture<RenewWuyingServerResponse> renewWuyingServer(RenewWuyingServerRequest request);
+
+    /**
+     * @param request the request parameters of RestartWuyingServer  RestartWuyingServerRequest
+     * @return RestartWuyingServerResponse
+     */
+    CompletableFuture<RestartWuyingServerResponse> restartWuyingServer(RestartWuyingServerRequest request);
+
+    /**
+     * @param request the request parameters of StartWuyingServer  StartWuyingServerRequest
+     * @return StartWuyingServerResponse
+     */
+    CompletableFuture<StartWuyingServerResponse> startWuyingServer(StartWuyingServerRequest request);
+
+    /**
+     * @param request the request parameters of StopWuyingServer  StopWuyingServerRequest
+     * @return StopWuyingServerResponse
+     */
+    CompletableFuture<StopWuyingServerResponse> stopWuyingServer(StopWuyingServerRequest request);
 
     /**
      * @param request the request parameters of TagCloudResources  TagCloudResourcesRequest
