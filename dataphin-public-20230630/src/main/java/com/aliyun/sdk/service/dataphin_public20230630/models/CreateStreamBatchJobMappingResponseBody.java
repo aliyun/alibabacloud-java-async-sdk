@@ -182,11 +182,15 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        private Long jobId;
+
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {
             this.fileId = builder.fileId;
+            this.jobId = builder.jobId;
             this.url = builder.url;
         }
 
@@ -206,6 +210,13 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobId
+         */
+        public Long getJobId() {
+            return this.jobId;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -214,6 +225,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileId; 
+            private Long jobId; 
             private String url; 
 
             private Builder() {
@@ -221,6 +233,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.fileId = model.fileId;
+                this.jobId = model.jobId;
                 this.url = model.url;
             } 
 
@@ -229,6 +242,14 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(Long jobId) {
+                this.jobId = jobId;
                 return this;
             }
 
