@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDocsResponse> deleteDocs(DeleteDocsRequest request);
 
     /**
+     * @param request the request parameters of DeleteFactAuditUrl  DeleteFactAuditUrlRequest
+     * @return DeleteFactAuditUrlResponse
+     */
+    CompletableFuture<DeleteFactAuditUrlResponse> deleteFactAuditUrl(DeleteFactAuditUrlRequest request);
+
+    /**
      * @param request the request parameters of DeleteGeneratedContent  DeleteGeneratedContentRequest
      * @return DeleteGeneratedContentResponse
      */
@@ -372,6 +378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetEnterpriseVocAnalysisTaskResponse
      */
     CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetFactAuditUrl  GetFactAuditUrlRequest
+     * @return GetFactAuditUrlResponse
+     */
+    CompletableFuture<GetFactAuditUrlResponse> getFactAuditUrl(GetFactAuditUrlRequest request);
 
     /**
      * @param request the request parameters of GetFileContentLength  GetFileContentLengthRequest
@@ -916,6 +928,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunTranslateGenerationResponseBody> runTranslateGenerationWithResponseIterable(RunTranslateGenerationRequest request);
 
     /**
+     * @param request the request parameters of RunVideoScriptGenerate  RunVideoScriptGenerateRequest
+     * @return RunVideoScriptGenerateResponse
+     */
+    CompletableFuture<RunVideoScriptGenerateResponse> runVideoScriptGenerate(RunVideoScriptGenerateRequest request);
+
+    ResponseIterable<RunVideoScriptGenerateResponseBody> runVideoScriptGenerateWithResponseIterable(RunVideoScriptGenerateRequest request);
+
+    /**
      * @param request the request parameters of RunWriteToneGeneration  RunWriteToneGenerationRequest
      * @return RunWriteToneGenerationResponse
      */
@@ -1028,6 +1048,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitExportTermsTaskResponse
      */
     CompletableFuture<SubmitExportTermsTaskResponse> submitExportTermsTask(SubmitExportTermsTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitFactAuditUrl  SubmitFactAuditUrlRequest
+     * @return SubmitFactAuditUrlResponse
+     */
+    CompletableFuture<SubmitFactAuditUrlResponse> submitFactAuditUrl(SubmitFactAuditUrlRequest request);
 
     /**
      * @param request the request parameters of SubmitImportTermsTask  SubmitImportTermsTaskRequest

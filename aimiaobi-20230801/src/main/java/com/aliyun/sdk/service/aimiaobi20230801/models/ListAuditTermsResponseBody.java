@@ -245,6 +245,9 @@ public class ListAuditTermsResponseBody extends TeaModel {
      * <p>ListAuditTermsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExceptionWord")
+        private java.util.List<String> exceptionWord;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -258,6 +261,7 @@ public class ListAuditTermsResponseBody extends TeaModel {
         private String termsDesc;
 
         private Data(Builder builder) {
+            this.exceptionWord = builder.exceptionWord;
             this.id = builder.id;
             this.keyword = builder.keyword;
             this.suggestWord = builder.suggestWord;
@@ -270,6 +274,13 @@ public class ListAuditTermsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return exceptionWord
+         */
+        public java.util.List<String> getExceptionWord() {
+            return this.exceptionWord;
         }
 
         /**
@@ -301,6 +312,7 @@ public class ListAuditTermsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> exceptionWord; 
             private String id; 
             private String keyword; 
             private String suggestWord; 
@@ -310,11 +322,20 @@ public class ListAuditTermsResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.exceptionWord = model.exceptionWord;
                 this.id = model.id;
                 this.keyword = model.keyword;
                 this.suggestWord = model.suggestWord;
                 this.termsDesc = model.termsDesc;
             } 
+
+            /**
+             * ExceptionWord.
+             */
+            public Builder exceptionWord(java.util.List<String> exceptionWord) {
+                this.exceptionWord = exceptionWord;
+                return this;
+            }
 
             /**
              * Id.

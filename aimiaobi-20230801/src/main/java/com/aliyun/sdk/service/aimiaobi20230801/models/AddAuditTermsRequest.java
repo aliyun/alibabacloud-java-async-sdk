@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddAuditTermsRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExceptionWord")
+    private java.util.List<String> exceptionWord;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
@@ -36,6 +40,7 @@ public class AddAuditTermsRequest extends Request {
 
     private AddAuditTermsRequest(Builder builder) {
         super(builder);
+        this.exceptionWord = builder.exceptionWord;
         this.keyword = builder.keyword;
         this.suggestWord = builder.suggestWord;
         this.termsDesc = builder.termsDesc;
@@ -53,6 +58,13 @@ public class AddAuditTermsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return exceptionWord
+     */
+    public java.util.List<String> getExceptionWord() {
+        return this.exceptionWord;
     }
 
     /**
@@ -84,6 +96,7 @@ public class AddAuditTermsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddAuditTermsRequest, Builder> {
+        private java.util.List<String> exceptionWord; 
         private String keyword; 
         private String suggestWord; 
         private String termsDesc; 
@@ -95,11 +108,22 @@ public class AddAuditTermsRequest extends Request {
 
         private Builder(AddAuditTermsRequest request) {
             super(request);
+            this.exceptionWord = request.exceptionWord;
             this.keyword = request.keyword;
             this.suggestWord = request.suggestWord;
             this.termsDesc = request.termsDesc;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ExceptionWord.
+         */
+        public Builder exceptionWord(java.util.List<String> exceptionWord) {
+            String exceptionWordShrink = shrink(exceptionWord, "ExceptionWord", "json");
+            this.putBodyParameter("ExceptionWord", exceptionWordShrink);
+            this.exceptionWord = exceptionWord;
+            return this;
+        }
 
         /**
          * Keyword.

@@ -419,6 +419,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteFactAuditUrl  DeleteFactAuditUrlRequest
+     * @return DeleteFactAuditUrlResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFactAuditUrlResponse> deleteFactAuditUrl(DeleteFactAuditUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteFactAuditUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFactAuditUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFactAuditUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteGeneratedContent  DeleteGeneratedContentRequest
      * @return DeleteGeneratedContentResponse
      */
@@ -1097,6 +1115,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetFactAuditUrl  GetFactAuditUrlRequest
+     * @return GetFactAuditUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetFactAuditUrlResponse> getFactAuditUrl(GetFactAuditUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetFactAuditUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFactAuditUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFactAuditUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2841,6 +2877,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunVideoScriptGenerate  RunVideoScriptGenerateRequest
+     * @return RunVideoScriptGenerateResponse
+     */
+    @Override
+    public CompletableFuture<RunVideoScriptGenerateResponse> runVideoScriptGenerate(RunVideoScriptGenerateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunVideoScriptGenerate").setMethod(HttpMethod.POST).setPathRegex("/miaobi/runVideoScriptGenerate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunVideoScriptGenerateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunVideoScriptGenerateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunVideoScriptGenerateResponseBody> runVideoScriptGenerateWithResponseIterable(RunVideoScriptGenerateRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunVideoScriptGenerate").setMethod(HttpMethod.POST).setPathRegex("/miaobi/runVideoScriptGenerate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunVideoScriptGenerateResponseBodyIterator iterator = RunVideoScriptGenerateResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunWriteToneGeneration  RunWriteToneGenerationRequest
      * @return RunWriteToneGenerationResponse
      */
@@ -3189,6 +3253,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitExportTermsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitFactAuditUrl  SubmitFactAuditUrlRequest
+     * @return SubmitFactAuditUrlResponse
+     */
+    @Override
+    public CompletableFuture<SubmitFactAuditUrlResponse> submitFactAuditUrl(SubmitFactAuditUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitFactAuditUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitFactAuditUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitFactAuditUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
