@@ -93,7 +93,10 @@ public class MobileDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class MobileDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class MobileDetectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>969434DF-926B-4997-9881-4DE94E39F805</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class MobileDetectResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -222,7 +231,10 @@ public class MobileDetectResponseBody extends TeaModel {
             } 
 
             /**
-             * Area.
+             * <p>Phone number&quot;s area (only for plaintext phone numbers)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>安徽-马**</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -230,7 +242,15 @@ public class MobileDetectResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>Verification result</p>
+             * <ul>
+             * <li>1: Available online </li>
+             * <li>2: Not available online</li>
+             * <li>3: No query result</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -238,7 +258,15 @@ public class MobileDetectResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name</p>
+             * <ul>
+             * <li>CMCC: China Mobile </li>
+             * <li>CUCC: China Unicom </li>
+             * <li>CTCC: China Telecom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -246,7 +274,10 @@ public class MobileDetectResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>Phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131********</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -254,7 +285,18 @@ public class MobileDetectResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Verification details</p>
+             * <ul>
+             * <li>101: Available number</li>
+             * <li>102: Empty number</li>
+             * <li>103: Suspended </li>
+             * <li>104: Silent number (inactive small number, new number, non-smartphone user within the last six months) </li>
+             * <li>105: Risky number (long-term shutdown or no voice service activated and prone to complaints)</li>
+             * <li>301: No record found</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -321,7 +363,10 @@ public class MobileDetectResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeCount.
+             * <p>Billing count, the total billing count in one request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder chargeCount(String chargeCount) {
                 this.chargeCount = chargeCount;
@@ -329,7 +374,7 @@ public class MobileDetectResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>Verification results set</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

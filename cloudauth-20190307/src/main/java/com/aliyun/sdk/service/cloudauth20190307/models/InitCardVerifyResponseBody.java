@@ -93,7 +93,15 @@ public class InitCardVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.
+         * Important</p>
+         * <ul>
+         * <li>This parameter indicates whether the interface was called correctly. For detailed return code descriptions, see the error codes.</li>
+         * <li>Business results should be viewed through the fields in ResultObject.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +109,10 @@ public class InitCardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +120,10 @@ public class InitCardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +131,7 @@ public class InitCardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -170,7 +184,16 @@ public class InitCardVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Verification request ID, a unique identifier for the verification service&quot;s authentication request.</p>
+             * <ul>
+             * <li><p>When querying the authentication result, the authentication request ID must be provided.</p>
+             * </li>
+             * <li><p>The CertifyId field is a billing statistics field. To facilitate subsequent bill reconciliation, please retain this field information locally. The CertifyId returned by the initialization interface is valid for 30 minutes and can only be submitted once for authentication. Please apply it within the validity period to avoid reuse.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>91707dc296d469ad38e4c5efa6a0****</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;

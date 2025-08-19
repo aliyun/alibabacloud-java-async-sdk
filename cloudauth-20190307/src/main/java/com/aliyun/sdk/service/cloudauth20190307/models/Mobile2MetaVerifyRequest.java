@@ -113,7 +113,17 @@ public class Mobile2MetaVerifyRequest extends Request {
         }
 
         /**
+         * <p>Phone number:</p>
+         * <ul>
+         * <li>When paramType is normal: input the plaintext phone number.</li>
+         * <li>When paramType is md5: input the encrypted phone number.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>● 明文：186****2055
+         * ● 密文：
+         * 849169cd3b20621c1c78bd61a11a4fc2</p>
          */
         public Builder mobile(String mobile) {
             this.putBodyParameter("Mobile", mobile);
@@ -122,6 +132,11 @@ public class Mobile2MetaVerifyRequest extends Request {
         }
 
         /**
+         * <p>Encryption method:</p>
+         * <ul>
+         * <li>normal: plaintext without encryption</li>
+         * <li>md5: MD5 encryption</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +149,17 @@ public class Mobile2MetaVerifyRequest extends Request {
         }
 
         /**
+         * <p>Name:</p>
+         * <ul>
+         * <li>When paramType is normal: input the plaintext name.</li>
+         * <li>When paramType is md5: input the encrypted name.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>● 明文：张三
+         * ● 密文：
+         * 32fa7bcd874161bea8ec8fd98f390ec9</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

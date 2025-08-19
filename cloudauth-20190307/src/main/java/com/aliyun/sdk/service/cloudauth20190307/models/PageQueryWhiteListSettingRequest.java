@@ -194,7 +194,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * CertNo.
+         * <p>ID number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330103xxxxxxxxxxxx</p>
          */
         public Builder certNo(String certNo) {
             this.putQueryParameter("CertNo", certNo);
@@ -203,7 +206,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * CertifyId.
+         * <p>Unique identifier for real person authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha75b4e19a1ddda059b920757b0e12b</p>
          */
         public Builder certifyId(String certifyId) {
             this.putQueryParameter("CertifyId", certifyId);
@@ -212,7 +218,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -221,7 +230,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, default is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +242,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000xxx</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -239,7 +254,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>ServiceCode of the real person cloud product, value: <strong>antcloudauth</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antcloudauth</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -248,7 +266,15 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Status:</p>
+         * <ul>
+         * <li>DELETE: Deleted</li>
+         * <li>VALID: Not deleted and within the validity period, valid</li>
+         * <li>INVALID: Not deleted but outside the validity period, invalid</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VALID</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -257,7 +283,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ValidEndDate.
+         * <p>End date of validity (timestamp in milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725379200000</p>
          */
         public Builder validEndDate(String validEndDate) {
             this.putQueryParameter("ValidEndDate", validEndDate);
@@ -266,7 +295,10 @@ public class PageQueryWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ValidStartDate.
+         * <p>Start date of validity (timestamp in milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725120000000</p>
          */
         public Builder validStartDate(String validStartDate) {
             this.putQueryParameter("ValidStartDate", validStartDate);

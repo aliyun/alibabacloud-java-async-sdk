@@ -152,7 +152,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * CertNo.
+         * <p>ID number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330103xxxxxxxxxxxx</p>
          */
         public Builder certNo(String certNo) {
             this.putQueryParameter("CertNo", certNo);
@@ -161,7 +164,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * CertifyId.
+         * <p>Unique identifier for real person authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shsf57a4e0d9981c3bd66dc754f3d3cd</p>
          */
         public Builder certifyId(String certifyId) {
             this.putQueryParameter("CertifyId", certifyId);
@@ -170,7 +176,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remark, with a length less than 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -179,7 +188,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For instructions on how to create an authentication scene, see Adding an Authentication Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000xxxx</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -188,7 +200,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>ServiceCode for the real person cloud product, value: <strong>antcloudauth</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antcloudauth</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -197,7 +212,10 @@ public class InsertWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ValidDay.
+         * <p>Whitelist validity period in days (only supports 3, 7, 30).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder validDay(Integer validDay) {
             this.putQueryParameter("ValidDay", validDay);

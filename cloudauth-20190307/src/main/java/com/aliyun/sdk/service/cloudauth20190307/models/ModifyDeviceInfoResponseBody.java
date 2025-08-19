@@ -119,7 +119,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * BeginDay.
+         * <p>If the Duration in the request parameters is not empty, this field represents the start time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20190401</p>
          */
         public Builder beginDay(String beginDay) {
             this.beginDay = beginDay;
@@ -127,7 +130,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * BizType.
+         * <p>Corresponds to the BizType in the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FACE_TEST</p>
          */
         public Builder bizType(String bizType) {
             this.bizType = bizType;
@@ -135,7 +141,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceId.
+         * <p>Corresponds to the DeviceId in the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
          */
         public Builder deviceId(String deviceId) {
             this.deviceId = deviceId;
@@ -143,7 +152,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredDay.
+         * <p>If the Duration in the request parameters is not empty, this field represents the expiration time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20200330</p>
          */
         public Builder expiredDay(String expiredDay) {
             this.expiredDay = expiredDay;
@@ -151,7 +163,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UserDeviceId.
+         * <p>Corresponds to the UserDeviceId in the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3iJ1AY$oHcu7mC69</p>
          */
         public Builder userDeviceId(String userDeviceId) {
             this.userDeviceId = userDeviceId;

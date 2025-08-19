@@ -106,7 +106,10 @@ public class RemoveWhiteListSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class RemoveWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,7 @@ public class RemoveWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -133,7 +139,10 @@ public class RemoveWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultObject(Boolean resultObject) {
             this.resultObject = resultObject;
@@ -141,7 +150,10 @@ public class RemoveWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the response was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

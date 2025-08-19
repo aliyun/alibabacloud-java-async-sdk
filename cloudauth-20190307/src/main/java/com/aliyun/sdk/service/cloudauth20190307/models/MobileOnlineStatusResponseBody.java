@@ -93,7 +93,10 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -196,7 +205,15 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result</p>
+             * <ul>
+             * <li>1: Available online </li>
+             * <li>2: Not available online (see subCode for details)</li>
+             * <li>3: No query result</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -204,7 +221,15 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>ISP name</p>
+             * <ul>
+             * <li>CMCC: China Mobile </li>
+             * <li>CUCC: China Unicom </li>
+             * <li>CTCC: China Telecom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -212,7 +237,18 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Verification details</p>
+             * <ul>
+             * <li>101: Available online </li>
+             * <li>201: Suspended </li>
+             * <li>202: Disconnected </li>
+             * <li>203: Online but not available </li>
+             * <li>204: Not online </li>
+             * <li>301: No record found</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

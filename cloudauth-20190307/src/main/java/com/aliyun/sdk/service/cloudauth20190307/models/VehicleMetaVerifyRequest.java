@@ -152,7 +152,17 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number.</p>
+         * <p>This is a required field when VerifyMetaType is set to VEHICLE_3_META.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plain text.</li>
+         * <li>When paramType is set to md5, enter the first 6 digits in plain text + the birth date encrypted with MD5 (32 lowercase characters) + the last 4 digits in plain text.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4****************1</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
@@ -161,7 +171,14 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: Unencrypted.</li>
+         * <li>md5: Encrypted with MD5.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -170,7 +187,17 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name</p>
+         * <blockquote>
+         * <p>This is an explanation</p>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plain text.</li>
+         * <li>When paramType is set to md5, encrypt the first character of the name with MD5 (32 lowercase characters) + the rest of the name in plain text.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>张**</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -179,7 +206,16 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * VehicleNum.
+         * <p>Vehicle license plate</p>
+         * <blockquote>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plain text.</li>
+         * <li>When paramType is set to md5, enter the part of the license plate except for the last two characters in plain text + the last two characters of the license plate encrypted with MD5 (32 lowercase characters).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>陕A9****</p>
          */
         public Builder vehicleNum(String vehicleNum) {
             this.putQueryParameter("VehicleNum", vehicleNum);
@@ -188,7 +224,10 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * VehicleType.
+         * <p>Vehicle type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02</p>
          */
         public Builder vehicleType(String vehicleType) {
             this.putQueryParameter("VehicleType", vehicleType);
@@ -197,7 +236,16 @@ public class VehicleMetaVerifyRequest extends Request {
         }
 
         /**
-         * VerifyMetaType.
+         * <p>Verification type</p>
+         * <blockquote>
+         * <ul>
+         * <li>VEHICLE_2_META: Two-element verification, name + vehicle license plate verification;</li>
+         * <li>VEHICLE_3_META: Three-element verification, name + vehicle license plate + ID number verification;</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>VEHICLE_2_META</p>
          */
         public Builder verifyMetaType(String verifyMetaType) {
             this.putQueryParameter("VerifyMetaType", verifyMetaType);

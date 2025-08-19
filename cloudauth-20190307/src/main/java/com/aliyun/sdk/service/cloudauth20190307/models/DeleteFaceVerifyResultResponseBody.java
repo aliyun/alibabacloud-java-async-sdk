@@ -93,7 +93,10 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -120,7 +126,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -199,7 +205,10 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique identifier for real-person authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha58aeae7ea2f5ed069530f58df4e6d</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -207,7 +216,14 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteResult.
+             * <p>Deletion result. Possible values are as follows:</p>
+             * <ul>
+             * <li>Y: Deletion successful.</li>
+             * <li>N: Deletion failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder deleteResult(String deleteResult) {
                 this.deleteResult = deleteResult;
@@ -215,7 +231,14 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * FailReason.
+             * <p>Reason for deletion failure</p>
+             * <ul>
+             * <li>NOT_DELETE_REPEATEDLY: Cannot be deleted repeatedly</li>
+             * <li>NEED_QUERY_VERIFY_RESULT: Need to query the verification result first, then delete</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_DELETE_REPEATEDLY</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;

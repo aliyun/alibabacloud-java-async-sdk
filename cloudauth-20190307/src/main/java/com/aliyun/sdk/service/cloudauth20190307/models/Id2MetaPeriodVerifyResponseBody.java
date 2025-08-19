@@ -93,7 +93,10 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -120,7 +126,7 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -173,7 +179,15 @@ public class Id2MetaPeriodVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result code:</p>
+             * <ul>
+             * <li><strong>1</strong>: Verification consistent.</li>
+             * <li><strong>2</strong>: Verification inconsistent.</li>
+             * <li><strong>3</strong>: No record found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;

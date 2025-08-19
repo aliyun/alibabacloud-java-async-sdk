@@ -93,7 +93,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Face comparison result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -196,7 +205,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique identifier for the real-person authentication request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -204,7 +216,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the verification passed, T for pass, F for fail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -212,7 +227,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyScore.
+             * <p>Face comparison score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.60875</p>
              */
             public Builder verifyScore(Float verifyScore) {
                 this.verifyScore = verifyScore;

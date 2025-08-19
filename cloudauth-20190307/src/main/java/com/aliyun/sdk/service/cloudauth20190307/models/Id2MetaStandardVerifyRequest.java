@@ -110,7 +110,15 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is normal: enter the plain text of the ID number.</li>
+         * <li>When <code>paramType</code> is md5:
+         * The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4****************1</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putBodyParameter("IdentifyNum", identifyNum);
@@ -119,7 +127,14 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: unencrypted.</li>
+         * <li>md5: md5 encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putBodyParameter("ParamType", paramType);
@@ -128,7 +143,14 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is normal: enter the plain text of the name.</li>
+         * <li>When <code>paramType</code> is md5: the first character of the name (encrypted) + the rest of the name (plain text).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -93,7 +93,10 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 indicates success, others indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message for the request information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A6229C0-E156-48E4-B6EC-0F52********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -183,7 +192,16 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result code:</p>
+             * <blockquote>
+             * <ul>
+             * <li>1: Found (charged)</li>
+             * <li>3: No record found (not charged)</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -191,7 +209,15 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleInfo.
+             * <p>Insurance date information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;firstInsuranceDate&quot;: &quot;<strong><strong>-</strong>-<strong>&quot;,
+             *     &quot;lastInsuranceDate&quot;: &quot;</strong></strong>-<strong>&quot;,
+             *     &quot;latestInsuranceDate&quot;: &quot;****-</strong>&quot;,
+             *     &quot;latestInsuranceDateStart&quot;: &quot;****-**&quot;
+             *   }</p>
              */
             public Builder vehicleInfo(String vehicleInfo) {
                 this.vehicleInfo = vehicleInfo;

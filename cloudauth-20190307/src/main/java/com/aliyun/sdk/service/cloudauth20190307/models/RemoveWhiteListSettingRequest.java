@@ -96,7 +96,7 @@ public class RemoveWhiteListSettingRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>IDs of the whitelist to be deleted in bulk.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -106,7 +106,10 @@ public class RemoveWhiteListSettingRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>ServiceCode for the real person cloud product, only value: <strong>antcloudauth</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antcloudauth</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);

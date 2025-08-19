@@ -266,7 +266,14 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * Crop.
+         * <p>Whether cropping is allowed. Default is not allowed, T/F.</p>
+         * <ul>
+         * <li>T: Indicates that cropping is required</li>
+         * <li>F: Indicates that cropping is not required (default F)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>T</p>
          */
         public Builder crop(String crop) {
             this.putBodyParameter("Crop", crop);
@@ -275,7 +282,10 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * OuterOrderNo.
+         * <p>A unique identifier for the merchant&quot;s request. The value is a 32-character alphanumeric combination, where the first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
          */
         public Builder outerOrderNo(String outerOrderNo) {
             this.putBodyParameter("OuterOrderNo", outerOrderNo);
@@ -284,7 +294,10 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Fixed value: PV_FC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PV_FC</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -293,7 +306,10 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000006</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -302,7 +318,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SourceCertifyId.
+         * <p>The CertifyId of a previously successful real-person verification, where the photo taken during that verification is used as the face comparison photo.</p>
+         * <blockquote>
+         * <p>Among the four ways to input facial photos (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
          */
         public Builder sourceCertifyId(String sourceCertifyId) {
             this.putBodyParameter("SourceCertifyId", sourceCertifyId);
@@ -311,7 +333,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SourceFaceContrastPicture.
+         * <p>Base64 encoding of the photo.</p>
+         * <blockquote>
+         * <p>Choose one of the four ways to input a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder sourceFaceContrastPicture(String sourceFaceContrastPicture) {
             this.putBodyParameter("SourceFaceContrastPicture", sourceFaceContrastPicture);
@@ -320,7 +348,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SourceFaceContrastPictureUrl.
+         * <p>OSS photo URL, currently only supports authorized OSS photo URLs.</p>
+         * <blockquote>
+         * <p>Four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS. Choose one of them to input.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
          */
         public Builder sourceFaceContrastPictureUrl(String sourceFaceContrastPictureUrl) {
             this.putBodyParameter("SourceFaceContrastPictureUrl", sourceFaceContrastPictureUrl);
@@ -329,7 +363,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SourceOssBucketName.
+         * <p>Name of the authorized OSS bucket.</p>
+         * <blockquote>
+         * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
          */
         public Builder sourceOssBucketName(String sourceOssBucketName) {
             this.putBodyParameter("SourceOssBucketName", sourceOssBucketName);
@@ -338,7 +378,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * SourceOssObjectName.
+         * <p>Filename of the authorized OSS space.</p>
+         * <blockquote>
+         * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>verify/xxxxx/xxxxxx.jpeg</p>
          */
         public Builder sourceOssObjectName(String sourceOssObjectName) {
             this.putBodyParameter("SourceOssObjectName", sourceOssObjectName);
@@ -347,7 +393,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * TargetCertifyId.
+         * <p>CertifyId from a previously successful real-person authentication, where the photo taken during the authentication is used for face comparison.</p>
+         * <blockquote>
+         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
          */
         public Builder targetCertifyId(String targetCertifyId) {
             this.putBodyParameter("TargetCertifyId", targetCertifyId);
@@ -356,7 +408,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * TargetFaceContrastPicture.
+         * <p>Base64 encoding of the reference photo.</p>
+         * <blockquote>
+         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder targetFaceContrastPicture(String targetFaceContrastPicture) {
             this.putBodyParameter("TargetFaceContrastPicture", targetFaceContrastPicture);
@@ -365,7 +423,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * TargetFaceContrastPictureUrl.
+         * <p>OSS address of the reference photo. Currently, only authorized OSS addresses are supported.</p>
+         * <blockquote>
+         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
          */
         public Builder targetFaceContrastPictureUrl(String targetFaceContrastPictureUrl) {
             this.putBodyParameter("TargetFaceContrastPictureUrl", targetFaceContrastPictureUrl);
@@ -374,7 +438,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * TargetOssBucketName.
+         * <p>Name of the authorized OSS bucket.</p>
+         * <blockquote>
+         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
          */
         public Builder targetOssBucketName(String targetOssBucketName) {
             this.putBodyParameter("TargetOssBucketName", targetOssBucketName);
@@ -383,7 +453,13 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * TargetOssObjectName.
+         * <p>File name in the authorized OSS space.</p>
+         * <blockquote>
+         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>verify/xxxxx/xxxxxx.jpeg</p>
          */
         public Builder targetOssObjectName(String targetOssObjectName) {
             this.putBodyParameter("TargetOssObjectName", targetOssObjectName);

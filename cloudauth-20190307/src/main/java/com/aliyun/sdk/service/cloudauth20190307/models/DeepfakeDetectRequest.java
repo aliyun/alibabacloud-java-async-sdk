@@ -124,7 +124,13 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * FaceBase64.
+         * <p>Enter the Base64 encoded string of the face image.</p>
+         * <blockquote>
+         * <p>Either FaceUrl or FaceBase64 must be provided.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder faceBase64(String faceBase64) {
             this.putBodyParameter("FaceBase64", faceBase64);
@@ -133,7 +139,10 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * FaceInputType.
+         * <p>Input <strong>IMAGE</strong> to indicate an image type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder faceInputType(String faceInputType) {
             this.putQueryParameter("FaceInputType", faceInputType);
@@ -142,7 +151,13 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * FaceUrl.
+         * <p>Enter the URL of the face image.</p>
+         * <blockquote>
+         * <p>Either FaceUrl or FaceBase64 must be provided.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
          */
         public Builder faceUrl(String faceUrl) {
             this.putQueryParameter("FaceUrl", faceUrl);
@@ -151,7 +166,10 @@ public class DeepfakeDetectRequest extends Request {
         }
 
         /**
-         * OuterOrderNo.
+         * <p>A unique identifier for the merchant&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters can be a custom abbreviation defined by the merchant, the middle part may include a timestamp, and the latter part can use a random or incrementing sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>
          */
         public Builder outerOrderNo(String outerOrderNo) {
             this.putQueryParameter("OuterOrderNo", outerOrderNo);

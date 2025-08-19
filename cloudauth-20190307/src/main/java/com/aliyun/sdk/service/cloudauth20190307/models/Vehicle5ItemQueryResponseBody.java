@@ -93,7 +93,10 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -183,7 +192,14 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result code:</p>
+             * <ul>
+             * <li><strong>1</strong>: Found (charged)</li>
+             * <li><strong>3</strong>: No record found (not charged)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -191,7 +207,22 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleInfo.
+             * <p>Vehicle information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;engineNo&quot;: &quot;F0******&quot;,
+             *         &quot;useProperty&quot;: 0,
+             *         &quot;registrationDate&quot;: &quot;<strong><strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
+             *         &quot;engineType&quot;: &quot;B</strong>**</strong>&quot;,
+             *         &quot;vin&quot;: &quot;A********&quot;,
+             *         &quot;state&quot;: &quot;0&quot;,
+             *         &quot;modelNo&quot;: &quot;B********&quot;,
+             *         &quot;type&quot;: &quot;小型轿车&quot;,
+             *         &quot;brand&quot;: &quot;宝马&quot;,
+             *         &quot;usePropertyDesc&quot;: &quot;非营运&quot;,
+             *         &quot;stateDesc&quot;: &quot;正常&quot;
+             *     }</p>
              */
             public Builder vehicleInfo(String vehicleInfo) {
                 this.vehicleInfo = vehicleInfo;

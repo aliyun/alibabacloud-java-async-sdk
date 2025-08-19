@@ -180,7 +180,14 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * BankCard.
+         * <p>Bank card number.</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text bank card number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>, enter the part of the card number except the last 6 digits in plain text + the last 6 digits encrypted with MD5 (32 lowercase).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>610*************1181</p>
          */
         public Builder bankCard(String bankCard) {
             this.putQueryParameter("BankCard", bankCard);
@@ -189,7 +196,15 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number.</p>
+         * <ul>
+         * <li>When <code>ProductType</code> is <code>BANK_CARD_3_META</code>, this field is required.</li>
+         * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text ID number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>, enter the first 6 digits of the ID number in plain text + the birth date encrypted with MD5 (32 lowercase MD5) + the last 4 digits of the ID number.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>429001********8211</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
@@ -198,7 +213,10 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * <p>Identity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -207,7 +225,15 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>Mobile phone number.</p>
+         * <ul>
+         * <li>When <code>ProductType</code> is <code>BANK_CARD_4_META</code>, this field is required.</li>
+         * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text mobile phone number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>, enter the mobile phone number (32 lowercase MD5).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>138******11</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -216,7 +242,14 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: Unencrypted.</li>
+         * <li>md5: MD5 encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -225,7 +258,15 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>Product type to call:</p>
+         * <ul>
+         * <li>BANK_CARD_2_META: Bank card number + name verification.</li>
+         * <li>BANK_CARD_3_META: Bank card number + name + ID number verification.</li>
+         * <li>BANK_CARD_4_META: Bank card number + name + ID number + mobile phone number verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BANK_CARD_2_META</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -234,7 +275,14 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name.</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text name.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>, encrypt the first character of the name with MD5 (32 lowercase MD5) + the rest of the name in plain text.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -243,7 +291,10 @@ public class BankMetaVerifyRequest extends Request {
         }
 
         /**
-         * VerifyMode.
+         * <p>VERIFY_BANK_CARD: Bank card authentication mode. It indicates whether the provided bank card number matches the user&quot;s real name, ID number, and mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VERIFY_BANK_CARD</p>
          */
         public Builder verifyMode(String verifyMode) {
             this.putQueryParameter("VerifyMode", verifyMode);

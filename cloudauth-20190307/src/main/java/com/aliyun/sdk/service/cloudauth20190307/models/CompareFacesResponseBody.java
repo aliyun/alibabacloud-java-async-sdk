@@ -106,7 +106,10 @@ public class CompareFacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CompareFacesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Result of the face comparison.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CompareFacesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error.InternalError</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CompareFacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class CompareFacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the response was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,23 @@ public class CompareFacesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfidenceThresholds.
+             * <p>Confidence thresholds for face comparison. The returned content is a JSON Object, with the specific structure being <code>&quot;key&quot;:&quot;value&quot;</code>.</p>
+             * <ul>
+             * <li><code>key</code> represents the false acceptance rate, which is the probability of misidentifying someone else as the specified person.</li>
+             * <li><code>value</code> is the corresponding threshold.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Regarding the confidence thresholds (confidenceThresholds) in the example:</p>
+             * </blockquote>
+             * <ul>
+             * <li><code>&quot;0.0001&quot;: &quot;90.07&quot;</code> indicates that the threshold is 90.07 when the false acceptance rate is 0.01%.</li>
+             * <li><code>&quot;0.001&quot;: &quot;80.01&quot;</code> indicates that the threshold is 80.01 when the false acceptance rate is 0.1%.</li>
+             * <li><code>&quot;0.01&quot;: &quot;70.02&quot;</code> indicates that the threshold is 70.02 when the false acceptance rate is 1%.</li>
+             * </ul>
+             * <p>Confidence thresholds are dynamically provided based on different images and algorithms, so do not persist these thresholds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;0.0001&quot;:&quot;90.07&quot;,&quot;0.001&quot;:&quot;80.01&quot;,&quot;0.01&quot;:&quot;70.02&quot;}</p>
              */
             public Builder confidenceThresholds(String confidenceThresholds) {
                 this.confidenceThresholds = confidenceThresholds;
@@ -212,7 +240,10 @@ public class CompareFacesResponseBody extends TeaModel {
             }
 
             /**
-             * SimilarityScore.
+             * <p>The degree of similarity between the faces in the two images. The value range is [0, 100], with higher values indicating greater similarity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98.7913</p>
              */
             public Builder similarityScore(Float similarityScore) {
                 this.similarityScore = similarityScore;

@@ -124,7 +124,14 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the ID number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted ID number.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>429001********8211</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putBodyParameter("IdentifyNum", identifyNum);
@@ -133,7 +140,14 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>Phone number:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the phone number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted phone number.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>130********</p>
          */
         public Builder mobile(String mobile) {
             this.putBodyParameter("Mobile", mobile);
@@ -142,7 +156,14 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: Unencrypted.</li>
+         * <li>md5: MD5 encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putBodyParameter("ParamType", paramType);
@@ -151,7 +172,14 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the name.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

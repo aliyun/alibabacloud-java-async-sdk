@@ -93,7 +93,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -196,7 +205,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique real-person authentication identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91707dc296d469ad38e4c5efa6a0****</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -204,7 +216,12 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Authentication result. Values:</p>
+             * <p>● Y: AIGC-generated face.</p>
+             * <p>● N: Not detected</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -212,7 +229,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Detection score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0000</p>
              */
             public Builder score(String score) {
                 this.score = score;

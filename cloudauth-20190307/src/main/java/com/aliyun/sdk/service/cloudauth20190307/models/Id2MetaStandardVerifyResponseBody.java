@@ -93,7 +93,10 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -120,7 +126,7 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -173,7 +179,15 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result code:</p>
+             * <ul>
+             * <li><strong>1</strong>: verification matches.</li>
+             * <li><strong>2</strong>: verification does not match.</li>
+             * <li><strong>3</strong>: no record found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;

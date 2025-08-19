@@ -158,7 +158,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code, <strong>200</strong> indicates a successful API response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -174,7 +180,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +191,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -190,7 +202,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -201,7 +213,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Request result</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -209,7 +221,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the response was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +232,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -225,7 +243,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -408,7 +429,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * CertNo.
+             * <p>ID number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330103xxxxxxxxxxxx</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -416,7 +440,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * CertifyId.
+             * <p>Unique identifier for real person authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha43d9cabd52d370d9f4cca9468f71e</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -424,7 +451,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-30 14:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -432,7 +462,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-30 14:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -440,7 +473,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Whitelist ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234822</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -448,7 +484,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -456,7 +495,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>Authentication scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000332</p>
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -464,7 +506,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>ServiceCode of the real person cloud product</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antcloudauth</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -472,7 +517,15 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status:</p>
+             * <ul>
+             * <li>DELETE: Deleted</li>
+             * <li>VALID: Not deleted and within the validity period, valid</li>
+             * <li>INVALID: Not deleted but outside the validity period, invalid</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +533,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * ValidEndDate.
+             * <p>End date of validity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-02 13:57:51</p>
              */
             public Builder validEndDate(String validEndDate) {
                 this.validEndDate = validEndDate;
@@ -488,7 +544,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * ValidStartDate.
+             * <p>Start date of validity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-30 13:57:51</p>
              */
             public Builder validStartDate(String validStartDate) {
                 this.validStartDate = validStartDate;

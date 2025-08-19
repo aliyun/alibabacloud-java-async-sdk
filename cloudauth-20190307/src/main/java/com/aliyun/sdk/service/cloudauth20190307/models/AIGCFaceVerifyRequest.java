@@ -166,7 +166,13 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * FaceContrastPicture.
+         * <p>Base64 encoded photo.</p>
+         * <blockquote>
+         * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder faceContrastPicture(String faceContrastPicture) {
             this.putBodyParameter("FaceContrastPicture", faceContrastPicture);
@@ -175,7 +181,13 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * FaceContrastPictureUrl.
+         * <p>Portrait address, accessible via public HTTP or HTTPS link.</p>
+         * <blockquote>
+         * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
          */
         public Builder faceContrastPictureUrl(String faceContrastPictureUrl) {
             this.putQueryParameter("FaceContrastPictureUrl", faceContrastPictureUrl);
@@ -184,7 +196,13 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * <p>Authorized OSS bucket name.</p>
+         * <blockquote>
+         * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -193,7 +211,13 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * OssObjectName.
+         * <p>Authorized OSS file name.</p>
+         * <blockquote>
+         * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>verify/xxxxx/xxxxxx.jpeg</p>
          */
         public Builder ossObjectName(String ossObjectName) {
             this.putQueryParameter("OssObjectName", ossObjectName);
@@ -202,7 +226,10 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * OuterOrderNo.
+         * <p>A unique business identifier defined by the client side, used for subsequent troubleshooting. The value should be a combination of letters and numbers with a maximum length of 32 characters, please ensure its uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
          */
         public Builder outerOrderNo(String outerOrderNo) {
             this.putQueryParameter("OuterOrderNo", outerOrderNo);
@@ -211,7 +238,10 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Product solution</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LR_FR_AIGC</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -220,7 +250,10 @@ public class AIGCFaceVerifyRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000xxxx</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);

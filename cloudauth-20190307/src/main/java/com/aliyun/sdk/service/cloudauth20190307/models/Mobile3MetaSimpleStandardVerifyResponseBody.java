@@ -93,7 +93,10 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -120,7 +126,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -186,7 +192,15 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result:</p>
+             * <ul>
+             * <li>1: Consistent (billable)</li>
+             * <li>2: Inconsistent (billable)</li>
+             * <li>3: No record found (non-billable)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -194,7 +208,16 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile.</li>
+             * <li><strong>CUCC</strong>: China Unicom.</li>
+             * <li><strong>CTCC</strong>: China Telecom.</li>
+             * <li><strong>CBCC</strong>: China Broadcasting Network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

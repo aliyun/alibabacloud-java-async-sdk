@@ -138,7 +138,15 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number:</p>
+         * <ul>
+         * <li>When <code>paramType</code> is <code>normal</code>: Enter the plain text of the ID number.</li>
+         * <li>When <code>paramType</code> is <code>md5</code>:
+         * The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4****************1</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putBodyParameter("IdentifyNum", identifyNum);
@@ -147,7 +155,14 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: Unencrypted.</li>
+         * <li>md5: MD5 encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putBodyParameter("ParamType", paramType);
@@ -156,7 +171,14 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name.</p>
+         * <ul>
+         * <li>When <code>paramType</code> = <code>normal</code>: Enter the plain text of the name.</li>
+         * <li>When <code>paramType</code> = <code>md5</code>: The first character of the name MD5 encrypted (32 lowercase MD5) + the rest of the name in plain text.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -165,7 +187,10 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * ValidityEndDate.
+         * <p>End date of ID validity, format: YYYYMMDD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20301001</p>
          */
         public Builder validityEndDate(String validityEndDate) {
             this.putBodyParameter("ValidityEndDate", validityEndDate);
@@ -174,7 +199,10 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * ValidityStartDate.
+         * <p>Start date of ID validity, format: YYYYMMDD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201001</p>
          */
         public Builder validityStartDate(String validityStartDate) {
             this.putBodyParameter("ValidityStartDate", validityStartDate);
