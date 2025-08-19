@@ -43,6 +43,7 @@ public class UpdateFunctionInput extends TeaModel {
     private Integer diskSize;
 
     @com.aliyun.core.annotation.NameInMap("enableLongLiving")
+    @Deprecated
     private Boolean enableLongLiving;
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
@@ -57,6 +58,9 @@ public class UpdateFunctionInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
+
+    @com.aliyun.core.annotation.NameInMap("instanceIsolationMode")
+    private String instanceIsolationMode;
 
     @com.aliyun.core.annotation.NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
@@ -89,6 +93,9 @@ public class UpdateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionAffinity")
     private String sessionAffinity;
 
+    @com.aliyun.core.annotation.NameInMap("sessionAffinityConfig")
+    private String sessionAffinityConfig;
+
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
@@ -112,6 +119,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.gpuConfig = builder.gpuConfig;
         this.handler = builder.handler;
         this.instanceConcurrency = builder.instanceConcurrency;
+        this.instanceIsolationMode = builder.instanceIsolationMode;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.internetAccess = builder.internetAccess;
         this.layers = builder.layers;
@@ -122,6 +130,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.role = builder.role;
         this.runtime = builder.runtime;
         this.sessionAffinity = builder.sessionAffinity;
+        this.sessionAffinityConfig = builder.sessionAffinityConfig;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -231,6 +240,13 @@ public class UpdateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return instanceIsolationMode
+     */
+    public String getInstanceIsolationMode() {
+        return this.instanceIsolationMode;
+    }
+
+    /**
      * @return instanceLifecycleConfig
      */
     public InstanceLifecycleConfig getInstanceLifecycleConfig() {
@@ -301,6 +317,13 @@ public class UpdateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return sessionAffinityConfig
+     */
+    public String getSessionAffinityConfig() {
+        return this.sessionAffinityConfig;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -335,6 +358,7 @@ public class UpdateFunctionInput extends TeaModel {
         private GPUConfig gpuConfig; 
         private String handler; 
         private Integer instanceConcurrency; 
+        private String instanceIsolationMode; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
         private java.util.List<String> layers; 
@@ -345,6 +369,7 @@ public class UpdateFunctionInput extends TeaModel {
         private String role; 
         private String runtime; 
         private String sessionAffinity; 
+        private String sessionAffinityConfig; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -366,6 +391,7 @@ public class UpdateFunctionInput extends TeaModel {
             this.gpuConfig = model.gpuConfig;
             this.handler = model.handler;
             this.instanceConcurrency = model.instanceConcurrency;
+            this.instanceIsolationMode = model.instanceIsolationMode;
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
             this.internetAccess = model.internetAccess;
             this.layers = model.layers;
@@ -376,6 +402,7 @@ public class UpdateFunctionInput extends TeaModel {
             this.role = model.role;
             this.runtime = model.runtime;
             this.sessionAffinity = model.sessionAffinity;
+            this.sessionAffinityConfig = model.sessionAffinityConfig;
             this.timeout = model.timeout;
             this.tracingConfig = model.tracingConfig;
             this.vpcConfig = model.vpcConfig;
@@ -486,6 +513,14 @@ public class UpdateFunctionInput extends TeaModel {
         }
 
         /**
+         * instanceIsolationMode.
+         */
+        public Builder instanceIsolationMode(String instanceIsolationMode) {
+            this.instanceIsolationMode = instanceIsolationMode;
+            return this;
+        }
+
+        /**
          * instanceLifecycleConfig.
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
@@ -562,6 +597,14 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
+            return this;
+        }
+
+        /**
+         * sessionAffinityConfig.
+         */
+        public Builder sessionAffinityConfig(String sessionAffinityConfig) {
+            this.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
 
