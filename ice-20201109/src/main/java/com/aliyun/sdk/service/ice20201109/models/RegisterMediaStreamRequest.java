@@ -30,6 +30,10 @@ public class RegisterMediaStreamRequest extends Request {
     private String mediaId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamTags")
+    private String streamTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -38,6 +42,7 @@ public class RegisterMediaStreamRequest extends Request {
         this.regionId = builder.regionId;
         this.inputURL = builder.inputURL;
         this.mediaId = builder.mediaId;
+        this.streamTags = builder.streamTags;
         this.userData = builder.userData;
     }
 
@@ -76,6 +81,13 @@ public class RegisterMediaStreamRequest extends Request {
     }
 
     /**
+     * @return streamTags
+     */
+    public String getStreamTags() {
+        return this.streamTags;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -86,6 +98,7 @@ public class RegisterMediaStreamRequest extends Request {
         private String regionId; 
         private String inputURL; 
         private String mediaId; 
+        private String streamTags; 
         private String userData; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class RegisterMediaStreamRequest extends Request {
             this.regionId = request.regionId;
             this.inputURL = request.inputURL;
             this.mediaId = request.mediaId;
+            this.streamTags = request.streamTags;
             this.userData = request.userData;
         } 
 
@@ -130,6 +144,15 @@ public class RegisterMediaStreamRequest extends Request {
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
             this.mediaId = mediaId;
+            return this;
+        }
+
+        /**
+         * StreamTags.
+         */
+        public Builder streamTags(String streamTags) {
+            this.putQueryParameter("StreamTags", streamTags);
+            this.streamTags = streamTags;
             return this;
         }
 
