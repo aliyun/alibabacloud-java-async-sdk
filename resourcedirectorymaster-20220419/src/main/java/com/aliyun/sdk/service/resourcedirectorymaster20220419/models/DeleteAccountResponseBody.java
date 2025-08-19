@@ -36,6 +36,10 @@ public class DeleteAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deletionType
      */
@@ -53,6 +57,14 @@ public class DeleteAccountResponseBody extends TeaModel {
     public static final class Builder {
         private String deletionType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAccountResponseBody model) {
+            this.deletionType = model.deletionType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of the deletion. Valid values:</p>

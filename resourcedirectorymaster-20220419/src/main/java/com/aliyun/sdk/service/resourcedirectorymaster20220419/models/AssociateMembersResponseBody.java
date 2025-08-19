@@ -36,6 +36,10 @@ public class AssociateMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return members
      */
@@ -53,6 +57,14 @@ public class AssociateMembersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Members> members; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssociateMembersResponseBody model) {
+            this.members = model.members;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the contact was bound to the object.</p>
@@ -134,6 +146,15 @@ public class AssociateMembersResponseBody extends TeaModel {
             private String contactId; 
             private String memberId; 
             private String modifyDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.contactId = model.contactId;
+                this.memberId = model.memberId;
+                this.modifyDate = model.modifyDate;
+            } 
 
             /**
              * <p>The ID of the contact.</p>

@@ -48,6 +48,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -89,6 +93,17 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDelegatedAdministratorsResponseBody model) {
+            this.accounts = model.accounts;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the delegated administrator accounts.</p>
@@ -228,6 +243,17 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             private String joinMethod; 
             private String servicePrincipal; 
 
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountId = model.accountId;
+                this.delegationEnabledTime = model.delegationEnabledTime;
+                this.displayName = model.displayName;
+                this.joinMethod = model.joinMethod;
+                this.servicePrincipal = model.servicePrincipal;
+            } 
+
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>
              * 
@@ -325,6 +351,13 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Account> account; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
 
             /**
              * Account.

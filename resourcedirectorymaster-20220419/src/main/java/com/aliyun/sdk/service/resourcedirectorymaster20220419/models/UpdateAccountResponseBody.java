@@ -36,6 +36,10 @@ public class UpdateAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return account
      */
@@ -53,6 +57,14 @@ public class UpdateAccountResponseBody extends TeaModel {
     public static final class Builder {
         private Account account; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAccountResponseBody model) {
+            this.account = model.account;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the member.</p>
@@ -218,6 +230,22 @@ public class UpdateAccountResponseBody extends TeaModel {
             private String resourceDirectoryId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.joinMethod = model.joinMethod;
+                this.joinTime = model.joinTime;
+                this.modifyTime = model.modifyTime;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>

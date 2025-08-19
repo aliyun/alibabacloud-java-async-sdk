@@ -36,6 +36,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return controlPolicyAttachments
      */
@@ -53,6 +57,14 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
     public static final class Builder {
         private ControlPolicyAttachments controlPolicyAttachments; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListControlPolicyAttachmentsForTargetResponseBody model) {
+            this.controlPolicyAttachments = model.controlPolicyAttachments;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the attached access control policies.</p>
@@ -171,6 +183,18 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             private String policyName; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ControlPolicyAttachment model) {
+                this.attachDate = model.attachDate;
+                this.description = model.description;
+                this.effectScope = model.effectScope;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>The time when the access control policy was attached.</p>
              * 
@@ -283,6 +307,13 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<ControlPolicyAttachment> controlPolicyAttachment; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlPolicyAttachments model) {
+                this.controlPolicyAttachment = model.controlPolicyAttachment;
+            } 
 
             /**
              * ControlPolicyAttachment.

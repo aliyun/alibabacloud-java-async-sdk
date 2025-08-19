@@ -36,6 +36,10 @@ public class GetMessageContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contact
      */
@@ -53,6 +57,14 @@ public class GetMessageContactResponseBody extends TeaModel {
     public static final class Builder {
         private Contact contact; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMessageContactResponseBody model) {
+            this.contact = model.contact;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the contact.</p>
@@ -206,6 +218,21 @@ public class GetMessageContactResponseBody extends TeaModel {
             private String phoneNumber; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.contactId = model.contactId;
+                this.createDate = model.createDate;
+                this.emailAddress = model.emailAddress;
+                this.members = model.members;
+                this.messageTypes = model.messageTypes;
+                this.name = model.name;
+                this.phoneNumber = model.phoneNumber;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The ID of the contact.</p>

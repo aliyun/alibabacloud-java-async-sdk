@@ -40,6 +40,10 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return payerAccountId
      */
@@ -65,6 +69,15 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         private String payerAccountId; 
         private String payerAccountName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPayerForAccountResponseBody model) {
+            this.payerAccountId = model.payerAccountId;
+            this.payerAccountName = model.payerAccountName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the billing account.</p>

@@ -36,6 +36,10 @@ public class SetMemberDisplayNameSyncStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return memberAccountDisplayNameSyncStatus
      */
@@ -53,6 +57,14 @@ public class SetMemberDisplayNameSyncStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String memberAccountDisplayNameSyncStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetMemberDisplayNameSyncStatusResponseBody model) {
+            this.memberAccountDisplayNameSyncStatus = model.memberAccountDisplayNameSyncStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the Member Display Name Synchronization feature. Valid values:</p>

@@ -44,6 +44,10 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managementAccountId
      */
@@ -77,6 +81,16 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         private String memberDeletionStatus; 
         private String requestId; 
         private String resourceDirectoryId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetMemberDeletionPermissionResponseBody model) {
+            this.managementAccountId = model.managementAccountId;
+            this.memberDeletionStatus = model.memberDeletionStatus;
+            this.requestId = model.requestId;
+            this.resourceDirectoryId = model.resourceDirectoryId;
+        } 
 
         /**
          * <p>The ID of the management account of the resource directory.</p>

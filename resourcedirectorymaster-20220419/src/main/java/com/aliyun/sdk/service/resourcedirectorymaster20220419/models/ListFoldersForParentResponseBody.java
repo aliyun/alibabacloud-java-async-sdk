@@ -48,6 +48,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folders
      */
@@ -89,6 +93,17 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFoldersForParentResponseBody model) {
+            this.folders = model.folders;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The folders.</p>
@@ -192,6 +207,14 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class ListFoldersForParentResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -336,6 +366,16 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             private String folderName; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Folder model) {
+                this.createTime = model.createTime;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the folder was created.</p>
              * 
@@ -415,6 +455,13 @@ public class ListFoldersForParentResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Folder> folder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Folders model) {
+                this.folder = model.folder;
+            } 
 
             /**
              * Folder.

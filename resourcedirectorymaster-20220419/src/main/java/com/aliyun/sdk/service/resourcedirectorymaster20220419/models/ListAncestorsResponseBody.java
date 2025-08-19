@@ -36,6 +36,10 @@ public class ListAncestorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folders
      */
@@ -53,6 +57,14 @@ public class ListAncestorsResponseBody extends TeaModel {
     public static final class Builder {
         private Folders folders; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAncestorsResponseBody model) {
+            this.folders = model.folders;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the folders.</p>
@@ -135,6 +147,15 @@ public class ListAncestorsResponseBody extends TeaModel {
             private String folderId; 
             private String folderName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Folder model) {
+                this.createTime = model.createTime;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+            } 
+
             /**
              * <p>The time when the folder was created.</p>
              * 
@@ -206,6 +227,13 @@ public class ListAncestorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Folder> folder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Folders model) {
+                this.folder = model.folder;
+            } 
 
             /**
              * Folder.

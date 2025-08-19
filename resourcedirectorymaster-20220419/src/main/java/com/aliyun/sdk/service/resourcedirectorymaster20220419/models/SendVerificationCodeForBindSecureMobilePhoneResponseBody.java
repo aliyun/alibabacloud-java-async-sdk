@@ -36,6 +36,10 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expirationDate
      */
@@ -53,6 +57,14 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends Te
     public static final class Builder {
         private String expirationDate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendVerificationCodeForBindSecureMobilePhoneResponseBody model) {
+            this.expirationDate = model.expirationDate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the verification code expires.</p>

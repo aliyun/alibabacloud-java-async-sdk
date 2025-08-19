@@ -36,6 +36,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountDeletionCheckResultInfo
      */
@@ -53,6 +57,14 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     public static final class Builder {
         private AccountDeletionCheckResultInfo accountDeletionCheckResultInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountDeletionCheckResultResponseBody model) {
+            this.accountDeletionCheckResultInfo = model.accountDeletionCheckResultInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of the deletion check for the member.</p>
@@ -134,6 +146,15 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String checkId; 
             private String checkName; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(AbandonableChecks model) {
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -230,6 +251,15 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String checkId; 
             private String checkName; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotAllowReason model) {
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -338,6 +368,16 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String allowDelete; 
             private java.util.List<NotAllowReason> notAllowReason; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountDeletionCheckResultInfo model) {
+                this.abandonableChecks = model.abandonableChecks;
+                this.allowDelete = model.allowDelete;
+                this.notAllowReason = model.notAllowReason;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The check items that you can choose to ignore for the member deletion.</p>

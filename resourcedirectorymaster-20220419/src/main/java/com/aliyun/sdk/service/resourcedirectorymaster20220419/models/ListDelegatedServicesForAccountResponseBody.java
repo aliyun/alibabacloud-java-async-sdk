@@ -36,6 +36,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return delegatedServices
      */
@@ -53,6 +57,14 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     public static final class Builder {
         private DelegatedServices delegatedServices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDelegatedServicesForAccountResponseBody model) {
+            this.delegatedServices = model.delegatedServices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the trusted services.</p>
@@ -138,6 +150,15 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             private String servicePrincipal; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelegatedService model) {
+                this.delegationEnabledTime = model.delegationEnabledTime;
+                this.servicePrincipal = model.servicePrincipal;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the member was specified as a delegated administrator account.</p>
              * 
@@ -213,6 +234,13 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DelegatedService> delegatedService; 
+
+            private Builder() {
+            } 
+
+            private Builder(DelegatedServices model) {
+                this.delegatedService = model.delegatedService;
+            } 
 
             /**
              * DelegatedService.

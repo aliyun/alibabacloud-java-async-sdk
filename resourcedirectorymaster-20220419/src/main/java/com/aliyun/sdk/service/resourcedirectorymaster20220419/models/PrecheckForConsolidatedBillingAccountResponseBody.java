@@ -40,6 +40,10 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reasons
      */
@@ -65,6 +69,15 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         private java.util.List<Reasons> reasons; 
         private String requestId; 
         private Boolean result; 
+
+        private Builder() {
+        } 
+
+        private Builder(PrecheckForConsolidatedBillingAccountResponseBody model) {
+            this.reasons = model.reasons;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The cause of the check failure.</p>
@@ -149,6 +162,14 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         public static final class Builder {
             private String code; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reasons model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The error code.</p>

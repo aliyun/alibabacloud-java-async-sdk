@@ -52,6 +52,10 @@ public class ListAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -101,6 +105,18 @@ public class ListAccountsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccountsResponseBody model) {
+            this.accounts = model.accounts;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the members.</p>
@@ -215,6 +231,14 @@ public class ListAccountsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -275,6 +299,13 @@ public class ListAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -466,6 +497,25 @@ public class ListAccountsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.deletionStatus = model.deletionStatus;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.joinMethod = model.joinMethod;
+                this.joinTime = model.joinTime;
+                this.modifyTime = model.modifyTime;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.resourceDirectoryPath = model.resourceDirectoryPath;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>
@@ -668,6 +718,13 @@ public class ListAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Account> account; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
 
             /**
              * Account.

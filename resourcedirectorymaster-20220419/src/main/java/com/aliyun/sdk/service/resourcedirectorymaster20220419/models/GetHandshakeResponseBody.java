@@ -36,6 +36,10 @@ public class GetHandshakeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return handshake
      */
@@ -53,6 +57,14 @@ public class GetHandshakeResponseBody extends TeaModel {
     public static final class Builder {
         private Handshake handshake; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHandshakeResponseBody model) {
+            this.handshake = model.handshake;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the invitation.</p>
@@ -254,6 +266,25 @@ public class GetHandshakeResponseBody extends TeaModel {
             private String status; 
             private String targetEntity; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Handshake model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.handshakeId = model.handshakeId;
+                this.invitedAccountRealName = model.invitedAccountRealName;
+                this.masterAccountId = model.masterAccountId;
+                this.masterAccountName = model.masterAccountName;
+                this.masterAccountRealName = model.masterAccountRealName;
+                this.modifyTime = model.modifyTime;
+                this.note = model.note;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.status = model.status;
+                this.targetEntity = model.targetEntity;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The time when the invitation was created. The time is displayed in UTC.</p>

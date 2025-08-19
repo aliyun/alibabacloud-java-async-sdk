@@ -36,6 +36,10 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactDeletionStatus
      */
@@ -53,6 +57,14 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     public static final class Builder {
         private ContactDeletionStatus contactDeletionStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMessageContactDeletionStatusResponseBody model) {
+            this.contactDeletionStatus = model.contactDeletionStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The deletion information of the contact.</p>
@@ -122,6 +134,14 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private java.util.List<String> messageTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailReasonList model) {
+                this.accountId = model.accountId;
+                this.messageTypes = model.messageTypes;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>
@@ -204,6 +224,15 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             private String contactId; 
             private java.util.List<FailReasonList> failReasonList; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactDeletionStatus model) {
+                this.contactId = model.contactId;
+                this.failReasonList = model.failReasonList;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the contact.</p>

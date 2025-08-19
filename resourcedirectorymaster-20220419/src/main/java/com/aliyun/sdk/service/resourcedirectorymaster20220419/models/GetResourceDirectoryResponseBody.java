@@ -36,6 +36,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceDirectory resourceDirectory; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceDirectoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceDirectory = model.resourceDirectory;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -206,6 +218,21 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String memberDeletionStatus; 
             private String resourceDirectoryId; 
             private String rootFolderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.controlPolicyStatus = model.controlPolicyStatus;
+                this.createTime = model.createTime;
+                this.identityInformation = model.identityInformation;
+                this.masterAccountId = model.masterAccountId;
+                this.masterAccountName = model.masterAccountName;
+                this.memberAccountDisplayNameSyncStatus = model.memberAccountDisplayNameSyncStatus;
+                this.memberDeletionStatus = model.memberDeletionStatus;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.rootFolderId = model.rootFolderId;
+            } 
 
             /**
              * <p>The status of the Control Policy feature. Valid values:</p>

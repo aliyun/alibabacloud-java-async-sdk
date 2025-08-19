@@ -48,6 +48,10 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactVerifications
      */
@@ -89,6 +93,17 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMessageContactVerificationsResponseBody model) {
+            this.contactVerifications = model.contactVerifications;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The record for the contact to be verified.</p>
@@ -191,6 +206,14 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         public static final class Builder {
             private String contactId; 
             private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactVerifications model) {
+                this.contactId = model.contactId;
+                this.target = model.target;
+            } 
 
             /**
              * <p>The ID of the contact.</p>

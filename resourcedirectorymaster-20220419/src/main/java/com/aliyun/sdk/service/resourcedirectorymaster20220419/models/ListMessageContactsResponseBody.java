@@ -48,6 +48,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contacts
      */
@@ -89,6 +93,17 @@ public class ListMessageContactsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMessageContactsResponseBody model) {
+            this.contacts = model.contacts;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The time when the contact was bound to the objects.</p>
@@ -287,6 +302,22 @@ public class ListMessageContactsResponseBody extends TeaModel {
             private String phoneNumber; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.associatedDate = model.associatedDate;
+                this.contactId = model.contactId;
+                this.createDate = model.createDate;
+                this.emailAddress = model.emailAddress;
+                this.members = model.members;
+                this.messageTypes = model.messageTypes;
+                this.name = model.name;
+                this.phoneNumber = model.phoneNumber;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The time when the contact was bound to the objects.</p>
