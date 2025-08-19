@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEndpointResponse> updateEndpoint(UpdateEndpointRequest request);
 
     /**
+     * @param request the request parameters of UpdateNetwork  UpdateNetworkRequest
+     * @return UpdateNetworkResponse
+     */
+    CompletableFuture<UpdateNetworkResponse> updateNetwork(UpdateNetworkRequest request);
+
+    /**
      * @param request the request parameters of UpdateSnapshotSetting  UpdateSnapshotSettingRequest
      * @return UpdateSnapshotSettingResponse
      */

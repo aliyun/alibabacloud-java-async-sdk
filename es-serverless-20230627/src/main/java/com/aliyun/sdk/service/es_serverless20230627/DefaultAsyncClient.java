@@ -454,6 +454,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateNetwork  UpdateNetworkRequest
+     * @return UpdateNetworkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNetworkResponse> updateNetwork(UpdateNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNetwork").setMethod(HttpMethod.PUT).setPathRegex("/openapi/es-serverless/instances/{appName}/networks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateSnapshotSetting  UpdateSnapshotSettingRequest
      * @return UpdateSnapshotSettingResponse
      */
