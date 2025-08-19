@@ -168,7 +168,7 @@ public class ModifySnapshotCategoryRequest extends Request {
         }
 
         /**
-         * <p>The new type of the snapshot.</p>
+         * <p>The type of the snapshot. Valid value:</p>
          * <ul>
          * <li>Archive: archive snapshot</li>
          * </ul>

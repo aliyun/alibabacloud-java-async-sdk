@@ -41,6 +41,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
+    @com.aliyun.core.annotation.NameInMap("SnapshotPolicyIds")
+    private SnapshotPolicyIds snapshotPolicyIds;
+
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
@@ -53,6 +56,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupName = builder.securityGroupName;
+        this.snapshotPolicyIds = builder.snapshotPolicyIds;
         this.vpcId = builder.vpcId;
     }
 
@@ -125,6 +129,13 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return snapshotPolicyIds
+     */
+    public SnapshotPolicyIds getSnapshotPolicyIds() {
+        return this.snapshotPolicyIds;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -140,6 +151,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String securityGroupId; 
         private String securityGroupName; 
+        private SnapshotPolicyIds snapshotPolicyIds; 
         private String vpcId; 
 
         private Builder() {
@@ -154,6 +166,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.securityGroupId = model.securityGroupId;
             this.securityGroupName = model.securityGroupName;
+            this.snapshotPolicyIds = model.snapshotPolicyIds;
             this.vpcId = model.vpcId;
         } 
 
@@ -243,6 +256,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
          */
         public Builder securityGroupName(String securityGroupName) {
             this.securityGroupName = securityGroupName;
+            return this;
+        }
+
+        /**
+         * SnapshotPolicyIds.
+         */
+        public Builder snapshotPolicyIds(SnapshotPolicyIds snapshotPolicyIds) {
+            this.snapshotPolicyIds = snapshotPolicyIds;
             return this;
         }
 
@@ -969,6 +990,60 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
             public Permissions build() {
                 return new Permissions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSecurityGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupAttributeResponseBody</p>
+     */
+    public static class SnapshotPolicyIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
+        private java.util.List<String> snapshotPolicyId;
+
+        private SnapshotPolicyIds(Builder builder) {
+            this.snapshotPolicyId = builder.snapshotPolicyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SnapshotPolicyIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return snapshotPolicyId
+         */
+        public java.util.List<String> getSnapshotPolicyId() {
+            return this.snapshotPolicyId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> snapshotPolicyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotPolicyIds model) {
+                this.snapshotPolicyId = model.snapshotPolicyId;
+            } 
+
+            /**
+             * SnapshotPolicyId.
+             */
+            public Builder snapshotPolicyId(java.util.List<String> snapshotPolicyId) {
+                this.snapshotPolicyId = snapshotPolicyId;
+                return this;
+            }
+
+            public SnapshotPolicyIds build() {
+                return new SnapshotPolicyIds(this);
             } 
 
         } 

@@ -79,6 +79,10 @@ public class RunInstancesRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockOptions")
+    private ClockOptions clockOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreditSpecification")
     private String creditSpecification;
 
@@ -351,6 +355,7 @@ public class RunInstancesRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
+        this.clockOptions = builder.clockOptions;
         this.creditSpecification = builder.creditSpecification;
         this.dataDisk = builder.dataDisk;
         this.dedicatedHostId = builder.dedicatedHostId;
@@ -532,6 +537,13 @@ public class RunInstancesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return clockOptions
+     */
+    public ClockOptions getClockOptions() {
+        return this.clockOptions;
     }
 
     /**
@@ -991,6 +1003,7 @@ public class RunInstancesRequest extends Request {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
+        private ClockOptions clockOptions; 
         private String creditSpecification; 
         private java.util.List<DataDisk> dataDisk; 
         private String dedicatedHostId; 
@@ -1076,6 +1089,7 @@ public class RunInstancesRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
+            this.clockOptions = request.clockOptions;
             this.creditSpecification = request.creditSpecification;
             this.dataDisk = request.dataDisk;
             this.dedicatedHostId = request.dedicatedHostId;
@@ -1340,6 +1354,15 @@ public class RunInstancesRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ClockOptions.
+         */
+        public Builder clockOptions(ClockOptions clockOptions) {
+            this.putQueryParameter("ClockOptions", clockOptions);
+            this.clockOptions = clockOptions;
             return this;
         }
 
@@ -3266,6 +3289,60 @@ public class RunInstancesRequest extends Request {
 
             public Arn build() {
                 return new Arn(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
+    public static class ClockOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PtpStatus")
+        private String ptpStatus;
+
+        private ClockOptions(Builder builder) {
+            this.ptpStatus = builder.ptpStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClockOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ptpStatus
+         */
+        public String getPtpStatus() {
+            return this.ptpStatus;
+        }
+
+        public static final class Builder {
+            private String ptpStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClockOptions model) {
+                this.ptpStatus = model.ptpStatus;
+            } 
+
+            /**
+             * PtpStatus.
+             */
+            public Builder ptpStatus(String ptpStatus) {
+                this.ptpStatus = ptpStatus;
+                return this;
+            }
+
+            public ClockOptions build() {
+                return new ClockOptions(this);
             } 
 
         } 

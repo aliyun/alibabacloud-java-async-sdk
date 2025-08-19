@@ -133,7 +133,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * SessionManagerConfig.
+         * <p>Cloud Assistant Session Manager configuration.</p>
          */
         public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
             this.sessionManagerConfig = sessionManagerConfig;
@@ -618,7 +618,18 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionManagerEnabled.
+             * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+             * <ul>
+             * <li>true: Enables the feature.</li>
+             * <li>false: Disables the feature.</li>
+             * </ul>
+             * <p>Note:</p>
+             * <ul>
+             * <li>The feature applies to all regions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sessionManagerEnabled(Boolean sessionManagerEnabled) {
                 this.sessionManagerEnabled = sessionManagerEnabled;

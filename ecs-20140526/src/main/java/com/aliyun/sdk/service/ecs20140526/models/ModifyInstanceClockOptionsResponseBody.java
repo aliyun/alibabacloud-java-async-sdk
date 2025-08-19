@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyInstanceNetworkOptionsResponseBody} extends {@link TeaModel}
+ * {@link ModifyInstanceClockOptionsResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyInstanceNetworkOptionsResponseBody</p>
+ * <p>ModifyInstanceClockOptionsResponseBody</p>
  */
-public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
+public class ModifyInstanceClockOptionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    private ModifyInstanceNetworkOptionsResponseBody(Builder builder) {
+    private ModifyInstanceClockOptionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
@@ -32,7 +32,7 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyInstanceNetworkOptionsResponseBody create() {
+    public static ModifyInstanceClockOptionsResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +61,13 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ModifyInstanceNetworkOptionsResponseBody model) {
+        private Builder(ModifyInstanceClockOptionsResponseBody model) {
             this.requestId = model.requestId;
             this.taskId = model.taskId;
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,19 +75,15 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the redeployment task.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the redeployment result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>t-bp198jigq7l0h5ac****</p>
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
 
-        public ModifyInstanceNetworkOptionsResponseBody build() {
-            return new ModifyInstanceNetworkOptionsResponseBody(this);
+        public ModifyInstanceClockOptionsResponseBody build() {
+            return new ModifyInstanceClockOptionsResponseBody(this);
         } 
 
     } 

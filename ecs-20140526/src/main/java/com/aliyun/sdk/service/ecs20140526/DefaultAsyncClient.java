@@ -6891,6 +6891,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyInstanceClockOptions  ModifyInstanceClockOptionsRequest
+     * @return ModifyInstanceClockOptionsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceClockOptionsResponse> modifyInstanceClockOptions(ModifyInstanceClockOptionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceClockOptions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceClockOptionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceClockOptionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
@@ -6963,6 +6981,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>You can modify only one attribute at a time. If you modify multiple attributes, call this operation multiple times.</li>
+     * <li>To modify the BandwidthWeighting, you must specify the specifications of the instance. The instance types that are supported. You can query the instance type list (DescribeInstanceTypes).</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyInstanceNetworkOptions  ModifyInstanceNetworkOptionsRequest
      * @return ModifyInstanceNetworkOptionsResponse
      */
@@ -7591,12 +7617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Archive snapshots cannot be restored to standard snapshots.</p>
+     * <p>  Archived snapshots cannot be restored to standard snapshots.</p>
      * <ul>
      * <li>You can archive only standard snapshots that have been retained for at least 14 days.</li>
-     * <li>You cannot archive encrypted snapshots.</li>
      * <li>You cannot archive snapshots that are shared to you, snapshots managed by Cloud Backup, or snapshots in cloud boxes.</li>
-     * <li>The archive snapshot feature is available only in the China (Hohhot), Malaysia (Kuala Lumpur), South Korea (Seoul), Philippines (Manila), Thailand (Bangkok), and Mexico regions. The availability of the feature in other regions is subject to notice.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySnapshotCategory  ModifySnapshotCategoryRequest

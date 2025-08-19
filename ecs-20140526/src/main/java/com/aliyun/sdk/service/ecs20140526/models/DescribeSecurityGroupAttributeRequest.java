@@ -22,6 +22,10 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Attribute")
+    private String attribute;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
@@ -67,6 +71,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     private DescribeSecurityGroupAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.attribute = builder.attribute;
         this.direction = builder.direction;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -97,6 +102,13 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return attribute
+     */
+    public String getAttribute() {
+        return this.attribute;
     }
 
     /**
@@ -171,6 +183,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSecurityGroupAttributeRequest, Builder> {
         private String sourceRegionId; 
+        private String attribute; 
         private String direction; 
         private Integer maxResults; 
         private String nextToken; 
@@ -189,6 +202,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         private Builder(DescribeSecurityGroupAttributeRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.attribute = request.attribute;
             this.direction = request.direction;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -207,6 +221,15 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Attribute.
+         */
+        public Builder attribute(String attribute) {
+            this.putQueryParameter("Attribute", attribute);
+            this.attribute = attribute;
             return this;
         }
 

@@ -279,7 +279,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * SessionManagerConfig.
+         * <p>Cloud Assistant Session Manager configuration.</p>
          */
         public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
             String sessionManagerConfigShrink = shrink(sessionManagerConfig, "SessionManagerConfig", "json");
@@ -664,7 +664,18 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             } 
 
             /**
-             * SessionManagerEnabled.
+             * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+             * <ul>
+             * <li>true: Enables the feature.</li>
+             * <li>false: Disables the feature.</li>
+             * </ul>
+             * <p>Notes:</p>
+             * <ul>
+             * <li>The feature applies to all regions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sessionManagerEnabled(Boolean sessionManagerEnabled) {
                 this.sessionManagerEnabled = sessionManagerEnabled;

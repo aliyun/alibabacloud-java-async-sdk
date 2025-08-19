@@ -12,26 +12,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyInstanceNetworkOptionsRequest} extends {@link RequestModel}
+ * {@link ModifyInstanceClockOptionsRequest} extends {@link RequestModel}
  *
- * <p>ModifyInstanceNetworkOptionsRequest</p>
+ * <p>ModifyInstanceClockOptionsRequest</p>
  */
-public class ModifyInstanceNetworkOptionsRequest extends Request {
+public class ModifyInstanceClockOptionsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BandwidthWeighting")
-    private String bandwidthWeighting;
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PtpStatus")
+    private String ptpStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -41,12 +59,16 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyInstanceNetworkOptionsRequest(Builder builder) {
+    private ModifyInstanceClockOptionsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
-        this.bandwidthWeighting = builder.bandwidthWeighting;
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.ptpStatus = builder.ptpStatus;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -55,7 +77,7 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyInstanceNetworkOptionsRequest create() {
+    public static ModifyInstanceClockOptionsRequest create() {
         return builder().build();
     }
 
@@ -72,10 +94,17 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
     }
 
     /**
-     * @return bandwidthWeighting
+     * @return clientToken
      */
-    public String getBandwidthWeighting() {
-        return this.bandwidthWeighting;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -86,10 +115,31 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return ptpStatus
+     */
+    public String getPtpStatus() {
+        return this.ptpStatus;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,11 +156,15 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyInstanceNetworkOptionsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyInstanceClockOptionsRequest, Builder> {
         private String sourceRegionId; 
-        private String bandwidthWeighting; 
+        private String clientToken; 
+        private Boolean dryRun; 
         private String instanceId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String ptpStatus; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -118,12 +172,16 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceNetworkOptionsRequest request) {
+        private Builder(ModifyInstanceClockOptionsRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
-            this.bandwidthWeighting = request.bandwidthWeighting;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.ptpStatus = request.ptpStatus;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -138,34 +196,41 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth weight. Different specifications support different values. You can call the DescribeInstanceTypes operation to query the values supported by the current instance type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Vpc-L1.</li>
-         * <li>Vpc-L2.</li>
-         * <li>Ebs-L1.</li>
-         * <li>Ebs-L2.</li>
-         * <li>Default.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Vpc-L1</p>
+         * ClientToken.
          */
-        public Builder bandwidthWeighting(String bandwidthWeighting) {
-            this.putQueryParameter("BandwidthWeighting", bandwidthWeighting);
-            this.bandwidthWeighting = bandwidthWeighting;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * <p>The ID of the instance for which you want to modify network configurations.</p>
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -175,6 +240,27 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PtpStatus.
+         */
+        public Builder ptpStatus(String ptpStatus) {
+            this.putQueryParameter("PtpStatus", ptpStatus);
+            this.ptpStatus = ptpStatus;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -197,8 +283,8 @@ public class ModifyInstanceNetworkOptionsRequest extends Request {
         }
 
         @Override
-        public ModifyInstanceNetworkOptionsRequest build() {
-            return new ModifyInstanceNetworkOptionsRequest(this);
+        public ModifyInstanceClockOptionsRequest build() {
+            return new ModifyInstanceClockOptionsRequest(this);
         } 
 
     } 
