@@ -3171,6 +3171,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_metadata_options")
+        private InstanceMetadataOptions instanceMetadataOptions;
+
         @com.aliyun.core.annotation.NameInMap("instance_types")
         private java.util.List<String> instanceTypes;
 
@@ -3228,6 +3231,7 @@ public class CreateClusterRequest extends Request {
             this.deploymentsetId = builder.deploymentsetId;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
+            this.instanceMetadataOptions = builder.instanceMetadataOptions;
             this.instanceTypes = builder.instanceTypes;
             this.keyPair = builder.keyPair;
             this.loginPassword = builder.loginPassword;
@@ -3308,6 +3312,13 @@ public class CreateClusterRequest extends Request {
          */
         public String getImageType() {
             return this.imageType;
+        }
+
+        /**
+         * @return instanceMetadataOptions
+         */
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         /**
@@ -3431,6 +3442,7 @@ public class CreateClusterRequest extends Request {
             private String deploymentsetId; 
             private String imageId; 
             private String imageType; 
+            private InstanceMetadataOptions instanceMetadataOptions; 
             private java.util.List<String> instanceTypes; 
             private String keyPair; 
             private String loginPassword; 
@@ -3460,6 +3472,7 @@ public class CreateClusterRequest extends Request {
                 this.deploymentsetId = model.deploymentsetId;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
+                this.instanceMetadataOptions = model.instanceMetadataOptions;
                 this.instanceTypes = model.instanceTypes;
                 this.keyPair = model.keyPair;
                 this.loginPassword = model.loginPassword;
@@ -3563,6 +3576,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * instance_metadata_options.
+             */
+            public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+                this.instanceMetadataOptions = instanceMetadataOptions;
                 return this;
             }
 

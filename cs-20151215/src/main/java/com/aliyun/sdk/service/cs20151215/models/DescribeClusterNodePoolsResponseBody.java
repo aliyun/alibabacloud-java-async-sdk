@@ -940,6 +940,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
     public static class AutoVulFixPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exclude_packages")
+        private String excludePackages;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
@@ -947,6 +950,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
+            this.excludePackages = builder.excludePackages;
             this.restartNode = builder.restartNode;
             this.vulLevel = builder.vulLevel;
         }
@@ -957,6 +961,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static AutoVulFixPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return excludePackages
+         */
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         /**
@@ -974,6 +985,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String excludePackages; 
             private Boolean restartNode; 
             private String vulLevel; 
 
@@ -981,9 +993,18 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             } 
 
             private Builder(AutoVulFixPolicy model) {
+                this.excludePackages = model.excludePackages;
                 this.restartNode = model.restartNode;
                 this.vulLevel = model.vulLevel;
             } 
+
+            /**
+             * exclude_packages.
+             */
+            public Builder excludePackages(String excludePackages) {
+                this.excludePackages = excludePackages;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to allow node restart. This parameter takes effect only if <code>auto_vul_fix</code> is set to true. Valid values:</p>

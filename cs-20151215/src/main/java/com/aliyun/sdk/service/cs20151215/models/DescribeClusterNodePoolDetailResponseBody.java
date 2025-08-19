@@ -1211,6 +1211,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
     public static class AutoVulFixPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exclude_packages")
+        private String excludePackages;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
@@ -1218,6 +1221,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
+            this.excludePackages = builder.excludePackages;
             this.restartNode = builder.restartNode;
             this.vulLevel = builder.vulLevel;
         }
@@ -1228,6 +1232,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         public static AutoVulFixPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return excludePackages
+         */
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         /**
@@ -1245,6 +1256,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String excludePackages; 
             private Boolean restartNode; 
             private String vulLevel; 
 
@@ -1252,9 +1264,18 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             } 
 
             private Builder(AutoVulFixPolicy model) {
+                this.excludePackages = model.excludePackages;
                 this.restartNode = model.restartNode;
                 this.vulLevel = model.vulLevel;
             } 
+
+            /**
+             * exclude_packages.
+             */
+            public Builder excludePackages(String excludePackages) {
+                this.excludePackages = excludePackages;
+                return this;
+            }
 
             /**
              * <p>Whether to allow restarting nodes.</p>
@@ -2126,6 +2147,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_charge_type")
         private String instanceChargeType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_metadata_options")
+        private InstanceMetadataOptions instanceMetadataOptions;
+
         @com.aliyun.core.annotation.NameInMap("instance_patterns")
         private java.util.List<InstancePatterns> instancePatterns;
 
@@ -2251,6 +2275,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instanceMetadataOptions = builder.instanceMetadataOptions;
             this.instancePatterns = builder.instancePatterns;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
@@ -2367,6 +2392,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceMetadataOptions
+         */
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         /**
@@ -2646,6 +2678,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
+            private InstanceMetadataOptions instanceMetadataOptions; 
             private java.util.List<InstancePatterns> instancePatterns; 
             private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
@@ -2699,6 +2732,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
                 this.instanceChargeType = model.instanceChargeType;
+                this.instanceMetadataOptions = model.instanceMetadataOptions;
                 this.instancePatterns = model.instancePatterns;
                 this.instanceTypes = model.instanceTypes;
                 this.internetChargeType = model.internetChargeType;
@@ -2856,6 +2890,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * instance_metadata_options.
+             */
+            public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+                this.instanceMetadataOptions = instanceMetadataOptions;
                 return this;
             }
 

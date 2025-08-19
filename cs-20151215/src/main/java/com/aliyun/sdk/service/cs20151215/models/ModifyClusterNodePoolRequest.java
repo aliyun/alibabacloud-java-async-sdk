@@ -553,6 +553,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("labels")
         private java.util.List<Tag> labels;
 
+        @com.aliyun.core.annotation.NameInMap("node_name_mode")
+        private String nodeNameMode;
+
         @com.aliyun.core.annotation.NameInMap("pre_user_data")
         private String preUserData;
 
@@ -575,6 +578,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.cmsEnabled = builder.cmsEnabled;
             this.cpuPolicy = builder.cpuPolicy;
             this.labels = builder.labels;
+            this.nodeNameMode = builder.nodeNameMode;
             this.preUserData = builder.preUserData;
             this.runtime = builder.runtime;
             this.runtimeVersion = builder.runtimeVersion;
@@ -610,6 +614,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public java.util.List<Tag> getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return nodeNameMode
+         */
+        public String getNodeNameMode() {
+            return this.nodeNameMode;
         }
 
         /**
@@ -658,6 +669,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Boolean cmsEnabled; 
             private String cpuPolicy; 
             private java.util.List<Tag> labels; 
+            private String nodeNameMode; 
             private String preUserData; 
             private String runtime; 
             private String runtimeVersion; 
@@ -672,6 +684,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.cmsEnabled = model.cmsEnabled;
                 this.cpuPolicy = model.cpuPolicy;
                 this.labels = model.labels;
+                this.nodeNameMode = model.nodeNameMode;
                 this.preUserData = model.preUserData;
                 this.runtime = model.runtime;
                 this.runtimeVersion = model.runtimeVersion;
@@ -721,6 +734,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder labels(java.util.List<Tag> labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * node_name_mode.
+             */
+            public Builder nodeNameMode(String nodeNameMode) {
+                this.nodeNameMode = nodeNameMode;
                 return this;
             }
 
@@ -1012,6 +1033,9 @@ public class ModifyClusterNodePoolRequest extends Request {
      * <p>ModifyClusterNodePoolRequest</p>
      */
     public static class AutoVulFixPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exclude_packages")
+        private String excludePackages;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
@@ -1019,6 +1043,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
+            this.excludePackages = builder.excludePackages;
             this.restartNode = builder.restartNode;
             this.vulLevel = builder.vulLevel;
         }
@@ -1029,6 +1054,13 @@ public class ModifyClusterNodePoolRequest extends Request {
 
         public static AutoVulFixPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return excludePackages
+         */
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         /**
@@ -1046,6 +1078,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         public static final class Builder {
+            private String excludePackages; 
             private Boolean restartNode; 
             private String vulLevel; 
 
@@ -1053,9 +1086,18 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             private Builder(AutoVulFixPolicy model) {
+                this.excludePackages = model.excludePackages;
                 this.restartNode = model.restartNode;
                 this.vulLevel = model.vulLevel;
             } 
+
+            /**
+             * exclude_packages.
+             */
+            public Builder excludePackages(String excludePackages) {
+                this.excludePackages = excludePackages;
+                return this;
+            }
 
             /**
              * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>

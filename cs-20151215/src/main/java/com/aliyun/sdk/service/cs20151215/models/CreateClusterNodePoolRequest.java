@@ -1480,6 +1480,9 @@ public class CreateClusterNodePoolRequest extends Request {
      * <p>CreateClusterNodePoolRequest</p>
      */
     public static class AutoVulFixPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exclude_packages")
+        private String excludePackages;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
@@ -1487,6 +1490,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
+            this.excludePackages = builder.excludePackages;
             this.restartNode = builder.restartNode;
             this.vulLevel = builder.vulLevel;
         }
@@ -1497,6 +1501,13 @@ public class CreateClusterNodePoolRequest extends Request {
 
         public static AutoVulFixPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return excludePackages
+         */
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         /**
@@ -1514,6 +1525,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         public static final class Builder {
+            private String excludePackages; 
             private Boolean restartNode; 
             private String vulLevel; 
 
@@ -1521,9 +1533,18 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             private Builder(AutoVulFixPolicy model) {
+                this.excludePackages = model.excludePackages;
                 this.restartNode = model.restartNode;
                 this.vulLevel = model.vulLevel;
             } 
+
+            /**
+             * exclude_packages.
+             */
+            public Builder excludePackages(String excludePackages) {
+                this.excludePackages = excludePackages;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_vul_fix</code> is set to true. Valid values:</p>
@@ -2388,6 +2409,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String instanceChargeType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_metadata_options")
+        private InstanceMetadataOptions instanceMetadataOptions;
+
         @com.aliyun.core.annotation.NameInMap("instance_patterns")
         private java.util.List<InstancePatterns> instancePatterns;
 
@@ -2511,6 +2535,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instanceMetadataOptions = builder.instanceMetadataOptions;
             this.instancePatterns = builder.instancePatterns;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
@@ -2625,6 +2650,13 @@ public class CreateClusterNodePoolRequest extends Request {
          */
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceMetadataOptions
+         */
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         /**
@@ -2890,6 +2922,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
+            private InstanceMetadataOptions instanceMetadataOptions; 
             private java.util.List<InstancePatterns> instancePatterns; 
             private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
@@ -2941,6 +2974,7 @@ public class CreateClusterNodePoolRequest extends Request {
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
                 this.instanceChargeType = model.instanceChargeType;
+                this.instanceMetadataOptions = model.instanceMetadataOptions;
                 this.instancePatterns = model.instancePatterns;
                 this.instanceTypes = model.instanceTypes;
                 this.internetChargeType = model.internetChargeType;
@@ -3115,6 +3149,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * instance_metadata_options.
+             */
+            public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+                this.instanceMetadataOptions = instanceMetadataOptions;
                 return this;
             }
 

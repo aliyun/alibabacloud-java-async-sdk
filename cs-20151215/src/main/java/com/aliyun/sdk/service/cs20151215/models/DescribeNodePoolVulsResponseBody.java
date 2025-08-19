@@ -101,6 +101,60 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
      *
      * <p>DescribeNodePoolVulsResponseBody</p>
      */
+    public static class PackageList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private PackageList(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PackageList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageList model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public PackageList build() {
+                return new PackageList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNodePoolVulsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodePoolVulsResponseBody</p>
+     */
     public static class VulList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alias_name")
         private String aliasName;
@@ -117,12 +171,16 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("need_reboot")
         private Boolean needReboot;
 
+        @com.aliyun.core.annotation.NameInMap("package_list")
+        private java.util.List<PackageList> packageList;
+
         private VulList(Builder builder) {
             this.aliasName = builder.aliasName;
             this.cveList = builder.cveList;
             this.name = builder.name;
             this.necessity = builder.necessity;
             this.needReboot = builder.needReboot;
+            this.packageList = builder.packageList;
         }
 
         public static Builder builder() {
@@ -168,12 +226,20 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             return this.needReboot;
         }
 
+        /**
+         * @return packageList
+         */
+        public java.util.List<PackageList> getPackageList() {
+            return this.packageList;
+        }
+
         public static final class Builder {
             private String aliasName; 
             private java.util.List<String> cveList; 
             private String name; 
             private String necessity; 
             private Boolean needReboot; 
+            private java.util.List<PackageList> packageList; 
 
             private Builder() {
             } 
@@ -184,6 +250,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
                 this.name = model.name;
                 this.necessity = model.necessity;
                 this.needReboot = model.needReboot;
+                this.packageList = model.packageList;
             } 
 
             /**
@@ -241,6 +308,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
+                return this;
+            }
+
+            /**
+             * package_list.
+             */
+            public Builder packageList(java.util.List<PackageList> packageList) {
+                this.packageList = packageList;
                 return this;
             }
 

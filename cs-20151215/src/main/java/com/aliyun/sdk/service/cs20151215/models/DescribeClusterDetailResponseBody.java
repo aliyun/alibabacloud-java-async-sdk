@@ -53,6 +53,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("external_loadbalancer_id")
     private String externalLoadbalancerId;
 
+    @com.aliyun.core.annotation.NameInMap("extra_sans")
+    private java.util.List<String> extraSans;
+
     @com.aliyun.core.annotation.NameInMap("init_version")
     private String initVersion;
 
@@ -100,6 +103,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("resource_group_id")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("rrsa_config")
+    private RrsaConfig rrsaConfig;
 
     @com.aliyun.core.annotation.NameInMap("security_group_id")
     private String securityGroupId;
@@ -156,6 +162,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         this.deletionProtection = builder.deletionProtection;
         this.dockerVersion = builder.dockerVersion;
         this.externalLoadbalancerId = builder.externalLoadbalancerId;
+        this.extraSans = builder.extraSans;
         this.initVersion = builder.initVersion;
         this.ipStack = builder.ipStack;
         this.maintenanceWindow = builder.maintenanceWindow;
@@ -172,6 +179,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         this.proxyMode = builder.proxyMode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.rrsaConfig = builder.rrsaConfig;
         this.securityGroupId = builder.securityGroupId;
         this.serviceCidr = builder.serviceCidr;
         this.size = builder.size;
@@ -281,6 +289,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     public String getExternalLoadbalancerId() {
         return this.externalLoadbalancerId;
+    }
+
+    /**
+     * @return extraSans
+     */
+    public java.util.List<String> getExtraSans() {
+        return this.extraSans;
     }
 
     /**
@@ -396,6 +411,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return rrsaConfig
+     */
+    public RrsaConfig getRrsaConfig() {
+        return this.rrsaConfig;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -499,6 +521,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private Boolean deletionProtection; 
         private String dockerVersion; 
         private String externalLoadbalancerId; 
+        private java.util.List<String> extraSans; 
         private String initVersion; 
         private String ipStack; 
         private MaintenanceWindow maintenanceWindow; 
@@ -515,6 +538,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String proxyMode; 
         private String regionId; 
         private String resourceGroupId; 
+        private RrsaConfig rrsaConfig; 
         private String securityGroupId; 
         private String serviceCidr; 
         private Long size; 
@@ -545,6 +569,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             this.deletionProtection = model.deletionProtection;
             this.dockerVersion = model.dockerVersion;
             this.externalLoadbalancerId = model.externalLoadbalancerId;
+            this.extraSans = model.extraSans;
             this.initVersion = model.initVersion;
             this.ipStack = model.ipStack;
             this.maintenanceWindow = model.maintenanceWindow;
@@ -561,6 +586,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             this.proxyMode = model.proxyMode;
             this.regionId = model.regionId;
             this.resourceGroupId = model.resourceGroupId;
+            this.rrsaConfig = model.rrsaConfig;
             this.securityGroupId = model.securityGroupId;
             this.serviceCidr = model.serviceCidr;
             this.size = model.size;
@@ -712,6 +738,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          */
         public Builder externalLoadbalancerId(String externalLoadbalancerId) {
             this.externalLoadbalancerId = externalLoadbalancerId;
+            return this;
+        }
+
+        /**
+         * extra_sans.
+         */
+        public Builder extraSans(java.util.List<String> extraSans) {
+            this.extraSans = extraSans;
             return this;
         }
 
@@ -899,6 +933,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * rrsa_config.
+         */
+        public Builder rrsaConfig(RrsaConfig rrsaConfig) {
+            this.rrsaConfig = rrsaConfig;
             return this;
         }
 
@@ -1145,6 +1187,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_metadata_options")
+        private InstanceMetadataOptions instanceMetadataOptions;
+
         @com.aliyun.core.annotation.NameInMap("instance_types")
         private java.util.List<String> instanceTypes;
 
@@ -1199,6 +1244,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             this.deploymentsetId = builder.deploymentsetId;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
+            this.instanceMetadataOptions = builder.instanceMetadataOptions;
             this.instanceTypes = builder.instanceTypes;
             this.keyPair = builder.keyPair;
             this.nodePortRange = builder.nodePortRange;
@@ -1278,6 +1324,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          */
         public String getImageType() {
             return this.imageType;
+        }
+
+        /**
+         * @return instanceMetadataOptions
+         */
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         /**
@@ -1394,6 +1447,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private String deploymentsetId; 
             private String imageId; 
             private String imageType; 
+            private InstanceMetadataOptions instanceMetadataOptions; 
             private java.util.List<String> instanceTypes; 
             private String keyPair; 
             private String nodePortRange; 
@@ -1422,6 +1476,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
                 this.deploymentsetId = model.deploymentsetId;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
+                this.instanceMetadataOptions = model.instanceMetadataOptions;
                 this.instanceTypes = model.instanceTypes;
                 this.keyPair = model.keyPair;
                 this.nodePortRange = model.nodePortRange;
@@ -1524,6 +1579,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * instance_metadata_options.
+             */
+            public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+                this.instanceMetadataOptions = instanceMetadataOptions;
                 return this;
             }
 
@@ -1832,6 +1895,210 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
             public OperationPolicy build() {
                 return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterDetailResponseBody</p>
+     */
+    public static class RrsaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("audience")
+        private String audience;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("issuer")
+        private String issuer;
+
+        @com.aliyun.core.annotation.NameInMap("jwks_url")
+        private String jwksUrl;
+
+        @com.aliyun.core.annotation.NameInMap("max_oidc_token_expiration")
+        private String maxOidcTokenExpiration;
+
+        @com.aliyun.core.annotation.NameInMap("oidc_arn")
+        private String oidcArn;
+
+        @com.aliyun.core.annotation.NameInMap("oidc_name")
+        private String oidcName;
+
+        @com.aliyun.core.annotation.NameInMap("open_api_configuration_url")
+        private String openApiConfigurationUrl;
+
+        private RrsaConfig(Builder builder) {
+            this.audience = builder.audience;
+            this.enabled = builder.enabled;
+            this.issuer = builder.issuer;
+            this.jwksUrl = builder.jwksUrl;
+            this.maxOidcTokenExpiration = builder.maxOidcTokenExpiration;
+            this.oidcArn = builder.oidcArn;
+            this.oidcName = builder.oidcName;
+            this.openApiConfigurationUrl = builder.openApiConfigurationUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RrsaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return audience
+         */
+        public String getAudience() {
+            return this.audience;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return issuer
+         */
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        /**
+         * @return jwksUrl
+         */
+        public String getJwksUrl() {
+            return this.jwksUrl;
+        }
+
+        /**
+         * @return maxOidcTokenExpiration
+         */
+        public String getMaxOidcTokenExpiration() {
+            return this.maxOidcTokenExpiration;
+        }
+
+        /**
+         * @return oidcArn
+         */
+        public String getOidcArn() {
+            return this.oidcArn;
+        }
+
+        /**
+         * @return oidcName
+         */
+        public String getOidcName() {
+            return this.oidcName;
+        }
+
+        /**
+         * @return openApiConfigurationUrl
+         */
+        public String getOpenApiConfigurationUrl() {
+            return this.openApiConfigurationUrl;
+        }
+
+        public static final class Builder {
+            private String audience; 
+            private Boolean enabled; 
+            private String issuer; 
+            private String jwksUrl; 
+            private String maxOidcTokenExpiration; 
+            private String oidcArn; 
+            private String oidcName; 
+            private String openApiConfigurationUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(RrsaConfig model) {
+                this.audience = model.audience;
+                this.enabled = model.enabled;
+                this.issuer = model.issuer;
+                this.jwksUrl = model.jwksUrl;
+                this.maxOidcTokenExpiration = model.maxOidcTokenExpiration;
+                this.oidcArn = model.oidcArn;
+                this.oidcName = model.oidcName;
+                this.openApiConfigurationUrl = model.openApiConfigurationUrl;
+            } 
+
+            /**
+             * audience.
+             */
+            public Builder audience(String audience) {
+                this.audience = audience;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * issuer.
+             */
+            public Builder issuer(String issuer) {
+                this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * jwks_url.
+             */
+            public Builder jwksUrl(String jwksUrl) {
+                this.jwksUrl = jwksUrl;
+                return this;
+            }
+
+            /**
+             * max_oidc_token_expiration.
+             */
+            public Builder maxOidcTokenExpiration(String maxOidcTokenExpiration) {
+                this.maxOidcTokenExpiration = maxOidcTokenExpiration;
+                return this;
+            }
+
+            /**
+             * oidc_arn.
+             */
+            public Builder oidcArn(String oidcArn) {
+                this.oidcArn = oidcArn;
+                return this;
+            }
+
+            /**
+             * oidc_name.
+             */
+            public Builder oidcName(String oidcName) {
+                this.oidcName = oidcName;
+                return this;
+            }
+
+            /**
+             * open_api_configuration_url.
+             */
+            public Builder openApiConfigurationUrl(String openApiConfigurationUrl) {
+                this.openApiConfigurationUrl = openApiConfigurationUrl;
+                return this;
+            }
+
+            public RrsaConfig build() {
+                return new RrsaConfig(this);
             } 
 
         } 

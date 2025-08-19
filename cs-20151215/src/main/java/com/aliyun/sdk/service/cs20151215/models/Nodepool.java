@@ -1745,6 +1745,9 @@ public class Nodepool extends TeaModel {
         @com.aliyun.core.annotation.Validation(required = true)
         private String instanceChargeType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_metadata_options")
+        private InstanceMetadataOptions instanceMetadataOptions;
+
         @com.aliyun.core.annotation.NameInMap("instance_types")
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<String> instanceTypes;
@@ -1857,6 +1860,7 @@ public class Nodepool extends TeaModel {
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instanceMetadataOptions = builder.instanceMetadataOptions;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -1961,6 +1965,13 @@ public class Nodepool extends TeaModel {
          */
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceMetadataOptions
+         */
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         /**
@@ -2204,6 +2215,7 @@ public class Nodepool extends TeaModel {
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
+            private InstanceMetadataOptions instanceMetadataOptions; 
             private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
@@ -2251,6 +2263,7 @@ public class Nodepool extends TeaModel {
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
                 this.instanceChargeType = model.instanceChargeType;
+                this.instanceMetadataOptions = model.instanceMetadataOptions;
                 this.instanceTypes = model.instanceTypes;
                 this.internetChargeType = model.internetChargeType;
                 this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
@@ -2358,6 +2371,14 @@ public class Nodepool extends TeaModel {
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * instance_metadata_options.
+             */
+            public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+                this.instanceMetadataOptions = instanceMetadataOptions;
                 return this;
             }
 
