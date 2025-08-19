@@ -338,6 +338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAllDepartmentResponse> getAllDepartment(GetAllDepartmentRequest request);
 
     /**
+     * @param request the request parameters of GetCallDialogContent  GetCallDialogContentRequest
+     * @return GetCallDialogContentResponse
+     */
+    CompletableFuture<GetCallDialogContentResponse> getCallDialogContent(GetCallDialogContentRequest request);
+
+    /**
      * @param request the request parameters of GetCallSoundRecord  GetCallSoundRecordRequest
      * @return GetCallSoundRecordResponse
      */
