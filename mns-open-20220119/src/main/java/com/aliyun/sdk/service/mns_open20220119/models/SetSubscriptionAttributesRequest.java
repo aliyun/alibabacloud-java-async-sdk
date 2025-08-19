@@ -35,6 +35,10 @@ public class SetSubscriptionAttributesRequest extends Request {
     private String subscriptionName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantRateLimitPolicy")
+    private TenantRateLimitPolicy tenantRateLimitPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
@@ -45,6 +49,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         this.dlqPolicy = builder.dlqPolicy;
         this.notifyStrategy = builder.notifyStrategy;
         this.subscriptionName = builder.subscriptionName;
+        this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.topicName = builder.topicName;
     }
 
@@ -90,6 +95,13 @@ public class SetSubscriptionAttributesRequest extends Request {
     }
 
     /**
+     * @return tenantRateLimitPolicy
+     */
+    public TenantRateLimitPolicy getTenantRateLimitPolicy() {
+        return this.tenantRateLimitPolicy;
+    }
+
+    /**
      * @return topicName
      */
     public String getTopicName() {
@@ -101,6 +113,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         private DlqPolicy dlqPolicy; 
         private String notifyStrategy; 
         private String subscriptionName; 
+        private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private String topicName; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class SetSubscriptionAttributesRequest extends Request {
             this.dlqPolicy = request.dlqPolicy;
             this.notifyStrategy = request.notifyStrategy;
             this.subscriptionName = request.subscriptionName;
+            this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.topicName = request.topicName;
         } 
 
@@ -161,6 +175,16 @@ public class SetSubscriptionAttributesRequest extends Request {
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
             this.subscriptionName = subscriptionName;
+            return this;
+        }
+
+        /**
+         * TenantRateLimitPolicy.
+         */
+        public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
+            String tenantRateLimitPolicyShrink = shrink(tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            this.putQueryParameter("TenantRateLimitPolicy", tenantRateLimitPolicyShrink);
+            this.tenantRateLimitPolicy = tenantRateLimitPolicy;
             return this;
         }
 
@@ -260,6 +284,84 @@ public class SetSubscriptionAttributesRequest extends Request {
 
             public DlqPolicy build() {
                 return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SetSubscriptionAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>SetSubscriptionAttributesRequest</p>
+     */
+    public static class TenantRateLimitPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceivesPerSecond")
+        private Integer maxReceivesPerSecond;
+
+        private TenantRateLimitPolicy(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxReceivesPerSecond = builder.maxReceivesPerSecond;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantRateLimitPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceivesPerSecond
+         */
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxReceivesPerSecond; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantRateLimitPolicy model) {
+                this.enabled = model.enabled;
+                this.maxReceivesPerSecond = model.maxReceivesPerSecond;
+            } 
+
+            /**
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceivesPerSecond.
+             */
+            public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
+                this.maxReceivesPerSecond = maxReceivesPerSecond;
+                return this;
+            }
+
+            public TenantRateLimitPolicy build() {
+                return new TenantRateLimitPolicy(this);
             } 
 
         } 

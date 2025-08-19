@@ -22,8 +22,19 @@ public class CreateEventRuleRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryMode")
+    private String deliveryMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
+    private Endpoint endpoint;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Endpoints")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.Query
@@ -49,6 +60,9 @@ public class CreateEventRuleRequest extends Request {
     private CreateEventRuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
+        this.deliveryMode = builder.deliveryMode;
+        this.endpoint = builder.endpoint;
         this.endpoints = builder.endpoints;
         this.eventTypes = builder.eventTypes;
         this.matchRules = builder.matchRules;
@@ -74,6 +88,27 @@ public class CreateEventRuleRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return deliveryMode
+     */
+    public String getDeliveryMode() {
+        return this.deliveryMode;
+    }
+
+    /**
+     * @return endpoint
+     */
+    public Endpoint getEndpoint() {
+        return this.endpoint;
     }
 
     /**
@@ -113,6 +148,9 @@ public class CreateEventRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateEventRuleRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
+        private String deliveryMode; 
+        private Endpoint endpoint; 
         private java.util.List<Endpoints> endpoints; 
         private java.util.List<String> eventTypes; 
         private java.util.List<java.util.List<EventMatchRule>> matchRules; 
@@ -126,6 +164,9 @@ public class CreateEventRuleRequest extends Request {
         private Builder(CreateEventRuleRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
+            this.deliveryMode = request.deliveryMode;
+            this.endpoint = request.endpoint;
             this.endpoints = request.endpoints;
             this.eventTypes = request.eventTypes;
             this.matchRules = request.matchRules;
@@ -143,7 +184,35 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeliveryMode.
+         */
+        public Builder deliveryMode(String deliveryMode) {
+            this.putQueryParameter("DeliveryMode", deliveryMode);
+            this.deliveryMode = deliveryMode;
+            return this;
+        }
+
+        /**
+         * Endpoint.
+         */
+        public Builder endpoint(Endpoint endpoint) {
+            String endpointShrink = shrink(endpoint, "Endpoint", "json");
+            this.putQueryParameter("Endpoint", endpointShrink);
+            this.endpoint = endpoint;
+            return this;
+        }
+
+        /**
+         * Endpoints.
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             String endpointsShrink = shrink(endpoints, "Endpoints", "json");
@@ -209,13 +278,86 @@ public class CreateEventRuleRequest extends Request {
      *
      * <p>CreateEventRuleRequest</p>
      */
-    public static class Endpoints extends TeaModel {
+    public static class Endpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointType")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String endpointType;
 
         @com.aliyun.core.annotation.NameInMap("EndpointValue")
-        @com.aliyun.core.annotation.Validation(required = true)
+        private String endpointValue;
+
+        private Endpoint(Builder builder) {
+            this.endpointType = builder.endpointType;
+            this.endpointValue = builder.endpointValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Endpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpointType
+         */
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        /**
+         * @return endpointValue
+         */
+        public String getEndpointValue() {
+            return this.endpointValue;
+        }
+
+        public static final class Builder {
+            private String endpointType; 
+            private String endpointValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoint model) {
+                this.endpointType = model.endpointType;
+                this.endpointValue = model.endpointValue;
+            } 
+
+            /**
+             * EndpointType.
+             */
+            public Builder endpointType(String endpointType) {
+                this.endpointType = endpointType;
+                return this;
+            }
+
+            /**
+             * EndpointValue.
+             */
+            public Builder endpointValue(String endpointValue) {
+                this.endpointValue = endpointValue;
+                return this;
+            }
+
+            public Endpoint build() {
+                return new Endpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRuleRequest</p>
+     */
+    public static class Endpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
+        private String endpointType;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointValue")
         private String endpointValue;
 
         private Endpoints(Builder builder) {
@@ -258,10 +400,7 @@ public class CreateEventRuleRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>http</p>
+             * EndpointType.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -269,10 +408,7 @@ public class CreateEventRuleRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-xxx-queue</p>
+             * EndpointValue.
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;

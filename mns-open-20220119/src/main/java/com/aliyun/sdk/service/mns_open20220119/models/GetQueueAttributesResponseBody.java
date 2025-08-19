@@ -379,6 +379,84 @@ public class GetQueueAttributesResponseBody extends TeaModel {
      *
      * <p>GetQueueAttributesResponseBody</p>
      */
+    public static class TenantRateLimitPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceivesPerSecond")
+        private Integer maxReceivesPerSecond;
+
+        private TenantRateLimitPolicy(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxReceivesPerSecond = builder.maxReceivesPerSecond;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantRateLimitPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceivesPerSecond
+         */
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxReceivesPerSecond; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantRateLimitPolicy model) {
+                this.enabled = model.enabled;
+                this.maxReceivesPerSecond = model.maxReceivesPerSecond;
+            } 
+
+            /**
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceivesPerSecond.
+             */
+            public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
+                this.maxReceivesPerSecond = maxReceivesPerSecond;
+                return this;
+            }
+
+            public TenantRateLimitPolicy build() {
+                return new TenantRateLimitPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetQueueAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueueAttributesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveMessages")
         private Long activeMessages;
@@ -419,6 +497,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("TenantRateLimitPolicy")
+        private TenantRateLimitPolicy tenantRateLimitPolicy;
+
         @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
         private Long visibilityTimeout;
 
@@ -436,6 +517,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             this.pollingWaitSeconds = builder.pollingWaitSeconds;
             this.queueName = builder.queueName;
             this.tags = builder.tags;
+            this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
             this.visibilityTimeout = builder.visibilityTimeout;
         }
 
@@ -539,6 +621,13 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantRateLimitPolicy
+         */
+        public TenantRateLimitPolicy getTenantRateLimitPolicy() {
+            return this.tenantRateLimitPolicy;
+        }
+
+        /**
          * @return visibilityTimeout
          */
         public Long getVisibilityTimeout() {
@@ -559,6 +648,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             private Long pollingWaitSeconds; 
             private String queueName; 
             private java.util.List<Tags> tags; 
+            private TenantRateLimitPolicy tenantRateLimitPolicy; 
             private Long visibilityTimeout; 
 
             private Builder() {
@@ -578,6 +668,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
                 this.pollingWaitSeconds = model.pollingWaitSeconds;
                 this.queueName = model.queueName;
                 this.tags = model.tags;
+                this.tenantRateLimitPolicy = model.tenantRateLimitPolicy;
                 this.visibilityTimeout = model.visibilityTimeout;
             } 
 
@@ -719,6 +810,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TenantRateLimitPolicy.
+             */
+            public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
+                this.tenantRateLimitPolicy = tenantRateLimitPolicy;
                 return this;
             }
 

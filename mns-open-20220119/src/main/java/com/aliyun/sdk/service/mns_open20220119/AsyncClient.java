@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEndpointAttributeResponse> getEndpointAttribute(GetEndpointAttributeRequest request);
 
     /**
+     * @param request the request parameters of GetEventRule  GetEventRuleRequest
+     * @return GetEventRuleResponse
+     */
+    CompletableFuture<GetEventRuleResponse> getEventRule(GetEventRuleRequest request);
+
+    /**
      * @param request the request parameters of GetQueueAttributes  GetQueueAttributesRequest
      * @return GetQueueAttributesResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTopicAttributesResponse
      */
     CompletableFuture<GetTopicAttributesResponse> getTopicAttributes(GetTopicAttributesRequest request);
+
+    /**
+     * @param request the request parameters of ListEventRules  ListEventRulesRequest
+     * @return ListEventRulesResponse
+     */
+    CompletableFuture<ListEventRulesResponse> listEventRules(ListEventRulesRequest request);
 
     /**
      * @param request the request parameters of ListQueue  ListQueueRequest

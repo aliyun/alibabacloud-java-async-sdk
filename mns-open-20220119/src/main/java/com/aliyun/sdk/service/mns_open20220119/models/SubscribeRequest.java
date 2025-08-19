@@ -26,9 +26,21 @@ public class SubscribeRequest extends Request {
     private DlqPolicy dlqPolicy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmAttributes")
+    private DmAttributes dmAttributes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DysmsAttributes")
+    private DysmsAttributes dysmsAttributes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Endpoint")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KafkaAttributes")
+    private KafkaAttributes kafkaAttributes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageTag")
@@ -57,6 +69,10 @@ public class SubscribeRequest extends Request {
     private String subscriptionName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantRateLimitPolicy")
+    private TenantRateLimitPolicy tenantRateLimitPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
@@ -65,13 +81,17 @@ public class SubscribeRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.dlqPolicy = builder.dlqPolicy;
+        this.dmAttributes = builder.dmAttributes;
+        this.dysmsAttributes = builder.dysmsAttributes;
         this.endpoint = builder.endpoint;
+        this.kafkaAttributes = builder.kafkaAttributes;
         this.messageTag = builder.messageTag;
         this.notifyContentFormat = builder.notifyContentFormat;
         this.notifyStrategy = builder.notifyStrategy;
         this.pushType = builder.pushType;
         this.stsRoleArn = builder.stsRoleArn;
         this.subscriptionName = builder.subscriptionName;
+        this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.topicName = builder.topicName;
     }
 
@@ -103,10 +123,31 @@ public class SubscribeRequest extends Request {
     }
 
     /**
+     * @return dmAttributes
+     */
+    public DmAttributes getDmAttributes() {
+        return this.dmAttributes;
+    }
+
+    /**
+     * @return dysmsAttributes
+     */
+    public DysmsAttributes getDysmsAttributes() {
+        return this.dysmsAttributes;
+    }
+
+    /**
      * @return endpoint
      */
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    /**
+     * @return kafkaAttributes
+     */
+    public KafkaAttributes getKafkaAttributes() {
+        return this.kafkaAttributes;
     }
 
     /**
@@ -152,6 +193,13 @@ public class SubscribeRequest extends Request {
     }
 
     /**
+     * @return tenantRateLimitPolicy
+     */
+    public TenantRateLimitPolicy getTenantRateLimitPolicy() {
+        return this.tenantRateLimitPolicy;
+    }
+
+    /**
      * @return topicName
      */
     public String getTopicName() {
@@ -161,13 +209,17 @@ public class SubscribeRequest extends Request {
     public static final class Builder extends Request.Builder<SubscribeRequest, Builder> {
         private String regionId; 
         private DlqPolicy dlqPolicy; 
+        private DmAttributes dmAttributes; 
+        private DysmsAttributes dysmsAttributes; 
         private String endpoint; 
+        private KafkaAttributes kafkaAttributes; 
         private String messageTag; 
         private String notifyContentFormat; 
         private String notifyStrategy; 
         private String pushType; 
         private String stsRoleArn; 
         private String subscriptionName; 
+        private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private String topicName; 
 
         private Builder() {
@@ -178,13 +230,17 @@ public class SubscribeRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.dlqPolicy = request.dlqPolicy;
+            this.dmAttributes = request.dmAttributes;
+            this.dysmsAttributes = request.dysmsAttributes;
             this.endpoint = request.endpoint;
+            this.kafkaAttributes = request.kafkaAttributes;
             this.messageTag = request.messageTag;
             this.notifyContentFormat = request.notifyContentFormat;
             this.notifyStrategy = request.notifyStrategy;
             this.pushType = request.pushType;
             this.stsRoleArn = request.stsRoleArn;
             this.subscriptionName = request.subscriptionName;
+            this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.topicName = request.topicName;
         } 
 
@@ -208,6 +264,26 @@ public class SubscribeRequest extends Request {
         }
 
         /**
+         * DmAttributes.
+         */
+        public Builder dmAttributes(DmAttributes dmAttributes) {
+            String dmAttributesShrink = shrink(dmAttributes, "DmAttributes", "json");
+            this.putQueryParameter("DmAttributes", dmAttributesShrink);
+            this.dmAttributes = dmAttributes;
+            return this;
+        }
+
+        /**
+         * DysmsAttributes.
+         */
+        public Builder dysmsAttributes(DysmsAttributes dysmsAttributes) {
+            String dysmsAttributesShrink = shrink(dysmsAttributes, "DysmsAttributes", "json");
+            this.putQueryParameter("DysmsAttributes", dysmsAttributesShrink);
+            this.dysmsAttributes = dysmsAttributes;
+            return this;
+        }
+
+        /**
          * <p>The receiver endpoint. The format of the endpoint varies based on the terminal type.</p>
          * <ul>
          * <li>If you set PushType to http, set Endpoint to an <code>HTTP URL that starts with http:// or https://</code>.</li>
@@ -224,6 +300,16 @@ public class SubscribeRequest extends Request {
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
             this.endpoint = endpoint;
+            return this;
+        }
+
+        /**
+         * KafkaAttributes.
+         */
+        public Builder kafkaAttributes(KafkaAttributes kafkaAttributes) {
+            String kafkaAttributesShrink = shrink(kafkaAttributes, "KafkaAttributes", "json");
+            this.putQueryParameter("KafkaAttributes", kafkaAttributesShrink);
+            this.kafkaAttributes = kafkaAttributes;
             return this;
         }
 
@@ -312,6 +398,16 @@ public class SubscribeRequest extends Request {
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
             this.subscriptionName = subscriptionName;
+            return this;
+        }
+
+        /**
+         * TenantRateLimitPolicy.
+         */
+        public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
+            String tenantRateLimitPolicyShrink = shrink(tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            this.putQueryParameter("TenantRateLimitPolicy", tenantRateLimitPolicyShrink);
+            this.tenantRateLimitPolicy = tenantRateLimitPolicy;
             return this;
         }
 
@@ -411,6 +507,288 @@ public class SubscribeRequest extends Request {
 
             public DlqPolicy build() {
                 return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubscribeRequest} extends {@link TeaModel}
+     *
+     * <p>SubscribeRequest</p>
+     */
+    public static class DmAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountName")
+        private String accountName;
+
+        @com.aliyun.core.annotation.NameInMap("Subject")
+        private String subject;
+
+        private DmAttributes(Builder builder) {
+            this.accountName = builder.accountName;
+            this.subject = builder.subject;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DmAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountName
+         */
+        public String getAccountName() {
+            return this.accountName;
+        }
+
+        /**
+         * @return subject
+         */
+        public String getSubject() {
+            return this.subject;
+        }
+
+        public static final class Builder {
+            private String accountName; 
+            private String subject; 
+
+            private Builder() {
+            } 
+
+            private Builder(DmAttributes model) {
+                this.accountName = model.accountName;
+                this.subject = model.subject;
+            } 
+
+            /**
+             * AccountName.
+             */
+            public Builder accountName(String accountName) {
+                this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * Subject.
+             */
+            public Builder subject(String subject) {
+                this.subject = subject;
+                return this;
+            }
+
+            public DmAttributes build() {
+                return new DmAttributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubscribeRequest} extends {@link TeaModel}
+     *
+     * <p>SubscribeRequest</p>
+     */
+    public static class DysmsAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SignName")
+        private String signName;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
+        private String templateCode;
+
+        private DysmsAttributes(Builder builder) {
+            this.signName = builder.signName;
+            this.templateCode = builder.templateCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DysmsAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return signName
+         */
+        public String getSignName() {
+            return this.signName;
+        }
+
+        /**
+         * @return templateCode
+         */
+        public String getTemplateCode() {
+            return this.templateCode;
+        }
+
+        public static final class Builder {
+            private String signName; 
+            private String templateCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(DysmsAttributes model) {
+                this.signName = model.signName;
+                this.templateCode = model.templateCode;
+            } 
+
+            /**
+             * SignName.
+             */
+            public Builder signName(String signName) {
+                this.signName = signName;
+                return this;
+            }
+
+            /**
+             * TemplateCode.
+             */
+            public Builder templateCode(String templateCode) {
+                this.templateCode = templateCode;
+                return this;
+            }
+
+            public DysmsAttributes build() {
+                return new DysmsAttributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubscribeRequest} extends {@link TeaModel}
+     *
+     * <p>SubscribeRequest</p>
+     */
+    public static class KafkaAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessMode")
+        private String businessMode;
+
+        private KafkaAttributes(Builder builder) {
+            this.businessMode = builder.businessMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KafkaAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessMode
+         */
+        public String getBusinessMode() {
+            return this.businessMode;
+        }
+
+        public static final class Builder {
+            private String businessMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(KafkaAttributes model) {
+                this.businessMode = model.businessMode;
+            } 
+
+            /**
+             * BusinessMode.
+             */
+            public Builder businessMode(String businessMode) {
+                this.businessMode = businessMode;
+                return this;
+            }
+
+            public KafkaAttributes build() {
+                return new KafkaAttributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubscribeRequest} extends {@link TeaModel}
+     *
+     * <p>SubscribeRequest</p>
+     */
+    public static class TenantRateLimitPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceivesPerSecond")
+        private Integer maxReceivesPerSecond;
+
+        private TenantRateLimitPolicy(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxReceivesPerSecond = builder.maxReceivesPerSecond;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantRateLimitPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceivesPerSecond
+         */
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxReceivesPerSecond; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantRateLimitPolicy model) {
+                this.enabled = model.enabled;
+                this.maxReceivesPerSecond = model.maxReceivesPerSecond;
+            } 
+
+            /**
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceivesPerSecond.
+             */
+            public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
+                this.maxReceivesPerSecond = maxReceivesPerSecond;
+                return this;
+            }
+
+            public TenantRateLimitPolicy build() {
+                return new TenantRateLimitPolicy(this);
             } 
 
         } 

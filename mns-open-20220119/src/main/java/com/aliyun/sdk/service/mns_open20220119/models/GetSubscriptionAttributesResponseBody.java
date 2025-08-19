@@ -274,6 +274,84 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
      *
      * <p>GetSubscriptionAttributesResponseBody</p>
      */
+    public static class TenantRateLimitPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceivesPerSecond")
+        private Integer maxReceivesPerSecond;
+
+        private TenantRateLimitPolicy(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxReceivesPerSecond = builder.maxReceivesPerSecond;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantRateLimitPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceivesPerSecond
+         */
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxReceivesPerSecond; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantRateLimitPolicy model) {
+                this.enabled = model.enabled;
+                this.maxReceivesPerSecond = model.maxReceivesPerSecond;
+            } 
+
+            /**
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceivesPerSecond.
+             */
+            public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
+                this.maxReceivesPerSecond = maxReceivesPerSecond;
+                return this;
+            }
+
+            public TenantRateLimitPolicy build() {
+                return new TenantRateLimitPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSubscriptionAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionAttributesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -299,6 +377,9 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubscriptionName")
         private String subscriptionName;
 
+        @com.aliyun.core.annotation.NameInMap("TenantRateLimitPolicy")
+        private TenantRateLimitPolicy tenantRateLimitPolicy;
+
         @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
@@ -314,6 +395,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             this.notifyContentFormat = builder.notifyContentFormat;
             this.notifyStrategy = builder.notifyStrategy;
             this.subscriptionName = builder.subscriptionName;
+            this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
             this.topicName = builder.topicName;
             this.topicOwner = builder.topicOwner;
         }
@@ -383,6 +465,13 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantRateLimitPolicy
+         */
+        public TenantRateLimitPolicy getTenantRateLimitPolicy() {
+            return this.tenantRateLimitPolicy;
+        }
+
+        /**
          * @return topicName
          */
         public String getTopicName() {
@@ -405,6 +494,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             private String notifyContentFormat; 
             private String notifyStrategy; 
             private String subscriptionName; 
+            private TenantRateLimitPolicy tenantRateLimitPolicy; 
             private String topicName; 
             private String topicOwner; 
 
@@ -420,6 +510,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
                 this.notifyContentFormat = model.notifyContentFormat;
                 this.notifyStrategy = model.notifyStrategy;
                 this.subscriptionName = model.subscriptionName;
+                this.tenantRateLimitPolicy = model.tenantRateLimitPolicy;
                 this.topicName = model.topicName;
                 this.topicOwner = model.topicOwner;
             } 
@@ -515,6 +606,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
              */
             public Builder subscriptionName(String subscriptionName) {
                 this.subscriptionName = subscriptionName;
+                return this;
+            }
+
+            /**
+             * TenantRateLimitPolicy.
+             */
+            public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
+                this.tenantRateLimitPolicy = tenantRateLimitPolicy;
                 return this;
             }
 
