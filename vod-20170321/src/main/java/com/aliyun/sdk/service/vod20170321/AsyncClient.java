@@ -44,12 +44,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
 
     /**
-     * @param request the request parameters of AddCustomTemplateAndGroupConsole  AddCustomTemplateAndGroupConsoleRequest
-     * @return AddCustomTemplateAndGroupConsoleResponse
-     */
-    CompletableFuture<AddCustomTemplateAndGroupConsoleResponse> addCustomTemplateAndGroupConsole(AddCustomTemplateAndGroupConsoleRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  For more information about the online editing feature, see <a href="https://help.aliyun.com/document_detail/95482.html">Overview</a>.</p>
      * 
@@ -63,36 +57,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AddEditingProjectMaterialsResponse
      */
     CompletableFuture<AddEditingProjectMaterialsResponse> addEditingProjectMaterials(AddEditingProjectMaterialsRequest request);
-
-    /**
-     * @param request the request parameters of AddFilterConfigs  AddFilterConfigsRequest
-     * @return AddFilterConfigsResponse
-     */
-    CompletableFuture<AddFilterConfigsResponse> addFilterConfigs(AddFilterConfigsRequest request);
-
-    /**
-     * @param request the request parameters of AddFreeLicense  AddFreeLicenseRequest
-     * @return AddFreeLicenseResponse
-     */
-    CompletableFuture<AddFreeLicenseResponse> addFreeLicense(AddFreeLicenseRequest request);
-
-    /**
-     * @param request the request parameters of AddLicense  AddLicenseRequest
-     * @return AddLicenseResponse
-     */
-    CompletableFuture<AddLicenseResponse> addLicense(AddLicenseRequest request);
-
-    /**
-     * @param request the request parameters of AddMediaSequences  AddMediaSequencesRequest
-     * @return AddMediaSequencesResponse
-     */
-    CompletableFuture<AddMediaSequencesResponse> addMediaSequences(AddMediaSequencesRequest request);
-
-    /**
-     * @param request the request parameters of AddStorage  AddStorageRequest
-     * @return AddStorageResponse
-     */
-    CompletableFuture<AddStorageResponse> addStorage(AddStorageRequest request);
 
     /**
      * <b>description</b> :
@@ -164,48 +128,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddWatermarkResponse> addWatermark(AddWatermarkRequest request);
 
     /**
-     * @param request the request parameters of AddWatermarkConsole  AddWatermarkConsoleRequest
-     * @return AddWatermarkConsoleResponse
-     */
-    CompletableFuture<AddWatermarkConsoleResponse> addWatermarkConsole(AddWatermarkConsoleRequest request);
-
-    /**
-     * @param request the request parameters of AddWorkflow  AddWorkflowRequest
-     * @return AddWorkflowResponse
-     */
-    CompletableFuture<AddWorkflowResponse> addWorkflow(AddWorkflowRequest request);
-
-    /**
-     * @param request the request parameters of AssignProductAccountId  AssignProductAccountIdRequest
-     * @return AssignProductAccountIdResponse
-     */
-    CompletableFuture<AssignProductAccountIdResponse> assignProductAccountId(AssignProductAccountIdRequest request);
-
-    /**
-     * @param request the request parameters of AssumeExperienceRole  AssumeExperienceRoleRequest
-     * @return AssumeExperienceRoleResponse
-     */
-    CompletableFuture<AssumeExperienceRoleResponse> assumeExperienceRole(AssumeExperienceRoleRequest request);
-
-    /**
-     * @param request the request parameters of AssumeOssRole  AssumeOssRoleRequest
-     * @return AssumeOssRoleResponse
-     */
-    CompletableFuture<AssumeOssRoleResponse> assumeOssRole(AssumeOssRoleRequest request);
-
-    /**
-     * @param request the request parameters of AssumeSlsRole  AssumeSlsRoleRequest
-     * @return AssumeSlsRoleResponse
-     */
-    CompletableFuture<AssumeSlsRoleResponse> assumeSlsRole(AssumeSlsRoleRequest request);
-
-    /**
-     * @param request the request parameters of AssumeSlsRoleV2  AssumeSlsRoleV2Request
-     * @return AssumeSlsRoleV2Response
-     */
-    CompletableFuture<AssumeSlsRoleV2Response> assumeSlsRoleV2(AssumeSlsRoleV2Request request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can grant a RAM user or RAM role permissions to access up to 10 applications.</p>
@@ -264,24 +186,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchStopVodDomainResponse> batchStopVodDomain(BatchStopVodDomainRequest request);
 
     /**
-     * @param request the request parameters of BlockVodObjectCaches  BlockVodObjectCachesRequest
-     * @return BlockVodObjectCachesResponse
-     */
-    CompletableFuture<BlockVodObjectCachesResponse> blockVodObjectCaches(BlockVodObjectCachesRequest request);
-
-    /**
-     * @param request the request parameters of CancelBucketRedundancyTransition  CancelBucketRedundancyTransitionRequest
-     * @return CancelBucketRedundancyTransitionResponse
-     */
-    CompletableFuture<CancelBucketRedundancyTransitionResponse> cancelBucketRedundancyTransition(CancelBucketRedundancyTransitionRequest request);
-
-    /**
-     * @param request the request parameters of CancelMediaExportJobs  CancelMediaExportJobsRequest
-     * @return CancelMediaExportJobsResponse
-     */
-    CompletableFuture<CancelMediaExportJobsResponse> cancelMediaExportJobs(CancelMediaExportJobsRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  You can cancel only URL-based upload jobs in the <strong>Pending</strong> state. You can query the status of a URL-based upload job by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * <ul>
@@ -301,24 +205,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
-     * @param request the request parameters of CheckLicense  CheckLicenseRequest
-     * @return CheckLicenseResponse
-     */
-    CompletableFuture<CheckLicenseResponse> checkLicense(CheckLicenseRequest request);
-
-    /**
-     * @param request the request parameters of CheckVodDefaultRole  CheckVodDefaultRoleRequest
-     * @return CheckVodDefaultRoleResponse
-     */
-    CompletableFuture<CheckVodDefaultRoleResponse> checkVodDefaultRole(CheckVodDefaultRoleRequest request);
-
-    /**
-     * @param request the request parameters of ControlVodAppService  ControlVodAppServiceRequest
-     * @return ControlVodAppServiceResponse
-     */
-    CompletableFuture<ControlVodAppServiceResponse> controlVodAppService(ControlVodAppServiceRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can create up to 10 applications within an Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
      * <h3>QPS limits</h3>
@@ -330,70 +216,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppInfoResponse> createAppInfo(CreateAppInfoRequest request);
 
     /**
-     * @param request the request parameters of CreateAppPolicy  CreateAppPolicyRequest
-     * @return CreateAppPolicyResponse
-     */
-    CompletableFuture<CreateAppPolicyResponse> createAppPolicy(CreateAppPolicyRequest request);
-
-    /**
      * @param request the request parameters of CreateAudit  CreateAuditRequest
      * @return CreateAuditResponse
      */
     CompletableFuture<CreateAuditResponse> createAudit(CreateAuditRequest request);
-
-    /**
-     * @param request the request parameters of CreateDNADB  CreateDNADBRequest
-     * @return CreateDNADBResponse
-     */
-    CompletableFuture<CreateDNADBResponse> createDNADB(CreateDNADBRequest request);
-
-    /**
-     * @param request the request parameters of CreateIntelligentStrategy  CreateIntelligentStrategyRequest
-     * @return CreateIntelligentStrategyResponse
-     */
-    CompletableFuture<CreateIntelligentStrategyResponse> createIntelligentStrategy(CreateIntelligentStrategyRequest request);
-
-    /**
-     * @param request the request parameters of CreateKMSServiceKey  CreateKMSServiceKeyRequest
-     * @return CreateKMSServiceKeyResponse
-     */
-    CompletableFuture<CreateKMSServiceKeyResponse> createKMSServiceKey(CreateKMSServiceKeyRequest request);
-
-    /**
-     * @param request the request parameters of CreateLicense  CreateLicenseRequest
-     * @return CreateLicenseResponse
-     */
-    CompletableFuture<CreateLicenseResponse> createLicense(CreateLicenseRequest request);
-
-    /**
-     * @param request the request parameters of CreateMediaDNALib  CreateMediaDNALibRequest
-     * @return CreateMediaDNALibResponse
-     */
-    CompletableFuture<CreateMediaDNALibResponse> createMediaDNALib(CreateMediaDNALibRequest request);
-
-    /**
-     * @param request the request parameters of CreateMediaLifecycleRule  CreateMediaLifecycleRuleRequest
-     * @return CreateMediaLifecycleRuleResponse
-     */
-    CompletableFuture<CreateMediaLifecycleRuleResponse> createMediaLifecycleRule(CreateMediaLifecycleRuleRequest request);
-
-    /**
-     * @param request the request parameters of CreateMultiOrderForLicense  CreateMultiOrderForLicenseRequest
-     * @return CreateMultiOrderForLicenseResponse
-     */
-    CompletableFuture<CreateMultiOrderForLicenseResponse> createMultiOrderForLicense(CreateMultiOrderForLicenseRequest request);
-
-    /**
-     * @param request the request parameters of CreateOrder  CreateOrderRequest
-     * @return CreateOrderResponse
-     */
-    CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
-
-    /**
-     * @param request the request parameters of CreateOrderForLicense  CreateOrderForLicenseRequest
-     * @return CreateOrderForLicenseResponse
-     */
-    CompletableFuture<CreateOrderForLicenseResponse> createOrderForLicense(CreateOrderForLicenseRequest request);
 
     /**
      * <b>description</b> :
@@ -443,34 +269,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadVideoResponse> createUploadVideo(CreateUploadVideoRequest request);
 
     /**
-     * @param request the request parameters of CreateVodRealTimeLogDelivery  CreateVodRealTimeLogDeliveryRequest
-     * @return CreateVodRealTimeLogDeliveryResponse
-     */
-    CompletableFuture<CreateVodRealTimeLogDeliveryResponse> createVodRealTimeLogDelivery(CreateVodRealTimeLogDeliveryRequest request);
-
-    /**
-     * @param request the request parameters of CreateVodUserUsageDetailDataExportTask  CreateVodUserUsageDetailDataExportTaskRequest
-     * @return CreateVodUserUsageDetailDataExportTaskResponse
-     */
-    CompletableFuture<CreateVodUserUsageDetailDataExportTaskResponse> createVodUserUsageDetailDataExportTask(CreateVodUserUsageDetailDataExportTaskRequest request);
-
-    /**
      * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
      */
     CompletableFuture<DecryptKMSDataKeyResponse> decryptKMSDataKey(DecryptKMSDataKeyRequest request);
-
-    /**
-     * @param request the request parameters of DelApp  DelAppRequest
-     * @return DelAppResponse
-     */
-    CompletableFuture<DelAppResponse> delApp(DelAppRequest request);
-
-    /**
-     * @param request the request parameters of DelFreeLicense  DelFreeLicenseRequest
-     * @return DelFreeLicenseResponse
-     */
-    CompletableFuture<DelFreeLicenseResponse> delFreeLicense(DelFreeLicenseRequest request);
 
     /**
      * <b>description</b> :
@@ -506,18 +308,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppInfoResponse> deleteAppInfo(DeleteAppInfoRequest request);
 
     /**
-     * @param request the request parameters of DeleteAppLicense  DeleteAppLicenseRequest
-     * @return DeleteAppLicenseResponse
-     */
-    CompletableFuture<DeleteAppLicenseResponse> deleteAppLicense(DeleteAppLicenseRequest request);
-
-    /**
-     * @param request the request parameters of DeleteAppPolicy  DeleteAppPolicyRequest
-     * @return DeleteAppPolicyResponse
-     */
-    CompletableFuture<DeleteAppPolicyResponse> deleteAppPolicy(DeleteAppPolicyRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  <strong>This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.</strong></p>
      * <ul>
@@ -540,24 +330,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCategoryResponse
      */
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
-
-    /**
-     * @param request the request parameters of DeleteCustomTemplateConsole  DeleteCustomTemplateConsoleRequest
-     * @return DeleteCustomTemplateConsoleResponse
-     */
-    CompletableFuture<DeleteCustomTemplateConsoleResponse> deleteCustomTemplateConsole(DeleteCustomTemplateConsoleRequest request);
-
-    /**
-     * @param request the request parameters of DeleteDNADB  DeleteDNADBRequest
-     * @return DeleteDNADBResponse
-     */
-    CompletableFuture<DeleteDNADBResponse> deleteDNADB(DeleteDNADBRequest request);
-
-    /**
-     * @param request the request parameters of DeleteDRMCertInfo  DeleteDRMCertInfoRequest
-     * @return DeleteDRMCertInfoResponse
-     */
-    CompletableFuture<DeleteDRMCertInfoResponse> deleteDRMCertInfo(DeleteDRMCertInfoRequest request);
 
     /**
      * <b>description</b> :
@@ -586,18 +358,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEditingProjectMaterialsResponse> deleteEditingProjectMaterials(DeleteEditingProjectMaterialsRequest request);
 
     /**
-     * @param request the request parameters of DeleteFilterConfigs  DeleteFilterConfigsRequest
-     * @return DeleteFilterConfigsResponse
-     */
-    CompletableFuture<DeleteFilterConfigsResponse> deleteFilterConfigs(DeleteFilterConfigsRequest request);
-
-    /**
-     * @param request the request parameters of DeleteFreeLicense  DeleteFreeLicenseRequest
-     * @return DeleteFreeLicenseResponse
-     */
-    CompletableFuture<DeleteFreeLicenseResponse> deleteFreeLicense(DeleteFreeLicenseRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  <strong>After you call this operation to delete an image, the source file is permanently deleted and cannot be recovered. Exercise caution when you call this operation.</strong></p>
      * <ul>
@@ -611,24 +371,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     /**
-     * @param request the request parameters of DeleteIntelligentStrategy  DeleteIntelligentStrategyRequest
-     * @return DeleteIntelligentStrategyResponse
-     */
-    CompletableFuture<DeleteIntelligentStrategyResponse> deleteIntelligentStrategy(DeleteIntelligentStrategyRequest request);
-
-    /**
-     * @param request the request parameters of DeleteMediaExportJobs  DeleteMediaExportJobsRequest
-     * @return DeleteMediaExportJobsResponse
-     */
-    CompletableFuture<DeleteMediaExportJobsResponse> deleteMediaExportJobs(DeleteMediaExportJobsRequest request);
-
-    /**
-     * @param request the request parameters of DeleteMediaLifecycleRule  DeleteMediaLifecycleRuleRequest
-     * @return DeleteMediaLifecycleRuleResponse
-     */
-    CompletableFuture<DeleteMediaLifecycleRuleResponse> deleteMediaLifecycleRule(DeleteMediaLifecycleRuleRequest request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
@@ -638,12 +380,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMessageCallbackResponse
      */
     CompletableFuture<DeleteMessageCallbackResponse> deleteMessageCallback(DeleteMessageCallbackRequest request);
-
-    /**
-     * @param request the request parameters of DeleteMessageCloudMonitorConfig  DeleteMessageCloudMonitorConfigRequest
-     * @return DeleteMessageCloudMonitorConfigResponse
-     */
-    CompletableFuture<DeleteMessageCloudMonitorConfigResponse> deleteMessageCloudMonitorConfig(DeleteMessageCloudMonitorConfigRequest request);
 
     /**
      * <b>description</b> :
@@ -668,22 +404,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMultipartUploadResponse> deleteMultipartUpload(DeleteMultipartUploadRequest request);
 
     /**
-     * @param request the request parameters of DeleteStorage  DeleteStorageRequest
-     * @return DeleteStorageResponse
-     */
-    CompletableFuture<DeleteStorageResponse> deleteStorage(DeleteStorageRequest request);
-
-    /**
      * @param request the request parameters of DeleteStream  DeleteStreamRequest
      * @return DeleteStreamResponse
      */
     CompletableFuture<DeleteStreamResponse> deleteStream(DeleteStreamRequest request);
-
-    /**
-     * @param request the request parameters of DeleteTemplateGroupConsole  DeleteTemplateGroupConsoleRequest
-     * @return DeleteTemplateGroupConsoleResponse
-     */
-    CompletableFuture<DeleteTemplateGroupConsoleResponse> deleteTemplateGroupConsole(DeleteTemplateGroupConsoleRequest request);
 
     /**
      * <b>description</b> :
@@ -696,12 +420,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTranscodeTemplateGroupResponse
      */
     CompletableFuture<DeleteTranscodeTemplateGroupResponse> deleteTranscodeTemplateGroup(DeleteTranscodeTemplateGroupRequest request);
-
-    /**
-     * @param request the request parameters of DeleteTranscodeTemplates  DeleteTranscodeTemplatesRequest
-     * @return DeleteTranscodeTemplatesResponse
-     */
-    CompletableFuture<DeleteTranscodeTemplatesResponse> deleteTranscodeTemplates(DeleteTranscodeTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -730,18 +448,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteVodDomainResponse
      */
     CompletableFuture<DeleteVodDomainResponse> deleteVodDomain(DeleteVodDomainRequest request);
-
-    /**
-     * @param request the request parameters of DeleteVodRealTimeLogLogstore  DeleteVodRealTimeLogLogstoreRequest
-     * @return DeleteVodRealTimeLogLogstoreResponse
-     */
-    CompletableFuture<DeleteVodRealTimeLogLogstoreResponse> deleteVodRealTimeLogLogstore(DeleteVodRealTimeLogLogstoreRequest request);
-
-    /**
-     * @param request the request parameters of DeleteVodRealtimeLogDelivery  DeleteVodRealtimeLogDeliveryRequest
-     * @return DeleteVodRealtimeLogDeliveryResponse
-     */
-    CompletableFuture<DeleteVodRealtimeLogDeliveryResponse> deleteVodRealtimeLogDelivery(DeleteVodRealtimeLogDeliveryRequest request);
 
     /**
      * <b>description</b> :
@@ -777,66 +483,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWatermarkResponse> deleteWatermark(DeleteWatermarkRequest request);
 
     /**
-     * @param request the request parameters of DeleteWatermarkConsole  DeleteWatermarkConsoleRequest
-     * @return DeleteWatermarkConsoleResponse
-     */
-    CompletableFuture<DeleteWatermarkConsoleResponse> deleteWatermarkConsole(DeleteWatermarkConsoleRequest request);
-
-    /**
-     * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
-     * @return DeleteWorkflowResponse
-     */
-    CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request);
-
-    /**
-     * @param request the request parameters of DescribeBizUserType  DescribeBizUserTypeRequest
-     * @return DescribeBizUserTypeResponse
-     */
-    CompletableFuture<DescribeBizUserTypeResponse> describeBizUserType(DescribeBizUserTypeRequest request);
-
-    /**
-     * @param request the request parameters of DescribeCdnDomainLogs  DescribeCdnDomainLogsRequest
-     * @return DescribeCdnDomainLogsResponse
-     */
-    CompletableFuture<DescribeCdnDomainLogsResponse> describeCdnDomainLogs(DescribeCdnDomainLogsRequest request);
-
-    /**
-     * @param request the request parameters of DescribeDailyAsyncJob  DescribeDailyAsyncJobRequest
-     * @return DescribeDailyAsyncJobResponse
-     */
-    CompletableFuture<DescribeDailyAsyncJobResponse> describeDailyAsyncJob(DescribeDailyAsyncJobRequest request);
-
-    /**
-     * @param request the request parameters of DescribeDomainBpsData  DescribeDomainBpsDataRequest
-     * @return DescribeDomainBpsDataResponse
-     */
-    CompletableFuture<DescribeDomainBpsDataResponse> describeDomainBpsData(DescribeDomainBpsDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeDomainFlowData  DescribeDomainFlowDataRequest
-     * @return DescribeDomainFlowDataResponse
-     */
-    CompletableFuture<DescribeDomainFlowDataResponse> describeDomainFlowData(DescribeDomainFlowDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeFileIdPlayStatisByEdge  DescribeFileIdPlayStatisByEdgeRequest
-     * @return DescribeFileIdPlayStatisByEdgeResponse
-     */
-    CompletableFuture<DescribeFileIdPlayStatisByEdgeResponse> describeFileIdPlayStatisByEdge(DescribeFileIdPlayStatisByEdgeRequest request);
-
-    /**
-     * @param request the request parameters of DescribeFileIdPlayStatisByOrigin  DescribeFileIdPlayStatisByOriginRequest
-     * @return DescribeFileIdPlayStatisByOriginResponse
-     */
-    CompletableFuture<DescribeFileIdPlayStatisByOriginResponse> describeFileIdPlayStatisByOrigin(DescribeFileIdPlayStatisByOriginRequest request);
-
-    /**
-     * @param request the request parameters of DescribeFilterConfigs  DescribeFilterConfigsRequest
-     * @return DescribeFilterConfigsResponse
-     */
-    CompletableFuture<DescribeFilterConfigsResponse> describeFilterConfigs(DescribeFilterConfigsRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  This operation is available only in the China (Shanghai) region.</p>
      * <ul>
@@ -847,60 +493,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMediaDistributionResponse
      */
     CompletableFuture<DescribeMediaDistributionResponse> describeMediaDistribution(DescribeMediaDistributionRequest request);
-
-    /**
-     * @param request the request parameters of DescribeMultiPriceForLicense  DescribeMultiPriceForLicenseRequest
-     * @return DescribeMultiPriceForLicenseResponse
-     */
-    CompletableFuture<DescribeMultiPriceForLicenseResponse> describeMultiPriceForLicense(DescribeMultiPriceForLicenseRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayDetail  DescribePlayDetailRequest
-     * @return DescribePlayDetailResponse
-     */
-    CompletableFuture<DescribePlayDetailResponse> describePlayDetail(DescribePlayDetailRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayEventList  DescribePlayEventListRequest
-     * @return DescribePlayEventListResponse
-     */
-    CompletableFuture<DescribePlayEventListResponse> describePlayEventList(DescribePlayEventListRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayFirstFrameDurationMetricData  DescribePlayFirstFrameDurationMetricDataRequest
-     * @return DescribePlayFirstFrameDurationMetricDataResponse
-     */
-    CompletableFuture<DescribePlayFirstFrameDurationMetricDataResponse> describePlayFirstFrameDurationMetricData(DescribePlayFirstFrameDurationMetricDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayList  DescribePlayListRequest
-     * @return DescribePlayListResponse
-     */
-    CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayMetricAuth  DescribePlayMetricAuthRequest
-     * @return DescribePlayMetricAuthResponse
-     */
-    CompletableFuture<DescribePlayMetricAuthResponse> describePlayMetricAuth(DescribePlayMetricAuthRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayMetricData  DescribePlayMetricDataRequest
-     * @return DescribePlayMetricDataResponse
-     */
-    CompletableFuture<DescribePlayMetricDataResponse> describePlayMetricData(DescribePlayMetricDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayQoeList  DescribePlayQoeListRequest
-     * @return DescribePlayQoeListResponse
-     */
-    CompletableFuture<DescribePlayQoeListResponse> describePlayQoeList(DescribePlayQoeListRequest request);
-
-    /**
-     * @param request the request parameters of DescribePlayQosList  DescribePlayQosListRequest
-     * @return DescribePlayQosListResponse
-     */
-    CompletableFuture<DescribePlayQosListResponse> describePlayQosList(DescribePlayQosListRequest request);
 
     /**
      * <b>description</b> :
@@ -962,30 +554,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePlayVideoStatisResponse> describePlayVideoStatis(DescribePlayVideoStatisRequest request);
 
     /**
-     * @param request the request parameters of DescribeQueryConfigs  DescribeQueryConfigsRequest
-     * @return DescribeQueryConfigsResponse
-     */
-    CompletableFuture<DescribeQueryConfigsResponse> describeQueryConfigs(DescribeQueryConfigsRequest request);
-
-    /**
-     * @param request the request parameters of DescribeRefreshQuota  DescribeRefreshQuotaRequest
-     * @return DescribeRefreshQuotaResponse
-     */
-    CompletableFuture<DescribeRefreshQuotaResponse> describeRefreshQuota(DescribeRefreshQuotaRequest request);
-
-    /**
-     * @param request the request parameters of DescribeRefreshTasks  DescribeRefreshTasksRequest
-     * @return DescribeRefreshTasksResponse
-     */
-    CompletableFuture<DescribeRefreshTasksResponse> describeRefreshTasks(DescribeRefreshTasksRequest request);
-
-    /**
-     * @param request the request parameters of DescribeUserVodStatus  DescribeUserVodStatusRequest
-     * @return DescribeUserVodStatusResponse
-     */
-    CompletableFuture<DescribeUserVodStatusResponse> describeUserVodStatus(DescribeUserVodStatusRequest request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
@@ -998,24 +566,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodAIDataResponse
      */
     CompletableFuture<DescribeVodAIDataResponse> describeVodAIData(DescribeVodAIDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodAppName  DescribeVodAppNameRequest
-     * @return DescribeVodAppNameResponse
-     */
-    CompletableFuture<DescribeVodAppNameResponse> describeVodAppName(DescribeVodAppNameRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodCertificateDetail  DescribeVodCertificateDetailRequest
-     * @return DescribeVodCertificateDetailResponse
-     */
-    CompletableFuture<DescribeVodCertificateDetailResponse> describeVodCertificateDetail(DescribeVodCertificateDetailRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodCertificateDetailById  DescribeVodCertificateDetailByIdRequest
-     * @return DescribeVodCertificateDetailByIdResponse
-     */
-    CompletableFuture<DescribeVodCertificateDetailByIdResponse> describeVodCertificateDetailById(DescribeVodCertificateDetailByIdRequest request);
 
     /**
      * <b>description</b> :
@@ -1085,12 +635,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainCertificateInfoResponse> describeVodDomainCertificateInfo(DescribeVodDomainCertificateInfoRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodDomainCname  DescribeVodDomainCnameRequest
-     * @return DescribeVodDomainCnameResponse
-     */
-    CompletableFuture<DescribeVodDomainCnameResponse> describeVodDomainCname(DescribeVodDomainCnameRequest request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
@@ -1156,18 +700,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainHitRateDataResponse> describeVodDomainHitRateData(DescribeVodDomainHitRateDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodDomainHttpCodeData  DescribeVodDomainHttpCodeDataRequest
-     * @return DescribeVodDomainHttpCodeDataResponse
-     */
-    CompletableFuture<DescribeVodDomainHttpCodeDataResponse> describeVodDomainHttpCodeData(DescribeVodDomainHttpCodeDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainISPData  DescribeVodDomainISPDataRequest
-     * @return DescribeVodDomainISPDataResponse
-     */
-    CompletableFuture<DescribeVodDomainISPDataResponse> describeVodDomainISPData(DescribeVodDomainISPDataRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
@@ -1186,12 +718,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodDomainMax95BpsDataResponse
      */
     CompletableFuture<DescribeVodDomainMax95BpsDataResponse> describeVodDomainMax95BpsData(DescribeVodDomainMax95BpsDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainPvData  DescribeVodDomainPvDataRequest
-     * @return DescribeVodDomainPvDataResponse
-     */
-    CompletableFuture<DescribeVodDomainPvDataResponse> describeVodDomainPvData(DescribeVodDomainPvDataRequest request);
 
     /**
      * <b>description</b> :
@@ -1463,18 +989,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainRealTimeReqHitRateDataResponse> describeVodDomainRealTimeReqHitRateData(DescribeVodDomainRealTimeReqHitRateDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodDomainRealTimeSrcBpsData  DescribeVodDomainRealTimeSrcBpsDataRequest
-     * @return DescribeVodDomainRealTimeSrcBpsDataResponse
-     */
-    CompletableFuture<DescribeVodDomainRealTimeSrcBpsDataResponse> describeVodDomainRealTimeSrcBpsData(DescribeVodDomainRealTimeSrcBpsDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainRealTimeSrcTrafficData  DescribeVodDomainRealTimeSrcTrafficDataRequest
-     * @return DescribeVodDomainRealTimeSrcTrafficDataResponse
-     */
-    CompletableFuture<DescribeVodDomainRealTimeSrcTrafficDataResponse> describeVodDomainRealTimeSrcTrafficData(DescribeVodDomainRealTimeSrcTrafficDataRequest request);
-
-    /**
      * <b>description</b> :
      * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
@@ -1516,18 +1030,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodDomainRealTimeTrafficDataResponse
      */
     CompletableFuture<DescribeVodDomainRealTimeTrafficDataResponse> describeVodDomainRealTimeTrafficData(DescribeVodDomainRealTimeTrafficDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainRealtimeLogDelivery  DescribeVodDomainRealtimeLogDeliveryRequest
-     * @return DescribeVodDomainRealtimeLogDeliveryResponse
-     */
-    CompletableFuture<DescribeVodDomainRealtimeLogDeliveryResponse> describeVodDomainRealtimeLogDelivery(DescribeVodDomainRealtimeLogDeliveryRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainRegionData  DescribeVodDomainRegionDataRequest
-     * @return DescribeVodDomainRegionDataResponse
-     */
-    CompletableFuture<DescribeVodDomainRegionDataResponse> describeVodDomainRegionData(DescribeVodDomainRegionDataRequest request);
 
     /**
      * <b>description</b> :
@@ -1660,24 +1162,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainSrcTrafficDataResponse> describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodDomainStagingConfig  DescribeVodDomainStagingConfigRequest
-     * @return DescribeVodDomainStagingConfigResponse
-     */
-    CompletableFuture<DescribeVodDomainStagingConfigResponse> describeVodDomainStagingConfig(DescribeVodDomainStagingConfigRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainTopReferVisit  DescribeVodDomainTopReferVisitRequest
-     * @return DescribeVodDomainTopReferVisitResponse
-     */
-    CompletableFuture<DescribeVodDomainTopReferVisitResponse> describeVodDomainTopReferVisit(DescribeVodDomainTopReferVisitRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainTopUrlVisit  DescribeVodDomainTopUrlVisitRequest
-     * @return DescribeVodDomainTopUrlVisitResponse
-     */
-    CompletableFuture<DescribeVodDomainTopUrlVisitResponse> describeVodDomainTopUrlVisit(DescribeVodDomainTopUrlVisitRequest request);
-
-    /**
      * <b>description</b> :
      * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
@@ -1734,18 +1218,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainUsageDataResponse> describeVodDomainUsageData(DescribeVodDomainUsageDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodDomainUvData  DescribeVodDomainUvDataRequest
-     * @return DescribeVodDomainUvDataResponse
-     */
-    CompletableFuture<DescribeVodDomainUvDataResponse> describeVodDomainUvData(DescribeVodDomainUvDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodDomainsUsageByDay  DescribeVodDomainsUsageByDayRequest
-     * @return DescribeVodDomainsUsageByDayResponse
-     */
-    CompletableFuture<DescribeVodDomainsUsageByDayResponse> describeVodDomainsUsageByDay(DescribeVodDomainsUsageByDayRequest request);
-
-    /**
      * @param request the request parameters of DescribeVodEditingUsageData  DescribeVodEditingUsageDataRequest
      * @return DescribeVodEditingUsageDataResponse
      */
@@ -1780,22 +1252,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodMediaPlayDataResponse> describeVodMediaPlayData(DescribeVodMediaPlayDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodMultiUsageData  DescribeVodMultiUsageDataRequest
-     * @return DescribeVodMultiUsageDataResponse
-     */
-    CompletableFuture<DescribeVodMultiUsageDataResponse> describeVodMultiUsageData(DescribeVodMultiUsageDataRequest request);
-
-    /**
      * @param request the request parameters of DescribeVodPlayerCollectData  DescribeVodPlayerCollectDataRequest
      * @return DescribeVodPlayerCollectDataResponse
      */
     CompletableFuture<DescribeVodPlayerCollectDataResponse> describeVodPlayerCollectData(DescribeVodPlayerCollectDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodPlayerCollectDataDemo  DescribeVodPlayerCollectDataDemoRequest
-     * @return DescribeVodPlayerCollectDataDemoResponse
-     */
-    CompletableFuture<DescribeVodPlayerCollectDataDemoResponse> describeVodPlayerCollectDataDemo(DescribeVodPlayerCollectDataDemoRequest request);
 
     /**
      * @param request the request parameters of DescribeVodPlayerDimensionData  DescribeVodPlayerDimensionDataRequest
@@ -1804,22 +1264,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodPlayerDimensionDataResponse> describeVodPlayerDimensionData(DescribeVodPlayerDimensionDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodPlayerDimensionDataDemo  DescribeVodPlayerDimensionDataDemoRequest
-     * @return DescribeVodPlayerDimensionDataDemoResponse
-     */
-    CompletableFuture<DescribeVodPlayerDimensionDataDemoResponse> describeVodPlayerDimensionDataDemo(DescribeVodPlayerDimensionDataDemoRequest request);
-
-    /**
      * @param request the request parameters of DescribeVodPlayerMetricData  DescribeVodPlayerMetricDataRequest
      * @return DescribeVodPlayerMetricDataResponse
      */
     CompletableFuture<DescribeVodPlayerMetricDataResponse> describeVodPlayerMetricData(DescribeVodPlayerMetricDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodPlayerMetricDataDemo  DescribeVodPlayerMetricDataDemoRequest
-     * @return DescribeVodPlayerMetricDataDemoResponse
-     */
-    CompletableFuture<DescribeVodPlayerMetricDataDemoResponse> describeVodPlayerMetricDataDemo(DescribeVodPlayerMetricDataDemoRequest request);
 
     /**
      * <b>description</b> :
@@ -1846,18 +1294,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodRangeDataByLocateAndIspServiceResponse
      */
     CompletableFuture<DescribeVodRangeDataByLocateAndIspServiceResponse> describeVodRangeDataByLocateAndIspService(DescribeVodRangeDataByLocateAndIspServiceRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodRealtimeDeliveryAcc  DescribeVodRealtimeDeliveryAccRequest
-     * @return DescribeVodRealtimeDeliveryAccResponse
-     */
-    CompletableFuture<DescribeVodRealtimeDeliveryAccResponse> describeVodRealtimeDeliveryAcc(DescribeVodRealtimeDeliveryAccRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodRealtimeLogAuthorized  DescribeVodRealtimeLogAuthorizedRequest
-     * @return DescribeVodRealtimeLogAuthorizedResponse
-     */
-    CompletableFuture<DescribeVodRealtimeLogAuthorizedResponse> describeVodRealtimeLogAuthorized(DescribeVodRealtimeLogAuthorizedRequest request);
 
     /**
      * <b>description</b> :
@@ -1892,18 +1328,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodSSLCertificateListResponse> describeVodSSLCertificateList(DescribeVodSSLCertificateListRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodService  DescribeVodServiceRequest
-     * @return DescribeVodServiceResponse
-     */
-    CompletableFuture<DescribeVodServiceResponse> describeVodService(DescribeVodServiceRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodStatis  DescribeVodStatisRequest
-     * @return DescribeVodStatisResponse
-     */
-    CompletableFuture<DescribeVodStatisResponse> describeVodStatis(DescribeVodStatisRequest request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
@@ -1916,12 +1340,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodStorageDataResponse
      */
     CompletableFuture<DescribeVodStorageDataResponse> describeVodStorageData(DescribeVodStorageDataRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodTagResources  DescribeVodTagResourcesRequest
-     * @return DescribeVodTagResourcesResponse
-     */
-    CompletableFuture<DescribeVodTagResourcesResponse> describeVodTagResources(DescribeVodTagResourcesRequest request);
 
     /**
      * <b>description</b> :
@@ -1948,12 +1366,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodTieringStorageRetrievalDataResponse> describeVodTieringStorageRetrievalData(DescribeVodTieringStorageRetrievalDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodTopDomainsByFlow  DescribeVodTopDomainsByFlowRequest
-     * @return DescribeVodTopDomainsByFlowResponse
-     */
-    CompletableFuture<DescribeVodTopDomainsByFlowResponse> describeVodTopDomainsByFlow(DescribeVodTopDomainsByFlowRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
@@ -1966,12 +1378,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodTranscodeDataResponse> describeVodTranscodeData(DescribeVodTranscodeDataRequest request);
 
     /**
-     * @param request the request parameters of DescribeVodUserBillPrediction  DescribeVodUserBillPredictionRequest
-     * @return DescribeVodUserBillPredictionResponse
-     */
-    CompletableFuture<DescribeVodUserBillPredictionResponse> describeVodUserBillPrediction(DescribeVodUserBillPredictionRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.</p>
      * <ul>
@@ -1982,30 +1388,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVodUserDomainsResponse
      */
     CompletableFuture<DescribeVodUserDomainsResponse> describeVodUserDomains(DescribeVodUserDomainsRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodUserQuota  DescribeVodUserQuotaRequest
-     * @return DescribeVodUserQuotaResponse
-     */
-    CompletableFuture<DescribeVodUserQuotaResponse> describeVodUserQuota(DescribeVodUserQuotaRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodUserResourcePackage  DescribeVodUserResourcePackageRequest
-     * @return DescribeVodUserResourcePackageResponse
-     */
-    CompletableFuture<DescribeVodUserResourcePackageResponse> describeVodUserResourcePackage(DescribeVodUserResourcePackageRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodUserTags  DescribeVodUserTagsRequest
-     * @return DescribeVodUserTagsResponse
-     */
-    CompletableFuture<DescribeVodUserTagsResponse> describeVodUserTags(DescribeVodUserTagsRequest request);
-
-    /**
-     * @param request the request parameters of DescribeVodUserUsageDetailDataExportTask  DescribeVodUserUsageDetailDataExportTaskRequest
-     * @return DescribeVodUserUsageDetailDataExportTaskResponse
-     */
-    CompletableFuture<DescribeVodUserUsageDetailDataExportTaskResponse> describeVodUserUsageDetailDataExportTask(DescribeVodUserUsageDetailDataExportTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -2028,42 +1410,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachAppPolicyFromIdentityResponse> detachAppPolicyFromIdentity(DetachAppPolicyFromIdentityRequest request);
 
     /**
-     * @param request the request parameters of DisableVodRealtimeLogDelivery  DisableVodRealtimeLogDeliveryRequest
-     * @return DisableVodRealtimeLogDeliveryResponse
-     */
-    CompletableFuture<DisableVodRealtimeLogDeliveryResponse> disableVodRealtimeLogDelivery(DisableVodRealtimeLogDeliveryRequest request);
-
-    /**
-     * @param request the request parameters of DisplayAIAuditSwitch  DisplayAIAuditSwitchRequest
-     * @return DisplayAIAuditSwitchResponse
-     */
-    CompletableFuture<DisplayAIAuditSwitchResponse> displayAIAuditSwitch(DisplayAIAuditSwitchRequest request);
-
-    /**
-     * @param request the request parameters of EditAppInfo  EditAppInfoRequest
-     * @return EditAppInfoResponse
-     */
-    CompletableFuture<EditAppInfoResponse> editAppInfo(EditAppInfoRequest request);
-
-    /**
-     * @param request the request parameters of EditLicense  EditLicenseRequest
-     * @return EditLicenseResponse
-     */
-    CompletableFuture<EditLicenseResponse> editLicense(EditLicenseRequest request);
-
-    /**
-     * @param request the request parameters of EnableVodRealtimeLogDelivery  EnableVodRealtimeLogDeliveryRequest
-     * @return EnableVodRealtimeLogDeliveryResponse
-     */
-    CompletableFuture<EnableVodRealtimeLogDeliveryResponse> enableVodRealtimeLogDelivery(EnableVodRealtimeLogDeliveryRequest request);
-
-    /**
-     * @param request the request parameters of FaceRegistration  FaceRegistrationRequest
-     * @return FaceRegistrationResponse
-     */
-    CompletableFuture<FaceRegistrationResponse> faceRegistration(FaceRegistrationRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  To use the secure download feature, you must enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>.</p>
      * <ul>
@@ -2080,12 +1426,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateKMSDataKeyResponse
      */
     CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
-
-    /**
-     * @param request the request parameters of GetAICaptionExtractionJobs  GetAICaptionExtractionJobsRequest
-     * @return GetAICaptionExtractionJobsResponse
-     */
-    CompletableFuture<GetAICaptionExtractionJobsResponse> getAICaptionExtractionJobs(GetAICaptionExtractionJobsRequest request);
 
     /**
      * <b>description</b> :
@@ -2108,18 +1448,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAIMediaAuditJobResponse
      */
     CompletableFuture<GetAIMediaAuditJobResponse> getAIMediaAuditJob(GetAIMediaAuditJobRequest request);
-
-    /**
-     * @param request the request parameters of GetAIService  GetAIServiceRequest
-     * @return GetAIServiceResponse
-     */
-    CompletableFuture<GetAIServiceResponse> getAIService(GetAIServiceRequest request);
-
-    /**
-     * @param request the request parameters of GetAIStatis  GetAIStatisRequest
-     * @return GetAIStatisResponse
-     */
-    CompletableFuture<GetAIStatisResponse> getAIStatis(GetAIStatisRequest request);
 
     /**
      * <b>description</b> :
@@ -2155,12 +1483,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppInfosResponse> getAppInfos(GetAppInfosRequest request);
 
     /**
-     * @param request the request parameters of GetAppPolicies  GetAppPoliciesRequest
-     * @return GetAppPoliciesResponse
-     */
-    CompletableFuture<GetAppPoliciesResponse> getAppPolicies(GetAppPoliciesRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can query information about up to 20 auxiliary media assets in a request.</p>
      * 
@@ -2176,88 +1498,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAuditHistoryResponse> getAuditHistory(GetAuditHistoryRequest request);
 
     /**
-     * @param request the request parameters of GetAuditResult  GetAuditResultRequest
-     * @return GetAuditResultResponse
-     */
-    CompletableFuture<GetAuditResultResponse> getAuditResult(GetAuditResultRequest request);
-
-    /**
-     * @param request the request parameters of GetAuditResultDetail  GetAuditResultDetailRequest
-     * @return GetAuditResultDetailResponse
-     */
-    CompletableFuture<GetAuditResultDetailResponse> getAuditResultDetail(GetAuditResultDetailRequest request);
-
-    /**
-     * @param request the request parameters of GetBucketDeleteTask  GetBucketDeleteTaskRequest
-     * @return GetBucketDeleteTaskResponse
-     */
-    CompletableFuture<GetBucketDeleteTaskResponse> getBucketDeleteTask(GetBucketDeleteTaskRequest request);
-
-    /**
-     * @param request the request parameters of GetCDNStatis  GetCDNStatisRequest
-     * @return GetCDNStatisResponse
-     */
-    CompletableFuture<GetCDNStatisResponse> getCDNStatis(GetCDNStatisRequest request);
-
-    /**
-     * @param request the request parameters of GetCDNStatisSum  GetCDNStatisSumRequest
-     * @return GetCDNStatisSumResponse
-     */
-    CompletableFuture<GetCDNStatisSumResponse> getCDNStatisSum(GetCDNStatisSumRequest request);
-
-    /**
      * @param request the request parameters of GetCategories  GetCategoriesRequest
      * @return GetCategoriesResponse
      */
     CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request);
 
     /**
-     * @param request the request parameters of GetCheckChannel  GetCheckChannelRequest
-     * @return GetCheckChannelResponse
-     */
-    CompletableFuture<GetCheckChannelResponse> getCheckChannel(GetCheckChannelRequest request);
-
-    /**
-     * @param request the request parameters of GetClientConfig  GetClientConfigRequest
-     * @return GetClientConfigResponse
-     */
-    CompletableFuture<GetClientConfigResponse> getClientConfig(GetClientConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetCustomerConfig  GetCustomerConfigRequest
-     * @return GetCustomerConfigResponse
-     */
-    CompletableFuture<GetCustomerConfigResponse> getCustomerConfig(GetCustomerConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetDNADB  GetDNADBRequest
-     * @return GetDNADBResponse
-     */
-    CompletableFuture<GetDNADBResponse> getDNADB(GetDNADBRequest request);
-
-    /**
-     * @param request the request parameters of GetDRMCertInfo  GetDRMCertInfoRequest
-     * @return GetDRMCertInfoResponse
-     */
-    CompletableFuture<GetDRMCertInfoResponse> getDRMCertInfo(GetDRMCertInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetDRMLicense  GetDRMLicenseRequest
-     * @return GetDRMLicenseResponse
-     */
-    CompletableFuture<GetDRMLicenseResponse> getDRMLicense(GetDRMLicenseRequest request);
-
-    /**
      * @param request the request parameters of GetDailyPlayRegionStatis  GetDailyPlayRegionStatisRequest
      * @return GetDailyPlayRegionStatisResponse
      */
     CompletableFuture<GetDailyPlayRegionStatisResponse> getDailyPlayRegionStatis(GetDailyPlayRegionStatisRequest request);
-
-    /**
-     * @param request the request parameters of GetDailyPlayStatis  GetDailyPlayStatisRequest
-     * @return GetDailyPlayStatisResponse
-     */
-    CompletableFuture<GetDailyPlayStatisResponse> getDailyPlayStatis(GetDailyPlayStatisRequest request);
 
     /**
      * <b>description</b> :
@@ -2319,12 +1569,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageInfosResponse> getImageInfos(GetImageInfosRequest request);
 
     /**
-     * @param request the request parameters of GetIntelligentStrategy  GetIntelligentStrategyRequest
-     * @return GetIntelligentStrategyResponse
-     */
-    CompletableFuture<GetIntelligentStrategyResponse> getIntelligentStrategy(GetIntelligentStrategyRequest request);
-
-    /**
      * <b>description</b> :
      * <hr>
      * <p>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
@@ -2335,42 +1579,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetJobDetailResponse
      */
     CompletableFuture<GetJobDetailResponse> getJobDetail(GetJobDetailRequest request);
-
-    /**
-     * @param request the request parameters of GetKMSServiceKey  GetKMSServiceKeyRequest
-     * @return GetKMSServiceKeyResponse
-     */
-    CompletableFuture<GetKMSServiceKeyResponse> getKMSServiceKey(GetKMSServiceKeyRequest request);
-
-    /**
-     * @param request the request parameters of GetLicenseInfo  GetLicenseInfoRequest
-     * @return GetLicenseInfoResponse
-     */
-    CompletableFuture<GetLicenseInfoResponse> getLicenseInfo(GetLicenseInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetLicenseKey  GetLicenseKeyRequest
-     * @return GetLicenseKeyResponse
-     */
-    CompletableFuture<GetLicenseKeyResponse> getLicenseKey(GetLicenseKeyRequest request);
-
-    /**
-     * @param request the request parameters of GetLicensePurchaseStatus  GetLicensePurchaseStatusRequest
-     * @return GetLicensePurchaseStatusResponse
-     */
-    CompletableFuture<GetLicensePurchaseStatusResponse> getLicensePurchaseStatus(GetLicensePurchaseStatusRequest request);
-
-    /**
-     * @param request the request parameters of GetLicenses  GetLicensesRequest
-     * @return GetLicensesResponse
-     */
-    CompletableFuture<GetLicensesResponse> getLicenses(GetLicensesRequest request);
-
-    /**
-     * @param request the request parameters of GetMTSStatis  GetMTSStatisRequest
-     * @return GetMTSStatisResponse
-     */
-    CompletableFuture<GetMTSStatisResponse> getMTSStatis(GetMTSStatisRequest request);
 
     /**
      * <b>description</b> :
@@ -2422,18 +1630,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaDNAResultResponse> getMediaDNAResult(GetMediaDNAResultRequest request);
 
     /**
-     * @param request the request parameters of GetMediaExportJobs  GetMediaExportJobsRequest
-     * @return GetMediaExportJobsResponse
-     */
-    CompletableFuture<GetMediaExportJobsResponse> getMediaExportJobs(GetMediaExportJobsRequest request);
-
-    /**
-     * @param request the request parameters of GetMediaLifecycleRule  GetMediaLifecycleRuleRequest
-     * @return GetMediaLifecycleRuleResponse
-     */
-    CompletableFuture<GetMediaLifecycleRuleResponse> getMediaLifecycleRule(GetMediaLifecycleRuleRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can query the information about all media files or a specific media file in a refresh or prefetch job.</p>
      * <h3>QPS limits</h3>
@@ -2456,24 +1652,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMessageCallbackResponse> getMessageCallback(GetMessageCallbackRequest request);
 
     /**
-     * @param request the request parameters of GetMessageCallbackEventList  GetMessageCallbackEventListRequest
-     * @return GetMessageCallbackEventListResponse
-     */
-    CompletableFuture<GetMessageCallbackEventListResponse> getMessageCallbackEventList(GetMessageCallbackEventListRequest request);
-
-    /**
-     * @param request the request parameters of GetMessageCloudMonitorConfig  GetMessageCloudMonitorConfigRequest
-     * @return GetMessageCloudMonitorConfigResponse
-     */
-    CompletableFuture<GetMessageCloudMonitorConfigResponse> getMessageCloudMonitorConfig(GetMessageCloudMonitorConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetMessageCloudMonitorEventList  GetMessageCloudMonitorEventListRequest
-     * @return GetMessageCloudMonitorEventListResponse
-     */
-    CompletableFuture<GetMessageCloudMonitorEventListResponse> getMessageCloudMonitorEventList(GetMessageCloudMonitorEventListRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can obtain complete information about the source file only after a stream is transcoded.</p>
      * 
@@ -2481,48 +1659,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMezzanineInfoResponse
      */
     CompletableFuture<GetMezzanineInfoResponse> getMezzanineInfo(GetMezzanineInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetOSSFlowStatis  GetOSSFlowStatisRequest
-     * @return GetOSSFlowStatisResponse
-     */
-    CompletableFuture<GetOSSFlowStatisResponse> getOSSFlowStatis(GetOSSFlowStatisRequest request);
-
-    /**
-     * @param request the request parameters of GetOSSStatis  GetOSSStatisRequest
-     * @return GetOSSStatisResponse
-     */
-    CompletableFuture<GetOSSStatisResponse> getOSSStatis(GetOSSStatisRequest request);
-
-    /**
-     * @param request the request parameters of GetPageByCondAppInfo  GetPageByCondAppInfoRequest
-     * @return GetPageByCondAppInfoResponse
-     */
-    CompletableFuture<GetPageByCondAppInfoResponse> getPageByCondAppInfo(GetPageByCondAppInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetPageByCondLicenseInstance  GetPageByCondLicenseInstanceRequest
-     * @return GetPageByCondLicenseInstanceResponse
-     */
-    CompletableFuture<GetPageByCondLicenseInstanceResponse> getPageByCondLicenseInstance(GetPageByCondLicenseInstanceRequest request);
-
-    /**
-     * @param request the request parameters of GetPersonalStorageList  GetPersonalStorageListRequest
-     * @return GetPersonalStorageListResponse
-     */
-    CompletableFuture<GetPersonalStorageListResponse> getPersonalStorageList(GetPersonalStorageListRequest request);
-
-    /**
-     * @param request the request parameters of GetPlanSpecificationForLicense  GetPlanSpecificationForLicenseRequest
-     * @return GetPlanSpecificationForLicenseResponse
-     */
-    CompletableFuture<GetPlanSpecificationForLicenseResponse> getPlanSpecificationForLicense(GetPlanSpecificationForLicenseRequest request);
-
-    /**
-     * @param request the request parameters of GetPlayConfig  GetPlayConfigRequest
-     * @return GetPlayConfigResponse
-     */
-    CompletableFuture<GetPlayConfigResponse> getPlayConfig(GetPlayConfigRequest request);
 
     /**
      * <b>description</b> :
@@ -2536,66 +1672,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPlayInfoResponse
      */
     CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetPlayerConfig  GetPlayerConfigRequest
-     * @return GetPlayerConfigResponse
-     */
-    CompletableFuture<GetPlayerConfigResponse> getPlayerConfig(GetPlayerConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetSdkIntegration  GetSdkIntegrationRequest
-     * @return GetSdkIntegrationResponse
-     */
-    CompletableFuture<GetSdkIntegrationResponse> getSdkIntegration(GetSdkIntegrationRequest request);
-
-    /**
-     * @param request the request parameters of GetSdkList  GetSdkListRequest
-     * @return GetSdkListResponse
-     */
-    CompletableFuture<GetSdkListResponse> getSdkList(GetSdkListRequest request);
-
-    /**
-     * @param request the request parameters of GetSpecificationsForLicense  GetSpecificationsForLicenseRequest
-     * @return GetSpecificationsForLicenseResponse
-     */
-    CompletableFuture<GetSpecificationsForLicenseResponse> getSpecificationsForLicense(GetSpecificationsForLicenseRequest request);
-
-    /**
-     * @param request the request parameters of GetStorageInfo  GetStorageInfoRequest
-     * @return GetStorageInfoResponse
-     */
-    CompletableFuture<GetStorageInfoResponse> getStorageInfo(GetStorageInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetStorageList  GetStorageListRequest
-     * @return GetStorageListResponse
-     */
-    CompletableFuture<GetStorageListResponse> getStorageList(GetStorageListRequest request);
-
-    /**
-     * @param request the request parameters of GetStorageNotifyConfig  GetStorageNotifyConfigRequest
-     * @return GetStorageNotifyConfigResponse
-     */
-    CompletableFuture<GetStorageNotifyConfigResponse> getStorageNotifyConfig(GetStorageNotifyConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetStorageRegionList  GetStorageRegionListRequest
-     * @return GetStorageRegionListResponse
-     */
-    CompletableFuture<GetStorageRegionListResponse> getStorageRegionList(GetStorageRegionListRequest request);
-
-    /**
-     * @param request the request parameters of GetTemplateGroupConsole  GetTemplateGroupConsoleRequest
-     * @return GetTemplateGroupConsoleResponse
-     */
-    CompletableFuture<GetTemplateGroupConsoleResponse> getTemplateGroupConsole(GetTemplateGroupConsoleRequest request);
-
-    /**
-     * @param request the request parameters of GetTotalStatis  GetTotalStatisRequest
-     * @return GetTotalStatisResponse
-     */
-    CompletableFuture<GetTotalStatisResponse> getTotalStatis(GetTotalStatisRequest request);
 
     /**
      * <b>description</b> :
@@ -2640,12 +1716,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetURLUploadInfosResponse> getURLUploadInfos(GetURLUploadInfosRequest request);
 
     /**
-     * @param request the request parameters of GetUnactivatedLicenseOrder  GetUnactivatedLicenseOrderRequest
-     * @return GetUnactivatedLicenseOrderResponse
-     */
-    CompletableFuture<GetUnactivatedLicenseOrderResponse> getUnactivatedLicenseOrder(GetUnactivatedLicenseOrderRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  You can call this operation to obtain the upload details only about audio and video files.</p>
      * <ul>
@@ -2665,24 +1735,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUploadDetailsResponse
      */
     CompletableFuture<GetUploadDetailsResponse> getUploadDetails(GetUploadDetailsRequest request);
-
-    /**
-     * @param request the request parameters of GetUploadProgress  GetUploadProgressRequest
-     * @return GetUploadProgressResponse
-     */
-    CompletableFuture<GetUploadProgressResponse> getUploadProgress(GetUploadProgressRequest request);
-
-    /**
-     * @param request the request parameters of GetVideoConfig  GetVideoConfigRequest
-     * @return GetVideoConfigResponse
-     */
-    CompletableFuture<GetVideoConfigResponse> getVideoConfig(GetVideoConfigRequest request);
-
-    /**
-     * @param request the request parameters of GetVideoDNAResult  GetVideoDNAResultRequest
-     * @return GetVideoDNAResultResponse
-     */
-    CompletableFuture<GetVideoDNAResultResponse> getVideoDNAResult(GetVideoDNAResultRequest request);
 
     /**
      * <b>description</b> :
@@ -2727,18 +1779,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoPlayAuthResponse> getVideoPlayAuth(GetVideoPlayAuthRequest request);
 
     /**
-     * @param request the request parameters of GetVideoPlayInfo  GetVideoPlayInfoRequest
-     * @return GetVideoPlayInfoResponse
-     */
-    CompletableFuture<GetVideoPlayInfoResponse> getVideoPlayInfo(GetVideoPlayInfoRequest request);
-
-    /**
-     * @param request the request parameters of GetVodServiceRegion  GetVodServiceRegionRequest
-     * @return GetVodServiceRegionResponse
-     */
-    CompletableFuture<GetVodServiceRegionResponse> getVodServiceRegion(GetVodServiceRegionRequest request);
-
-    /**
      * @param request the request parameters of GetVodTemplate  GetVodTemplateRequest
      * @return GetVodTemplateResponse
      */
@@ -2749,42 +1789,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWatermarkResponse
      */
     CompletableFuture<GetWatermarkResponse> getWatermark(GetWatermarkRequest request);
-
-    /**
-     * @param request the request parameters of GetWatermarkConsole  GetWatermarkConsoleRequest
-     * @return GetWatermarkConsoleResponse
-     */
-    CompletableFuture<GetWatermarkConsoleResponse> getWatermarkConsole(GetWatermarkConsoleRequest request);
-
-    /**
-     * @param request the request parameters of GetWatermarksConsole  GetWatermarksConsoleRequest
-     * @return GetWatermarksConsoleResponse
-     */
-    CompletableFuture<GetWatermarksConsoleResponse> getWatermarksConsole(GetWatermarksConsoleRequest request);
-
-    /**
-     * @param request the request parameters of GetWorkflow  GetWorkflowRequest
-     * @return GetWorkflowResponse
-     */
-    CompletableFuture<GetWorkflowResponse> getWorkflow(GetWorkflowRequest request);
-
-    /**
-     * @param request the request parameters of HttpRequestVodTestTool  HttpRequestVodTestToolRequest
-     * @return HttpRequestVodTestToolResponse
-     */
-    CompletableFuture<HttpRequestVodTestToolResponse> httpRequestVodTestTool(HttpRequestVodTestToolRequest request);
-
-    /**
-     * @param request the request parameters of InitialTranscodeConfig  InitialTranscodeConfigRequest
-     * @return InitialTranscodeConfigResponse
-     */
-    CompletableFuture<InitialTranscodeConfigResponse> initialTranscodeConfig(InitialTranscodeConfigRequest request);
-
-    /**
-     * @param request the request parameters of ListAIASRJob  ListAIASRJobRequest
-     * @return ListAIASRJobResponse
-     */
-    CompletableFuture<ListAIASRJobResponse> listAIASRJob(ListAIASRJobRequest request);
 
     /**
      * <b>description</b> :
@@ -2811,12 +1815,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIJobResponse> listAIJob(ListAIJobRequest request);
 
     /**
-     * @param request the request parameters of ListAIStatisType  ListAIStatisTypeRequest
-     * @return ListAIStatisTypeResponse
-     */
-    CompletableFuture<ListAIStatisTypeResponse> listAIStatisType(ListAIStatisTypeRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
@@ -2827,54 +1825,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAITemplateResponse
      */
     CompletableFuture<ListAITemplateResponse> listAITemplate(ListAITemplateRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoCategoryJob  ListAIVideoCategoryJobRequest
-     * @return ListAIVideoCategoryJobResponse
-     */
-    CompletableFuture<ListAIVideoCategoryJobResponse> listAIVideoCategoryJob(ListAIVideoCategoryJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoCensorJob  ListAIVideoCensorJobRequest
-     * @return ListAIVideoCensorJobResponse
-     */
-    CompletableFuture<ListAIVideoCensorJobResponse> listAIVideoCensorJob(ListAIVideoCensorJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoCoverJob  ListAIVideoCoverJobRequest
-     * @return ListAIVideoCoverJobResponse
-     */
-    CompletableFuture<ListAIVideoCoverJobResponse> listAIVideoCoverJob(ListAIVideoCoverJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoFaceRecogJob  ListAIVideoFaceRecogJobRequest
-     * @return ListAIVideoFaceRecogJobResponse
-     */
-    CompletableFuture<ListAIVideoFaceRecogJobResponse> listAIVideoFaceRecogJob(ListAIVideoFaceRecogJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoPornRecogJob  ListAIVideoPornRecogJobRequest
-     * @return ListAIVideoPornRecogJobResponse
-     */
-    CompletableFuture<ListAIVideoPornRecogJobResponse> listAIVideoPornRecogJob(ListAIVideoPornRecogJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoSummaryJob  ListAIVideoSummaryJobRequest
-     * @return ListAIVideoSummaryJobResponse
-     */
-    CompletableFuture<ListAIVideoSummaryJobResponse> listAIVideoSummaryJob(ListAIVideoSummaryJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoTagJob  ListAIVideoTagJobRequest
-     * @return ListAIVideoTagJobResponse
-     */
-    CompletableFuture<ListAIVideoTagJobResponse> listAIVideoTagJob(ListAIVideoTagJobRequest request);
-
-    /**
-     * @param request the request parameters of ListAIVideoTerrorismRecogJob  ListAIVideoTerrorismRecogJobRequest
-     * @return ListAIVideoTerrorismRecogJobResponse
-     */
-    CompletableFuture<ListAIVideoTerrorismRecogJobResponse> listAIVideoTerrorismRecogJob(ListAIVideoTerrorismRecogJobRequest request);
 
     /**
      * <b>description</b> :
@@ -2900,46 +1850,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppPoliciesForIdentityResponse> listAppPoliciesForIdentity(ListAppPoliciesForIdentityRequest request);
 
     /**
-     * @param request the request parameters of ListAppPolicy  ListAppPolicyRequest
-     * @return ListAppPolicyResponse
-     */
-    CompletableFuture<ListAppPolicyResponse> listAppPolicy(ListAppPolicyRequest request);
-
-    /**
      * @param request the request parameters of ListAuditSecurityIp  ListAuditSecurityIpRequest
      * @return ListAuditSecurityIpResponse
      */
     CompletableFuture<ListAuditSecurityIpResponse> listAuditSecurityIp(ListAuditSecurityIpRequest request);
 
     /**
-     * @param request the request parameters of ListBucketRedundancyTransition  ListBucketRedundancyTransitionRequest
-     * @return ListBucketRedundancyTransitionResponse
-     */
-    CompletableFuture<ListBucketRedundancyTransitionResponse> listBucketRedundancyTransition(ListBucketRedundancyTransitionRequest request);
-
-    /**
-     * @param request the request parameters of ListDNADB  ListDNADBRequest
-     * @return ListDNADBResponse
-     */
-    CompletableFuture<ListDNADBResponse> listDNADB(ListDNADBRequest request);
-
-    /**
-     * @param request the request parameters of ListDRMCertInfo  ListDRMCertInfoRequest
-     * @return ListDRMCertInfoResponse
-     */
-    CompletableFuture<ListDRMCertInfoResponse> listDRMCertInfo(ListDRMCertInfoRequest request);
-
-    /**
      * @param request the request parameters of ListDynamicImage  ListDynamicImageRequest
      * @return ListDynamicImageResponse
      */
     CompletableFuture<ListDynamicImageResponse> listDynamicImage(ListDynamicImageRequest request);
-
-    /**
-     * @param request the request parameters of ListIntelligentStrategy  ListIntelligentStrategyRequest
-     * @return ListIntelligentStrategyResponse
-     */
-    CompletableFuture<ListIntelligentStrategyResponse> listIntelligentStrategy(ListIntelligentStrategyRequest request);
 
     /**
      * <b>description</b> :
@@ -2957,18 +1877,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobInfoResponse> listJobInfo(ListJobInfoRequest request);
 
     /**
-     * @param request the request parameters of ListLicenseInfos  ListLicenseInfosRequest
-     * @return ListLicenseInfosResponse
-     */
-    CompletableFuture<ListLicenseInfosResponse> listLicenseInfos(ListLicenseInfosRequest request);
-
-    /**
-     * @param request the request parameters of ListLicenses  ListLicensesRequest
-     * @return ListLicensesResponse
-     */
-    CompletableFuture<ListLicensesResponse> listLicenses(ListLicensesRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can query up to 5,000 videos based on the specified filter condition.</p>
      * 
@@ -2978,30 +1886,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLiveRecordVideoResponse> listLiveRecordVideo(ListLiveRecordVideoRequest request);
 
     /**
-     * @param request the request parameters of ListMediaDNADeleteJob  ListMediaDNADeleteJobRequest
-     * @return ListMediaDNADeleteJobResponse
-     */
-    CompletableFuture<ListMediaDNADeleteJobResponse> listMediaDNADeleteJob(ListMediaDNADeleteJobRequest request);
-
-    /**
-     * @param request the request parameters of ListMediaDNALibs  ListMediaDNALibsRequest
-     * @return ListMediaDNALibsResponse
-     */
-    CompletableFuture<ListMediaDNALibsResponse> listMediaDNALibs(ListMediaDNALibsRequest request);
-
-    /**
-     * @param request the request parameters of ListMediaExportJobs  ListMediaExportJobsRequest
-     * @return ListMediaExportJobsResponse
-     */
-    CompletableFuture<ListMediaExportJobsResponse> listMediaExportJobs(ListMediaExportJobsRequest request);
-
-    /**
-     * @param request the request parameters of ListMediaLifecycleRule  ListMediaLifecycleRuleRequest
-     * @return ListMediaLifecycleRuleResponse
-     */
-    CompletableFuture<ListMediaLifecycleRuleResponse> listMediaLifecycleRule(ListMediaLifecycleRuleRequest request);
-
-    /**
      * <b>description</b> :
      * <p>If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.</p>
      * 
@@ -3009,30 +1893,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSnapshotsResponse
      */
     CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
-
-    /**
-     * @param request the request parameters of ListStrategyExecutionRecord  ListStrategyExecutionRecordRequest
-     * @return ListStrategyExecutionRecordResponse
-     */
-    CompletableFuture<ListStrategyExecutionRecordResponse> listStrategyExecutionRecord(ListStrategyExecutionRecordRequest request);
-
-    /**
-     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
-     * @return ListTagResourcesResponse
-     */
-    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
-
-    /**
-     * @param request the request parameters of ListTemplateGroup  ListTemplateGroupRequest
-     * @return ListTemplateGroupResponse
-     */
-    CompletableFuture<ListTemplateGroupResponse> listTemplateGroup(ListTemplateGroupRequest request);
-
-    /**
-     * @param request the request parameters of ListTemplateGroupConsole  ListTemplateGroupConsoleRequest
-     * @return ListTemplateGroupConsoleResponse
-     */
-    CompletableFuture<ListTemplateGroupConsoleResponse> listTemplateGroupConsole(ListTemplateGroupConsoleRequest request);
 
     /**
      * <b>description</b> :
@@ -3058,36 +1918,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTranscodeTemplateGroupResponse> listTranscodeTemplateGroup(ListTranscodeTemplateGroupRequest request);
 
     /**
-     * @param request the request parameters of ListVodEsTemplateInfo  ListVodEsTemplateInfoRequest
-     * @return ListVodEsTemplateInfoResponse
-     */
-    CompletableFuture<ListVodEsTemplateInfoResponse> listVodEsTemplateInfo(ListVodEsTemplateInfoRequest request);
-
-    /**
-     * @param request the request parameters of ListVodRealtimeLogDelivery  ListVodRealtimeLogDeliveryRequest
-     * @return ListVodRealtimeLogDeliveryResponse
-     */
-    CompletableFuture<ListVodRealtimeLogDeliveryResponse> listVodRealtimeLogDelivery(ListVodRealtimeLogDeliveryRequest request);
-
-    /**
-     * @param request the request parameters of ListVodRealtimeLogDeliveryDomains  ListVodRealtimeLogDeliveryDomainsRequest
-     * @return ListVodRealtimeLogDeliveryDomainsResponse
-     */
-    CompletableFuture<ListVodRealtimeLogDeliveryDomainsResponse> listVodRealtimeLogDeliveryDomains(ListVodRealtimeLogDeliveryDomainsRequest request);
-
-    /**
-     * @param request the request parameters of ListVodRealtimeLogDeliveryInfos  ListVodRealtimeLogDeliveryInfosRequest
-     * @return ListVodRealtimeLogDeliveryInfosResponse
-     */
-    CompletableFuture<ListVodRealtimeLogDeliveryInfosResponse> listVodRealtimeLogDeliveryInfos(ListVodRealtimeLogDeliveryInfosRequest request);
-
-    /**
-     * @param request the request parameters of ListVodTagResources  ListVodTagResourcesRequest
-     * @return ListVodTagResourcesResponse
-     */
-    CompletableFuture<ListVodTagResourcesResponse> listVodTagResources(ListVodTagResourcesRequest request);
-
-    /**
      * @param request the request parameters of ListVodTemplate  ListVodTemplateRequest
      * @return ListVodTemplateResponse
      */
@@ -3100,46 +1930,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWatermarkResponse> listWatermark(ListWatermarkRequest request);
 
     /**
-     * @param request the request parameters of ListWorkflow  ListWorkflowRequest
-     * @return ListWorkflowResponse
-     */
-    CompletableFuture<ListWorkflowResponse> listWorkflow(ListWorkflowRequest request);
-
-    /**
-     * @param request the request parameters of ModifyLicenseInfo  ModifyLicenseInfoRequest
-     * @return ModifyLicenseInfoResponse
-     */
-    CompletableFuture<ModifyLicenseInfoResponse> modifyLicenseInfo(ModifyLicenseInfoRequest request);
-
-    /**
-     * @param request the request parameters of ModifyVodDomainSchdmByProperty  ModifyVodDomainSchdmByPropertyRequest
-     * @return ModifyVodDomainSchdmByPropertyResponse
-     */
-    CompletableFuture<ModifyVodDomainSchdmByPropertyResponse> modifyVodDomainSchdmByProperty(ModifyVodDomainSchdmByPropertyRequest request);
-
-    /**
-     * @param request the request parameters of ModifyVodService  ModifyVodServiceRequest
-     * @return ModifyVodServiceResponse
-     */
-    CompletableFuture<ModifyVodServiceResponse> modifyVodService(ModifyVodServiceRequest request);
-
-    /**
      * @param request the request parameters of MoveAppResource  MoveAppResourceRequest
      * @return MoveAppResourceResponse
      */
     CompletableFuture<MoveAppResourceResponse> moveAppResource(MoveAppResourceRequest request);
-
-    /**
-     * @param request the request parameters of OpenVodService  OpenVodServiceRequest
-     * @return OpenVodServiceResponse
-     */
-    CompletableFuture<OpenVodServiceResponse> openVodService(OpenVodServiceRequest request);
-
-    /**
-     * @param request the request parameters of PreloadPlayDeviceAbility  PreloadPlayDeviceAbilityRequest
-     * @return PreloadPlayDeviceAbilityResponse
-     */
-    CompletableFuture<PreloadPlayDeviceAbilityResponse> preloadPlayDeviceAbility(PreloadPlayDeviceAbilityRequest request);
 
     /**
      * <b>description</b> :
@@ -3188,24 +1982,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ProduceEditingProjectVideoResponse> produceEditingProjectVideo(ProduceEditingProjectVideoRequest request);
 
     /**
-     * @param request the request parameters of PublishVodStagingConfigToProduction  PublishVodStagingConfigToProductionRequest
-     * @return PublishVodStagingConfigToProductionResponse
-     */
-    CompletableFuture<PublishVodStagingConfigToProductionResponse> publishVodStagingConfigToProduction(PublishVodStagingConfigToProductionRequest request);
-
-    /**
-     * @param request the request parameters of PushObjectCache  PushObjectCacheRequest
-     * @return PushObjectCacheResponse
-     */
-    CompletableFuture<PushObjectCacheResponse> pushObjectCache(PushObjectCacheRequest request);
-
-    /**
-     * @param request the request parameters of QueryCssOrderForLicense  QueryCssOrderForLicenseRequest
-     * @return QueryCssOrderForLicenseResponse
-     */
-    CompletableFuture<QueryCssOrderForLicenseResponse> queryCssOrderForLicense(QueryCssOrderForLicenseRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  ApsaraVideo VOD allows you to purge and prefetch resources. The purge feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.</p>
      * <ul>
@@ -3217,12 +1993,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RefreshMediaPlayUrlsResponse
      */
     CompletableFuture<RefreshMediaPlayUrlsResponse> refreshMediaPlayUrls(RefreshMediaPlayUrlsRequest request);
-
-    /**
-     * @param request the request parameters of RefreshObjectCaches  RefreshObjectCachesRequest
-     * @return RefreshObjectCachesResponse
-     */
-    CompletableFuture<RefreshObjectCachesResponse> refreshObjectCaches(RefreshObjectCachesRequest request);
 
     /**
      * <b>description</b> :
@@ -3247,12 +2017,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshVodObjectCachesResponse> refreshVodObjectCaches(RefreshVodObjectCachesRequest request);
 
     /**
-     * @param request the request parameters of RegistDRMCertInfo  RegistDRMCertInfoRequest
-     * @return RegistDRMCertInfoResponse
-     */
-    CompletableFuture<RegistDRMCertInfoResponse> registDRMCertInfo(RegistDRMCertInfoRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  After you add an OSS bucket to ApsaraVideo VOD, you must register media files in the OSS bucket to generate the required information. Then, you can use media IDs for features such as transcoding, snapshot capture, and AI processing.use features such as xxx on media files by specifying their IDs?</p>
      * <ul>
@@ -3268,24 +2032,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterMediaResponse> registerMedia(RegisterMediaRequest request);
 
     /**
-     * @param request the request parameters of RenewAppLicense  RenewAppLicenseRequest
-     * @return RenewAppLicenseResponse
-     */
-    CompletableFuture<RenewAppLicenseResponse> renewAppLicense(RenewAppLicenseRequest request);
-
-    /**
-     * @param request the request parameters of RenewFreeLicense  RenewFreeLicenseRequest
-     * @return RenewFreeLicenseResponse
-     */
-    CompletableFuture<RenewFreeLicenseResponse> renewFreeLicense(RenewFreeLicenseRequest request);
-
-    /**
-     * @param request the request parameters of ReportUploadProgress  ReportUploadProgressRequest
-     * @return ReportUploadProgressResponse
-     */
-    CompletableFuture<ReportUploadProgressResponse> reportUploadProgress(ReportUploadProgressRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can call this operation to restore only Archive and Cold Archive audio and video files. You can access the audio and video files after the files are restored. You cannot change the storage class of an audio or video file that is being restored. You are charged for the retrieval traffic generated during restoration. After a Cold Archive audio or video file is restored, a Standard replica of the file is generated for access. You are charged for the storage of the replica before the file returns to the frozen state.</p>
      * 
@@ -3293,12 +2039,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestoreMediaResponse
      */
     CompletableFuture<RestoreMediaResponse> restoreMedia(RestoreMediaRequest request);
-
-    /**
-     * @param request the request parameters of RollbackVodStagingConfig  RollbackVodStagingConfigRequest
-     * @return RollbackVodStagingConfigResponse
-     */
-    CompletableFuture<RollbackVodStagingConfigResponse> rollbackVodStagingConfig(RollbackVodStagingConfigRequest request);
 
     /**
      * @param request the request parameters of SearchEditingProject  SearchEditingProjectRequest
@@ -3327,12 +2067,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
     /**
-     * @param request the request parameters of SetAIService  SetAIServiceRequest
-     * @return SetAIServiceResponse
-     */
-    CompletableFuture<SetAIServiceResponse> setAIService(SetAIServiceRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.</p>
      * 
@@ -3340,12 +2074,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetAuditSecurityIpResponse
      */
     CompletableFuture<SetAuditSecurityIpResponse> setAuditSecurityIp(SetAuditSecurityIpRequest request);
-
-    /**
-     * @param request the request parameters of SetCheckChannel  SetCheckChannelRequest
-     * @return SetCheckChannelResponse
-     */
-    CompletableFuture<SetCheckChannelResponse> setCheckChannel(SetCheckChannelRequest request);
 
     /**
      * <b>description</b> :
@@ -3359,12 +2087,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetCrossdomainContentResponse> setCrossdomainContent(SetCrossdomainContentRequest request);
 
     /**
-     * @param request the request parameters of SetCustomerConfig  SetCustomerConfigRequest
-     * @return SetCustomerConfigResponse
-     */
-    CompletableFuture<SetCustomerConfigResponse> setCustomerConfig(SetCustomerConfigRequest request);
-
-    /**
      * <b>description</b> :
      * <p>Specifies an AI template as the default template.</p>
      * 
@@ -3374,34 +2096,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDefaultAITemplateResponse> setDefaultAITemplate(SetDefaultAITemplateRequest request);
 
     /**
-     * @param request the request parameters of SetDefaultPlayDomain  SetDefaultPlayDomainRequest
-     * @return SetDefaultPlayDomainResponse
-     */
-    CompletableFuture<SetDefaultPlayDomainResponse> setDefaultPlayDomain(SetDefaultPlayDomainRequest request);
-
-    /**
-     * @param request the request parameters of SetDefaultTemplateGroupConsole  SetDefaultTemplateGroupConsoleRequest
-     * @return SetDefaultTemplateGroupConsoleResponse
-     */
-    CompletableFuture<SetDefaultTemplateGroupConsoleResponse> setDefaultTemplateGroupConsole(SetDefaultTemplateGroupConsoleRequest request);
-
-    /**
      * @param request the request parameters of SetDefaultTranscodeTemplateGroup  SetDefaultTranscodeTemplateGroupRequest
      * @return SetDefaultTranscodeTemplateGroupResponse
      */
     CompletableFuture<SetDefaultTranscodeTemplateGroupResponse> setDefaultTranscodeTemplateGroup(SetDefaultTranscodeTemplateGroupRequest request);
-
-    /**
-     * @param request the request parameters of SetDefaultUploadStorage  SetDefaultUploadStorageRequest
-     * @return SetDefaultUploadStorageResponse
-     */
-    CompletableFuture<SetDefaultUploadStorageResponse> setDefaultUploadStorage(SetDefaultUploadStorageRequest request);
-
-    /**
-     * @param request the request parameters of SetDefaultVodTemplate  SetDefaultVodTemplateRequest
-     * @return SetDefaultVodTemplateResponse
-     */
-    CompletableFuture<SetDefaultVodTemplateResponse> setDefaultVodTemplate(SetDefaultVodTemplateRequest request);
 
     /**
      * @param request the request parameters of SetDefaultWatermark  SetDefaultWatermarkRequest
@@ -3410,22 +2108,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDefaultWatermarkResponse> setDefaultWatermark(SetDefaultWatermarkRequest request);
 
     /**
-     * @param request the request parameters of SetDefaultWatermarkConsole  SetDefaultWatermarkConsoleRequest
-     * @return SetDefaultWatermarkConsoleResponse
-     */
-    CompletableFuture<SetDefaultWatermarkConsoleResponse> setDefaultWatermarkConsole(SetDefaultWatermarkConsoleRequest request);
-
-    /**
      * @param request the request parameters of SetEditingProjectMaterials  SetEditingProjectMaterialsRequest
      * @return SetEditingProjectMaterialsResponse
      */
     CompletableFuture<SetEditingProjectMaterialsResponse> setEditingProjectMaterials(SetEditingProjectMaterialsRequest request);
-
-    /**
-     * @param request the request parameters of SetL2OssKeyConfig  SetL2OssKeyConfigRequest
-     * @return SetL2OssKeyConfigResponse
-     */
-    CompletableFuture<SetL2OssKeyConfigResponse> setL2OssKeyConfig(SetL2OssKeyConfigRequest request);
 
     /**
      * <b>description</b> :
@@ -3435,18 +2121,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetMessageCallbackResponse
      */
     CompletableFuture<SetMessageCallbackResponse> setMessageCallback(SetMessageCallbackRequest request);
-
-    /**
-     * @param request the request parameters of SetMessageCloudMonitorConfig  SetMessageCloudMonitorConfigRequest
-     * @return SetMessageCloudMonitorConfigResponse
-     */
-    CompletableFuture<SetMessageCloudMonitorConfigResponse> setMessageCloudMonitorConfig(SetMessageCloudMonitorConfigRequest request);
-
-    /**
-     * @param request the request parameters of SetStorageACL  SetStorageACLRequest
-     * @return SetStorageACLResponse
-     */
-    CompletableFuture<SetStorageACLResponse> setStorageACL(SetStorageACLRequest request);
 
     /**
      * <b>description</b> :
@@ -3464,36 +2138,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetVodDomainSSLCertificateResponse
      */
     CompletableFuture<SetVodDomainSSLCertificateResponse> setVodDomainSSLCertificate(SetVodDomainSSLCertificateRequest request);
-
-    /**
-     * @param request the request parameters of SetVodDomainStagingConfig  SetVodDomainStagingConfigRequest
-     * @return SetVodDomainStagingConfigResponse
-     */
-    CompletableFuture<SetVodDomainStagingConfigResponse> setVodDomainStagingConfig(SetVodDomainStagingConfigRequest request);
-
-    /**
-     * @param request the request parameters of StartVodDomain  StartVodDomainRequest
-     * @return StartVodDomainResponse
-     */
-    CompletableFuture<StartVodDomainResponse> startVodDomain(StartVodDomainRequest request);
-
-    /**
-     * @param request the request parameters of StopVodDomain  StopVodDomainRequest
-     * @return StopVodDomainResponse
-     */
-    CompletableFuture<StopVodDomainResponse> stopVodDomain(StopVodDomainRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIASRJob  SubmitAIASRJobRequest
-     * @return SubmitAIASRJobResponse
-     */
-    CompletableFuture<SubmitAIASRJobResponse> submitAIASRJob(SubmitAIASRJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAICaptionExtractionJob  SubmitAICaptionExtractionJobRequest
-     * @return SubmitAICaptionExtractionJobResponse
-     */
-    CompletableFuture<SubmitAICaptionExtractionJobResponse> submitAICaptionExtractionJob(SubmitAICaptionExtractionJobRequest request);
 
     /**
      * <b>description</b> :
@@ -3546,72 +2190,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitAIMediaAuditJobResponse> submitAIMediaAuditJob(SubmitAIMediaAuditJobRequest request);
 
     /**
-     * @param request the request parameters of SubmitAIVideoCategoryJob  SubmitAIVideoCategoryJobRequest
-     * @return SubmitAIVideoCategoryJobResponse
-     */
-    CompletableFuture<SubmitAIVideoCategoryJobResponse> submitAIVideoCategoryJob(SubmitAIVideoCategoryJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoCensorJob  SubmitAIVideoCensorJobRequest
-     * @return SubmitAIVideoCensorJobResponse
-     */
-    CompletableFuture<SubmitAIVideoCensorJobResponse> submitAIVideoCensorJob(SubmitAIVideoCensorJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoCoverJob  SubmitAIVideoCoverJobRequest
-     * @return SubmitAIVideoCoverJobResponse
-     */
-    CompletableFuture<SubmitAIVideoCoverJobResponse> submitAIVideoCoverJob(SubmitAIVideoCoverJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoFaceRecogJob  SubmitAIVideoFaceRecogJobRequest
-     * @return SubmitAIVideoFaceRecogJobResponse
-     */
-    CompletableFuture<SubmitAIVideoFaceRecogJobResponse> submitAIVideoFaceRecogJob(SubmitAIVideoFaceRecogJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoPornRecogJob  SubmitAIVideoPornRecogJobRequest
-     * @return SubmitAIVideoPornRecogJobResponse
-     */
-    CompletableFuture<SubmitAIVideoPornRecogJobResponse> submitAIVideoPornRecogJob(SubmitAIVideoPornRecogJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoSummaryJob  SubmitAIVideoSummaryJobRequest
-     * @return SubmitAIVideoSummaryJobResponse
-     */
-    CompletableFuture<SubmitAIVideoSummaryJobResponse> submitAIVideoSummaryJob(SubmitAIVideoSummaryJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoTagJob  SubmitAIVideoTagJobRequest
-     * @return SubmitAIVideoTagJobResponse
-     */
-    CompletableFuture<SubmitAIVideoTagJobResponse> submitAIVideoTagJob(SubmitAIVideoTagJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitAIVideoTerrorismRecogJob  SubmitAIVideoTerrorismRecogJobRequest
-     * @return SubmitAIVideoTerrorismRecogJobResponse
-     */
-    CompletableFuture<SubmitAIVideoTerrorismRecogJobResponse> submitAIVideoTerrorismRecogJob(SubmitAIVideoTerrorismRecogJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitBucketDeleteTask  SubmitBucketDeleteTaskRequest
-     * @return SubmitBucketDeleteTaskResponse
-     */
-    CompletableFuture<SubmitBucketDeleteTaskResponse> submitBucketDeleteTask(SubmitBucketDeleteTaskRequest request);
-
-    /**
-     * @param request the request parameters of SubmitBucketRedundancyTransition  SubmitBucketRedundancyTransitionRequest
-     * @return SubmitBucketRedundancyTransitionResponse
-     */
-    CompletableFuture<SubmitBucketRedundancyTransitionResponse> submitBucketRedundancyTransition(SubmitBucketRedundancyTransitionRequest request);
-
-    /**
-     * @param request the request parameters of SubmitDNAInitializationJob  SubmitDNAInitializationJobRequest
-     * @return SubmitDNAInitializationJobResponse
-     */
-    CompletableFuture<SubmitDNAInitializationJobResponse> submitDNAInitializationJob(SubmitDNAInitializationJobRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  <strong>Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for generating and extracting digital watermarks. For more information, see <a href="~~188310#62b9c940403se~~">Billing</a>.</strong></p>
      * <ul>
@@ -3643,12 +2221,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request);
 
     /**
-     * @param request the request parameters of SubmitLiveEditing  SubmitLiveEditingRequest
-     * @return SubmitLiveEditingResponse
-     */
-    CompletableFuture<SubmitLiveEditingResponse> submitLiveEditing(SubmitLiveEditingRequest request);
-
-    /**
      * <b>description</b> :
      * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
@@ -3656,12 +2228,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitMediaDNADeleteJobResponse
      */
     CompletableFuture<SubmitMediaDNADeleteJobResponse> submitMediaDNADeleteJob(SubmitMediaDNADeleteJobRequest request);
-
-    /**
-     * @param request the request parameters of SubmitMediaExportJob  SubmitMediaExportJobRequest
-     * @return SubmitMediaExportJobResponse
-     */
-    CompletableFuture<SubmitMediaExportJobResponse> submitMediaExportJob(SubmitMediaExportJobRequest request);
 
     /**
      * <b>description</b> :
@@ -3674,12 +2240,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitPreprocessJobsResponse
      */
     CompletableFuture<SubmitPreprocessJobsResponse> submitPreprocessJobs(SubmitPreprocessJobsRequest request);
-
-    /**
-     * @param request the request parameters of SubmitPreprocessJobsConsole  SubmitPreprocessJobsConsoleRequest
-     * @return SubmitPreprocessJobsConsoleResponse
-     */
-    CompletableFuture<SubmitPreprocessJobsConsoleResponse> submitPreprocessJobsConsole(SubmitPreprocessJobsConsoleRequest request);
 
     /**
      * <b>description</b> :
@@ -3723,42 +2283,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitWorkflowJobResponse> submitWorkflowJob(SubmitWorkflowJobRequest request);
 
     /**
-     * @param request the request parameters of SyncUserProdAccountAndBucket  SyncUserProdAccountAndBucketRequest
-     * @return SyncUserProdAccountAndBucketResponse
-     */
-    CompletableFuture<SyncUserProdAccountAndBucketResponse> syncUserProdAccountAndBucket(SyncUserProdAccountAndBucketRequest request);
-
-    /**
-     * @param request the request parameters of TagResources  TagResourcesRequest
-     * @return TagResourcesResponse
-     */
-    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
-
-    /**
-     * @param request the request parameters of TagVodResources  TagVodResourcesRequest
-     * @return TagVodResourcesResponse
-     */
-    CompletableFuture<TagVodResourcesResponse> tagVodResources(TagVodResourcesRequest request);
-
-    /**
-     * @param request the request parameters of TerminateBucketDeleteTask  TerminateBucketDeleteTaskRequest
-     * @return TerminateBucketDeleteTaskResponse
-     */
-    CompletableFuture<TerminateBucketDeleteTaskResponse> terminateBucketDeleteTask(TerminateBucketDeleteTaskRequest request);
-
-    /**
-     * @param request the request parameters of UnTagVodResources  UnTagVodResourcesRequest
-     * @return UnTagVodResourcesResponse
-     */
-    CompletableFuture<UnTagVodResourcesResponse> unTagVodResources(UnTagVodResourcesRequest request);
-
-    /**
-     * @param request the request parameters of UntagResources  UntagResourcesRequest
-     * @return UntagResourcesResponse
-     */
-    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
@@ -3781,12 +2305,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAppInfoResponse> updateAppInfo(UpdateAppInfoRequest request);
 
     /**
-     * @param request the request parameters of UpdateAppPolicy  UpdateAppPolicyRequest
-     * @return UpdateAppPolicyResponse
-     */
-    CompletableFuture<UpdateAppPolicyResponse> updateAppPolicy(UpdateAppPolicyRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You can modify the information about up to 20 auxiliary media assets at a time.</p>
      * 
@@ -3803,18 +2321,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCategoryResponse
      */
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
-
-    /**
-     * @param request the request parameters of UpdateCustomTemplateAndGroupConsole  UpdateCustomTemplateAndGroupConsoleRequest
-     * @return UpdateCustomTemplateAndGroupConsoleResponse
-     */
-    CompletableFuture<UpdateCustomTemplateAndGroupConsoleResponse> updateCustomTemplateAndGroupConsole(UpdateCustomTemplateAndGroupConsoleRequest request);
-
-    /**
-     * @param request the request parameters of UpdateDNADB  UpdateDNADBRequest
-     * @return UpdateDNADBResponse
-     */
-    CompletableFuture<UpdateDNADBResponse> updateDNADB(UpdateDNADBRequest request);
 
     /**
      * @param request the request parameters of UpdateEditingProject  UpdateEditingProjectRequest
@@ -3835,18 +2341,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateImageInfosResponse> updateImageInfos(UpdateImageInfosRequest request);
 
     /**
-     * @param request the request parameters of UpdateIntelligentStrategy  UpdateIntelligentStrategyRequest
-     * @return UpdateIntelligentStrategyResponse
-     */
-    CompletableFuture<UpdateIntelligentStrategyResponse> updateIntelligentStrategy(UpdateIntelligentStrategyRequest request);
-
-    /**
-     * @param request the request parameters of UpdateMediaLifecycleRule  UpdateMediaLifecycleRuleRequest
-     * @return UpdateMediaLifecycleRuleResponse
-     */
-    CompletableFuture<UpdateMediaLifecycleRuleResponse> updateMediaLifecycleRule(UpdateMediaLifecycleRuleRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  This operation is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.</p>
      * <ul>
@@ -3859,12 +2353,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMediaStorageClassResponse
      */
     CompletableFuture<UpdateMediaStorageClassResponse> updateMediaStorageClass(UpdateMediaStorageClassRequest request);
-
-    /**
-     * @param request the request parameters of UpdateStreamInfo  UpdateStreamInfoRequest
-     * @return UpdateStreamInfoResponse
-     */
-    CompletableFuture<UpdateStreamInfoResponse> updateStreamInfo(UpdateStreamInfoRequest request);
 
     /**
      * <b>description</b> :
@@ -3924,18 +2412,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateWatermarkResponse> updateWatermark(UpdateWatermarkRequest request);
 
     /**
-     * @param request the request parameters of UpdateWatermarkConsole  UpdateWatermarkConsoleRequest
-     * @return UpdateWatermarkConsoleResponse
-     */
-    CompletableFuture<UpdateWatermarkConsoleResponse> updateWatermarkConsole(UpdateWatermarkConsoleRequest request);
-
-    /**
-     * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
-     * @return UpdateWorkflowResponse
-     */
-    CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request);
-
-    /**
      * <b>description</b> :
      * <p>  You can call this operation to upload media files that are not stored on a local server or device and must be uploaded based on URLs over the Internet.</p>
      * <ul>
@@ -3964,12 +2440,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadStreamByURLResponse
      */
     CompletableFuture<UploadStreamByURLResponse> uploadStreamByURL(UploadStreamByURLRequest request);
-
-    /**
-     * @param request the request parameters of ValidateCdnUrlAuth  ValidateCdnUrlAuthRequest
-     * @return ValidateCdnUrlAuthResponse
-     */
-    CompletableFuture<ValidateCdnUrlAuthResponse> validateCdnUrlAuth(ValidateCdnUrlAuthRequest request);
 
     /**
      * <b>description</b> :
