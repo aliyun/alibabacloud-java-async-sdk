@@ -53,6 +53,10 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaselineSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface response code.</p>
@@ -229,6 +245,15 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
             private Long dealCount; 
             private Long findCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrendDTOList model) {
+                this.date = model.date;
+                this.dealCount = model.dealCount;
+                this.findCount = model.findCount;
+            } 
+
             /**
              * <p>Date point.</p>
              * 
@@ -300,6 +325,13 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrendDTOList> trendDTOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.trendDTOList = model.trendDTOList;
+            } 
 
             /**
              * <p>Collection of baseline statistical data.</p>

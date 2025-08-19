@@ -36,6 +36,10 @@ public class DescribeServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entityRoleGrant
      */
@@ -53,6 +57,14 @@ public class DescribeServiceLinkedRoleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean entityRoleGrant; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceLinkedRoleResponseBody model) {
+            this.entityRoleGrant = model.entityRoleGrant;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Whether the service-linked role permission is granted:</p>

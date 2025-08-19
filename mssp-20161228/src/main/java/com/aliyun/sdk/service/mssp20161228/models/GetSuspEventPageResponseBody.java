@@ -57,6 +57,10 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuspEventPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -408,6 +425,28 @@ public class GetSuspEventPageResponseBody extends TeaModel {
             private String remark; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmEventType = model.alarmEventType;
+                this.alarmId = model.alarmId;
+                this.alarmName = model.alarmName;
+                this.alarmSource = model.alarmSource;
+                this.alarmTime = model.alarmTime;
+                this.analysisResult = model.analysisResult;
+                this.dealTime = model.dealTime;
+                this.eventLevel = model.eventLevel;
+                this.id = model.id;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.occurrenceTime = model.occurrenceTime;
+                this.ownerId = model.ownerId;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Alarm event type.</p>
              * 
@@ -646,6 +685,15 @@ public class GetSuspEventPageResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The current page number in pagination queries.</p>

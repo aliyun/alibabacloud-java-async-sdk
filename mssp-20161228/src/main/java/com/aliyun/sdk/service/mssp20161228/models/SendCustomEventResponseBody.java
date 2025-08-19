@@ -53,6 +53,10 @@ public class SendCustomEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class SendCustomEventResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendCustomEventResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface response code.</p>
@@ -295,6 +311,20 @@ public class SendCustomEventResponseBody extends TeaModel {
             private String ownerName; 
             private String workTaskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customerId = model.customerId;
+                this.customerName = model.customerName;
+                this.eventId = model.eventId;
+                this.eventType = model.eventType;
+                this.id = model.id;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.workTaskName = model.workTaskName;
+            } 
+
             /**
              * <p>Service UID.</p>
              * 
@@ -310,7 +340,7 @@ public class SendCustomEventResponseBody extends TeaModel {
              * <p>Customer name.</p>
              * 
              * <strong>example:</strong>
-             * <p>天津瑞鹏昇科技发展有限公司</p>
+             * <p>Tianjin Ruipengsheng Technology Development Co., Ltd</p>
              */
             public Builder customerName(String customerName) {
                 this.customerName = customerName;
@@ -365,7 +395,7 @@ public class SendCustomEventResponseBody extends TeaModel {
              * <p>Owner name.</p>
              * 
              * <strong>example:</strong>
-             * <p>乐牙</p>
+             * <p>Le Ya</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;

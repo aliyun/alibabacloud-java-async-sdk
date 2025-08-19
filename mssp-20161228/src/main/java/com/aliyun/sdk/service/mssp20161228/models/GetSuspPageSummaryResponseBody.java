@@ -53,6 +53,10 @@ public class GetSuspPageSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetSuspPageSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuspPageSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface response code.</p>
@@ -280,6 +296,19 @@ public class GetSuspPageSummaryResponseBody extends TeaModel {
             private Long mediumCount; 
             private Long totalCount; 
             private Long waitHandleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completedCount = model.completedCount;
+                this.handingCount = model.handingCount;
+                this.highCount = model.highCount;
+                this.lowCount = model.lowCount;
+                this.mediumCount = model.mediumCount;
+                this.totalCount = model.totalCount;
+                this.waitHandleCount = model.waitHandleCount;
+            } 
 
             /**
              * <p>Number of completed items.</p>

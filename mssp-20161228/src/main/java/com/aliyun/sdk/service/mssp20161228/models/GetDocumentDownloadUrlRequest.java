@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDocumentDownloadUrlRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileKey")
+    private String fileKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
@@ -28,6 +32,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
 
     private GetDocumentDownloadUrlRequest(Builder builder) {
         super(builder);
+        this.fileKey = builder.fileKey;
         this.id = builder.id;
         this.reportType = builder.reportType;
     }
@@ -40,9 +45,16 @@ public class GetDocumentDownloadUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return fileKey
+     */
+    public String getFileKey() {
+        return this.fileKey;
     }
 
     /**
@@ -60,6 +72,7 @@ public class GetDocumentDownloadUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDocumentDownloadUrlRequest, Builder> {
+        private String fileKey; 
         private Long id; 
         private String reportType; 
 
@@ -69,9 +82,19 @@ public class GetDocumentDownloadUrlRequest extends Request {
 
         private Builder(GetDocumentDownloadUrlRequest request) {
             super(request);
+            this.fileKey = request.fileKey;
             this.id = request.id;
             this.reportType = request.reportType;
         } 
+
+        /**
+         * FileKey.
+         */
+        public Builder fileKey(String fileKey) {
+            this.putBodyParameter("FileKey", fileKey);
+            this.fileKey = fileKey;
+            return this;
+        }
 
         /**
          * <p>Document management ID.</p>

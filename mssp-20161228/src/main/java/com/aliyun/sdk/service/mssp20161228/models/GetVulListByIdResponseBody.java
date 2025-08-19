@@ -57,6 +57,10 @@ public class GetVulListByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class GetVulListByIdResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVulListByIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -248,6 +265,15 @@ public class GetVulListByIdResponseBody extends TeaModel {
             private String matchList; 
             private String path; 
             private String softName; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectMsgDTOS model) {
+                this.matchList = model.matchList;
+                this.path = model.path;
+                this.softName = model.softName;
+            } 
 
             /**
              * <p>Hit</p>
@@ -489,6 +515,27 @@ public class GetVulListByIdResponseBody extends TeaModel {
             private String tag; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliasName = model.aliasName;
+                this.effectMsgDTOS = model.effectMsgDTOS;
+                this.firstTs = model.firstTs;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lastTs = model.lastTs;
+                this.name = model.name;
+                this.necessity = model.necessity;
+                this.related = model.related;
+                this.repairCmd = model.repairCmd;
+                this.repairTs = model.repairTs;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>Vulnerability Alias</p>
              * 
@@ -726,6 +773,15 @@ public class GetVulListByIdResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Current page number.</p>

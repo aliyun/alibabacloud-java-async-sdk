@@ -53,6 +53,10 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVulPageSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface return code.</p>
@@ -276,6 +292,19 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
             private Long mediumCount; 
             private Long totalCount; 
             private Long waitHandleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completedCount = model.completedCount;
+                this.handingCount = model.handingCount;
+                this.highCount = model.highCount;
+                this.lowCount = model.lowCount;
+                this.mediumCount = model.mediumCount;
+                this.totalCount = model.totalCount;
+                this.waitHandleCount = model.waitHandleCount;
+            } 
 
             /**
              * <p>Number of completed items.</p>

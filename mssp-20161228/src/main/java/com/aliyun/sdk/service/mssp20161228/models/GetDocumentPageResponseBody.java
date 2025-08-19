@@ -57,6 +57,10 @@ public class GetDocumentPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class GetDocumentPageResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -285,6 +302,18 @@ public class GetDocumentPageResponseBody extends TeaModel {
             private String reportStatus; 
             private String uploadTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deliveredBy = model.deliveredBy;
+                this.documentName = model.documentName;
+                this.documentType = model.documentType;
+                this.id = model.id;
+                this.reportStatus = model.reportStatus;
+                this.uploadTime = model.uploadTime;
+            } 
+
             /**
              * <p>Delivered by.</p>
              * 
@@ -413,6 +442,15 @@ public class GetDocumentPageResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The current page number in pagination queries.</p>

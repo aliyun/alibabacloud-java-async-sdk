@@ -57,6 +57,10 @@ public class GetVulItemPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class GetVulItemPageResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVulItemPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -418,6 +435,29 @@ public class GetVulItemPageResponseBody extends TeaModel {
             private String tags; 
             private Long totalFixCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliasName = model.aliasName;
+                this.asapCount = model.asapCount;
+                this.customerId = model.customerId;
+                this.cveUrlPrefix = model.cveUrlPrefix;
+                this.dealed = model.dealed;
+                this.findTime = model.findTime;
+                this.handledCount = model.handledCount;
+                this.id = model.id;
+                this.laterCount = model.laterCount;
+                this.level = model.level;
+                this.name = model.name;
+                this.nntfCount = model.nntfCount;
+                this.related = model.related;
+                this.relatedCveCount = model.relatedCveCount;
+                this.scanType = model.scanType;
+                this.tags = model.tags;
+                this.totalFixCount = model.totalFixCount;
+            } 
+
             /**
              * <p>Vulnerability alias.</p>
              * 
@@ -667,6 +707,15 @@ public class GetVulItemPageResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The current page number for pagination queries.</p>

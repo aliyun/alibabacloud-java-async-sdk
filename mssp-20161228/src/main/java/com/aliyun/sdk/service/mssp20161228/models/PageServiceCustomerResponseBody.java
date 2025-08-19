@@ -57,6 +57,10 @@ public class PageServiceCustomerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class PageServiceCustomerResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageServiceCustomerResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface return code.</p>
@@ -349,6 +366,23 @@ public class PageServiceCustomerResponseBody extends TeaModel {
             private String userId; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliuid = model.aliuid;
+                this.authStatus = model.authStatus;
+                this.cmAuthStatus = model.cmAuthStatus;
+                this.endTime = model.endTime;
+                this.level = model.level;
+                this.monitorAuthStatus = model.monitorAuthStatus;
+                this.name = model.name;
+                this.ownId = model.ownId;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+                this.version = model.version;
+            } 
+
             /**
              * <p>Customer UID.</p>
              * 
@@ -532,6 +566,15 @@ public class PageServiceCustomerResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The current page number in pagination queries.</p>

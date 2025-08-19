@@ -53,6 +53,10 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceWorkOrderResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface status code.</p>
@@ -354,6 +370,25 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
             private String workOrderSource; 
             private String workOrderStatus; 
             private String workOrderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.customerId = model.customerId;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.ownerId = model.ownerId;
+                this.startTime = model.startTime;
+                this.workOrderDetail = model.workOrderDetail;
+                this.workOrderName = model.workOrderName;
+                this.workOrderSource = model.workOrderSource;
+                this.workOrderStatus = model.workOrderStatus;
+                this.workOrderType = model.workOrderType;
+            } 
 
             /**
              * <p>Completion time.</p>

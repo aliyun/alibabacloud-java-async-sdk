@@ -53,6 +53,10 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuspEventSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -245,6 +261,16 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
             private Long eipCount; 
             private Long wafCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrendList model) {
+                this.date = model.date;
+                this.ddosCount = model.ddosCount;
+                this.eipCount = model.eipCount;
+                this.wafCount = model.wafCount;
+            } 
+
             /**
              * <p>Date.</p>
              * 
@@ -327,6 +353,13 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrendList> trendList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAttackTrendDTO model) {
+                this.trendList = model.trendList;
+            } 
 
             /**
              * <p>Collection of trend nodes for each attack item.</p>
@@ -434,6 +467,18 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
             private Long totalCount; 
             private String totalGrowthRate; 
             private Long waitHandleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspEventDealSummaryDTO model) {
+                this.completedCount = model.completedCount;
+                this.handingCount = model.handingCount;
+                this.handingRate = model.handingRate;
+                this.totalCount = model.totalCount;
+                this.totalGrowthRate = model.totalGrowthRate;
+                this.waitHandleCount = model.waitHandleCount;
+            } 
 
             /**
              * <p>Completed.</p>
@@ -552,6 +597,14 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
             private String eventName; 
             private Long taskCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuspEventList model) {
+                this.eventName = model.eventName;
+                this.taskCount = model.taskCount;
+            } 
+
             /**
              * <p>Alert name.</p>
              * 
@@ -612,6 +665,13 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SuspEventList> suspEventList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspEventTopDTO model) {
+                this.suspEventList = model.suspEventList;
+            } 
 
             /**
              * <p>Top 10 before handling alarms</p>
@@ -684,6 +744,15 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
             private Long dealCount; 
             private Long findCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuspEventTrendDTOTrendList model) {
+                this.date = model.date;
+                this.dealCount = model.dealCount;
+                this.findCount = model.findCount;
+            } 
+
             /**
              * <p>Time point.</p>
              * 
@@ -755,6 +824,13 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SuspEventTrendDTOTrendList> trendList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspEventTrendDTO model) {
+                this.trendList = model.trendList;
+            } 
 
             /**
              * <p>Trend of alerts.</p>
@@ -838,6 +914,16 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
             private SuspEventDealSummaryDTO suspEventDealSummaryDTO; 
             private SuspEventTopDTO suspEventTopDTO; 
             private SuspEventTrendDTO suspEventTrendDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.networkAttackTrendDTO = model.networkAttackTrendDTO;
+                this.suspEventDealSummaryDTO = model.suspEventDealSummaryDTO;
+                this.suspEventTopDTO = model.suspEventTopDTO;
+                this.suspEventTrendDTO = model.suspEventTrendDTO;
+            } 
 
             /**
              * <p>Network attack trend.</p>

@@ -53,6 +53,10 @@ public class GetVulSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetVulSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVulSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface response code.</p>
@@ -229,6 +245,15 @@ public class GetVulSummaryResponseBody extends TeaModel {
             private Long dealCount; 
             private Long findCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrendList model) {
+                this.date = model.date;
+                this.dealCount = model.dealCount;
+                this.findCount = model.findCount;
+            } 
+
             /**
              * <p>Time point.</p>
              * 
@@ -336,6 +361,16 @@ public class GetVulSummaryResponseBody extends TeaModel {
             private String dealRate; 
             private java.util.List<TrendList> trendList; 
             private Long waitHandleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completedCount = model.completedCount;
+                this.dealRate = model.dealRate;
+                this.trendList = model.trendList;
+                this.waitHandleCount = model.waitHandleCount;
+            } 
 
             /**
              * <p>Number of completed items.</p>

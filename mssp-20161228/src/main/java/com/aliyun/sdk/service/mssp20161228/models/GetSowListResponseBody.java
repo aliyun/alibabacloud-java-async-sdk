@@ -53,6 +53,10 @@ public class GetSowListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetSowListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSowListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface response code.</p>
@@ -276,6 +292,19 @@ public class GetSowListResponseBody extends TeaModel {
             private String startTime; 
             private String taskTypeName; 
             private String workOrderName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completeTime = model.completeTime;
+                this.operateRemark = model.operateRemark;
+                this.progress = model.progress;
+                this.recordCount = model.recordCount;
+                this.startTime = model.startTime;
+                this.taskTypeName = model.taskTypeName;
+                this.workOrderName = model.workOrderName;
+            } 
 
             /**
              * <p>Completion time.</p>

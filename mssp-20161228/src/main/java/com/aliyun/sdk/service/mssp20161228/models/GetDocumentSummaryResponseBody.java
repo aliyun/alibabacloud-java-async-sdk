@@ -53,6 +53,10 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface return code.</p>
@@ -220,6 +236,14 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long documentCount; 
             private Long frequency; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.documentCount = model.documentCount;
+                this.frequency = model.frequency;
+            } 
 
             /**
              * <p>Number of documents.</p>

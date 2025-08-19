@@ -53,6 +53,10 @@ public class GetDetailByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetDetailByIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDetailByIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Interface return code.</p>
@@ -241,6 +257,16 @@ public class GetDetailByIdResponseBody extends TeaModel {
             private String fixSuggestion; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(VulDetails model) {
+                this.cveId = model.cveId;
+                this.cvssScore = model.cvssScore;
+                this.fixSuggestion = model.fixSuggestion;
+                this.title = model.title;
+            } 
+
             /**
              * <p>CVE ID.</p>
              * 
@@ -323,6 +349,13 @@ public class GetDetailByIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VulDetails> vulDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.vulDetails = model.vulDetails;
+            } 
 
             /**
              * <p>Vulnerability details.</p>

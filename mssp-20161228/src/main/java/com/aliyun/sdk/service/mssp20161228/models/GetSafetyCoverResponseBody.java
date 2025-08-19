@@ -53,6 +53,10 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSafetyCoverResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API return code.</p>
@@ -257,6 +273,17 @@ public class GetSafetyCoverResponseBody extends TeaModel {
             private String protectionRate; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(CfwProtection model) {
+                this.noProtectionCount = model.noProtectionCount;
+                this.protectionCount = model.protectionCount;
+                this.protectionGrowthRate = model.protectionGrowthRate;
+                this.protectionRate = model.protectionRate;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>Number of unprotected items.</p>
              * 
@@ -398,6 +425,17 @@ public class GetSafetyCoverResponseBody extends TeaModel {
             private String protectionGrowthRate; 
             private String protectionRate; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsProtection model) {
+                this.noProtectionCount = model.noProtectionCount;
+                this.protectionCount = model.protectionCount;
+                this.protectionGrowthRate = model.protectionGrowthRate;
+                this.protectionRate = model.protectionRate;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Number of unprotected items.</p>
@@ -541,6 +579,17 @@ public class GetSafetyCoverResponseBody extends TeaModel {
             private String protectionRate; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(WafProtection model) {
+                this.noProtectionCount = model.noProtectionCount;
+                this.protectionCount = model.protectionCount;
+                this.protectionGrowthRate = model.protectionGrowthRate;
+                this.protectionRate = model.protectionRate;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>Number of unprotected items.</p>
              * 
@@ -658,6 +707,15 @@ public class GetSafetyCoverResponseBody extends TeaModel {
             private CfwProtection cfwProtection; 
             private EcsProtection ecsProtection; 
             private WafProtection wafProtection; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cfwProtection = model.cfwProtection;
+                this.ecsProtection = model.ecsProtection;
+                this.wafProtection = model.wafProtection;
+            } 
 
             /**
              * <p>CFW protection coverage.</p>

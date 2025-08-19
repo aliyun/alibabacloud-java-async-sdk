@@ -53,6 +53,10 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkTaskSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Response code.</p>
@@ -288,6 +304,20 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
             private String workTaskDealRate; 
             private String workTaskDealRateGrowthRate; 
             private String workTaskGrowthRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dealAverageDuration = model.dealAverageDuration;
+                this.dealAverageDurationGrowthRate = model.dealAverageDurationGrowthRate;
+                this.dealWorkTaskCount = model.dealWorkTaskCount;
+                this.dealWorkTaskCountRate = model.dealWorkTaskCountRate;
+                this.workTaskCount = model.workTaskCount;
+                this.workTaskDealRate = model.workTaskDealRate;
+                this.workTaskDealRateGrowthRate = model.workTaskDealRateGrowthRate;
+                this.workTaskGrowthRate = model.workTaskGrowthRate;
+            } 
 
             /**
              * <p>Average response time (in minutes).</p>

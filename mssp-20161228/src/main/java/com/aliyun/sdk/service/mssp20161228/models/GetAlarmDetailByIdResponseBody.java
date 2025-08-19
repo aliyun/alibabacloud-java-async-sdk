@@ -53,6 +53,10 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlarmDetailByIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>API response code.</p>
@@ -240,6 +256,16 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private String valueDisplay; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventDetails model) {
+                this.nameDisplay = model.nameDisplay;
+                this.type = model.type;
+                this.value = model.value;
+                this.valueDisplay = model.valueDisplay;
+            } 
 
             /**
              * <p>Alarm event display name.</p>
@@ -563,6 +589,33 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
             private String remark; 
             private String status; 
             private String tacticDisplayName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmEventType = model.alarmEventType;
+                this.alarmEventTypeDisplay = model.alarmEventTypeDisplay;
+                this.alarmId = model.alarmId;
+                this.alarmName = model.alarmName;
+                this.alarmSource = model.alarmSource;
+                this.alarmTime = model.alarmTime;
+                this.analysisResult = model.analysisResult;
+                this.containHwMode = model.containHwMode;
+                this.dealTime = model.dealTime;
+                this.desc = model.desc;
+                this.eventDetails = model.eventDetails;
+                this.eventLevel = model.eventLevel;
+                this.id = model.id;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.occurrenceTime = model.occurrenceTime;
+                this.ownerId = model.ownerId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.tacticDisplayName = model.tacticDisplayName;
+            } 
 
             /**
              * <p>Alarm event type.</p>

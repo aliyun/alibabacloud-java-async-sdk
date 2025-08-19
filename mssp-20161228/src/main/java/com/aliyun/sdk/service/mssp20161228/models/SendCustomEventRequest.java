@@ -121,7 +121,7 @@ public class SendCustomEventRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,7 +339,10 @@ public class SendCustomEventRequest extends Request {
         }
 
         /**
-         * EventMarkdown.
+         * <p>Details of markdown format</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder eventMarkdown(String eventMarkdown) {
             this.putBodyParameter("EventMarkdown", eventMarkdown);
@@ -352,7 +355,7 @@ public class SendCustomEventRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户端离线</p>
+         * <p>客户端离线 Client offline</p>
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
