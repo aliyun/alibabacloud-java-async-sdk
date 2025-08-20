@@ -59,6 +59,10 @@ public class CreateWmBaseImageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String wmType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("comment")
+    private String comment;
+
     private CreateWmBaseImageRequest(Builder builder) {
         super(builder);
         this.height = builder.height;
@@ -70,6 +74,7 @@ public class CreateWmBaseImageRequest extends Request {
         this.wmInfoSize = builder.wmInfoSize;
         this.wmInfoUint = builder.wmInfoUint;
         this.wmType = builder.wmType;
+        this.comment = builder.comment;
     }
 
     public static Builder builder() {
@@ -148,6 +153,13 @@ public class CreateWmBaseImageRequest extends Request {
         return this.wmType;
     }
 
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
+    }
+
     public static final class Builder extends Request.Builder<CreateWmBaseImageRequest, Builder> {
         private Integer height; 
         private ImageControl imageControl; 
@@ -158,6 +170,7 @@ public class CreateWmBaseImageRequest extends Request {
         private Long wmInfoSize; 
         private String wmInfoUint; 
         private String wmType; 
+        private String comment; 
 
         private Builder() {
             super();
@@ -174,6 +187,7 @@ public class CreateWmBaseImageRequest extends Request {
             this.wmInfoSize = request.wmInfoSize;
             this.wmInfoUint = request.wmInfoUint;
             this.wmType = request.wmType;
+            this.comment = request.comment;
         } 
 
         /**
@@ -273,6 +287,15 @@ public class CreateWmBaseImageRequest extends Request {
             return this;
         }
 
+        /**
+         * comment.
+         */
+        public Builder comment(String comment) {
+            this.putQueryParameter("comment", comment);
+            this.comment = comment;
+            return this;
+        }
+
         @Override
         public CreateWmBaseImageRequest build() {
             return new CreateWmBaseImageRequest(this);
@@ -286,12 +309,135 @@ public class CreateWmBaseImageRequest extends Request {
      *
      * <p>CreateWmBaseImageRequest</p>
      */
+    public static class Margin extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bottom")
+        private Float bottom;
+
+        @com.aliyun.core.annotation.NameInMap("Left")
+        private Float left;
+
+        @com.aliyun.core.annotation.NameInMap("Right")
+        private Float right;
+
+        @com.aliyun.core.annotation.NameInMap("Top")
+        private Float top;
+
+        private Margin(Builder builder) {
+            this.bottom = builder.bottom;
+            this.left = builder.left;
+            this.right = builder.right;
+            this.top = builder.top;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Margin create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bottom
+         */
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        /**
+         * @return left
+         */
+        public Float getLeft() {
+            return this.left;
+        }
+
+        /**
+         * @return right
+         */
+        public Float getRight() {
+            return this.right;
+        }
+
+        /**
+         * @return top
+         */
+        public Float getTop() {
+            return this.top;
+        }
+
+        public static final class Builder {
+            private Float bottom; 
+            private Float left; 
+            private Float right; 
+            private Float top; 
+
+            private Builder() {
+            } 
+
+            private Builder(Margin model) {
+                this.bottom = model.bottom;
+                this.left = model.left;
+                this.right = model.right;
+                this.top = model.top;
+            } 
+
+            /**
+             * Bottom.
+             */
+            public Builder bottom(Float bottom) {
+                this.bottom = bottom;
+                return this;
+            }
+
+            /**
+             * Left.
+             */
+            public Builder left(Float left) {
+                this.left = left;
+                return this;
+            }
+
+            /**
+             * Right.
+             */
+            public Builder right(Float right) {
+                this.right = right;
+                return this;
+            }
+
+            /**
+             * Top.
+             */
+            public Builder top(Float top) {
+                this.top = top;
+                return this;
+            }
+
+            public Margin build() {
+                return new Margin(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmBaseImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmBaseImageRequest</p>
+     */
     public static class LogoVisibleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Angle")
         private Long angle;
 
+        @com.aliyun.core.annotation.NameInMap("Enhance")
+        private Boolean enhance;
+
         @com.aliyun.core.annotation.NameInMap("LogoBase64")
         private String logoBase64;
+
+        @com.aliyun.core.annotation.NameInMap("Margin")
+        private Margin margin;
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -322,7 +468,9 @@ public class CreateWmBaseImageRequest extends Request {
 
         private LogoVisibleControl(Builder builder) {
             this.angle = builder.angle;
+            this.enhance = builder.enhance;
             this.logoBase64 = builder.logoBase64;
+            this.margin = builder.margin;
             this.mode = builder.mode;
             this.opacity = builder.opacity;
             this.posAx = builder.posAx;
@@ -350,10 +498,24 @@ public class CreateWmBaseImageRequest extends Request {
         }
 
         /**
+         * @return enhance
+         */
+        public Boolean getEnhance() {
+            return this.enhance;
+        }
+
+        /**
          * @return logoBase64
          */
         public String getLogoBase64() {
             return this.logoBase64;
+        }
+
+        /**
+         * @return margin
+         */
+        public Margin getMargin() {
+            return this.margin;
         }
 
         /**
@@ -421,7 +583,9 @@ public class CreateWmBaseImageRequest extends Request {
 
         public static final class Builder {
             private Long angle; 
+            private Boolean enhance; 
             private String logoBase64; 
+            private Margin margin; 
             private String mode; 
             private Integer opacity; 
             private Float posAx; 
@@ -437,7 +601,9 @@ public class CreateWmBaseImageRequest extends Request {
 
             private Builder(LogoVisibleControl model) {
                 this.angle = model.angle;
+                this.enhance = model.enhance;
                 this.logoBase64 = model.logoBase64;
+                this.margin = model.margin;
                 this.mode = model.mode;
                 this.opacity = model.opacity;
                 this.posAx = model.posAx;
@@ -458,10 +624,26 @@ public class CreateWmBaseImageRequest extends Request {
             }
 
             /**
+             * Enhance.
+             */
+            public Builder enhance(Boolean enhance) {
+                this.enhance = enhance;
+                return this;
+            }
+
+            /**
              * LogoBase64.
              */
             public Builder logoBase64(String logoBase64) {
                 this.logoBase64 = logoBase64;
+                return this;
+            }
+
+            /**
+             * Margin.
+             */
+            public Builder margin(Margin margin) {
+                this.margin = margin;
                 return this;
             }
 
@@ -553,6 +735,123 @@ public class CreateWmBaseImageRequest extends Request {
      *
      * <p>CreateWmBaseImageRequest</p>
      */
+    public static class TextVisibleControlMargin extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bottom")
+        private Float bottom;
+
+        @com.aliyun.core.annotation.NameInMap("Left")
+        private Float left;
+
+        @com.aliyun.core.annotation.NameInMap("Right")
+        private Float right;
+
+        @com.aliyun.core.annotation.NameInMap("Top")
+        private Float top;
+
+        private TextVisibleControlMargin(Builder builder) {
+            this.bottom = builder.bottom;
+            this.left = builder.left;
+            this.right = builder.right;
+            this.top = builder.top;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextVisibleControlMargin create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bottom
+         */
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        /**
+         * @return left
+         */
+        public Float getLeft() {
+            return this.left;
+        }
+
+        /**
+         * @return right
+         */
+        public Float getRight() {
+            return this.right;
+        }
+
+        /**
+         * @return top
+         */
+        public Float getTop() {
+            return this.top;
+        }
+
+        public static final class Builder {
+            private Float bottom; 
+            private Float left; 
+            private Float right; 
+            private Float top; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextVisibleControlMargin model) {
+                this.bottom = model.bottom;
+                this.left = model.left;
+                this.right = model.right;
+                this.top = model.top;
+            } 
+
+            /**
+             * Bottom.
+             */
+            public Builder bottom(Float bottom) {
+                this.bottom = bottom;
+                return this;
+            }
+
+            /**
+             * Left.
+             */
+            public Builder left(Float left) {
+                this.left = left;
+                return this;
+            }
+
+            /**
+             * Right.
+             */
+            public Builder right(Float right) {
+                this.right = right;
+                return this;
+            }
+
+            /**
+             * Top.
+             */
+            public Builder top(Float top) {
+                this.top = top;
+                return this;
+            }
+
+            public TextVisibleControlMargin build() {
+                return new TextVisibleControlMargin(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmBaseImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmBaseImageRequest</p>
+     */
     public static class TextVisibleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Angle")
         private Long angle;
@@ -562,6 +861,9 @@ public class CreateWmBaseImageRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("FontSize")
         private Long fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("Margin")
+        private TextVisibleControlMargin margin;
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -597,6 +899,7 @@ public class CreateWmBaseImageRequest extends Request {
             this.angle = builder.angle;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
+            this.margin = builder.margin;
             this.mode = builder.mode;
             this.opacity = builder.opacity;
             this.posAx = builder.posAx;
@@ -636,6 +939,13 @@ public class CreateWmBaseImageRequest extends Request {
          */
         public Long getFontSize() {
             return this.fontSize;
+        }
+
+        /**
+         * @return margin
+         */
+        public TextVisibleControlMargin getMargin() {
+            return this.margin;
         }
 
         /**
@@ -712,6 +1022,7 @@ public class CreateWmBaseImageRequest extends Request {
             private Long angle; 
             private String fontColor; 
             private Long fontSize; 
+            private TextVisibleControlMargin margin; 
             private String mode; 
             private Integer opacity; 
             private Float posAx; 
@@ -730,6 +1041,7 @@ public class CreateWmBaseImageRequest extends Request {
                 this.angle = model.angle;
                 this.fontColor = model.fontColor;
                 this.fontSize = model.fontSize;
+                this.margin = model.margin;
                 this.mode = model.mode;
                 this.opacity = model.opacity;
                 this.posAx = model.posAx;
@@ -763,6 +1075,14 @@ public class CreateWmBaseImageRequest extends Request {
              */
             public Builder fontSize(Long fontSize) {
                 this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * Margin.
+             */
+            public Builder margin(TextVisibleControlMargin margin) {
+                this.margin = margin;
                 return this;
             }
 

@@ -77,6 +77,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrivateAccessApplicationResponse> createPrivateAccessApplication(CreatePrivateAccessApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>By default, up to 500 private access policies can be created.</p>
+     * 
      * @param request the request parameters of CreatePrivateAccessPolicy  CreatePrivateAccessPolicyRequest
      * @return CreatePrivateAccessPolicyResponse
      */

@@ -869,6 +869,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUninstallPolicies")
         private AppUninstallPolicies appUninstallPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("ApprovalType")
+        private Integer approvalType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -910,6 +913,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
         private Processes(Builder builder) {
             this.appUninstallPolicies = builder.appUninstallPolicies;
+            this.approvalType = builder.approvalType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.deviceRegistrationPolicies = builder.deviceRegistrationPolicies;
@@ -938,6 +942,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
          */
         public AppUninstallPolicies getAppUninstallPolicies() {
             return this.appUninstallPolicies;
+        }
+
+        /**
+         * @return approvalType
+         */
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         /**
@@ -1033,6 +1044,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
         public static final class Builder {
             private AppUninstallPolicies appUninstallPolicies; 
+            private Integer approvalType; 
             private String createTime; 
             private String description; 
             private DeviceRegistrationPolicies deviceRegistrationPolicies; 
@@ -1052,6 +1064,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
             private Builder(Processes model) {
                 this.appUninstallPolicies = model.appUninstallPolicies;
+                this.approvalType = model.approvalType;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.deviceRegistrationPolicies = model.deviceRegistrationPolicies;
@@ -1072,6 +1085,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
              */
             public Builder appUninstallPolicies(AppUninstallPolicies appUninstallPolicies) {
                 this.appUninstallPolicies = appUninstallPolicies;
+                return this;
+            }
+
+            /**
+             * ApprovalType.
+             */
+            public Builder approvalType(Integer approvalType) {
+                this.approvalType = approvalType;
                 return this;
             }
 

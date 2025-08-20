@@ -96,6 +96,10 @@ public class ListUserDevicesRequest extends Request {
     private Boolean sharingStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnSystem")
+    private String snSystem;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -128,6 +132,7 @@ public class ListUserDevicesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.saseUserId = builder.saseUserId;
         this.sharingStatus = builder.sharingStatus;
+        this.snSystem = builder.snSystem;
         this.sortBy = builder.sortBy;
         this.username = builder.username;
         this.workshop = builder.workshop;
@@ -280,6 +285,13 @@ public class ListUserDevicesRequest extends Request {
     }
 
     /**
+     * @return snSystem
+     */
+    public String getSnSystem() {
+        return this.snSystem;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -320,6 +332,7 @@ public class ListUserDevicesRequest extends Request {
         private Long pageSize; 
         private String saseUserId; 
         private Boolean sharingStatus; 
+        private String snSystem; 
         private String sortBy; 
         private String username; 
         private String workshop; 
@@ -349,6 +362,7 @@ public class ListUserDevicesRequest extends Request {
             this.pageSize = request.pageSize;
             this.saseUserId = request.saseUserId;
             this.sharingStatus = request.sharingStatus;
+            this.snSystem = request.snSystem;
             this.sortBy = request.sortBy;
             this.username = request.username;
             this.workshop = request.workshop;
@@ -528,6 +542,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putQueryParameter("SharingStatus", sharingStatus);
             this.sharingStatus = sharingStatus;
+            return this;
+        }
+
+        /**
+         * SnSystem.
+         */
+        public Builder snSystem(String snSystem) {
+            this.putQueryParameter("SnSystem", snSystem);
+            this.snSystem = snSystem;
             return this;
         }
 

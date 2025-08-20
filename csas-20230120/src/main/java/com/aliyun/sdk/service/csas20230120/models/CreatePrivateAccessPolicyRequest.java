@@ -289,7 +289,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>Set of application IDs for the private access policy. Up to 100 application IDs can be entered. Required when <strong>ApplicationType</strong> is <strong>Application</strong>. Mutually exclusive with <strong>TagIds</strong>.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
@@ -298,6 +298,11 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
+         * <p>Application type of the private access policy. Values:</p>
+         * <ul>
+         * <li><strong>Application</strong>: Application.</li>
+         * <li><strong>Tag</strong>: Tag.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +315,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * CustomUserAttributes.
+         * <p>Set of custom user groups for the private access policy. Required when the user group type is <strong>Custom</strong>. Mutually exclusive with the user group ID set. Up to 10 custom user groups can be entered.</p>
          */
         public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
             this.putBodyParameter("CustomUserAttributes", customUserAttributes);
@@ -319,7 +324,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the private access policy. The length is 1 to 128 characters, supporting Chinese and uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -328,7 +336,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * DeviceAttributeAction.
+         * <p>The execution policy for not meeting the security baseline. Values:</p>
+         * <ul>
+         * <li><strong>Block</strong>: Block.</li>
+         * <li><strong>Observe</strong>: Observe.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Block</p>
          */
         public Builder deviceAttributeAction(String deviceAttributeAction) {
             this.putBodyParameter("DeviceAttributeAction", deviceAttributeAction);
@@ -337,7 +352,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * DeviceAttributeId.
+         * <p>The ID of the security baseline policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dag-d3f64e8bdd4a****</p>
          */
         public Builder deviceAttributeId(String deviceAttributeId) {
             this.putBodyParameter("DeviceAttributeId", deviceAttributeId);
@@ -346,6 +364,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
+         * <p>Name of the private access policy. The length is 1 to 128 characters, supporting Chinese and uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,6 +377,11 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
+         * <p>Action of the private access policy. Values:</p>
+         * <ul>
+         * <li><strong>Block</strong>: Block.</li>
+         * <li><strong>Allow</strong>: Allow.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,6 +394,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
+         * <p>The priority of the private access policy. The number 1 indicates the highest priority. Range: 1~1000, with the maximum value being the total number of private access policies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,6 +407,11 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
+         * <p>The status of the private access policy. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -394,7 +424,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当<strong>ApplicationType</strong>为<strong>Tag时</strong>，必填。和<strong>ApplicationIds</strong>互斥。</p>
+         * <p>Set of tag IDs for the private access policy. Up to 100 tag IDs can be entered. Required when <strong>ApplicationType</strong> is <strong>Tag</strong>. Mutually exclusive with <strong>ApplicationIds</strong>.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -403,7 +433,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * TriggerTemplateId.
+         * <p>The trigger template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dag-d3f64e8bdd4a****</p>
          */
         public Builder triggerTemplateId(String triggerTemplateId) {
             this.putBodyParameter("TriggerTemplateId", triggerTemplateId);
@@ -412,7 +445,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * TrustedProcessGroupIds.
+         * <p>The ID of the trusted process group.</p>
          */
         public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
             this.putBodyParameter("TrustedProcessGroupIds", trustedProcessGroupIds);
@@ -421,7 +454,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * TrustedProcessStatus.
+         * <p>The switch status of the trusted process. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder trustedProcessStatus(String trustedProcessStatus) {
             this.putBodyParameter("TrustedProcessStatus", trustedProcessStatus);
@@ -430,7 +470,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * TrustedSoftwareIds.
+         * <p>The ID of the trusted software.</p>
          */
         public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
             this.putBodyParameter("TrustedSoftwareIds", trustedSoftwareIds);
@@ -439,7 +479,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>Set of user group IDs for the private access policy. Required when the user group type is <strong>Normal</strong>. Mutually exclusive with the custom user group set. Up to 2000 user group IDs can be entered.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -448,10 +488,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>内网访问策略的用户组类型。取值：</p>
+         * <p>User group type of the private access policy. Values:</p>
          * <ul>
-         * <li><strong>Normal</strong>：普通用户组。</li>
-         * <li><strong>Custom</strong>：自定义用户组。</li>
+         * <li><strong>Normal</strong>: Normal user group.</li>
+         * <li><strong>Custom</strong>: Custom user group.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -550,7 +590,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             } 
 
             /**
-             * IdpId.
+             * <p>The ID of the identity source for the custom user group. Required when the custom user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -558,7 +601,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * Relation.
+             * <p>Relation of the custom user group. Values:</p>
+             * <ul>
+             * <li><strong>Equal</strong>: Equal.</li>
+             * <li><strong>Unequal</strong>: Not equal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -566,7 +616,16 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * <p>Type of the custom user group. Values:</p>
+             * <ul>
+             * <li><strong>username</strong>: Username.</li>
+             * <li><strong>department</strong>: Department.</li>
+             * <li><strong>email</strong>: Email.</li>
+             * <li><strong>telephone</strong>: Telephone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -574,7 +633,16 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Value of the custom user group attribute.</p>
+             * <ul>
+             * <li>When the user group type is <strong>username</strong>, it represents the value of the username. The length is 1 to 128 characters, supporting Chinese and uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), hyphens (-), asterisks (*), at (@) symbols, and spaces.</li>
+             * <li>When the user group type is <strong>department</strong>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk.</li>
+             * <li>When the user group type is <strong>email</strong>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+             * <li>When the user group type is <strong>telephone</strong>, it represents the value of the telephone. For example: 13900001234.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;

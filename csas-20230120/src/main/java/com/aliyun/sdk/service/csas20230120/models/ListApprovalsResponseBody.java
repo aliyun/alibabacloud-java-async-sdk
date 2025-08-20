@@ -359,6 +359,9 @@ public class ListApprovalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalProgresses")
         private java.util.List<ApprovalProgresses> approvalProgresses;
 
+        @com.aliyun.core.annotation.NameInMap("ApprovalType")
+        private Integer approvalType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -405,6 +408,7 @@ public class ListApprovalsResponseBody extends TeaModel {
             this.approvalDetail = builder.approvalDetail;
             this.approvalId = builder.approvalId;
             this.approvalProgresses = builder.approvalProgresses;
+            this.approvalType = builder.approvalType;
             this.createTime = builder.createTime;
             this.creatorDepartment = builder.creatorDepartment;
             this.creatorDevTag = builder.creatorDevTag;
@@ -448,6 +452,13 @@ public class ListApprovalsResponseBody extends TeaModel {
          */
         public java.util.List<ApprovalProgresses> getApprovalProgresses() {
             return this.approvalProgresses;
+        }
+
+        /**
+         * @return approvalType
+         */
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         /**
@@ -552,6 +563,7 @@ public class ListApprovalsResponseBody extends TeaModel {
             private String approvalDetail; 
             private String approvalId; 
             private java.util.List<ApprovalProgresses> approvalProgresses; 
+            private Integer approvalType; 
             private String createTime; 
             private String creatorDepartment; 
             private String creatorDevTag; 
@@ -574,6 +586,7 @@ public class ListApprovalsResponseBody extends TeaModel {
                 this.approvalDetail = model.approvalDetail;
                 this.approvalId = model.approvalId;
                 this.approvalProgresses = model.approvalProgresses;
+                this.approvalType = model.approvalType;
                 this.createTime = model.createTime;
                 this.creatorDepartment = model.creatorDepartment;
                 this.creatorDevTag = model.creatorDevTag;
@@ -611,6 +624,14 @@ public class ListApprovalsResponseBody extends TeaModel {
              */
             public Builder approvalProgresses(java.util.List<ApprovalProgresses> approvalProgresses) {
                 this.approvalProgresses = approvalProgresses;
+                return this;
+            }
+
+            /**
+             * ApprovalType.
+             */
+            public Builder approvalType(Integer approvalType) {
+                this.approvalType = approvalType;
                 return this;
             }
 

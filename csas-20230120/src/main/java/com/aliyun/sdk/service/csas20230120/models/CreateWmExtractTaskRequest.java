@@ -36,6 +36,10 @@ public class CreateWmExtractTaskRequest extends Request {
     private String filename;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageExtractParamsOpenApi")
+    private ImageExtractParamsOpenApi imageExtractParamsOpenApi;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsClientEmbed")
     private Boolean isClientEmbed;
 
@@ -63,6 +67,7 @@ public class CreateWmExtractTaskRequest extends Request {
         this.documentIsCapture = builder.documentIsCapture;
         this.fileUrl = builder.fileUrl;
         this.filename = builder.filename;
+        this.imageExtractParamsOpenApi = builder.imageExtractParamsOpenApi;
         this.isClientEmbed = builder.isClientEmbed;
         this.videoIsLong = builder.videoIsLong;
         this.videoSpeed = builder.videoSpeed;
@@ -112,6 +117,13 @@ public class CreateWmExtractTaskRequest extends Request {
     }
 
     /**
+     * @return imageExtractParamsOpenApi
+     */
+    public ImageExtractParamsOpenApi getImageExtractParamsOpenApi() {
+        return this.imageExtractParamsOpenApi;
+    }
+
+    /**
      * @return isClientEmbed
      */
     public Boolean getIsClientEmbed() {
@@ -151,6 +163,7 @@ public class CreateWmExtractTaskRequest extends Request {
         private Boolean documentIsCapture; 
         private String fileUrl; 
         private String filename; 
+        private ImageExtractParamsOpenApi imageExtractParamsOpenApi; 
         private Boolean isClientEmbed; 
         private Boolean videoIsLong; 
         private String videoSpeed; 
@@ -167,6 +180,7 @@ public class CreateWmExtractTaskRequest extends Request {
             this.documentIsCapture = request.documentIsCapture;
             this.fileUrl = request.fileUrl;
             this.filename = request.filename;
+            this.imageExtractParamsOpenApi = request.imageExtractParamsOpenApi;
             this.isClientEmbed = request.isClientEmbed;
             this.videoIsLong = request.videoIsLong;
             this.videoSpeed = request.videoSpeed;
@@ -223,6 +237,16 @@ public class CreateWmExtractTaskRequest extends Request {
         public Builder filename(String filename) {
             this.putBodyParameter("Filename", filename);
             this.filename = filename;
+            return this;
+        }
+
+        /**
+         * ImageExtractParamsOpenApi.
+         */
+        public Builder imageExtractParamsOpenApi(ImageExtractParamsOpenApi imageExtractParamsOpenApi) {
+            String imageExtractParamsOpenApiShrink = shrink(imageExtractParamsOpenApi, "ImageExtractParamsOpenApi", "json");
+            this.putQueryParameter("ImageExtractParamsOpenApi", imageExtractParamsOpenApiShrink);
+            this.imageExtractParamsOpenApi = imageExtractParamsOpenApi;
             return this;
         }
 
@@ -484,6 +508,60 @@ public class CreateWmExtractTaskRequest extends Request {
 
             public CsvControl build() {
                 return new CsvControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmExtractTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmExtractTaskRequest</p>
+     */
+    public static class ImageExtractParamsOpenApi extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SrcLogoBase64")
+        private String srcLogoBase64;
+
+        private ImageExtractParamsOpenApi(Builder builder) {
+            this.srcLogoBase64 = builder.srcLogoBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageExtractParamsOpenApi create() {
+            return builder().build();
+        }
+
+        /**
+         * @return srcLogoBase64
+         */
+        public String getSrcLogoBase64() {
+            return this.srcLogoBase64;
+        }
+
+        public static final class Builder {
+            private String srcLogoBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageExtractParamsOpenApi model) {
+                this.srcLogoBase64 = model.srcLogoBase64;
+            } 
+
+            /**
+             * SrcLogoBase64.
+             */
+            public Builder srcLogoBase64(String srcLogoBase64) {
+                this.srcLogoBase64 = srcLogoBase64;
+                return this;
+            }
+
+            public ImageExtractParamsOpenApi build() {
+                return new ImageExtractParamsOpenApi(this);
             } 
 
         } 

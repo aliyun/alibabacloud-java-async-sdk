@@ -67,7 +67,10 @@ public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * PolicyId.
+         * <p>The ID of the private access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-policy-867ef4007c8a****</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -75,7 +78,10 @@ public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

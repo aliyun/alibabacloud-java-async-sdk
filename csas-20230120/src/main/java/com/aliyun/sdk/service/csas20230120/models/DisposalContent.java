@@ -23,6 +23,9 @@ public class DisposalContent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertContentEn")
     private String alertContentEn;
 
+    @com.aliyun.core.annotation.NameInMap("AlertIntervalSeconds")
+    private Long alertIntervalSeconds;
+
     @com.aliyun.core.annotation.NameInMap("AlertTitle")
     private String alertTitle;
 
@@ -45,9 +48,13 @@ public class DisposalContent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProhibitActions")
     private java.util.List<String> prohibitActions;
 
+    @com.aliyun.core.annotation.NameInMap("ProhibitSoftwareIds")
+    private java.util.List<String> prohibitSoftwareIds;
+
     private DisposalContent(Builder builder) {
         this.alertContent = builder.alertContent;
         this.alertContentEn = builder.alertContentEn;
+        this.alertIntervalSeconds = builder.alertIntervalSeconds;
         this.alertTitle = builder.alertTitle;
         this.alertTitleEn = builder.alertTitleEn;
         this.nacDemotionPolicyIds = builder.nacDemotionPolicyIds;
@@ -55,6 +62,7 @@ public class DisposalContent extends TeaModel {
         this.noticeContentEn = builder.noticeContentEn;
         this.notifyActions = builder.notifyActions;
         this.prohibitActions = builder.prohibitActions;
+        this.prohibitSoftwareIds = builder.prohibitSoftwareIds;
     }
 
     public static Builder builder() {
@@ -81,6 +89,13 @@ public class DisposalContent extends TeaModel {
      */
     public String getAlertContentEn() {
         return this.alertContentEn;
+    }
+
+    /**
+     * @return alertIntervalSeconds
+     */
+    public Long getAlertIntervalSeconds() {
+        return this.alertIntervalSeconds;
     }
 
     /**
@@ -132,9 +147,17 @@ public class DisposalContent extends TeaModel {
         return this.prohibitActions;
     }
 
+    /**
+     * @return prohibitSoftwareIds
+     */
+    public java.util.List<String> getProhibitSoftwareIds() {
+        return this.prohibitSoftwareIds;
+    }
+
     public static final class Builder {
         private String alertContent; 
         private String alertContentEn; 
+        private Long alertIntervalSeconds; 
         private String alertTitle; 
         private String alertTitleEn; 
         private java.util.List<String> nacDemotionPolicyIds; 
@@ -142,6 +165,7 @@ public class DisposalContent extends TeaModel {
         private String noticeContentEn; 
         private java.util.List<String> notifyActions; 
         private java.util.List<String> prohibitActions; 
+        private java.util.List<String> prohibitSoftwareIds; 
 
         private Builder() {
         } 
@@ -149,6 +173,7 @@ public class DisposalContent extends TeaModel {
         private Builder(DisposalContent model) {
             this.alertContent = model.alertContent;
             this.alertContentEn = model.alertContentEn;
+            this.alertIntervalSeconds = model.alertIntervalSeconds;
             this.alertTitle = model.alertTitle;
             this.alertTitleEn = model.alertTitleEn;
             this.nacDemotionPolicyIds = model.nacDemotionPolicyIds;
@@ -156,6 +181,7 @@ public class DisposalContent extends TeaModel {
             this.noticeContentEn = model.noticeContentEn;
             this.notifyActions = model.notifyActions;
             this.prohibitActions = model.prohibitActions;
+            this.prohibitSoftwareIds = model.prohibitSoftwareIds;
         } 
 
         /**
@@ -171,6 +197,14 @@ public class DisposalContent extends TeaModel {
          */
         public Builder alertContentEn(String alertContentEn) {
             this.alertContentEn = alertContentEn;
+            return this;
+        }
+
+        /**
+         * AlertIntervalSeconds.
+         */
+        public Builder alertIntervalSeconds(Long alertIntervalSeconds) {
+            this.alertIntervalSeconds = alertIntervalSeconds;
             return this;
         }
 
@@ -227,6 +261,14 @@ public class DisposalContent extends TeaModel {
          */
         public Builder prohibitActions(java.util.List<String> prohibitActions) {
             this.prohibitActions = prohibitActions;
+            return this;
+        }
+
+        /**
+         * ProhibitSoftwareIds.
+         */
+        public Builder prohibitSoftwareIds(java.util.List<String> prohibitSoftwareIds) {
+            this.prohibitSoftwareIds = prohibitSoftwareIds;
             return this;
         }
 

@@ -266,6 +266,21 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharingStatus")
         private Boolean sharingStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SnBaseBoard")
+        private String snBaseBoard;
+
+        @com.aliyun.core.annotation.NameInMap("SnBios")
+        private String snBios;
+
+        @com.aliyun.core.annotation.NameInMap("SnDiskDrive")
+        private String snDiskDrive;
+
+        @com.aliyun.core.annotation.NameInMap("SnProcessor")
+        private String snProcessor;
+
+        @com.aliyun.core.annotation.NameInMap("SnSystem")
+        private String snSystem;
+
         @com.aliyun.core.annotation.NameInMap("SrcIP")
         private String srcIP;
 
@@ -304,6 +319,11 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.paStatus = builder.paStatus;
             this.saseUserId = builder.saseUserId;
             this.sharingStatus = builder.sharingStatus;
+            this.snBaseBoard = builder.snBaseBoard;
+            this.snBios = builder.snBios;
+            this.snDiskDrive = builder.snDiskDrive;
+            this.snProcessor = builder.snProcessor;
+            this.snSystem = builder.snSystem;
             this.srcIP = builder.srcIP;
             this.updateTime = builder.updateTime;
             this.username = builder.username;
@@ -494,6 +514,41 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return snBaseBoard
+         */
+        public String getSnBaseBoard() {
+            return this.snBaseBoard;
+        }
+
+        /**
+         * @return snBios
+         */
+        public String getSnBios() {
+            return this.snBios;
+        }
+
+        /**
+         * @return snDiskDrive
+         */
+        public String getSnDiskDrive() {
+            return this.snDiskDrive;
+        }
+
+        /**
+         * @return snProcessor
+         */
+        public String getSnProcessor() {
+            return this.snProcessor;
+        }
+
+        /**
+         * @return snSystem
+         */
+        public String getSnSystem() {
+            return this.snSystem;
+        }
+
+        /**
          * @return srcIP
          */
         public String getSrcIP() {
@@ -547,6 +602,11 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String paStatus; 
             private String saseUserId; 
             private Boolean sharingStatus; 
+            private String snBaseBoard; 
+            private String snBios; 
+            private String snDiskDrive; 
+            private String snProcessor; 
+            private String snSystem; 
             private String srcIP; 
             private String updateTime; 
             private String username; 
@@ -581,6 +641,11 @@ public class ListUserDevicesResponseBody extends TeaModel {
                 this.paStatus = model.paStatus;
                 this.saseUserId = model.saseUserId;
                 this.sharingStatus = model.sharingStatus;
+                this.snBaseBoard = model.snBaseBoard;
+                this.snBios = model.snBios;
+                this.snDiskDrive = model.snDiskDrive;
+                this.snProcessor = model.snProcessor;
+                this.snSystem = model.snSystem;
                 this.srcIP = model.srcIP;
                 this.updateTime = model.updateTime;
                 this.username = model.username;
@@ -784,6 +849,46 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder sharingStatus(Boolean sharingStatus) {
                 this.sharingStatus = sharingStatus;
+                return this;
+            }
+
+            /**
+             * SnBaseBoard.
+             */
+            public Builder snBaseBoard(String snBaseBoard) {
+                this.snBaseBoard = snBaseBoard;
+                return this;
+            }
+
+            /**
+             * SnBios.
+             */
+            public Builder snBios(String snBios) {
+                this.snBios = snBios;
+                return this;
+            }
+
+            /**
+             * SnDiskDrive.
+             */
+            public Builder snDiskDrive(String snDiskDrive) {
+                this.snDiskDrive = snDiskDrive;
+                return this;
+            }
+
+            /**
+             * SnProcessor.
+             */
+            public Builder snProcessor(String snProcessor) {
+                this.snProcessor = snProcessor;
+                return this;
+            }
+
+            /**
+             * SnSystem.
+             */
+            public Builder snSystem(String snSystem) {
+                this.snSystem = snSystem;
                 return this;
             }
 

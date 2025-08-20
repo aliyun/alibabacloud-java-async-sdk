@@ -94,7 +94,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class FieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private FieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public FieldMap build() {
+                return new FieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class AppUninstallPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<FieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -102,6 +204,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private AppUninstallPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -112,6 +216,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static AppUninstallPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<FieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -129,6 +247,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<FieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -136,9 +256,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(AppUninstallPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<FieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -169,7 +307,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class DeviceRegistrationPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private DeviceRegistrationPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeviceRegistrationPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceRegistrationPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public DeviceRegistrationPoliciesFieldMap build() {
+                return new DeviceRegistrationPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class DeviceRegistrationPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<DeviceRegistrationPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -177,6 +417,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private DeviceRegistrationPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -187,6 +429,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static DeviceRegistrationPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<DeviceRegistrationPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -204,6 +460,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<DeviceRegistrationPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -211,9 +469,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(DeviceRegistrationPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<DeviceRegistrationPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -244,7 +520,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class DlpSendPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private DlpSendPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlpSendPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DlpSendPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public DlpSendPoliciesFieldMap build() {
+                return new DlpSendPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class DlpSendPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<DlpSendPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -252,6 +630,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private DlpSendPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -262,6 +642,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static DlpSendPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<DlpSendPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -279,6 +673,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<DlpSendPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -286,9 +682,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(DlpSendPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<DlpSendPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -319,7 +733,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class DomainBlacklistPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private DomainBlacklistPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainBlacklistPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainBlacklistPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public DomainBlacklistPoliciesFieldMap build() {
+                return new DomainBlacklistPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class DomainBlacklistPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<DomainBlacklistPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -327,6 +843,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private DomainBlacklistPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -337,6 +855,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static DomainBlacklistPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<DomainBlacklistPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -354,6 +886,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<DomainBlacklistPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -361,9 +895,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(DomainBlacklistPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<DomainBlacklistPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -394,7 +946,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class DomainWhitelistPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private DomainWhitelistPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainWhitelistPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainWhitelistPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public DomainWhitelistPoliciesFieldMap build() {
+                return new DomainWhitelistPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class DomainWhitelistPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<DomainWhitelistPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -402,6 +1056,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private DomainWhitelistPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -412,6 +1068,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static DomainWhitelistPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<DomainWhitelistPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -429,6 +1099,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<DomainWhitelistPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -436,9 +1108,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(DomainWhitelistPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<DomainWhitelistPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -469,7 +1159,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class EndpointHardeningPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private EndpointHardeningPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndpointHardeningPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointHardeningPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public EndpointHardeningPoliciesFieldMap build() {
+                return new EndpointHardeningPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class EndpointHardeningPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<EndpointHardeningPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -477,6 +1269,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private EndpointHardeningPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -487,6 +1281,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static EndpointHardeningPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<EndpointHardeningPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -504,6 +1312,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<EndpointHardeningPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -511,9 +1321,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(EndpointHardeningPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<EndpointHardeningPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -544,7 +1372,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class PeripheraBlockPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private PeripheraBlockPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PeripheraBlockPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeripheraBlockPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public PeripheraBlockPoliciesFieldMap build() {
+                return new PeripheraBlockPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class PeripheraBlockPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<PeripheraBlockPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -552,6 +1482,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private PeripheraBlockPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -562,6 +1494,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static PeripheraBlockPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<PeripheraBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -579,6 +1525,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<PeripheraBlockPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -586,9 +1534,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(PeripheraBlockPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<PeripheraBlockPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -694,7 +1660,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class SoftwareBlockPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private SoftwareBlockPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SoftwareBlockPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoftwareBlockPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public SoftwareBlockPoliciesFieldMap build() {
+                return new SoftwareBlockPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class SoftwareBlockPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<SoftwareBlockPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -702,6 +1770,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private SoftwareBlockPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -712,6 +1782,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static SoftwareBlockPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<SoftwareBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -729,6 +1813,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<SoftwareBlockPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -736,9 +1822,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(SoftwareBlockPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<SoftwareBlockPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -769,7 +1873,109 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>UpdateApprovalProcessResponseBody</p>
      */
+    public static class SoftwareHardeningPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private SoftwareHardeningPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SoftwareHardeningPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoftwareHardeningPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public SoftwareHardeningPoliciesFieldMap build() {
+                return new SoftwareHardeningPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessResponseBody</p>
+     */
     public static class SoftwareHardeningPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<SoftwareHardeningPoliciesFieldMap> fieldMap;
+
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
 
@@ -777,6 +1983,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         private String schemaId;
 
         private SoftwareHardeningPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
             this.policyIds = builder.policyIds;
             this.schemaId = builder.schemaId;
         }
@@ -787,6 +1995,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static SoftwareHardeningPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<SoftwareHardeningPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         /**
@@ -804,6 +2026,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<SoftwareHardeningPoliciesFieldMap> fieldMap; 
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
@@ -811,9 +2035,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             } 
 
             private Builder(SoftwareHardeningPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
                 this.policyIds = model.policyIds;
                 this.schemaId = model.schemaId;
             } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<SoftwareHardeningPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
 
             /**
              * PolicyIds.
@@ -848,6 +2090,9 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUninstallPolicies")
         private AppUninstallPolicies appUninstallPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("ApprovalType")
+        private Integer approvalType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -869,6 +2114,12 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointHardeningPolicies")
         private EndpointHardeningPolicies endpointHardeningPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("EventLabel")
+        private String eventLabel;
+
+        @com.aliyun.core.annotation.NameInMap("ExternalConfig")
+        private String externalConfig;
+
         @com.aliyun.core.annotation.NameInMap("PeripheraBlockPolicies")
         private PeripheraBlockPolicies peripheraBlockPolicies;
 
@@ -889,6 +2140,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         private Process(Builder builder) {
             this.appUninstallPolicies = builder.appUninstallPolicies;
+            this.approvalType = builder.approvalType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.deviceRegistrationPolicies = builder.deviceRegistrationPolicies;
@@ -896,6 +2148,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             this.domainBlacklistPolicies = builder.domainBlacklistPolicies;
             this.domainWhitelistPolicies = builder.domainWhitelistPolicies;
             this.endpointHardeningPolicies = builder.endpointHardeningPolicies;
+            this.eventLabel = builder.eventLabel;
+            this.externalConfig = builder.externalConfig;
             this.peripheraBlockPolicies = builder.peripheraBlockPolicies;
             this.processId = builder.processId;
             this.processName = builder.processName;
@@ -917,6 +2171,13 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
          */
         public AppUninstallPolicies getAppUninstallPolicies() {
             return this.appUninstallPolicies;
+        }
+
+        /**
+         * @return approvalType
+         */
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         /**
@@ -969,6 +2230,20 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventLabel
+         */
+        public String getEventLabel() {
+            return this.eventLabel;
+        }
+
+        /**
+         * @return externalConfig
+         */
+        public String getExternalConfig() {
+            return this.externalConfig;
+        }
+
+        /**
          * @return peripheraBlockPolicies
          */
         public PeripheraBlockPolicies getPeripheraBlockPolicies() {
@@ -1012,6 +2287,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private AppUninstallPolicies appUninstallPolicies; 
+            private Integer approvalType; 
             private String createTime; 
             private String description; 
             private DeviceRegistrationPolicies deviceRegistrationPolicies; 
@@ -1019,6 +2295,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
             private DomainBlacklistPolicies domainBlacklistPolicies; 
             private DomainWhitelistPolicies domainWhitelistPolicies; 
             private EndpointHardeningPolicies endpointHardeningPolicies; 
+            private String eventLabel; 
+            private String externalConfig; 
             private PeripheraBlockPolicies peripheraBlockPolicies; 
             private String processId; 
             private String processName; 
@@ -1031,6 +2309,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
             private Builder(Process model) {
                 this.appUninstallPolicies = model.appUninstallPolicies;
+                this.approvalType = model.approvalType;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.deviceRegistrationPolicies = model.deviceRegistrationPolicies;
@@ -1038,6 +2317,8 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
                 this.domainBlacklistPolicies = model.domainBlacklistPolicies;
                 this.domainWhitelistPolicies = model.domainWhitelistPolicies;
                 this.endpointHardeningPolicies = model.endpointHardeningPolicies;
+                this.eventLabel = model.eventLabel;
+                this.externalConfig = model.externalConfig;
                 this.peripheraBlockPolicies = model.peripheraBlockPolicies;
                 this.processId = model.processId;
                 this.processName = model.processName;
@@ -1051,6 +2332,14 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
              */
             public Builder appUninstallPolicies(AppUninstallPolicies appUninstallPolicies) {
                 this.appUninstallPolicies = appUninstallPolicies;
+                return this;
+            }
+
+            /**
+             * ApprovalType.
+             */
+            public Builder approvalType(Integer approvalType) {
+                this.approvalType = approvalType;
                 return this;
             }
 
@@ -1107,6 +2396,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
              */
             public Builder endpointHardeningPolicies(EndpointHardeningPolicies endpointHardeningPolicies) {
                 this.endpointHardeningPolicies = endpointHardeningPolicies;
+                return this;
+            }
+
+            /**
+             * EventLabel.
+             */
+            public Builder eventLabel(String eventLabel) {
+                this.eventLabel = eventLabel;
+                return this;
+            }
+
+            /**
+             * ExternalConfig.
+             */
+            public Builder externalConfig(String externalConfig) {
+                this.externalConfig = externalConfig;
                 return this;
             }
 
