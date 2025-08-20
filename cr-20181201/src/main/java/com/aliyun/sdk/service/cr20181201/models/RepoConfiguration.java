@@ -122,12 +122,8 @@ public class RepoConfiguration extends TeaModel {
         @com.aliyun.core.annotation.Validation(required = true)
         private Boolean imageIndexOnly;
 
-        @com.aliyun.core.annotation.NameInMap("PriorityFile")
-        private String priorityFile;
-
         private ArtifactBuildRuleParameters(Builder builder) {
             this.imageIndexOnly = builder.imageIndexOnly;
-            this.priorityFile = builder.priorityFile;
         }
 
         public static Builder builder() {
@@ -145,23 +141,14 @@ public class RepoConfiguration extends TeaModel {
             return this.imageIndexOnly;
         }
 
-        /**
-         * @return priorityFile
-         */
-        public String getPriorityFile() {
-            return this.priorityFile;
-        }
-
         public static final class Builder {
             private Boolean imageIndexOnly; 
-            private String priorityFile; 
 
             private Builder() {
             } 
 
             private Builder(ArtifactBuildRuleParameters model) {
                 this.imageIndexOnly = model.imageIndexOnly;
-                this.priorityFile = model.priorityFile;
             } 
 
             /**
@@ -169,14 +156,6 @@ public class RepoConfiguration extends TeaModel {
              */
             public Builder imageIndexOnly(Boolean imageIndexOnly) {
                 this.imageIndexOnly = imageIndexOnly;
-                return this;
-            }
-
-            /**
-             * PriorityFile.
-             */
-            public Builder priorityFile(String priorityFile) {
-                this.priorityFile = priorityFile;
                 return this;
             }
 

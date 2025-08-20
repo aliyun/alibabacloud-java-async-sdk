@@ -226,6 +226,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         private String addedBy;
 
         @com.aliyun.core.annotation.NameInMap("AliasName")
+        @Deprecated
         private String aliasName;
 
         @com.aliyun.core.annotation.NameInMap("CveLink")

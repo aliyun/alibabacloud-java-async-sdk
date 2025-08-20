@@ -221,6 +221,252 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
      *
      * <p>ListArtifactLifecycleRuleResponseBody</p>
      */
+    public static class Condition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LastPullOlderThanDays")
+        private Integer lastPullOlderThanDays;
+
+        @com.aliyun.core.annotation.NameInMap("LastPushOlderThanDays")
+        private Integer lastPushOlderThanDays;
+
+        @com.aliyun.core.annotation.NameInMap("LatestTagCount")
+        private Integer latestTagCount;
+
+        private Condition(Builder builder) {
+            this.lastPullOlderThanDays = builder.lastPullOlderThanDays;
+            this.lastPushOlderThanDays = builder.lastPushOlderThanDays;
+            this.latestTagCount = builder.latestTagCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Condition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lastPullOlderThanDays
+         */
+        public Integer getLastPullOlderThanDays() {
+            return this.lastPullOlderThanDays;
+        }
+
+        /**
+         * @return lastPushOlderThanDays
+         */
+        public Integer getLastPushOlderThanDays() {
+            return this.lastPushOlderThanDays;
+        }
+
+        /**
+         * @return latestTagCount
+         */
+        public Integer getLatestTagCount() {
+            return this.latestTagCount;
+        }
+
+        public static final class Builder {
+            private Integer lastPullOlderThanDays; 
+            private Integer lastPushOlderThanDays; 
+            private Integer latestTagCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.lastPullOlderThanDays = model.lastPullOlderThanDays;
+                this.lastPushOlderThanDays = model.lastPushOlderThanDays;
+                this.latestTagCount = model.latestTagCount;
+            } 
+
+            /**
+             * LastPullOlderThanDays.
+             */
+            public Builder lastPullOlderThanDays(Integer lastPullOlderThanDays) {
+                this.lastPullOlderThanDays = lastPullOlderThanDays;
+                return this;
+            }
+
+            /**
+             * LastPushOlderThanDays.
+             */
+            public Builder lastPushOlderThanDays(Integer lastPushOlderThanDays) {
+                this.lastPushOlderThanDays = lastPushOlderThanDays;
+                return this;
+            }
+
+            /**
+             * LatestTagCount.
+             */
+            public Builder latestTagCount(Integer latestTagCount) {
+                this.latestTagCount = latestTagCount;
+                return this;
+            }
+
+            public Condition build() {
+                return new Condition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListArtifactLifecycleRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactLifecycleRuleResponseBody</p>
+     */
+    public static class Filter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagWildcard")
+        private String tagWildcard;
+
+        private Filter(Builder builder) {
+            this.tagWildcard = builder.tagWildcard;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagWildcard
+         */
+        public String getTagWildcard() {
+            return this.tagWildcard;
+        }
+
+        public static final class Builder {
+            private String tagWildcard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.tagWildcard = model.tagWildcard;
+            } 
+
+            /**
+             * TagWildcard.
+             */
+            public Builder tagWildcard(String tagWildcard) {
+                this.tagWildcard = tagWildcard;
+                return this;
+            }
+
+            public Filter build() {
+                return new Filter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListArtifactLifecycleRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactLifecycleRuleResponseBody</p>
+     */
+    public static class Policies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private Condition condition;
+
+        @com.aliyun.core.annotation.NameInMap("Filter")
+        private Filter filter;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Policies(Builder builder) {
+            this.condition = builder.condition;
+            this.filter = builder.filter;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Policies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return condition
+         */
+        public Condition getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return filter
+         */
+        public Filter getFilter() {
+            return this.filter;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Condition condition; 
+            private Filter filter; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.condition = model.condition;
+                this.filter = model.filter;
+                this.type = model.type;
+            } 
+
+            /**
+             * Condition.
+             */
+            public Builder condition(Condition condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * Filter.
+             */
+            public Builder filter(Filter filter) {
+                this.filter = filter;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Policies build() {
+                return new Policies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListArtifactLifecycleRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactLifecycleRuleResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Auto")
         private Boolean auto;
@@ -242,6 +488,9 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NextTime")
         private Long nextTime;
+
+        @com.aliyun.core.annotation.NameInMap("Policies")
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
@@ -269,6 +518,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             this.modifiedTime = builder.modifiedTime;
             this.namespaceName = builder.namespaceName;
             this.nextTime = builder.nextTime;
+            this.policies = builder.policies;
             this.repoName = builder.repoName;
             this.retentionTagCount = builder.retentionTagCount;
             this.ruleId = builder.ruleId;
@@ -335,6 +585,13 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return policies
+         */
+        public java.util.List<Policies> getPolicies() {
+            return this.policies;
+        }
+
+        /**
          * @return repoName
          */
         public String getRepoName() {
@@ -384,6 +641,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             private Long modifiedTime; 
             private String namespaceName; 
             private Long nextTime; 
+            private java.util.List<Policies> policies; 
             private String repoName; 
             private Long retentionTagCount; 
             private String ruleId; 
@@ -402,6 +660,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
                 this.modifiedTime = model.modifiedTime;
                 this.namespaceName = model.namespaceName;
                 this.nextTime = model.nextTime;
+                this.policies = model.policies;
                 this.repoName = model.repoName;
                 this.retentionTagCount = model.retentionTagCount;
                 this.ruleId = model.ruleId;
@@ -484,6 +743,14 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
              */
             public Builder nextTime(Long nextTime) {
                 this.nextTime = nextTime;
+                return this;
+            }
+
+            /**
+             * Policies.
+             */
+            public Builder policies(java.util.List<Policies> policies) {
+                this.policies = policies;
                 return this;
             }
 
