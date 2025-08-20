@@ -194,6 +194,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GeneralAnalyzeImage  GeneralAnalyzeImageRequest
+     * @return GeneralAnalyzeImageResponse
+     */
+    @Override
+    public CompletableFuture<GeneralAnalyzeImageResponse> generalAnalyzeImage(GeneralAnalyzeImageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GeneralAnalyzeImage").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/generalanalyzeImage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GeneralAnalyzeImageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GeneralAnalyzeImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<GeneralAnalyzeImageResponseBody> generalAnalyzeImageWithResponseIterable(GeneralAnalyzeImageRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("GeneralAnalyzeImage").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/generalanalyzeImage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        GeneralAnalyzeImageResponseBodyIterator iterator = GeneralAnalyzeImageResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of GetTaskResult  GetTaskResultRequest
      * @return GetTaskResultResponse
      */

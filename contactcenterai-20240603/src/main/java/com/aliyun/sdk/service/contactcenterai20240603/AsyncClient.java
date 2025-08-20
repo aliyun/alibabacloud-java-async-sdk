@@ -64,6 +64,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVocabResponse> deleteVocab(DeleteVocabRequest request);
 
     /**
+     * @param request the request parameters of GeneralAnalyzeImage  GeneralAnalyzeImageRequest
+     * @return GeneralAnalyzeImageResponse
+     */
+    CompletableFuture<GeneralAnalyzeImageResponse> generalAnalyzeImage(GeneralAnalyzeImageRequest request);
+
+    ResponseIterable<GeneralAnalyzeImageResponseBody> generalAnalyzeImageWithResponseIterable(GeneralAnalyzeImageRequest request);
+
+    /**
      * @param request the request parameters of GetTaskResult  GetTaskResultRequest
      * @return GetTaskResultResponse
      */
