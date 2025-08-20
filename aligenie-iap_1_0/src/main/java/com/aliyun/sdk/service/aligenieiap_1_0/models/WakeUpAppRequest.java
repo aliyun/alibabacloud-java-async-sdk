@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WakeUpAppRequest} extends {@link RequestModel}
  *
  * <p>WakeUpAppRequest</p>
  */
 public class WakeUpAppRequest extends Request {
-    @Body
-    @NameInMap("IsDebug")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsDebug")
     private Boolean isDebug;
 
-    @Body
-    @NameInMap("Path")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Path")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
-    @Body
-    @NameInMap("TargetInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TargetInfo targetInfo;
 
     private WakeUpAppRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class WakeUpAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,10 @@ public class WakeUpAppRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用拉起路径</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);
@@ -102,7 +110,7 @@ public class WakeUpAppRequest extends Request {
         }
 
         /**
-         * TargetInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder targetInfo(TargetInfo targetInfo) {
             this.putBodyParameter("TargetInfo", targetInfo);
@@ -117,24 +125,30 @@ public class WakeUpAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link WakeUpAppRequest} extends {@link TeaModel}
+     *
+     * <p>WakeUpAppRequest</p>
+     */
     public static class TargetInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("TargetIdentity")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetIdentity")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetIdentity;
 
-        @NameInMap("TargetType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetType;
 
         private TargetInfo(Builder builder) {
@@ -195,8 +209,22 @@ public class WakeUpAppRequest extends Request {
             private String targetIdentity; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.organizationId = model.organizationId;
+                this.targetIdentity = model.targetIdentity;
+                this.targetType = model.targetType;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apk包名</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -204,7 +232,10 @@ public class WakeUpAppRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -220,7 +251,10 @@ public class WakeUpAppRequest extends Request {
             }
 
             /**
-             * TargetIdentity.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2VpiDQ6aMjxz******Eo7r6e08oIVZ3fKrm5TyEfY=</p>
              */
             public Builder targetIdentity(String targetIdentity) {
                 this.targetIdentity = targetIdentity;
@@ -228,7 +262,10 @@ public class WakeUpAppRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEVICE_OPEN_ID</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountForAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountForAppResponseBody</p>
  */
 public class GetAccountForAppResponseBody extends TeaModel {
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private Integer retCode;
 
-    @NameInMap("RetMsg")
+    @com.aliyun.core.annotation.NameInMap("RetMsg")
     private String retMsg;
 
-    @NameInMap("RetValue")
+    @com.aliyun.core.annotation.NameInMap("RetValue")
     private RetValue retValue;
 
     private GetAccountForAppResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GetAccountForAppResponseBody extends TeaModel {
 
     public static GetAccountForAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class GetAccountForAppResponseBody extends TeaModel {
         private Integer retCode; 
         private String retMsg; 
         private RetValue retValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountForAppResponseBody model) {
+            this.retCode = model.retCode;
+            this.retMsg = model.retMsg;
+            this.retValue = model.retValue;
+        } 
 
         /**
          * RetCode.
@@ -91,14 +109,20 @@ public class GetAccountForAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountForAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountForAppResponseBody</p>
+     */
     public static class RetValue extends TeaModel {
-        @NameInMap("IsVip")
+        @com.aliyun.core.annotation.NameInMap("IsVip")
         private Boolean isVip;
 
-        @NameInMap("StrVipExpire")
+        @com.aliyun.core.annotation.NameInMap("StrVipExpire")
         private String strVipExpire;
 
-        @NameInMap("VipExpireAt")
+        @com.aliyun.core.annotation.NameInMap("VipExpireAt")
         private Long vipExpireAt;
 
         private RetValue(Builder builder) {
@@ -140,6 +164,15 @@ public class GetAccountForAppResponseBody extends TeaModel {
             private Boolean isVip; 
             private String strVipExpire; 
             private Long vipExpireAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetValue model) {
+                this.isVip = model.isVip;
+                this.strVipExpire = model.strVipExpire;
+                this.vipExpireAt = model.vipExpireAt;
+            } 
 
             /**
              * IsVip.

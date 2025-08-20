@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckThirdRightSendPlanResponseBody} extends {@link TeaModel}
  *
  * <p>CheckThirdRightSendPlanResponseBody</p>
  */
 public class CheckThirdRightSendPlanResponseBody extends TeaModel {
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private Integer retCode;
 
-    @NameInMap("RetMsg")
+    @com.aliyun.core.annotation.NameInMap("RetMsg")
     private String retMsg;
 
-    @NameInMap("RetValue")
+    @com.aliyun.core.annotation.NameInMap("RetValue")
     private RetValue retValue;
 
     private CheckThirdRightSendPlanResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
 
     public static CheckThirdRightSendPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         private Integer retCode; 
         private String retMsg; 
         private RetValue retValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckThirdRightSendPlanResponseBody model) {
+            this.retCode = model.retCode;
+            this.retMsg = model.retMsg;
+            this.retValue = model.retValue;
+        } 
 
         /**
          * RetCode.
@@ -91,26 +109,32 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckThirdRightSendPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckThirdRightSendPlanResponseBody</p>
+     */
     public static class RetValue extends TeaModel {
-        @NameInMap("ActivateDate")
+        @com.aliyun.core.annotation.NameInMap("ActivateDate")
         private String activateDate;
 
-        @NameInMap("CardType")
+        @com.aliyun.core.annotation.NameInMap("CardType")
         private Integer cardType;
 
-        @NameInMap("ChannelCode")
+        @com.aliyun.core.annotation.NameInMap("ChannelCode")
         private String channelCode;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("ExtendInfo")
-        private java.util.Map < String, ? > extendInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
+        private java.util.Map<String, ?> extendInfo;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RightsExpiredDate")
+        @com.aliyun.core.annotation.NameInMap("RightsExpiredDate")
         private String rightsExpiredDate;
 
         private RetValue(Builder builder) {
@@ -162,7 +186,7 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         /**
          * @return extendInfo
          */
-        public java.util.Map < String, ? > getExtendInfo() {
+        public java.util.Map<String, ?> getExtendInfo() {
             return this.extendInfo;
         }
 
@@ -185,9 +209,22 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
             private Integer cardType; 
             private String channelCode; 
             private String channelName; 
-            private java.util.Map < String, ? > extendInfo; 
+            private java.util.Map<String, ?> extendInfo; 
             private String requestId; 
             private String rightsExpiredDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetValue model) {
+                this.activateDate = model.activateDate;
+                this.cardType = model.cardType;
+                this.channelCode = model.channelCode;
+                this.channelName = model.channelName;
+                this.extendInfo = model.extendInfo;
+                this.requestId = model.requestId;
+                this.rightsExpiredDate = model.rightsExpiredDate;
+            } 
 
             /**
              * ActivateDate.
@@ -224,7 +261,7 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
             /**
              * ExtendInfo.
              */
-            public Builder extendInfo(java.util.Map < String, ? > extendInfo) {
+            public Builder extendInfo(java.util.Map<String, ?> extendInfo) {
                 this.extendInfo = extendInfo;
                 return this;
             }

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetReminderResponseBody} extends {@link TeaModel}
  *
  * <p>GetReminderResponseBody</p>
  */
 public class GetReminderResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetReminderResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetReminderResponseBody extends TeaModel {
 
     public static GetReminderResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetReminderResponseBody extends TeaModel {
         private String errorMsg; 
         private Model model; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetReminderResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.model = model.model;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -111,38 +130,44 @@ public class GetReminderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetReminderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReminderResponseBody</p>
+     */
     public static class RecurrenceRule extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("DaysOfMonth")
-        private java.util.List < Integer > daysOfMonth;
+        @com.aliyun.core.annotation.NameInMap("DaysOfMonth")
+        private java.util.List<Integer> daysOfMonth;
 
-        @NameInMap("DaysOfWeek")
-        private java.util.List < Integer > daysOfWeek;
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
+        private java.util.List<Integer> daysOfWeek;
 
-        @NameInMap("EndDateTime")
+        @com.aliyun.core.annotation.NameInMap("EndDateTime")
         private String endDateTime;
 
-        @NameInMap("Freq")
+        @com.aliyun.core.annotation.NameInMap("Freq")
         private String freq;
 
-        @NameInMap("Hour")
+        @com.aliyun.core.annotation.NameInMap("Hour")
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("Second")
+        @com.aliyun.core.annotation.NameInMap("Second")
         private Integer second;
 
-        @NameInMap("StartDateTime")
+        @com.aliyun.core.annotation.NameInMap("StartDateTime")
         private String startDateTime;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private RecurrenceRule(Builder builder) {
@@ -177,14 +202,14 @@ public class GetReminderResponseBody extends TeaModel {
         /**
          * @return daysOfMonth
          */
-        public java.util.List < Integer > getDaysOfMonth() {
+        public java.util.List<Integer> getDaysOfMonth() {
             return this.daysOfMonth;
         }
 
         /**
          * @return daysOfWeek
          */
-        public java.util.List < Integer > getDaysOfWeek() {
+        public java.util.List<Integer> getDaysOfWeek() {
             return this.daysOfWeek;
         }
 
@@ -246,8 +271,8 @@ public class GetReminderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer day; 
-            private java.util.List < Integer > daysOfMonth; 
-            private java.util.List < Integer > daysOfWeek; 
+            private java.util.List<Integer> daysOfMonth; 
+            private java.util.List<Integer> daysOfWeek; 
             private String endDateTime; 
             private String freq; 
             private Integer hour; 
@@ -256,6 +281,23 @@ public class GetReminderResponseBody extends TeaModel {
             private Integer second; 
             private String startDateTime; 
             private Integer year; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRule model) {
+                this.day = model.day;
+                this.daysOfMonth = model.daysOfMonth;
+                this.daysOfWeek = model.daysOfWeek;
+                this.endDateTime = model.endDateTime;
+                this.freq = model.freq;
+                this.hour = model.hour;
+                this.minute = model.minute;
+                this.month = model.month;
+                this.second = model.second;
+                this.startDateTime = model.startDateTime;
+                this.year = model.year;
+            } 
 
             /**
              * Day.
@@ -268,7 +310,7 @@ public class GetReminderResponseBody extends TeaModel {
             /**
              * DaysOfMonth.
              */
-            public Builder daysOfMonth(java.util.List < Integer > daysOfMonth) {
+            public Builder daysOfMonth(java.util.List<Integer> daysOfMonth) {
                 this.daysOfMonth = daysOfMonth;
                 return this;
             }
@@ -276,7 +318,7 @@ public class GetReminderResponseBody extends TeaModel {
             /**
              * DaysOfWeek.
              */
-            public Builder daysOfWeek(java.util.List < Integer > daysOfWeek) {
+            public Builder daysOfWeek(java.util.List<Integer> daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
                 return this;
             }
@@ -352,26 +394,32 @@ public class GetReminderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReminderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReminderResponseBody</p>
+     */
     public static class RemindResponses extends TeaModel {
-        @NameInMap("ActionTopic")
+        @com.aliyun.core.annotation.NameInMap("ActionTopic")
         private String actionTopic;
 
-        @NameInMap("DayDesc")
+        @com.aliyun.core.annotation.NameInMap("DayDesc")
         private String dayDesc;
 
-        @NameInMap("RecurrenceRule")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceRule")
         private RecurrenceRule recurrenceRule;
 
-        @NameInMap("RemindId")
+        @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
-        @NameInMap("RemindTime")
+        @com.aliyun.core.annotation.NameInMap("RemindTime")
         private String remindTime;
 
-        @NameInMap("RepeatCount")
+        @com.aliyun.core.annotation.NameInMap("RepeatCount")
         private Integer repeatCount;
 
-        @NameInMap("Week")
+        @com.aliyun.core.annotation.NameInMap("Week")
         private String week;
 
         private RemindResponses(Builder builder) {
@@ -450,6 +498,19 @@ public class GetReminderResponseBody extends TeaModel {
             private Integer repeatCount; 
             private String week; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemindResponses model) {
+                this.actionTopic = model.actionTopic;
+                this.dayDesc = model.dayDesc;
+                this.recurrenceRule = model.recurrenceRule;
+                this.remindId = model.remindId;
+                this.remindTime = model.remindTime;
+                this.repeatCount = model.repeatCount;
+                this.week = model.week;
+            } 
+
             /**
              * ActionTopic.
              */
@@ -513,9 +574,15 @@ public class GetReminderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReminderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReminderResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("RemindResponses")
-        private java.util.List < RemindResponses> remindResponses;
+        @com.aliyun.core.annotation.NameInMap("RemindResponses")
+        private java.util.List<RemindResponses> remindResponses;
 
         private Model(Builder builder) {
             this.remindResponses = builder.remindResponses;
@@ -532,17 +599,24 @@ public class GetReminderResponseBody extends TeaModel {
         /**
          * @return remindResponses
          */
-        public java.util.List < RemindResponses> getRemindResponses() {
+        public java.util.List<RemindResponses> getRemindResponses() {
             return this.remindResponses;
         }
 
         public static final class Builder {
-            private java.util.List < RemindResponses> remindResponses; 
+            private java.util.List<RemindResponses> remindResponses; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.remindResponses = model.remindResponses;
+            } 
 
             /**
              * RemindResponses.
              */
-            public Builder remindResponses(java.util.List < RemindResponses> remindResponses) {
+            public Builder remindResponses(java.util.List<RemindResponses> remindResponses) {
                 this.remindResponses = remindResponses;
                 return this;
             }

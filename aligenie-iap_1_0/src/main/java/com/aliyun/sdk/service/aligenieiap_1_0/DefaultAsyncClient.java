@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AppUseTimeReport  AppUseTimeReportRequest
+     * @return AppUseTimeReportResponse
+     */
     @Override
     public CompletableFuture<AppUseTimeReportResponse> appUseTimeReport(AppUseTimeReportRequest request) {
         try {
@@ -53,11 +57,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CallBackThirdRightSendPlan  CallBackThirdRightSendPlanRequest
+     * @return CallBackThirdRightSendPlanResponse
+     */
     @Override
     public CompletableFuture<CallBackThirdRightSendPlanResponse> callBackThirdRightSendPlan(CallBackThirdRightSendPlanRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CallBackThirdRightSendPlan").setMethod(HttpMethod.POST).setPathRegex("/1.0/iap/business/CallBackThirdRightSendPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CallBackThirdRightSendPlan").setMethod(HttpMethod.POST).setPathRegex("/v1.0/iap/business/CallBackThirdRightSendPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CallBackThirdRightSendPlanResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckThirdRightSendPlan  CheckThirdRightSendPlanRequest
+     * @return CheckThirdRightSendPlanResponse
+     */
     @Override
     public CompletableFuture<CheckThirdRightSendPlanResponse> checkThirdRightSendPlan(CheckThirdRightSendPlanRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateReminder  CreateReminderRequest
+     * @return CreateReminderResponse
+     */
     @Override
     public CompletableFuture<CreateReminderResponse> createReminder(CreateReminderRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteReminder  DeleteReminderRequest
+     * @return DeleteReminderResponse
+     */
     @Override
     public CompletableFuture<DeleteReminderResponse> deleteReminder(DeleteReminderRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountForApp  GetAccountForAppRequest
+     * @return GetAccountForAppResponse
+     */
     @Override
     public CompletableFuture<GetAccountForAppResponse> getAccountForApp(GetAccountForAppRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBusAppConfig  GetBusAppConfigRequest
+     * @return GetBusAppConfigResponse
+     */
     @Override
     public CompletableFuture<GetBusAppConfigResponse> getBusAppConfig(GetBusAppConfigRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPhoneNumber  GetPhoneNumberRequest
+     * @return GetPhoneNumberResponse
+     */
     @Override
     public CompletableFuture<GetPhoneNumberResponse> getPhoneNumber(GetPhoneNumberRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetReminder  GetReminderRequest
+     * @return GetReminderResponse
+     */
     @Override
     public CompletableFuture<GetReminderResponse> getReminder(GetReminderRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListReminders  ListRemindersRequest
+     * @return ListRemindersResponse
+     */
     @Override
     public CompletableFuture<ListRemindersResponse> listReminders(ListRemindersRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PullCashier  PullCashierRequest
+     * @return PullCashierResponse
+     */
     @Override
     public CompletableFuture<PullCashierResponse> pullCashier(PullCashierRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushNotifications  PushNotificationsRequest
+     * @return PushNotificationsResponse
+     */
     @Override
     public CompletableFuture<PushNotificationsResponse> pushNotifications(PushNotificationsRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendNotifications  SendNotificationsRequest
+     * @return SendNotificationsResponse
+     */
     @Override
     public CompletableFuture<SendNotificationsResponse> sendNotifications(SendNotificationsRequest request) {
         try {
@@ -221,6 +273,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ThirdImmediateMsgPush  ThirdImmediateMsgPushRequest
+     * @return ThirdImmediateMsgPushResponse
+     */
+    @Override
+    public CompletableFuture<ThirdImmediateMsgPushResponse> thirdImmediateMsgPush(ThirdImmediateMsgPushRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ThirdImmediateMsgPush").setMethod(HttpMethod.POST).setPathRegex("/v1.0/iap/thirdImmediateMsgPush").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ThirdImmediateMsgPushResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ThirdImmediateMsgPushResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateReminder  UpdateReminderRequest
+     * @return UpdateReminderResponse
+     */
     @Override
     public CompletableFuture<UpdateReminderResponse> updateReminder(UpdateReminderRequest request) {
         try {
@@ -235,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VideoAppReport  VideoAppReportRequest
+     * @return VideoAppReportResponse
+     */
     @Override
     public CompletableFuture<VideoAppReportResponse> videoAppReport(VideoAppReportRequest request) {
         try {
@@ -249,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of WakeUpApp  WakeUpAppRequest
+     * @return WakeUpAppResponse
+     */
     @Override
     public CompletableFuture<WakeUpAppResponse> wakeUpApp(WakeUpAppRequest request) {
         try {

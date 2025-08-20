@@ -12,24 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PushNotificationsResponse} extends {@link TeaModel}
+ * {@link ThirdImmediateMsgPushResponse} extends {@link TeaModel}
  *
- * <p>PushNotificationsResponse</p>
+ * <p>ThirdImmediateMsgPushResponse</p>
  */
-public class PushNotificationsResponse extends Response {
+public class ThirdImmediateMsgPushResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private PushNotificationsResponse(BuilderImpl builder) {
+    @com.aliyun.core.annotation.NameInMap("body")
+    private ThirdImmediateMsgPushResponseBody body;
+
+    private ThirdImmediateMsgPushResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
-    public static PushNotificationsResponse create() {
+    public static ThirdImmediateMsgPushResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -52,31 +56,42 @@ public class PushNotificationsResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<PushNotificationsResponse, Builder> {
+    /**
+     * @return body
+     */
+    public ThirdImmediateMsgPushResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ThirdImmediateMsgPushResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
+        Builder body(ThirdImmediateMsgPushResponseBody body);
+
         @Override
-        PushNotificationsResponse build();
+        ThirdImmediateMsgPushResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PushNotificationsResponse, Builder>
+            extends Response.BuilderImpl<ThirdImmediateMsgPushResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
+        private ThirdImmediateMsgPushResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PushNotificationsResponse response) {
+        private BuilderImpl(ThirdImmediateMsgPushResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -97,9 +112,18 @@ public class PushNotificationsResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public PushNotificationsResponse build() {
-            return new PushNotificationsResponse(this);
+        public Builder body(ThirdImmediateMsgPushResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ThirdImmediateMsgPushResponse build() {
+            return new ThirdImmediateMsgPushResponse(this);
         } 
 
     } 

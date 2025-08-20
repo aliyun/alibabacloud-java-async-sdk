@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PullCashierResponseBody} extends {@link TeaModel}
  *
  * <p>PullCashierResponseBody</p>
  */
 public class PullCashierResponseBody extends TeaModel {
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private Integer retCode;
 
-    @NameInMap("RetMsg")
+    @com.aliyun.core.annotation.NameInMap("RetMsg")
     private String retMsg;
 
-    @NameInMap("RetValue")
+    @com.aliyun.core.annotation.NameInMap("RetValue")
     private Boolean retValue;
 
     private PullCashierResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class PullCashierResponseBody extends TeaModel {
 
     public static PullCashierResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class PullCashierResponseBody extends TeaModel {
         private Integer retCode; 
         private String retMsg; 
         private Boolean retValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(PullCashierResponseBody model) {
+            this.retCode = model.retCode;
+            this.retMsg = model.retMsg;
+            this.retValue = model.retValue;
+        } 
 
         /**
          * RetCode.

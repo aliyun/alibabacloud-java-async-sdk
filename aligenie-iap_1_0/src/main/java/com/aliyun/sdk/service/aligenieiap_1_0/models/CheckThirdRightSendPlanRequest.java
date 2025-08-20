@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckThirdRightSendPlanRequest} extends {@link RequestModel}
  *
  * <p>CheckThirdRightSendPlanRequest</p>
  */
 public class CheckThirdRightSendPlanRequest extends Request {
-    @Query
-    @NameInMap("BizGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizGroup")
     private String bizGroup;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("ExtendInfo")
-    private java.util.Map < String, ? > extendInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
+    private java.util.Map<String, ?> extendInfo;
 
-    @Query
-    @NameInMap("Sn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
-    @Query
-    @NameInMap("SupplierId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupplierId")
     private Long supplierId;
 
     private CheckThirdRightSendPlanRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class CheckThirdRightSendPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,7 +76,7 @@ public class CheckThirdRightSendPlanRequest extends Request {
     /**
      * @return extendInfo
      */
-    public java.util.Map < String, ? > getExtendInfo() {
+    public java.util.Map<String, ?> getExtendInfo() {
         return this.extendInfo;
     }
 
@@ -92,7 +97,7 @@ public class CheckThirdRightSendPlanRequest extends Request {
     public static final class Builder extends Request.Builder<CheckThirdRightSendPlanRequest, Builder> {
         private String bizGroup; 
         private String bizType; 
-        private java.util.Map < String, ? > extendInfo; 
+        private java.util.Map<String, ?> extendInfo; 
         private String sn; 
         private Long supplierId; 
 
@@ -130,7 +135,7 @@ public class CheckThirdRightSendPlanRequest extends Request {
         /**
          * ExtendInfo.
          */
-        public Builder extendInfo(java.util.Map < String, ? > extendInfo) {
+        public Builder extendInfo(java.util.Map<String, ?> extendInfo) {
             String extendInfoShrink = shrink(extendInfo, "ExtendInfo", "json");
             this.putQueryParameter("ExtendInfo", extendInfoShrink);
             this.extendInfo = extendInfo;

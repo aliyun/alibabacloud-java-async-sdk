@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhoneNumberResponseBody</p>
  */
 public class GetPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("phoneNumber")
+    @com.aliyun.core.annotation.NameInMap("phoneNumber")
     private String phoneNumber;
 
     private GetPhoneNumberResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class GetPhoneNumberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return phoneNumber
      */
@@ -36,6 +45,13 @@ public class GetPhoneNumberResponseBody extends TeaModel {
 
     public static final class Builder {
         private String phoneNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPhoneNumberResponseBody model) {
+            this.phoneNumber = model.phoneNumber;
+        } 
 
         /**
          * phoneNumber.

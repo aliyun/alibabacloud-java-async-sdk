@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBusAppConfigRequest} extends {@link RequestModel}
  *
  * <p>GetBusAppConfigRequest</p>
  */
 public class GetBusAppConfigRequest extends Request {
-    @Query
-    @NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
     private DeviceInfo deviceInfo;
 
-    @Query
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private GetBusAppConfigRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class GetBusAppConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +108,7 @@ public class GetBusAppConfigRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -119,20 +124,26 @@ public class GetBusAppConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetBusAppConfigRequest} extends {@link TeaModel}
+     *
+     * <p>GetBusAppConfigRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
         private String encodeKey;
 
-        @NameInMap("EncodeType")
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
         private String encodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdType")
+        @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private DeviceInfo(Builder builder) {
@@ -193,6 +204,17 @@ public class GetBusAppConfigRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
              * EncodeKey.
              */
@@ -240,11 +262,17 @@ public class GetBusAppConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBusAppConfigRequest} extends {@link TeaModel}
+     *
+     * <p>GetBusAppConfigRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("originUuid")
+        @com.aliyun.core.annotation.NameInMap("originUuid")
         private String originUuid;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
         private Payload(Builder builder) {
@@ -278,6 +306,14 @@ public class GetBusAppConfigRequest extends Request {
             private String originUuid; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.originUuid = model.originUuid;
+                this.phone = model.phone;
+            } 
+
             /**
              * originUuid.
              */
@@ -301,24 +337,30 @@ public class GetBusAppConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBusAppConfigRequest} extends {@link TeaModel}
+     *
+     * <p>GetBusAppConfigRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -379,8 +421,22 @@ public class GetBusAppConfigRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -388,7 +444,10 @@ public class GetBusAppConfigRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL_ID</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -396,7 +455,10 @@ public class GetBusAppConfigRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -404,7 +466,10 @@ public class GetBusAppConfigRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

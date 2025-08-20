@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReminderRequest} extends {@link RequestModel}
  *
  * <p>CreateReminderRequest</p>
  */
 public class CreateReminderRequest extends Request {
-    @Body
-    @NameInMap("DeviceInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DeviceInfo deviceInfo;
 
-    @Body
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Payload payload;
 
-    @Body
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private CreateReminderRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class CreateReminderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,7 @@ public class CreateReminderRequest extends Request {
         } 
 
         /**
-         * DeviceInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceInfo(DeviceInfo deviceInfo) {
             String deviceInfoShrink = shrink(deviceInfo, "DeviceInfo", "json");
@@ -95,7 +100,7 @@ public class CreateReminderRequest extends Request {
         }
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -105,7 +110,7 @@ public class CreateReminderRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -121,24 +126,30 @@ public class CreateReminderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateReminderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReminderRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private DeviceInfo(Builder builder) {
@@ -199,8 +210,22 @@ public class CreateReminderRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -208,7 +233,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -216,7 +244,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAFE****ce3ej=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -224,7 +255,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;
@@ -246,42 +280,48 @@ public class CreateReminderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReminderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReminderRequest</p>
+     */
     public static class RecurrenceRule extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("DaysOfMonth")
-        private java.util.List < Integer > daysOfMonth;
+        @com.aliyun.core.annotation.NameInMap("DaysOfMonth")
+        private java.util.List<Integer> daysOfMonth;
 
-        @NameInMap("DaysOfWeek")
-        private java.util.List < Integer > daysOfWeek;
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
+        private java.util.List<Integer> daysOfWeek;
 
-        @NameInMap("EndDateTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndDateTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long endDateTime;
 
-        @NameInMap("Freq")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Freq")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String freq;
 
-        @NameInMap("Hour")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Hour")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("Second")
+        @com.aliyun.core.annotation.NameInMap("Second")
         private Integer second;
 
-        @NameInMap("StartDateTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StartDateTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long startDateTime;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private RecurrenceRule(Builder builder) {
@@ -316,14 +356,14 @@ public class CreateReminderRequest extends Request {
         /**
          * @return daysOfMonth
          */
-        public java.util.List < Integer > getDaysOfMonth() {
+        public java.util.List<Integer> getDaysOfMonth() {
             return this.daysOfMonth;
         }
 
         /**
          * @return daysOfWeek
          */
-        public java.util.List < Integer > getDaysOfWeek() {
+        public java.util.List<Integer> getDaysOfWeek() {
             return this.daysOfWeek;
         }
 
@@ -385,8 +425,8 @@ public class CreateReminderRequest extends Request {
 
         public static final class Builder {
             private Integer day; 
-            private java.util.List < Integer > daysOfMonth; 
-            private java.util.List < Integer > daysOfWeek; 
+            private java.util.List<Integer> daysOfMonth; 
+            private java.util.List<Integer> daysOfWeek; 
             private Long endDateTime; 
             private String freq; 
             private Integer hour; 
@@ -395,6 +435,23 @@ public class CreateReminderRequest extends Request {
             private Integer second; 
             private Long startDateTime; 
             private Integer year; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRule model) {
+                this.day = model.day;
+                this.daysOfMonth = model.daysOfMonth;
+                this.daysOfWeek = model.daysOfWeek;
+                this.endDateTime = model.endDateTime;
+                this.freq = model.freq;
+                this.hour = model.hour;
+                this.minute = model.minute;
+                this.month = model.month;
+                this.second = model.second;
+                this.startDateTime = model.startDateTime;
+                this.year = model.year;
+            } 
 
             /**
              * Day.
@@ -407,7 +464,7 @@ public class CreateReminderRequest extends Request {
             /**
              * DaysOfMonth.
              */
-            public Builder daysOfMonth(java.util.List < Integer > daysOfMonth) {
+            public Builder daysOfMonth(java.util.List<Integer> daysOfMonth) {
                 this.daysOfMonth = daysOfMonth;
                 return this;
             }
@@ -415,13 +472,16 @@ public class CreateReminderRequest extends Request {
             /**
              * DaysOfWeek.
              */
-            public Builder daysOfWeek(java.util.List < Integer > daysOfWeek) {
+            public Builder daysOfWeek(java.util.List<Integer> daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
                 return this;
             }
 
             /**
-             * EndDateTime.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635134700000</p>
              */
             public Builder endDateTime(Long endDateTime) {
                 this.endDateTime = endDateTime;
@@ -429,7 +489,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * Freq.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONCE</p>
              */
             public Builder freq(String freq) {
                 this.freq = freq;
@@ -437,7 +500,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * Hour.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder hour(Integer hour) {
                 this.hour = hour;
@@ -469,7 +535,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * StartDateTime.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635134400000</p>
              */
             public Builder startDateTime(Long startDateTime) {
                 this.startDateTime = startDateTime;
@@ -491,17 +560,23 @@ public class CreateReminderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReminderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReminderRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("IsDebug")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsDebug")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isDebug;
 
-        @NameInMap("RecurrenceRule")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RecurrenceRule")
+        @com.aliyun.core.annotation.Validation(required = true)
         private RecurrenceRule recurrenceRule;
 
         private Payload(Builder builder) {
@@ -544,8 +619,20 @@ public class CreateReminderRequest extends Request {
             private Boolean isDebug; 
             private RecurrenceRule recurrenceRule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.content = model.content;
+                this.isDebug = model.isDebug;
+                this.recurrenceRule = model.recurrenceRule;
+            } 
+
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>提醒内容</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -553,7 +640,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * IsDebug.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDebug(Boolean isDebug) {
                 this.isDebug = isDebug;
@@ -561,7 +651,7 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * RecurrenceRule.
+             * <p>This parameter is required.</p>
              */
             public Builder recurrenceRule(RecurrenceRule recurrenceRule) {
                 this.recurrenceRule = recurrenceRule;
@@ -575,24 +665,30 @@ public class CreateReminderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReminderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReminderRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -653,8 +749,22 @@ public class CreateReminderRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -662,7 +772,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -670,7 +783,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -678,7 +794,10 @@ public class CreateReminderRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

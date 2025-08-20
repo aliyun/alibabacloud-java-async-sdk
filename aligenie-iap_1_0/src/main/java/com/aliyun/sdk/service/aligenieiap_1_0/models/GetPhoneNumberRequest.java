@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneNumberRequest</p>
  */
 public class GetPhoneNumberRequest extends Request {
-    @Query
-    @NameInMap("DeviceInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DeviceInfo deviceInfo;
 
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private GetPhoneNumberRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetPhoneNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class GetPhoneNumberRequest extends Request {
         } 
 
         /**
-         * DeviceInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceInfo(DeviceInfo deviceInfo) {
             String deviceInfoShrink = shrink(deviceInfo, "DeviceInfo", "json");
@@ -80,7 +85,7 @@ public class GetPhoneNumberRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -96,24 +101,30 @@ public class GetPhoneNumberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhoneNumberRequest} extends {@link TeaModel}
+     *
+     * <p>GetPhoneNumberRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private DeviceInfo(Builder builder) {
@@ -174,8 +185,22 @@ public class GetPhoneNumberRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -183,7 +208,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -191,7 +219,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAFE****ce3ej=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -199,7 +230,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;
@@ -221,24 +255,30 @@ public class GetPhoneNumberRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPhoneNumberRequest} extends {@link TeaModel}
+     *
+     * <p>GetPhoneNumberRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -299,8 +339,22 @@ public class GetPhoneNumberRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -308,7 +362,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -316,7 +373,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -324,7 +384,10 @@ public class GetPhoneNumberRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

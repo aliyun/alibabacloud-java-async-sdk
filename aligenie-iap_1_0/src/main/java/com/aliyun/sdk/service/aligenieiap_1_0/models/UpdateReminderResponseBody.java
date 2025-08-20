@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateReminderResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateReminderResponseBody</p>
  */
 public class UpdateReminderResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Long model;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateReminderResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateReminderResponseBody extends TeaModel {
 
     public static UpdateReminderResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class UpdateReminderResponseBody extends TeaModel {
         private String errorMsg; 
         private Long model; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateReminderResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.model = model.model;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

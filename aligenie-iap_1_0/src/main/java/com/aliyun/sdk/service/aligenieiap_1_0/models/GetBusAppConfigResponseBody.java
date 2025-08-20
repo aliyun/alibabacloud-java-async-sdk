@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBusAppConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetBusAppConfigResponseBody</p>
  */
 public class GetBusAppConfigResponseBody extends TeaModel {
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private Integer retCode;
 
-    @NameInMap("RetMsg")
+    @com.aliyun.core.annotation.NameInMap("RetMsg")
     private String retMsg;
 
-    @NameInMap("RetValue")
+    @com.aliyun.core.annotation.NameInMap("RetValue")
     private RetValue retValue;
 
     private GetBusAppConfigResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GetBusAppConfigResponseBody extends TeaModel {
 
     public static GetBusAppConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class GetBusAppConfigResponseBody extends TeaModel {
         private Integer retCode; 
         private String retMsg; 
         private RetValue retValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBusAppConfigResponseBody model) {
+            this.retCode = model.retCode;
+            this.retMsg = model.retMsg;
+            this.retValue = model.retValue;
+        } 
 
         /**
          * RetCode.
@@ -91,17 +109,23 @@ public class GetBusAppConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBusAppConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusAppConfigResponseBody</p>
+     */
     public static class RetValue extends TeaModel {
-        @NameInMap("Cashier")
+        @com.aliyun.core.annotation.NameInMap("Cashier")
         private String cashier;
 
-        @NameInMap("ShoppingBar")
+        @com.aliyun.core.annotation.NameInMap("ShoppingBar")
         private String shoppingBar;
 
-        @NameInMap("ShoppingWindow")
+        @com.aliyun.core.annotation.NameInMap("ShoppingWindow")
         private String shoppingWindow;
 
-        @NameInMap("VipLabel")
+        @com.aliyun.core.annotation.NameInMap("VipLabel")
         private String vipLabel;
 
         private RetValue(Builder builder) {
@@ -152,6 +176,16 @@ public class GetBusAppConfigResponseBody extends TeaModel {
             private String shoppingBar; 
             private String shoppingWindow; 
             private String vipLabel; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetValue model) {
+                this.cashier = model.cashier;
+                this.shoppingBar = model.shoppingBar;
+                this.shoppingWindow = model.shoppingWindow;
+                this.vipLabel = model.vipLabel;
+            } 
 
             /**
              * Cashier.

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushNotificationsRequest} extends {@link RequestModel}
  *
  * <p>PushNotificationsRequest</p>
  */
 public class PushNotificationsRequest extends Request {
-    @Body
-    @NameInMap("NotificationUnicastRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotificationUnicastRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NotificationUnicastRequest notificationUnicastRequest;
 
-    @Body
-    @NameInMap("TenantInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantInfo")
     private TenantInfo tenantInfo;
 
     private PushNotificationsRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class PushNotificationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class PushNotificationsRequest extends Request {
         } 
 
         /**
-         * NotificationUnicastRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder notificationUnicastRequest(NotificationUnicastRequest notificationUnicastRequest) {
             String notificationUnicastRequestShrink = shrink(notificationUnicastRequest, "NotificationUnicastRequest", "json");
@@ -95,11 +100,17 @@ public class PushNotificationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>PushNotificationsRequest</p>
+     */
     public static class SendTarget extends TeaModel {
-        @NameInMap("TargetIdentity")
+        @com.aliyun.core.annotation.NameInMap("TargetIdentity")
         private String targetIdentity;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private SendTarget(Builder builder) {
@@ -133,6 +144,14 @@ public class PushNotificationsRequest extends Request {
             private String targetIdentity; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SendTarget model) {
+                this.targetIdentity = model.targetIdentity;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * TargetIdentity.
              */
@@ -156,30 +175,36 @@ public class PushNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PushNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>PushNotificationsRequest</p>
+     */
     public static class NotificationUnicastRequest extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("IsDebug")
+        @com.aliyun.core.annotation.NameInMap("IsDebug")
         private Boolean isDebug;
 
-        @NameInMap("MessageTemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MessageTemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String messageTemplateId;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("PlaceHolder")
-        private java.util.Map < String, String > placeHolder;
+        @com.aliyun.core.annotation.NameInMap("PlaceHolder")
+        private java.util.Map<String, String> placeHolder;
 
-        @NameInMap("SendTarget")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SendTarget")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SendTarget sendTarget;
 
         private NotificationUnicastRequest(Builder builder) {
@@ -238,7 +263,7 @@ public class PushNotificationsRequest extends Request {
         /**
          * @return placeHolder
          */
-        public java.util.Map < String, String > getPlaceHolder() {
+        public java.util.Map<String, String> getPlaceHolder() {
             return this.placeHolder;
         }
 
@@ -255,11 +280,27 @@ public class PushNotificationsRequest extends Request {
             private Boolean isDebug; 
             private String messageTemplateId; 
             private String organizationId; 
-            private java.util.Map < String, String > placeHolder; 
+            private java.util.Map<String, String> placeHolder; 
             private SendTarget sendTarget; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotificationUnicastRequest model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.isDebug = model.isDebug;
+                this.messageTemplateId = model.messageTemplateId;
+                this.organizationId = model.organizationId;
+                this.placeHolder = model.placeHolder;
+                this.sendTarget = model.sendTarget;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apk包名</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -267,7 +308,10 @@ public class PushNotificationsRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -283,7 +327,10 @@ public class PushNotificationsRequest extends Request {
             }
 
             /**
-             * MessageTemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2iU81*****G9elJ</p>
              */
             public Builder messageTemplateId(String messageTemplateId) {
                 this.messageTemplateId = messageTemplateId;
@@ -301,13 +348,13 @@ public class PushNotificationsRequest extends Request {
             /**
              * PlaceHolder.
              */
-            public Builder placeHolder(java.util.Map < String, String > placeHolder) {
+            public Builder placeHolder(java.util.Map<String, String> placeHolder) {
                 this.placeHolder = placeHolder;
                 return this;
             }
 
             /**
-             * SendTarget.
+             * <p>This parameter is required.</p>
              */
             public Builder sendTarget(SendTarget sendTarget) {
                 this.sendTarget = sendTarget;
@@ -321,6 +368,12 @@ public class PushNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PushNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>PushNotificationsRequest</p>
+     */
     public static class TenantInfo extends TeaModel {
         private TenantInfo(Builder builder) {
         }
@@ -334,6 +387,12 @@ public class PushNotificationsRequest extends Request {
         }
 
         public static final class Builder {
+
+            private Builder() {
+            } 
+
+            private Builder(TenantInfo model) {
+            } 
 
             public TenantInfo build() {
                 return new TenantInfo(this);

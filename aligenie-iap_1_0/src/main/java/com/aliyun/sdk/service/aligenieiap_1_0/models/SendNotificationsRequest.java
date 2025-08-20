@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendNotificationsRequest} extends {@link RequestModel}
  *
  * <p>SendNotificationsRequest</p>
  */
 public class SendNotificationsRequest extends Request {
-    @Body
-    @NameInMap("DeviceInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DeviceInfo deviceInfo;
 
-    @Body
-    @NameInMap("NotificationUnicastRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotificationUnicastRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NotificationUnicastRequest notificationUnicastRequest;
 
-    @Body
-    @NameInMap("TenantInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantInfo")
     private TenantInfo tenantInfo;
 
-    @Body
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private SendNotificationsRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class SendNotificationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,7 @@ public class SendNotificationsRequest extends Request {
         } 
 
         /**
-         * DeviceInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceInfo(DeviceInfo deviceInfo) {
             String deviceInfoShrink = shrink(deviceInfo, "DeviceInfo", "json");
@@ -109,7 +114,7 @@ public class SendNotificationsRequest extends Request {
         }
 
         /**
-         * NotificationUnicastRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder notificationUnicastRequest(NotificationUnicastRequest notificationUnicastRequest) {
             String notificationUnicastRequestShrink = shrink(notificationUnicastRequest, "NotificationUnicastRequest", "json");
@@ -129,7 +134,7 @@ public class SendNotificationsRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -145,24 +150,30 @@ public class SendNotificationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SendNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>SendNotificationsRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private DeviceInfo(Builder builder) {
@@ -223,8 +234,22 @@ public class SendNotificationsRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -232,7 +257,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -240,7 +268,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAFE****ce3ej=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -248,7 +279,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;
@@ -270,6 +304,12 @@ public class SendNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>SendNotificationsRequest</p>
+     */
     public static class SendTarget extends TeaModel {
         private SendTarget(Builder builder) {
         }
@@ -284,6 +324,12 @@ public class SendNotificationsRequest extends Request {
 
         public static final class Builder {
 
+            private Builder() {
+            } 
+
+            private Builder(SendTarget model) {
+            } 
+
             public SendTarget build() {
                 return new SendTarget(this);
             } 
@@ -291,19 +337,25 @@ public class SendNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>SendNotificationsRequest</p>
+     */
     public static class NotificationUnicastRequest extends TeaModel {
-        @NameInMap("IsDebug")
+        @com.aliyun.core.annotation.NameInMap("IsDebug")
         private Boolean isDebug;
 
-        @NameInMap("MessageTemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MessageTemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String messageTemplateId;
 
-        @NameInMap("PlaceHolder")
-        private java.util.Map < String, String > placeHolder;
+        @com.aliyun.core.annotation.NameInMap("PlaceHolder")
+        private java.util.Map<String, String> placeHolder;
 
-        @NameInMap("SendTarget")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SendTarget")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SendTarget sendTarget;
 
         private NotificationUnicastRequest(Builder builder) {
@@ -338,7 +390,7 @@ public class SendNotificationsRequest extends Request {
         /**
          * @return placeHolder
          */
-        public java.util.Map < String, String > getPlaceHolder() {
+        public java.util.Map<String, String> getPlaceHolder() {
             return this.placeHolder;
         }
 
@@ -352,8 +404,18 @@ public class SendNotificationsRequest extends Request {
         public static final class Builder {
             private Boolean isDebug; 
             private String messageTemplateId; 
-            private java.util.Map < String, String > placeHolder; 
+            private java.util.Map<String, String> placeHolder; 
             private SendTarget sendTarget; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationUnicastRequest model) {
+                this.isDebug = model.isDebug;
+                this.messageTemplateId = model.messageTemplateId;
+                this.placeHolder = model.placeHolder;
+                this.sendTarget = model.sendTarget;
+            } 
 
             /**
              * IsDebug.
@@ -364,7 +426,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * MessageTemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2iU81*****G9elJ</p>
              */
             public Builder messageTemplateId(String messageTemplateId) {
                 this.messageTemplateId = messageTemplateId;
@@ -374,13 +439,13 @@ public class SendNotificationsRequest extends Request {
             /**
              * PlaceHolder.
              */
-            public Builder placeHolder(java.util.Map < String, String > placeHolder) {
+            public Builder placeHolder(java.util.Map<String, String> placeHolder) {
                 this.placeHolder = placeHolder;
                 return this;
             }
 
             /**
-             * SendTarget.
+             * <p>This parameter is required.</p>
              */
             public Builder sendTarget(SendTarget sendTarget) {
                 this.sendTarget = sendTarget;
@@ -394,6 +459,12 @@ public class SendNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>SendNotificationsRequest</p>
+     */
     public static class TenantInfo extends TeaModel {
         private TenantInfo(Builder builder) {
         }
@@ -408,6 +479,12 @@ public class SendNotificationsRequest extends Request {
 
         public static final class Builder {
 
+            private Builder() {
+            } 
+
+            private Builder(TenantInfo model) {
+            } 
+
             public TenantInfo build() {
                 return new TenantInfo(this);
             } 
@@ -415,24 +492,30 @@ public class SendNotificationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendNotificationsRequest} extends {@link TeaModel}
+     *
+     * <p>SendNotificationsRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -493,8 +576,22 @@ public class SendNotificationsRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -502,7 +599,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -510,7 +610,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -518,7 +621,10 @@ public class SendNotificationsRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

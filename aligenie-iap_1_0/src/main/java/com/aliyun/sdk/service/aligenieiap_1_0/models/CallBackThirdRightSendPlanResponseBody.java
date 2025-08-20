@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallBackThirdRightSendPlanResponseBody} extends {@link TeaModel}
  *
  * <p>CallBackThirdRightSendPlanResponseBody</p>
  */
 public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private String retCode;
 
-    @NameInMap("RetMsg")
+    @com.aliyun.core.annotation.NameInMap("RetMsg")
     private String retMsg;
 
-    @NameInMap("RetValue")
+    @com.aliyun.core.annotation.NameInMap("RetValue")
     private Boolean retValue;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private CallBackThirdRightSendPlanResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
 
     public static CallBackThirdRightSendPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
         private String retMsg; 
         private Boolean retValue; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CallBackThirdRightSendPlanResponseBody model) {
+            this.retCode = model.retCode;
+            this.retMsg = model.retMsg;
+            this.retValue = model.retValue;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RetCode.

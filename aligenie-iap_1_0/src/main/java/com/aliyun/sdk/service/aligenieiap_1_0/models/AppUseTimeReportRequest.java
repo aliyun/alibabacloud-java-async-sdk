@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppUseTimeReportRequest} extends {@link RequestModel}
  *
  * <p>AppUseTimeReportRequest</p>
  */
 public class AppUseTimeReportRequest extends Request {
-    @Body
-    @NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
     private DeviceInfo deviceInfo;
 
-    @Body
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private Payload payload;
 
-    @Body
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private AppUseTimeReportRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class AppUseTimeReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +108,7 @@ public class AppUseTimeReportRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -119,20 +124,26 @@ public class AppUseTimeReportRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AppUseTimeReportRequest} extends {@link TeaModel}
+     *
+     * <p>AppUseTimeReportRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
         private String encodeKey;
 
-        @NameInMap("EncodeType")
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
         private String encodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdType")
+        @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private DeviceInfo(Builder builder) {
@@ -193,6 +204,17 @@ public class AppUseTimeReportRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
              * EncodeKey.
              */
@@ -240,32 +262,38 @@ public class AppUseTimeReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AppUseTimeReportRequest} extends {@link TeaModel}
+     *
+     * <p>AppUseTimeReportRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Action")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Action")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String action;
 
-        @NameInMap("IsPrivilege")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsPrivilege")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer isPrivilege;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer resourceType;
 
-        @NameInMap("StepCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StepCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String stepCode;
 
-        @NameInMap("VipType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VipType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer vipType;
 
-        @NameInMap("originUuid")
+        @com.aliyun.core.annotation.NameInMap("originUuid")
         private String originUuid;
 
         private Payload(Builder builder) {
@@ -344,8 +372,24 @@ public class AppUseTimeReportRequest extends Request {
             private Integer vipType; 
             private String originUuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.action = model.action;
+                this.isPrivilege = model.isPrivilege;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.stepCode = model.stepCode;
+                this.vipType = model.vipType;
+                this.originUuid = model.originUuid;
+            } 
+
             /**
-             * Action.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -353,7 +397,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * IsPrivilege.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPrivilege(Integer isPrivilege) {
                 this.isPrivilege = isPrivilege;
@@ -361,7 +408,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -369,7 +419,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceType(Integer resourceType) {
                 this.resourceType = resourceType;
@@ -377,7 +430,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * StepCode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder stepCode(String stepCode) {
                 this.stepCode = stepCode;
@@ -385,7 +441,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * VipType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vipType(Integer vipType) {
                 this.vipType = vipType;
@@ -407,24 +466,30 @@ public class AppUseTimeReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AppUseTimeReportRequest} extends {@link TeaModel}
+     *
+     * <p>AppUseTimeReportRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -485,8 +550,22 @@ public class AppUseTimeReportRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**45</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -494,7 +573,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACKAGE_NAME</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -502,7 +584,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -510,7 +595,10 @@ public class AppUseTimeReportRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

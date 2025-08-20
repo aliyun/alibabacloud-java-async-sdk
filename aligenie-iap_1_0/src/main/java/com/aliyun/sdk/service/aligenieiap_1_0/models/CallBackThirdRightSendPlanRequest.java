@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieiap_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallBackThirdRightSendPlanRequest} extends {@link RequestModel}
  *
  * <p>CallBackThirdRightSendPlanRequest</p>
  */
 public class CallBackThirdRightSendPlanRequest extends Request {
-    @Query
-    @NameInMap("BizGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizGroup")
     private String bizGroup;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("CardType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardType")
     private Integer cardType;
 
-    @Query
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @Query
-    @NameInMap("ExtendInfo")
-    private java.util.Map < String, ? > extendInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
+    private java.util.Map<String, ?> extendInfo;
 
-    @Query
-    @NameInMap("GenieOpenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenieOpenId")
     private String genieOpenId;
 
-    @Query
-    @NameInMap("ReceiveStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReceiveStatus")
     private Integer receiveStatus;
 
-    @Query
-    @NameInMap("Sn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
-    @Query
-    @NameInMap("SupplierId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupplierId")
     private Long supplierId;
 
     private CallBackThirdRightSendPlanRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class CallBackThirdRightSendPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -105,7 +110,7 @@ public class CallBackThirdRightSendPlanRequest extends Request {
     /**
      * @return extendInfo
      */
-    public java.util.Map < String, ? > getExtendInfo() {
+    public java.util.Map<String, ?> getExtendInfo() {
         return this.extendInfo;
     }
 
@@ -142,7 +147,7 @@ public class CallBackThirdRightSendPlanRequest extends Request {
         private String bizType; 
         private Integer cardType; 
         private String errorMsg; 
-        private java.util.Map < String, ? > extendInfo; 
+        private java.util.Map<String, ?> extendInfo; 
         private String genieOpenId; 
         private Integer receiveStatus; 
         private String sn; 
@@ -204,7 +209,7 @@ public class CallBackThirdRightSendPlanRequest extends Request {
         /**
          * ExtendInfo.
          */
-        public Builder extendInfo(java.util.Map < String, ? > extendInfo) {
+        public Builder extendInfo(java.util.Map<String, ?> extendInfo) {
             String extendInfoShrink = shrink(extendInfo, "ExtendInfo", "json");
             this.putQueryParameter("ExtendInfo", extendInfoShrink);
             this.extendInfo = extendInfo;
