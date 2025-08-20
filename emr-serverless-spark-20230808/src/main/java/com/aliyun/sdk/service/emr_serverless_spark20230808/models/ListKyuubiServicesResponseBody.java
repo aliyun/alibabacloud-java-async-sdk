@@ -110,6 +110,9 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kyuubiConfigs")
         private String kyuubiConfigs;
 
+        @com.aliyun.core.annotation.NameInMap("kyuubiReleaseVersion")
+        private String kyuubiReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("kyuubiServiceId")
         private String kyuubiServiceId;
 
@@ -143,6 +146,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.innerEndpoint = builder.innerEndpoint;
             this.kyuubiConfigs = builder.kyuubiConfigs;
+            this.kyuubiReleaseVersion = builder.kyuubiReleaseVersion;
             this.kyuubiServiceId = builder.kyuubiServiceId;
             this.name = builder.name;
             this.publicEndpoint = builder.publicEndpoint;
@@ -195,6 +199,13 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
          */
         public String getKyuubiConfigs() {
             return this.kyuubiConfigs;
+        }
+
+        /**
+         * @return kyuubiReleaseVersion
+         */
+        public String getKyuubiReleaseVersion() {
+            return this.kyuubiReleaseVersion;
         }
 
         /**
@@ -266,6 +277,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             private String creator; 
             private String innerEndpoint; 
             private String kyuubiConfigs; 
+            private String kyuubiReleaseVersion; 
             private String kyuubiServiceId; 
             private String name; 
             private String publicEndpoint; 
@@ -285,6 +297,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
                 this.creator = model.creator;
                 this.innerEndpoint = model.innerEndpoint;
                 this.kyuubiConfigs = model.kyuubiConfigs;
+                this.kyuubiReleaseVersion = model.kyuubiReleaseVersion;
                 this.kyuubiServiceId = model.kyuubiServiceId;
                 this.name = model.name;
                 this.publicEndpoint = model.publicEndpoint;
@@ -333,6 +346,14 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
              */
             public Builder kyuubiConfigs(String kyuubiConfigs) {
                 this.kyuubiConfigs = kyuubiConfigs;
+                return this;
+            }
+
+            /**
+             * kyuubiReleaseVersion.
+             */
+            public Builder kyuubiReleaseVersion(String kyuubiReleaseVersion) {
+                this.kyuubiReleaseVersion = kyuubiReleaseVersion;
                 return this;
             }
 

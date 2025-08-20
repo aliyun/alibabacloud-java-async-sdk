@@ -34,6 +34,10 @@ public class CreateSessionClusterRequest extends Request {
     private AutoStopConfiguration autoStopConfiguration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
     private String displayReleaseVersion;
 
@@ -75,6 +79,7 @@ public class CreateSessionClusterRequest extends Request {
         this.applicationConfigs = builder.applicationConfigs;
         this.autoStartConfiguration = builder.autoStartConfiguration;
         this.autoStopConfiguration = builder.autoStopConfiguration;
+        this.clientToken = builder.clientToken;
         this.displayReleaseVersion = builder.displayReleaseVersion;
         this.envId = builder.envId;
         this.fusion = builder.fusion;
@@ -125,6 +130,13 @@ public class CreateSessionClusterRequest extends Request {
      */
     public AutoStopConfiguration getAutoStopConfiguration() {
         return this.autoStopConfiguration;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -195,6 +207,7 @@ public class CreateSessionClusterRequest extends Request {
         private java.util.List<ApplicationConfigs> applicationConfigs; 
         private AutoStartConfiguration autoStartConfiguration; 
         private AutoStopConfiguration autoStopConfiguration; 
+        private String clientToken; 
         private String displayReleaseVersion; 
         private String envId; 
         private Boolean fusion; 
@@ -215,6 +228,7 @@ public class CreateSessionClusterRequest extends Request {
             this.applicationConfigs = request.applicationConfigs;
             this.autoStartConfiguration = request.autoStartConfiguration;
             this.autoStopConfiguration = request.autoStopConfiguration;
+            this.clientToken = request.clientToken;
             this.displayReleaseVersion = request.displayReleaseVersion;
             this.envId = request.envId;
             this.fusion = request.fusion;
@@ -266,6 +280,15 @@ public class CreateSessionClusterRequest extends Request {
         public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
             this.putBodyParameter("autoStopConfiguration", autoStopConfiguration);
             this.autoStopConfiguration = autoStopConfiguration;
+            return this;
+        }
+
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class ListJobRunsRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("applicationConfigs")
+    private String applicationConfigs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
@@ -67,6 +71,10 @@ public class ListJobRunsRequest extends Request {
     private String resourceQueueId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("runtimeConfigs")
+    private String runtimeConfigs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startTime")
     private StartTime startTime;
 
@@ -81,6 +89,7 @@ public class ListJobRunsRequest extends Request {
     private ListJobRunsRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.applicationConfigs = builder.applicationConfigs;
         this.creator = builder.creator;
         this.endTime = builder.endTime;
         this.isWorkflow = builder.isWorkflow;
@@ -92,6 +101,7 @@ public class ListJobRunsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.resourceQueueId = builder.resourceQueueId;
+        this.runtimeConfigs = builder.runtimeConfigs;
         this.startTime = builder.startTime;
         this.states = builder.states;
         this.tags = builder.tags;
@@ -115,6 +125,13 @@ public class ListJobRunsRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return applicationConfigs
+     */
+    public String getApplicationConfigs() {
+        return this.applicationConfigs;
     }
 
     /**
@@ -195,6 +212,13 @@ public class ListJobRunsRequest extends Request {
     }
 
     /**
+     * @return runtimeConfigs
+     */
+    public String getRuntimeConfigs() {
+        return this.runtimeConfigs;
+    }
+
+    /**
      * @return startTime
      */
     public StartTime getStartTime() {
@@ -217,6 +241,7 @@ public class ListJobRunsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListJobRunsRequest, Builder> {
         private String workspaceId; 
+        private String applicationConfigs; 
         private String creator; 
         private EndTime endTime; 
         private String isWorkflow; 
@@ -228,6 +253,7 @@ public class ListJobRunsRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String resourceQueueId; 
+        private String runtimeConfigs; 
         private StartTime startTime; 
         private java.util.List<String> states; 
         private java.util.List<Tags> tags; 
@@ -239,6 +265,7 @@ public class ListJobRunsRequest extends Request {
         private Builder(ListJobRunsRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.applicationConfigs = request.applicationConfigs;
             this.creator = request.creator;
             this.endTime = request.endTime;
             this.isWorkflow = request.isWorkflow;
@@ -250,6 +277,7 @@ public class ListJobRunsRequest extends Request {
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.resourceQueueId = request.resourceQueueId;
+            this.runtimeConfigs = request.runtimeConfigs;
             this.startTime = request.startTime;
             this.states = request.states;
             this.tags = request.tags;
@@ -265,6 +293,15 @@ public class ListJobRunsRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * applicationConfigs.
+         */
+        public Builder applicationConfigs(String applicationConfigs) {
+            this.putQueryParameter("applicationConfigs", applicationConfigs);
+            this.applicationConfigs = applicationConfigs;
             return this;
         }
 
@@ -392,6 +429,15 @@ public class ListJobRunsRequest extends Request {
         public Builder resourceQueueId(String resourceQueueId) {
             this.putQueryParameter("resourceQueueId", resourceQueueId);
             this.resourceQueueId = resourceQueueId;
+            return this;
+        }
+
+        /**
+         * runtimeConfigs.
+         */
+        public Builder runtimeConfigs(String runtimeConfigs) {
+            this.putQueryParameter("runtimeConfigs", runtimeConfigs);
+            this.runtimeConfigs = runtimeConfigs;
             return this;
         }
 

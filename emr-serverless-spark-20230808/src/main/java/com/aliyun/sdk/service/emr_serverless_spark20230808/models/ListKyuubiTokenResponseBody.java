@@ -95,6 +95,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
      * <p>ListKyuubiTokenResponseBody</p>
      */
     public static class Tokens extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accountNames")
+        private java.util.List<String> accountNames;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
@@ -107,6 +110,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("lastUsedTime")
         private Long lastUsedTime;
 
+        @com.aliyun.core.annotation.NameInMap("memberArns")
+        private java.util.List<String> memberArns;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -117,10 +123,12 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         private String tokenId;
 
         private Tokens(Builder builder) {
+            this.accountNames = builder.accountNames;
             this.createTime = builder.createTime;
             this.createdBy = builder.createdBy;
             this.expireTime = builder.expireTime;
             this.lastUsedTime = builder.lastUsedTime;
+            this.memberArns = builder.memberArns;
             this.name = builder.name;
             this.token = builder.token;
             this.tokenId = builder.tokenId;
@@ -132,6 +140,13 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
 
         public static Tokens create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountNames
+         */
+        public java.util.List<String> getAccountNames() {
+            return this.accountNames;
         }
 
         /**
@@ -163,6 +178,13 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberArns
+         */
+        public java.util.List<String> getMemberArns() {
+            return this.memberArns;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -184,10 +206,12 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> accountNames; 
             private Long createTime; 
             private String createdBy; 
             private Long expireTime; 
             private Long lastUsedTime; 
+            private java.util.List<String> memberArns; 
             private String name; 
             private String token; 
             private String tokenId; 
@@ -196,14 +220,24 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             } 
 
             private Builder(Tokens model) {
+                this.accountNames = model.accountNames;
                 this.createTime = model.createTime;
                 this.createdBy = model.createdBy;
                 this.expireTime = model.expireTime;
                 this.lastUsedTime = model.lastUsedTime;
+                this.memberArns = model.memberArns;
                 this.name = model.name;
                 this.token = model.token;
                 this.tokenId = model.tokenId;
             } 
+
+            /**
+             * accountNames.
+             */
+            public Builder accountNames(java.util.List<String> accountNames) {
+                this.accountNames = accountNames;
+                return this;
+            }
 
             /**
              * createTime.
@@ -234,6 +268,14 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
+                return this;
+            }
+
+            /**
+             * memberArns.
+             */
+            public Builder memberArns(java.util.List<String> memberArns) {
+                this.memberArns = memberArns;
                 return this;
             }
 

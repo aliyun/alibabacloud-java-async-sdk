@@ -182,6 +182,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("exitReason")
+        private String exitReason;
+
         @com.aliyun.core.annotation.NameInMap("latestSqlStatementStatus")
         private String latestSqlStatementStatus;
 
@@ -208,6 +211,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             this.applicationName = builder.applicationName;
             this.cuHours = builder.cuHours;
             this.endTime = builder.endTime;
+            this.exitReason = builder.exitReason;
             this.latestSqlStatementStatus = builder.latestSqlStatementStatus;
             this.mbSeconds = builder.mbSeconds;
             this.resourceQueueId = builder.resourceQueueId;
@@ -251,6 +255,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return exitReason
+         */
+        public String getExitReason() {
+            return this.exitReason;
         }
 
         /**
@@ -307,6 +318,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             private String applicationName; 
             private Double cuHours; 
             private String endTime; 
+            private String exitReason; 
             private String latestSqlStatementStatus; 
             private Long mbSeconds; 
             private String resourceQueueId; 
@@ -323,6 +335,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
                 this.applicationName = model.applicationName;
                 this.cuHours = model.cuHours;
                 this.endTime = model.endTime;
+                this.exitReason = model.exitReason;
                 this.latestSqlStatementStatus = model.latestSqlStatementStatus;
                 this.mbSeconds = model.mbSeconds;
                 this.resourceQueueId = model.resourceQueueId;
@@ -373,6 +386,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * exitReason.
+             */
+            public Builder exitReason(String exitReason) {
+                this.exitReason = exitReason;
                 return this;
             }
 
