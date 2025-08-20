@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CloseChatInstanceSessions  CloseChatInstanceSessionsRequest
+     * @return CloseChatInstanceSessionsResponse
+     */
+    @Override
+    public CompletableFuture<CloseChatInstanceSessionsResponse> closeChatInstanceSessions(CloseChatInstanceSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CloseChatInstanceSessions").setMethod(HttpMethod.PUT).setPathRegex("/openapi/chat/instances/{instanceId}/sessions/close").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloseChatInstanceSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloseChatInstanceSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
      * @return CreateChatSessionResponse
      */
@@ -52,6 +70,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateChatSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryChatInstanceSessions  QueryChatInstanceSessionsRequest
+     * @return QueryChatInstanceSessionsResponse
+     */
+    @Override
+    public CompletableFuture<QueryChatInstanceSessionsResponse> queryChatInstanceSessions(QueryChatInstanceSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryChatInstanceSessions").setMethod(HttpMethod.GET).setPathRegex("/openapi/chat/instances/{instanceId}/sessions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryChatInstanceSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryChatInstanceSessionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
