@@ -143,6 +143,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnchorUnionId")
         private String anchorUnionId;
 
+        @com.aliyun.core.annotation.NameInMap("AnchorUnionIdInAlibaba")
+        private String anchorUnionIdInAlibaba;
+
         @com.aliyun.core.annotation.NameInMap("AnchorUserId")
         private String anchorUserId;
 
@@ -164,6 +167,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private LiveList(Builder builder) {
             this.anchorNickname = builder.anchorNickname;
             this.anchorUnionId = builder.anchorUnionId;
+            this.anchorUnionIdInAlibaba = builder.anchorUnionIdInAlibaba;
             this.anchorUserId = builder.anchorUserId;
             this.liveEndTime = builder.liveEndTime;
             this.liveStartTime = builder.liveStartTime;
@@ -192,6 +196,13 @@ public class GetOrgLiveListResponseBody extends TeaModel {
          */
         public String getAnchorUnionId() {
             return this.anchorUnionId;
+        }
+
+        /**
+         * @return anchorUnionIdInAlibaba
+         */
+        public String getAnchorUnionIdInAlibaba() {
+            return this.anchorUnionIdInAlibaba;
         }
 
         /**
@@ -239,6 +250,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         public static final class Builder {
             private String anchorNickname; 
             private String anchorUnionId; 
+            private String anchorUnionIdInAlibaba; 
             private String anchorUserId; 
             private Long liveEndTime; 
             private Long liveStartTime; 
@@ -252,6 +264,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private Builder(LiveList model) {
                 this.anchorNickname = model.anchorNickname;
                 this.anchorUnionId = model.anchorUnionId;
+                this.anchorUnionIdInAlibaba = model.anchorUnionIdInAlibaba;
                 this.anchorUserId = model.anchorUserId;
                 this.liveEndTime = model.liveEndTime;
                 this.liveStartTime = model.liveStartTime;
@@ -273,6 +286,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
              */
             public Builder anchorUnionId(String anchorUnionId) {
                 this.anchorUnionId = anchorUnionId;
+                return this;
+            }
+
+            /**
+             * AnchorUnionIdInAlibaba.
+             */
+            public Builder anchorUnionIdInAlibaba(String anchorUnionIdInAlibaba) {
+                this.anchorUnionIdInAlibaba = anchorUnionIdInAlibaba;
                 return this;
             }
 
@@ -482,6 +503,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnchorUnionId")
         private String anchorUnionId;
 
+        @com.aliyun.core.annotation.NameInMap("AnchorUnionIdInAlibaba")
+        private String anchorUnionIdInAlibaba;
+
         @com.aliyun.core.annotation.NameInMap("AnchorUserId")
         private String anchorUserId;
 
@@ -500,6 +524,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private UpdateLiveLiveList(Builder builder) {
             this.anchorNickname = builder.anchorNickname;
             this.anchorUnionId = builder.anchorUnionId;
+            this.anchorUnionIdInAlibaba = builder.anchorUnionIdInAlibaba;
             this.anchorUserId = builder.anchorUserId;
             this.liveEndTime = builder.liveEndTime;
             this.liveStartTime = builder.liveStartTime;
@@ -527,6 +552,13 @@ public class GetOrgLiveListResponseBody extends TeaModel {
          */
         public String getAnchorUnionId() {
             return this.anchorUnionId;
+        }
+
+        /**
+         * @return anchorUnionIdInAlibaba
+         */
+        public String getAnchorUnionIdInAlibaba() {
+            return this.anchorUnionIdInAlibaba;
         }
 
         /**
@@ -567,6 +599,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         public static final class Builder {
             private String anchorNickname; 
             private String anchorUnionId; 
+            private String anchorUnionIdInAlibaba; 
             private String anchorUserId; 
             private Long liveEndTime; 
             private Long liveStartTime; 
@@ -579,6 +612,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private Builder(UpdateLiveLiveList model) {
                 this.anchorNickname = model.anchorNickname;
                 this.anchorUnionId = model.anchorUnionId;
+                this.anchorUnionIdInAlibaba = model.anchorUnionIdInAlibaba;
                 this.anchorUserId = model.anchorUserId;
                 this.liveEndTime = model.liveEndTime;
                 this.liveStartTime = model.liveStartTime;
@@ -599,6 +633,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
              */
             public Builder anchorUnionId(String anchorUnionId) {
                 this.anchorUnionId = anchorUnionId;
+                return this;
+            }
+
+            /**
+             * AnchorUnionIdInAlibaba.
+             */
+            public Builder anchorUnionIdInAlibaba(String anchorUnionIdInAlibaba) {
+                this.anchorUnionIdInAlibaba = anchorUnionIdInAlibaba;
                 return this;
             }
 
