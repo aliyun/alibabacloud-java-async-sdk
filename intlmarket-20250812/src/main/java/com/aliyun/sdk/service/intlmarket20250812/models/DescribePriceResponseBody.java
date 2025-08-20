@@ -392,6 +392,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Long canPromFee;
 
+        @com.aliyun.core.annotation.NameInMap("CouponDesc")
+        private String couponDesc;
+
         @com.aliyun.core.annotation.NameInMap("CouponName")
         private String couponName;
 
@@ -409,6 +412,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
         private Coupons(Builder builder) {
             this.canPromFee = builder.canPromFee;
+            this.couponDesc = builder.couponDesc;
             this.couponName = builder.couponName;
             this.couponOptionCode = builder.couponOptionCode;
             this.couponOptionNo = builder.couponOptionNo;
@@ -429,6 +433,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Long getCanPromFee() {
             return this.canPromFee;
+        }
+
+        /**
+         * @return couponDesc
+         */
+        public String getCouponDesc() {
+            return this.couponDesc;
         }
 
         /**
@@ -468,6 +479,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long canPromFee; 
+            private String couponDesc; 
             private String couponName; 
             private String couponOptionCode; 
             private String couponOptionNo; 
@@ -479,6 +491,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
             private Builder(Coupons model) {
                 this.canPromFee = model.canPromFee;
+                this.couponDesc = model.couponDesc;
                 this.couponName = model.couponName;
                 this.couponOptionCode = model.couponOptionCode;
                 this.couponOptionNo = model.couponOptionNo;
@@ -491,6 +504,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder canPromFee(Long canPromFee) {
                 this.canPromFee = canPromFee;
+                return this;
+            }
+
+            /**
+             * CouponDesc.
+             */
+            public Builder couponDesc(String couponDesc) {
+                this.couponDesc = couponDesc;
                 return this;
             }
 
