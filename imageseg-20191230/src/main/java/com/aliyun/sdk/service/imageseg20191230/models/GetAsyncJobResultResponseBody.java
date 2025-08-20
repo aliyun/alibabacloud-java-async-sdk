@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imageseg20191230.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncJobResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncJobResultResponseBody</p>
@@ -30,6 +36,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -47,6 +57,14 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsyncJobResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -70,6 +88,12 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsyncJobResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsyncJobResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -143,6 +167,17 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
             private String jobId; 
             private String result; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.jobId = model.jobId;
+                this.result = model.result;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorCode.
