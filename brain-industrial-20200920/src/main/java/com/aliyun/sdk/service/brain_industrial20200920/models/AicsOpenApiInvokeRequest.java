@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AicsOpenApiInvokeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    private String jobId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
@@ -36,6 +40,7 @@ public class AicsOpenApiInvokeRequest extends Request {
 
     private AicsOpenApiInvokeRequest(Builder builder) {
         super(builder);
+        this.jobId = builder.jobId;
         this.nodeId = builder.nodeId;
         this.param = builder.param;
         this.serviceId = builder.serviceId;
@@ -53,6 +58,13 @@ public class AicsOpenApiInvokeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -84,6 +96,7 @@ public class AicsOpenApiInvokeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AicsOpenApiInvokeRequest, Builder> {
+        private String jobId; 
         private String nodeId; 
         private java.util.Map<String, ?> param; 
         private String serviceId; 
@@ -95,11 +108,21 @@ public class AicsOpenApiInvokeRequest extends Request {
 
         private Builder(AicsOpenApiInvokeRequest request) {
             super(request);
+            this.jobId = request.jobId;
             this.nodeId = request.nodeId;
             this.param = request.param;
             this.serviceId = request.serviceId;
             this.type = request.type;
         } 
+
+        /**
+         * JobId.
+         */
+        public Builder jobId(String jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
+            return this;
+        }
 
         /**
          * NodeId.
