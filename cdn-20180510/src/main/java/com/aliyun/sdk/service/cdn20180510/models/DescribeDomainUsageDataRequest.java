@@ -44,6 +44,10 @@ public class DescribeDomainUsageDataRequest extends Request {
     private String interval;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
+    private String serviceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -60,6 +64,7 @@ public class DescribeDomainUsageDataRequest extends Request {
         this.endTime = builder.endTime;
         this.field = builder.field;
         this.interval = builder.interval;
+        this.serviceType = builder.serviceType;
         this.startTime = builder.startTime;
         this.type = builder.type;
     }
@@ -120,6 +125,13 @@ public class DescribeDomainUsageDataRequest extends Request {
     }
 
     /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -140,6 +152,7 @@ public class DescribeDomainUsageDataRequest extends Request {
         private String endTime; 
         private String field; 
         private String interval; 
+        private String serviceType; 
         private String startTime; 
         private String type; 
 
@@ -155,6 +168,7 @@ public class DescribeDomainUsageDataRequest extends Request {
             this.endTime = request.endTime;
             this.field = request.field;
             this.interval = request.interval;
+            this.serviceType = request.serviceType;
             this.startTime = request.startTime;
             this.type = request.type;
         } 
@@ -268,6 +282,15 @@ public class DescribeDomainUsageDataRequest extends Request {
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
             this.interval = interval;
+            return this;
+        }
+
+        /**
+         * ServiceType.
+         */
+        public Builder serviceType(String serviceType) {
+            this.putQueryParameter("ServiceType", serviceType);
+            this.serviceType = serviceType;
             return this;
         }
 
