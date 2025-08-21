@@ -23,11 +23,17 @@ public class WafSiteSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AddSecurityHeaders")
     private AddSecurityHeaders addSecurityHeaders;
 
+    @com.aliyun.core.annotation.NameInMap("BandwidthAbuseProtection")
+    private BandwidthAbuseProtection bandwidthAbuseProtection;
+
     @com.aliyun.core.annotation.NameInMap("BotManagement")
     private BotManagement botManagement;
 
     @com.aliyun.core.annotation.NameInMap("ClientIpIdentifier")
     private ClientIpIdentifier clientIpIdentifier;
+
+    @com.aliyun.core.annotation.NameInMap("DisableSecurityModule")
+    private DisableSecurityModule disableSecurityModule;
 
     @com.aliyun.core.annotation.NameInMap("SecurityLevel")
     private SecurityLevel securityLevel;
@@ -35,8 +41,10 @@ public class WafSiteSettings extends TeaModel {
     private WafSiteSettings(Builder builder) {
         this.addBotProtectionHeaders = builder.addBotProtectionHeaders;
         this.addSecurityHeaders = builder.addSecurityHeaders;
+        this.bandwidthAbuseProtection = builder.bandwidthAbuseProtection;
         this.botManagement = builder.botManagement;
         this.clientIpIdentifier = builder.clientIpIdentifier;
+        this.disableSecurityModule = builder.disableSecurityModule;
         this.securityLevel = builder.securityLevel;
     }
 
@@ -67,6 +75,13 @@ public class WafSiteSettings extends TeaModel {
     }
 
     /**
+     * @return bandwidthAbuseProtection
+     */
+    public BandwidthAbuseProtection getBandwidthAbuseProtection() {
+        return this.bandwidthAbuseProtection;
+    }
+
+    /**
      * @return botManagement
      */
     public BotManagement getBotManagement() {
@@ -81,6 +96,13 @@ public class WafSiteSettings extends TeaModel {
     }
 
     /**
+     * @return disableSecurityModule
+     */
+    public DisableSecurityModule getDisableSecurityModule() {
+        return this.disableSecurityModule;
+    }
+
+    /**
      * @return securityLevel
      */
     public SecurityLevel getSecurityLevel() {
@@ -90,8 +112,10 @@ public class WafSiteSettings extends TeaModel {
     public static final class Builder {
         private AddBotProtectionHeaders addBotProtectionHeaders; 
         private AddSecurityHeaders addSecurityHeaders; 
+        private BandwidthAbuseProtection bandwidthAbuseProtection; 
         private BotManagement botManagement; 
         private ClientIpIdentifier clientIpIdentifier; 
+        private DisableSecurityModule disableSecurityModule; 
         private SecurityLevel securityLevel; 
 
         private Builder() {
@@ -100,8 +124,10 @@ public class WafSiteSettings extends TeaModel {
         private Builder(WafSiteSettings model) {
             this.addBotProtectionHeaders = model.addBotProtectionHeaders;
             this.addSecurityHeaders = model.addSecurityHeaders;
+            this.bandwidthAbuseProtection = model.bandwidthAbuseProtection;
             this.botManagement = model.botManagement;
             this.clientIpIdentifier = model.clientIpIdentifier;
+            this.disableSecurityModule = model.disableSecurityModule;
             this.securityLevel = model.securityLevel;
         } 
 
@@ -122,6 +148,14 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
+         * BandwidthAbuseProtection.
+         */
+        public Builder bandwidthAbuseProtection(BandwidthAbuseProtection bandwidthAbuseProtection) {
+            this.bandwidthAbuseProtection = bandwidthAbuseProtection;
+            return this;
+        }
+
+        /**
          * BotManagement.
          */
         public Builder botManagement(BotManagement botManagement) {
@@ -134,6 +168,14 @@ public class WafSiteSettings extends TeaModel {
          */
         public Builder clientIpIdentifier(ClientIpIdentifier clientIpIdentifier) {
             this.clientIpIdentifier = clientIpIdentifier;
+            return this;
+        }
+
+        /**
+         * DisableSecurityModule.
+         */
+        public Builder disableSecurityModule(DisableSecurityModule disableSecurityModule) {
+            this.disableSecurityModule = disableSecurityModule;
             return this;
         }
 
@@ -254,6 +296,102 @@ public class WafSiteSettings extends TeaModel {
 
             public AddSecurityHeaders build() {
                 return new AddSecurityHeaders(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class BandwidthAbuseProtection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private BandwidthAbuseProtection(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BandwidthAbuseProtection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandwidthAbuseProtection model) {
+                this.action = model.action;
+                this.id = model.id;
+                this.status = model.status;
+            } 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public BandwidthAbuseProtection build() {
+                return new BandwidthAbuseProtection(this);
             } 
 
         } 
@@ -800,6 +938,60 @@ public class WafSiteSettings extends TeaModel {
 
             public ClientIpIdentifier build() {
                 return new ClientIpIdentifier(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class DisableSecurityModule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private DisableSecurityModule(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DisableSecurityModule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DisableSecurityModule model) {
+                this.status = model.status;
+            } 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DisableSecurityModule build() {
+                return new DisableSecurityModule(this);
             } 
 
         } 

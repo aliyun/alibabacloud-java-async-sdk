@@ -292,6 +292,9 @@ public class GetRecordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
@@ -315,6 +318,7 @@ public class GetRecordResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.selector = builder.selector;
             this.tag = builder.tag;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.usage = builder.usage;
             this.value = builder.value;
@@ -400,6 +404,13 @@ public class GetRecordResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public Integer getType() {
@@ -438,6 +449,7 @@ public class GetRecordResponseBody extends TeaModel {
             private Integer priority; 
             private Integer selector; 
             private String tag; 
+            private java.util.Map<String, ?> tags; 
             private Integer type; 
             private Integer usage; 
             private String value; 
@@ -457,6 +469,7 @@ public class GetRecordResponseBody extends TeaModel {
                 this.priority = model.priority;
                 this.selector = model.selector;
                 this.tag = model.tag;
+                this.tags = model.tags;
                 this.type = model.type;
                 this.usage = model.usage;
                 this.value = model.value;
@@ -570,6 +583,14 @@ public class GetRecordResponseBody extends TeaModel {
              */
             public Builder tag(String tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, ?> tags) {
+                this.tags = tags;
                 return this;
             }
 
