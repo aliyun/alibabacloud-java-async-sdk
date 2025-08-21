@@ -47,6 +47,10 @@ public class RunInstancesRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -184,6 +188,7 @@ public class RunInstancesRequest extends Request {
         this.billingCycle = builder.billingCycle;
         this.carrier = builder.carrier;
         this.dataDisk = builder.dataDisk;
+        this.deletionProtection = builder.deletionProtection;
         this.ensRegionId = builder.ensRegionId;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
@@ -277,6 +282,13 @@ public class RunInstancesRequest extends Request {
      */
     public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -504,6 +516,7 @@ public class RunInstancesRequest extends Request {
         private String billingCycle; 
         private String carrier; 
         private java.util.List<DataDisk> dataDisk; 
+        private Boolean deletionProtection; 
         private String ensRegionId; 
         private String hostName; 
         private String imageId; 
@@ -549,6 +562,7 @@ public class RunInstancesRequest extends Request {
             this.billingCycle = request.billingCycle;
             this.carrier = request.carrier;
             this.dataDisk = request.dataDisk;
+            this.deletionProtection = request.deletionProtection;
             this.ensRegionId = request.ensRegionId;
             this.hostName = request.hostName;
             this.imageId = request.imageId;
@@ -681,6 +695,15 @@ public class RunInstancesRequest extends Request {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
             this.putQueryParameter("DataDisk", dataDiskShrink);
             this.dataDisk = dataDisk;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

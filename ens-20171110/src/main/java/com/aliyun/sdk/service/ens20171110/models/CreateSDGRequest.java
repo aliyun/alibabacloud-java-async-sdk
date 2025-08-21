@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSDGRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    private String billingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FromSDGId")
@@ -36,7 +44,9 @@ public class CreateSDGRequest extends Request {
 
     private CreateSDGRequest(Builder builder) {
         super(builder);
+        this.billingCycle = builder.billingCycle;
         this.description = builder.description;
+        this.diskType = builder.diskType;
         this.fromSDGId = builder.fromSDGId;
         this.instanceId = builder.instanceId;
         this.size = builder.size;
@@ -56,10 +66,24 @@ public class CreateSDGRequest extends Request {
     }
 
     /**
+     * @return billingCycle
+     */
+    public String getBillingCycle() {
+        return this.billingCycle;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -84,7 +108,9 @@ public class CreateSDGRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSDGRequest, Builder> {
+        private String billingCycle; 
         private String description; 
+        private String diskType; 
         private String fromSDGId; 
         private String instanceId; 
         private String size; 
@@ -95,11 +121,22 @@ public class CreateSDGRequest extends Request {
 
         private Builder(CreateSDGRequest request) {
             super(request);
+            this.billingCycle = request.billingCycle;
             this.description = request.description;
+            this.diskType = request.diskType;
             this.fromSDGId = request.fromSDGId;
             this.instanceId = request.instanceId;
             this.size = request.size;
         } 
+
+        /**
+         * BillingCycle.
+         */
+        public Builder billingCycle(String billingCycle) {
+            this.putQueryParameter("BillingCycle", billingCycle);
+            this.billingCycle = billingCycle;
+            return this;
+        }
 
         /**
          * <p>The description of the SDG.</p>
@@ -113,6 +150,15 @@ public class CreateSDGRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

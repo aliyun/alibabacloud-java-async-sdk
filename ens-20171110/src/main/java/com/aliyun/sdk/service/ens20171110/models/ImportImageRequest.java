@@ -42,6 +42,10 @@ public class ImportImageRequest extends Request {
     private String imageName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
+    private String licenseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OSSBucket")
     private String OSSBucket;
 
@@ -64,7 +68,6 @@ public class ImportImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Platform")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
     @com.aliyun.core.annotation.Query
@@ -78,6 +81,7 @@ public class ImportImageRequest extends Request {
         this.diskDeviceMapping = builder.diskDeviceMapping;
         this.imageFormat = builder.imageFormat;
         this.imageName = builder.imageName;
+        this.licenseType = builder.licenseType;
         this.OSSBucket = builder.OSSBucket;
         this.OSSObject = builder.OSSObject;
         this.OSSRegion = builder.OSSRegion;
@@ -136,6 +140,13 @@ public class ImportImageRequest extends Request {
     }
 
     /**
+     * @return licenseType
+     */
+    public String getLicenseType() {
+        return this.licenseType;
+    }
+
+    /**
      * @return OSSBucket
      */
     public String getOSSBucket() {
@@ -190,6 +201,7 @@ public class ImportImageRequest extends Request {
         private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
         private String imageFormat; 
         private String imageName; 
+        private String licenseType; 
         private String OSSBucket; 
         private String OSSObject; 
         private String OSSRegion; 
@@ -209,6 +221,7 @@ public class ImportImageRequest extends Request {
             this.diskDeviceMapping = request.diskDeviceMapping;
             this.imageFormat = request.imageFormat;
             this.imageName = request.imageName;
+            this.licenseType = request.licenseType;
             this.OSSBucket = request.OSSBucket;
             this.OSSObject = request.OSSObject;
             this.OSSRegion = request.OSSRegion;
@@ -274,6 +287,15 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * LicenseType.
+         */
+        public Builder licenseType(String licenseType) {
+            this.putQueryParameter("LicenseType", licenseType);
+            this.licenseType = licenseType;
+            return this;
+        }
+
+        /**
          * OSSBucket.
          */
         public Builder OSSBucket(String OSSBucket) {
@@ -322,10 +344,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos</p>
+         * Platform.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);

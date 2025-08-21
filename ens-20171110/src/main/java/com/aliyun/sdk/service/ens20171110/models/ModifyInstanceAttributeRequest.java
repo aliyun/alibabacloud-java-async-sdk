@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
@@ -40,6 +44,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     private ModifyInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.deletionProtection = builder.deletionProtection;
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -58,6 +63,13 @@ public class ModifyInstanceAttributeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAttributeRequest, Builder> {
+        private Boolean deletionProtection; 
         private String hostName; 
         private String instanceId; 
         private String instanceName; 
@@ -108,12 +121,22 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         private Builder(ModifyInstanceAttributeRequest request) {
             super(request);
+            this.deletionProtection = request.deletionProtection;
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.password = request.password;
             this.userData = request.userData;
         } 
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
 
         /**
          * <p>The hostname of the Elastic Compute Service (ECS) instance. The value can be 2 to 64 characters in length. You can use periods (.) to separate the value into multiple segments. Each segment can contain letters, digits, hyphens (-), and periods. Consecutive periods or hyphens are not allowed. The name cannot start or end with a period (.) or a hyphen (-).</p>

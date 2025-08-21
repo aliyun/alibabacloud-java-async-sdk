@@ -2114,6 +2114,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
         private InstanceDataDisk dataDisk;
 
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
         @com.aliyun.core.annotation.NameInMap("Disk")
         private Integer disk;
 
@@ -2200,6 +2203,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
             this.dataDisk = builder.dataDisk;
+            this.deletionProtection = builder.deletionProtection;
             this.disk = builder.disk;
             this.ensRegionId = builder.ensRegionId;
             this.expiredTime = builder.expiredTime;
@@ -2263,6 +2267,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public InstanceDataDisk getDataDisk() {
             return this.dataDisk;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -2459,6 +2470,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String cpu; 
             private String creationTime; 
             private InstanceDataDisk dataDisk; 
+            private Boolean deletionProtection; 
             private Integer disk; 
             private String ensRegionId; 
             private String expiredTime; 
@@ -2495,6 +2507,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.cpu = model.cpu;
                 this.creationTime = model.creationTime;
                 this.dataDisk = model.dataDisk;
+                this.deletionProtection = model.deletionProtection;
                 this.disk = model.disk;
                 this.ensRegionId = model.ensRegionId;
                 this.expiredTime = model.expiredTime;
@@ -2562,6 +2575,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder dataDisk(InstanceDataDisk dataDisk) {
                 this.dataDisk = dataDisk;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 

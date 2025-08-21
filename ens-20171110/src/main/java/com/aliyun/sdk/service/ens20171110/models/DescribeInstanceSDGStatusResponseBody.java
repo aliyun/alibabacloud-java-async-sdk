@@ -176,6 +176,12 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheSize")
         private Integer cacheSize;
 
+        @com.aliyun.core.annotation.NameInMap("DiskAccessProtocol")
+        private String diskAccessProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
@@ -200,6 +206,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         private DeploymentStatus(Builder builder) {
             this.blockRwSplitSize = builder.blockRwSplitSize;
             this.cacheSize = builder.cacheSize;
+            this.diskAccessProtocol = builder.diskAccessProtocol;
+            this.diskType = builder.diskType;
             this.ensRegionId = builder.ensRegionId;
             this.instanceId = builder.instanceId;
             this.mountType = builder.mountType;
@@ -229,6 +237,20 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
          */
         public Integer getCacheSize() {
             return this.cacheSize;
+        }
+
+        /**
+         * @return diskAccessProtocol
+         */
+        public String getDiskAccessProtocol() {
+            return this.diskAccessProtocol;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
         }
 
         /**
@@ -283,6 +305,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer blockRwSplitSize; 
             private Integer cacheSize; 
+            private String diskAccessProtocol; 
+            private String diskType; 
             private String ensRegionId; 
             private String instanceId; 
             private String mountType; 
@@ -297,6 +321,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             private Builder(DeploymentStatus model) {
                 this.blockRwSplitSize = model.blockRwSplitSize;
                 this.cacheSize = model.cacheSize;
+                this.diskAccessProtocol = model.diskAccessProtocol;
+                this.diskType = model.diskType;
                 this.ensRegionId = model.ensRegionId;
                 this.instanceId = model.instanceId;
                 this.mountType = model.mountType;
@@ -319,6 +345,22 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
              */
             public Builder cacheSize(Integer cacheSize) {
                 this.cacheSize = cacheSize;
+                return this;
+            }
+
+            /**
+             * DiskAccessProtocol.
+             */
+            public Builder diskAccessProtocol(String diskAccessProtocol) {
+                this.diskAccessProtocol = diskAccessProtocol;
+                return this;
+            }
+
+            /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
                 return this;
             }
 

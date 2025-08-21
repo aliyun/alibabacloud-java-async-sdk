@@ -22,6 +22,14 @@ public class DeployInstanceSDGRequest extends Request {
     private String deploymentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskAccessProtocol")
+    private String diskAccessProtocol;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
@@ -34,6 +42,8 @@ public class DeployInstanceSDGRequest extends Request {
     private DeployInstanceSDGRequest(Builder builder) {
         super(builder);
         this.deploymentType = builder.deploymentType;
+        this.diskAccessProtocol = builder.diskAccessProtocol;
+        this.diskType = builder.diskType;
         this.instanceIds = builder.instanceIds;
         this.SDGId = builder.SDGId;
     }
@@ -59,6 +69,20 @@ public class DeployInstanceSDGRequest extends Request {
     }
 
     /**
+     * @return diskAccessProtocol
+     */
+    public String getDiskAccessProtocol() {
+        return this.diskAccessProtocol;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -74,6 +98,8 @@ public class DeployInstanceSDGRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeployInstanceSDGRequest, Builder> {
         private String deploymentType; 
+        private String diskAccessProtocol; 
+        private String diskType; 
         private java.util.List<String> instanceIds; 
         private String SDGId; 
 
@@ -84,6 +110,8 @@ public class DeployInstanceSDGRequest extends Request {
         private Builder(DeployInstanceSDGRequest request) {
             super(request);
             this.deploymentType = request.deploymentType;
+            this.diskAccessProtocol = request.diskAccessProtocol;
+            this.diskType = request.diskType;
             this.instanceIds = request.instanceIds;
             this.SDGId = request.SDGId;
         } 
@@ -97,6 +125,24 @@ public class DeployInstanceSDGRequest extends Request {
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
             this.deploymentType = deploymentType;
+            return this;
+        }
+
+        /**
+         * DiskAccessProtocol.
+         */
+        public Builder diskAccessProtocol(String diskAccessProtocol) {
+            this.putQueryParameter("DiskAccessProtocol", diskAccessProtocol);
+            this.diskAccessProtocol = diskAccessProtocol;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

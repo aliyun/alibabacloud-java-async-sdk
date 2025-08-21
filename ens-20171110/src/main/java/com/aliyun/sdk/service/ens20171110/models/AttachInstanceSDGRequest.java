@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AttachInstanceSDGRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskAccessProtocol")
+    private String diskAccessProtocol;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
@@ -33,6 +41,8 @@ public class AttachInstanceSDGRequest extends Request {
 
     private AttachInstanceSDGRequest(Builder builder) {
         super(builder);
+        this.diskAccessProtocol = builder.diskAccessProtocol;
+        this.diskType = builder.diskType;
         this.instanceIds = builder.instanceIds;
         this.loadOpt = builder.loadOpt;
         this.SDGId = builder.SDGId;
@@ -49,6 +59,20 @@ public class AttachInstanceSDGRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return diskAccessProtocol
+     */
+    public String getDiskAccessProtocol() {
+        return this.diskAccessProtocol;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -73,6 +97,8 @@ public class AttachInstanceSDGRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachInstanceSDGRequest, Builder> {
+        private String diskAccessProtocol; 
+        private String diskType; 
         private java.util.List<String> instanceIds; 
         private LoadOpt loadOpt; 
         private String SDGId; 
@@ -83,10 +109,30 @@ public class AttachInstanceSDGRequest extends Request {
 
         private Builder(AttachInstanceSDGRequest request) {
             super(request);
+            this.diskAccessProtocol = request.diskAccessProtocol;
+            this.diskType = request.diskType;
             this.instanceIds = request.instanceIds;
             this.loadOpt = request.loadOpt;
             this.SDGId = request.SDGId;
         } 
+
+        /**
+         * DiskAccessProtocol.
+         */
+        public Builder diskAccessProtocol(String diskAccessProtocol) {
+            this.putQueryParameter("DiskAccessProtocol", diskAccessProtocol);
+            this.diskAccessProtocol = diskAccessProtocol;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
+            return this;
+        }
 
         /**
          * <p>The IDs of the instances.</p>

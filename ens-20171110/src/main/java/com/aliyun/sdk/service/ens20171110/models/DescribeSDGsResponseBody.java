@@ -375,6 +375,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvaliableRegionIds")
         private java.util.List<AvaliableRegionIds> avaliableRegionIds;
 
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
+        private String billingCycle;
+
+        @com.aliyun.core.annotation.NameInMap("CreationDiskType")
+        private String creationDiskType;
+
         @com.aliyun.core.annotation.NameInMap("CreationInstanceId")
         private String creationInstanceId;
 
@@ -407,6 +413,8 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
         private SDGs(Builder builder) {
             this.avaliableRegionIds = builder.avaliableRegionIds;
+            this.billingCycle = builder.billingCycle;
+            this.creationDiskType = builder.creationDiskType;
             this.creationInstanceId = builder.creationInstanceId;
             this.creationRegionId = builder.creationRegionId;
             this.creationTime = builder.creationTime;
@@ -432,6 +440,20 @@ public class DescribeSDGsResponseBody extends TeaModel {
          */
         public java.util.List<AvaliableRegionIds> getAvaliableRegionIds() {
             return this.avaliableRegionIds;
+        }
+
+        /**
+         * @return billingCycle
+         */
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        /**
+         * @return creationDiskType
+         */
+        public String getCreationDiskType() {
+            return this.creationDiskType;
         }
 
         /**
@@ -506,6 +528,8 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvaliableRegionIds> avaliableRegionIds; 
+            private String billingCycle; 
+            private String creationDiskType; 
             private String creationInstanceId; 
             private String creationRegionId; 
             private String creationTime; 
@@ -522,6 +546,8 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
             private Builder(SDGs model) {
                 this.avaliableRegionIds = model.avaliableRegionIds;
+                this.billingCycle = model.billingCycle;
+                this.creationDiskType = model.creationDiskType;
                 this.creationInstanceId = model.creationInstanceId;
                 this.creationRegionId = model.creationRegionId;
                 this.creationTime = model.creationTime;
@@ -539,6 +565,22 @@ public class DescribeSDGsResponseBody extends TeaModel {
              */
             public Builder avaliableRegionIds(java.util.List<AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
+                return this;
+            }
+
+            /**
+             * BillingCycle.
+             */
+            public Builder billingCycle(String billingCycle) {
+                this.billingCycle = billingCycle;
+                return this;
+            }
+
+            /**
+             * CreationDiskType.
+             */
+            public Builder creationDiskType(String creationDiskType) {
+                this.creationDiskType = creationDiskType;
                 return this;
             }
 

@@ -23,6 +23,10 @@ public class PreloadRegionSDGRequest extends Request {
     private java.util.List<String> destinationRegionIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespaces")
     private java.util.List<String> namespaces;
 
@@ -39,6 +43,7 @@ public class PreloadRegionSDGRequest extends Request {
     private PreloadRegionSDGRequest(Builder builder) {
         super(builder);
         this.destinationRegionIds = builder.destinationRegionIds;
+        this.diskType = builder.diskType;
         this.namespaces = builder.namespaces;
         this.redundantNum = builder.redundantNum;
         this.SDGId = builder.SDGId;
@@ -65,6 +70,13 @@ public class PreloadRegionSDGRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return namespaces
      */
     public java.util.List<String> getNamespaces() {
@@ -87,6 +99,7 @@ public class PreloadRegionSDGRequest extends Request {
 
     public static final class Builder extends Request.Builder<PreloadRegionSDGRequest, Builder> {
         private java.util.List<String> destinationRegionIds; 
+        private String diskType; 
         private java.util.List<String> namespaces; 
         private Integer redundantNum; 
         private String SDGId; 
@@ -98,6 +111,7 @@ public class PreloadRegionSDGRequest extends Request {
         private Builder(PreloadRegionSDGRequest request) {
             super(request);
             this.destinationRegionIds = request.destinationRegionIds;
+            this.diskType = request.diskType;
             this.namespaces = request.namespaces;
             this.redundantNum = request.redundantNum;
             this.SDGId = request.SDGId;
@@ -111,6 +125,15 @@ public class PreloadRegionSDGRequest extends Request {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
             this.putQueryParameter("DestinationRegionIds", destinationRegionIdsShrink);
             this.destinationRegionIds = destinationRegionIds;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 
