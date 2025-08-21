@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class DescribeIntentResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlotInfos")
-    private java.util.List < SlotInfos> slotInfos;
+    private java.util.List<SlotInfos> slotInfos;
 
     private DescribeIntentResponseBody(Builder builder) {
         this.aliasName = builder.aliasName;
@@ -65,6 +70,10 @@ public class DescribeIntentResponseBody extends TeaModel {
 
     public static DescribeIntentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -140,7 +149,7 @@ public class DescribeIntentResponseBody extends TeaModel {
     /**
      * @return slotInfos
      */
-    public java.util.List < SlotInfos> getSlotInfos() {
+    public java.util.List<SlotInfos> getSlotInfos() {
         return this.slotInfos;
     }
 
@@ -155,7 +164,24 @@ public class DescribeIntentResponseBody extends TeaModel {
         private String modifyUserId; 
         private String modifyUserName; 
         private String requestId; 
-        private java.util.List < SlotInfos> slotInfos; 
+        private java.util.List<SlotInfos> slotInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIntentResponseBody model) {
+            this.aliasName = model.aliasName;
+            this.createTime = model.createTime;
+            this.createUserId = model.createUserId;
+            this.createUserName = model.createUserName;
+            this.intentId = model.intentId;
+            this.intentName = model.intentName;
+            this.modifyTime = model.modifyTime;
+            this.modifyUserId = model.modifyUserId;
+            this.modifyUserName = model.modifyUserName;
+            this.requestId = model.requestId;
+            this.slotInfos = model.slotInfos;
+        } 
 
         /**
          * AliasName.
@@ -240,7 +266,7 @@ public class DescribeIntentResponseBody extends TeaModel {
         /**
          * SlotInfos.
          */
-        public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
+        public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
             this.slotInfos = slotInfos;
             return this;
         }
@@ -342,6 +368,18 @@ public class DescribeIntentResponseBody extends TeaModel {
             private String name; 
             private String slotId; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlotInfos model) {
+                this.array = model.array;
+                this.encrypt = model.encrypt;
+                this.interactive = model.interactive;
+                this.name = model.name;
+                this.slotId = model.slotId;
+                this.value = model.value;
+            } 
 
             /**
              * Array.

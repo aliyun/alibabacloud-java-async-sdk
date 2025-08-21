@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,13 +55,21 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSaasPermissionGroupInfosResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -130,6 +147,15 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             private String pgEnName; 
             private String pgName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PgInfos model) {
+                this.pgCode = model.pgCode;
+                this.pgEnName = model.pgEnName;
+                this.pgName = model.pgName;
+            } 
+
             /**
              * PgCode.
              */
@@ -175,7 +201,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PgInfos")
-        private java.util.List < PgInfos> pgInfos;
+        private java.util.List<PgInfos> pgInfos;
 
         @com.aliyun.core.annotation.NameInMap("SaasCode")
         private String saasCode;
@@ -212,7 +238,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         /**
          * @return pgInfos
          */
-        public java.util.List < PgInfos> getPgInfos() {
+        public java.util.List<PgInfos> getPgInfos() {
             return this.pgInfos;
         }
 
@@ -226,8 +252,18 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public static final class Builder {
             private String enName; 
             private String name; 
-            private java.util.List < PgInfos> pgInfos; 
+            private java.util.List<PgInfos> pgInfos; 
             private String saasCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enName = model.enName;
+                this.name = model.name;
+                this.pgInfos = model.pgInfos;
+                this.saasCode = model.saasCode;
+            } 
 
             /**
              * EnName.
@@ -248,7 +284,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             /**
              * PgInfos.
              */
-            public Builder pgInfos(java.util.List < PgInfos> pgInfos) {
+            public Builder pgInfos(java.util.List<PgInfos> pgInfos) {
                 this.pgInfos = pgInfos;
                 return this;
             }

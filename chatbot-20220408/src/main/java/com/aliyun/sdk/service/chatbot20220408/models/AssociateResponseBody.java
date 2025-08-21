@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AssociateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Associate")
-    private java.util.List < Associate> associate;
+    private java.util.List<Associate> associate;
 
     @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
@@ -39,10 +44,14 @@ public class AssociateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associate
      */
-    public java.util.List < Associate> getAssociate() {
+    public java.util.List<Associate> getAssociate() {
         return this.associate;
     }
 
@@ -68,15 +77,25 @@ public class AssociateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Associate> associate; 
+        private java.util.List<Associate> associate; 
         private String messageId; 
         private String requestId; 
         private String sessionId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AssociateResponseBody model) {
+            this.associate = model.associate;
+            this.messageId = model.messageId;
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+        } 
+
         /**
          * Associate.
          */
-        public Builder associate(java.util.List < Associate> associate) {
+        public Builder associate(java.util.List<Associate> associate) {
             this.associate = associate;
             return this;
         }
@@ -154,6 +173,14 @@ public class AssociateResponseBody extends TeaModel {
         public static final class Builder {
             private String meta; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Associate model) {
+                this.meta = model.meta;
+                this.title = model.title;
+            } 
 
             /**
              * Meta.

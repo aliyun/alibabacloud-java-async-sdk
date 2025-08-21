@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class BeginSessionResponseBody extends TeaModel {
 
     public static BeginSessionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class BeginSessionResponseBody extends TeaModel {
         private String requestId; 
         private Integer silenceReplyTimeout; 
         private String welcomeMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(BeginSessionResponseBody model) {
+            this.asrMaxEndSilence = model.asrMaxEndSilence;
+            this.interruptible = model.interruptible;
+            this.requestId = model.requestId;
+            this.silenceReplyTimeout = model.silenceReplyTimeout;
+            this.welcomeMessage = model.welcomeMessage;
+        } 
 
         /**
          * AsrMaxEndSilence.

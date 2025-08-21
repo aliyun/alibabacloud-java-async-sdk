@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class UpdateIntentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +270,18 @@ public class UpdateIntentRequest extends Request {
             private String slotId; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlotInfos model) {
+                this.array = model.array;
+                this.encrypt = model.encrypt;
+                this.interactive = model.interactive;
+                this.name = model.name;
+                this.slotId = model.slotId;
+                this.value = model.value;
+            } 
+
             /**
              * Array.
              */
@@ -338,7 +355,7 @@ public class UpdateIntentRequest extends Request {
         private String intentName;
 
         @com.aliyun.core.annotation.NameInMap("SlotInfos")
-        private java.util.List < SlotInfos> slotInfos;
+        private java.util.List<SlotInfos> slotInfos;
 
         private IntentDefinition(Builder builder) {
             this.aliasName = builder.aliasName;
@@ -371,14 +388,23 @@ public class UpdateIntentRequest extends Request {
         /**
          * @return slotInfos
          */
-        public java.util.List < SlotInfos> getSlotInfos() {
+        public java.util.List<SlotInfos> getSlotInfos() {
             return this.slotInfos;
         }
 
         public static final class Builder {
             private String aliasName; 
             private String intentName; 
-            private java.util.List < SlotInfos> slotInfos; 
+            private java.util.List<SlotInfos> slotInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntentDefinition model) {
+                this.aliasName = model.aliasName;
+                this.intentName = model.intentName;
+                this.slotInfos = model.slotInfos;
+            } 
 
             /**
              * AliasName.
@@ -399,7 +425,7 @@ public class UpdateIntentRequest extends Request {
             /**
              * SlotInfos.
              */
-            public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
+            public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;
                 return this;
             }

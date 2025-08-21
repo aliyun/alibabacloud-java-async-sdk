@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSolutionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Solutions")
-    private java.util.List < Solutions> solutions;
+    private java.util.List<Solutions> solutions;
 
     private ListSolutionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListSolutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListSolutionResponseBody extends TeaModel {
     /**
      * @return solutions
      */
-    public java.util.List < Solutions> getSolutions() {
+    public java.util.List<Solutions> getSolutions() {
         return this.solutions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Solutions> solutions; 
+        private java.util.List<Solutions> solutions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSolutionResponseBody model) {
+            this.requestId = model.requestId;
+            this.solutions = model.solutions;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class ListSolutionResponseBody extends TeaModel {
         /**
          * Solutions.
          */
-        public Builder solutions(java.util.List < Solutions> solutions) {
+        public Builder solutions(java.util.List<Solutions> solutions) {
             this.solutions = solutions;
             return this;
         }
@@ -91,7 +108,7 @@ public class ListSolutionResponseBody extends TeaModel {
         private String modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
-        private java.util.List < String > perspectiveCodes;
+        private java.util.List<String> perspectiveCodes;
 
         @com.aliyun.core.annotation.NameInMap("PlainText")
         private String plainText;
@@ -148,7 +165,7 @@ public class ListSolutionResponseBody extends TeaModel {
         /**
          * @return perspectiveCodes
          */
-        public java.util.List < String > getPerspectiveCodes() {
+        public java.util.List<String> getPerspectiveCodes() {
             return this.perspectiveCodes;
         }
 
@@ -171,9 +188,22 @@ public class ListSolutionResponseBody extends TeaModel {
             private Integer contentType; 
             private String createTime; 
             private String modifyTime; 
-            private java.util.List < String > perspectiveCodes; 
+            private java.util.List<String> perspectiveCodes; 
             private String plainText; 
             private Long solutionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Solutions model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.perspectiveCodes = model.perspectiveCodes;
+                this.plainText = model.plainText;
+                this.solutionId = model.solutionId;
+            } 
 
             /**
              * Content.
@@ -210,7 +240,7 @@ public class ListSolutionResponseBody extends TeaModel {
             /**
              * PerspectiveCodes.
              */
-            public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
+            public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
                 return this;
             }

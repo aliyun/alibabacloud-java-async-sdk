@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SimQuestions")
-    private java.util.List < SimQuestions> simQuestions;
+    private java.util.List<SimQuestions> simQuestions;
 
     private ListSimQuestionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListSimQuestionResponseBody extends TeaModel {
     /**
      * @return simQuestions
      */
-    public java.util.List < SimQuestions> getSimQuestions() {
+    public java.util.List<SimQuestions> getSimQuestions() {
         return this.simQuestions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SimQuestions> simQuestions; 
+        private java.util.List<SimQuestions> simQuestions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSimQuestionResponseBody model) {
+            this.requestId = model.requestId;
+            this.simQuestions = model.simQuestions;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
         /**
          * SimQuestions.
          */
-        public Builder simQuestions(java.util.List < SimQuestions> simQuestions) {
+        public Builder simQuestions(java.util.List<SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
             return this;
         }
@@ -138,6 +155,16 @@ public class ListSimQuestionResponseBody extends TeaModel {
             private String modifyTime; 
             private Long simQuestionId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimQuestions model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.simQuestionId = model.simQuestionId;
+                this.title = model.title;
+            } 
 
             /**
              * CreateTime.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class NluResponseBody extends TeaModel {
     private String messageId;
 
     @com.aliyun.core.annotation.NameInMap("Messages")
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class NluResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageId
      */
@@ -45,7 +54,7 @@ public class NluResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
@@ -58,8 +67,17 @@ public class NluResponseBody extends TeaModel {
 
     public static final class Builder {
         private String messageId; 
-        private java.util.List < Messages> messages; 
+        private java.util.List<Messages> messages; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NluResponseBody model) {
+            this.messageId = model.messageId;
+            this.messages = model.messages;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MessageId.
@@ -72,7 +90,7 @@ public class NluResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
             return this;
         }
@@ -134,6 +152,14 @@ public class NluResponseBody extends TeaModel {
         public static final class Builder {
             private String standardWord; 
             private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalDictList model) {
+                this.standardWord = model.standardWord;
+                this.word = model.word;
+            } 
 
             /**
              * StandardWord.
@@ -202,6 +228,14 @@ public class NluResponseBody extends TeaModel {
             private String standardWord; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalSensitiveWordList model) {
+                this.standardWord = model.standardWord;
+                this.word = model.word;
+            } 
+
             /**
              * StandardWord.
              */
@@ -233,10 +267,10 @@ public class NluResponseBody extends TeaModel {
      */
     public static class DialogHubNluInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalDictList")
-        private java.util.List < GlobalDictList> globalDictList;
+        private java.util.List<GlobalDictList> globalDictList;
 
         @com.aliyun.core.annotation.NameInMap("GlobalSensitiveWordList")
-        private java.util.List < GlobalSensitiveWordList> globalSensitiveWordList;
+        private java.util.List<GlobalSensitiveWordList> globalSensitiveWordList;
 
         private DialogHubNluInfo(Builder builder) {
             this.globalDictList = builder.globalDictList;
@@ -254,25 +288,33 @@ public class NluResponseBody extends TeaModel {
         /**
          * @return globalDictList
          */
-        public java.util.List < GlobalDictList> getGlobalDictList() {
+        public java.util.List<GlobalDictList> getGlobalDictList() {
             return this.globalDictList;
         }
 
         /**
          * @return globalSensitiveWordList
          */
-        public java.util.List < GlobalSensitiveWordList> getGlobalSensitiveWordList() {
+        public java.util.List<GlobalSensitiveWordList> getGlobalSensitiveWordList() {
             return this.globalSensitiveWordList;
         }
 
         public static final class Builder {
-            private java.util.List < GlobalDictList> globalDictList; 
-            private java.util.List < GlobalSensitiveWordList> globalSensitiveWordList; 
+            private java.util.List<GlobalDictList> globalDictList; 
+            private java.util.List<GlobalSensitiveWordList> globalSensitiveWordList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DialogHubNluInfo model) {
+                this.globalDictList = model.globalDictList;
+                this.globalSensitiveWordList = model.globalSensitiveWordList;
+            } 
 
             /**
              * GlobalDictList.
              */
-            public Builder globalDictList(java.util.List < GlobalDictList> globalDictList) {
+            public Builder globalDictList(java.util.List<GlobalDictList> globalDictList) {
                 this.globalDictList = globalDictList;
                 return this;
             }
@@ -280,7 +322,7 @@ public class NluResponseBody extends TeaModel {
             /**
              * GlobalSensitiveWordList.
              */
-            public Builder globalSensitiveWordList(java.util.List < GlobalSensitiveWordList> globalSensitiveWordList) {
+            public Builder globalSensitiveWordList(java.util.List<GlobalSensitiveWordList> globalSensitiveWordList) {
                 this.globalSensitiveWordList = globalSensitiveWordList;
                 return this;
             }
@@ -359,6 +401,16 @@ public class NluResponseBody extends TeaModel {
             private String origin; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityList model) {
+                this.name = model.name;
+                this.origin = model.origin;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -467,6 +519,16 @@ public class NluResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlotList model) {
+                this.name = model.name;
+                this.origin = model.origin;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -529,7 +591,7 @@ public class NluResponseBody extends TeaModel {
         private Double score;
 
         @com.aliyun.core.annotation.NameInMap("SlotList")
-        private java.util.List < SlotList> slotList;
+        private java.util.List<SlotList> slotList;
 
         private IntentList(Builder builder) {
             this.intentId = builder.intentId;
@@ -586,7 +648,7 @@ public class NluResponseBody extends TeaModel {
         /**
          * @return slotList
          */
-        public java.util.List < SlotList> getSlotList() {
+        public java.util.List<SlotList> getSlotList() {
             return this.slotList;
         }
 
@@ -596,7 +658,19 @@ public class NluResponseBody extends TeaModel {
             private String matchType; 
             private String name; 
             private Double score; 
-            private java.util.List < SlotList> slotList; 
+            private java.util.List<SlotList> slotList; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntentList model) {
+                this.intentId = model.intentId;
+                this.matchDetail = model.matchDetail;
+                this.matchType = model.matchType;
+                this.name = model.name;
+                this.score = model.score;
+                this.slotList = model.slotList;
+            } 
 
             /**
              * IntentId.
@@ -641,7 +715,7 @@ public class NluResponseBody extends TeaModel {
             /**
              * SlotList.
              */
-            public Builder slotList(java.util.List < SlotList> slotList) {
+            public Builder slotList(java.util.List<SlotList> slotList) {
                 this.slotList = slotList;
                 return this;
             }
@@ -661,10 +735,10 @@ public class NluResponseBody extends TeaModel {
      */
     public static class DsNluInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityList")
-        private java.util.List < EntityList> entityList;
+        private java.util.List<EntityList> entityList;
 
         @com.aliyun.core.annotation.NameInMap("IntentList")
-        private java.util.List < IntentList> intentList;
+        private java.util.List<IntentList> intentList;
 
         private DsNluInfo(Builder builder) {
             this.entityList = builder.entityList;
@@ -682,25 +756,33 @@ public class NluResponseBody extends TeaModel {
         /**
          * @return entityList
          */
-        public java.util.List < EntityList> getEntityList() {
+        public java.util.List<EntityList> getEntityList() {
             return this.entityList;
         }
 
         /**
          * @return intentList
          */
-        public java.util.List < IntentList> getIntentList() {
+        public java.util.List<IntentList> getIntentList() {
             return this.intentList;
         }
 
         public static final class Builder {
-            private java.util.List < EntityList> entityList; 
-            private java.util.List < IntentList> intentList; 
+            private java.util.List<EntityList> entityList; 
+            private java.util.List<IntentList> intentList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DsNluInfo model) {
+                this.entityList = model.entityList;
+                this.intentList = model.intentList;
+            } 
 
             /**
              * EntityList.
              */
-            public Builder entityList(java.util.List < EntityList> entityList) {
+            public Builder entityList(java.util.List<EntityList> entityList) {
                 this.entityList = entityList;
                 return this;
             }
@@ -708,7 +790,7 @@ public class NluResponseBody extends TeaModel {
             /**
              * IntentList.
              */
-            public Builder intentList(java.util.List < IntentList> intentList) {
+            public Builder intentList(java.util.List<IntentList> intentList) {
                 this.intentList = intentList;
                 return this;
             }
@@ -763,6 +845,14 @@ public class NluResponseBody extends TeaModel {
         public static final class Builder {
             private DialogHubNluInfo dialogHubNluInfo; 
             private DsNluInfo dsNluInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.dialogHubNluInfo = model.dialogHubNluInfo;
+                this.dsNluInfo = model.dsNluInfo;
+            } 
 
             /**
              * DialogHubNluInfo.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCategoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < Categories> categories;
+    private java.util.List<Categories> categories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categories
      */
-    public java.util.List < Categories> getCategories() {
+    public java.util.List<Categories> getCategories() {
         return this.categories;
     }
 
@@ -46,13 +55,21 @@ public class ListCategoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Categories> categories; 
+        private java.util.List<Categories> categories; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCategoryResponseBody model) {
+            this.categories = model.categories;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Categories.
          */
-        public Builder categories(java.util.List < Categories> categories) {
+        public Builder categories(java.util.List<Categories> categories) {
             this.categories = categories;
             return this;
         }
@@ -150,6 +167,17 @@ public class ListCategoryResponseBody extends TeaModel {
             private String name; 
             private Long parentCategoryId; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.bizCode = model.bizCode;
+                this.categoryId = model.categoryId;
+                this.name = model.name;
+                this.parentCategoryId = model.parentCategoryId;
+                this.status = model.status;
+            } 
 
             /**
              * BizCode.

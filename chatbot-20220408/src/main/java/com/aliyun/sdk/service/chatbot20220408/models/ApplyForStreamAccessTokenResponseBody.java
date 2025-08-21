@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -72,6 +81,16 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         private String channelId; 
         private String requestId; 
         private String streamSecret; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyForStreamAccessTokenResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.channelId = model.channelId;
+            this.requestId = model.requestId;
+            this.streamSecret = model.streamSecret;
+        } 
 
         /**
          * AccessToken.

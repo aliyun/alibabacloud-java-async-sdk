@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class CreateDocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocMetadata")
-    private java.util.List < DocMetadata> docMetadata;
+    private java.util.List<DocMetadata> docMetadata;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndDate")
@@ -51,7 +56,7 @@ public class CreateDocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagIds")
-    private java.util.List < Long > tagIds;
+    private java.util.List<Long> tagIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
@@ -86,7 +91,7 @@ public class CreateDocRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +134,7 @@ public class CreateDocRequest extends Request {
     /**
      * @return docMetadata
      */
-    public java.util.List < DocMetadata> getDocMetadata() {
+    public java.util.List<DocMetadata> getDocMetadata() {
         return this.docMetadata;
     }
 
@@ -157,7 +162,7 @@ public class CreateDocRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < Long > getTagIds() {
+    public java.util.List<Long> getTagIds() {
         return this.tagIds;
     }
 
@@ -181,11 +186,11 @@ public class CreateDocRequest extends Request {
         private Long categoryId; 
         private String config; 
         private String content; 
-        private java.util.List < DocMetadata> docMetadata; 
+        private java.util.List<DocMetadata> docMetadata; 
         private String endDate; 
         private String meta; 
         private String startDate; 
-        private java.util.List < Long > tagIds; 
+        private java.util.List<Long> tagIds; 
         private String title; 
         private String url; 
 
@@ -260,7 +265,7 @@ public class CreateDocRequest extends Request {
         /**
          * DocMetadata.
          */
-        public Builder docMetadata(java.util.List < DocMetadata> docMetadata) {
+        public Builder docMetadata(java.util.List<DocMetadata> docMetadata) {
             String docMetadataShrink = shrink(docMetadata, "DocMetadata", "json");
             this.putQueryParameter("DocMetadata", docMetadataShrink);
             this.docMetadata = docMetadata;
@@ -297,7 +302,7 @@ public class CreateDocRequest extends Request {
         /**
          * TagIds.
          */
-        public Builder tagIds(java.util.List < Long > tagIds) {
+        public Builder tagIds(java.util.List<Long> tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");
             this.putQueryParameter("TagIds", tagIdsShrink);
             this.tagIds = tagIds;
@@ -385,6 +390,15 @@ public class CreateDocRequest extends Request {
             private String fieldName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaCellInfoDTOList model) {
+                this.fieldCode = model.fieldCode;
+                this.fieldName = model.fieldName;
+                this.value = model.value;
+            } 
+
             /**
              * FieldCode.
              */
@@ -430,7 +444,7 @@ public class CreateDocRequest extends Request {
         private String businessViewName;
 
         @com.aliyun.core.annotation.NameInMap("MetaCellInfoDTOList")
-        private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList;
+        private java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList;
 
         private DocMetadata(Builder builder) {
             this.businessViewId = builder.businessViewId;
@@ -463,14 +477,23 @@ public class CreateDocRequest extends Request {
         /**
          * @return metaCellInfoDTOList
          */
-        public java.util.List < MetaCellInfoDTOList> getMetaCellInfoDTOList() {
+        public java.util.List<MetaCellInfoDTOList> getMetaCellInfoDTOList() {
             return this.metaCellInfoDTOList;
         }
 
         public static final class Builder {
             private String businessViewId; 
             private String businessViewName; 
-            private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList; 
+            private java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocMetadata model) {
+                this.businessViewId = model.businessViewId;
+                this.businessViewName = model.businessViewName;
+                this.metaCellInfoDTOList = model.metaCellInfoDTOList;
+            } 
 
             /**
              * BusinessViewId.
@@ -491,7 +514,7 @@ public class CreateDocRequest extends Request {
             /**
              * MetaCellInfoDTOList.
              */
-            public Builder metaCellInfoDTOList(java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList) {
+            public Builder metaCellInfoDTOList(java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList) {
                 this.metaCellInfoDTOList = metaCellInfoDTOList;
                 return this;
             }

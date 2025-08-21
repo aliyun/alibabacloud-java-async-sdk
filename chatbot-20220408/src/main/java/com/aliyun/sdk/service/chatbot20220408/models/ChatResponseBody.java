@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ChatResponseBody extends TeaModel {
     private String messageId;
 
     @com.aliyun.core.annotation.NameInMap("Messages")
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.NameInMap("QuerySegList")
-    private java.util.List < String > querySegList;
+    private java.util.List<String> querySegList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +48,10 @@ public class ChatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageId
      */
@@ -53,14 +62,14 @@ public class ChatResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
     /**
      * @return querySegList
      */
-    public java.util.List < String > getQuerySegList() {
+    public java.util.List<String> getQuerySegList() {
         return this.querySegList;
     }
 
@@ -80,10 +89,21 @@ public class ChatResponseBody extends TeaModel {
 
     public static final class Builder {
         private String messageId; 
-        private java.util.List < Messages> messages; 
-        private java.util.List < String > querySegList; 
+        private java.util.List<Messages> messages; 
+        private java.util.List<String> querySegList; 
         private String requestId; 
         private String sessionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChatResponseBody model) {
+            this.messageId = model.messageId;
+            this.messages = model.messages;
+            this.querySegList = model.querySegList;
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+        } 
 
         /**
          * MessageId.
@@ -96,7 +116,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
             return this;
         }
@@ -104,7 +124,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * QuerySegList.
          */
-        public Builder querySegList(java.util.List < String > querySegList) {
+        public Builder querySegList(java.util.List<String> querySegList) {
             this.querySegList = querySegList;
             return this;
         }
@@ -175,6 +195,14 @@ public class ChatResponseBody extends TeaModel {
             private String knowledgeId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedKnowledges model) {
+                this.knowledgeId = model.knowledgeId;
+                this.title = model.title;
+            } 
+
             /**
              * KnowledgeId.
              */
@@ -224,7 +252,7 @@ public class ChatResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("RelatedKnowledges")
-        private java.util.List < RelatedKnowledges> relatedKnowledges;
+        private java.util.List<RelatedKnowledges> relatedKnowledges;
 
         @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
@@ -301,7 +329,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * @return relatedKnowledges
          */
-        public java.util.List < RelatedKnowledges> getRelatedKnowledges() {
+        public java.util.List<RelatedKnowledges> getRelatedKnowledges() {
             return this.relatedKnowledges;
         }
 
@@ -333,10 +361,26 @@ public class ChatResponseBody extends TeaModel {
             private String contentType; 
             private String hitStatement; 
             private String id; 
-            private java.util.List < RelatedKnowledges> relatedKnowledges; 
+            private java.util.List<RelatedKnowledges> relatedKnowledges; 
             private Double score; 
             private String summary; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Knowledge model) {
+                this.answerSource = model.answerSource;
+                this.category = model.category;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.hitStatement = model.hitStatement;
+                this.id = model.id;
+                this.relatedKnowledges = model.relatedKnowledges;
+                this.score = model.score;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
 
             /**
              * AnswerSource.
@@ -389,7 +433,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * RelatedKnowledges.
              */
-            public Builder relatedKnowledges(java.util.List < RelatedKnowledges> relatedKnowledges) {
+            public Builder relatedKnowledges(java.util.List<RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
                 return this;
             }
@@ -492,6 +536,16 @@ public class ChatResponseBody extends TeaModel {
             private String knowledgeId; 
             private Double score; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recommends model) {
+                this.answerSource = model.answerSource;
+                this.knowledgeId = model.knowledgeId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
 
             /**
              * AnswerSource.
@@ -600,6 +654,16 @@ public class ChatResponseBody extends TeaModel {
             private String origin; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Slots model) {
+                this.hit = model.hit;
+                this.name = model.name;
+                this.origin = model.origin;
+                this.value = model.value;
+            } 
+
             /**
              * Hit.
              */
@@ -653,7 +717,7 @@ public class ChatResponseBody extends TeaModel {
         private String articleTitle;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.Map < String, ? > commands;
+        private java.util.Map<String, ?> commands;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -665,10 +729,10 @@ public class ChatResponseBody extends TeaModel {
         private String dialogName;
 
         @com.aliyun.core.annotation.NameInMap("Ext")
-        private java.util.Map < String, ? > ext;
+        private java.util.Map<String, ?> ext;
 
         @com.aliyun.core.annotation.NameInMap("ExternalFlags")
-        private java.util.Map < String, ? > externalFlags;
+        private java.util.Map<String, ?> externalFlags;
 
         @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
@@ -692,7 +756,7 @@ public class ChatResponseBody extends TeaModel {
         private Double score;
 
         @com.aliyun.core.annotation.NameInMap("Slots")
-        private java.util.List < Slots> slots;
+        private java.util.List<Slots> slots;
 
         @com.aliyun.core.annotation.NameInMap("UserDefinedChatTitle")
         private String userDefinedChatTitle;
@@ -742,7 +806,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * @return commands
          */
-        public java.util.Map < String, ? > getCommands() {
+        public java.util.Map<String, ?> getCommands() {
             return this.commands;
         }
 
@@ -770,14 +834,14 @@ public class ChatResponseBody extends TeaModel {
         /**
          * @return ext
          */
-        public java.util.Map < String, ? > getExt() {
+        public java.util.Map<String, ?> getExt() {
             return this.ext;
         }
 
         /**
          * @return externalFlags
          */
-        public java.util.Map < String, ? > getExternalFlags() {
+        public java.util.Map<String, ?> getExternalFlags() {
             return this.externalFlags;
         }
 
@@ -833,7 +897,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * @return slots
          */
-        public java.util.List < Slots> getSlots() {
+        public java.util.List<Slots> getSlots() {
             return this.slots;
         }
 
@@ -847,12 +911,12 @@ public class ChatResponseBody extends TeaModel {
         public static final class Builder {
             private String answerSource; 
             private String articleTitle; 
-            private java.util.Map < String, ? > commands; 
+            private java.util.Map<String, ?> commands; 
             private String content; 
             private String contentType; 
             private String dialogName; 
-            private java.util.Map < String, ? > ext; 
-            private java.util.Map < String, ? > externalFlags; 
+            private java.util.Map<String, ?> ext; 
+            private java.util.Map<String, ?> externalFlags; 
             private String hitStatement; 
             private String intentName; 
             private String metaData; 
@@ -860,8 +924,31 @@ public class ChatResponseBody extends TeaModel {
             private String nodeName; 
             private String responseType; 
             private Double score; 
-            private java.util.List < Slots> slots; 
+            private java.util.List<Slots> slots; 
             private String userDefinedChatTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.answerSource = model.answerSource;
+                this.articleTitle = model.articleTitle;
+                this.commands = model.commands;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.dialogName = model.dialogName;
+                this.ext = model.ext;
+                this.externalFlags = model.externalFlags;
+                this.hitStatement = model.hitStatement;
+                this.intentName = model.intentName;
+                this.metaData = model.metaData;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.responseType = model.responseType;
+                this.score = model.score;
+                this.slots = model.slots;
+                this.userDefinedChatTitle = model.userDefinedChatTitle;
+            } 
 
             /**
              * AnswerSource.
@@ -882,7 +969,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * Commands.
              */
-            public Builder commands(java.util.Map < String, ? > commands) {
+            public Builder commands(java.util.Map<String, ?> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -914,7 +1001,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * Ext.
              */
-            public Builder ext(java.util.Map < String, ? > ext) {
+            public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
                 return this;
             }
@@ -922,7 +1009,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * ExternalFlags.
              */
-            public Builder externalFlags(java.util.Map < String, ? > externalFlags) {
+            public Builder externalFlags(java.util.Map<String, ?> externalFlags) {
                 this.externalFlags = externalFlags;
                 return this;
             }
@@ -986,7 +1073,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * Slots.
              */
-            public Builder slots(java.util.List < Slots> slots) {
+            public Builder slots(java.util.List<Slots> slots) {
                 this.slots = slots;
                 return this;
             }
@@ -1023,7 +1110,7 @@ public class ChatResponseBody extends TeaModel {
         private Knowledge knowledge;
 
         @com.aliyun.core.annotation.NameInMap("Recommends")
-        private java.util.List < Recommends> recommends;
+        private java.util.List<Recommends> recommends;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private Text text;
@@ -1076,7 +1163,7 @@ public class ChatResponseBody extends TeaModel {
         /**
          * @return recommends
          */
-        public java.util.List < Recommends> getRecommends() {
+        public java.util.List<Recommends> getRecommends() {
             return this.recommends;
         }
 
@@ -1105,10 +1192,23 @@ public class ChatResponseBody extends TeaModel {
             private String answerSource; 
             private String answerType; 
             private Knowledge knowledge; 
-            private java.util.List < Recommends> recommends; 
+            private java.util.List<Recommends> recommends; 
             private Text text; 
             private String title; 
             private String voiceTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.answerSource = model.answerSource;
+                this.answerType = model.answerType;
+                this.knowledge = model.knowledge;
+                this.recommends = model.recommends;
+                this.text = model.text;
+                this.title = model.title;
+                this.voiceTitle = model.voiceTitle;
+            } 
 
             /**
              * AnswerSource.
@@ -1137,7 +1237,7 @@ public class ChatResponseBody extends TeaModel {
             /**
              * Recommends.
              */
-            public Builder recommends(java.util.List < Recommends> recommends) {
+            public Builder recommends(java.util.List<Recommends> recommends) {
                 this.recommends = recommends;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class UpdateLgfRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,6 +222,14 @@ public class UpdateLgfRequest extends Request {
         public static final class Builder {
             private Long intentId; 
             private String ruleText; 
+
+            private Builder() {
+            } 
+
+            private Builder(LgfDefinition model) {
+                this.intentId = model.intentId;
+                this.ruleText = model.ruleText;
+            } 
 
             /**
              * <p>This parameter is required.</p>

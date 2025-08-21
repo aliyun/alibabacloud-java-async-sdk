@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class CreateUserSayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,6 +204,15 @@ public class CreateUserSayRequest extends Request {
             private String slotId; 
             private Integer startIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlotInfos model) {
+                this.endIndex = model.endIndex;
+                this.slotId = model.slotId;
+                this.startIndex = model.startIndex;
+            } 
+
             /**
              * EndIndex.
              */
@@ -246,7 +260,7 @@ public class CreateUserSayRequest extends Request {
         private Long intentId;
 
         @com.aliyun.core.annotation.NameInMap("SlotInfos")
-        private java.util.List < SlotInfos> slotInfos;
+        private java.util.List<SlotInfos> slotInfos;
 
         private UserSayDefinition(Builder builder) {
             this.content = builder.content;
@@ -279,14 +293,23 @@ public class CreateUserSayRequest extends Request {
         /**
          * @return slotInfos
          */
-        public java.util.List < SlotInfos> getSlotInfos() {
+        public java.util.List<SlotInfos> getSlotInfos() {
             return this.slotInfos;
         }
 
         public static final class Builder {
             private String content; 
             private Long intentId; 
-            private java.util.List < SlotInfos> slotInfos; 
+            private java.util.List<SlotInfos> slotInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSayDefinition model) {
+                this.content = model.content;
+                this.intentId = model.intentId;
+                this.slotInfos = model.slotInfos;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -310,7 +333,7 @@ public class CreateUserSayRequest extends Request {
             /**
              * SlotInfos.
              */
-            public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
+            public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;
                 return this;
             }

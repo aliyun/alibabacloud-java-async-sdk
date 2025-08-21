@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BizTypeList")
-    private java.util.List < String > bizTypeList;
+    private java.util.List<String> bizTypeList;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -22,7 +27,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     private String error;
 
     @com.aliyun.core.annotation.NameInMap("Errors")
-    private java.util.Map < String, ? > errors;
+    private java.util.Map<String, ?> errors;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
@@ -40,7 +45,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Warnings")
-    private java.util.Map < String, ? > warnings;
+    private java.util.Map<String, ?> warnings;
 
     private ContinueInstancePublishTaskResponseBody(Builder builder) {
         this.bizTypeList = builder.bizTypeList;
@@ -63,10 +68,14 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizTypeList
      */
-    public java.util.List < String > getBizTypeList() {
+    public java.util.List<String> getBizTypeList() {
         return this.bizTypeList;
     }
 
@@ -87,7 +96,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     /**
      * @return errors
      */
-    public java.util.Map < String, ? > getErrors() {
+    public java.util.Map<String, ?> getErrors() {
         return this.errors;
     }
 
@@ -129,26 +138,42 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     /**
      * @return warnings
      */
-    public java.util.Map < String, ? > getWarnings() {
+    public java.util.Map<String, ?> getWarnings() {
         return this.warnings;
     }
 
     public static final class Builder {
-        private java.util.List < String > bizTypeList; 
+        private java.util.List<String> bizTypeList; 
         private String createTime; 
         private String error; 
-        private java.util.Map < String, ? > errors; 
+        private java.util.Map<String, ?> errors; 
         private Long id; 
         private String modifyTime; 
         private String requestId; 
         private String response; 
         private String status; 
-        private java.util.Map < String, ? > warnings; 
+        private java.util.Map<String, ?> warnings; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContinueInstancePublishTaskResponseBody model) {
+            this.bizTypeList = model.bizTypeList;
+            this.createTime = model.createTime;
+            this.error = model.error;
+            this.errors = model.errors;
+            this.id = model.id;
+            this.modifyTime = model.modifyTime;
+            this.requestId = model.requestId;
+            this.response = model.response;
+            this.status = model.status;
+            this.warnings = model.warnings;
+        } 
 
         /**
          * BizTypeList.
          */
-        public Builder bizTypeList(java.util.List < String > bizTypeList) {
+        public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.bizTypeList = bizTypeList;
             return this;
         }
@@ -172,7 +197,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         /**
          * Errors.
          */
-        public Builder errors(java.util.Map < String, ? > errors) {
+        public Builder errors(java.util.Map<String, ?> errors) {
             this.errors = errors;
             return this;
         }
@@ -220,7 +245,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         /**
          * Warnings.
          */
-        public Builder warnings(java.util.Map < String, ? > warnings) {
+        public Builder warnings(java.util.Map<String, ?> warnings) {
             this.warnings = warnings;
             return this;
         }

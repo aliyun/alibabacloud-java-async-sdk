@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryPerspectivesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Perspectives")
-    private java.util.List < Perspectives> perspectives;
+    private java.util.List<Perspectives> perspectives;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return perspectives
      */
-    public java.util.List < Perspectives> getPerspectives() {
+    public java.util.List<Perspectives> getPerspectives() {
         return this.perspectives;
     }
 
@@ -46,13 +55,21 @@ public class QueryPerspectivesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Perspectives> perspectives; 
+        private java.util.List<Perspectives> perspectives; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPerspectivesResponseBody model) {
+            this.perspectives = model.perspectives;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Perspectives.
          */
-        public Builder perspectives(java.util.List < Perspectives> perspectives) {
+        public Builder perspectives(java.util.List<Perspectives> perspectives) {
             this.perspectives = perspectives;
             return this;
         }
@@ -174,6 +191,19 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             private String perspectiveId; 
             private Boolean selfDefine; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Perspectives model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.perspectiveCode = model.perspectiveCode;
+                this.perspectiveId = model.perspectiveId;
+                this.selfDefine = model.selfDefine;
+                this.status = model.status;
+            } 
 
             /**
              * CreateTime.

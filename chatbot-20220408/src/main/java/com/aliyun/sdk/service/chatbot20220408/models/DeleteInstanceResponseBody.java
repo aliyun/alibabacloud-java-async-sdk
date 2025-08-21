@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BizTypeList")
-    private java.util.List < String > bizTypeList;
+    private java.util.List<String> bizTypeList;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -59,10 +64,14 @@ public class DeleteInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizTypeList
      */
-    public java.util.List < String > getBizTypeList() {
+    public java.util.List<String> getBizTypeList() {
         return this.bizTypeList;
     }
 
@@ -123,7 +132,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > bizTypeList; 
+        private java.util.List<String> bizTypeList; 
         private String createTime; 
         private Long createUserId; 
         private String createUserName; 
@@ -133,10 +142,25 @@ public class DeleteInstanceResponseBody extends TeaModel {
         private Long response; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteInstanceResponseBody model) {
+            this.bizTypeList = model.bizTypeList;
+            this.createTime = model.createTime;
+            this.createUserId = model.createUserId;
+            this.createUserName = model.createUserName;
+            this.error = model.error;
+            this.id = model.id;
+            this.requestId = model.requestId;
+            this.response = model.response;
+            this.status = model.status;
+        } 
+
         /**
          * BizTypeList.
          */
-        public Builder bizTypeList(java.util.List < String > bizTypeList) {
+        public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.bizTypeList = bizTypeList;
             return this;
         }

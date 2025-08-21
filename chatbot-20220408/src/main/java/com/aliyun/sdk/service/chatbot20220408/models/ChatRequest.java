@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ChatRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Perspective")
-    private java.util.List < String > perspective;
+    private java.util.List<String> perspective;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SandBox")
@@ -79,7 +84,7 @@ public class ChatRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +120,7 @@ public class ChatRequest extends Request {
     /**
      * @return perspective
      */
-    public java.util.List < String > getPerspective() {
+    public java.util.List<String> getPerspective() {
         return this.perspective;
     }
 
@@ -166,7 +171,7 @@ public class ChatRequest extends Request {
         private String instanceId; 
         private String intentName; 
         private String knowledgeId; 
-        private java.util.List < String > perspective; 
+        private java.util.List<String> perspective; 
         private Boolean sandBox; 
         private String senderId; 
         private String senderNick; 
@@ -232,7 +237,7 @@ public class ChatRequest extends Request {
         /**
          * Perspective.
          */
-        public Builder perspective(java.util.List < String > perspective) {
+        public Builder perspective(java.util.List<String> perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
             this.putQueryParameter("Perspective", perspectiveShrink);
             this.perspective = perspective;

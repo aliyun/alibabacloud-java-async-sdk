@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
 
     public static DescribeDSEntityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         private String modifyUserName; 
         private String requestId; 
         private String sysEntityCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDSEntityResponseBody model) {
+            this.createTime = model.createTime;
+            this.createUserId = model.createUserId;
+            this.createUserName = model.createUserName;
+            this.entityId = model.entityId;
+            this.entityName = model.entityName;
+            this.entityType = model.entityType;
+            this.modifyTime = model.modifyTime;
+            this.modifyUserId = model.modifyUserId;
+            this.modifyUserName = model.modifyUserName;
+            this.requestId = model.requestId;
+            this.sysEntityCode = model.sysEntityCode;
+        } 
 
         /**
          * CreateTime.

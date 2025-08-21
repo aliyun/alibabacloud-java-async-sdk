@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListIntentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Intents")
-    private java.util.List < Intents> intents;
+    private java.util.List<Intents> intents;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListIntentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return intents
      */
-    public java.util.List < Intents> getIntents() {
+    public java.util.List<Intents> getIntents() {
         return this.intents;
     }
 
@@ -79,16 +88,27 @@ public class ListIntentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Intents> intents; 
+        private java.util.List<Intents> intents; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIntentResponseBody model) {
+            this.intents = model.intents;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Intents.
          */
-        public Builder intents(java.util.List < Intents> intents) {
+        public Builder intents(java.util.List<Intents> intents) {
             this.intents = intents;
             return this;
         }
@@ -223,6 +243,18 @@ public class ListIntentResponseBody extends TeaModel {
             private String slotId; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlotInfos model) {
+                this.array = model.array;
+                this.encrypt = model.encrypt;
+                this.interactive = model.interactive;
+                this.name = model.name;
+                this.slotId = model.slotId;
+                this.value = model.value;
+            } 
+
             /**
              * Array.
              */
@@ -313,7 +345,7 @@ public class ListIntentResponseBody extends TeaModel {
         private String modifyUserName;
 
         @com.aliyun.core.annotation.NameInMap("SlotInfos")
-        private java.util.List < SlotInfos> slotInfos;
+        private java.util.List<SlotInfos> slotInfos;
 
         private Intents(Builder builder) {
             this.aliasName = builder.aliasName;
@@ -402,7 +434,7 @@ public class ListIntentResponseBody extends TeaModel {
         /**
          * @return slotInfos
          */
-        public java.util.List < SlotInfos> getSlotInfos() {
+        public java.util.List<SlotInfos> getSlotInfos() {
             return this.slotInfos;
         }
 
@@ -416,7 +448,23 @@ public class ListIntentResponseBody extends TeaModel {
             private String modifyTime; 
             private String modifyUserId; 
             private String modifyUserName; 
-            private java.util.List < SlotInfos> slotInfos; 
+            private java.util.List<SlotInfos> slotInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Intents model) {
+                this.aliasName = model.aliasName;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.createUserName = model.createUserName;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+                this.modifyTime = model.modifyTime;
+                this.modifyUserId = model.modifyUserId;
+                this.modifyUserName = model.modifyUserName;
+                this.slotInfos = model.slotInfos;
+            } 
 
             /**
              * AliasName.
@@ -493,7 +541,7 @@ public class ListIntentResponseBody extends TeaModel {
             /**
              * SlotInfos.
              */
-            public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
+            public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;
                 return this;
             }

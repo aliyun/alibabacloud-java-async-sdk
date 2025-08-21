@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchDocResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DocHits")
-    private java.util.List < DocHits> docHits;
+    private java.util.List<DocHits> docHits;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class SearchDocResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return docHits
      */
-    public java.util.List < DocHits> getDocHits() {
+    public java.util.List<DocHits> getDocHits() {
         return this.docHits;
     }
 
@@ -79,16 +88,27 @@ public class SearchDocResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DocHits> docHits; 
+        private java.util.List<DocHits> docHits; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(SearchDocResponseBody model) {
+            this.docHits = model.docHits;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * DocHits.
          */
-        public Builder docHits(java.util.List < DocHits> docHits) {
+        public Builder docHits(java.util.List<DocHits> docHits) {
             this.docHits = docHits;
             return this;
         }
@@ -214,6 +234,17 @@ public class SearchDocResponseBody extends TeaModel {
             private Long tagId; 
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocTags model) {
+                this.defaultTag = model.defaultTag;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
+
             /**
              * DefaultTag.
              */
@@ -290,7 +321,7 @@ public class SearchDocResponseBody extends TeaModel {
         private String docName;
 
         @com.aliyun.core.annotation.NameInMap("DocTags")
-        private java.util.List < DocTags> docTags;
+        private java.util.List<DocTags> docTags;
 
         @com.aliyun.core.annotation.NameInMap("EffectStatus")
         private Integer effectStatus;
@@ -415,7 +446,7 @@ public class SearchDocResponseBody extends TeaModel {
         /**
          * @return docTags
          */
-        public java.util.List < DocTags> getDocTags() {
+        public java.util.List<DocTags> getDocTags() {
             return this.docTags;
         }
 
@@ -518,7 +549,7 @@ public class SearchDocResponseBody extends TeaModel {
             private Long createUserId; 
             private String createUserName; 
             private String docName; 
-            private java.util.List < DocTags> docTags; 
+            private java.util.List<DocTags> docTags; 
             private Integer effectStatus; 
             private String endDate; 
             private Long knowledgeId; 
@@ -532,6 +563,33 @@ public class SearchDocResponseBody extends TeaModel {
             private String startDate; 
             private Integer status; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocHits model) {
+                this.bizCode = model.bizCode;
+                this.categoryId = model.categoryId;
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.createUserName = model.createUserName;
+                this.docName = model.docName;
+                this.docTags = model.docTags;
+                this.effectStatus = model.effectStatus;
+                this.endDate = model.endDate;
+                this.knowledgeId = model.knowledgeId;
+                this.meta = model.meta;
+                this.modifyTime = model.modifyTime;
+                this.modifyUserId = model.modifyUserId;
+                this.modifyUserName = model.modifyUserName;
+                this.processCanRetry = model.processCanRetry;
+                this.processMessage = model.processMessage;
+                this.processStatus = model.processStatus;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.url = model.url;
+            } 
 
             /**
              * BizCode.
@@ -592,7 +650,7 @@ public class SearchDocResponseBody extends TeaModel {
             /**
              * DocTags.
              */
-            public Builder docTags(java.util.List < DocTags> docTags) {
+            public Builder docTags(java.util.List<DocTags> docTags) {
                 this.docTags = docTags;
                 return this;
             }

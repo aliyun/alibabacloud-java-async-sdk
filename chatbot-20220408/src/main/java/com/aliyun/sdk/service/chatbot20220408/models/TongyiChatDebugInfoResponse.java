@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link LinkInstanceCategoryResponse} extends {@link TeaModel}
+ * {@link TongyiChatDebugInfoResponse} extends {@link TeaModel}
  *
- * <p>LinkInstanceCategoryResponse</p>
+ * <p>TongyiChatDebugInfoResponse</p>
  */
-public class LinkInstanceCategoryResponse extends Response {
+public class TongyiChatDebugInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class LinkInstanceCategoryResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private LinkInstanceCategoryResponseBody body;
+    private TongyiChatDebugInfoResponseBody body;
 
-    private LinkInstanceCategoryResponse(BuilderImpl builder) {
+    private TongyiChatDebugInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static LinkInstanceCategoryResponse create() {
+    public static TongyiChatDebugInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class LinkInstanceCategoryResponse extends Response {
     /**
      * @return body
      */
-    public LinkInstanceCategoryResponseBody getBody() {
+    public TongyiChatDebugInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<LinkInstanceCategoryResponse, Builder> {
+    public interface Builder extends Response.Builder<TongyiChatDebugInfoResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(LinkInstanceCategoryResponseBody body);
+        Builder body(TongyiChatDebugInfoResponseBody body);
 
         @Override
-        LinkInstanceCategoryResponse build();
+        TongyiChatDebugInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<LinkInstanceCategoryResponse, Builder>
+            extends Response.BuilderImpl<TongyiChatDebugInfoResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private LinkInstanceCategoryResponseBody body; 
+        private TongyiChatDebugInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(LinkInstanceCategoryResponse response) {
+        private BuilderImpl(TongyiChatDebugInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class LinkInstanceCategoryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(LinkInstanceCategoryResponseBody body) {
+        public Builder body(TongyiChatDebugInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public LinkInstanceCategoryResponse build() {
-            return new LinkInstanceCategoryResponse(this);
+        public TongyiChatDebugInfoResponse build() {
+            return new TongyiChatDebugInfoResponse(this);
         } 
 
     } 

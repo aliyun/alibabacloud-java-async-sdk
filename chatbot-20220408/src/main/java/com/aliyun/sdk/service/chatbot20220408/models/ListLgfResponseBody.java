@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLgfResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Lgfs")
-    private java.util.List < Lgfs> lgfs;
+    private java.util.List<Lgfs> lgfs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListLgfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lgfs
      */
-    public java.util.List < Lgfs> getLgfs() {
+    public java.util.List<Lgfs> getLgfs() {
         return this.lgfs;
     }
 
@@ -79,16 +88,27 @@ public class ListLgfResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Lgfs> lgfs; 
+        private java.util.List<Lgfs> lgfs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLgfResponseBody model) {
+            this.lgfs = model.lgfs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Lgfs.
          */
-        public Builder lgfs(java.util.List < Lgfs> lgfs) {
+        public Builder lgfs(java.util.List<Lgfs> lgfs) {
             this.lgfs = lgfs;
             return this;
         }
@@ -210,6 +230,17 @@ public class ListLgfResponseBody extends TeaModel {
             private Long lgfId; 
             private String modifyTime; 
             private String ruleText; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lgfs model) {
+                this.createTime = model.createTime;
+                this.intentId = model.intentId;
+                this.lgfId = model.lgfId;
+                this.modifyTime = model.modifyTime;
+                this.ruleText = model.ruleText;
+            } 
 
             /**
              * CreateTime.

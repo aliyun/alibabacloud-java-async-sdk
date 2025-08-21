@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDSEntityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Entities")
-    private java.util.List < Entities> entities;
+    private java.util.List<Entities> entities;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListDSEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entities
      */
-    public java.util.List < Entities> getEntities() {
+    public java.util.List<Entities> getEntities() {
         return this.entities;
     }
 
@@ -79,16 +88,27 @@ public class ListDSEntityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Entities> entities; 
+        private java.util.List<Entities> entities; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDSEntityResponseBody model) {
+            this.entities = model.entities;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Entities.
          */
-        public Builder entities(java.util.List < Entities> entities) {
+        public Builder entities(java.util.List<Entities> entities) {
             this.entities = entities;
             return this;
         }
@@ -270,6 +290,22 @@ public class ListDSEntityResponseBody extends TeaModel {
             private String modifyUserId; 
             private String modifyUserName; 
             private String sysEntityCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entities model) {
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.createUserName = model.createUserName;
+                this.entityId = model.entityId;
+                this.entityName = model.entityName;
+                this.entityType = model.entityType;
+                this.modifyTime = model.modifyTime;
+                this.modifyUserId = model.modifyUserId;
+                this.modifyUserName = model.modifyUserName;
+                this.sysEntityCode = model.sysEntityCode;
+            } 
 
             /**
              * CreateTime.

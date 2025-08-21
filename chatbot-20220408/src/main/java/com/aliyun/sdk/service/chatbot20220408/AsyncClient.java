@@ -446,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchFaqResponse> searchFaq(SearchFaqRequest request);
 
     /**
+     * @param request the request parameters of TongyiChatDebugInfo  TongyiChatDebugInfoRequest
+     * @return TongyiChatDebugInfoResponse
+     */
+    CompletableFuture<TongyiChatDebugInfoResponse> tongyiChatDebugInfo(TongyiChatDebugInfoRequest request);
+
+    /**
      * @param request the request parameters of UpdateCategory  UpdateCategoryRequest
      * @return UpdateCategoryResponse
      */

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class CreateDSEntityValueRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Synonyms")
-    private java.util.List < String > synonyms;
+    private java.util.List<String> synonyms;
 
     private CreateDSEntityValueRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class CreateDSEntityValueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,7 @@ public class CreateDSEntityValueRequest extends Request {
     /**
      * @return synonyms
      */
-    public java.util.List < String > getSynonyms() {
+    public java.util.List<String> getSynonyms() {
         return this.synonyms;
     }
 
@@ -110,7 +115,7 @@ public class CreateDSEntityValueRequest extends Request {
         private String content; 
         private Long entityId; 
         private String instanceId; 
-        private java.util.List < String > synonyms; 
+        private java.util.List<String> synonyms; 
 
         private Builder() {
             super();
@@ -183,7 +188,7 @@ public class CreateDSEntityValueRequest extends Request {
         /**
          * Synonyms.
          */
-        public Builder synonyms(java.util.List < String > synonyms) {
+        public Builder synonyms(java.util.List<String> synonyms) {
             String synonymsShrink = shrink(synonyms, "Synonyms", "json");
             this.putBodyParameter("Synonyms", synonymsShrink);
             this.synonyms = synonyms;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchFaqResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FaqHits")
-    private java.util.List < FaqHits> faqHits;
+    private java.util.List<FaqHits> faqHits;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class SearchFaqResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return faqHits
      */
-    public java.util.List < FaqHits> getFaqHits() {
+    public java.util.List<FaqHits> getFaqHits() {
         return this.faqHits;
     }
 
@@ -79,16 +88,27 @@ public class SearchFaqResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FaqHits> faqHits; 
+        private java.util.List<FaqHits> faqHits; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(SearchFaqResponseBody model) {
+            this.faqHits = model.faqHits;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * FaqHits.
          */
-        public Builder faqHits(java.util.List < FaqHits> faqHits) {
+        public Builder faqHits(java.util.List<FaqHits> faqHits) {
             this.faqHits = faqHits;
             return this;
         }
@@ -154,10 +174,10 @@ public class SearchFaqResponseBody extends TeaModel {
         private Integer effectStatus;
 
         @com.aliyun.core.annotation.NameInMap("HitSimilarTitles")
-        private java.util.List < String > hitSimilarTitles;
+        private java.util.List<String> hitSimilarTitles;
 
         @com.aliyun.core.annotation.NameInMap("HitSolutions")
-        private java.util.List < String > hitSolutions;
+        private java.util.List<String> hitSolutions;
 
         @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private Long knowledgeId;
@@ -239,14 +259,14 @@ public class SearchFaqResponseBody extends TeaModel {
         /**
          * @return hitSimilarTitles
          */
-        public java.util.List < String > getHitSimilarTitles() {
+        public java.util.List<String> getHitSimilarTitles() {
             return this.hitSimilarTitles;
         }
 
         /**
          * @return hitSolutions
          */
-        public java.util.List < String > getHitSolutions() {
+        public java.util.List<String> getHitSolutions() {
             return this.hitSolutions;
         }
 
@@ -298,14 +318,33 @@ public class SearchFaqResponseBody extends TeaModel {
             private Long createUserId; 
             private String createUserName; 
             private Integer effectStatus; 
-            private java.util.List < String > hitSimilarTitles; 
-            private java.util.List < String > hitSolutions; 
+            private java.util.List<String> hitSimilarTitles; 
+            private java.util.List<String> hitSolutions; 
             private Long knowledgeId; 
             private String modifyTime; 
             private Long modifyUserId; 
             private String modifyUserName; 
             private Integer status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(FaqHits model) {
+                this.categoryId = model.categoryId;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.createUserName = model.createUserName;
+                this.effectStatus = model.effectStatus;
+                this.hitSimilarTitles = model.hitSimilarTitles;
+                this.hitSolutions = model.hitSolutions;
+                this.knowledgeId = model.knowledgeId;
+                this.modifyTime = model.modifyTime;
+                this.modifyUserId = model.modifyUserId;
+                this.modifyUserName = model.modifyUserName;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * CategoryId.
@@ -350,7 +389,7 @@ public class SearchFaqResponseBody extends TeaModel {
             /**
              * HitSimilarTitles.
              */
-            public Builder hitSimilarTitles(java.util.List < String > hitSimilarTitles) {
+            public Builder hitSimilarTitles(java.util.List<String> hitSimilarTitles) {
                 this.hitSimilarTitles = hitSimilarTitles;
                 return this;
             }
@@ -358,7 +397,7 @@ public class SearchFaqResponseBody extends TeaModel {
             /**
              * HitSolutions.
              */
-            public Builder hitSolutions(java.util.List < String > hitSolutions) {
+            public Builder hitSolutions(java.util.List<String> hitSolutions) {
                 this.hitSolutions = hitSolutions;
                 return this;
             }

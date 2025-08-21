@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class FeedbackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return feedback
      */
@@ -60,6 +69,15 @@ public class FeedbackResponseBody extends TeaModel {
         private String feedback; 
         private String messageId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FeedbackResponseBody model) {
+            this.feedback = model.feedback;
+            this.messageId = model.messageId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Feedback.

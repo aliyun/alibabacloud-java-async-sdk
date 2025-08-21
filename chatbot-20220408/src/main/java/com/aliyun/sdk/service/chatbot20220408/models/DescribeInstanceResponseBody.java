@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     private String avatar;
 
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < Categories> categories;
+    private java.util.List<Categories> categories;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -67,6 +72,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatar
      */
@@ -77,7 +86,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     /**
      * @return categories
      */
-    public java.util.List < Categories> getCategories() {
+    public java.util.List<Categories> getCategories() {
         return this.categories;
     }
 
@@ -146,7 +155,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String avatar; 
-        private java.util.List < Categories> categories; 
+        private java.util.List<Categories> categories; 
         private String createTime; 
         private String editStatus; 
         private String instanceId; 
@@ -156,6 +165,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String robotType; 
         private String timeZone; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.avatar = model.avatar;
+            this.categories = model.categories;
+            this.createTime = model.createTime;
+            this.editStatus = model.editStatus;
+            this.instanceId = model.instanceId;
+            this.introduction = model.introduction;
+            this.languageCode = model.languageCode;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.robotType = model.robotType;
+            this.timeZone = model.timeZone;
+        } 
 
         /**
          * Avatar.
@@ -168,7 +194,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * Categories.
          */
-        public Builder categories(java.util.List < Categories> categories) {
+        public Builder categories(java.util.List<Categories> categories) {
             this.categories = categories;
             return this;
         }
@@ -258,6 +284,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
      * <p>DescribeInstanceResponseBody</p>
      */
     public static class Categories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AbilityType")
+        private String abilityType;
+
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
@@ -268,6 +297,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Long parentCategoryId;
 
         private Categories(Builder builder) {
+            this.abilityType = builder.abilityType;
             this.categoryId = builder.categoryId;
             this.name = builder.name;
             this.parentCategoryId = builder.parentCategoryId;
@@ -279,6 +309,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static Categories create() {
             return builder().build();
+        }
+
+        /**
+         * @return abilityType
+         */
+        public String getAbilityType() {
+            return this.abilityType;
         }
 
         /**
@@ -303,9 +340,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String abilityType; 
             private Long categoryId; 
             private String name; 
             private Long parentCategoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.abilityType = model.abilityType;
+                this.categoryId = model.categoryId;
+                this.name = model.name;
+                this.parentCategoryId = model.parentCategoryId;
+            } 
+
+            /**
+             * AbilityType.
+             */
+            public Builder abilityType(String abilityType) {
+                this.abilityType = abilityType;
+                return this;
+            }
 
             /**
              * CategoryId.

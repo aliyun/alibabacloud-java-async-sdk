@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListUserSayResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("UserSays")
-    private java.util.List < UserSays> userSays;
+    private java.util.List<UserSays> userSays;
 
     private ListUserSayResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -41,6 +46,10 @@ public class ListUserSayResponseBody extends TeaModel {
 
     public static ListUserSayResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class ListUserSayResponseBody extends TeaModel {
     /**
      * @return userSays
      */
-    public java.util.List < UserSays> getUserSays() {
+    public java.util.List<UserSays> getUserSays() {
         return this.userSays;
     }
 
@@ -83,7 +92,18 @@ public class ListUserSayResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < UserSays> userSays; 
+        private java.util.List<UserSays> userSays; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserSayResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.userSays = model.userSays;
+        } 
 
         /**
          * PageNumber.
@@ -120,7 +140,7 @@ public class ListUserSayResponseBody extends TeaModel {
         /**
          * UserSays.
          */
-        public Builder userSays(java.util.List < UserSays> userSays) {
+        public Builder userSays(java.util.List<UserSays> userSays) {
             this.userSays = userSays;
             return this;
         }
@@ -187,6 +207,15 @@ public class ListUserSayResponseBody extends TeaModel {
             private String slotId; 
             private Integer startIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlotInfos model) {
+                this.endIndex = model.endIndex;
+                this.slotId = model.slotId;
+                this.startIndex = model.startIndex;
+            } 
+
             /**
              * EndIndex.
              */
@@ -238,7 +267,7 @@ public class ListUserSayResponseBody extends TeaModel {
         private String modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("SlotInfos")
-        private java.util.List < SlotInfos> slotInfos;
+        private java.util.List<SlotInfos> slotInfos;
 
         @com.aliyun.core.annotation.NameInMap("UserSayId")
         private Long userSayId;
@@ -291,7 +320,7 @@ public class ListUserSayResponseBody extends TeaModel {
         /**
          * @return slotInfos
          */
-        public java.util.List < SlotInfos> getSlotInfos() {
+        public java.util.List<SlotInfos> getSlotInfos() {
             return this.slotInfos;
         }
 
@@ -307,8 +336,20 @@ public class ListUserSayResponseBody extends TeaModel {
             private String createTime; 
             private Long intentId; 
             private String modifyTime; 
-            private java.util.List < SlotInfos> slotInfos; 
+            private java.util.List<SlotInfos> slotInfos; 
             private Long userSayId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSays model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.intentId = model.intentId;
+                this.modifyTime = model.modifyTime;
+                this.slotInfos = model.slotInfos;
+                this.userSayId = model.userSayId;
+            } 
 
             /**
              * Content.
@@ -345,7 +386,7 @@ public class ListUserSayResponseBody extends TeaModel {
             /**
              * SlotInfos.
              */
-            public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
+            public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;
                 return this;
             }

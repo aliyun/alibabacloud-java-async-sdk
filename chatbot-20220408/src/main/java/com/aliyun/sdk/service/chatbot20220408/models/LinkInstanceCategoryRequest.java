@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,6 +22,10 @@ public class LinkInstanceCategoryRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AbilityType")
+    private String abilityType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
@@ -31,6 +40,7 @@ public class LinkInstanceCategoryRequest extends Request {
     private LinkInstanceCategoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.abilityType = builder.abilityType;
         this.agentKey = builder.agentKey;
         this.categoryIds = builder.categoryIds;
         this.instanceId = builder.instanceId;
@@ -44,7 +54,7 @@ public class LinkInstanceCategoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +64,13 @@ public class LinkInstanceCategoryRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return abilityType
+     */
+    public String getAbilityType() {
+        return this.abilityType;
     }
 
     /**
@@ -79,6 +96,7 @@ public class LinkInstanceCategoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<LinkInstanceCategoryRequest, Builder> {
         private String regionId; 
+        private String abilityType; 
         private String agentKey; 
         private String categoryIds; 
         private String instanceId; 
@@ -90,6 +108,7 @@ public class LinkInstanceCategoryRequest extends Request {
         private Builder(LinkInstanceCategoryRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.abilityType = request.abilityType;
             this.agentKey = request.agentKey;
             this.categoryIds = request.categoryIds;
             this.instanceId = request.instanceId;
@@ -101,6 +120,15 @@ public class LinkInstanceCategoryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AbilityType.
+         */
+        public Builder abilityType(String abilityType) {
+            this.putQueryParameter("AbilityType", abilityType);
+            this.abilityType = abilityType;
             return this;
         }
 

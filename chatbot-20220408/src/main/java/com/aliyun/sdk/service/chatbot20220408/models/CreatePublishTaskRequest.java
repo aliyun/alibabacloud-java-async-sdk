@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class CreatePublishTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataIdList")
-    private java.util.List < String > dataIdList;
+    private java.util.List<String> dataIdList;
 
     private CreatePublishTaskRequest(Builder builder) {
         super(builder);
@@ -44,7 +49,7 @@ public class CreatePublishTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +78,7 @@ public class CreatePublishTaskRequest extends Request {
     /**
      * @return dataIdList
      */
-    public java.util.List < String > getDataIdList() {
+    public java.util.List<String> getDataIdList() {
         return this.dataIdList;
     }
 
@@ -81,7 +86,7 @@ public class CreatePublishTaskRequest extends Request {
         private String regionId; 
         private String agentKey; 
         private String bizType; 
-        private java.util.List < String > dataIdList; 
+        private java.util.List<String> dataIdList; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class CreatePublishTaskRequest extends Request {
         /**
          * DataIdList.
          */
-        public Builder dataIdList(java.util.List < String > dataIdList) {
+        public Builder dataIdList(java.util.List<String> dataIdList) {
             String dataIdListShrink = shrink(dataIdList, "DataIdList", "json");
             this.putQueryParameter("DataIdList", dataIdListShrink);
             this.dataIdList = dataIdList;

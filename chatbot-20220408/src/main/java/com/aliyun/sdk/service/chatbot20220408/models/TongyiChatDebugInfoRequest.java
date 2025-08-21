@@ -12,48 +12,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceRequest} extends {@link RequestModel}
+ * {@link TongyiChatDebugInfoRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceRequest</p>
+ * <p>TongyiChatDebugInfoRequest</p>
  */
-public class DeleteInstanceRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class TongyiChatDebugInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private DeleteInstanceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String messageId;
+
+    private TongyiChatDebugInfoRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
+        this.messageId = builder.messageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteInstanceRequest create() {
+    public static TongyiChatDebugInfoRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -70,30 +65,28 @@ public class DeleteInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
-        private String regionId; 
+    /**
+     * @return messageId
+     */
+    public String getMessageId() {
+        return this.messageId;
+    }
+
+    public static final class Builder extends Request.Builder<TongyiChatDebugInfoRequest, Builder> {
         private String agentKey; 
         private String instanceId; 
+        private String messageId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest request) {
+        private Builder(TongyiChatDebugInfoRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
+            this.messageId = request.messageId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * AgentKey.
@@ -105,7 +98,10 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-7QuUfaqMQe</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -113,9 +109,21 @@ public class DeleteInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>396E74B3-D84B-46CE-9E51-91C06AD22E31</p>
+         */
+        public Builder messageId(String messageId) {
+            this.putQueryParameter("MessageId", messageId);
+            this.messageId = messageId;
+            return this;
+        }
+
         @Override
-        public DeleteInstanceRequest build() {
-            return new DeleteInstanceRequest(this);
+        public TongyiChatDebugInfoRequest build() {
+            return new TongyiChatDebugInfoRequest(this);
         } 
 
     } 

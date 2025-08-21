@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class SearchDocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryIds")
-    private java.util.List < Long > categoryIds;
+    private java.util.List<Long> categoryIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateTimeBegin")
@@ -91,7 +96,7 @@ public class SearchDocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagIds")
-    private java.util.List < Long > tagIds;
+    private java.util.List<Long> tagIds;
 
     private SearchDocRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class SearchDocRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,7 +152,7 @@ public class SearchDocRequest extends Request {
     /**
      * @return categoryIds
      */
-    public java.util.List < Long > getCategoryIds() {
+    public java.util.List<Long> getCategoryIds() {
         return this.categoryIds;
     }
 
@@ -266,14 +271,14 @@ public class SearchDocRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < Long > getTagIds() {
+    public java.util.List<Long> getTagIds() {
         return this.tagIds;
     }
 
     public static final class Builder extends Request.Builder<SearchDocRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < Long > categoryIds; 
+        private java.util.List<Long> categoryIds; 
         private String createTimeBegin; 
         private String createTimeEnd; 
         private String createUserName; 
@@ -290,7 +295,7 @@ public class SearchDocRequest extends Request {
         private String startTimeBegin; 
         private String startTimeEnd; 
         private Integer status; 
-        private java.util.List < Long > tagIds; 
+        private java.util.List<Long> tagIds; 
 
         private Builder() {
             super();
@@ -341,7 +346,7 @@ public class SearchDocRequest extends Request {
         /**
          * CategoryIds.
          */
-        public Builder categoryIds(java.util.List < Long > categoryIds) {
+        public Builder categoryIds(java.util.List<Long> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
             this.putQueryParameter("CategoryIds", categoryIdsShrink);
             this.categoryIds = categoryIds;
@@ -495,7 +500,7 @@ public class SearchDocRequest extends Request {
         /**
          * TagIds.
          */
-        public Builder tagIds(java.util.List < Long > tagIds) {
+        public Builder tagIds(java.util.List<Long> tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");
             this.putQueryParameter("TagIds", tagIdsShrink);
             this.tagIds = tagIds;

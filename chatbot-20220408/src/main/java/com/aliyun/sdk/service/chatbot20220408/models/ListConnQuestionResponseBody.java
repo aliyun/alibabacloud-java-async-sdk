@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListConnQuestionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Outlines")
-    private java.util.List < Outlines> outlines;
+    private java.util.List<Outlines> outlines;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListConnQuestionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outlines
      */
-    public java.util.List < Outlines> getOutlines() {
+    public java.util.List<Outlines> getOutlines() {
         return this.outlines;
     }
 
@@ -46,13 +55,21 @@ public class ListConnQuestionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Outlines> outlines; 
+        private java.util.List<Outlines> outlines; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConnQuestionResponseBody model) {
+            this.outlines = model.outlines;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Outlines.
          */
-        public Builder outlines(java.util.List < Outlines> outlines) {
+        public Builder outlines(java.util.List<Outlines> outlines) {
             this.outlines = outlines;
             return this;
         }
@@ -150,6 +167,17 @@ public class ListConnQuestionResponseBody extends TeaModel {
             private String modifyTime; 
             private Long outlineId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.connQuestionId = model.connQuestionId;
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.outlineId = model.outlineId;
+                this.title = model.title;
+            } 
 
             /**
              * ConnQuestionId.

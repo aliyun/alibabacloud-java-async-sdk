@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class UpdateSolutionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > perspectiveCodes;
+    private java.util.List<String> perspectiveCodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SolutionId")
@@ -57,7 +62,7 @@ public class UpdateSolutionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,7 @@ public class UpdateSolutionRequest extends Request {
     /**
      * @return perspectiveCodes
      */
-    public java.util.List < String > getPerspectiveCodes() {
+    public java.util.List<String> getPerspectiveCodes() {
         return this.perspectiveCodes;
     }
 
@@ -109,7 +114,7 @@ public class UpdateSolutionRequest extends Request {
         private String agentKey; 
         private String content; 
         private Integer contentType; 
-        private java.util.List < String > perspectiveCodes; 
+        private java.util.List<String> perspectiveCodes; 
         private Long solutionId; 
 
         private Builder() {
@@ -165,7 +170,7 @@ public class UpdateSolutionRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
+        public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
             this.putBodyParameter("PerspectiveCodes", perspectiveCodes);
             this.perspectiveCodes = perspectiveCodes;
             return this;

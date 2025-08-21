@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -43,10 +48,14 @@ public class ListInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -79,16 +88,27 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -234,6 +254,19 @@ public class ListInstanceResponseBody extends TeaModel {
             private String languageCode; 
             private String name; 
             private String robotType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.avatar = model.avatar;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.introduction = model.introduction;
+                this.languageCode = model.languageCode;
+                this.name = model.name;
+                this.robotType = model.robotType;
+            } 
 
             /**
              * Avatar.

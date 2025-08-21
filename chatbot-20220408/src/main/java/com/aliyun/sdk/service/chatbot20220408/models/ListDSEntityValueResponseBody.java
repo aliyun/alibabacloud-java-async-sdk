@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDSEntityValueResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EntityValues")
-    private java.util.List < EntityValues> entityValues;
+    private java.util.List<EntityValues> entityValues;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entityValues
      */
-    public java.util.List < EntityValues> getEntityValues() {
+    public java.util.List<EntityValues> getEntityValues() {
         return this.entityValues;
     }
 
@@ -79,16 +88,27 @@ public class ListDSEntityValueResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EntityValues> entityValues; 
+        private java.util.List<EntityValues> entityValues; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDSEntityValueResponseBody model) {
+            this.entityValues = model.entityValues;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * EntityValues.
          */
-        public Builder entityValues(java.util.List < EntityValues> entityValues) {
+        public Builder entityValues(java.util.List<EntityValues> entityValues) {
             this.entityValues = entityValues;
             return this;
         }
@@ -154,7 +174,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         private String modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("Synonyms")
-        private java.util.List < String > synonyms;
+        private java.util.List<String> synonyms;
 
         private EntityValues(Builder builder) {
             this.content = builder.content;
@@ -211,7 +231,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         /**
          * @return synonyms
          */
-        public java.util.List < String > getSynonyms() {
+        public java.util.List<String> getSynonyms() {
             return this.synonyms;
         }
 
@@ -221,7 +241,19 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             private Long entityId; 
             private Long entityValueId; 
             private String modifyTime; 
-            private java.util.List < String > synonyms; 
+            private java.util.List<String> synonyms; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityValues model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.entityId = model.entityId;
+                this.entityValueId = model.entityValueId;
+                this.modifyTime = model.modifyTime;
+                this.synonyms = model.synonyms;
+            } 
 
             /**
              * Content.
@@ -266,7 +298,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             /**
              * Synonyms.
              */
-            public Builder synonyms(java.util.List < String > synonyms) {
+            public Builder synonyms(java.util.List<String> synonyms) {
                 this.synonyms = synonyms;
                 return this;
             }

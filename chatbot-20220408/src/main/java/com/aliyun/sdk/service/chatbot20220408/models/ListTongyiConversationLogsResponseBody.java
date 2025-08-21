@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     private String costTime;
 
     @com.aliyun.core.annotation.NameInMap("Datas")
-    private java.util.List < java.util.Map<String, ?>> datas;
+    private java.util.List<java.util.Map<String, ?>> datas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return costTime
      */
@@ -45,7 +54,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     /**
      * @return datas
      */
-    public java.util.List < java.util.Map<String, ?>> getDatas() {
+    public java.util.List<java.util.Map<String, ?>> getDatas() {
         return this.datas;
     }
 
@@ -58,8 +67,17 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String costTime; 
-        private java.util.List < java.util.Map<String, ?>> datas; 
+        private java.util.List<java.util.Map<String, ?>> datas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTongyiConversationLogsResponseBody model) {
+            this.costTime = model.costTime;
+            this.datas = model.datas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CostTime.
@@ -72,7 +90,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         /**
          * Datas.
          */
-        public Builder datas(java.util.List < java.util.Map<String, ?>> datas) {
+        public Builder datas(java.util.List<java.util.Map<String, ?>> datas) {
             this.datas = datas;
             return this;
         }

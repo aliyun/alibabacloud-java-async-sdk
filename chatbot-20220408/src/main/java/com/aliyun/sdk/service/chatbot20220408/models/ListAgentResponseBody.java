@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,16 +88,27 @@ public class ListAgentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAgentResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,7 +171,7 @@ public class ListAgentResponseBody extends TeaModel {
         private String agentName;
 
         @com.aliyun.core.annotation.NameInMap("InstanceInfos")
-        private java.util.Map < String, ? > instanceInfos;
+        private java.util.Map<String, ?> instanceInfos;
 
         private Data(Builder builder) {
             this.agentId = builder.agentId;
@@ -192,7 +212,7 @@ public class ListAgentResponseBody extends TeaModel {
         /**
          * @return instanceInfos
          */
-        public java.util.Map < String, ? > getInstanceInfos() {
+        public java.util.Map<String, ?> getInstanceInfos() {
             return this.instanceInfos;
         }
 
@@ -200,7 +220,17 @@ public class ListAgentResponseBody extends TeaModel {
             private Long agentId; 
             private String agentKey; 
             private String agentName; 
-            private java.util.Map < String, ? > instanceInfos; 
+            private java.util.Map<String, ?> instanceInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentId = model.agentId;
+                this.agentKey = model.agentKey;
+                this.agentName = model.agentName;
+                this.instanceInfos = model.instanceInfos;
+            } 
 
             /**
              * AgentId.
@@ -229,7 +259,7 @@ public class ListAgentResponseBody extends TeaModel {
             /**
              * InstanceInfos.
              */
-            public Builder instanceInfos(java.util.Map < String, ? > instanceInfos) {
+            public Builder instanceInfos(java.util.Map<String, ?> instanceInfos) {
                 this.instanceInfos = instanceInfos;
                 return this;
             }

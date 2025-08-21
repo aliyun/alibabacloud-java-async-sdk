@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,16 +42,16 @@ public class DescribeFaqResponseBody extends TeaModel {
     private String modifyUserName;
 
     @com.aliyun.core.annotation.NameInMap("Outlines")
-    private java.util.List < Outlines> outlines;
+    private java.util.List<Outlines> outlines;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SimQuestions")
-    private java.util.List < SimQuestions> simQuestions;
+    private java.util.List<SimQuestions> simQuestions;
 
     @com.aliyun.core.annotation.NameInMap("Solutions")
-    private java.util.List < Solutions> solutions;
+    private java.util.List<Solutions> solutions;
 
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
@@ -81,6 +86,10 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     public static DescribeFaqResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -142,7 +151,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     /**
      * @return outlines
      */
-    public java.util.List < Outlines> getOutlines() {
+    public java.util.List<Outlines> getOutlines() {
         return this.outlines;
     }
 
@@ -156,14 +165,14 @@ public class DescribeFaqResponseBody extends TeaModel {
     /**
      * @return simQuestions
      */
-    public java.util.List < SimQuestions> getSimQuestions() {
+    public java.util.List<SimQuestions> getSimQuestions() {
         return this.simQuestions;
     }
 
     /**
      * @return solutions
      */
-    public java.util.List < Solutions> getSolutions() {
+    public java.util.List<Solutions> getSolutions() {
         return this.solutions;
     }
 
@@ -197,13 +206,34 @@ public class DescribeFaqResponseBody extends TeaModel {
         private Long knowledgeId; 
         private String modifyTime; 
         private String modifyUserName; 
-        private java.util.List < Outlines> outlines; 
+        private java.util.List<Outlines> outlines; 
         private String requestId; 
-        private java.util.List < SimQuestions> simQuestions; 
-        private java.util.List < Solutions> solutions; 
+        private java.util.List<SimQuestions> simQuestions; 
+        private java.util.List<Solutions> solutions; 
         private String startDate; 
         private Integer status; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaqResponseBody model) {
+            this.categoryId = model.categoryId;
+            this.createTime = model.createTime;
+            this.createUserName = model.createUserName;
+            this.effectStatus = model.effectStatus;
+            this.endDate = model.endDate;
+            this.knowledgeId = model.knowledgeId;
+            this.modifyTime = model.modifyTime;
+            this.modifyUserName = model.modifyUserName;
+            this.outlines = model.outlines;
+            this.requestId = model.requestId;
+            this.simQuestions = model.simQuestions;
+            this.solutions = model.solutions;
+            this.startDate = model.startDate;
+            this.status = model.status;
+            this.title = model.title;
+        } 
 
         /**
          * CategoryId.
@@ -272,7 +302,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         /**
          * Outlines.
          */
-        public Builder outlines(java.util.List < Outlines> outlines) {
+        public Builder outlines(java.util.List<Outlines> outlines) {
             this.outlines = outlines;
             return this;
         }
@@ -288,7 +318,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         /**
          * SimQuestions.
          */
-        public Builder simQuestions(java.util.List < SimQuestions> simQuestions) {
+        public Builder simQuestions(java.util.List<SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
             return this;
         }
@@ -296,7 +326,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         /**
          * Solutions.
          */
-        public Builder solutions(java.util.List < Solutions> solutions) {
+        public Builder solutions(java.util.List<Solutions> solutions) {
             this.solutions = solutions;
             return this;
         }
@@ -410,6 +440,17 @@ public class DescribeFaqResponseBody extends TeaModel {
             private String modifyTime; 
             private Long outlineId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.connQuestionId = model.connQuestionId;
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.outlineId = model.outlineId;
+                this.title = model.title;
+            } 
 
             /**
              * ConnQuestionId.
@@ -526,6 +567,16 @@ public class DescribeFaqResponseBody extends TeaModel {
             private Long simQuestionId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimQuestions model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.simQuestionId = model.simQuestionId;
+                this.title = model.title;
+            } 
+
             /**
              * CreateTime.
              */
@@ -585,7 +636,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         private String modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
-        private java.util.List < String > perspectiveCodes;
+        private java.util.List<String> perspectiveCodes;
 
         @com.aliyun.core.annotation.NameInMap("PlainText")
         private String plainText;
@@ -642,7 +693,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         /**
          * @return perspectiveCodes
          */
-        public java.util.List < String > getPerspectiveCodes() {
+        public java.util.List<String> getPerspectiveCodes() {
             return this.perspectiveCodes;
         }
 
@@ -665,9 +716,22 @@ public class DescribeFaqResponseBody extends TeaModel {
             private Integer contentType; 
             private String createTime; 
             private String modifyTime; 
-            private java.util.List < String > perspectiveCodes; 
+            private java.util.List<String> perspectiveCodes; 
             private String plainText; 
             private Long solutionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Solutions model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.perspectiveCodes = model.perspectiveCodes;
+                this.plainText = model.plainText;
+                this.solutionId = model.solutionId;
+            } 
 
             /**
              * Content.
@@ -704,7 +768,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             /**
              * PerspectiveCodes.
              */
-            public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
+            public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
                 return this;
             }

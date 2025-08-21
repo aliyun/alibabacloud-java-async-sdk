@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,13 +39,13 @@ public class DescribeDocResponseBody extends TeaModel {
     private DocInfo docInfo;
 
     @com.aliyun.core.annotation.NameInMap("DocMetadata")
-    private java.util.List < DocMetadata> docMetadata;
+    private java.util.List<DocMetadata> docMetadata;
 
     @com.aliyun.core.annotation.NameInMap("DocName")
     private String docName;
 
     @com.aliyun.core.annotation.NameInMap("DocTags")
-    private java.util.List < DocTags> docTags;
+    private java.util.List<DocTags> docTags;
 
     @com.aliyun.core.annotation.NameInMap("EffectStatus")
     private Integer effectStatus;
@@ -123,6 +128,10 @@ public class DescribeDocResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizCode
      */
@@ -175,7 +184,7 @@ public class DescribeDocResponseBody extends TeaModel {
     /**
      * @return docMetadata
      */
-    public java.util.List < DocMetadata> getDocMetadata() {
+    public java.util.List<DocMetadata> getDocMetadata() {
         return this.docMetadata;
     }
 
@@ -189,7 +198,7 @@ public class DescribeDocResponseBody extends TeaModel {
     /**
      * @return docTags
      */
-    public java.util.List < DocTags> getDocTags() {
+    public java.util.List<DocTags> getDocTags() {
         return this.docTags;
     }
 
@@ -306,9 +315,9 @@ public class DescribeDocResponseBody extends TeaModel {
         private Long createUserId; 
         private String createUserName; 
         private DocInfo docInfo; 
-        private java.util.List < DocMetadata> docMetadata; 
+        private java.util.List<DocMetadata> docMetadata; 
         private String docName; 
-        private java.util.List < DocTags> docTags; 
+        private java.util.List<DocTags> docTags; 
         private Integer effectStatus; 
         private String endDate; 
         private Long knowledgeId; 
@@ -324,6 +333,37 @@ public class DescribeDocResponseBody extends TeaModel {
         private Integer status; 
         private String title; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDocResponseBody model) {
+            this.bizCode = model.bizCode;
+            this.categoryId = model.categoryId;
+            this.config = model.config;
+            this.createTime = model.createTime;
+            this.createUserId = model.createUserId;
+            this.createUserName = model.createUserName;
+            this.docInfo = model.docInfo;
+            this.docMetadata = model.docMetadata;
+            this.docName = model.docName;
+            this.docTags = model.docTags;
+            this.effectStatus = model.effectStatus;
+            this.endDate = model.endDate;
+            this.knowledgeId = model.knowledgeId;
+            this.meta = model.meta;
+            this.modifyTime = model.modifyTime;
+            this.modifyUserId = model.modifyUserId;
+            this.modifyUserName = model.modifyUserName;
+            this.processCanRetry = model.processCanRetry;
+            this.processMessage = model.processMessage;
+            this.processStatus = model.processStatus;
+            this.requestId = model.requestId;
+            this.startDate = model.startDate;
+            this.status = model.status;
+            this.title = model.title;
+            this.url = model.url;
+        } 
 
         /**
          * BizCode.
@@ -384,7 +424,7 @@ public class DescribeDocResponseBody extends TeaModel {
         /**
          * DocMetadata.
          */
-        public Builder docMetadata(java.util.List < DocMetadata> docMetadata) {
+        public Builder docMetadata(java.util.List<DocMetadata> docMetadata) {
             this.docMetadata = docMetadata;
             return this;
         }
@@ -400,7 +440,7 @@ public class DescribeDocResponseBody extends TeaModel {
         /**
          * DocTags.
          */
-        public Builder docTags(java.util.List < DocTags> docTags) {
+        public Builder docTags(java.util.List<DocTags> docTags) {
             this.docTags = docTags;
             return this;
         }
@@ -602,6 +642,16 @@ public class DescribeDocResponseBody extends TeaModel {
             private String paraText; 
             private String paraType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocParas model) {
+                this.paraLevel = model.paraLevel;
+                this.paraNo = model.paraNo;
+                this.paraText = model.paraText;
+                this.paraType = model.paraType;
+            } 
+
             /**
              * ParaLevel.
              */
@@ -649,7 +699,7 @@ public class DescribeDocResponseBody extends TeaModel {
      */
     public static class DocInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocParas")
-        private java.util.List < DocParas> docParas;
+        private java.util.List<DocParas> docParas;
 
         private DocInfo(Builder builder) {
             this.docParas = builder.docParas;
@@ -666,17 +716,24 @@ public class DescribeDocResponseBody extends TeaModel {
         /**
          * @return docParas
          */
-        public java.util.List < DocParas> getDocParas() {
+        public java.util.List<DocParas> getDocParas() {
             return this.docParas;
         }
 
         public static final class Builder {
-            private java.util.List < DocParas> docParas; 
+            private java.util.List<DocParas> docParas; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocInfo model) {
+                this.docParas = model.docParas;
+            } 
 
             /**
              * DocParas.
              */
-            public Builder docParas(java.util.List < DocParas> docParas) {
+            public Builder docParas(java.util.List<DocParas> docParas) {
                 this.docParas = docParas;
                 return this;
             }
@@ -744,6 +801,15 @@ public class DescribeDocResponseBody extends TeaModel {
             private String fieldName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaCellInfoDTOList model) {
+                this.fieldCode = model.fieldCode;
+                this.fieldName = model.fieldName;
+                this.value = model.value;
+            } 
+
             /**
              * FieldCode.
              */
@@ -789,7 +855,7 @@ public class DescribeDocResponseBody extends TeaModel {
         private String businessViewName;
 
         @com.aliyun.core.annotation.NameInMap("MetaCellInfoDTOList")
-        private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList;
+        private java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList;
 
         private DocMetadata(Builder builder) {
             this.businessViewId = builder.businessViewId;
@@ -822,14 +888,23 @@ public class DescribeDocResponseBody extends TeaModel {
         /**
          * @return metaCellInfoDTOList
          */
-        public java.util.List < MetaCellInfoDTOList> getMetaCellInfoDTOList() {
+        public java.util.List<MetaCellInfoDTOList> getMetaCellInfoDTOList() {
             return this.metaCellInfoDTOList;
         }
 
         public static final class Builder {
             private String businessViewId; 
             private String businessViewName; 
-            private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList; 
+            private java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocMetadata model) {
+                this.businessViewId = model.businessViewId;
+                this.businessViewName = model.businessViewName;
+                this.metaCellInfoDTOList = model.metaCellInfoDTOList;
+            } 
 
             /**
              * BusinessViewId.
@@ -850,7 +925,7 @@ public class DescribeDocResponseBody extends TeaModel {
             /**
              * MetaCellInfoDTOList.
              */
-            public Builder metaCellInfoDTOList(java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList) {
+            public Builder metaCellInfoDTOList(java.util.List<MetaCellInfoDTOList> metaCellInfoDTOList) {
                 this.metaCellInfoDTOList = metaCellInfoDTOList;
                 return this;
             }
@@ -941,6 +1016,17 @@ public class DescribeDocResponseBody extends TeaModel {
             private String groupName; 
             private Long tagId; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocTags model) {
+                this.defaultTag = model.defaultTag;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * DefaultTag.
