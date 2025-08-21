@@ -36,6 +36,10 @@ public class ListSummaryAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListSummaryAppsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SummaryAppInfos summaryAppInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSummaryAppsResponseBody model) {
+            this.requestId = model.requestId;
+            this.summaryAppInfos = model.summaryAppInfos;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class ListSummaryAppsResponseBody extends TeaModel {
             private Long appKey; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SummaryAppInfo model) {
+                this.appKey = model.appKey;
+                this.appName = model.appName;
+            } 
+
             /**
              * AppKey.
              */
@@ -174,6 +194,13 @@ public class ListSummaryAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SummaryAppInfo> summaryAppInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SummaryAppInfos model) {
+                this.summaryAppInfo = model.summaryAppInfo;
+            } 
 
             /**
              * SummaryAppInfo.

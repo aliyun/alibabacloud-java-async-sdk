@@ -72,6 +72,10 @@ public class PushRequest extends Request {
     private String androidInboxBody;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMeizuNoticeMsgType")
+    private Integer androidMeizuNoticeMsgType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidMessageHuaweiCategory")
     private String androidMessageHuaweiCategory;
 
@@ -473,6 +477,7 @@ public class PushRequest extends Request {
         this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
         this.androidImageUrl = builder.androidImageUrl;
         this.androidInboxBody = builder.androidInboxBody;
+        this.androidMeizuNoticeMsgType = builder.androidMeizuNoticeMsgType;
         this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
         this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
         this.androidMessageOppoCategory = builder.androidMessageOppoCategory;
@@ -576,7 +581,7 @@ public class PushRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -670,6 +675,13 @@ public class PushRequest extends Request {
      */
     public String getAndroidInboxBody() {
         return this.androidInboxBody;
+    }
+
+    /**
+     * @return androidMeizuNoticeMsgType
+     */
+    public Integer getAndroidMeizuNoticeMsgType() {
+        return this.androidMeizuNoticeMsgType;
     }
 
     /**
@@ -1337,6 +1349,7 @@ public class PushRequest extends Request {
         private Integer androidHuaweiTargetUserType; 
         private String androidImageUrl; 
         private String androidInboxBody; 
+        private Integer androidMeizuNoticeMsgType; 
         private String androidMessageHuaweiCategory; 
         private String androidMessageHuaweiUrgency; 
         private String androidMessageOppoCategory; 
@@ -1450,6 +1463,7 @@ public class PushRequest extends Request {
             this.androidHuaweiTargetUserType = request.androidHuaweiTargetUserType;
             this.androidImageUrl = request.androidImageUrl;
             this.androidInboxBody = request.androidInboxBody;
+            this.androidMeizuNoticeMsgType = request.androidMeizuNoticeMsgType;
             this.androidMessageHuaweiCategory = request.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = request.androidMessageHuaweiUrgency;
             this.androidMessageOppoCategory = request.androidMessageOppoCategory;
@@ -1659,6 +1673,15 @@ public class PushRequest extends Request {
         public Builder androidInboxBody(String androidInboxBody) {
             this.putQueryParameter("AndroidInboxBody", androidInboxBody);
             this.androidInboxBody = androidInboxBody;
+            return this;
+        }
+
+        /**
+         * AndroidMeizuNoticeMsgType.
+         */
+        public Builder androidMeizuNoticeMsgType(Integer androidMeizuNoticeMsgType) {
+            this.putQueryParameter("AndroidMeizuNoticeMsgType", androidMeizuNoticeMsgType);
+            this.androidMeizuNoticeMsgType = androidMeizuNoticeMsgType;
             return this;
         }
 

@@ -36,6 +36,10 @@ public class QueryDeviceStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appDeviceStats
      */
@@ -53,6 +57,14 @@ public class QueryDeviceStatResponseBody extends TeaModel {
     public static final class Builder {
         private AppDeviceStats appDeviceStats; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceStatResponseBody model) {
+            this.appDeviceStats = model.appDeviceStats;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AppDeviceStats.
@@ -132,6 +144,15 @@ public class QueryDeviceStatResponseBody extends TeaModel {
             private String deviceType; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppDeviceStat model) {
+                this.count = model.count;
+                this.deviceType = model.deviceType;
+                this.time = model.time;
+            } 
+
             /**
              * Count.
              */
@@ -194,6 +215,13 @@ public class QueryDeviceStatResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AppDeviceStat> appDeviceStat; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppDeviceStats model) {
+                this.appDeviceStat = model.appDeviceStat;
+            } 
 
             /**
              * AppDeviceStat.

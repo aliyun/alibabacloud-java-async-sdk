@@ -36,6 +36,10 @@ public class QueryAliasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliasInfos
      */
@@ -53,6 +57,14 @@ public class QueryAliasesResponseBody extends TeaModel {
     public static final class Builder {
         private AliasInfos aliasInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAliasesResponseBody model) {
+            this.aliasInfos = model.aliasInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AliasInfos.
@@ -108,6 +120,13 @@ public class QueryAliasesResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AliasInfo model) {
+                this.aliasName = model.aliasName;
+            } 
+
             /**
              * AliasName.
              */
@@ -154,6 +173,13 @@ public class QueryAliasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AliasInfo> aliasInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliasInfos model) {
+                this.aliasInfo = model.aliasInfo;
+            } 
 
             /**
              * AliasInfo.

@@ -36,6 +36,10 @@ public class QueryDevicesByAliasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceIds
      */
@@ -53,6 +57,14 @@ public class QueryDevicesByAliasResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceIds deviceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDevicesByAliasResponseBody model) {
+            this.deviceIds = model.deviceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DeviceIds.
@@ -107,6 +119,13 @@ public class QueryDevicesByAliasResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> deviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceIds model) {
+                this.deviceId = model.deviceId;
+            } 
 
             /**
              * DeviceId.

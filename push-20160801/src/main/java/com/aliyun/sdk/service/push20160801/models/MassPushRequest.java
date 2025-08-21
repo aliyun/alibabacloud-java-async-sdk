@@ -47,7 +47,7 @@ public class MassPushRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,9 @@ public class MassPushRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("AndroidInboxBody")
         private String androidInboxBody;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidMeizuNoticeMsgType")
+        private Integer androidMeizuNoticeMsgType;
 
         @com.aliyun.core.annotation.NameInMap("AndroidMessageHuaweiCategory")
         private String androidMessageHuaweiCategory;
@@ -454,6 +457,7 @@ public class MassPushRequest extends Request {
             this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
             this.androidImageUrl = builder.androidImageUrl;
             this.androidInboxBody = builder.androidInboxBody;
+            this.androidMeizuNoticeMsgType = builder.androidMeizuNoticeMsgType;
             this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
             this.androidMessageOppoCategory = builder.androidMessageOppoCategory;
@@ -639,6 +643,13 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidInboxBody() {
             return this.androidInboxBody;
+        }
+
+        /**
+         * @return androidMeizuNoticeMsgType
+         */
+        public Integer getAndroidMeizuNoticeMsgType() {
+            return this.androidMeizuNoticeMsgType;
         }
 
         /**
@@ -1257,6 +1268,7 @@ public class MassPushRequest extends Request {
             private Integer androidHuaweiTargetUserType; 
             private String androidImageUrl; 
             private String androidInboxBody; 
+            private Integer androidMeizuNoticeMsgType; 
             private String androidMessageHuaweiCategory; 
             private String androidMessageHuaweiUrgency; 
             private String androidMessageOppoCategory; 
@@ -1343,6 +1355,112 @@ public class MassPushRequest extends Request {
             private String iOSRemindBody; 
             private Boolean iOSSilentNotification; 
             private String iOSSubtitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushTask model) {
+                this.androidActivity = model.androidActivity;
+                this.androidBadgeAddNum = model.androidBadgeAddNum;
+                this.androidBadgeClass = model.androidBadgeClass;
+                this.androidBadgeSetNum = model.androidBadgeSetNum;
+                this.androidBigBody = model.androidBigBody;
+                this.androidBigPictureUrl = model.androidBigPictureUrl;
+                this.androidBigTitle = model.androidBigTitle;
+                this.androidExtParameters = model.androidExtParameters;
+                this.androidHonorTargetUserType = model.androidHonorTargetUserType;
+                this.androidHuaweiReceiptId = model.androidHuaweiReceiptId;
+                this.androidHuaweiTargetUserType = model.androidHuaweiTargetUserType;
+                this.androidImageUrl = model.androidImageUrl;
+                this.androidInboxBody = model.androidInboxBody;
+                this.androidMeizuNoticeMsgType = model.androidMeizuNoticeMsgType;
+                this.androidMessageHuaweiCategory = model.androidMessageHuaweiCategory;
+                this.androidMessageHuaweiUrgency = model.androidMessageHuaweiUrgency;
+                this.androidMessageOppoCategory = model.androidMessageOppoCategory;
+                this.androidMessageOppoNotifyLevel = model.androidMessageOppoNotifyLevel;
+                this.androidMessageVivoCategory = model.androidMessageVivoCategory;
+                this.androidMusic = model.androidMusic;
+                this.androidNotificationBarPriority = model.androidNotificationBarPriority;
+                this.androidNotificationBarType = model.androidNotificationBarType;
+                this.androidNotificationChannel = model.androidNotificationChannel;
+                this.androidNotificationGroup = model.androidNotificationGroup;
+                this.androidNotificationHonorChannel = model.androidNotificationHonorChannel;
+                this.androidNotificationHuaweiChannel = model.androidNotificationHuaweiChannel;
+                this.androidNotificationNotifyId = model.androidNotificationNotifyId;
+                this.androidNotificationThreadId = model.androidNotificationThreadId;
+                this.androidNotificationVivoChannel = model.androidNotificationVivoChannel;
+                this.androidNotificationXiaomiChannel = model.androidNotificationXiaomiChannel;
+                this.androidNotifyType = model.androidNotifyType;
+                this.androidOpenType = model.androidOpenType;
+                this.androidOpenUrl = model.androidOpenUrl;
+                this.androidPopupActivity = model.androidPopupActivity;
+                this.androidPopupBody = model.androidPopupBody;
+                this.androidPopupTitle = model.androidPopupTitle;
+                this.androidRemind = model.androidRemind;
+                this.androidRenderStyle = model.androidRenderStyle;
+                this.androidTargetUserType = model.androidTargetUserType;
+                this.androidVivoPushMode = model.androidVivoPushMode;
+                this.androidVivoReceiptId = model.androidVivoReceiptId;
+                this.androidXiaoMiActivity = model.androidXiaoMiActivity;
+                this.androidXiaoMiNotifyBody = model.androidXiaoMiNotifyBody;
+                this.androidXiaoMiNotifyTitle = model.androidXiaoMiNotifyTitle;
+                this.androidXiaomiBigPictureUrl = model.androidXiaomiBigPictureUrl;
+                this.androidXiaomiImageUrl = model.androidXiaomiImageUrl;
+                this.body = model.body;
+                this.deviceType = model.deviceType;
+                this.expireTime = model.expireTime;
+                this.harmonyAction = model.harmonyAction;
+                this.harmonyActionType = model.harmonyActionType;
+                this.harmonyBadgeAddNum = model.harmonyBadgeAddNum;
+                this.harmonyBadgeSetNum = model.harmonyBadgeSetNum;
+                this.harmonyCategory = model.harmonyCategory;
+                this.harmonyExtParameters = model.harmonyExtParameters;
+                this.harmonyExtensionExtraData = model.harmonyExtensionExtraData;
+                this.harmonyExtensionPush = model.harmonyExtensionPush;
+                this.harmonyImageUrl = model.harmonyImageUrl;
+                this.harmonyInboxContent = model.harmonyInboxContent;
+                this.harmonyNotificationSlotType = model.harmonyNotificationSlotType;
+                this.harmonyNotifyId = model.harmonyNotifyId;
+                this.harmonyReceiptId = model.harmonyReceiptId;
+                this.harmonyRemind = model.harmonyRemind;
+                this.harmonyRemindBody = model.harmonyRemindBody;
+                this.harmonyRemindTitle = model.harmonyRemindTitle;
+                this.harmonyRenderStyle = model.harmonyRenderStyle;
+                this.harmonyTestMessage = model.harmonyTestMessage;
+                this.harmonyUri = model.harmonyUri;
+                this.jobKey = model.jobKey;
+                this.pushTime = model.pushTime;
+                this.pushType = model.pushType;
+                this.sendChannels = model.sendChannels;
+                this.sendSpeed = model.sendSpeed;
+                this.storeOffline = model.storeOffline;
+                this.target = model.target;
+                this.targetValue = model.targetValue;
+                this.title = model.title;
+                this.trim = model.trim;
+                this.iOSApnsEnv = model.iOSApnsEnv;
+                this.iOSBadge = model.iOSBadge;
+                this.iOSBadgeAutoIncrement = model.iOSBadgeAutoIncrement;
+                this.iOSExtParameters = model.iOSExtParameters;
+                this.iOSInterruptionLevel = model.iOSInterruptionLevel;
+                this.iOSLiveActivityAttributes = model.iOSLiveActivityAttributes;
+                this.iOSLiveActivityAttributesType = model.iOSLiveActivityAttributesType;
+                this.iOSLiveActivityContentState = model.iOSLiveActivityContentState;
+                this.iOSLiveActivityDismissalDate = model.iOSLiveActivityDismissalDate;
+                this.iOSLiveActivityEvent = model.iOSLiveActivityEvent;
+                this.iOSLiveActivityId = model.iOSLiveActivityId;
+                this.iOSLiveActivityStaleDate = model.iOSLiveActivityStaleDate;
+                this.iOSMusic = model.iOSMusic;
+                this.iOSMutableContent = model.iOSMutableContent;
+                this.iOSNotificationCategory = model.iOSNotificationCategory;
+                this.iOSNotificationCollapseId = model.iOSNotificationCollapseId;
+                this.iOSNotificationThreadId = model.iOSNotificationThreadId;
+                this.iOSRelevanceScore = model.iOSRelevanceScore;
+                this.iOSRemind = model.iOSRemind;
+                this.iOSRemindBody = model.iOSRemindBody;
+                this.iOSSilentNotification = model.iOSSilentNotification;
+                this.iOSSubtitle = model.iOSSubtitle;
+            } 
 
             /**
              * AndroidActivity.
@@ -1445,6 +1563,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidInboxBody(String androidInboxBody) {
                 this.androidInboxBody = androidInboxBody;
+                return this;
+            }
+
+            /**
+             * AndroidMeizuNoticeMsgType.
+             */
+            public Builder androidMeizuNoticeMsgType(Integer androidMeizuNoticeMsgType) {
+                this.androidMeizuNoticeMsgType = androidMeizuNoticeMsgType;
                 return this;
             }
 

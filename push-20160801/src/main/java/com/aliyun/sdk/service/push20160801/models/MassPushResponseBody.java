@@ -36,6 +36,10 @@ public class MassPushResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageIds
      */
@@ -53,6 +57,14 @@ public class MassPushResponseBody extends TeaModel {
     public static final class Builder {
         private MessageIds messageIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MassPushResponseBody model) {
+            this.messageIds = model.messageIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MessageIds.
@@ -107,6 +119,13 @@ public class MassPushResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> messageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageIds model) {
+                this.messageId = model.messageId;
+            } 
 
             /**
              * MessageId.

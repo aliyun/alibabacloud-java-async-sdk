@@ -36,6 +36,10 @@ public class CheckDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceCheckInfos
      */
@@ -53,6 +57,14 @@ public class CheckDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceCheckInfos deviceCheckInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDevicesResponseBody model) {
+            this.deviceCheckInfos = model.deviceCheckInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DeviceCheckInfos.
@@ -120,6 +132,14 @@ public class CheckDevicesResponseBody extends TeaModel {
             private Boolean available; 
             private String deviceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceCheckInfo model) {
+                this.available = model.available;
+                this.deviceId = model.deviceId;
+            } 
+
             /**
              * Available.
              */
@@ -174,6 +194,13 @@ public class CheckDevicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeviceCheckInfo> deviceCheckInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCheckInfos model) {
+                this.deviceCheckInfo = model.deviceCheckInfo;
+            } 
 
             /**
              * DeviceCheckInfo.

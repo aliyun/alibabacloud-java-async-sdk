@@ -36,6 +36,10 @@ public class CheckDeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return available
      */
@@ -53,6 +57,14 @@ public class CheckDeviceResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean available; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDeviceResponseBody model) {
+            this.available = model.available;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Available.
