@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddImageResponse> addImage(AddImageRequest request);
 
     /**
+     * @param request the request parameters of CreateActionPlan  CreateActionPlanRequest
+     * @return CreateActionPlanResponse
+     */
+    CompletableFuture<CreateActionPlanResponse> createActionPlan(CreateActionPlanRequest request);
+
+    /**
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
      */
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePoolResponse
      */
     CompletableFuture<CreatePoolResponse> createPool(CreatePoolRequest request);
+
+    /**
+     * @param request the request parameters of DeleteActionPlan  DeleteActionPlanRequest
+     * @return DeleteActionPlanResponse
+     */
+    CompletableFuture<DeleteActionPlanResponse> deleteActionPlan(DeleteActionPlanRequest request);
 
     /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
@@ -62,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeJobMetricLastResponse> describeJobMetricLast(DescribeJobMetricLastRequest request);
 
     /**
+     * @param request the request parameters of GetActionPlan  GetActionPlanRequest
+     * @return GetActionPlanResponse
+     */
+    CompletableFuture<GetActionPlanResponse> getActionPlan(GetActionPlanRequest request);
+
+    /**
      * @param request the request parameters of GetAppVersions  GetAppVersionsRequest
      * @return GetAppVersionsResponse
      */
@@ -84,6 +102,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPoolResponse
      */
     CompletableFuture<GetPoolResponse> getPool(GetPoolRequest request);
+
+    /**
+     * @param request the request parameters of ListActionPlanActivities  ListActionPlanActivitiesRequest
+     * @return ListActionPlanActivitiesResponse
+     */
+    CompletableFuture<ListActionPlanActivitiesResponse> listActionPlanActivities(ListActionPlanActivitiesRequest request);
+
+    /**
+     * @param request the request parameters of ListActionPlans  ListActionPlansRequest
+     * @return ListActionPlansResponse
+     */
+    CompletableFuture<ListActionPlansResponse> listActionPlans(ListActionPlansRequest request);
 
     /**
      * @param request the request parameters of ListExecutors  ListExecutorsRequest
@@ -144,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnTagResourcesResponse
      */
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateActionPlan  UpdateActionPlanRequest
+     * @return UpdateActionPlanResponse
+     */
+    CompletableFuture<UpdateActionPlanResponse> updateActionPlan(UpdateActionPlanRequest request);
 
     /**
      * @param request the request parameters of UpdatePool  UpdatePoolRequest
