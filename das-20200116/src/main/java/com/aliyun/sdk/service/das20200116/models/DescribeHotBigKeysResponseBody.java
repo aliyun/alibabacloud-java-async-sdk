@@ -380,6 +380,276 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
      *
      * <p>DescribeHotBigKeysResponseBody</p>
      */
+    public static class HighTrafficKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Db")
+        private Integer db;
+
+        @com.aliyun.core.annotation.NameInMap("Hot")
+        private String hot;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("KeyType")
+        private String keyType;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("inBytes")
+        private Long inBytes;
+
+        @com.aliyun.core.annotation.NameInMap("outBytes")
+        private Long outBytes;
+
+        private HighTrafficKey(Builder builder) {
+            this.db = builder.db;
+            this.hot = builder.hot;
+            this.key = builder.key;
+            this.keyType = builder.keyType;
+            this.nodeId = builder.nodeId;
+            this.size = builder.size;
+            this.inBytes = builder.inBytes;
+            this.outBytes = builder.outBytes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HighTrafficKey create() {
+            return builder().build();
+        }
+
+        /**
+         * @return db
+         */
+        public Integer getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return hot
+         */
+        public String getHot() {
+            return this.hot;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return keyType
+         */
+        public String getKeyType() {
+            return this.keyType;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return inBytes
+         */
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
+        /**
+         * @return outBytes
+         */
+        public Long getOutBytes() {
+            return this.outBytes;
+        }
+
+        public static final class Builder {
+            private Integer db; 
+            private String hot; 
+            private String key; 
+            private String keyType; 
+            private String nodeId; 
+            private Long size; 
+            private Long inBytes; 
+            private Long outBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighTrafficKey model) {
+                this.db = model.db;
+                this.hot = model.hot;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.nodeId = model.nodeId;
+                this.size = model.size;
+                this.inBytes = model.inBytes;
+                this.outBytes = model.outBytes;
+            } 
+
+            /**
+             * <p>The database in which the key is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder db(Integer db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * Hot.
+             */
+            public Builder hot(String hot) {
+                this.hot = hot;
+                return this;
+            }
+
+            /**
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc:def:eng</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zset</p>
+             */
+            public Builder keyType(String keyType) {
+                this.keyType = keyType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * inBytes.
+             */
+            public Builder inBytes(Long inBytes) {
+                this.inBytes = inBytes;
+                return this;
+            }
+
+            /**
+             * outBytes.
+             */
+            public Builder outBytes(Long outBytes) {
+                this.outBytes = outBytes;
+                return this;
+            }
+
+            public HighTrafficKey build() {
+                return new HighTrafficKey(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeHotBigKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotBigKeysResponseBody</p>
+     */
+    public static class HighTrafficKeys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HighTrafficKey")
+        private java.util.List<HighTrafficKey> highTrafficKey;
+
+        private HighTrafficKeys(Builder builder) {
+            this.highTrafficKey = builder.highTrafficKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HighTrafficKeys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return highTrafficKey
+         */
+        public java.util.List<HighTrafficKey> getHighTrafficKey() {
+            return this.highTrafficKey;
+        }
+
+        public static final class Builder {
+            private java.util.List<HighTrafficKey> highTrafficKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighTrafficKeys model) {
+                this.highTrafficKey = model.highTrafficKey;
+            } 
+
+            /**
+             * HighTrafficKey.
+             */
+            public Builder highTrafficKey(java.util.List<HighTrafficKey> highTrafficKey) {
+                this.highTrafficKey = highTrafficKey;
+                return this;
+            }
+
+            public HighTrafficKeys build() {
+                return new HighTrafficKeys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeHotBigKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotBigKeysResponseBody</p>
+     */
     public static class HotKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
@@ -399,6 +669,9 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
         private HotKey(Builder builder) {
             this.db = builder.db;
             this.hot = builder.hot;
@@ -406,6 +679,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             this.keyType = builder.keyType;
             this.lfu = builder.lfu;
             this.nodeId = builder.nodeId;
+            this.size = builder.size;
         }
 
         public static Builder builder() {
@@ -458,6 +732,13 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
         public static final class Builder {
             private Integer db; 
             private String hot; 
@@ -465,6 +746,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private String keyType; 
             private Integer lfu; 
             private String nodeId; 
+            private Long size; 
 
             private Builder() {
             } 
@@ -476,6 +758,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
                 this.keyType = model.keyType;
                 this.lfu = model.lfu;
                 this.nodeId = model.nodeId;
+                this.size = model.size;
             } 
 
             /**
@@ -541,6 +824,17 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
                 return this;
             }
 
@@ -618,6 +912,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
+        @com.aliyun.core.annotation.NameInMap("HighTrafficKeyMsg")
+        private String highTrafficKeyMsg;
+
+        @com.aliyun.core.annotation.NameInMap("HighTrafficKeys")
+        private HighTrafficKeys highTrafficKeys;
+
         @com.aliyun.core.annotation.NameInMap("HotKeyMsg")
         private String hotKeyMsg;
 
@@ -627,6 +927,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.bigKeyMsg = builder.bigKeyMsg;
             this.bigKeys = builder.bigKeys;
+            this.highTrafficKeyMsg = builder.highTrafficKeyMsg;
+            this.highTrafficKeys = builder.highTrafficKeys;
             this.hotKeyMsg = builder.hotKeyMsg;
             this.hotKeys = builder.hotKeys;
         }
@@ -654,6 +956,20 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return highTrafficKeyMsg
+         */
+        public String getHighTrafficKeyMsg() {
+            return this.highTrafficKeyMsg;
+        }
+
+        /**
+         * @return highTrafficKeys
+         */
+        public HighTrafficKeys getHighTrafficKeys() {
+            return this.highTrafficKeys;
+        }
+
+        /**
          * @return hotKeyMsg
          */
         public String getHotKeyMsg() {
@@ -670,6 +986,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         public static final class Builder {
             private String bigKeyMsg; 
             private BigKeys bigKeys; 
+            private String highTrafficKeyMsg; 
+            private HighTrafficKeys highTrafficKeys; 
             private String hotKeyMsg; 
             private HotKeys hotKeys; 
 
@@ -679,6 +997,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.bigKeyMsg = model.bigKeyMsg;
                 this.bigKeys = model.bigKeys;
+                this.highTrafficKeyMsg = model.highTrafficKeyMsg;
+                this.highTrafficKeys = model.highTrafficKeys;
                 this.hotKeyMsg = model.hotKeyMsg;
                 this.hotKeys = model.hotKeys;
             } 
@@ -699,6 +1019,22 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
+                return this;
+            }
+
+            /**
+             * HighTrafficKeyMsg.
+             */
+            public Builder highTrafficKeyMsg(String highTrafficKeyMsg) {
+                this.highTrafficKeyMsg = highTrafficKeyMsg;
+                return this;
+            }
+
+            /**
+             * HighTrafficKeys.
+             */
+            public Builder highTrafficKeys(HighTrafficKeys highTrafficKeys) {
+                this.highTrafficKeys = highTrafficKeys;
                 return this;
             }
 

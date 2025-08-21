@@ -177,11 +177,17 @@ public class DescribeHotKeysResponseBody extends TeaModel {
      * <p>DescribeHotKeysResponseBody</p>
      */
     public static class HotKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
         @com.aliyun.core.annotation.NameInMap("Hot")
         private String hot;
+
+        @com.aliyun.core.annotation.NameInMap("InBytes")
+        private Long inBytes;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -189,14 +195,24 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
+        private Long outBytes;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private HotKey(Builder builder) {
+            this.category = builder.category;
             this.db = builder.db;
             this.hot = builder.hot;
+            this.inBytes = builder.inBytes;
             this.key = builder.key;
             this.keyType = builder.keyType;
+            this.nodeId = builder.nodeId;
+            this.outBytes = builder.outBytes;
             this.size = builder.size;
         }
 
@@ -206,6 +222,13 @@ public class DescribeHotKeysResponseBody extends TeaModel {
 
         public static HotKey create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -223,6 +246,13 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return inBytes
+         */
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
+        /**
          * @return key
          */
         public String getKey() {
@@ -237,6 +267,20 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return outBytes
+         */
+        public Long getOutBytes() {
+            return this.outBytes;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -244,22 +288,38 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private Integer db; 
             private String hot; 
+            private Long inBytes; 
             private String key; 
             private String keyType; 
+            private String nodeId; 
+            private Long outBytes; 
             private Long size; 
 
             private Builder() {
             } 
 
             private Builder(HotKey model) {
+                this.category = model.category;
                 this.db = model.db;
                 this.hot = model.hot;
+                this.inBytes = model.inBytes;
                 this.key = model.key;
                 this.keyType = model.keyType;
+                this.nodeId = model.nodeId;
+                this.outBytes = model.outBytes;
                 this.size = model.size;
             } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * <p>The database in which the key is stored.</p>
@@ -284,6 +344,14 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
+             * InBytes.
+             */
+            public Builder inBytes(Long inBytes) {
+                this.inBytes = inBytes;
+                return this;
+            }
+
+            /**
              * <p>The name of the key.</p>
              * 
              * <strong>example:</strong>
@@ -302,6 +370,22 @@ public class DescribeHotKeysResponseBody extends TeaModel {
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * OutBytes.
+             */
+            public Builder outBytes(Long outBytes) {
+                this.outBytes = outBytes;
                 return this;
             }
 

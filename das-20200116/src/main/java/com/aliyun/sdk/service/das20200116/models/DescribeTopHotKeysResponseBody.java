@@ -174,11 +174,17 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
      * <p>DescribeTopHotKeysResponseBody</p>
      */
     public static class HotKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
         @com.aliyun.core.annotation.NameInMap("Hot")
         private String hot;
+
+        @com.aliyun.core.annotation.NameInMap("InBytes")
+        private Long inBytes;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -192,13 +198,19 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
+        private Long outBytes;
+
         private HotKey(Builder builder) {
+            this.category = builder.category;
             this.db = builder.db;
             this.hot = builder.hot;
+            this.inBytes = builder.inBytes;
             this.key = builder.key;
             this.keyType = builder.keyType;
             this.lfu = builder.lfu;
             this.nodeId = builder.nodeId;
+            this.outBytes = builder.outBytes;
         }
 
         public static Builder builder() {
@@ -207,6 +219,13 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
 
         public static HotKey create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -221,6 +240,13 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
          */
         public String getHot() {
             return this.hot;
+        }
+
+        /**
+         * @return inBytes
+         */
+        public Long getInBytes() {
+            return this.inBytes;
         }
 
         /**
@@ -251,25 +277,46 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        /**
+         * @return outBytes
+         */
+        public Long getOutBytes() {
+            return this.outBytes;
+        }
+
         public static final class Builder {
+            private String category; 
             private Integer db; 
             private String hot; 
+            private Long inBytes; 
             private String key; 
             private String keyType; 
             private Integer lfu; 
             private String nodeId; 
+            private Long outBytes; 
 
             private Builder() {
             } 
 
             private Builder(HotKey model) {
+                this.category = model.category;
                 this.db = model.db;
                 this.hot = model.hot;
+                this.inBytes = model.inBytes;
                 this.key = model.key;
                 this.keyType = model.keyType;
                 this.lfu = model.lfu;
                 this.nodeId = model.nodeId;
+                this.outBytes = model.outBytes;
             } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * <p>The database in which the key is stored.</p>
@@ -290,6 +337,14 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
              */
             public Builder hot(String hot) {
                 this.hot = hot;
+                return this;
+            }
+
+            /**
+             * InBytes.
+             */
+            public Builder inBytes(Long inBytes) {
+                this.inBytes = inBytes;
                 return this;
             }
 
@@ -334,6 +389,14 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * OutBytes.
+             */
+            public Builder outBytes(Long outBytes) {
+                this.outBytes = outBytes;
                 return this;
             }
 
