@@ -122,6 +122,9 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
+        @com.aliyun.core.annotation.NameInMap("PatchId")
+        private String patchId;
+
         @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
         private String renderingInstanceId;
 
@@ -134,6 +137,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         private Sessions(Builder builder) {
             this.appId = builder.appId;
             this.clientId = builder.clientId;
+            this.patchId = builder.patchId;
             this.renderingInstanceId = builder.renderingInstanceId;
             this.sessionId = builder.sessionId;
             this.startTime = builder.startTime;
@@ -162,6 +166,13 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return patchId
+         */
+        public String getPatchId() {
+            return this.patchId;
+        }
+
+        /**
          * @return renderingInstanceId
          */
         public String getRenderingInstanceId() {
@@ -185,6 +196,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String clientId; 
+            private String patchId; 
             private String renderingInstanceId; 
             private String sessionId; 
             private String startTime; 
@@ -195,6 +207,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             private Builder(Sessions model) {
                 this.appId = model.appId;
                 this.clientId = model.clientId;
+                this.patchId = model.patchId;
                 this.renderingInstanceId = model.renderingInstanceId;
                 this.sessionId = model.sessionId;
                 this.startTime = model.startTime;
@@ -213,6 +226,14 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * PatchId.
+             */
+            public Builder patchId(String patchId) {
+                this.patchId = patchId;
                 return this;
             }
 

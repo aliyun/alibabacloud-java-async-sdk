@@ -19,12 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UploadCloudAppRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 255, minLength = 8)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 4)
     private String appName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppVersion")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 255, minLength = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 1)
     private String appVersion;
 
     @com.aliyun.core.annotation.Query
@@ -42,6 +42,14 @@ public class UploadCloudAppRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String md5;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgFormat")
+    private String pkgFormat;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgType")
+    private String pkgType;
+
     private UploadCloudAppRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
@@ -49,6 +57,8 @@ public class UploadCloudAppRequest extends Request {
         this.description = builder.description;
         this.downloadUrl = builder.downloadUrl;
         this.md5 = builder.md5;
+        this.pkgFormat = builder.pkgFormat;
+        this.pkgType = builder.pkgType;
     }
 
     public static Builder builder() {
@@ -99,12 +109,28 @@ public class UploadCloudAppRequest extends Request {
         return this.md5;
     }
 
+    /**
+     * @return pkgFormat
+     */
+    public String getPkgFormat() {
+        return this.pkgFormat;
+    }
+
+    /**
+     * @return pkgType
+     */
+    public String getPkgType() {
+        return this.pkgType;
+    }
+
     public static final class Builder extends Request.Builder<UploadCloudAppRequest, Builder> {
         private String appName; 
         private String appVersion; 
         private String description; 
         private String downloadUrl; 
         private String md5; 
+        private String pkgFormat; 
+        private String pkgType; 
 
         private Builder() {
             super();
@@ -117,6 +143,8 @@ public class UploadCloudAppRequest extends Request {
             this.description = request.description;
             this.downloadUrl = request.downloadUrl;
             this.md5 = request.md5;
+            this.pkgFormat = request.pkgFormat;
+            this.pkgType = request.pkgType;
         } 
 
         /**
@@ -173,6 +201,24 @@ public class UploadCloudAppRequest extends Request {
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
             this.md5 = md5;
+            return this;
+        }
+
+        /**
+         * PkgFormat.
+         */
+        public Builder pkgFormat(String pkgFormat) {
+            this.putQueryParameter("PkgFormat", pkgFormat);
+            this.pkgFormat = pkgFormat;
+            return this;
+        }
+
+        /**
+         * PkgType.
+         */
+        public Builder pkgType(String pkgType) {
+            this.putQueryParameter("PkgType", pkgType);
+            this.pkgType = pkgType;
             return this;
         }
 

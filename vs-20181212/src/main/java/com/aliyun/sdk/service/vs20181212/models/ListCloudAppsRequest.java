@@ -30,6 +30,10 @@ public class ListCloudAppsRequest extends Request {
     private String appVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -38,13 +42,24 @@ public class ListCloudAppsRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgType")
+    private String pkgType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListCloudAppsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.appVersion = builder.appVersion;
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.pkgType = builder.pkgType;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -82,6 +97,13 @@ public class ListCloudAppsRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -95,12 +117,29 @@ public class ListCloudAppsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return pkgType
+     */
+    public String getPkgType() {
+        return this.pkgType;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListCloudAppsRequest, Builder> {
         private String appId; 
         private String appName; 
         private String appVersion; 
+        private String endTime; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String pkgType; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -111,8 +150,11 @@ public class ListCloudAppsRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.appVersion = request.appVersion;
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.pkgType = request.pkgType;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -143,6 +185,15 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -157,6 +208,24 @@ public class ListCloudAppsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PkgType.
+         */
+        public Builder pkgType(String pkgType) {
+            this.putQueryParameter("PkgType", pkgType);
+            this.pkgType = pkgType;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

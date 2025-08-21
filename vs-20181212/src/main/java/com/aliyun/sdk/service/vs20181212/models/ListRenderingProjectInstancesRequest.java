@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRenderingProjectInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -36,15 +40,21 @@ public class ListRenderingProjectInstancesRequest extends Request {
     private String renderingInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private ListRenderingProjectInstancesRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.startTime = builder.startTime;
         this.state = builder.state;
     }
 
@@ -59,6 +69,13 @@ public class ListRenderingProjectInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -90,6 +107,13 @@ public class ListRenderingProjectInstancesRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -97,10 +121,12 @@ public class ListRenderingProjectInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRenderingProjectInstancesRequest, Builder> {
+        private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
         private String renderingInstanceId; 
+        private String startTime; 
         private String state; 
 
         private Builder() {
@@ -109,12 +135,23 @@ public class ListRenderingProjectInstancesRequest extends Request {
 
         private Builder(ListRenderingProjectInstancesRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.startTime = request.startTime;
             this.state = request.state;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -152,6 +189,15 @@ public class ListRenderingProjectInstancesRequest extends Request {
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

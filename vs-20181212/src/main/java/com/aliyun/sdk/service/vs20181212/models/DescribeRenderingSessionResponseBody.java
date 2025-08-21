@@ -35,6 +35,9 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Location")
     private Location location;
 
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
     @com.aliyun.core.annotation.NameInMap("PortMappings")
     private java.util.List<PortMappings> portMappings;
 
@@ -60,6 +63,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         this.hostname = builder.hostname;
         this.isp = builder.isp;
         this.location = builder.location;
+        this.patchId = builder.patchId;
         this.portMappings = builder.portMappings;
         this.renderingInstanceId = builder.renderingInstanceId;
         this.requestId = builder.requestId;
@@ -123,6 +127,13 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
 
     /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
      * @return portMappings
      */
     public java.util.List<PortMappings> getPortMappings() {
@@ -171,6 +182,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         private String hostname; 
         private String isp; 
         private Location location; 
+        private String patchId; 
         private java.util.List<PortMappings> portMappings; 
         private String renderingInstanceId; 
         private String requestId; 
@@ -188,6 +200,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             this.hostname = model.hostname;
             this.isp = model.isp;
             this.location = model.location;
+            this.patchId = model.patchId;
             this.portMappings = model.portMappings;
             this.renderingInstanceId = model.renderingInstanceId;
             this.requestId = model.requestId;
@@ -241,6 +254,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
          */
         public Builder location(Location location) {
             this.location = location;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.patchId = patchId;
             return this;
         }
 

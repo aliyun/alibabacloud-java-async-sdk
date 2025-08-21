@@ -26,6 +26,10 @@ public class ListRenderingSessionsRequest extends Request {
     private String clientId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -33,6 +37,10 @@ public class ListRenderingSessionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -48,6 +56,10 @@ public class ListRenderingSessionsRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
@@ -55,11 +67,14 @@ public class ListRenderingSessionsRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.clientId = builder.clientId;
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.patchId = builder.patchId;
         this.projectId = builder.projectId;
         this.renderingInstanceId = builder.renderingInstanceId;
         this.sessionId = builder.sessionId;
+        this.startTime = builder.startTime;
         this.state = builder.state;
     }
 
@@ -91,6 +106,13 @@ public class ListRenderingSessionsRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -102,6 +124,13 @@ public class ListRenderingSessionsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
     }
 
     /**
@@ -126,6 +155,13 @@ public class ListRenderingSessionsRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -135,11 +171,14 @@ public class ListRenderingSessionsRequest extends Request {
     public static final class Builder extends Request.Builder<ListRenderingSessionsRequest, Builder> {
         private String appId; 
         private String clientId; 
+        private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String patchId; 
         private String projectId; 
         private String renderingInstanceId; 
         private String sessionId; 
+        private String startTime; 
         private String state; 
 
         private Builder() {
@@ -150,11 +189,14 @@ public class ListRenderingSessionsRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.clientId = request.clientId;
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.patchId = request.patchId;
             this.projectId = request.projectId;
             this.renderingInstanceId = request.renderingInstanceId;
             this.sessionId = request.sessionId;
+            this.startTime = request.startTime;
             this.state = request.state;
         } 
 
@@ -177,6 +219,15 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -191,6 +242,15 @@ public class ListRenderingSessionsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
             return this;
         }
 
@@ -221,6 +281,15 @@ public class ListRenderingSessionsRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

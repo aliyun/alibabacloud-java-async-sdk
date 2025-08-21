@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPublicKeysRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyGroup")
     private String keyGroup;
 
@@ -38,13 +42,19 @@ public class ListPublicKeysRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListPublicKeysRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.keyGroup = builder.keyGroup;
         this.keyName = builder.keyName;
         this.keyType = builder.keyType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -58,6 +68,13 @@ public class ListPublicKeysRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -95,12 +112,21 @@ public class ListPublicKeysRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListPublicKeysRequest, Builder> {
+        private String endTime; 
         private String keyGroup; 
         private String keyName; 
         private String keyType; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -108,12 +134,23 @@ public class ListPublicKeysRequest extends Request {
 
         private Builder(ListPublicKeysRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.keyGroup = request.keyGroup;
             this.keyName = request.keyName;
             this.keyType = request.keyType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * KeyGroup.
@@ -157,6 +194,15 @@ public class ListPublicKeysRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

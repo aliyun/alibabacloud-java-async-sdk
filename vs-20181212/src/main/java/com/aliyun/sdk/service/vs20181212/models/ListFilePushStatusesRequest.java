@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFilePushStatusesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileId")
     private String fileId;
 
@@ -38,13 +42,19 @@ public class ListFilePushStatusesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     private String renderingInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListFilePushStatusesRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -58,6 +68,13 @@ public class ListFilePushStatusesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -95,12 +112,21 @@ public class ListFilePushStatusesRequest extends Request {
         return this.renderingInstanceId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListFilePushStatusesRequest, Builder> {
+        private String endTime; 
         private String fileId; 
         private String fileName; 
         private Long pageNumber; 
         private Long pageSize; 
         private String renderingInstanceId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -108,12 +134,23 @@ public class ListFilePushStatusesRequest extends Request {
 
         private Builder(ListFilePushStatusesRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.fileId = request.fileId;
             this.fileName = request.fileName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * FileId.
@@ -157,6 +194,15 @@ public class ListFilePushStatusesRequest extends Request {
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

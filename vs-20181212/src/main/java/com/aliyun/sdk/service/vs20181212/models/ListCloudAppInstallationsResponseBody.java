@@ -170,6 +170,9 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstallationTime")
         private String installationTime;
 
+        @com.aliyun.core.annotation.NameInMap("PatchId")
+        private String patchId;
+
         @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
         private String renderingInstanceId;
 
@@ -187,6 +190,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.appVersion = builder.appVersion;
             this.installationTime = builder.installationTime;
+            this.patchId = builder.patchId;
             this.renderingInstanceId = builder.renderingInstanceId;
             this.status = builder.status;
             this.statusDescription = builder.statusDescription;
@@ -230,6 +234,13 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return patchId
+         */
+        public String getPatchId() {
+            return this.patchId;
+        }
+
+        /**
          * @return renderingInstanceId
          */
         public String getRenderingInstanceId() {
@@ -262,6 +273,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             private String appName; 
             private String appVersion; 
             private String installationTime; 
+            private String patchId; 
             private String renderingInstanceId; 
             private String status; 
             private String statusDescription; 
@@ -275,6 +287,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
                 this.appName = model.appName;
                 this.appVersion = model.appVersion;
                 this.installationTime = model.installationTime;
+                this.patchId = model.patchId;
                 this.renderingInstanceId = model.renderingInstanceId;
                 this.status = model.status;
                 this.statusDescription = model.statusDescription;
@@ -310,6 +323,14 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
              */
             public Builder installationTime(String installationTime) {
                 this.installationTime = installationTime;
+                return this;
+            }
+
+            /**
+             * PatchId.
+             */
+            public Builder patchId(String patchId) {
+                this.patchId = patchId;
                 return this;
             }
 

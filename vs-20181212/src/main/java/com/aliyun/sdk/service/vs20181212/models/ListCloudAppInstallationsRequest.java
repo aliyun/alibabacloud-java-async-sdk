@@ -30,6 +30,10 @@ public class ListCloudAppInstallationsRequest extends Request {
     private String appVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -39,17 +43,33 @@ public class ListCloudAppInstallationsRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     private String renderingInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
     private ListCloudAppInstallationsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.appVersion = builder.appVersion;
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.patchId = builder.patchId;
+        this.projectId = builder.projectId;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -87,6 +107,13 @@ public class ListCloudAppInstallationsRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -101,19 +128,44 @@ public class ListCloudAppInstallationsRequest extends Request {
     }
 
     /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return renderingInstanceId
      */
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListCloudAppInstallationsRequest, Builder> {
         private String appId; 
         private String appName; 
         private String appVersion; 
+        private String endTime; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String patchId; 
+        private String projectId; 
         private String renderingInstanceId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -124,9 +176,13 @@ public class ListCloudAppInstallationsRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.appVersion = request.appVersion;
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.patchId = request.patchId;
+            this.projectId = request.projectId;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -157,6 +213,15 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -175,11 +240,38 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
          * RenderingInstanceId.
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

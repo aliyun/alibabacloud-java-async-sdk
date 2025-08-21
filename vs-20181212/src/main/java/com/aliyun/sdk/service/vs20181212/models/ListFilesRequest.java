@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFilesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileId")
     private String fileId;
 
@@ -34,12 +38,18 @@ public class ListFilesRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListFilesRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -53,6 +63,13 @@ public class ListFilesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -83,11 +100,20 @@ public class ListFilesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListFilesRequest, Builder> {
+        private String endTime; 
         private String fileId; 
         private String fileName; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -95,11 +121,22 @@ public class ListFilesRequest extends Request {
 
         private Builder(ListFilesRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.fileId = request.fileId;
             this.fileName = request.fileName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * FileId.
@@ -134,6 +171,15 @@ public class ListFilesRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

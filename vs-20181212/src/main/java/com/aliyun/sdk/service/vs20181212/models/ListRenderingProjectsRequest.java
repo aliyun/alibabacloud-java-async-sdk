@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRenderingProjectsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -34,12 +38,18 @@ public class ListRenderingProjectsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListRenderingProjectsRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -53,6 +63,13 @@ public class ListRenderingProjectsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -83,11 +100,20 @@ public class ListRenderingProjectsRequest extends Request {
         return this.projectName;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListRenderingProjectsRequest, Builder> {
+        private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
         private String projectName; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -95,11 +121,22 @@ public class ListRenderingProjectsRequest extends Request {
 
         private Builder(ListRenderingProjectsRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.projectName = request.projectName;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -134,6 +171,15 @@ public class ListRenderingProjectsRequest extends Request {
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

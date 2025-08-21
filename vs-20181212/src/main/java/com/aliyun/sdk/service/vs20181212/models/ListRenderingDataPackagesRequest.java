@@ -26,6 +26,10 @@ public class ListRenderingDataPackagesRequest extends Request {
     private String dataPackageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -39,6 +43,10 @@ public class ListRenderingDataPackagesRequest extends Request {
     private Integer size;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -46,9 +54,11 @@ public class ListRenderingDataPackagesRequest extends Request {
         super(builder);
         this.category = builder.category;
         this.dataPackageId = builder.dataPackageId;
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.size = builder.size;
+        this.startTime = builder.startTime;
         this.status = builder.status;
     }
 
@@ -80,6 +90,13 @@ public class ListRenderingDataPackagesRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -101,6 +118,13 @@ public class ListRenderingDataPackagesRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -110,9 +134,11 @@ public class ListRenderingDataPackagesRequest extends Request {
     public static final class Builder extends Request.Builder<ListRenderingDataPackagesRequest, Builder> {
         private String category; 
         private String dataPackageId; 
+        private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Integer size; 
+        private String startTime; 
         private String status; 
 
         private Builder() {
@@ -123,9 +149,11 @@ public class ListRenderingDataPackagesRequest extends Request {
             super(request);
             this.category = request.category;
             this.dataPackageId = request.dataPackageId;
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.size = request.size;
+            this.startTime = request.startTime;
             this.status = request.status;
         } 
 
@@ -144,6 +172,15 @@ public class ListRenderingDataPackagesRequest extends Request {
         public Builder dataPackageId(String dataPackageId) {
             this.putQueryParameter("DataPackageId", dataPackageId);
             this.dataPackageId = dataPackageId;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -171,6 +208,15 @@ public class ListRenderingDataPackagesRequest extends Request {
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

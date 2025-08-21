@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRenderingInstanceGatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayInstanceId")
     private String gatewayInstanceId;
 
@@ -33,12 +37,18 @@ public class ListRenderingInstanceGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     private String renderingInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private ListRenderingInstanceGatewayRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.gatewayInstanceId = builder.gatewayInstanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -52,6 +62,13 @@ public class ListRenderingInstanceGatewayRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -82,11 +99,20 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         return this.renderingInstanceId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListRenderingInstanceGatewayRequest, Builder> {
+        private String endTime; 
         private String gatewayInstanceId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String renderingInstanceId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -94,11 +120,22 @@ public class ListRenderingInstanceGatewayRequest extends Request {
 
         private Builder(ListRenderingInstanceGatewayRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.gatewayInstanceId = request.gatewayInstanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * GatewayInstanceId.
@@ -133,6 +170,15 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

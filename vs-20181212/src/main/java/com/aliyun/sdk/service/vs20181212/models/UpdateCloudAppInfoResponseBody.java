@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCloudAppInfoResponseBody</p>
  */
 public class UpdateCloudAppInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateCloudAppInfoResponseBody(Builder builder) {
+        this.patchId = builder.patchId;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class UpdateCloudAppInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class UpdateCloudAppInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String patchId; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(UpdateCloudAppInfoResponseBody model) {
+            this.patchId = model.patchId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.patchId = patchId;
+            return this;
+        }
 
         /**
          * RequestId.

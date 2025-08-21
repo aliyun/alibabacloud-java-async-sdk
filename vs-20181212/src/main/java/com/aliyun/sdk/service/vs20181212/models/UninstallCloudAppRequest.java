@@ -23,14 +23,39 @@ public class UninstallCloudAppRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String renderingInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenderingInstanceIds")
+    private java.util.List<String> renderingInstanceIds;
 
     private UninstallCloudAppRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.patchId = builder.patchId;
+        this.projectId = builder.projectId;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.renderingInstanceIds = builder.renderingInstanceIds;
     }
 
     public static Builder builder() {
@@ -54,15 +79,55 @@ public class UninstallCloudAppRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return renderingInstanceId
      */
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
     }
 
+    /**
+     * @return renderingInstanceIds
+     */
+    public java.util.List<String> getRenderingInstanceIds() {
+        return this.renderingInstanceIds;
+    }
+
     public static final class Builder extends Request.Builder<UninstallCloudAppRequest, Builder> {
         private String appId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String patchId; 
+        private String projectId; 
         private String renderingInstanceId; 
+        private java.util.List<String> renderingInstanceIds; 
 
         private Builder() {
             super();
@@ -71,7 +136,12 @@ public class UninstallCloudAppRequest extends Request {
         private Builder(UninstallCloudAppRequest request) {
             super(request);
             this.appId = request.appId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.patchId = request.patchId;
+            this.projectId = request.projectId;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.renderingInstanceIds = request.renderingInstanceIds;
         } 
 
         /**
@@ -87,14 +157,57 @@ public class UninstallCloudAppRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * RenderingInstanceId.
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * RenderingInstanceIds.
+         */
+        public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {
+            String renderingInstanceIdsShrink = shrink(renderingInstanceIds, "RenderingInstanceIds", "json");
+            this.putQueryParameter("RenderingInstanceIds", renderingInstanceIdsShrink);
+            this.renderingInstanceIds = renderingInstanceIds;
             return this;
         }
 

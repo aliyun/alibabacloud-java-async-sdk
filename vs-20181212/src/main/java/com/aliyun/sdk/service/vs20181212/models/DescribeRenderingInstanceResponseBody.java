@@ -32,6 +32,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    private String internalIp;
+
     @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
@@ -62,6 +65,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.egressIp = builder.egressIp;
         this.hostname = builder.hostname;
+        this.internalIp = builder.internalIp;
         this.isp = builder.isp;
         this.portMappings = builder.portMappings;
         this.renderingInstanceId = builder.renderingInstanceId;
@@ -117,6 +121,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     public String getHostname() {
         return this.hostname;
+    }
+
+    /**
+     * @return internalIp
+     */
+    public String getInternalIp() {
+        return this.internalIp;
     }
 
     /**
@@ -181,6 +192,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private String creationTime; 
         private String egressIp; 
         private String hostname; 
+        private String internalIp; 
         private String isp; 
         private java.util.List<PortMappings> portMappings; 
         private String renderingInstanceId; 
@@ -199,6 +211,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             this.creationTime = model.creationTime;
             this.egressIp = model.egressIp;
             this.hostname = model.hostname;
+            this.internalIp = model.internalIp;
             this.isp = model.isp;
             this.portMappings = model.portMappings;
             this.renderingInstanceId = model.renderingInstanceId;
@@ -246,6 +259,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
+            return this;
+        }
+
+        /**
+         * InternalIp.
+         */
+        public Builder internalIp(String internalIp) {
+            this.internalIp = internalIp;
             return this;
         }
 

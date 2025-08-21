@@ -170,6 +170,15 @@ public class ListCloudAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("PkgFormat")
+        private String pkgFormat;
+
+        @com.aliyun.core.annotation.NameInMap("PkgType")
+        private String pkgType;
+
+        @com.aliyun.core.annotation.NameInMap("StablePatchId")
+        private String stablePatchId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -187,6 +196,9 @@ public class ListCloudAppsResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.appVersion = builder.appVersion;
             this.description = builder.description;
+            this.pkgFormat = builder.pkgFormat;
+            this.pkgType = builder.pkgType;
+            this.stablePatchId = builder.stablePatchId;
             this.status = builder.status;
             this.statusDescription = builder.statusDescription;
             this.updateTime = builder.updateTime;
@@ -230,6 +242,27 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return pkgFormat
+         */
+        public String getPkgFormat() {
+            return this.pkgFormat;
+        }
+
+        /**
+         * @return pkgType
+         */
+        public String getPkgType() {
+            return this.pkgType;
+        }
+
+        /**
+         * @return stablePatchId
+         */
+        public String getStablePatchId() {
+            return this.stablePatchId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -262,6 +295,9 @@ public class ListCloudAppsResponseBody extends TeaModel {
             private String appName; 
             private String appVersion; 
             private String description; 
+            private String pkgFormat; 
+            private String pkgType; 
+            private String stablePatchId; 
             private String status; 
             private String statusDescription; 
             private String updateTime; 
@@ -275,6 +311,9 @@ public class ListCloudAppsResponseBody extends TeaModel {
                 this.appName = model.appName;
                 this.appVersion = model.appVersion;
                 this.description = model.description;
+                this.pkgFormat = model.pkgFormat;
+                this.pkgType = model.pkgType;
+                this.stablePatchId = model.stablePatchId;
                 this.status = model.status;
                 this.statusDescription = model.statusDescription;
                 this.updateTime = model.updateTime;
@@ -310,6 +349,30 @@ public class ListCloudAppsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * PkgFormat.
+             */
+            public Builder pkgFormat(String pkgFormat) {
+                this.pkgFormat = pkgFormat;
+                return this;
+            }
+
+            /**
+             * PkgType.
+             */
+            public Builder pkgType(String pkgType) {
+                this.pkgType = pkgType;
+                return this;
+            }
+
+            /**
+             * StablePatchId.
+             */
+            public Builder stablePatchId(String stablePatchId) {
+                this.stablePatchId = stablePatchId;
                 return this;
             }
 

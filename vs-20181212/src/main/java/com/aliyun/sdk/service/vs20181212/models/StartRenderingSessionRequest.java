@@ -31,6 +31,10 @@ public class StartRenderingSessionRequest extends Request {
     private ClientParams clientParams;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -40,6 +44,7 @@ public class StartRenderingSessionRequest extends Request {
         this.appId = builder.appId;
         this.clientId = builder.clientId;
         this.clientParams = builder.clientParams;
+        this.patchId = builder.patchId;
         this.projectId = builder.projectId;
     }
 
@@ -78,6 +83,13 @@ public class StartRenderingSessionRequest extends Request {
     }
 
     /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -88,6 +100,7 @@ public class StartRenderingSessionRequest extends Request {
         private String appId; 
         private String clientId; 
         private ClientParams clientParams; 
+        private String patchId; 
         private String projectId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class StartRenderingSessionRequest extends Request {
             this.appId = request.appId;
             this.clientId = request.clientId;
             this.clientParams = request.clientParams;
+            this.patchId = request.patchId;
             this.projectId = request.projectId;
         } 
 
@@ -130,6 +144,15 @@ public class StartRenderingSessionRequest extends Request {
             String clientParamsShrink = shrink(clientParams, "ClientParams", "json");
             this.putQueryParameter("ClientParams", clientParamsShrink);
             this.clientParams = clientParams;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
             return this;
         }
 

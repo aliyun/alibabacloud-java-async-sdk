@@ -27,6 +27,10 @@ public class CreateRenderingDataPackageRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String renderingInstanceId;
@@ -35,6 +39,7 @@ public class CreateRenderingDataPackageRequest extends Request {
         super(builder);
         this.category = builder.category;
         this.description = builder.description;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.renderingInstanceId = builder.renderingInstanceId;
     }
 
@@ -66,6 +71,13 @@ public class CreateRenderingDataPackageRequest extends Request {
     }
 
     /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
+    }
+
+    /**
      * @return renderingInstanceId
      */
     public String getRenderingInstanceId() {
@@ -75,6 +87,7 @@ public class CreateRenderingDataPackageRequest extends Request {
     public static final class Builder extends Request.Builder<CreateRenderingDataPackageRequest, Builder> {
         private String category; 
         private String description; 
+        private String instanceBillingCycle; 
         private String renderingInstanceId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class CreateRenderingDataPackageRequest extends Request {
             super(request);
             this.category = request.category;
             this.description = request.description;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.renderingInstanceId = request.renderingInstanceId;
         } 
 
@@ -103,6 +117,15 @@ public class CreateRenderingDataPackageRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 

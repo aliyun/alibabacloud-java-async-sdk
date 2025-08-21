@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRenderingInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -35,15 +39,21 @@ public class ListRenderingInstancesRequest extends Request {
     private String renderingSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Integer storageSize;
 
     private ListRenderingInstancesRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.renderingInstanceId = builder.renderingInstanceId;
         this.renderingSpec = builder.renderingSpec;
+        this.startTime = builder.startTime;
         this.storageSize = builder.storageSize;
     }
 
@@ -58,6 +68,13 @@ public class ListRenderingInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -89,6 +106,13 @@ public class ListRenderingInstancesRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return storageSize
      */
     public Integer getStorageSize() {
@@ -96,10 +120,12 @@ public class ListRenderingInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRenderingInstancesRequest, Builder> {
+        private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String renderingInstanceId; 
         private String renderingSpec; 
+        private String startTime; 
         private Integer storageSize; 
 
         private Builder() {
@@ -108,12 +134,23 @@ public class ListRenderingInstancesRequest extends Request {
 
         private Builder(ListRenderingInstancesRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.renderingInstanceId = request.renderingInstanceId;
             this.renderingSpec = request.renderingSpec;
+            this.startTime = request.startTime;
             this.storageSize = request.storageSize;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -148,6 +185,15 @@ public class ListRenderingInstancesRequest extends Request {
         public Builder renderingSpec(String renderingSpec) {
             this.putQueryParameter("RenderingSpec", renderingSpec);
             this.renderingSpec = renderingSpec;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
