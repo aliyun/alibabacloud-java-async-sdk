@@ -27,13 +27,16 @@ public class DeleteRumUploadFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    private String serviceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -43,14 +46,20 @@ public class DeleteRumUploadFileRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
+
     private DeleteRumUploadFileRequest(Builder builder) {
         super(builder);
         this.batchItems = builder.batchItems;
         this.fileName = builder.fileName;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.serviceId = builder.serviceId;
         this.uuid = builder.uuid;
         this.versionId = builder.versionId;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -95,6 +104,13 @@ public class DeleteRumUploadFileRequest extends Request {
     }
 
     /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -108,13 +124,22 @@ public class DeleteRumUploadFileRequest extends Request {
         return this.versionId;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<DeleteRumUploadFileRequest, Builder> {
         private String batchItems; 
         private String fileName; 
         private String pid; 
         private String regionId; 
+        private String serviceId; 
         private String uuid; 
         private String versionId; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -126,8 +151,10 @@ public class DeleteRumUploadFileRequest extends Request {
             this.fileName = request.fileName;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
             this.uuid = request.uuid;
             this.versionId = request.versionId;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -164,7 +191,6 @@ public class DeleteRumUploadFileRequest extends Request {
 
         /**
          * <p>The application ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>atc889zkcf@d8deedfa9bf****</p>
@@ -189,6 +215,15 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
          * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +244,15 @@ public class DeleteRumUploadFileRequest extends Request {
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
             this.versionId = versionId;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

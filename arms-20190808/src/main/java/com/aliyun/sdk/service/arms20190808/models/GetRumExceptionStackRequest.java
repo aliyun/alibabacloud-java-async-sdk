@@ -35,7 +35,6 @@ public class GetRumExceptionStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
     @com.aliyun.core.annotation.Query
@@ -43,8 +42,16 @@ public class GetRumExceptionStackRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    private String serviceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourcemapType")
     private String sourcemapType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
 
     private GetRumExceptionStackRequest(Builder builder) {
         super(builder);
@@ -54,7 +61,9 @@ public class GetRumExceptionStackRequest extends Request {
         this.extraInfo = builder.extraInfo;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.serviceId = builder.serviceId;
         this.sourcemapType = builder.sourcemapType;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -113,10 +122,24 @@ public class GetRumExceptionStackRequest extends Request {
     }
 
     /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
      * @return sourcemapType
      */
     public String getSourcemapType() {
         return this.sourcemapType;
+    }
+
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
     }
 
     public static final class Builder extends Request.Builder<GetRumExceptionStackRequest, Builder> {
@@ -126,7 +149,9 @@ public class GetRumExceptionStackRequest extends Request {
         private String extraInfo; 
         private String pid; 
         private String regionId; 
+        private String serviceId; 
         private String sourcemapType; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -140,7 +165,9 @@ public class GetRumExceptionStackRequest extends Request {
             this.extraInfo = request.extraInfo;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
             this.sourcemapType = request.sourcemapType;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -199,7 +226,6 @@ public class GetRumExceptionStackRequest extends Request {
 
         /**
          * <p>The application ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>atxxxxzkcf@d8deedfa9bf****</p>
@@ -223,6 +249,15 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
          * <p>The parsing type. Valid values:</p>
          * <ul>
          * <li>js: Parses JavaScript errors.</li>
@@ -238,6 +273,15 @@ public class GetRumExceptionStackRequest extends Request {
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);
             this.sourcemapType = sourcemapType;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

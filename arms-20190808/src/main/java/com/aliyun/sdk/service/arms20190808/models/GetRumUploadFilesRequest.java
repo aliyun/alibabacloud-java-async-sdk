@@ -43,8 +43,16 @@ public class GetRumUploadFilesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    private String serviceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
 
     private GetRumUploadFilesRequest(Builder builder) {
         super(builder);
@@ -54,7 +62,9 @@ public class GetRumUploadFilesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.serviceId = builder.serviceId;
         this.versionId = builder.versionId;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -113,10 +123,24 @@ public class GetRumUploadFilesRequest extends Request {
     }
 
     /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
         return this.versionId;
+    }
+
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
     }
 
     public static final class Builder extends Request.Builder<GetRumUploadFilesRequest, Builder> {
@@ -126,7 +150,9 @@ public class GetRumUploadFilesRequest extends Request {
         private Integer pageSize; 
         private String pid; 
         private String regionId; 
+        private String serviceId; 
         private String versionId; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -140,7 +166,9 @@ public class GetRumUploadFilesRequest extends Request {
             this.pageSize = request.pageSize;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
             this.versionId = request.versionId;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -208,6 +236,15 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
          * <p>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +253,15 @@ public class GetRumUploadFilesRequest extends Request {
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
             this.versionId = versionId;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 
