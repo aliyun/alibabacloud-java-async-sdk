@@ -101,6 +101,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeysPerUserQuota")
         private Integer accessKeysPerUserQuota;
 
+        @com.aliyun.core.annotation.NameInMap("AccountAccessKeysPerAccountQuota")
+        private Integer accountAccessKeysPerAccountQuota;
+
         @com.aliyun.core.annotation.NameInMap("AttachedPoliciesPerGroupQuota")
         private Integer attachedPoliciesPerGroupQuota;
 
@@ -169,6 +172,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
         private SummaryMap(Builder builder) {
             this.accessKeysPerUserQuota = builder.accessKeysPerUserQuota;
+            this.accountAccessKeysPerAccountQuota = builder.accountAccessKeysPerAccountQuota;
             this.attachedPoliciesPerGroupQuota = builder.attachedPoliciesPerGroupQuota;
             this.attachedPoliciesPerRoleQuota = builder.attachedPoliciesPerRoleQuota;
             this.attachedPoliciesPerUserQuota = builder.attachedPoliciesPerUserQuota;
@@ -206,6 +210,13 @@ public class GetAccountSummaryResponseBody extends TeaModel {
          */
         public Integer getAccessKeysPerUserQuota() {
             return this.accessKeysPerUserQuota;
+        }
+
+        /**
+         * @return accountAccessKeysPerAccountQuota
+         */
+        public Integer getAccountAccessKeysPerAccountQuota() {
+            return this.accountAccessKeysPerAccountQuota;
         }
 
         /**
@@ -364,6 +375,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer accessKeysPerUserQuota; 
+            private Integer accountAccessKeysPerAccountQuota; 
             private Integer attachedPoliciesPerGroupQuota; 
             private Integer attachedPoliciesPerRoleQuota; 
             private Integer attachedPoliciesPerUserQuota; 
@@ -392,6 +404,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
             private Builder(SummaryMap model) {
                 this.accessKeysPerUserQuota = model.accessKeysPerUserQuota;
+                this.accountAccessKeysPerAccountQuota = model.accountAccessKeysPerAccountQuota;
                 this.attachedPoliciesPerGroupQuota = model.attachedPoliciesPerGroupQuota;
                 this.attachedPoliciesPerRoleQuota = model.attachedPoliciesPerRoleQuota;
                 this.attachedPoliciesPerUserQuota = model.attachedPoliciesPerUserQuota;
@@ -424,6 +437,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
              */
             public Builder accessKeysPerUserQuota(Integer accessKeysPerUserQuota) {
                 this.accessKeysPerUserQuota = accessKeysPerUserQuota;
+                return this;
+            }
+
+            /**
+             * AccountAccessKeysPerAccountQuota.
+             */
+            public Builder accountAccessKeysPerAccountQuota(Integer accountAccessKeysPerAccountQuota) {
+                this.accountAccessKeysPerAccountQuota = accountAccessKeysPerAccountQuota;
                 return this;
             }
 

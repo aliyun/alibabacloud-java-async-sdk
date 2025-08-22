@@ -44,6 +44,10 @@ public class CreateApplicationRequest extends Request {
     private String predefinedScopes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolVersion")
+    private String protocolVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RedirectUris")
     private String redirectUris;
 
@@ -67,6 +71,7 @@ public class CreateApplicationRequest extends Request {
         this.displayName = builder.displayName;
         this.isMultiTenant = builder.isMultiTenant;
         this.predefinedScopes = builder.predefinedScopes;
+        this.protocolVersion = builder.protocolVersion;
         this.redirectUris = builder.redirectUris;
         this.refreshTokenValidity = builder.refreshTokenValidity;
         this.requiredScopes = builder.requiredScopes;
@@ -129,6 +134,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return protocolVersion
+     */
+    public String getProtocolVersion() {
+        return this.protocolVersion;
+    }
+
+    /**
      * @return redirectUris
      */
     public String getRedirectUris() {
@@ -163,6 +175,7 @@ public class CreateApplicationRequest extends Request {
         private String displayName; 
         private Boolean isMultiTenant; 
         private String predefinedScopes; 
+        private String protocolVersion; 
         private String redirectUris; 
         private Integer refreshTokenValidity; 
         private String requiredScopes; 
@@ -180,6 +193,7 @@ public class CreateApplicationRequest extends Request {
             this.displayName = request.displayName;
             this.isMultiTenant = request.isMultiTenant;
             this.predefinedScopes = request.predefinedScopes;
+            this.protocolVersion = request.protocolVersion;
             this.redirectUris = request.redirectUris;
             this.refreshTokenValidity = request.refreshTokenValidity;
             this.requiredScopes = request.requiredScopes;
@@ -272,6 +286,15 @@ public class CreateApplicationRequest extends Request {
         public Builder predefinedScopes(String predefinedScopes) {
             this.putQueryParameter("PredefinedScopes", predefinedScopes);
             this.predefinedScopes = predefinedScopes;
+            return this;
+        }
+
+        /**
+         * ProtocolVersion.
+         */
+        public Builder protocolVersion(String protocolVersion) {
+            this.putQueryParameter("ProtocolVersion", protocolVersion);
+            this.protocolVersion = protocolVersion;
             return this;
         }
 

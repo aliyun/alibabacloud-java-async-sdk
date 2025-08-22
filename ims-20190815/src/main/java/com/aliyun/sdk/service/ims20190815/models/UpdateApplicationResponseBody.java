@@ -397,6 +397,9 @@ public class UpdateApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
 
+        @com.aliyun.core.annotation.NameInMap("ProtocolVersion")
+        private String protocolVersion;
+
         @com.aliyun.core.annotation.NameInMap("RedirectUris")
         private RedirectUris redirectUris;
 
@@ -419,6 +422,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
             this.isMultiTenant = builder.isMultiTenant;
+            this.protocolVersion = builder.protocolVersion;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenValidity = builder.refreshTokenValidity;
             this.secretRequired = builder.secretRequired;
@@ -497,6 +501,13 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolVersion
+         */
+        public String getProtocolVersion() {
+            return this.protocolVersion;
+        }
+
+        /**
          * @return redirectUris
          */
         public RedirectUris getRedirectUris() {
@@ -534,6 +545,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private DelegatedScope delegatedScope; 
             private String displayName; 
             private Boolean isMultiTenant; 
+            private String protocolVersion; 
             private RedirectUris redirectUris; 
             private Integer refreshTokenValidity; 
             private Boolean secretRequired; 
@@ -552,6 +564,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
                 this.isMultiTenant = model.isMultiTenant;
+                this.protocolVersion = model.protocolVersion;
                 this.redirectUris = model.redirectUris;
                 this.refreshTokenValidity = model.refreshTokenValidity;
                 this.secretRequired = model.secretRequired;
@@ -651,6 +664,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
+                return this;
+            }
+
+            /**
+             * ProtocolVersion.
+             */
+            public Builder protocolVersion(String protocolVersion) {
+                this.protocolVersion = protocolVersion;
                 return this;
             }
 
