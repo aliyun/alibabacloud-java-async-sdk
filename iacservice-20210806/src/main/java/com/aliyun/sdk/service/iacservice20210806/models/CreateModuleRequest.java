@@ -37,6 +37,7 @@ public class CreateModuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
     @com.aliyun.core.annotation.Body
@@ -46,6 +47,10 @@ public class CreateModuleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("statePath")
     private String statePath;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("versionStrategy")
@@ -60,6 +65,7 @@ public class CreateModuleRequest extends Request {
         this.source = builder.source;
         this.sourcePath = builder.sourcePath;
         this.statePath = builder.statePath;
+        this.tags = builder.tags;
         this.versionStrategy = builder.versionStrategy;
     }
 
@@ -126,6 +132,13 @@ public class CreateModuleRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return versionStrategy
      */
     public String getVersionStrategy() {
@@ -140,6 +153,7 @@ public class CreateModuleRequest extends Request {
         private String source; 
         private String sourcePath; 
         private String statePath; 
+        private java.util.List<Tags> tags; 
         private String versionStrategy; 
 
         private Builder() {
@@ -155,6 +169,7 @@ public class CreateModuleRequest extends Request {
             this.source = request.source;
             this.sourcePath = request.sourcePath;
             this.statePath = request.statePath;
+            this.tags = request.tags;
             this.versionStrategy = request.versionStrategy;
         } 
 
@@ -201,7 +216,10 @@ public class CreateModuleRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("source", source);
@@ -224,6 +242,15 @@ public class CreateModuleRequest extends Request {
         public Builder statePath(String statePath) {
             this.putBodyParameter("statePath", statePath);
             this.statePath = statePath;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -313,6 +340,81 @@ public class CreateModuleRequest extends Request {
 
             public GroupInfo build() {
                 return new GroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateModuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateModuleRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -75,6 +75,9 @@ public class GetResourceExportTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-al171j05rlog5tbri1pmkk</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putPathParameter("exportTaskId", exportTaskId);

@@ -29,9 +29,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
-    @com.aliyun.core.annotation.NameInMap("verisonList")
-    private java.util.List<String> verisonList;
-
     @com.aliyun.core.annotation.NameInMap("versions")
     private java.util.List<Versions> versions;
 
@@ -40,7 +37,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.verisonList = builder.verisonList;
         this.versions = builder.versions;
     }
 
@@ -85,13 +81,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
     }
 
     /**
-     * @return verisonList
-     */
-    public java.util.List<String> getVerisonList() {
-        return this.verisonList;
-    }
-
-    /**
      * @return versions
      */
     public java.util.List<Versions> getVersions() {
@@ -103,7 +92,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List<String> verisonList; 
         private java.util.List<Versions> versions; 
 
         private Builder() {
@@ -114,7 +102,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.totalCount = model.totalCount;
-            this.verisonList = model.verisonList;
             this.versions = model.versions;
         } 
 
@@ -147,14 +134,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * verisonList.
-         */
-        public Builder verisonList(java.util.List<String> verisonList) {
-            this.verisonList = verisonList;
             return this;
         }
 

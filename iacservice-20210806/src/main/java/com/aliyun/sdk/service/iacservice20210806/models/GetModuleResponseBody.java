@@ -97,12 +97,207 @@ public class GetModuleResponseBody extends TeaModel {
      *
      * <p>GetModuleResponseBody</p>
      */
+    public static class GroupInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("groupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("projectId")
+        private String projectId;
+
+        @com.aliyun.core.annotation.NameInMap("projectName")
+        private String projectName;
+
+        private GroupInfo(Builder builder) {
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+            this.projectId = builder.projectId;
+            this.projectName = builder.projectName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GroupInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public static final class Builder {
+            private String groupId; 
+            private String groupName; 
+            private String projectId; 
+            private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
+
+            /**
+             * groupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * projectId.
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * projectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
+                return this;
+            }
+
+            public GroupInfo build() {
+                return new GroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("groupInfo")
+        private GroupInfo groupInfo;
 
         @com.aliyun.core.annotation.NameInMap("latestVersion")
         private String latestVersion;
@@ -128,12 +323,16 @@ public class GetModuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("versionStrategy")
         private String versionStrategy;
 
         private Module(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.groupInfo = builder.groupInfo;
             this.latestVersion = builder.latestVersion;
             this.moduleId = builder.moduleId;
             this.name = builder.name;
@@ -142,6 +341,7 @@ public class GetModuleResponseBody extends TeaModel {
             this.sourcePath = builder.sourcePath;
             this.statePath = builder.statePath;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.versionStrategy = builder.versionStrategy;
         }
 
@@ -165,6 +365,13 @@ public class GetModuleResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return groupInfo
+         */
+        public GroupInfo getGroupInfo() {
+            return this.groupInfo;
         }
 
         /**
@@ -224,6 +431,13 @@ public class GetModuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return versionStrategy
          */
         public String getVersionStrategy() {
@@ -233,6 +447,7 @@ public class GetModuleResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String description; 
+            private GroupInfo groupInfo; 
             private String latestVersion; 
             private String moduleId; 
             private String name; 
@@ -241,6 +456,7 @@ public class GetModuleResponseBody extends TeaModel {
             private String sourcePath; 
             private String statePath; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String versionStrategy; 
 
             private Builder() {
@@ -249,6 +465,7 @@ public class GetModuleResponseBody extends TeaModel {
             private Builder(Module model) {
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.groupInfo = model.groupInfo;
                 this.latestVersion = model.latestVersion;
                 this.moduleId = model.moduleId;
                 this.name = model.name;
@@ -257,6 +474,7 @@ public class GetModuleResponseBody extends TeaModel {
                 this.sourcePath = model.sourcePath;
                 this.statePath = model.statePath;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.versionStrategy = model.versionStrategy;
             } 
 
@@ -273,6 +491,14 @@ public class GetModuleResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * groupInfo.
+             */
+            public Builder groupInfo(GroupInfo groupInfo) {
+                this.groupInfo = groupInfo;
                 return this;
             }
 
@@ -337,6 +563,14 @@ public class GetModuleResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

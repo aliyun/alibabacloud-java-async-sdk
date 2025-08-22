@@ -29,7 +29,6 @@ public class OperateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("operationType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String operationType;
 
     @com.aliyun.core.annotation.Query
@@ -143,10 +142,7 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>execute</p>
+         * operationType.
          */
         public Builder operationType(String operationType) {
             this.putPathParameter("operationType", operationType);

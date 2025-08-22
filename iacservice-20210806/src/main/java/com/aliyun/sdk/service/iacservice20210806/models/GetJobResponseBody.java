@@ -383,9 +383,6 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("parameters")
         private java.util.Map<String, String> parameters;
 
-        @com.aliyun.core.annotation.NameInMap("runtimeType")
-        private String runtimeType;
-
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -413,7 +410,6 @@ public class GetJobResponseBody extends TeaModel {
             this.jobId = builder.jobId;
             this.output = builder.output;
             this.parameters = builder.parameters;
-            this.runtimeType = builder.runtimeType;
             this.status = builder.status;
             this.statusDetail = builder.statusDetail;
             this.taskId = builder.taskId;
@@ -507,13 +503,6 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return runtimeType
-         */
-        public String getRuntimeType() {
-            return this.runtimeType;
-        }
-
-        /**
          * @return status
          */
         public String getStatus() {
@@ -560,7 +549,6 @@ public class GetJobResponseBody extends TeaModel {
             private String jobId; 
             private String output; 
             private java.util.Map<String, String> parameters; 
-            private String runtimeType; 
             private String status; 
             private java.util.Map<String, JobStatusDetailValue> statusDetail; 
             private String taskId; 
@@ -582,7 +570,6 @@ public class GetJobResponseBody extends TeaModel {
                 this.jobId = model.jobId;
                 this.output = model.output;
                 this.parameters = model.parameters;
-                this.runtimeType = model.runtimeType;
                 this.status = model.status;
                 this.statusDetail = model.statusDetail;
                 this.taskId = model.taskId;
@@ -675,14 +662,6 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;
-                return this;
-            }
-
-            /**
-             * runtimeType.
-             */
-            public Builder runtimeType(String runtimeType) {
-                this.runtimeType = runtimeType;
                 return this;
             }
 

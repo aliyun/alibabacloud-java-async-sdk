@@ -28,16 +28,8 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("configPath")
-    private String configPath;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("excludeRules")
-    private java.util.List<ExcludeRules> excludeRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("exportToModule")
@@ -49,7 +41,6 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
@@ -76,9 +67,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         super(builder);
         this.exportTaskId = builder.exportTaskId;
         this.clientToken = builder.clientToken;
-        this.configPath = builder.configPath;
         this.description = builder.description;
-        this.excludeRules = builder.excludeRules;
         this.exportToModule = builder.exportToModule;
         this.includeRules = builder.includeRules;
         this.name = builder.name;
@@ -117,24 +106,10 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
     }
 
     /**
-     * @return configPath
-     */
-    public String getConfigPath() {
-        return this.configPath;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return excludeRules
-     */
-    public java.util.List<ExcludeRules> getExcludeRules() {
-        return this.excludeRules;
     }
 
     /**
@@ -196,9 +171,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateResourceExportTaskAttributeRequest, Builder> {
         private String exportTaskId; 
         private String clientToken; 
-        private String configPath; 
         private String description; 
-        private java.util.List<ExcludeRules> excludeRules; 
         private ExportToModule exportToModule; 
         private java.util.List<IncludeRules> includeRules; 
         private String name; 
@@ -216,9 +189,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             super(request);
             this.exportTaskId = request.exportTaskId;
             this.clientToken = request.clientToken;
-            this.configPath = request.configPath;
             this.description = request.description;
-            this.excludeRules = request.excludeRules;
             this.exportToModule = request.exportToModule;
             this.includeRules = request.includeRules;
             this.name = request.name;
@@ -231,6 +202,9 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-al1811jl980g5ffd115nhgt</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putPathParameter("exportTaskId", exportTaskId);
@@ -240,19 +214,13 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * configPath.
-         */
-        public Builder configPath(String configPath) {
-            this.putBodyParameter("configPath", configPath);
-            this.configPath = configPath;
             return this;
         }
 
@@ -262,15 +230,6 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
-            return this;
-        }
-
-        /**
-         * excludeRules.
-         */
-        public Builder excludeRules(java.util.List<ExcludeRules> excludeRules) {
-            this.putBodyParameter("excludeRules", excludeRules);
-            this.excludeRules = excludeRules;
             return this;
         }
 
@@ -293,7 +252,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -353,81 +312,6 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
 
     } 
 
-    /**
-     * 
-     * {@link UpdateResourceExportTaskAttributeRequest} extends {@link TeaModel}
-     *
-     * <p>UpdateResourceExportTaskAttributeRequest</p>
-     */
-    public static class ExcludeRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List<String> values;
-
-        private ExcludeRules(Builder builder) {
-            this.key = builder.key;
-            this.values = builder.values;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExcludeRules create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return values
-         */
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private java.util.List<String> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExcludeRules model) {
-                this.key = model.key;
-                this.values = model.values;
-            } 
-
-            /**
-             * key.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * values.
-             */
-            public Builder values(java.util.List<String> values) {
-                this.values = values;
-                return this;
-            }
-
-            public ExcludeRules build() {
-                return new ExcludeRules(this);
-            } 
-
-        } 
-
-    }
     /**
      * 
      * {@link UpdateResourceExportTaskAttributeRequest} extends {@link TeaModel}

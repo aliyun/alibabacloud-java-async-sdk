@@ -161,6 +161,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isDestroy")
         private Boolean isDestroy;
 
+        @com.aliyun.core.annotation.NameInMap("moduleDescription")
+        private String moduleDescription;
+
         @com.aliyun.core.annotation.NameInMap("moduleVersion")
         private String moduleVersion;
 
@@ -172,6 +175,7 @@ public class ListJobsResponseBody extends TeaModel {
 
         private Config(Builder builder) {
             this.isDestroy = builder.isDestroy;
+            this.moduleDescription = builder.moduleDescription;
             this.moduleVersion = builder.moduleVersion;
             this.resourcesChanged = builder.resourcesChanged;
             this.subCommand = builder.subCommand;
@@ -190,6 +194,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public Boolean getIsDestroy() {
             return this.isDestroy;
+        }
+
+        /**
+         * @return moduleDescription
+         */
+        public String getModuleDescription() {
+            return this.moduleDescription;
         }
 
         /**
@@ -215,6 +226,7 @@ public class ListJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isDestroy; 
+            private String moduleDescription; 
             private String moduleVersion; 
             private String resourcesChanged; 
             private String subCommand; 
@@ -224,6 +236,7 @@ public class ListJobsResponseBody extends TeaModel {
 
             private Builder(Config model) {
                 this.isDestroy = model.isDestroy;
+                this.moduleDescription = model.moduleDescription;
                 this.moduleVersion = model.moduleVersion;
                 this.resourcesChanged = model.resourcesChanged;
                 this.subCommand = model.subCommand;
@@ -234,6 +247,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder isDestroy(Boolean isDestroy) {
                 this.isDestroy = isDestroy;
+                return this;
+            }
+
+            /**
+             * moduleDescription.
+             */
+            public Builder moduleDescription(String moduleDescription) {
+                this.moduleDescription = moduleDescription;
                 return this;
             }
 

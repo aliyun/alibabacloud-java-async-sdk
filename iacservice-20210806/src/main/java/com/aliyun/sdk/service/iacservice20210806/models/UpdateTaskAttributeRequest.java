@@ -24,12 +24,16 @@ public class UpdateTaskAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoApply")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoApply;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoDestroy")
     private Boolean autoDestroy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String clientToken;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
@@ -44,23 +48,12 @@ public class UpdateTaskAttributeRequest extends Request {
     private Boolean initModuleState;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("moduleId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String moduleId;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("moduleVersion")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String moduleVersion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protectionStrategy")
@@ -68,7 +61,6 @@ public class UpdateTaskAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRole")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ramRole;
 
     @com.aliyun.core.annotation.Body
@@ -76,36 +68,34 @@ public class UpdateTaskAttributeRequest extends Request {
     private Boolean skipPropertyValidation;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("terraformVersion")
     private String terraformVersion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("triggerStrategy")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerStrategy;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("triggerValue")
-    private String triggerValue;
 
     private UpdateTaskAttributeRequest(Builder builder) {
         super(builder);
         this.taskId = builder.taskId;
         this.autoApply = builder.autoApply;
         this.autoDestroy = builder.autoDestroy;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.groupInfo = builder.groupInfo;
         this.initModuleState = builder.initModuleState;
-        this.moduleId = builder.moduleId;
         this.moduleVersion = builder.moduleVersion;
         this.name = builder.name;
-        this.parameters = builder.parameters;
         this.protectionStrategy = builder.protectionStrategy;
         this.ramRole = builder.ramRole;
         this.skipPropertyValidation = builder.skipPropertyValidation;
+        this.tags = builder.tags;
         this.terraformVersion = builder.terraformVersion;
         this.triggerStrategy = builder.triggerStrategy;
-        this.triggerValue = builder.triggerValue;
     }
 
     public static Builder builder() {
@@ -143,6 +133,13 @@ public class UpdateTaskAttributeRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -164,13 +161,6 @@ public class UpdateTaskAttributeRequest extends Request {
     }
 
     /**
-     * @return moduleId
-     */
-    public String getModuleId() {
-        return this.moduleId;
-    }
-
-    /**
      * @return moduleVersion
      */
     public String getModuleVersion() {
@@ -182,13 +172,6 @@ public class UpdateTaskAttributeRequest extends Request {
      */
     public String getName() {
         return this.name;
-    }
-
-    /**
-     * @return parameters
-     */
-    public java.util.Map<String, String> getParameters() {
-        return this.parameters;
     }
 
     /**
@@ -213,6 +196,13 @@ public class UpdateTaskAttributeRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return terraformVersion
      */
     public String getTerraformVersion() {
@@ -226,30 +216,22 @@ public class UpdateTaskAttributeRequest extends Request {
         return this.triggerStrategy;
     }
 
-    /**
-     * @return triggerValue
-     */
-    public String getTriggerValue() {
-        return this.triggerValue;
-    }
-
     public static final class Builder extends Request.Builder<UpdateTaskAttributeRequest, Builder> {
         private String taskId; 
         private Boolean autoApply; 
         private Boolean autoDestroy; 
+        private String clientToken; 
         private String description; 
         private GroupInfo groupInfo; 
         private Boolean initModuleState; 
-        private String moduleId; 
         private String moduleVersion; 
         private String name; 
-        private java.util.Map<String, String> parameters; 
         private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
+        private java.util.List<Tags> tags; 
         private String terraformVersion; 
         private String triggerStrategy; 
-        private String triggerValue; 
 
         private Builder() {
             super();
@@ -260,19 +242,18 @@ public class UpdateTaskAttributeRequest extends Request {
             this.taskId = request.taskId;
             this.autoApply = request.autoApply;
             this.autoDestroy = request.autoDestroy;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.groupInfo = request.groupInfo;
             this.initModuleState = request.initModuleState;
-            this.moduleId = request.moduleId;
             this.moduleVersion = request.moduleVersion;
             this.name = request.name;
-            this.parameters = request.parameters;
             this.protectionStrategy = request.protectionStrategy;
             this.ramRole = request.ramRole;
             this.skipPropertyValidation = request.skipPropertyValidation;
+            this.tags = request.tags;
             this.terraformVersion = request.terraformVersion;
             this.triggerStrategy = request.triggerStrategy;
-            this.triggerValue = request.triggerValue;
         } 
 
         /**
@@ -288,10 +269,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * autoApply.
          */
         public Builder autoApply(Boolean autoApply) {
             this.putBodyParameter("autoApply", autoApply);
@@ -305,6 +283,15 @@ public class UpdateTaskAttributeRequest extends Request {
         public Builder autoDestroy(Boolean autoDestroy) {
             this.putBodyParameter("autoDestroy", autoDestroy);
             this.autoDestroy = autoDestroy;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -336,22 +323,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mod-148e7853433574fff6b316f4eb737e</p>
-         */
-        public Builder moduleId(String moduleId) {
-            this.putBodyParameter("moduleId", moduleId);
-            this.moduleId = moduleId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
+         * moduleVersion.
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -360,23 +332,11 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * parameters.
-         */
-        public Builder parameters(java.util.Map<String, String> parameters) {
-            this.putBodyParameter("parameters", parameters);
-            this.parameters = parameters;
             return this;
         }
 
@@ -390,10 +350,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * ramRole.
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -411,6 +368,15 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * terraformVersion.
          */
         public Builder terraformVersion(String terraformVersion) {
@@ -420,23 +386,11 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Manual</p>
+         * triggerStrategy.
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
             this.triggerStrategy = triggerStrategy;
-            return this;
-        }
-
-        /**
-         * triggerValue.
-         */
-        public Builder triggerValue(String triggerValue) {
-            this.putBodyParameter("triggerValue", triggerValue);
-            this.triggerValue = triggerValue;
             return this;
         }
 
@@ -517,6 +471,81 @@ public class UpdateTaskAttributeRequest extends Request {
 
             public GroupInfo build() {
                 return new GroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateTaskAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskAttributeRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

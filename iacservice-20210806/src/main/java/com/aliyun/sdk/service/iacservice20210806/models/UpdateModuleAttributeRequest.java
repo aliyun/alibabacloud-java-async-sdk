@@ -23,6 +23,11 @@ public class UpdateModuleAttributeRequest extends Request {
     private String moduleId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -35,10 +40,6 @@ public class UpdateModuleAttributeRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("source")
-    private String source;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourcePath")
     private String sourcePath;
 
@@ -47,18 +48,23 @@ public class UpdateModuleAttributeRequest extends Request {
     private String statePath;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("versionStrategy")
     private String versionStrategy;
 
     private UpdateModuleAttributeRequest(Builder builder) {
         super(builder);
         this.moduleId = builder.moduleId;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.groupInfo = builder.groupInfo;
         this.name = builder.name;
-        this.source = builder.source;
         this.sourcePath = builder.sourcePath;
         this.statePath = builder.statePath;
+        this.tags = builder.tags;
         this.versionStrategy = builder.versionStrategy;
     }
 
@@ -83,6 +89,13 @@ public class UpdateModuleAttributeRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -104,13 +117,6 @@ public class UpdateModuleAttributeRequest extends Request {
     }
 
     /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
      * @return sourcePath
      */
     public String getSourcePath() {
@@ -125,6 +131,13 @@ public class UpdateModuleAttributeRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return versionStrategy
      */
     public String getVersionStrategy() {
@@ -133,12 +146,13 @@ public class UpdateModuleAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateModuleAttributeRequest, Builder> {
         private String moduleId; 
+        private String clientToken; 
         private String description; 
         private GroupInfo groupInfo; 
         private String name; 
-        private String source; 
         private String sourcePath; 
         private String statePath; 
+        private java.util.List<Tags> tags; 
         private String versionStrategy; 
 
         private Builder() {
@@ -148,12 +162,13 @@ public class UpdateModuleAttributeRequest extends Request {
         private Builder(UpdateModuleAttributeRequest request) {
             super(request);
             this.moduleId = request.moduleId;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.groupInfo = request.groupInfo;
             this.name = request.name;
-            this.source = request.source;
             this.sourcePath = request.sourcePath;
             this.statePath = request.statePath;
+            this.tags = request.tags;
             this.versionStrategy = request.versionStrategy;
         } 
 
@@ -166,6 +181,15 @@ public class UpdateModuleAttributeRequest extends Request {
         public Builder moduleId(String moduleId) {
             this.putPathParameter("moduleId", moduleId);
             this.moduleId = moduleId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -197,15 +221,6 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * source.
-         */
-        public Builder source(String source) {
-            this.putBodyParameter("source", source);
-            this.source = source;
-            return this;
-        }
-
-        /**
          * sourcePath.
          */
         public Builder sourcePath(String sourcePath) {
@@ -220,6 +235,15 @@ public class UpdateModuleAttributeRequest extends Request {
         public Builder statePath(String statePath) {
             this.putBodyParameter("statePath", statePath);
             this.statePath = statePath;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -309,6 +333,81 @@ public class UpdateModuleAttributeRequest extends Request {
 
             public GroupInfo build() {
                 return new GroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateModuleAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModuleAttributeRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

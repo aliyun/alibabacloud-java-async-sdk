@@ -278,11 +278,19 @@ public class ListModulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
         @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
             this.key = builder.key;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
             this.value = builder.value;
         }
 
@@ -302,6 +310,20 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -310,6 +332,8 @@ public class ListModulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
+            private String tagKey; 
+            private String tagValue; 
             private String value; 
 
             private Builder() {
@@ -317,6 +341,8 @@ public class ListModulesResponseBody extends TeaModel {
 
             private Builder(Tags model) {
                 this.key = model.key;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
                 this.value = model.value;
             } 
 
@@ -325,6 +351,22 @@ public class ListModulesResponseBody extends TeaModel {
              */
             public Builder key(String key) {
                 this.key = key;
+                return this;
+            }
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -365,9 +407,6 @@ public class ListModulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("latestVersion")
         private String latestVersion;
 
-        @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.Map<String, ?> meta;
-
         @com.aliyun.core.annotation.NameInMap("moduleId")
         private String moduleId;
 
@@ -376,9 +415,6 @@ public class ListModulesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
-
-        @com.aliyun.core.annotation.NameInMap("sourceConfig")
-        private java.util.Map<String, ?> sourceConfig;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -392,11 +428,9 @@ public class ListModulesResponseBody extends TeaModel {
             this.description = builder.description;
             this.groupInfo = builder.groupInfo;
             this.latestVersion = builder.latestVersion;
-            this.meta = builder.meta;
             this.moduleId = builder.moduleId;
             this.name = builder.name;
             this.source = builder.source;
-            this.sourceConfig = builder.sourceConfig;
             this.status = builder.status;
             this.tags = builder.tags;
         }
@@ -445,13 +479,6 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
-         * @return meta
-         */
-        public java.util.Map<String, ?> getMeta() {
-            return this.meta;
-        }
-
-        /**
          * @return moduleId
          */
         public String getModuleId() {
@@ -470,13 +497,6 @@ public class ListModulesResponseBody extends TeaModel {
          */
         public String getSource() {
             return this.source;
-        }
-
-        /**
-         * @return sourceConfig
-         */
-        public java.util.Map<String, ?> getSourceConfig() {
-            return this.sourceConfig;
         }
 
         /**
@@ -499,11 +519,9 @@ public class ListModulesResponseBody extends TeaModel {
             private String description; 
             private GroupInfo groupInfo; 
             private String latestVersion; 
-            private java.util.Map<String, ?> meta; 
             private String moduleId; 
             private String name; 
             private String source; 
-            private java.util.Map<String, ?> sourceConfig; 
             private String status; 
             private java.util.List<Tags> tags; 
 
@@ -516,11 +534,9 @@ public class ListModulesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.groupInfo = model.groupInfo;
                 this.latestVersion = model.latestVersion;
-                this.meta = model.meta;
                 this.moduleId = model.moduleId;
                 this.name = model.name;
                 this.source = model.source;
-                this.sourceConfig = model.sourceConfig;
                 this.status = model.status;
                 this.tags = model.tags;
             } 
@@ -566,14 +582,6 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
-             */
-            public Builder meta(java.util.Map<String, ?> meta) {
-                this.meta = meta;
-                return this;
-            }
-
-            /**
              * moduleId.
              */
             public Builder moduleId(String moduleId) {
@@ -594,14 +602,6 @@ public class ListModulesResponseBody extends TeaModel {
              */
             public Builder source(String source) {
                 this.source = source;
-                return this;
-            }
-
-            /**
-             * sourceConfig.
-             */
-            public Builder sourceConfig(java.util.Map<String, ?> sourceConfig) {
-                this.sourceConfig = sourceConfig;
                 return this;
             }
 

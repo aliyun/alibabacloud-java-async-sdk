@@ -23,16 +23,8 @@ public class CreateResourceExportTaskRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("configPath")
-    private String configPath;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("excludeRules")
-    private java.util.List<ExcludeRules> excludeRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("exportToModule")
@@ -70,9 +62,7 @@ public class CreateResourceExportTaskRequest extends Request {
     private CreateResourceExportTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.configPath = builder.configPath;
         this.description = builder.description;
-        this.excludeRules = builder.excludeRules;
         this.exportToModule = builder.exportToModule;
         this.includeRules = builder.includeRules;
         this.name = builder.name;
@@ -104,24 +94,10 @@ public class CreateResourceExportTaskRequest extends Request {
     }
 
     /**
-     * @return configPath
-     */
-    public String getConfigPath() {
-        return this.configPath;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return excludeRules
-     */
-    public java.util.List<ExcludeRules> getExcludeRules() {
-        return this.excludeRules;
     }
 
     /**
@@ -182,9 +158,7 @@ public class CreateResourceExportTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateResourceExportTaskRequest, Builder> {
         private String clientToken; 
-        private String configPath; 
         private String description; 
-        private java.util.List<ExcludeRules> excludeRules; 
         private ExportToModule exportToModule; 
         private java.util.List<IncludeRules> includeRules; 
         private String name; 
@@ -201,9 +175,7 @@ public class CreateResourceExportTaskRequest extends Request {
         private Builder(CreateResourceExportTaskRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.configPath = request.configPath;
             this.description = request.description;
-            this.excludeRules = request.excludeRules;
             this.exportToModule = request.exportToModule;
             this.includeRules = request.includeRules;
             this.name = request.name;
@@ -227,29 +199,11 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * configPath.
-         */
-        public Builder configPath(String configPath) {
-            this.putBodyParameter("configPath", configPath);
-            this.configPath = configPath;
-            return this;
-        }
-
-        /**
          * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
-            return this;
-        }
-
-        /**
-         * excludeRules.
-         */
-        public Builder excludeRules(java.util.List<ExcludeRules> excludeRules) {
-            this.putBodyParameter("excludeRules", excludeRules);
-            this.excludeRules = excludeRules;
             return this;
         }
 
@@ -335,81 +289,6 @@ public class CreateResourceExportTaskRequest extends Request {
 
     } 
 
-    /**
-     * 
-     * {@link CreateResourceExportTaskRequest} extends {@link TeaModel}
-     *
-     * <p>CreateResourceExportTaskRequest</p>
-     */
-    public static class ExcludeRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List<String> values;
-
-        private ExcludeRules(Builder builder) {
-            this.key = builder.key;
-            this.values = builder.values;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExcludeRules create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return values
-         */
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private java.util.List<String> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExcludeRules model) {
-                this.key = model.key;
-                this.values = model.values;
-            } 
-
-            /**
-             * key.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * values.
-             */
-            public Builder values(java.util.List<String> values) {
-                this.values = values;
-                return this;
-            }
-
-            public ExcludeRules build() {
-                return new ExcludeRules(this);
-            } 
-
-        } 
-
-    }
     /**
      * 
      * {@link CreateResourceExportTaskRequest} extends {@link TeaModel}

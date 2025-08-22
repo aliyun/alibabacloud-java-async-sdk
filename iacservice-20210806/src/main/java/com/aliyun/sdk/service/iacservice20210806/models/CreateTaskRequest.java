@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoApply")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoApply;
 
     @com.aliyun.core.annotation.Body
@@ -59,21 +58,20 @@ public class CreateTaskRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map<String, String> parameters;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protectionStrategy")
     private java.util.List<String> protectionStrategy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRole")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ramRole;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("skipPropertyValidation")
     private Boolean skipPropertyValidation;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskBackend")
@@ -85,12 +83,7 @@ public class CreateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("triggerStrategy")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerStrategy;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("triggerValue")
-    private String triggerValue;
 
     private CreateTaskRequest(Builder builder) {
         super(builder);
@@ -103,14 +96,13 @@ public class CreateTaskRequest extends Request {
         this.moduleId = builder.moduleId;
         this.moduleVersion = builder.moduleVersion;
         this.name = builder.name;
-        this.parameters = builder.parameters;
         this.protectionStrategy = builder.protectionStrategy;
         this.ramRole = builder.ramRole;
         this.skipPropertyValidation = builder.skipPropertyValidation;
+        this.tags = builder.tags;
         this.taskBackend = builder.taskBackend;
         this.terraformVersion = builder.terraformVersion;
         this.triggerStrategy = builder.triggerStrategy;
-        this.triggerValue = builder.triggerValue;
     }
 
     public static Builder builder() {
@@ -190,13 +182,6 @@ public class CreateTaskRequest extends Request {
     }
 
     /**
-     * @return parameters
-     */
-    public java.util.Map<String, String> getParameters() {
-        return this.parameters;
-    }
-
-    /**
      * @return protectionStrategy
      */
     public java.util.List<String> getProtectionStrategy() {
@@ -215,6 +200,13 @@ public class CreateTaskRequest extends Request {
      */
     public Boolean getSkipPropertyValidation() {
         return this.skipPropertyValidation;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -238,13 +230,6 @@ public class CreateTaskRequest extends Request {
         return this.triggerStrategy;
     }
 
-    /**
-     * @return triggerValue
-     */
-    public String getTriggerValue() {
-        return this.triggerValue;
-    }
-
     public static final class Builder extends Request.Builder<CreateTaskRequest, Builder> {
         private Boolean autoApply; 
         private Boolean autoDestroy; 
@@ -255,14 +240,13 @@ public class CreateTaskRequest extends Request {
         private String moduleId; 
         private String moduleVersion; 
         private String name; 
-        private java.util.Map<String, String> parameters; 
         private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
+        private java.util.List<Tags> tags; 
         private TaskBackend taskBackend; 
         private String terraformVersion; 
         private String triggerStrategy; 
-        private String triggerValue; 
 
         private Builder() {
             super();
@@ -279,21 +263,17 @@ public class CreateTaskRequest extends Request {
             this.moduleId = request.moduleId;
             this.moduleVersion = request.moduleVersion;
             this.name = request.name;
-            this.parameters = request.parameters;
             this.protectionStrategy = request.protectionStrategy;
             this.ramRole = request.ramRole;
             this.skipPropertyValidation = request.skipPropertyValidation;
+            this.tags = request.tags;
             this.taskBackend = request.taskBackend;
             this.terraformVersion = request.terraformVersion;
             this.triggerStrategy = request.triggerStrategy;
-            this.triggerValue = request.triggerValue;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * autoApply.
          */
         public Builder autoApply(Boolean autoApply) {
             this.putBodyParameter("autoApply", autoApply);
@@ -386,15 +366,6 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * parameters.
-         */
-        public Builder parameters(java.util.Map<String, String> parameters) {
-            this.putBodyParameter("parameters", parameters);
-            this.parameters = parameters;
-            return this;
-        }
-
-        /**
          * protectionStrategy.
          */
         public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
@@ -404,10 +375,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * ramRole.
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -421,6 +389,15 @@ public class CreateTaskRequest extends Request {
         public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
             this.putBodyParameter("skipPropertyValidation", skipPropertyValidation);
             this.skipPropertyValidation = skipPropertyValidation;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -443,23 +420,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Always</p>
+         * triggerStrategy.
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
             this.triggerStrategy = triggerStrategy;
-            return this;
-        }
-
-        /**
-         * triggerValue.
-         */
-        public Builder triggerValue(String triggerValue) {
-            this.putBodyParameter("triggerValue", triggerValue);
-            this.triggerValue = triggerValue;
             return this;
         }
 
@@ -540,6 +505,81 @@ public class CreateTaskRequest extends Request {
 
             public GroupInfo build() {
                 return new GroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

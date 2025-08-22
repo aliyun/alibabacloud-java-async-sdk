@@ -33,10 +33,6 @@ public class CreateJobRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("executeType")
-    private String executeType;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("subCommand")
     private String subCommand;
 
@@ -49,7 +45,6 @@ public class CreateJobRequest extends Request {
         this.taskId = builder.taskId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
-        this.executeType = builder.executeType;
         this.subCommand = builder.subCommand;
         this.taskType = builder.taskType;
     }
@@ -89,13 +84,6 @@ public class CreateJobRequest extends Request {
     }
 
     /**
-     * @return executeType
-     */
-    public String getExecuteType() {
-        return this.executeType;
-    }
-
-    /**
      * @return subCommand
      */
     public String getSubCommand() {
@@ -113,7 +101,6 @@ public class CreateJobRequest extends Request {
         private String taskId; 
         private String clientToken; 
         private String description; 
-        private String executeType; 
         private String subCommand; 
         private String taskType; 
 
@@ -126,7 +113,6 @@ public class CreateJobRequest extends Request {
             this.taskId = request.taskId;
             this.clientToken = request.clientToken;
             this.description = request.description;
-            this.executeType = request.executeType;
             this.subCommand = request.subCommand;
             this.taskType = request.taskType;
         } 
@@ -164,15 +150,6 @@ public class CreateJobRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
-            return this;
-        }
-
-        /**
-         * executeType.
-         */
-        public Builder executeType(String executeType) {
-            this.putBodyParameter("executeType", executeType);
-            this.executeType = executeType;
             return this;
         }
 

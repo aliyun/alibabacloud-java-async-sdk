@@ -157,81 +157,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
      *
      * <p>ListResourceExportTasksResponseBody</p>
      */
-    public static class ExcludeRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List<String> values;
-
-        private ExcludeRules(Builder builder) {
-            this.key = builder.key;
-            this.values = builder.values;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExcludeRules create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return values
-         */
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private java.util.List<String> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExcludeRules model) {
-                this.key = model.key;
-                this.values = model.values;
-            } 
-
-            /**
-             * key.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * values.
-             */
-            public Builder values(java.util.List<String> values) {
-                this.values = values;
-                return this;
-            }
-
-            public ExcludeRules build() {
-                return new ExcludeRules(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListResourceExportTasksResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListResourceExportTasksResponseBody</p>
-     */
     public static class ExportToModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
@@ -584,9 +509,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("elapsedTime")
         private Long elapsedTime;
 
-        @com.aliyun.core.annotation.NameInMap("excludeRules")
-        private java.util.List<ExcludeRules> excludeRules;
-
         @com.aliyun.core.annotation.NameInMap("exportStatus")
         private String exportStatus;
 
@@ -598,9 +520,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("exportVersion")
         private String exportVersion;
-
-        @com.aliyun.core.annotation.NameInMap("hasDestroy")
-        private Boolean hasDestroy;
 
         @com.aliyun.core.annotation.NameInMap("includeRules")
         private java.util.List<IncludeRules> includeRules;
@@ -621,12 +540,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.elapsedTime = builder.elapsedTime;
-            this.excludeRules = builder.excludeRules;
             this.exportStatus = builder.exportStatus;
             this.exportTaskId = builder.exportTaskId;
             this.exportToModule = builder.exportToModule;
             this.exportVersion = builder.exportVersion;
-            this.hasDestroy = builder.hasDestroy;
             this.includeRules = builder.includeRules;
             this.modules = builder.modules;
             this.name = builder.name;
@@ -664,13 +581,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return excludeRules
-         */
-        public java.util.List<ExcludeRules> getExcludeRules() {
-            return this.excludeRules;
-        }
-
-        /**
          * @return exportStatus
          */
         public String getExportStatus() {
@@ -696,13 +606,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
          */
         public String getExportVersion() {
             return this.exportVersion;
-        }
-
-        /**
-         * @return hasDestroy
-         */
-        public Boolean getHasDestroy() {
-            return this.hasDestroy;
         }
 
         /**
@@ -744,12 +647,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private Long elapsedTime; 
-            private java.util.List<ExcludeRules> excludeRules; 
             private String exportStatus; 
             private String exportTaskId; 
             private ExportToModule exportToModule; 
             private String exportVersion; 
-            private Boolean hasDestroy; 
             private java.util.List<IncludeRules> includeRules; 
             private java.util.List<Modules> modules; 
             private String name; 
@@ -763,12 +664,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.elapsedTime = model.elapsedTime;
-                this.excludeRules = model.excludeRules;
                 this.exportStatus = model.exportStatus;
                 this.exportTaskId = model.exportTaskId;
                 this.exportToModule = model.exportToModule;
                 this.exportVersion = model.exportVersion;
-                this.hasDestroy = model.hasDestroy;
                 this.includeRules = model.includeRules;
                 this.modules = model.modules;
                 this.name = model.name;
@@ -801,14 +700,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * excludeRules.
-             */
-            public Builder excludeRules(java.util.List<ExcludeRules> excludeRules) {
-                this.excludeRules = excludeRules;
-                return this;
-            }
-
-            /**
              * exportStatus.
              */
             public Builder exportStatus(String exportStatus) {
@@ -837,14 +728,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
              */
             public Builder exportVersion(String exportVersion) {
                 this.exportVersion = exportVersion;
-                return this;
-            }
-
-            /**
-             * hasDestroy.
-             */
-            public Builder hasDestroy(Boolean hasDestroy) {
-                this.hasDestroy = hasDestroy;
                 return this;
             }
 

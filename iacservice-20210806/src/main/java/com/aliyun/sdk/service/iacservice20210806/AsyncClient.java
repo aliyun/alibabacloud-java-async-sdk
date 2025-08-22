@@ -20,70 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddSharedAccounts  AddSharedAccountsRequest
+     * @return AddSharedAccountsResponse
+     */
+    CompletableFuture<AddSharedAccountsResponse> addSharedAccounts(AddSharedAccountsRequest request);
+
+    /**
      * @param request the request parameters of AssociateGroup  AssociateGroupRequest
      * @return AssociateGroupResponse
      */
     CompletableFuture<AssociateGroupResponse> associateGroup(AssociateGroupRequest request);
 
     /**
-     * @param request the request parameters of AssociateParameterSet  AssociateParameterSetRequest
-     * @return AssociateParameterSetResponse
-     */
-    CompletableFuture<AssociateParameterSetResponse> associateParameterSet(AssociateParameterSetRequest request);
-
-    /**
-     * @param request the request parameters of AttachRabbitmqPublisher  AttachRabbitmqPublisherRequest
-     * @return AttachRabbitmqPublisherResponse
-     */
-    CompletableFuture<AttachRabbitmqPublisherResponse> attachRabbitmqPublisher(AttachRabbitmqPublisherRequest request);
-
-    /**
-     * @param request the request parameters of CancelProjectBuild  CancelProjectBuildRequest
-     * @return CancelProjectBuildResponse
-     */
-    CompletableFuture<CancelProjectBuildResponse> cancelProjectBuild(CancelProjectBuildRequest request);
-
-    /**
-     * @param request the request parameters of CancelRamPolicyExportTask  CancelRamPolicyExportTaskRequest
-     * @return CancelRamPolicyExportTaskResponse
-     */
-    CompletableFuture<CancelRamPolicyExportTaskResponse> cancelRamPolicyExportTask(CancelRamPolicyExportTaskRequest request);
-
-    /**
      * @param request the request parameters of CancelResourceExportTask  CancelResourceExportTaskRequest
      * @return CancelResourceExportTaskResponse
      */
     CompletableFuture<CancelResourceExportTaskResponse> cancelResourceExportTask(CancelResourceExportTaskRequest request);
-
-    /**
-     * @param request the request parameters of CheckResourceName  CheckResourceNameRequest
-     * @return CheckResourceNameResponse
-     */
-    CompletableFuture<CheckResourceNameResponse> checkResourceName(CheckResourceNameRequest request);
-
-    /**
-     * @param request the request parameters of CloneGroup  CloneGroupRequest
-     * @return CloneGroupResponse
-     */
-    CompletableFuture<CloneGroupResponse> cloneGroup(CloneGroupRequest request);
-
-    /**
-     * @param request the request parameters of CloneModule  CloneModuleRequest
-     * @return CloneModuleResponse
-     */
-    CompletableFuture<CloneModuleResponse> cloneModule(CloneModuleRequest request);
-
-    /**
-     * @param request the request parameters of CreateAuthorization  CreateAuthorizationRequest
-     * @return CreateAuthorizationResponse
-     */
-    CompletableFuture<CreateAuthorizationResponse> createAuthorization(CreateAuthorizationRequest request);
-
-    /**
-     * @param request the request parameters of CreateExplorerTask  CreateExplorerTaskRequest
-     * @return CreateExplorerTaskResponse
-     */
-    CompletableFuture<CreateExplorerTaskResponse> createExplorerTask(CreateExplorerTaskRequest request);
 
     /**
      * @param request the request parameters of CreateGroup  CreateGroupRequest
@@ -110,34 +62,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateModuleVersionResponse> createModuleVersion(CreateModuleVersionRequest request);
 
     /**
-     * @param request the request parameters of CreateParameterSet  CreateParameterSetRequest
-     * @return CreateParameterSetResponse
-     */
-    CompletableFuture<CreateParameterSetResponse> createParameterSet(CreateParameterSetRequest request);
-
-    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
-     * @param request the request parameters of CreateProjectBuild  CreateProjectBuildRequest
-     * @return CreateProjectBuildResponse
+     * @param request the request parameters of CreateRegistryModule  CreateRegistryModuleRequest
+     * @return CreateRegistryModuleResponse
      */
-    CompletableFuture<CreateProjectBuildResponse> createProjectBuild(CreateProjectBuildRequest request);
+    CompletableFuture<CreateRegistryModuleResponse> createRegistryModule(CreateRegistryModuleRequest request);
 
     /**
-     * @param request the request parameters of CreateRabbitmqPublisher  CreateRabbitmqPublisherRequest
-     * @return CreateRabbitmqPublisherResponse
+     * @param request the request parameters of CreateRegistryNamespace  CreateRegistryNamespaceRequest
+     * @return CreateRegistryNamespaceResponse
      */
-    CompletableFuture<CreateRabbitmqPublisherResponse> createRabbitmqPublisher(CreateRabbitmqPublisherRequest request);
-
-    /**
-     * @param request the request parameters of CreateRamPolicyExportTask  CreateRamPolicyExportTaskRequest
-     * @return CreateRamPolicyExportTaskResponse
-     */
-    CompletableFuture<CreateRamPolicyExportTaskResponse> createRamPolicyExportTask(CreateRamPolicyExportTaskRequest request);
+    CompletableFuture<CreateRegistryNamespaceResponse> createRegistryNamespace(CreateRegistryNamespaceRequest request);
 
     /**
      * @param request the request parameters of CreateResourceExportTask  CreateResourceExportTaskRequest
@@ -152,12 +92,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
-     * @param request the request parameters of DeleteAuthorization  DeleteAuthorizationRequest
-     * @return DeleteAuthorizationResponse
-     */
-    CompletableFuture<DeleteAuthorizationResponse> deleteAuthorization(DeleteAuthorizationRequest request);
-
-    /**
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
      */
@@ -170,34 +104,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteModuleResponse> deleteModule(DeleteModuleRequest request);
 
     /**
-     * @param request the request parameters of DeleteParameterSet  DeleteParameterSetRequest
-     * @return DeleteParameterSetResponse
-     */
-    CompletableFuture<DeleteParameterSetResponse> deleteParameterSet(DeleteParameterSetRequest request);
-
-    /**
      * @param request the request parameters of DeleteProject  DeleteProjectRequest
      * @return DeleteProjectResponse
      */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     /**
-     * @param request the request parameters of DeleteRabbitmqPublisher  DeleteRabbitmqPublisherRequest
-     * @return DeleteRabbitmqPublisherResponse
+     * @param request the request parameters of DeleteRegistryModule  DeleteRegistryModuleRequest
+     * @return DeleteRegistryModuleResponse
      */
-    CompletableFuture<DeleteRabbitmqPublisherResponse> deleteRabbitmqPublisher(DeleteRabbitmqPublisherRequest request);
+    CompletableFuture<DeleteRegistryModuleResponse> deleteRegistryModule(DeleteRegistryModuleRequest request);
 
     /**
-     * @param request the request parameters of DeleteRamPolicyExportTask  DeleteRamPolicyExportTaskRequest
-     * @return DeleteRamPolicyExportTaskResponse
+     * @param request the request parameters of DeleteRegistryModuleVersion  DeleteRegistryModuleVersionRequest
+     * @return DeleteRegistryModuleVersionResponse
      */
-    CompletableFuture<DeleteRamPolicyExportTaskResponse> deleteRamPolicyExportTask(DeleteRamPolicyExportTaskRequest request);
+    CompletableFuture<DeleteRegistryModuleVersionResponse> deleteRegistryModuleVersion(DeleteRegistryModuleVersionRequest request);
 
     /**
-     * @param request the request parameters of DeleteRamPolicyExportTaskVersion  DeleteRamPolicyExportTaskVersionRequest
-     * @return DeleteRamPolicyExportTaskVersionResponse
+     * @param request the request parameters of DeleteRegistryNamespace  DeleteRegistryNamespaceRequest
+     * @return DeleteRegistryNamespaceResponse
      */
-    CompletableFuture<DeleteRamPolicyExportTaskVersionResponse> deleteRamPolicyExportTaskVersion(DeleteRamPolicyExportTaskVersionRequest request);
+    CompletableFuture<DeleteRegistryNamespaceResponse> deleteRegistryNamespace(DeleteRegistryNamespaceRequest request);
 
     /**
      * @param request the request parameters of DeleteResourceExportTask  DeleteResourceExportTaskRequest
@@ -206,22 +134,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceExportTaskResponse> deleteResourceExportTask(DeleteResourceExportTaskRequest request);
 
     /**
-     * @param request the request parameters of DeleteSceneTestingTask  DeleteSceneTestingTaskRequest
-     * @return DeleteSceneTestingTaskResponse
-     */
-    CompletableFuture<DeleteSceneTestingTaskResponse> deleteSceneTestingTask(DeleteSceneTestingTaskRequest request);
-
-    /**
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
      */
     CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
-
-    /**
-     * @param request the request parameters of DetachRabbitmqPublisher  DetachRabbitmqPublisherRequest
-     * @return DetachRabbitmqPublisherResponse
-     */
-    CompletableFuture<DetachRabbitmqPublisherResponse> detachRabbitmqPublisher(DetachRabbitmqPublisherRequest request);
 
     /**
      * @param request the request parameters of DissociateGroup  DissociateGroupRequest
@@ -230,16 +146,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DissociateGroupResponse> dissociateGroup(DissociateGroupRequest request);
 
     /**
-     * @param request the request parameters of DissociateParameterSet  DissociateParameterSetRequest
-     * @return DissociateParameterSetResponse
+     * @param request the request parameters of ExecuteRegistryModule  ExecuteRegistryModuleRequest
+     * @return ExecuteRegistryModuleResponse
      */
-    CompletableFuture<DissociateParameterSetResponse> dissociateParameterSet(DissociateParameterSetRequest request);
-
-    /**
-     * @param request the request parameters of ExecuteRamPolicyExportTask  ExecuteRamPolicyExportTaskRequest
-     * @return ExecuteRamPolicyExportTaskResponse
-     */
-    CompletableFuture<ExecuteRamPolicyExportTaskResponse> executeRamPolicyExportTask(ExecuteRamPolicyExportTaskRequest request);
+    CompletableFuture<ExecuteRegistryModuleResponse> executeRegistryModule(ExecuteRegistryModuleRequest request);
 
     /**
      * @param request the request parameters of ExecuteResourceExportTask  ExecuteResourceExportTaskRequest
@@ -248,10 +158,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteResourceExportTaskResponse> executeResourceExportTask(ExecuteResourceExportTaskRequest request);
 
     /**
-     * @param request the request parameters of GetExplorerTask  GetExplorerTaskRequest
-     * @return GetExplorerTaskResponse
+     * @param request the request parameters of ExecuteTerraformApply  ExecuteTerraformApplyRequest
+     * @return ExecuteTerraformApplyResponse
      */
-    CompletableFuture<GetExplorerTaskResponse> getExplorerTask(GetExplorerTaskRequest request);
+    CompletableFuture<ExecuteTerraformApplyResponse> executeTerraformApply(ExecuteTerraformApplyRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTerraformDestroy  ExecuteTerraformDestroyRequest
+     * @return ExecuteTerraformDestroyResponse
+     */
+    CompletableFuture<ExecuteTerraformDestroyResponse> executeTerraformDestroy(ExecuteTerraformDestroyRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTerraformPlan  ExecuteTerraformPlanRequest
+     * @return ExecuteTerraformPlanResponse
+     */
+    CompletableFuture<ExecuteTerraformPlanResponse> executeTerraformPlan(ExecuteTerraformPlanRequest request);
+
+    /**
+     * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
+     * @return GetExecuteStateResponse
+     */
+    CompletableFuture<GetExecuteStateResponse> getExecuteState(GetExecuteStateRequest request);
 
     /**
      * @param request the request parameters of GetGroup  GetGroupRequest
@@ -278,40 +206,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetModuleVersionResponse> getModuleVersion(GetModuleVersionRequest request);
 
     /**
-     * @param request the request parameters of GetParameterSet  GetParameterSetRequest
-     * @return GetParameterSetResponse
-     */
-    CompletableFuture<GetParameterSetResponse> getParameterSet(GetParameterSetRequest request);
-
-    /**
      * @param request the request parameters of GetProject  GetProjectRequest
      * @return GetProjectResponse
      */
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
-     * @param request the request parameters of GetProjectBuildContext  GetProjectBuildContextRequest
-     * @return GetProjectBuildContextResponse
+     * @param request the request parameters of GetRegistryModule  GetRegistryModuleRequest
+     * @return GetRegistryModuleResponse
      */
-    CompletableFuture<GetProjectBuildContextResponse> getProjectBuildContext(GetProjectBuildContextRequest request);
+    CompletableFuture<GetRegistryModuleResponse> getRegistryModule(GetRegistryModuleRequest request);
 
     /**
-     * @param request the request parameters of GetRabbitmqPublisher  GetRabbitmqPublisherRequest
-     * @return GetRabbitmqPublisherResponse
+     * @param request the request parameters of GetRegistryModuleVersion  GetRegistryModuleVersionRequest
+     * @return GetRegistryModuleVersionResponse
      */
-    CompletableFuture<GetRabbitmqPublisherResponse> getRabbitmqPublisher(GetRabbitmqPublisherRequest request);
+    CompletableFuture<GetRegistryModuleVersionResponse> getRegistryModuleVersion(GetRegistryModuleVersionRequest request);
 
     /**
-     * @param request the request parameters of GetRamPolicyExportTask  GetRamPolicyExportTaskRequest
-     * @return GetRamPolicyExportTaskResponse
+     * @param request the request parameters of GetRegistryNamespace  GetRegistryNamespaceRequest
+     * @return GetRegistryNamespaceResponse
      */
-    CompletableFuture<GetRamPolicyExportTaskResponse> getRamPolicyExportTask(GetRamPolicyExportTaskRequest request);
-
-    /**
-     * @param request the request parameters of GetRamPolicyExportTaskVersion  GetRamPolicyExportTaskVersionRequest
-     * @return GetRamPolicyExportTaskVersionResponse
-     */
-    CompletableFuture<GetRamPolicyExportTaskVersionResponse> getRamPolicyExportTaskVersion(GetRamPolicyExportTaskVersionRequest request);
+    CompletableFuture<GetRegistryNamespaceResponse> getRegistryNamespace(GetRegistryNamespaceRequest request);
 
     /**
      * @param request the request parameters of GetResourceExportTask  GetResourceExportTaskRequest
@@ -320,34 +236,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceExportTaskResponse> getResourceExportTask(GetResourceExportTaskRequest request);
 
     /**
+     * @param request the request parameters of GetResourceType  GetResourceTypeRequest
+     * @return GetResourceTypeResponse
+     */
+    CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
+
+    /**
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     /**
-     * @param request the request parameters of GetTaskPolicy  GetTaskPolicyRequest
-     * @return GetTaskPolicyResponse
+     * @param request the request parameters of ListExplorerRegistryModuleExamples  ListExplorerRegistryModuleExamplesRequest
+     * @return ListExplorerRegistryModuleExamplesResponse
      */
-    CompletableFuture<GetTaskPolicyResponse> getTaskPolicy(GetTaskPolicyRequest request);
+    CompletableFuture<ListExplorerRegistryModuleExamplesResponse> listExplorerRegistryModuleExamples(ListExplorerRegistryModuleExamplesRequest request);
 
     /**
-     * @param request the request parameters of ListAuthorizations  ListAuthorizationsRequest
-     * @return ListAuthorizationsResponse
+     * @param request the request parameters of ListExplorerRegistryModuleVersions  ListExplorerRegistryModuleVersionsRequest
+     * @return ListExplorerRegistryModuleVersionsResponse
      */
-    CompletableFuture<ListAuthorizationsResponse> listAuthorizations(ListAuthorizationsRequest request);
+    CompletableFuture<ListExplorerRegistryModuleVersionsResponse> listExplorerRegistryModuleVersions(ListExplorerRegistryModuleVersionsRequest request);
 
     /**
-     * @param request the request parameters of ListAvailableTerraformVersions  ListAvailableTerraformVersionsRequest
-     * @return ListAvailableTerraformVersionsResponse
+     * @param request the request parameters of ListExplorerRegistryModules  ListExplorerRegistryModulesRequest
+     * @return ListExplorerRegistryModulesResponse
      */
-    CompletableFuture<ListAvailableTerraformVersionsResponse> listAvailableTerraformVersions(ListAvailableTerraformVersionsRequest request);
-
-    /**
-     * @param request the request parameters of ListExplorerTasks  ListExplorerTasksRequest
-     * @return ListExplorerTasksResponse
-     */
-    CompletableFuture<ListExplorerTasksResponse> listExplorerTasks(ListExplorerTasksRequest request);
+    CompletableFuture<ListExplorerRegistryModulesResponse> listExplorerRegistryModules(ListExplorerRegistryModulesRequest request);
 
     /**
      * @param request the request parameters of ListGroup  ListGroupRequest
@@ -374,16 +290,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListModulesResponse> listModules(ListModulesRequest request);
 
     /**
-     * @param request the request parameters of ListParameterSetRelation  ListParameterSetRelationRequest
-     * @return ListParameterSetRelationResponse
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
      */
-    CompletableFuture<ListParameterSetRelationResponse> listParameterSetRelation(ListParameterSetRelationRequest request);
-
-    /**
-     * @param request the request parameters of ListParameterSets  ListParameterSetsRequest
-     * @return ListParameterSetsResponse
-     */
-    CompletableFuture<ListParameterSetsResponse> listParameterSets(ListParameterSetsRequest request);
+    CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
 
     /**
      * @param request the request parameters of ListProject  ListProjectRequest
@@ -392,28 +302,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request);
 
     /**
-     * @param request the request parameters of ListProjectBuilds  ListProjectBuildsRequest
-     * @return ListProjectBuildsResponse
+     * @param request the request parameters of ListRegistryModuleVersions  ListRegistryModuleVersionsRequest
+     * @return ListRegistryModuleVersionsResponse
      */
-    CompletableFuture<ListProjectBuildsResponse> listProjectBuilds(ListProjectBuildsRequest request);
+    CompletableFuture<ListRegistryModuleVersionsResponse> listRegistryModuleVersions(ListRegistryModuleVersionsRequest request);
 
     /**
-     * @param request the request parameters of ListRabbitmqPublishers  ListRabbitmqPublishersRequest
-     * @return ListRabbitmqPublishersResponse
+     * @param request the request parameters of ListRegistryModules  ListRegistryModulesRequest
+     * @return ListRegistryModulesResponse
      */
-    CompletableFuture<ListRabbitmqPublishersResponse> listRabbitmqPublishers(ListRabbitmqPublishersRequest request);
+    CompletableFuture<ListRegistryModulesResponse> listRegistryModules(ListRegistryModulesRequest request);
 
     /**
-     * @param request the request parameters of ListRamPolicyExportTaskVersions  ListRamPolicyExportTaskVersionsRequest
-     * @return ListRamPolicyExportTaskVersionsResponse
+     * @param request the request parameters of ListRegistryNamespaces  ListRegistryNamespacesRequest
+     * @return ListRegistryNamespacesResponse
      */
-    CompletableFuture<ListRamPolicyExportTaskVersionsResponse> listRamPolicyExportTaskVersions(ListRamPolicyExportTaskVersionsRequest request);
-
-    /**
-     * @param request the request parameters of ListRamPolicyExportTasks  ListRamPolicyExportTasksRequest
-     * @return ListRamPolicyExportTasksResponse
-     */
-    CompletableFuture<ListRamPolicyExportTasksResponse> listRamPolicyExportTasks(ListRamPolicyExportTasksRequest request);
+    CompletableFuture<ListRegistryNamespacesResponse> listRegistryNamespaces(ListRegistryNamespacesRequest request);
 
     /**
      * @param request the request parameters of ListResourceExportTaskVersions  ListResourceExportTaskVersionsRequest
@@ -428,10 +332,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourceExportTasksResponse> listResourceExportTasks(ListResourceExportTasksRequest request);
 
     /**
-     * @param request the request parameters of ListResources  ListResourcesRequest
-     * @return ListResourcesResponse
+     * @param request the request parameters of ListResourceTypes  ListResourceTypesRequest
+     * @return ListResourceTypesResponse
      */
-    CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);
+    CompletableFuture<ListResourceTypesResponse> listResourceTypes(ListResourceTypesRequest request);
 
     /**
      * @param request the request parameters of ListTasks  ListTasksRequest
@@ -452,28 +356,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateJobResponse> operateJob(OperateJobRequest request);
 
     /**
-     * @param request the request parameters of RemoveResourceExportTaskVersion  RemoveResourceExportTaskVersionRequest
-     * @return RemoveResourceExportTaskVersionResponse
+     * @param request the request parameters of PublishRegistryModuleVersion  PublishRegistryModuleVersionRequest
+     * @return PublishRegistryModuleVersionResponse
      */
-    CompletableFuture<RemoveResourceExportTaskVersionResponse> removeResourceExportTaskVersion(RemoveResourceExportTaskVersionRequest request);
+    CompletableFuture<PublishRegistryModuleVersionResponse> publishRegistryModuleVersion(PublishRegistryModuleVersionRequest request);
 
     /**
-     * @param request the request parameters of TagResources  TagResourcesRequest
-     * @return TagResourcesResponse
+     * @param request the request parameters of RemoveSharedAccounts  RemoveSharedAccountsRequest
+     * @return RemoveSharedAccountsResponse
      */
-    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+    CompletableFuture<RemoveSharedAccountsResponse> removeSharedAccounts(RemoveSharedAccountsRequest request);
 
     /**
-     * @param request the request parameters of UpdateAuthorizationAttribute  UpdateAuthorizationAttributeRequest
-     * @return UpdateAuthorizationAttributeResponse
+     * @param request the request parameters of UpdateExplorerModuleAttribute  UpdateExplorerModuleAttributeRequest
+     * @return UpdateExplorerModuleAttributeResponse
      */
-    CompletableFuture<UpdateAuthorizationAttributeResponse> updateAuthorizationAttribute(UpdateAuthorizationAttributeRequest request);
-
-    /**
-     * @param request the request parameters of UpdateExplorerTaskAttribute  UpdateExplorerTaskAttributeRequest
-     * @return UpdateExplorerTaskAttributeResponse
-     */
-    CompletableFuture<UpdateExplorerTaskAttributeResponse> updateExplorerTaskAttribute(UpdateExplorerTaskAttributeRequest request);
+    CompletableFuture<UpdateExplorerModuleAttributeResponse> updateExplorerModuleAttribute(UpdateExplorerModuleAttributeRequest request);
 
     /**
      * @param request the request parameters of UpdateGroup  UpdateGroupRequest
@@ -488,28 +386,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateModuleAttributeResponse> updateModuleAttribute(UpdateModuleAttributeRequest request);
 
     /**
-     * @param request the request parameters of UpdateParameterSetAttribute  UpdateParameterSetAttributeRequest
-     * @return UpdateParameterSetAttributeResponse
-     */
-    CompletableFuture<UpdateParameterSetAttributeResponse> updateParameterSetAttribute(UpdateParameterSetAttributeRequest request);
-
-    /**
      * @param request the request parameters of UpdateProject  UpdateProjectRequest
      * @return UpdateProjectResponse
      */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 
     /**
-     * @param request the request parameters of UpdateRabbitmqPublisherAttribute  UpdateRabbitmqPublisherAttributeRequest
-     * @return UpdateRabbitmqPublisherAttributeResponse
+     * @param request the request parameters of UpdateRegistryModuleAttribute  UpdateRegistryModuleAttributeRequest
+     * @return UpdateRegistryModuleAttributeResponse
      */
-    CompletableFuture<UpdateRabbitmqPublisherAttributeResponse> updateRabbitmqPublisherAttribute(UpdateRabbitmqPublisherAttributeRequest request);
+    CompletableFuture<UpdateRegistryModuleAttributeResponse> updateRegistryModuleAttribute(UpdateRegistryModuleAttributeRequest request);
 
     /**
-     * @param request the request parameters of UpdateRamPolicyExportTaskAttribute  UpdateRamPolicyExportTaskAttributeRequest
-     * @return UpdateRamPolicyExportTaskAttributeResponse
+     * @param request the request parameters of UpdateRegistryNamespaceAttribute  UpdateRegistryNamespaceAttributeRequest
+     * @return UpdateRegistryNamespaceAttributeResponse
      */
-    CompletableFuture<UpdateRamPolicyExportTaskAttributeResponse> updateRamPolicyExportTaskAttribute(UpdateRamPolicyExportTaskAttributeRequest request);
+    CompletableFuture<UpdateRegistryNamespaceAttributeResponse> updateRegistryNamespaceAttribute(UpdateRegistryNamespaceAttributeRequest request);
 
     /**
      * @param request the request parameters of UpdateResourceExportTaskAttribute  UpdateResourceExportTaskAttributeRequest
@@ -524,9 +416,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskAttributeResponse> updateTaskAttribute(UpdateTaskAttributeRequest request);
 
     /**
-     * @param request the request parameters of UpdateTaskPolicy  UpdateTaskPolicyRequest
-     * @return UpdateTaskPolicyResponse
+     * @param request the request parameters of ValidateModule  ValidateModuleRequest
+     * @return ValidateModuleResponse
      */
-    CompletableFuture<UpdateTaskPolicyResponse> updateTaskPolicy(UpdateTaskPolicyRequest request);
+    CompletableFuture<ValidateModuleResponse> validateModule(ValidateModuleRequest request);
+
+    ResponseIterable<ValidateModuleResponseBody> validateModuleWithResponseIterable(ValidateModuleRequest request);
 
 }

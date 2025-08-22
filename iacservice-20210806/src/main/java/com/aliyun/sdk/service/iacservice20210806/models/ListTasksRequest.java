@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("excludeTaskIds")
-    private java.util.List<String> excludeTaskIds;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("groupId")
     private String groupId;
 
@@ -60,7 +56,6 @@ public class ListTasksRequest extends Request {
 
     private ListTasksRequest(Builder builder) {
         super(builder);
-        this.excludeTaskIds = builder.excludeTaskIds;
         this.groupId = builder.groupId;
         this.keyword = builder.keyword;
         this.moduleId = builder.moduleId;
@@ -83,13 +78,6 @@ public class ListTasksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return excludeTaskIds
-     */
-    public java.util.List<String> getExcludeTaskIds() {
-        return this.excludeTaskIds;
     }
 
     /**
@@ -156,7 +144,6 @@ public class ListTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTasksRequest, Builder> {
-        private java.util.List<String> excludeTaskIds; 
         private String groupId; 
         private String keyword; 
         private String moduleId; 
@@ -173,7 +160,6 @@ public class ListTasksRequest extends Request {
 
         private Builder(ListTasksRequest request) {
             super(request);
-            this.excludeTaskIds = request.excludeTaskIds;
             this.groupId = request.groupId;
             this.keyword = request.keyword;
             this.moduleId = request.moduleId;
@@ -184,16 +170,6 @@ public class ListTasksRequest extends Request {
             this.tag = request.tag;
             this.taskId = request.taskId;
         } 
-
-        /**
-         * excludeTaskIds.
-         */
-        public Builder excludeTaskIds(java.util.List<String> excludeTaskIds) {
-            String excludeTaskIdsShrink = shrink(excludeTaskIds, "excludeTaskIds", "simple");
-            this.putQueryParameter("excludeTaskIds", excludeTaskIdsShrink);
-            this.excludeTaskIds = excludeTaskIds;
-            return this;
-        }
 
         /**
          * groupId.
@@ -291,15 +267,15 @@ public class ListTasksRequest extends Request {
      * <p>ListTasksRequest</p>
      */
     public static class Tag extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
 
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
 
         private Tag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -311,44 +287,44 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * @return key
+         * @return tagKey
          */
-        public String getKey() {
-            return this.key;
+        public String getTagKey() {
+            return this.tagKey;
         }
 
         /**
-         * @return value
+         * @return tagValue
          */
-        public String getValue() {
-            return this.value;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
         public static final class Builder {
-            private String key; 
-            private String value; 
+            private String tagKey; 
+            private String tagValue; 
 
             private Builder() {
             } 
 
             private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
             } 
 
             /**
-             * key.
+             * tagKey.
              */
-            public Builder key(String key) {
-                this.key = key;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * value.
+             * tagValue.
              */
-            public Builder value(String value) {
-                this.value = value;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 

@@ -132,6 +132,9 @@ public class ListResourceExportTaskVersionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-al1f11jlh9llnk8drc4g1c</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putPathParameter("exportTaskId", exportTaskId);

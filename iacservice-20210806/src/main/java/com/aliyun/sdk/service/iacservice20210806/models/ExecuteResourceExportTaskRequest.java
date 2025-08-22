@@ -27,15 +27,10 @@ public class ExecuteResourceExportTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ramRole")
-    private String ramRole;
-
     private ExecuteResourceExportTaskRequest(Builder builder) {
         super(builder);
         this.exportTaskId = builder.exportTaskId;
         this.clientToken = builder.clientToken;
-        this.ramRole = builder.ramRole;
     }
 
     public static Builder builder() {
@@ -65,17 +60,9 @@ public class ExecuteResourceExportTaskRequest extends Request {
         return this.clientToken;
     }
 
-    /**
-     * @return ramRole
-     */
-    public String getRamRole() {
-        return this.ramRole;
-    }
-
     public static final class Builder extends Request.Builder<ExecuteResourceExportTaskRequest, Builder> {
         private String exportTaskId; 
         private String clientToken; 
-        private String ramRole; 
 
         private Builder() {
             super();
@@ -85,7 +72,6 @@ public class ExecuteResourceExportTaskRequest extends Request {
             super(request);
             this.exportTaskId = request.exportTaskId;
             this.clientToken = request.clientToken;
-            this.ramRole = request.ramRole;
         } 
 
         /**
@@ -109,15 +95,6 @@ public class ExecuteResourceExportTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * ramRole.
-         */
-        public Builder ramRole(String ramRole) {
-            this.putBodyParameter("ramRole", ramRole);
-            this.ramRole = ramRole;
             return this;
         }
 

@@ -278,11 +278,19 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
         @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
             this.key = builder.key;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
             this.value = builder.value;
         }
 
@@ -302,6 +310,20 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -310,6 +332,8 @@ public class ListTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
+            private String tagKey; 
+            private String tagValue; 
             private String value; 
 
             private Builder() {
@@ -317,6 +341,8 @@ public class ListTasksResponseBody extends TeaModel {
 
             private Builder(Tags model) {
                 this.key = model.key;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
                 this.value = model.value;
             } 
 
@@ -325,6 +351,22 @@ public class ListTasksResponseBody extends TeaModel {
              */
             public Builder key(String key) {
                 this.key = key;
+                return this;
+            }
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -368,6 +410,9 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupInfo")
         private GroupInfo groupInfo;
 
+        @com.aliyun.core.annotation.NameInMap("latestModuleVersion")
+        private String latestModuleVersion;
+
         @com.aliyun.core.annotation.NameInMap("moduleId")
         private String moduleId;
 
@@ -396,6 +441,7 @@ public class ListTasksResponseBody extends TeaModel {
             this.currentJobStatus = builder.currentJobStatus;
             this.deletionProtection = builder.deletionProtection;
             this.groupInfo = builder.groupInfo;
+            this.latestModuleVersion = builder.latestModuleVersion;
             this.moduleId = builder.moduleId;
             this.moduleName = builder.moduleName;
             this.moduleVersion = builder.moduleVersion;
@@ -456,6 +502,13 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestModuleVersion
+         */
+        public String getLatestModuleVersion() {
+            return this.latestModuleVersion;
+        }
+
+        /**
          * @return moduleId
          */
         public String getModuleId() {
@@ -511,6 +564,7 @@ public class ListTasksResponseBody extends TeaModel {
             private String currentJobStatus; 
             private Boolean deletionProtection; 
             private GroupInfo groupInfo; 
+            private String latestModuleVersion; 
             private String moduleId; 
             private String moduleName; 
             private String moduleVersion; 
@@ -529,6 +583,7 @@ public class ListTasksResponseBody extends TeaModel {
                 this.currentJobStatus = model.currentJobStatus;
                 this.deletionProtection = model.deletionProtection;
                 this.groupInfo = model.groupInfo;
+                this.latestModuleVersion = model.latestModuleVersion;
                 this.moduleId = model.moduleId;
                 this.moduleName = model.moduleName;
                 this.moduleVersion = model.moduleVersion;
@@ -583,6 +638,14 @@ public class ListTasksResponseBody extends TeaModel {
              */
             public Builder groupInfo(GroupInfo groupInfo) {
                 this.groupInfo = groupInfo;
+                return this;
+            }
+
+            /**
+             * latestModuleVersion.
+             */
+            public Builder latestModuleVersion(String latestModuleVersion) {
+                this.latestModuleVersion = latestModuleVersion;
                 return this;
             }
 

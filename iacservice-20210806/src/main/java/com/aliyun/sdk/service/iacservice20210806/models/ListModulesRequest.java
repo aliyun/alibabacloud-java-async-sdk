@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListModulesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("excludeModuleIds")
-    private java.util.List<String> excludeModuleIds;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("groupId")
     private String groupId;
 
@@ -48,7 +44,6 @@ public class ListModulesRequest extends Request {
 
     private ListModulesRequest(Builder builder) {
         super(builder);
-        this.excludeModuleIds = builder.excludeModuleIds;
         this.groupId = builder.groupId;
         this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
@@ -68,13 +63,6 @@ public class ListModulesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return excludeModuleIds
-     */
-    public java.util.List<String> getExcludeModuleIds() {
-        return this.excludeModuleIds;
     }
 
     /**
@@ -120,7 +108,6 @@ public class ListModulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListModulesRequest, Builder> {
-        private java.util.List<String> excludeModuleIds; 
         private String groupId; 
         private String keyword; 
         private Integer pageNumber; 
@@ -134,7 +121,6 @@ public class ListModulesRequest extends Request {
 
         private Builder(ListModulesRequest request) {
             super(request);
-            this.excludeModuleIds = request.excludeModuleIds;
             this.groupId = request.groupId;
             this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
@@ -142,16 +128,6 @@ public class ListModulesRequest extends Request {
             this.projectId = request.projectId;
             this.tag = request.tag;
         } 
-
-        /**
-         * excludeModuleIds.
-         */
-        public Builder excludeModuleIds(java.util.List<String> excludeModuleIds) {
-            String excludeModuleIdsShrink = shrink(excludeModuleIds, "excludeModuleIds", "simple");
-            this.putQueryParameter("excludeModuleIds", excludeModuleIdsShrink);
-            this.excludeModuleIds = excludeModuleIds;
-            return this;
-        }
 
         /**
          * groupId.
@@ -222,15 +198,15 @@ public class ListModulesRequest extends Request {
      * <p>ListModulesRequest</p>
      */
     public static class Tag extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
 
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
 
         private Tag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -242,44 +218,44 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * @return key
+         * @return tagKey
          */
-        public String getKey() {
-            return this.key;
+        public String getTagKey() {
+            return this.tagKey;
         }
 
         /**
-         * @return value
+         * @return tagValue
          */
-        public String getValue() {
-            return this.value;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
         public static final class Builder {
-            private String key; 
-            private String value; 
+            private String tagKey; 
+            private String tagValue; 
 
             private Builder() {
             } 
 
             private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
             } 
 
             /**
-             * key.
+             * tagKey.
              */
-            public Builder key(String key) {
-                this.key = key;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * value.
+             * tagValue.
              */
-            public Builder value(String value) {
-                this.value = value;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
