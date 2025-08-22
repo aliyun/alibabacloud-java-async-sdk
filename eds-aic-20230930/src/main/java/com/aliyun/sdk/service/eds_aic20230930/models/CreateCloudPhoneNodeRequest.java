@@ -902,6 +902,12 @@ public class CreateCloudPhoneNodeRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LimitedBandwidth")
         private Integer limitedBandwidth;
 
+        @com.aliyun.core.annotation.NameInMap("PayType")
+        private String payType;
+
+        @com.aliyun.core.annotation.NameInMap("VisibleType")
+        private String visibleType;
+
         private NetworkInfo(Builder builder) {
             this.bandwidthPackageName = builder.bandwidthPackageName;
             this.cidrBlock = builder.cidrBlock;
@@ -909,6 +915,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.ipRatio = builder.ipRatio;
             this.isp = builder.isp;
             this.limitedBandwidth = builder.limitedBandwidth;
+            this.payType = builder.payType;
+            this.visibleType = builder.visibleType;
         }
 
         public static Builder builder() {
@@ -961,6 +969,20 @@ public class CreateCloudPhoneNodeRequest extends Request {
             return this.limitedBandwidth;
         }
 
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
+         * @return visibleType
+         */
+        public String getVisibleType() {
+            return this.visibleType;
+        }
+
         public static final class Builder {
             private String bandwidthPackageName; 
             private String cidrBlock; 
@@ -968,6 +990,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
             private Integer ipRatio; 
             private String isp; 
             private Integer limitedBandwidth; 
+            private String payType; 
+            private String visibleType; 
 
             private Builder() {
             } 
@@ -979,6 +1003,8 @@ public class CreateCloudPhoneNodeRequest extends Request {
                 this.ipRatio = model.ipRatio;
                 this.isp = model.isp;
                 this.limitedBandwidth = model.limitedBandwidth;
+                this.payType = model.payType;
+                this.visibleType = model.visibleType;
             } 
 
             /**
@@ -1026,6 +1052,22 @@ public class CreateCloudPhoneNodeRequest extends Request {
              */
             public Builder limitedBandwidth(Integer limitedBandwidth) {
                 this.limitedBandwidth = limitedBandwidth;
+                return this;
+            }
+
+            /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
+             * VisibleType.
+             */
+            public Builder visibleType(String visibleType) {
+                this.visibleType = visibleType;
                 return this;
             }
 

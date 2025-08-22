@@ -31,6 +31,14 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    private String bandwidthPackageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageType")
+    private String bandwidthPackageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
@@ -74,6 +82,14 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String keyPairId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInfo")
+    private NetworkInfo networkInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    private String networkType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NumberOfInstances")
     @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer numberOfInstances;
@@ -107,6 +123,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.bandwidthPackageId = builder.bandwidthPackageId;
+        this.bandwidthPackageType = builder.bandwidthPackageType;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
@@ -117,6 +135,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.instanceGroupSpec = builder.instanceGroupSpec;
         this.ipv6Bandwidth = builder.ipv6Bandwidth;
         this.keyPairId = builder.keyPairId;
+        this.networkInfo = builder.networkInfo;
+        this.networkType = builder.networkType;
         this.numberOfInstances = builder.numberOfInstances;
         this.officeSiteId = builder.officeSiteId;
         this.period = builder.period;
@@ -158,6 +178,20 @@ public class CreateAndroidInstanceGroupRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return bandwidthPackageId
+     */
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    /**
+     * @return bandwidthPackageType
+     */
+    public String getBandwidthPackageType() {
+        return this.bandwidthPackageType;
     }
 
     /**
@@ -231,6 +265,20 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return networkInfo
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.networkInfo;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
      * @return numberOfInstances
      */
     public Integer getNumberOfInstances() {
@@ -283,6 +331,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private String bandwidthPackageId; 
+        private String bandwidthPackageType; 
         private String bizRegionId; 
         private String chargeType; 
         private String clientToken; 
@@ -293,6 +343,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String instanceGroupSpec; 
         private Integer ipv6Bandwidth; 
         private String keyPairId; 
+        private NetworkInfo networkInfo; 
+        private String networkType; 
         private Integer numberOfInstances; 
         private String officeSiteId; 
         private Integer period; 
@@ -310,6 +362,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.bandwidthPackageType = request.bandwidthPackageType;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
@@ -320,6 +374,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.instanceGroupSpec = request.instanceGroupSpec;
             this.ipv6Bandwidth = request.ipv6Bandwidth;
             this.keyPairId = request.keyPairId;
+            this.networkInfo = request.networkInfo;
+            this.networkType = request.networkType;
             this.numberOfInstances = request.numberOfInstances;
             this.officeSiteId = request.officeSiteId;
             this.period = request.period;
@@ -372,6 +428,24 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BandwidthPackageId.
+         */
+        public Builder bandwidthPackageId(String bandwidthPackageId) {
+            this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+
+        /**
+         * BandwidthPackageType.
+         */
+        public Builder bandwidthPackageType(String bandwidthPackageType) {
+            this.putQueryParameter("BandwidthPackageType", bandwidthPackageType);
+            this.bandwidthPackageType = bandwidthPackageType;
             return this;
         }
 
@@ -534,6 +608,25 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * NetworkInfo.
+         */
+        public Builder networkInfo(NetworkInfo networkInfo) {
+            String networkInfoShrink = shrink(networkInfo, "NetworkInfo", "json");
+            this.putQueryParameter("NetworkInfo", networkInfoShrink);
+            this.networkInfo = networkInfo;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
+            return this;
+        }
+
+        /**
          * <p>The number of cloud phones in the instance group. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
@@ -635,6 +728,319 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAndroidInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndroidInstanceGroupRequest</p>
+     */
+    public static class NetworkInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoPay")
+        private Boolean autoPay;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageName")
+        private String bandwidthPackageName;
+
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
+        private String cidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+        private String internetChargeType;
+
+        @com.aliyun.core.annotation.NameInMap("IpRatio")
+        private Integer ipRatio;
+
+        @com.aliyun.core.annotation.NameInMap("Isp")
+        private String isp;
+
+        @com.aliyun.core.annotation.NameInMap("LimitedBandwidth")
+        private Integer limitedBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("PayType")
+        private String payType;
+
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("VisibleType")
+        private String visibleType;
+
+        private NetworkInfo(Builder builder) {
+            this.autoPay = builder.autoPay;
+            this.autoRenew = builder.autoRenew;
+            this.bandwidthPackageName = builder.bandwidthPackageName;
+            this.cidrBlock = builder.cidrBlock;
+            this.internetChargeType = builder.internetChargeType;
+            this.ipRatio = builder.ipRatio;
+            this.isp = builder.isp;
+            this.limitedBandwidth = builder.limitedBandwidth;
+            this.payType = builder.payType;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.visibleType = builder.visibleType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoPay
+         */
+        public Boolean getAutoPay() {
+            return this.autoPay;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return bandwidthPackageName
+         */
+        public String getBandwidthPackageName() {
+            return this.bandwidthPackageName;
+        }
+
+        /**
+         * @return cidrBlock
+         */
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        /**
+         * @return internetChargeType
+         */
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        /**
+         * @return ipRatio
+         */
+        public Integer getIpRatio() {
+            return this.ipRatio;
+        }
+
+        /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
+        }
+
+        /**
+         * @return limitedBandwidth
+         */
+        public Integer getLimitedBandwidth() {
+            return this.limitedBandwidth;
+        }
+
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return visibleType
+         */
+        public String getVisibleType() {
+            return this.visibleType;
+        }
+
+        public static final class Builder {
+            private Boolean autoPay; 
+            private Boolean autoRenew; 
+            private String bandwidthPackageName; 
+            private String cidrBlock; 
+            private String internetChargeType; 
+            private Integer ipRatio; 
+            private String isp; 
+            private Integer limitedBandwidth; 
+            private String payType; 
+            private Integer period; 
+            private String periodUnit; 
+            private String visibleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.autoPay = model.autoPay;
+                this.autoRenew = model.autoRenew;
+                this.bandwidthPackageName = model.bandwidthPackageName;
+                this.cidrBlock = model.cidrBlock;
+                this.internetChargeType = model.internetChargeType;
+                this.ipRatio = model.ipRatio;
+                this.isp = model.isp;
+                this.limitedBandwidth = model.limitedBandwidth;
+                this.payType = model.payType;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.visibleType = model.visibleType;
+            } 
+
+            /**
+             * <p>Specifies whether to enable automatic payment. Default value: false.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</li>
+             * <li>false: disables automatic payment. You must manually complete the payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder autoPay(Boolean autoPay) {
+                this.autoPay = autoPay;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: automatically renew resource upon expiration.</li>
+             * <li>false: manually renew resources upon expiration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageName.
+             */
+            public Builder bandwidthPackageName(String bandwidthPackageName) {
+                this.bandwidthPackageName = bandwidthPackageName;
+                return this;
+            }
+
+            /**
+             * CidrBlock.
+             */
+            public Builder cidrBlock(String cidrBlock) {
+                this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * InternetChargeType.
+             */
+            public Builder internetChargeType(String internetChargeType) {
+                this.internetChargeType = internetChargeType;
+                return this;
+            }
+
+            /**
+             * IpRatio.
+             */
+            public Builder ipRatio(Integer ipRatio) {
+                this.ipRatio = ipRatio;
+                return this;
+            }
+
+            /**
+             * Isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            /**
+             * LimitedBandwidth.
+             */
+            public Builder limitedBandwidth(Integer limitedBandwidth) {
+                this.limitedBandwidth = limitedBandwidth;
+                return this;
+            }
+
+            /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
+             * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * <p>The unit of the subscription duration.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Month</li>
+             * <li>Year</li>
+             * <li>Hour (Note that this unit is supported only by pay-as-you-go.)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * VisibleType.
+             */
+            public Builder visibleType(String visibleType) {
+                this.visibleType = visibleType;
+                return this;
+            }
+
+            public NetworkInfo build() {
+                return new NetworkInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateAndroidInstanceGroupRequest} extends {@link TeaModel}

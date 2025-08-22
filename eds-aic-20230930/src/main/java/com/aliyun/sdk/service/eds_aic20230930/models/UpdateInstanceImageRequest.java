@@ -25,10 +25,15 @@ public class UpdateInstanceImageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceIdList")
     private java.util.List<String> instanceIdList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reset")
+    private Boolean reset;
+
     private UpdateInstanceImageRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
         this.instanceIdList = builder.instanceIdList;
+        this.reset = builder.reset;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class UpdateInstanceImageRequest extends Request {
         return this.instanceIdList;
     }
 
+    /**
+     * @return reset
+     */
+    public Boolean getReset() {
+        return this.reset;
+    }
+
     public static final class Builder extends Request.Builder<UpdateInstanceImageRequest, Builder> {
         private String imageId; 
         private java.util.List<String> instanceIdList; 
+        private Boolean reset; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class UpdateInstanceImageRequest extends Request {
             super(request);
             this.imageId = request.imageId;
             this.instanceIdList = request.instanceIdList;
+            this.reset = request.reset;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class UpdateInstanceImageRequest extends Request {
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
+            return this;
+        }
+
+        /**
+         * Reset.
+         */
+        public Builder reset(Boolean reset) {
+            this.putQueryParameter("Reset", reset);
+            this.reset = reset;
             return this;
         }
 

@@ -23,6 +23,9 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupInfos")
     private java.util.List<InstanceGroupInfos> instanceGroupInfos;
 
+    @com.aliyun.core.annotation.NameInMap("NetworkPackageOrderModel")
+    private NetworkPackageOrderModel networkPackageOrderModel;
+
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
@@ -32,6 +35,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     private CreateAndroidInstanceGroupResponseBody(Builder builder) {
         this.instanceGroupIds = builder.instanceGroupIds;
         this.instanceGroupInfos = builder.instanceGroupInfos;
+        this.networkPackageOrderModel = builder.networkPackageOrderModel;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -63,6 +67,13 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return networkPackageOrderModel
+     */
+    public NetworkPackageOrderModel getNetworkPackageOrderModel() {
+        return this.networkPackageOrderModel;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -79,6 +90,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> instanceGroupIds; 
         private java.util.List<InstanceGroupInfos> instanceGroupInfos; 
+        private NetworkPackageOrderModel networkPackageOrderModel; 
         private String orderId; 
         private String requestId; 
 
@@ -88,6 +100,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         private Builder(CreateAndroidInstanceGroupResponseBody model) {
             this.instanceGroupIds = model.instanceGroupIds;
             this.instanceGroupInfos = model.instanceGroupInfos;
+            this.networkPackageOrderModel = model.networkPackageOrderModel;
             this.orderId = model.orderId;
             this.requestId = model.requestId;
         } 
@@ -105,6 +118,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
          */
         public Builder instanceGroupInfos(java.util.List<InstanceGroupInfos> instanceGroupInfos) {
             this.instanceGroupInfos = instanceGroupInfos;
+            return this;
+        }
+
+        /**
+         * NetworkPackageOrderModel.
+         */
+        public Builder networkPackageOrderModel(NetworkPackageOrderModel networkPackageOrderModel) {
+            this.networkPackageOrderModel = networkPackageOrderModel;
             return this;
         }
 
@@ -209,6 +230,81 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
             public InstanceGroupInfos build() {
                 return new InstanceGroupInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAndroidInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAndroidInstanceGroupResponseBody</p>
+     */
+    public static class NetworkPackageOrderModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageOrderId")
+        private String bandwidthPackageOrderId;
+
+        private NetworkPackageOrderModel(Builder builder) {
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthPackageOrderId = builder.bandwidthPackageOrderId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkPackageOrderModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthPackageOrderId
+         */
+        public String getBandwidthPackageOrderId() {
+            return this.bandwidthPackageOrderId;
+        }
+
+        public static final class Builder {
+            private String bandwidthPackageId; 
+            private String bandwidthPackageOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkPackageOrderModel model) {
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageOrderId = model.bandwidthPackageOrderId;
+            } 
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageOrderId.
+             */
+            public Builder bandwidthPackageOrderId(String bandwidthPackageOrderId) {
+                this.bandwidthPackageOrderId = bandwidthPackageOrderId;
+                return this;
+            }
+
+            public NetworkPackageOrderModel build() {
+                return new NetworkPackageOrderModel(this);
             } 
 
         } 

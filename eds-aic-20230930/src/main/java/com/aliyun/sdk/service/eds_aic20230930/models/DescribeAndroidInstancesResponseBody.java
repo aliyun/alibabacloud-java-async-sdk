@@ -803,6 +803,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StreamMode")
         private Integer streamMode;
 
+        @com.aliyun.core.annotation.NameInMap("SystemVersion")
+        private String systemVersion;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -860,6 +863,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.serverType = builder.serverType;
             this.sessionStatus = builder.sessionStatus;
             this.streamMode = builder.streamMode;
+            this.systemVersion = builder.systemVersion;
             this.tags = builder.tags;
             this.upBandwidthLimit = builder.upBandwidthLimit;
             this.vSwitchId = builder.vSwitchId;
@@ -1183,6 +1187,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemVersion
+         */
+        public String getSystemVersion() {
+            return this.systemVersion;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -1255,6 +1266,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String serverType; 
             private String sessionStatus; 
             private Integer streamMode; 
+            private String systemVersion; 
             private java.util.List<Tags> tags; 
             private Integer upBandwidthLimit; 
             private String vSwitchId; 
@@ -1308,6 +1320,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.serverType = model.serverType;
                 this.sessionStatus = model.sessionStatus;
                 this.streamMode = model.streamMode;
+                this.systemVersion = model.systemVersion;
                 this.tags = model.tags;
                 this.upBandwidthLimit = model.upBandwidthLimit;
                 this.vSwitchId = model.vSwitchId;
@@ -1762,6 +1775,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder streamMode(Integer streamMode) {
                 this.streamMode = streamMode;
+                return this;
+            }
+
+            /**
+             * SystemVersion.
+             */
+            public Builder systemVersion(String systemVersion) {
+                this.systemVersion = systemVersion;
                 return this;
             }
 

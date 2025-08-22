@@ -58,6 +58,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private DescribeAndroidInstanceGroupsRequest(Builder builder) {
         super(builder);
         this.bizRegionId = builder.bizRegionId;
@@ -70,6 +74,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         this.policyGroupId = builder.policyGroupId;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -155,6 +160,13 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAndroidInstanceGroupsRequest, Builder> {
         private String bizRegionId; 
         private String chargeType; 
@@ -166,6 +178,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         private String policyGroupId; 
         private String saleMode; 
         private String status; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -183,6 +196,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.saleMode = request.saleMode;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -323,6 +337,15 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public DescribeAndroidInstanceGroupsRequest build() {
             return new DescribeAndroidInstanceGroupsRequest(this);
@@ -330,4 +353,79 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAndroidInstanceGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstanceGroupsRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
