@@ -21,7 +21,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List<Data> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -66,7 +66,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -100,7 +100,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List<Data> data; 
+        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -132,7 +132,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         /**
          * <p>The queried files.</p>
          */
-        public Builder data(java.util.List<Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -197,7 +197,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
      *
      * <p>GetRumUploadFilesResponseBody</p>
      */
-    public static class Data extends TeaModel {
+    public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
@@ -213,7 +213,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
-        private Data(Builder builder) {
+        private FileList(Builder builder) {
             this.fileName = builder.fileName;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.size = builder.size;
@@ -225,7 +225,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Data create() {
+        public static FileList create() {
             return builder().build();
         }
 
@@ -274,7 +274,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Data model) {
+            private Builder(FileList model) {
                 this.fileName = model.fileName;
                 this.lastModifiedTime = model.lastModifiedTime;
                 this.size = model.size;
@@ -283,10 +283,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test.js.map</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -294,10 +291,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was last modified. The value is a timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1682863151000</p>
+             * LastModifiedTime.
              */
             public Builder lastModifiedTime(Object lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -305,10 +299,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -316,10 +307,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cxxxerfewrfwerfwerffvrt</p>
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -327,13 +315,85 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0.0</p>
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
+                return this;
+            }
+
+            public FileList build() {
+                return new FileList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRumUploadFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumUploadFilesResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileList")
+        private java.util.List<FileList> fileList;
+
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        private Data(Builder builder) {
+            this.fileList = builder.fileList;
+            this.nextToken = builder.nextToken;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileList
+         */
+        public java.util.List<FileList> getFileList() {
+            return this.fileList;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public static final class Builder {
+            private java.util.List<FileList> fileList; 
+            private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileList = model.fileList;
+                this.nextToken = model.nextToken;
+            } 
+
+            /**
+             * FileList.
+             */
+            public Builder fileList(java.util.List<FileList> fileList) {
+                this.fileList = fileList;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 

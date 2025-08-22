@@ -22,8 +22,19 @@ public class GetRumUploadFilesRequest extends Request {
     private String appType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    private String fileName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
     @com.aliyun.core.annotation.Query
@@ -38,6 +49,9 @@ public class GetRumUploadFilesRequest extends Request {
     private GetRumUploadFilesRequest(Builder builder) {
         super(builder);
         this.appType = builder.appType;
+        this.fileName = builder.fileName;
+        this.nextToken = builder.nextToken;
+        this.pageSize = builder.pageSize;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.versionId = builder.versionId;
@@ -64,6 +78,27 @@ public class GetRumUploadFilesRequest extends Request {
     }
 
     /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return pid
      */
     public String getPid() {
@@ -86,6 +121,9 @@ public class GetRumUploadFilesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetRumUploadFilesRequest, Builder> {
         private String appType; 
+        private String fileName; 
+        private String nextToken; 
+        private Integer pageSize; 
         private String pid; 
         private String regionId; 
         private String versionId; 
@@ -97,6 +135,9 @@ public class GetRumUploadFilesRequest extends Request {
         private Builder(GetRumUploadFilesRequest request) {
             super(request);
             this.appType = request.appType;
+            this.fileName = request.fileName;
+            this.nextToken = request.nextToken;
+            this.pageSize = request.pageSize;
             this.pid = request.pid;
             this.regionId = request.regionId;
             this.versionId = request.versionId;
@@ -115,8 +156,34 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
+         * FileName.
+         */
+        public Builder fileName(String fileName) {
+            this.putQueryParameter("FileName", fileName);
+            this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * <p>The process ID (PID) of the application.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aoxxxxxly@741623b4e91****</p>
