@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MachineGroup</p>
  */
 public class MachineGroup extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AllocatableCpu")
+    private Long allocatableCpu;
+
+    @com.aliyun.core.annotation.NameInMap("AllocatableMemory")
+    private Long allocatableMemory;
+
     @com.aliyun.core.annotation.NameInMap("Cpu")
     private Long cpu;
 
@@ -95,7 +101,15 @@ public class MachineGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
     private java.util.List<String> supportedDrivers;
 
+    @com.aliyun.core.annotation.NameInMap("SystemReservedCpu")
+    private Long systemReservedCpu;
+
+    @com.aliyun.core.annotation.NameInMap("SystemReservedMemory")
+    private Long systemReservedMemory;
+
     private MachineGroup(Builder builder) {
+        this.allocatableCpu = builder.allocatableCpu;
+        this.allocatableMemory = builder.allocatableMemory;
         this.cpu = builder.cpu;
         this.creatorID = builder.creatorID;
         this.defaultDriver = builder.defaultDriver;
@@ -122,6 +136,8 @@ public class MachineGroup extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.supportedDrivers = builder.supportedDrivers;
+        this.systemReservedCpu = builder.systemReservedCpu;
+        this.systemReservedMemory = builder.systemReservedMemory;
     }
 
     public static Builder builder() {
@@ -134,6 +150,20 @@ public class MachineGroup extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allocatableCpu
+     */
+    public Long getAllocatableCpu() {
+        return this.allocatableCpu;
+    }
+
+    /**
+     * @return allocatableMemory
+     */
+    public Long getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     /**
@@ -318,7 +348,23 @@ public class MachineGroup extends TeaModel {
         return this.supportedDrivers;
     }
 
+    /**
+     * @return systemReservedCpu
+     */
+    public Long getSystemReservedCpu() {
+        return this.systemReservedCpu;
+    }
+
+    /**
+     * @return systemReservedMemory
+     */
+    public Long getSystemReservedMemory() {
+        return this.systemReservedMemory;
+    }
+
     public static final class Builder {
+        private Long allocatableCpu; 
+        private Long allocatableMemory; 
         private Long cpu; 
         private String creatorID; 
         private String defaultDriver; 
@@ -345,11 +391,15 @@ public class MachineGroup extends TeaModel {
         private String resourceType; 
         private String status; 
         private java.util.List<String> supportedDrivers; 
+        private Long systemReservedCpu; 
+        private Long systemReservedMemory; 
 
         private Builder() {
         } 
 
         private Builder(MachineGroup model) {
+            this.allocatableCpu = model.allocatableCpu;
+            this.allocatableMemory = model.allocatableMemory;
             this.cpu = model.cpu;
             this.creatorID = model.creatorID;
             this.defaultDriver = model.defaultDriver;
@@ -376,7 +426,25 @@ public class MachineGroup extends TeaModel {
             this.resourceType = model.resourceType;
             this.status = model.status;
             this.supportedDrivers = model.supportedDrivers;
+            this.systemReservedCpu = model.systemReservedCpu;
+            this.systemReservedMemory = model.systemReservedMemory;
         } 
+
+        /**
+         * AllocatableCpu.
+         */
+        public Builder allocatableCpu(Long allocatableCpu) {
+            this.allocatableCpu = allocatableCpu;
+            return this;
+        }
+
+        /**
+         * AllocatableMemory.
+         */
+        public Builder allocatableMemory(Long allocatableMemory) {
+            this.allocatableMemory = allocatableMemory;
+            return this;
+        }
 
         /**
          * Cpu.
@@ -583,6 +651,22 @@ public class MachineGroup extends TeaModel {
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
+            return this;
+        }
+
+        /**
+         * SystemReservedCpu.
+         */
+        public Builder systemReservedCpu(Long systemReservedCpu) {
+            this.systemReservedCpu = systemReservedCpu;
+            return this;
+        }
+
+        /**
+         * SystemReservedMemory.
+         */
+        public Builder systemReservedMemory(Long systemReservedMemory) {
+            this.systemReservedMemory = systemReservedMemory;
             return this;
         }
 

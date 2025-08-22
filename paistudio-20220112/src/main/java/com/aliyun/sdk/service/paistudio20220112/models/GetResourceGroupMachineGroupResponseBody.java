@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupMachineGroupResponseBody</p>
  */
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AllocatableCpu")
+    private String allocatableCpu;
+
+    @com.aliyun.core.annotation.NameInMap("AllocatableMemory")
+    private String allocatableMemory;
+
     @com.aliyun.core.annotation.NameInMap("Cpu")
     private String cpu;
 
@@ -77,10 +83,18 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
     private java.util.List<String> supportedDrivers;
 
+    @com.aliyun.core.annotation.NameInMap("SystemReservedCpu")
+    private String systemReservedCpu;
+
+    @com.aliyun.core.annotation.NameInMap("SystemReservedMemory")
+    private String systemReservedMemory;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
     private GetResourceGroupMachineGroupResponseBody(Builder builder) {
+        this.allocatableCpu = builder.allocatableCpu;
+        this.allocatableMemory = builder.allocatableMemory;
         this.cpu = builder.cpu;
         this.defaultDriver = builder.defaultDriver;
         this.ecsCount = builder.ecsCount;
@@ -101,6 +115,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
         this.supportedDrivers = builder.supportedDrivers;
+        this.systemReservedCpu = builder.systemReservedCpu;
+        this.systemReservedMemory = builder.systemReservedMemory;
         this.tags = builder.tags;
     }
 
@@ -114,6 +130,20 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allocatableCpu
+     */
+    public String getAllocatableCpu() {
+        return this.allocatableCpu;
+    }
+
+    /**
+     * @return allocatableMemory
+     */
+    public String getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     /**
@@ -257,6 +287,20 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return systemReservedCpu
+     */
+    public String getSystemReservedCpu() {
+        return this.systemReservedCpu;
+    }
+
+    /**
+     * @return systemReservedMemory
+     */
+    public String getSystemReservedMemory() {
+        return this.systemReservedMemory;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -264,6 +308,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String allocatableCpu; 
+        private String allocatableMemory; 
         private String cpu; 
         private String defaultDriver; 
         private Long ecsCount; 
@@ -284,12 +330,16 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         private String resourceGroupID; 
         private String status; 
         private java.util.List<String> supportedDrivers; 
+        private String systemReservedCpu; 
+        private String systemReservedMemory; 
         private java.util.List<Tags> tags; 
 
         private Builder() {
         } 
 
         private Builder(GetResourceGroupMachineGroupResponseBody model) {
+            this.allocatableCpu = model.allocatableCpu;
+            this.allocatableMemory = model.allocatableMemory;
             this.cpu = model.cpu;
             this.defaultDriver = model.defaultDriver;
             this.ecsCount = model.ecsCount;
@@ -310,8 +360,26 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
             this.resourceGroupID = model.resourceGroupID;
             this.status = model.status;
             this.supportedDrivers = model.supportedDrivers;
+            this.systemReservedCpu = model.systemReservedCpu;
+            this.systemReservedMemory = model.systemReservedMemory;
             this.tags = model.tags;
         } 
+
+        /**
+         * AllocatableCpu.
+         */
+        public Builder allocatableCpu(String allocatableCpu) {
+            this.allocatableCpu = allocatableCpu;
+            return this;
+        }
+
+        /**
+         * AllocatableMemory.
+         */
+        public Builder allocatableMemory(String allocatableMemory) {
+            this.allocatableMemory = allocatableMemory;
+            return this;
+        }
 
         /**
          * Cpu.
@@ -470,6 +538,22 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
+            return this;
+        }
+
+        /**
+         * SystemReservedCpu.
+         */
+        public Builder systemReservedCpu(String systemReservedCpu) {
+            this.systemReservedCpu = systemReservedCpu;
+            return this;
+        }
+
+        /**
+         * SystemReservedMemory.
+         */
+        public Builder systemReservedMemory(String systemReservedMemory) {
+            this.systemReservedMemory = systemReservedMemory;
             return this;
         }
 

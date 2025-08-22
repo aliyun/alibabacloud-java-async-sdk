@@ -20,6 +20,12 @@ public class NodeType extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
+    @com.aliyun.core.annotation.NameInMap("AllocatableCPU")
+    private String allocatableCPU;
+
+    @com.aliyun.core.annotation.NameInMap("AllocatableMemory")
+    private String allocatableMemory;
+
     @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
 
@@ -38,14 +44,24 @@ public class NodeType extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
+    @com.aliyun.core.annotation.NameInMap("SystemReservedCPU")
+    private String systemReservedCPU;
+
+    @com.aliyun.core.annotation.NameInMap("SystemReservedMemory")
+    private String systemReservedMemory;
+
     private NodeType(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
+        this.allocatableCPU = builder.allocatableCPU;
+        this.allocatableMemory = builder.allocatableMemory;
         this.CPU = builder.CPU;
         this.GPU = builder.GPU;
         this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.memory = builder.memory;
         this.nodeType = builder.nodeType;
+        this.systemReservedCPU = builder.systemReservedCPU;
+        this.systemReservedMemory = builder.systemReservedMemory;
     }
 
     public static Builder builder() {
@@ -65,6 +81,20 @@ public class NodeType extends TeaModel {
      */
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    /**
+     * @return allocatableCPU
+     */
+    public String getAllocatableCPU() {
+        return this.allocatableCPU;
+    }
+
+    /**
+     * @return allocatableMemory
+     */
+    public String getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     /**
@@ -109,26 +139,48 @@ public class NodeType extends TeaModel {
         return this.nodeType;
     }
 
+    /**
+     * @return systemReservedCPU
+     */
+    public String getSystemReservedCPU() {
+        return this.systemReservedCPU;
+    }
+
+    /**
+     * @return systemReservedMemory
+     */
+    public String getSystemReservedMemory() {
+        return this.systemReservedMemory;
+    }
+
     public static final class Builder {
         private String acceleratorType; 
+        private String allocatableCPU; 
+        private String allocatableMemory; 
         private String CPU; 
         private String GPU; 
         private String GPUMemory; 
         private String GPUType; 
         private String memory; 
         private String nodeType; 
+        private String systemReservedCPU; 
+        private String systemReservedMemory; 
 
         private Builder() {
         } 
 
         private Builder(NodeType model) {
             this.acceleratorType = model.acceleratorType;
+            this.allocatableCPU = model.allocatableCPU;
+            this.allocatableMemory = model.allocatableMemory;
             this.CPU = model.CPU;
             this.GPU = model.GPU;
             this.GPUMemory = model.GPUMemory;
             this.GPUType = model.GPUType;
             this.memory = model.memory;
             this.nodeType = model.nodeType;
+            this.systemReservedCPU = model.systemReservedCPU;
+            this.systemReservedMemory = model.systemReservedMemory;
         } 
 
         /**
@@ -136,6 +188,22 @@ public class NodeType extends TeaModel {
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * AllocatableCPU.
+         */
+        public Builder allocatableCPU(String allocatableCPU) {
+            this.allocatableCPU = allocatableCPU;
+            return this;
+        }
+
+        /**
+         * AllocatableMemory.
+         */
+        public Builder allocatableMemory(String allocatableMemory) {
+            this.allocatableMemory = allocatableMemory;
             return this;
         }
 
@@ -184,6 +252,22 @@ public class NodeType extends TeaModel {
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * SystemReservedCPU.
+         */
+        public Builder systemReservedCPU(String systemReservedCPU) {
+            this.systemReservedCPU = systemReservedCPU;
+            return this;
+        }
+
+        /**
+         * SystemReservedMemory.
+         */
+        public Builder systemReservedMemory(String systemReservedMemory) {
+            this.systemReservedMemory = systemReservedMemory;
             return this;
         }
 

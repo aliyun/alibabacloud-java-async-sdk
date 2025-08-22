@@ -20,6 +20,12 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
+    @com.aliyun.core.annotation.NameInMap("AllocatableCPU")
+    private String allocatableCPU;
+
+    @com.aliyun.core.annotation.NameInMap("AllocatableMemory")
+    private String allocatableMemory;
+
     @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
     private String availabilityZone;
 
@@ -107,6 +113,12 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
+    @com.aliyun.core.annotation.NameInMap("SystemReservedCPU")
+    private String systemReservedCPU;
+
+    @com.aliyun.core.annotation.NameInMap("SystemReservedMemory")
+    private String systemReservedMemory;
+
     @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List<UserInfo> users;
 
@@ -115,6 +127,8 @@ public class Node extends TeaModel {
 
     private Node(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
+        this.allocatableCPU = builder.allocatableCPU;
+        this.allocatableMemory = builder.allocatableMemory;
         this.availabilityZone = builder.availabilityZone;
         this.boundQuotas = builder.boundQuotas;
         this.CPU = builder.CPU;
@@ -144,6 +158,8 @@ public class Node extends TeaModel {
         this.requestMemory = builder.requestMemory;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupName = builder.resourceGroupName;
+        this.systemReservedCPU = builder.systemReservedCPU;
+        this.systemReservedMemory = builder.systemReservedMemory;
         this.users = builder.users;
         this.workloadNum = builder.workloadNum;
     }
@@ -165,6 +181,20 @@ public class Node extends TeaModel {
      */
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    /**
+     * @return allocatableCPU
+     */
+    public String getAllocatableCPU() {
+        return this.allocatableCPU;
+    }
+
+    /**
+     * @return allocatableMemory
+     */
+    public String getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     /**
@@ -371,6 +401,20 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return systemReservedCPU
+     */
+    public String getSystemReservedCPU() {
+        return this.systemReservedCPU;
+    }
+
+    /**
+     * @return systemReservedMemory
+     */
+    public String getSystemReservedMemory() {
+        return this.systemReservedMemory;
+    }
+
+    /**
      * @return users
      */
     public java.util.List<UserInfo> getUsers() {
@@ -386,6 +430,8 @@ public class Node extends TeaModel {
 
     public static final class Builder {
         private String acceleratorType; 
+        private String allocatableCPU; 
+        private String allocatableMemory; 
         private String availabilityZone; 
         private java.util.List<QuotaIdName> boundQuotas; 
         private String CPU; 
@@ -415,6 +461,8 @@ public class Node extends TeaModel {
         private String requestMemory; 
         private String resourceGroupId; 
         private String resourceGroupName; 
+        private String systemReservedCPU; 
+        private String systemReservedMemory; 
         private java.util.List<UserInfo> users; 
         private Long workloadNum; 
 
@@ -423,6 +471,8 @@ public class Node extends TeaModel {
 
         private Builder(Node model) {
             this.acceleratorType = model.acceleratorType;
+            this.allocatableCPU = model.allocatableCPU;
+            this.allocatableMemory = model.allocatableMemory;
             this.availabilityZone = model.availabilityZone;
             this.boundQuotas = model.boundQuotas;
             this.CPU = model.CPU;
@@ -452,6 +502,8 @@ public class Node extends TeaModel {
             this.requestMemory = model.requestMemory;
             this.resourceGroupId = model.resourceGroupId;
             this.resourceGroupName = model.resourceGroupName;
+            this.systemReservedCPU = model.systemReservedCPU;
+            this.systemReservedMemory = model.systemReservedMemory;
             this.users = model.users;
             this.workloadNum = model.workloadNum;
         } 
@@ -461,6 +513,22 @@ public class Node extends TeaModel {
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * AllocatableCPU.
+         */
+        public Builder allocatableCPU(String allocatableCPU) {
+            this.allocatableCPU = allocatableCPU;
+            return this;
+        }
+
+        /**
+         * AllocatableMemory.
+         */
+        public Builder allocatableMemory(String allocatableMemory) {
+            this.allocatableMemory = allocatableMemory;
             return this;
         }
 
@@ -693,6 +761,22 @@ public class Node extends TeaModel {
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * SystemReservedCPU.
+         */
+        public Builder systemReservedCPU(String systemReservedCPU) {
+            this.systemReservedCPU = systemReservedCPU;
+            return this;
+        }
+
+        /**
+         * SystemReservedMemory.
+         */
+        public Builder systemReservedMemory(String systemReservedMemory) {
+            this.systemReservedMemory = systemReservedMemory;
             return this;
         }
 

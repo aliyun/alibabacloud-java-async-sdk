@@ -59,6 +59,9 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupportRDMA")
     private Boolean supportRDMA;
 
+    @com.aliyun.core.annotation.NameInMap("UseCase")
+    private String useCase;
+
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
@@ -77,6 +80,7 @@ public class QuotaConfig extends TeaModel {
         this.subQuotaPreemptionConfig = builder.subQuotaPreemptionConfig;
         this.supportGPUDrivers = builder.supportGPUDrivers;
         this.supportRDMA = builder.supportRDMA;
+        this.useCase = builder.useCase;
         this.userVpc = builder.userVpc;
     }
 
@@ -191,6 +195,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return useCase
+     */
+    public String getUseCase() {
+        return this.useCase;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -212,6 +223,7 @@ public class QuotaConfig extends TeaModel {
         private SubQuotaPreemptionConfig subQuotaPreemptionConfig; 
         private java.util.List<String> supportGPUDrivers; 
         private Boolean supportRDMA; 
+        private String useCase; 
         private UserVpc userVpc; 
 
         private Builder() {
@@ -232,6 +244,7 @@ public class QuotaConfig extends TeaModel {
             this.subQuotaPreemptionConfig = model.subQuotaPreemptionConfig;
             this.supportGPUDrivers = model.supportGPUDrivers;
             this.supportRDMA = model.supportRDMA;
+            this.useCase = model.useCase;
             this.userVpc = model.userVpc;
         } 
 
@@ -344,6 +357,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder supportRDMA(Boolean supportRDMA) {
             this.supportRDMA = supportRDMA;
+            return this;
+        }
+
+        /**
+         * UseCase.
+         */
+        public Builder useCase(String useCase) {
+            this.useCase = useCase;
             return this;
         }
 

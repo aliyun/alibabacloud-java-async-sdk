@@ -20,6 +20,9 @@ public class QuotaDetails extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActualMinQuota")
     private ResourceAmount actualMinQuota;
 
+    @com.aliyun.core.annotation.NameInMap("AllocatableQuota")
+    private ResourceAmount allocatableQuota;
+
     @com.aliyun.core.annotation.NameInMap("AllocatedQuota")
     private ResourceAmount allocatedQuota;
 
@@ -41,11 +44,15 @@ public class QuotaDetails extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SelfSubmittedQuota")
     private ResourceAmount selfSubmittedQuota;
 
+    @com.aliyun.core.annotation.NameInMap("SystemReservedQuota")
+    private ResourceAmount systemReservedQuota;
+
     @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private ResourceAmount usedQuota;
 
     private QuotaDetails(Builder builder) {
         this.actualMinQuota = builder.actualMinQuota;
+        this.allocatableQuota = builder.allocatableQuota;
         this.allocatedQuota = builder.allocatedQuota;
         this.ancestorsAllocatedQuota = builder.ancestorsAllocatedQuota;
         this.descendantsAllocatedQuota = builder.descendantsAllocatedQuota;
@@ -53,6 +60,7 @@ public class QuotaDetails extends TeaModel {
         this.requestedQuota = builder.requestedQuota;
         this.selfAllocatedQuota = builder.selfAllocatedQuota;
         this.selfSubmittedQuota = builder.selfSubmittedQuota;
+        this.systemReservedQuota = builder.systemReservedQuota;
         this.usedQuota = builder.usedQuota;
     }
 
@@ -73,6 +81,13 @@ public class QuotaDetails extends TeaModel {
      */
     public ResourceAmount getActualMinQuota() {
         return this.actualMinQuota;
+    }
+
+    /**
+     * @return allocatableQuota
+     */
+    public ResourceAmount getAllocatableQuota() {
+        return this.allocatableQuota;
     }
 
     /**
@@ -125,6 +140,13 @@ public class QuotaDetails extends TeaModel {
     }
 
     /**
+     * @return systemReservedQuota
+     */
+    public ResourceAmount getSystemReservedQuota() {
+        return this.systemReservedQuota;
+    }
+
+    /**
      * @return usedQuota
      */
     public ResourceAmount getUsedQuota() {
@@ -133,6 +155,7 @@ public class QuotaDetails extends TeaModel {
 
     public static final class Builder {
         private ResourceAmount actualMinQuota; 
+        private ResourceAmount allocatableQuota; 
         private ResourceAmount allocatedQuota; 
         private ResourceAmount ancestorsAllocatedQuota; 
         private ResourceAmount descendantsAllocatedQuota; 
@@ -140,6 +163,7 @@ public class QuotaDetails extends TeaModel {
         private ResourceAmount requestedQuota; 
         private ResourceAmount selfAllocatedQuota; 
         private ResourceAmount selfSubmittedQuota; 
+        private ResourceAmount systemReservedQuota; 
         private ResourceAmount usedQuota; 
 
         private Builder() {
@@ -147,6 +171,7 @@ public class QuotaDetails extends TeaModel {
 
         private Builder(QuotaDetails model) {
             this.actualMinQuota = model.actualMinQuota;
+            this.allocatableQuota = model.allocatableQuota;
             this.allocatedQuota = model.allocatedQuota;
             this.ancestorsAllocatedQuota = model.ancestorsAllocatedQuota;
             this.descendantsAllocatedQuota = model.descendantsAllocatedQuota;
@@ -154,6 +179,7 @@ public class QuotaDetails extends TeaModel {
             this.requestedQuota = model.requestedQuota;
             this.selfAllocatedQuota = model.selfAllocatedQuota;
             this.selfSubmittedQuota = model.selfSubmittedQuota;
+            this.systemReservedQuota = model.systemReservedQuota;
             this.usedQuota = model.usedQuota;
         } 
 
@@ -162,6 +188,14 @@ public class QuotaDetails extends TeaModel {
          */
         public Builder actualMinQuota(ResourceAmount actualMinQuota) {
             this.actualMinQuota = actualMinQuota;
+            return this;
+        }
+
+        /**
+         * AllocatableQuota.
+         */
+        public Builder allocatableQuota(ResourceAmount allocatableQuota) {
+            this.allocatableQuota = allocatableQuota;
             return this;
         }
 
@@ -218,6 +252,14 @@ public class QuotaDetails extends TeaModel {
          */
         public Builder selfSubmittedQuota(ResourceAmount selfSubmittedQuota) {
             this.selfSubmittedQuota = selfSubmittedQuota;
+            return this;
+        }
+
+        /**
+         * SystemReservedQuota.
+         */
+        public Builder systemReservedQuota(ResourceAmount systemReservedQuota) {
+            this.systemReservedQuota = systemReservedQuota;
             return this;
         }
 

@@ -74,6 +74,10 @@ public class ListNodesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    private String paymentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
@@ -109,6 +113,7 @@ public class ListNodesRequest extends Request {
         this.orderStatuses = builder.orderStatuses;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.paymentType = builder.paymentType;
         this.quotaId = builder.quotaId;
         this.reasonCodes = builder.reasonCodes;
         this.resourceGroupIds = builder.resourceGroupIds;
@@ -228,6 +233,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    /**
      * @return quotaId
      */
     public String getQuotaId() {
@@ -277,6 +289,7 @@ public class ListNodesRequest extends Request {
         private String orderStatuses; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String paymentType; 
         private String quotaId; 
         private String reasonCodes; 
         private String resourceGroupIds; 
@@ -303,6 +316,7 @@ public class ListNodesRequest extends Request {
             this.orderStatuses = request.orderStatuses;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.paymentType = request.paymentType;
             this.quotaId = request.quotaId;
             this.reasonCodes = request.reasonCodes;
             this.resourceGroupIds = request.resourceGroupIds;
@@ -433,6 +447,15 @@ public class ListNodesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putQueryParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 
