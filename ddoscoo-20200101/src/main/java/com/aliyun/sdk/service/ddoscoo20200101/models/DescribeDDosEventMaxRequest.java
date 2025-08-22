@@ -27,6 +27,10 @@ public class DescribeDDosEventMaxRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    private String ip;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
@@ -35,6 +39,7 @@ public class DescribeDDosEventMaxRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.endTime = builder.endTime;
+        this.ip = builder.ip;
         this.startTime = builder.startTime;
     }
 
@@ -66,6 +71,13 @@ public class DescribeDDosEventMaxRequest extends Request {
     }
 
     /**
+     * @return ip
+     */
+    public String getIp() {
+        return this.ip;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -75,6 +87,7 @@ public class DescribeDDosEventMaxRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDDosEventMaxRequest, Builder> {
         private String regionId; 
         private Long endTime; 
+        private String ip; 
         private Long startTime; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class DescribeDDosEventMaxRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.endTime = request.endTime;
+            this.ip = request.ip;
             this.startTime = request.startTime;
         } 
 
@@ -107,6 +121,15 @@ public class DescribeDDosEventMaxRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Ip.
+         */
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
             return this;
         }
 

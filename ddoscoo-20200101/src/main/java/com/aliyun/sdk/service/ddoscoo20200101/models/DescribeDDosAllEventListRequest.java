@@ -31,6 +31,10 @@ public class DescribeDDosAllEventListRequest extends Request {
     private String eventType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    private String ip;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
@@ -50,6 +54,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.eventType = builder.eventType;
+        this.ip = builder.ip;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -90,6 +95,13 @@ public class DescribeDDosAllEventListRequest extends Request {
     }
 
     /**
+     * @return ip
+     */
+    public String getIp() {
+        return this.ip;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -114,6 +126,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         private String regionId; 
         private Long endTime; 
         private String eventType; 
+        private String ip; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long startTime; 
@@ -127,6 +140,7 @@ public class DescribeDDosAllEventListRequest extends Request {
             this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.eventType = request.eventType;
+            this.ip = request.ip;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
@@ -171,6 +185,15 @@ public class DescribeDDosAllEventListRequest extends Request {
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
             this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * Ip.
+         */
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
             return this;
         }
 
