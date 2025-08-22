@@ -60,6 +60,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SpotSpec")
     private SpotSpec spotSpec;
 
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
+    private SystemDisk systemDisk;
+
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -82,6 +85,7 @@ public class JobSpec extends TeaModel {
         this.restartPolicy = builder.restartPolicy;
         this.serviceSpec = builder.serviceSpec;
         this.spotSpec = builder.spotSpec;
+        this.systemDisk = builder.systemDisk;
         this.type = builder.type;
         this.useSpotInstance = builder.useSpotInstance;
     }
@@ -197,6 +201,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return systemDisk
+     */
+    public SystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -225,6 +236,7 @@ public class JobSpec extends TeaModel {
         private String restartPolicy; 
         private ServiceSpec serviceSpec; 
         private SpotSpec spotSpec; 
+        private SystemDisk systemDisk; 
         private String type; 
         private Boolean useSpotInstance; 
 
@@ -246,6 +258,7 @@ public class JobSpec extends TeaModel {
             this.restartPolicy = model.restartPolicy;
             this.serviceSpec = model.serviceSpec;
             this.spotSpec = model.spotSpec;
+            this.systemDisk = model.systemDisk;
             this.type = model.type;
             this.useSpotInstance = model.useSpotInstance;
         } 
@@ -359,6 +372,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder spotSpec(SpotSpec spotSpec) {
             this.spotSpec = spotSpec;
+            return this;
+        }
+
+        /**
+         * SystemDisk.
+         */
+        public Builder systemDisk(SystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
             return this;
         }
 

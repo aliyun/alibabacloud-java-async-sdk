@@ -29,6 +29,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
+    @com.aliyun.core.annotation.NameInMap("DataJuicerConfig")
+    private DataJuicerConfig dataJuicerConfig;
+
     @com.aliyun.core.annotation.NameInMap("DisableEcsStockCheck")
     private Boolean disableEcsStockCheck;
 
@@ -37,6 +40,9 @@ public class JobSettings extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("EnableCPUAffinity")
     private Boolean enableCPUAffinity;
+
+    @com.aliyun.core.annotation.NameInMap("EnableDSWDev")
+    private Boolean enableDSWDev;
 
     @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
@@ -79,9 +85,11 @@ public class JobSettings extends TeaModel {
         this.allocateAllRDMADevices = builder.allocateAllRDMADevices;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
+        this.dataJuicerConfig = builder.dataJuicerConfig;
         this.disableEcsStockCheck = builder.disableEcsStockCheck;
         this.driver = builder.driver;
         this.enableCPUAffinity = builder.enableCPUAffinity;
+        this.enableDSWDev = builder.enableDSWDev;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
         this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
@@ -137,6 +145,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return dataJuicerConfig
+     */
+    public DataJuicerConfig getDataJuicerConfig() {
+        return this.dataJuicerConfig;
+    }
+
+    /**
      * @return disableEcsStockCheck
      */
     public Boolean getDisableEcsStockCheck() {
@@ -155,6 +170,13 @@ public class JobSettings extends TeaModel {
      */
     public Boolean getEnableCPUAffinity() {
         return this.enableCPUAffinity;
+    }
+
+    /**
+     * @return enableDSWDev
+     */
+    public Boolean getEnableDSWDev() {
+        return this.enableDSWDev;
     }
 
     /**
@@ -246,9 +268,11 @@ public class JobSettings extends TeaModel {
         private Boolean allocateAllRDMADevices; 
         private String businessUserId; 
         private String caller; 
+        private DataJuicerConfig dataJuicerConfig; 
         private Boolean disableEcsStockCheck; 
         private String driver; 
         private Boolean enableCPUAffinity; 
+        private Boolean enableDSWDev; 
         private Boolean enableErrorMonitoringInAIMaster; 
         private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
@@ -270,9 +294,11 @@ public class JobSettings extends TeaModel {
             this.allocateAllRDMADevices = model.allocateAllRDMADevices;
             this.businessUserId = model.businessUserId;
             this.caller = model.caller;
+            this.dataJuicerConfig = model.dataJuicerConfig;
             this.disableEcsStockCheck = model.disableEcsStockCheck;
             this.driver = model.driver;
             this.enableCPUAffinity = model.enableCPUAffinity;
+            this.enableDSWDev = model.enableDSWDev;
             this.enableErrorMonitoringInAIMaster = model.enableErrorMonitoringInAIMaster;
             this.enableOssAppend = model.enableOssAppend;
             this.enableRDMA = model.enableRDMA;
@@ -320,6 +346,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
+         * DataJuicerConfig.
+         */
+        public Builder dataJuicerConfig(DataJuicerConfig dataJuicerConfig) {
+            this.dataJuicerConfig = dataJuicerConfig;
+            return this;
+        }
+
+        /**
          * DisableEcsStockCheck.
          */
         public Builder disableEcsStockCheck(Boolean disableEcsStockCheck) {
@@ -340,6 +374,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder enableCPUAffinity(Boolean enableCPUAffinity) {
             this.enableCPUAffinity = enableCPUAffinity;
+            return this;
+        }
+
+        /**
+         * EnableDSWDev.
+         */
+        public Builder enableDSWDev(Boolean enableDSWDev) {
+            this.enableDSWDev = enableDSWDev;
             return this;
         }
 

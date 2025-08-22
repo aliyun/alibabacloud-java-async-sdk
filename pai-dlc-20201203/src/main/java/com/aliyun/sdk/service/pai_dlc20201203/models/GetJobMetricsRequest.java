@@ -131,7 +131,7 @@ public class GetJobMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. You can call the <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> operation to query all job IDs.</p>
+         * <p>The job ID. You can call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to query all job IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

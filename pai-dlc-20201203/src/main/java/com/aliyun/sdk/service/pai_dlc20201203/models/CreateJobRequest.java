@@ -445,7 +445,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.****</p>
+         * <p><strong>JobSpecs</strong> describes the configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.</p>
          * <p>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <strong>JobSpecs</strong> specifies the configurations of all types of nodes. The value is of the array type.</p>
          * <p>This parameter is required.</p>
          */
@@ -467,7 +467,7 @@ public class CreateJobRequest extends Request {
          * <li>SlurmJob</li>
          * <li>RayJob</li>
          * </ul>
-         * <p>Valid values for each job type:</p>
+         * <p>Valid values and corresponding frameworks:</p>
          * <ul>
          * <li>OneFlowJob: OneFlow.</li>
          * <li>PyTorchJob: PyTorch.</li>
@@ -504,7 +504,7 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The priority of the job. Default value: 1. Valid values: 1 to 9.</p>
          * <ul>
-         * <li>1: the lowest priority.</li>
+         * <li>1 is the lowest priority.</li>
          * <li>9: the highest priority.</li>
          * </ul>
          * 
@@ -762,6 +762,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceVersion")
         private String dataSourceVersion;
 
+        @com.aliyun.core.annotation.NameInMap("EnableCache")
+        private Boolean enableCache;
+
         @com.aliyun.core.annotation.NameInMap("MountAccess")
         private String mountAccess;
 
@@ -777,6 +780,7 @@ public class CreateJobRequest extends Request {
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceVersion = builder.dataSourceVersion;
+            this.enableCache = builder.enableCache;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.options = builder.options;
@@ -803,6 +807,13 @@ public class CreateJobRequest extends Request {
          */
         public String getDataSourceVersion() {
             return this.dataSourceVersion;
+        }
+
+        /**
+         * @return enableCache
+         */
+        public Boolean getEnableCache() {
+            return this.enableCache;
         }
 
         /**
@@ -836,6 +847,7 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String dataSourceId; 
             private String dataSourceVersion; 
+            private Boolean enableCache; 
             private String mountAccess; 
             private String mountPath; 
             private String options; 
@@ -847,6 +859,7 @@ public class CreateJobRequest extends Request {
             private Builder(DataSources model) {
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceVersion = model.dataSourceVersion;
+                this.enableCache = model.enableCache;
                 this.mountAccess = model.mountAccess;
                 this.mountPath = model.mountPath;
                 this.options = model.options;
@@ -869,6 +882,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder dataSourceVersion(String dataSourceVersion) {
                 this.dataSourceVersion = dataSourceVersion;
+                return this;
+            }
+
+            /**
+             * EnableCache.
+             */
+            public Builder enableCache(Boolean enableCache) {
+                this.enableCache = enableCache;
                 return this;
             }
 
@@ -1019,7 +1040,7 @@ public class CreateJobRequest extends Request {
              * <p>The default route. Default value: false. Valid values:</p>
              * <ul>
              * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
-             * <li>eth1: The user&quot;s Elastic Network Interface is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
+             * <li>eth1: The user&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>

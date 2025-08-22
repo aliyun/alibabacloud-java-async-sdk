@@ -21,7 +21,7 @@ public class ServiceSpec extends TeaModel {
     private Integer defaultPort;
 
     @com.aliyun.core.annotation.NameInMap("ExtraPorts")
-    private Integer extraPorts;
+    private java.util.List<Integer> extraPorts;
 
     @com.aliyun.core.annotation.NameInMap("ServiceMode")
     private String serviceMode;
@@ -54,7 +54,7 @@ public class ServiceSpec extends TeaModel {
     /**
      * @return extraPorts
      */
-    public Integer getExtraPorts() {
+    public java.util.List<Integer> getExtraPorts() {
         return this.extraPorts;
     }
 
@@ -67,7 +67,7 @@ public class ServiceSpec extends TeaModel {
 
     public static final class Builder {
         private Integer defaultPort; 
-        private Integer extraPorts; 
+        private java.util.List<Integer> extraPorts; 
         private String serviceMode; 
 
         private Builder() {
@@ -90,7 +90,7 @@ public class ServiceSpec extends TeaModel {
         /**
          * ExtraPorts.
          */
-        public Builder extraPorts(Integer extraPorts) {
+        public Builder extraPorts(java.util.List<Integer> extraPorts) {
             this.extraPorts = extraPorts;
             return this;
         }

@@ -761,7 +761,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node configurations of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
+         * <p>The node configuration of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -876,7 +876,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The settings of the additional parameters of the job.</p>
+         * <p>The additional parameter configurations of the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
