@@ -93,7 +93,7 @@ public class CreateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RouteStrategy")
-    @com.aliyun.core.annotation.Validation(maximum = 8, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 9, minimum = 1)
     private Integer routeStrategy;
 
     @com.aliyun.core.annotation.Body
@@ -121,6 +121,10 @@ public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Weight")
+    private Integer weight;
+
     private CreateJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -147,6 +151,7 @@ public class CreateJobRequest extends Request {
         this.timeExpression = builder.timeExpression;
         this.timeType = builder.timeType;
         this.timezone = builder.timezone;
+        this.weight = builder.weight;
     }
 
     public static Builder builder() {
@@ -330,6 +335,13 @@ public class CreateJobRequest extends Request {
         return this.timezone;
     }
 
+    /**
+     * @return weight
+     */
+    public Integer getWeight() {
+        return this.weight;
+    }
+
     public static final class Builder extends Request.Builder<CreateJobRequest, Builder> {
         private String regionId; 
         private String appName; 
@@ -355,6 +367,7 @@ public class CreateJobRequest extends Request {
         private String timeExpression; 
         private Integer timeType; 
         private String timezone; 
+        private Integer weight; 
 
         private Builder() {
             super();
@@ -386,6 +399,7 @@ public class CreateJobRequest extends Request {
             this.timeExpression = request.timeExpression;
             this.timeType = request.timeType;
             this.timezone = request.timezone;
+            this.weight = request.weight;
         } 
 
         /**
@@ -618,6 +632,15 @@ public class CreateJobRequest extends Request {
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);
             this.timezone = timezone;
+            return this;
+        }
+
+        /**
+         * Weight.
+         */
+        public Builder weight(Integer weight) {
+            this.putBodyParameter("Weight", weight);
+            this.weight = weight;
             return this;
         }
 

@@ -181,6 +181,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private Integer weight;
+
         private Data(Builder builder) {
             this.address = builder.address;
             this.ip = builder.ip;
@@ -189,6 +192,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             this.online = builder.online;
             this.port = builder.port;
             this.version = builder.version;
+            this.weight = builder.weight;
         }
 
         public static Builder builder() {
@@ -248,6 +252,13 @@ public class ListExecutorsResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
         public static final class Builder {
             private String address; 
             private String ip; 
@@ -256,6 +267,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private Boolean online; 
             private Integer port; 
             private String version; 
+            private Integer weight; 
 
             private Builder() {
             } 
@@ -268,6 +280,7 @@ public class ListExecutorsResponseBody extends TeaModel {
                 this.online = model.online;
                 this.port = model.port;
                 this.version = model.version;
+                this.weight = model.weight;
             } 
 
             /**
@@ -323,6 +336,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * Weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
                 return this;
             }
 

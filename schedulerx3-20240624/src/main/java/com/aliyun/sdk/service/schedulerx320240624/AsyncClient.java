@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportJobsResponse> exportJobs(ExportJobsRequest request);
 
     /**
+     * @param request the request parameters of GetApp  GetAppRequest
+     * @return GetAppResponse
+     */
+    CompletableFuture<GetAppResponse> getApp(GetAppRequest request);
+
+    /**
      * @param request the request parameters of GetCluster  GetClusterRequest
      * @return GetClusterResponse
      */
@@ -86,10 +92,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobExecutionProgressResponse> getJobExecutionProgress(GetJobExecutionProgressRequest request);
 
     /**
+     * @param request the request parameters of GetJobExecutionThreadDump  GetJobExecutionThreadDumpRequest
+     * @return GetJobExecutionThreadDumpResponse
+     */
+    CompletableFuture<GetJobExecutionThreadDumpResponse> getJobExecutionThreadDump(GetJobExecutionThreadDumpRequest request);
+
+    /**
      * @param request the request parameters of GetLog  GetLogRequest
      * @return GetLogResponse
      */
     CompletableFuture<GetLogResponse> getLog(GetLogRequest request);
+
+    /**
+     * @param request the request parameters of GetLogEvent  GetLogEventRequest
+     * @return GetLogEventResponse
+     */
+    CompletableFuture<GetLogEventResponse> getLogEvent(GetLogEventRequest request);
 
     /**
      * @param request the request parameters of ImportCalendar  ImportCalendarRequest
@@ -144,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListJobExecutionsResponse
      */
     CompletableFuture<ListJobExecutionsResponse> listJobExecutions(ListJobExecutionsRequest request);
+
+    /**
+     * @param request the request parameters of ListJobScriptHistory  ListJobScriptHistoryRequest
+     * @return ListJobScriptHistoryResponse
+     */
+    CompletableFuture<ListJobScriptHistoryResponse> listJobScriptHistory(ListJobScriptHistoryRequest request);
 
     /**
      * @param request the request parameters of ListJobs  ListJobsRequest
@@ -240,5 +264,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobResponse
      */
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobScript  UpdateJobScriptRequest
+     * @return UpdateJobScriptResponse
+     */
+    CompletableFuture<UpdateJobScriptResponse> updateJobScript(UpdateJobScriptRequest request);
 
 }

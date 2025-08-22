@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAppsResponseBody} extends {@link TeaModel}
+ * {@link GetLogEventResponseBody} extends {@link TeaModel}
  *
- * <p>ListAppsResponseBody</p>
+ * <p>GetLogEventResponseBody</p>
  */
-public class ListAppsResponseBody extends TeaModel {
+public class GetLogEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -32,7 +32,7 @@ public class ListAppsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListAppsResponseBody(Builder builder) {
+    private GetLogEventResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListAppsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListAppsResponseBody create() {
+    public static GetLogEventResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListAppsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListAppsResponseBody model) {
+        private Builder(GetLogEventResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -147,76 +147,48 @@ public class ListAppsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListAppsResponseBody build() {
-            return new ListAppsResponseBody(this);
+        public GetLogEventResponseBody build() {
+            return new GetLogEventResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     * {@link GetLogEventResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAppsResponseBody</p>
+     * <p>GetLogEventResponseBody</p>
      */
     public static class Records extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AccessToken")
-        private String accessToken;
-
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @com.aliyun.core.annotation.NameInMap("AppType")
-        private Integer appType;
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
 
-        @com.aliyun.core.annotation.NameInMap("Creator")
-        private String creator;
+        @com.aliyun.core.annotation.NameInMap("Event")
+        private String event;
 
-        @com.aliyun.core.annotation.NameInMap("EnableLog")
-        private Boolean enableLog;
+        @com.aliyun.core.annotation.NameInMap("JobExecutionId")
+        private String jobExecutionId;
 
-        @com.aliyun.core.annotation.NameInMap("ExecutorNum")
-        private Long executorNum;
+        @com.aliyun.core.annotation.NameInMap("JobName")
+        private String jobName;
 
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        @com.aliyun.core.annotation.NameInMap("Time")
+        private String time;
 
-        @com.aliyun.core.annotation.NameInMap("JobNum")
-        private Integer jobNum;
-
-        @com.aliyun.core.annotation.NameInMap("LabelRouteStrategy")
-        private Integer labelRouteStrategy;
-
-        @com.aliyun.core.annotation.NameInMap("Leader")
-        private String leader;
-
-        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
-        private Integer maxConcurrency;
-
-        @com.aliyun.core.annotation.NameInMap("MaxJobs")
-        private Integer maxJobs;
-
-        @com.aliyun.core.annotation.NameInMap("Title")
-        private String title;
-
-        @com.aliyun.core.annotation.NameInMap("Updater")
-        private String updater;
+        @com.aliyun.core.annotation.NameInMap("WorkerAddr")
+        private String workerAddr;
 
         private Records(Builder builder) {
-            this.accessToken = builder.accessToken;
             this.appName = builder.appName;
-            this.appType = builder.appType;
-            this.creator = builder.creator;
-            this.enableLog = builder.enableLog;
-            this.executorNum = builder.executorNum;
-            this.id = builder.id;
-            this.jobNum = builder.jobNum;
-            this.labelRouteStrategy = builder.labelRouteStrategy;
-            this.leader = builder.leader;
-            this.maxConcurrency = builder.maxConcurrency;
-            this.maxJobs = builder.maxJobs;
-            this.title = builder.title;
-            this.updater = builder.updater;
+            this.content = builder.content;
+            this.event = builder.event;
+            this.jobExecutionId = builder.jobExecutionId;
+            this.jobName = builder.jobName;
+            this.time = builder.time;
+            this.workerAddr = builder.workerAddr;
         }
 
         public static Builder builder() {
@@ -228,13 +200,6 @@ public class ListAppsResponseBody extends TeaModel {
         }
 
         /**
-         * @return accessToken
-         */
-        public String getAccessToken() {
-            return this.accessToken;
-        }
-
-        /**
          * @return appName
          */
         public String getAppName() {
@@ -242,135 +207,68 @@ public class ListAppsResponseBody extends TeaModel {
         }
 
         /**
-         * @return appType
+         * @return content
          */
-        public Integer getAppType() {
-            return this.appType;
+        public String getContent() {
+            return this.content;
         }
 
         /**
-         * @return creator
+         * @return event
          */
-        public String getCreator() {
-            return this.creator;
+        public String getEvent() {
+            return this.event;
         }
 
         /**
-         * @return enableLog
+         * @return jobExecutionId
          */
-        public Boolean getEnableLog() {
-            return this.enableLog;
+        public String getJobExecutionId() {
+            return this.jobExecutionId;
         }
 
         /**
-         * @return executorNum
+         * @return jobName
          */
-        public Long getExecutorNum() {
-            return this.executorNum;
+        public String getJobName() {
+            return this.jobName;
         }
 
         /**
-         * @return id
+         * @return time
          */
-        public Long getId() {
-            return this.id;
+        public String getTime() {
+            return this.time;
         }
 
         /**
-         * @return jobNum
+         * @return workerAddr
          */
-        public Integer getJobNum() {
-            return this.jobNum;
-        }
-
-        /**
-         * @return labelRouteStrategy
-         */
-        public Integer getLabelRouteStrategy() {
-            return this.labelRouteStrategy;
-        }
-
-        /**
-         * @return leader
-         */
-        public String getLeader() {
-            return this.leader;
-        }
-
-        /**
-         * @return maxConcurrency
-         */
-        public Integer getMaxConcurrency() {
-            return this.maxConcurrency;
-        }
-
-        /**
-         * @return maxJobs
-         */
-        public Integer getMaxJobs() {
-            return this.maxJobs;
-        }
-
-        /**
-         * @return title
-         */
-        public String getTitle() {
-            return this.title;
-        }
-
-        /**
-         * @return updater
-         */
-        public String getUpdater() {
-            return this.updater;
+        public String getWorkerAddr() {
+            return this.workerAddr;
         }
 
         public static final class Builder {
-            private String accessToken; 
             private String appName; 
-            private Integer appType; 
-            private String creator; 
-            private Boolean enableLog; 
-            private Long executorNum; 
-            private Long id; 
-            private Integer jobNum; 
-            private Integer labelRouteStrategy; 
-            private String leader; 
-            private Integer maxConcurrency; 
-            private Integer maxJobs; 
-            private String title; 
-            private String updater; 
+            private String content; 
+            private String event; 
+            private String jobExecutionId; 
+            private String jobName; 
+            private String time; 
+            private String workerAddr; 
 
             private Builder() {
             } 
 
             private Builder(Records model) {
-                this.accessToken = model.accessToken;
                 this.appName = model.appName;
-                this.appType = model.appType;
-                this.creator = model.creator;
-                this.enableLog = model.enableLog;
-                this.executorNum = model.executorNum;
-                this.id = model.id;
-                this.jobNum = model.jobNum;
-                this.labelRouteStrategy = model.labelRouteStrategy;
-                this.leader = model.leader;
-                this.maxConcurrency = model.maxConcurrency;
-                this.maxJobs = model.maxJobs;
-                this.title = model.title;
-                this.updater = model.updater;
+                this.content = model.content;
+                this.event = model.event;
+                this.jobExecutionId = model.jobExecutionId;
+                this.jobName = model.jobName;
+                this.time = model.time;
+                this.workerAddr = model.workerAddr;
             } 
-
-            /**
-             * <p>AccessToken</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2f4ddeab8e344ed68e0402cf9b8502ffv3</p>
-             */
-            public Builder accessToken(String accessToken) {
-                this.accessToken = accessToken;
-                return this;
-            }
 
             /**
              * AppName.
@@ -381,98 +279,50 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * Content.
              */
-            public Builder appType(Integer appType) {
-                this.appType = appType;
+            public Builder content(String content) {
+                this.content = content;
                 return this;
             }
 
             /**
-             * Creator.
+             * Event.
              */
-            public Builder creator(String creator) {
-                this.creator = creator;
+            public Builder event(String event) {
+                this.event = event;
                 return this;
             }
 
             /**
-             * EnableLog.
+             * JobExecutionId.
              */
-            public Builder enableLog(Boolean enableLog) {
-                this.enableLog = enableLog;
+            public Builder jobExecutionId(String jobExecutionId) {
+                this.jobExecutionId = jobExecutionId;
                 return this;
             }
 
             /**
-             * ExecutorNum.
+             * JobName.
              */
-            public Builder executorNum(Long executorNum) {
-                this.executorNum = executorNum;
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
                 return this;
             }
 
             /**
-             * Id.
+             * Time.
              */
-            public Builder id(Long id) {
-                this.id = id;
+            public Builder time(String time) {
+                this.time = time;
                 return this;
             }
 
             /**
-             * JobNum.
+             * WorkerAddr.
              */
-            public Builder jobNum(Integer jobNum) {
-                this.jobNum = jobNum;
-                return this;
-            }
-
-            /**
-             * LabelRouteStrategy.
-             */
-            public Builder labelRouteStrategy(Integer labelRouteStrategy) {
-                this.labelRouteStrategy = labelRouteStrategy;
-                return this;
-            }
-
-            /**
-             * Leader.
-             */
-            public Builder leader(String leader) {
-                this.leader = leader;
-                return this;
-            }
-
-            /**
-             * MaxConcurrency.
-             */
-            public Builder maxConcurrency(Integer maxConcurrency) {
-                this.maxConcurrency = maxConcurrency;
-                return this;
-            }
-
-            /**
-             * MaxJobs.
-             */
-            public Builder maxJobs(Integer maxJobs) {
-                this.maxJobs = maxJobs;
-                return this;
-            }
-
-            /**
-             * Title.
-             */
-            public Builder title(String title) {
-                this.title = title;
-                return this;
-            }
-
-            /**
-             * Updater.
-             */
-            public Builder updater(String updater) {
-                this.updater = updater;
+            public Builder workerAddr(String workerAddr) {
+                this.workerAddr = workerAddr;
                 return this;
             }
 
@@ -485,9 +335,9 @@ public class ListAppsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     * {@link GetLogEventResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAppsResponseBody</p>
+     * <p>GetLogEventResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -500,7 +350,7 @@ public class ListAppsResponseBody extends TeaModel {
         private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("Total")
-        private Integer total;
+        private Long total;
 
         private Data(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -541,7 +391,7 @@ public class ListAppsResponseBody extends TeaModel {
         /**
          * @return total
          */
-        public Integer getTotal() {
+        public Long getTotal() {
             return this.total;
         }
 
@@ -549,7 +399,7 @@ public class ListAppsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private java.util.List<Records> records; 
-            private Integer total; 
+            private Long total; 
 
             private Builder() {
             } 
@@ -590,7 +440,7 @@ public class ListAppsResponseBody extends TeaModel {
             /**
              * Total.
              */
-            public Builder total(Integer total) {
+            public Builder total(Long total) {
                 this.total = total;
                 return this;
             }

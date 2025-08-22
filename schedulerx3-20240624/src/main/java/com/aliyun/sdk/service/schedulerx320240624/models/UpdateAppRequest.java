@@ -41,6 +41,10 @@ public class UpdateAppRequest extends Request {
     private Boolean enableLog;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelRouteStrategy")
+    private Integer labelRouteStrategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
     private Integer maxConcurrency;
 
@@ -56,6 +60,7 @@ public class UpdateAppRequest extends Request {
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
         this.enableLog = builder.enableLog;
+        this.labelRouteStrategy = builder.labelRouteStrategy;
         this.maxConcurrency = builder.maxConcurrency;
         this.title = builder.title;
     }
@@ -109,6 +114,13 @@ public class UpdateAppRequest extends Request {
     }
 
     /**
+     * @return labelRouteStrategy
+     */
+    public Integer getLabelRouteStrategy() {
+        return this.labelRouteStrategy;
+    }
+
+    /**
      * @return maxConcurrency
      */
     public Integer getMaxConcurrency() {
@@ -128,6 +140,7 @@ public class UpdateAppRequest extends Request {
         private String appName; 
         private String clusterId; 
         private Boolean enableLog; 
+        private Integer labelRouteStrategy; 
         private Integer maxConcurrency; 
         private String title; 
 
@@ -142,6 +155,7 @@ public class UpdateAppRequest extends Request {
             this.appName = request.appName;
             this.clusterId = request.clusterId;
             this.enableLog = request.enableLog;
+            this.labelRouteStrategy = request.labelRouteStrategy;
             this.maxConcurrency = request.maxConcurrency;
             this.title = request.title;
         } 
@@ -194,6 +208,15 @@ public class UpdateAppRequest extends Request {
         public Builder enableLog(Boolean enableLog) {
             this.putBodyParameter("EnableLog", enableLog);
             this.enableLog = enableLog;
+            return this;
+        }
+
+        /**
+         * LabelRouteStrategy.
+         */
+        public Builder labelRouteStrategy(Integer labelRouteStrategy) {
+            this.putBodyParameter("LabelRouteStrategy", labelRouteStrategy);
+            this.labelRouteStrategy = labelRouteStrategy;
             return this;
         }
 

@@ -283,6 +283,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
+
         @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List<VSwitches> vSwitches;
 
@@ -315,6 +318,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.productType = builder.productType;
             this.spm = builder.spm;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vSwitches = builder.vSwitches;
             this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
@@ -443,6 +447,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vSwitches
          */
         public java.util.List<VSwitches> getVSwitches() {
@@ -494,6 +505,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer productType; 
             private Integer spm; 
             private Integer status; 
+            private java.util.Map<String, ?> tags; 
             private java.util.List<VSwitches> vSwitches; 
             private String versionLifecycle; 
             private String vpcId; 
@@ -520,6 +532,7 @@ public class GetClusterResponseBody extends TeaModel {
                 this.productType = model.productType;
                 this.spm = model.spm;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.vSwitches = model.vSwitches;
                 this.versionLifecycle = model.versionLifecycle;
                 this.vpcId = model.vpcId;
@@ -652,6 +665,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, ?> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -250,6 +250,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Updater")
         private String updater;
 
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private Integer weight;
+
         @com.aliyun.core.annotation.NameInMap("Xattrs")
         private String xattrs;
 
@@ -284,6 +287,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.timeZone = builder.timeZone;
             this.timezone = builder.timezone;
             this.updater = builder.updater;
+            this.weight = builder.weight;
             this.xattrs = builder.xattrs;
         }
 
@@ -506,6 +510,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        /**
          * @return xattrs
          */
         public String getXattrs() {
@@ -543,6 +554,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String timeZone; 
             private String timezone; 
             private String updater; 
+            private Integer weight; 
             private String xattrs; 
 
             private Builder() {
@@ -579,6 +591,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.timeZone = model.timeZone;
                 this.timezone = model.timezone;
                 this.updater = model.updater;
+                this.weight = model.weight;
                 this.xattrs = model.xattrs;
             } 
 
@@ -819,6 +832,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder updater(String updater) {
                 this.updater = updater;
+                return this;
+            }
+
+            /**
+             * Weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
                 return this;
             }
 

@@ -36,6 +36,10 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String engineType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitches")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -52,6 +56,7 @@ public class CreateClusterRequest extends Request {
         this.clusterName = builder.clusterName;
         this.clusterSpec = builder.clusterSpec;
         this.engineType = builder.engineType;
+        this.tag = builder.tag;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
     }
@@ -98,6 +103,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitches
      */
     public java.util.List<VSwitches> getVSwitches() {
@@ -116,6 +128,7 @@ public class CreateClusterRequest extends Request {
         private String clusterName; 
         private String clusterSpec; 
         private String engineType; 
+        private java.util.List<Tag> tag; 
         private java.util.List<VSwitches> vSwitches; 
         private String vpcId; 
 
@@ -129,6 +142,7 @@ public class CreateClusterRequest extends Request {
             this.clusterName = request.clusterName;
             this.clusterSpec = request.clusterSpec;
             this.engineType = request.engineType;
+            this.tag = request.tag;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
         } 
@@ -179,6 +193,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
@@ -208,6 +231,81 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateClusterRequest} extends {@link TeaModel}

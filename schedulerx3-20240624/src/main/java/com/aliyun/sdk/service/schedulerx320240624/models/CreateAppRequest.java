@@ -32,6 +32,10 @@ public class CreateAppRequest extends Request {
     private String appName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    private Integer appType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
@@ -39,6 +43,10 @@ public class CreateAppRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableLog")
     private Boolean enableLog;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelRouteStrategy")
+    private Integer labelRouteStrategy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
@@ -54,8 +62,10 @@ public class CreateAppRequest extends Request {
         this.regionId = builder.regionId;
         this.accessToken = builder.accessToken;
         this.appName = builder.appName;
+        this.appType = builder.appType;
         this.clusterId = builder.clusterId;
         this.enableLog = builder.enableLog;
+        this.labelRouteStrategy = builder.labelRouteStrategy;
         this.maxConcurrency = builder.maxConcurrency;
         this.title = builder.title;
     }
@@ -95,6 +105,13 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return appType
+     */
+    public Integer getAppType() {
+        return this.appType;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -106,6 +123,13 @@ public class CreateAppRequest extends Request {
      */
     public Boolean getEnableLog() {
         return this.enableLog;
+    }
+
+    /**
+     * @return labelRouteStrategy
+     */
+    public Integer getLabelRouteStrategy() {
+        return this.labelRouteStrategy;
     }
 
     /**
@@ -126,8 +150,10 @@ public class CreateAppRequest extends Request {
         private String regionId; 
         private String accessToken; 
         private String appName; 
+        private Integer appType; 
         private String clusterId; 
         private Boolean enableLog; 
+        private Integer labelRouteStrategy; 
         private Integer maxConcurrency; 
         private String title; 
 
@@ -140,8 +166,10 @@ public class CreateAppRequest extends Request {
             this.regionId = request.regionId;
             this.accessToken = request.accessToken;
             this.appName = request.appName;
+            this.appType = request.appType;
             this.clusterId = request.clusterId;
             this.enableLog = request.enableLog;
+            this.labelRouteStrategy = request.labelRouteStrategy;
             this.maxConcurrency = request.maxConcurrency;
             this.title = request.title;
         } 
@@ -177,6 +205,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * AppType.
+         */
+        public Builder appType(Integer appType) {
+            this.putBodyParameter("AppType", appType);
+            this.appType = appType;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +231,15 @@ public class CreateAppRequest extends Request {
         public Builder enableLog(Boolean enableLog) {
             this.putBodyParameter("EnableLog", enableLog);
             this.enableLog = enableLog;
+            return this;
+        }
+
+        /**
+         * LabelRouteStrategy.
+         */
+        public Builder labelRouteStrategy(Integer labelRouteStrategy) {
+            this.putBodyParameter("LabelRouteStrategy", labelRouteStrategy);
+            this.labelRouteStrategy = labelRouteStrategy;
             return this;
         }
 

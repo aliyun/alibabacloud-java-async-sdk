@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAppsResponseBody} extends {@link TeaModel}
+ * {@link GetAppResponseBody} extends {@link TeaModel}
  *
- * <p>ListAppsResponseBody</p>
+ * <p>GetAppResponseBody</p>
  */
-public class ListAppsResponseBody extends TeaModel {
+public class GetAppResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -32,7 +32,7 @@ public class ListAppsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListAppsResponseBody(Builder builder) {
+    private GetAppResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListAppsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListAppsResponseBody create() {
+    public static GetAppResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListAppsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListAppsResponseBody model) {
+        private Builder(GetAppResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -147,19 +147,19 @@ public class ListAppsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListAppsResponseBody build() {
-            return new ListAppsResponseBody(this);
+        public GetAppResponseBody build() {
+            return new GetAppResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     * {@link GetAppResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAppsResponseBody</p>
+     * <p>GetAppResponseBody</p>
      */
-    public static class Records extends TeaModel {
+    public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
 
@@ -202,7 +202,7 @@ public class ListAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Updater")
         private String updater;
 
-        private Records(Builder builder) {
+        private Data(Builder builder) {
             this.accessToken = builder.accessToken;
             this.appName = builder.appName;
             this.appType = builder.appType;
@@ -223,7 +223,7 @@ public class ListAppsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Records create() {
+        public static Data create() {
             return builder().build();
         }
 
@@ -344,7 +344,7 @@ public class ListAppsResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Records model) {
+            private Builder(Data model) {
                 this.accessToken = model.accessToken;
                 this.appName = model.appName;
                 this.appType = model.appType;
@@ -362,7 +362,7 @@ public class ListAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AccessToken</p>
+             * <p>AccessToken。</p>
              * 
              * <strong>example:</strong>
              * <p>2f4ddeab8e344ed68e0402cf9b8502ffv3</p>
@@ -473,125 +473,6 @@ public class ListAppsResponseBody extends TeaModel {
              */
             public Builder updater(String updater) {
                 this.updater = updater;
-                return this;
-            }
-
-            public Records build() {
-                return new Records(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListAppsResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListAppsResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("PageNumber")
-        private Integer pageNumber;
-
-        @com.aliyun.core.annotation.NameInMap("PageSize")
-        private Integer pageSize;
-
-        @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List<Records> records;
-
-        @com.aliyun.core.annotation.NameInMap("Total")
-        private Integer total;
-
-        private Data(Builder builder) {
-            this.pageNumber = builder.pageNumber;
-            this.pageSize = builder.pageSize;
-            this.records = builder.records;
-            this.total = builder.total;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return pageNumber
-         */
-        public Integer getPageNumber() {
-            return this.pageNumber;
-        }
-
-        /**
-         * @return pageSize
-         */
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        /**
-         * @return records
-         */
-        public java.util.List<Records> getRecords() {
-            return this.records;
-        }
-
-        /**
-         * @return total
-         */
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public static final class Builder {
-            private Integer pageNumber; 
-            private Integer pageSize; 
-            private java.util.List<Records> records; 
-            private Integer total; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.records = model.records;
-                this.total = model.total;
-            } 
-
-            /**
-             * PageNumber.
-             */
-            public Builder pageNumber(Integer pageNumber) {
-                this.pageNumber = pageNumber;
-                return this;
-            }
-
-            /**
-             * PageSize.
-             */
-            public Builder pageSize(Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-            }
-
-            /**
-             * <ul>
-             * <li></li>
-             * </ul>
-             */
-            public Builder records(java.util.List<Records> records) {
-                this.records = records;
-                return this;
-            }
-
-            /**
-             * Total.
-             */
-            public Builder total(Integer total) {
-                this.total = total;
                 return this;
             }
 
