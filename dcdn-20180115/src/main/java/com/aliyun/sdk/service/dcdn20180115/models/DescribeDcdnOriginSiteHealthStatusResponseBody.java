@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OriginSiteStatus")
-    private java.util.List < OriginSiteStatus> originSiteStatus;
+    private java.util.List<OriginSiteStatus> originSiteStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return originSiteStatus
      */
-    public java.util.List < OriginSiteStatus> getOriginSiteStatus() {
+    public java.util.List<OriginSiteStatus> getOriginSiteStatus() {
         return this.originSiteStatus;
     }
 
@@ -46,13 +55,21 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OriginSiteStatus> originSiteStatus; 
+        private java.util.List<OriginSiteStatus> originSiteStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnOriginSiteHealthStatusResponseBody model) {
+            this.originSiteStatus = model.originSiteStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the origin server of the accelerated domain name.</p>
          */
-        public Builder originSiteStatus(java.util.List < OriginSiteStatus> originSiteStatus) {
+        public Builder originSiteStatus(java.util.List<OriginSiteStatus> originSiteStatus) {
             this.originSiteStatus = originSiteStatus;
             return this;
         }
@@ -117,6 +134,14 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String healthStatus; 
             private String host; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginSiteStatus model) {
+                this.healthStatus = model.healthStatus;
+                this.host = model.host;
+            } 
 
             /**
              * <p>The health status of the origin server. Each point of presence (POP) periodically initiates a probe request to the configured origin domain name. If the POP receives a response from the origin server in 5 seconds, the probe is considered successful. After the probe data for each POP is collected, the health status of the origin server is calculated based on the proportion of successful probes. Valid values:</p>

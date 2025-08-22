@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainBpsDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainBpsDataResponseBody model) {
+            this.bpsDataPerInterval = model.bpsDataPerInterval;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The bandwidth data returned at each interval.</p>
@@ -258,6 +279,18 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             private Float staticHttpsBps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.bps = model.bps;
+                this.dynamicHttpBps = model.dynamicHttpBps;
+                this.dynamicHttpsBps = model.dynamicHttpsBps;
+                this.staticHttpBps = model.staticHttpBps;
+                this.staticHttpsBps = model.staticHttpsBps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The bandwidth value. Unit: bit/s.</p>
              * 
@@ -339,7 +372,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
      */
     public static class BpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private BpsDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -356,17 +389,24 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

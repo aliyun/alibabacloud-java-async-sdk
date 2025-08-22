@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     private String capacityUsedString;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceList")
-    private java.util.List < NamespaceList> namespaceList;
+    private java.util.List<NamespaceList> namespaceList;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceQuota")
     private Integer namespaceQuota;
@@ -59,6 +64,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return capacity
      */
@@ -90,7 +99,7 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     /**
      * @return namespaceList
      */
-    public java.util.List < NamespaceList> getNamespaceList() {
+    public java.util.List<NamespaceList> getNamespaceList() {
         return this.namespaceList;
     }
 
@@ -127,11 +136,26 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         private String capacityString; 
         private Long capacityUsed; 
         private String capacityUsedString; 
-        private java.util.List < NamespaceList> namespaceList; 
+        private java.util.List<NamespaceList> namespaceList; 
         private Integer namespaceQuota; 
         private Integer namespaceUsed; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnKvAccountResponseBody model) {
+            this.capacity = model.capacity;
+            this.capacityString = model.capacityString;
+            this.capacityUsed = model.capacityUsed;
+            this.capacityUsedString = model.capacityUsedString;
+            this.namespaceList = model.namespaceList;
+            this.namespaceQuota = model.namespaceQuota;
+            this.namespaceUsed = model.namespaceUsed;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Capacity.
@@ -174,7 +198,7 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         /**
          * <p>Details about the namespaces.</p>
          */
-        public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
+        public Builder namespaceList(java.util.List<NamespaceList> namespaceList) {
             this.namespaceList = namespaceList;
             return this;
         }
@@ -348,6 +372,20 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             private String namespace; 
             private String namespaceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespaceList model) {
+                this.capacity = model.capacity;
+                this.capacityString = model.capacityString;
+                this.capacityUsed = model.capacityUsed;
+                this.capacityUsedString = model.capacityUsedString;
+                this.description = model.description;
+                this.namespace = model.namespace;
+                this.namespaceId = model.namespaceId;
+                this.status = model.status;
+            } 
 
             /**
              * Capacity.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -46,13 +55,21 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafGeoInfoResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of information about the country or region.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -118,6 +135,14 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the country or region.</p>
              * 
@@ -158,7 +183,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Regions")
-        private java.util.List < Regions> regions;
+        private java.util.List<Regions> regions;
 
         private Continents(Builder builder) {
             this.name = builder.name;
@@ -183,13 +208,21 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         /**
          * @return regions
          */
-        public java.util.List < Regions> getRegions() {
+        public java.util.List<Regions> getRegions() {
             return this.regions;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Regions> regions; 
+            private java.util.List<Regions> regions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Continents model) {
+                this.name = model.name;
+                this.regions = model.regions;
+            } 
 
             /**
              * <p>The district to which the country or region belongs.</p>
@@ -205,7 +238,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             /**
              * <p>The region information.</p>
              */
-            public Builder regions(java.util.List < Regions> regions) {
+            public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
                 return this;
             }
@@ -225,7 +258,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Continents")
-        private java.util.List < Continents> continents;
+        private java.util.List<Continents> continents;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -246,7 +279,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         /**
          * @return continents
          */
-        public java.util.List < Continents> getContinents() {
+        public java.util.List<Continents> getContinents() {
             return this.continents;
         }
 
@@ -258,13 +291,21 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Continents> continents; 
+            private java.util.List<Continents> continents; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.continents = model.continents;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The information about the country or region.</p>
              */
-            public Builder continents(java.util.List < Continents> continents) {
+            public Builder continents(java.util.List<Continents> continents) {
                 this.continents = continents;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,10 +39,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Env")
-    private String env;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -65,7 +66,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         this.certRegion = builder.certRegion;
         this.certType = builder.certType;
         this.domainName = builder.domainName;
-        this.env = builder.env;
         this.ownerId = builder.ownerId;
         this.SSLPri = builder.SSLPri;
         this.SSLProtocol = builder.SSLProtocol;
@@ -81,7 +81,7 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -119,13 +119,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
-    }
-
-    /**
-     * @return env
-     */
-    public String getEnv() {
-        return this.env;
     }
 
     /**
@@ -169,7 +162,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         private String certRegion; 
         private String certType; 
         private String domainName; 
-        private String env; 
         private Long ownerId; 
         private String SSLPri; 
         private String SSLProtocol; 
@@ -187,7 +179,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
             this.certRegion = request.certRegion;
             this.certType = request.certType;
             this.domainName = request.domainName;
-            this.env = request.env;
             this.ownerId = request.ownerId;
             this.SSLPri = request.SSLPri;
             this.SSLProtocol = request.SSLProtocol;
@@ -257,18 +248,6 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
-            return this;
-        }
-
-        /**
-         * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>staging</p>
-         */
-        public Builder env(String env) {
-            this.putQueryParameter("Env", env);
-            this.env = env;
             return this;
         }
 

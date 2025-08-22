@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         private String domainName; 
         private String protocol; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainPropertyResponseBody model) {
+            this.domainName = model.domainName;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>

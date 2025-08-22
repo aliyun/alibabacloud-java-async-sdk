@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
 
     public static DescribeDcdnUserDomainsByFuncResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnUserDomainsByFuncResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</p>
@@ -223,6 +243,17 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.content = model.content;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The origin server address.</p>
              * 
@@ -293,7 +324,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
      */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
-        private java.util.List < Source> source;
+        private java.util.List<Source> source;
 
         private Sources(Builder builder) {
             this.source = builder.source;
@@ -310,17 +341,24 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         /**
          * @return source
          */
-        public java.util.List < Source> getSource() {
+        public java.util.List<Source> getSource() {
             return this.source;
         }
 
         public static final class Builder {
-            private java.util.List < Source> source; 
+            private java.util.List<Source> source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.source = model.source;
+            } 
 
             /**
              * Source.
              */
-            public Builder source(java.util.List < Source> source) {
+            public Builder source(java.util.List<Source> source) {
                 this.source = source;
                 return this;
             }
@@ -472,6 +510,22 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
             private Sources sources; 
             private String sslProtocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sandbox = model.sandbox;
+                this.sources = model.sources;
+                this.sslProtocol = model.sslProtocol;
+            } 
+
             /**
              * <p>The CNAME assigned to the accelerated domain name.</p>
              * 
@@ -606,7 +660,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        private java.util.List<PageData> pageData;
 
         private Domains(Builder builder) {
             this.pageData = builder.pageData;
@@ -623,17 +677,24 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
         public static final class Builder {
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.pageData = model.pageData;
+            } 
 
             /**
              * PageData.
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }

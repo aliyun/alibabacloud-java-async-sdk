@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
 
     public static DescribeDcdnIpInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         private String region; 
         private String regionEname; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnIpInfoResponseBody model) {
+            this.dcdnIp = model.dcdnIp;
+            this.ISP = model.ISP;
+            this.ispEname = model.ispEname;
+            this.region = model.region;
+            this.regionEname = model.regionEname;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the specified IP address is assigned to an Alibaba Cloud DCDN POP.</p>

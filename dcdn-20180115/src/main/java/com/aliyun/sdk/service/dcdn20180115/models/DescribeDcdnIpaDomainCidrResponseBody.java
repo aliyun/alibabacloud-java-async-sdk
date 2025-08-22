@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cidr")
-    private java.util.List < String > cidr;
+    private java.util.List<String> cidr;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidr
      */
-    public java.util.List < String > getCidr() {
+    public java.util.List<String> getCidr() {
         return this.cidr;
     }
 
@@ -46,8 +55,16 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cidr; 
+        private java.util.List<String> cidr; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnIpaDomainCidrResponseBody model) {
+            this.cidr = model.cidr;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The back-to-origin IPv4 and IPv6 CIDR blocks.</p>
@@ -55,7 +72,7 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;1.1.1.0/24&quot;,&quot;2.2.2.0/24&quot;,&quot;1111:2222:3333:4444:5555:0:0:0/80&quot;]</p>
          */
-        public Builder cidr(java.util.List < String > cidr) {
+        public Builder cidr(java.util.List<String> cidr) {
             this.cidr = cidr;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.NameInMap("Subscribe")
     private String subscribe;
@@ -57,6 +62,10 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
 
     public static DescribeDcdnWafGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,7 +106,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -128,10 +137,25 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private String subscribe; 
         private Long templateId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafGroupResponseBody model) {
+            this.id = model.id;
+            this.name = model.name;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.subscribe = model.subscribe;
+            this.templateId = model.templateId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the custom WAF rule group.</p>
@@ -191,7 +215,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         /**
          * <p>The configurations of the rule.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -366,6 +390,21 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             private String name; 
             private Integer protectionType; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.applicationType = model.applicationType;
+                this.cveId = model.cveId;
+                this.cveUrl = model.cveUrl;
+                this.description = model.description;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.protectionType = model.protectionType;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The type of the application. Valid values:</p>

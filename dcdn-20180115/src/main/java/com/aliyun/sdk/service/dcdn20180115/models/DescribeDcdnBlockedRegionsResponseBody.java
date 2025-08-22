@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return infoList
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private InfoList infoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnBlockedRegionsResponseBody model) {
+            this.infoList = model.infoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the country or region.</p>
@@ -130,6 +147,15 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
             private String countriesAndRegions; 
             private String countriesAndRegionsName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InfoItem model) {
+                this.continent = model.continent;
+                this.countriesAndRegions = model.countriesAndRegions;
+                this.countriesAndRegionsName = model.countriesAndRegionsName;
+            } 
+
             /**
              * <p>The larger region to which the country or region belongs.</p>
              * 
@@ -178,7 +204,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
      */
     public static class InfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InfoItem")
-        private java.util.List < InfoItem> infoItem;
+        private java.util.List<InfoItem> infoItem;
 
         private InfoList(Builder builder) {
             this.infoItem = builder.infoItem;
@@ -195,17 +221,24 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
         /**
          * @return infoItem
          */
-        public java.util.List < InfoItem> getInfoItem() {
+        public java.util.List<InfoItem> getInfoItem() {
             return this.infoItem;
         }
 
         public static final class Builder {
-            private java.util.List < InfoItem> infoItem; 
+            private java.util.List<InfoItem> infoItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InfoList model) {
+                this.infoItem = model.infoItem;
+            } 
 
             /**
              * InfoItem.
              */
-            public Builder infoItem(java.util.List < InfoItem> infoItem) {
+            public Builder infoItem(java.util.List<InfoItem> infoItem) {
                 this.infoItem = infoItem;
                 return this;
             }

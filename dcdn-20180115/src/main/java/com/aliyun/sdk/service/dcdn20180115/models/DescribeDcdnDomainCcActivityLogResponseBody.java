@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActivityLog")
-    private java.util.List < ActivityLog> activityLog;
+    private java.util.List<ActivityLog> activityLog;
 
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Long pageIndex;
@@ -43,10 +48,14 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityLog
      */
-    public java.util.List < ActivityLog> getActivityLog() {
+    public java.util.List<ActivityLog> getActivityLog() {
         return this.activityLog;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ActivityLog> activityLog; 
+        private java.util.List<ActivityLog> activityLog; 
         private Long pageIndex; 
         private Long pageSize; 
         private String requestId; 
         private Long total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainCcActivityLogResponseBody model) {
+            this.activityLog = model.activityLog;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
          * <p>The log data of the event that triggered rate limiting.</p>
          */
-        public Builder activityLog(java.util.List < ActivityLog> activityLog) {
+        public Builder activityLog(java.util.List<ActivityLog> activityLog) {
             this.activityLog = activityLog;
             return this;
         }
@@ -246,6 +266,19 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
             private String triggerObject; 
             private Long ttl; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivityLog model) {
+                this.action = model.action;
+                this.domainName = model.domainName;
+                this.ruleName = model.ruleName;
+                this.timeStamp = model.timeStamp;
+                this.triggerObject = model.triggerObject;
+                this.ttl = model.ttl;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The action that was triggered.</p>

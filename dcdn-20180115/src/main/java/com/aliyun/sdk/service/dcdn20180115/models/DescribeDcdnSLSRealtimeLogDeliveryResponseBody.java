@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSLSRealtimeLogDeliveryResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration results of the domain name.</p>
@@ -225,6 +242,23 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             private String samplingRate; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.businessType = model.businessType;
+                this.dataCenter = model.dataCenter;
+                this.domainName = model.domainName;
+                this.fieldName = model.fieldName;
+                this.projectName = model.projectName;
+                this.SLSLogStore = model.SLSLogStore;
+                this.SLSProject = model.SLSProject;
+                this.SLSRegion = model.SLSRegion;
+                this.samplingRate = model.samplingRate;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>

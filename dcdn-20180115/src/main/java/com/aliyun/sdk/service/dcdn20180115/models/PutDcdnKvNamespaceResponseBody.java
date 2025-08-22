@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,6 +49,10 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -85,6 +94,17 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         private String namespaceId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutDcdnKvNamespaceResponseBody model) {
+            this.description = model.description;
+            this.namespace = model.namespace;
+            this.namespaceId = model.namespaceId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The description of the namespace.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainOriginTrafficDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         private OriginTrafficDataPerInterval originTrafficDataPerInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainOriginTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.originTrafficDataPerInterval = model.originTrafficDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -258,6 +279,18 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             private Float staticHttpsOriginTraffic; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.dynamicHttpOriginTraffic = model.dynamicHttpOriginTraffic;
+                this.dynamicHttpsOriginTraffic = model.dynamicHttpsOriginTraffic;
+                this.originTraffic = model.originTraffic;
+                this.staticHttpOriginTraffic = model.staticHttpOriginTraffic;
+                this.staticHttpsOriginTraffic = model.staticHttpsOriginTraffic;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.</p>
              * 
@@ -339,7 +372,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
      */
     public static class OriginTrafficDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private OriginTrafficDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -356,17 +389,24 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginTrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

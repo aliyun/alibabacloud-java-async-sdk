@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainMultiUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         private RequestPerInterval requestPerInterval; 
         private String startTime; 
         private TrafficPerInterval trafficPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainMultiUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.requestPerInterval = model.requestPerInterval;
+            this.startTime = model.startTime;
+            this.trafficPerInterval = model.trafficPerInterval;
+        } 
 
         /**
          * <p>The end of the time range that was queried.</p>
@@ -208,6 +228,16 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestDataModule model) {
+                this.domain = model.domain;
+                this.request = model.request;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -267,7 +297,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
      */
     public static class RequestPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestDataModule")
-        private java.util.List < RequestDataModule> requestDataModule;
+        private java.util.List<RequestDataModule> requestDataModule;
 
         private RequestPerInterval(Builder builder) {
             this.requestDataModule = builder.requestDataModule;
@@ -284,17 +314,24 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         /**
          * @return requestDataModule
          */
-        public java.util.List < RequestDataModule> getRequestDataModule() {
+        public java.util.List<RequestDataModule> getRequestDataModule() {
             return this.requestDataModule;
         }
 
         public static final class Builder {
-            private java.util.List < RequestDataModule> requestDataModule; 
+            private java.util.List<RequestDataModule> requestDataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestPerInterval model) {
+                this.requestDataModule = model.requestDataModule;
+            } 
 
             /**
              * RequestDataModule.
              */
-            public Builder requestDataModule(java.util.List < RequestDataModule> requestDataModule) {
+            public Builder requestDataModule(java.util.List<RequestDataModule> requestDataModule) {
                 this.requestDataModule = requestDataModule;
                 return this;
             }
@@ -386,6 +423,17 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficDataModule model) {
+                this.area = model.area;
+                this.bps = model.bps;
+                this.domain = model.domain;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the region.</p>
              * 
@@ -456,7 +504,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
      */
     public static class TrafficPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficDataModule")
-        private java.util.List < TrafficDataModule> trafficDataModule;
+        private java.util.List<TrafficDataModule> trafficDataModule;
 
         private TrafficPerInterval(Builder builder) {
             this.trafficDataModule = builder.trafficDataModule;
@@ -473,17 +521,24 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         /**
          * @return trafficDataModule
          */
-        public java.util.List < TrafficDataModule> getTrafficDataModule() {
+        public java.util.List<TrafficDataModule> getTrafficDataModule() {
             return this.trafficDataModule;
         }
 
         public static final class Builder {
-            private java.util.List < TrafficDataModule> trafficDataModule; 
+            private java.util.List<TrafficDataModule> trafficDataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficPerInterval model) {
+                this.trafficDataModule = model.trafficDataModule;
+            } 
 
             /**
              * TrafficDataModule.
              */
-            public Builder trafficDataModule(java.util.List < TrafficDataModule> trafficDataModule) {
+            public Builder trafficDataModule(java.util.List<TrafficDataModule> trafficDataModule) {
                 this.trafficDataModule = trafficDataModule;
                 return this;
             }

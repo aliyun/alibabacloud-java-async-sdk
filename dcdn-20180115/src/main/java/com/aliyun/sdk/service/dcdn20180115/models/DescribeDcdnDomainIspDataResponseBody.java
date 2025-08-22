@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainIspDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Value value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainIspDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -318,6 +339,23 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             private String totalBytes; 
             private String totalQuery; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspProportionData model) {
+                this.avgObjectSize = model.avgObjectSize;
+                this.avgResponseRate = model.avgResponseRate;
+                this.avgResponseTime = model.avgResponseTime;
+                this.bps = model.bps;
+                this.bytesProportion = model.bytesProportion;
+                this.isp = model.isp;
+                this.ispEname = model.ispEname;
+                this.proportion = model.proportion;
+                this.qps = model.qps;
+                this.totalBytes = model.totalBytes;
+                this.totalQuery = model.totalQuery;
+            } 
+
             /**
              * <p>The average response size. Unit: bytes.</p>
              * 
@@ -454,7 +492,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspProportionData")
-        private java.util.List < IspProportionData> ispProportionData;
+        private java.util.List<IspProportionData> ispProportionData;
 
         private Value(Builder builder) {
             this.ispProportionData = builder.ispProportionData;
@@ -471,17 +509,24 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         /**
          * @return ispProportionData
          */
-        public java.util.List < IspProportionData> getIspProportionData() {
+        public java.util.List<IspProportionData> getIspProportionData() {
             return this.ispProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < IspProportionData> ispProportionData; 
+            private java.util.List<IspProportionData> ispProportionData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.ispProportionData = model.ispProportionData;
+            } 
 
             /**
              * IspProportionData.
              */
-            public Builder ispProportionData(java.util.List < IspProportionData> ispProportionData) {
+            public Builder ispProportionData(java.util.List<IspProportionData> ispProportionData) {
                 this.ispProportionData = ispProportionData;
                 return this;
             }

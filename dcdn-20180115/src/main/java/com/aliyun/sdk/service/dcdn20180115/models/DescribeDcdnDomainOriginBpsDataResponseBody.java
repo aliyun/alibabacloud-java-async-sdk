@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainOriginBpsDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         private OriginBpsDataPerInterval originBpsDataPerInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainOriginBpsDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.originBpsDataPerInterval = model.originBpsDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -258,6 +279,18 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             private Float staticHttpsOriginBps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.dynamicHttpOriginBps = model.dynamicHttpOriginBps;
+                this.dynamicHttpsOriginBps = model.dynamicHttpsOriginBps;
+                this.originBps = model.originBps;
+                this.staticHttpOriginBps = model.staticHttpOriginBps;
+                this.staticHttpsOriginBps = model.staticHttpsOriginBps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The bandwidth that was consumed for fetching dynamic content from the origin over HTTP.</p>
              * 
@@ -339,7 +372,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
      */
     public static class OriginBpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private OriginBpsDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -356,17 +389,24 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginBpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

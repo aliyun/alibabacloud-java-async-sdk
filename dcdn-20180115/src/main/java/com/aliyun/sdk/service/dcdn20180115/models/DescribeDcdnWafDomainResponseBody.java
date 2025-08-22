@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OutPutDomains")
-    private java.util.List < OutPutDomains> outPutDomains;
+    private java.util.List<OutPutDomains> outPutDomains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outPutDomains
      */
-    public java.util.List < OutPutDomains> getOutPutDomains() {
+    public java.util.List<OutPutDomains> getOutPutDomains() {
         return this.outPutDomains;
     }
 
@@ -57,14 +66,23 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OutPutDomains> outPutDomains; 
+        private java.util.List<OutPutDomains> outPutDomains; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafDomainResponseBody model) {
+            this.outPutDomains = model.outPutDomains;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>
          */
-        public Builder outPutDomains(java.util.List < OutPutDomains> outPutDomains) {
+        public Builder outPutDomains(java.util.List<OutPutDomains> outPutDomains) {
             this.outPutDomains = outPutDomains;
             return this;
         }
@@ -176,6 +194,17 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             private String domain; 
             private Integer status; 
             private Integer wafStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutPutDomains model) {
+                this.aclStatus = model.aclStatus;
+                this.ccStatus = model.ccStatus;
+                this.domain = model.domain;
+                this.status = model.status;
+                this.wafStatus = model.wafStatus;
+            } 
 
             /**
              * <p>The status of the ACL. Valid values:</p>

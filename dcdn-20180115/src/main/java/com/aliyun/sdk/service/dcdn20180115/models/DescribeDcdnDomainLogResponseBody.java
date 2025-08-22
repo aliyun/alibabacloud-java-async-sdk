@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainLogDetails
      */
@@ -61,8 +70,17 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainLogResponseBody model) {
+            this.domainLogDetails = model.domainLogDetails;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The log information. The log information is indicated by the DomainLogDetail parameter.</p>
+         * <p>The log information.</p>
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -177,6 +195,17 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private Long logSize; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfoDetail model) {
+                this.endTime = model.endTime;
+                this.logName = model.logName;
+                this.logPath = model.logPath;
+                this.logSize = model.logSize;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the time range during which data was queried.</p>
              * 
@@ -204,7 +233,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
              * <p>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">LogPath field</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
+             * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -223,7 +252,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start of the time range during which data was queried.</p>
+             * <p>The beginning of the time range during which data was queried.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-07T17:00:00Z</p>
@@ -248,7 +277,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
      */
     public static class LogInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
-        private java.util.List < LogInfoDetail> logInfoDetail;
+        private java.util.List<LogInfoDetail> logInfoDetail;
 
         private LogInfos(Builder builder) {
             this.logInfoDetail = builder.logInfoDetail;
@@ -265,17 +294,24 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         /**
          * @return logInfoDetail
          */
-        public java.util.List < LogInfoDetail> getLogInfoDetail() {
+        public java.util.List<LogInfoDetail> getLogInfoDetail() {
             return this.logInfoDetail;
         }
 
         public static final class Builder {
-            private java.util.List < LogInfoDetail> logInfoDetail; 
+            private java.util.List<LogInfoDetail> logInfoDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogInfos model) {
+                this.logInfoDetail = model.logInfoDetail;
+            } 
 
             /**
              * LogInfoDetail.
              */
-            public Builder logInfoDetail(java.util.List < LogInfoDetail> logInfoDetail) {
+            public Builder logInfoDetail(java.util.List<LogInfoDetail> logInfoDetail) {
                 this.logInfoDetail = logInfoDetail;
                 return this;
             }
@@ -342,6 +378,15 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private Long pageIndex; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfos model) {
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -439,6 +484,15 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private LogInfos logInfos; 
             private PageInfos pageInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetail model) {
+                this.logCount = model.logCount;
+                this.logInfos = model.logInfos;
+                this.pageInfos = model.pageInfos;
+            } 
+
             /**
              * <p>The total number of entries returned on the current page.</p>
              * 
@@ -451,7 +505,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log information. The log information is indicated by the LogInfoDetail parameter.</p>
+             * <p>Details about the logs.</p>
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -459,7 +513,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page information. The page information is indicated by the PageInfoDetail parameter.</p>
+             * <p>The page information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;
@@ -481,7 +535,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
      */
     public static class DomainLogDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
-        private java.util.List < DomainLogDetail> domainLogDetail;
+        private java.util.List<DomainLogDetail> domainLogDetail;
 
         private DomainLogDetails(Builder builder) {
             this.domainLogDetail = builder.domainLogDetail;
@@ -498,17 +552,24 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         /**
          * @return domainLogDetail
          */
-        public java.util.List < DomainLogDetail> getDomainLogDetail() {
+        public java.util.List<DomainLogDetail> getDomainLogDetail() {
             return this.domainLogDetail;
         }
 
         public static final class Builder {
-            private java.util.List < DomainLogDetail> domainLogDetail; 
+            private java.util.List<DomainLogDetail> domainLogDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetails model) {
+                this.domainLogDetail = model.domainLogDetail;
+            } 
 
             /**
              * DomainLogDetail.
              */
-            public Builder domainLogDetail(java.util.List < DomainLogDetail> domainLogDetail) {
+            public Builder domainLogDetail(java.util.List<DomainLogDetail> domainLogDetail) {
                 this.domainLogDetail = domainLogDetail;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -48,6 +57,14 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDcdnProjectExistResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -105,6 +122,13 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
 
         public static final class Builder {
             private String exist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.exist = model.exist;
+            } 
 
             /**
              * <p>Indicates whether the real-time log delivery project exists. Valid values:</p>

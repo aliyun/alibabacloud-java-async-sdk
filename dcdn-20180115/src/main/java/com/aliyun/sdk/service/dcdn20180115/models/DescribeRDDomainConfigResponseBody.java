@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRDDomainConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainConfigs")
-    private java.util.List < DomainConfigs> domainConfigs;
+    private java.util.List<DomainConfigs> domainConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigs
      */
-    public java.util.List < DomainConfigs> getDomainConfigs() {
+    public java.util.List<DomainConfigs> getDomainConfigs() {
         return this.domainConfigs;
     }
 
@@ -46,13 +55,21 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainConfigs> domainConfigs; 
+        private java.util.List<DomainConfigs> domainConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRDDomainConfigResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of the domain name.</p>
          */
-        public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
+        public Builder domainConfigs(java.util.List<DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
             return this;
         }
@@ -118,6 +135,14 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
             private String argName; 
             private String argValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
+
             /**
              * <p>The name of the configuration.</p>
              * 
@@ -158,7 +183,7 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
         private Long configId;
 
         @com.aliyun.core.annotation.NameInMap("FunctionArgs")
-        private java.util.List < FunctionArgs> functionArgs;
+        private java.util.List<FunctionArgs> functionArgs;
 
         @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
@@ -195,7 +220,7 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
         /**
          * @return functionArgs
          */
-        public java.util.List < FunctionArgs> getFunctionArgs() {
+        public java.util.List<FunctionArgs> getFunctionArgs() {
             return this.functionArgs;
         }
 
@@ -222,10 +247,21 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long configId; 
-            private java.util.List < FunctionArgs> functionArgs; 
+            private java.util.List<FunctionArgs> functionArgs; 
             private String functionName; 
             private String parentId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.parentId = model.parentId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the configuration.</p>
@@ -241,7 +277,7 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
             /**
              * <p>The configurations of the features.</p>
              */
-            public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
+            public Builder functionArgs(java.util.List<FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
                 return this;
             }

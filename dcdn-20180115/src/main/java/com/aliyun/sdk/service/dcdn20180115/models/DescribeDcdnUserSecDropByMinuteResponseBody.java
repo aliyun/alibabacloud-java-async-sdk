@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rows")
-    private java.util.List < Rows> rows;
+    private java.util.List<Rows> rows;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -49,6 +54,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
 
     public static DescribeDcdnUserSecDropByMinuteResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,7 +98,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     /**
      * @return rows
      */
-    public java.util.List < Rows> getRows() {
+    public java.util.List<Rows> getRows() {
         return this.rows;
     }
 
@@ -106,8 +115,21 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Rows> rows; 
+        private java.util.List<Rows> rows; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnUserSecDropByMinuteResponseBody model) {
+            this.description = model.description;
+            this.len = model.len;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rows = model.rows;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The description of HTTP responses.</p>
@@ -167,7 +189,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         /**
          * <p>An array.</p>
          */
-        public Builder rows(java.util.List < Rows> rows) {
+        public Builder rows(java.util.List<Rows> rows) {
             this.rows = rows;
             return this;
         }
@@ -280,6 +302,18 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             private String ruleName; 
             private String secFunc; 
             private String tmStr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rows model) {
+                this.domain = model.domain;
+                this.drops = model.drops;
+                this.object = model.object;
+                this.ruleName = model.ruleName;
+                this.secFunc = model.secFunc;
+                this.tmStr = model.tmStr;
+            } 
 
             /**
              * <p>The domain name.</p>

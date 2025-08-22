@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafPolicyValidDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The information about the protected domain names.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -199,6 +219,15 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the rule.</p>
              * 
@@ -250,7 +279,7 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
         private String domainName;
 
         @com.aliyun.core.annotation.NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
@@ -287,7 +316,7 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -314,10 +343,21 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domainName; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private Long policyId; 
             private String policyName; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainName = model.domainName;
+                this.policies = model.policies;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * <p>The protected domain name.</p>
@@ -333,7 +373,7 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
             /**
              * <p>The policy that is bound to the domain name.</p>
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }

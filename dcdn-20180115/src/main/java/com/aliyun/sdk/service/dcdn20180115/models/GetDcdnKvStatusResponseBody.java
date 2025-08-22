@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return complete
      */
@@ -60,6 +69,15 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         private Boolean complete; 
         private String expire; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDcdnKvStatusResponseBody model) {
+            this.complete = model.complete;
+            this.expire = model.expire;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Specifies whether the configured key has taken effect on all points of presence (POPs).</p>

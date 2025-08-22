@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainInfo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DomainInfo> domainInfo;
+    private java.util.List<DomainInfo> domainInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -32,10 +37,14 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainInfo
      */
-    public java.util.List < DomainInfo> getDomainInfo() {
+    public java.util.List<DomainInfo> getDomainInfo() {
         return this.domainInfo;
     }
 
@@ -47,14 +56,22 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainInfo> domainInfo; 
+        private java.util.List<DomainInfo> domainInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainsBySourceResponseBody model) {
+            this.domainInfo = model.domainInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about each origin server and the corresponding domain names.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
+        public Builder domainInfo(java.util.List<DomainInfo> domainInfo) {
             this.domainInfo = domainInfo;
             return this;
         }
@@ -168,6 +185,18 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainList model) {
+                this.createTime = model.createTime;
+                this.domainCname = model.domainCname;
+                this.domainName = model.domainName;
+                this.domainType = model.domainType;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The creation time.</p>
              * 
@@ -261,7 +290,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
      */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainList")
-        private java.util.List < DomainList> domainList;
+        private java.util.List<DomainList> domainList;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -282,7 +311,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         /**
          * @return domainList
          */
-        public java.util.List < DomainList> getDomainList() {
+        public java.util.List<DomainList> getDomainList() {
             return this.domainList;
         }
 
@@ -294,13 +323,21 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DomainList> domainList; 
+            private java.util.List<DomainList> domainList; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.domainList = model.domainList;
+                this.source = model.source;
+            } 
 
             /**
              * <p>The information about the domain names.</p>
              */
-            public Builder domainList(java.util.List < DomainList> domainList) {
+            public Builder domainList(java.util.List<DomainList> domainList) {
                 this.domainList = domainList;
                 return this;
             }

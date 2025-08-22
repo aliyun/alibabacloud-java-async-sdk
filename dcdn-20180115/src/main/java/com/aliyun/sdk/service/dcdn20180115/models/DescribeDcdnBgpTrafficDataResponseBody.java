@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BgpDataInterval")
-    private java.util.List < BgpDataInterval> bgpDataInterval;
+    private java.util.List<BgpDataInterval> bgpDataInterval;
 
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
@@ -39,10 +44,14 @@ public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpDataInterval
      */
-    public java.util.List < BgpDataInterval> getBgpDataInterval() {
+    public java.util.List<BgpDataInterval> getBgpDataInterval() {
         return this.bgpDataInterval;
     }
 
@@ -68,15 +77,25 @@ public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BgpDataInterval> bgpDataInterval; 
+        private java.util.List<BgpDataInterval> bgpDataInterval; 
         private String endTime; 
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnBgpTrafficDataResponseBody model) {
+            this.bgpDataInterval = model.bgpDataInterval;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
          * <p>The BGP traffic at each time interval.</p>
          */
-        public Builder bgpDataInterval(java.util.List < BgpDataInterval> bgpDataInterval) {
+        public Builder bgpDataInterval(java.util.List<BgpDataInterval> bgpDataInterval) {
             this.bgpDataInterval = bgpDataInterval;
             return this;
         }
@@ -175,6 +194,15 @@ public class DescribeDcdnBgpTrafficDataResponseBody extends TeaModel {
             private Long in; 
             private Long out; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpDataInterval model) {
+                this.in = model.in;
+                this.out = model.out;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The inbound traffic. Unit: bytes.</p>

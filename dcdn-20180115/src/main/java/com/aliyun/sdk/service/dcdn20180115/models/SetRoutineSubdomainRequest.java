@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SetRoutineSubdomainRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Subdomains")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > subdomains;
+    private java.util.Map<String, ?> subdomains;
 
     private SetRoutineSubdomainRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class SetRoutineSubdomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class SetRoutineSubdomainRequest extends Request {
     /**
      * @return subdomains
      */
-    public java.util.Map < String, ? > getSubdomains() {
+    public java.util.Map<String, ?> getSubdomains() {
         return this.subdomains;
     }
 
     public static final class Builder extends Request.Builder<SetRoutineSubdomainRequest, Builder> {
-        private java.util.Map < String, ? > subdomains; 
+        private java.util.Map<String, ?> subdomains; 
 
         private Builder() {
             super();
@@ -66,7 +71,7 @@ public class SetRoutineSubdomainRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;subdomain-test&quot;]</p>
          */
-        public Builder subdomains(java.util.Map < String, ? > subdomains) {
+        public Builder subdomains(java.util.Map<String, ?> subdomains) {
             String subdomainsShrink = shrink(subdomains, "Subdomains", "json");
             this.putBodyParameter("Subdomains", subdomainsShrink);
             this.subdomains = subdomains;

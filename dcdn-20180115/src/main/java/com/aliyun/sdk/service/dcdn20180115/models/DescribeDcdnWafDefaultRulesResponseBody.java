@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -46,13 +55,21 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafDefaultRulesResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The rule configurations.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -154,6 +171,17 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.action = model.action;
+                this.config = model.config;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The default action of the rule. Valid values:</p>
              * <ul>
@@ -242,7 +270,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         private String defenseScene;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private Content(Builder builder) {
             this.defenseScene = builder.defenseScene;
@@ -267,13 +295,21 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private String defenseScene; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.defenseScene = model.defenseScene;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The protection scenario. Valid values:</p>
@@ -293,7 +329,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             /**
              * <p>The rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

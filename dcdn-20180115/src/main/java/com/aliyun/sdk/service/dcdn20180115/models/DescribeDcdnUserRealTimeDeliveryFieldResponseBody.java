@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnUserRealTimeDeliveryFieldResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -130,6 +147,15 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             private String fieldName; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.description = model.description;
+                this.fieldName = model.fieldName;
+                this.selected = model.selected;
+            } 
+
             /**
              * <p>The description of the field.</p>
              * 
@@ -182,7 +208,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         private Content(Builder builder) {
             this.fields = builder.fields;
@@ -199,17 +225,24 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
         public static final class Builder {
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.fields = model.fields;
+            } 
 
             /**
              * Fields.
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         private String dataInterval; 
         private HttpCodeDataInterval httpCodeDataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainHttpCodeDataByLayerResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.httpCodeDataInterval = model.httpCodeDataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -111,7 +129,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         private String totalValue;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.Map < String, ? > value;
+        private java.util.Map<String, ?> value;
 
         private DataModule(Builder builder) {
             this.timeStamp = builder.timeStamp;
@@ -144,14 +162,23 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         /**
          * @return value
          */
-        public java.util.Map < String, ? > getValue() {
+        public java.util.Map<String, ?> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String timeStamp; 
             private String totalValue; 
-            private java.util.Map < String, ? > value; 
+            private java.util.Map<String, ?> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.totalValue = model.totalValue;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The timestamp of the returned data.</p>
@@ -181,7 +208,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
              * <strong>example:</strong>
              * <p>{&quot;200&quot;: 10,&quot;206&quot;: 100}</p>
              */
-            public Builder value(java.util.Map < String, ? > value) {
+            public Builder value(java.util.Map<String, ?> value) {
                 this.value = value;
                 return this;
             }
@@ -201,7 +228,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
      */
     public static class HttpCodeDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private HttpCodeDataInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -218,17 +245,24 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpCodeDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         private CertInfos certInfos; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnHttpsDomainListResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the certificate.</p>
@@ -213,6 +231,20 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             private String certUpdateTime; 
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certCommonName = model.certCommonName;
+                this.certExpireTime = model.certExpireTime;
+                this.certName = model.certName;
+                this.certStartTime = model.certStartTime;
+                this.certStatus = model.certStatus;
+                this.certType = model.certType;
+                this.certUpdateTime = model.certUpdateTime;
+                this.domainName = model.domainName;
+            } 
+
             /**
              * <p>The returned primary domain name of the certificate.</p>
              * 
@@ -326,7 +358,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
      */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
-        private java.util.List < CertInfo> certInfo;
+        private java.util.List<CertInfo> certInfo;
 
         private CertInfos(Builder builder) {
             this.certInfo = builder.certInfo;
@@ -343,17 +375,24 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         /**
          * @return certInfo
          */
-        public java.util.List < CertInfo> getCertInfo() {
+        public java.util.List<CertInfo> getCertInfo() {
             return this.certInfo;
         }
 
         public static final class Builder {
-            private java.util.List < CertInfo> certInfo; 
+            private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.
              */
-            public Builder certInfo(java.util.List < CertInfo> certInfo) {
+            public Builder certInfo(java.util.List<CertInfo> certInfo) {
                 this.certInfo = certInfo;
                 return this;
             }

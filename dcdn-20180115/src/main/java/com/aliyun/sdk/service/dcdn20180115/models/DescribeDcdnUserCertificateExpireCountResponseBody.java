@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnUserCertificateExpireCountResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expireWithin30DaysCount
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnUserCertificateExpireCountResponseBody extends TeaModel
         private Integer expireWithin30DaysCount; 
         private Integer expiredCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnUserCertificateExpireCountResponseBody model) {
+            this.expireWithin30DaysCount = model.expireWithin30DaysCount;
+            this.expiredCount = model.expiredCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of domain names whose SSL certificates are about to expire within 30 days.</p>

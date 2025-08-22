@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchPutDcdnKvResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailKeys")
-    private java.util.List < String > failKeys;
+    private java.util.List<String> failKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuccessKeys")
-    private java.util.List < String > successKeys;
+    private java.util.List<String> successKeys;
 
     private BatchPutDcdnKvResponseBody(Builder builder) {
         this.failKeys = builder.failKeys;
@@ -35,10 +40,14 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failKeys
      */
-    public java.util.List < String > getFailKeys() {
+    public java.util.List<String> getFailKeys() {
         return this.failKeys;
     }
 
@@ -52,19 +61,28 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
     /**
      * @return successKeys
      */
-    public java.util.List < String > getSuccessKeys() {
+    public java.util.List<String> getSuccessKeys() {
         return this.successKeys;
     }
 
     public static final class Builder {
-        private java.util.List < String > failKeys; 
+        private java.util.List<String> failKeys; 
         private String requestId; 
-        private java.util.List < String > successKeys; 
+        private java.util.List<String> successKeys; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchPutDcdnKvResponseBody model) {
+            this.failKeys = model.failKeys;
+            this.requestId = model.requestId;
+            this.successKeys = model.successKeys;
+        } 
 
         /**
          * <p>The keys that failed to be written.</p>
          */
-        public Builder failKeys(java.util.List < String > failKeys) {
+        public Builder failKeys(java.util.List<String> failKeys) {
             this.failKeys = failKeys;
             return this;
         }
@@ -83,7 +101,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         /**
          * <p>The keys that were written.</p>
          */
-        public Builder successKeys(java.util.List < String > successKeys) {
+        public Builder successKeys(java.util.List<String> successKeys) {
             this.successKeys = successKeys;
             return this;
         }

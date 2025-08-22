@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainUvDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private UvDataInterval uvDataInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainUvDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.uvDataInterval = model.uvDataInterval;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -210,6 +231,14 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the data returned.</p>
              * 
@@ -247,7 +276,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
      */
     public static class UvDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private UvDataInterval(Builder builder) {
             this.usageData = builder.usageData;
@@ -264,17 +293,24 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(UvDataInterval model) {
+                this.usageData = model.usageData;
+            } 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

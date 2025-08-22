@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
     private String endTime;
 
     @com.aliyun.core.annotation.NameInMap("KvUsageData")
-    private java.util.List < KvUsageData> kvUsageData;
+    private java.util.List<KvUsageData> kvUsageData;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -39,6 +44,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -49,7 +58,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
     /**
      * @return kvUsageData
      */
-    public java.util.List < KvUsageData> getKvUsageData() {
+    public java.util.List<KvUsageData> getKvUsageData() {
         return this.kvUsageData;
     }
 
@@ -69,9 +78,19 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
 
     public static final class Builder {
         private String endTime; 
-        private java.util.List < KvUsageData> kvUsageData; 
+        private java.util.List<KvUsageData> kvUsageData; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKvUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.kvUsageData = model.kvUsageData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The end of the time range during which data was queried.</p>
@@ -87,7 +106,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         /**
          * <p>The usage details.</p>
          */
-        public Builder kvUsageData(java.util.List < KvUsageData> kvUsageData) {
+        public Builder kvUsageData(java.util.List<KvUsageData> kvUsageData) {
             this.kvUsageData = kvUsageData;
             return this;
         }
@@ -187,6 +206,16 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             private String accessType; 
             private String namespaceId; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(KvUsageData model) {
+                this.acc = model.acc;
+                this.accessType = model.accessType;
+                this.namespaceId = model.namespaceId;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The number of visits.</p>

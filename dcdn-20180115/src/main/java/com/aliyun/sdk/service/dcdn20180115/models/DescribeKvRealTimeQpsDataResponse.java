@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchSetDcdnDomainCertificateResponse} extends {@link TeaModel}
+ * {@link DescribeKvRealTimeQpsDataResponse} extends {@link TeaModel}
  *
- * <p>BatchSetDcdnDomainCertificateResponse</p>
+ * <p>DescribeKvRealTimeQpsDataResponse</p>
  */
-public class BatchSetDcdnDomainCertificateResponse extends Response {
+public class DescribeKvRealTimeQpsDataResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private BatchSetDcdnDomainCertificateResponseBody body;
+    private DescribeKvRealTimeQpsDataResponseBody body;
 
-    private BatchSetDcdnDomainCertificateResponse(BuilderImpl builder) {
+    private DescribeKvRealTimeQpsDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static BatchSetDcdnDomainCertificateResponse create() {
+    public static DescribeKvRealTimeQpsDataResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class BatchSetDcdnDomainCertificateResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class BatchSetDcdnDomainCertificateResponse extends Response {
     /**
      * @return body
      */
-    public BatchSetDcdnDomainCertificateResponseBody getBody() {
+    public DescribeKvRealTimeQpsDataResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BatchSetDcdnDomainCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeKvRealTimeQpsDataResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(BatchSetDcdnDomainCertificateResponseBody body);
+        Builder body(DescribeKvRealTimeQpsDataResponseBody body);
 
         @Override
-        BatchSetDcdnDomainCertificateResponse build();
+        DescribeKvRealTimeQpsDataResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BatchSetDcdnDomainCertificateResponse, Builder>
+            extends Response.BuilderImpl<DescribeKvRealTimeQpsDataResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private BatchSetDcdnDomainCertificateResponseBody body; 
+        private DescribeKvRealTimeQpsDataResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BatchSetDcdnDomainCertificateResponse response) {
+        private BuilderImpl(DescribeKvRealTimeQpsDataResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class BatchSetDcdnDomainCertificateResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class BatchSetDcdnDomainCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BatchSetDcdnDomainCertificateResponseBody body) {
+        public Builder body(DescribeKvRealTimeQpsDataResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BatchSetDcdnDomainCertificateResponse build() {
-            return new BatchSetDcdnDomainCertificateResponse(this);
+        public DescribeKvRealTimeQpsDataResponse build() {
+            return new DescribeKvRealTimeQpsDataResponse(this);
         } 
 
     } 

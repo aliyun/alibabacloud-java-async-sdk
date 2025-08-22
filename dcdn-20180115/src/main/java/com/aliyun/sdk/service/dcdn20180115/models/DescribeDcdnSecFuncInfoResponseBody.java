@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -43,10 +48,14 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String description; 
         private String httpStatus; 
         private String requestId; 
         private String retCode; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSecFuncInfoResponseBody model) {
+            this.content = model.content;
+            this.description = model.description;
+            this.httpStatus = model.httpStatus;
+            this.requestId = model.requestId;
+            this.retCode = model.retCode;
+        } 
+
         /**
          * <p>The parameters required by the code.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -190,6 +210,14 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String label; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The language (Chinese or English).</p>

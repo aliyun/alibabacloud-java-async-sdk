@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainQpsDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         private QpsDataPerInterval qpsDataPerInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainQpsDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.qpsDataPerInterval = model.qpsDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -318,6 +339,23 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             private Float staticHttpsQps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.acc = model.acc;
+                this.dynamicHttpAcc = model.dynamicHttpAcc;
+                this.dynamicHttpQps = model.dynamicHttpQps;
+                this.dynamicHttpsAcc = model.dynamicHttpsAcc;
+                this.dynamicHttpsQps = model.dynamicHttpsQps;
+                this.qps = model.qps;
+                this.staticHttpAcc = model.staticHttpAcc;
+                this.staticHttpQps = model.staticHttpQps;
+                this.staticHttpsAcc = model.staticHttpsAcc;
+                this.staticHttpsQps = model.staticHttpsQps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The total number of requests.</p>
              * 
@@ -454,7 +492,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
      */
     public static class QpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private QpsDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -471,17 +509,24 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(QpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

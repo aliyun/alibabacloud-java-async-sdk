@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
 
     public static DescribeDcdnWafServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         private String requestId; 
         private String ruleBillingType; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafServiceResponseBody model) {
+            this.edition = model.edition;
+            this.enabled = model.enabled;
+            this.openingTime = model.openingTime;
+            this.requestBillingType = model.requestBillingType;
+            this.requestId = model.requestId;
+            this.ruleBillingType = model.ruleBillingType;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The edition of WAF.</p>

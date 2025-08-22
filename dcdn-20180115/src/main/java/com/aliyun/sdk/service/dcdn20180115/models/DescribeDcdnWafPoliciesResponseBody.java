@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +48,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -60,7 +69,7 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -81,9 +90,20 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafPoliciesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
@@ -110,7 +130,7 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         /**
          * <p>The information about protection policies.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -258,6 +278,20 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             private String policyStatus; 
             private String policyType; 
             private Long ruleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.defenseScene = model.defenseScene;
+                this.domainCount = model.domainCount;
+                this.gmtModified = model.gmtModified;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyStatus = model.policyStatus;
+                this.policyType = model.policyType;
+                this.ruleCount = model.ruleCount;
+            } 
 
             /**
              * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>

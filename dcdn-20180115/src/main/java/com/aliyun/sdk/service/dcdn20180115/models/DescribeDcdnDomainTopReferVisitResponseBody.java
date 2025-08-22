@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -72,6 +81,16 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TopReferList topReferList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainTopReferVisitResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.topReferList = model.topReferList;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>
@@ -200,6 +219,17 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.referDetail = model.referDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -270,7 +300,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
      */
     public static class TopReferList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferList")
-        private java.util.List < ReferList> referList;
+        private java.util.List<ReferList> referList;
 
         private TopReferList(Builder builder) {
             this.referList = builder.referList;
@@ -287,17 +317,24 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         /**
          * @return referList
          */
-        public java.util.List < ReferList> getReferList() {
+        public java.util.List<ReferList> getReferList() {
             return this.referList;
         }
 
         public static final class Builder {
-            private java.util.List < ReferList> referList; 
+            private java.util.List<ReferList> referList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopReferList model) {
+                this.referList = model.referList;
+            } 
 
             /**
              * ReferList.
              */
-            public Builder referList(java.util.List < ReferList> referList) {
+            public Builder referList(java.util.List<ReferList> referList) {
                 this.referList = referList;
                 return this;
             }

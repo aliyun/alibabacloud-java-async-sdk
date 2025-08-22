@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SlsInfo slsInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSlrAndSlsProjectResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsInfo = model.slsInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -141,6 +158,16 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             private String logStore; 
             private String project; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsInfo model) {
+                this.endPoint = model.endPoint;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The endpoint of Log Service.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Keys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > keys;
+    private java.util.List<String> keys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -36,7 +41,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
     /**
      * @return keys
      */
-    public java.util.List < String > getKeys() {
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
@@ -56,7 +61,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchDeleteDcdnKvRequest, Builder> {
-        private java.util.List < String > keys; 
+        private java.util.List<String> keys; 
         private String namespace; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder keys(java.util.List < String > keys) {
+        public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "json");
             this.putBodyParameter("Keys", keysShrink);
             this.keys = keys;

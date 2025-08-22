@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commonName
      */
@@ -72,6 +81,16 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         private String csr; 
         private String pubMd5; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDcdnCertificateSigningRequestResponseBody model) {
+            this.commonName = model.commonName;
+            this.csr = model.csr;
+            this.pubMd5 = model.pubMd5;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Common Name of the certificate.</p>

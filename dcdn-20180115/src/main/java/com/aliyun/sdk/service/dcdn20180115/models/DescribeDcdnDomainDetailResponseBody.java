@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainDetail
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private DomainDetail domainDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainDetailResponseBody model) {
+            this.domainDetail = model.domainDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the accelerated domain name.</p>
@@ -166,6 +183,18 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.content = model.content;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The address of the origin server.</p>
              * 
@@ -252,7 +281,7 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
      */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
-        private java.util.List < Source> source;
+        private java.util.List<Source> source;
 
         private Sources(Builder builder) {
             this.source = builder.source;
@@ -269,17 +298,24 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         /**
          * @return source
          */
-        public java.util.List < Source> getSource() {
+        public java.util.List<Source> getSource() {
             return this.source;
         }
 
         public static final class Builder {
-            private java.util.List < Source> source; 
+            private java.util.List<Source> source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.source = model.source;
+            } 
 
             /**
              * Source.
              */
-            public Builder source(java.util.List < Source> source) {
+            public Builder source(java.util.List<Source> source) {
                 this.source = source;
                 return this;
             }
@@ -466,6 +502,25 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
             private String scene; 
             private String scope; 
             private Sources sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainDetail model) {
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.functionType = model.functionType;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.resourceGroupId = model.resourceGroupId;
+                this.SSLProtocol = model.SSLProtocol;
+                this.SSLPub = model.SSLPub;
+                this.scene = model.scene;
+                this.scope = model.scope;
+                this.sources = model.sources;
+            } 
 
             /**
              * <p>The CNAME that is assigned to the accelerated domain name. You must add the CNAME record to the system of your Domain Name System (DNS) provider to map the accelerated domain name to the CNAME.</p>

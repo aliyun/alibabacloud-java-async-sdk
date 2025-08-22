@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Envs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > envs;
+    private java.util.Map<String, ?> envs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -42,7 +47,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,7 +55,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     /**
      * @return envs
      */
-    public java.util.Map < String, ? > getEnvs() {
+    public java.util.Map<String, ?> getEnvs() {
         return this.envs;
     }
 
@@ -69,7 +74,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishRoutineCodeRevisionRequest, Builder> {
-        private java.util.Map < String, ? > envs; 
+        private java.util.Map<String, ?> envs; 
         private String name; 
         private String selectCodeRevision; 
 
@@ -99,7 +104,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;production&quot;,&quot;presetCanaryZhejiang&quot;]</p>
          */
-        public Builder envs(java.util.Map < String, ? > envs) {
+        public Builder envs(java.util.Map<String, ?> envs) {
             String envsShrink = shrink(envs, "Envs", "json");
             this.putBodyParameter("Envs", envsShrink);
             this.envs = envs;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cnameDatas
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
     public static final class Builder {
         private CnameDatas cnameDatas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainCnameResponseBody model) {
+            this.cnameDatas = model.cnameDatas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The CNAME information.</p>
@@ -87,12 +104,20 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
+        private String errMsg;
+
+        @com.aliyun.core.annotation.NameInMap("Passed")
+        private String passed;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
             this.cname = builder.cname;
             this.domain = builder.domain;
+            this.errMsg = builder.errMsg;
+            this.passed = builder.passed;
             this.status = builder.status;
         }
 
@@ -119,6 +144,20 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         }
 
         /**
+         * @return errMsg
+         */
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        /**
+         * @return passed
+         */
+        public String getPassed() {
+            return this.passed;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -128,7 +167,20 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         public static final class Builder {
             private String cname; 
             private String domain; 
+            private String errMsg; 
+            private String passed; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.errMsg = model.errMsg;
+                this.passed = model.passed;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The CNAME assigned to the domain name.</p>
@@ -149,6 +201,22 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * ErrMsg.
+             */
+            public Builder errMsg(String errMsg) {
+                this.errMsg = errMsg;
+                return this;
+            }
+
+            /**
+             * Passed.
+             */
+            public Builder passed(String passed) {
+                this.passed = passed;
                 return this;
             }
 
@@ -178,7 +246,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
      */
     public static class CnameDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         private CnameDatas(Builder builder) {
             this.data = builder.data;
@@ -195,17 +263,24 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(CnameDatas model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

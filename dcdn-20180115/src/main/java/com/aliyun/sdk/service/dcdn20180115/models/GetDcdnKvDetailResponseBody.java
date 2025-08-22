@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class GetDcdnKvDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expirationTtl
      */
@@ -60,6 +69,15 @@ public class GetDcdnKvDetailResponseBody extends TeaModel {
         private String expirationTtl; 
         private String requestId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDcdnKvDetailResponseBody model) {
+            this.expirationTtl = model.expirationTtl;
+            this.requestId = model.requestId;
+            this.value = model.value;
+        } 
 
         /**
          * ExpirationTtl.

@@ -131,17 +131,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can call this operation up to 10 times per second per account.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of BatchSetDcdnDomainCertificate  BatchSetDcdnDomainCertificateRequest
-     * @return BatchSetDcdnDomainCertificateResponse
-     */
-    CompletableFuture<BatchSetDcdnDomainCertificateResponse> batchSetDcdnDomainCertificate(BatchSetDcdnDomainCertificateRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>  You can specify up to 50 domain names in each request.</p>
      * <ul>
      * <li>You can call this operation up to 30 times per second per account.</li>
@@ -315,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSlrAndSlsProjectResponse> createSlrAndSlsProject(CreateSlrAndSlsProjectRequest request);
 
     /**
+     * @param request the request parameters of DeleteCustomDomainSampleRate  DeleteCustomDomainSampleRateRequest
+     * @return DeleteCustomDomainSampleRateResponse
+     */
+    CompletableFuture<DeleteCustomDomainSampleRateResponse> deleteCustomDomainSampleRate(DeleteCustomDomainSampleRateRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> The maximum number of times that each user can call this operation per second is 3.</p>
@@ -481,6 +476,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRoutineConfEnvsResponse
      */
     CompletableFuture<DeleteRoutineConfEnvsResponse> deleteRoutineConfEnvs(DeleteRoutineConfEnvsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCustomDomainSampleRate  DescribeCustomDomainSampleRateRequest
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    CompletableFuture<DescribeCustomDomainSampleRateResponse> describeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request);
 
     /**
      * <b>description</b> :
@@ -1218,7 +1219,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to apply for permissions to use this operation.</li>
+     * </ul>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDcdnDomainRealTimeDetailData  DescribeDcdnDomainRealTimeDetailDataRequest
@@ -2513,6 +2517,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHighlightInfoResponse> describeHighlightInfo(DescribeHighlightInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeKvRealTimeQpsData  DescribeKvRealTimeQpsDataRequest
+     * @return DescribeKvRealTimeQpsDataResponse
+     */
+    CompletableFuture<DescribeKvRealTimeQpsDataResponse> describeKvRealTimeQpsData(DescribeKvRealTimeQpsDataRequest request);
+
+    /**
      * <b>description</b> :
      * <p><em>Note</em>** You can call this operation up to 5 times per second per account.</p>
      * <ul>
@@ -2726,6 +2736,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDcdnRealTimeDeliveryProjectResponse> listDcdnRealTimeDeliveryProject(ListDcdnRealTimeDeliveryProjectRequest request);
 
     /**
+     * @param request the request parameters of ModifyCustomDomainSampleRate  ModifyCustomDomainSampleRateRequest
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    CompletableFuture<ModifyCustomDomainSampleRateResponse> modifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -2918,15 +2934,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetDcdnDomainCSRCertificateResponse
      */
     CompletableFuture<SetDcdnDomainCSRCertificateResponse> setDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request);
-
-    /**
-     * @deprecated OpenAPI SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.  * @description > You can call this operation up to 30 times per second per account.
-     * 
-     * @param request the request parameters of SetDcdnDomainCertificate  SetDcdnDomainCertificateRequest
-     * @return SetDcdnDomainCertificateResponse
-     */
-    @Deprecated
-    CompletableFuture<SetDcdnDomainCertificateResponse> setDcdnDomainCertificate(SetDcdnDomainCertificateRequest request);
 
     /**
      * <b>description</b> :

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
 
     public static DescribeDcdnDdosServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -204,6 +213,27 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         private Integer protectNum; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDdosServiceResponseBody model) {
+            this.changingAffectTime = model.changingAffectTime;
+            this.changingChargeType = model.changingChargeType;
+            this.changingDomianNum = model.changingDomianNum;
+            this.changingEdition = model.changingEdition;
+            this.changingProtectNum = model.changingProtectNum;
+            this.chargeType = model.chargeType;
+            this.domianNum = model.domianNum;
+            this.edition = model.edition;
+            this.enabled = model.enabled;
+            this.endingTime = model.endingTime;
+            this.instanceId = model.instanceId;
+            this.openingTime = model.openingTime;
+            this.protectNum = model.protectNum;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>

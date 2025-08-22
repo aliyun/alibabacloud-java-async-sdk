@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -60,6 +69,15 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         private Content content; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDcdnRealTimeDeliveryProjectResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The configuration results of the domain name.</p>
@@ -237,6 +255,22 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             private Float samplingRate; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.businessType = model.businessType;
+                this.dataCenter = model.dataCenter;
+                this.domainName = model.domainName;
+                this.fieldName = model.fieldName;
+                this.projectName = model.projectName;
+                this.SLSLogStore = model.SLSLogStore;
+                this.SLSProject = model.SLSProject;
+                this.SLSRegion = model.SLSRegion;
+                this.samplingRate = model.samplingRate;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
              * <ul>
@@ -367,7 +401,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Projects")
-        private java.util.List < Projects> projects;
+        private java.util.List<Projects> projects;
 
         private Content(Builder builder) {
             this.projects = builder.projects;
@@ -384,17 +418,24 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
         }
 
         public static final class Builder {
-            private java.util.List < Projects> projects; 
+            private java.util.List<Projects> projects; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.projects = model.projects;
+            } 
 
             /**
              * Projects.
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -46,13 +55,21 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafFilterInfoResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -117,6 +134,14 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String errMsg; 
             private String pattern; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regexp model) {
+                this.errMsg = model.errMsg;
+                this.pattern = model.pattern;
+            } 
 
             /**
              * <p>The error message returned when no items match the regular expression.</p>
@@ -251,6 +276,19 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String tip; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogicalSymbol model) {
+                this.attributes = model.attributes;
+                this.description = model.description;
+                this.maxLength = model.maxLength;
+                this.regexp = model.regexp;
+                this.symbol = model.symbol;
+                this.tip = model.tip;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The configurable attributes, which are bit-field variables that are shown in the following list.<br>For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.</p>
              * <ul>
@@ -358,7 +396,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         private String extendField;
 
         @com.aliyun.core.annotation.NameInMap("LogicalSymbol")
-        private java.util.List < LogicalSymbol> logicalSymbol;
+        private java.util.List<LogicalSymbol> logicalSymbol;
 
         @com.aliyun.core.annotation.NameInMap("MatchField")
         private String matchField;
@@ -387,7 +425,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         /**
          * @return logicalSymbol
          */
-        public java.util.List < LogicalSymbol> getLogicalSymbol() {
+        public java.util.List<LogicalSymbol> getLogicalSymbol() {
             return this.logicalSymbol;
         }
 
@@ -400,8 +438,17 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extendField; 
-            private java.util.List < LogicalSymbol> logicalSymbol; 
+            private java.util.List<LogicalSymbol> logicalSymbol; 
             private String matchField; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.extendField = model.extendField;
+                this.logicalSymbol = model.logicalSymbol;
+                this.matchField = model.matchField;
+            } 
 
             /**
              * <p>The description of the match field. This parameter is not returned or is empty if no match fields are found.</p>
@@ -417,7 +464,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             /**
              * <p>The information about the logical symbol.</p>
              */
-            public Builder logicalSymbol(java.util.List < LogicalSymbol> logicalSymbol) {
+            public Builder logicalSymbol(java.util.List<LogicalSymbol> logicalSymbol) {
                 this.logicalSymbol = logicalSymbol;
                 return this;
             }
@@ -451,7 +498,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         private String defenseScene;
 
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         private Content(Builder builder) {
             this.defenseScene = builder.defenseScene;
@@ -476,13 +523,21 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
         public static final class Builder {
             private String defenseScene; 
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.defenseScene = model.defenseScene;
+                this.fields = model.fields;
+            } 
 
             /**
              * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScenes parameter in the request.</p>
@@ -498,7 +553,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             /**
              * <p>The information about the match condition.</p>
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SpecInfos")
-    private java.util.List < SpecInfos> specInfos;
+    private java.util.List<SpecInfos> specInfos;
 
     private DescribeDcdnWafSpecInfoResponseBody(Builder builder) {
         this.edition = builder.edition;
@@ -33,6 +38,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
 
     public static DescribeDcdnWafSpecInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     /**
      * @return specInfos
      */
-    public java.util.List < SpecInfos> getSpecInfos() {
+    public java.util.List<SpecInfos> getSpecInfos() {
         return this.specInfos;
     }
 
     public static final class Builder {
         private String edition; 
         private String requestId; 
-        private java.util.List < SpecInfos> specInfos; 
+        private java.util.List<SpecInfos> specInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafSpecInfoResponseBody model) {
+            this.edition = model.edition;
+            this.requestId = model.requestId;
+            this.specInfos = model.specInfos;
+        } 
 
         /**
          * <p>The version of WAF.</p>
@@ -86,7 +104,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         /**
          * <p>The supported types of protection policies and the configuration information of protection rules.</p>
          */
-        public Builder specInfos(java.util.List < SpecInfos> specInfos) {
+        public Builder specInfos(java.util.List<SpecInfos> specInfos) {
             this.specInfos = specInfos;
             return this;
         }
@@ -153,6 +171,15 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             private String expr; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.config = model.config;
+                this.expr = model.expr;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The configuration code of the protection rule.</p>
              * 
@@ -201,7 +228,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
      */
     public static class SpecInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configs")
-        private java.util.List < Configs> configs;
+        private java.util.List<Configs> configs;
 
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -222,7 +249,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -234,13 +261,21 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Configs> configs; 
+            private java.util.List<Configs> configs; 
             private String defenseScene; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecInfos model) {
+                this.configs = model.configs;
+                this.defenseScene = model.defenseScene;
+            } 
 
             /**
              * <p>The configuration information of the protection rule.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
 
     public static DescribeDcdnDeletedDomainsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDeletedDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the accelerated domain name.</p>
@@ -187,6 +207,14 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
             private String domainName; 
             private String gmtModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.domainName = model.domainName;
+                this.gmtModified = model.gmtModified;
+            } 
+
             /**
              * <p>The accelerated domain name.</p>
              * 
@@ -224,7 +252,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        private java.util.List<PageData> pageData;
 
         private Domains(Builder builder) {
             this.pageData = builder.pageData;
@@ -241,17 +269,24 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
         public static final class Builder {
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.pageData = model.pageData;
+            } 
 
             /**
              * PageData.
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }

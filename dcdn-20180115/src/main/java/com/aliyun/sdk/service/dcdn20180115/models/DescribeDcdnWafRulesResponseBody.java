@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
 
     public static DescribeDcdnWafRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -82,8 +91,19 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafRulesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
@@ -121,7 +141,7 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         /**
          * <p>The information about the protection rule.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -246,6 +266,19 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
             private String ruleStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.defenseScene = model.defenseScene;
+                this.gmtModified = model.gmtModified;
+                this.policyId = model.policyId;
+                this.ruleConfig = model.ruleConfig;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
 
             /**
              * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScene field in QueryArgst.</p>

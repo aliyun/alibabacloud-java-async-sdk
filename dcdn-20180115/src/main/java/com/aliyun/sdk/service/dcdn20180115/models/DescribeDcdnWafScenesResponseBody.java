@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefenseScenes")
-    private java.util.List < DefenseScenes> defenseScenes;
+    private java.util.List<DefenseScenes> defenseScenes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defenseScenes
      */
-    public java.util.List < DefenseScenes> getDefenseScenes() {
+    public java.util.List<DefenseScenes> getDefenseScenes() {
         return this.defenseScenes;
     }
 
@@ -46,13 +55,21 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DefenseScenes> defenseScenes; 
+        private java.util.List<DefenseScenes> defenseScenes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafScenesResponseBody model) {
+            this.defenseScenes = model.defenseScenes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types of the protection policies.</p>
          */
-        public Builder defenseScenes(java.util.List < DefenseScenes> defenseScenes) {
+        public Builder defenseScenes(java.util.List<DefenseScenes> defenseScenes) {
             this.defenseScenes = defenseScenes;
             return this;
         }
@@ -129,6 +146,15 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
             private String defenseScene; 
             private Integer policyCount; 
             private Integer ruleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefenseScenes model) {
+                this.defenseScene = model.defenseScene;
+                this.policyCount = model.policyCount;
+                this.ruleCount = model.ruleCount;
+            } 
 
             /**
              * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>

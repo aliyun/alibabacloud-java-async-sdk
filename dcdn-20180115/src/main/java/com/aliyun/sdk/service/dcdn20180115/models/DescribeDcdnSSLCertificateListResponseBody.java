@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSSLCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of certificates.</p>
@@ -178,6 +195,19 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             private String issuer; 
             private Long lastTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cert model) {
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.certRegion = model.certRegion;
+                this.common = model.common;
+                this.fingerprint = model.fingerprint;
+                this.issuer = model.issuer;
+                this.lastTime = model.lastTime;
+            } 
+
             /**
              * <p>The ID of the certificate.</p>
              * 
@@ -270,7 +300,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
      */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cert")
-        private java.util.List < Cert> cert;
+        private java.util.List<Cert> cert;
 
         private CertList(Builder builder) {
             this.cert = builder.cert;
@@ -287,17 +317,24 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
         /**
          * @return cert
          */
-        public java.util.List < Cert> getCert() {
+        public java.util.List<Cert> getCert() {
             return this.cert;
         }
 
         public static final class Builder {
-            private java.util.List < Cert> cert; 
+            private java.util.List<Cert> cert; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.cert = model.cert;
+            } 
 
             /**
              * Cert.
              */
-            public Builder cert(java.util.List < Cert> cert) {
+            public Builder cert(java.util.List<Cert> cert) {
                 this.cert = cert;
                 return this;
             }
@@ -376,6 +413,16 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             private Integer count; 
             private Long pageNumber; 
             private Long pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * <p>Details about each certificate.</p>

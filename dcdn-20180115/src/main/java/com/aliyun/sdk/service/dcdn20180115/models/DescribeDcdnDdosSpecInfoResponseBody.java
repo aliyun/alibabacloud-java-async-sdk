@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SpecInfos")
-    private java.util.List < SpecInfos> specInfos;
+    private java.util.List<SpecInfos> specInfos;
 
     private DescribeDcdnDdosSpecInfoResponseBody(Builder builder) {
         this.bandwidthLimit = builder.bandwidthLimit;
@@ -53,6 +58,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
 
     public static DescribeDcdnDdosSpecInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,7 +116,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     /**
      * @return specInfos
      */
-    public java.util.List < SpecInfos> getSpecInfos() {
+    public java.util.List<SpecInfos> getSpecInfos() {
         return this.specInfos;
     }
 
@@ -119,7 +128,21 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         private String protectedArea; 
         private String qpsLimit; 
         private String requestId; 
-        private java.util.List < SpecInfos> specInfos; 
+        private java.util.List<SpecInfos> specInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDdosSpecInfoResponseBody model) {
+            this.bandwidthLimit = model.bandwidthLimit;
+            this.edition = model.edition;
+            this.enable = model.enable;
+            this.isSpecialPort = model.isSpecialPort;
+            this.protectedArea = model.protectedArea;
+            this.qpsLimit = model.qpsLimit;
+            this.requestId = model.requestId;
+            this.specInfos = model.specInfos;
+        } 
 
         /**
          * <p>The bandwidth limit of a single instance.</p>
@@ -221,7 +244,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         /**
          * <p>The code and configurations of the security rules.</p>
          */
-        public Builder specInfos(java.util.List < SpecInfos> specInfos) {
+        public Builder specInfos(java.util.List<SpecInfos> specInfos) {
             this.specInfos = specInfos;
             return this;
         }
@@ -288,6 +311,15 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             private String expr; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.config = model.config;
+                this.expr = model.expr;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The configuration code of the version rule. Valid values:</p>
              * <ul>
@@ -344,7 +376,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
      */
     public static class SpecInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configs")
-        private java.util.List < Configs> configs;
+        private java.util.List<Configs> configs;
 
         @com.aliyun.core.annotation.NameInMap("Rule")
         private String rule;
@@ -365,7 +397,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -377,13 +409,21 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Configs> configs; 
+            private java.util.List<Configs> configs; 
             private String rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecInfos model) {
+                this.configs = model.configs;
+                this.rule = model.rule;
+            } 
 
             /**
              * <p>The configurations of the version rule.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }

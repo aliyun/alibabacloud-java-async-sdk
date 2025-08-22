@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
 
     public static DescribeDcdnCertificateDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         private String certName; 
         private String key; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnCertificateDetailResponseBody model) {
+            this.cert = model.cert;
+            this.certId = model.certId;
+            this.certName = model.certName;
+            this.key = model.key;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the certificate.</p>

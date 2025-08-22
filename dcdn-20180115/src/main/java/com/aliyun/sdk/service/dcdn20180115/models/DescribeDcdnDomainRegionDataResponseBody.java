@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainRegionDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Value value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainRegionDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -318,6 +339,23 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
             private String totalBytes; 
             private String totalQuery; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionProportionData model) {
+                this.avgObjectSize = model.avgObjectSize;
+                this.avgResponseRate = model.avgResponseRate;
+                this.avgResponseTime = model.avgResponseTime;
+                this.bps = model.bps;
+                this.bytesProportion = model.bytesProportion;
+                this.proportion = model.proportion;
+                this.qps = model.qps;
+                this.region = model.region;
+                this.regionEname = model.regionEname;
+                this.totalBytes = model.totalBytes;
+                this.totalQuery = model.totalQuery;
+            } 
+
             /**
              * <p>The average response size. Unit: bytes.</p>
              * 
@@ -454,7 +492,7 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionProportionData")
-        private java.util.List < RegionProportionData> regionProportionData;
+        private java.util.List<RegionProportionData> regionProportionData;
 
         private Value(Builder builder) {
             this.regionProportionData = builder.regionProportionData;
@@ -471,17 +509,24 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
         /**
          * @return regionProportionData
          */
-        public java.util.List < RegionProportionData> getRegionProportionData() {
+        public java.util.List<RegionProportionData> getRegionProportionData() {
             return this.regionProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RegionProportionData> regionProportionData; 
+            private java.util.List<RegionProportionData> regionProportionData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.regionProportionData = model.regionProportionData;
+            } 
 
             /**
              * RegionProportionData.
              */
-            public Builder regionProportionData(java.util.List < RegionProportionData> regionProportionData) {
+            public Builder regionProportionData(java.util.List<RegionProportionData> regionProportionData) {
                 this.regionProportionData = regionProportionData;
                 return this;
             }

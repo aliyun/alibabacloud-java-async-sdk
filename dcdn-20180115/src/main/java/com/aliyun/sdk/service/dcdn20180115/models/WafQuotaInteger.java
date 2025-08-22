@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class WafQuotaInteger extends TeaModel {
 
     public static WafQuotaInteger create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class WafQuotaInteger extends TeaModel {
         private Integer greaterThanOrEqual; 
         private Integer lessThan; 
         private Integer lessThanOrEqual; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafQuotaInteger model) {
+            this.equal = model.equal;
+            this.greaterThan = model.greaterThan;
+            this.greaterThanOrEqual = model.greaterThanOrEqual;
+            this.lessThan = model.lessThan;
+            this.lessThanOrEqual = model.lessThanOrEqual;
+        } 
 
         /**
          * Equal.

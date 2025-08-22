@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateRoutineRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnvConf")
-    private java.util.Map < String, ? > envConf;
+    private java.util.Map<String, ?> envConf;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -40,7 +45,7 @@ public class CreateRoutineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class CreateRoutineRequest extends Request {
     /**
      * @return envConf
      */
-    public java.util.Map < String, ? > getEnvConf() {
+    public java.util.Map<String, ?> getEnvConf() {
         return this.envConf;
     }
 
@@ -68,7 +73,7 @@ public class CreateRoutineRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRoutineRequest, Builder> {
         private String description; 
-        private java.util.Map < String, ? > envConf; 
+        private java.util.Map<String, ?> envConf; 
         private String name; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class CreateRoutineRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;staging&quot;:{&quot;SpecName&quot;:&quot;50ms&quot;},&quot;production&quot;:{&quot;SpecName&quot;:&quot;50ms&quot;}}</p>
          */
-        public Builder envConf(java.util.Map < String, ? > envConf) {
+        public Builder envConf(java.util.Map<String, ?> envConf) {
             String envConfShrink = shrink(envConf, "EnvConf", "json");
             this.putBodyParameter("EnvConf", envConfShrink);
             this.envConf = envConf;

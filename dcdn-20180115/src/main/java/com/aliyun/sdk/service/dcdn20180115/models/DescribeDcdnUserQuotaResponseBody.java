@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,6 +74,10 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
 
     public static DescribeDcdnUserQuotaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -168,6 +177,24 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         private Integer refreshUrlQuota; 
         private Integer refreshUrlRemain; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnUserQuotaResponseBody model) {
+            this.blockQuota = model.blockQuota;
+            this.blockRemain = model.blockRemain;
+            this.domainQuota = model.domainQuota;
+            this.ignoreParamsQuota = model.ignoreParamsQuota;
+            this.ignoreParamsRemain = model.ignoreParamsRemain;
+            this.preloadQuota = model.preloadQuota;
+            this.preloadRemain = model.preloadRemain;
+            this.refreshDirQuota = model.refreshDirQuota;
+            this.refreshDirRemain = model.refreshDirRemain;
+            this.refreshUrlQuota = model.refreshUrlQuota;
+            this.refreshUrlRemain = model.refreshUrlRemain;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of URLs that can be blocked.</p>

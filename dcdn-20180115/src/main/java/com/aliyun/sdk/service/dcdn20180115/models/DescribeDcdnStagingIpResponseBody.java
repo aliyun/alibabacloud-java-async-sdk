@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return IPV4s
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
     public static final class Builder {
         private IPV4s IPV4s; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnStagingIpResponseBody model) {
+            this.IPV4s = model.IPV4s;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * IPV4s.
@@ -82,7 +99,7 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
      */
     public static class IPV4s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPV4")
-        private java.util.List < String > IPV4;
+        private java.util.List<String> IPV4;
 
         private IPV4s(Builder builder) {
             this.IPV4 = builder.IPV4;
@@ -99,17 +116,24 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
         /**
          * @return IPV4
          */
-        public java.util.List < String > getIPV4() {
+        public java.util.List<String> getIPV4() {
             return this.IPV4;
         }
 
         public static final class Builder {
-            private java.util.List < String > IPV4; 
+            private java.util.List<String> IPV4; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPV4s model) {
+                this.IPV4 = model.IPV4;
+            } 
 
             /**
              * IPV4.
              */
-            public Builder IPV4(java.util.List < String > IPV4) {
+            public Builder IPV4(java.util.List<String> IPV4) {
                 this.IPV4 = IPV4;
                 return this;
             }

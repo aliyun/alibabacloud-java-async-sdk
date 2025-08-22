@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainTopUrlVisitResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         private Url300List url300List; 
         private Url400List url400List; 
         private Url500List url500List; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainTopUrlVisitResponseBody model) {
+            this.allUrlList = model.allUrlList;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.url200List = model.url200List;
+            this.url300List = model.url300List;
+            this.url400List = model.url400List;
+            this.url500List = model.url500List;
+        } 
 
         /**
          * <p>A list of frequently requested URLs.</p>
@@ -280,6 +303,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(UrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -350,7 +384,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
      */
     public static class AllUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < UrlList> urlList;
+        private java.util.List<UrlList> urlList;
 
         private AllUrlList(Builder builder) {
             this.urlList = builder.urlList;
@@ -367,17 +401,24 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < UrlList> getUrlList() {
+        public java.util.List<UrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < UrlList> urlList; 
+            private java.util.List<UrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllUrlList model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < UrlList> urlList) {
+            public Builder urlList(java.util.List<UrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -469,6 +510,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url200ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -539,7 +591,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url200List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url200ListUrlList> urlList;
+        private java.util.List<Url200ListUrlList> urlList;
 
         private Url200List(Builder builder) {
             this.urlList = builder.urlList;
@@ -556,17 +608,24 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url200ListUrlList> getUrlList() {
+        public java.util.List<Url200ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url200ListUrlList> urlList; 
+            private java.util.List<Url200ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url200List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url200ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url200ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -658,6 +717,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url300ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -728,7 +798,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url300List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url300ListUrlList> urlList;
+        private java.util.List<Url300ListUrlList> urlList;
 
         private Url300List(Builder builder) {
             this.urlList = builder.urlList;
@@ -745,17 +815,24 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url300ListUrlList> getUrlList() {
+        public java.util.List<Url300ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url300ListUrlList> urlList; 
+            private java.util.List<Url300ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url300List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url300ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url300ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -847,6 +924,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url400ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -917,7 +1005,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url400List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url400ListUrlList> urlList;
+        private java.util.List<Url400ListUrlList> urlList;
 
         private Url400List(Builder builder) {
             this.urlList = builder.urlList;
@@ -934,17 +1022,24 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url400ListUrlList> getUrlList() {
+        public java.util.List<Url400ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url400ListUrlList> urlList; 
+            private java.util.List<Url400ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url400List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url400ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url400ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -1036,6 +1131,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url500ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. (Unit: bytes)</p>
              * 
@@ -1106,7 +1212,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url500List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url500ListUrlList> urlList;
+        private java.util.List<Url500ListUrlList> urlList;
 
         private Url500List(Builder builder) {
             this.urlList = builder.urlList;
@@ -1123,17 +1229,24 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url500ListUrlList> getUrlList() {
+        public java.util.List<Url500ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url500ListUrlList> urlList; 
+            private java.util.List<Url500ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url500List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url500ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url500ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }

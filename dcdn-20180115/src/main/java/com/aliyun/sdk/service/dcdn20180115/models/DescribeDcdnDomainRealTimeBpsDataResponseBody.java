@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainRealTimeBpsDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -118,6 +135,14 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             private Float bps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(BpsModel model) {
+                this.bps = model.bps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The bandwidth. Unit: bit/s.</p>
              * 
@@ -155,7 +180,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BpsModel")
-        private java.util.List < BpsModel> bpsModel;
+        private java.util.List<BpsModel> bpsModel;
 
         private Data(Builder builder) {
             this.bpsModel = builder.bpsModel;
@@ -172,17 +197,24 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         /**
          * @return bpsModel
          */
-        public java.util.List < BpsModel> getBpsModel() {
+        public java.util.List<BpsModel> getBpsModel() {
             return this.bpsModel;
         }
 
         public static final class Builder {
-            private java.util.List < BpsModel> bpsModel; 
+            private java.util.List<BpsModel> bpsModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bpsModel = model.bpsModel;
+            } 
 
             /**
              * BpsModel.
              */
-            public Builder bpsModel(java.util.List < BpsModel> bpsModel) {
+            public Builder bpsModel(java.util.List<BpsModel> bpsModel) {
                 this.bpsModel = bpsModel;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -35,6 +40,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -58,8 +67,17 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnRefreshTaskByIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -75,7 +93,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         /**
          * <p>A list of prefetch or refresh tasks.</p>
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -200,6 +218,19 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             private String process; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.objectPath = model.objectPath;
+                this.objectType = model.objectType;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDdosAllEventListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDdosAllEventListResponseBody model) {
+            this.dataList = model.dataList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
          * <p>The list of events.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -270,6 +290,21 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             private Long qps; 
             private String startTime; 
             private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.bps = model.bps;
+                this.cps = model.cps;
+                this.endTime = model.endTime;
+                this.eventId = model.eventId;
+                this.eventType = model.eventType;
+                this.pps = model.pps;
+                this.qps = model.qps;
+                this.startTime = model.startTime;
+                this.target = model.target;
+            } 
 
             /**
              * <p>The peak attack traffic of volumetric attacks. Unit: bit/s.</p>

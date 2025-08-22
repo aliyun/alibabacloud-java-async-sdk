@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainRealTimeReqHitRateDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of byte hit ratios.</p>
@@ -118,6 +135,14 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
             private Float reqHitRate; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReqHitRateDataModel model) {
+                this.reqHitRate = model.reqHitRate;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The request hit ratio.</p>
              * 
@@ -155,7 +180,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRateDataModel")
-        private java.util.List < ReqHitRateDataModel> reqHitRateDataModel;
+        private java.util.List<ReqHitRateDataModel> reqHitRateDataModel;
 
         private Data(Builder builder) {
             this.reqHitRateDataModel = builder.reqHitRateDataModel;
@@ -172,17 +197,24 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
         /**
          * @return reqHitRateDataModel
          */
-        public java.util.List < ReqHitRateDataModel> getReqHitRateDataModel() {
+        public java.util.List<ReqHitRateDataModel> getReqHitRateDataModel() {
             return this.reqHitRateDataModel;
         }
 
         public static final class Builder {
-            private java.util.List < ReqHitRateDataModel> reqHitRateDataModel; 
+            private java.util.List<ReqHitRateDataModel> reqHitRateDataModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.reqHitRateDataModel = model.reqHitRateDataModel;
+            } 
 
             /**
              * ReqHitRateDataModel.
              */
-            public Builder reqHitRateDataModel(java.util.List < ReqHitRateDataModel> reqHitRateDataModel) {
+            public Builder reqHitRateDataModel(java.util.List<ReqHitRateDataModel> reqHitRateDataModel) {
                 this.reqHitRateDataModel = reqHitRateDataModel;
                 return this;
             }

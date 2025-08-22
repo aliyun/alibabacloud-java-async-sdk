@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The protected domain name.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -198,6 +218,15 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
             private String clientIpTag; 
             private String domainName; 
             private Integer policyCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.clientIpTag = model.clientIpTag;
+                this.domainName = model.domainName;
+                this.policyCount = model.policyCount;
+            } 
 
             /**
              * <p>The header of IP address of the client that is connected to the point of presence (POP).</p>

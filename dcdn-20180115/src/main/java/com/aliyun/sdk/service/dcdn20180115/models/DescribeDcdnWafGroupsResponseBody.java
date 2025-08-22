@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WafGroups")
-    private java.util.List < WafGroups> wafGroups;
+    private java.util.List<WafGroups> wafGroups;
 
     private DescribeDcdnWafGroupsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -41,6 +46,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
 
     public static DescribeDcdnWafGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     /**
      * @return wafGroups
      */
-    public java.util.List < WafGroups> getWafGroups() {
+    public java.util.List<WafGroups> getWafGroups() {
         return this.wafGroups;
     }
 
@@ -83,7 +92,18 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < WafGroups> wafGroups; 
+        private java.util.List<WafGroups> wafGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafGroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.wafGroups = model.wafGroups;
+        } 
 
         /**
          * <p>The page number of the returned page. Default value: 1.</p>
@@ -132,7 +152,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         /**
          * <p>The list of WAF rule groups.</p>
          */
-        public Builder wafGroups(java.util.List < WafGroups> wafGroups) {
+        public Builder wafGroups(java.util.List<WafGroups> wafGroups) {
             this.wafGroups = wafGroups;
             return this;
         }
@@ -199,6 +219,15 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the policy.</p>
              * 
@@ -260,7 +289,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
@@ -313,7 +342,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -342,10 +371,23 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private String name; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private Integer ruleCount; 
             private String subscribe; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WafGroups model) {
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.policies = model.policies;
+                this.ruleCount = model.ruleCount;
+                this.subscribe = model.subscribe;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The time when the WAF rule group was modified.</p>
@@ -383,7 +425,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             /**
              * <p>The policy that is associated with the WAF rule group.</p>
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }

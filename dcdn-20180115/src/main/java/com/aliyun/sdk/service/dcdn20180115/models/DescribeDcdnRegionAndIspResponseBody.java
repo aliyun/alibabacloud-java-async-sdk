@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isps
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         private Isps isps; 
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnRegionAndIspResponseBody model) {
+            this.isps = model.isps;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of ISPs.</p>
@@ -138,6 +156,14 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameEn; 
             private String nameZh; 
 
+            private Builder() {
+            } 
+
+            private Builder(Isp model) {
+                this.nameEn = model.nameEn;
+                this.nameZh = model.nameZh;
+            } 
+
             /**
              * <p>The English name of the region.</p>
              * 
@@ -175,7 +201,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
      */
     public static class Isps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Isp")
-        private java.util.List < Isp> isp;
+        private java.util.List<Isp> isp;
 
         private Isps(Builder builder) {
             this.isp = builder.isp;
@@ -192,17 +218,24 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         /**
          * @return isp
          */
-        public java.util.List < Isp> getIsp() {
+        public java.util.List<Isp> getIsp() {
             return this.isp;
         }
 
         public static final class Builder {
-            private java.util.List < Isp> isp; 
+            private java.util.List<Isp> isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isps model) {
+                this.isp = model.isp;
+            } 
 
             /**
              * Isp.
              */
-            public Builder isp(java.util.List < Isp> isp) {
+            public Builder isp(java.util.List<Isp> isp) {
                 this.isp = isp;
                 return this;
             }
@@ -258,6 +291,14 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameEn; 
             private String nameZh; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.nameEn = model.nameEn;
+                this.nameZh = model.nameZh;
+            } 
+
             /**
              * <p>The English name of the region.</p>
              * 
@@ -295,7 +336,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
-        private java.util.List < Region> region;
+        private java.util.List<Region> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -312,17 +353,24 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < Region> getRegion() {
+        public java.util.List<Region> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < Region> region; 
+            private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < Region> region) {
+            public Builder region(java.util.List<Region> region) {
                 this.region = region;
                 return this;
             }

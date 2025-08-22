@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RuleIds ruleIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchCreateDcdnWafRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleIds = model.ruleIds;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -82,7 +99,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
      */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
-        private java.util.List < String > ruleId;
+        private java.util.List<String> ruleId;
 
         private RuleIds(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -99,17 +116,24 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public java.util.List < String > getRuleId() {
+        public java.util.List<String> getRuleId() {
             return this.ruleId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ruleId; 
+            private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
              */
-            public Builder ruleId(java.util.List < String > ruleId) {
+            public Builder ruleId(java.util.List<String> ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }

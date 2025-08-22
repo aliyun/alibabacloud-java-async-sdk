@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigList
      */
@@ -48,6 +57,14 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private DomainConfigList domainConfigList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchSetDcdnDomainConfigsResponseBody model) {
+            this.domainConfigList = model.domainConfigList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of domain configurations.</p>
@@ -130,6 +147,15 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             private String domainName; 
             private String functionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigModel model) {
+                this.configId = model.configId;
+                this.domainName = model.domainName;
+                this.functionName = model.functionName;
+            } 
+
             /**
              * <p>The ID of the configuration.</p>
              * 
@@ -178,7 +204,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
      */
     public static class DomainConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainConfigModel")
-        private java.util.List < DomainConfigModel> domainConfigModel;
+        private java.util.List<DomainConfigModel> domainConfigModel;
 
         private DomainConfigList(Builder builder) {
             this.domainConfigModel = builder.domainConfigModel;
@@ -195,17 +221,24 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         /**
          * @return domainConfigModel
          */
-        public java.util.List < DomainConfigModel> getDomainConfigModel() {
+        public java.util.List<DomainConfigModel> getDomainConfigModel() {
             return this.domainConfigModel;
         }
 
         public static final class Builder {
-            private java.util.List < DomainConfigModel> domainConfigModel; 
+            private java.util.List<DomainConfigModel> domainConfigModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigList model) {
+                this.domainConfigModel = model.domainConfigModel;
+            } 
 
             /**
              * DomainConfigModel.
              */
-            public Builder domainConfigModel(java.util.List < DomainConfigModel> domainConfigModel) {
+            public Builder domainConfigModel(java.util.List<DomainConfigModel> domainConfigModel) {
                 this.domainConfigModel = domainConfigModel;
                 return this;
             }

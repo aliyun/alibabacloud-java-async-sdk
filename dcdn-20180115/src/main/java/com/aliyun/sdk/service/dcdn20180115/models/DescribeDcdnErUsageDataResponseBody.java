@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -72,6 +81,16 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         private ErAccData erAccData; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnErUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.erAccData = model.erAccData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The end of the time range during which data was queried.</p>
@@ -188,6 +207,16 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
             private String spec; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErAccItem model) {
+                this.erAcc = model.erAcc;
+                this.routine = model.routine;
+                this.spec = model.spec;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The number of requests.</p>
              * 
@@ -247,7 +276,7 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
      */
     public static class ErAccData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErAccItem")
-        private java.util.List < ErAccItem> erAccItem;
+        private java.util.List<ErAccItem> erAccItem;
 
         private ErAccData(Builder builder) {
             this.erAccItem = builder.erAccItem;
@@ -264,17 +293,24 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         /**
          * @return erAccItem
          */
-        public java.util.List < ErAccItem> getErAccItem() {
+        public java.util.List<ErAccItem> getErAccItem() {
             return this.erAccItem;
         }
 
         public static final class Builder {
-            private java.util.List < ErAccItem> erAccItem; 
+            private java.util.List<ErAccItem> erAccItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErAccData model) {
+                this.erAccItem = model.erAccItem;
+            } 
 
             /**
              * ErAccItem.
              */
-            public Builder erAccItem(java.util.List < ErAccItem> erAccItem) {
+            public Builder erAccItem(java.util.List<ErAccItem> erAccItem) {
                 this.erAccItem = erAccItem;
                 return this;
             }

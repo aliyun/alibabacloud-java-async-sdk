@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
 
     public static DescribeDcdnRefreshTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         private String requestId; 
         private Tasks tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnRefreshTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -247,6 +267,19 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.objectPath = model.objectPath;
+                this.objectType = model.objectType;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The time when the task was created. The time is displayed in UTC.</p>
              * 
@@ -354,7 +387,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
      */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Task")
-        private java.util.List < Task> task;
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -371,17 +404,24 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

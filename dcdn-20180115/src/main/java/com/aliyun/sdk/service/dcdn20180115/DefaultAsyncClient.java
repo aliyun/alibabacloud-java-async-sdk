@@ -314,29 +314,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can call this operation up to 10 times per second per account.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of BatchSetDcdnDomainCertificate  BatchSetDcdnDomainCertificateRequest
-     * @return BatchSetDcdnDomainCertificateResponse
-     */
-    @Override
-    public CompletableFuture<BatchSetDcdnDomainCertificateResponse> batchSetDcdnDomainCertificate(BatchSetDcdnDomainCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchSetDcdnDomainCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSetDcdnDomainCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BatchSetDcdnDomainCertificateResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <p>  You can specify up to 50 domain names in each request.</p>
      * <ul>
      * <li>You can call this operation up to 30 times per second per account.</li>
@@ -684,6 +661,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateSlrAndSlsProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCustomDomainSampleRate  DeleteCustomDomainSampleRateRequest
+     * @return DeleteCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCustomDomainSampleRateResponse> deleteCustomDomainSampleRate(DeleteCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCustomDomainSampleRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCustomDomainSampleRateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1044,6 +1039,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRoutineConfEnvsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCustomDomainSampleRate  DescribeCustomDomainSampleRateRequest
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCustomDomainSampleRateResponse> describeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCustomDomainSampleRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCustomDomainSampleRateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2217,7 +2230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to apply for permissions to use this operation.</li>
+     * </ul>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDcdnDomainRealTimeDetailData  DescribeDcdnDomainRealTimeDetailDataRequest
@@ -4616,6 +4632,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeKvRealTimeQpsData  DescribeKvRealTimeQpsDataRequest
+     * @return DescribeKvRealTimeQpsDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKvRealTimeQpsDataResponse> describeKvRealTimeQpsData(DescribeKvRealTimeQpsDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKvRealTimeQpsData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKvRealTimeQpsDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKvRealTimeQpsDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p><em>Note</em>** You can call this operation up to 5 times per second per account.</p>
      * <ul>
@@ -5057,6 +5091,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyCustomDomainSampleRate  ModifyCustomDomainSampleRateRequest
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<ModifyCustomDomainSampleRateResponse> modifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCustomDomainSampleRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyCustomDomainSampleRateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -5449,27 +5501,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetDcdnDomainCSRCertificateResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.  * @description > You can call this operation up to 30 times per second per account.
-     * 
-     * @param request the request parameters of SetDcdnDomainCertificate  SetDcdnDomainCertificateRequest
-     * @return SetDcdnDomainCertificateResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<SetDcdnDomainCertificateResponse> setDcdnDomainCertificate(SetDcdnDomainCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDcdnDomainCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDcdnDomainCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetDcdnDomainCertificateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domain
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Domain domain; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafDomainDetailResponseBody model) {
+            this.domain = model.domain;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the accelerated domain name.</p>
@@ -130,6 +147,15 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             private Long policyId; 
             private String policyIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefenseScenes model) {
+                this.defenseScene = model.defenseScene;
+                this.policyId = model.policyId;
+                this.policyIds = model.policyIds;
+            } 
+
             /**
              * <p>The type of the protection policy. Valid values:</p>
              * <ul>
@@ -183,7 +209,7 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
      */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScenes")
-        private java.util.List < DefenseScenes> defenseScenes;
+        private java.util.List<DefenseScenes> defenseScenes;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -204,7 +230,7 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         /**
          * @return defenseScenes
          */
-        public java.util.List < DefenseScenes> getDefenseScenes() {
+        public java.util.List<DefenseScenes> getDefenseScenes() {
             return this.defenseScenes;
         }
 
@@ -216,13 +242,21 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DefenseScenes> defenseScenes; 
+            private java.util.List<DefenseScenes> defenseScenes; 
             private String domainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.defenseScenes = model.defenseScenes;
+                this.domainName = model.domainName;
+            } 
 
             /**
              * <p>The types of the protection policies.</p>
              */
-            public Builder defenseScenes(java.util.List < DefenseScenes> defenseScenes) {
+            public Builder defenseScenes(java.util.List<DefenseScenes> defenseScenes) {
                 this.defenseScenes = defenseScenes;
                 return this;
             }

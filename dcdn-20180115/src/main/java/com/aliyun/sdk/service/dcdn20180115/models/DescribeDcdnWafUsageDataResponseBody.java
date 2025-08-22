@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -72,6 +81,16 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private WafUsageData wafUsageData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.wafUsageData = model.wafUsageData;
+        } 
 
         /**
          * <p>The operation that you want to perform. Set the value to <strong>DescribeDcdnWafUsageData</strong>.</p>
@@ -216,6 +235,18 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             private Long secCu; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(WafUsageDataItem model) {
+                this.accessCnt = model.accessCnt;
+                this.blockCnt = model.blockCnt;
+                this.domain = model.domain;
+                this.observeCnt = model.observeCnt;
+                this.secCu = model.secCu;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The number of blocked requests.</p>
              * 
@@ -298,7 +329,7 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
      */
     public static class WafUsageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WafUsageDataItem")
-        private java.util.List < WafUsageDataItem> wafUsageDataItem;
+        private java.util.List<WafUsageDataItem> wafUsageDataItem;
 
         private WafUsageData(Builder builder) {
             this.wafUsageDataItem = builder.wafUsageDataItem;
@@ -315,17 +346,24 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         /**
          * @return wafUsageDataItem
          */
-        public java.util.List < WafUsageDataItem> getWafUsageDataItem() {
+        public java.util.List<WafUsageDataItem> getWafUsageDataItem() {
             return this.wafUsageDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < WafUsageDataItem> wafUsageDataItem; 
+            private java.util.List<WafUsageDataItem> wafUsageDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(WafUsageData model) {
+                this.wafUsageDataItem = model.wafUsageDataItem;
+            } 
 
             /**
              * WafUsageDataItem.
              */
-            public Builder wafUsageDataItem(java.util.List < WafUsageDataItem> wafUsageDataItem) {
+            public Builder wafUsageDataItem(java.util.List<WafUsageDataItem> wafUsageDataItem) {
                 this.wafUsageDataItem = wafUsageDataItem;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
 
     public static DescribeDcdnDomainRealTimeHttpCodeDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         private RealTimeHttpCodeData realTimeHttpCodeData; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainRealTimeHttpCodeDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.realTimeHttpCodeData = model.realTimeHttpCodeData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -222,6 +243,15 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             private String count; 
             private String proportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealTimeCodeProportionData model) {
+                this.code = model.code;
+                this.count = model.count;
+                this.proportion = model.proportion;
+            } 
+
             /**
              * <p>The HTTP status code returned.</p>
              * 
@@ -270,7 +300,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RealTimeCodeProportionData")
-        private java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData;
+        private java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData;
 
         private Value(Builder builder) {
             this.realTimeCodeProportionData = builder.realTimeCodeProportionData;
@@ -287,17 +317,24 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         /**
          * @return realTimeCodeProportionData
          */
-        public java.util.List < RealTimeCodeProportionData> getRealTimeCodeProportionData() {
+        public java.util.List<RealTimeCodeProportionData> getRealTimeCodeProportionData() {
             return this.realTimeCodeProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData; 
+            private java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.realTimeCodeProportionData = model.realTimeCodeProportionData;
+            } 
 
             /**
              * RealTimeCodeProportionData.
              */
-            public Builder realTimeCodeProportionData(java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData) {
+            public Builder realTimeCodeProportionData(java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData) {
                 this.realTimeCodeProportionData = realTimeCodeProportionData;
                 return this;
             }
@@ -353,6 +390,14 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             private String timeStamp; 
             private Value value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the returned data.</p>
              * 
@@ -387,7 +432,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
      */
     public static class RealTimeHttpCodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private RealTimeHttpCodeData(Builder builder) {
             this.usageData = builder.usageData;
@@ -404,17 +449,24 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTimeHttpCodeData model) {
+                this.usageData = model.usageData;
+            } 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

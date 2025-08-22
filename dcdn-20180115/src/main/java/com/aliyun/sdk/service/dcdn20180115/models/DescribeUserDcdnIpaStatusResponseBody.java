@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
 
     public static DescribeUserDcdnIpaStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         private Boolean inDebtOverdue; 
         private Boolean onService; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserDcdnIpaStatusResponseBody model) {
+            this.enabled = model.enabled;
+            this.inDebt = model.inDebt;
+            this.inDebtOverdue = model.inDebtOverdue;
+            this.onService = model.onService;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the IPA service is activated.</p>

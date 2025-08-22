@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -48,6 +57,14 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDcdnSLSRealtimeLogDeliveryResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration results of the domain name.</p>
@@ -142,6 +159,16 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             private String region; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.desc = model.desc;
+                this.domainName = model.domainName;
+                this.region = model.region;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The description of the returned result.</p>
              * 
@@ -205,7 +232,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
-        private java.util.List < Domains> domains;
+        private java.util.List<Domains> domains;
 
         private Content(Builder builder) {
             this.domains = builder.domains;
@@ -222,17 +249,24 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < Domains> getDomains() {
+        public java.util.List<Domains> getDomains() {
             return this.domains;
         }
 
         public static final class Builder {
-            private java.util.List < Domains> domains; 
+            private java.util.List<Domains> domains; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.domains = model.domains;
+            } 
 
             /**
              * Domains.
              */
-            public Builder domains(java.util.List < Domains> domains) {
+            public Builder domains(java.util.List<Domains> domains) {
                 this.domains = domains;
                 return this;
             }

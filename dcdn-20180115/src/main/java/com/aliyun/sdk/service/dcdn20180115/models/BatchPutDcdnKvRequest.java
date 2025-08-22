@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchPutDcdnKvRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("KvList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < KvList> kvList;
+    private java.util.List<KvList> kvList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -36,7 +41,7 @@ public class BatchPutDcdnKvRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class BatchPutDcdnKvRequest extends Request {
     /**
      * @return kvList
      */
-    public java.util.List < KvList> getKvList() {
+    public java.util.List<KvList> getKvList() {
         return this.kvList;
     }
 
@@ -56,7 +61,7 @@ public class BatchPutDcdnKvRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchPutDcdnKvRequest, Builder> {
-        private java.util.List < KvList> kvList; 
+        private java.util.List<KvList> kvList; 
         private String namespace; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class BatchPutDcdnKvRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder kvList(java.util.List < KvList> kvList) {
+        public Builder kvList(java.util.List<KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
             this.putBodyParameter("KvList", kvListShrink);
             this.kvList = kvList;
@@ -168,6 +173,16 @@ public class BatchPutDcdnKvRequest extends Request {
             private Long expirationTtl; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(KvList model) {
+                this.expiration = model.expiration;
+                this.expirationTtl = model.expirationTtl;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Expiration.

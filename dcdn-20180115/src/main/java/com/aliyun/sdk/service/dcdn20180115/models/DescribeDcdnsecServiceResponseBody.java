@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,6 +74,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
 
     public static DescribeDcdnsecServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -168,6 +177,24 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         private String requestType; 
         private String startTime; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnsecServiceResponseBody model) {
+            this.changingAffectTime = model.changingAffectTime;
+            this.changingChargeType = model.changingChargeType;
+            this.domainNum = model.domainNum;
+            this.endTime = model.endTime;
+            this.flowType = model.flowType;
+            this.instanceId = model.instanceId;
+            this.internetChargeType = model.internetChargeType;
+            this.operationLocks = model.operationLocks;
+            this.requestId = model.requestId;
+            this.requestType = model.requestType;
+            this.startTime = model.startTime;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
@@ -354,6 +381,13 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the instance was locked.</p>
              * 
@@ -380,7 +414,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -397,12 +431,19 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the instance was locked.</p>
@@ -410,7 +451,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>financial</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }

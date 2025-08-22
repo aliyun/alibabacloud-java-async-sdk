@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSMCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of the certificate information.</p>
@@ -142,6 +159,16 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
             private String common; 
             private String issuer; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.common = model.common;
+                this.issuer = model.issuer;
+            } 
+
             /**
              * <p>The ID of the certificate.</p>
              * 
@@ -201,7 +228,7 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
      */
     public static class CertificateListModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertList")
-        private java.util.List < CertList> certList;
+        private java.util.List<CertList> certList;
 
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -222,7 +249,7 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
         /**
          * @return certList
          */
-        public java.util.List < CertList> getCertList() {
+        public java.util.List<CertList> getCertList() {
             return this.certList;
         }
 
@@ -234,13 +261,21 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CertList> certList; 
+            private java.util.List<CertList> certList; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+            } 
 
             /**
              * <p>A list of certificates.</p>
              */
-            public Builder certList(java.util.List < CertList> certList) {
+            public Builder certList(java.util.List<CertList> certList) {
                 this.certList = certList;
                 return this;
             }

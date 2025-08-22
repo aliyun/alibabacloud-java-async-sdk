@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
 
     public static DescribeDcdnSMCertificateDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         private String requestId; 
         private String sans; 
         private String signCertificate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSMCertificateDetailResponseBody model) {
+            this.certExpireTime = model.certExpireTime;
+            this.certIdentifier = model.certIdentifier;
+            this.certName = model.certName;
+            this.certOrg = model.certOrg;
+            this.commonName = model.commonName;
+            this.encryptCertificate = model.encryptCertificate;
+            this.requestId = model.requestId;
+            this.sans = model.sans;
+            this.signCertificate = model.signCertificate;
+        } 
 
         /**
          * <p>The time when the certificate expires. The time is displayed in UTC.</p>

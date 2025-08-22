@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Vips")
-    private java.util.List < String > vips;
+    private java.util.List<String> vips;
 
     private DescribeDcdnL2VipsResponseBody(Builder builder) {
         this.domainName = builder.domainName;
@@ -33,6 +38,10 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
 
     public static DescribeDcdnL2VipsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
     /**
      * @return vips
      */
-    public java.util.List < String > getVips() {
+    public java.util.List<String> getVips() {
         return this.vips;
     }
 
     public static final class Builder {
         private String domainName; 
         private String requestId; 
-        private java.util.List < String > vips; 
+        private java.util.List<String> vips; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnL2VipsResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.vips = model.vips;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>
@@ -86,7 +104,7 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
         /**
          * <p>The virtual IP addresses (VIPs).</p>
          */
-        public Builder vips(java.util.List < String > vips) {
+        public Builder vips(java.util.List<String> vips) {
             this.vips = vips;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
 
     public static DescribeDcdnIpaServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         private String openingTime; 
         private OperationLocks operationLocks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnIpaServiceResponseBody model) {
+            this.changingAffectTime = model.changingAffectTime;
+            this.changingChargeType = model.changingChargeType;
+            this.instanceId = model.instanceId;
+            this.internetChargeType = model.internetChargeType;
+            this.openingTime = model.openingTime;
+            this.operationLocks = model.operationLocks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the change of the billing method starts to take effect. The time is in GMT. This time appears on the frontend only when it is later than the current time.</p>
@@ -239,6 +261,13 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the instance is locked. For example, a value of <strong>financial</strong> indicates that an overdue payment exists.</p>
              * 
@@ -265,7 +294,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -282,12 +311,19 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the instance is locked. For example, a value of <strong>financial</strong> indicates that an overdue payment exists.</p>
@@ -295,7 +331,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>financial</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }

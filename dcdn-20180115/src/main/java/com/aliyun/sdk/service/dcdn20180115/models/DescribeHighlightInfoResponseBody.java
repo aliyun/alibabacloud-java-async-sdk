@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHighlightInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataModule")
-    private java.util.List < DataModule> dataModule;
+    private java.util.List<DataModule> dataModule;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataModule
      */
-    public java.util.List < DataModule> getDataModule() {
+    public java.util.List<DataModule> getDataModule() {
         return this.dataModule;
     }
 
@@ -46,13 +55,21 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataModule> dataModule; 
+        private java.util.List<DataModule> dataModule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHighlightInfoResponseBody model) {
+            this.dataModule = model.dataModule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data model of the highlighted data.</p>
          */
-        public Builder dataModule(java.util.List < DataModule> dataModule) {
+        public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
             return this;
         }
@@ -129,6 +146,15 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             private String hit; 
             private String key; 
             private String raw; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.hit = model.hit;
+                this.key = model.key;
+                this.raw = model.raw;
+            } 
 
             /**
              * <p>The highlighted data.</p>

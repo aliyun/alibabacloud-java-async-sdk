@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnSLSRealTimeLogTypeResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -118,6 +135,14 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             private String businessType; 
             private String desc; 
 
+            private Builder() {
+            } 
+
+            private Builder(Business model) {
+                this.businessType = model.businessType;
+                this.desc = model.desc;
+            } 
+
             /**
              * <p>The type of real-time logs. Valid values:</p>
              * <ul>
@@ -160,7 +185,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Business")
-        private java.util.List < Business> business;
+        private java.util.List<Business> business;
 
         private Content(Builder builder) {
             this.business = builder.business;
@@ -177,17 +202,24 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         /**
          * @return business
          */
-        public java.util.List < Business> getBusiness() {
+        public java.util.List<Business> getBusiness() {
             return this.business;
         }
 
         public static final class Builder {
-            private java.util.List < Business> business; 
+            private java.util.List<Business> business; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.business = model.business;
+            } 
 
             /**
              * Business.
              */
-            public Builder business(java.util.List < Business> business) {
+            public Builder business(java.util.List<Business> business) {
                 this.business = business;
                 return this;
             }

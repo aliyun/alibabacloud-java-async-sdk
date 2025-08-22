@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataInterval
      */
@@ -60,6 +69,15 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         private BpsDataInterval bpsDataInterval; 
         private String dataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainBpsDataByLayerResponseBody model) {
+            this.bpsDataInterval = model.bpsDataInterval;
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The bandwidth returned at each time interval.</p>
@@ -201,6 +219,19 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             private String trafficValue; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.dynamicTrafficValue = model.dynamicTrafficValue;
+                this.dynamicValue = model.dynamicValue;
+                this.staticTrafficValue = model.staticTrafficValue;
+                this.staticValue = model.staticValue;
+                this.timeStamp = model.timeStamp;
+                this.trafficValue = model.trafficValue;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The traffic that is used to deliver dynamic content. Unit: bytes.</p>
              * 
@@ -293,7 +324,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
      */
     public static class BpsDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private BpsDataInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -310,17 +341,24 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

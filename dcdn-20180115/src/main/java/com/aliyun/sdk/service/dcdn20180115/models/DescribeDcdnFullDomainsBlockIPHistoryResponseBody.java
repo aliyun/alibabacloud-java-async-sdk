@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("IPBlockInfo")
-    private java.util.List < IPBlockInfo> IPBlockInfo;
+    private java.util.List<IPBlockInfo> IPBlockInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -39,6 +44,10 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -56,7 +65,7 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     /**
      * @return IPBlockInfo
      */
-    public java.util.List < IPBlockInfo> getIPBlockInfo() {
+    public java.util.List<IPBlockInfo> getIPBlockInfo() {
         return this.IPBlockInfo;
     }
 
@@ -70,8 +79,18 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     public static final class Builder {
         private Integer code; 
         private String description; 
-        private java.util.List < IPBlockInfo> IPBlockInfo; 
+        private java.util.List<IPBlockInfo> IPBlockInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnFullDomainsBlockIPHistoryResponseBody model) {
+            this.code = model.code;
+            this.description = model.description;
+            this.IPBlockInfo = model.IPBlockInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -104,7 +123,7 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         /**
          * <p>The result of the operation.</p>
          */
-        public Builder IPBlockInfo(java.util.List < IPBlockInfo> IPBlockInfo) {
+        public Builder IPBlockInfo(java.util.List<IPBlockInfo> IPBlockInfo) {
             this.IPBlockInfo = IPBlockInfo;
             return this;
         }
@@ -136,16 +155,28 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         @com.aliyun.core.annotation.NameInMap("BlockIP")
         private String blockIP;
 
+        @com.aliyun.core.annotation.NameInMap("BlockInterval")
+        private String blockInterval;
+
         @com.aliyun.core.annotation.NameInMap("DeliverTime")
         private String deliverTime;
+
+        @com.aliyun.core.annotation.NameInMap("OperationType")
+        private String operationType;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateType")
+        private String updateType;
+
         private IPBlockInfo(Builder builder) {
             this.blockIP = builder.blockIP;
+            this.blockInterval = builder.blockInterval;
             this.deliverTime = builder.deliverTime;
+            this.operationType = builder.operationType;
             this.status = builder.status;
+            this.updateType = builder.updateType;
         }
 
         public static Builder builder() {
@@ -164,10 +195,24 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         }
 
         /**
+         * @return blockInterval
+         */
+        public String getBlockInterval() {
+            return this.blockInterval;
+        }
+
+        /**
          * @return deliverTime
          */
         public String getDeliverTime() {
             return this.deliverTime;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
         }
 
         /**
@@ -177,10 +222,32 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             return this.status;
         }
 
+        /**
+         * @return updateType
+         */
+        public String getUpdateType() {
+            return this.updateType;
+        }
+
         public static final class Builder {
             private String blockIP; 
+            private String blockInterval; 
             private String deliverTime; 
+            private String operationType; 
             private String status; 
+            private String updateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPBlockInfo model) {
+                this.blockIP = model.blockIP;
+                this.blockInterval = model.blockInterval;
+                this.deliverTime = model.deliverTime;
+                this.operationType = model.operationType;
+                this.status = model.status;
+                this.updateType = model.updateType;
+            } 
 
             /**
              * <p>The blocked IP address or CIDR block.</p>
@@ -190,6 +257,14 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
              */
             public Builder blockIP(String blockIP) {
                 this.blockIP = blockIP;
+                return this;
+            }
+
+            /**
+             * BlockInterval.
+             */
+            public Builder blockInterval(String blockInterval) {
+                this.blockInterval = blockInterval;
                 return this;
             }
 
@@ -205,6 +280,14 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             }
 
             /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
+                return this;
+            }
+
+            /**
              * <p>The delivery status.</p>
              * <ul>
              * <li>Success</li>
@@ -216,6 +299,14 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UpdateType.
+             */
+            public Builder updateType(String updateType) {
+                this.updateType = updateType;
                 return this;
             }
 

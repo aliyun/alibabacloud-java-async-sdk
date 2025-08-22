@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetDcdnDomainCertificateResponse} extends {@link TeaModel}
+ * {@link DescribeCustomDomainSampleRateResponse} extends {@link TeaModel}
  *
- * <p>SetDcdnDomainCertificateResponse</p>
+ * <p>DescribeCustomDomainSampleRateResponse</p>
  */
-public class SetDcdnDomainCertificateResponse extends Response {
+public class DescribeCustomDomainSampleRateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SetDcdnDomainCertificateResponseBody body;
+    private DescribeCustomDomainSampleRateResponseBody body;
 
-    private SetDcdnDomainCertificateResponse(BuilderImpl builder) {
+    private DescribeCustomDomainSampleRateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SetDcdnDomainCertificateResponse create() {
+    public static DescribeCustomDomainSampleRateResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class SetDcdnDomainCertificateResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class SetDcdnDomainCertificateResponse extends Response {
     /**
      * @return body
      */
-    public SetDcdnDomainCertificateResponseBody getBody() {
+    public DescribeCustomDomainSampleRateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetDcdnDomainCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeCustomDomainSampleRateResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SetDcdnDomainCertificateResponseBody body);
+        Builder body(DescribeCustomDomainSampleRateResponseBody body);
 
         @Override
-        SetDcdnDomainCertificateResponse build();
+        DescribeCustomDomainSampleRateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetDcdnDomainCertificateResponse, Builder>
+            extends Response.BuilderImpl<DescribeCustomDomainSampleRateResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SetDcdnDomainCertificateResponseBody body; 
+        private DescribeCustomDomainSampleRateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetDcdnDomainCertificateResponse response) {
+        private BuilderImpl(DescribeCustomDomainSampleRateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class SetDcdnDomainCertificateResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class SetDcdnDomainCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetDcdnDomainCertificateResponseBody body) {
+        public Builder body(DescribeCustomDomainSampleRateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetDcdnDomainCertificateResponse build() {
-            return new SetDcdnDomainCertificateResponse(this);
+        public DescribeCustomDomainSampleRateResponse build() {
+            return new DescribeCustomDomainSampleRateResponse(this);
         } 
 
     } 

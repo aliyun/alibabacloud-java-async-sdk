@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRoutineSpecResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.Map < String, ? > content;
+    private java.util.Map<String, ?> content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.Map < String, ? > getContent() {
+    public java.util.Map<String, ?> getContent() {
         return this.content;
     }
 
@@ -46,8 +55,16 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > content; 
+        private java.util.Map<String, ?> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRoutineSpecResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The specification of the CPU time slice. Valid values: 5 ms, 50 ms, and 100 ms.</p>
@@ -55,7 +72,7 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>5ms, 50ms, 100ms</p>
          */
-        public Builder content(java.util.Map < String, ? > content) {
+        public Builder content(java.util.Map<String, ?> content) {
             this.content = content;
             return this;
         }

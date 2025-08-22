@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private CertInfos certInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainByCertificateResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the certificate.</p>
@@ -202,6 +219,21 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             private String domainNames; 
             private String issuer; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certCaIsLegacy = model.certCaIsLegacy;
+                this.certExpireTime = model.certExpireTime;
+                this.certExpired = model.certExpired;
+                this.certStartTime = model.certStartTime;
+                this.certSubjectCommonName = model.certSubjectCommonName;
+                this.certType = model.certType;
+                this.domainList = model.domainList;
+                this.domainNames = model.domainNames;
+                this.issuer = model.issuer;
+            } 
+
             /**
              * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
              * <ul>
@@ -325,7 +357,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
      */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
-        private java.util.List < CertInfo> certInfo;
+        private java.util.List<CertInfo> certInfo;
 
         private CertInfos(Builder builder) {
             this.certInfo = builder.certInfo;
@@ -342,17 +374,24 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         /**
          * @return certInfo
          */
-        public java.util.List < CertInfo> getCertInfo() {
+        public java.util.List<CertInfo> getCertInfo() {
             return this.certInfo;
         }
 
         public static final class Builder {
-            private java.util.List < CertInfo> certInfo; 
+            private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.
              */
-            public Builder certInfo(java.util.List < CertInfo> certInfo) {
+            public Builder certInfo(java.util.List<CertInfo> certInfo) {
                 this.certInfo = certInfo;
                 return this;
             }

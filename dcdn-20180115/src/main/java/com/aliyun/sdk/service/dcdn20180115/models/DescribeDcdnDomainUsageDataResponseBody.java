@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         private String startTime; 
         private String type; 
         private UsageDataPerInterval usageDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainUsageDataResponseBody model) {
+            this.area = model.area;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.type = model.type;
+            this.usageDataPerInterval = model.usageDataPerInterval;
+        } 
 
         /**
          * <p>The billable region where the usage data was collected.</p>
@@ -280,6 +303,16 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.peakTime = model.peakTime;
+                this.specialValue = model.specialValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The time of the peak bandwidth value if the <strong>Field</strong> parameter in the request is set to <strong>bps</strong>. Otherwise, this parameter returns the same value as the <strong>TimeStamp</strong> parameter.</p>
              * 
@@ -342,7 +375,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
      */
     public static class UsageDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private UsageDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -359,17 +392,24 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

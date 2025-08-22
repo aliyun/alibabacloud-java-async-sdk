@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
 
     public static DescribeDcdnTopDomainsByFlowResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TopDomains topDomains; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnTopDomainsByFlowResponseBody model) {
+            this.domainCount = model.domainCount;
+            this.domainOnlineCount = model.domainOnlineCount;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.topDomains = model.topDomains;
+        } 
 
         /**
          * <p>The total number of accelerated domains under your account.</p>
@@ -270,6 +291,19 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             private String totalTraffic; 
             private String trafficPercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopDomain model) {
+                this.domainName = model.domainName;
+                this.maxBps = model.maxBps;
+                this.maxBpsTime = model.maxBpsTime;
+                this.rank = model.rank;
+                this.totalAccess = model.totalAccess;
+                this.totalTraffic = model.totalTraffic;
+                this.trafficPercent = model.trafficPercent;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -362,7 +396,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
      */
     public static class TopDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopDomain")
-        private java.util.List < TopDomain> topDomain;
+        private java.util.List<TopDomain> topDomain;
 
         private TopDomains(Builder builder) {
             this.topDomain = builder.topDomain;
@@ -379,17 +413,24 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         /**
          * @return topDomain
          */
-        public java.util.List < TopDomain> getTopDomain() {
+        public java.util.List<TopDomain> getTopDomain() {
             return this.topDomain;
         }
 
         public static final class Builder {
-            private java.util.List < TopDomain> topDomain; 
+            private java.util.List<TopDomain> topDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopDomains model) {
+                this.topDomain = model.topDomain;
+            } 
 
             /**
              * TopDomain.
              */
-            public Builder topDomain(java.util.List < TopDomain> topDomain) {
+            public Builder topDomain(java.util.List<TopDomain> topDomain) {
                 this.topDomain = topDomain;
                 return this;
             }

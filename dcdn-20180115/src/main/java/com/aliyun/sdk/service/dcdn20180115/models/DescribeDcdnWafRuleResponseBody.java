@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Rule rule; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnWafRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -177,6 +194,19 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
             private String ruleStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.defenseScene = model.defenseScene;
+                this.gmtModified = model.gmtModified;
+                this.policyId = model.policyId;
+                this.ruleConfig = model.ruleConfig;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
 
             /**
              * <p>The type of the protection policy. Valid values:</p>

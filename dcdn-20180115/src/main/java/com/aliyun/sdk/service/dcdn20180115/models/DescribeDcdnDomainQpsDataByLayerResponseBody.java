@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
 
     public static DescribeDcdnDomainQpsDataByLayerResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         private QpsDataInterval qpsDataInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDcdnDomainQpsDataByLayerResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.layer = model.layer;
+            this.qpsDataInterval = model.qpsDataInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -293,6 +315,19 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.accDomesticValue = model.accDomesticValue;
+                this.accOverseasValue = model.accOverseasValue;
+                this.accValue = model.accValue;
+                this.domesticValue = model.domesticValue;
+                this.overseasValue = model.overseasValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The number of requests in the Chinese mainland.</p>
              * 
@@ -385,7 +420,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
      */
     public static class QpsDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private QpsDataInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -402,17 +437,24 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(QpsDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }
