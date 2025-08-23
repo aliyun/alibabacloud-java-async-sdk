@@ -149,6 +149,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetFileContent  GetFileContentRequest
+     * @return GetFileContentResponse
+     */
+    @Override
+    public CompletableFuture<GetFileContentResponse> getFileContent(GetFileContentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFileContent").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/getFileContent").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFileContentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFileContentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
      * @return GetTagMiningAnalysisTaskResponse
      */

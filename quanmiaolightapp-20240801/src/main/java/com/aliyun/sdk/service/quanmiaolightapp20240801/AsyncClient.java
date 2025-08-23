@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEssayCorrectionTaskResponse> getEssayCorrectionTask(GetEssayCorrectionTaskRequest request);
 
     /**
+     * @param request the request parameters of GetFileContent  GetFileContentRequest
+     * @return GetFileContentResponse
+     */
+    CompletableFuture<GetFileContentResponse> getFileContent(GetFileContentRequest request);
+
+    /**
      * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
      * @return GetTagMiningAnalysisTaskResponse
      */
