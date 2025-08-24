@@ -34,6 +34,10 @@ public class ResetDesktopsRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastRetryTime")
+    private Long lastRetryTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -57,6 +61,7 @@ public class ResetDesktopsRequest extends Request {
         this.desktopGroupIds = builder.desktopGroupIds;
         this.desktopId = builder.desktopId;
         this.imageId = builder.imageId;
+        this.lastRetryTime = builder.lastRetryTime;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.resetScope = builder.resetScope;
@@ -105,6 +110,13 @@ public class ResetDesktopsRequest extends Request {
     }
 
     /**
+     * @return lastRetryTime
+     */
+    public Long getLastRetryTime() {
+        return this.lastRetryTime;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -137,6 +149,7 @@ public class ResetDesktopsRequest extends Request {
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> desktopId; 
         private String imageId; 
+        private Long lastRetryTime; 
         private String payType; 
         private String regionId; 
         private String resetScope; 
@@ -152,6 +165,7 @@ public class ResetDesktopsRequest extends Request {
             this.desktopGroupIds = request.desktopGroupIds;
             this.desktopId = request.desktopId;
             this.imageId = request.imageId;
+            this.lastRetryTime = request.lastRetryTime;
             this.payType = request.payType;
             this.regionId = request.regionId;
             this.resetScope = request.resetScope;
@@ -201,6 +215,15 @@ public class ResetDesktopsRequest extends Request {
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * LastRetryTime.
+         */
+        public Builder lastRetryTime(Long lastRetryTime) {
+            this.putQueryParameter("LastRetryTime", lastRetryTime);
+            this.lastRetryTime = lastRetryTime;
             return this;
         }
 

@@ -34,6 +34,10 @@ public class ModifyTemplateRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataDiskList")
+    private java.util.List<DataDiskList> dataDiskList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DefaultLanguage")
     private String defaultLanguage;
 
@@ -112,6 +116,7 @@ public class ModifyTemplateRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.chargeType = builder.chargeType;
+        this.dataDiskList = builder.dataDiskList;
         this.defaultLanguage = builder.defaultLanguage;
         this.description = builder.description;
         this.imageId = builder.imageId;
@@ -170,6 +175,13 @@ public class ModifyTemplateRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return dataDiskList
+     */
+    public java.util.List<DataDiskList> getDataDiskList() {
+        return this.dataDiskList;
     }
 
     /**
@@ -296,6 +308,7 @@ public class ModifyTemplateRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String chargeType; 
+        private java.util.List<DataDiskList> dataDiskList; 
         private String defaultLanguage; 
         private String description; 
         private String imageId; 
@@ -324,6 +337,7 @@ public class ModifyTemplateRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.chargeType = request.chargeType;
+            this.dataDiskList = request.dataDiskList;
             this.defaultLanguage = request.defaultLanguage;
             this.description = request.description;
             this.imageId = request.imageId;
@@ -376,6 +390,15 @@ public class ModifyTemplateRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * DataDiskList.
+         */
+        public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
+            this.putBodyParameter("DataDiskList", dataDiskList);
+            this.dataDiskList = dataDiskList;
             return this;
         }
 
@@ -542,6 +565,82 @@ public class ModifyTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTemplateRequest</p>
+     */
+    public static class DataDiskList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        @com.aliyun.core.annotation.Validation(maximum = 2040)
+        private Integer size;
+
+        private DataDiskList(Builder builder) {
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDiskList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String performanceLevel; 
+            private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDiskList model) {
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public DataDiskList build() {
+                return new DataDiskList(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ModifyTemplateRequest} extends {@link TeaModel}

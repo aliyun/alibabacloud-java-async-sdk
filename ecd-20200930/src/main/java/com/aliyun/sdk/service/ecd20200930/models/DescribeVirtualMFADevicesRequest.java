@@ -22,6 +22,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
@@ -42,6 +46,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     private DescribeVirtualMFADevicesRequest(Builder builder) {
         super(builder);
         this.endUserId = builder.endUserId;
+        this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -66,6 +71,13 @@ public class DescribeVirtualMFADevicesRequest extends Request {
      */
     public java.util.List<String> getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
     }
 
     /**
@@ -98,6 +110,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVirtualMFADevicesRequest, Builder> {
         private java.util.List<String> endUserId; 
+        private String filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -110,6 +123,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         private Builder(DescribeVirtualMFADevicesRequest request) {
             super(request);
             this.endUserId = request.endUserId;
+            this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
@@ -125,6 +139,15 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
