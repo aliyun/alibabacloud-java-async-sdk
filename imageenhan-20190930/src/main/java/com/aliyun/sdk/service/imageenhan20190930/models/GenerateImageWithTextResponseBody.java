@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imageenhan20190930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateImageWithTextResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateImageWithTextResponseBody</p>
  */
 public class GenerateImageWithTextResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateImageWithTextResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GenerateImageWithTextResponseBody extends TeaModel {
 
     public static GenerateImageWithTextResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class GenerateImageWithTextResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateImageWithTextResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -91,9 +109,15 @@ public class GenerateImageWithTextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateImageWithTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateImageWithTextResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ImageUrls")
-        private java.util.List < String > imageUrls;
+        @com.aliyun.core.annotation.NameInMap("ImageUrls")
+        private java.util.List<String> imageUrls;
 
         private Data(Builder builder) {
             this.imageUrls = builder.imageUrls;
@@ -110,17 +134,24 @@ public class GenerateImageWithTextResponseBody extends TeaModel {
         /**
          * @return imageUrls
          */
-        public java.util.List < String > getImageUrls() {
+        public java.util.List<String> getImageUrls() {
             return this.imageUrls;
         }
 
         public static final class Builder {
-            private java.util.List < String > imageUrls; 
+            private java.util.List<String> imageUrls; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.imageUrls = model.imageUrls;
+            } 
 
             /**
              * ImageUrls.
              */
-            public Builder imageUrls(java.util.List < String > imageUrls) {
+            public Builder imageUrls(java.util.List<String> imageUrls) {
                 this.imageUrls = imageUrls;
                 return this;
             }

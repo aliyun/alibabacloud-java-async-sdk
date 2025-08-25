@@ -1,3 +1,6 @@
+2025-08-25 Version: 1.0.1
+- Generated java-async 2019-09-30 for imageenhan.
+
 2024-02-20 Version: 1.0.0
 - Generated java-async 2019-09-30 for imageenhan.
 

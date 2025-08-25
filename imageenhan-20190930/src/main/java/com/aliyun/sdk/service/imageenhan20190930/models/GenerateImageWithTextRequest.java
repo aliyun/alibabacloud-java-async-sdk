@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imageenhan20190930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateImageWithTextRequest} extends {@link RequestModel}
  *
  * <p>GenerateImageWithTextRequest</p>
  */
 public class GenerateImageWithTextRequest extends Request {
-    @Body
-    @NameInMap("Number")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Number")
     private Integer number;
 
-    @Body
-    @NameInMap("Resolution")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resolution")
     private String resolution;
 
-    @Body
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
     private GenerateImageWithTextRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class GenerateImageWithTextRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +106,7 @@ public class GenerateImageWithTextRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>This parameter is required.</p>
          */
         public Builder text(String text) {
             this.putBodyParameter("Text", text);
