@@ -1,0 +1,229 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.mpaas20200710.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CreateMcubeMiniTaskResponseBody} extends {@link TeaModel}
+ *
+ * <p>CreateMcubeMiniTaskResponseBody</p>
+ */
+public class CreateMcubeMiniTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CreateMiniTaskResult")
+    private CreateMiniTaskResult createMiniTaskResult;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
+    private String resultCode;
+
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
+    private String resultMessage;
+
+    private CreateMcubeMiniTaskResponseBody(Builder builder) {
+        this.createMiniTaskResult = builder.createMiniTaskResult;
+        this.requestId = builder.requestId;
+        this.resultCode = builder.resultCode;
+        this.resultMessage = builder.resultMessage;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateMcubeMiniTaskResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return createMiniTaskResult
+     */
+    public CreateMiniTaskResult getCreateMiniTaskResult() {
+        return this.createMiniTaskResult;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return resultCode
+     */
+    public String getResultCode() {
+        return this.resultCode;
+    }
+
+    /**
+     * @return resultMessage
+     */
+    public String getResultMessage() {
+        return this.resultMessage;
+    }
+
+    public static final class Builder {
+        private CreateMiniTaskResult createMiniTaskResult; 
+        private String requestId; 
+        private String resultCode; 
+        private String resultMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMcubeMiniTaskResponseBody model) {
+            this.createMiniTaskResult = model.createMiniTaskResult;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMessage = model.resultMessage;
+        } 
+
+        /**
+         * CreateMiniTaskResult.
+         */
+        public Builder createMiniTaskResult(CreateMiniTaskResult createMiniTaskResult) {
+            this.createMiniTaskResult = createMiniTaskResult;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResultCode.
+         */
+        public Builder resultCode(String resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+
+        /**
+         * ResultMessage.
+         */
+        public Builder resultMessage(String resultMessage) {
+            this.resultMessage = resultMessage;
+            return this;
+        }
+
+        public CreateMcubeMiniTaskResponseBody build() {
+            return new CreateMcubeMiniTaskResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link CreateMcubeMiniTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcubeMiniTaskResponseBody</p>
+     */
+    public static class CreateMiniTaskResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MiniTaskId")
+        private String miniTaskId;
+
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
+        private String resultMsg;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        private CreateMiniTaskResult(Builder builder) {
+            this.miniTaskId = builder.miniTaskId;
+            this.resultMsg = builder.resultMsg;
+            this.success = builder.success;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CreateMiniTaskResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return miniTaskId
+         */
+        public String getMiniTaskId() {
+            return this.miniTaskId;
+        }
+
+        /**
+         * @return resultMsg
+         */
+        public String getResultMsg() {
+            return this.resultMsg;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public static final class Builder {
+            private String miniTaskId; 
+            private String resultMsg; 
+            private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateMiniTaskResult model) {
+                this.miniTaskId = model.miniTaskId;
+                this.resultMsg = model.resultMsg;
+                this.success = model.success;
+            } 
+
+            /**
+             * MiniTaskId.
+             */
+            public Builder miniTaskId(String miniTaskId) {
+                this.miniTaskId = miniTaskId;
+                return this;
+            }
+
+            /**
+             * ResultMsg.
+             */
+            public Builder resultMsg(String resultMsg) {
+                this.resultMsg = resultMsg;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            public CreateMiniTaskResult build() {
+                return new CreateMiniTaskResult(this);
+            } 
+
+        } 
+
+    }
+}
