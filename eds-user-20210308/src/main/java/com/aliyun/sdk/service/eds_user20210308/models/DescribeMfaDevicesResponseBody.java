@@ -121,7 +121,127 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
      *
      * <p>DescribeMfaDevicesResponseBody</p>
      */
+    public static class AdUser extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayNameNew")
+        private String displayNameNew;
+
+        @com.aliyun.core.annotation.NameInMap("EndUser")
+        private String endUser;
+
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+        private String userPrincipalName;
+
+        private AdUser(Builder builder) {
+            this.displayName = builder.displayName;
+            this.displayNameNew = builder.displayNameNew;
+            this.endUser = builder.endUser;
+            this.userPrincipalName = builder.userPrincipalName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdUser create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return displayNameNew
+         */
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
+        }
+
+        /**
+         * @return endUser
+         */
+        public String getEndUser() {
+            return this.endUser;
+        }
+
+        /**
+         * @return userPrincipalName
+         */
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
+        }
+
+        public static final class Builder {
+            private String displayName; 
+            private String displayNameNew; 
+            private String endUser; 
+            private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdUser model) {
+                this.displayName = model.displayName;
+                this.displayNameNew = model.displayNameNew;
+                this.endUser = model.endUser;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * DisplayNameNew.
+             */
+            public Builder displayNameNew(String displayNameNew) {
+                this.displayNameNew = displayNameNew;
+                return this;
+            }
+
+            /**
+             * EndUser.
+             */
+            public Builder endUser(String endUser) {
+                this.endUser = endUser;
+                return this;
+            }
+
+            /**
+             * UserPrincipalName.
+             */
+            public Builder userPrincipalName(String userPrincipalName) {
+                this.userPrincipalName = userPrincipalName;
+                return this;
+            }
+
+            public AdUser build() {
+                return new AdUser(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMfaDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMfaDevicesResponseBody</p>
+     */
     public static class MfaDevices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdUser")
+        private AdUser adUser;
+
         @com.aliyun.core.annotation.NameInMap("ConsecutiveFails")
         private Integer consecutiveFails;
 
@@ -150,6 +270,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         private String status;
 
         private MfaDevices(Builder builder) {
+            this.adUser = builder.adUser;
             this.consecutiveFails = builder.consecutiveFails;
             this.deviceType = builder.deviceType;
             this.email = builder.email;
@@ -167,6 +288,13 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
         public static MfaDevices create() {
             return builder().build();
+        }
+
+        /**
+         * @return adUser
+         */
+        public AdUser getAdUser() {
+            return this.adUser;
         }
 
         /**
@@ -233,6 +361,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AdUser adUser; 
             private Integer consecutiveFails; 
             private String deviceType; 
             private String email; 
@@ -247,6 +376,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             } 
 
             private Builder(MfaDevices model) {
+                this.adUser = model.adUser;
                 this.consecutiveFails = model.consecutiveFails;
                 this.deviceType = model.deviceType;
                 this.email = model.email;
@@ -257,6 +387,14 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
                 this.serialNumber = model.serialNumber;
                 this.status = model.status;
             } 
+
+            /**
+             * AdUser.
+             */
+            public Builder adUser(AdUser adUser) {
+                this.adUser = adUser;
+                return this;
+            }
 
             /**
              * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>

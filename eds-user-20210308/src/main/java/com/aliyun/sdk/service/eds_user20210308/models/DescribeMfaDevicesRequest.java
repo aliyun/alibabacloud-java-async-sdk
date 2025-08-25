@@ -26,6 +26,10 @@ public class DescribeMfaDevicesRequest extends Request {
     private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maxResults;
@@ -42,6 +46,7 @@ public class DescribeMfaDevicesRequest extends Request {
         super(builder);
         this.adDomain = builder.adDomain;
         this.endUserIds = builder.endUserIds;
+        this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.serialNumbers = builder.serialNumbers;
@@ -75,6 +80,13 @@ public class DescribeMfaDevicesRequest extends Request {
     }
 
     /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
+    }
+
+    /**
      * @return maxResults
      */
     public Long getMaxResults() {
@@ -98,6 +110,7 @@ public class DescribeMfaDevicesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeMfaDevicesRequest, Builder> {
         private String adDomain; 
         private java.util.List<String> endUserIds; 
+        private String filter; 
         private Long maxResults; 
         private String nextToken; 
         private java.util.List<String> serialNumbers; 
@@ -110,6 +123,7 @@ public class DescribeMfaDevicesRequest extends Request {
             super(request);
             this.adDomain = request.adDomain;
             this.endUserIds = request.endUserIds;
+            this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.serialNumbers = request.serialNumbers;
@@ -136,6 +150,15 @@ public class DescribeMfaDevicesRequest extends Request {
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
