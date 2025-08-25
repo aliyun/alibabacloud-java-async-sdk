@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.videoenhan20200320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFaceVideoTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteFaceVideoTemplateRequest</p>
@@ -29,7 +35,7 @@ public class DeleteFaceVideoTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class DeleteFaceVideoTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3bf2418c-7adf-4002-a9d6-2f7cf1889c0d</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceVideoTemplate  DeleteFaceVideoTemplateRequest
+     * @return DeleteFaceVideoTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceVideoTemplateResponse> deleteFaceVideoTemplate(DeleteFaceVideoTemplateRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncJobResult  GetAsyncJobResultRequest
+     * @return GetAsyncJobResultResponse
+     */
     @Override
     public CompletableFuture<GetAsyncJobResultResponse> getAsyncJobResult(GetAsyncJobResultRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceVideoTemplate  QueryFaceVideoTemplateRequest
+     * @return QueryFaceVideoTemplateResponse
+     */
     @Override
     public CompletableFuture<QueryFaceVideoTemplateResponse> queryFaceVideoTemplate(QueryFaceVideoTemplateRequest request) {
         try {

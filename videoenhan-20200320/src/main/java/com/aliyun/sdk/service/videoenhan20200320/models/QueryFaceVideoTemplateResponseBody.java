@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.videoenhan20200320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceVideoTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceVideoTemplateResponseBody</p>
@@ -30,6 +36,10 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -47,6 +57,14 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceVideoTemplateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -70,6 +88,12 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceVideoTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceVideoTemplateResponseBody</p>
+     */
     public static class FaceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateFaceID")
         private String templateFaceID;
@@ -108,6 +132,14 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
             private String templateFaceID; 
             private String templateFaceURL; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceInfos model) {
+                this.templateFaceID = model.templateFaceID;
+                this.templateFaceURL = model.templateFaceURL;
+            } 
+
             /**
              * TemplateFaceID.
              */
@@ -131,12 +163,18 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceVideoTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceVideoTemplateResponseBody</p>
+     */
     public static class Elements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("FaceInfos")
-        private java.util.List < FaceInfos> faceInfos;
+        private java.util.List<FaceInfos> faceInfos;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
@@ -177,7 +215,7 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         /**
          * @return faceInfos
          */
-        public java.util.List < FaceInfos> getFaceInfos() {
+        public java.util.List<FaceInfos> getFaceInfos() {
             return this.faceInfos;
         }
 
@@ -211,11 +249,23 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private java.util.List < FaceInfos> faceInfos; 
+            private java.util.List<FaceInfos> faceInfos; 
             private String templateId; 
             private String templateURL; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Elements model) {
+                this.createTime = model.createTime;
+                this.faceInfos = model.faceInfos;
+                this.templateId = model.templateId;
+                this.templateURL = model.templateURL;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * CreateTime.
@@ -228,7 +278,7 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
             /**
              * FaceInfos.
              */
-            public Builder faceInfos(java.util.List < FaceInfos> faceInfos) {
+            public Builder faceInfos(java.util.List<FaceInfos> faceInfos) {
                 this.faceInfos = faceInfos;
                 return this;
             }
@@ -272,9 +322,15 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceVideoTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceVideoTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Elements")
-        private java.util.List < Elements> elements;
+        private java.util.List<Elements> elements;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -295,7 +351,7 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         /**
          * @return elements
          */
-        public java.util.List < Elements> getElements() {
+        public java.util.List<Elements> getElements() {
             return this.elements;
         }
 
@@ -307,13 +363,21 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Elements> elements; 
+            private java.util.List<Elements> elements; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.elements = model.elements;
+                this.total = model.total;
+            } 
 
             /**
              * Elements.
              */
-            public Builder elements(java.util.List < Elements> elements) {
+            public Builder elements(java.util.List<Elements> elements) {
                 this.elements = elements;
                 return this;
             }

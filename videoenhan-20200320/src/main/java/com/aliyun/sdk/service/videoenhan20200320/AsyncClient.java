@@ -19,10 +19,22 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceVideoTemplate  DeleteFaceVideoTemplateRequest
+     * @return DeleteFaceVideoTemplateResponse
+     */
     CompletableFuture<DeleteFaceVideoTemplateResponse> deleteFaceVideoTemplate(DeleteFaceVideoTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetAsyncJobResult  GetAsyncJobResultRequest
+     * @return GetAsyncJobResultResponse
+     */
     CompletableFuture<GetAsyncJobResultResponse> getAsyncJobResult(GetAsyncJobResultRequest request);
 
+    /**
+     * @param request the request parameters of QueryFaceVideoTemplate  QueryFaceVideoTemplateRequest
+     * @return QueryFaceVideoTemplateResponse
+     */
     CompletableFuture<QueryFaceVideoTemplateResponse> queryFaceVideoTemplate(QueryFaceVideoTemplateRequest request);
 
 }
