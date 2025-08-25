@@ -22,6 +22,10 @@ public class DescribeInstanceTypesRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalAttributes")
+    private java.util.List<String> additionalAttributes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
     private String cpuArchitecture;
 
@@ -214,6 +218,7 @@ public class DescribeInstanceTypesRequest extends Request {
     private DescribeInstanceTypesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.additionalAttributes = builder.additionalAttributes;
         this.cpuArchitecture = builder.cpuArchitecture;
         this.cpuArchitectures = builder.cpuArchitectures;
         this.GPUSpec = builder.GPUSpec;
@@ -281,6 +286,13 @@ public class DescribeInstanceTypesRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return additionalAttributes
+     */
+    public java.util.List<String> getAdditionalAttributes() {
+        return this.additionalAttributes;
     }
 
     /**
@@ -614,6 +626,7 @@ public class DescribeInstanceTypesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
+        private java.util.List<String> additionalAttributes; 
         private String cpuArchitecture; 
         private java.util.List<String> cpuArchitectures; 
         private String GPUSpec; 
@@ -669,6 +682,7 @@ public class DescribeInstanceTypesRequest extends Request {
         private Builder(DescribeInstanceTypesRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.additionalAttributes = request.additionalAttributes;
             this.cpuArchitecture = request.cpuArchitecture;
             this.cpuArchitectures = request.cpuArchitectures;
             this.GPUSpec = request.GPUSpec;
@@ -724,6 +738,15 @@ public class DescribeInstanceTypesRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * AdditionalAttributes.
+         */
+        public Builder additionalAttributes(java.util.List<String> additionalAttributes) {
+            this.putQueryParameter("AdditionalAttributes", additionalAttributes);
+            this.additionalAttributes = additionalAttributes;
             return this;
         }
 

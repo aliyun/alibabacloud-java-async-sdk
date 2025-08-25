@@ -225,7 +225,10 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * Attribute.
+         * <p>The attributes of the security group. Valid value: snapshotPolicyIds: queries information about snapshot policies associated with a security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshotPolicyIds</p>
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);

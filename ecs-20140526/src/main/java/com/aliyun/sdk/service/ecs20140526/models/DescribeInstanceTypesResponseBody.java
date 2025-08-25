@@ -746,6 +746,309 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTypesResponseBody</p>
      */
+    public static class WeightingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EbsBandwidth")
+        private Long ebsBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("EbsBurstBandwidth")
+        private Long ebsBurstBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("VpcBandwidth")
+        private Long vpcBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("VpcBurstBandwidth")
+        private Long vpcBurstBandwidth;
+
+        private WeightingInfo(Builder builder) {
+            this.ebsBandwidth = builder.ebsBandwidth;
+            this.ebsBurstBandwidth = builder.ebsBurstBandwidth;
+            this.name = builder.name;
+            this.vpcBandwidth = builder.vpcBandwidth;
+            this.vpcBurstBandwidth = builder.vpcBurstBandwidth;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WeightingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ebsBandwidth
+         */
+        public Long getEbsBandwidth() {
+            return this.ebsBandwidth;
+        }
+
+        /**
+         * @return ebsBurstBandwidth
+         */
+        public Long getEbsBurstBandwidth() {
+            return this.ebsBurstBandwidth;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return vpcBandwidth
+         */
+        public Long getVpcBandwidth() {
+            return this.vpcBandwidth;
+        }
+
+        /**
+         * @return vpcBurstBandwidth
+         */
+        public Long getVpcBurstBandwidth() {
+            return this.vpcBurstBandwidth;
+        }
+
+        public static final class Builder {
+            private Long ebsBandwidth; 
+            private Long ebsBurstBandwidth; 
+            private String name; 
+            private Long vpcBandwidth; 
+            private Long vpcBurstBandwidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeightingInfo model) {
+                this.ebsBandwidth = model.ebsBandwidth;
+                this.ebsBurstBandwidth = model.ebsBurstBandwidth;
+                this.name = model.name;
+                this.vpcBandwidth = model.vpcBandwidth;
+                this.vpcBurstBandwidth = model.vpcBurstBandwidth;
+            } 
+
+            /**
+             * EbsBandwidth.
+             */
+            public Builder ebsBandwidth(Long ebsBandwidth) {
+                this.ebsBandwidth = ebsBandwidth;
+                return this;
+            }
+
+            /**
+             * EbsBurstBandwidth.
+             */
+            public Builder ebsBurstBandwidth(Long ebsBurstBandwidth) {
+                this.ebsBurstBandwidth = ebsBurstBandwidth;
+                return this;
+            }
+
+            /**
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VirtualIntelSpeedSelectTechnologySupport</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * VpcBandwidth.
+             */
+            public Builder vpcBandwidth(Long vpcBandwidth) {
+                this.vpcBandwidth = vpcBandwidth;
+                return this;
+            }
+
+            /**
+             * VpcBurstBandwidth.
+             */
+            public Builder vpcBurstBandwidth(Long vpcBurstBandwidth) {
+                this.vpcBurstBandwidth = vpcBurstBandwidth;
+                return this;
+            }
+
+            public WeightingInfo build() {
+                return new WeightingInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
+    public static class WeightingInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WeightingInfo")
+        private java.util.List<WeightingInfo> weightingInfo;
+
+        private WeightingInfos(Builder builder) {
+            this.weightingInfo = builder.weightingInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WeightingInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return weightingInfo
+         */
+        public java.util.List<WeightingInfo> getWeightingInfo() {
+            return this.weightingInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List<WeightingInfo> weightingInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeightingInfos model) {
+                this.weightingInfo = model.weightingInfo;
+            } 
+
+            /**
+             * WeightingInfo.
+             */
+            public Builder weightingInfo(java.util.List<WeightingInfo> weightingInfo) {
+                this.weightingInfo = weightingInfo;
+                return this;
+            }
+
+            public WeightingInfos build() {
+                return new WeightingInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
+    public static class BandwidthWeighting extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WeightingInfos")
+        private WeightingInfos weightingInfos;
+
+        private BandwidthWeighting(Builder builder) {
+            this.weightingInfos = builder.weightingInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BandwidthWeighting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return weightingInfos
+         */
+        public WeightingInfos getWeightingInfos() {
+            return this.weightingInfos;
+        }
+
+        public static final class Builder {
+            private WeightingInfos weightingInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandwidthWeighting model) {
+                this.weightingInfos = model.weightingInfos;
+            } 
+
+            /**
+             * WeightingInfos.
+             */
+            public Builder weightingInfos(WeightingInfos weightingInfos) {
+                this.weightingInfos = weightingInfos;
+                return this;
+            }
+
+            public BandwidthWeighting build() {
+                return new BandwidthWeighting(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
+    public static class NetworkInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthWeighting")
+        private BandwidthWeighting bandwidthWeighting;
+
+        private NetworkInfo(Builder builder) {
+            this.bandwidthWeighting = builder.bandwidthWeighting;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthWeighting
+         */
+        public BandwidthWeighting getBandwidthWeighting() {
+            return this.bandwidthWeighting;
+        }
+
+        public static final class Builder {
+            private BandwidthWeighting bandwidthWeighting; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.bandwidthWeighting = model.bandwidthWeighting;
+            } 
+
+            /**
+             * BandwidthWeighting.
+             */
+            public Builder bandwidthWeighting(BandwidthWeighting bandwidthWeighting) {
+                this.bandwidthWeighting = bandwidthWeighting;
+                return this;
+            }
+
+            public NetworkInfo build() {
+                return new NetworkInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class SupportedBootModes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedBootMode")
         private java.util.List<String> supportedBootMode;
@@ -912,6 +1215,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkEncryptionSupport")
         private Boolean networkEncryptionSupport;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInfo")
+        private NetworkInfo networkInfo;
+
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
@@ -971,6 +1277,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.networkCardQuantity = builder.networkCardQuantity;
             this.networkCards = builder.networkCards;
             this.networkEncryptionSupport = builder.networkEncryptionSupport;
+            this.networkInfo = builder.networkInfo;
             this.nvmeSupport = builder.nvmeSupport;
             this.physicalProcessorModel = builder.physicalProcessorModel;
             this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
@@ -1248,6 +1555,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInfo
+         */
+        public NetworkInfo getNetworkInfo() {
+            return this.networkInfo;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -1334,6 +1648,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer networkCardQuantity; 
             private NetworkCards networkCards; 
             private Boolean networkEncryptionSupport; 
+            private NetworkInfo networkInfo; 
             private String nvmeSupport; 
             private String physicalProcessorModel; 
             private Integer primaryEniQueueNumber; 
@@ -1383,6 +1698,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
                 this.networkCardQuantity = model.networkCardQuantity;
                 this.networkCards = model.networkCards;
                 this.networkEncryptionSupport = model.networkEncryptionSupport;
+                this.networkInfo = model.networkInfo;
                 this.nvmeSupport = model.nvmeSupport;
                 this.physicalProcessorModel = model.physicalProcessorModel;
                 this.primaryEniQueueNumber = model.primaryEniQueueNumber;
@@ -1830,6 +2146,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder networkEncryptionSupport(Boolean networkEncryptionSupport) {
                 this.networkEncryptionSupport = networkEncryptionSupport;
+                return this;
+            }
+
+            /**
+             * NetworkInfo.
+             */
+            public Builder networkInfo(NetworkInfo networkInfo) {
+                this.networkInfo = networkInfo;
                 return this;
             }
 

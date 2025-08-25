@@ -6891,6 +6891,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>To modify the PtpStatus parameter, you must specify the parameter. The instance types that are supported. You can query the instance type list (<a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> ).</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyInstanceClockOptions  ModifyInstanceClockOptionsRequest
      * @return ModifyInstanceClockOptionsResponse
      */

@@ -716,7 +716,6 @@ public class CreateElasticityAssuranceRequest extends Request {
      */
     public static class RecurrenceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndHour")
-        @com.aliyun.core.annotation.Validation(maximum = 24)
         private Integer endHour;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceType")
@@ -726,7 +725,6 @@ public class CreateElasticityAssuranceRequest extends Request {
         private String recurrenceValue;
 
         @com.aliyun.core.annotation.NameInMap("StartHour")
-        @com.aliyun.core.annotation.Validation(maximum = 24)
         private Integer startHour;
 
         private RecurrenceRules(Builder builder) {
