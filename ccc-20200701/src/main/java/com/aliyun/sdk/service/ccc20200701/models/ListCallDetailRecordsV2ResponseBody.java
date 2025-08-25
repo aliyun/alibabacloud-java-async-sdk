@@ -932,6 +932,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsiteAgentOriginatorNumbers")
         private String offsiteAgentOriginatorNumbers;
 
+        @com.aliyun.core.annotation.NameInMap("OffsiteAgentReleaseReason")
+        private String offsiteAgentReleaseReason;
+
         @com.aliyun.core.annotation.NameInMap("OutsideNumberReleaseReason")
         private String outsideNumberReleaseReason;
 
@@ -986,6 +989,12 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransferCount")
         private Long transferCount;
 
+        @com.aliyun.core.annotation.NameInMap("VoicebotDestinationNumber")
+        private String voicebotDestinationNumber;
+
+        @com.aliyun.core.annotation.NameInMap("VoicebotOriginatorNumber")
+        private String voicebotOriginatorNumber;
+
         @com.aliyun.core.annotation.NameInMap("WaitTime")
         private Long waitTime;
 
@@ -1028,6 +1037,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.offSiteAgentIds = builder.offSiteAgentIds;
             this.offsiteAgentDestinationNumbers = builder.offsiteAgentDestinationNumbers;
             this.offsiteAgentOriginatorNumbers = builder.offsiteAgentOriginatorNumbers;
+            this.offsiteAgentReleaseReason = builder.offsiteAgentReleaseReason;
             this.outsideNumberReleaseReason = builder.outsideNumberReleaseReason;
             this.queueTime = builder.queueTime;
             this.recordingDuration = builder.recordingDuration;
@@ -1046,6 +1056,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.summaryIndex = builder.summaryIndex;
             this.talkTime = builder.talkTime;
             this.transferCount = builder.transferCount;
+            this.voicebotDestinationNumber = builder.voicebotDestinationNumber;
+            this.voicebotOriginatorNumber = builder.voicebotOriginatorNumber;
             this.waitTime = builder.waitTime;
         }
 
@@ -1324,6 +1336,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return offsiteAgentReleaseReason
+         */
+        public String getOffsiteAgentReleaseReason() {
+            return this.offsiteAgentReleaseReason;
+        }
+
+        /**
          * @return outsideNumberReleaseReason
          */
         public String getOutsideNumberReleaseReason() {
@@ -1450,6 +1469,20 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return voicebotDestinationNumber
+         */
+        public String getVoicebotDestinationNumber() {
+            return this.voicebotDestinationNumber;
+        }
+
+        /**
+         * @return voicebotOriginatorNumber
+         */
+        public String getVoicebotOriginatorNumber() {
+            return this.voicebotOriginatorNumber;
+        }
+
+        /**
          * @return waitTime
          */
         public Long getWaitTime() {
@@ -1495,6 +1528,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private String offSiteAgentIds; 
             private String offsiteAgentDestinationNumbers; 
             private String offsiteAgentOriginatorNumbers; 
+            private String offsiteAgentReleaseReason; 
             private String outsideNumberReleaseReason; 
             private Long queueTime; 
             private Long recordingDuration; 
@@ -1513,6 +1547,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private SummaryIndex summaryIndex; 
             private Long talkTime; 
             private Long transferCount; 
+            private String voicebotDestinationNumber; 
+            private String voicebotOriginatorNumber; 
             private Long waitTime; 
 
             private Builder() {
@@ -1557,6 +1593,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
                 this.offSiteAgentIds = model.offSiteAgentIds;
                 this.offsiteAgentDestinationNumbers = model.offsiteAgentDestinationNumbers;
                 this.offsiteAgentOriginatorNumbers = model.offsiteAgentOriginatorNumbers;
+                this.offsiteAgentReleaseReason = model.offsiteAgentReleaseReason;
                 this.outsideNumberReleaseReason = model.outsideNumberReleaseReason;
                 this.queueTime = model.queueTime;
                 this.recordingDuration = model.recordingDuration;
@@ -1575,6 +1612,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
                 this.summaryIndex = model.summaryIndex;
                 this.talkTime = model.talkTime;
                 this.transferCount = model.transferCount;
+                this.voicebotDestinationNumber = model.voicebotDestinationNumber;
+                this.voicebotOriginatorNumber = model.voicebotOriginatorNumber;
                 this.waitTime = model.waitTime;
             } 
 
@@ -1883,6 +1922,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             }
 
             /**
+             * OffsiteAgentReleaseReason.
+             */
+            public Builder offsiteAgentReleaseReason(String offsiteAgentReleaseReason) {
+                this.offsiteAgentReleaseReason = offsiteAgentReleaseReason;
+                return this;
+            }
+
+            /**
              * OutsideNumberReleaseReason.
              */
             public Builder outsideNumberReleaseReason(String outsideNumberReleaseReason) {
@@ -2023,6 +2070,22 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
              */
             public Builder transferCount(Long transferCount) {
                 this.transferCount = transferCount;
+                return this;
+            }
+
+            /**
+             * VoicebotDestinationNumber.
+             */
+            public Builder voicebotDestinationNumber(String voicebotDestinationNumber) {
+                this.voicebotDestinationNumber = voicebotDestinationNumber;
+                return this;
+            }
+
+            /**
+             * VoicebotOriginatorNumber.
+             */
+            public Builder voicebotOriginatorNumber(String voicebotOriginatorNumber) {
+                this.voicebotOriginatorNumber = voicebotOriginatorNumber;
                 return this;
             }
 

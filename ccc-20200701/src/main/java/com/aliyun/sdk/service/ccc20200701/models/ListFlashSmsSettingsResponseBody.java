@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListOutboundNumbersOfUserResponseBody} extends {@link TeaModel}
+ * {@link ListFlashSmsSettingsResponseBody} extends {@link TeaModel}
  *
- * <p>ListOutboundNumbersOfUserResponseBody</p>
+ * <p>ListFlashSmsSettingsResponseBody</p>
  */
-public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
+public class ListFlashSmsSettingsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,14 +29,18 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ListOutboundNumbersOfUserResponseBody(Builder builder) {
+    private ListFlashSmsSettingsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -44,7 +48,7 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListOutboundNumbersOfUserResponseBody create() {
+    public static ListFlashSmsSettingsResponseBody create() {
         return builder().build();
     }
 
@@ -81,6 +85,13 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -92,16 +103,18 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(ListOutboundNumbersOfUserResponseBody model) {
+        private Builder(ListFlashSmsSettingsResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
+            this.params = model.params;
             this.requestId = model.requestId;
         } 
 
@@ -138,6 +151,14 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
+         * Params.
+         */
+        public Builder params(java.util.List<String> params) {
+            this.params = params;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -145,54 +166,36 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             return this;
         }
 
-        public ListOutboundNumbersOfUserResponseBody build() {
-            return new ListOutboundNumbersOfUserResponseBody(this);
+        public ListFlashSmsSettingsResponseBody build() {
+            return new ListFlashSmsSettingsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListOutboundNumbersOfUserResponseBody} extends {@link TeaModel}
+     * {@link ListFlashSmsSettingsResponseBody} extends {@link TeaModel}
      *
-     * <p>ListOutboundNumbersOfUserResponseBody</p>
+     * <p>ListFlashSmsSettingsResponseBody</p>
      */
     public static class List extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("City")
-        private String city;
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
 
-        @com.aliyun.core.annotation.NameInMap("Number")
-        private String number;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
 
-        @com.aliyun.core.annotation.NameInMap("Provider")
-        private String provider;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+        private String skillGroupId;
 
-        @com.aliyun.core.annotation.NameInMap("ProviderCode")
-        @Deprecated
-        private String providerCode;
-
-        @com.aliyun.core.annotation.NameInMap("ProviderDisplayName")
-        @Deprecated
-        private String providerDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("ProviderShortName")
-        private String providerShortName;
-
-        @com.aliyun.core.annotation.NameInMap("ProviderType")
-        private String providerType;
-
-        @com.aliyun.core.annotation.NameInMap("Province")
-        private String province;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
+        private String skillGroupName;
 
         private List(Builder builder) {
-            this.city = builder.city;
-            this.number = builder.number;
-            this.provider = builder.provider;
-            this.providerCode = builder.providerCode;
-            this.providerDisplayName = builder.providerDisplayName;
-            this.providerShortName = builder.providerShortName;
-            this.providerType = builder.providerType;
-            this.province = builder.province;
+            this.enabled = builder.enabled;
+            this.instanceId = builder.instanceId;
+            this.skillGroupId = builder.skillGroupId;
+            this.skillGroupName = builder.skillGroupName;
         }
 
         public static Builder builder() {
@@ -204,146 +207,78 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * @return city
+         * @return enabled
          */
-        public String getCity() {
-            return this.city;
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
         /**
-         * @return number
+         * @return instanceId
          */
-        public String getNumber() {
-            return this.number;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
-         * @return provider
+         * @return skillGroupId
          */
-        public String getProvider() {
-            return this.provider;
+        public String getSkillGroupId() {
+            return this.skillGroupId;
         }
 
         /**
-         * @return providerCode
+         * @return skillGroupName
          */
-        public String getProviderCode() {
-            return this.providerCode;
-        }
-
-        /**
-         * @return providerDisplayName
-         */
-        public String getProviderDisplayName() {
-            return this.providerDisplayName;
-        }
-
-        /**
-         * @return providerShortName
-         */
-        public String getProviderShortName() {
-            return this.providerShortName;
-        }
-
-        /**
-         * @return providerType
-         */
-        public String getProviderType() {
-            return this.providerType;
-        }
-
-        /**
-         * @return province
-         */
-        public String getProvince() {
-            return this.province;
+        public String getSkillGroupName() {
+            return this.skillGroupName;
         }
 
         public static final class Builder {
-            private String city; 
-            private String number; 
-            private String provider; 
-            private String providerCode; 
-            private String providerDisplayName; 
-            private String providerShortName; 
-            private String providerType; 
-            private String province; 
+            private Boolean enabled; 
+            private String instanceId; 
+            private String skillGroupId; 
+            private String skillGroupName; 
 
             private Builder() {
             } 
 
             private Builder(List model) {
-                this.city = model.city;
-                this.number = model.number;
-                this.provider = model.provider;
-                this.providerCode = model.providerCode;
-                this.providerDisplayName = model.providerDisplayName;
-                this.providerShortName = model.providerShortName;
-                this.providerType = model.providerType;
-                this.province = model.province;
+                this.enabled = model.enabled;
+                this.instanceId = model.instanceId;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
             } 
 
             /**
-             * City.
+             * Enabled.
              */
-            public Builder city(String city) {
-                this.city = city;
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
                 return this;
             }
 
             /**
-             * Number.
+             * InstanceId.
              */
-            public Builder number(String number) {
-                this.number = number;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * Provider.
+             * SkillGroupId.
              */
-            public Builder provider(String provider) {
-                this.provider = provider;
+            public Builder skillGroupId(String skillGroupId) {
+                this.skillGroupId = skillGroupId;
                 return this;
             }
 
             /**
-             * ProviderCode.
+             * SkillGroupName.
              */
-            public Builder providerCode(String providerCode) {
-                this.providerCode = providerCode;
-                return this;
-            }
-
-            /**
-             * ProviderDisplayName.
-             */
-            public Builder providerDisplayName(String providerDisplayName) {
-                this.providerDisplayName = providerDisplayName;
-                return this;
-            }
-
-            /**
-             * ProviderShortName.
-             */
-            public Builder providerShortName(String providerShortName) {
-                this.providerShortName = providerShortName;
-                return this;
-            }
-
-            /**
-             * ProviderType.
-             */
-            public Builder providerType(String providerType) {
-                this.providerType = providerType;
-                return this;
-            }
-
-            /**
-             * Province.
-             */
-            public Builder province(String province) {
-                this.province = province;
+            public Builder skillGroupName(String skillGroupName) {
+                this.skillGroupName = skillGroupName;
                 return this;
             }
 
@@ -356,9 +291,9 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListOutboundNumbersOfUserResponseBody} extends {@link TeaModel}
+     * {@link ListFlashSmsSettingsResponseBody} extends {@link TeaModel}
      *
-     * <p>ListOutboundNumbersOfUserResponseBody</p>
+     * <p>ListFlashSmsSettingsResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")

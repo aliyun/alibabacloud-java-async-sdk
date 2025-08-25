@@ -2011,6 +2011,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ImportRamUsers  ImportRamUsersRequest
+     * @return ImportRamUsersResponse
+     */
+    @Override
+    public CompletableFuture<ImportRamUsersResponse> importRamUsers(ImportRamUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ImportRamUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportRamUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportRamUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InitiateAttendedTransfer  InitiateAttendedTransferRequest
      * @return InitiateAttendedTransferResponse
      */
@@ -2494,6 +2512,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListFlashSmsApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListFlashSmsSettings  ListFlashSmsSettingsRequest
+     * @return ListFlashSmsSettingsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlashSmsSettingsResponse> listFlashSmsSettings(ListFlashSmsSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFlashSmsSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlashSmsSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlashSmsSettingsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

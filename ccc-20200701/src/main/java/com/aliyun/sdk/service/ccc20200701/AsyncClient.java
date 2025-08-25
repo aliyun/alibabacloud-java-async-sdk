@@ -672,6 +672,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportDocumentsResponse> importDocuments(ImportDocumentsRequest request);
 
     /**
+     * @param request the request parameters of ImportRamUsers  ImportRamUsersRequest
+     * @return ImportRamUsersResponse
+     */
+    CompletableFuture<ImportRamUsersResponse> importRamUsers(ImportRamUsersRequest request);
+
+    /**
      * @param request the request parameters of InitiateAttendedTransfer  InitiateAttendedTransferRequest
      * @return InitiateAttendedTransferResponse
      */
@@ -835,6 +841,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFlashSmsApplicationsResponse
      */
     CompletableFuture<ListFlashSmsApplicationsResponse> listFlashSmsApplications(ListFlashSmsApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListFlashSmsSettings  ListFlashSmsSettingsRequest
+     * @return ListFlashSmsSettingsResponse
+     */
+    CompletableFuture<ListFlashSmsSettingsResponse> listFlashSmsSettings(ListFlashSmsSettingsRequest request);
 
     /**
      * @param request the request parameters of ListFlashSmsTemplates  ListFlashSmsTemplatesRequest
