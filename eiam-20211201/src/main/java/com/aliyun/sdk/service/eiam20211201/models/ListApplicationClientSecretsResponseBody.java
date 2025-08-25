@@ -131,6 +131,9 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+        private Long expirationTime;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -147,6 +150,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.clientId = builder.clientId;
             this.clientSecret = builder.clientSecret;
+            this.expirationTime = builder.expirationTime;
             this.instanceId = builder.instanceId;
             this.lastUsedTime = builder.lastUsedTime;
             this.secretId = builder.secretId;
@@ -183,6 +187,13 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         }
 
         /**
+         * @return expirationTime
+         */
+        public Long getExpirationTime() {
+            return this.expirationTime;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -214,6 +225,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             private String applicationId; 
             private String clientId; 
             private String clientSecret; 
+            private Long expirationTime; 
             private String instanceId; 
             private Long lastUsedTime; 
             private String secretId; 
@@ -226,6 +238,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
                 this.applicationId = model.applicationId;
                 this.clientId = model.clientId;
                 this.clientSecret = model.clientSecret;
+                this.expirationTime = model.expirationTime;
                 this.instanceId = model.instanceId;
                 this.lastUsedTime = model.lastUsedTime;
                 this.secretId = model.secretId;
@@ -262,6 +275,14 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
+                return this;
+            }
+
+            /**
+             * ExpirationTime.
+             */
+            public Builder expirationTime(Long expirationTime) {
+                this.expirationTime = expirationTime;
                 return this;
             }
 

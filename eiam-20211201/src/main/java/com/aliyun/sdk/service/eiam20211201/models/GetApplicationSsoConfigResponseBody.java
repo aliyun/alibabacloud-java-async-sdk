@@ -182,6 +182,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessTokenEffectiveTime")
         private Long accessTokenEffectiveTime;
 
+        @com.aliyun.core.annotation.NameInMap("AllowedPublicClient")
+        private String allowedPublicClient;
+
         @com.aliyun.core.annotation.NameInMap("CodeEffectiveTime")
         private Long codeEffectiveTime;
 
@@ -226,6 +229,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         private OidcSsoConfig(Builder builder) {
             this.accessTokenEffectiveTime = builder.accessTokenEffectiveTime;
+            this.allowedPublicClient = builder.allowedPublicClient;
             this.codeEffectiveTime = builder.codeEffectiveTime;
             this.customClaims = builder.customClaims;
             this.grantScopes = builder.grantScopes;
@@ -255,6 +259,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
          */
         public Long getAccessTokenEffectiveTime() {
             return this.accessTokenEffectiveTime;
+        }
+
+        /**
+         * @return allowedPublicClient
+         */
+        public String getAllowedPublicClient() {
+            return this.allowedPublicClient;
         }
 
         /**
@@ -357,6 +368,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long accessTokenEffectiveTime; 
+            private String allowedPublicClient; 
             private Long codeEffectiveTime; 
             private java.util.List<CustomClaims> customClaims; 
             private java.util.List<String> grantScopes; 
@@ -377,6 +389,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
             private Builder(OidcSsoConfig model) {
                 this.accessTokenEffectiveTime = model.accessTokenEffectiveTime;
+                this.allowedPublicClient = model.allowedPublicClient;
                 this.codeEffectiveTime = model.codeEffectiveTime;
                 this.customClaims = model.customClaims;
                 this.grantScopes = model.grantScopes;
@@ -401,6 +414,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              */
             public Builder accessTokenEffectiveTime(Long accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
+                return this;
+            }
+
+            /**
+             * AllowedPublicClient.
+             */
+            public Builder allowedPublicClient(String allowedPublicClient) {
+                this.allowedPublicClient = allowedPublicClient;
                 return this;
             }
 

@@ -782,6 +782,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationAuthorizationTypeResponse> updateApplicationAuthorizationType(UpdateApplicationAuthorizationTypeRequest request);
 
     /**
+     * @param request the request parameters of UpdateApplicationClientSecretExpirationTime  UpdateApplicationClientSecretExpirationTimeRequest
+     * @return UpdateApplicationClientSecretExpirationTimeResponse
+     */
+    CompletableFuture<UpdateApplicationClientSecretExpirationTimeResponse> updateApplicationClientSecretExpirationTime(UpdateApplicationClientSecretExpirationTimeRequest request);
+
+    /**
      * @param request the request parameters of UpdateApplicationDescription  UpdateApplicationDescriptionRequest
      * @return UpdateApplicationDescriptionResponse
      */

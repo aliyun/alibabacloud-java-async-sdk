@@ -2242,6 +2242,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateApplicationClientSecretExpirationTime  UpdateApplicationClientSecretExpirationTimeRequest
+     * @return UpdateApplicationClientSecretExpirationTimeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApplicationClientSecretExpirationTimeResponse> updateApplicationClientSecretExpirationTime(UpdateApplicationClientSecretExpirationTimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateApplicationClientSecretExpirationTime").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApplicationClientSecretExpirationTimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApplicationClientSecretExpirationTimeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateApplicationDescription  UpdateApplicationDescriptionRequest
      * @return UpdateApplicationDescriptionResponse
      */

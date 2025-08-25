@@ -349,6 +349,9 @@ public class SetApplicationSsoConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AccessTokenEffectiveTime")
         private Long accessTokenEffectiveTime;
 
+        @com.aliyun.core.annotation.NameInMap("AllowedPublicClient")
+        private Boolean allowedPublicClient;
+
         @com.aliyun.core.annotation.NameInMap("CodeEffectiveTime")
         private Long codeEffectiveTime;
 
@@ -394,6 +397,7 @@ public class SetApplicationSsoConfigRequest extends Request {
 
         private OidcSsoConfig(Builder builder) {
             this.accessTokenEffectiveTime = builder.accessTokenEffectiveTime;
+            this.allowedPublicClient = builder.allowedPublicClient;
             this.codeEffectiveTime = builder.codeEffectiveTime;
             this.customClaims = builder.customClaims;
             this.grantScopes = builder.grantScopes;
@@ -423,6 +427,13 @@ public class SetApplicationSsoConfigRequest extends Request {
          */
         public Long getAccessTokenEffectiveTime() {
             return this.accessTokenEffectiveTime;
+        }
+
+        /**
+         * @return allowedPublicClient
+         */
+        public Boolean getAllowedPublicClient() {
+            return this.allowedPublicClient;
         }
 
         /**
@@ -525,6 +536,7 @@ public class SetApplicationSsoConfigRequest extends Request {
 
         public static final class Builder {
             private Long accessTokenEffectiveTime; 
+            private Boolean allowedPublicClient; 
             private Long codeEffectiveTime; 
             private java.util.List<CustomClaims> customClaims; 
             private java.util.List<String> grantScopes; 
@@ -545,6 +557,7 @@ public class SetApplicationSsoConfigRequest extends Request {
 
             private Builder(OidcSsoConfig model) {
                 this.accessTokenEffectiveTime = model.accessTokenEffectiveTime;
+                this.allowedPublicClient = model.allowedPublicClient;
                 this.codeEffectiveTime = model.codeEffectiveTime;
                 this.customClaims = model.customClaims;
                 this.grantScopes = model.grantScopes;
@@ -569,6 +582,14 @@ public class SetApplicationSsoConfigRequest extends Request {
              */
             public Builder accessTokenEffectiveTime(Long accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
+                return this;
+            }
+
+            /**
+             * AllowedPublicClient.
+             */
+            public Builder allowedPublicClient(Boolean allowedPublicClient) {
+                this.allowedPublicClient = allowedPublicClient;
                 return this;
             }
 

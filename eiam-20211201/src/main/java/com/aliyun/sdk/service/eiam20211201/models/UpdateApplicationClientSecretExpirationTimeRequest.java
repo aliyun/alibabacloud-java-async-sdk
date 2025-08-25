@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateApplicationClientSecretRequest} extends {@link RequestModel}
+ * {@link UpdateApplicationClientSecretExpirationTimeRequest} extends {@link RequestModel}
  *
- * <p>CreateApplicationClientSecretRequest</p>
+ * <p>UpdateApplicationClientSecretExpirationTimeRequest</p>
  */
-public class CreateApplicationClientSecretRequest extends Request {
+public class UpdateApplicationClientSecretExpirationTimeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -28,6 +28,7 @@ public class CreateApplicationClientSecretRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private Long expirationTime;
 
     @com.aliyun.core.annotation.Query
@@ -35,19 +36,25 @@ public class CreateApplicationClientSecretRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    private CreateApplicationClientSecretRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
+    private String secretId;
+
+    private UpdateApplicationClientSecretExpirationTimeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
         this.expirationTime = builder.expirationTime;
         this.instanceId = builder.instanceId;
+        this.secretId = builder.secretId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateApplicationClientSecretRequest create() {
+    public static UpdateApplicationClientSecretExpirationTimeRequest create() {
         return builder().build();
     }
 
@@ -84,22 +91,31 @@ public class CreateApplicationClientSecretRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<CreateApplicationClientSecretRequest, Builder> {
+    /**
+     * @return secretId
+     */
+    public String getSecretId() {
+        return this.secretId;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateApplicationClientSecretExpirationTimeRequest, Builder> {
         private String regionId; 
         private String applicationId; 
         private Long expirationTime; 
         private String instanceId; 
+        private String secretId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateApplicationClientSecretRequest request) {
+        private Builder(UpdateApplicationClientSecretExpirationTimeRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.applicationId = request.applicationId;
             this.expirationTime = request.expirationTime;
             this.instanceId = request.instanceId;
+            this.secretId = request.secretId;
         } 
 
         /**
@@ -112,7 +128,7 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application for which you want to create a client key.</p>
+         * <p>IDaaS的应用资源ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +141,11 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * ExpirationTime.
+         * <p>client secret的有效期时间，Unix时间戳格式，单位为毫秒</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735530123762</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.putQueryParameter("ExpirationTime", expirationTime);
@@ -134,7 +154,7 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>IDaaS EIAM实例的ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,9 +166,22 @@ public class CreateApplicationClientSecretRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>OIDC 场景下用于客户端身份验证的客户端密钥</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sct_11111</p>
+         */
+        public Builder secretId(String secretId) {
+            this.putQueryParameter("SecretId", secretId);
+            this.secretId = secretId;
+            return this;
+        }
+
         @Override
-        public CreateApplicationClientSecretRequest build() {
-            return new CreateApplicationClientSecretRequest(this);
+        public UpdateApplicationClientSecretExpirationTimeRequest build() {
+            return new UpdateApplicationClientSecretExpirationTimeRequest(this);
         } 
 
     } 
