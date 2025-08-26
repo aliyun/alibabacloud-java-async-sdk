@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAirflowLoginTokenRequest} extends {@link RequestModel}
+ * {@link GetAirflowRequest} extends {@link RequestModel}
  *
- * <p>CreateAirflowLoginTokenRequest</p>
+ * <p>GetAirflowRequest</p>
  */
-public class CreateAirflowLoginTokenRequest extends Request {
+public class GetAirflowRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -26,17 +26,23 @@ public class CreateAirflowLoginTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String airflowId;
 
-    private CreateAirflowLoginTokenRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workspaceId;
+
+    private GetAirflowRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.airflowId = builder.airflowId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateAirflowLoginTokenRequest create() {
+    public static GetAirflowRequest create() {
         return builder().build();
     }
 
@@ -59,18 +65,27 @@ public class CreateAirflowLoginTokenRequest extends Request {
         return this.airflowId;
     }
 
-    public static final class Builder extends Request.Builder<CreateAirflowLoginTokenRequest, Builder> {
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<GetAirflowRequest, Builder> {
         private String regionId; 
         private String airflowId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAirflowLoginTokenRequest request) {
+        private Builder(GetAirflowRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.airflowId = request.airflowId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -83,11 +98,10 @@ public class CreateAirflowLoginTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>af-b3a7f110a6vmvn7xxxxxx</p>
+         * <p>af-b3a7f110a6vmvn7****</p>
          */
         public Builder airflowId(String airflowId) {
             this.putQueryParameter("AirflowId", airflowId);
@@ -95,9 +109,21 @@ public class CreateAirflowLoginTokenRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8630242382****</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
         @Override
-        public CreateAirflowLoginTokenRequest build() {
-            return new CreateAirflowLoginTokenRequest(this);
+        public GetAirflowRequest build() {
+            return new GetAirflowRequest(this);
         } 
 
     } 

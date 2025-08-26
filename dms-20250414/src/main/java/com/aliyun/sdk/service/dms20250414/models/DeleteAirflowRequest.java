@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAirflowLoginTokenRequest} extends {@link RequestModel}
+ * {@link DeleteAirflowRequest} extends {@link RequestModel}
  *
- * <p>CreateAirflowLoginTokenRequest</p>
+ * <p>DeleteAirflowRequest</p>
  */
-public class CreateAirflowLoginTokenRequest extends Request {
+public class DeleteAirflowRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -26,17 +26,28 @@ public class CreateAirflowLoginTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String airflowId;
 
-    private CreateAirflowLoginTokenRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workspaceId;
+
+    private DeleteAirflowRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.airflowId = builder.airflowId;
+        this.clientToken = builder.clientToken;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateAirflowLoginTokenRequest create() {
+    public static DeleteAirflowRequest create() {
         return builder().build();
     }
 
@@ -59,18 +70,36 @@ public class CreateAirflowLoginTokenRequest extends Request {
         return this.airflowId;
     }
 
-    public static final class Builder extends Request.Builder<CreateAirflowLoginTokenRequest, Builder> {
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteAirflowRequest, Builder> {
         private String regionId; 
         private String airflowId; 
+        private String clientToken; 
+        private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAirflowLoginTokenRequest request) {
+        private Builder(DeleteAirflowRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.airflowId = request.airflowId;
+            this.clientToken = request.clientToken;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -83,11 +112,10 @@ public class CreateAirflowLoginTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>af-b3a7f110a6vmvn7xxxxxx</p>
+         * <p>af-test****</p>
          */
         public Builder airflowId(String airflowId) {
             this.putQueryParameter("AirflowId", airflowId);
@@ -95,9 +123,30 @@ public class CreateAirflowLoginTokenRequest extends Request {
             return this;
         }
 
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86302423828****</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
         @Override
-        public CreateAirflowLoginTokenRequest build() {
-            return new CreateAirflowLoginTokenRequest(this);
+        public DeleteAirflowRequest build() {
+            return new DeleteAirflowRequest(this);
         } 
 
     } 
