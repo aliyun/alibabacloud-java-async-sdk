@@ -36,6 +36,10 @@ public class CreateWmEmbedTaskRequest extends Request {
     private String filename;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageControl")
+    private ImageControl imageControl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageEmbedJpegQuality")
     private Long imageEmbedJpegQuality;
 
@@ -76,6 +80,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         this.documentControl = builder.documentControl;
         this.fileUrl = builder.fileUrl;
         this.filename = builder.filename;
+        this.imageControl = builder.imageControl;
         this.imageEmbedJpegQuality = builder.imageEmbedJpegQuality;
         this.imageEmbedLevel = builder.imageEmbedLevel;
         this.videoBitrate = builder.videoBitrate;
@@ -125,6 +130,13 @@ public class CreateWmEmbedTaskRequest extends Request {
      */
     public String getFilename() {
         return this.filename;
+    }
+
+    /**
+     * @return imageControl
+     */
+    public ImageControl getImageControl() {
+        return this.imageControl;
     }
 
     /**
@@ -188,6 +200,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         private DocumentControl documentControl; 
         private String fileUrl; 
         private String filename; 
+        private ImageControl imageControl; 
         private Long imageEmbedJpegQuality; 
         private Long imageEmbedLevel; 
         private String videoBitrate; 
@@ -207,6 +220,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             this.documentControl = request.documentControl;
             this.fileUrl = request.fileUrl;
             this.filename = request.filename;
+            this.imageControl = request.imageControl;
             this.imageEmbedJpegQuality = request.imageEmbedJpegQuality;
             this.imageEmbedLevel = request.imageEmbedLevel;
             this.videoBitrate = request.videoBitrate;
@@ -258,6 +272,16 @@ public class CreateWmEmbedTaskRequest extends Request {
         public Builder filename(String filename) {
             this.putBodyParameter("Filename", filename);
             this.filename = filename;
+            return this;
+        }
+
+        /**
+         * ImageControl.
+         */
+        public Builder imageControl(ImageControl imageControl) {
+            String imageControlShrink = shrink(imageControl, "ImageControl", "json");
+            this.putBodyParameter("ImageControl", imageControlShrink);
+            this.imageControl = imageControl;
             return this;
         }
 
@@ -1036,6 +1060,1023 @@ public class CreateWmEmbedTaskRequest extends Request {
 
             public DocumentControl build() {
                 return new DocumentControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class Margin extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bottom")
+        private Float bottom;
+
+        @com.aliyun.core.annotation.NameInMap("Left")
+        private Float left;
+
+        @com.aliyun.core.annotation.NameInMap("Right")
+        private Float right;
+
+        @com.aliyun.core.annotation.NameInMap("Top")
+        private Float top;
+
+        private Margin(Builder builder) {
+            this.bottom = builder.bottom;
+            this.left = builder.left;
+            this.right = builder.right;
+            this.top = builder.top;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Margin create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bottom
+         */
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        /**
+         * @return left
+         */
+        public Float getLeft() {
+            return this.left;
+        }
+
+        /**
+         * @return right
+         */
+        public Float getRight() {
+            return this.right;
+        }
+
+        /**
+         * @return top
+         */
+        public Float getTop() {
+            return this.top;
+        }
+
+        public static final class Builder {
+            private Float bottom; 
+            private Float left; 
+            private Float right; 
+            private Float top; 
+
+            private Builder() {
+            } 
+
+            private Builder(Margin model) {
+                this.bottom = model.bottom;
+                this.left = model.left;
+                this.right = model.right;
+                this.top = model.top;
+            } 
+
+            /**
+             * Bottom.
+             */
+            public Builder bottom(Float bottom) {
+                this.bottom = bottom;
+                return this;
+            }
+
+            /**
+             * Left.
+             */
+            public Builder left(Float left) {
+                this.left = left;
+                return this;
+            }
+
+            /**
+             * Right.
+             */
+            public Builder right(Float right) {
+                this.right = right;
+                return this;
+            }
+
+            /**
+             * Top.
+             */
+            public Builder top(Float top) {
+                this.top = top;
+                return this;
+            }
+
+            public Margin build() {
+                return new Margin(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class LogoVisibleControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Angle")
+        private Long angle;
+
+        @com.aliyun.core.annotation.NameInMap("LogoBase64")
+        private String logoBase64;
+
+        @com.aliyun.core.annotation.NameInMap("Margin")
+        private Margin margin;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("Opacity")
+        private Integer opacity;
+
+        @com.aliyun.core.annotation.NameInMap("PosAx")
+        private Float posAx;
+
+        @com.aliyun.core.annotation.NameInMap("PosAy")
+        private Float posAy;
+
+        @com.aliyun.core.annotation.NameInMap("PosX")
+        private Long posX;
+
+        @com.aliyun.core.annotation.NameInMap("PosY")
+        private Long posY;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceX")
+        private Long spaceX;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceY")
+        private Long spaceY;
+
+        @com.aliyun.core.annotation.NameInMap("Visible")
+        private Boolean visible;
+
+        private LogoVisibleControl(Builder builder) {
+            this.angle = builder.angle;
+            this.logoBase64 = builder.logoBase64;
+            this.margin = builder.margin;
+            this.mode = builder.mode;
+            this.opacity = builder.opacity;
+            this.posAx = builder.posAx;
+            this.posAy = builder.posAy;
+            this.posX = builder.posX;
+            this.posY = builder.posY;
+            this.spaceX = builder.spaceX;
+            this.spaceY = builder.spaceY;
+            this.visible = builder.visible;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogoVisibleControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return angle
+         */
+        public Long getAngle() {
+            return this.angle;
+        }
+
+        /**
+         * @return logoBase64
+         */
+        public String getLogoBase64() {
+            return this.logoBase64;
+        }
+
+        /**
+         * @return margin
+         */
+        public Margin getMargin() {
+            return this.margin;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return opacity
+         */
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        /**
+         * @return posAx
+         */
+        public Float getPosAx() {
+            return this.posAx;
+        }
+
+        /**
+         * @return posAy
+         */
+        public Float getPosAy() {
+            return this.posAy;
+        }
+
+        /**
+         * @return posX
+         */
+        public Long getPosX() {
+            return this.posX;
+        }
+
+        /**
+         * @return posY
+         */
+        public Long getPosY() {
+            return this.posY;
+        }
+
+        /**
+         * @return spaceX
+         */
+        public Long getSpaceX() {
+            return this.spaceX;
+        }
+
+        /**
+         * @return spaceY
+         */
+        public Long getSpaceY() {
+            return this.spaceY;
+        }
+
+        /**
+         * @return visible
+         */
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+        public static final class Builder {
+            private Long angle; 
+            private String logoBase64; 
+            private Margin margin; 
+            private String mode; 
+            private Integer opacity; 
+            private Float posAx; 
+            private Float posAy; 
+            private Long posX; 
+            private Long posY; 
+            private Long spaceX; 
+            private Long spaceY; 
+            private Boolean visible; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogoVisibleControl model) {
+                this.angle = model.angle;
+                this.logoBase64 = model.logoBase64;
+                this.margin = model.margin;
+                this.mode = model.mode;
+                this.opacity = model.opacity;
+                this.posAx = model.posAx;
+                this.posAy = model.posAy;
+                this.posX = model.posX;
+                this.posY = model.posY;
+                this.spaceX = model.spaceX;
+                this.spaceY = model.spaceY;
+                this.visible = model.visible;
+            } 
+
+            /**
+             * Angle.
+             */
+            public Builder angle(Long angle) {
+                this.angle = angle;
+                return this;
+            }
+
+            /**
+             * LogoBase64.
+             */
+            public Builder logoBase64(String logoBase64) {
+                this.logoBase64 = logoBase64;
+                return this;
+            }
+
+            /**
+             * Margin.
+             */
+            public Builder margin(Margin margin) {
+                this.margin = margin;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * Opacity.
+             */
+            public Builder opacity(Integer opacity) {
+                this.opacity = opacity;
+                return this;
+            }
+
+            /**
+             * PosAx.
+             */
+            public Builder posAx(Float posAx) {
+                this.posAx = posAx;
+                return this;
+            }
+
+            /**
+             * PosAy.
+             */
+            public Builder posAy(Float posAy) {
+                this.posAy = posAy;
+                return this;
+            }
+
+            /**
+             * PosX.
+             */
+            public Builder posX(Long posX) {
+                this.posX = posX;
+                return this;
+            }
+
+            /**
+             * PosY.
+             */
+            public Builder posY(Long posY) {
+                this.posY = posY;
+                return this;
+            }
+
+            /**
+             * SpaceX.
+             */
+            public Builder spaceX(Long spaceX) {
+                this.spaceX = spaceX;
+                return this;
+            }
+
+            /**
+             * SpaceY.
+             */
+            public Builder spaceY(Long spaceY) {
+                this.spaceY = spaceY;
+                return this;
+            }
+
+            /**
+             * Visible.
+             */
+            public Builder visible(Boolean visible) {
+                this.visible = visible;
+                return this;
+            }
+
+            public LogoVisibleControl build() {
+                return new LogoVisibleControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class MetadataControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("XmpKvBase64")
+        private String xmpKvBase64;
+
+        private MetadataControl(Builder builder) {
+            this.enable = builder.enable;
+            this.xmpKvBase64 = builder.xmpKvBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetadataControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return xmpKvBase64
+         */
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String xmpKvBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetadataControl model) {
+                this.enable = model.enable;
+                this.xmpKvBase64 = model.xmpKvBase64;
+            } 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * XmpKvBase64.
+             */
+            public Builder xmpKvBase64(String xmpKvBase64) {
+                this.xmpKvBase64 = xmpKvBase64;
+                return this;
+            }
+
+            public MetadataControl build() {
+                return new MetadataControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class TextVisibleControlMargin extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bottom")
+        private Float bottom;
+
+        @com.aliyun.core.annotation.NameInMap("Left")
+        private Float left;
+
+        @com.aliyun.core.annotation.NameInMap("Right")
+        private Float right;
+
+        @com.aliyun.core.annotation.NameInMap("Top")
+        private Float top;
+
+        private TextVisibleControlMargin(Builder builder) {
+            this.bottom = builder.bottom;
+            this.left = builder.left;
+            this.right = builder.right;
+            this.top = builder.top;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextVisibleControlMargin create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bottom
+         */
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        /**
+         * @return left
+         */
+        public Float getLeft() {
+            return this.left;
+        }
+
+        /**
+         * @return right
+         */
+        public Float getRight() {
+            return this.right;
+        }
+
+        /**
+         * @return top
+         */
+        public Float getTop() {
+            return this.top;
+        }
+
+        public static final class Builder {
+            private Float bottom; 
+            private Float left; 
+            private Float right; 
+            private Float top; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextVisibleControlMargin model) {
+                this.bottom = model.bottom;
+                this.left = model.left;
+                this.right = model.right;
+                this.top = model.top;
+            } 
+
+            /**
+             * Bottom.
+             */
+            public Builder bottom(Float bottom) {
+                this.bottom = bottom;
+                return this;
+            }
+
+            /**
+             * Left.
+             */
+            public Builder left(Float left) {
+                this.left = left;
+                return this;
+            }
+
+            /**
+             * Right.
+             */
+            public Builder right(Float right) {
+                this.right = right;
+                return this;
+            }
+
+            /**
+             * Top.
+             */
+            public Builder top(Float top) {
+                this.top = top;
+                return this;
+            }
+
+            public TextVisibleControlMargin build() {
+                return new TextVisibleControlMargin(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class TextVisibleControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Angle")
+        private Long angle;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private String fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        private Long fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("Margin")
+        private TextVisibleControlMargin margin;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("Opacity")
+        private Integer opacity;
+
+        @com.aliyun.core.annotation.NameInMap("PosAx")
+        private Float posAx;
+
+        @com.aliyun.core.annotation.NameInMap("PosAy")
+        private Float posAy;
+
+        @com.aliyun.core.annotation.NameInMap("PosX")
+        private Long posX;
+
+        @com.aliyun.core.annotation.NameInMap("PosY")
+        private Long posY;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceX")
+        private Long spaceX;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceY")
+        private Long spaceY;
+
+        @com.aliyun.core.annotation.NameInMap("Visible")
+        private Boolean visible;
+
+        @com.aliyun.core.annotation.NameInMap("VisibleText")
+        private String visibleText;
+
+        private TextVisibleControl(Builder builder) {
+            this.angle = builder.angle;
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.margin = builder.margin;
+            this.mode = builder.mode;
+            this.opacity = builder.opacity;
+            this.posAx = builder.posAx;
+            this.posAy = builder.posAy;
+            this.posX = builder.posX;
+            this.posY = builder.posY;
+            this.spaceX = builder.spaceX;
+            this.spaceY = builder.spaceY;
+            this.visible = builder.visible;
+            this.visibleText = builder.visibleText;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextVisibleControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return angle
+         */
+        public Long getAngle() {
+            return this.angle;
+        }
+
+        /**
+         * @return fontColor
+         */
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public Long getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return margin
+         */
+        public TextVisibleControlMargin getMargin() {
+            return this.margin;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return opacity
+         */
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        /**
+         * @return posAx
+         */
+        public Float getPosAx() {
+            return this.posAx;
+        }
+
+        /**
+         * @return posAy
+         */
+        public Float getPosAy() {
+            return this.posAy;
+        }
+
+        /**
+         * @return posX
+         */
+        public Long getPosX() {
+            return this.posX;
+        }
+
+        /**
+         * @return posY
+         */
+        public Long getPosY() {
+            return this.posY;
+        }
+
+        /**
+         * @return spaceX
+         */
+        public Long getSpaceX() {
+            return this.spaceX;
+        }
+
+        /**
+         * @return spaceY
+         */
+        public Long getSpaceY() {
+            return this.spaceY;
+        }
+
+        /**
+         * @return visible
+         */
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+        /**
+         * @return visibleText
+         */
+        public String getVisibleText() {
+            return this.visibleText;
+        }
+
+        public static final class Builder {
+            private Long angle; 
+            private String fontColor; 
+            private Long fontSize; 
+            private TextVisibleControlMargin margin; 
+            private String mode; 
+            private Integer opacity; 
+            private Float posAx; 
+            private Float posAy; 
+            private Long posX; 
+            private Long posY; 
+            private Long spaceX; 
+            private Long spaceY; 
+            private Boolean visible; 
+            private String visibleText; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextVisibleControl model) {
+                this.angle = model.angle;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.margin = model.margin;
+                this.mode = model.mode;
+                this.opacity = model.opacity;
+                this.posAx = model.posAx;
+                this.posAy = model.posAy;
+                this.posX = model.posX;
+                this.posY = model.posY;
+                this.spaceX = model.spaceX;
+                this.spaceY = model.spaceY;
+                this.visible = model.visible;
+                this.visibleText = model.visibleText;
+            } 
+
+            /**
+             * Angle.
+             */
+            public Builder angle(Long angle) {
+                this.angle = angle;
+                return this;
+            }
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(String fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(Long fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * Margin.
+             */
+            public Builder margin(TextVisibleControlMargin margin) {
+                this.margin = margin;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * Opacity.
+             */
+            public Builder opacity(Integer opacity) {
+                this.opacity = opacity;
+                return this;
+            }
+
+            /**
+             * PosAx.
+             */
+            public Builder posAx(Float posAx) {
+                this.posAx = posAx;
+                return this;
+            }
+
+            /**
+             * PosAy.
+             */
+            public Builder posAy(Float posAy) {
+                this.posAy = posAy;
+                return this;
+            }
+
+            /**
+             * PosX.
+             */
+            public Builder posX(Long posX) {
+                this.posX = posX;
+                return this;
+            }
+
+            /**
+             * PosY.
+             */
+            public Builder posY(Long posY) {
+                this.posY = posY;
+                return this;
+            }
+
+            /**
+             * SpaceX.
+             */
+            public Builder spaceX(Long spaceX) {
+                this.spaceX = spaceX;
+                return this;
+            }
+
+            /**
+             * SpaceY.
+             */
+            public Builder spaceY(Long spaceY) {
+                this.spaceY = spaceY;
+                return this;
+            }
+
+            /**
+             * Visible.
+             */
+            public Builder visible(Boolean visible) {
+                this.visible = visible;
+                return this;
+            }
+
+            /**
+             * VisibleText.
+             */
+            public Builder visibleText(String visibleText) {
+                this.visibleText = visibleText;
+                return this;
+            }
+
+            public TextVisibleControl build() {
+                return new TextVisibleControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class ImageControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogoVisibleControl")
+        private LogoVisibleControl logoVisibleControl;
+
+        @com.aliyun.core.annotation.NameInMap("MetadataControl")
+        private MetadataControl metadataControl;
+
+        @com.aliyun.core.annotation.NameInMap("TextVisibleControl")
+        private TextVisibleControl textVisibleControl;
+
+        private ImageControl(Builder builder) {
+            this.logoVisibleControl = builder.logoVisibleControl;
+            this.metadataControl = builder.metadataControl;
+            this.textVisibleControl = builder.textVisibleControl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logoVisibleControl
+         */
+        public LogoVisibleControl getLogoVisibleControl() {
+            return this.logoVisibleControl;
+        }
+
+        /**
+         * @return metadataControl
+         */
+        public MetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
+        /**
+         * @return textVisibleControl
+         */
+        public TextVisibleControl getTextVisibleControl() {
+            return this.textVisibleControl;
+        }
+
+        public static final class Builder {
+            private LogoVisibleControl logoVisibleControl; 
+            private MetadataControl metadataControl; 
+            private TextVisibleControl textVisibleControl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageControl model) {
+                this.logoVisibleControl = model.logoVisibleControl;
+                this.metadataControl = model.metadataControl;
+                this.textVisibleControl = model.textVisibleControl;
+            } 
+
+            /**
+             * LogoVisibleControl.
+             */
+            public Builder logoVisibleControl(LogoVisibleControl logoVisibleControl) {
+                this.logoVisibleControl = logoVisibleControl;
+                return this;
+            }
+
+            /**
+             * MetadataControl.
+             */
+            public Builder metadataControl(MetadataControl metadataControl) {
+                this.metadataControl = metadataControl;
+                return this;
+            }
+
+            /**
+             * TextVisibleControl.
+             */
+            public Builder textVisibleControl(TextVisibleControl textVisibleControl) {
+                this.textVisibleControl = textVisibleControl;
+                return this;
+            }
+
+            public ImageControl build() {
+                return new ImageControl(this);
             } 
 
         } 
