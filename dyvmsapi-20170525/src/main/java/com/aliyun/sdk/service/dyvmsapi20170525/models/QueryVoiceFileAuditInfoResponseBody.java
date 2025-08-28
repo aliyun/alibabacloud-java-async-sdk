@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -39,6 +44,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,9 +78,19 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryVoiceFileAuditInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -88,7 +107,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         /**
          * <p>The response parameters.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -176,6 +195,15 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             private String auditState; 
             private String rejectInfo; 
             private String voiceCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.auditState = model.auditState;
+                this.rejectInfo = model.rejectInfo;
+                this.voiceCode = model.voiceCode;
+            } 
 
             /**
              * <p>The review state of the voice file. Valid values:</p>

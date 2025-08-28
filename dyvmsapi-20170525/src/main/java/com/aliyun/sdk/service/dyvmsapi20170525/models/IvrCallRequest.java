@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class IvrCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MenuKeyMap")
-    private java.util.List < MenuKeyMap> menuKeyMap;
+    private java.util.List<MenuKeyMap> menuKeyMap;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
@@ -92,7 +97,7 @@ public class IvrCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +133,7 @@ public class IvrCallRequest extends Request {
     /**
      * @return menuKeyMap
      */
-    public java.util.List < MenuKeyMap> getMenuKeyMap() {
+    public java.util.List<MenuKeyMap> getMenuKeyMap() {
         return this.menuKeyMap;
     }
 
@@ -193,7 +198,7 @@ public class IvrCallRequest extends Request {
         private String byeTtsParams; 
         private String calledNumber; 
         private String calledShowNumber; 
-        private java.util.List < MenuKeyMap> menuKeyMap; 
+        private java.util.List<MenuKeyMap> menuKeyMap; 
         private String outId; 
         private Long ownerId; 
         private Long playTimes; 
@@ -289,7 +294,7 @@ public class IvrCallRequest extends Request {
         /**
          * <p>The information about the key pressed by the subscriber.</p>
          */
-        public Builder menuKeyMap(java.util.List < MenuKeyMap> menuKeyMap) {
+        public Builder menuKeyMap(java.util.List<MenuKeyMap> menuKeyMap) {
             this.putQueryParameter("MenuKeyMap", menuKeyMap);
             this.menuKeyMap = menuKeyMap;
             return this;
@@ -453,6 +458,15 @@ public class IvrCallRequest extends Request {
             private String code; 
             private String key; 
             private String ttsParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(MenuKeyMap model) {
+                this.code = model.code;
+                this.key = model.key;
+                this.ttsParams = model.ttsParams;
+            } 
 
             /**
              * <p>The voice that corresponds to the key specified by the <strong>MenuKeyMap.N.Key</strong> parameter.</p>

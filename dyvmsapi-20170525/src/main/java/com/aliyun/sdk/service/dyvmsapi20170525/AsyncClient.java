@@ -210,16 +210,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <h3>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
-     * @param request the request parameters of ListHotlineTransferNumber  ListHotlineTransferNumberRequest
-     * @return ListHotlineTransferNumberResponse
-     */
-    CompletableFuture<ListHotlineTransferNumberResponse> listHotlineTransferNumber(ListHotlineTransferNumberRequest request);
-
-    /**
-     * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * 
      * @param request the request parameters of ListHotlineTransferRegisterFile  ListHotlineTransferRegisterFileRequest
      * @return ListHotlineTransferRegisterFileResponse
      */

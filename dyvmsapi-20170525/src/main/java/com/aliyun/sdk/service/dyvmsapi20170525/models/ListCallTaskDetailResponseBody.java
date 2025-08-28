@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -51,6 +56,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -61,7 +70,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,12 +111,25 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long total; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallTaskDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -127,7 +149,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         /**
          * <p>The information about the task.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -272,6 +294,17 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             private Long duration; 
             private Long id; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.calledNum = model.calledNum;
+                this.caller = model.caller;
+                this.duration = model.duration;
+                this.id = model.id;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The called number.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Details")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Details> details;
+    private java.util.List<Details> details;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -63,7 +68,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,7 +83,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
     /**
      * @return details
      */
-    public java.util.List < Details> getDetails() {
+    public java.util.List<Details> getDetails() {
         return this.details;
     }
 
@@ -119,7 +124,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetTransferCalleePoolConfigRequest, Builder> {
         private String calledRouteMode; 
-        private java.util.List < Details> details; 
+        private java.util.List<Details> details; 
         private Long ownerId; 
         private String phoneNumber; 
         private String qualificationId; 
@@ -162,7 +167,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
          * <p>The information about the phone numbers for transferring the call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder details(java.util.List < Details> details) {
+        public Builder details(java.util.List<Details> details) {
             this.putQueryParameter("Details", details);
             this.details = details;
             return this;
@@ -272,6 +277,14 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         public static final class Builder {
             private String called; 
             private String caller; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.called = model.called;
+                this.caller = model.caller;
+            } 
 
             /**
              * <p>The called number.</p>

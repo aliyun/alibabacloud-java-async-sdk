@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotlineTransferRegisterFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -252,6 +271,21 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             private String qualificationId; 
             private Long resUniqueCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.agree = model.agree;
+                this.corpName = model.corpName;
+                this.hotlineNumber = model.hotlineNumber;
+                this.mngOpIdentityCard = model.mngOpIdentityCard;
+                this.mngOpMail = model.mngOpMail;
+                this.mngOpMobile = model.mngOpMobile;
+                this.mngOpName = model.mngOpName;
+                this.qualificationId = model.qualificationId;
+                this.resUniqueCode = model.resUniqueCode;
+            } 
+
             /**
              * <p>The authenticity of the commitment.</p>
              * 
@@ -375,7 +409,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         private Long total;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private Data(Builder builder) {
             this.pageNo = builder.pageNo;
@@ -416,7 +450,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
@@ -424,7 +458,17 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -462,7 +506,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             /**
              * <p>The registration file.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

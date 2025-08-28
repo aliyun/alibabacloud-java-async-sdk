@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -71,7 +76,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransferPhoneNumberInfos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TransferPhoneNumberInfos> transferPhoneNumberInfos;
+    private java.util.List<TransferPhoneNumberInfos> transferPhoneNumberInfos;
 
     private SubmitHotlineTransferRegisterRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,7 +195,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
     /**
      * @return transferPhoneNumberInfos
      */
-    public java.util.List < TransferPhoneNumberInfos> getTransferPhoneNumberInfos() {
+    public java.util.List<TransferPhoneNumberInfos> getTransferPhoneNumberInfos() {
         return this.transferPhoneNumberInfos;
     }
 
@@ -207,7 +212,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         private String qualificationId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < TransferPhoneNumberInfos> transferPhoneNumberInfos; 
+        private java.util.List<TransferPhoneNumberInfos> transferPhoneNumberInfos; 
 
         private Builder() {
             super();
@@ -381,7 +386,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
          * <p>The registration information about the China 400 number.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder transferPhoneNumberInfos(java.util.List < TransferPhoneNumberInfos> transferPhoneNumberInfos) {
+        public Builder transferPhoneNumberInfos(java.util.List<TransferPhoneNumberInfos> transferPhoneNumberInfos) {
             this.putQueryParameter("TransferPhoneNumberInfos", transferPhoneNumberInfos);
             this.transferPhoneNumberInfos = transferPhoneNumberInfos;
             return this;
@@ -452,6 +457,15 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
             private String identityCard; 
             private String phoneNumber; 
             private String phoneNumberOwnerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferPhoneNumberInfos model) {
+                this.identityCard = model.identityCard;
+                this.phoneNumber = model.phoneNumber;
+                this.phoneNumberOwnerName = model.phoneNumberOwnerName;
+            } 
 
             /**
              * <p>The ID card number of the number owner.</p>

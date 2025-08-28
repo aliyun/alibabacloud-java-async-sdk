@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCallInPoolTransferConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -156,6 +175,13 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String called; 
 
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.called = model.called;
+            } 
+
             /**
              * <p>The number used to transfer the call.</p>
              * 
@@ -185,7 +211,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         private String calledRouteMode;
 
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -218,7 +244,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -238,9 +264,19 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String calledRouteMode; 
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private Long gmtCreate; 
             private String transferTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.calledRouteMode = model.calledRouteMode;
+                this.details = model.details;
+                this.gmtCreate = model.gmtCreate;
+                this.transferTimeout = model.transferTimeout;
+            } 
 
             /**
              * <p>The call mode. Valid values:</p>
@@ -260,7 +296,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             /**
              * <p>The details of the response parameters.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }

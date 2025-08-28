@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCallInTransferRecordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -216,6 +235,18 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private String transferCalled; 
             private String transferCaller; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.callInCalled = model.callInCalled;
+                this.callInCaller = model.callInCaller;
+                this.gmtCreate = model.gmtCreate;
+                this.recordUrl = model.recordUrl;
+                this.transferCalled = model.transferCalled;
+                this.transferCaller = model.transferCaller;
+            } 
+
             /**
              * <p>The called number of the inbound call.</p>
              * 
@@ -306,7 +337,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         private Long total;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private Data(Builder builder) {
             this.pageNo = builder.pageNo;
@@ -347,7 +378,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
@@ -355,7 +386,17 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -393,7 +434,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             /**
              * <p>The call transfer records.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

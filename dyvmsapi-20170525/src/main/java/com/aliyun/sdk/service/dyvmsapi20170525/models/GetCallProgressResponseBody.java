@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetCallProgressResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.Map < String, ? > model;
+    private java.util.Map<String, ?> model;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -41,6 +46,10 @@ public class GetCallProgressResponseBody extends TeaModel {
 
     public static GetCallProgressResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class GetCallProgressResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.Map < String, ? > getModel() {
+    public java.util.Map<String, ?> getModel() {
         return this.model;
     }
 
@@ -82,8 +91,19 @@ public class GetCallProgressResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private java.util.Map < String, ? > model; 
+        private java.util.Map<String, ?> model; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCallProgressResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -112,7 +132,7 @@ public class GetCallProgressResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.Map < String, ? > model) {
+        public Builder model(java.util.Map<String, ?> model) {
             this.model = model;
             return this;
         }
