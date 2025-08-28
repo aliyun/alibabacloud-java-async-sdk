@@ -39,7 +39,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shenzhen", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-heyuan", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "r-kvstore.aliyuncs.com"),
@@ -428,6 +427,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateTairInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateTairKVCacheVNode  CreateTairKVCacheVNodeRequest
+     * @return CreateTairKVCacheVNodeResponse
+     */
+    @Override
+    public CompletableFuture<CreateTairKVCacheVNodeResponse> createTairKVCacheVNode(CreateTairKVCacheVNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTairKVCacheVNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTairKVCacheVNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTairKVCacheVNodeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2985,6 +3002,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TransformInstanceChargeTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TransformToEcs  TransformToEcsRequest
+     * @return TransformToEcsResponse
+     */
+    @Override
+    public CompletableFuture<TransformToEcsResponse> transformToEcs(TransformToEcsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransformToEcs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransformToEcsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransformToEcsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

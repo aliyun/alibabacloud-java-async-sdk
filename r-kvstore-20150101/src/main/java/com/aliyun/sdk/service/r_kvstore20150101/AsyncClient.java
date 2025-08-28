@@ -193,6 +193,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTairInstanceResponse> createTairInstance(CreateTairInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateTairKVCacheVNode  CreateTairKVCacheVNodeRequest
+     * @return CreateTairKVCacheVNodeResponse
+     */
+    CompletableFuture<CreateTairKVCacheVNodeResponse> createTairKVCacheVNode(CreateTairKVCacheVNodeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
@@ -1284,6 +1290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TransformInstanceChargeTypeResponse
      */
     CompletableFuture<TransformInstanceChargeTypeResponse> transformInstanceChargeType(TransformInstanceChargeTypeRequest request);
+
+    /**
+     * @param request the request parameters of TransformToEcs  TransformToEcsRequest
+     * @return TransformToEcsResponse
+     */
+    CompletableFuture<TransformToEcsResponse> transformToEcs(TransformToEcsRequest request);
 
     /**
      * <b>description</b> :

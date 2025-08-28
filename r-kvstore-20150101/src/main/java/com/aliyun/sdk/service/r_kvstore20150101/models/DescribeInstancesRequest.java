@@ -62,6 +62,10 @@ public class DescribeInstancesRequest extends Request {
     private String networkType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -135,6 +139,7 @@ public class DescribeInstancesRequest extends Request {
         this.instanceStatus = builder.instanceStatus;
         this.instanceType = builder.instanceType;
         this.networkType = builder.networkType;
+        this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -240,6 +245,13 @@ public class DescribeInstancesRequest extends Request {
      */
     public String getNetworkType() {
         return this.networkType;
+    }
+
+    /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     /**
@@ -359,6 +371,7 @@ public class DescribeInstancesRequest extends Request {
         private String instanceStatus; 
         private String instanceType; 
         private String networkType; 
+        private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -392,6 +405,7 @@ public class DescribeInstancesRequest extends Request {
             this.instanceStatus = request.instanceStatus;
             this.instanceType = request.instanceType;
             this.networkType = request.networkType;
+            this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -600,6 +614,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
             this.networkType = networkType;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
             return this;
         }
 

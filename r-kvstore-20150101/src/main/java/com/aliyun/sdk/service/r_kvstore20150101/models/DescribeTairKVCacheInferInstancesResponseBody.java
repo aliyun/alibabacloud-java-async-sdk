@@ -287,6 +287,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
      * <p>DescribeTairKVCacheInferInstancesResponseBody</p>
      */
     public static class TairInferInstanceDTO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AckId")
+        private String ackId;
+
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
@@ -341,6 +344,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("VNodeCount")
+        private Integer vNodeCount;
+
         @com.aliyun.core.annotation.NameInMap("VNodeName")
         private String vNodeName;
 
@@ -354,6 +360,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private TairInferInstanceDTO(Builder builder) {
+            this.ackId = builder.ackId;
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
             this.computeUnitNum = builder.computeUnitNum;
@@ -372,6 +379,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
+            this.vNodeCount = builder.vNodeCount;
             this.vNodeName = builder.vNodeName;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -384,6 +392,13 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
 
         public static TairInferInstanceDTO create() {
             return builder().build();
+        }
+
+        /**
+         * @return ackId
+         */
+        public String getAckId() {
+            return this.ackId;
         }
 
         /**
@@ -513,6 +528,13 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vNodeCount
+         */
+        public Integer getVNodeCount() {
+            return this.vNodeCount;
+        }
+
+        /**
          * @return vNodeName
          */
         public String getVNodeName() {
@@ -541,6 +563,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String ackId; 
             private Long capacity; 
             private String chargeType; 
             private Integer computeUnitNum; 
@@ -559,6 +582,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private Tags tags; 
+            private Integer vNodeCount; 
             private String vNodeName; 
             private String vSwitchId; 
             private String vpcId; 
@@ -568,6 +592,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(TairInferInstanceDTO model) {
+                this.ackId = model.ackId;
                 this.capacity = model.capacity;
                 this.chargeType = model.chargeType;
                 this.computeUnitNum = model.computeUnitNum;
@@ -586,11 +611,20 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.tags = model.tags;
+                this.vNodeCount = model.vNodeCount;
                 this.vNodeName = model.vNodeName;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AckId.
+             */
+            public Builder ackId(String ackId) {
+                this.ackId = ackId;
+                return this;
+            }
 
             /**
              * Capacity.
@@ -733,6 +767,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VNodeCount.
+             */
+            public Builder vNodeCount(Integer vNodeCount) {
+                this.vNodeCount = vNodeCount;
                 return this;
             }
 
