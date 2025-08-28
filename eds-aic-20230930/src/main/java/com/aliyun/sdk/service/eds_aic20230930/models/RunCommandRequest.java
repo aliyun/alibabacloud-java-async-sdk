@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RunCommandRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommandContent")
     private String commandContent;
 
@@ -35,6 +39,7 @@ public class RunCommandRequest extends Request {
 
     private RunCommandRequest(Builder builder) {
         super(builder);
+        this.agentType = builder.agentType;
         this.commandContent = builder.commandContent;
         this.contentEncoding = builder.contentEncoding;
         this.instanceIds = builder.instanceIds;
@@ -52,6 +57,13 @@ public class RunCommandRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -83,6 +95,7 @@ public class RunCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RunCommandRequest, Builder> {
+        private String agentType; 
         private String commandContent; 
         private String contentEncoding; 
         private java.util.List<String> instanceIds; 
@@ -94,11 +107,21 @@ public class RunCommandRequest extends Request {
 
         private Builder(RunCommandRequest request) {
             super(request);
+            this.agentType = request.agentType;
             this.commandContent = request.commandContent;
             this.contentEncoding = request.contentEncoding;
             this.instanceIds = request.instanceIds;
             this.timeout = request.timeout;
         } 
+
+        /**
+         * AgentType.
+         */
+        public Builder agentType(String agentType) {
+            this.putQueryParameter("AgentType", agentType);
+            this.agentType = agentType;
+            return this;
+        }
 
         /**
          * <p>The content of the command.</p>
