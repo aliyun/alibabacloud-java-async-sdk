@@ -626,6 +626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableLineageByTaskIdResponse> getTableLineageByTaskId(GetTableLineageByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of GetTransferInfo  GetTransferInfoRequest
+     * @return GetTransferInfoResponse
+     */
+    CompletableFuture<GetTransferInfoResponse> getTransferInfo(GetTransferInfoRequest request);
+
+    /**
      * @param request the request parameters of GetUdf  GetUdfRequest
      * @return GetUdfResponse
      */
@@ -944,6 +950,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumePhysicalNodeResponse> resumePhysicalNode(ResumePhysicalNodeRequest request);
 
     /**
+     * @param request the request parameters of RetryTransferOwnership  RetryTransferOwnershipRequest
+     * @return RetryTransferOwnershipResponse
+     */
+    CompletableFuture<RetryTransferOwnershipResponse> retryTransferOwnership(RetryTransferOwnershipRequest request);
+
+    /**
      * @param request the request parameters of RevokeDataServiceApi  RevokeDataServiceApiRequest
      * @return RevokeDataServiceApiResponse
      */
@@ -966,6 +978,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitBatchTaskResponse
      */
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
+
+    /**
+     * @param request the request parameters of TransferOwnershipForAllObject  TransferOwnershipForAllObjectRequest
+     * @return TransferOwnershipForAllObjectResponse
+     */
+    CompletableFuture<TransferOwnershipForAllObjectResponse> transferOwnershipForAllObject(TransferOwnershipForAllObjectRequest request);
 
     /**
      * @param request the request parameters of UpdateAdHocFile  UpdateAdHocFileRequest
