@@ -620,6 +620,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveSceneIds")
         private java.util.List<Integer> effectiveSceneIds;
 
+        @com.aliyun.core.annotation.NameInMap("EffectiveSceneNameList")
+        private java.util.List<String> effectiveSceneNameList;
+
         @com.aliyun.core.annotation.NameInMap("EffectiveSceneNames")
         private java.util.List<Integer> effectiveSceneNames;
 
@@ -680,6 +683,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceIdList")
+        private java.util.List<Integer> serviceIdList;
+
         @com.aliyun.core.annotation.NameInMap("ServiceIds")
         private java.util.List<String> serviceIds;
 
@@ -720,6 +726,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             this.controlType = builder.controlType;
             this.description = builder.description;
             this.effectiveSceneIds = builder.effectiveSceneIds;
+            this.effectiveSceneNameList = builder.effectiveSceneNameList;
             this.effectiveSceneNames = builder.effectiveSceneNames;
             this.endTime = builder.endTime;
             this.everPublished = builder.everPublished;
@@ -740,6 +747,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
             this.serviceId = builder.serviceId;
+            this.serviceIdList = builder.serviceIdList;
             this.serviceIds = builder.serviceIds;
             this.startTime = builder.startTime;
             this.statisBahaviorConditionExpress = builder.statisBahaviorConditionExpress;
@@ -801,6 +809,13 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
          */
         public java.util.List<Integer> getEffectiveSceneIds() {
             return this.effectiveSceneIds;
+        }
+
+        /**
+         * @return effectiveSceneNameList
+         */
+        public java.util.List<String> getEffectiveSceneNameList() {
+            return this.effectiveSceneNameList;
         }
 
         /**
@@ -944,6 +959,13 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceIdList
+         */
+        public java.util.List<Integer> getServiceIdList() {
+            return this.serviceIdList;
+        }
+
+        /**
          * @return serviceIds
          */
         public java.util.List<String> getServiceIds() {
@@ -1027,6 +1049,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String controlType; 
             private String description; 
             private java.util.List<Integer> effectiveSceneIds; 
+            private java.util.List<String> effectiveSceneNameList; 
             private java.util.List<Integer> effectiveSceneNames; 
             private String endTime; 
             private Boolean everPublished; 
@@ -1047,6 +1070,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String sceneId; 
             private String sceneName; 
             private String serviceId; 
+            private java.util.List<Integer> serviceIdList; 
             private java.util.List<String> serviceIds; 
             private String startTime; 
             private String statisBahaviorConditionExpress; 
@@ -1069,6 +1093,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
                 this.controlType = model.controlType;
                 this.description = model.description;
                 this.effectiveSceneIds = model.effectiveSceneIds;
+                this.effectiveSceneNameList = model.effectiveSceneNameList;
                 this.effectiveSceneNames = model.effectiveSceneNames;
                 this.endTime = model.endTime;
                 this.everPublished = model.everPublished;
@@ -1089,6 +1114,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
                 this.sceneId = model.sceneId;
                 this.sceneName = model.sceneName;
                 this.serviceId = model.serviceId;
+                this.serviceIdList = model.serviceIdList;
                 this.serviceIds = model.serviceIds;
                 this.startTime = model.startTime;
                 this.statisBahaviorConditionExpress = model.statisBahaviorConditionExpress;
@@ -1147,6 +1173,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
              */
             public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
                 this.effectiveSceneIds = effectiveSceneIds;
+                return this;
+            }
+
+            /**
+             * EffectiveSceneNameList.
+             */
+            public Builder effectiveSceneNameList(java.util.List<String> effectiveSceneNameList) {
+                this.effectiveSceneNameList = effectiveSceneNameList;
                 return this;
             }
 
@@ -1307,6 +1341,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServiceIdList.
+             */
+            public Builder serviceIdList(java.util.List<Integer> serviceIdList) {
+                this.serviceIdList = serviceIdList;
                 return this;
             }
 
