@@ -42,6 +42,10 @@ public class CreateTrafficControlTaskRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EffectiveSceneIds")
+    private java.util.List<Integer> effectiveSceneIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -95,6 +99,10 @@ public class CreateTrafficControlTaskRequest extends Request {
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceIds")
+    private java.util.List<Integer> serviceIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -138,6 +146,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         this.controlLogic = builder.controlLogic;
         this.controlType = builder.controlType;
         this.description = builder.description;
+        this.effectiveSceneIds = builder.effectiveSceneIds;
         this.endTime = builder.endTime;
         this.executionTime = builder.executionTime;
         this.flinkResourceId = builder.flinkResourceId;
@@ -151,6 +160,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         this.prodExperimentIds = builder.prodExperimentIds;
         this.sceneId = builder.sceneId;
         this.serviceId = builder.serviceId;
+        this.serviceIds = builder.serviceIds;
         this.startTime = builder.startTime;
         this.statisBehaviorConditionArray = builder.statisBehaviorConditionArray;
         this.statisBehaviorConditionExpress = builder.statisBehaviorConditionExpress;
@@ -215,6 +225,13 @@ public class CreateTrafficControlTaskRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return effectiveSceneIds
+     */
+    public java.util.List<Integer> getEffectiveSceneIds() {
+        return this.effectiveSceneIds;
     }
 
     /**
@@ -309,6 +326,13 @@ public class CreateTrafficControlTaskRequest extends Request {
     }
 
     /**
+     * @return serviceIds
+     */
+    public java.util.List<Integer> getServiceIds() {
+        return this.serviceIds;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -378,6 +402,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         private String controlLogic; 
         private String controlType; 
         private String description; 
+        private java.util.List<Integer> effectiveSceneIds; 
         private String endTime; 
         private String executionTime; 
         private String flinkResourceId; 
@@ -391,6 +416,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         private String prodExperimentIds; 
         private String sceneId; 
         private String serviceId; 
+        private java.util.List<Integer> serviceIds; 
         private String startTime; 
         private String statisBehaviorConditionArray; 
         private String statisBehaviorConditionExpress; 
@@ -413,6 +439,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             this.controlLogic = request.controlLogic;
             this.controlType = request.controlType;
             this.description = request.description;
+            this.effectiveSceneIds = request.effectiveSceneIds;
             this.endTime = request.endTime;
             this.executionTime = request.executionTime;
             this.flinkResourceId = request.flinkResourceId;
@@ -426,6 +453,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             this.prodExperimentIds = request.prodExperimentIds;
             this.sceneId = request.sceneId;
             this.serviceId = request.serviceId;
+            this.serviceIds = request.serviceIds;
             this.startTime = request.startTime;
             this.statisBehaviorConditionArray = request.statisBehaviorConditionArray;
             this.statisBehaviorConditionExpress = request.statisBehaviorConditionExpress;
@@ -488,6 +516,15 @@ public class CreateTrafficControlTaskRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EffectiveSceneIds.
+         */
+        public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
+            this.putBodyParameter("EffectiveSceneIds", effectiveSceneIds);
+            this.effectiveSceneIds = effectiveSceneIds;
             return this;
         }
 
@@ -605,6 +642,15 @@ public class CreateTrafficControlTaskRequest extends Request {
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * ServiceIds.
+         */
+        public Builder serviceIds(java.util.List<Integer> serviceIds) {
+            this.putBodyParameter("ServiceIds", serviceIds);
+            this.serviceIds = serviceIds;
             return this;
         }
 

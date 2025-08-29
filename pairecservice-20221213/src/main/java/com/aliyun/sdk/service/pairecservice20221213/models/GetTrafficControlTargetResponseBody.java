@@ -65,6 +65,9 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TrafficControlTargetId")
     private String trafficControlTargetId;
 
+    @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
+    private String trafficControlTaskId;
+
     @com.aliyun.core.annotation.NameInMap("Value")
     private Float value;
 
@@ -85,6 +88,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         this.status = builder.status;
         this.toleranceValue = builder.toleranceValue;
         this.trafficControlTargetId = builder.trafficControlTargetId;
+        this.trafficControlTaskId = builder.trafficControlTaskId;
         this.value = builder.value;
     }
 
@@ -213,6 +217,13 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     }
 
     /**
+     * @return trafficControlTaskId
+     */
+    public String getTrafficControlTaskId() {
+        return this.trafficControlTaskId;
+    }
+
+    /**
      * @return value
      */
     public Float getValue() {
@@ -236,6 +247,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         private String status; 
         private Long toleranceValue; 
         private String trafficControlTargetId; 
+        private String trafficControlTaskId; 
         private Float value; 
 
         private Builder() {
@@ -258,6 +270,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             this.status = model.status;
             this.toleranceValue = model.toleranceValue;
             this.trafficControlTargetId = model.trafficControlTargetId;
+            this.trafficControlTaskId = model.trafficControlTaskId;
             this.value = model.value;
         } 
 
@@ -386,6 +399,14 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.trafficControlTargetId = trafficControlTargetId;
+            return this;
+        }
+
+        /**
+         * TrafficControlTaskId.
+         */
+        public Builder trafficControlTaskId(String trafficControlTaskId) {
+            this.trafficControlTaskId = trafficControlTaskId;
             return this;
         }
 
