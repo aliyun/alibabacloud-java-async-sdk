@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddVirtualNodePoolStatusList")
+    private java.util.List<String> addVirtualNodePoolStatusList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -51,6 +55,10 @@ public class ListWuyingServerRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+    private String virtualNodePoolId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WuyingServerIdList")
     private java.util.List<String> wuyingServerIdList;
 
@@ -60,6 +68,7 @@ public class ListWuyingServerRequest extends Request {
 
     private ListWuyingServerRequest(Builder builder) {
         super(builder);
+        this.addVirtualNodePoolStatusList = builder.addVirtualNodePoolStatusList;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.imageId = builder.imageId;
@@ -68,6 +77,7 @@ public class ListWuyingServerRequest extends Request {
         this.pageSize = builder.pageSize;
         this.serverInstanceType = builder.serverInstanceType;
         this.status = builder.status;
+        this.virtualNodePoolId = builder.virtualNodePoolId;
         this.wuyingServerIdList = builder.wuyingServerIdList;
         this.wuyingServerNameOrId = builder.wuyingServerNameOrId;
     }
@@ -83,6 +93,13 @@ public class ListWuyingServerRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addVirtualNodePoolStatusList
+     */
+    public java.util.List<String> getAddVirtualNodePoolStatusList() {
+        return this.addVirtualNodePoolStatusList;
     }
 
     /**
@@ -142,6 +159,13 @@ public class ListWuyingServerRequest extends Request {
     }
 
     /**
+     * @return virtualNodePoolId
+     */
+    public String getVirtualNodePoolId() {
+        return this.virtualNodePoolId;
+    }
+
+    /**
      * @return wuyingServerIdList
      */
     public java.util.List<String> getWuyingServerIdList() {
@@ -156,6 +180,7 @@ public class ListWuyingServerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListWuyingServerRequest, Builder> {
+        private java.util.List<String> addVirtualNodePoolStatusList; 
         private String bizRegionId; 
         private String chargeType; 
         private String imageId; 
@@ -164,6 +189,7 @@ public class ListWuyingServerRequest extends Request {
         private Integer pageSize; 
         private String serverInstanceType; 
         private String status; 
+        private String virtualNodePoolId; 
         private java.util.List<String> wuyingServerIdList; 
         private String wuyingServerNameOrId; 
 
@@ -173,6 +199,7 @@ public class ListWuyingServerRequest extends Request {
 
         private Builder(ListWuyingServerRequest request) {
             super(request);
+            this.addVirtualNodePoolStatusList = request.addVirtualNodePoolStatusList;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.imageId = request.imageId;
@@ -181,9 +208,19 @@ public class ListWuyingServerRequest extends Request {
             this.pageSize = request.pageSize;
             this.serverInstanceType = request.serverInstanceType;
             this.status = request.status;
+            this.virtualNodePoolId = request.virtualNodePoolId;
             this.wuyingServerIdList = request.wuyingServerIdList;
             this.wuyingServerNameOrId = request.wuyingServerNameOrId;
         } 
+
+        /**
+         * AddVirtualNodePoolStatusList.
+         */
+        public Builder addVirtualNodePoolStatusList(java.util.List<String> addVirtualNodePoolStatusList) {
+            this.putBodyParameter("AddVirtualNodePoolStatusList", addVirtualNodePoolStatusList);
+            this.addVirtualNodePoolStatusList = addVirtualNodePoolStatusList;
+            return this;
+        }
 
         /**
          * BizRegionId.
@@ -254,6 +291,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * VirtualNodePoolId.
+         */
+        public Builder virtualNodePoolId(String virtualNodePoolId) {
+            this.putBodyParameter("VirtualNodePoolId", virtualNodePoolId);
+            this.virtualNodePoolId = virtualNodePoolId;
             return this;
         }
 

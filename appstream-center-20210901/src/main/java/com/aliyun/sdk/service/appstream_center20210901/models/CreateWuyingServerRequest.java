@@ -86,6 +86,10 @@ public class CreateWuyingServerRequest extends Request {
     private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+    private String virtualNodePoolId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WuyingServerName")
     private String wuyingServerName;
 
@@ -108,6 +112,7 @@ public class CreateWuyingServerRequest extends Request {
         this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
         this.systemDiskSize = builder.systemDiskSize;
         this.vSwitchIds = builder.vSwitchIds;
+        this.virtualNodePoolId = builder.virtualNodePoolId;
         this.wuyingServerName = builder.wuyingServerName;
     }
 
@@ -244,6 +249,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return virtualNodePoolId
+     */
+    public String getVirtualNodePoolId() {
+        return this.virtualNodePoolId;
+    }
+
+    /**
      * @return wuyingServerName
      */
     public String getWuyingServerName() {
@@ -268,6 +280,7 @@ public class CreateWuyingServerRequest extends Request {
         private String systemDiskPerformanceLevel; 
         private Integer systemDiskSize; 
         private java.util.List<String> vSwitchIds; 
+        private String virtualNodePoolId; 
         private String wuyingServerName; 
 
         private Builder() {
@@ -293,6 +306,7 @@ public class CreateWuyingServerRequest extends Request {
             this.systemDiskPerformanceLevel = request.systemDiskPerformanceLevel;
             this.systemDiskSize = request.systemDiskSize;
             this.vSwitchIds = request.vSwitchIds;
+            this.virtualNodePoolId = request.virtualNodePoolId;
             this.wuyingServerName = request.wuyingServerName;
         } 
 
@@ -446,6 +460,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putBodyParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
+        /**
+         * VirtualNodePoolId.
+         */
+        public Builder virtualNodePoolId(String virtualNodePoolId) {
+            this.putBodyParameter("VirtualNodePoolId", virtualNodePoolId);
+            this.virtualNodePoolId = virtualNodePoolId;
             return this;
         }
 

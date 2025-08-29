@@ -467,6 +467,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
      * <p>ListWuyingServerResponseBody</p>
      */
     public static class WuyingServerList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddVirtualNodePoolStatus")
+        private String addVirtualNodePoolStatus;
+
         @com.aliyun.core.annotation.NameInMap("BizRegionId")
         private String bizRegionId;
 
@@ -506,6 +509,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
+
         @com.aliyun.core.annotation.NameInMap("ServerInstanceTypeInfo")
         private ServerInstanceTypeInfo serverInstanceTypeInfo;
 
@@ -521,6 +527,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+        private String virtualNodePoolId;
+
         @com.aliyun.core.annotation.NameInMap("WuyingServerId")
         private String wuyingServerId;
 
@@ -528,6 +537,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         private String wuyingServerName;
 
         private WuyingServerList(Builder builder) {
+            this.addVirtualNodePoolStatus = builder.addVirtualNodePoolStatus;
             this.bizRegionId = builder.bizRegionId;
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
@@ -541,11 +551,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
             this.osType = builder.osType;
+            this.securityGroupIds = builder.securityGroupIds;
             this.serverInstanceTypeInfo = builder.serverInstanceTypeInfo;
             this.status = builder.status;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskSize = builder.systemDiskSize;
+            this.virtualNodePoolId = builder.virtualNodePoolId;
             this.wuyingServerId = builder.wuyingServerId;
             this.wuyingServerName = builder.wuyingServerName;
         }
@@ -556,6 +568,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         public static WuyingServerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return addVirtualNodePoolStatus
+         */
+        public String getAddVirtualNodePoolStatus() {
+            return this.addVirtualNodePoolStatus;
         }
 
         /**
@@ -650,6 +669,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupIds
+         */
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
          * @return serverInstanceTypeInfo
          */
         public ServerInstanceTypeInfo getServerInstanceTypeInfo() {
@@ -685,6 +711,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return virtualNodePoolId
+         */
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
+        }
+
+        /**
          * @return wuyingServerId
          */
         public String getWuyingServerId() {
@@ -699,6 +732,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String addVirtualNodePoolStatus; 
             private String bizRegionId; 
             private String chargeType; 
             private String createTime; 
@@ -712,11 +746,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String officeSiteName; 
             private String officeSiteType; 
             private String osType; 
+            private java.util.List<String> securityGroupIds; 
             private ServerInstanceTypeInfo serverInstanceTypeInfo; 
             private String status; 
             private String systemDiskCategory; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
+            private String virtualNodePoolId; 
             private String wuyingServerId; 
             private String wuyingServerName; 
 
@@ -724,6 +760,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             private Builder(WuyingServerList model) {
+                this.addVirtualNodePoolStatus = model.addVirtualNodePoolStatus;
                 this.bizRegionId = model.bizRegionId;
                 this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
@@ -737,14 +774,24 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.officeSiteName = model.officeSiteName;
                 this.officeSiteType = model.officeSiteType;
                 this.osType = model.osType;
+                this.securityGroupIds = model.securityGroupIds;
                 this.serverInstanceTypeInfo = model.serverInstanceTypeInfo;
                 this.status = model.status;
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskSize = model.systemDiskSize;
+                this.virtualNodePoolId = model.virtualNodePoolId;
                 this.wuyingServerId = model.wuyingServerId;
                 this.wuyingServerName = model.wuyingServerName;
             } 
+
+            /**
+             * AddVirtualNodePoolStatus.
+             */
+            public Builder addVirtualNodePoolStatus(String addVirtualNodePoolStatus) {
+                this.addVirtualNodePoolStatus = addVirtualNodePoolStatus;
+                return this;
+            }
 
             /**
              * BizRegionId.
@@ -851,6 +898,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
              * ServerInstanceTypeInfo.
              */
             public Builder serverInstanceTypeInfo(ServerInstanceTypeInfo serverInstanceTypeInfo) {
@@ -887,6 +942,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * VirtualNodePoolId.
+             */
+            public Builder virtualNodePoolId(String virtualNodePoolId) {
+                this.virtualNodePoolId = virtualNodePoolId;
                 return this;
             }
 

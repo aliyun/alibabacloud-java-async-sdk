@@ -217,6 +217,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNodePoolAmountResponse> modifyNodePoolAmount(ModifyNodePoolAmountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can select one of the following scaling policies for cloud app resources:</p>
+     * <ul>
+     * <li>No scaling: Resources are not scaled.</li>
+     * <li>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</li>
+     * <li>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyNodePoolAttribute  ModifyNodePoolAttributeRequest
      * @return ModifyNodePoolAttributeResponse
      */
