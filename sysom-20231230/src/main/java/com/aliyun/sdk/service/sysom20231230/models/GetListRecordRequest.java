@@ -25,10 +25,15 @@ public class GetListRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    private String region;
+
     private GetListRecordRequest(Builder builder) {
         super(builder);
         this.current = builder.current;
         this.pageSize = builder.pageSize;
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class GetListRecordRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
     public static final class Builder extends Request.Builder<GetListRecordRequest, Builder> {
         private Long current; 
         private Long pageSize; 
+        private String region; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class GetListRecordRequest extends Request {
             super(request);
             this.current = request.current;
             this.pageSize = request.pageSize;
+            this.region = request.region;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class GetListRecordRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("region", region);
+            this.region = region;
             return this;
         }
 
