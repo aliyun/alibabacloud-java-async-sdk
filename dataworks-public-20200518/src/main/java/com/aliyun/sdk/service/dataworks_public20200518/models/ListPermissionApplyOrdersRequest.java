@@ -35,6 +35,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineType")
+    @Deprecated
     private String engineType;
 
     @com.aliyun.core.annotation.Query
@@ -47,6 +48,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
     private Integer orderType;
 

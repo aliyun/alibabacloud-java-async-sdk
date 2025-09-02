@@ -50,6 +50,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineType")
+    @Deprecated
     private String engineType;
 
     @com.aliyun.core.annotation.Query
@@ -58,6 +59,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
+    @Deprecated
     private Integer orderType;
 
     @com.aliyun.core.annotation.Query
@@ -343,7 +345,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
         private String actions;
 
         @com.aliyun.core.annotation.NameInMap("Name")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ColumnMetaList(Builder builder) {
@@ -395,7 +396,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
             /**
              * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>aColumnName</p>
@@ -426,7 +426,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
         private java.util.List<ColumnMetaList> columnMetaList;
 
         @com.aliyun.core.annotation.NameInMap("Name")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ApplyObject(Builder builder) {
@@ -499,7 +498,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
             /**
              * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>aTableName</p>

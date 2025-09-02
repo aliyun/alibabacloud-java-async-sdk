@@ -104,7 +104,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBusinessResponse> createBusiness(CreateBusinessRequest request);
 
     /**
-     * @deprecated OpenAPI CreateConnection is deprecated  * @param request  the request parameters of CreateConnection  CreateConnectionRequest
+     * @deprecated OpenAPI CreateConnection is deprecated, please use dataworks-public::2020-05-18::CreateDataSource instead.  * @param request  the request parameters of CreateConnection  CreateConnectionRequest
      * @return CreateConnectionResponse
      */
     @Deprecated
@@ -1877,7 +1877,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterConfigsResponse> updateClusterConfigs(UpdateClusterConfigsRequest request);
 
     /**
-     * @deprecated OpenAPI UpdateConnection is deprecated  * @param request  the request parameters of UpdateConnection  UpdateConnectionRequest
+     * @deprecated OpenAPI UpdateConnection is deprecated, please use dataworks-public::2020-05-18::UpdateDataSource instead.  * @param request  the request parameters of UpdateConnection  UpdateConnectionRequest
      * @return UpdateConnectionResponse
      */
     @Deprecated

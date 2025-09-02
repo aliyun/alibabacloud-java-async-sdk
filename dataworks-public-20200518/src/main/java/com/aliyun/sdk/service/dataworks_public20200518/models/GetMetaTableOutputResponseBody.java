@@ -467,7 +467,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of instances.</p>
+             * <p>The partitions.</p>
              */
             public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
