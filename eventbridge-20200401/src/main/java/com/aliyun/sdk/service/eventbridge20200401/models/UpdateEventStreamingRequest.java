@@ -903,6 +903,1014 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
+    public static class Headers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Headers(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Headers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Headers build() {
+                return new Headers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Key extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Key(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Key create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Key model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Key build() {
+                return new Key(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class NetworkType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private NetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NetworkType build() {
+                return new NetworkType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class VSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Value extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Value(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Value create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Value build() {
+                return new Value(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class VpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SinkApacheKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Acks")
+        private String acks;
+
+        @com.aliyun.core.annotation.NameInMap("Bootstraps")
+        private String bootstraps;
+
+        @com.aliyun.core.annotation.NameInMap("Headers")
+        private Headers headers;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private Key key;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private NetworkType networkType;
+
+        @com.aliyun.core.annotation.NameInMap("SaslMechanism")
+        private String saslMechanism;
+
+        @com.aliyun.core.annotation.NameInMap("SaslPassword")
+        private String saslPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SaslUser")
+        private String saslUser;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
+        private String securityProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private VSwitchIds vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private Value value;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private VpcId vpcId;
+
+        private SinkApacheKafkaParameters(Builder builder) {
+            this.acks = builder.acks;
+            this.bootstraps = builder.bootstraps;
+            this.headers = builder.headers;
+            this.key = builder.key;
+            this.networkType = builder.networkType;
+            this.saslMechanism = builder.saslMechanism;
+            this.saslPassword = builder.saslPassword;
+            this.saslUser = builder.saslUser;
+            this.securityGroupId = builder.securityGroupId;
+            this.securityProtocol = builder.securityProtocol;
+            this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.value = builder.value;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkApacheKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return acks
+         */
+        public String getAcks() {
+            return this.acks;
+        }
+
+        /**
+         * @return bootstraps
+         */
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        /**
+         * @return headers
+         */
+        public Headers getHeaders() {
+            return this.headers;
+        }
+
+        /**
+         * @return key
+         */
+        public Key getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return networkType
+         */
+        public NetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return saslMechanism
+         */
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        /**
+         * @return saslPassword
+         */
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        /**
+         * @return saslUser
+         */
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return securityProtocol
+         */
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public VSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return value
+         */
+        public Value getValue() {
+            return this.value;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String acks; 
+            private String bootstraps; 
+            private Headers headers; 
+            private Key key; 
+            private NetworkType networkType; 
+            private String saslMechanism; 
+            private String saslPassword; 
+            private String saslUser; 
+            private SecurityGroupId securityGroupId; 
+            private String securityProtocol; 
+            private String topic; 
+            private VSwitchIds vSwitchIds; 
+            private Value value; 
+            private VpcId vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkApacheKafkaParameters model) {
+                this.acks = model.acks;
+                this.bootstraps = model.bootstraps;
+                this.headers = model.headers;
+                this.key = model.key;
+                this.networkType = model.networkType;
+                this.saslMechanism = model.saslMechanism;
+                this.saslPassword = model.saslPassword;
+                this.saslUser = model.saslUser;
+                this.securityGroupId = model.securityGroupId;
+                this.securityProtocol = model.securityProtocol;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.value = model.value;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * Acks.
+             */
+            public Builder acks(String acks) {
+                this.acks = acks;
+                return this;
+            }
+
+            /**
+             * Bootstraps.
+             */
+            public Builder bootstraps(String bootstraps) {
+                this.bootstraps = bootstraps;
+                return this;
+            }
+
+            /**
+             * Headers.
+             */
+            public Builder headers(Headers headers) {
+                this.headers = headers;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(Key key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(NetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * SaslMechanism.
+             */
+            public Builder saslMechanism(String saslMechanism) {
+                this.saslMechanism = saslMechanism;
+                return this;
+            }
+
+            /**
+             * SaslPassword.
+             */
+            public Builder saslPassword(String saslPassword) {
+                this.saslPassword = saslPassword;
+                return this;
+            }
+
+            /**
+             * SaslUser.
+             */
+            public Builder saslUser(String saslUser) {
+                this.saslUser = saslUser;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vcgdxz7o1n9zapp****</p>
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityProtocol.
+             */
+            public Builder securityProtocol(String securityProtocol) {
+                this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * Topic.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-m5ev8asdc6h12345****</p>
+             */
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Value value) {
+                this.value = value;
+                return this;
+            }
+
+            /**
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zehizpoendb3****</p>
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SinkApacheKafkaParameters build() {
+                return new SinkApacheKafkaParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
     public static class ConsumeTimestamp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -3895,7 +4903,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class NetworkType extends TeaModel {
+    public static class SinkDorisParametersNetworkType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -3905,7 +4913,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private NetworkType(Builder builder) {
+        private SinkDorisParametersNetworkType(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -3915,7 +4923,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static NetworkType create() {
+        public static SinkDorisParametersNetworkType create() {
             return builder().build();
         }
 
@@ -3948,7 +4956,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(NetworkType model) {
+            private Builder(SinkDorisParametersNetworkType model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -3988,8 +4996,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public NetworkType build() {
-                return new NetworkType(this);
+            public SinkDorisParametersNetworkType build() {
+                return new SinkDorisParametersNetworkType(this);
             } 
 
         } 
@@ -4213,7 +5221,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class SecurityGroupId extends TeaModel {
+    public static class SinkDorisParametersSecurityGroupId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -4223,7 +5231,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SecurityGroupId(Builder builder) {
+        private SinkDorisParametersSecurityGroupId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -4233,7 +5241,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static SecurityGroupId create() {
+        public static SinkDorisParametersSecurityGroupId create() {
             return builder().build();
         }
 
@@ -4266,7 +5274,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(SecurityGroupId model) {
+            private Builder(SinkDorisParametersSecurityGroupId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -4306,8 +5314,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public SecurityGroupId build() {
-                return new SecurityGroupId(this);
+            public SinkDorisParametersSecurityGroupId build() {
+                return new SinkDorisParametersSecurityGroupId(this);
             } 
 
         } 
@@ -4531,7 +5539,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class VSwitchIds extends TeaModel {
+    public static class SinkDorisParametersVSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -4541,7 +5549,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VSwitchIds(Builder builder) {
+        private SinkDorisParametersVSwitchIds(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -4551,7 +5559,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VSwitchIds create() {
+        public static SinkDorisParametersVSwitchIds create() {
             return builder().build();
         }
 
@@ -4584,7 +5592,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VSwitchIds model) {
+            private Builder(SinkDorisParametersVSwitchIds model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -4624,8 +5632,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VSwitchIds build() {
-                return new VSwitchIds(this);
+            public SinkDorisParametersVSwitchIds build() {
+                return new SinkDorisParametersVSwitchIds(this);
             } 
 
         } 
@@ -4637,7 +5645,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class VpcId extends TeaModel {
+    public static class SinkDorisParametersVpcId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -4647,7 +5655,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VpcId(Builder builder) {
+        private SinkDorisParametersVpcId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -4657,7 +5665,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VpcId create() {
+        public static SinkDorisParametersVpcId create() {
             return builder().build();
         }
 
@@ -4690,7 +5698,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VpcId model) {
+            private Builder(SinkDorisParametersVpcId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -4730,8 +5738,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VpcId build() {
-                return new VpcId(this);
+            public SinkDorisParametersVpcId build() {
+                return new SinkDorisParametersVpcId(this);
             } 
 
         } 
@@ -4757,7 +5765,7 @@ public class UpdateEventStreamingRequest extends Request {
         private FeHttpEndpoint feHttpEndpoint;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
-        private NetworkType networkType;
+        private SinkDorisParametersNetworkType networkType;
 
         @com.aliyun.core.annotation.NameInMap("Password")
         private Password password;
@@ -4766,7 +5774,7 @@ public class UpdateEventStreamingRequest extends Request {
         private QueryEndpoint queryEndpoint;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private SecurityGroupId securityGroupId;
+        private SinkDorisParametersSecurityGroupId securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Table")
         private Table table;
@@ -4775,10 +5783,10 @@ public class UpdateEventStreamingRequest extends Request {
         private UserName userName;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private VSwitchIds vSwitchIds;
+        private SinkDorisParametersVSwitchIds vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
-        private VpcId vpcId;
+        private SinkDorisParametersVpcId vpcId;
 
         private SinkDorisParameters(Builder builder) {
             this.beHttpEndpoint = builder.beHttpEndpoint;
@@ -4834,7 +5842,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return networkType
          */
-        public NetworkType getNetworkType() {
+        public SinkDorisParametersNetworkType getNetworkType() {
             return this.networkType;
         }
 
@@ -4855,7 +5863,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return securityGroupId
          */
-        public SecurityGroupId getSecurityGroupId() {
+        public SinkDorisParametersSecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -4876,14 +5884,14 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return vSwitchIds
          */
-        public VSwitchIds getVSwitchIds() {
+        public SinkDorisParametersVSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         /**
          * @return vpcId
          */
-        public VpcId getVpcId() {
+        public SinkDorisParametersVpcId getVpcId() {
             return this.vpcId;
         }
 
@@ -4892,14 +5900,14 @@ public class UpdateEventStreamingRequest extends Request {
             private SinkDorisParametersBody body; 
             private Database database; 
             private FeHttpEndpoint feHttpEndpoint; 
-            private NetworkType networkType; 
+            private SinkDorisParametersNetworkType networkType; 
             private Password password; 
             private QueryEndpoint queryEndpoint; 
-            private SecurityGroupId securityGroupId; 
+            private SinkDorisParametersSecurityGroupId securityGroupId; 
             private Table table; 
             private UserName userName; 
-            private VSwitchIds vSwitchIds; 
-            private VpcId vpcId; 
+            private SinkDorisParametersVSwitchIds vSwitchIds; 
+            private SinkDorisParametersVpcId vpcId; 
 
             private Builder() {
             } 
@@ -4961,7 +5969,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <strong>example:</strong>
              * <p>PrivateNetwork</p>
              */
-            public Builder networkType(NetworkType networkType) {
+            public Builder networkType(SinkDorisParametersNetworkType networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -4988,7 +5996,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <strong>example:</strong>
              * <p>sg-2ze5bmpw6adn0q******</p>
              */
-            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+            public Builder securityGroupId(SinkDorisParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -5015,7 +6023,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <strong>example:</strong>
              * <p>vsw-m5ev8asdc6h12345****</p>
              */
-            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+            public Builder vSwitchIds(SinkDorisParametersVSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -5026,7 +6034,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <strong>example:</strong>
              * <p>vpc-2zeccak5pb0j3ay******</p>
              */
-            public Builder vpcId(VpcId vpcId) {
+            public Builder vpcId(SinkDorisParametersVpcId vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -6589,7 +7597,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class Headers extends TeaModel {
+    public static class SinkKafkaParametersHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6599,7 +7607,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Headers(Builder builder) {
+        private SinkKafkaParametersHeaders(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6609,7 +7617,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static Headers create() {
+        public static SinkKafkaParametersHeaders create() {
             return builder().build();
         }
 
@@ -6642,7 +7650,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Headers model) {
+            private Builder(SinkKafkaParametersHeaders model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6689,8 +7697,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public Headers build() {
-                return new Headers(this);
+            public SinkKafkaParametersHeaders build() {
+                return new SinkKafkaParametersHeaders(this);
             } 
 
         } 
@@ -6804,7 +7812,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class Key extends TeaModel {
+    public static class SinkKafkaParametersKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6814,7 +7822,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Key(Builder builder) {
+        private SinkKafkaParametersKey(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6824,7 +7832,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static Key create() {
+        public static SinkKafkaParametersKey create() {
             return builder().build();
         }
 
@@ -6857,7 +7865,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Key model) {
+            private Builder(SinkKafkaParametersKey model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6893,8 +7901,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public Key build() {
-                return new Key(this);
+            public SinkKafkaParametersKey build() {
+                return new SinkKafkaParametersKey(this);
             } 
 
         } 
@@ -7008,7 +8016,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class Value extends TeaModel {
+    public static class SinkKafkaParametersValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -7018,7 +8026,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Value(Builder builder) {
+        private SinkKafkaParametersValue(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -7028,7 +8036,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static Value create() {
+        public static SinkKafkaParametersValue create() {
             return builder().build();
         }
 
@@ -7061,7 +8069,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Value model) {
+            private Builder(SinkKafkaParametersValue model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -7102,8 +8110,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public Value build() {
-                return new Value(this);
+            public SinkKafkaParametersValue build() {
+                return new SinkKafkaParametersValue(this);
             } 
 
         } 
@@ -7120,19 +8128,19 @@ public class UpdateEventStreamingRequest extends Request {
         private Acks acks;
 
         @com.aliyun.core.annotation.NameInMap("Headers")
-        private Headers headers;
+        private SinkKafkaParametersHeaders headers;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Key")
-        private Key key;
+        private SinkKafkaParametersKey key;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkKafkaParametersTopic topic;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private Value value;
+        private SinkKafkaParametersValue value;
 
         private SinkKafkaParameters(Builder builder) {
             this.acks = builder.acks;
@@ -7161,7 +8169,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return headers
          */
-        public Headers getHeaders() {
+        public SinkKafkaParametersHeaders getHeaders() {
             return this.headers;
         }
 
@@ -7175,7 +8183,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return key
          */
-        public Key getKey() {
+        public SinkKafkaParametersKey getKey() {
             return this.key;
         }
 
@@ -7189,17 +8197,17 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return value
          */
-        public Value getValue() {
+        public SinkKafkaParametersValue getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private Acks acks; 
-            private Headers headers; 
+            private SinkKafkaParametersHeaders headers; 
             private InstanceId instanceId; 
-            private Key key; 
+            private SinkKafkaParametersKey key; 
             private SinkKafkaParametersTopic topic; 
-            private Value value; 
+            private SinkKafkaParametersValue value; 
 
             private Builder() {
             } 
@@ -7229,7 +8237,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The metadata added to messages in the ApsaraMQ for Kafka instance.</p>
              */
-            public Builder headers(Headers headers) {
+            public Builder headers(SinkKafkaParametersHeaders headers) {
                 this.headers = headers;
                 return this;
             }
@@ -7245,7 +8253,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The message key.</p>
              */
-            public Builder key(Key key) {
+            public Builder key(SinkKafkaParametersKey key) {
                 this.key = key;
                 return this;
             }
@@ -7261,7 +8269,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The message body.</p>
              */
-            public Builder value(Value value) {
+            public Builder value(SinkKafkaParametersValue value) {
                 this.value = value;
                 return this;
             }
@@ -14379,6 +15387,9 @@ public class UpdateEventStreamingRequest extends Request {
      * <p>UpdateEventStreamingRequest</p>
      */
     public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkApacheKafkaParameters")
+        private SinkApacheKafkaParameters sinkApacheKafkaParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkApacheRocketMQCheckpointParameters")
         private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
@@ -14431,6 +15442,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
             this.sinkBaiLianParameters = builder.sinkBaiLianParameters;
             this.sinkCustomizedKafkaConnectorParameters = builder.sinkCustomizedKafkaConnectorParameters;
@@ -14456,6 +15468,13 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkApacheKafkaParameters
+         */
+        public SinkApacheKafkaParameters getSinkApacheKafkaParameters() {
+            return this.sinkApacheKafkaParameters;
         }
 
         /**
@@ -14578,6 +15597,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
             private SinkBaiLianParameters sinkBaiLianParameters; 
             private SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters; 
@@ -14600,6 +15620,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             private Builder(Sink model) {
+                this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
                 this.sinkBaiLianParameters = model.sinkBaiLianParameters;
                 this.sinkCustomizedKafkaConnectorParameters = model.sinkCustomizedKafkaConnectorParameters;
@@ -14618,6 +15639,14 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sinkRocketMQParameters = model.sinkRocketMQParameters;
                 this.sinkSLSParameters = model.sinkSLSParameters;
             } 
+
+            /**
+             * SinkApacheKafkaParameters.
+             */
+            public Builder sinkApacheKafkaParameters(SinkApacheKafkaParameters sinkApacheKafkaParameters) {
+                this.sinkApacheKafkaParameters = sinkApacheKafkaParameters;
+                return this;
+            }
 
             /**
              * <p>The parameters that are configured if you specify Apache RocketMQ (Offset Data) as the event target.</p>
@@ -14757,6 +15786,312 @@ public class UpdateEventStreamingRequest extends Request {
 
             public Sink build() {
                 return new Sink(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SourceApacheKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bootstraps")
+        private String bootstraps;
+
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
+        private String consumerGroup;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
+        private String offsetReset;
+
+        @com.aliyun.core.annotation.NameInMap("SaslMechanism")
+        private String saslMechanism;
+
+        @com.aliyun.core.annotation.NameInMap("SaslPassword")
+        private String saslPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SaslUser")
+        private String saslUser;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
+        private String securityProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ValueDataType")
+        private String valueDataType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private SourceApacheKafkaParameters(Builder builder) {
+            this.bootstraps = builder.bootstraps;
+            this.consumerGroup = builder.consumerGroup;
+            this.networkType = builder.networkType;
+            this.offsetReset = builder.offsetReset;
+            this.saslMechanism = builder.saslMechanism;
+            this.saslPassword = builder.saslPassword;
+            this.saslUser = builder.saslUser;
+            this.securityGroupId = builder.securityGroupId;
+            this.securityProtocol = builder.securityProtocol;
+            this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceApacheKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bootstraps
+         */
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        /**
+         * @return consumerGroup
+         */
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return offsetReset
+         */
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        /**
+         * @return saslMechanism
+         */
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        /**
+         * @return saslPassword
+         */
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        /**
+         * @return saslUser
+         */
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return securityProtocol
+         */
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String bootstraps; 
+            private String consumerGroup; 
+            private String networkType; 
+            private String offsetReset; 
+            private String saslMechanism; 
+            private String saslPassword; 
+            private String saslUser; 
+            private String securityGroupId; 
+            private String securityProtocol; 
+            private String topic; 
+            private String vSwitchIds; 
+            private String valueDataType; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceApacheKafkaParameters model) {
+                this.bootstraps = model.bootstraps;
+                this.consumerGroup = model.consumerGroup;
+                this.networkType = model.networkType;
+                this.offsetReset = model.offsetReset;
+                this.saslMechanism = model.saslMechanism;
+                this.saslPassword = model.saslPassword;
+                this.saslUser = model.saslUser;
+                this.securityGroupId = model.securityGroupId;
+                this.securityProtocol = model.securityProtocol;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.valueDataType = model.valueDataType;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * Bootstraps.
+             */
+            public Builder bootstraps(String bootstraps) {
+                this.bootstraps = bootstraps;
+                return this;
+            }
+
+            /**
+             * ConsumerGroup.
+             */
+            public Builder consumerGroup(String consumerGroup) {
+                this.consumerGroup = consumerGroup;
+                return this;
+            }
+
+            /**
+             * <p>The network type.</p>
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * OffsetReset.
+             */
+            public Builder offsetReset(String offsetReset) {
+                this.offsetReset = offsetReset;
+                return this;
+            }
+
+            /**
+             * SaslMechanism.
+             */
+            public Builder saslMechanism(String saslMechanism) {
+                this.saslMechanism = saslMechanism;
+                return this;
+            }
+
+            /**
+             * SaslPassword.
+             */
+            public Builder saslPassword(String saslPassword) {
+                this.saslPassword = saslPassword;
+                return this;
+            }
+
+            /**
+             * SaslUser.
+             */
+            public Builder saslUser(String saslUser) {
+                this.saslUser = saslUser;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group.</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityProtocol.
+             */
+            public Builder securityProtocol(String securityProtocol) {
+                this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * <p>The topic that you want to use to store logs. This parameter corresponds to the reserved field topic in Simple Log Service.</p>
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * <p>The vSwitch ID.</p>
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
+                return this;
+            }
+
+            /**
+             * <p>The virtual private cloud (VPC) ID.</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SourceApacheKafkaParameters build() {
+                return new SourceApacheKafkaParameters(this);
             } 
 
         } 
@@ -17533,6 +18868,9 @@ public class UpdateEventStreamingRequest extends Request {
      * <p>UpdateEventStreamingRequest</p>
      */
     public static class Source extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SourceApacheKafkaParameters")
+        private SourceApacheKafkaParameters sourceApacheKafkaParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceApacheRocketMQCheckpointParameters")
         private SourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
 
@@ -17582,6 +18920,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SourceSLSParameters sourceSLSParameters;
 
         private Source(Builder builder) {
+            this.sourceApacheKafkaParameters = builder.sourceApacheKafkaParameters;
             this.sourceApacheRocketMQCheckpointParameters = builder.sourceApacheRocketMQCheckpointParameters;
             this.sourceCustomizedKafkaConnectorParameters = builder.sourceCustomizedKafkaConnectorParameters;
             this.sourceCustomizedKafkaParameters = builder.sourceCustomizedKafkaParameters;
@@ -17606,6 +18945,13 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static Source create() {
             return builder().build();
+        }
+
+        /**
+         * @return sourceApacheKafkaParameters
+         */
+        public SourceApacheKafkaParameters getSourceApacheKafkaParameters() {
+            return this.sourceApacheKafkaParameters;
         }
 
         /**
@@ -17721,6 +19067,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private SourceApacheKafkaParameters sourceApacheKafkaParameters; 
             private SourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters; 
             private SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters; 
             private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters; 
@@ -17742,6 +19089,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             private Builder(Source model) {
+                this.sourceApacheKafkaParameters = model.sourceApacheKafkaParameters;
                 this.sourceApacheRocketMQCheckpointParameters = model.sourceApacheRocketMQCheckpointParameters;
                 this.sourceCustomizedKafkaConnectorParameters = model.sourceCustomizedKafkaConnectorParameters;
                 this.sourceCustomizedKafkaParameters = model.sourceCustomizedKafkaParameters;
@@ -17759,6 +19107,14 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sourceRocketMQParameters = model.sourceRocketMQParameters;
                 this.sourceSLSParameters = model.sourceSLSParameters;
             } 
+
+            /**
+             * SourceApacheKafkaParameters.
+             */
+            public Builder sourceApacheKafkaParameters(SourceApacheKafkaParameters sourceApacheKafkaParameters) {
+                this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+                return this;
+            }
 
             /**
              * SourceApacheRocketMQCheckpointParameters.
