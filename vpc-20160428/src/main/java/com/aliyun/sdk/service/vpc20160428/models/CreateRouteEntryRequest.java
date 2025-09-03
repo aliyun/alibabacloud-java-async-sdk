@@ -289,7 +289,14 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the required parameters, request syntax, and limits. If the request fails, an error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -298,7 +305,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop for the custom route.</p>
+         * <blockquote>
+         * <p> <a href="#-nexthoptype--ecr-describeexpressconnectrouterassociation--associationid--id"></a>If you set the NextHopType parameter to ECR, call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to access the AssociationId and use it as the next hop ID.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>i-j6c2fp57q8rr4jlu****</p>
@@ -322,7 +332,7 @@ public class CreateRouteEntryRequest extends Request {
          * <p>The type of next hop of the custom route entry. Valid values:</p>
          * <ul>
          * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
-         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HaVip).</li>
          * <li><strong>RouterInterface</strong>: a router interface.</li>
          * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI).</li>
          * <li><strong>VpnGateway</strong>: a VPN gateway.</li>

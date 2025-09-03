@@ -80,7 +80,14 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>Indicates whether there is a token for the next query. Values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it means there is no next query.</li>
+         * <li>If <strong>NextToken</strong> has a return value, this value indicates the token for the start of the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +95,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D0971B2-A35A-42C1-A44C-E91360C36C0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +106,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RouteEntries.
+         * <p>List of route entry publishing status information.</p>
          */
         public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.routeEntries = routeEntries;
@@ -175,7 +185,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * PublishStatus.
+             * <p>The publishing status of the route entry in the publishing target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -183,7 +196,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTargetInstanceId.
+             * <p>The ID of the route publishing target instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-xvuqdfma6x57ei****</p>
              */
             public Builder publishTargetInstanceId(String publishTargetInstanceId) {
                 this.publishTargetInstanceId = publishTargetInstanceId;
@@ -191,7 +207,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTargetType.
+             * <p>The type of the route publishing target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECR</p>
              */
             public Builder publishTargetType(String publishTargetType) {
                 this.publishTargetType = publishTargetType;
@@ -284,7 +303,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DestinationCidrBlock.
+             * <p>The destination CIDR block of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -292,7 +314,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryId.
+             * <p>The ID of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rte-bp1mnnr2al0naomnpv****</p>
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -300,7 +325,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RoutePublishTargets.
+             * <p>List of route entry publishing status information in the publishing targets.</p>
              */
             public Builder routePublishTargets(java.util.List<RoutePublishTargets> routePublishTargets) {
                 this.routePublishTargets = routePublishTargets;
@@ -308,7 +333,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2ze3jgygk9bmsj23s****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

@@ -1005,6 +1005,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MinTxInterval")
         private Long minTxInterval;
 
+        @com.aliyun.core.annotation.NameInMap("Mtu")
+        private Integer mtu;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -1091,6 +1094,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
             this.minRxInterval = builder.minRxInterval;
             this.minTxInterval = builder.minTxInterval;
+            this.mtu = builder.mtu;
             this.name = builder.name;
             this.pConnVbrChargeType = builder.pConnVbrChargeType;
             this.pConnVbrExpireTime = builder.pConnVbrExpireTime;
@@ -1254,6 +1258,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public Long getMinTxInterval() {
             return this.minTxInterval;
+        }
+
+        /**
+         * @return mtu
+         */
+        public Integer getMtu() {
+            return this.mtu;
         }
 
         /**
@@ -1430,6 +1441,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String localIpv6GatewayIp; 
             private Long minRxInterval; 
             private Long minTxInterval; 
+            private Integer mtu; 
             private String name; 
             private String pConnVbrChargeType; 
             private String pConnVbrExpireTime; 
@@ -1476,6 +1488,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
                 this.localIpv6GatewayIp = model.localIpv6GatewayIp;
                 this.minRxInterval = model.minRxInterval;
                 this.minTxInterval = model.minTxInterval;
+                this.mtu = model.mtu;
                 this.name = model.name;
                 this.pConnVbrChargeType = model.pConnVbrChargeType;
                 this.pConnVbrExpireTime = model.pConnVbrExpireTime;
@@ -1713,6 +1726,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder minTxInterval(Long minTxInterval) {
                 this.minTxInterval = minTxInterval;
+                return this;
+            }
+
+            /**
+             * Mtu.
+             */
+            public Builder mtu(Integer mtu) {
+                this.mtu = mtu;
                 return this;
             }
 

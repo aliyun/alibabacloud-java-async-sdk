@@ -106,7 +106,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the route.</p>
+         * <p>The information about the routes.</p>
          */
         public Builder routeEntrys(RouteEntrys routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -388,7 +388,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * <p>The next hop type. Valid values:</p>
              * <ul>
              * <li><strong>Instance</strong>: an ECS instance.</li>
-             * <li><strong>HaVip</strong>: an HAVIP.</li>
+             * <li><strong>HaVip</strong>: an HaVip.</li>
              * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
              * <li><strong>NatGateway</strong>: a NAT gateway.</li>
              * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
@@ -785,11 +785,12 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route status. Valid values:</p>
+             * <p>The status of the route entry. Valid values:</p>
              * <ul>
              * <li><strong>Pending</strong></li>
              * <li><strong>Available</strong></li>
              * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

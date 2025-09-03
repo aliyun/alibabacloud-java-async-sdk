@@ -161,7 +161,7 @@ public class DeleteHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HAVIP that you want to delete.</p>
+         * <p>The ID of the HaVip that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DeleteHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the HAVIP is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the HaVip resides. Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

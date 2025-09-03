@@ -344,6 +344,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceVpcId")
+        private String resourceVpcId;
+
         @com.aliyun.core.annotation.NameInMap("TunnelIndex")
         private String tunnelIndex;
 
@@ -353,6 +356,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             this.resourceId = builder.resourceId;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceType = builder.resourceType;
+            this.resourceVpcId = builder.resourceVpcId;
             this.tunnelIndex = builder.tunnelIndex;
         }
 
@@ -400,6 +404,13 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
+         * @return resourceVpcId
+         */
+        public String getResourceVpcId() {
+            return this.resourceVpcId;
+        }
+
+        /**
          * @return tunnelIndex
          */
         public String getTunnelIndex() {
@@ -412,6 +423,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             private String resourceId; 
             private String resourceOwnerId; 
             private String resourceType; 
+            private String resourceVpcId; 
             private String tunnelIndex; 
 
             private Builder() {
@@ -423,6 +435,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
                 this.resourceId = model.resourceId;
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceType = model.resourceType;
+                this.resourceVpcId = model.resourceVpcId;
                 this.tunnelIndex = model.tunnelIndex;
             } 
 
@@ -463,6 +476,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * ResourceVpcId.
+             */
+            public Builder resourceVpcId(String resourceVpcId) {
+                this.resourceVpcId = resourceVpcId;
                 return this;
             }
 

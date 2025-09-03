@@ -54,6 +54,14 @@ public class CreateVpcRequest extends Request {
     private String ipv6CidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrMask")
+    private Integer ipv6CidrMask;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6IpamPoolId")
+    private String ipv6IpamPoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
@@ -105,6 +113,8 @@ public class CreateVpcRequest extends Request {
         this.ipv4CidrMask = builder.ipv4CidrMask;
         this.ipv4IpamPoolId = builder.ipv4IpamPoolId;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        this.ipv6CidrMask = builder.ipv6CidrMask;
+        this.ipv6IpamPoolId = builder.ipv6IpamPoolId;
         this.ipv6Isp = builder.ipv6Isp;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -194,6 +204,20 @@ public class CreateVpcRequest extends Request {
     }
 
     /**
+     * @return ipv6CidrMask
+     */
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
+    }
+
+    /**
+     * @return ipv6IpamPoolId
+     */
+    public String getIpv6IpamPoolId() {
+        return this.ipv6IpamPoolId;
+    }
+
+    /**
      * @return ipv6Isp
      */
     public String getIpv6Isp() {
@@ -273,6 +297,8 @@ public class CreateVpcRequest extends Request {
         private Integer ipv4CidrMask; 
         private String ipv4IpamPoolId; 
         private String ipv6CidrBlock; 
+        private Integer ipv6CidrMask; 
+        private String ipv6IpamPoolId; 
         private String ipv6Isp; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -299,6 +325,8 @@ public class CreateVpcRequest extends Request {
             this.ipv4CidrMask = request.ipv4CidrMask;
             this.ipv4IpamPoolId = request.ipv4IpamPoolId;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ipv6CidrMask = request.ipv6CidrMask;
+            this.ipv6IpamPoolId = request.ipv6IpamPoolId;
             this.ipv6Isp = request.ipv6Isp;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -314,8 +342,8 @@ public class CreateVpcRequest extends Request {
         /**
          * <p>The CIDR block of the VPC.</p>
          * <ul>
-         * <li>You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</li>
-         * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</li>
+         * <li>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
+         * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +401,14 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * EnableDnsHostname.
+         * <p>Whether to enable the DNS hostname feature. Values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): Not enabled. </li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDnsHostname(Boolean enableDnsHostname) {
             this.putQueryParameter("EnableDnsHostname", enableDnsHostname);
@@ -382,10 +417,10 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): disabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -398,7 +433,13 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * Ipv4CidrMask.
+         * <p>Allocate VPC from the IPAM address pool by inputting a mask.</p>
+         * <blockquote>
+         * <p>When creating a VPC with a specified IPAM address pool, at least one of the parameters CidrBlock or Ipv4CidrMask must be provided.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder ipv4CidrMask(Integer ipv4CidrMask) {
             this.putQueryParameter("Ipv4CidrMask", ipv4CidrMask);
@@ -419,7 +460,7 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
+         * <p>The IPv6 CIDR block of the VPC. If you enable IPv6 for a VPC, the system allocates an IPv6 CIDR block. To specify an IPv6 CIDR block, you must call the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:0:6a::/56</p>
@@ -427,6 +468,30 @@ public class CreateVpcRequest extends Request {
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
             this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
+        public Builder ipv6CidrMask(Integer ipv6CidrMask) {
+            this.putQueryParameter("Ipv6CidrMask", ipv6CidrMask);
+            this.ipv6CidrMask = ipv6CidrMask;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the IP Address Manager (IPAM) pool of the IPv6 type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-bp1aq51kkfh477z03****</p>
+         */
+        public Builder ipv6IpamPoolId(String ipv6IpamPoolId) {
+            this.putQueryParameter("Ipv6IpamPoolId", ipv6IpamPoolId);
+            this.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
 

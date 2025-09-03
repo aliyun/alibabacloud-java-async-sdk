@@ -26,8 +26,15 @@ public class DeleteNatIpRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private String ipv4Prefix;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    private String natGatewayId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String natIpId;
 
     @com.aliyun.core.annotation.Query
@@ -55,6 +62,8 @@ public class DeleteNatIpRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.ipv4Prefix = builder.ipv4Prefix;
+        this.natGatewayId = builder.natGatewayId;
         this.natIpId = builder.natIpId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -88,6 +97,20 @@ public class DeleteNatIpRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     /**
@@ -135,6 +158,8 @@ public class DeleteNatIpRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteNatIpRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private String ipv4Prefix; 
+        private String natGatewayId; 
         private String natIpId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -150,6 +175,8 @@ public class DeleteNatIpRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.ipv4Prefix = request.ipv4Prefix;
+            this.natGatewayId = request.natGatewayId;
             this.natIpId = request.natIpId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -191,8 +218,25 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(String ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the NAT IP address that you want to delete.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>

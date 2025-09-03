@@ -199,7 +199,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -259,7 +259,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

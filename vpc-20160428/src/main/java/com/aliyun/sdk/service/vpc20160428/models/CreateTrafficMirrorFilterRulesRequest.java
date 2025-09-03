@@ -219,7 +219,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of outbound rules.</p>
+         * <p>The information about the outbound rule.</p>
          */
         public Builder egressRules(java.util.List<EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
@@ -228,7 +228,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of inbound rules.</p>
+         * <p>The information about the inbound rules.</p>
          */
         public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);
@@ -256,7 +256,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
 
         /**
          * <p>The ID of the region to which the mirrored traffic belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             } 
 
             /**
-             * <p>The action of the outbound rule. Valid values:</p>
+             * <p>The collection policy of the outbound rule. Valid values:</p>
              * <ul>
              * <li><strong>accept</strong>: accepts network traffic.</li>
              * <li><strong>drop</strong>: drops network traffic.</li>
@@ -463,9 +463,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>, which specifies all ports.</p>
+             * <p>The destination port range of the outbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first and last port with a forward slash (/). For example <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to **-1/-1**, which indicates all ports.</p>
              * <blockquote>
-             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -477,7 +477,14 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong>: IPv4</li>
+             * <li><strong>IPv6</strong>: IPv6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -499,9 +506,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
              * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
-             * <li><strong>ICMP</strong>: ICMP</li>
-             * <li><strong>TCP</strong>: TCP</li>
-             * <li><strong>UDP</strong>: UDP</li>
+             * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+             * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+             * <li><strong>UDP</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -524,9 +531,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * <p>The source port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>, which specifies all ports.</p>
+             * <p>The source port range of the outbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first and last port with a forward slash (/). For example <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to **-1/-1**, which indicates all ports.</p>
              * <blockquote>
-             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -675,9 +682,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             } 
 
             /**
-             * <p>The action of the inbound rule. Valid values:</p>
+             * <p>The policy of the inbound rule. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: accepts network traffic.</li>
+             * <li><strong>accept</strong>: collects network traffic.</li>
              * <li><strong>drop</strong>: drops network traffic.</li>
              * </ul>
              * 
@@ -701,9 +708,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+             * <p>The destination port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first and the last port with a forward slash (/). For example, <strong>1/200</strong> or <strong>80/80</strong>.</p>
              * <blockquote>
-             * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If the <strong>IngressRules.N.Protocol</strong> parameter is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -715,7 +722,14 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version of the instance. The following value may be returned:</p>
+             * <ul>
+             * <li><strong>IPv4</strong>: IPv4</li>
+             * <li><strong>IPv6</strong>: IPv6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -737,9 +751,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
              * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
-             * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP)</li>
-             * <li><strong>TCP</strong>: TCP</li>
-             * <li><strong>UDP</strong>: User Datagram Protocol (UDP)</li>
+             * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+             * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+             * <li><strong>UDP</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -762,9 +776,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             }
 
             /**
-             * <p>The source port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>, which specifies all ports.</p>
+             * <p>The source port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first and last port with a forward slash (/). For example <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to **-1/-1**, which indicates all ports.</p>
              * <blockquote>
-             * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If the <strong>IngressRules.N.Protocol</strong> parameter is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

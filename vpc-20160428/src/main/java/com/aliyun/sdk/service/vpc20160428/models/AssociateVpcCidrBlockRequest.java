@@ -30,6 +30,10 @@ public class AssociateVpcCidrBlockRequest extends Request {
     private String ipamPoolId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrMask")
+    private Integer ipv6CidrMask;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
@@ -43,7 +47,6 @@ public class AssociateVpcCidrBlockRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -72,6 +75,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         this.iPv6CidrBlock = builder.iPv6CidrBlock;
         this.ipVersion = builder.ipVersion;
         this.ipamPoolId = builder.ipamPoolId;
+        this.ipv6CidrMask = builder.ipv6CidrMask;
         this.ipv6Isp = builder.ipv6Isp;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -115,6 +119,13 @@ public class AssociateVpcCidrBlockRequest extends Request {
      */
     public String getIpamPoolId() {
         return this.ipamPoolId;
+    }
+
+    /**
+     * @return ipv6CidrMask
+     */
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     /**
@@ -184,6 +195,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         private String iPv6CidrBlock; 
         private String ipVersion; 
         private String ipamPoolId; 
+        private Integer ipv6CidrMask; 
         private String ipv6Isp; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -203,6 +215,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
             this.iPv6CidrBlock = request.iPv6CidrBlock;
             this.ipVersion = request.ipVersion;
             this.ipamPoolId = request.ipamPoolId;
+            this.ipv6CidrMask = request.ipv6CidrMask;
             this.ipv6Isp = request.ipv6Isp;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -215,9 +228,9 @@ public class AssociateVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * <p>The IPv6 CIDR block to be added.</p>
+         * <p>The IPv6 CIDR block that you want to add to the VPC.</p>
          * <blockquote>
-         * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+         * <p> You can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,7 +259,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IP Address Manager (IPAM) pool that contains IPv4 addresses.</p>
+         * <p>The ID of the IPAM pool.</p>
          * 
          * <strong>example:</strong>
          * <p>ipam-pool-sycmt3p2a9v63i****</p>
@@ -254,6 +267,21 @@ public class AssociateVpcCidrBlockRequest extends Request {
         public Builder ipamPoolId(String ipamPoolId) {
             this.putQueryParameter("IpamPoolId", ipamPoolId);
             this.ipamPoolId = ipamPoolId;
+            return this;
+        }
+
+        /**
+         * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+         * <blockquote>
+         * <p> To add an IPv6 CIDR block to a VPC, specify at least one of the IPv6CidrBlock and Ipv6CidrMask parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
+        public Builder ipv6CidrMask(Integer ipv6CidrMask) {
+            this.putQueryParameter("Ipv6CidrMask", ipv6CidrMask);
+            this.ipv6CidrMask = ipv6CidrMask;
             return this;
         }
 
@@ -299,7 +327,6 @@ public class AssociateVpcCidrBlockRequest extends Request {
         /**
          * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ch-hangzhou</p>
@@ -353,9 +380,9 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * <p>Add secondary CIDR blocks to the VPC from the IPAM pool by entering a mask.</p>
+         * <p>Add an IPv4 CIDR block from the IPAM pool to the VPC by specifying a mask.</p>
          * <blockquote>
-         * <p>To add a secondary CIDR block to the VPC using the specified IPAM pool, you must specify at least one of the parameters, SecondaryCidrBlock or SecondaryCidrMask.</p>
+         * <p> If you use an IPAM pool, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

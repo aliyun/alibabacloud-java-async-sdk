@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNatIpResponseBody</p>
  */
 public class CreateNatIpResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private String ipv4Prefix;
+
     @com.aliyun.core.annotation.NameInMap("NatIp")
     private String natIp;
 
@@ -27,6 +30,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     private String requestId;
 
     private CreateNatIpResponseBody(Builder builder) {
+        this.ipv4Prefix = builder.ipv4Prefix;
         this.natIp = builder.natIp;
         this.natIpId = builder.natIpId;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class CreateNatIpResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     /**
@@ -66,6 +77,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String ipv4Prefix; 
         private String natIp; 
         private String natIpId; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class CreateNatIpResponseBody extends TeaModel {
         } 
 
         private Builder(CreateNatIpResponseBody model) {
+            this.ipv4Prefix = model.ipv4Prefix;
             this.natIp = model.natIp;
             this.natIpId = model.natIpId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(String ipv4Prefix) {
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
 
         /**
          * <p>The NAT IP address.</p>

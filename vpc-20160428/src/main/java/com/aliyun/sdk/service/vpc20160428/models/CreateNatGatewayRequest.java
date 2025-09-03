@@ -54,8 +54,16 @@ public class CreateNatGatewayRequest extends Request {
     private String internetChargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private String ipv4Prefix;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIp")
+    private String natIp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatType")
@@ -127,7 +135,9 @@ public class CreateNatGatewayRequest extends Request {
         this.icmpReplyEnabled = builder.icmpReplyEnabled;
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
+        this.ipv4Prefix = builder.ipv4Prefix;
         this.name = builder.name;
+        this.natIp = builder.natIp;
         this.natType = builder.natType;
         this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
@@ -221,10 +231,24 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     /**
+     * @return ipv4Prefix
+     */
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return natIp
+     */
+    public String getNatIp() {
+        return this.natIp;
     }
 
     /**
@@ -335,7 +359,9 @@ public class CreateNatGatewayRequest extends Request {
         private Boolean icmpReplyEnabled; 
         private String instanceChargeType; 
         private String internetChargeType; 
+        private String ipv4Prefix; 
         private String name; 
+        private String natIp; 
         private String natType; 
         private String networkType; 
         private String ownerAccount; 
@@ -366,7 +392,9 @@ public class CreateNatGatewayRequest extends Request {
             this.icmpReplyEnabled = request.icmpReplyEnabled;
             this.instanceChargeType = request.instanceChargeType;
             this.internetChargeType = request.internetChargeType;
+            this.ipv4Prefix = request.ipv4Prefix;
             this.name = request.name;
+            this.natIp = request.natIp;
             this.natType = request.natType;
             this.networkType = request.networkType;
             this.ownerAccount = request.ownerAccount;
@@ -510,6 +538,15 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(String ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+
+        /**
          * <p>The name of the NAT gateway.</p>
          * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
@@ -520,6 +557,15 @@ public class CreateNatGatewayRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NatIp.
+         */
+        public Builder natIp(String natIp) {
+            this.putQueryParameter("NatIp", natIp);
+            this.natIp = natIp;
             return this;
         }
 

@@ -174,6 +174,9 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
      * <p>GetVpcPrefixListAssociationsResponseBody</p>
      */
     public static class PrefixListAssociation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrList")
+        private String cidrList;
+
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
@@ -199,6 +202,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         private String status;
 
         private PrefixListAssociation(Builder builder) {
+            this.cidrList = builder.cidrList;
             this.ownerId = builder.ownerId;
             this.prefixListId = builder.prefixListId;
             this.reason = builder.reason;
@@ -215,6 +219,13 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
 
         public static PrefixListAssociation create() {
             return builder().build();
+        }
+
+        /**
+         * @return cidrList
+         */
+        public String getCidrList() {
+            return this.cidrList;
         }
 
         /**
@@ -274,6 +285,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cidrList; 
             private String ownerId; 
             private String prefixListId; 
             private String reason; 
@@ -287,6 +299,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             } 
 
             private Builder(PrefixListAssociation model) {
+                this.cidrList = model.cidrList;
                 this.ownerId = model.ownerId;
                 this.prefixListId = model.prefixListId;
                 this.reason = model.reason;
@@ -296,6 +309,17 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
                 this.resourceUid = model.resourceUid;
                 this.status = model.status;
             } 
+
+            /**
+             * <p>List of CIDR addresses where the prefix list is effective in the currently associated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
+             */
+            public Builder cidrList(String cidrList) {
+                this.cidrList = cidrList;
+                return this;
+            }
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>

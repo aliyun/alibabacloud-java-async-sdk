@@ -1,3 +1,6 @@
+2025-09-03 Version: 5.0.42
+- Generated java-async 2016-04-28 for Vpc.
+
 2025-06-16 Version: 5.0.40
 - Generated java-async 2016-04-28 for Vpc.
 

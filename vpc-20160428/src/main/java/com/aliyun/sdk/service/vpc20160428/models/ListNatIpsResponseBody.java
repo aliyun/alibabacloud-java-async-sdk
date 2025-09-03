@@ -150,6 +150,9 @@ public class ListNatIpsResponseBody extends TeaModel {
      * <p>ListNatIpsResponseBody</p>
      */
     public static class NatIps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+        private String ipv4Prefix;
+
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
@@ -175,6 +178,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         private String natIpStatus;
 
         private NatIps(Builder builder) {
+            this.ipv4Prefix = builder.ipv4Prefix;
             this.isDefault = builder.isDefault;
             this.natGatewayId = builder.natGatewayId;
             this.natIp = builder.natIp;
@@ -191,6 +195,13 @@ public class ListNatIpsResponseBody extends TeaModel {
 
         public static NatIps create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipv4Prefix
+         */
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
         }
 
         /**
@@ -250,6 +261,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String ipv4Prefix; 
             private Boolean isDefault; 
             private String natGatewayId; 
             private String natIp; 
@@ -263,6 +275,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             } 
 
             private Builder(NatIps model) {
+                this.ipv4Prefix = model.ipv4Prefix;
                 this.isDefault = model.isDefault;
                 this.natGatewayId = model.natGatewayId;
                 this.natIp = model.natIp;
@@ -272,6 +285,14 @@ public class ListNatIpsResponseBody extends TeaModel {
                 this.natIpName = model.natIpName;
                 this.natIpStatus = model.natIpStatus;
             } 
+
+            /**
+             * Ipv4Prefix.
+             */
+            public Builder ipv4Prefix(String ipv4Prefix) {
+                this.ipv4Prefix = ipv4Prefix;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>

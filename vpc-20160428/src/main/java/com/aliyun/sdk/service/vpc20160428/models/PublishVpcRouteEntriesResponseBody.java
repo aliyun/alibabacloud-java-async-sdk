@@ -54,7 +54,10 @@ public class PublishVpcRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>980960B0-2969-40BF-8542-EBB34FD358AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

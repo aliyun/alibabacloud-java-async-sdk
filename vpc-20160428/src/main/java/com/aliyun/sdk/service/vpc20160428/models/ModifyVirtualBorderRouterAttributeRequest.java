@@ -62,6 +62,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
     private Long minTxInterval;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mtu")
+    private Integer mtu;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -128,6 +132,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
         this.minRxInterval = builder.minRxInterval;
         this.minTxInterval = builder.minTxInterval;
+        this.mtu = builder.mtu;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -234,6 +239,13 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
     }
 
     /**
+     * @return mtu
+     */
+    public Integer getMtu() {
+        return this.mtu;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -336,6 +348,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         private String localIpv6GatewayIp; 
         private Long minRxInterval; 
         private Long minTxInterval; 
+        private Integer mtu; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -367,6 +380,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
             this.localIpv6GatewayIp = request.localIpv6GatewayIp;
             this.minRxInterval = request.minRxInterval;
             this.minTxInterval = request.minTxInterval;
+            this.mtu = request.mtu;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -532,6 +546,15 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         public Builder minTxInterval(Long minTxInterval) {
             this.putQueryParameter("MinTxInterval", minTxInterval);
             this.minTxInterval = minTxInterval;
+            return this;
+        }
+
+        /**
+         * Mtu.
+         */
+        public Builder mtu(Integer mtu) {
+            this.putQueryParameter("Mtu", mtu);
+            this.mtu = mtu;
             return this;
         }
 

@@ -241,17 +241,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</li>
-     * <li>The HAVIP and ECS instance must belong to the same vSwitch.</li>
-     * <li>You can associate an HAVIP with at most two ECS instances.</li>
+     * <li>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</li>
+     * <li>The HaVip and ECS instance must belong to the same vSwitch.</li>
+     * <li>You can associate an HaVip with at most two ECS instances.</li>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Associating</strong> state, the HAVIP is being associated.</li>
-     * <li>If the HAVIP is in the <strong>InUse</strong> state, the HAVIP is associated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Associating</strong> state, the HaVip is being associated.</li>
+     * <li>If the HaVip is in the <strong>InUse</strong> state, the HaVip is associated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateHaVip  AssociateHaVipRequest
@@ -455,17 +455,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConnectRouterInterfaceResponse> connectRouterInterface(ConnectRouterInterfaceRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:</p>
-     * <ul>
-     * <li>You are not charged for the conversion.</li>
-     * <li>When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.</li>
-     * <li>After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.</li>
-     * </ul>
+     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated  * @description Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
+     * *   You are not charged for the conversion.
+     * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
+     * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
      * 
      * @param request the request parameters of ConvertBandwidthPackage  ConvertBandwidthPackageRequest
      * @return ConvertBandwidthPackageResponse
      */
+    @Deprecated
     CompletableFuture<ConvertBandwidthPackageResponse> convertBandwidthPackage(ConvertBandwidthPackageRequest request);
 
     /**
@@ -684,8 +682,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</p>
      * <ul>
-     * <li>If the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
-     * <li>If the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
+     * <li>If the HaVip is in the <strong>Creating</strong> state, the HaVip is being created.</li>
+     * <li>If the HaVip is in the <strong>Available</strong> state, the HaVip is created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateHaVip  CreateHaVipRequest
@@ -1461,15 +1459,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following rules:</p>
      * <ul>
-     * <li>You can delete only HAVIPs that are in the Available state.</li>
-     * <li>Make sure that no route points to the HAVIP that you want to delete.</li>
-     * <li>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</li>
-     * <li>The <strong>DeleteHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Deleting</strong> state, the HAVIP is being deleted.</li>
-     * <li>If you cannot query the HAVIP, the HAVIP is deleted.</li>
+     * <li>The HaVip must be in the available state before it can be deleted.</li>
+     * <li>Make sure that no routes are destined for the HaVip.</li>
+     * <li>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</li>
+     * <li><strong>DeleteHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>The <strong>Deleting</strong> state indicates the HaVip is being deleted.</li>
+     * <li>If no HaVip is found, the HaVip is deleted.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete the same HaVip.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteHaVip  DeleteHaVipRequest
@@ -1832,7 +1830,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
@@ -1903,7 +1901,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only a VPC that is in the <strong>Available</strong> state.</li>
      * <li>The <strong>DeleteVpc</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<ul>
      * <li>If the VPC is in the <strong>Deleting</strong> state, the VPC is being deleted.</li>
@@ -2423,6 +2421,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVpcAttributeResponse
      */
     CompletableFuture<DescribeVpcAttributeResponse> describeVpcAttribute(DescribeVpcAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVpcGrantRulesToEcr  DescribeVpcGrantRulesToEcrRequest
+     * @return DescribeVpcGrantRulesToEcrResponse
+     */
+    CompletableFuture<DescribeVpcGrantRulesToEcrResponse> describeVpcGrantRulesToEcr(DescribeVpcGrantRulesToEcrRequest request);
 
     /**
      * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
@@ -3085,7 +3089,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified periods of time.</p>
+     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HaVip within the specified periods of time.</p>
      * 
      * @param request the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
@@ -3563,7 +3567,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can enable traffic mirroring for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirroring for one region within the specified period of time.</p>
+     * <p>You can enable traffic mirror for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirror for one region within the specified period of time.</p>
      * 
      * @param request the request parameters of OpenTrafficMirrorService  OpenTrafficMirrorServiceRequest
      * @return OpenTrafficMirrorServiceResponse
@@ -3862,13 +3866,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Unassociating</strong> state, the HAVIP is being disassociated.</li>
-     * <li>If the HAVIP is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HAVIP is disassociated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Unassociating</strong> state, the HaVip is being disassociated.</li>
+     * <li>If the HaVip is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HaVip is disassociated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of UnassociateHaVip  UnassociateHaVipRequest
@@ -4020,7 +4024,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</p>
+     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</p>
      * 
      * @param request the request parameters of UpdateTrafficMirrorFilterAttribute  UpdateTrafficMirrorFilterAttributeRequest
      * @return UpdateTrafficMirrorFilterAttributeResponse

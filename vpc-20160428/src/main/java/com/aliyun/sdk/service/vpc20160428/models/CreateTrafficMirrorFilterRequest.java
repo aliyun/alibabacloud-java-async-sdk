@@ -297,7 +297,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
 
         /**
          * <p>The ID of the region to which the mirrored traffic belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -512,10 +512,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             } 
 
             /**
-             * <p>The collection policy of the outbound rule. Valid value:</p>
+             * <p>The collection policy of the outbound rule. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: collects network traffic.</li>
-             * <li><strong>drop</strong>: does not collect network traffic.</li>
+             * <li><strong>accept</strong>: collects the network traffic.</li>
+             * <li><strong>drop</strong>: does not collect the network traffic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -552,7 +552,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version of the instance. The following value may be returned:</p>
+             * <ul>
+             * <li><strong>IPv4</strong>: IPv4</li>
+             * <li><strong>IPv6</strong>: IPv6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -571,7 +578,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid value:</p>
+             * <p>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid values:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
              * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
@@ -750,10 +757,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             } 
 
             /**
-             * <p>The collection policy of the inbound rule. Valid value:</p>
+             * <p>The collection policy of the inbound rule. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: collects network traffic.</li>
-             * <li><strong>drop</strong>: does not collect network traffic.</li>
+             * <li><strong>accept</strong>: collects the network traffic.</li>
+             * <li><strong>drop</strong>: does not collect the network traffic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -790,7 +797,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version of the instance. The following value may be returned:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>IPv6</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -809,7 +823,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The type of the protocol is used by the inbound traffic that you want to mirror. Valid value:</p>
+             * <p>The type of the protocol is used by the inbound traffic that you want to mirror. Valid values:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
              * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>

@@ -80,7 +80,10 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
         } 
 
         /**
-         * CidrBlock.
+         * <p>The IPv4 CIDR block to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -88,7 +91,14 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
         }
 
         /**
-         * IpVersion.
+         * <p>The version of the IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>IPV4</strong>: the IPv4 address.</li>
+         * <li><strong>IPV6</strong>: the IPv6 address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPV4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = ipVersion;

@@ -91,7 +91,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned after traffic mirroring is enabled.</p>
+         * <p>The information returned after traffic mirror is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

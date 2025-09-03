@@ -569,6 +569,114 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      *
      * <p>DescribeNatGatewaysResponseBody</p>
      */
+    public static class IpPrefixList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IpPrefix")
+        private String ipPrefix;
+
+        private IpPrefixList(Builder builder) {
+            this.ipPrefix = builder.ipPrefix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpPrefixList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipPrefix
+         */
+        public String getIpPrefix() {
+            return this.ipPrefix;
+        }
+
+        public static final class Builder {
+            private String ipPrefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpPrefixList model) {
+                this.ipPrefix = model.ipPrefix;
+            } 
+
+            /**
+             * IpPrefix.
+             */
+            public Builder ipPrefix(String ipPrefix) {
+                this.ipPrefix = ipPrefix;
+                return this;
+            }
+
+            public IpPrefixList build() {
+                return new IpPrefixList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
+    public static class NatGatewayIpPrefixList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IpPrefixList")
+        private java.util.List<IpPrefixList> ipPrefixList;
+
+        private NatGatewayIpPrefixList(Builder builder) {
+            this.ipPrefixList = builder.ipPrefixList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NatGatewayIpPrefixList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipPrefixList
+         */
+        public java.util.List<IpPrefixList> getIpPrefixList() {
+            return this.ipPrefixList;
+        }
+
+        public static final class Builder {
+            private java.util.List<IpPrefixList> ipPrefixList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGatewayIpPrefixList model) {
+                this.ipPrefixList = model.ipPrefixList;
+            } 
+
+            /**
+             * IpPrefixList.
+             */
+            public Builder ipPrefixList(java.util.List<IpPrefixList> ipPrefixList) {
+                this.ipPrefixList = ipPrefixList;
+                return this;
+            }
+
+            public NatGatewayIpPrefixList build() {
+                return new NatGatewayIpPrefixList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGatewayPrivateInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
@@ -1036,6 +1144,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpLists")
         private IpLists ipLists;
 
+        @com.aliyun.core.annotation.NameInMap("IpPrefixList")
+        private NatGatewayIpPrefixList ipPrefixList;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -1098,6 +1209,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.instanceChargeType = builder.instanceChargeType;
             this.internetChargeType = builder.internetChargeType;
             this.ipLists = builder.ipLists;
+            this.ipPrefixList = builder.ipPrefixList;
             this.name = builder.name;
             this.natGatewayId = builder.natGatewayId;
             this.natGatewayPrivateInfo = builder.natGatewayPrivateInfo;
@@ -1236,6 +1348,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipPrefixList
+         */
+        public NatGatewayIpPrefixList getIpPrefixList() {
+            return this.ipPrefixList;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1357,6 +1476,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String instanceChargeType; 
             private String internetChargeType; 
             private IpLists ipLists; 
+            private NatGatewayIpPrefixList ipPrefixList; 
             private String name; 
             private String natGatewayId; 
             private NatGatewayPrivateInfo natGatewayPrivateInfo; 
@@ -1393,6 +1513,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
                 this.instanceChargeType = model.instanceChargeType;
                 this.internetChargeType = model.internetChargeType;
                 this.ipLists = model.ipLists;
+                this.ipPrefixList = model.ipPrefixList;
                 this.name = model.name;
                 this.natGatewayId = model.natGatewayId;
                 this.natGatewayPrivateInfo = model.natGatewayPrivateInfo;
@@ -1599,6 +1720,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder ipLists(IpLists ipLists) {
                 this.ipLists = ipLists;
+                return this;
+            }
+
+            /**
+             * IpPrefixList.
+             */
+            public Builder ipPrefixList(NatGatewayIpPrefixList ipPrefixList) {
+                this.ipPrefixList = ipPrefixList;
                 return this;
             }
 

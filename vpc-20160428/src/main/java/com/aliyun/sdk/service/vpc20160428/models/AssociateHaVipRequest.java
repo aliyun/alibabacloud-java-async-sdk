@@ -190,7 +190,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HAVIP.</p>
+         * <p>The ID of the HaVip.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance to be associated with the HAVIP.</p>
+         * <p>The ID of the ECS instance to be associated with the HaVip.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,10 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
+         * <p>The type of the instance to be associated with the HaVip. Valid values:</p>
          * <ul>
          * <li><strong>EcsInstance</strong>: an ECS instance</li>
-         * <li><strong>NetworkInterface</strong>: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</li>
+         * <li><strong>NetworkInterface</strong>: an ENI. If you want to associate the HaVip with an ENI, this parameter is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the HAVIP belongs.</p>
+         * <p>The ID of the region to which the HaVip belongs.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 

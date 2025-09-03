@@ -205,7 +205,14 @@ public class DeleteIpv4GatewayRequest extends Request {
         }
 
         /**
-         * InternetMode.
+         * <p>Select the public network mode of the VPC after deleting the IPv4 gateway. The values are:</p>
+         * <ul>
+         * <li><strong>private</strong>: Default value, after deleting the IPv4 gateway, the VPC will become a pure private VPC without public network access capability. </li>
+         * <li><strong>public</strong>: After deleting the IPv4 gateway, the VPC&quot;s public network access is no longer centrally controlled by the IPv4 gateway, and instances with public IPs bound can access the public network by default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder internetMode(String internetMode) {
             this.putQueryParameter("InternetMode", internetMode);

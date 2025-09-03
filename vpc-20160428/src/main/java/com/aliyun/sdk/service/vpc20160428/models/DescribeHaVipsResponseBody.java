@@ -106,7 +106,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the HAVIP.</p>
+         * <p>The details about the HaVip.</p>
          */
         public Builder haVips(HaVips haVips) {
             this.haVips = haVips;
@@ -641,7 +641,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of EIPs associated with the HAVIP.</p>
+             * <p>The list of EIPs associated with the HaVip.</p>
              */
             public Builder associatedEipAddresses(AssociatedEipAddresses associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
@@ -649,7 +649,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance with which the HAVIP is associated. Valid values:</p>
+             * <p>The type of the instance with which the HaVip is associated. Valid values:</p>
              * <ul>
              * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
              * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
@@ -664,7 +664,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance associated with the HAVIP.</p>
+             * <p>The information about the instance associated with the HaVip.</p>
              */
             public Builder associatedInstances(AssociatedInstances associatedInstances) {
                 this.associatedInstances = associatedInstances;
@@ -683,7 +683,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the HAVIP was created.</p>
+             * <p>The time when the HaVip was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-03T14:25:26Z</p>
@@ -694,7 +694,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the HAVIP.</p>
+             * <p>The description of the HaVip.</p>
              * 
              * <strong>example:</strong>
              * <p>My HaVip</p>
@@ -705,7 +705,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the HAVIP.</p>
+             * <p>The ID of the HaVip.</p>
              * 
              * <strong>example:</strong>
              * <p>havip-bp149uyvut73dpld****</p>
@@ -716,7 +716,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the HAVIP.</p>
+             * <p>The private IP address of the HaVip.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.24.5</p>
@@ -727,7 +727,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the active instance that is associated with the HAVIP.</p>
+             * <p>The ID of the active instance that is associated with the HaVip.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp145q7glnuzdvz****</p>
@@ -738,7 +738,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the HAVIP.</p>
+             * <p>The name of the HaVip.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -749,7 +749,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region to which the HAVIP belongs.</p>
+             * <p>The ID of the region to which the HaVip belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -760,7 +760,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the HAVIP belongs.</p>
+             * <p>The ID of the resource group to which the HaVip belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-bp67acfmxazb4ph****</p>
@@ -771,7 +771,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the HAVIP. Valid values:</p>
+             * <p>The status of the HaVip. Valid values:</p>
              * <ul>
              * <li><strong>Creating</strong>: The server group is being created.</li>
              * <li><strong>Available</strong>: The FULLNAT entry is available.</li>
@@ -795,7 +795,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+             * <p>The ID of the vSwitch to which the HaVip belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1pkt1fba8e824ez****</p>
@@ -806,7 +806,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the HAVIP belongs.</p>
+             * <p>The ID of the VPC to which the HaVip belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1kcm36tevkpms97****</p>

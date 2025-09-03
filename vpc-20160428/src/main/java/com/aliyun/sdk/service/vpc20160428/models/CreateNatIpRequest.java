@@ -26,6 +26,14 @@ public class CreateNatIpRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private String ipv4Prefix;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4PrefixCount")
+    private Long ipv4PrefixCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
@@ -72,6 +80,8 @@ public class CreateNatIpRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.ipv4Prefix = builder.ipv4Prefix;
+        this.ipv4PrefixCount = builder.ipv4PrefixCount;
         this.natGatewayId = builder.natGatewayId;
         this.natIp = builder.natIp;
         this.natIpCidr = builder.natIpCidr;
@@ -109,6 +119,20 @@ public class CreateNatIpRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    /**
+     * @return ipv4PrefixCount
+     */
+    public Long getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
     }
 
     /**
@@ -184,6 +208,8 @@ public class CreateNatIpRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNatIpRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private String ipv4Prefix; 
+        private Long ipv4PrefixCount; 
         private String natGatewayId; 
         private String natIp; 
         private String natIpCidr; 
@@ -203,6 +229,8 @@ public class CreateNatIpRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.ipv4Prefix = request.ipv4Prefix;
+            this.ipv4PrefixCount = request.ipv4PrefixCount;
             this.natGatewayId = request.natGatewayId;
             this.natIp = request.natIp;
             this.natIpCidr = request.natIpCidr;
@@ -244,6 +272,24 @@ public class CreateNatIpRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(String ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+
+        /**
+         * Ipv4PrefixCount.
+         */
+        public Builder ipv4PrefixCount(Long ipv4PrefixCount) {
+            this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
+            this.ipv4PrefixCount = ipv4PrefixCount;
             return this;
         }
 

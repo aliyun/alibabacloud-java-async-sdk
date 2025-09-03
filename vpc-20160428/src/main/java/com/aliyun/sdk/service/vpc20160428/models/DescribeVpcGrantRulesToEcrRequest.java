@@ -12,15 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeTagsRequest} extends {@link RequestModel}
+ * {@link DescribeVpcGrantRulesToEcrRequest} extends {@link RequestModel}
  *
- * <p>DescribeTagsRequest</p>
+ * <p>DescribeVpcGrantRulesToEcrRequest</p>
  */
-public class DescribeTagsRequest extends Request {
+public class DescribeVpcGrantRulesToEcrRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MaxResult")
-    @com.aliyun.core.annotation.Validation(maximum = 500)
-    private Integer maxResult;
+    @com.aliyun.core.annotation.NameInMap("EcrInstanceId")
+    private String ecrInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcrOwnerId")
+    private Long ecrOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -40,8 +55,8 @@ public class DescribeTagsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List<String> resourceId;
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -52,32 +67,31 @@ public class DescribeTagsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private String resourceType;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List<Tag> tag;
-
-    private DescribeTagsRequest(Builder builder) {
+    private DescribeVpcGrantRulesToEcrRequest(Builder builder) {
         super(builder);
-        this.maxResult = builder.maxResult;
+        this.ecrInstanceId = builder.ecrInstanceId;
+        this.ecrOwnerId = builder.ecrOwnerId;
+        this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
-        this.resourceId = builder.resourceId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.resourceType = builder.resourceType;
-        this.tag = builder.tag;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeTagsRequest create() {
+    public static DescribeVpcGrantRulesToEcrRequest create() {
         return builder().build();
     }
 
@@ -87,10 +101,38 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return maxResult
+     * @return ecrInstanceId
      */
-    public Integer getMaxResult() {
-        return this.maxResult;
+    public String getEcrInstanceId() {
+        return this.ecrInstanceId;
+    }
+
+    /**
+     * @return ecrOwnerId
+     */
+    public Long getEcrOwnerId() {
+        return this.ecrOwnerId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -122,10 +164,10 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return resourceId
+     * @return resourceGroupId
      */
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -143,70 +185,95 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return resourceType
+     * @return tags
      */
-    public String getResourceType() {
-        return this.resourceType;
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
-    /**
-     * @return tag
-     */
-    public java.util.List<Tag> getTag() {
-        return this.tag;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeTagsRequest, Builder> {
-        private Integer maxResult; 
+    public static final class Builder extends Request.Builder<DescribeVpcGrantRulesToEcrRequest, Builder> {
+        private String ecrInstanceId; 
+        private Long ecrOwnerId; 
+        private String instanceId; 
+        private String instanceType; 
+        private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List<String> resourceId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String resourceType; 
-        private java.util.List<Tag> tag; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTagsRequest request) {
+        private Builder(DescribeVpcGrantRulesToEcrRequest request) {
             super(request);
-            this.maxResult = request.maxResult;
+            this.ecrInstanceId = request.ecrInstanceId;
+            this.ecrOwnerId = request.ecrOwnerId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
-            this.resourceId = request.resourceId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.resourceType = request.resourceType;
-            this.tag = request.tag;
+            this.tags = request.tags;
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * EcrInstanceId.
          */
-        public Builder maxResult(Integer maxResult) {
-            this.putQueryParameter("MaxResult", maxResult);
-            this.maxResult = maxResult;
+        public Builder ecrInstanceId(String ecrInstanceId) {
+            this.putQueryParameter("EcrInstanceId", ecrInstanceId);
+            this.ecrInstanceId = ecrInstanceId;
             return this;
         }
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
-         * <ul>
-         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+         * EcrOwnerId.
+         */
+        public Builder ecrOwnerId(Long ecrOwnerId) {
+            this.putQueryParameter("EcrOwnerId", ecrOwnerId);
+            this.ecrOwnerId = ecrOwnerId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -233,8 +300,6 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the resource belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,11 +312,11 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs.</p>
+         * ResourceGroupId.
          */
-        public Builder resourceId(java.util.List<String> resourceId) {
-            this.putQueryParameter("ResourceId", resourceId);
-            this.resourceId = resourceId;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -274,56 +339,35 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VSWITCH</strong>: vSwitch</li>
-         * <li><strong>ROUTETABLE</strong>: route table</li>
-         * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
-         * <li><strong>VpnGateway</strong>: VPN gateway</li>
-         * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
-         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
+         * Tags.
          */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * <p>The tags.</p>
-         */
-        public Builder tag(java.util.List<Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
         @Override
-        public DescribeTagsRequest build() {
-            return new DescribeTagsRequest(this);
+        public DescribeVpcGrantRulesToEcrRequest build() {
+            return new DescribeVpcGrantRulesToEcrRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DescribeTagsRequest} extends {@link TeaModel}
+     * {@link DescribeVpcGrantRulesToEcrRequest} extends {@link TeaModel}
      *
-     * <p>DescribeTagsRequest</p>
+     * <p>DescribeVpcGrantRulesToEcrRequest</p>
      */
-    public static class Tag extends TeaModel {
+    public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Tag(Builder builder) {
+        private Tags(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -332,7 +376,7 @@ public class DescribeTagsRequest extends Request {
             return new Builder();
         }
 
-        public static Tag create() {
+        public static Tags create() {
             return builder().build();
         }
 
@@ -357,17 +401,13 @@ public class DescribeTagsRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Tag model) {
+            private Builder(Tags model) {
                 this.key = model.key;
                 this.value = model.value;
             } 
 
             /**
-             * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -375,19 +415,15 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public Tag build() {
-                return new Tag(this);
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

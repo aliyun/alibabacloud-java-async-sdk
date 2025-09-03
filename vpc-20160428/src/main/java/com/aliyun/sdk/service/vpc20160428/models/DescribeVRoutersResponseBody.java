@@ -368,7 +368,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table in the vRouter.</p>
+             * <p>The IDs of the route tables.</p>
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;

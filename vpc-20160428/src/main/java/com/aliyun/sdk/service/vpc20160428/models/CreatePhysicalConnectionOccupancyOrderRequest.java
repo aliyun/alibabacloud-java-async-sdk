@@ -22,6 +22,14 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
+    private Integer autoRenewDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -66,6 +74,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
     private CreatePhysicalConnectionOccupancyOrderRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewDuration = builder.autoRenewDuration;
         this.clientToken = builder.clientToken;
         this.instanceChargeType = builder.instanceChargeType;
         this.ownerAccount = builder.ownerAccount;
@@ -96,6 +106,20 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewDuration
+     */
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
     }
 
     /**
@@ -170,6 +194,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePhysicalConnectionOccupancyOrderRequest, Builder> {
         private Boolean autoPay; 
+        private Boolean autoRenew; 
+        private Integer autoRenewDuration; 
         private String clientToken; 
         private String instanceChargeType; 
         private String ownerAccount; 
@@ -188,6 +214,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         private Builder(CreatePhysicalConnectionOccupancyOrderRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewDuration = request.autoRenewDuration;
             this.clientToken = request.clientToken;
             this.instanceChargeType = request.instanceChargeType;
             this.ownerAccount = request.ownerAccount;
@@ -213,6 +241,24 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewDuration.
+         */
+        public Builder autoRenewDuration(Integer autoRenewDuration) {
+            this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
+            this.autoRenewDuration = autoRenewDuration;
             return this;
         }
 

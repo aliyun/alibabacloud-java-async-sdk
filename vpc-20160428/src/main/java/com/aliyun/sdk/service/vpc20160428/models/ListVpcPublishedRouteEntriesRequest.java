@@ -202,7 +202,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * DestinationCidrBlock.
+         * <p>The destination CIDR block of the route entry, supporting both IPv4 and IPv6 segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX/16</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -211,7 +214,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to display per batch query. Range: <strong>1</strong>~<strong>500</strong>, default value is <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -220,7 +226,14 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates whether there is a token for the next query. Values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it means there is no next query.</li>
+         * <li>If <strong>NextToken</strong> has a return value, this value indicates the token for the start of the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -247,7 +260,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,6 +290,7 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +303,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>The ID of the route publishing target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-dhw2xsds5****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -295,6 +315,7 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
+         * <p>The type of the route publishing target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

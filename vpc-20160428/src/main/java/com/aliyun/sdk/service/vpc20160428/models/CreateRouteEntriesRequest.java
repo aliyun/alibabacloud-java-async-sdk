@@ -145,7 +145,14 @@ public class CreateRouteEntriesRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -412,7 +419,7 @@ public class CreateRouteEntriesRequest extends Request {
              * <p>The type of next hop. You can specify at most 50 next hop types. Valid values:</p>
              * <ul>
              * <li><strong>Instance</strong>: Elastic Compute Service (ECS) instance. This is the default value.</li>
-             * <li><strong>HaVip</strong>: high-availability virtual IP address (HAVIP).</li>
+             * <li><strong>HaVip</strong>: high-availability virtual IP address (HaVip).</li>
              * <li><strong>RouterInterface</strong>: router interface.</li>
              * <li><strong>NetworkInterface</strong>: elastic network interface (ENI).</li>
              * <li><strong>VpnGateway</strong>: VPN gateway.</li>
