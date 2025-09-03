@@ -22,8 +22,16 @@ public class SenderStatisticsDetailByParamRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigSetId")
+    private String configSetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpPoolId")
+    private String ipPoolId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Length")
@@ -66,7 +74,9 @@ public class SenderStatisticsDetailByParamRequest extends Request {
     private SenderStatisticsDetailByParamRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
+        this.configSetId = builder.configSetId;
         this.endTime = builder.endTime;
+        this.ipPoolId = builder.ipPoolId;
         this.length = builder.length;
         this.nextStart = builder.nextStart;
         this.ownerId = builder.ownerId;
@@ -99,10 +109,24 @@ public class SenderStatisticsDetailByParamRequest extends Request {
     }
 
     /**
+     * @return configSetId
+     */
+    public String getConfigSetId() {
+        return this.configSetId;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return ipPoolId
+     */
+    public String getIpPoolId() {
+        return this.ipPoolId;
     }
 
     /**
@@ -170,7 +194,9 @@ public class SenderStatisticsDetailByParamRequest extends Request {
 
     public static final class Builder extends Request.Builder<SenderStatisticsDetailByParamRequest, Builder> {
         private String accountName; 
+        private String configSetId; 
         private String endTime; 
+        private String ipPoolId; 
         private Integer length; 
         private String nextStart; 
         private Long ownerId; 
@@ -188,7 +214,9 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         private Builder(SenderStatisticsDetailByParamRequest request) {
             super(request);
             this.accountName = request.accountName;
+            this.configSetId = request.configSetId;
             this.endTime = request.endTime;
+            this.ipPoolId = request.ipPoolId;
             this.length = request.length;
             this.nextStart = request.nextStart;
             this.ownerId = request.ownerId;
@@ -216,6 +244,15 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
+         * ConfigSetId.
+         */
+        public Builder configSetId(String configSetId) {
+            this.putQueryParameter("ConfigSetId", configSetId);
+            this.configSetId = configSetId;
+            return this;
+        }
+
+        /**
          * <p>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +261,15 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * IpPoolId.
+         */
+        public Builder ipPoolId(String ipPoolId) {
+            this.putQueryParameter("IpPoolId", ipPoolId);
+            this.ipPoolId = ipPoolId;
             return this;
         }
 

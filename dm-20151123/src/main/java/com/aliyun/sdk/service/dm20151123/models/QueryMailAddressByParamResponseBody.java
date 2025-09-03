@@ -176,6 +176,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigSetId")
+        private String configSetId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigSetName")
+        private String configSetName;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -209,6 +215,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         private MailAddress(Builder builder) {
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
+            this.configSetId = builder.configSetId;
+            this.configSetName = builder.configSetName;
             this.createTime = builder.createTime;
             this.dailyCount = builder.dailyCount;
             this.dailyReqCount = builder.dailyReqCount;
@@ -241,6 +249,20 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
          */
         public String getAccountStatus() {
             return this.accountStatus;
+        }
+
+        /**
+         * @return configSetId
+         */
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        /**
+         * @return configSetName
+         */
+        public String getConfigSetName() {
+            return this.configSetName;
         }
 
         /**
@@ -316,6 +338,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public static final class Builder {
             private String accountName; 
             private String accountStatus; 
+            private String configSetId; 
+            private String configSetName; 
             private String createTime; 
             private String dailyCount; 
             private String dailyReqCount; 
@@ -333,6 +357,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             private Builder(MailAddress model) {
                 this.accountName = model.accountName;
                 this.accountStatus = model.accountStatus;
+                this.configSetId = model.configSetId;
+                this.configSetName = model.configSetName;
                 this.createTime = model.createTime;
                 this.dailyCount = model.dailyCount;
                 this.dailyReqCount = model.dailyReqCount;
@@ -364,6 +390,22 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
+                return this;
+            }
+
+            /**
+             * ConfigSetId.
+             */
+            public Builder configSetId(String configSetId) {
+                this.configSetId = configSetId;
+                return this;
+            }
+
+            /**
+             * ConfigSetName.
+             */
+            public Builder configSetName(String configSetName) {
+                this.configSetName = configSetName;
                 return this;
             }
 

@@ -173,6 +173,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigSetId")
+        private String configSetId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigSetName")
+        private String configSetName;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -205,6 +211,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
 
         private Task(Builder builder) {
             this.addressType = builder.addressType;
+            this.configSetId = builder.configSetId;
+            this.configSetName = builder.configSetName;
             this.createTime = builder.createTime;
             this.ipPoolId = builder.ipPoolId;
             this.ipPoolName = builder.ipPoolName;
@@ -230,6 +238,20 @@ public class QueryTaskByParamResponseBody extends TeaModel {
          */
         public String getAddressType() {
             return this.addressType;
+        }
+
+        /**
+         * @return configSetId
+         */
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        /**
+         * @return configSetName
+         */
+        public String getConfigSetName() {
+            return this.configSetName;
         }
 
         /**
@@ -304,6 +326,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressType; 
+            private String configSetId; 
+            private String configSetName; 
             private String createTime; 
             private String ipPoolId; 
             private String ipPoolName; 
@@ -320,6 +344,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
 
             private Builder(Task model) {
                 this.addressType = model.addressType;
+                this.configSetId = model.configSetId;
+                this.configSetName = model.configSetName;
                 this.createTime = model.createTime;
                 this.ipPoolId = model.ipPoolId;
                 this.ipPoolName = model.ipPoolName;
@@ -340,6 +366,22 @@ public class QueryTaskByParamResponseBody extends TeaModel {
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
+                return this;
+            }
+
+            /**
+             * ConfigSetId.
+             */
+            public Builder configSetId(String configSetId) {
+                this.configSetId = configSetId;
+                return this;
+            }
+
+            /**
+             * ConfigSetName.
+             */
+            public Builder configSetName(String configSetName) {
+                this.configSetName = configSetName;
                 return this;
             }
 

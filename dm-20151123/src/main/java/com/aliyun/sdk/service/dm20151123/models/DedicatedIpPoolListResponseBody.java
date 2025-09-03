@@ -200,9 +200,13 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private Ips(Builder builder) {
             this.id = builder.id;
             this.ip = builder.ip;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -227,9 +231,17 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
             return this.ip;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String id; 
             private String ip; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -237,6 +249,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
             private Builder(Ips model) {
                 this.id = model.id;
                 this.ip = model.ip;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -258,6 +271,14 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
              */
             public Builder ip(String ip) {
                 this.ip = ip;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

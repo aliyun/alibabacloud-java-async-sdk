@@ -22,6 +22,10 @@ public class GetTrackListRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigSetId")
+    private String configSetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DedicatedIp")
     private String dedicatedIp;
 
@@ -86,6 +90,7 @@ public class GetTrackListRequest extends Request {
     private GetTrackListRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
+        this.configSetId = builder.configSetId;
         this.dedicatedIp = builder.dedicatedIp;
         this.dedicatedIpPoolId = builder.dedicatedIpPoolId;
         this.endTime = builder.endTime;
@@ -121,6 +126,13 @@ public class GetTrackListRequest extends Request {
      */
     public String getAccountName() {
         return this.accountName;
+    }
+
+    /**
+     * @return configSetId
+     */
+    public String getConfigSetId() {
+        return this.configSetId;
     }
 
     /**
@@ -230,6 +242,7 @@ public class GetTrackListRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTrackListRequest, Builder> {
         private String accountName; 
+        private String configSetId; 
         private String dedicatedIp; 
         private String dedicatedIpPoolId; 
         private String endTime; 
@@ -253,6 +266,7 @@ public class GetTrackListRequest extends Request {
         private Builder(GetTrackListRequest request) {
             super(request);
             this.accountName = request.accountName;
+            this.configSetId = request.configSetId;
             this.dedicatedIp = request.dedicatedIp;
             this.dedicatedIpPoolId = request.dedicatedIpPoolId;
             this.endTime = request.endTime;
@@ -282,6 +296,15 @@ public class GetTrackListRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * ConfigSetId.
+         */
+        public Builder configSetId(String configSetId) {
+            this.putQueryParameter("ConfigSetId", configSetId);
+            this.configSetId = configSetId;
             return this;
         }
 

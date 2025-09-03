@@ -326,6 +326,9 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarmupType")
         private String warmupType;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private Ips(Builder builder) {
             this.expiredTime = builder.expiredTime;
             this.id = builder.id;
@@ -337,6 +340,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
             this.status = builder.status;
             this.warmupStatus = builder.warmupStatus;
             this.warmupType = builder.warmupType;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -417,6 +421,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
             return this.warmupType;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String expiredTime; 
             private String id; 
@@ -428,6 +439,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
             private String status; 
             private String warmupStatus; 
             private String warmupType; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -443,6 +455,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
                 this.status = model.status;
                 this.warmupStatus = model.warmupStatus;
                 this.warmupType = model.warmupType;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -549,6 +562,14 @@ public class DedicatedIpListResponseBody extends TeaModel {
              */
             public Builder warmupType(String warmupType) {
                 this.warmupType = warmupType;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

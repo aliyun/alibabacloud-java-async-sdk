@@ -22,6 +22,10 @@ public class DedicatedIpPoolListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
+    private Boolean all;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
@@ -36,6 +40,7 @@ public class DedicatedIpPoolListRequest extends Request {
     private DedicatedIpPoolListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.all = builder.all;
         this.keyword = builder.keyword;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
@@ -62,6 +67,13 @@ public class DedicatedIpPoolListRequest extends Request {
     }
 
     /**
+     * @return all
+     */
+    public Boolean getAll() {
+        return this.all;
+    }
+
+    /**
      * @return keyword
      */
     public String getKeyword() {
@@ -84,6 +96,7 @@ public class DedicatedIpPoolListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DedicatedIpPoolListRequest, Builder> {
         private String regionId; 
+        private Boolean all; 
         private String keyword; 
         private Integer pageIndex; 
         private Integer pageSize; 
@@ -95,6 +108,7 @@ public class DedicatedIpPoolListRequest extends Request {
         private Builder(DedicatedIpPoolListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.all = request.all;
             this.keyword = request.keyword;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
@@ -106,6 +120,15 @@ public class DedicatedIpPoolListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * All.
+         */
+        public Builder all(Boolean all) {
+            this.putQueryParameter("All", all);
+            this.all = all;
             return this;
         }
 

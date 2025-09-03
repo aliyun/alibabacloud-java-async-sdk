@@ -125,8 +125,20 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigSetId")
+        private String configSetId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigSetName")
+        private String configSetName;
+
         @com.aliyun.core.annotation.NameInMap("ErrorClassification")
         private String errorClassification;
+
+        @com.aliyun.core.annotation.NameInMap("IpPoolId")
+        private String ipPoolId;
+
+        @com.aliyun.core.annotation.NameInMap("IpPoolName")
+        private String ipPoolName;
 
         @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private String lastUpdateTime;
@@ -148,7 +160,11 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         private MailDetail(Builder builder) {
             this.accountName = builder.accountName;
+            this.configSetId = builder.configSetId;
+            this.configSetName = builder.configSetName;
             this.errorClassification = builder.errorClassification;
+            this.ipPoolId = builder.ipPoolId;
+            this.ipPoolName = builder.ipPoolName;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.message = builder.message;
             this.status = builder.status;
@@ -173,10 +189,38 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
+         * @return configSetId
+         */
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        /**
+         * @return configSetName
+         */
+        public String getConfigSetName() {
+            return this.configSetName;
+        }
+
+        /**
          * @return errorClassification
          */
         public String getErrorClassification() {
             return this.errorClassification;
+        }
+
+        /**
+         * @return ipPoolId
+         */
+        public String getIpPoolId() {
+            return this.ipPoolId;
+        }
+
+        /**
+         * @return ipPoolName
+         */
+        public String getIpPoolName() {
+            return this.ipPoolName;
         }
 
         /**
@@ -223,7 +267,11 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String configSetId; 
+            private String configSetName; 
             private String errorClassification; 
+            private String ipPoolId; 
+            private String ipPoolName; 
             private String lastUpdateTime; 
             private String message; 
             private Integer status; 
@@ -236,7 +284,11 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
             private Builder(MailDetail model) {
                 this.accountName = model.accountName;
+                this.configSetId = model.configSetId;
+                this.configSetName = model.configSetName;
                 this.errorClassification = model.errorClassification;
+                this.ipPoolId = model.ipPoolId;
+                this.ipPoolName = model.ipPoolName;
                 this.lastUpdateTime = model.lastUpdateTime;
                 this.message = model.message;
                 this.status = model.status;
@@ -257,6 +309,22 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
+             * ConfigSetId.
+             */
+            public Builder configSetId(String configSetId) {
+                this.configSetId = configSetId;
+                return this;
+            }
+
+            /**
+             * ConfigSetName.
+             */
+            public Builder configSetName(String configSetName) {
+                this.configSetName = configSetName;
+                return this;
+            }
+
+            /**
              * <p>Detailed classification of error reasons: - SendOk - SmtpNxBox
              * etc.</p>
              * 
@@ -265,6 +333,22 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
              */
             public Builder errorClassification(String errorClassification) {
                 this.errorClassification = errorClassification;
+                return this;
+            }
+
+            /**
+             * IpPoolId.
+             */
+            public Builder ipPoolId(String ipPoolId) {
+                this.ipPoolId = ipPoolId;
+                return this;
+            }
+
+            /**
+             * IpPoolName.
+             */
+            public Builder ipPoolName(String ipPoolName) {
+                this.ipPoolName = ipPoolName;
                 return this;
             }
 
