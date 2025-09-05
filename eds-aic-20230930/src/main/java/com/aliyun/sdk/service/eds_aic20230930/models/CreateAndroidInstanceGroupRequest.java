@@ -111,6 +111,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String policyGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -142,6 +146,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
+        this.promotionId = builder.promotionId;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -314,6 +319,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -350,6 +362,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
+        private String promotionId; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
@@ -381,6 +394,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
+            this.promotionId = request.promotionId;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -693,6 +707,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

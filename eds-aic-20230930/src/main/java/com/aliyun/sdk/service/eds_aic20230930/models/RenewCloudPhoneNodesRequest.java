@@ -37,6 +37,10 @@ public class RenewCloudPhoneNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
     private RenewCloudPhoneNodesRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -44,6 +48,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         this.nodeIds = builder.nodeIds;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.promotionId = builder.promotionId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class RenewCloudPhoneNodesRequest extends Request {
         return this.periodUnit;
     }
 
+    /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
     public static final class Builder extends Request.Builder<RenewCloudPhoneNodesRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private java.util.List<String> nodeIds; 
         private Integer period; 
         private String periodUnit; 
+        private String promotionId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
             this.nodeIds = request.nodeIds;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class RenewCloudPhoneNodesRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

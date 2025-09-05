@@ -95,6 +95,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private Integer phoneDataVolume;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
     private Integer resolutionHeight;
 
@@ -153,6 +157,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.phoneCount = builder.phoneCount;
         this.phoneDataVolume = builder.phoneDataVolume;
+        this.promotionId = builder.promotionId;
         this.resolutionHeight = builder.resolutionHeight;
         this.resolutionWidth = builder.resolutionWidth;
         this.serverShareDataVolume = builder.serverShareDataVolume;
@@ -311,6 +316,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    /**
      * @return resolutionHeight
      */
     public Integer getResolutionHeight() {
@@ -393,6 +405,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private String periodUnit; 
         private Integer phoneCount; 
         private Integer phoneDataVolume; 
+        private String promotionId; 
         private Integer resolutionHeight; 
         private Integer resolutionWidth; 
         private Integer serverShareDataVolume; 
@@ -428,6 +441,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.phoneCount = request.phoneCount;
             this.phoneDataVolume = request.phoneDataVolume;
+            this.promotionId = request.promotionId;
             this.resolutionHeight = request.resolutionHeight;
             this.resolutionWidth = request.resolutionWidth;
             this.serverShareDataVolume = request.serverShareDataVolume;
@@ -670,6 +684,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
             this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

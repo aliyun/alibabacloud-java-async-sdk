@@ -42,6 +42,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     private Integer phoneDataVolume;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpBandwidthLimit")
     private Integer upBandwidthLimit;
 
@@ -53,6 +57,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         this.nodeId = builder.nodeId;
         this.phoneCount = builder.phoneCount;
         this.phoneDataVolume = builder.phoneDataVolume;
+        this.promotionId = builder.promotionId;
         this.upBandwidthLimit = builder.upBandwidthLimit;
     }
 
@@ -112,6 +117,13 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    /**
      * @return upBandwidthLimit
      */
     public Integer getUpBandwidthLimit() {
@@ -125,6 +137,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         private String nodeId; 
         private Integer phoneCount; 
         private Integer phoneDataVolume; 
+        private String promotionId; 
         private Integer upBandwidthLimit; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
             this.nodeId = request.nodeId;
             this.phoneCount = request.phoneCount;
             this.phoneDataVolume = request.phoneDataVolume;
+            this.promotionId = request.promotionId;
             this.upBandwidthLimit = request.upBandwidthLimit;
         } 
 
@@ -193,6 +207,15 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
             this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

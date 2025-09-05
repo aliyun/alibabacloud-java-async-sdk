@@ -43,6 +43,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
     private ModifyInstanceChargeTypeRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -51,6 +55,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         this.instanceGroupIds = builder.instanceGroupIds;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.promotionId = builder.promotionId;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         return this.periodUnit;
     }
 
+    /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceChargeTypeRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
@@ -115,6 +127,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         private java.util.List<String> instanceGroupIds; 
         private Integer period; 
         private String periodUnit; 
+        private String promotionId; 
 
         private Builder() {
             super();
@@ -128,6 +141,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
             this.instanceGroupIds = request.instanceGroupIds;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
         } 
 
         /**
@@ -205,6 +219,15 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

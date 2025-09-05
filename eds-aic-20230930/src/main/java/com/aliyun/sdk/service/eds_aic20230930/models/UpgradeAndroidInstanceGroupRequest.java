@@ -29,11 +29,16 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupId")
     private String instanceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
     private UpgradeAndroidInstanceGroupRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
         this.increaseNumberOfInstance = builder.increaseNumberOfInstance;
         this.instanceGroupId = builder.instanceGroupId;
+        this.promotionId = builder.promotionId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         return this.instanceGroupId;
     }
 
+    /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeAndroidInstanceGroupRequest, Builder> {
         private Boolean autoPay; 
         private Integer increaseNumberOfInstance; 
         private String instanceGroupId; 
+        private String promotionId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
             this.autoPay = request.autoPay;
             this.increaseNumberOfInstance = request.increaseNumberOfInstance;
             this.instanceGroupId = request.instanceGroupId;
+            this.promotionId = request.promotionId;
         } 
 
         /**
@@ -124,6 +138,15 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
             this.instanceGroupId = instanceGroupId;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 
