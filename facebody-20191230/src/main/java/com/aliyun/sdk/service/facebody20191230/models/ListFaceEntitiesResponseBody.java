@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFaceEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFaceEntitiesResponseBody</p>
  */
 public class ListFaceEntitiesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFaceEntitiesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
 
     public static ListFaceEntitiesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFaceEntitiesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -71,23 +88,29 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFaceEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFaceEntitiesResponseBody</p>
+     */
     public static class Entities extends TeaModel {
-        @NameInMap("CreatedAt")
+        @com.aliyun.core.annotation.NameInMap("CreatedAt")
         private Long createdAt;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("FaceCount")
+        @com.aliyun.core.annotation.NameInMap("FaceCount")
         private Integer faceCount;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("UpdatedAt")
+        @com.aliyun.core.annotation.NameInMap("UpdatedAt")
         private Long updatedAt;
 
         private Entities(Builder builder) {
@@ -157,6 +180,18 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
             private String labels; 
             private Long updatedAt; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entities model) {
+                this.createdAt = model.createdAt;
+                this.dbName = model.dbName;
+                this.entityId = model.entityId;
+                this.faceCount = model.faceCount;
+                this.labels = model.labels;
+                this.updatedAt = model.updatedAt;
+            } 
+
             /**
              * CreatedAt.
              */
@@ -212,14 +247,20 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFaceEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFaceEntitiesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Entities")
-        private java.util.List < Entities> entities;
+        @com.aliyun.core.annotation.NameInMap("Entities")
+        private java.util.List<Entities> entities;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -239,7 +280,7 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         /**
          * @return entities
          */
-        public java.util.List < Entities> getEntities() {
+        public java.util.List<Entities> getEntities() {
             return this.entities;
         }
 
@@ -258,14 +299,23 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Entities> entities; 
+            private java.util.List<Entities> entities; 
             private String token; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.entities = model.entities;
+                this.token = model.token;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Entities.
              */
-            public Builder entities(java.util.List < Entities> entities) {
+            public Builder entities(java.util.List<Entities> entities) {
                 this.entities = entities;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFaceDbsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFaceDbsResponseBody</p>
  */
 public class ListFaceDbsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFaceDbsResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListFaceDbsResponseBody extends TeaModel {
 
     public static ListFaceDbsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class ListFaceDbsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFaceDbsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -71,8 +88,14 @@ public class ListFaceDbsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFaceDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFaceDbsResponseBody</p>
+     */
     public static class DbList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DbList(Builder builder) {
@@ -97,6 +120,13 @@ public class ListFaceDbsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbList model) {
+                this.name = model.name;
+            } 
+
             /**
              * Name.
              */
@@ -112,9 +142,15 @@ public class ListFaceDbsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFaceDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFaceDbsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DbList")
-        private java.util.List < DbList> dbList;
+        @com.aliyun.core.annotation.NameInMap("DbList")
+        private java.util.List<DbList> dbList;
 
         private Data(Builder builder) {
             this.dbList = builder.dbList;
@@ -131,17 +167,24 @@ public class ListFaceDbsResponseBody extends TeaModel {
         /**
          * @return dbList
          */
-        public java.util.List < DbList> getDbList() {
+        public java.util.List<DbList> getDbList() {
             return this.dbList;
         }
 
         public static final class Builder {
-            private java.util.List < DbList> dbList; 
+            private java.util.List<DbList> dbList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbList = model.dbList;
+            } 
 
             /**
              * DbList.
              */
-            public Builder dbList(java.util.List < DbList> dbList) {
+            public Builder dbList(java.util.List<DbList> dbList) {
                 this.dbList = dbList;
                 return this;
             }

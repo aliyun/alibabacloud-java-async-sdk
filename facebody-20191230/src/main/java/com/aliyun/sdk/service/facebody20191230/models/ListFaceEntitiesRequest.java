@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFaceEntitiesRequest} extends {@link RequestModel}
  *
  * <p>ListFaceEntitiesRequest</p>
  */
 public class ListFaceEntitiesRequest extends Request {
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("EntityIdPrefix")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityIdPrefix")
     private String entityIdPrefix;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Body
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Integer offset;
 
-    @Body
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Body
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private ListFaceEntitiesRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class ListFaceEntitiesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,10 @@ public class ListFaceEntitiesRequest extends Request {
         } 
 
         /**
-         * DbName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);

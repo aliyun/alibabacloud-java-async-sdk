@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenRealPersonVerificationTokenRequest} extends {@link RequestModel}
  *
  * <p>GenRealPersonVerificationTokenRequest</p>
  */
 public class GenRealPersonVerificationTokenRequest extends Request {
-    @Body
-    @NameInMap("CertificateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertificateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateName;
 
-    @Body
-    @NameInMap("CertificateNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertificateNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateNumber;
 
-    @Body
-    @NameInMap("MetaInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetaInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metaInfo;
 
     private GenRealPersonVerificationTokenRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class GenRealPersonVerificationTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,7 @@ public class GenRealPersonVerificationTokenRequest extends Request {
         } 
 
         /**
-         * CertificateName.
+         * <p>This parameter is required.</p>
          */
         public Builder certificateName(String certificateName) {
             this.putBodyParameter("CertificateName", certificateName);
@@ -94,7 +99,10 @@ public class GenRealPersonVerificationTokenRequest extends Request {
         }
 
         /**
-         * CertificateNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33010219001123123X</p>
          */
         public Builder certificateNumber(String certificateNumber) {
             this.putBodyParameter("CertificateNumber", certificateNumber);
@@ -103,7 +111,10 @@ public class GenRealPersonVerificationTokenRequest extends Request {
         }
 
         /**
-         * MetaInfo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dwe&quot;:&quot;ew4e&quot;...}</p>
          */
         public Builder metaInfo(String metaInfo) {
             this.putBodyParameter("MetaInfo", metaInfo);

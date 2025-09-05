@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteFaceRequest</p>
  */
 public class DeleteFaceRequest extends Request {
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("FaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String faceId;
 
     private DeleteFaceRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DeleteFaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class DeleteFaceRequest extends Request {
         } 
 
         /**
-         * DbName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -79,7 +87,10 @@ public class DeleteFaceRequest extends Request {
         }
 
         /**
-         * FaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder faceId(String faceId) {
             this.putBodyParameter("FaceId", faceId);

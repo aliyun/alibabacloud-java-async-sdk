@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddFaceEntity  AddFaceEntityRequest
+     * @return AddFaceEntityResponse
+     */
     @Override
     public CompletableFuture<AddFaceEntityResponse> addFaceEntity(AddFaceEntityRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFaceDb  CreateFaceDbRequest
+     * @return CreateFaceDbResponse
+     */
     @Override
     public CompletableFuture<CreateFaceDbResponse> createFaceDb(CreateFaceDbRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFace  DeleteFaceRequest
+     * @return DeleteFaceResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceResponse> deleteFace(DeleteFaceRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceDb  DeleteFaceDbRequest
+     * @return DeleteFaceDbResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceDbResponse> deleteFaceDb(DeleteFaceDbRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceEntity  DeleteFaceEntityRequest
+     * @return DeleteFaceEntityResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceEntityResponse> deleteFaceEntity(DeleteFaceEntityRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceImageTemplate  DeleteFaceImageTemplateRequest
+     * @return DeleteFaceImageTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceImageTemplateResponse> deleteFaceImageTemplate(DeleteFaceImageTemplateRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenRealPersonVerificationToken  GenRealPersonVerificationTokenRequest
+     * @return GenRealPersonVerificationTokenResponse
+     */
     @Override
     public CompletableFuture<GenRealPersonVerificationTokenResponse> genRealPersonVerificationToken(GenRealPersonVerificationTokenRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFaceEntity  GetFaceEntityRequest
+     * @return GetFaceEntityResponse
+     */
     @Override
     public CompletableFuture<GetFaceEntityResponse> getFaceEntity(GetFaceEntityRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRealPersonVerificationResult  GetRealPersonVerificationResultRequest
+     * @return GetRealPersonVerificationResultResponse
+     */
     @Override
     public CompletableFuture<GetRealPersonVerificationResultResponse> getRealPersonVerificationResult(GetRealPersonVerificationResultRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFaceDbs  ListFaceDbsRequest
+     * @return ListFaceDbsResponse
+     */
     @Override
     public CompletableFuture<ListFaceDbsResponse> listFaceDbs(ListFaceDbsRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFaceEntities  ListFaceEntitiesRequest
+     * @return ListFaceEntitiesResponse
+     */
     @Override
     public CompletableFuture<ListFaceEntitiesResponse> listFaceEntities(ListFaceEntitiesRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceImageTemplate  QueryFaceImageTemplateRequest
+     * @return QueryFaceImageTemplateResponse
+     */
     @Override
     public CompletableFuture<QueryFaceImageTemplateResponse> queryFaceImageTemplate(QueryFaceImageTemplateRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFaceEntity  UpdateFaceEntityRequest
+     * @return UpdateFaceEntityResponse
+     */
     @Override
     public CompletableFuture<UpdateFaceEntityResponse> updateFaceEntity(UpdateFaceEntityRequest request) {
         try {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFaceEntityResponseBody} extends {@link TeaModel}
  *
  * <p>GetFaceEntityResponseBody</p>
  */
 public class GetFaceEntityResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFaceEntityResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetFaceEntityResponseBody extends TeaModel {
 
     public static GetFaceEntityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetFaceEntityResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFaceEntityResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -71,8 +88,14 @@ public class GetFaceEntityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFaceEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFaceEntityResponseBody</p>
+     */
     public static class Faces extends TeaModel {
-        @NameInMap("FaceId")
+        @com.aliyun.core.annotation.NameInMap("FaceId")
         private String faceId;
 
         private Faces(Builder builder) {
@@ -97,6 +120,13 @@ public class GetFaceEntityResponseBody extends TeaModel {
         public static final class Builder {
             private String faceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Faces model) {
+                this.faceId = model.faceId;
+            } 
+
             /**
              * FaceId.
              */
@@ -112,17 +142,23 @@ public class GetFaceEntityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFaceEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFaceEntityResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("Faces")
-        private java.util.List < Faces> faces;
+        @com.aliyun.core.annotation.NameInMap("Faces")
+        private java.util.List<Faces> faces;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
         private Data(Builder builder) {
@@ -157,7 +193,7 @@ public class GetFaceEntityResponseBody extends TeaModel {
         /**
          * @return faces
          */
-        public java.util.List < Faces> getFaces() {
+        public java.util.List<Faces> getFaces() {
             return this.faces;
         }
 
@@ -171,8 +207,18 @@ public class GetFaceEntityResponseBody extends TeaModel {
         public static final class Builder {
             private String dbName; 
             private String entityId; 
-            private java.util.List < Faces> faces; 
+            private java.util.List<Faces> faces; 
             private String labels; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbName = model.dbName;
+                this.entityId = model.entityId;
+                this.faces = model.faces;
+                this.labels = model.labels;
+            } 
 
             /**
              * DbName.
@@ -193,7 +239,7 @@ public class GetFaceEntityResponseBody extends TeaModel {
             /**
              * Faces.
              */
-            public Builder faces(java.util.List < Faces> faces) {
+            public Builder faces(java.util.List<Faces> faces) {
                 this.faces = faces;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceImageTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceImageTemplateResponseBody</p>
  */
 public class QueryFaceImageTemplateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryFaceImageTemplateResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
 
     public static QueryFaceImageTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceImageTemplateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -71,17 +88,23 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceImageTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceImageTemplateResponseBody</p>
+     */
     public static class FaceRect extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private FaceRect(Builder builder) {
@@ -133,6 +156,16 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceRect model) {
+                this.height = model.height;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Height.
              */
@@ -172,11 +205,17 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceImageTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceImageTemplateResponseBody</p>
+     */
     public static class FaceInfos extends TeaModel {
-        @NameInMap("FaceRect")
+        @com.aliyun.core.annotation.NameInMap("FaceRect")
         private FaceRect faceRect;
 
-        @NameInMap("TemplateFaceID")
+        @com.aliyun.core.annotation.NameInMap("TemplateFaceID")
         private String templateFaceID;
 
         private FaceInfos(Builder builder) {
@@ -210,6 +249,14 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
             private FaceRect faceRect; 
             private String templateFaceID; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceInfos model) {
+                this.faceRect = model.faceRect;
+                this.templateFaceID = model.templateFaceID;
+            } 
+
             /**
              * FaceRect.
              */
@@ -233,23 +280,29 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceImageTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceImageTemplateResponseBody</p>
+     */
     public static class Elements extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FaceInfos")
-        private java.util.List < FaceInfos> faceInfos;
+        @com.aliyun.core.annotation.NameInMap("FaceInfos")
+        private java.util.List<FaceInfos> faceInfos;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateURL")
+        @com.aliyun.core.annotation.NameInMap("TemplateURL")
         private String templateURL;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Elements(Builder builder) {
@@ -279,7 +332,7 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         /**
          * @return faceInfos
          */
-        public java.util.List < FaceInfos> getFaceInfos() {
+        public java.util.List<FaceInfos> getFaceInfos() {
             return this.faceInfos;
         }
 
@@ -313,11 +366,23 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private java.util.List < FaceInfos> faceInfos; 
+            private java.util.List<FaceInfos> faceInfos; 
             private String templateId; 
             private String templateURL; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Elements model) {
+                this.createTime = model.createTime;
+                this.faceInfos = model.faceInfos;
+                this.templateId = model.templateId;
+                this.templateURL = model.templateURL;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * CreateTime.
@@ -330,7 +395,7 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
             /**
              * FaceInfos.
              */
-            public Builder faceInfos(java.util.List < FaceInfos> faceInfos) {
+            public Builder faceInfos(java.util.List<FaceInfos> faceInfos) {
                 this.faceInfos = faceInfos;
                 return this;
             }
@@ -374,11 +439,17 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceImageTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceImageTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Elements")
-        private java.util.List < Elements> elements;
+        @com.aliyun.core.annotation.NameInMap("Elements")
+        private java.util.List<Elements> elements;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -397,7 +468,7 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         /**
          * @return elements
          */
-        public java.util.List < Elements> getElements() {
+        public java.util.List<Elements> getElements() {
             return this.elements;
         }
 
@@ -409,13 +480,21 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Elements> elements; 
+            private java.util.List<Elements> elements; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.elements = model.elements;
+                this.total = model.total;
+            } 
 
             /**
              * Elements.
              */
-            public Builder elements(java.util.List < Elements> elements) {
+            public Builder elements(java.util.List<Elements> elements) {
                 this.elements = elements;
                 return this;
             }

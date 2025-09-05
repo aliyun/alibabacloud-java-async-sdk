@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceImageTemplateRequest} extends {@link RequestModel}
  *
  * <p>QueryFaceImageTemplateRequest</p>
  */
 public class QueryFaceImageTemplateRequest extends Request {
-    @Query
-    @NameInMap("PageNo")
-    @Validation(maximum = 5000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(maximum = 5000, minimum = 1)
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private QueryFaceImageTemplateRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class QueryFaceImageTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

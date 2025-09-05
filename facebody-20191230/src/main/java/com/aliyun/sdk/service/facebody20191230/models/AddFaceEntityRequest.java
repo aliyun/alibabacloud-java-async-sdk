@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFaceEntityRequest} extends {@link RequestModel}
  *
  * <p>AddFaceEntityRequest</p>
  */
 public class AddFaceEntityRequest extends Request {
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("EntityId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityId;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
     private AddFaceEntityRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class AddFaceEntityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,10 @@ public class AddFaceEntityRequest extends Request {
         } 
 
         /**
-         * DbName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -93,7 +101,10 @@ public class AddFaceEntityRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mm2</p>
          */
         public Builder entityId(String entityId) {
             this.putBodyParameter("EntityId", entityId);

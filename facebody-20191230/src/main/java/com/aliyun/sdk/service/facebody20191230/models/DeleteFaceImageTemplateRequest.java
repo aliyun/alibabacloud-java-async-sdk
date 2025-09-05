@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFaceImageTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteFaceImageTemplateRequest</p>
  */
 public class DeleteFaceImageTemplateRequest extends Request {
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private DeleteFaceImageTemplateRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DeleteFaceImageTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,10 @@ public class DeleteFaceImageTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

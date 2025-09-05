@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.facebody20191230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRealPersonVerificationResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetRealPersonVerificationResultResponseBody</p>
  */
 public class GetRealPersonVerificationResultResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRealPersonVerificationResultResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
 
     public static GetRealPersonVerificationResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRealPersonVerificationResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -71,8 +88,14 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRealPersonVerificationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealPersonVerificationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Passed")
+        @com.aliyun.core.annotation.NameInMap("Passed")
         private Boolean passed;
 
         private Data(Builder builder) {
@@ -96,6 +119,13 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean passed; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.passed = model.passed;
+            } 
 
             /**
              * Passed.
