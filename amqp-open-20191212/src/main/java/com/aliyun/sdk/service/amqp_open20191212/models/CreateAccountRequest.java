@@ -22,6 +22,10 @@ public class CreateAccountRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("accountAccessKey")
     @com.aliyun.core.annotation.Validation(required = true)
     private String accountAccessKey;
@@ -54,6 +58,7 @@ public class CreateAccountRequest extends Request {
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.remark = builder.remark;
         this.accountAccessKey = builder.accountAccessKey;
         this.createTimestamp = builder.createTimestamp;
         this.instanceId = builder.instanceId;
@@ -80,6 +85,13 @@ public class CreateAccountRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
@@ -126,6 +138,7 @@ public class CreateAccountRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String regionId; 
+        private String remark; 
         private String accountAccessKey; 
         private Long createTimestamp; 
         private String instanceId; 
@@ -140,6 +153,7 @@ public class CreateAccountRequest extends Request {
         private Builder(CreateAccountRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.remark = request.remark;
             this.accountAccessKey = request.accountAccessKey;
             this.createTimestamp = request.createTimestamp;
             this.instanceId = request.instanceId;
@@ -154,6 +168,15 @@ public class CreateAccountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

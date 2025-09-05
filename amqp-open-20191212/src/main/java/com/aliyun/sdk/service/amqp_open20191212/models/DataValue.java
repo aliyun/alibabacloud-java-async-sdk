@@ -38,6 +38,9 @@ public class DataValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
     private DataValue(Builder builder) {
         this.masterUid = builder.masterUid;
         this.cInstanceId = builder.cInstanceId;
@@ -46,6 +49,7 @@ public class DataValue extends TeaModel {
         this.password = builder.password;
         this.deleted = builder.deleted;
         this.createTimestamp = builder.createTimestamp;
+        this.remark = builder.remark;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class DataValue extends TeaModel {
         return this.createTimestamp;
     }
 
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
     public static final class Builder {
         private Long masterUid; 
         private String cInstanceId; 
@@ -117,6 +128,7 @@ public class DataValue extends TeaModel {
         private String password; 
         private Long deleted; 
         private Long createTimestamp; 
+        private String remark; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class DataValue extends TeaModel {
             this.password = model.password;
             this.deleted = model.deleted;
             this.createTimestamp = model.createTimestamp;
+            this.remark = model.remark;
         } 
 
         /**
@@ -205,6 +218,14 @@ public class DataValue extends TeaModel {
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.remark = remark;
             return this;
         }
 

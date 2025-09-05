@@ -185,6 +185,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassicEndpoint")
         private String classicEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("Edition")
+        private String edition;
+
         @com.aliyun.core.annotation.NameInMap("EncryptedInstance")
         private Boolean encryptedInstance;
 
@@ -224,6 +227,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateEndpoint")
         private String privateEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedCapacity")
+        private Integer provisionedCapacity;
+
         @com.aliyun.core.annotation.NameInMap("PublicEndpoint")
         private String publicEndpoint;
 
@@ -245,6 +251,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Instances(Builder builder) {
             this.autoRenewInstance = builder.autoRenewInstance;
             this.classicEndpoint = builder.classicEndpoint;
+            this.edition = builder.edition;
             this.encryptedInstance = builder.encryptedInstance;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
@@ -258,6 +265,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.orderCreateTime = builder.orderCreateTime;
             this.orderType = builder.orderType;
             this.privateEndpoint = builder.privateEndpoint;
+            this.provisionedCapacity = builder.provisionedCapacity;
             this.publicEndpoint = builder.publicEndpoint;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
@@ -286,6 +294,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getClassicEndpoint() {
             return this.classicEndpoint;
+        }
+
+        /**
+         * @return edition
+         */
+        public String getEdition() {
+            return this.edition;
         }
 
         /**
@@ -380,6 +395,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return provisionedCapacity
+         */
+        public Integer getProvisionedCapacity() {
+            return this.provisionedCapacity;
+        }
+
+        /**
          * @return publicEndpoint
          */
         public String getPublicEndpoint() {
@@ -424,6 +446,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoRenewInstance; 
             private String classicEndpoint; 
+            private String edition; 
             private Boolean encryptedInstance; 
             private Long expireTime; 
             private String instanceId; 
@@ -437,6 +460,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long orderCreateTime; 
             private String orderType; 
             private String privateEndpoint; 
+            private Integer provisionedCapacity; 
             private String publicEndpoint; 
             private String resourceGroupId; 
             private String status; 
@@ -450,6 +474,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Builder(Instances model) {
                 this.autoRenewInstance = model.autoRenewInstance;
                 this.classicEndpoint = model.classicEndpoint;
+                this.edition = model.edition;
                 this.encryptedInstance = model.encryptedInstance;
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
@@ -463,6 +488,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.orderCreateTime = model.orderCreateTime;
                 this.orderType = model.orderType;
                 this.privateEndpoint = model.privateEndpoint;
+                this.provisionedCapacity = model.provisionedCapacity;
                 this.publicEndpoint = model.publicEndpoint;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
@@ -490,6 +516,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder classicEndpoint(String classicEndpoint) {
                 this.classicEndpoint = classicEndpoint;
+                return this;
+            }
+
+            /**
+             * Edition.
+             */
+            public Builder edition(String edition) {
+                this.edition = edition;
                 return this;
             }
 
@@ -642,6 +676,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder privateEndpoint(String privateEndpoint) {
                 this.privateEndpoint = privateEndpoint;
+                return this;
+            }
+
+            /**
+             * ProvisionedCapacity.
+             */
+            public Builder provisionedCapacity(Integer provisionedCapacity) {
+                this.provisionedCapacity = provisionedCapacity;
                 return this;
             }
 
