@@ -548,6 +548,9 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommentDatas")
         private java.util.List<DataCommentDatas> commentDatas;
 
+        @com.aliyun.core.annotation.NameInMap("DataId")
+        private String dataId;
+
         @com.aliyun.core.annotation.NameInMap("MainData")
         private MainData mainData;
 
@@ -559,6 +562,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.commentDatas = builder.commentDatas;
+            this.dataId = builder.dataId;
             this.mainData = builder.mainData;
             this.reqId = builder.reqId;
             this.riskLevel = builder.riskLevel;
@@ -577,6 +581,13 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
          */
         public java.util.List<DataCommentDatas> getCommentDatas() {
             return this.commentDatas;
+        }
+
+        /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
         }
 
         /**
@@ -602,6 +613,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataCommentDatas> commentDatas; 
+            private String dataId; 
             private MainData mainData; 
             private String reqId; 
             private String riskLevel; 
@@ -611,6 +623,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.commentDatas = model.commentDatas;
+                this.dataId = model.dataId;
                 this.mainData = model.mainData;
                 this.reqId = model.reqId;
                 this.riskLevel = model.riskLevel;
@@ -621,6 +634,14 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
              */
             public Builder commentDatas(java.util.List<DataCommentDatas> commentDatas) {
                 this.commentDatas = commentDatas;
+                return this;
+            }
+
+            /**
+             * DataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
                 return this;
             }
 
