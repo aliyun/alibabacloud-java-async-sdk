@@ -111,6 +111,10 @@ public class InitFaceVerifyRequest extends Request {
     private String model;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedMultiFaceCheck")
+    private String needMultiFaceCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
@@ -195,6 +199,7 @@ public class InitFaceVerifyRequest extends Request {
         this.mobile = builder.mobile;
         this.mode = builder.mode;
         this.model = builder.model;
+        this.needMultiFaceCheck = builder.needMultiFaceCheck;
         this.ossBucketName = builder.ossBucketName;
         this.ossObjectName = builder.ossObjectName;
         this.outerOrderNo = builder.outerOrderNo;
@@ -387,6 +392,13 @@ public class InitFaceVerifyRequest extends Request {
     }
 
     /**
+     * @return needMultiFaceCheck
+     */
+    public String getNeedMultiFaceCheck() {
+        return this.needMultiFaceCheck;
+    }
+
+    /**
      * @return ossBucketName
      */
     public String getOssBucketName() {
@@ -515,6 +527,7 @@ public class InitFaceVerifyRequest extends Request {
         private String mobile; 
         private String mode; 
         private String model; 
+        private String needMultiFaceCheck; 
         private String ossBucketName; 
         private String ossObjectName; 
         private String outerOrderNo; 
@@ -560,6 +573,7 @@ public class InitFaceVerifyRequest extends Request {
             this.mobile = request.mobile;
             this.mode = request.mode;
             this.model = request.model;
+            this.needMultiFaceCheck = request.needMultiFaceCheck;
             this.ossBucketName = request.ossBucketName;
             this.ossObjectName = request.ossObjectName;
             this.outerOrderNo = request.outerOrderNo;
@@ -781,6 +795,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * NeedMultiFaceCheck.
+         */
+        public Builder needMultiFaceCheck(String needMultiFaceCheck) {
+            this.putQueryParameter("NeedMultiFaceCheck", needMultiFaceCheck);
+            this.needMultiFaceCheck = needMultiFaceCheck;
             return this;
         }
 
