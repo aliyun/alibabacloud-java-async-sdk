@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelAuditTaskResponse> cancelAuditTask(CancelAuditTaskRequest request);
 
     /**
+     * @param request the request parameters of CancelDeepWriteTask  CancelDeepWriteTaskRequest
+     * @return CancelDeepWriteTaskResponse
+     */
+    CompletableFuture<CancelDeepWriteTaskResponse> cancelDeepWriteTask(CancelDeepWriteTaskRequest request);
+
+    /**
      * @param request the request parameters of ClearIntervenes  ClearIntervenesRequest
      * @return ClearIntervenesResponse
      */
@@ -360,6 +366,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDatasetDocumentResponse
      */
     CompletableFuture<GetDatasetDocumentResponse> getDatasetDocument(GetDatasetDocumentRequest request);
+
+    /**
+     * @param request the request parameters of GetDeepWriteTask  GetDeepWriteTaskRequest
+     * @return GetDeepWriteTaskResponse
+     */
+    CompletableFuture<GetDeepWriteTaskResponse> getDeepWriteTask(GetDeepWriteTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetDeepWriteTaskResult  GetDeepWriteTaskResultRequest
+     * @return GetDeepWriteTaskResultResponse
+     */
+    CompletableFuture<GetDeepWriteTaskResultResponse> getDeepWriteTaskResult(GetDeepWriteTaskResultRequest request);
 
     /**
      * @param request the request parameters of GetDocClusterTask  GetDocClusterTaskRequest
@@ -768,6 +786,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunCustomHotTopicViewPointAnalysisResponseBody> runCustomHotTopicViewPointAnalysisWithResponseIterable(RunCustomHotTopicViewPointAnalysisRequest request);
 
     /**
+     * @param request the request parameters of RunDeepWriting  RunDeepWritingRequest
+     * @return RunDeepWritingResponse
+     */
+    CompletableFuture<RunDeepWritingResponse> runDeepWriting(RunDeepWritingRequest request);
+
+    ResponseIterable<RunDeepWritingResponseBody> runDeepWritingWithResponseIterable(RunDeepWritingRequest request);
+
+    /**
      * @param request the request parameters of RunDocBrainmap  RunDocBrainmapRequest
      * @return RunDocBrainmapResponse
      */
@@ -1030,6 +1056,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse
      */
     CompletableFuture<SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse> submitCustomTopicSelectionPerspectiveAnalysisTask(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitDeepWriteTask  SubmitDeepWriteTaskRequest
+     * @return SubmitDeepWriteTaskResponse
+     */
+    CompletableFuture<SubmitDeepWriteTaskResponse> submitDeepWriteTask(SubmitDeepWriteTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitDocClusterTask  SubmitDocClusterTaskRequest

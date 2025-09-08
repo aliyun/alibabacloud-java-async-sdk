@@ -12,19 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AddAuditTermsResponseBody} extends {@link TeaModel}
+ * {@link CancelDeepWriteTaskResponseBody} extends {@link TeaModel}
  *
- * <p>AddAuditTermsResponseBody</p>
+ * <p>CancelDeepWriteTaskResponseBody</p>
  */
-public class AddAuditTermsResponseBody extends TeaModel {
+public class CancelDeepWriteTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
-
-    @com.aliyun.core.annotation.NameInMap("DataV1")
-    private DataV1 dataV1;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -38,10 +35,9 @@ public class AddAuditTermsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private AddAuditTermsResponseBody(Builder builder) {
+    private CancelDeepWriteTaskResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
-        this.dataV1 = builder.dataV1;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -52,7 +48,7 @@ public class AddAuditTermsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AddAuditTermsResponseBody create() {
+    public static CancelDeepWriteTaskResponseBody create() {
         return builder().build();
     }
 
@@ -70,15 +66,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dataV1
-     */
-    public DataV1 getDataV1() {
-        return this.dataV1;
     }
 
     /**
@@ -111,8 +100,7 @@ public class AddAuditTermsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
-        private DataV1 dataV1; 
+        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -121,10 +109,9 @@ public class AddAuditTermsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(AddAuditTermsResponseBody model) {
+        private Builder(CancelDeepWriteTaskResponseBody model) {
             this.code = model.code;
             this.data = model.data;
-            this.dataV1 = model.dataV1;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -142,16 +129,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Boolean data) {
+        public Builder data(Data data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * DataV1.
-         */
-        public Builder dataV1(DataV1 dataV1) {
-            this.dataV1 = dataV1;
             return this;
         }
 
@@ -175,7 +154,7 @@ public class AddAuditTermsResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
+         * <p>xxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,61 +169,103 @@ public class AddAuditTermsResponseBody extends TeaModel {
             return this;
         }
 
-        public AddAuditTermsResponseBody build() {
-            return new AddAuditTermsResponseBody(this);
+        public CancelDeepWriteTaskResponseBody build() {
+            return new CancelDeepWriteTaskResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link AddAuditTermsResponseBody} extends {@link TeaModel}
+     * {@link CancelDeepWriteTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>AddAuditTermsResponseBody</p>
+     * <p>CancelDeepWriteTaskResponseBody</p>
      */
-    public static class DataV1 extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private String input;
 
-        private DataV1(Builder builder) {
-            this.id = builder.id;
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        private Data(Builder builder) {
+            this.input = builder.input;
+            this.status = builder.status;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static DataV1 create() {
+        public static Data create() {
             return builder().build();
         }
 
         /**
-         * @return id
+         * @return input
          */
-        public Long getId() {
-            return this.id;
+        public String getInput() {
+            return this.input;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public static final class Builder {
-            private Long id; 
+            private String input; 
+            private String status; 
+            private String taskId; 
 
             private Builder() {
             } 
 
-            private Builder(DataV1 model) {
-                this.id = model.id;
+            private Builder(Data model) {
+                this.input = model.input;
+                this.status = model.status;
+                this.taskId = model.taskId;
             } 
 
             /**
-             * Id.
+             * Input.
              */
-            public Builder id(Long id) {
-                this.id = id;
+            public Builder input(String input) {
+                this.input = input;
                 return this;
             }
 
-            public DataV1 build() {
-                return new DataV1(this);
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
             } 
 
         } 
