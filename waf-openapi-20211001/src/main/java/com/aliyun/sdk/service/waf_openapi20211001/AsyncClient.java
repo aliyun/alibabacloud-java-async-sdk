@@ -317,6 +317,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApisecUserOperationsResponse> describeApisecUserOperations(DescribeApisecUserOperationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBaseSystemRules  DescribeBaseSystemRulesRequest
+     * @return DescribeBaseSystemRulesResponse
+     */
+    CompletableFuture<DescribeBaseSystemRulesResponse> describeBaseSystemRules(DescribeBaseSystemRulesRequest request);
+
+    /**
      * @param request the request parameters of DescribeCertDetail  DescribeCertDetailRequest
      * @return DescribeCertDetailResponse
      */
@@ -351,6 +357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCnameCountResponse
      */
     CompletableFuture<DescribeCnameCountResponse> describeCnameCount(DescribeCnameCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCustomBaseRuleCompileResult  DescribeCustomBaseRuleCompileResultRequest
+     * @return DescribeCustomBaseRuleCompileResultResponse
+     */
+    CompletableFuture<DescribeCustomBaseRuleCompileResultResponse> describeCustomBaseRuleCompileResult(DescribeCustomBaseRuleCompileResultRequest request);
 
     /**
      * @param request the request parameters of DescribeDDoSStatus  DescribeDDoSStatusRequest
@@ -417,6 +429,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDefenseRuleResponse
      */
     CompletableFuture<DescribeDefenseRuleResponse> describeDefenseRule(DescribeDefenseRuleRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDefenseRuleStatistics  DescribeDefenseRuleStatisticsRequest
+     * @return DescribeDefenseRuleStatisticsResponse
+     */
+    CompletableFuture<DescribeDefenseRuleStatisticsResponse> describeDefenseRuleStatistics(DescribeDefenseRuleStatisticsRequest request);
 
     /**
      * @param request the request parameters of DescribeDefenseRules  DescribeDefenseRulesRequest
