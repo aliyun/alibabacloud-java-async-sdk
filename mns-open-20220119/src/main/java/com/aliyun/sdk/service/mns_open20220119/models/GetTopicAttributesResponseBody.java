@@ -299,6 +299,9 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
+        @com.aliyun.core.annotation.NameInMap("TopicType")
+        private String topicType;
+
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.lastModifyTime = builder.lastModifyTime;
@@ -308,6 +311,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
             this.tags = builder.tags;
             this.topicName = builder.topicName;
+            this.topicType = builder.topicType;
         }
 
         public static Builder builder() {
@@ -374,6 +378,13 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             return this.topicName;
         }
 
+        /**
+         * @return topicType
+         */
+        public String getTopicType() {
+            return this.topicType;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private Long lastModifyTime; 
@@ -383,6 +394,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             private Long messageRetentionPeriod; 
             private java.util.List<Tags> tags; 
             private String topicName; 
+            private String topicType; 
 
             private Builder() {
             } 
@@ -396,6 +408,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
                 this.messageRetentionPeriod = model.messageRetentionPeriod;
                 this.tags = model.tags;
                 this.topicName = model.topicName;
+                this.topicType = model.topicType;
             } 
 
             /**
@@ -484,6 +497,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
+                return this;
+            }
+
+            /**
+             * TopicType.
+             */
+            public Builder topicType(String topicType) {
+                this.topicType = topicType;
                 return this;
             }
 

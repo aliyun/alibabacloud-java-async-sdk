@@ -52,6 +52,10 @@ public class CreateQueueRequest extends Request {
     private String queueName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueType")
+    private String queueType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -73,6 +77,7 @@ public class CreateQueueRequest extends Request {
         this.messageRetentionPeriod = builder.messageRetentionPeriod;
         this.pollingWaitSeconds = builder.pollingWaitSeconds;
         this.queueName = builder.queueName;
+        this.queueType = builder.queueType;
         this.tag = builder.tag;
         this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.visibilityTimeout = builder.visibilityTimeout;
@@ -148,6 +153,13 @@ public class CreateQueueRequest extends Request {
     }
 
     /**
+     * @return queueType
+     */
+    public String getQueueType() {
+        return this.queueType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -177,6 +189,7 @@ public class CreateQueueRequest extends Request {
         private Long messageRetentionPeriod; 
         private Long pollingWaitSeconds; 
         private String queueName; 
+        private String queueType; 
         private java.util.List<Tag> tag; 
         private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private Long visibilityTimeout; 
@@ -195,6 +208,7 @@ public class CreateQueueRequest extends Request {
             this.messageRetentionPeriod = request.messageRetentionPeriod;
             this.pollingWaitSeconds = request.pollingWaitSeconds;
             this.queueName = request.queueName;
+            this.queueType = request.queueType;
             this.tag = request.tag;
             this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.visibilityTimeout = request.visibilityTimeout;
@@ -294,6 +308,15 @@ public class CreateQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
+            return this;
+        }
+
+        /**
+         * QueueType.
+         */
+        public Builder queueType(String queueType) {
+            this.putQueryParameter("QueueType", queueType);
+            this.queueType = queueType;
             return this;
         }
 

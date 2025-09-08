@@ -38,6 +38,10 @@ public class CreateTopicRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicType")
+    private String topicType;
+
     private CreateTopicRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -45,6 +49,7 @@ public class CreateTopicRequest extends Request {
         this.maxMessageSize = builder.maxMessageSize;
         this.tag = builder.tag;
         this.topicName = builder.topicName;
+        this.topicType = builder.topicType;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class CreateTopicRequest extends Request {
         return this.topicName;
     }
 
+    /**
+     * @return topicType
+     */
+    public String getTopicType() {
+        return this.topicType;
+    }
+
     public static final class Builder extends Request.Builder<CreateTopicRequest, Builder> {
         private String regionId; 
         private Boolean enableLogging; 
         private Long maxMessageSize; 
         private java.util.List<Tag> tag; 
         private String topicName; 
+        private String topicType; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class CreateTopicRequest extends Request {
             this.maxMessageSize = request.maxMessageSize;
             this.tag = request.tag;
             this.topicName = request.topicName;
+            this.topicType = request.topicType;
         } 
 
         /**
@@ -171,6 +185,15 @@ public class CreateTopicRequest extends Request {
         public Builder topicName(String topicName) {
             this.putBodyParameter("TopicName", topicName);
             this.topicName = topicName;
+            return this;
+        }
+
+        /**
+         * TopicType.
+         */
+        public Builder topicType(String topicType) {
+            this.putQueryParameter("TopicType", topicType);
+            this.topicType = topicType;
             return this;
         }
 

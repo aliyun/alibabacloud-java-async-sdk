@@ -302,6 +302,9 @@ public class ListTopicResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
+        @com.aliyun.core.annotation.NameInMap("TopicType")
+        private String topicType;
+
         @com.aliyun.core.annotation.NameInMap("TopicUrl")
         private String topicUrl;
 
@@ -315,6 +318,7 @@ public class ListTopicResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
+            this.topicType = builder.topicType;
             this.topicUrl = builder.topicUrl;
         }
 
@@ -390,6 +394,13 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicType
+         */
+        public String getTopicType() {
+            return this.topicType;
+        }
+
+        /**
          * @return topicUrl
          */
         public String getTopicUrl() {
@@ -406,6 +417,7 @@ public class ListTopicResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String topicInnerUrl; 
             private String topicName; 
+            private String topicType; 
             private String topicUrl; 
 
             private Builder() {
@@ -421,6 +433,7 @@ public class ListTopicResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.topicInnerUrl = model.topicInnerUrl;
                 this.topicName = model.topicName;
+                this.topicType = model.topicType;
                 this.topicUrl = model.topicUrl;
             } 
 
@@ -521,6 +534,14 @@ public class ListTopicResponseBody extends TeaModel {
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
+                return this;
+            }
+
+            /**
+             * TopicType.
+             */
+            public Builder topicType(String topicType) {
+                this.topicType = topicType;
                 return this;
             }
 

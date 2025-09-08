@@ -416,6 +416,9 @@ public class ListQueueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("QueueType")
+        private String queueType;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -435,6 +438,7 @@ public class ListQueueResponseBody extends TeaModel {
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
             this.pollingWaitSeconds = builder.pollingWaitSeconds;
             this.queueName = builder.queueName;
+            this.queueType = builder.queueType;
             this.tags = builder.tags;
             this.visibilityTimeout = builder.visibilityTimeout;
         }
@@ -532,6 +536,13 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
+         * @return queueType
+         */
+        public String getQueueType() {
+            return this.queueType;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -558,6 +569,7 @@ public class ListQueueResponseBody extends TeaModel {
             private Long messageRetentionPeriod; 
             private Long pollingWaitSeconds; 
             private String queueName; 
+            private String queueType; 
             private java.util.List<Tags> tags; 
             private Long visibilityTimeout; 
 
@@ -577,6 +589,7 @@ public class ListQueueResponseBody extends TeaModel {
                 this.messageRetentionPeriod = model.messageRetentionPeriod;
                 this.pollingWaitSeconds = model.pollingWaitSeconds;
                 this.queueName = model.queueName;
+                this.queueType = model.queueType;
                 this.tags = model.tags;
                 this.visibilityTimeout = model.visibilityTimeout;
             } 
@@ -711,6 +724,14 @@ public class ListQueueResponseBody extends TeaModel {
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * QueueType.
+             */
+            public Builder queueType(String queueType) {
+                this.queueType = queueType;
                 return this;
             }
 

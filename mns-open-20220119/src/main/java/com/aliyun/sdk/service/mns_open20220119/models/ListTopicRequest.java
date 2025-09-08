@@ -37,6 +37,10 @@ public class ListTopicRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TopicName")
     private String topicName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicType")
+    private String topicType;
+
     private ListTopicRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class ListTopicRequest extends Request {
         this.pageSize = builder.pageSize;
         this.tag = builder.tag;
         this.topicName = builder.topicName;
+        this.topicType = builder.topicType;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListTopicRequest extends Request {
         return this.topicName;
     }
 
+    /**
+     * @return topicType
+     */
+    public String getTopicType() {
+        return this.topicType;
+    }
+
     public static final class Builder extends Request.Builder<ListTopicRequest, Builder> {
         private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
         private java.util.List<Tag> tag; 
         private String topicName; 
+        private String topicType; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ListTopicRequest extends Request {
             this.pageSize = request.pageSize;
             this.tag = request.tag;
             this.topicName = request.topicName;
+            this.topicType = request.topicType;
         } 
 
         /**
@@ -165,6 +179,15 @@ public class ListTopicRequest extends Request {
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);
             this.topicName = topicName;
+            return this;
+        }
+
+        /**
+         * TopicType.
+         */
+        public Builder topicType(String topicType) {
+            this.putQueryParameter("TopicType", topicType);
+            this.topicType = topicType;
             return this;
         }
 

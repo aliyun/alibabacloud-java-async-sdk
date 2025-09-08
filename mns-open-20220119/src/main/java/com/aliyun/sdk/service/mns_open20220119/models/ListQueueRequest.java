@@ -34,6 +34,10 @@ public class ListQueueRequest extends Request {
     private String queueName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueType")
+    private String queueType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -43,6 +47,7 @@ public class ListQueueRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.queueName = builder.queueName;
+        this.queueType = builder.queueType;
         this.tag = builder.tag;
     }
 
@@ -88,6 +93,13 @@ public class ListQueueRequest extends Request {
     }
 
     /**
+     * @return queueType
+     */
+    public String getQueueType() {
+        return this.queueType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -99,6 +111,7 @@ public class ListQueueRequest extends Request {
         private Long pageNum; 
         private Long pageSize; 
         private String queueName; 
+        private String queueType; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListQueueRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.queueName = request.queueName;
+            this.queueType = request.queueType;
             this.tag = request.tag;
         } 
 
@@ -156,6 +170,15 @@ public class ListQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
+            return this;
+        }
+
+        /**
+         * QueueType.
+         */
+        public Builder queueType(String queueType) {
+            this.putQueryParameter("QueueType", queueType);
+            this.queueType = queueType;
             return this;
         }
 
