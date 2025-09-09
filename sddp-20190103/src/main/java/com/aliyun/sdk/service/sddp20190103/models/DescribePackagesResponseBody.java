@@ -48,6 +48,10 @@ public class DescribePackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribePackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePackagesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -287,6 +302,22 @@ public class DescribePackagesResponseBody extends TeaModel {
             private Boolean sensitive; 
             private Integer sensitiveCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.sensitive = model.sensitive;
+                this.sensitiveCount = model.sensitiveCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.</p>

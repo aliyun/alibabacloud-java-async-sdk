@@ -115,7 +115,7 @@ public class DescribeDataObjectsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -284,7 +284,10 @@ public class DescribeDataObjectsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Page number for the paginated query. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -293,7 +296,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * <p>ID of the data domain to which the data asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -302,7 +308,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * FeatureType.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -311,7 +320,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * FileCategoryCode.
+         * <p>File category code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileCategoryCode(Long fileCategoryCode) {
             this.putQueryParameter("FileCategoryCode", fileCategoryCode);
@@ -320,7 +332,13 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>OSS file types that are supported for recognition.</p>
+         * <blockquote>
+         * <p>You can obtain the supported OSS file types by calling <a href="https://help.aliyun.com/document_detail/2536492.html">DescribeDocTypes</a>, using the Code field value from the response. This parameter is only valid for querying OSS-type assets.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder fileType(Long fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -329,7 +347,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Keyword for the asset instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8vb54hn2g9j191ddz</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -338,7 +359,14 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for request and response messages, default is <strong>zh_cn</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese.</li>
+         * <li><strong>en_us</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -347,7 +375,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * MemberAccount.
+         * <p>Member account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**********8103</p>
          */
         public Builder memberAccount(Long memberAccount) {
             this.putQueryParameter("MemberAccount", memberAccount);
@@ -356,7 +387,13 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * ModelIds.
+         * <p>Model IDs of the industry template, separated by commas.</p>
+         * <blockquote>
+         * <p>You can obtain the industry template model identifier ID by calling <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder modelIds(String modelIds) {
             this.putQueryParameter("ModelIds", modelIds);
@@ -365,7 +402,15 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * ModelTagIds.
+         * <p>Data labels to be queried, separated by commas. Values:</p>
+         * <ul>
+         * <li><strong>101</strong>: Personal Sensitive Information.</li>
+         * <li><strong>102</strong>: Personal Information.</li>
+         * <li><strong>107</strong>: General Information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>101,102</p>
          */
         public Builder modelTagIds(String modelTagIds) {
             this.putQueryParameter("ModelTagIds", modelTagIds);
@@ -374,7 +419,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>When performing a paginated query, set the maximum number of data asset instances to display per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -383,7 +431,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * ParentCategoryIds.
+         * <p>List of parent category IDs for the template to be queried, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234,236,238</p>
          */
         public Builder parentCategoryIds(String parentCategoryIds) {
             this.putQueryParameter("ParentCategoryIds", parentCategoryIds);
@@ -392,7 +443,27 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * ProductIds.
+         * <p>It is recommended to fill in the list of product IDs to be queried, separated by commas. Values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: ADB-MYSQL</li>
+         * <li><strong>4</strong>: TableStore</li>
+         * <li><strong>5</strong>: RDS</li>
+         * <li><strong>6</strong>: SELF_DB</li>
+         * <li><strong>7</strong>: PolarDB-X</li>
+         * <li><strong>8</strong>: PolarDB</li>
+         * <li><strong>9</strong>: ADB-PG</li>
+         * <li><strong>10</strong>: OceanBase</li>
+         * <li><strong>11</strong>: MongoDB</li>
+         * <li><strong>25</strong>: Redis</li>
+         * </ul>
+         * <blockquote>
+         * <p>OSS is mutually exclusive with other products, meaning if OSS is included in the query, no other products can be listed; by default, non-OSS products are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1,5</p>
          */
         public Builder productIds(String productIds) {
             this.putQueryParameter("ProductIds", productIds);
@@ -401,7 +472,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * QueryName.
+         * <p>Keyword for the data object to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t_sddp_selfmysql_pers0</p>
          */
         public Builder queryName(String queryName) {
             this.putQueryParameter("QueryName", queryName);
@@ -410,7 +484,16 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * RiskLevels.
+         * <p>Specify the risk levels of the data assets to be queried, separated by commas if multiple.</p>
+         * <ul>
+         * <li><strong>2</strong>: S1, low risk level.</li>
+         * <li><strong>3</strong>: S2, medium risk level.</li>
+         * <li><strong>4</strong>: S3, high risk level.</li>
+         * <li><strong>5</strong>: S4, highest risk level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevels(String riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -419,7 +502,19 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * <p>Region where the asset is located. Values:</p>
+         * <ul>
+         * <li><strong>cn-beijing</strong>: North China 2 (Beijing).</li>
+         * <li><strong>cn-zhangjiakou</strong>: North China 3 (Zhangjiakou).</li>
+         * <li><strong>cn-huhehaote</strong>: North China 5 (Hohhot).</li>
+         * <li><strong>cn-hangzhou</strong>: East China 1 (Hangzhou).</li>
+         * <li><strong>cn-shanghai</strong>: East China 2 (Shanghai).</li>
+         * <li><strong>cn-shenzhen</strong>: South China 1 (Shenzhen).</li>
+         * <li><strong>cn-hongkong</strong>: Hong Kong, China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -428,6 +523,10 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * <p>Industry template ID.</p>
+         * <blockquote>
+         * <p>You can obtain the industry template identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

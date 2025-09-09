@@ -36,6 +36,10 @@ public class CreateSlrRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasPermission
      */
@@ -53,6 +57,14 @@ public class CreateSlrRoleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean hasPermission; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSlrRoleResponseBody model) {
+            this.hasPermission = model.hasPermission;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the service-linked role was created. Valid values:</p>

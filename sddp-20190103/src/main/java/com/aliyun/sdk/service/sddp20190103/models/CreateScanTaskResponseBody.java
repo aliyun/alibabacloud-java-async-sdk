@@ -36,6 +36,10 @@ public class CreateScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class CreateScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Integer id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScanTaskResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the custom scan task.</p>

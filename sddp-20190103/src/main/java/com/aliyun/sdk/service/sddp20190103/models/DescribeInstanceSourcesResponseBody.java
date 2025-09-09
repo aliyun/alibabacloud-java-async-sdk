@@ -48,6 +48,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -90,6 +94,17 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSourcesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The page number of the returned page.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the queried data assets.</p>
+         * <p>The assets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -468,6 +483,37 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             private String tenantName; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.auditStatus = model.auditStatus;
+                this.autoScan = model.autoScan;
+                this.canModifyUserName = model.canModifyUserName;
+                this.checkStatus = model.checkStatus;
+                this.datamaskStatus = model.datamaskStatus;
+                this.dbName = model.dbName;
+                this.enable = model.enable;
+                this.engineType = model.engineType;
+                this.errorMessage = model.errorMessage;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.instanceSize = model.instanceSize;
+                this.lastModifyTime = model.lastModifyTime;
+                this.lastModifyUserId = model.lastModifyUserId;
+                this.logStoreDay = model.logStoreDay;
+                this.passwordStatus = model.passwordStatus;
+                this.productId = model.productId;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.samplingSize = model.samplingSize;
+                this.tenantId = model.tenantId;
+                this.tenantName = model.tenantName;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
              * <ul>
@@ -573,7 +619,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine. Valid values: <strong>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</strong>.</p>
+             * <p>The engine type. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>MariaDB</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -698,7 +751,15 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service to which the data asset belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * <p>The ID of the service to which the asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: OSS</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: OTS</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * <li><strong>6</strong>: self-managed databases</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2</p>

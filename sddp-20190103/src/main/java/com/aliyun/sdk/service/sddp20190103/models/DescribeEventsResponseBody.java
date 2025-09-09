@@ -48,6 +48,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -407,6 +422,32 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String typeName; 
             private Long userId; 
             private Integer warnLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.alertTime = model.alertTime;
+                this.backed = model.backed;
+                this.dealDisplayName = model.dealDisplayName;
+                this.dealLoginName = model.dealLoginName;
+                this.dealTime = model.dealTime;
+                this.dealUserId = model.dealUserId;
+                this.displayName = model.displayName;
+                this.eventTime = model.eventTime;
+                this.id = model.id;
+                this.loginName = model.loginName;
+                this.productCode = model.productCode;
+                this.status = model.status;
+                this.statusName = model.statusName;
+                this.subTypeCode = model.subTypeCode;
+                this.subTypeName = model.subTypeName;
+                this.targetProductCode = model.targetProductCode;
+                this.typeCode = model.typeCode;
+                this.typeName = model.typeName;
+                this.userId = model.userId;
+                this.warnLevel = model.warnLevel;
+            } 
 
             /**
              * <p>The time when an alert was triggered for the anomalous event. The value is a UNIX timestamp. Unit: milliseconds.</p>

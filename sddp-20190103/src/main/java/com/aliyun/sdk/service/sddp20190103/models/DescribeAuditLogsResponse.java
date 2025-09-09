@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribePackagesResponse} extends {@link TeaModel}
+ * {@link DescribeAuditLogsResponse} extends {@link TeaModel}
  *
- * <p>DescribePackagesResponse</p>
+ * <p>DescribeAuditLogsResponse</p>
  */
-public class DescribePackagesResponse extends Response {
+public class DescribeAuditLogsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribePackagesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePackagesResponseBody body;
+    private DescribeAuditLogsResponseBody body;
 
-    private DescribePackagesResponse(BuilderImpl builder) {
+    private DescribeAuditLogsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePackagesResponse create() {
+    public static DescribeAuditLogsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribePackagesResponse extends Response {
     /**
      * @return body
      */
-    public DescribePackagesResponseBody getBody() {
+    public DescribeAuditLogsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePackagesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeAuditLogsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePackagesResponseBody body);
+        Builder body(DescribeAuditLogsResponseBody body);
 
         @Override
-        DescribePackagesResponse build();
+        DescribeAuditLogsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePackagesResponse, Builder>
+            extends Response.BuilderImpl<DescribeAuditLogsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribePackagesResponseBody body; 
+        private DescribeAuditLogsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePackagesResponse response) {
+        private BuilderImpl(DescribeAuditLogsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribePackagesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePackagesResponseBody body) {
+        public Builder body(DescribeAuditLogsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePackagesResponse build() {
-            return new DescribePackagesResponse(this);
+        public DescribeAuditLogsResponse build() {
+            return new DescribeAuditLogsResponse(this);
         } 
 
     } 

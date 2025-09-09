@@ -36,6 +36,10 @@ public class ScanOssObjectV1ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -54,8 +58,19 @@ public class ScanOssObjectV1ResponseBody extends TeaModel {
         private Long id; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ScanOssObjectV1ResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Id.
+         * <p>The ID of the identification task that is returned after the identification task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -63,7 +78,10 @@ public class ScanOssObjectV1ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

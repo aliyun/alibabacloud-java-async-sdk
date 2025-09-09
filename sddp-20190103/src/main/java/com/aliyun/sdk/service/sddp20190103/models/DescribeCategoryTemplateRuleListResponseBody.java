@@ -48,6 +48,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCategoryTemplateRuleListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -251,6 +266,19 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             private String name; 
             private Long riskLevelId; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.identificationRuleIds = model.identificationRuleIds;
+                this.identificationScope = model.identificationScope;
+                this.name = model.name;
+                this.riskLevelId = model.riskLevelId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The description of the rule.</p>

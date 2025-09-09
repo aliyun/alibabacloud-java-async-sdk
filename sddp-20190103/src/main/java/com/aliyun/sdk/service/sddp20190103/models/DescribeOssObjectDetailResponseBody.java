@@ -36,6 +36,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ossObjectDetail
      */
@@ -53,6 +57,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
     public static final class Builder {
         private OssObjectDetail ossObjectDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOssObjectDetailResponseBody model) {
+            this.ossObjectDetail = model.ossObjectDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the OSS object.</p>
@@ -122,6 +134,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelTags model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The tag ID.</p>
@@ -253,6 +273,18 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private Long riskLevelId; 
             private String riskLevelName; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.categoryName = model.categoryName;
+                this.count = model.count;
+                this.modelTags = model.modelTags;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * <p>The type of the OSS object.</p>
@@ -422,6 +454,18 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private String regionId; 
             private String riskLevelName; 
             private java.util.List<RuleList> ruleList; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssObjectDetail model) {
+                this.bucketName = model.bucketName;
+                this.categoryName = model.categoryName;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleList = model.ruleList;
+            } 
 
             /**
              * <p>The name of the OSS bucket to which the OSS object belongs.</p>

@@ -36,6 +36,10 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return docTypeList
      */
@@ -54,8 +58,16 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         private java.util.List<DocTypeList> docTypeList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDocTypesResponseBody model) {
+            this.docTypeList = model.docTypeList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DocTypeList.
+         * <p>A list of OSS object types.</p>
          */
         public Builder docTypeList(java.util.List<DocTypeList> docTypeList) {
             this.docTypeList = docTypeList;
@@ -63,7 +75,10 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,8 +147,20 @@ public class DescribeDocTypesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocTypeList model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
-             * Code.
+             * <p>The code of the object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -141,7 +168,10 @@ public class DescribeDocTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -149,7 +179,10 @@ public class DescribeDocTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C/C++ Source Code</p>
              */
             public Builder name(String name) {
                 this.name = name;

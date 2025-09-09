@@ -36,6 +36,10 @@ public class CreateRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class CreateRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Integer id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRuleResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique ID of the sensitive data detection rule.</p>

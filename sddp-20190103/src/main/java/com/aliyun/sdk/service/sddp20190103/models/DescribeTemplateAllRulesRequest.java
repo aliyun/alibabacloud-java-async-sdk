@@ -44,7 +44,7 @@ public class DescribeTemplateAllRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class DescribeTemplateAllRulesRequest extends Request {
         } 
 
         /**
-         * FeatureType.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -96,7 +99,14 @@ public class DescribeTemplateAllRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for the request and response, default is <strong>zh_cn</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese.</li>
+         * <li><strong>en_us</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +115,13 @@ public class DescribeTemplateAllRulesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Industry template ID.</p>
+         * <blockquote>
+         * <p>You can obtain the industry template ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>. If this parameter is not provided, the model list of the primary template will be returned by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

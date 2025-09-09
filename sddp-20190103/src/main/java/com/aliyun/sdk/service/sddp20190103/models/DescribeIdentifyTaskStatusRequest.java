@@ -40,7 +40,7 @@ public class DescribeIdentifyTaskStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class DescribeIdentifyTaskStatusRequest extends Request {
         } 
 
         /**
+         * <p>Task ID, obtained from the ID field in the response after calling CreateScanTask or ScanOssObjectV1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class DescribeIdentifyTaskStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language type for request and response messages, default is <strong>zh_cn</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese (Simplified)</li>
+         * <li><strong>en_us</strong>: English (United States)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

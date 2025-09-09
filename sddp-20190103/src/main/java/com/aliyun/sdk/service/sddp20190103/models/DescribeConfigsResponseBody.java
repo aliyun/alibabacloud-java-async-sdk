@@ -36,6 +36,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configList
      */
@@ -53,6 +57,14 @@ public class DescribeConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConfigList> configList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConfigsResponseBody model) {
+            this.configList = model.configList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of common configuration items for alerts.</p>
@@ -158,6 +170,17 @@ public class DescribeConfigsResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.code = model.code;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.id = model.id;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The code of the common configuration item.</p>

@@ -36,6 +36,10 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataLimit
      */
@@ -53,6 +57,14 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
     public static final class Builder {
         private DataLimit dataLimit; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataLimitDetailResponseBody model) {
+            this.dataLimit = model.dataLimit;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the data asset.</p>
@@ -230,6 +242,23 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataLimit model) {
+                this.checkStatus = model.checkStatus;
+                this.checkStatusName = model.checkStatusName;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.localName = model.localName;
+                this.parentId = model.parentId;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.resourceTypeCode = model.resourceTypeCode;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The status of the connectivity test between the data asset and DSC. Valid values:</p>

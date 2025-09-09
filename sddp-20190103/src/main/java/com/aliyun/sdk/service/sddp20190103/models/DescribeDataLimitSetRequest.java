@@ -30,6 +30,10 @@ public class DescribeDataLimitSetRequest extends Request {
     private String parentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionType")
+    private String regionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
@@ -38,6 +42,7 @@ public class DescribeDataLimitSetRequest extends Request {
         this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.parentId = builder.parentId;
+        this.regionType = builder.regionType;
         this.resourceType = builder.resourceType;
     }
 
@@ -49,7 +54,7 @@ public class DescribeDataLimitSetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,6 +81,13 @@ public class DescribeDataLimitSetRequest extends Request {
     }
 
     /**
+     * @return regionType
+     */
+    public String getRegionType() {
+        return this.regionType;
+    }
+
+    /**
      * @return resourceType
      */
     public Integer getResourceType() {
@@ -86,6 +98,7 @@ public class DescribeDataLimitSetRequest extends Request {
         private Integer featureType; 
         private String lang; 
         private String parentId; 
+        private String regionType; 
         private Integer resourceType; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class DescribeDataLimitSetRequest extends Request {
             this.featureType = request.featureType;
             this.lang = request.lang;
             this.parentId = request.parentId;
+            this.regionType = request.regionType;
             this.resourceType = request.resourceType;
         } 
 
@@ -138,6 +152,15 @@ public class DescribeDataLimitSetRequest extends Request {
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
             this.parentId = parentId;
+            return this;
+        }
+
+        /**
+         * RegionType.
+         */
+        public Builder regionType(String regionType) {
+            this.putQueryParameter("RegionType", regionType);
+            this.regionType = regionType;
             return this;
         }
 

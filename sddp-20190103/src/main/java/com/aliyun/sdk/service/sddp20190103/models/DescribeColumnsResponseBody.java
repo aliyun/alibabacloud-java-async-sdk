@@ -48,6 +48,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -90,6 +94,17 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeColumnsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The page number of the returned page.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The columns.</p>
+         * <p>The data in the columns of the table.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -191,6 +206,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelTags model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The tag ID.</p>
@@ -539,6 +562,36 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private Long tableId; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.creationTime = model.creationTime;
+                this.dataType = model.dataType;
+                this.engineType = model.engineType;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.maskingStatus = model.maskingStatus;
+                this.modelTags = model.modelTags;
+                this.name = model.name;
+                this.odpsRiskLevelName = model.odpsRiskLevelName;
+                this.odpsRiskLevelValue = model.odpsRiskLevelValue;
+                this.productCode = model.productCode;
+                this.productId = model.productId;
+                this.regionId = model.regionId;
+                this.revisionId = model.revisionId;
+                this.revisionStatus = model.revisionStatus;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.sensLevelName = model.sensLevelName;
+                this.sensitive = model.sensitive;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The time when the data in the column of the table is created. Unit: milliseconds.</p>
              * 
@@ -562,7 +615,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -603,7 +659,15 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingStatus.
+             * <p>The column encryption status. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: unencrypted</li>
+             * <li><strong>1</strong>: encrypted</li>
+             * <li><strong>2</strong>: encryption failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder maskingStatus(Integer maskingStatus) {
                 this.maskingStatus = maskingStatus;
@@ -677,7 +741,24 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the service to which the data object belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: Tablestore (OTS)</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * <li><strong>6</strong>: self-managed database</li>
+             * <li><strong>7</strong>: PolarDB for Xscale (PolarDB-X)</li>
+             * <li><strong>8</strong>: PolarDB</li>
+             * <li><strong>9</strong>: AnalyticDB for PostgreSQL</li>
+             * <li><strong>10</strong>: ApsaraDB for OceanBase</li>
+             * <li><strong>11</strong>: ApsaraDB for MongoDB</li>
+             * <li><strong>25</strong>: ApsaraDB for Redis</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;

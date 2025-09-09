@@ -36,6 +36,10 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedIds
      */
@@ -53,6 +57,14 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String failedIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyRuleStatusResponseBody model) {
+            this.failedIds = model.failedIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).</p>

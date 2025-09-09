@@ -48,6 +48,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -191,6 +206,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelTags model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the tag. Valid values:</p>
@@ -502,6 +525,33 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer sensitiveCount; 
             private String tenantName; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.creationTime = model.creationTime;
+                this.departName = model.departName;
+                this.id = model.id;
+                this.instanceDescription = model.instanceDescription;
+                this.labelsec = model.labelsec;
+                this.lastFinishTime = model.lastFinishTime;
+                this.memberAliUid = model.memberAliUid;
+                this.modelTags = model.modelTags;
+                this.name = model.name;
+                this.odpsRiskLevelName = model.odpsRiskLevelName;
+                this.owner = model.owner;
+                this.productCode = model.productCode;
+                this.productId = model.productId;
+                this.protection = model.protection;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleName = model.ruleName;
+                this.sensitive = model.sensitive;
+                this.sensitiveCount = model.sensitiveCount;
+                this.tenantName = model.tenantName;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>

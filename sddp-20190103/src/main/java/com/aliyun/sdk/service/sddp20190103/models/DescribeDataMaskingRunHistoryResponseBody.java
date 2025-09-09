@@ -48,6 +48,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataMaskingRunHistoryResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -395,6 +410,31 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             private Integer status; 
             private String taskId; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.conflictCount = model.conflictCount;
+                this.dstType = model.dstType;
+                this.dstTypeCode = model.dstTypeCode;
+                this.endTime = model.endTime;
+                this.failCode = model.failCode;
+                this.failMsg = model.failMsg;
+                this.hasDownloadFile = model.hasDownloadFile;
+                this.hasSubProcess = model.hasSubProcess;
+                this.id = model.id;
+                this.maskingCount = model.maskingCount;
+                this.percentage = model.percentage;
+                this.runIndex = model.runIndex;
+                this.srcTableName = model.srcTableName;
+                this.srcType = model.srcType;
+                this.srcTypeCode = model.srcTypeCode;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of rows that are in conflict with the data to be de-identified in the destination table to which the data to be de-identified is moved.</p>

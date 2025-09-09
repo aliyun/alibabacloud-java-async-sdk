@@ -48,6 +48,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -90,8 +94,22 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeParentInstanceResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * CurrentPage.
+         * <p>When performing a paginated query, set the current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -99,7 +117,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The assets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -107,7 +125,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>When performing a paginated query, set the maximum number of data asset instances displayed per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +136,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID of the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACEF9334-BB50-525D-8CF3-6CF504E4D1B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +147,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of data items in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -396,8 +423,41 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             private String unConnectDbCount; 
             private String unSupportOneClickAuthReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.auditStatus = model.auditStatus;
+                this.authStatus = model.authStatus;
+                this.authTime = model.authTime;
+                this.clusterStatus = model.clusterStatus;
+                this.connectNode = model.connectNode;
+                this.dbNum = model.dbNum;
+                this.engineType = model.engineType;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.instanceSize = model.instanceSize;
+                this.localName = model.localName;
+                this.memberAccount = model.memberAccount;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.supportConnectNodes = model.supportConnectNodes;
+                this.tenantId = model.tenantId;
+                this.tenantName = model.tenantName;
+                this.unConnectDbCount = model.unConnectDbCount;
+                this.unSupportOneClickAuthReason = model.unSupportOneClickAuthReason;
+            } 
+
             /**
-             * AuditStatus.
+             * <p>Audit authorization status. The values are as follows:</p>
+             * <ul>
+             * <li><strong>1</strong>: Authorized</li>
+             * <li><strong>0</strong>: Unauthorized</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -405,7 +465,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AuthStatus.
+             * <p>Authorization status of the data asset instance.</p>
+             * <ul>
+             * <li><strong>0</strong>: Unauthorized</li>
+             * <li><strong>1</strong>: Authorized</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder authStatus(Integer authStatus) {
                 this.authStatus = authStatus;
@@ -413,7 +480,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AuthTime.
+             * <p>Instance authorization time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719882941000</p>
              */
             public Builder authTime(Long authTime) {
                 this.authTime = authTime;
@@ -421,7 +491,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterStatus.
+             * <p>Instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -429,7 +502,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectNode.
+             * <p>Connection node type, valid only for MongoDB assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder connectNode(String connectNode) {
                 this.connectNode = connectNode;
@@ -437,7 +513,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbNum.
+             * <p>Number of databases under the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dbNum(String dbNum) {
                 this.dbNum = dbNum;
@@ -445,7 +524,17 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The engine type. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>MariaDB</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -453,7 +542,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>Description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance description</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -461,7 +553,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-*******t2vz</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -469,7 +564,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSize.
+             * <p>Instance space size, valid only for OSS assets. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>409600</p>
              */
             public Builder instanceSize(Long instanceSize) {
                 this.instanceSize = instanceSize;
@@ -477,7 +575,21 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>Region name. The values are as follows:</p>
+             * <ul>
+             * <li><strong>China (Hangzhou)</strong></li>
+             * <li><strong>China (Shanghai)</strong></li>
+             * <li><strong>China (Beijing)</strong></li>
+             * <li><strong>China (Zhangjiakou)</strong></li>
+             * <li><strong>China (Shenzhen)</strong></li>
+             * <li><strong>China (Guangzhou)</strong></li>
+             * <li><strong>China (Hong Kong)</strong></li>
+             * <li><strong>Singapore</strong></li>
+             * <li><strong>US (Silicon Valley)</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -485,7 +597,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MemberAccount.
+             * <p>Member account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**********8103</p>
              */
             public Builder memberAccount(Long memberAccount) {
                 this.memberAccount = memberAccount;
@@ -493,7 +608,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>Identifier for the authorized asset. For structured data, it is identified by <code>instanceID.databaseName</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-******xxx.**st</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -501,7 +619,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region in which the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -509,7 +630,24 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>Asset type name. The values are as follows:</p>
+             * <ul>
+             * <li><strong>MaxCompute</strong></li>
+             * <li><strong>OSS</strong></li>
+             * <li><strong>ADB-MYSQL</strong></li>
+             * <li><strong>TableStore</strong></li>
+             * <li><strong>RDS</strong></li>
+             * <li><strong>SelfDB</strong></li>
+             * <li><strong>PolarDB-X</strong></li>
+             * <li><strong>PolarDB</strong></li>
+             * <li><strong>ADB-PG</strong></li>
+             * <li><strong>OceanBase</strong></li>
+             * <li><strong>MongoDB</strong></li>
+             * <li><strong>Redis</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -517,7 +655,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportConnectNodes.
+             * <p>Supported connection nodes, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary,Secondary</p>
              */
             public Builder supportConnectNodes(String supportConnectNodes) {
                 this.supportConnectNodes = supportConnectNodes;
@@ -525,7 +666,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID, valid only for OceanBase assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HB***-zh_CN</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -533,7 +677,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>Tenant name, valid only for OceanBase assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -541,7 +688,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnConnectDbCount.
+             * <p>Number of unconnected databases under the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unConnectDbCount(String unConnectDbCount) {
                 this.unConnectDbCount = unConnectDbCount;
@@ -549,7 +699,10 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnSupportOneClickAuthReason.
+             * <p>Reason for not supporting one-click authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>engine type not support</p>
              */
             public Builder unSupportOneClickAuthReason(String unSupportOneClickAuthReason) {
                 this.unSupportOneClickAuthReason = unSupportOneClickAuthReason;

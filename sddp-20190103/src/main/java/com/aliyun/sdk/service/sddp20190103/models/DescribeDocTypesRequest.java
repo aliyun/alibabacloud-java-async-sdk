@@ -34,7 +34,7 @@ public class DescribeDocTypesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,14 @@ public class DescribeDocTypesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

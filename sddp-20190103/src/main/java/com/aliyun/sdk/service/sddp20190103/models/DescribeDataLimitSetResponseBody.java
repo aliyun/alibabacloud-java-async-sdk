@@ -36,6 +36,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataLimitSet
      */
@@ -53,6 +57,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     public static final class Builder {
         private DataLimitSet dataLimitSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataLimitSetResponseBody model) {
+            this.dataLimitSet = model.dataLimitSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the data asset.</p>
@@ -230,6 +242,23 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataLimitList model) {
+                this.checkStatus = model.checkStatus;
+                this.checkStatusName = model.checkStatusName;
+                this.connector = model.connector;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.localName = model.localName;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.resourceTypeCode = model.resourceTypeCode;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Indicates whether the test of connectivity between DSC and the data asset is passed.</p>
@@ -422,6 +451,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String bucketName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssBucketList model) {
+                this.bucketName = model.bucketName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The name of the OSS bucket to which the OSS object belongs.</p>
              * 
@@ -494,6 +531,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public static final class Builder {
             private String localName; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionList model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The name of the region.</p>
@@ -615,6 +660,18 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataLimitSet model) {
+                this.dataLimitList = model.dataLimitList;
+                this.ossBucketList = model.ossBucketList;
+                this.regionList = model.regionList;
+                this.resourceType = model.resourceType;
+                this.resourceTypeCode = model.resourceTypeCode;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>An array that consists of data assets that DSC is authorized to scan.</p>

@@ -48,6 +48,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeTablesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTablesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -203,6 +218,15 @@ public class DescribeTablesResponseBody extends TeaModel {
             private Long count; 
             private String name; 
             private Long riskLevelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.count = model.count;
+                this.name = model.name;
+                this.riskLevelId = model.riskLevelId;
+            } 
 
             /**
              * <p>The total number of rules.</p>
@@ -474,6 +498,29 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String sensitiveRatio; 
             private String tenantName; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.productCode = model.productCode;
+                this.productId = model.productId;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleList = model.ruleList;
+                this.sensitive = model.sensitive;
+                this.sensitiveCount = model.sensitiveCount;
+                this.sensitiveRatio = model.sensitiveRatio;
+                this.tenantName = model.tenantName;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The point in time when the table was created. Unit: milliseconds.</p>

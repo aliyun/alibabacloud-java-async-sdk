@@ -57,7 +57,7 @@ public class ScanOssObjectV1Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +118,7 @@ public class ScanOssObjectV1Request extends Request {
         } 
 
         /**
+         * <p>The name of the OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,14 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,6 +147,7 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
+         * <p>The objects in the OSS bucket that you want to scan. You can specify up to 50 objects at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder objectKeyList(java.util.List<String> objectKeyList) {
@@ -149,6 +158,7 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
+         * <p>The ID of the region in which the OSS bucket is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +171,13 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the industry-specific classification template.</p>
+         * <blockquote>
+         * <p> You can call the <strong>DescribeCategoryTemplateList</strong> operation to query industry-specific classification templates. If you do not specify this parameter, the system automatically uses the main template.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -36,6 +36,10 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return event
      */
@@ -53,6 +57,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Event event; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventDetailResponseBody model) {
+            this.event = model.event;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the anomalous event.</p>
@@ -134,6 +146,15 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private java.util.List<String> x; 
             private java.util.List<String> y; 
             private java.util.List<String> z; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
 
             /**
              * <p>The value of the data item on the X axis.</p>
@@ -287,6 +308,20 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private String xLabel; 
             private String yLabel; 
             private String zLabel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chart model) {
+                this.chatType = model.chatType;
+                this.data = model.data;
+                this.label = model.label;
+                this.name = model.name;
+                this.type = model.type;
+                this.xLabel = model.xLabel;
+                this.yLabel = model.yLabel;
+                this.zLabel = model.zLabel;
+            } 
 
             /**
              * <p>The type of the chart. Valid values:</p>
@@ -453,6 +488,15 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.label = model.label;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The title of the content in the anomalous event.</p>
              * 
@@ -536,6 +580,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String label; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceInfo model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The source title.</p>
@@ -621,6 +673,15 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private java.util.List<Chart> chart; 
             private java.util.List<Content> content; 
             private java.util.List<ResourceInfo> resourceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.chart = model.chart;
+                this.content = model.content;
+                this.resourceInfo = model.resourceInfo;
+            } 
 
             /**
              * <p>The baseline behavior chart of the anomalous event.</p>
@@ -768,6 +829,20 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private Integer handlerValue; 
             private Long id; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(HandleInfoList model) {
+                this.currentValue = model.currentValue;
+                this.disableTime = model.disableTime;
+                this.enableTime = model.enableTime;
+                this.handlerName = model.handlerName;
+                this.handlerType = model.handlerType;
+                this.handlerValue = model.handlerValue;
+                this.id = model.id;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The account that is used to handle the anomalous event.</p>
@@ -1177,6 +1252,36 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private String typeCode; 
             private String typeName; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.alertTime = model.alertTime;
+                this.backed = model.backed;
+                this.dataInstance = model.dataInstance;
+                this.dealDisplayName = model.dealDisplayName;
+                this.dealLoginName = model.dealLoginName;
+                this.dealReason = model.dealReason;
+                this.dealTime = model.dealTime;
+                this.dealUserId = model.dealUserId;
+                this.detail = model.detail;
+                this.displayName = model.displayName;
+                this.eventTime = model.eventTime;
+                this.handleInfoList = model.handleInfoList;
+                this.id = model.id;
+                this.logDetail = model.logDetail;
+                this.loginName = model.loginName;
+                this.newAlarm = model.newAlarm;
+                this.productCode = model.productCode;
+                this.status = model.status;
+                this.statusName = model.statusName;
+                this.subTypeCode = model.subTypeCode;
+                this.subTypeName = model.subTypeName;
+                this.typeCode = model.typeCode;
+                this.typeName = model.typeName;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the alert for the anomalous event was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>

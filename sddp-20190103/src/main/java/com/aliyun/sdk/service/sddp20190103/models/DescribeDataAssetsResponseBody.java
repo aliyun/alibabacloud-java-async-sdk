@@ -48,6 +48,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataAssetsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -395,6 +410,31 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             private Integer sensitiveCount; 
             private String sensitiveRatio; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.acl = model.acl;
+                this.creationTime = model.creationTime;
+                this.dataType = model.dataType;
+                this.id = model.id;
+                this.labelsec = model.labelsec;
+                this.name = model.name;
+                this.objectKey = model.objectKey;
+                this.odpsRiskLevelName = model.odpsRiskLevelName;
+                this.owner = model.owner;
+                this.productCode = model.productCode;
+                this.productId = model.productId;
+                this.protection = model.protection;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleName = model.ruleName;
+                this.sensitive = model.sensitive;
+                this.sensitiveCount = model.sensitiveCount;
+                this.sensitiveRatio = model.sensitiveRatio;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The access control list (ACL) that controls the access permissions on the OSS bucket.</p>

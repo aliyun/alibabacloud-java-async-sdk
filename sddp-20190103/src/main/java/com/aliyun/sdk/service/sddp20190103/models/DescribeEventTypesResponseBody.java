@@ -36,6 +36,10 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventTypeList
      */
@@ -53,6 +57,14 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EventTypeList> eventTypeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventTypesResponseBody model) {
+            this.eventTypeList = model.eventTypeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the types of anomalous events.</p>
@@ -233,6 +245,23 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubTypeList model) {
+                this.adaptedProduct = model.adaptedProduct;
+                this.code = model.code;
+                this.configCode = model.configCode;
+                this.configContentType = model.configContentType;
+                this.configDescription = model.configDescription;
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.eventHitCount = model.eventHitCount;
+                this.id = model.id;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The service to which the anomalous event detection rule applies. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
@@ -449,6 +478,17 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private java.util.List<SubTypeList> subTypeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventTypeList model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.subTypeList = model.subTypeList;
+            } 
 
             /**
              * <p>The code of the anomalous event type.</p>

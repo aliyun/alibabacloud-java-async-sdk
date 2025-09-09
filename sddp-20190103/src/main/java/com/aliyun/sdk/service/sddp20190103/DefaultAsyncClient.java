@@ -67,8 +67,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateDataLimit  CreateDataLimitRequest
      * @return CreateDataLimitResponse
@@ -187,6 +185,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAuditLogs  DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAuditLogsResponse> describeAuditLogs(DescribeAuditLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAuditLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAuditLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAuditLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -418,6 +434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Notes</h2>
+     * <p>The DescribeDataObjectColumnDetail interface has been revised to DescribeDataObjectColumnDetailV2. It is recommended that you use the newer version, DescribeDataObjectColumnDetailV2, when developing your application.</p>
+     * 
      * @param request the request parameters of DescribeDataObjectColumnDetail  DescribeDataObjectColumnDetailRequest
      * @return DescribeDataObjectColumnDetailResponse
      */
@@ -549,6 +569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>QPS Limit</h2>
+     * <p>The QPS limit for this interface per user is 10 times/second. Exceeding the limit will result in API calls being rate-limited, which may affect your business. Please call it reasonably.</p>
+     * 
      * @param request the request parameters of DescribeIdentifyTaskStatus  DescribeIdentifyTaskStatusRequest
      * @return DescribeIdentifyTaskStatusResponse
      */
@@ -570,8 +594,6 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
      * This operation is no longer used for the KMS console of the new version.</p>
-     * <h1><a href="#qps-"></a>QPS limits</h1>
-     * <p>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of DescribeInstanceSources  DescribeInstanceSourcesRequest
      * @return DescribeInstanceSourcesResponse
@@ -639,6 +661,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is generally used to query the detailed information of OSS storage objects, which facilitates the accurate positioning of sensitive OSS assets.</p>
+     * 
      * @param request the request parameters of DescribeOssObjectDetailV2  DescribeOssObjectDetailV2Request
      * @return DescribeOssObjectDetailV2Response
      */
@@ -1026,6 +1051,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>To call this operation, make sure that asset authorization for your OSS bucket is complete and the bucket is connected. If the authorization is not complete, the bucket_not_authorized error code is returned when you call the operation.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3><a href="#"></a>Additional information</h3>
+     * <p>After you call this operation, you can obtain the task ID. You can specify the task ID in the DescribeIdentifyTaskDetail operation to query the state of the task.
+     * After the task is complete, you can call the DescribeOssObjectDetailV2 operation to query the identification results of sensitive data in the related OSS objects. When you call the DescribeOssObjectDetailV2 operation, you must specify BucketName, ServiceRegionId, and ObjectKey.</p>
+     * 
      * @param request the request parameters of ScanOssObjectV1  ScanOssObjectV1Request
      * @return ScanOssObjectV1Response
      */

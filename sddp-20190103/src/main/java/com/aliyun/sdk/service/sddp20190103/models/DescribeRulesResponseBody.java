@@ -48,6 +48,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRulesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -503,6 +518,40 @@ public class DescribeRulesResponseBody extends TeaModel {
             private String templateRuleIds; 
             private Long userId; 
             private Integer warnLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.category = model.category;
+                this.categoryName = model.categoryName;
+                this.content = model.content;
+                this.contentCategory = model.contentCategory;
+                this.customType = model.customType;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupId = model.groupId;
+                this.hitTotalCount = model.hitTotalCount;
+                this.id = model.id;
+                this.loginName = model.loginName;
+                this.majorKey = model.majorKey;
+                this.matchType = model.matchType;
+                this.modelRuleIds = model.modelRuleIds;
+                this.name = model.name;
+                this.productCode = model.productCode;
+                this.productId = model.productId;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.statExpress = model.statExpress;
+                this.status = model.status;
+                this.supportForm = model.supportForm;
+                this.target = model.target;
+                this.templateRuleIds = model.templateRuleIds;
+                this.userId = model.userId;
+                this.warnLevel = model.warnLevel;
+            } 
 
             /**
              * <p>The content type of the sensitive data detection rule. Valid values:</p>

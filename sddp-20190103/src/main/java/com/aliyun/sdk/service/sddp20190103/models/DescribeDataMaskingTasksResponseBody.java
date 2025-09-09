@@ -48,6 +48,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataMaskingTasksResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -383,6 +398,30 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private Integer triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.dstMemberAccount = model.dstMemberAccount;
+                this.dstPath = model.dstPath;
+                this.dstType = model.dstType;
+                this.dstTypeCode = model.dstTypeCode;
+                this.gmtCreate = model.gmtCreate;
+                this.hasUnfinishProcess = model.hasUnfinishProcess;
+                this.id = model.id;
+                this.originalTable = model.originalTable;
+                this.owner = model.owner;
+                this.runCount = model.runCount;
+                this.srcMemberAccount = model.srcMemberAccount;
+                this.srcPath = model.srcPath;
+                this.srcType = model.srcType;
+                this.srcTypeCode = model.srcTypeCode;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * <p>The member account to which the desensitization target belongs.</p>

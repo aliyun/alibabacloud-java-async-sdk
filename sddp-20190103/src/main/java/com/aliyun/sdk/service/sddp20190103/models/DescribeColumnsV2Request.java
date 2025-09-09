@@ -99,7 +99,7 @@ public class DescribeColumnsV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,7 +241,7 @@ public class DescribeColumnsV2Request extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>When performing a paginated query, sets the current page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +253,17 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>Engine type. Values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong>.</li>
+         * <li><strong>MariaDB</strong>.</li>
+         * <li><strong>Oracle</strong>.</li>
+         * <li><strong>PostgreSQL</strong>.</li>
+         * <li><strong>SQLServer</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -262,9 +272,9 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which data in the column of the table belongs.</p>
+         * <p>ID of the asset instance to which the column data in the data asset table belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> operation to obtain the ID of the instance to which the data in the column of the table belongs.</p>
+         * <p>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the asset instance to which the column data in the data asset table belongs. The asset instance ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> interface.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +287,7 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The name of the instance to which data in the column of the table belongs.</p>
+         * <p>Name of the asset instance to which the column data in the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp17t1htja573l5i8****</p>
@@ -289,10 +299,11 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <p>Sets the language type for requests and received messages, default is <strong>zh_cn</strong>.
+         * Values:</p>
          * <ul>
-         * <li><strong>zh_cn</strong>: simplified Chinese</li>
-         * <li><strong>en_us</strong>: English</li>
+         * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+         * <li><strong>en_us</strong>: English (United States)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,8 +316,8 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The search keyword. Fuzzy match is supported.</p>
-         * <p>For example, if you enter <strong>test</strong>, all columns whose names contain <strong>test</strong> are retrieved.</p>
+         * <p>Search keyword, supports fuzzy matching.</p>
+         * <p>For example, entering <strong>test</strong> will search for all data information containing <strong>test</strong> in the search items.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -318,7 +329,7 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>When performing a paginated query, sets the maximum number of data asset instances displayed per page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -330,7 +341,7 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>Product name to which the column data in the data asset table belongs. Values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, etc.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -342,13 +353,13 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</p>
+         * <p>Risk level ID of the sensitive data recognition rule. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A</li>
-         * <li><strong>2</strong>: S1</li>
-         * <li><strong>3</strong>: S2</li>
-         * <li><strong>4</strong>: S3</li>
-         * <li><strong>5</strong>: S4</li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,9 +372,9 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
+         * <p>Unique identifier ID of the sensitive data recognition rule hit by the column data in the asset table.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</p>
+         * <p>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the sensitive data recognition rule hit by the column data in the asset table. The sensitive data recognition rule ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> interface.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -376,7 +387,7 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+         * <p>Name of the sensitive data recognition rule hit by the column data in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -388,13 +399,13 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The name of the sensitivity level. Valid values:</p>
+         * <p>Sensitive level name. Values:</p>
          * <ul>
-         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
-         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
-         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
-         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
-         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * <li><strong>N/A</strong>: No sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,9 +418,9 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the table to which the column belongs.</p>
+         * <p>Unique identifier ID of the asset table to which the column in MaxCompute, RDS, etc., belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> operation to obtain the ID of the table.</p>
+         * <p>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the asset table. The asset table ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> interface.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -422,7 +433,7 @@ public class DescribeColumnsV2Request extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>Name of the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>it_table</p>

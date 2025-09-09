@@ -48,6 +48,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataLimitsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -659,6 +674,53 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String userName; 
             private java.util.List<String> vSwitchIdList; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.auditStatus = model.auditStatus;
+                this.autoScan = model.autoScan;
+                this.checkStatus = model.checkStatus;
+                this.checkStatusName = model.checkStatusName;
+                this.datamaskStatus = model.datamaskStatus;
+                this.dbVersion = model.dbVersion;
+                this.enable = model.enable;
+                this.engineType = model.engineType;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.eventStatus = model.eventStatus;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.lastFinishedTime = model.lastFinishedTime;
+                this.lastStartTime = model.lastStartTime;
+                this.localName = model.localName;
+                this.logStoreDay = model.logStoreDay;
+                this.memberAccount = model.memberAccount;
+                this.nextStartTime = model.nextStartTime;
+                this.ocrStatus = model.ocrStatus;
+                this.parentId = model.parentId;
+                this.port = model.port;
+                this.processStatus = model.processStatus;
+                this.processTotalCount = model.processTotalCount;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.resourceTypeCode = model.resourceTypeCode;
+                this.samplingSize = model.samplingSize;
+                this.securityGroupIdList = model.securityGroupIdList;
+                this.supportAudit = model.supportAudit;
+                this.supportDatamask = model.supportDatamask;
+                this.supportEvent = model.supportEvent;
+                this.supportOcr = model.supportOcr;
+                this.supportScan = model.supportScan;
+                this.tenantName = model.tenantName;
+                this.totalCount = model.totalCount;
+                this.userName = model.userName;
+                this.vSwitchIdList = model.vSwitchIdList;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Indicates whether the security audit feature is enabled. Valid values:</p>

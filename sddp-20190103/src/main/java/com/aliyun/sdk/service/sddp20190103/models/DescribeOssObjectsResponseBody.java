@@ -60,6 +60,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -125,6 +129,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Boolean truncated; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOssObjectsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.marker = model.marker;
+            this.nextMarker = model.nextMarker;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.truncated = model.truncated;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -279,6 +297,15 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private Long count; 
             private String name; 
             private Long riskLevelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.count = model.count;
+                this.name = model.name;
+                this.riskLevelId = model.riskLevelId;
+            } 
 
             /**
              * <p>The number of times that the rule is hit.</p>
@@ -550,6 +577,29 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private java.util.List<RuleList> ruleList; 
             private Integer sensitiveCount; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.bucketName = model.bucketName;
+                this.category = model.category;
+                this.categoryName = model.categoryName;
+                this.fileCategoryCode = model.fileCategoryCode;
+                this.fileCategoryName = model.fileCategoryName;
+                this.fileId = model.fileId;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.riskLevelId = model.riskLevelId;
+                this.riskLevelName = model.riskLevelName;
+                this.ruleCount = model.ruleCount;
+                this.ruleList = model.ruleList;
+                this.sensitiveCount = model.sensitiveCount;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The name of the bucket.</p>

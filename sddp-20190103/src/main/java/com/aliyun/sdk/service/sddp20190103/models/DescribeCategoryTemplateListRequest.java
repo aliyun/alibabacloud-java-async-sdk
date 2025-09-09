@@ -54,7 +54,7 @@ public class DescribeCategoryTemplateListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class DescribeCategoryTemplateListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Page number for paginated queries. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,7 +127,10 @@ public class DescribeCategoryTemplateListRequest extends Request {
         }
 
         /**
-         * FeatureType.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -133,7 +139,15 @@ public class DescribeCategoryTemplateListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Set the language type for the request and response messages, default is <strong>zh_cn</strong>.
+         * Values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese (Simplified)</li>
+         * <li><strong>en_us</strong>: English (United States)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +156,10 @@ public class DescribeCategoryTemplateListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>When performing a paginated query, set the number of items per page. Default value is <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +168,16 @@ public class DescribeCategoryTemplateListRequest extends Request {
         }
 
         /**
-         * UsageScenario.
+         * <p>API call scenario, default is <strong>null</strong>.
+         * Values:</p>
+         * <ul>
+         * <li><strong>null</strong>: Old version</li>
+         * <li><strong>0</strong>: Old version</li>
+         * <li><strong>1</strong>: New version</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usageScenario(Integer usageScenario) {
             this.putQueryParameter("UsageScenario", usageScenario);

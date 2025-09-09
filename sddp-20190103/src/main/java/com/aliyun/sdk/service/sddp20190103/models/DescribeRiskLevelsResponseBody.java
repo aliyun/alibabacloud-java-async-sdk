@@ -36,6 +36,10 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RiskLevelList> riskLevelList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskLevelsResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskLevelList = model.riskLevelList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private Integer referenceNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskLevelList model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.referenceNum = model.referenceNum;
+            } 
 
             /**
              * <p>The description of the sensitivity level. You can enter a custom description.</p>

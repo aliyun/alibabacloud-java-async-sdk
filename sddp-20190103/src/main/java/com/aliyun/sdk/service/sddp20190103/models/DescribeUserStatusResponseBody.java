@@ -36,6 +36,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserStatus userStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.userStatus = model.userStatus;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -339,11 +351,37 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             private Integer useInstanceNum; 
             private Long useOssSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatus model) {
+                this.accessKeyId = model.accessKeyId;
+                this.auditClosable = model.auditClosable;
+                this.auditReleasable = model.auditReleasable;
+                this.authed = model.authed;
+                this.chargeType = model.chargeType;
+                this.dataManagerRole = model.dataManagerRole;
+                this.instanceId = model.instanceId;
+                this.instanceNum = model.instanceNum;
+                this.instanceTotalCount = model.instanceTotalCount;
+                this.labStatus = model.labStatus;
+                this.ossTotalSize = model.ossTotalSize;
+                this.protectionDays = model.protectionDays;
+                this.purchased = model.purchased;
+                this.releaseDays = model.releaseDays;
+                this.releaseTime = model.releaseTime;
+                this.remainDays = model.remainDays;
+                this.trail = model.trail;
+                this.useAgentAudit = model.useAgentAudit;
+                this.useInstanceNum = model.useInstanceNum;
+                this.useOssSize = model.useOssSize;
+            } 
+
             /**
              * <p>The AccessKey ID of the current account.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI4G67HRBzNRmMhfyv****</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
