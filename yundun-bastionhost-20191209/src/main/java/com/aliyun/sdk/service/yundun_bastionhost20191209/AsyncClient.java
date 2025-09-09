@@ -57,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddHostsToGroupResponse> addHostsToGroup(AddHostsToGroupRequest request);
 
     /**
+     * @param request the request parameters of AddInstanceRdMember  AddInstanceRdMemberRequest
+     * @return AddInstanceRdMemberResponse
+     */
+    CompletableFuture<AddInstanceRdMemberResponse> addInstanceRdMember(AddInstanceRdMemberRequest request);
+
+    /**
      * <b>description</b> :
      * <h1></h1>
      * <p>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</p>
@@ -655,6 +661,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHostsForUserGroupResponse> listHostsForUserGroup(ListHostsForUserGroupRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceRdMembers  ListInstanceRdMembersRequest
+     * @return ListInstanceRdMembersResponse
+     */
+    CompletableFuture<ListInstanceRdMembersResponse> listInstanceRdMembers(ListInstanceRdMembersRequest request);
+
+    /**
      * @param request the request parameters of ListNetworkDomains  ListNetworkDomainsRequest
      * @return ListNetworkDomainsResponse
      */
@@ -925,6 +937,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveHostsFromGroupResponse
      */
     CompletableFuture<RemoveHostsFromGroupResponse> removeHostsFromGroup(RemoveHostsFromGroupRequest request);
+
+    /**
+     * @param request the request parameters of RemoveInstanceRdMember  RemoveInstanceRdMemberRequest
+     * @return RemoveInstanceRdMemberResponse
+     */
+    CompletableFuture<RemoveInstanceRdMemberResponse> removeInstanceRdMember(RemoveInstanceRdMemberRequest request);
 
     /**
      * <b>description</b> :
