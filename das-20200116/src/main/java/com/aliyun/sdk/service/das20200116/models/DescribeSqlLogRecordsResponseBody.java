@@ -255,6 +255,9 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
         @com.aliyun.core.annotation.NameInMap("ThreadId")
         private Long threadId;
 
@@ -303,6 +306,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             this.sqlText = builder.sqlText;
             this.sqlType = builder.sqlType;
             this.state = builder.state;
+            this.tableName = builder.tableName;
             this.threadId = builder.threadId;
             this.traceId = builder.traceId;
             this.trxId = builder.trxId;
@@ -503,6 +507,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        /**
          * @return threadId
          */
         public Long getThreadId() {
@@ -578,6 +589,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private String sqlText; 
             private String sqlType; 
             private String state; 
+            private String tableName; 
             private Long threadId; 
             private String traceId; 
             private String trxId; 
@@ -616,6 +628,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
                 this.sqlText = model.sqlText;
                 this.sqlType = model.sqlType;
                 this.state = model.state;
+                this.tableName = model.tableName;
                 this.threadId = model.threadId;
                 this.traceId = model.traceId;
                 this.trxId = model.trxId;
@@ -912,6 +925,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
                 return this;
             }
 

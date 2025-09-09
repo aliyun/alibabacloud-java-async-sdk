@@ -216,6 +216,9 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SqlLogEnable")
         private Boolean sqlLogEnable;
 
+        @com.aliyun.core.annotation.NameInMap("SqlLogSource")
+        private String sqlLogSource;
+
         @com.aliyun.core.annotation.NameInMap("SqlLogState")
         private String sqlLogState;
 
@@ -242,6 +245,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             this.requestStopTime = builder.requestStopTime;
             this.retention = builder.retention;
             this.sqlLogEnable = builder.sqlLogEnable;
+            this.sqlLogSource = builder.sqlLogSource;
             this.sqlLogState = builder.sqlLogState;
             this.sqlLogVisibleTime = builder.sqlLogVisibleTime;
             this.supportVersion = builder.supportVersion;
@@ -348,6 +352,13 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlLogSource
+         */
+        public String getSqlLogSource() {
+            return this.sqlLogSource;
+        }
+
+        /**
          * @return sqlLogState
          */
         public String getSqlLogState() {
@@ -389,6 +400,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             private Long requestStopTime; 
             private Integer retention; 
             private Boolean sqlLogEnable; 
+            private String sqlLogSource; 
             private String sqlLogState; 
             private Long sqlLogVisibleTime; 
             private String supportVersion; 
@@ -411,6 +423,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
                 this.requestStopTime = model.requestStopTime;
                 this.retention = model.retention;
                 this.sqlLogEnable = model.sqlLogEnable;
+                this.sqlLogSource = model.sqlLogSource;
                 this.sqlLogState = model.sqlLogState;
                 this.sqlLogVisibleTime = model.sqlLogVisibleTime;
                 this.supportVersion = model.supportVersion;
@@ -582,6 +595,14 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
              */
             public Builder sqlLogEnable(Boolean sqlLogEnable) {
                 this.sqlLogEnable = sqlLogEnable;
+                return this;
+            }
+
+            /**
+             * SqlLogSource.
+             */
+            public Builder sqlLogSource(String sqlLogSource) {
+                this.sqlLogSource = sqlLogSource;
                 return this;
             }
 
