@@ -21,6 +21,10 @@ public class CreateReportDefinitionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BeginBillingCycle")
     private String beginBillingCycle;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeMembers")
+    private String includeMembers;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("McProject")
     private String mcProject;
@@ -32,6 +36,10 @@ public class CreateReportDefinitionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Nbid")
     private String nbid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotSendOnNoData")
+    private String notSendOnNoData;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssBucketName")
@@ -54,17 +62,29 @@ public class CreateReportDefinitionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String reportType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendWithAttach")
+    private String sendWithAttach;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SplitFileOnUserId")
+    private String splitFileOnUserId;
+
     private CreateReportDefinitionRequest(Builder builder) {
         super(builder);
         this.beginBillingCycle = builder.beginBillingCycle;
+        this.includeMembers = builder.includeMembers;
         this.mcProject = builder.mcProject;
         this.mcTableName = builder.mcTableName;
         this.nbid = builder.nbid;
+        this.notSendOnNoData = builder.notSendOnNoData;
         this.ossBucketName = builder.ossBucketName;
         this.ossBucketOwnerAccountId = builder.ossBucketOwnerAccountId;
         this.ossBucketPath = builder.ossBucketPath;
         this.reportSourceType = builder.reportSourceType;
         this.reportType = builder.reportType;
+        this.sendWithAttach = builder.sendWithAttach;
+        this.splitFileOnUserId = builder.splitFileOnUserId;
     }
 
     public static Builder builder() {
@@ -88,6 +108,13 @@ public class CreateReportDefinitionRequest extends Request {
     }
 
     /**
+     * @return includeMembers
+     */
+    public String getIncludeMembers() {
+        return this.includeMembers;
+    }
+
+    /**
      * @return mcProject
      */
     public String getMcProject() {
@@ -106,6 +133,13 @@ public class CreateReportDefinitionRequest extends Request {
      */
     public String getNbid() {
         return this.nbid;
+    }
+
+    /**
+     * @return notSendOnNoData
+     */
+    public String getNotSendOnNoData() {
+        return this.notSendOnNoData;
     }
 
     /**
@@ -143,16 +177,34 @@ public class CreateReportDefinitionRequest extends Request {
         return this.reportType;
     }
 
+    /**
+     * @return sendWithAttach
+     */
+    public String getSendWithAttach() {
+        return this.sendWithAttach;
+    }
+
+    /**
+     * @return splitFileOnUserId
+     */
+    public String getSplitFileOnUserId() {
+        return this.splitFileOnUserId;
+    }
+
     public static final class Builder extends Request.Builder<CreateReportDefinitionRequest, Builder> {
         private String beginBillingCycle; 
+        private String includeMembers; 
         private String mcProject; 
         private String mcTableName; 
         private String nbid; 
+        private String notSendOnNoData; 
         private String ossBucketName; 
         private Long ossBucketOwnerAccountId; 
         private String ossBucketPath; 
         private String reportSourceType; 
         private String reportType; 
+        private String sendWithAttach; 
+        private String splitFileOnUserId; 
 
         private Builder() {
             super();
@@ -161,14 +213,18 @@ public class CreateReportDefinitionRequest extends Request {
         private Builder(CreateReportDefinitionRequest request) {
             super(request);
             this.beginBillingCycle = request.beginBillingCycle;
+            this.includeMembers = request.includeMembers;
             this.mcProject = request.mcProject;
             this.mcTableName = request.mcTableName;
             this.nbid = request.nbid;
+            this.notSendOnNoData = request.notSendOnNoData;
             this.ossBucketName = request.ossBucketName;
             this.ossBucketOwnerAccountId = request.ossBucketOwnerAccountId;
             this.ossBucketPath = request.ossBucketPath;
             this.reportSourceType = request.reportSourceType;
             this.reportType = request.reportType;
+            this.sendWithAttach = request.sendWithAttach;
+            this.splitFileOnUserId = request.splitFileOnUserId;
         } 
 
         /**
@@ -177,6 +233,15 @@ public class CreateReportDefinitionRequest extends Request {
         public Builder beginBillingCycle(String beginBillingCycle) {
             this.putQueryParameter("BeginBillingCycle", beginBillingCycle);
             this.beginBillingCycle = beginBillingCycle;
+            return this;
+        }
+
+        /**
+         * IncludeMembers.
+         */
+        public Builder includeMembers(String includeMembers) {
+            this.putQueryParameter("IncludeMembers", includeMembers);
+            this.includeMembers = includeMembers;
             return this;
         }
 
@@ -204,6 +269,15 @@ public class CreateReportDefinitionRequest extends Request {
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
             this.nbid = nbid;
+            return this;
+        }
+
+        /**
+         * NotSendOnNoData.
+         */
+        public Builder notSendOnNoData(String notSendOnNoData) {
+            this.putQueryParameter("NotSendOnNoData", notSendOnNoData);
+            this.notSendOnNoData = notSendOnNoData;
             return this;
         }
 
@@ -252,6 +326,24 @@ public class CreateReportDefinitionRequest extends Request {
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
             this.reportType = reportType;
+            return this;
+        }
+
+        /**
+         * SendWithAttach.
+         */
+        public Builder sendWithAttach(String sendWithAttach) {
+            this.putQueryParameter("SendWithAttach", sendWithAttach);
+            this.sendWithAttach = sendWithAttach;
+            return this;
+        }
+
+        /**
+         * SplitFileOnUserId.
+         */
+        public Builder splitFileOnUserId(String splitFileOnUserId) {
+            this.putQueryParameter("SplitFileOnUserId", splitFileOnUserId);
+            this.splitFileOnUserId = splitFileOnUserId;
             return this;
         }
 

@@ -1,3 +1,6 @@
+2025-09-09 Version: 1.0.7
+- Generated java-async 2023-09-30 for BssOpenApi.
+
 2025-08-14 Version: 1.0.5
 - Generated java-async 2023-09-30 for BssOpenApi.
 

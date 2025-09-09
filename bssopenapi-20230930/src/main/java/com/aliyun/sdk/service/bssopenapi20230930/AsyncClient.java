@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelFundAccountLowAvailableAmountAlarmResponse> cancelFundAccountLowAvailableAmountAlarm(CancelFundAccountLowAvailableAmountAlarmRequest request);
 
     /**
+     * @param request the request parameters of CheckAccountExist  CheckAccountExistRequest
+     * @return CheckAccountExistResponse
+     */
+    CompletableFuture<CheckAccountExistResponse> checkAccountExist(CheckAccountExistRequest request);
+
+    /**
      * @param request the request parameters of CreateCostCenter  CreateCostCenterRequest
      * @return CreateCostCenterResponse
      */
@@ -234,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCostCenterRuleResponse
      */
     CompletableFuture<ModifyCostCenterRuleResponse> modifyCostCenterRule(ModifyCostCenterRuleRequest request);
+
+    /**
+     * @param request the request parameters of PayOrder  PayOrderRequest
+     * @return PayOrderResponse
+     */
+    CompletableFuture<PayOrderResponse> payOrder(PayOrderRequest request);
 
     /**
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
