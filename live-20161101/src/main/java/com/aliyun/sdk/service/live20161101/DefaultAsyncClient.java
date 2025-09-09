@@ -7669,6 +7669,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRTCLiveRooms  ListRTCLiveRoomsRequest
+     * @return ListRTCLiveRoomsResponse
+     */
+    @Override
+    public CompletableFuture<ListRTCLiveRoomsResponse> listRTCLiveRooms(ListRTCLiveRoomsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRTCLiveRooms").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRTCLiveRoomsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRTCLiveRoomsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the callback records of a subscription to mixed-stream relay events in the last seven days.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>

@@ -3847,6 +3847,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPlaylistItemsResponse> listPlaylistItems(ListPlaylistItemsRequest request);
 
     /**
+     * @param request the request parameters of ListRTCLiveRooms  ListRTCLiveRoomsRequest
+     * @return ListRTCLiveRoomsResponse
+     */
+    CompletableFuture<ListRTCLiveRoomsResponse> listRTCLiveRooms(ListRTCLiveRoomsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the callback records of a subscription to mixed-stream relay events in the last seven days.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
