@@ -17,15 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSystemLogsResponseBody</p>
  */
 public class ListSystemLogsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Offset")
+    private String offset;
+
     @com.aliyun.core.annotation.NameInMap("SystemLogs")
     private java.util.List<SystemLogs> systemLogs;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Long totalCount;
-
     private ListSystemLogsResponseBody(Builder builder) {
+        this.offset = builder.offset;
         this.systemLogs = builder.systemLogs;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,44 +41,44 @@ public class ListSystemLogsResponseBody extends TeaModel {
     }
 
     /**
+     * @return offset
+     */
+    public String getOffset() {
+        return this.offset;
+    }
+
+    /**
      * @return systemLogs
      */
     public java.util.List<SystemLogs> getSystemLogs() {
         return this.systemLogs;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
+        private String offset; 
         private java.util.List<SystemLogs> systemLogs; 
-        private Long totalCount; 
 
         private Builder() {
         } 
 
         private Builder(ListSystemLogsResponseBody model) {
+            this.offset = model.offset;
             this.systemLogs = model.systemLogs;
-            this.totalCount = model.totalCount;
         } 
+
+        /**
+         * Offset.
+         */
+        public Builder offset(String offset) {
+            this.offset = offset;
+            return this;
+        }
 
         /**
          * SystemLogs.
          */
         public Builder systemLogs(java.util.List<SystemLogs> systemLogs) {
             this.systemLogs = systemLogs;
-            return this;
-        }
-
-        /**
-         * TotalCount.
-         */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
             return this;
         }
 

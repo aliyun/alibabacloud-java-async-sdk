@@ -30,20 +30,24 @@ public class ListSystemLogsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleId")
+    private String lifecycleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogLevel")
     private String logLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogRepository")
+    private String logRepository;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
+    private String offset;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private Long pageNumber;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PageSize")
-    private Long pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProblemCategory")
@@ -57,23 +61,19 @@ public class ListSystemLogsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceRequestId")
     private String sourceRequestId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceType")
-    private String sourceType;
-
     private ListSystemLogsRequest(Builder builder) {
         super(builder);
         this.gmtEndTime = builder.gmtEndTime;
         this.gmtStartTime = builder.gmtStartTime;
         this.instanceId = builder.instanceId;
+        this.lifecycleId = builder.lifecycleId;
         this.logLevel = builder.logLevel;
+        this.logRepository = builder.logRepository;
+        this.offset = builder.offset;
         this.order = builder.order;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
         this.problemCategory = builder.problemCategory;
         this.sortBy = builder.sortBy;
         this.sourceRequestId = builder.sourceRequestId;
-        this.sourceType = builder.sourceType;
     }
 
     public static Builder builder() {
@@ -111,6 +111,13 @@ public class ListSystemLogsRequest extends Request {
     }
 
     /**
+     * @return lifecycleId
+     */
+    public String getLifecycleId() {
+        return this.lifecycleId;
+    }
+
+    /**
      * @return logLevel
      */
     public String getLogLevel() {
@@ -118,24 +125,24 @@ public class ListSystemLogsRequest extends Request {
     }
 
     /**
+     * @return logRepository
+     */
+    public String getLogRepository() {
+        return this.logRepository;
+    }
+
+    /**
+     * @return offset
+     */
+    public String getOffset() {
+        return this.offset;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
         return this.order;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     /**
@@ -159,25 +166,18 @@ public class ListSystemLogsRequest extends Request {
         return this.sourceRequestId;
     }
 
-    /**
-     * @return sourceType
-     */
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
     public static final class Builder extends Request.Builder<ListSystemLogsRequest, Builder> {
         private String gmtEndTime; 
         private String gmtStartTime; 
         private String instanceId; 
+        private String lifecycleId; 
         private String logLevel; 
+        private String logRepository; 
+        private String offset; 
         private String order; 
-        private Long pageNumber; 
-        private Long pageSize; 
         private String problemCategory; 
         private String sortBy; 
         private String sourceRequestId; 
-        private String sourceType; 
 
         private Builder() {
             super();
@@ -188,14 +188,14 @@ public class ListSystemLogsRequest extends Request {
             this.gmtEndTime = request.gmtEndTime;
             this.gmtStartTime = request.gmtStartTime;
             this.instanceId = request.instanceId;
+            this.lifecycleId = request.lifecycleId;
             this.logLevel = request.logLevel;
+            this.logRepository = request.logRepository;
+            this.offset = request.offset;
             this.order = request.order;
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
             this.problemCategory = request.problemCategory;
             this.sortBy = request.sortBy;
             this.sourceRequestId = request.sourceRequestId;
-            this.sourceType = request.sourceType;
         } 
 
         /**
@@ -232,6 +232,15 @@ public class ListSystemLogsRequest extends Request {
         }
 
         /**
+         * LifecycleId.
+         */
+        public Builder lifecycleId(String lifecycleId) {
+            this.putQueryParameter("LifecycleId", lifecycleId);
+            this.lifecycleId = lifecycleId;
+            return this;
+        }
+
+        /**
          * LogLevel.
          */
         public Builder logLevel(String logLevel) {
@@ -241,29 +250,29 @@ public class ListSystemLogsRequest extends Request {
         }
 
         /**
+         * LogRepository.
+         */
+        public Builder logRepository(String logRepository) {
+            this.putQueryParameter("LogRepository", logRepository);
+            this.logRepository = logRepository;
+            return this;
+        }
+
+        /**
+         * Offset.
+         */
+        public Builder offset(String offset) {
+            this.putQueryParameter("Offset", offset);
+            this.offset = offset;
+            return this;
+        }
+
+        /**
          * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
             this.order = order;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
             return this;
         }
 
@@ -291,15 +300,6 @@ public class ListSystemLogsRequest extends Request {
         public Builder sourceRequestId(String sourceRequestId) {
             this.putQueryParameter("SourceRequestId", sourceRequestId);
             this.sourceRequestId = sourceRequestId;
-            return this;
-        }
-
-        /**
-         * SourceType.
-         */
-        public Builder sourceType(String sourceType) {
-            this.putQueryParameter("SourceType", sourceType);
-            this.sourceType = sourceType;
             return this;
         }
 
