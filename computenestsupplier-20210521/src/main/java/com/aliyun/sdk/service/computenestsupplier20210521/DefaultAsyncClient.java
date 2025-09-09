@@ -241,6 +241,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAcrImageRepositories  DeleteAcrImageRepositoriesRequest
+     * @return DeleteAcrImageRepositoriesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAcrImageRepositoriesResponse> deleteAcrImageRepositories(DeleteAcrImageRepositoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAcrImageRepositories").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAcrImageRepositoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAcrImageRepositoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAcrImageTags  DeleteAcrImageTagsRequest
+     * @return DeleteAcrImageTagsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAcrImageTagsResponse> deleteAcrImageTags(DeleteAcrImageTagsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAcrImageTags").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAcrImageTagsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAcrImageTagsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
      * @return DeleteArtifactResponse
      */
@@ -403,6 +439,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetNetworkAvailableZones  GetNetworkAvailableZonesRequest
+     * @return GetNetworkAvailableZonesResponse
+     */
+    @Override
+    public CompletableFuture<GetNetworkAvailableZonesResponse> getNetworkAvailableZones(GetNetworkAvailableZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetNetworkAvailableZones").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNetworkAvailableZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNetworkAvailableZonesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetService  GetServiceRequest
      * @return GetServiceResponse
      */
@@ -493,6 +547,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetServiceTemplateCriterionIssues  GetServiceTemplateCriterionIssuesRequest
+     * @return GetServiceTemplateCriterionIssuesResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceTemplateCriterionIssuesResponse> getServiceTemplateCriterionIssues(GetServiceTemplateCriterionIssuesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetServiceTemplateCriterionIssues").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceTemplateCriterionIssuesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceTemplateCriterionIssuesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetServiceTemplateParameterConstraints  GetServiceTemplateParameterConstraintsRequest
      * @return GetServiceTemplateParameterConstraintsResponse
      */
@@ -565,6 +637,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要上线的服务必须为已通过审核的服务。</p>
+     * 
      * @param request the request parameters of LaunchService  LaunchServiceRequest
      * @return LaunchServiceResponse
      */
@@ -613,6 +688,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAcrImageTagsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListArtifactBuildLogs  ListArtifactBuildLogsRequest
+     * @return ListArtifactBuildLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListArtifactBuildLogsResponse> listArtifactBuildLogs(ListArtifactBuildLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListArtifactBuildLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListArtifactBuildLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListArtifactBuildLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -685,6 +778,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListResellersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListServiceBuildLogs  ListServiceBuildLogsRequest
+     * @return ListServiceBuildLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListServiceBuildLogsResponse> listServiceBuildLogs(ListServiceBuildLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListServiceBuildLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceBuildLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListServiceBuildLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

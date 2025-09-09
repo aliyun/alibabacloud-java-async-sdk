@@ -104,7 +104,7 @@ public class UpdateServiceTestCaseRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -116,7 +116,7 @@ public class UpdateServiceTestCaseRequest extends Request {
         }
 
         /**
-         * <p>The service test case id.</p>
+         * <p>Service test case ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateServiceTestCaseRequest extends Request {
         }
 
         /**
-         * <p>The service test case name.</p>
+         * <p>Test case name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class UpdateServiceTestCaseRequest extends Request {
         }
 
         /**
-         * <p>The service test config.</p>
+         * <p>Test configuration</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

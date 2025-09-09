@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateServiceTestCaseResponseBody} extends {@link TeaModel}
+ * {@link DeleteAcrImageRepositoriesResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateServiceTestCaseResponseBody</p>
+ * <p>DeleteAcrImageRepositoriesResponseBody</p>
  */
-public class UpdateServiceTestCaseResponseBody extends TeaModel {
+public class DeleteAcrImageRepositoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateServiceTestCaseResponseBody(Builder builder) {
+    private DeleteAcrImageRepositoriesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateServiceTestCaseResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateServiceTestCaseResponseBody create() {
+    public static DeleteAcrImageRepositoriesResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateServiceTestCaseResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateServiceTestCaseResponseBody model) {
+        private Builder(DeleteAcrImageRepositoriesResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DB1FA13E-1087-5654-84D5-58A0ACAD1B18</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateServiceTestCaseResponseBody build() {
-            return new UpdateServiceTestCaseResponseBody(this);
+        public DeleteAcrImageRepositoriesResponseBody build() {
+            return new DeleteAcrImageRepositoriesResponseBody(this);
         } 
 
     } 

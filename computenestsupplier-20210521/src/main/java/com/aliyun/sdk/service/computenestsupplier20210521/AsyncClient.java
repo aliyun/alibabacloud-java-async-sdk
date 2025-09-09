@@ -89,6 +89,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSupplierRegistrationResponse> createSupplierRegistration(CreateSupplierRegistrationRequest request);
 
     /**
+     * @param request the request parameters of DeleteAcrImageRepositories  DeleteAcrImageRepositoriesRequest
+     * @return DeleteAcrImageRepositoriesResponse
+     */
+    CompletableFuture<DeleteAcrImageRepositoriesResponse> deleteAcrImageRepositories(DeleteAcrImageRepositoriesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAcrImageTags  DeleteAcrImageTagsRequest
+     * @return DeleteAcrImageTagsResponse
+     */
+    CompletableFuture<DeleteAcrImageTagsResponse> deleteAcrImageTags(DeleteAcrImageTagsRequest request);
+
+    /**
      * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
      * @return DeleteArtifactResponse
      */
@@ -143,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetArtifactRepositoryCredentialsResponse> getArtifactRepositoryCredentials(GetArtifactRepositoryCredentialsRequest request);
 
     /**
+     * @param request the request parameters of GetNetworkAvailableZones  GetNetworkAvailableZonesRequest
+     * @return GetNetworkAvailableZonesResponse
+     */
+    CompletableFuture<GetNetworkAvailableZonesResponse> getNetworkAvailableZones(GetNetworkAvailableZonesRequest request);
+
+    /**
      * @param request the request parameters of GetService  GetServiceRequest
      * @return GetServiceResponse
      */
@@ -173,6 +191,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceRegistrationResponse> getServiceRegistration(GetServiceRegistrationRequest request);
 
     /**
+     * @param request the request parameters of GetServiceTemplateCriterionIssues  GetServiceTemplateCriterionIssuesRequest
+     * @return GetServiceTemplateCriterionIssuesResponse
+     */
+    CompletableFuture<GetServiceTemplateCriterionIssuesResponse> getServiceTemplateCriterionIssues(GetServiceTemplateCriterionIssuesRequest request);
+
+    /**
      * @param request the request parameters of GetServiceTemplateParameterConstraints  GetServiceTemplateParameterConstraintsRequest
      * @return GetServiceTemplateParameterConstraintsResponse
      */
@@ -197,6 +221,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUploadCredentialsResponse> getUploadCredentials(GetUploadCredentialsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>需要上线的服务必须为已通过审核的服务。</p>
+     * 
      * @param request the request parameters of LaunchService  LaunchServiceRequest
      * @return LaunchServiceResponse
      */
@@ -213,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAcrImageTagsResponse
      */
     CompletableFuture<ListAcrImageTagsResponse> listAcrImageTags(ListAcrImageTagsRequest request);
+
+    /**
+     * @param request the request parameters of ListArtifactBuildLogs  ListArtifactBuildLogsRequest
+     * @return ListArtifactBuildLogsResponse
+     */
+    CompletableFuture<ListArtifactBuildLogsResponse> listArtifactBuildLogs(ListArtifactBuildLogsRequest request);
 
     /**
      * @param request the request parameters of ListArtifactRisks  ListArtifactRisksRequest
@@ -237,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListResellersResponse
      */
     CompletableFuture<ListResellersResponse> listResellers(ListResellersRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceBuildLogs  ListServiceBuildLogsRequest
+     * @return ListServiceBuildLogsResponse
+     */
+    CompletableFuture<ListServiceBuildLogsResponse> listServiceBuildLogs(ListServiceBuildLogsRequest request);
 
     /**
      * @param request the request parameters of ListServiceInstanceBill  ListServiceInstanceBillRequest

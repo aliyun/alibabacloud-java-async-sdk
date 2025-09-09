@@ -456,7 +456,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * BuildParameters.
+         * <p>The Parameters to build service parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</p>
          */
         public Builder buildParameters(String buildParameters) {
             this.putQueryParameter("BuildParameters", buildParameters);

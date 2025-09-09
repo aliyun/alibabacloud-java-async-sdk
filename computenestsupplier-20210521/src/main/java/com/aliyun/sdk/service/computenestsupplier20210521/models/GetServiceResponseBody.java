@@ -95,6 +95,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SecretKey")
+    private String secretKey;
+
     @com.aliyun.core.annotation.NameInMap("ServiceAuditDocumentUrl")
     private String serviceAuditDocumentUrl;
 
@@ -209,6 +212,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resellable = builder.resellable;
         this.resourceGroupId = builder.resourceGroupId;
+        this.secretKey = builder.secretKey;
         this.serviceAuditDocumentUrl = builder.serviceAuditDocumentUrl;
         this.serviceDiscoverable = builder.serviceDiscoverable;
         this.serviceDocumentInfos = builder.serviceDocumentInfos;
@@ -432,6 +436,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return secretKey
+     */
+    public String getSecretKey() {
+        return this.secretKey;
     }
 
     /**
@@ -664,6 +675,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean resellable; 
         private String resourceGroupId; 
+        private String secretKey; 
         private String serviceAuditDocumentUrl; 
         private String serviceDiscoverable; 
         private java.util.List<ServiceDocumentInfos> serviceDocumentInfos; 
@@ -724,6 +736,7 @@ public class GetServiceResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resellable = model.resellable;
             this.resourceGroupId = model.resourceGroupId;
+            this.secretKey = model.secretKey;
             this.serviceAuditDocumentUrl = model.serviceAuditDocumentUrl;
             this.serviceDiscoverable = model.serviceDiscoverable;
             this.serviceDocumentInfos = model.serviceDocumentInfos;
@@ -1080,6 +1093,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SecretKey.
+         */
+        public Builder secretKey(String secretKey) {
+            this.secretKey = secretKey;
             return this;
         }
 

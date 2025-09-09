@@ -778,7 +778,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * EnableGpu.
+             * <p>Whether GPU is required. CPU instance is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableGpu(Boolean enableGpu) {
                 this.enableGpu = enableGpu;
@@ -836,7 +839,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * <blockquote>
+             * <p> The system disk must be at least as large as the image.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
