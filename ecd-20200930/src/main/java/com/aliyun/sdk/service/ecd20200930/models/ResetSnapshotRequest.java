@@ -27,10 +27,15 @@ public class ResetSnapshotRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopDesktop")
+    private Boolean stopDesktop;
+
     private ResetSnapshotRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.snapshotId = builder.snapshotId;
+        this.stopDesktop = builder.stopDesktop;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class ResetSnapshotRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return stopDesktop
+     */
+    public Boolean getStopDesktop() {
+        return this.stopDesktop;
+    }
+
     public static final class Builder extends Request.Builder<ResetSnapshotRequest, Builder> {
         private String regionId; 
         private String snapshotId; 
+        private Boolean stopDesktop; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class ResetSnapshotRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.snapshotId = request.snapshotId;
+            this.stopDesktop = request.stopDesktop;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class ResetSnapshotRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * StopDesktop.
+         */
+        public Builder stopDesktop(Boolean stopDesktop) {
+            this.putQueryParameter("StopDesktop", stopDesktop);
+            this.stopDesktop = stopDesktop;
             return this;
         }
 

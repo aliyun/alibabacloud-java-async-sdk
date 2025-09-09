@@ -52,9 +52,17 @@ public class DescribeModificationPriceRequest extends Request {
     private String resourceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskPerformanceLevel")
+    private String rootDiskPerformanceLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
     @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskPerformanceLevel")
+    private String userDiskPerformanceLevel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
@@ -71,7 +79,9 @@ public class DescribeModificationPriceRequest extends Request {
         this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceSpecs = builder.resourceSpecs;
         this.resourceType = builder.resourceType;
+        this.rootDiskPerformanceLevel = builder.rootDiskPerformanceLevel;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
+        this.userDiskPerformanceLevel = builder.userDiskPerformanceLevel;
         this.userDiskSizeGib = builder.userDiskSizeGib;
     }
 
@@ -145,10 +155,24 @@ public class DescribeModificationPriceRequest extends Request {
     }
 
     /**
+     * @return rootDiskPerformanceLevel
+     */
+    public String getRootDiskPerformanceLevel() {
+        return this.rootDiskPerformanceLevel;
+    }
+
+    /**
      * @return rootDiskSizeGib
      */
     public Integer getRootDiskSizeGib() {
         return this.rootDiskSizeGib;
+    }
+
+    /**
+     * @return userDiskPerformanceLevel
+     */
+    public String getUserDiskPerformanceLevel() {
+        return this.userDiskPerformanceLevel;
     }
 
     /**
@@ -167,7 +191,9 @@ public class DescribeModificationPriceRequest extends Request {
         private Long resellerOwnerUid; 
         private java.util.List<ResourceSpecs> resourceSpecs; 
         private String resourceType; 
+        private String rootDiskPerformanceLevel; 
         private Integer rootDiskSizeGib; 
+        private String userDiskPerformanceLevel; 
         private Integer userDiskSizeGib; 
 
         private Builder() {
@@ -184,7 +210,9 @@ public class DescribeModificationPriceRequest extends Request {
             this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceSpecs = request.resourceSpecs;
             this.resourceType = request.resourceType;
+            this.rootDiskPerformanceLevel = request.rootDiskPerformanceLevel;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
+            this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
@@ -315,6 +343,15 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
+         * RootDiskPerformanceLevel.
+         */
+        public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
+            this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
+            this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
+            return this;
+        }
+
+        /**
          * <p>The size of the system disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
@@ -323,6 +360,15 @@ public class DescribeModificationPriceRequest extends Request {
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
             this.rootDiskSizeGib = rootDiskSizeGib;
+            return this;
+        }
+
+        /**
+         * UserDiskPerformanceLevel.
+         */
+        public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
+            this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
+            this.userDiskPerformanceLevel = userDiskPerformanceLevel;
             return this;
         }
 

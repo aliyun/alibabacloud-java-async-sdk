@@ -77,6 +77,10 @@ public class DescribePriceRequest extends Request {
     private String rootDiskCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskPerformanceLevel")
+    private String rootDiskPerformanceLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
     @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
@@ -84,6 +88,10 @@ public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskCategory")
     private String userDiskCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskPerformanceLevel")
+    private String userDiskPerformanceLevel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
@@ -106,8 +114,10 @@ public class DescribePriceRequest extends Request {
         this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
         this.rootDiskCategory = builder.rootDiskCategory;
+        this.rootDiskPerformanceLevel = builder.rootDiskPerformanceLevel;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
         this.userDiskCategory = builder.userDiskCategory;
+        this.userDiskPerformanceLevel = builder.userDiskPerformanceLevel;
         this.userDiskSizeGib = builder.userDiskSizeGib;
     }
 
@@ -223,6 +233,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return rootDiskPerformanceLevel
+     */
+    public String getRootDiskPerformanceLevel() {
+        return this.rootDiskPerformanceLevel;
+    }
+
+    /**
      * @return rootDiskSizeGib
      */
     public Integer getRootDiskSizeGib() {
@@ -234,6 +251,13 @@ public class DescribePriceRequest extends Request {
      */
     public String getUserDiskCategory() {
         return this.userDiskCategory;
+    }
+
+    /**
+     * @return userDiskPerformanceLevel
+     */
+    public String getUserDiskPerformanceLevel() {
+        return this.userDiskPerformanceLevel;
     }
 
     /**
@@ -258,8 +282,10 @@ public class DescribePriceRequest extends Request {
         private Long resellerOwnerUid; 
         private String resourceType; 
         private String rootDiskCategory; 
+        private String rootDiskPerformanceLevel; 
         private Integer rootDiskSizeGib; 
         private String userDiskCategory; 
+        private String userDiskPerformanceLevel; 
         private Integer userDiskSizeGib; 
 
         private Builder() {
@@ -282,8 +308,10 @@ public class DescribePriceRequest extends Request {
             this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
             this.rootDiskCategory = request.rootDiskCategory;
+            this.rootDiskPerformanceLevel = request.rootDiskPerformanceLevel;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
             this.userDiskCategory = request.userDiskCategory;
+            this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
@@ -506,6 +534,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * RootDiskPerformanceLevel.
+         */
+        public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
+            this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
+            this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
+            return this;
+        }
+
+        /**
          * <p>The size of the system disk. Unit: GiB. If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
          * 
          * <strong>example:</strong>
@@ -532,6 +569,15 @@ public class DescribePriceRequest extends Request {
         public Builder userDiskCategory(String userDiskCategory) {
             this.putQueryParameter("UserDiskCategory", userDiskCategory);
             this.userDiskCategory = userDiskCategory;
+            return this;
+        }
+
+        /**
+         * UserDiskPerformanceLevel.
+         */
+        public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
+            this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
+            this.userDiskPerformanceLevel = userDiskPerformanceLevel;
             return this;
         }
 
