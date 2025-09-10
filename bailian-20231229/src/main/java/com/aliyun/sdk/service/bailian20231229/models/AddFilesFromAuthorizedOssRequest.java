@@ -52,6 +52,10 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
     private String ossRegionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OverWriteFileByOssKey")
+    private Boolean overWriteFileByOssKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<String> tags;
 
@@ -64,6 +68,7 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
         this.fileDetails = builder.fileDetails;
         this.ossBucketName = builder.ossBucketName;
         this.ossRegionId = builder.ossRegionId;
+        this.overWriteFileByOssKey = builder.overWriteFileByOssKey;
         this.tags = builder.tags;
     }
 
@@ -130,6 +135,13 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
     }
 
     /**
+     * @return overWriteFileByOssKey
+     */
+    public Boolean getOverWriteFileByOssKey() {
+        return this.overWriteFileByOssKey;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<String> getTags() {
@@ -144,6 +156,7 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
         private java.util.List<FileDetails> fileDetails; 
         private String ossBucketName; 
         private String ossRegionId; 
+        private Boolean overWriteFileByOssKey; 
         private java.util.List<String> tags; 
 
         private Builder() {
@@ -159,6 +172,7 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
             this.fileDetails = request.fileDetails;
             this.ossBucketName = request.ossBucketName;
             this.ossRegionId = request.ossRegionId;
+            this.overWriteFileByOssKey = request.overWriteFileByOssKey;
             this.tags = request.tags;
         } 
 
@@ -242,6 +256,15 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * OverWriteFileByOssKey.
+         */
+        public Builder overWriteFileByOssKey(Boolean overWriteFileByOssKey) {
+            this.putBodyParameter("OverWriteFileByOssKey", overWriteFileByOssKey);
+            this.overWriteFileByOssKey = overWriteFileByOssKey;
+            return this;
+        }
+
+        /**
          * Tags.
          */
         public Builder tags(java.util.List<String> tags) {
@@ -266,7 +289,7 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
      */
     public static class FileDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 123, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 500, minLength = 1)
         private String fileName;
 
         @com.aliyun.core.annotation.NameInMap("OssKey")

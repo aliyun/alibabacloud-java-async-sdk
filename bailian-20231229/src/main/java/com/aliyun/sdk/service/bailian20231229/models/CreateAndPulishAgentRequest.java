@@ -393,6 +393,9 @@ public class CreateAndPulishAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("dialogRound")
         private Integer dialogRound;
 
+        @com.aliyun.core.annotation.NameInMap("enable_thinking")
+        private Boolean enableThinking;
+
         @com.aliyun.core.annotation.NameInMap("maxTokens")
         private Integer maxTokens;
 
@@ -401,6 +404,7 @@ public class CreateAndPulishAgentRequest extends Request {
 
         private Parameters(Builder builder) {
             this.dialogRound = builder.dialogRound;
+            this.enableThinking = builder.enableThinking;
             this.maxTokens = builder.maxTokens;
             this.temperature = builder.temperature;
         }
@@ -421,6 +425,13 @@ public class CreateAndPulishAgentRequest extends Request {
         }
 
         /**
+         * @return enableThinking
+         */
+        public Boolean getEnableThinking() {
+            return this.enableThinking;
+        }
+
+        /**
          * @return maxTokens
          */
         public Integer getMaxTokens() {
@@ -436,6 +447,7 @@ public class CreateAndPulishAgentRequest extends Request {
 
         public static final class Builder {
             private Integer dialogRound; 
+            private Boolean enableThinking; 
             private Integer maxTokens; 
             private Double temperature; 
 
@@ -444,6 +456,7 @@ public class CreateAndPulishAgentRequest extends Request {
 
             private Builder(Parameters model) {
                 this.dialogRound = model.dialogRound;
+                this.enableThinking = model.enableThinking;
                 this.maxTokens = model.maxTokens;
                 this.temperature = model.temperature;
             } 
@@ -453,6 +466,14 @@ public class CreateAndPulishAgentRequest extends Request {
              */
             public Builder dialogRound(Integer dialogRound) {
                 this.dialogRound = dialogRound;
+                return this;
+            }
+
+            /**
+             * enable_thinking.
+             */
+            public Builder enableThinking(Boolean enableThinking) {
+                this.enableThinking = enableThinking;
                 return this;
             }
 
