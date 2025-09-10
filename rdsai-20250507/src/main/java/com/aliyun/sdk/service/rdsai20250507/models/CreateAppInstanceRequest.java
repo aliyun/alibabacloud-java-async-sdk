@@ -30,6 +30,10 @@ public class CreateAppInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceConfig")
+    private DBInstanceConfig DBInstanceConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
@@ -54,6 +58,10 @@ public class CreateAppInstanceRequest extends Request {
     private Boolean publicNetworkAccessEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RAGEnabled")
+    private Boolean RAGEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -66,12 +74,14 @@ public class CreateAppInstanceRequest extends Request {
         this.appName = builder.appName;
         this.appType = builder.appType;
         this.clientToken = builder.clientToken;
+        this.DBInstanceConfig = builder.DBInstanceConfig;
         this.DBInstanceName = builder.DBInstanceName;
         this.dashboardPassword = builder.dashboardPassword;
         this.dashboardUsername = builder.dashboardUsername;
         this.databasePassword = builder.databasePassword;
         this.instanceClass = builder.instanceClass;
         this.publicNetworkAccessEnabled = builder.publicNetworkAccessEnabled;
+        this.RAGEnabled = builder.RAGEnabled;
         this.regionId = builder.regionId;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -108,6 +118,13 @@ public class CreateAppInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return DBInstanceConfig
+     */
+    public DBInstanceConfig getDBInstanceConfig() {
+        return this.DBInstanceConfig;
     }
 
     /**
@@ -153,6 +170,13 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return RAGEnabled
+     */
+    public Boolean getRAGEnabled() {
+        return this.RAGEnabled;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -170,12 +194,14 @@ public class CreateAppInstanceRequest extends Request {
         private String appName; 
         private String appType; 
         private String clientToken; 
+        private DBInstanceConfig DBInstanceConfig; 
         private String DBInstanceName; 
         private String dashboardPassword; 
         private String dashboardUsername; 
         private String databasePassword; 
         private String instanceClass; 
         private Boolean publicNetworkAccessEnabled; 
+        private Boolean RAGEnabled; 
         private String regionId; 
         private String vSwitchId; 
 
@@ -188,12 +214,14 @@ public class CreateAppInstanceRequest extends Request {
             this.appName = request.appName;
             this.appType = request.appType;
             this.clientToken = request.clientToken;
+            this.DBInstanceConfig = request.DBInstanceConfig;
             this.DBInstanceName = request.DBInstanceName;
             this.dashboardPassword = request.dashboardPassword;
             this.dashboardUsername = request.dashboardUsername;
             this.databasePassword = request.databasePassword;
             this.instanceClass = request.instanceClass;
             this.publicNetworkAccessEnabled = request.publicNetworkAccessEnabled;
+            this.RAGEnabled = request.RAGEnabled;
             this.regionId = request.regionId;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -222,6 +250,16 @@ public class CreateAppInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DBInstanceConfig.
+         */
+        public Builder DBInstanceConfig(DBInstanceConfig DBInstanceConfig) {
+            String DBInstanceConfigShrink = shrink(DBInstanceConfig, "DBInstanceConfig", "json");
+            this.putQueryParameter("DBInstanceConfig", DBInstanceConfigShrink);
+            this.DBInstanceConfig = DBInstanceConfig;
             return this;
         }
 
@@ -280,6 +318,15 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
+         * RAGEnabled.
+         */
+        public Builder RAGEnabled(Boolean RAGEnabled) {
+            this.putQueryParameter("RAGEnabled", RAGEnabled);
+            this.RAGEnabled = RAGEnabled;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -304,4 +351,101 @@ public class CreateAppInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceRequest</p>
+     */
+    public static class DBInstanceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+        private String DBInstanceClass;
+
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 64000, minimum = 10)
+        private Integer DBInstanceStorage;
+
+        @com.aliyun.core.annotation.NameInMap("PayType")
+        private String payType;
+
+        private DBInstanceConfig(Builder builder) {
+            this.DBInstanceClass = builder.DBInstanceClass;
+            this.DBInstanceStorage = builder.DBInstanceStorage;
+            this.payType = builder.payType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBInstanceClass
+         */
+        public String getDBInstanceClass() {
+            return this.DBInstanceClass;
+        }
+
+        /**
+         * @return DBInstanceStorage
+         */
+        public Integer getDBInstanceStorage() {
+            return this.DBInstanceStorage;
+        }
+
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public static final class Builder {
+            private String DBInstanceClass; 
+            private Integer DBInstanceStorage; 
+            private String payType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceConfig model) {
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.payType = model.payType;
+            } 
+
+            /**
+             * DBInstanceClass.
+             */
+            public Builder DBInstanceClass(String DBInstanceClass) {
+                this.DBInstanceClass = DBInstanceClass;
+                return this;
+            }
+
+            /**
+             * DBInstanceStorage.
+             */
+            public Builder DBInstanceStorage(Integer DBInstanceStorage) {
+                this.DBInstanceStorage = DBInstanceStorage;
+                return this;
+            }
+
+            /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            public DBInstanceConfig build() {
+                return new DBInstanceConfig(this);
+            } 
+
+        } 
+
+    }
 }
