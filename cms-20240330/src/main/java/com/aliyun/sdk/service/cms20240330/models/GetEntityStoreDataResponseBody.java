@@ -26,10 +26,14 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("responseStatus")
+    private ResponseStatus responseStatus;
+
     private GetEntityStoreDataResponseBody(Builder builder) {
         this.data = builder.data;
         this.header = builder.header;
         this.requestId = builder.requestId;
+        this.responseStatus = builder.responseStatus;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return responseStatus
+     */
+    public ResponseStatus getResponseStatus() {
+        return this.responseStatus;
+    }
+
     public static final class Builder {
         private java.util.List<java.util.List<String>> data; 
         private java.util.List<String> header; 
         private String requestId; 
+        private ResponseStatus responseStatus; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             this.data = model.data;
             this.header = model.header;
             this.requestId = model.requestId;
+            this.responseStatus = model.responseStatus;
         } 
 
         /**
@@ -103,10 +116,273 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * responseStatus.
+         */
+        public Builder responseStatus(ResponseStatus responseStatus) {
+            this.responseStatus = responseStatus;
+            return this;
+        }
+
         public GetEntityStoreDataResponseBody build() {
             return new GetEntityStoreDataResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link GetEntityStoreDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEntityStoreDataResponseBody</p>
+     */
+    public static class StatusItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("suggestion")
+        private String suggestion;
+
+        private StatusItem(Builder builder) {
+            this.code = builder.code;
+            this.level = builder.level;
+            this.message = builder.message;
+            this.suggestion = builder.suggestion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StatusItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return suggestion
+         */
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String level; 
+            private String message; 
+            private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusItem model) {
+                this.code = model.code;
+                this.level = model.level;
+                this.message = model.message;
+                this.suggestion = model.suggestion;
+            } 
+
+            /**
+             * code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * suggestion.
+             */
+            public Builder suggestion(String suggestion) {
+                this.suggestion = suggestion;
+                return this;
+            }
+
+            public StatusItem build() {
+                return new StatusItem(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEntityStoreDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEntityStoreDataResponseBody</p>
+     */
+    public static class ResponseStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("executionStates")
+        private String executionStates;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("result")
+        private String result;
+
+        @com.aliyun.core.annotation.NameInMap("retryPolicy")
+        private String retryPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("statusItem")
+        private java.util.List<StatusItem> statusItem;
+
+        private ResponseStatus(Builder builder) {
+            this.executionStates = builder.executionStates;
+            this.level = builder.level;
+            this.result = builder.result;
+            this.retryPolicy = builder.retryPolicy;
+            this.statusItem = builder.statusItem;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return executionStates
+         */
+        public String getExecutionStates() {
+            return this.executionStates;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return result
+         */
+        public String getResult() {
+            return this.result;
+        }
+
+        /**
+         * @return retryPolicy
+         */
+        public String getRetryPolicy() {
+            return this.retryPolicy;
+        }
+
+        /**
+         * @return statusItem
+         */
+        public java.util.List<StatusItem> getStatusItem() {
+            return this.statusItem;
+        }
+
+        public static final class Builder {
+            private String executionStates; 
+            private String level; 
+            private String result; 
+            private String retryPolicy; 
+            private java.util.List<StatusItem> statusItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseStatus model) {
+                this.executionStates = model.executionStates;
+                this.level = model.level;
+                this.result = model.result;
+                this.retryPolicy = model.retryPolicy;
+                this.statusItem = model.statusItem;
+            } 
+
+            /**
+             * executionStates.
+             */
+            public Builder executionStates(String executionStates) {
+                this.executionStates = executionStates;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * result.
+             */
+            public Builder result(String result) {
+                this.result = result;
+                return this;
+            }
+
+            /**
+             * retryPolicy.
+             */
+            public Builder retryPolicy(String retryPolicy) {
+                this.retryPolicy = retryPolicy;
+                return this;
+            }
+
+            /**
+             * statusItem.
+             */
+            public Builder statusItem(java.util.List<StatusItem> statusItem) {
+                this.statusItem = statusItem;
+                return this;
+            }
+
+            public ResponseStatus build() {
+                return new ResponseStatus(this);
+            } 
+
+        } 
+
+    }
 }

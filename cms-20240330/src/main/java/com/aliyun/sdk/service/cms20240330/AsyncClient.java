@@ -20,16 +20,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateAddonRelease  CreateAddonReleaseRequest
+     * @return CreateAddonReleaseResponse
+     */
+    CompletableFuture<CreateAddonReleaseResponse> createAddonRelease(CreateAddonReleaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateAggTaskGroup  CreateAggTaskGroupRequest
+     * @return CreateAggTaskGroupResponse
+     */
+    CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateEntityStore  CreateEntityStoreRequest
      * @return CreateEntityStoreResponse
      */
     CompletableFuture<CreateEntityStoreResponse> createEntityStore(CreateEntityStoreRequest request);
 
     /**
+     * @param request the request parameters of CreateIntegrationPolicy  CreateIntegrationPolicyRequest
+     * @return CreateIntegrationPolicyResponse
+     */
+    CompletableFuture<CreateIntegrationPolicyResponse> createIntegrationPolicy(CreateIntegrationPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreatePrometheusInstance  CreatePrometheusInstanceRequest
      * @return CreatePrometheusInstanceResponse
      */
     CompletableFuture<CreatePrometheusInstanceResponse> createPrometheusInstance(CreatePrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreatePrometheusView  CreatePrometheusViewRequest
+     * @return CreatePrometheusViewResponse
+     */
+    CompletableFuture<CreatePrometheusViewResponse> createPrometheusView(CreatePrometheusViewRequest request);
+
+    /**
+     * @param request the request parameters of CreatePrometheusVirtualInstance  CreatePrometheusVirtualInstanceRequest
+     * @return CreatePrometheusVirtualInstanceResponse
+     */
+    CompletableFuture<CreatePrometheusVirtualInstanceResponse> createPrometheusVirtualInstance(CreatePrometheusVirtualInstanceRequest request);
 
     /**
      * @param request the request parameters of CreateService  CreateServiceRequest
@@ -50,10 +80,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUmodelResponse> createUmodel(CreateUmodelRequest request);
 
     /**
+     * @param request the request parameters of DeleteAddonRelease  DeleteAddonReleaseRequest
+     * @return DeleteAddonReleaseResponse
+     */
+    CompletableFuture<DeleteAddonReleaseResponse> deleteAddonRelease(DeleteAddonReleaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAggTaskGroup  DeleteAggTaskGroupRequest
+     * @return DeleteAggTaskGroupResponse
+     */
+    CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
+
+    /**
      * @param request the request parameters of DeleteEntityStore  DeleteEntityStoreRequest
      * @return DeleteEntityStoreResponse
      */
     CompletableFuture<DeleteEntityStoreResponse> deleteEntityStore(DeleteEntityStoreRequest request);
+
+    /**
+     * @param request the request parameters of DeleteIntegrationPolicy  DeleteIntegrationPolicyRequest
+     * @return DeleteIntegrationPolicyResponse
+     */
+    CompletableFuture<DeleteIntegrationPolicyResponse> deleteIntegrationPolicy(DeleteIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrometheusInstance  DeletePrometheusInstanceRequest
+     * @return DeletePrometheusInstanceResponse
+     */
+    CompletableFuture<DeletePrometheusInstanceResponse> deletePrometheusInstance(DeletePrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrometheusView  DeletePrometheusViewRequest
+     * @return DeletePrometheusViewResponse
+     */
+    CompletableFuture<DeletePrometheusViewResponse> deletePrometheusView(DeletePrometheusViewRequest request);
 
     /**
      * @param request the request parameters of DeleteService  DeleteServiceRequest
@@ -80,6 +140,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of GetAddonRelease  GetAddonReleaseRequest
+     * @return GetAddonReleaseResponse
+     */
+    CompletableFuture<GetAddonReleaseResponse> getAddonRelease(GetAddonReleaseRequest request);
+
+    /**
+     * @param request the request parameters of GetAggTaskGroup  GetAggTaskGroupRequest
+     * @return GetAggTaskGroupResponse
+     */
+    CompletableFuture<GetAggTaskGroupResponse> getAggTaskGroup(GetAggTaskGroupRequest request);
+
+    /**
      * @param request the request parameters of GetEntityStore  GetEntityStoreRequest
      * @return GetEntityStoreResponse
      */
@@ -90,6 +162,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetEntityStoreDataResponse
      */
     CompletableFuture<GetEntityStoreDataResponse> getEntityStoreData(GetEntityStoreDataRequest request);
+
+    /**
+     * @param request the request parameters of GetIntegrationPolicy  GetIntegrationPolicyRequest
+     * @return GetIntegrationPolicyResponse
+     */
+    CompletableFuture<GetIntegrationPolicyResponse> getIntegrationPolicy(GetIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
+     * @return GetPrometheusInstanceResponse
+     */
+    CompletableFuture<GetPrometheusInstanceResponse> getPrometheusInstance(GetPrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetPrometheusView  GetPrometheusViewRequest
+     * @return GetPrometheusViewResponse
+     */
+    CompletableFuture<GetPrometheusViewResponse> getPrometheusView(GetPrometheusViewRequest request);
 
     /**
      * @param request the request parameters of GetService  GetServiceRequest
@@ -122,10 +212,64 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
+     * @return ListAddonReleasesResponse
+     */
+    CompletableFuture<ListAddonReleasesResponse> listAddonReleases(ListAddonReleasesRequest request);
+
+    /**
+     * @param request the request parameters of ListAggTaskGroups  ListAggTaskGroupsRequest
+     * @return ListAggTaskGroupsResponse
+     */
+    CompletableFuture<ListAggTaskGroupsResponse> listAggTaskGroups(ListAggTaskGroupsRequest request);
+
+    /**
      * @param request the request parameters of ListAlertActions  ListAlertActionsRequest
      * @return ListAlertActionsResponse
      */
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyCustomScrapeJobRules  ListIntegrationPolicyCustomScrapeJobRulesRequest
+     * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
+     */
+    CompletableFuture<ListIntegrationPolicyCustomScrapeJobRulesResponse> listIntegrationPolicyCustomScrapeJobRules(ListIntegrationPolicyCustomScrapeJobRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
+     * @return ListIntegrationPolicyPodMonitorsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyPodMonitorsResponse> listIntegrationPolicyPodMonitors(ListIntegrationPolicyPodMonitorsRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
+     * @return ListIntegrationPolicyStorageRequirementsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyStorageRequirementsResponse> listIntegrationPolicyStorageRequirements(ListIntegrationPolicyStorageRequirementsRequest request);
+
+    /**
+     * @param request the request parameters of ListPrometheusDashboards  ListPrometheusDashboardsRequest
+     * @return ListPrometheusDashboardsResponse
+     */
+    CompletableFuture<ListPrometheusDashboardsResponse> listPrometheusDashboards(ListPrometheusDashboardsRequest request);
+
+    /**
+     * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
+     * @return ListPrometheusInstancesResponse
+     */
+    CompletableFuture<ListPrometheusInstancesResponse> listPrometheusInstances(ListPrometheusInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
+     * @return ListPrometheusViewsResponse
+     */
+    CompletableFuture<ListPrometheusViewsResponse> listPrometheusViews(ListPrometheusViewsRequest request);
+
+    /**
+     * @param request the request parameters of ListPrometheusVirtualInstances  ListPrometheusVirtualInstancesRequest
+     * @return ListPrometheusVirtualInstancesResponse
+     */
+    CompletableFuture<ListPrometheusVirtualInstancesResponse> listPrometheusVirtualInstances(ListPrometheusVirtualInstancesRequest request);
 
     /**
      * @param request the request parameters of ListServices  ListServicesRequest
@@ -144,6 +288,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutWorkspaceResponse
      */
     CompletableFuture<PutWorkspaceResponse> putWorkspace(PutWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAddonRelease  UpdateAddonReleaseRequest
+     * @return UpdateAddonReleaseResponse
+     */
+    CompletableFuture<UpdateAddonReleaseResponse> updateAddonRelease(UpdateAddonReleaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAggTaskGroup  UpdateAggTaskGroupRequest
+     * @return UpdateAggTaskGroupResponse
+     */
+    CompletableFuture<UpdateAggTaskGroupResponse> updateAggTaskGroup(UpdateAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAggTaskGroupStatus  UpdateAggTaskGroupStatusRequest
+     * @return UpdateAggTaskGroupStatusResponse
+     */
+    CompletableFuture<UpdateAggTaskGroupStatusResponse> updateAggTaskGroupStatus(UpdateAggTaskGroupStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateIntegrationPolicy  UpdateIntegrationPolicyRequest
+     * @return UpdateIntegrationPolicyResponse
+     */
+    CompletableFuture<UpdateIntegrationPolicyResponse> updateIntegrationPolicy(UpdateIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
+     * @return UpdatePrometheusInstanceResponse
+     */
+    CompletableFuture<UpdatePrometheusInstanceResponse> updatePrometheusInstance(UpdatePrometheusInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePrometheusView  UpdatePrometheusViewRequest
+     * @return UpdatePrometheusViewResponse
+     */
+    CompletableFuture<UpdatePrometheusViewResponse> updatePrometheusView(UpdatePrometheusViewRequest request);
 
     /**
      * @param request the request parameters of UpdateService  UpdateServiceRequest

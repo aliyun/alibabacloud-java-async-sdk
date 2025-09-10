@@ -44,6 +44,9 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("noDataPolicy")
     private String noDataPolicy;
 
+    @com.aliyun.core.annotation.NameInMap("oper")
+    private String oper;
+
     @com.aliyun.core.annotation.NameInMap("relation")
     private String relation;
 
@@ -53,6 +56,9 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
+
+    @com.aliyun.core.annotation.NameInMap("value")
+    private Double value;
 
     private AlertRuleCondition(Builder builder) {
         this.alertCount = builder.alertCount;
@@ -64,9 +70,11 @@ public class AlertRuleCondition extends TeaModel {
         this.noDataAlertLevel = builder.noDataAlertLevel;
         this.noDataAppendValue = builder.noDataAppendValue;
         this.noDataPolicy = builder.noDataPolicy;
+        this.oper = builder.oper;
         this.relation = builder.relation;
         this.simpleEscalation = builder.simpleEscalation;
         this.type = builder.type;
+        this.value = builder.value;
     }
 
     public static Builder builder() {
@@ -145,6 +153,13 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return oper
+     */
+    public String getOper() {
+        return this.oper;
+    }
+
+    /**
      * @return relation
      */
     public String getRelation() {
@@ -165,6 +180,13 @@ public class AlertRuleCondition extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return value
+     */
+    public Double getValue() {
+        return this.value;
+    }
+
     public static final class Builder {
         private Integer alertCount; 
         private java.util.List<CaseList> caseList; 
@@ -175,9 +197,11 @@ public class AlertRuleCondition extends TeaModel {
         private String noDataAlertLevel; 
         private String noDataAppendValue; 
         private String noDataPolicy; 
+        private String oper; 
         private String relation; 
         private SimpleEscalation simpleEscalation; 
         private String type; 
+        private Double value; 
 
         private Builder() {
         } 
@@ -192,9 +216,11 @@ public class AlertRuleCondition extends TeaModel {
             this.noDataAlertLevel = model.noDataAlertLevel;
             this.noDataAppendValue = model.noDataAppendValue;
             this.noDataPolicy = model.noDataPolicy;
+            this.oper = model.oper;
             this.relation = model.relation;
             this.simpleEscalation = model.simpleEscalation;
             this.type = model.type;
+            this.value = model.value;
         } 
 
         /**
@@ -270,6 +296,14 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
+         * oper.
+         */
+        public Builder oper(String oper) {
+            this.oper = oper;
+            return this;
+        }
+
+        /**
          * relation.
          */
         public Builder relation(String relation) {
@@ -291,6 +325,14 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * value.
+         */
+        public Builder value(Double value) {
+            this.value = value;
             return this;
         }
 

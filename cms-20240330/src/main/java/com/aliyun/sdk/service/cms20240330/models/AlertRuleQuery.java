@@ -53,6 +53,9 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("secondJoin")
     private AlertRuleSlsQueryJoin secondJoin;
 
+    @com.aliyun.core.annotation.NameInMap("serviceIds")
+    private java.util.List<String> serviceIds;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -70,6 +73,7 @@ public class AlertRuleQuery extends TeaModel {
         this.queries = builder.queries;
         this.relationType = builder.relationType;
         this.secondJoin = builder.secondJoin;
+        this.serviceIds = builder.serviceIds;
         this.type = builder.type;
     }
 
@@ -170,6 +174,13 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return serviceIds
+     */
+    public java.util.List<String> getServiceIds() {
+        return this.serviceIds;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -189,6 +200,7 @@ public class AlertRuleQuery extends TeaModel {
         private java.util.List<Queries> queries; 
         private String relationType; 
         private AlertRuleSlsQueryJoin secondJoin; 
+        private java.util.List<String> serviceIds; 
         private String type; 
 
         private Builder() {
@@ -207,6 +219,7 @@ public class AlertRuleQuery extends TeaModel {
             this.queries = model.queries;
             this.relationType = model.relationType;
             this.secondJoin = model.secondJoin;
+            this.serviceIds = model.serviceIds;
             this.type = model.type;
         } 
 
@@ -303,6 +316,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder secondJoin(AlertRuleSlsQueryJoin secondJoin) {
             this.secondJoin = secondJoin;
+            return this;
+        }
+
+        /**
+         * serviceIds.
+         */
+        public Builder serviceIds(java.util.List<String> serviceIds) {
+            this.serviceIds = serviceIds;
             return this;
         }
 
