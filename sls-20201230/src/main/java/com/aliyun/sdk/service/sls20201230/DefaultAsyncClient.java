@@ -913,6 +913,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteConsumeProcessor  DeleteConsumeProcessorRequest
+     * @return DeleteConsumeProcessorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteConsumeProcessorResponse> deleteConsumeProcessor(DeleteConsumeProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteConsumeProcessor").setMethod(HttpMethod.DELETE).setPathRegex("/consumeprocessors/{processorName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteConsumeProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteConsumeProcessorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -1710,6 +1728,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetConsumeProcessor  GetConsumeProcessorRequest
+     * @return GetConsumeProcessorResponse
+     */
+    @Override
+    public CompletableFuture<GetConsumeProcessorResponse> getConsumeProcessor(GetConsumeProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetConsumeProcessor").setMethod(HttpMethod.GET).setPathRegex("/consumeprocessors/{processorName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetConsumeProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetConsumeProcessorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -2055,11 +2091,25 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</p>
+     * <p>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</p>
      * <ul>
-     * <li>You can call this operation by using Simple Log Service SDK for Go or Java.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</li>
+     * <li>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreLogs</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of GetLogsV2  GetLogsV2Request
      * @return GetLogsV2Response
@@ -2667,6 +2717,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListConsumeProcessors  ListConsumeProcessorsRequest
+     * @return ListConsumeProcessorsResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumeProcessorsResponse> listConsumeProcessors(ListConsumeProcessorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumeProcessors").setMethod(HttpMethod.GET).setPathRegex("/consumeprocessors").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumeProcessorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumeProcessorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -3237,6 +3305,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutAnnotationDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PutConsumeProcessor  PutConsumeProcessorRequest
+     * @return PutConsumeProcessorResponse
+     */
+    @Override
+    public CompletableFuture<PutConsumeProcessorResponse> putConsumeProcessor(PutConsumeProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutConsumeProcessor").setMethod(HttpMethod.PUT).setPathRegex("/consumeprocessors/{processorName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutConsumeProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutConsumeProcessorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4377,6 +4463,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
      * @param request the request parameters of UpsertCollectionPolicy  UpsertCollectionPolicyRequest
      * @return UpsertCollectionPolicyResponse
      */

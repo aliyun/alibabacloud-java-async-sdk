@@ -52,6 +52,10 @@ public class CreateLogtailPipelineConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("processors")
     private java.util.List<java.util.Map<String, ?>> processors;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("task")
+    private java.util.Map<String, ?> task;
+
     private CreateLogtailPipelineConfigRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
@@ -62,6 +66,7 @@ public class CreateLogtailPipelineConfigRequest extends Request {
         this.inputs = builder.inputs;
         this.logSample = builder.logSample;
         this.processors = builder.processors;
+        this.task = builder.task;
     }
 
     public static Builder builder() {
@@ -133,6 +138,13 @@ public class CreateLogtailPipelineConfigRequest extends Request {
         return this.processors;
     }
 
+    /**
+     * @return task
+     */
+    public java.util.Map<String, ?> getTask() {
+        return this.task;
+    }
+
     public static final class Builder extends Request.Builder<CreateLogtailPipelineConfigRequest, Builder> {
         private String project; 
         private java.util.List<java.util.Map<String, ?>> aggregators; 
@@ -142,6 +154,7 @@ public class CreateLogtailPipelineConfigRequest extends Request {
         private java.util.List<java.util.Map<String, ?>> inputs; 
         private String logSample; 
         private java.util.List<java.util.Map<String, ?>> processors; 
+        private java.util.Map<String, ?> task; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class CreateLogtailPipelineConfigRequest extends Request {
             this.inputs = request.inputs;
             this.logSample = request.logSample;
             this.processors = request.processors;
+            this.task = request.task;
         } 
 
         /**
@@ -278,6 +292,15 @@ public class CreateLogtailPipelineConfigRequest extends Request {
         public Builder processors(java.util.List<java.util.Map<String, ?>> processors) {
             this.putBodyParameter("processors", processors);
             this.processors = processors;
+            return this;
+        }
+
+        /**
+         * task.
+         */
+        public Builder task(java.util.Map<String, ?> task) {
+            this.putBodyParameter("task", task);
+            this.task = task;
             return this;
         }
 

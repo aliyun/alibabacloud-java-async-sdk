@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link PutProjectTransferAccelerationRequest} extends {@link RequestModel}
+ * {@link GetConsumeProcessorRequest} extends {@link RequestModel}
  *
- * <p>PutProjectTransferAccelerationRequest</p>
+ * <p>GetConsumeProcessorRequest</p>
  */
-public class PutProjectTransferAccelerationRequest extends Request {
+public class GetConsumeProcessorRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("enabled")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("processorName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Boolean enabled;
+    private String processorName;
 
-    private PutProjectTransferAccelerationRequest(Builder builder) {
+    private GetConsumeProcessorRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
-        this.enabled = builder.enabled;
+        this.processorName = builder.processorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static PutProjectTransferAccelerationRequest create() {
+    public static GetConsumeProcessorRequest create() {
         return builder().build();
     }
 
@@ -53,24 +53,24 @@ public class PutProjectTransferAccelerationRequest extends Request {
     }
 
     /**
-     * @return enabled
+     * @return processorName
      */
-    public Boolean getEnabled() {
-        return this.enabled;
+    public String getProcessorName() {
+        return this.processorName;
     }
 
-    public static final class Builder extends Request.Builder<PutProjectTransferAccelerationRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetConsumeProcessorRequest, Builder> {
         private String project; 
-        private Boolean enabled; 
+        private String processorName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(PutProjectTransferAccelerationRequest request) {
+        private Builder(GetConsumeProcessorRequest request) {
             super(request);
             this.project = request.project;
-            this.enabled = request.enabled;
+            this.processorName = request.processorName;
         } 
 
         /**
@@ -83,21 +83,21 @@ public class PutProjectTransferAccelerationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable transfer acceleration.</p>
+         * <p>The identifier of the consumer processor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>consume-processor-1</p>
          */
-        public Builder enabled(Boolean enabled) {
-            this.putBodyParameter("enabled", enabled);
-            this.enabled = enabled;
+        public Builder processorName(String processorName) {
+            this.putPathParameter("processorName", processorName);
+            this.processorName = processorName;
             return this;
         }
 
         @Override
-        public PutProjectTransferAccelerationRequest build() {
-            return new PutProjectTransferAccelerationRequest(this);
+        public GetConsumeProcessorRequest build() {
+            return new GetConsumeProcessorRequest(this);
         } 
 
     } 

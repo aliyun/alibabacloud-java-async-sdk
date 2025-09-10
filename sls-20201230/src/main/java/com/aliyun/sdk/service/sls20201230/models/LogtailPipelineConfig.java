@@ -47,6 +47,9 @@ public class LogtailPipelineConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("processors")
     private java.util.List<java.util.Map<String, ?>> processors;
 
+    @com.aliyun.core.annotation.NameInMap("task")
+    private java.util.Map<String, ?> task;
+
     private LogtailPipelineConfig(Builder builder) {
         this.aggregators = builder.aggregators;
         this.configName = builder.configName;
@@ -57,6 +60,7 @@ public class LogtailPipelineConfig extends TeaModel {
         this.lastModifyTime = builder.lastModifyTime;
         this.logSample = builder.logSample;
         this.processors = builder.processors;
+        this.task = builder.task;
     }
 
     public static Builder builder() {
@@ -134,6 +138,13 @@ public class LogtailPipelineConfig extends TeaModel {
         return this.processors;
     }
 
+    /**
+     * @return task
+     */
+    public java.util.Map<String, ?> getTask() {
+        return this.task;
+    }
+
     public static final class Builder {
         private java.util.List<java.util.Map<String, ?>> aggregators; 
         private String configName; 
@@ -144,6 +155,7 @@ public class LogtailPipelineConfig extends TeaModel {
         private Long lastModifyTime; 
         private String logSample; 
         private java.util.List<java.util.Map<String, ?>> processors; 
+        private java.util.Map<String, ?> task; 
 
         private Builder() {
         } 
@@ -158,6 +170,7 @@ public class LogtailPipelineConfig extends TeaModel {
             this.lastModifyTime = model.lastModifyTime;
             this.logSample = model.logSample;
             this.processors = model.processors;
+            this.task = model.task;
         } 
 
         /**
@@ -232,6 +245,14 @@ public class LogtailPipelineConfig extends TeaModel {
          */
         public Builder processors(java.util.List<java.util.Map<String, ?>> processors) {
             this.processors = processors;
+            return this;
+        }
+
+        /**
+         * task.
+         */
+        public Builder task(java.util.Map<String, ?> task) {
+            this.task = task;
             return this;
         }
 

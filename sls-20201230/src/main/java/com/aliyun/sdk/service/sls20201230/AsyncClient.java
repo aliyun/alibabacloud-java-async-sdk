@@ -437,6 +437,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
 
     /**
+     * @param request the request parameters of DeleteConsumeProcessor  DeleteConsumeProcessorRequest
+     * @return DeleteConsumeProcessorResponse
+     */
+    CompletableFuture<DeleteConsumeProcessorResponse> deleteConsumeProcessor(DeleteConsumeProcessorRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -802,6 +808,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request);
 
     /**
+     * @param request the request parameters of GetConsumeProcessor  GetConsumeProcessorRequest
+     * @return GetConsumeProcessorResponse
+     */
+    CompletableFuture<GetConsumeProcessorResponse> getConsumeProcessor(GetConsumeProcessorRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -991,11 +1003,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</p>
+     * <p>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</p>
      * <ul>
-     * <li>You can call this operation by using Simple Log Service SDK for Go or Java.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</li>
+     * <li>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreLogs</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of GetLogsV2  GetLogsV2Request
      * @return GetLogsV2Response
@@ -1279,6 +1305,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request);
 
     /**
+     * @param request the request parameters of ListConsumeProcessors  ListConsumeProcessorsRequest
+     * @return ListConsumeProcessorsResponse
+     */
+    CompletableFuture<ListConsumeProcessorsResponse> listConsumeProcessors(ListConsumeProcessorsRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -1553,6 +1585,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutAnnotationDataResponse
      */
     CompletableFuture<PutAnnotationDataResponse> putAnnotationData(PutAnnotationDataRequest request);
+
+    /**
+     * @param request the request parameters of PutConsumeProcessor  PutConsumeProcessorRequest
+     * @return PutConsumeProcessorResponse
+     */
+    CompletableFuture<PutConsumeProcessorResponse> putConsumeProcessor(PutConsumeProcessorRequest request);
 
     /**
      * @param request the request parameters of PutIngestProcessor  PutIngestProcessorRequest
@@ -2101,6 +2139,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateStoreViewResponse> updateStoreView(UpdateStoreViewRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
      * @param request the request parameters of UpsertCollectionPolicy  UpsertCollectionPolicyRequest
      * @return UpsertCollectionPolicyResponse
      */

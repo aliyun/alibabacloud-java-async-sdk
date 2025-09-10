@@ -622,7 +622,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows that are processed in the request.</p>
+             * <p>The number of rows that are processed in the query.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>

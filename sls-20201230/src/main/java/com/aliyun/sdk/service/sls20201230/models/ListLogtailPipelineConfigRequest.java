@@ -26,6 +26,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
     private String configName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("configType")
+    private String configType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("logstoreName")
     private String logstoreName;
 
@@ -42,6 +46,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         super(builder);
         this.project = builder.project;
         this.configName = builder.configName;
+        this.configType = builder.configType;
         this.logstoreName = builder.logstoreName;
         this.offset = builder.offset;
         this.size = builder.size;
@@ -75,6 +80,13 @@ public class ListLogtailPipelineConfigRequest extends Request {
     }
 
     /**
+     * @return configType
+     */
+    public String getConfigType() {
+        return this.configType;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -98,6 +110,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListLogtailPipelineConfigRequest, Builder> {
         private String project; 
         private String configName; 
+        private String configType; 
         private String logstoreName; 
         private Long offset; 
         private Long size; 
@@ -110,6 +123,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
             super(request);
             this.project = request.project;
             this.configName = request.configName;
+            this.configType = request.configType;
             this.logstoreName = request.logstoreName;
             this.offset = request.offset;
             this.size = request.size;
@@ -137,6 +151,15 @@ public class ListLogtailPipelineConfigRequest extends Request {
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
             this.configName = configName;
+            return this;
+        }
+
+        /**
+         * configType.
+         */
+        public Builder configType(String configType) {
+            this.putQueryParameter("configType", configType);
+            this.configType = configType;
             return this;
         }
 
