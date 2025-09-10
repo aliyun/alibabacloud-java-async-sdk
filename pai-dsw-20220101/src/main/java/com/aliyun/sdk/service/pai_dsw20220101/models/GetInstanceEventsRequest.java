@@ -27,6 +27,10 @@ public class GetInstanceEventsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventLevel")
+    private String eventLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxEventsNum")
     private Integer maxEventsNum;
 
@@ -42,6 +46,7 @@ public class GetInstanceEventsRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.endTime = builder.endTime;
+        this.eventLevel = builder.eventLevel;
         this.maxEventsNum = builder.maxEventsNum;
         this.startTime = builder.startTime;
         this.token = builder.token;
@@ -75,6 +80,13 @@ public class GetInstanceEventsRequest extends Request {
     }
 
     /**
+     * @return eventLevel
+     */
+    public String getEventLevel() {
+        return this.eventLevel;
+    }
+
+    /**
      * @return maxEventsNum
      */
     public Integer getMaxEventsNum() {
@@ -98,6 +110,7 @@ public class GetInstanceEventsRequest extends Request {
     public static final class Builder extends Request.Builder<GetInstanceEventsRequest, Builder> {
         private String instanceId; 
         private String endTime; 
+        private String eventLevel; 
         private Integer maxEventsNum; 
         private String startTime; 
         private String token; 
@@ -110,6 +123,7 @@ public class GetInstanceEventsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.endTime = request.endTime;
+            this.eventLevel = request.eventLevel;
             this.maxEventsNum = request.maxEventsNum;
             this.startTime = request.startTime;
             this.token = request.token;
@@ -137,6 +151,15 @@ public class GetInstanceEventsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EventLevel.
+         */
+        public Builder eventLevel(String eventLevel) {
+            this.putQueryParameter("EventLevel", eventLevel);
+            this.eventLevel = eventLevel;
             return this;
         }
 

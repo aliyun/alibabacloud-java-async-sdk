@@ -23,12 +23,17 @@ public class GetInstanceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    private String fields;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private GetInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.fields = builder.fields;
         this.token = builder.token;
     }
 
@@ -53,6 +58,13 @@ public class GetInstanceRequest extends Request {
     }
 
     /**
+     * @return fields
+     */
+    public String getFields() {
+        return this.fields;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -61,6 +73,7 @@ public class GetInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetInstanceRequest, Builder> {
         private String instanceId; 
+        private String fields; 
         private String token; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class GetInstanceRequest extends Request {
         private Builder(GetInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.fields = request.fields;
             this.token = request.token;
         } 
 
@@ -83,6 +97,15 @@ public class GetInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Fields.
+         */
+        public Builder fields(String fields) {
+            this.putQueryParameter("Fields", fields);
+            this.fields = fields;
             return this;
         }
 

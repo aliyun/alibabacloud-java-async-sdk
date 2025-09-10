@@ -26,6 +26,10 @@ public class CreateInstanceRequest extends Request {
     private Affinity affinity;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+    private AssignNodeSpec assignNodeSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List<CloudDisks> cloudDisks;
 
@@ -90,6 +94,10 @@ public class CreateInstanceRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpotSpec")
+    private SpotSpec spotSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -117,6 +125,7 @@ public class CreateInstanceRequest extends Request {
         super(builder);
         this.accessibility = builder.accessibility;
         this.affinity = builder.affinity;
+        this.assignNodeSpec = builder.assignNodeSpec;
         this.cloudDisks = builder.cloudDisks;
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
@@ -133,6 +142,7 @@ public class CreateInstanceRequest extends Request {
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
+        this.spotSpec = builder.spotSpec;
         this.tag = builder.tag;
         this.userCommand = builder.userCommand;
         this.userId = builder.userId;
@@ -166,6 +176,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Affinity getAffinity() {
         return this.affinity;
+    }
+
+    /**
+     * @return assignNodeSpec
+     */
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     /**
@@ -281,6 +298,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return spotSpec
+     */
+    public SpotSpec getSpotSpec() {
+        return this.spotSpec;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -325,6 +349,7 @@ public class CreateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String accessibility; 
         private Affinity affinity; 
+        private AssignNodeSpec assignNodeSpec; 
         private java.util.List<CloudDisks> cloudDisks; 
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
@@ -341,6 +366,7 @@ public class CreateInstanceRequest extends Request {
         private Long priority; 
         private RequestedResource requestedResource; 
         private String resourceId; 
+        private SpotSpec spotSpec; 
         private java.util.List<Tag> tag; 
         private UserCommand userCommand; 
         private String userId; 
@@ -356,6 +382,7 @@ public class CreateInstanceRequest extends Request {
             super(request);
             this.accessibility = request.accessibility;
             this.affinity = request.affinity;
+            this.assignNodeSpec = request.assignNodeSpec;
             this.cloudDisks = request.cloudDisks;
             this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
@@ -372,6 +399,7 @@ public class CreateInstanceRequest extends Request {
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
+            this.spotSpec = request.spotSpec;
             this.tag = request.tag;
             this.userCommand = request.userCommand;
             this.userId = request.userId;
@@ -403,6 +431,15 @@ public class CreateInstanceRequest extends Request {
         public Builder affinity(Affinity affinity) {
             this.putBodyParameter("Affinity", affinity);
             this.affinity = affinity;
+            return this;
+        }
+
+        /**
+         * AssignNodeSpec.
+         */
+        public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+            this.putBodyParameter("AssignNodeSpec", assignNodeSpec);
+            this.assignNodeSpec = assignNodeSpec;
             return this;
         }
 
@@ -591,6 +628,15 @@ public class CreateInstanceRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * SpotSpec.
+         */
+        public Builder spotSpec(SpotSpec spotSpec) {
+            this.putBodyParameter("SpotSpec", spotSpec);
+            this.spotSpec = spotSpec;
             return this;
         }
 
@@ -786,6 +832,81 @@ public class CreateInstanceRequest extends Request {
 
             public Affinity build() {
                 return new Affinity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class AssignNodeSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AntiAffinityNodeNames")
+        private String antiAffinityNodeNames;
+
+        @com.aliyun.core.annotation.NameInMap("NodeNames")
+        private String nodeNames;
+
+        private AssignNodeSpec(Builder builder) {
+            this.antiAffinityNodeNames = builder.antiAffinityNodeNames;
+            this.nodeNames = builder.nodeNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssignNodeSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return antiAffinityNodeNames
+         */
+        public String getAntiAffinityNodeNames() {
+            return this.antiAffinityNodeNames;
+        }
+
+        /**
+         * @return nodeNames
+         */
+        public String getNodeNames() {
+            return this.nodeNames;
+        }
+
+        public static final class Builder {
+            private String antiAffinityNodeNames; 
+            private String nodeNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignNodeSpec model) {
+                this.antiAffinityNodeNames = model.antiAffinityNodeNames;
+                this.nodeNames = model.nodeNames;
+            } 
+
+            /**
+             * AntiAffinityNodeNames.
+             */
+            public Builder antiAffinityNodeNames(String antiAffinityNodeNames) {
+                this.antiAffinityNodeNames = antiAffinityNodeNames;
+                return this;
+            }
+
+            /**
+             * NodeNames.
+             */
+            public Builder nodeNames(String nodeNames) {
+                this.nodeNames = nodeNames;
+                return this;
+            }
+
+            public AssignNodeSpec build() {
+                return new AssignNodeSpec(this);
             } 
 
         } 
@@ -1542,6 +1663,123 @@ public class CreateInstanceRequest extends Request {
 
             public RequestedResource build() {
                 return new RequestedResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class SpotSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpotDiscountLimit")
+        private String spotDiscountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
+        private String spotDuration;
+
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
+        private String spotPriceLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        private SpotSpec(Builder builder) {
+            this.spotDiscountLimit = builder.spotDiscountLimit;
+            this.spotDuration = builder.spotDuration;
+            this.spotPriceLimit = builder.spotPriceLimit;
+            this.spotStrategy = builder.spotStrategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpotSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return spotDiscountLimit
+         */
+        public String getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        /**
+         * @return spotDuration
+         */
+        public String getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        /**
+         * @return spotPriceLimit
+         */
+        public String getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public static final class Builder {
+            private String spotDiscountLimit; 
+            private String spotDuration; 
+            private String spotPriceLimit; 
+            private String spotStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotSpec model) {
+                this.spotDiscountLimit = model.spotDiscountLimit;
+                this.spotDuration = model.spotDuration;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+            } 
+
+            /**
+             * SpotDiscountLimit.
+             */
+            public Builder spotDiscountLimit(String spotDiscountLimit) {
+                this.spotDiscountLimit = spotDiscountLimit;
+                return this;
+            }
+
+            /**
+             * SpotDuration.
+             */
+            public Builder spotDuration(String spotDuration) {
+                this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * SpotPriceLimit.
+             */
+            public Builder spotPriceLimit(String spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            public SpotSpec build() {
+                return new SpotSpec(this);
             } 
 
         } 

@@ -31,6 +31,10 @@ public class UpdateInstanceRequest extends Request {
     private Affinity affinity;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+    private AssignNodeSpec assignNodeSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List<CloudDisks> cloudDisks;
 
@@ -41,6 +45,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List<Datasets> datasets;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateAssignNode")
+    private Boolean disassociateAssignNode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateCredential")
@@ -61,6 +69,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateForwardInfos")
     private Boolean disassociateForwardInfos;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateSpot")
+    private Boolean disassociateSpot;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateUserCommand")
@@ -115,6 +127,10 @@ public class UpdateInstanceRequest extends Request {
     private RequestedResource requestedResource;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpotSpec")
+    private SpotSpec spotSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserCommand")
     private UserCommand userCommand;
 
@@ -135,14 +151,17 @@ public class UpdateInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.accessibility = builder.accessibility;
         this.affinity = builder.affinity;
+        this.assignNodeSpec = builder.assignNodeSpec;
         this.cloudDisks = builder.cloudDisks;
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.disassociateAssignNode = builder.disassociateAssignNode;
         this.disassociateCredential = builder.disassociateCredential;
         this.disassociateDatasets = builder.disassociateDatasets;
         this.disassociateDriver = builder.disassociateDriver;
         this.disassociateEnvironmentVariables = builder.disassociateEnvironmentVariables;
         this.disassociateForwardInfos = builder.disassociateForwardInfos;
+        this.disassociateSpot = builder.disassociateSpot;
         this.disassociateUserCommand = builder.disassociateUserCommand;
         this.disassociateVpc = builder.disassociateVpc;
         this.driver = builder.driver;
@@ -156,6 +175,7 @@ public class UpdateInstanceRequest extends Request {
         this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
+        this.spotSpec = builder.spotSpec;
         this.userCommand = builder.userCommand;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
@@ -197,6 +217,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return assignNodeSpec
+     */
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
+    }
+
+    /**
      * @return cloudDisks
      */
     public java.util.List<CloudDisks> getCloudDisks() {
@@ -215,6 +242,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public java.util.List<Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return disassociateAssignNode
+     */
+    public Boolean getDisassociateAssignNode() {
+        return this.disassociateAssignNode;
     }
 
     /**
@@ -250,6 +284,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public Boolean getDisassociateForwardInfos() {
         return this.disassociateForwardInfos;
+    }
+
+    /**
+     * @return disassociateSpot
+     */
+    public Boolean getDisassociateSpot() {
+        return this.disassociateSpot;
     }
 
     /**
@@ -344,6 +385,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return spotSpec
+     */
+    public SpotSpec getSpotSpec() {
+        return this.spotSpec;
+    }
+
+    /**
      * @return userCommand
      */
     public UserCommand getUserCommand() {
@@ -375,14 +423,17 @@ public class UpdateInstanceRequest extends Request {
         private String instanceId; 
         private String accessibility; 
         private Affinity affinity; 
+        private AssignNodeSpec assignNodeSpec; 
         private java.util.List<CloudDisks> cloudDisks; 
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
+        private Boolean disassociateAssignNode; 
         private Boolean disassociateCredential; 
         private Boolean disassociateDatasets; 
         private Boolean disassociateDriver; 
         private Boolean disassociateEnvironmentVariables; 
         private Boolean disassociateForwardInfos; 
+        private Boolean disassociateSpot; 
         private Boolean disassociateUserCommand; 
         private Boolean disassociateVpc; 
         private String driver; 
@@ -396,6 +447,7 @@ public class UpdateInstanceRequest extends Request {
         private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
+        private SpotSpec spotSpec; 
         private UserCommand userCommand; 
         private String userId; 
         private UserVpc userVpc; 
@@ -410,14 +462,17 @@ public class UpdateInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.accessibility = request.accessibility;
             this.affinity = request.affinity;
+            this.assignNodeSpec = request.assignNodeSpec;
             this.cloudDisks = request.cloudDisks;
             this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
+            this.disassociateAssignNode = request.disassociateAssignNode;
             this.disassociateCredential = request.disassociateCredential;
             this.disassociateDatasets = request.disassociateDatasets;
             this.disassociateDriver = request.disassociateDriver;
             this.disassociateEnvironmentVariables = request.disassociateEnvironmentVariables;
             this.disassociateForwardInfos = request.disassociateForwardInfos;
+            this.disassociateSpot = request.disassociateSpot;
             this.disassociateUserCommand = request.disassociateUserCommand;
             this.disassociateVpc = request.disassociateVpc;
             this.driver = request.driver;
@@ -431,6 +486,7 @@ public class UpdateInstanceRequest extends Request {
             this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
+            this.spotSpec = request.spotSpec;
             this.userCommand = request.userCommand;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
@@ -477,6 +533,15 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * AssignNodeSpec.
+         */
+        public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+            this.putBodyParameter("AssignNodeSpec", assignNodeSpec);
+            this.assignNodeSpec = assignNodeSpec;
+            return this;
+        }
+
+        /**
          * <p>The cloud disks.</p>
          * 
          * <strong>example:</strong>
@@ -503,6 +568,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * DisassociateAssignNode.
+         */
+        public Builder disassociateAssignNode(Boolean disassociateAssignNode) {
+            this.putBodyParameter("DisassociateAssignNode", disassociateAssignNode);
+            this.disassociateAssignNode = disassociateAssignNode;
             return this;
         }
 
@@ -564,6 +638,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder disassociateForwardInfos(Boolean disassociateForwardInfos) {
             this.putBodyParameter("DisassociateForwardInfos", disassociateForwardInfos);
             this.disassociateForwardInfos = disassociateForwardInfos;
+            return this;
+        }
+
+        /**
+         * DisassociateSpot.
+         */
+        public Builder disassociateSpot(Boolean disassociateSpot) {
+            this.putBodyParameter("DisassociateSpot", disassociateSpot);
+            this.disassociateSpot = disassociateSpot;
             return this;
         }
 
@@ -716,6 +799,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder requestedResource(RequestedResource requestedResource) {
             this.putBodyParameter("RequestedResource", requestedResource);
             this.requestedResource = requestedResource;
+            return this;
+        }
+
+        /**
+         * SpotSpec.
+         */
+        public Builder spotSpec(SpotSpec spotSpec) {
+            this.putBodyParameter("SpotSpec", spotSpec);
+            this.spotSpec = spotSpec;
             return this;
         }
 
@@ -890,6 +982,81 @@ public class UpdateInstanceRequest extends Request {
 
             public Affinity build() {
                 return new Affinity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
+    public static class AssignNodeSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AntiAffinityNodeNames")
+        private String antiAffinityNodeNames;
+
+        @com.aliyun.core.annotation.NameInMap("NodeNames")
+        private String nodeNames;
+
+        private AssignNodeSpec(Builder builder) {
+            this.antiAffinityNodeNames = builder.antiAffinityNodeNames;
+            this.nodeNames = builder.nodeNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssignNodeSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return antiAffinityNodeNames
+         */
+        public String getAntiAffinityNodeNames() {
+            return this.antiAffinityNodeNames;
+        }
+
+        /**
+         * @return nodeNames
+         */
+        public String getNodeNames() {
+            return this.nodeNames;
+        }
+
+        public static final class Builder {
+            private String antiAffinityNodeNames; 
+            private String nodeNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignNodeSpec model) {
+                this.antiAffinityNodeNames = model.antiAffinityNodeNames;
+                this.nodeNames = model.nodeNames;
+            } 
+
+            /**
+             * AntiAffinityNodeNames.
+             */
+            public Builder antiAffinityNodeNames(String antiAffinityNodeNames) {
+                this.antiAffinityNodeNames = antiAffinityNodeNames;
+                return this;
+            }
+
+            /**
+             * NodeNames.
+             */
+            public Builder nodeNames(String nodeNames) {
+                this.nodeNames = nodeNames;
+                return this;
+            }
+
+            public AssignNodeSpec build() {
+                return new AssignNodeSpec(this);
             } 
 
         } 
@@ -1384,6 +1551,123 @@ public class UpdateInstanceRequest extends Request {
 
             public RequestedResource build() {
                 return new RequestedResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
+    public static class SpotSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpotDiscountLimit")
+        private String spotDiscountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
+        private String spotDuration;
+
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
+        private String spotPriceLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        private SpotSpec(Builder builder) {
+            this.spotDiscountLimit = builder.spotDiscountLimit;
+            this.spotDuration = builder.spotDuration;
+            this.spotPriceLimit = builder.spotPriceLimit;
+            this.spotStrategy = builder.spotStrategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpotSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return spotDiscountLimit
+         */
+        public String getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        /**
+         * @return spotDuration
+         */
+        public String getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        /**
+         * @return spotPriceLimit
+         */
+        public String getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public static final class Builder {
+            private String spotDiscountLimit; 
+            private String spotDuration; 
+            private String spotPriceLimit; 
+            private String spotStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotSpec model) {
+                this.spotDiscountLimit = model.spotDiscountLimit;
+                this.spotDuration = model.spotDuration;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+            } 
+
+            /**
+             * SpotDiscountLimit.
+             */
+            public Builder spotDiscountLimit(String spotDiscountLimit) {
+                this.spotDiscountLimit = spotDiscountLimit;
+                return this;
+            }
+
+            /**
+             * SpotDuration.
+             */
+            public Builder spotDuration(String spotDuration) {
+                this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * SpotPriceLimit.
+             */
+            public Builder spotPriceLimit(String spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            public SpotSpec build() {
+                return new SpotSpec(this);
             } 
 
         } 
