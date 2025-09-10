@@ -39,6 +39,10 @@ public class ListClusterNodesRequest extends Request {
     private String nodeGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperatingStates")
+    private java.util.List<String> operatingStates;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -53,6 +57,7 @@ public class ListClusterNodesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.nodeGroupId = builder.nodeGroupId;
+        this.operatingStates = builder.operatingStates;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
     }
@@ -106,6 +111,13 @@ public class ListClusterNodesRequest extends Request {
     }
 
     /**
+     * @return operatingStates
+     */
+    public java.util.List<String> getOperatingStates() {
+        return this.operatingStates;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -125,6 +137,7 @@ public class ListClusterNodesRequest extends Request {
         private Long maxResults; 
         private String nextToken; 
         private String nodeGroupId; 
+        private java.util.List<String> operatingStates; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
 
@@ -139,6 +152,7 @@ public class ListClusterNodesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.nodeGroupId = request.nodeGroupId;
+            this.operatingStates = request.operatingStates;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
@@ -198,6 +212,15 @@ public class ListClusterNodesRequest extends Request {
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
             this.nodeGroupId = nodeGroupId;
+            return this;
+        }
+
+        /**
+         * OperatingStates.
+         */
+        public Builder operatingStates(java.util.List<String> operatingStates) {
+            this.putBodyParameter("OperatingStates", operatingStates);
+            this.operatingStates = operatingStates;
             return this;
         }
 

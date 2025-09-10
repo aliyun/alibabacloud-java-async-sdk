@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteNode  DeleteNodeRequest
+     * @return DeleteNodeResponse
+     */
+    CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request);
+
+    /**
      * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
      * @return DeleteNodeGroupResponse
      */
@@ -129,6 +135,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNodeResponse
      */
     CompletableFuture<DescribeNodeResponse> describeNode(DescribeNodeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNodeType  DescribeNodeTypeRequest
+     * @return DescribeNodeTypeResponse
+     */
+    CompletableFuture<DescribeNodeTypeResponse> describeNodeType(DescribeNodeTypeRequest request);
 
     /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
