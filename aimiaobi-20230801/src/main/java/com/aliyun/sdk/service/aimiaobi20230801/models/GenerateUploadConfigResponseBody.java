@@ -183,7 +183,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         private String fileKey;
 
         @com.aliyun.core.annotation.NameInMap("FormDatas")
-        private java.util.Map<String, ?> formDatas;
+        private java.util.Map<String, String> formDatas;
 
         @com.aliyun.core.annotation.NameInMap("PostUrl")
         private String postUrl;
@@ -212,7 +212,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         /**
          * @return formDatas
          */
-        public java.util.Map<String, ?> getFormDatas() {
+        public java.util.Map<String, String> getFormDatas() {
             return this.formDatas;
         }
 
@@ -225,7 +225,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileKey; 
-            private java.util.Map<String, ?> formDatas; 
+            private java.util.Map<String, String> formDatas; 
             private String postUrl; 
 
             private Builder() {
@@ -248,7 +248,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
             /**
              * FormDatas.
              */
-            public Builder formDatas(java.util.Map<String, ?> formDatas) {
+            public Builder formDatas(java.util.Map<String, String> formDatas) {
                 this.formDatas = formDatas;
                 return this;
             }
