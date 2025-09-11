@@ -942,7 +942,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Includes.
+             * <p>Filter the directories under directory and transfer the folder contents contained in the filtered directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/test/&quot;,&quot;/test1/&quot;]</p>
              */
             public Builder includes(String includes) {
                 this.includes = includes;

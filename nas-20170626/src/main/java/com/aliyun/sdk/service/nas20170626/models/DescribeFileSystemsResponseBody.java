@@ -106,7 +106,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried file systems.</p>
+         * <p>The file system list.</p>
          */
         public Builder fileSystems(FileSystems fileSystems) {
             this.fileSystems = fileSystems;
@@ -765,12 +765,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>The status of the mount target.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Active: The mount target is available.</li>
-             * <li>Inactive: The mount target is unavailable.</li>
-             * <li>Pending: The mount target is being processed.</li>
-             * <li>Deleting: The mount target is being deleted.</li>
-             * <li>Hibernating: The mount target is being hibernated.</li>
-             * <li>Hibernated: The mount target is hibernated.</li>
+             * <li>Active</li>
+             * <li>Inactive</li>
+             * <li>Pending</li>
+             * <li>Deleting</li>
+             * <li>Hibernating</li>
+             * <li>Hibernated</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1053,8 +1053,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>The type of the storage plan.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>ssd: the storage plan for Performance NAS file systems.</li>
-             * <li>hybrid: the storage plan for Capacity NAS file systems.</li>
+             * <li>ssd: The storage plan for Performance NAS file systems.</li>
+             * <li>hybrid: The storage plan for Capacity NAS file systems.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1886,9 +1886,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>The billing method.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Subscription: The subscription billing method is used.</li>
-             * <li>PayAsYouGo: The pay-as-you-go billing method is used.</li>
-             * <li>Package: A storage plan is attached to the file system.</li>
+             * <li>Subscription</li>
+             * <li>PayAsYouGo</li>
+             * <li>Package: storage plan</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1922,7 +1922,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption type.</p>
+             * <p>Indicates whether the data in the file system is encrypted.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>0: The data in the file system is not encrypted.</li>
@@ -1961,16 +1961,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file system.</p>
+             * <p>The file system type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>standard: General-purpose NAS file system</li>
-             * <li>extreme: Extreme NAS file system</li>
-             * <li>cpfs: CPFS file system<blockquote>
-             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-             * </blockquote>
-             * </li>
+             * <li>standard: General-purpose NAS file system.</li>
+             * <li>extreme: Extreme NAS file system.</li>
+             * <li>cpfs: CPFS file system.</li>
              * </ul>
+             * <blockquote>
+             * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -2037,7 +2037,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about mount targets.</p>
+             * <p>The queried mount targets.</p>
              */
             public Builder mountTargets(MountTargets mountTargets) {
                 this.mountTargets = mountTargets;
@@ -2064,12 +2064,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>The protocol type of the file system.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>NFS: Network File System (NFS)</li>
-             * <li>SMB: Server Message Block (SMB)</li>
-             * <li>cpfs: the protocol type supported by the CPFS file system</li>
+             * <li>NFS: Network File System.</li>
+             * <li>SMB: Server Message Block.</li>
+             * <li>cpfs: The protocol type supported by the CPFS file system.</li>
              * </ul>
              * <blockquote>
-             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2081,7 +2081,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2ze37k6jh8ums2fw2****</p>
@@ -2104,7 +2104,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The resource group ID.</p>
-             * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmwavnfdf****</p>
@@ -2193,7 +2192,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VscTarget.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-370y1tv921vpuj4****-000001.cn-wulanchabu.cpfs.aliyuncs.com</p>
              */
             public Builder vscTarget(String vscTarget) {
                 this.vscTarget = vscTarget;
@@ -2201,7 +2205,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A collection of vSwitch IDs.</p>
+             * <p>The information about vSwitch.</p>
              */
             public Builder vswIds(VswIds vswIds) {
                 this.vswIds = vswIds;

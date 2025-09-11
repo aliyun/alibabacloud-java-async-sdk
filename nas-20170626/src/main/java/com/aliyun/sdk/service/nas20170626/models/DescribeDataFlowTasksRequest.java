@@ -35,12 +35,17 @@ public class DescribeDataFlowTasksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithReports")
+    private Boolean withReports;
+
     private DescribeDataFlowTasksRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
         this.filters = builder.filters;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.withReports = builder.withReports;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class DescribeDataFlowTasksRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return withReports
+     */
+    public Boolean getWithReports() {
+        return this.withReports;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDataFlowTasksRequest, Builder> {
         private String fileSystemId; 
         private java.util.List<Filters> filters; 
         private Long maxResults; 
         private String nextToken; 
+        private Boolean withReports; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class DescribeDataFlowTasksRequest extends Request {
             this.filters = request.filters;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.withReports = request.withReports;
         } 
 
         /**
@@ -154,6 +168,15 @@ public class DescribeDataFlowTasksRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * WithReports.
+         */
+        public Builder withReports(Boolean withReports) {
+            this.putQueryParameter("WithReports", withReports);
+            this.withReports = withReports;
             return this;
         }
 
