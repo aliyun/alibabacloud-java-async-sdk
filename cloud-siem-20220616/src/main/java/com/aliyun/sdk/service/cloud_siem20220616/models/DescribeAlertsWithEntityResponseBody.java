@@ -447,6 +447,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
+        @com.aliyun.core.annotation.NameInMap("DetectionRuleId")
+        private String detectionRuleId;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
@@ -480,6 +483,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OccurTime")
         private String occurTime;
 
+        @com.aliyun.core.annotation.NameInMap("ProductId")
+        private String productId;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -488,6 +494,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
+
+        @com.aliyun.core.annotation.NameInMap("VendorId")
+        private String vendorId;
 
         private ResponseData(Builder builder) {
             this.alertDesc = builder.alertDesc;
@@ -510,6 +519,7 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             this.assetList = builder.assetList;
             this.attCk = builder.attCk;
             this.cloudCode = builder.cloudCode;
+            this.detectionRuleId = builder.detectionRuleId;
             this.endTime = builder.endTime;
             this.entityList = builder.entityList;
             this.gmtCreate = builder.gmtCreate;
@@ -521,9 +531,11 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             this.logUuid = builder.logUuid;
             this.mainUserId = builder.mainUserId;
             this.occurTime = builder.occurTime;
+            this.productId = builder.productId;
             this.startTime = builder.startTime;
             this.subUserId = builder.subUserId;
             this.subUserName = builder.subUserName;
+            this.vendorId = builder.vendorId;
         }
 
         public static Builder builder() {
@@ -675,6 +687,13 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         }
 
         /**
+         * @return detectionRuleId
+         */
+        public String getDetectionRuleId() {
+            return this.detectionRuleId;
+        }
+
+        /**
          * @return endTime
          */
         public String getEndTime() {
@@ -752,6 +771,13 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         }
 
         /**
+         * @return productId
+         */
+        public String getProductId() {
+            return this.productId;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -770,6 +796,13 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
          */
         public String getSubUserName() {
             return this.subUserName;
+        }
+
+        /**
+         * @return vendorId
+         */
+        public String getVendorId() {
+            return this.vendorId;
         }
 
         public static final class Builder {
@@ -793,6 +826,7 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             private String assetList; 
             private String attCk; 
             private String cloudCode; 
+            private String detectionRuleId; 
             private String endTime; 
             private String entityList; 
             private String gmtCreate; 
@@ -804,9 +838,11 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             private String logUuid; 
             private Long mainUserId; 
             private String occurTime; 
+            private String productId; 
             private String startTime; 
             private Long subUserId; 
             private String subUserName; 
+            private String vendorId; 
 
             private Builder() {
             } 
@@ -832,6 +868,7 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
                 this.assetList = model.assetList;
                 this.attCk = model.attCk;
                 this.cloudCode = model.cloudCode;
+                this.detectionRuleId = model.detectionRuleId;
                 this.endTime = model.endTime;
                 this.entityList = model.entityList;
                 this.gmtCreate = model.gmtCreate;
@@ -843,9 +880,11 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
                 this.logUuid = model.logUuid;
                 this.mainUserId = model.mainUserId;
                 this.occurTime = model.occurTime;
+                this.productId = model.productId;
                 this.startTime = model.startTime;
                 this.subUserId = model.subUserId;
                 this.subUserName = model.subUserName;
+                this.vendorId = model.vendorId;
             } 
 
             /**
@@ -1090,6 +1129,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             }
 
             /**
+             * DetectionRuleId.
+             */
+            public Builder detectionRuleId(String detectionRuleId) {
+                this.detectionRuleId = detectionRuleId;
+                return this;
+            }
+
+            /**
              * <p>The time when the alert was closed.</p>
              * 
              * <strong>example:</strong>
@@ -1212,6 +1259,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             }
 
             /**
+             * ProductId.
+             */
+            public Builder productId(String productId) {
+                this.productId = productId;
+                return this;
+            }
+
+            /**
              * <p>The time at which the alert was first generated.</p>
              * 
              * <strong>example:</strong>
@@ -1238,6 +1293,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;
+                return this;
+            }
+
+            /**
+             * VendorId.
+             */
+            public Builder vendorId(String vendorId) {
+                this.vendorId = vendorId;
                 return this;
             }
 

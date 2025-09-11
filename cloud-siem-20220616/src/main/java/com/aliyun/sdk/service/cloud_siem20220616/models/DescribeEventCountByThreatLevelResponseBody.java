@@ -183,11 +183,17 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HighLevelEventNum")
         private Long highLevelEventNum;
 
+        @com.aliyun.core.annotation.NameInMap("InfoLevelEventNum")
+        private Long infoLevelEventNum;
+
         @com.aliyun.core.annotation.NameInMap("LowLevelEventNum")
         private Long lowLevelEventNum;
 
         @com.aliyun.core.annotation.NameInMap("MediumLevelEventNum")
         private Long mediumLevelEventNum;
+
+        @com.aliyun.core.annotation.NameInMap("SeriousLevelEventNum")
+        private Long seriousLevelEventNum;
 
         @com.aliyun.core.annotation.NameInMap("UndealEventNum")
         private Long undealEventNum;
@@ -195,8 +201,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.eventNum = builder.eventNum;
             this.highLevelEventNum = builder.highLevelEventNum;
+            this.infoLevelEventNum = builder.infoLevelEventNum;
             this.lowLevelEventNum = builder.lowLevelEventNum;
             this.mediumLevelEventNum = builder.mediumLevelEventNum;
+            this.seriousLevelEventNum = builder.seriousLevelEventNum;
             this.undealEventNum = builder.undealEventNum;
         }
 
@@ -223,6 +231,13 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
+         * @return infoLevelEventNum
+         */
+        public Long getInfoLevelEventNum() {
+            return this.infoLevelEventNum;
+        }
+
+        /**
          * @return lowLevelEventNum
          */
         public Long getLowLevelEventNum() {
@@ -237,6 +252,13 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
+         * @return seriousLevelEventNum
+         */
+        public Long getSeriousLevelEventNum() {
+            return this.seriousLevelEventNum;
+        }
+
+        /**
          * @return undealEventNum
          */
         public Long getUndealEventNum() {
@@ -246,8 +268,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         public static final class Builder {
             private Long eventNum; 
             private Long highLevelEventNum; 
+            private Long infoLevelEventNum; 
             private Long lowLevelEventNum; 
             private Long mediumLevelEventNum; 
+            private Long seriousLevelEventNum; 
             private Long undealEventNum; 
 
             private Builder() {
@@ -256,8 +280,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.eventNum = model.eventNum;
                 this.highLevelEventNum = model.highLevelEventNum;
+                this.infoLevelEventNum = model.infoLevelEventNum;
                 this.lowLevelEventNum = model.lowLevelEventNum;
                 this.mediumLevelEventNum = model.mediumLevelEventNum;
+                this.seriousLevelEventNum = model.seriousLevelEventNum;
                 this.undealEventNum = model.undealEventNum;
             } 
 
@@ -284,6 +310,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
+             * InfoLevelEventNum.
+             */
+            public Builder infoLevelEventNum(Long infoLevelEventNum) {
+                this.infoLevelEventNum = infoLevelEventNum;
+                return this;
+            }
+
+            /**
              * <p>The number of low-risk events.</p>
              * 
              * <strong>example:</strong>
@@ -302,6 +336,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
              */
             public Builder mediumLevelEventNum(Long mediumLevelEventNum) {
                 this.mediumLevelEventNum = mediumLevelEventNum;
+                return this;
+            }
+
+            /**
+             * SeriousLevelEventNum.
+             */
+            public Builder seriousLevelEventNum(Long seriousLevelEventNum) {
+                this.seriousLevelEventNum = seriousLevelEventNum;
                 return this;
             }
 
