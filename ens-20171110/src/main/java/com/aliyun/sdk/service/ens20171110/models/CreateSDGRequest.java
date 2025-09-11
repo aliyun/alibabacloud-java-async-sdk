@@ -39,6 +39,10 @@ public class CreateSDGRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+    private Long performanceLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Size")
     private String size;
 
@@ -49,6 +53,7 @@ public class CreateSDGRequest extends Request {
         this.diskType = builder.diskType;
         this.fromSDGId = builder.fromSDGId;
         this.instanceId = builder.instanceId;
+        this.performanceLevel = builder.performanceLevel;
         this.size = builder.size;
     }
 
@@ -101,6 +106,13 @@ public class CreateSDGRequest extends Request {
     }
 
     /**
+     * @return performanceLevel
+     */
+    public Long getPerformanceLevel() {
+        return this.performanceLevel;
+    }
+
+    /**
      * @return size
      */
     public String getSize() {
@@ -113,6 +125,7 @@ public class CreateSDGRequest extends Request {
         private String diskType; 
         private String fromSDGId; 
         private String instanceId; 
+        private Long performanceLevel; 
         private String size; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class CreateSDGRequest extends Request {
             this.diskType = request.diskType;
             this.fromSDGId = request.fromSDGId;
             this.instanceId = request.instanceId;
+            this.performanceLevel = request.performanceLevel;
             this.size = request.size;
         } 
 
@@ -194,6 +208,15 @@ public class CreateSDGRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PerformanceLevel.
+         */
+        public Builder performanceLevel(Long performanceLevel) {
+            this.putQueryParameter("PerformanceLevel", performanceLevel);
+            this.performanceLevel = performanceLevel;
             return this;
         }
 

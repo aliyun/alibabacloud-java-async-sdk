@@ -70,6 +70,10 @@ public class DescribeARMServerInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("States")
     private java.util.List<String> states;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private DescribeARMServerInstancesRequest(Builder builder) {
         super(builder);
         this.AICSpecs = builder.AICSpecs;
@@ -85,6 +89,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         this.serverIds = builder.serverIds;
         this.serverSpecs = builder.serverSpecs;
         this.states = builder.states;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -191,6 +196,13 @@ public class DescribeARMServerInstancesRequest extends Request {
         return this.states;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeARMServerInstancesRequest, Builder> {
         private java.util.List<String> AICSpecs; 
         private Boolean describeAICInstances; 
@@ -205,6 +217,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         private java.util.List<String> serverIds; 
         private java.util.List<String> serverSpecs; 
         private java.util.List<String> states; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -225,6 +238,7 @@ public class DescribeARMServerInstancesRequest extends Request {
             this.serverIds = request.serverIds;
             this.serverSpecs = request.serverSpecs;
             this.states = request.states;
+            this.tags = request.tags;
         } 
 
         /**
@@ -380,6 +394,16 @@ public class DescribeARMServerInstancesRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public DescribeARMServerInstancesRequest build() {
             return new DescribeARMServerInstancesRequest(this);
@@ -387,4 +411,79 @@ public class DescribeARMServerInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeARMServerInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

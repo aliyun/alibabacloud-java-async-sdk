@@ -504,6 +504,9 @@ public class DescribeSDGResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParentSDGId")
         private String parentSDGId;
 
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
         @com.aliyun.core.annotation.NameInMap("PreloadInfos")
         private java.util.List<PreloadInfos> preloadInfos;
 
@@ -528,6 +531,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.parentSDGId = builder.parentSDGId;
+            this.performanceLevel = builder.performanceLevel;
             this.preloadInfos = builder.preloadInfos;
             this.SDGId = builder.SDGId;
             this.size = builder.size;
@@ -600,6 +604,13 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
          * @return preloadInfos
          */
         public java.util.List<PreloadInfos> getPreloadInfos() {
@@ -643,6 +654,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String parentSDGId; 
+            private String performanceLevel; 
             private java.util.List<PreloadInfos> preloadInfos; 
             private String SDGId; 
             private Long size; 
@@ -661,6 +673,7 @@ public class DescribeSDGResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.description = model.description;
                 this.parentSDGId = model.parentSDGId;
+                this.performanceLevel = model.performanceLevel;
                 this.preloadInfos = model.preloadInfos;
                 this.SDGId = model.SDGId;
                 this.size = model.size;
@@ -744,6 +757,14 @@ public class DescribeSDGResponseBody extends TeaModel {
              */
             public Builder parentSDGId(String parentSDGId) {
                 this.parentSDGId = parentSDGId;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
                 return this;
             }
 

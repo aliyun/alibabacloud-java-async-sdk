@@ -399,6 +399,9 @@ public class DescribeSDGsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParentSDGId")
         private String parentSDGId;
 
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private Long performanceLevel;
+
         @com.aliyun.core.annotation.NameInMap("SDGId")
         private String SDGId;
 
@@ -421,6 +424,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             this.deployedInstanceIds = builder.deployedInstanceIds;
             this.description = builder.description;
             this.parentSDGId = builder.parentSDGId;
+            this.performanceLevel = builder.performanceLevel;
             this.SDGId = builder.SDGId;
             this.size = builder.size;
             this.status = builder.status;
@@ -499,6 +503,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
 
         /**
+         * @return performanceLevel
+         */
+        public Long getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
          * @return SDGId
          */
         public String getSDGId() {
@@ -536,6 +547,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private java.util.List<DeployedInstanceIds> deployedInstanceIds; 
             private String description; 
             private String parentSDGId; 
+            private Long performanceLevel; 
             private String SDGId; 
             private Long size; 
             private String status; 
@@ -554,6 +566,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
                 this.deployedInstanceIds = model.deployedInstanceIds;
                 this.description = model.description;
                 this.parentSDGId = model.parentSDGId;
+                this.performanceLevel = model.performanceLevel;
                 this.SDGId = model.SDGId;
                 this.size = model.size;
                 this.status = model.status;
@@ -644,6 +657,14 @@ public class DescribeSDGsResponseBody extends TeaModel {
              */
             public Builder parentSDGId(String parentSDGId) {
                 this.parentSDGId = parentSDGId;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(Long performanceLevel) {
+                this.performanceLevel = performanceLevel;
                 return this;
             }
 
