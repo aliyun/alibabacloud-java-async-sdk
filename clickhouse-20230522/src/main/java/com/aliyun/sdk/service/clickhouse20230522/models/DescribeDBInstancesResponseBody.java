@@ -236,6 +236,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -268,6 +271,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.scaleMax = builder.scaleMax;
             this.scaleMin = builder.scaleMin;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -416,6 +420,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -463,6 +474,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer scaleMax; 
             private Integer scaleMin; 
             private String status; 
+            private String storageType; 
             private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
@@ -491,6 +503,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.scaleMax = model.scaleMax;
                 this.scaleMin = model.scaleMin;
                 this.status = model.status;
+                this.storageType = model.storageType;
                 this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -707,6 +720,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

@@ -344,6 +344,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -395,6 +398,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultiZones")
         private java.util.List<MultiZones> multiZones;
 
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
+        private String nodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("NodeScaleMax")
+        private String nodeScaleMax;
+
+        @com.aliyun.core.annotation.NameInMap("NodeScaleMin")
+        private String nodeScaleMin;
+
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List<Nodes> nodes;
 
@@ -415,6 +427,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StorageQuota")
+        private String storageQuota;
 
         @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Integer storageSize;
@@ -437,6 +452,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.aliUid = builder.aliUid;
             this.bid = builder.bid;
+            this.category = builder.category;
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.DBInstanceId = builder.DBInstanceId;
@@ -454,6 +470,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.multiZones = builder.multiZones;
+            this.nodeCount = builder.nodeCount;
+            this.nodeScaleMax = builder.nodeScaleMax;
+            this.nodeScaleMin = builder.nodeScaleMin;
             this.nodes = builder.nodes;
             this.objectStoreSize = builder.objectStoreSize;
             this.regionId = builder.regionId;
@@ -461,6 +480,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.scaleMax = builder.scaleMax;
             this.scaleMin = builder.scaleMin;
             this.status = builder.status;
+            this.storageQuota = builder.storageQuota;
             this.storageSize = builder.storageSize;
             this.storageType = builder.storageType;
             this.tags = builder.tags;
@@ -489,6 +509,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getBid() {
             return this.bid;
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -611,6 +638,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeCount
+         */
+        public String getNodeCount() {
+            return this.nodeCount;
+        }
+
+        /**
+         * @return nodeScaleMax
+         */
+        public String getNodeScaleMax() {
+            return this.nodeScaleMax;
+        }
+
+        /**
+         * @return nodeScaleMin
+         */
+        public String getNodeScaleMin() {
+            return this.nodeScaleMin;
+        }
+
+        /**
          * @return nodes
          */
         public java.util.List<Nodes> getNodes() {
@@ -660,6 +708,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageQuota
+         */
+        public String getStorageQuota() {
+            return this.storageQuota;
+        }
+
+        /**
          * @return storageSize
          */
         public Integer getStorageSize() {
@@ -704,6 +759,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Long aliUid; 
             private String bid; 
+            private String category; 
             private String chargeType; 
             private String createTime; 
             private String DBInstanceId; 
@@ -721,6 +777,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String maintainEndTime; 
             private String maintainStartTime; 
             private java.util.List<MultiZones> multiZones; 
+            private String nodeCount; 
+            private String nodeScaleMax; 
+            private String nodeScaleMin; 
             private java.util.List<Nodes> nodes; 
             private String objectStoreSize; 
             private String regionId; 
@@ -728,6 +787,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer scaleMax; 
             private Integer scaleMin; 
             private String status; 
+            private String storageQuota; 
             private Integer storageSize; 
             private String storageType; 
             private java.util.List<Tags> tags; 
@@ -741,6 +801,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.aliUid = model.aliUid;
                 this.bid = model.bid;
+                this.category = model.category;
                 this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
                 this.DBInstanceId = model.DBInstanceId;
@@ -758,6 +819,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.maintainEndTime = model.maintainEndTime;
                 this.maintainStartTime = model.maintainStartTime;
                 this.multiZones = model.multiZones;
+                this.nodeCount = model.nodeCount;
+                this.nodeScaleMax = model.nodeScaleMax;
+                this.nodeScaleMin = model.nodeScaleMin;
                 this.nodes = model.nodes;
                 this.objectStoreSize = model.objectStoreSize;
                 this.regionId = model.regionId;
@@ -765,6 +829,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.scaleMax = model.scaleMax;
                 this.scaleMin = model.scaleMin;
                 this.status = model.status;
+                this.storageQuota = model.storageQuota;
                 this.storageSize = model.storageSize;
                 this.storageType = model.storageType;
                 this.tags = model.tags;
@@ -792,6 +857,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder bid(String bid) {
                 this.bid = bid;
+                return this;
+            }
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
                 return this;
             }
 
@@ -988,6 +1061,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * NodeCount.
+             */
+            public Builder nodeCount(String nodeCount) {
+                this.nodeCount = nodeCount;
+                return this;
+            }
+
+            /**
+             * NodeScaleMax.
+             */
+            public Builder nodeScaleMax(String nodeScaleMax) {
+                this.nodeScaleMax = nodeScaleMax;
+                return this;
+            }
+
+            /**
+             * NodeScaleMin.
+             */
+            public Builder nodeScaleMin(String nodeScaleMin) {
+                this.nodeScaleMin = nodeScaleMin;
+                return this;
+            }
+
+            /**
              * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
@@ -1058,6 +1155,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageQuota.
+             */
+            public Builder storageQuota(String storageQuota) {
+                this.storageQuota = storageQuota;
                 return this;
             }
 

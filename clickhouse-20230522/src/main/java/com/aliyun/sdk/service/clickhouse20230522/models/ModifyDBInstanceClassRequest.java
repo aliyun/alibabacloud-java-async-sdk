@@ -23,6 +23,18 @@ public class ModifyDBInstanceClassRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
+    private Integer nodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeScaleMax")
+    private Integer nodeScaleMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeScaleMin")
+    private Integer nodeScaleMin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -34,12 +46,25 @@ public class ModifyDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScaleMin")
     private Long scaleMin;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageQuota")
+    private String storageQuota;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
     private ModifyDBInstanceClassRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.nodeCount = builder.nodeCount;
+        this.nodeScaleMax = builder.nodeScaleMax;
+        this.nodeScaleMin = builder.nodeScaleMin;
         this.regionId = builder.regionId;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
+        this.storageQuota = builder.storageQuota;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -63,6 +88,27 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return nodeCount
+     */
+    public Integer getNodeCount() {
+        return this.nodeCount;
+    }
+
+    /**
+     * @return nodeScaleMax
+     */
+    public Integer getNodeScaleMax() {
+        return this.nodeScaleMax;
+    }
+
+    /**
+     * @return nodeScaleMin
+     */
+    public Integer getNodeScaleMin() {
+        return this.nodeScaleMin;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,11 +129,30 @@ public class ModifyDBInstanceClassRequest extends Request {
         return this.scaleMin;
     }
 
+    /**
+     * @return storageQuota
+     */
+    public String getStorageQuota() {
+        return this.storageQuota;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceClassRequest, Builder> {
         private String DBInstanceId; 
+        private Integer nodeCount; 
+        private Integer nodeScaleMax; 
+        private Integer nodeScaleMin; 
         private String regionId; 
         private Long scaleMax; 
         private Long scaleMin; 
+        private String storageQuota; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -96,9 +161,14 @@ public class ModifyDBInstanceClassRequest extends Request {
         private Builder(ModifyDBInstanceClassRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.nodeCount = request.nodeCount;
+            this.nodeScaleMax = request.nodeScaleMax;
+            this.nodeScaleMin = request.nodeScaleMin;
             this.regionId = request.regionId;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
+            this.storageQuota = request.storageQuota;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -111,6 +181,33 @@ public class ModifyDBInstanceClassRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * NodeCount.
+         */
+        public Builder nodeCount(Integer nodeCount) {
+            this.putQueryParameter("NodeCount", nodeCount);
+            this.nodeCount = nodeCount;
+            return this;
+        }
+
+        /**
+         * NodeScaleMax.
+         */
+        public Builder nodeScaleMax(Integer nodeScaleMax) {
+            this.putQueryParameter("NodeScaleMax", nodeScaleMax);
+            this.nodeScaleMax = nodeScaleMax;
+            return this;
+        }
+
+        /**
+         * NodeScaleMin.
+         */
+        public Builder nodeScaleMin(Integer nodeScaleMin) {
+            this.putQueryParameter("NodeScaleMin", nodeScaleMin);
+            this.nodeScaleMin = nodeScaleMin;
             return this;
         }
 
@@ -147,6 +244,24 @@ public class ModifyDBInstanceClassRequest extends Request {
         public Builder scaleMin(Long scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
             this.scaleMin = scaleMin;
+            return this;
+        }
+
+        /**
+         * StorageQuota.
+         */
+        public Builder storageQuota(String storageQuota) {
+            this.putQueryParameter("StorageQuota", storageQuota);
+            this.storageQuota = storageQuota;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

@@ -46,6 +46,18 @@ public class CreateDBInstanceRequest extends Request {
     private java.util.List<MultiZone> multiZone;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
+    private Integer nodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeScaleMax")
+    private Integer nodeScaleMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeScaleMin")
+    private Integer nodeScaleMin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -65,6 +77,14 @@ public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDBInstanceId")
     private String sourceDBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageQuota")
+    private String storageQuota;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -87,11 +107,16 @@ public class CreateDBInstanceRequest extends Request {
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.multiZone = builder.multiZone;
+        this.nodeCount = builder.nodeCount;
+        this.nodeScaleMax = builder.nodeScaleMax;
+        this.nodeScaleMin = builder.nodeScaleMin;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
         this.sourceDBInstanceId = builder.sourceDBInstanceId;
+        this.storageQuota = builder.storageQuota;
+        this.storageType = builder.storageType;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -160,6 +185,27 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return nodeCount
+     */
+    public Integer getNodeCount() {
+        return this.nodeCount;
+    }
+
+    /**
+     * @return nodeScaleMax
+     */
+    public Integer getNodeScaleMax() {
+        return this.nodeScaleMax;
+    }
+
+    /**
+     * @return nodeScaleMin
+     */
+    public Integer getNodeScaleMin() {
+        return this.nodeScaleMin;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -195,6 +241,20 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return storageQuota
+     */
+    public String getStorageQuota() {
+        return this.storageQuota;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -223,11 +283,16 @@ public class CreateDBInstanceRequest extends Request {
         private String engine; 
         private String engineVersion; 
         private java.util.List<MultiZone> multiZone; 
+        private Integer nodeCount; 
+        private Integer nodeScaleMax; 
+        private Integer nodeScaleMin; 
         private String regionId; 
         private String resourceGroupId; 
         private String scaleMax; 
         private String scaleMin; 
         private String sourceDBInstanceId; 
+        private String storageQuota; 
+        private String storageType; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -245,11 +310,16 @@ public class CreateDBInstanceRequest extends Request {
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
             this.multiZone = request.multiZone;
+            this.nodeCount = request.nodeCount;
+            this.nodeScaleMax = request.nodeScaleMax;
+            this.nodeScaleMin = request.nodeScaleMin;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
             this.sourceDBInstanceId = request.sourceDBInstanceId;
+            this.storageQuota = request.storageQuota;
+            this.storageType = request.storageType;
             this.vpcId = request.vpcId;
             this.vswitchId = request.vswitchId;
             this.zoneId = request.zoneId;
@@ -338,6 +408,33 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * NodeCount.
+         */
+        public Builder nodeCount(Integer nodeCount) {
+            this.putQueryParameter("NodeCount", nodeCount);
+            this.nodeCount = nodeCount;
+            return this;
+        }
+
+        /**
+         * NodeScaleMax.
+         */
+        public Builder nodeScaleMax(Integer nodeScaleMax) {
+            this.putQueryParameter("NodeScaleMax", nodeScaleMax);
+            this.nodeScaleMax = nodeScaleMax;
+            return this;
+        }
+
+        /**
+         * NodeScaleMin.
+         */
+        public Builder nodeScaleMin(Integer nodeScaleMin) {
+            this.putQueryParameter("NodeScaleMin", nodeScaleMin);
+            this.nodeScaleMin = nodeScaleMin;
+            return this;
+        }
+
+        /**
          * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
@@ -392,6 +489,24 @@ public class CreateDBInstanceRequest extends Request {
         public Builder sourceDBInstanceId(String sourceDBInstanceId) {
             this.putQueryParameter("SourceDBInstanceId", sourceDBInstanceId);
             this.sourceDBInstanceId = sourceDBInstanceId;
+            return this;
+        }
+
+        /**
+         * StorageQuota.
+         */
+        public Builder storageQuota(String storageQuota) {
+            this.putQueryParameter("StorageQuota", storageQuota);
+            this.storageQuota = storageQuota;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
