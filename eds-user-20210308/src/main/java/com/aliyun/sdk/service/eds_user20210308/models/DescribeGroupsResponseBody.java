@@ -115,7 +115,85 @@ public class DescribeGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeGroupsResponseBody</p>
      */
+    public static class AttachedLoginPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
+        private AttachedLoginPolicy(Builder builder) {
+            this.name = builder.name;
+            this.policyId = builder.policyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AttachedLoginPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String policyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachedLoginPolicy model) {
+                this.name = model.name;
+                this.policyId = model.policyId;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * PolicyId.
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            public AttachedLoginPolicy build() {
+                return new AttachedLoginPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttachedLoginPolicy")
+        private AttachedLoginPolicy attachedLoginPolicy;
+
         @com.aliyun.core.annotation.NameInMap("AuthedResources")
         private java.util.Map<String, String> authedResources;
 
@@ -138,6 +216,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         private Integer userCount;
 
         private Groups(Builder builder) {
+            this.attachedLoginPolicy = builder.attachedLoginPolicy;
             this.authedResources = builder.authedResources;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -153,6 +232,13 @@ public class DescribeGroupsResponseBody extends TeaModel {
 
         public static Groups create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachedLoginPolicy
+         */
+        public AttachedLoginPolicy getAttachedLoginPolicy() {
+            return this.attachedLoginPolicy;
         }
 
         /**
@@ -205,6 +291,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AttachedLoginPolicy attachedLoginPolicy; 
             private java.util.Map<String, String> authedResources; 
             private String createTime; 
             private String description; 
@@ -217,6 +304,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(Groups model) {
+                this.attachedLoginPolicy = model.attachedLoginPolicy;
                 this.authedResources = model.authedResources;
                 this.createTime = model.createTime;
                 this.description = model.description;
@@ -225,6 +313,14 @@ public class DescribeGroupsResponseBody extends TeaModel {
                 this.transferFileNeedApproval = model.transferFileNeedApproval;
                 this.userCount = model.userCount;
             } 
+
+            /**
+             * AttachedLoginPolicy.
+             */
+            public Builder attachedLoginPolicy(AttachedLoginPolicy attachedLoginPolicy) {
+                this.attachedLoginPolicy = attachedLoginPolicy;
+                return this;
+            }
 
             /**
              * AuthedResources.

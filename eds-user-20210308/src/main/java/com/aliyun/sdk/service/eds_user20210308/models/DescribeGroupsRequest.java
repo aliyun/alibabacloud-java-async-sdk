@@ -22,12 +22,20 @@ public class DescribeGroupsRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeAttachedLoginPolicyGroups")
+    private Boolean excludeAttachedLoginPolicyGroups;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginPolicyId")
+    private String loginPolicyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -49,8 +57,10 @@ public class DescribeGroupsRequest extends Request {
     private DescribeGroupsRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.excludeAttachedLoginPolicyGroups = builder.excludeAttachedLoginPolicyGroups;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
+        this.loginPolicyId = builder.loginPolicyId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.solutionId = builder.solutionId;
@@ -78,6 +88,13 @@ public class DescribeGroupsRequest extends Request {
     }
 
     /**
+     * @return excludeAttachedLoginPolicyGroups
+     */
+    public Boolean getExcludeAttachedLoginPolicyGroups() {
+        return this.excludeAttachedLoginPolicyGroups;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -89,6 +106,13 @@ public class DescribeGroupsRequest extends Request {
      */
     public String getGroupName() {
         return this.groupName;
+    }
+
+    /**
+     * @return loginPolicyId
+     */
+    public String getLoginPolicyId() {
+        return this.loginPolicyId;
     }
 
     /**
@@ -121,8 +145,10 @@ public class DescribeGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGroupsRequest, Builder> {
         private String bizType; 
+        private Boolean excludeAttachedLoginPolicyGroups; 
         private String groupId; 
         private String groupName; 
+        private String loginPolicyId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String solutionId; 
@@ -135,8 +161,10 @@ public class DescribeGroupsRequest extends Request {
         private Builder(DescribeGroupsRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.excludeAttachedLoginPolicyGroups = request.excludeAttachedLoginPolicyGroups;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
+            this.loginPolicyId = request.loginPolicyId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.solutionId = request.solutionId;
@@ -149,6 +177,15 @@ public class DescribeGroupsRequest extends Request {
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * ExcludeAttachedLoginPolicyGroups.
+         */
+        public Builder excludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {
+            this.putQueryParameter("ExcludeAttachedLoginPolicyGroups", excludeAttachedLoginPolicyGroups);
+            this.excludeAttachedLoginPolicyGroups = excludeAttachedLoginPolicyGroups;
             return this;
         }
 
@@ -167,6 +204,15 @@ public class DescribeGroupsRequest extends Request {
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
             this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * LoginPolicyId.
+         */
+        public Builder loginPolicyId(String loginPolicyId) {
+            this.putQueryParameter("LoginPolicyId", loginPolicyId);
+            this.loginPolicyId = loginPolicyId;
             return this;
         }
 
