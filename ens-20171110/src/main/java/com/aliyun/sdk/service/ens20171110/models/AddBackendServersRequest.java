@@ -119,7 +119,6 @@ public class AddBackendServersRequest extends Request {
         private String ip;
 
         @com.aliyun.core.annotation.NameInMap("Port")
-        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("ServerId")

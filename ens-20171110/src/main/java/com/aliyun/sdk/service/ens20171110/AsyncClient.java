@@ -1152,6 +1152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMountTargetsResponse> describeMountTargets(DescribeMountTargetsRequest request);
 
     /**
+     * @param request the request parameters of DescribeNASAvailableResourceInfo  DescribeNASAvailableResourceInfoRequest
+     * @return DescribeNASAvailableResourceInfoResponse
+     */
+    CompletableFuture<DescribeNASAvailableResourceInfoResponse> describeNASAvailableResourceInfo(DescribeNASAvailableResourceInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeNCInformation  DescribeNCInformationRequest
      * @return DescribeNCInformationResponse
      */
