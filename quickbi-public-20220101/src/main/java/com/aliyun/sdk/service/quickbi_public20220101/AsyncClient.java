@@ -40,6 +40,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDataLevelPermissionWhiteListResponse> addDataLevelPermissionWhiteList(AddDataLevelPermissionWhiteListRequest request);
 
     /**
+     * @param request the request parameters of AddDataSource  AddDataSourceRequest
+     * @return AddDataSourceResponse
+     */
+    CompletableFuture<AddDataSourceResponse> addDataSource(AddDataSourceRequest request);
+
+    /**
      * @param request the request parameters of AddShareReport  AddShareReportRequest
      * @return AddShareReportResponse
      */
@@ -125,10 +131,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeVisibilityModelResponse> changeVisibilityModel(ChangeVisibilityModelRequest request);
 
     /**
+     * @param request the request parameters of CheckDatasetExisted  CheckDatasetExistedRequest
+     * @return CheckDatasetExistedResponse
+     */
+    CompletableFuture<CheckDatasetExistedResponse> checkDatasetExisted(CheckDatasetExistedRequest request);
+
+    /**
+     * @param request the request parameters of CheckOrganizationMember  CheckOrganizationMemberRequest
+     * @return CheckOrganizationMemberResponse
+     */
+    CompletableFuture<CheckOrganizationMemberResponse> checkOrganizationMember(CheckOrganizationMemberRequest request);
+
+    /**
      * @param request the request parameters of CheckReadable  CheckReadableRequest
      * @return CheckReadableResponse
      */
     CompletableFuture<CheckReadableResponse> checkReadable(CheckReadableRequest request);
+
+    /**
+     * @param request the request parameters of CreateCubeBySql  CreateCubeBySqlRequest
+     * @return CreateCubeBySqlResponse
+     */
+    CompletableFuture<CreateCubeBySqlResponse> createCubeBySql(CreateCubeBySqlRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
      * <b>description</b> :
@@ -367,6 +397,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWorkspaceRolesResponse
      */
     CompletableFuture<ListWorkspaceRolesResponse> listWorkspaceRoles(ListWorkspaceRolesRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkspaceUserRolesByUserId  ListWorkspaceUserRolesByUserIdRequest
+     * @return ListWorkspaceUserRolesByUserIdResponse
+     */
+    CompletableFuture<ListWorkspaceUserRolesByUserIdResponse> listWorkspaceUserRolesByUserId(ListWorkspaceUserRolesByUserIdRequest request);
 
     /**
      * @param request the request parameters of ManualRunMailTask  ManualRunMailTaskRequest
@@ -729,6 +765,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SmartqQueryAbilityResponse> smartqQueryAbility(SmartqQueryAbilityRequest request);
 
     /**
+     * @param request the request parameters of UpdateCubeBySql  UpdateCubeBySqlRequest
+     * @return UpdateCubeBySqlResponse
+     */
+    CompletableFuture<UpdateCubeBySqlResponse> updateCubeBySql(UpdateCubeBySqlRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The execution result of the interface. Valid values:</p>
      * <ul>
@@ -740,6 +782,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataLevelPermissionStatusResponse
      */
     CompletableFuture<UpdateDataLevelPermissionStatusResponse> updateDataLevelPermissionStatus(UpdateDataLevelPermissionStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataSource  UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     */
+    CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
 
     /**
      * @param request the request parameters of UpdateEmbeddedStatus  UpdateEmbeddedStatusRequest
