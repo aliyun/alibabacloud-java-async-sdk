@@ -345,6 +345,31 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API允许用户获取特定集群的管理证书。</li>
+     * <li>返回的数据是经过base64编码的证书内容。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DownloadClusterManagedCert  DownloadClusterManagedCertRequest
+     * @return DownloadClusterManagedCertResponse
+     */
+    @Override
+    public CompletableFuture<DownloadClusterManagedCertResponse> downloadClusterManagedCert(DownloadClusterManagedCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadClusterManagedCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadClusterManagedCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadClusterManagedCertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is available only for backups in the Chinese mainland.</p>
      * 
      * @param request the request parameters of EnableBackup  EnableBackupRequest
@@ -692,6 +717,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QuickDeployCluster  QuickDeployClusterRequest
+     * @return QuickDeployClusterResponse
+     */
+    @Override
+    public CompletableFuture<QuickDeployClusterResponse> quickDeployCluster(QuickDeployClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuickDeployCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuickDeployClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuickDeployClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</p>
      * 
@@ -788,6 +831,33 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResumeInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于触发指定集群的管理证书轮转过程。通过提供<code>ClusterId</code>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保提供的<code>ClusterId</code>是有效的，并且用户具有对该集群的操作权限。</li>
+     * <li>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RotateClusterManagedCert  RotateClusterManagedCertRequest
+     * @return RotateClusterManagedCertResponse
+     */
+    @Override
+    public CompletableFuture<RotateClusterManagedCertResponse> rotateClusterManagedCert(RotateClusterManagedCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RotateClusterManagedCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RotateClusterManagedCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RotateClusterManagedCertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

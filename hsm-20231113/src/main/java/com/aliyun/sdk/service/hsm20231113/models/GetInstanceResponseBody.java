@@ -128,6 +128,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
+        @com.aliyun.core.annotation.NameInMap("PqcEnabled")
+        private Integer pqcEnabled;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -166,6 +169,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.isTrial = builder.isTrial;
             this.master = builder.master;
             this.orderId = builder.orderId;
+            this.pqcEnabled = builder.pqcEnabled;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
             this.status = builder.status;
@@ -256,6 +260,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return pqcEnabled
+         */
+        public Integer getPqcEnabled() {
+            return this.pqcEnabled;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -329,6 +340,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean isTrial; 
             private Boolean master; 
             private String orderId; 
+            private Integer pqcEnabled; 
             private String regionId; 
             private String remark; 
             private String status; 
@@ -353,6 +365,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.isTrial = model.isTrial;
                 this.master = model.master;
                 this.orderId = model.orderId;
+                this.pqcEnabled = model.pqcEnabled;
                 this.regionId = model.regionId;
                 this.remark = model.remark;
                 this.status = model.status;
@@ -479,6 +492,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * PqcEnabled.
+             */
+            public Builder pqcEnabled(Integer pqcEnabled) {
+                this.pqcEnabled = pqcEnabled;
                 return this;
             }
 
