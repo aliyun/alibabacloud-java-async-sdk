@@ -200,6 +200,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
+        @com.aliyun.core.annotation.NameInMap("DbType")
+        private String dbType;
+
         @com.aliyun.core.annotation.NameInMap("EffectRow")
         private Long effectRow;
 
@@ -283,6 +286,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.dataSet = builder.dataSet;
             this.databaseName = builder.databaseName;
+            this.dbType = builder.dbType;
             this.effectRow = builder.effectRow;
             this.executeStatus = builder.executeStatus;
             this.executeTime = builder.executeTime;
@@ -365,6 +369,13 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
          */
         public String getDatabaseName() {
             return this.databaseName;
+        }
+
+        /**
+         * @return dbType
+         */
+        public String getDbType() {
+            return this.dbType;
         }
 
         /**
@@ -550,6 +561,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             private Long creationTime; 
             private String dataSet; 
             private String databaseName; 
+            private String dbType; 
             private Long effectRow; 
             private Integer executeStatus; 
             private Long executeTime; 
@@ -587,6 +599,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.dataSet = model.dataSet;
                 this.databaseName = model.databaseName;
+                this.dbType = model.dbType;
                 this.effectRow = model.effectRow;
                 this.executeStatus = model.executeStatus;
                 this.executeTime = model.executeTime;
@@ -667,6 +680,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
+                return this;
+            }
+
+            /**
+             * DbType.
+             */
+            public Builder dbType(String dbType) {
+                this.dbType = dbType;
                 return this;
             }
 
