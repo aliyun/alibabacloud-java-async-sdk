@@ -53,6 +53,9 @@ public class OpenStructMvDetailModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private String resourceGroup;
 
+    @com.aliyun.core.annotation.NameInMap("TableEngine")
+    private String tableEngine;
+
     @com.aliyun.core.annotation.NameInMap("UpdatedAt")
     private String updatedAt;
 
@@ -69,6 +72,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         this.refreshState = builder.refreshState;
         this.remoteSize = builder.remoteSize;
         this.resourceGroup = builder.resourceGroup;
+        this.tableEngine = builder.tableEngine;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -169,6 +173,13 @@ public class OpenStructMvDetailModel extends TeaModel {
     }
 
     /**
+     * @return tableEngine
+     */
+    public String getTableEngine() {
+        return this.tableEngine;
+    }
+
+    /**
      * @return updatedAt
      */
     public String getUpdatedAt() {
@@ -188,6 +199,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         private String refreshState; 
         private Long remoteSize; 
         private String resourceGroup; 
+        private String tableEngine; 
         private String updatedAt; 
 
         private Builder() {
@@ -206,6 +218,7 @@ public class OpenStructMvDetailModel extends TeaModel {
             this.refreshState = model.refreshState;
             this.remoteSize = model.remoteSize;
             this.resourceGroup = model.resourceGroup;
+            this.tableEngine = model.tableEngine;
             this.updatedAt = model.updatedAt;
         } 
 
@@ -306,6 +319,14 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
+         * TableEngine.
+         */
+        public Builder tableEngine(String tableEngine) {
+            this.tableEngine = tableEngine;
+            return this;
+        }
+
+        /**
          * UpdatedAt.
          */
         public Builder updatedAt(String updatedAt) {
@@ -332,12 +353,16 @@ public class OpenStructMvDetailModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
+        @com.aliyun.core.annotation.NameInMap("TableEngine")
+        private String tableEngine;
+
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private BaseTableInfos(Builder builder) {
             this.baseTableIsMv = builder.baseTableIsMv;
             this.schemaName = builder.schemaName;
+            this.tableEngine = builder.tableEngine;
             this.tableName = builder.tableName;
         }
 
@@ -364,6 +389,13 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
+         * @return tableEngine
+         */
+        public String getTableEngine() {
+            return this.tableEngine;
+        }
+
+        /**
          * @return tableName
          */
         public String getTableName() {
@@ -373,6 +405,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         public static final class Builder {
             private Boolean baseTableIsMv; 
             private String schemaName; 
+            private String tableEngine; 
             private String tableName; 
 
             private Builder() {
@@ -381,6 +414,7 @@ public class OpenStructMvDetailModel extends TeaModel {
             private Builder(BaseTableInfos model) {
                 this.baseTableIsMv = model.baseTableIsMv;
                 this.schemaName = model.schemaName;
+                this.tableEngine = model.tableEngine;
                 this.tableName = model.tableName;
             } 
 
@@ -397,6 +431,14 @@ public class OpenStructMvDetailModel extends TeaModel {
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
+                return this;
+            }
+
+            /**
+             * TableEngine.
+             */
+            public Builder tableEngine(String tableEngine) {
+                this.tableEngine = tableEngine;
                 return this;
             }
 

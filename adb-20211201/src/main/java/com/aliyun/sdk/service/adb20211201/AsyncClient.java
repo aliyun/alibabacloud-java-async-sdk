@@ -143,6 +143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApsHiveJobResponse> createApsHiveJob(CreateApsHiveJobRequest request);
 
     /**
+     * @param request the request parameters of CreateApsKafkaHudiJob  CreateApsKafkaHudiJobRequest
+     * @return CreateApsKafkaHudiJobResponse
+     */
+    CompletableFuture<CreateApsKafkaHudiJobResponse> createApsKafkaHudiJob(CreateApsKafkaHudiJobRequest request);
+
+    /**
      * @param request the request parameters of CreateApsSlsADBJob  CreateApsSlsADBJobRequest
      * @return CreateApsSlsADBJobResponse
      */
@@ -664,6 +670,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterSSL  DescribeDBClusterSSLRequest
+     * @return DescribeDBClusterSSLResponse
+     */
+    CompletableFuture<DescribeDBClusterSSLResponse> describeDBClusterSSL(DescribeDBClusterSSLRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -794,6 +806,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeExecutorDetectionResponse
      */
     CompletableFuture<DescribeExecutorDetectionResponse> describeExecutorDetection(DescribeExecutorDetectionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
+     * @return DescribeHistoryTasksResponse
+     */
+    CompletableFuture<DescribeHistoryTasksResponse> describeHistoryTasks(DescribeHistoryTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHistoryTasksStat  DescribeHistoryTasksStatRequest
+     * @return DescribeHistoryTasksStatResponse
+     */
+    CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
 
     /**
      * <b>description</b> :
@@ -1140,6 +1164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
+
+    /**
+     * @param request the request parameters of GetADBSparkNecessaryRAMPermissions  GetADBSparkNecessaryRAMPermissionsRequest
+     * @return GetADBSparkNecessaryRAMPermissionsResponse
+     */
+    CompletableFuture<GetADBSparkNecessaryRAMPermissionsResponse> getADBSparkNecessaryRAMPermissions(GetADBSparkNecessaryRAMPermissionsRequest request);
 
     /**
      * @param request the request parameters of GetApsManagedDatabases  GetApsManagedDatabasesRequest
@@ -1725,6 +1755,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBClusterResourceGroupResponse
      */
     CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterSSL  ModifyDBClusterSSLRequest
+     * @return ModifyDBClusterSSLResponse
+     */
+    CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request);
 
     /**
      * @param request the request parameters of ModifyDBClusterVip  ModifyDBClusterVipRequest

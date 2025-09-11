@@ -281,8 +281,20 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("EnableUserEni")
+        private Boolean enableUserEni;
+
+        @com.aliyun.core.annotation.NameInMap("HeadAllocateUnit")
+        private String headAllocateUnit;
+
+        @com.aliyun.core.annotation.NameInMap("HeadDiskCapacity")
+        private String headDiskCapacity;
+
         @com.aliyun.core.annotation.NameInMap("HeadSpec")
         private String headSpec;
+
+        @com.aliyun.core.annotation.NameInMap("HeadSpecType")
+        private String headSpecType;
 
         @com.aliyun.core.annotation.NameInMap("RayClusterAddress")
         private String rayClusterAddress;
@@ -298,7 +310,11 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         private RayConfig(Builder builder) {
             this.category = builder.category;
+            this.enableUserEni = builder.enableUserEni;
+            this.headAllocateUnit = builder.headAllocateUnit;
+            this.headDiskCapacity = builder.headDiskCapacity;
             this.headSpec = builder.headSpec;
+            this.headSpecType = builder.headSpecType;
             this.rayClusterAddress = builder.rayClusterAddress;
             this.rayDashboardAddress = builder.rayDashboardAddress;
             this.rayGrafanaAddress = builder.rayGrafanaAddress;
@@ -321,10 +337,38 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableUserEni
+         */
+        public Boolean getEnableUserEni() {
+            return this.enableUserEni;
+        }
+
+        /**
+         * @return headAllocateUnit
+         */
+        public String getHeadAllocateUnit() {
+            return this.headAllocateUnit;
+        }
+
+        /**
+         * @return headDiskCapacity
+         */
+        public String getHeadDiskCapacity() {
+            return this.headDiskCapacity;
+        }
+
+        /**
          * @return headSpec
          */
         public String getHeadSpec() {
             return this.headSpec;
+        }
+
+        /**
+         * @return headSpecType
+         */
+        public String getHeadSpecType() {
+            return this.headSpecType;
         }
 
         /**
@@ -357,7 +401,11 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private Boolean enableUserEni; 
+            private String headAllocateUnit; 
+            private String headDiskCapacity; 
             private String headSpec; 
+            private String headSpecType; 
             private String rayClusterAddress; 
             private String rayDashboardAddress; 
             private String rayGrafanaAddress; 
@@ -368,7 +416,11 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
             private Builder(RayConfig model) {
                 this.category = model.category;
+                this.enableUserEni = model.enableUserEni;
+                this.headAllocateUnit = model.headAllocateUnit;
+                this.headDiskCapacity = model.headDiskCapacity;
                 this.headSpec = model.headSpec;
+                this.headSpecType = model.headSpecType;
                 this.rayClusterAddress = model.rayClusterAddress;
                 this.rayDashboardAddress = model.rayDashboardAddress;
                 this.rayGrafanaAddress = model.rayGrafanaAddress;
@@ -384,10 +436,42 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * EnableUserEni.
+             */
+            public Builder enableUserEni(Boolean enableUserEni) {
+                this.enableUserEni = enableUserEni;
+                return this;
+            }
+
+            /**
+             * HeadAllocateUnit.
+             */
+            public Builder headAllocateUnit(String headAllocateUnit) {
+                this.headAllocateUnit = headAllocateUnit;
+                return this;
+            }
+
+            /**
+             * HeadDiskCapacity.
+             */
+            public Builder headDiskCapacity(String headDiskCapacity) {
+                this.headDiskCapacity = headDiskCapacity;
+                return this;
+            }
+
+            /**
              * HeadSpec.
              */
             public Builder headSpec(String headSpec) {
                 this.headSpec = headSpec;
+                return this;
+            }
+
+            /**
+             * HeadSpecType.
+             */
+            public Builder headSpecType(String headSpecType) {
+                this.headSpecType = headSpecType;
                 return this;
             }
 

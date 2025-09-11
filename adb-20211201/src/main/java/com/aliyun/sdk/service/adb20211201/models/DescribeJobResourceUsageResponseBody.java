@@ -434,14 +434,26 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobAcuUsage")
         private java.util.List<JobAcuUsage> jobAcuUsage;
 
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
 
         private Data(Builder builder) {
             this.DBClusterId = builder.DBClusterId;
             this.endTime = builder.endTime;
             this.jobAcuUsage = builder.jobAcuUsage;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
             this.startTime = builder.startTime;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -474,17 +486,41 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
             return this.startTime;
         }
 
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private String DBClusterId; 
             private String endTime; 
             private java.util.List<JobAcuUsage> jobAcuUsage; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
             private String startTime; 
+            private Integer totalCount; 
 
             private Builder() {
             } 
@@ -493,7 +529,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
                 this.DBClusterId = model.DBClusterId;
                 this.endTime = model.endTime;
                 this.jobAcuUsage = model.jobAcuUsage;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
                 this.startTime = model.startTime;
+                this.totalCount = model.totalCount;
             } 
 
             /**
@@ -527,6 +566,22 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
              * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
@@ -534,6 +589,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

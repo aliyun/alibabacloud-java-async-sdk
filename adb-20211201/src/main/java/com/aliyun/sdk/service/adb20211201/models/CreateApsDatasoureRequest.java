@@ -1206,6 +1206,9 @@ public class CreateApsDatasoureRequest extends Request {
 
             /**
              * <p>The name of the database account of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

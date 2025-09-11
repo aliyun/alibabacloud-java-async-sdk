@@ -233,6 +233,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
+        private String backupStatus;
+
         @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
@@ -250,6 +253,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupRegion = builder.backupRegion;
             this.backupSize = builder.backupSize;
             this.backupStartTime = builder.backupStartTime;
+            this.backupStatus = builder.backupStatus;
             this.backupType = builder.backupType;
             this.DBClusterId = builder.DBClusterId;
             this.parentBackupId = builder.parentBackupId;
@@ -313,6 +317,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return backupStatus
+         */
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        /**
          * @return backupType
          */
         public String getBackupType() {
@@ -341,6 +352,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupRegion; 
             private Integer backupSize; 
             private String backupStartTime; 
+            private String backupStatus; 
             private String backupType; 
             private String DBClusterId; 
             private String parentBackupId; 
@@ -356,6 +368,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupRegion = model.backupRegion;
                 this.backupSize = model.backupSize;
                 this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
                 this.backupType = model.backupType;
                 this.DBClusterId = model.DBClusterId;
                 this.parentBackupId = model.parentBackupId;
@@ -429,6 +442,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
+                return this;
+            }
+
+            /**
+             * BackupStatus.
+             */
+            public Builder backupStatus(String backupStatus) {
+                this.backupStatus = backupStatus;
                 return this;
             }
 

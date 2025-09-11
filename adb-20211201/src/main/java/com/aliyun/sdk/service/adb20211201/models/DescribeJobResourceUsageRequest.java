@@ -28,6 +28,14 @@ public class DescribeJobResourceUsageRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -36,6 +44,8 @@ public class DescribeJobResourceUsageRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.endTime = builder.endTime;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
     }
 
@@ -67,6 +77,20 @@ public class DescribeJobResourceUsageRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -76,6 +100,8 @@ public class DescribeJobResourceUsageRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeJobResourceUsageRequest, Builder> {
         private String DBClusterId; 
         private String endTime; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String startTime; 
 
         private Builder() {
@@ -86,6 +112,8 @@ public class DescribeJobResourceUsageRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
 
@@ -112,6 +140,24 @@ public class DescribeJobResourceUsageRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

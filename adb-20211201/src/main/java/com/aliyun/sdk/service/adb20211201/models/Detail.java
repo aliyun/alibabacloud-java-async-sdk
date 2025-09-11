@@ -32,6 +32,9 @@ public class Detail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EstimateExecutionCpuTimeInSeconds")
     private Long estimateExecutionCpuTimeInSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("ExecutionDurationInMillis")
+    private Long executionDurationInMillis;
+
     @com.aliyun.core.annotation.NameInMap("LastAttemptId")
     private String lastAttemptId;
 
@@ -43,6 +46,12 @@ public class Detail extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceProvisioningDurationInMillis")
+    private Long resourceProvisioningDurationInMillis;
+
+    @com.aliyun.core.annotation.NameInMap("RunningStartTimeInMillis")
+    private Long runningStartTimeInMillis;
 
     @com.aliyun.core.annotation.NameInMap("StartedTimeInMillis")
     private Long startedTimeInMillis;
@@ -62,10 +71,13 @@ public class Detail extends TeaModel {
         this.data = builder.data;
         this.durationInMillis = builder.durationInMillis;
         this.estimateExecutionCpuTimeInSeconds = builder.estimateExecutionCpuTimeInSeconds;
+        this.executionDurationInMillis = builder.executionDurationInMillis;
         this.lastAttemptId = builder.lastAttemptId;
         this.lastUpdatedTimeInMillis = builder.lastUpdatedTimeInMillis;
         this.logRootPath = builder.logRootPath;
         this.resourceGroupName = builder.resourceGroupName;
+        this.resourceProvisioningDurationInMillis = builder.resourceProvisioningDurationInMillis;
+        this.runningStartTimeInMillis = builder.runningStartTimeInMillis;
         this.startedTimeInMillis = builder.startedTimeInMillis;
         this.submittedTimeInMillis = builder.submittedTimeInMillis;
         this.terminatedTimeInMillis = builder.terminatedTimeInMillis;
@@ -120,6 +132,13 @@ public class Detail extends TeaModel {
     }
 
     /**
+     * @return executionDurationInMillis
+     */
+    public Long getExecutionDurationInMillis() {
+        return this.executionDurationInMillis;
+    }
+
+    /**
      * @return lastAttemptId
      */
     public String getLastAttemptId() {
@@ -145,6 +164,20 @@ public class Detail extends TeaModel {
      */
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    /**
+     * @return resourceProvisioningDurationInMillis
+     */
+    public Long getResourceProvisioningDurationInMillis() {
+        return this.resourceProvisioningDurationInMillis;
+    }
+
+    /**
+     * @return runningStartTimeInMillis
+     */
+    public Long getRunningStartTimeInMillis() {
+        return this.runningStartTimeInMillis;
     }
 
     /**
@@ -181,10 +214,13 @@ public class Detail extends TeaModel {
         private String data; 
         private Long durationInMillis; 
         private Long estimateExecutionCpuTimeInSeconds; 
+        private Long executionDurationInMillis; 
         private String lastAttemptId; 
         private Long lastUpdatedTimeInMillis; 
         private String logRootPath; 
         private String resourceGroupName; 
+        private Long resourceProvisioningDurationInMillis; 
+        private Long runningStartTimeInMillis; 
         private Long startedTimeInMillis; 
         private Long submittedTimeInMillis; 
         private Long terminatedTimeInMillis; 
@@ -199,10 +235,13 @@ public class Detail extends TeaModel {
             this.data = model.data;
             this.durationInMillis = model.durationInMillis;
             this.estimateExecutionCpuTimeInSeconds = model.estimateExecutionCpuTimeInSeconds;
+            this.executionDurationInMillis = model.executionDurationInMillis;
             this.lastAttemptId = model.lastAttemptId;
             this.lastUpdatedTimeInMillis = model.lastUpdatedTimeInMillis;
             this.logRootPath = model.logRootPath;
             this.resourceGroupName = model.resourceGroupName;
+            this.resourceProvisioningDurationInMillis = model.resourceProvisioningDurationInMillis;
+            this.runningStartTimeInMillis = model.runningStartTimeInMillis;
             this.startedTimeInMillis = model.startedTimeInMillis;
             this.submittedTimeInMillis = model.submittedTimeInMillis;
             this.terminatedTimeInMillis = model.terminatedTimeInMillis;
@@ -250,6 +289,14 @@ public class Detail extends TeaModel {
         }
 
         /**
+         * ExecutionDurationInMillis.
+         */
+        public Builder executionDurationInMillis(Long executionDurationInMillis) {
+            this.executionDurationInMillis = executionDurationInMillis;
+            return this;
+        }
+
+        /**
          * LastAttemptId.
          */
         public Builder lastAttemptId(String lastAttemptId) {
@@ -278,6 +325,22 @@ public class Detail extends TeaModel {
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * ResourceProvisioningDurationInMillis.
+         */
+        public Builder resourceProvisioningDurationInMillis(Long resourceProvisioningDurationInMillis) {
+            this.resourceProvisioningDurationInMillis = resourceProvisioningDurationInMillis;
+            return this;
+        }
+
+        /**
+         * RunningStartTimeInMillis.
+         */
+        public Builder runningStartTimeInMillis(Long runningStartTimeInMillis) {
+            this.runningStartTimeInMillis = runningStartTimeInMillis;
             return this;
         }
 
