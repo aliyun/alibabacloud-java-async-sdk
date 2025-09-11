@@ -23,6 +23,10 @@ public class CreateInstantSiteMonitorRequest extends Request {
     private String address;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentGroup")
+    private String agentGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IspCities")
     private String ispCities;
 
@@ -47,6 +51,7 @@ public class CreateInstantSiteMonitorRequest extends Request {
     private CreateInstantSiteMonitorRequest(Builder builder) {
         super(builder);
         this.address = builder.address;
+        this.agentGroup = builder.agentGroup;
         this.ispCities = builder.ispCities;
         this.optionsJson = builder.optionsJson;
         this.randomIspCity = builder.randomIspCity;
@@ -72,6 +77,13 @@ public class CreateInstantSiteMonitorRequest extends Request {
      */
     public String getAddress() {
         return this.address;
+    }
+
+    /**
+     * @return agentGroup
+     */
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     /**
@@ -111,6 +123,7 @@ public class CreateInstantSiteMonitorRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstantSiteMonitorRequest, Builder> {
         private String address; 
+        private String agentGroup; 
         private String ispCities; 
         private String optionsJson; 
         private Integer randomIspCity; 
@@ -124,6 +137,7 @@ public class CreateInstantSiteMonitorRequest extends Request {
         private Builder(CreateInstantSiteMonitorRequest request) {
             super(request);
             this.address = request.address;
+            this.agentGroup = request.agentGroup;
             this.ispCities = request.ispCities;
             this.optionsJson = request.optionsJson;
             this.randomIspCity = request.randomIspCity;
@@ -141,6 +155,15 @@ public class CreateInstantSiteMonitorRequest extends Request {
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
             this.address = address;
+            return this;
+        }
+
+        /**
+         * AgentGroup.
+         */
+        public Builder agentGroup(String agentGroup) {
+            this.putQueryParameter("AgentGroup", agentGroup);
+            this.agentGroup = agentGroup;
             return this;
         }
 

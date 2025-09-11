@@ -23,6 +23,10 @@ public class CreateSiteMonitorRequest extends Request {
     private String address;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentGroup")
+    private String agentGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertIds")
     private String alertIds;
 
@@ -59,6 +63,7 @@ public class CreateSiteMonitorRequest extends Request {
     private CreateSiteMonitorRequest(Builder builder) {
         super(builder);
         this.address = builder.address;
+        this.agentGroup = builder.agentGroup;
         this.alertIds = builder.alertIds;
         this.customSchedule = builder.customSchedule;
         this.interval = builder.interval;
@@ -87,6 +92,13 @@ public class CreateSiteMonitorRequest extends Request {
      */
     public String getAddress() {
         return this.address;
+    }
+
+    /**
+     * @return agentGroup
+     */
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     /**
@@ -147,6 +159,7 @@ public class CreateSiteMonitorRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSiteMonitorRequest, Builder> {
         private String address; 
+        private String agentGroup; 
         private String alertIds; 
         private String customSchedule; 
         private String interval; 
@@ -163,6 +176,7 @@ public class CreateSiteMonitorRequest extends Request {
         private Builder(CreateSiteMonitorRequest request) {
             super(request);
             this.address = request.address;
+            this.agentGroup = request.agentGroup;
             this.alertIds = request.alertIds;
             this.customSchedule = request.customSchedule;
             this.interval = request.interval;
@@ -183,6 +197,15 @@ public class CreateSiteMonitorRequest extends Request {
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
             this.address = address;
+            return this;
+        }
+
+        /**
+         * AgentGroup.
+         */
+        public Builder agentGroup(String agentGroup) {
+            this.putQueryParameter("AgentGroup", agentGroup);
+            this.agentGroup = agentGroup;
             return this;
         }
 
