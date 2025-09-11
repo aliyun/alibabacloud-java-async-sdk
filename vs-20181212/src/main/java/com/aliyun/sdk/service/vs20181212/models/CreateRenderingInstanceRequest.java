@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRenderingInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Attributes")
+    private Attributes attributes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -56,6 +60,7 @@ public class CreateRenderingInstanceRequest extends Request {
 
     private CreateRenderingInstanceRequest(Builder builder) {
         super(builder);
+        this.attributes = builder.attributes;
         this.autoRenew = builder.autoRenew;
         this.clientInfo = builder.clientInfo;
         this.instanceBillingCycle = builder.instanceBillingCycle;
@@ -78,6 +83,13 @@ public class CreateRenderingInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return attributes
+     */
+    public Attributes getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -144,6 +156,7 @@ public class CreateRenderingInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRenderingInstanceRequest, Builder> {
+        private Attributes attributes; 
         private Boolean autoRenew; 
         private ClientInfo clientInfo; 
         private String instanceBillingCycle; 
@@ -160,6 +173,7 @@ public class CreateRenderingInstanceRequest extends Request {
 
         private Builder(CreateRenderingInstanceRequest request) {
             super(request);
+            this.attributes = request.attributes;
             this.autoRenew = request.autoRenew;
             this.clientInfo = request.clientInfo;
             this.instanceBillingCycle = request.instanceBillingCycle;
@@ -170,6 +184,16 @@ public class CreateRenderingInstanceRequest extends Request {
             this.renderingSpec = request.renderingSpec;
             this.storageSize = request.storageSize;
         } 
+
+        /**
+         * Attributes.
+         */
+        public Builder attributes(Attributes attributes) {
+            String attributesShrink = shrink(attributes, "Attributes", "json");
+            this.putQueryParameter("Attributes", attributesShrink);
+            this.attributes = attributes;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -263,6 +287,123 @@ public class CreateRenderingInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRenderingInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRenderingInstanceRequest</p>
+     */
+    public static class Attributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EdgeMediaService")
+        private String edgeMediaService;
+
+        @com.aliyun.core.annotation.NameInMap("InAccess")
+        private String inAccess;
+
+        @com.aliyun.core.annotation.NameInMap("OutAccess")
+        private String outAccess;
+
+        @com.aliyun.core.annotation.NameInMap("Zone")
+        private String zone;
+
+        private Attributes(Builder builder) {
+            this.edgeMediaService = builder.edgeMediaService;
+            this.inAccess = builder.inAccess;
+            this.outAccess = builder.outAccess;
+            this.zone = builder.zone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Attributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return edgeMediaService
+         */
+        public String getEdgeMediaService() {
+            return this.edgeMediaService;
+        }
+
+        /**
+         * @return inAccess
+         */
+        public String getInAccess() {
+            return this.inAccess;
+        }
+
+        /**
+         * @return outAccess
+         */
+        public String getOutAccess() {
+            return this.outAccess;
+        }
+
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
+        public static final class Builder {
+            private String edgeMediaService; 
+            private String inAccess; 
+            private String outAccess; 
+            private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.edgeMediaService = model.edgeMediaService;
+                this.inAccess = model.inAccess;
+                this.outAccess = model.outAccess;
+                this.zone = model.zone;
+            } 
+
+            /**
+             * EdgeMediaService.
+             */
+            public Builder edgeMediaService(String edgeMediaService) {
+                this.edgeMediaService = edgeMediaService;
+                return this;
+            }
+
+            /**
+             * InAccess.
+             */
+            public Builder inAccess(String inAccess) {
+                this.inAccess = inAccess;
+                return this;
+            }
+
+            /**
+             * OutAccess.
+             */
+            public Builder outAccess(String outAccess) {
+                this.outAccess = outAccess;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
+                return this;
+            }
+
+            public Attributes build() {
+                return new Attributes(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateRenderingInstanceRequest} extends {@link TeaModel}

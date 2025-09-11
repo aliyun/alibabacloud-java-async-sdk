@@ -710,6 +710,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloudAppInstallationsResponse> listCloudAppInstallations(ListCloudAppInstallationsRequest request);
 
     /**
+     * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
+     * @return ListCloudAppPatchesResponse
+     */
+    CompletableFuture<ListCloudAppPatchesResponse> listCloudAppPatches(ListCloudAppPatchesRequest request);
+
+    /**
      * @param request the request parameters of ListCloudApps  ListCloudAppsRequest
      * @return ListCloudAppsResponse
      */
@@ -842,6 +848,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyRenderingInstanceResponse
      */
     CompletableFuture<ModifyRenderingInstanceResponse> modifyRenderingInstance(ModifyRenderingInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRenderingInstanceAttribute  ModifyRenderingInstanceAttributeRequest
+     * @return ModifyRenderingInstanceAttributeResponse
+     */
+    CompletableFuture<ModifyRenderingInstanceAttributeResponse> modifyRenderingInstanceAttribute(ModifyRenderingInstanceAttributeRequest request);
 
     /**
      * @param request the request parameters of ModifyRenderingInstanceBandwidth  ModifyRenderingInstanceBandwidthRequest
