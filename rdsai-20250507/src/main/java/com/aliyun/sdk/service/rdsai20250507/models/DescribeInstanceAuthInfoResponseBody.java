@@ -20,6 +20,12 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApiKeys")
     private ApiKeys apiKeys;
 
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
+    private java.util.List<ConfigList> configList;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
     @com.aliyun.core.annotation.NameInMap("JwtSecret")
     private String jwtSecret;
 
@@ -28,6 +34,8 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     private DescribeInstanceAuthInfoResponseBody(Builder builder) {
         this.apiKeys = builder.apiKeys;
+        this.configList = builder.configList;
+        this.instanceName = builder.instanceName;
         this.jwtSecret = builder.jwtSecret;
         this.requestId = builder.requestId;
     }
@@ -52,6 +60,20 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return configList
+     */
+    public java.util.List<ConfigList> getConfigList() {
+        return this.configList;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return jwtSecret
      */
     public String getJwtSecret() {
@@ -67,6 +89,8 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private ApiKeys apiKeys; 
+        private java.util.List<ConfigList> configList; 
+        private String instanceName; 
         private String jwtSecret; 
         private String requestId; 
 
@@ -75,6 +99,8 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
         private Builder(DescribeInstanceAuthInfoResponseBody model) {
             this.apiKeys = model.apiKeys;
+            this.configList = model.configList;
+            this.instanceName = model.instanceName;
             this.jwtSecret = model.jwtSecret;
             this.requestId = model.requestId;
         } 
@@ -84,6 +110,22 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
          */
         public Builder apiKeys(ApiKeys apiKeys) {
             this.apiKeys = apiKeys;
+            return this;
+        }
+
+        /**
+         * ConfigList.
+         */
+        public Builder configList(java.util.List<ConfigList> configList) {
+            this.configList = configList;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -185,6 +227,81 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
             public ApiKeys build() {
                 return new ApiKeys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceAuthInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAuthInfoResponseBody</p>
+     */
+    public static class ConfigList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ConfigList(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ConfigList build() {
+                return new ConfigList(this);
             } 
 
         } 
