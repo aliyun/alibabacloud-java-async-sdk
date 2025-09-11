@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CheckCreateDBInstance  CheckCreateDBInstanceRequest
      * @return CheckCreateDBInstanceResponse
      */
     CompletableFuture<CheckCreateDBInstanceResponse> checkCreateDBInstance(CheckCreateDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CheckIpExistsInSecurityIpList  CheckIpExistsInSecurityIpListRequest
+     * @return CheckIpExistsInSecurityIpListResponse
+     */
+    CompletableFuture<CheckIpExistsInSecurityIpListResponse> checkIpExistsInSecurityIpList(CheckIpExistsInSecurityIpListRequest request);
 
     /**
      * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
@@ -120,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBClusterConfigChangeLogsResponse
      */
     CompletableFuture<DescribeDBClusterConfigChangeLogsResponse> describeDBClusterConfigChangeLogs(DescribeDBClusterConfigChangeLogsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBClusterStorageLimitation  DescribeDBClusterStorageLimitationRequest
+     * @return DescribeDBClusterStorageLimitationResponse
+     */
+    CompletableFuture<DescribeDBClusterStorageLimitationResponse> describeDBClusterStorageLimitation(DescribeDBClusterStorageLimitationRequest request);
 
     /**
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
@@ -240,6 +258,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopBEClusterResponse
      */
     CompletableFuture<StopBEClusterResponse> stopBECluster(StopBEClusterRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpgradeDBInstanceEngineVersion  UpgradeDBInstanceEngineVersionRequest

@@ -53,6 +53,10 @@ public class GetCreateBEClusterInquiryRequest extends Request {
     private String pricingCycle;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
+    private String promotionOptionNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Quantity")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long quantity;
@@ -76,6 +80,7 @@ public class GetCreateBEClusterInquiryRequest extends Request {
         this.preCacheSize = builder.preCacheSize;
         this.preComputeSize = builder.preComputeSize;
         this.pricingCycle = builder.pricingCycle;
+        this.promotionOptionNo = builder.promotionOptionNo;
         this.quantity = builder.quantity;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -151,6 +156,13 @@ public class GetCreateBEClusterInquiryRequest extends Request {
     }
 
     /**
+     * @return promotionOptionNo
+     */
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
+    }
+
+    /**
      * @return quantity
      */
     public Long getQuantity() {
@@ -180,6 +192,7 @@ public class GetCreateBEClusterInquiryRequest extends Request {
         private Long preCacheSize; 
         private Long preComputeSize; 
         private String pricingCycle; 
+        private String promotionOptionNo; 
         private Long quantity; 
         private String regionId; 
         private Long resourceOwnerId; 
@@ -198,6 +211,7 @@ public class GetCreateBEClusterInquiryRequest extends Request {
             this.preCacheSize = request.preCacheSize;
             this.preComputeSize = request.preComputeSize;
             this.pricingCycle = request.pricingCycle;
+            this.promotionOptionNo = request.promotionOptionNo;
             this.quantity = request.quantity;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -319,6 +333,15 @@ public class GetCreateBEClusterInquiryRequest extends Request {
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
             this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * PromotionOptionNo.
+         */
+        public Builder promotionOptionNo(String promotionOptionNo) {
+            this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
+            this.promotionOptionNo = promotionOptionNo;
             return this;
         }
 

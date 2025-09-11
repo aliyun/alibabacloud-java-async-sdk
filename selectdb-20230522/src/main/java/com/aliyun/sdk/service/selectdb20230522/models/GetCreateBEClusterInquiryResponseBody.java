@@ -97,9 +97,150 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
      *
      * <p>GetCreateBEClusterInquiryResponseBody</p>
      */
+    public static class OptionalPromotions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
+        private String canPromFee;
+
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
+        private String optionCode;
+
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
+        private String promotionDesc;
+
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
+        private String promotionName;
+
+        @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
+        private String promotionOptionNo;
+
+        private OptionalPromotions(Builder builder) {
+            this.canPromFee = builder.canPromFee;
+            this.optionCode = builder.optionCode;
+            this.promotionDesc = builder.promotionDesc;
+            this.promotionName = builder.promotionName;
+            this.promotionOptionNo = builder.promotionOptionNo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalPromotions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canPromFee
+         */
+        public String getCanPromFee() {
+            return this.canPromFee;
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return promotionDesc
+         */
+        public String getPromotionDesc() {
+            return this.promotionDesc;
+        }
+
+        /**
+         * @return promotionName
+         */
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        /**
+         * @return promotionOptionNo
+         */
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
+        public static final class Builder {
+            private String canPromFee; 
+            private String optionCode; 
+            private String promotionDesc; 
+            private String promotionName; 
+            private String promotionOptionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotions model) {
+                this.canPromFee = model.canPromFee;
+                this.optionCode = model.optionCode;
+                this.promotionDesc = model.promotionDesc;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+            } 
+
+            /**
+             * CanPromFee.
+             */
+            public Builder canPromFee(String canPromFee) {
+                this.canPromFee = canPromFee;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PromotionDesc.
+             */
+            public Builder promotionDesc(String promotionDesc) {
+                this.promotionDesc = promotionDesc;
+                return this;
+            }
+
+            /**
+             * PromotionName.
+             */
+            public Builder promotionName(String promotionName) {
+                this.promotionName = promotionName;
+                return this;
+            }
+
+            /**
+             * PromotionOptionNo.
+             */
+            public Builder promotionOptionNo(String promotionOptionNo) {
+                this.promotionOptionNo = promotionOptionNo;
+                return this;
+            }
+
+            public OptionalPromotions build() {
+                return new OptionalPromotions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCreateBEClusterInquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCreateBEClusterInquiryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("OptionalPromotions")
+        private java.util.List<OptionalPromotions> optionalPromotions;
 
         @com.aliyun.core.annotation.NameInMap("PricingRules")
         private java.util.Map<String, String> pricingRules;
@@ -109,6 +250,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.currency = builder.currency;
+            this.optionalPromotions = builder.optionalPromotions;
             this.pricingRules = builder.pricingRules;
             this.tradeAmount = builder.tradeAmount;
         }
@@ -129,6 +271,13 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
+         * @return optionalPromotions
+         */
+        public java.util.List<OptionalPromotions> getOptionalPromotions() {
+            return this.optionalPromotions;
+        }
+
+        /**
          * @return pricingRules
          */
         public java.util.Map<String, String> getPricingRules() {
@@ -144,6 +293,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currency; 
+            private java.util.List<OptionalPromotions> optionalPromotions; 
             private java.util.Map<String, String> pricingRules; 
             private String tradeAmount; 
 
@@ -152,6 +302,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.currency = model.currency;
+                this.optionalPromotions = model.optionalPromotions;
                 this.pricingRules = model.pricingRules;
                 this.tradeAmount = model.tradeAmount;
             } 
@@ -164,6 +315,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
              */
             public Builder currency(String currency) {
                 this.currency = currency;
+                return this;
+            }
+
+            /**
+             * OptionalPromotions.
+             */
+            public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
+                this.optionalPromotions = optionalPromotions;
                 return this;
             }
 
