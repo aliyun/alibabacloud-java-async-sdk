@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCreateLogoTaskResponse> getCreateLogoTask(GetCreateLogoTaskRequest request);
 
     /**
+     * @param request the request parameters of GetDomainInfoForPartner  GetDomainInfoForPartnerRequest
+     * @return GetDomainInfoForPartnerResponse
+     */
+    CompletableFuture<GetDomainInfoForPartnerResponse> getDomainInfoForPartner(GetDomainInfoForPartnerRequest request);
+
+    /**
      * @param request the request parameters of GetIcpFilingInfoForPartner  GetIcpFilingInfoForPartnerRequest
      * @return GetIcpFilingInfoForPartnerResponse
      */
