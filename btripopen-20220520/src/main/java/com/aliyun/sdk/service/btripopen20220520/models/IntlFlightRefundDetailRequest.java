@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link IntlFlightReShopConsultRequest} extends {@link RequestModel}
+ * {@link IntlFlightRefundDetailRequest} extends {@link RequestModel}
  *
- * <p>IntlFlightReShopConsultRequest</p>
+ * <p>IntlFlightRefundDetailRequest</p>
  */
-public class IntlFlightReShopConsultRequest extends Request {
+public class IntlFlightRefundDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("order_id")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,14 +26,25 @@ public class IntlFlightReShopConsultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_refund_apply_id")
+    private String outRefundApplyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("refund_apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String refundApplyId;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
-    private IntlFlightReShopConsultRequest(Builder builder) {
+    private IntlFlightRefundDetailRequest(Builder builder) {
         super(builder);
         this.orderId = builder.orderId;
         this.outOrderId = builder.outOrderId;
+        this.outRefundApplyId = builder.outRefundApplyId;
+        this.refundApplyId = builder.refundApplyId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -41,7 +52,7 @@ public class IntlFlightReShopConsultRequest extends Request {
         return new Builder();
     }
 
-    public static IntlFlightReShopConsultRequest create() {
+    public static IntlFlightRefundDetailRequest create() {
         return builder().build();
     }
 
@@ -65,25 +76,43 @@ public class IntlFlightReShopConsultRequest extends Request {
     }
 
     /**
+     * @return outRefundApplyId
+     */
+    public String getOutRefundApplyId() {
+        return this.outRefundApplyId;
+    }
+
+    /**
+     * @return refundApplyId
+     */
+    public String getRefundApplyId() {
+        return this.refundApplyId;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
         return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<IntlFlightReShopConsultRequest, Builder> {
+    public static final class Builder extends Request.Builder<IntlFlightRefundDetailRequest, Builder> {
         private String orderId; 
         private String outOrderId; 
+        private String outRefundApplyId; 
+        private String refundApplyId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(IntlFlightReShopConsultRequest request) {
+        private Builder(IntlFlightRefundDetailRequest request) {
             super(request);
             this.orderId = request.orderId;
             this.outOrderId = request.outOrderId;
+            this.outRefundApplyId = request.outRefundApplyId;
+            this.refundApplyId = request.refundApplyId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -91,7 +120,7 @@ public class IntlFlightReShopConsultRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1003038202430742196</p>
+         * <p>1002145190081005400</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("order_id", orderId);
@@ -109,6 +138,24 @@ public class IntlFlightReShopConsultRequest extends Request {
         }
 
         /**
+         * out_refund_apply_id.
+         */
+        public Builder outRefundApplyId(String outRefundApplyId) {
+            this.putQueryParameter("out_refund_apply_id", outRefundApplyId);
+            this.outRefundApplyId = outRefundApplyId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder refundApplyId(String refundApplyId) {
+            this.putQueryParameter("refund_apply_id", refundApplyId);
+            this.refundApplyId = refundApplyId;
+            return this;
+        }
+
+        /**
          * x-acs-btrip-corp-token.
          */
         public Builder xAcsBtripCorpToken(String xAcsBtripCorpToken) {
@@ -118,8 +165,8 @@ public class IntlFlightReShopConsultRequest extends Request {
         }
 
         @Override
-        public IntlFlightReShopConsultRequest build() {
-            return new IntlFlightReShopConsultRequest(this);
+        public IntlFlightRefundDetailRequest build() {
+            return new IntlFlightRefundDetailRequest(this);
         } 
 
     } 

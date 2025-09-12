@@ -203,6 +203,15 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
+        @com.aliyun.core.annotation.NameInMap("approver_email")
+        private String approverEmail;
+
+        @com.aliyun.core.annotation.NameInMap("approver_id")
+        private String approverId;
+
+        @com.aliyun.core.annotation.NameInMap("approver_name")
+        private String approverName;
+
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
@@ -326,6 +335,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_type_desc")
         private String feeTypeDesc;
 
+        @com.aliyun.core.annotation.NameInMap("foreigners_tag")
+        private String foreignersTag;
+
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
@@ -334,6 +346,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("is_transfer_order")
         private String isTransferOrder;
+
+        @com.aliyun.core.annotation.NameInMap("location")
+        private String location;
 
         @com.aliyun.core.annotation.NameInMap("long_ticket_no")
         private String longTicketNo;
@@ -437,6 +452,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("short_ticket_no")
         private String shortTicketNo;
 
+        @com.aliyun.core.annotation.NameInMap("sio")
+        private String sio;
+
         @com.aliyun.core.annotation.NameInMap("speed_package_fee")
         private Double speedPackageFee;
 
@@ -473,6 +491,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_type")
         private String trainType;
 
+        @com.aliyun.core.annotation.NameInMap("traveler_email")
+        private String travelerEmail;
+
         @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
 
@@ -487,6 +508,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("traveler_name")
         private String travelerName;
+
+        @com.aliyun.core.annotation.NameInMap("verify_failed_reason")
+        private String verifyFailedReason;
+
+        @com.aliyun.core.annotation.NameInMap("verify_status")
+        private Integer verifyStatus;
 
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
@@ -503,6 +530,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.applyDepCityName = builder.applyDepCityName;
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
+            this.approverEmail = builder.approverEmail;
+            this.approverId = builder.approverId;
+            this.approverName = builder.approverName;
             this.arrCityCode = builder.arrCityCode;
             this.arrCityName = builder.arrCityName;
             this.arrDate = builder.arrDate;
@@ -544,9 +574,11 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
             this.feeTypeDesc = builder.feeTypeDesc;
+            this.foreignersTag = builder.foreignersTag;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
             this.isTransferOrder = builder.isTransferOrder;
+            this.location = builder.location;
             this.longTicketNo = builder.longTicketNo;
             this.mappingCompanyCode = builder.mappingCompanyCode;
             this.maxCabin = builder.maxCabin;
@@ -581,6 +613,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.shortTicketNo = builder.shortTicketNo;
+            this.sio = builder.sio;
             this.speedPackageFee = builder.speedPackageFee;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
@@ -593,11 +626,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.tradeActionDesc = builder.tradeActionDesc;
             this.trainNo = builder.trainNo;
             this.trainType = builder.trainType;
+            this.travelerEmail = builder.travelerEmail;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerMemberType = builder.travelerMemberType;
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
+            this.verifyFailedReason = builder.verifyFailedReason;
+            this.verifyStatus = builder.verifyStatus;
             this.voucherType = builder.voucherType;
             this.voucherTypeDesc = builder.voucherTypeDesc;
         }
@@ -664,6 +700,27 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getApplyId() {
             return this.applyId;
+        }
+
+        /**
+         * @return approverEmail
+         */
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        /**
+         * @return approverId
+         */
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        /**
+         * @return approverName
+         */
+        public String getApproverName() {
+            return this.approverName;
         }
 
         /**
@@ -954,6 +1011,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return foreignersTag
+         */
+        public String getForeignersTag() {
+            return this.foreignersTag;
+        }
+
+        /**
          * @return index
          */
         public String getIndex() {
@@ -972,6 +1036,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getIsTransferOrder() {
             return this.isTransferOrder;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
         }
 
         /**
@@ -1213,6 +1284,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return sio
+         */
+        public String getSio() {
+            return this.sio;
+        }
+
+        /**
          * @return speedPackageFee
          */
         public Double getSpeedPackageFee() {
@@ -1297,6 +1375,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return travelerEmail
+         */
+        public String getTravelerEmail() {
+            return this.travelerEmail;
+        }
+
+        /**
          * @return travelerId
          */
         public String getTravelerId() {
@@ -1332,6 +1417,20 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return verifyFailedReason
+         */
+        public String getVerifyFailedReason() {
+            return this.verifyFailedReason;
+        }
+
+        /**
+         * @return verifyStatus
+         */
+        public Integer getVerifyStatus() {
+            return this.verifyStatus;
+        }
+
+        /**
          * @return voucherType
          */
         public Integer getVoucherType() {
@@ -1354,6 +1453,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String applyDepCityName; 
             private String applyExtendField; 
             private String applyId; 
+            private String approverEmail; 
+            private String approverId; 
+            private String approverName; 
             private String arrCityCode; 
             private String arrCityName; 
             private String arrDate; 
@@ -1395,9 +1497,11 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String exceedReason; 
             private String feeType; 
             private String feeTypeDesc; 
+            private String foreignersTag; 
             private String index; 
             private String invoiceTitle; 
             private String isTransferOrder; 
+            private String location; 
             private String longTicketNo; 
             private String mappingCompanyCode; 
             private String maxCabin; 
@@ -1432,6 +1536,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String settlementTime; 
             private String settlementType; 
             private String shortTicketNo; 
+            private String sio; 
             private Double speedPackageFee; 
             private Integer status; 
             private String statusDesc; 
@@ -1444,11 +1549,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String tradeActionDesc; 
             private String trainNo; 
             private String trainType; 
+            private String travelerEmail; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerMemberType; 
             private String travelerMemberTypeName; 
             private String travelerName; 
+            private String verifyFailedReason; 
+            private Integer verifyStatus; 
             private Integer voucherType; 
             private String voucherTypeDesc; 
 
@@ -1464,6 +1572,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
                 this.applyDepCityName = model.applyDepCityName;
                 this.applyExtendField = model.applyExtendField;
                 this.applyId = model.applyId;
+                this.approverEmail = model.approverEmail;
+                this.approverId = model.approverId;
+                this.approverName = model.approverName;
                 this.arrCityCode = model.arrCityCode;
                 this.arrCityName = model.arrCityName;
                 this.arrDate = model.arrDate;
@@ -1505,9 +1616,11 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
                 this.exceedReason = model.exceedReason;
                 this.feeType = model.feeType;
                 this.feeTypeDesc = model.feeTypeDesc;
+                this.foreignersTag = model.foreignersTag;
                 this.index = model.index;
                 this.invoiceTitle = model.invoiceTitle;
                 this.isTransferOrder = model.isTransferOrder;
+                this.location = model.location;
                 this.longTicketNo = model.longTicketNo;
                 this.mappingCompanyCode = model.mappingCompanyCode;
                 this.maxCabin = model.maxCabin;
@@ -1542,6 +1655,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
                 this.settlementTime = model.settlementTime;
                 this.settlementType = model.settlementType;
                 this.shortTicketNo = model.shortTicketNo;
+                this.sio = model.sio;
                 this.speedPackageFee = model.speedPackageFee;
                 this.status = model.status;
                 this.statusDesc = model.statusDesc;
@@ -1554,11 +1668,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
                 this.tradeActionDesc = model.tradeActionDesc;
                 this.trainNo = model.trainNo;
                 this.trainType = model.trainType;
+                this.travelerEmail = model.travelerEmail;
                 this.travelerId = model.travelerId;
                 this.travelerJobNo = model.travelerJobNo;
                 this.travelerMemberType = model.travelerMemberType;
                 this.travelerMemberTypeName = model.travelerMemberTypeName;
                 this.travelerName = model.travelerName;
+                this.verifyFailedReason = model.verifyFailedReason;
+                this.verifyStatus = model.verifyStatus;
                 this.voucherType = model.voucherType;
                 this.voucherTypeDesc = model.voucherTypeDesc;
             } 
@@ -1624,6 +1741,30 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * approver_email.
+             */
+            public Builder approverEmail(String approverEmail) {
+                this.approverEmail = approverEmail;
+                return this;
+            }
+
+            /**
+             * approver_id.
+             */
+            public Builder approverId(String approverId) {
+                this.approverId = approverId;
+                return this;
+            }
+
+            /**
+             * approver_name.
+             */
+            public Builder approverName(String approverName) {
+                this.approverName = approverName;
                 return this;
             }
 
@@ -1956,6 +2097,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * foreigners_tag.
+             */
+            public Builder foreignersTag(String foreignersTag) {
+                this.foreignersTag = foreignersTag;
+                return this;
+            }
+
+            /**
              * index.
              */
             public Builder index(String index) {
@@ -1976,6 +2125,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder isTransferOrder(String isTransferOrder) {
                 this.isTransferOrder = isTransferOrder;
+                return this;
+            }
+
+            /**
+             * location.
+             */
+            public Builder location(String location) {
+                this.location = location;
                 return this;
             }
 
@@ -2252,6 +2409,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * sio.
+             */
+            public Builder sio(String sio) {
+                this.sio = sio;
+                return this;
+            }
+
+            /**
              * speed_package_fee.
              */
             public Builder speedPackageFee(Double speedPackageFee) {
@@ -2351,6 +2516,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * traveler_email.
+             */
+            public Builder travelerEmail(String travelerEmail) {
+                this.travelerEmail = travelerEmail;
+                return this;
+            }
+
+            /**
              * traveler_id.
              */
             public Builder travelerId(String travelerId) {
@@ -2387,6 +2560,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder travelerName(String travelerName) {
                 this.travelerName = travelerName;
+                return this;
+            }
+
+            /**
+             * verify_failed_reason.
+             */
+            public Builder verifyFailedReason(String verifyFailedReason) {
+                this.verifyFailedReason = verifyFailedReason;
+                return this;
+            }
+
+            /**
+             * verify_status.
+             */
+            public Builder verifyStatus(Integer verifyStatus) {
+                this.verifyStatus = verifyStatus;
                 return this;
             }
 

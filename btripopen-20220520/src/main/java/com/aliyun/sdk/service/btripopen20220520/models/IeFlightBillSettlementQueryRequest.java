@@ -23,7 +23,7 @@ public class IeFlightBillSettlementQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("order_id")
-    private Double orderId;
+    private Long orderId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
@@ -91,7 +91,7 @@ public class IeFlightBillSettlementQueryRequest extends Request {
     /**
      * @return orderId
      */
-    public Double getOrderId() {
+    public Long getOrderId() {
         return this.orderId;
     }
 
@@ -146,7 +146,7 @@ public class IeFlightBillSettlementQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<IeFlightBillSettlementQueryRequest, Builder> {
         private String billBatch; 
-        private Double orderId; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
@@ -184,7 +184,7 @@ public class IeFlightBillSettlementQueryRequest extends Request {
         /**
          * order_id.
          */
-        public Builder orderId(Double orderId) {
+        public Builder orderId(Long orderId) {
             this.putQueryParameter("order_id", orderId);
             this.orderId = orderId;
             return this;

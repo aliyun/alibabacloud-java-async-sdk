@@ -194,6 +194,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_handling_fee")
         private Double changeHandlingFee;
 
+        @com.aliyun.core.annotation.NameInMap("change_order_id")
+        private String changeOrderId;
+
         @com.aliyun.core.annotation.NameInMap("change_seat_no")
         private String changeSeatNo;
 
@@ -270,6 +273,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.changeCoachNo = builder.changeCoachNo;
             this.changeGapFee = builder.changeGapFee;
             this.changeHandlingFee = builder.changeHandlingFee;
+            this.changeOrderId = builder.changeOrderId;
             this.changeSeatNo = builder.changeSeatNo;
             this.changeSeatTypeName = builder.changeSeatTypeName;
             this.changeServiceFee = builder.changeServiceFee;
@@ -323,6 +327,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
          */
         public Double getChangeHandlingFee() {
             return this.changeHandlingFee;
+        }
+
+        /**
+         * @return changeOrderId
+         */
+        public String getChangeOrderId() {
+            return this.changeOrderId;
         }
 
         /**
@@ -497,6 +508,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String changeCoachNo; 
             private Double changeGapFee; 
             private Double changeHandlingFee; 
+            private String changeOrderId; 
             private String changeSeatNo; 
             private String changeSeatTypeName; 
             private Double changeServiceFee; 
@@ -529,6 +541,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
                 this.changeCoachNo = model.changeCoachNo;
                 this.changeGapFee = model.changeGapFee;
                 this.changeHandlingFee = model.changeHandlingFee;
+                this.changeOrderId = model.changeOrderId;
                 this.changeSeatNo = model.changeSeatNo;
                 this.changeSeatTypeName = model.changeSeatTypeName;
                 this.changeServiceFee = model.changeServiceFee;
@@ -576,6 +589,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder changeHandlingFee(Double changeHandlingFee) {
                 this.changeHandlingFee = changeHandlingFee;
+                return this;
+            }
+
+            /**
+             * change_order_id.
+             */
+            public Builder changeOrderId(String changeOrderId) {
+                this.changeOrderId = changeOrderId;
                 return this;
             }
 
@@ -1805,6 +1826,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
+        @com.aliyun.core.annotation.NameInMap("refund_apply_id")
+        private String refundApplyId;
+
         @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
@@ -1820,6 +1844,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         private RefundTicketInfoList(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
+            this.refundApplyId = builder.refundApplyId;
             this.refundFee = builder.refundFee;
             this.refundServiceFee = builder.refundServiceFee;
             this.ticketNo = builder.ticketNo;
@@ -1846,6 +1871,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
          */
         public String getGmtModify() {
             return this.gmtModify;
+        }
+
+        /**
+         * @return refundApplyId
+         */
+        public String getRefundApplyId() {
+            return this.refundApplyId;
         }
 
         /**
@@ -1879,6 +1911,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         public static final class Builder {
             private String gmtCreate; 
             private String gmtModify; 
+            private String refundApplyId; 
             private Double refundFee; 
             private Double refundServiceFee; 
             private String ticketNo; 
@@ -1890,6 +1923,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private Builder(RefundTicketInfoList model) {
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModify = model.gmtModify;
+                this.refundApplyId = model.refundApplyId;
                 this.refundFee = model.refundFee;
                 this.refundServiceFee = model.refundServiceFee;
                 this.ticketNo = model.ticketNo;
@@ -1909,6 +1943,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
+                return this;
+            }
+
+            /**
+             * refund_apply_id.
+             */
+            public Builder refundApplyId(String refundApplyId) {
+                this.refundApplyId = refundApplyId;
                 return this;
             }
 

@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateEmployeeRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("account_email")
+    private String accountEmail;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("account_phone")
+    private String accountPhone;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("attribute")
     private String attribute;
 
@@ -108,6 +116,8 @@ public class UpdateEmployeeRequest extends Request {
 
     private UpdateEmployeeRequest(Builder builder) {
         super(builder);
+        this.accountEmail = builder.accountEmail;
+        this.accountPhone = builder.accountPhone;
         this.attribute = builder.attribute;
         this.avatar = builder.avatar;
         this.baseCityCodeList = builder.baseCityCodeList;
@@ -143,6 +153,20 @@ public class UpdateEmployeeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountEmail
+     */
+    public String getAccountEmail() {
+        return this.accountEmail;
+    }
+
+    /**
+     * @return accountPhone
+     */
+    public String getAccountPhone() {
+        return this.accountPhone;
     }
 
     /**
@@ -300,6 +324,8 @@ public class UpdateEmployeeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateEmployeeRequest, Builder> {
+        private String accountEmail; 
+        private String accountPhone; 
         private String attribute; 
         private String avatar; 
         private java.util.List<String> baseCityCodeList; 
@@ -329,6 +355,8 @@ public class UpdateEmployeeRequest extends Request {
 
         private Builder(UpdateEmployeeRequest request) {
             super(request);
+            this.accountEmail = request.accountEmail;
+            this.accountPhone = request.accountPhone;
             this.attribute = request.attribute;
             this.avatar = request.avatar;
             this.baseCityCodeList = request.baseCityCodeList;
@@ -352,6 +380,24 @@ public class UpdateEmployeeRequest extends Request {
             this.userNick = request.userNick;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * account_email.
+         */
+        public Builder accountEmail(String accountEmail) {
+            this.putBodyParameter("account_email", accountEmail);
+            this.accountEmail = accountEmail;
+            return this;
+        }
+
+        /**
+         * account_phone.
+         */
+        public Builder accountPhone(String accountPhone) {
+            this.putBodyParameter("account_phone", accountPhone);
+            this.accountPhone = accountPhone;
+            return this;
+        }
 
         /**
          * attribute.

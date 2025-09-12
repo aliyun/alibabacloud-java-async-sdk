@@ -2011,6 +2011,81 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
      *
      * <p>IntlFlightOtaSearchResponseBody</p>
      */
+    public static class LabelList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("labelCode")
+        private Integer labelCode;
+
+        @com.aliyun.core.annotation.NameInMap("labelName")
+        private String labelName;
+
+        private LabelList(Builder builder) {
+            this.labelCode = builder.labelCode;
+            this.labelName = builder.labelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelCode
+         */
+        public Integer getLabelCode() {
+            return this.labelCode;
+        }
+
+        /**
+         * @return labelName
+         */
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+        public static final class Builder {
+            private Integer labelCode; 
+            private String labelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelList model) {
+                this.labelCode = model.labelCode;
+                this.labelName = model.labelName;
+            } 
+
+            /**
+             * labelCode.
+             */
+            public Builder labelCode(Integer labelCode) {
+                this.labelCode = labelCode;
+                return this;
+            }
+
+            /**
+             * labelName.
+             */
+            public Builder labelName(String labelName) {
+                this.labelName = labelName;
+                return this;
+            }
+
+            public LabelList build() {
+                return new LabelList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaSearchResponseBody</p>
+     */
     public static class BaggageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_digest")
         private String baggageDigest;
@@ -2531,6 +2606,9 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("item_type")
         private String itemType;
 
+        @com.aliyun.core.annotation.NameInMap("label_list")
+        private java.util.List<LabelList> labelList;
+
         @com.aliyun.core.annotation.NameInMap("shopping_item_map")
         private java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap;
 
@@ -2541,6 +2619,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             this.agreementPriceCodes = builder.agreementPriceCodes;
             this.itemId = builder.itemId;
             this.itemType = builder.itemType;
+            this.labelList = builder.labelList;
             this.shoppingItemMap = builder.shoppingItemMap;
             this.subItems = builder.subItems;
         }
@@ -2575,6 +2654,13 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return labelList
+         */
+        public java.util.List<LabelList> getLabelList() {
+            return this.labelList;
+        }
+
+        /**
          * @return shoppingItemMap
          */
         public java.util.Map<String, ModuleItemListShoppingItemMapValue> getShoppingItemMap() {
@@ -2592,6 +2678,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             private java.util.List<AgreementPriceCodes> agreementPriceCodes; 
             private String itemId; 
             private String itemType; 
+            private java.util.List<LabelList> labelList; 
             private java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap; 
             private java.util.List<SubItems> subItems; 
 
@@ -2602,6 +2689,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
                 this.agreementPriceCodes = model.agreementPriceCodes;
                 this.itemId = model.itemId;
                 this.itemType = model.itemType;
+                this.labelList = model.labelList;
                 this.shoppingItemMap = model.shoppingItemMap;
                 this.subItems = model.subItems;
             } 
@@ -2627,6 +2715,14 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
              */
             public Builder itemType(String itemType) {
                 this.itemType = itemType;
+                return this;
+            }
+
+            /**
+             * label_list.
+             */
+            public Builder labelList(java.util.List<LabelList> labelList) {
+                this.labelList = labelList;
                 return this;
             }
 

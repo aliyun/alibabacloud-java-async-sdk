@@ -502,6 +502,9 @@ public class FlightCreateOrderV2Request extends Request {
         @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
+        @com.aliyun.core.annotation.NameInMap("tax_number")
+        private String taxNumber;
+
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
@@ -528,6 +531,7 @@ public class FlightCreateOrderV2Request extends Request {
             this.phone = builder.phone;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.taxNumber = builder.taxNumber;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -667,6 +671,13 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
+         * @return taxNumber
+         */
+        public String getTaxNumber() {
+            return this.taxNumber;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -699,6 +710,7 @@ public class FlightCreateOrderV2Request extends Request {
             private String phone; 
             private String projectCode; 
             private String projectTitle; 
+            private String taxNumber; 
             private String userId; 
             private Integer userType; 
 
@@ -724,6 +736,7 @@ public class FlightCreateOrderV2Request extends Request {
                 this.phone = model.phone;
                 this.projectCode = model.projectCode;
                 this.projectTitle = model.projectTitle;
+                this.taxNumber = model.taxNumber;
                 this.userId = model.userId;
                 this.userType = model.userType;
             } 
@@ -878,6 +891,14 @@ public class FlightCreateOrderV2Request extends Request {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * tax_number.
+             */
+            public Builder taxNumber(String taxNumber) {
+                this.taxNumber = taxNumber;
                 return this;
             }
 

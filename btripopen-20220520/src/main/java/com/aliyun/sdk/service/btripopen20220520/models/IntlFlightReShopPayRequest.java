@@ -12,28 +12,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link IntlFlightReShopConsultRequest} extends {@link RequestModel}
+ * {@link IntlFlightReShopPayRequest} extends {@link RequestModel}
  *
- * <p>IntlFlightReShopConsultRequest</p>
+ * <p>IntlFlightReShopPayRequest</p>
  */
-public class IntlFlightReShopConsultRequest extends Request {
-    @com.aliyun.core.annotation.Query
+public class IntlFlightReShopPayRequest extends Request {
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_re_shop_apply_id")
+    private String outReShopApplyId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("re_shop_apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String reShopApplyId;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
-    private IntlFlightReShopConsultRequest(Builder builder) {
+    private IntlFlightReShopPayRequest(Builder builder) {
         super(builder);
         this.orderId = builder.orderId;
         this.outOrderId = builder.outOrderId;
+        this.outReShopApplyId = builder.outReShopApplyId;
+        this.reShopApplyId = builder.reShopApplyId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -41,7 +52,7 @@ public class IntlFlightReShopConsultRequest extends Request {
         return new Builder();
     }
 
-    public static IntlFlightReShopConsultRequest create() {
+    public static IntlFlightReShopPayRequest create() {
         return builder().build();
     }
 
@@ -65,25 +76,43 @@ public class IntlFlightReShopConsultRequest extends Request {
     }
 
     /**
+     * @return outReShopApplyId
+     */
+    public String getOutReShopApplyId() {
+        return this.outReShopApplyId;
+    }
+
+    /**
+     * @return reShopApplyId
+     */
+    public String getReShopApplyId() {
+        return this.reShopApplyId;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
         return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<IntlFlightReShopConsultRequest, Builder> {
+    public static final class Builder extends Request.Builder<IntlFlightReShopPayRequest, Builder> {
         private String orderId; 
         private String outOrderId; 
+        private String outReShopApplyId; 
+        private String reShopApplyId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(IntlFlightReShopConsultRequest request) {
+        private Builder(IntlFlightReShopPayRequest request) {
             super(request);
             this.orderId = request.orderId;
             this.outOrderId = request.outOrderId;
+            this.outReShopApplyId = request.outReShopApplyId;
+            this.reShopApplyId = request.reShopApplyId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -91,10 +120,10 @@ public class IntlFlightReShopConsultRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1003038202430742196</p>
+         * <p>1017035200059399795</p>
          */
         public Builder orderId(String orderId) {
-            this.putQueryParameter("order_id", orderId);
+            this.putBodyParameter("order_id", orderId);
             this.orderId = orderId;
             return this;
         }
@@ -103,8 +132,29 @@ public class IntlFlightReShopConsultRequest extends Request {
          * out_order_id.
          */
         public Builder outOrderId(String outOrderId) {
-            this.putQueryParameter("out_order_id", outOrderId);
+            this.putBodyParameter("out_order_id", outOrderId);
             this.outOrderId = outOrderId;
+            return this;
+        }
+
+        /**
+         * out_re_shop_apply_id.
+         */
+        public Builder outReShopApplyId(String outReShopApplyId) {
+            this.putBodyParameter("out_re_shop_apply_id", outReShopApplyId);
+            this.outReShopApplyId = outReShopApplyId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1019202345889633</p>
+         */
+        public Builder reShopApplyId(String reShopApplyId) {
+            this.putBodyParameter("re_shop_apply_id", reShopApplyId);
+            this.reShopApplyId = reShopApplyId;
             return this;
         }
 
@@ -118,8 +168,8 @@ public class IntlFlightReShopConsultRequest extends Request {
         }
 
         @Override
-        public IntlFlightReShopConsultRequest build() {
-            return new IntlFlightReShopConsultRequest(this);
+        public IntlFlightReShopPayRequest build() {
+            return new IntlFlightReShopPayRequest(this);
         } 
 
     } 

@@ -184,6 +184,123 @@ public class CarOrderQueryResponseBody extends TeaModel {
      *
      * <p>CarOrderQueryResponseBody</p>
      */
+    public static class WayPoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("address")
+        private String address;
+
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
+        @com.aliyun.core.annotation.NameInMap("latitude")
+        private String latitude;
+
+        @com.aliyun.core.annotation.NameInMap("longitude")
+        private String longitude;
+
+        private WayPoints(Builder builder) {
+            this.address = builder.address;
+            this.index = builder.index;
+            this.latitude = builder.latitude;
+            this.longitude = builder.longitude;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WayPoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return latitude
+         */
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        /**
+         * @return longitude
+         */
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        public static final class Builder {
+            private String address; 
+            private String index; 
+            private String latitude; 
+            private String longitude; 
+
+            private Builder() {
+            } 
+
+            private Builder(WayPoints model) {
+                this.address = model.address;
+                this.index = model.index;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+            } 
+
+            /**
+             * address.
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * latitude.
+             */
+            public Builder latitude(String latitude) {
+                this.latitude = latitude;
+                return this;
+            }
+
+            /**
+             * longitude.
+             */
+            public Builder longitude(String longitude) {
+                this.longitude = longitude;
+                return this;
+            }
+
+            public WayPoints build() {
+                return new WayPoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class CarInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_category")
         private String businessCategory;
@@ -269,6 +386,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("travel_distance")
         private String travelDistance;
 
+        @com.aliyun.core.annotation.NameInMap("way_points")
+        private java.util.List<WayPoints> wayPoints;
+
         private CarInfo(Builder builder) {
             this.businessCategory = builder.businessCategory;
             this.cancelTime = builder.cancelTime;
@@ -298,6 +418,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             this.toCityAdCode = builder.toCityAdCode;
             this.toCityName = builder.toCityName;
             this.travelDistance = builder.travelDistance;
+            this.wayPoints = builder.wayPoints;
         }
 
         public static Builder builder() {
@@ -504,6 +625,13 @@ public class CarOrderQueryResponseBody extends TeaModel {
             return this.travelDistance;
         }
 
+        /**
+         * @return wayPoints
+         */
+        public java.util.List<WayPoints> getWayPoints() {
+            return this.wayPoints;
+        }
+
         public static final class Builder {
             private String businessCategory; 
             private Long cancelTime; 
@@ -533,6 +661,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String toCityAdCode; 
             private String toCityName; 
             private String travelDistance; 
+            private java.util.List<WayPoints> wayPoints; 
 
             private Builder() {
             } 
@@ -566,6 +695,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
                 this.toCityAdCode = model.toCityAdCode;
                 this.toCityName = model.toCityName;
                 this.travelDistance = model.travelDistance;
+                this.wayPoints = model.wayPoints;
             } 
 
             /**
@@ -789,6 +919,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
              */
             public Builder travelDistance(String travelDistance) {
                 this.travelDistance = travelDistance;
+                return this;
+            }
+
+            /**
+             * way_points.
+             */
+            public Builder wayPoints(java.util.List<WayPoints> wayPoints) {
+                this.wayPoints = wayPoints;
                 return this;
             }
 

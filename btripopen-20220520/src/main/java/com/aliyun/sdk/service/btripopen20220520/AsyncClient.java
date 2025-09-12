@@ -836,10 +836,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IntlFlightOtaSearchResponse> intlFlightOtaSearch(IntlFlightOtaSearchRequest request);
 
     /**
+     * @param request the request parameters of IntlFlightReShopApply  IntlFlightReShopApplyRequest
+     * @return IntlFlightReShopApplyResponse
+     */
+    CompletableFuture<IntlFlightReShopApplyResponse> intlFlightReShopApply(IntlFlightReShopApplyRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightReShopCancel  IntlFlightReShopCancelRequest
+     * @return IntlFlightReShopCancelResponse
+     */
+    CompletableFuture<IntlFlightReShopCancelResponse> intlFlightReShopCancel(IntlFlightReShopCancelRequest request);
+
+    /**
      * @param request the request parameters of IntlFlightReShopConsult  IntlFlightReShopConsultRequest
      * @return IntlFlightReShopConsultResponse
      */
     CompletableFuture<IntlFlightReShopConsultResponse> intlFlightReShopConsult(IntlFlightReShopConsultRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightReShopDetail  IntlFlightReShopDetailRequest
+     * @return IntlFlightReShopDetailResponse
+     */
+    CompletableFuture<IntlFlightReShopDetailResponse> intlFlightReShopDetail(IntlFlightReShopDetailRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightReShopPay  IntlFlightReShopPayRequest
+     * @return IntlFlightReShopPayResponse
+     */
+    CompletableFuture<IntlFlightReShopPayResponse> intlFlightReShopPay(IntlFlightReShopPayRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightRefundApply  IntlFlightRefundApplyRequest
+     * @return IntlFlightRefundApplyResponse
+     */
+    CompletableFuture<IntlFlightRefundApplyResponse> intlFlightRefundApply(IntlFlightRefundApplyRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightRefundConsult  IntlFlightRefundConsultRequest
+     * @return IntlFlightRefundConsultResponse
+     */
+    CompletableFuture<IntlFlightRefundConsultResponse> intlFlightRefundConsult(IntlFlightRefundConsultRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightRefundDetail  IntlFlightRefundDetailRequest
+     * @return IntlFlightRefundDetailResponse
+     */
+    CompletableFuture<IntlFlightRefundDetailResponse> intlFlightRefundDetail(IntlFlightRefundDetailRequest request);
 
     /**
      * @param request the request parameters of IntlFlightSegmentAvailableCert  IntlFlightSegmentAvailableCertRequest
@@ -1188,6 +1230,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TravelStandardQueryResponse
      */
     CompletableFuture<TravelStandardQueryResponse> travelStandardQuery(TravelStandardQueryRequest request);
+
+    /**
+     * @param request the request parameters of TravelStandardRelateAdd  TravelStandardRelateAddRequest
+     * @return TravelStandardRelateAddResponse
+     */
+    CompletableFuture<TravelStandardRelateAddResponse> travelStandardRelateAdd(TravelStandardRelateAddRequest request);
+
+    /**
+     * @param request the request parameters of TravelStandardRelateDelete  TravelStandardRelateDeleteRequest
+     * @return TravelStandardRelateDeleteResponse
+     */
+    CompletableFuture<TravelStandardRelateDeleteResponse> travelStandardRelateDelete(TravelStandardRelateDeleteRequest request);
+
+    /**
+     * @param request the request parameters of TravelStandardRelateQuery  TravelStandardRelateQueryRequest
+     * @return TravelStandardRelateQueryResponse
+     */
+    CompletableFuture<TravelStandardRelateQueryResponse> travelStandardRelateQuery(TravelStandardRelateQueryRequest request);
+
+    /**
+     * @param request the request parameters of TravelStandardScopeSave  TravelStandardScopeSaveRequest
+     * @return TravelStandardScopeSaveResponse
+     */
+    CompletableFuture<TravelStandardScopeSaveResponse> travelStandardScopeSave(TravelStandardScopeSaveRequest request);
 
     /**
      * @param request the request parameters of TripBusinessInstanceQuery  TripBusinessInstanceQueryRequest

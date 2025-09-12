@@ -253,23 +253,98 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      *
      * <p>IntlFlightListingSearchResponseBody</p>
      */
+    public static class LabelList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("labelCode")
+        private Integer labelCode;
+
+        @com.aliyun.core.annotation.NameInMap("labelName")
+        private String labelName;
+
+        private LabelList(Builder builder) {
+            this.labelCode = builder.labelCode;
+            this.labelName = builder.labelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelCode
+         */
+        public Integer getLabelCode() {
+            return this.labelCode;
+        }
+
+        /**
+         * @return labelName
+         */
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+        public static final class Builder {
+            private Integer labelCode; 
+            private String labelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelList model) {
+                this.labelCode = model.labelCode;
+                this.labelName = model.labelName;
+            } 
+
+            /**
+             * labelCode.
+             */
+            public Builder labelCode(Integer labelCode) {
+                this.labelCode = labelCode;
+                return this;
+            }
+
+            /**
+             * labelName.
+             */
+            public Builder labelName(String labelName) {
+                this.labelName = labelName;
+                return this;
+            }
+
+            public LabelList build() {
+                return new LabelList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class BestPriceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
         private java.util.List<AgreementPriceCodes> agreementPriceCodes;
 
-        @com.aliyun.core.annotation.NameInMap("item_id")
-        private String itemId;
-
         @com.aliyun.core.annotation.NameInMap("item_type")
         private String itemType;
+
+        @com.aliyun.core.annotation.NameInMap("label_list")
+        private java.util.List<LabelList> labelList;
 
         @com.aliyun.core.annotation.NameInMap("shopping_item_map")
         private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
 
         private BestPriceItem(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
-            this.itemId = builder.itemId;
             this.itemType = builder.itemType;
+            this.labelList = builder.labelList;
             this.shoppingItemMap = builder.shoppingItemMap;
         }
 
@@ -289,17 +364,17 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return itemId
-         */
-        public String getItemId() {
-            return this.itemId;
-        }
-
-        /**
          * @return itemType
          */
         public String getItemType() {
             return this.itemType;
+        }
+
+        /**
+         * @return labelList
+         */
+        public java.util.List<LabelList> getLabelList() {
+            return this.labelList;
         }
 
         /**
@@ -311,8 +386,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AgreementPriceCodes> agreementPriceCodes; 
-            private String itemId; 
             private String itemType; 
+            private java.util.List<LabelList> labelList; 
             private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap; 
 
             private Builder() {
@@ -320,8 +395,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
             private Builder(BestPriceItem model) {
                 this.agreementPriceCodes = model.agreementPriceCodes;
-                this.itemId = model.itemId;
                 this.itemType = model.itemType;
+                this.labelList = model.labelList;
                 this.shoppingItemMap = model.shoppingItemMap;
             } 
 
@@ -334,18 +409,18 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * item_id.
-             */
-            public Builder itemId(String itemId) {
-                this.itemId = itemId;
-                return this;
-            }
-
-            /**
              * item_type.
              */
             public Builder itemType(String itemType) {
                 this.itemType = itemType;
+                return this;
+            }
+
+            /**
+             * label_list.
+             */
+            public Builder labelList(java.util.List<LabelList> labelList) {
+                this.labelList = labelList;
                 return this;
             }
 

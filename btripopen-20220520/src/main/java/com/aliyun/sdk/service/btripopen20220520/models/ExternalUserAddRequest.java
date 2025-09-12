@@ -40,7 +40,6 @@ public class ExternalUserAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("real_name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String realName;
 
     @com.aliyun.core.annotation.Body
@@ -223,7 +222,7 @@ public class ExternalUserAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * real_name.
          */
         public Builder realName(String realName) {
             this.putBodyParameter("real_name", realName);

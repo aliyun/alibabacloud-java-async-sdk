@@ -2488,6 +2488,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of IntlFlightReShopApply  IntlFlightReShopApplyRequest
+     * @return IntlFlightReShopApplyResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopApplyResponse> intlFlightReShopApply(IntlFlightReShopApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopApply").setMethod(HttpMethod.POST).setPathRegex("/intl-flight/v1/flights/action/reshop/apply").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopApplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightReShopCancel  IntlFlightReShopCancelRequest
+     * @return IntlFlightReShopCancelResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopCancelResponse> intlFlightReShopCancel(IntlFlightReShopCancelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopCancel").setMethod(HttpMethod.PUT).setPathRegex("/intl-flight/v1/flights/action/reshop/cancel").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopCancelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopCancelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of IntlFlightReShopConsult  IntlFlightReShopConsultRequest
      * @return IntlFlightReShopConsultResponse
      */
@@ -2500,6 +2536,96 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<IntlFlightReShopConsultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightReShopDetail  IntlFlightReShopDetailRequest
+     * @return IntlFlightReShopDetailResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopDetailResponse> intlFlightReShopDetail(IntlFlightReShopDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopDetail").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/reshop/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightReShopPay  IntlFlightReShopPayRequest
+     * @return IntlFlightReShopPayResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopPayResponse> intlFlightReShopPay(IntlFlightReShopPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopPay").setMethod(HttpMethod.PUT).setPathRegex("/intl-flight/v1/flights/action/reshop/pay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightRefundApply  IntlFlightRefundApplyRequest
+     * @return IntlFlightRefundApplyResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightRefundApplyResponse> intlFlightRefundApply(IntlFlightRefundApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightRefundApply").setMethod(HttpMethod.POST).setPathRegex("/intl-flight/v1/flights/action/refund/apply").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightRefundApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightRefundApplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightRefundConsult  IntlFlightRefundConsultRequest
+     * @return IntlFlightRefundConsultResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightRefundConsultResponse> intlFlightRefundConsult(IntlFlightRefundConsultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightRefundConsult").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/refund/consult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightRefundConsultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightRefundConsultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightRefundDetail  IntlFlightRefundDetailRequest
+     * @return IntlFlightRefundDetailResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightRefundDetailResponse> intlFlightRefundDetail(IntlFlightRefundDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightRefundDetail").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/refund/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightRefundDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightRefundDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3544,6 +3670,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TravelStandardQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TravelStandardRelateAdd  TravelStandardRelateAddRequest
+     * @return TravelStandardRelateAddResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardRelateAddResponse> travelStandardRelateAdd(TravelStandardRelateAddRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardRelateAdd").setMethod(HttpMethod.POST).setPathRegex("/travel-manage/v1/standards/add-relate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardRelateAddResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardRelateAddResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TravelStandardRelateDelete  TravelStandardRelateDeleteRequest
+     * @return TravelStandardRelateDeleteResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardRelateDeleteResponse> travelStandardRelateDelete(TravelStandardRelateDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardRelateDelete").setMethod(HttpMethod.POST).setPathRegex("/travel-manage/v1/standards/delete-relate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardRelateDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardRelateDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TravelStandardRelateQuery  TravelStandardRelateQueryRequest
+     * @return TravelStandardRelateQueryResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardRelateQueryResponse> travelStandardRelateQuery(TravelStandardRelateQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardRelateQuery").setMethod(HttpMethod.GET).setPathRegex("/travel-manage/v1/standards/query-relate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardRelateQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardRelateQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TravelStandardScopeSave  TravelStandardScopeSaveRequest
+     * @return TravelStandardScopeSaveResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardScopeSaveResponse> travelStandardScopeSave(TravelStandardScopeSaveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardScopeSave").setMethod(HttpMethod.GET).setPathRegex("/travel-manage/v1/standards/save-scope").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardScopeSaveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardScopeSaveResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
