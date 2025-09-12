@@ -972,6 +972,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DownloadSQLLogsRecordsResponse> downloadSQLLogsRecords(DownloadSQLLogsRecordsRequest request);
 
     /**
+     * @param request the request parameters of EnableCollectionGraphRAG  EnableCollectionGraphRAGRequest
+     * @return EnableCollectionGraphRAGResponse
+     */
+    CompletableFuture<EnableCollectionGraphRAGResponse> enableCollectionGraphRAG(EnableCollectionGraphRAGRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.</p>
      * <ul>
@@ -995,6 +1001,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAccountResponse
      */
     CompletableFuture<GetAccountResponse> getAccount(GetAccountRequest request);
+
+    /**
+     * @param request the request parameters of GetGraphRAGJob  GetGraphRAGJobRequest
+     * @return GetGraphRAGJobResponse
+     */
+    CompletableFuture<GetGraphRAGJobResponse> getGraphRAGJob(GetGraphRAGJobRequest request);
 
     /**
      * @param request the request parameters of GetSecretValue  GetSecretValueRequest

@@ -36,6 +36,14 @@ public class CreateDocumentCollectionRequest extends Request {
     private String embeddingModel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGraph")
+    private Boolean enableGraph;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityTypes")
+    private java.util.List<String> entityTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExternalStorage")
     private Integer externalStorage;
 
@@ -51,6 +59,14 @@ public class CreateDocumentCollectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("HnswM")
     @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer hnswM;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LLMModel")
+    private String LLMModel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManagerAccount")
@@ -95,16 +111,24 @@ public class CreateDocumentCollectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationshipTypes")
+    private java.util.List<String> relationshipTypes;
+
     private CreateDocumentCollectionRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
         this.embeddingModel = builder.embeddingModel;
+        this.enableGraph = builder.enableGraph;
+        this.entityTypes = builder.entityTypes;
         this.externalStorage = builder.externalStorage;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
         this.hnswEfConstruction = builder.hnswEfConstruction;
         this.hnswM = builder.hnswM;
+        this.LLMModel = builder.LLMModel;
+        this.language = builder.language;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
         this.metadata = builder.metadata;
@@ -115,6 +139,7 @@ public class CreateDocumentCollectionRequest extends Request {
         this.parser = builder.parser;
         this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
+        this.relationshipTypes = builder.relationshipTypes;
     }
 
     public static Builder builder() {
@@ -159,6 +184,20 @@ public class CreateDocumentCollectionRequest extends Request {
     }
 
     /**
+     * @return enableGraph
+     */
+    public Boolean getEnableGraph() {
+        return this.enableGraph;
+    }
+
+    /**
+     * @return entityTypes
+     */
+    public java.util.List<String> getEntityTypes() {
+        return this.entityTypes;
+    }
+
+    /**
      * @return externalStorage
      */
     public Integer getExternalStorage() {
@@ -184,6 +223,20 @@ public class CreateDocumentCollectionRequest extends Request {
      */
     public Integer getHnswM() {
         return this.hnswM;
+    }
+
+    /**
+     * @return LLMModel
+     */
+    public String getLLMModel() {
+        return this.LLMModel;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -256,15 +309,26 @@ public class CreateDocumentCollectionRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return relationshipTypes
+     */
+    public java.util.List<String> getRelationshipTypes() {
+        return this.relationshipTypes;
+    }
+
     public static final class Builder extends Request.Builder<CreateDocumentCollectionRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
         private Integer dimension; 
         private String embeddingModel; 
+        private Boolean enableGraph; 
+        private java.util.List<String> entityTypes; 
         private Integer externalStorage; 
         private String fullTextRetrievalFields; 
         private String hnswEfConstruction; 
         private Integer hnswM; 
+        private String LLMModel; 
+        private String language; 
         private String managerAccount; 
         private String managerAccountPassword; 
         private String metadata; 
@@ -275,6 +339,7 @@ public class CreateDocumentCollectionRequest extends Request {
         private String parser; 
         private Integer pqEnable; 
         private String regionId; 
+        private java.util.List<String> relationshipTypes; 
 
         private Builder() {
             super();
@@ -286,10 +351,14 @@ public class CreateDocumentCollectionRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
             this.embeddingModel = request.embeddingModel;
+            this.enableGraph = request.enableGraph;
+            this.entityTypes = request.entityTypes;
             this.externalStorage = request.externalStorage;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
             this.hnswEfConstruction = request.hnswEfConstruction;
             this.hnswM = request.hnswM;
+            this.LLMModel = request.LLMModel;
+            this.language = request.language;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
             this.metadata = request.metadata;
@@ -300,6 +369,7 @@ public class CreateDocumentCollectionRequest extends Request {
             this.parser = request.parser;
             this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
+            this.relationshipTypes = request.relationshipTypes;
         } 
 
         /**
@@ -389,6 +459,25 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
+         * EnableGraph.
+         */
+        public Builder enableGraph(Boolean enableGraph) {
+            this.putQueryParameter("EnableGraph", enableGraph);
+            this.enableGraph = enableGraph;
+            return this;
+        }
+
+        /**
+         * EntityTypes.
+         */
+        public Builder entityTypes(java.util.List<String> entityTypes) {
+            String entityTypesShrink = shrink(entityTypes, "EntityTypes", "json");
+            this.putQueryParameter("EntityTypes", entityTypesShrink);
+            this.entityTypes = entityTypes;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
          * <blockquote>
          * </blockquote>
@@ -451,6 +540,24 @@ public class CreateDocumentCollectionRequest extends Request {
         public Builder hnswM(Integer hnswM) {
             this.putQueryParameter("HnswM", hnswM);
             this.hnswM = hnswM;
+            return this;
+        }
+
+        /**
+         * LLMModel.
+         */
+        public Builder LLMModel(String LLMModel) {
+            this.putQueryParameter("LLMModel", LLMModel);
+            this.LLMModel = LLMModel;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 
@@ -594,6 +701,16 @@ public class CreateDocumentCollectionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RelationshipTypes.
+         */
+        public Builder relationshipTypes(java.util.List<String> relationshipTypes) {
+            String relationshipTypesShrink = shrink(relationshipTypes, "RelationshipTypes", "json");
+            this.putQueryParameter("RelationshipTypes", relationshipTypesShrink);
+            this.relationshipTypes = relationshipTypes;
             return this;
         }
 

@@ -314,6 +314,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
+        @com.aliyun.core.annotation.NameInMap("GraphEngineStatus")
+        private String graphEngineStatus;
+
         @com.aliyun.core.annotation.NameInMap("HostType")
         private String hostType;
 
@@ -468,6 +471,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.graphEngineStatus = builder.graphEngineStatus;
             this.hostType = builder.hostType;
             this.idleTime = builder.idleTime;
             this.instanceNetworkType = builder.instanceNetworkType;
@@ -707,6 +711,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return graphEngineStatus
+         */
+        public String getGraphEngineStatus() {
+            return this.graphEngineStatus;
         }
 
         /**
@@ -1031,6 +1042,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
+            private String graphEngineStatus; 
             private String hostType; 
             private Integer idleTime; 
             private String instanceNetworkType; 
@@ -1105,6 +1117,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.engine = model.engine;
                 this.engineVersion = model.engineVersion;
                 this.expireTime = model.expireTime;
+                this.graphEngineStatus = model.graphEngineStatus;
                 this.hostType = model.hostType;
                 this.idleTime = model.idleTime;
                 this.instanceNetworkType = model.instanceNetworkType;
@@ -1490,6 +1503,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * GraphEngineStatus.
+             */
+            public Builder graphEngineStatus(String graphEngineStatus) {
+                this.graphEngineStatus = graphEngineStatus;
                 return this;
             }
 

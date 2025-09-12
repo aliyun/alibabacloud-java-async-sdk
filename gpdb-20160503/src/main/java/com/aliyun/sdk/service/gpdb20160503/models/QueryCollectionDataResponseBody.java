@@ -234,6 +234,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map<String, String> metadata;
 
+        @com.aliyun.core.annotation.NameInMap("MetadataV2")
+        private java.util.Map<String, ?> metadataV2;
+
         @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
@@ -243,6 +246,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private Match(Builder builder) {
             this.id = builder.id;
             this.metadata = builder.metadata;
+            this.metadataV2 = builder.metadataV2;
             this.score = builder.score;
             this.values = builder.values;
         }
@@ -270,6 +274,13 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return metadataV2
+         */
+        public java.util.Map<String, ?> getMetadataV2() {
+            return this.metadataV2;
+        }
+
+        /**
          * @return score
          */
         public Double getScore() {
@@ -286,6 +297,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private java.util.Map<String, String> metadata; 
+            private java.util.Map<String, ?> metadataV2; 
             private Double score; 
             private Values values; 
 
@@ -295,6 +307,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private Builder(Match model) {
                 this.id = model.id;
                 this.metadata = model.metadata;
+                this.metadataV2 = model.metadataV2;
                 this.score = model.score;
                 this.values = model.values;
             } 
@@ -315,6 +328,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * MetadataV2.
+             */
+            public Builder metadataV2(java.util.Map<String, ?> metadataV2) {
+                this.metadataV2 = metadataV2;
                 return this;
             }
 

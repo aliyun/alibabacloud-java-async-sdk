@@ -12,14 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpsertChunksResponseBody} extends {@link TeaModel}
+ * {@link EnableCollectionGraphRAGResponseBody} extends {@link TeaModel}
  *
- * <p>UpsertChunksResponseBody</p>
+ * <p>EnableCollectionGraphRAGResponseBody</p>
  */
-public class UpsertChunksResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("EmbeddingTokens")
-    private String embeddingTokens;
-
+public class EnableCollectionGraphRAGResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
@@ -32,8 +29,7 @@ public class UpsertChunksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    private UpsertChunksResponseBody(Builder builder) {
-        this.embeddingTokens = builder.embeddingTokens;
+    private EnableCollectionGraphRAGResponseBody(Builder builder) {
         this.jobId = builder.jobId;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -44,19 +40,12 @@ public class UpsertChunksResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpsertChunksResponseBody create() {
+    public static EnableCollectionGraphRAGResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return embeddingTokens
-     */
-    public String getEmbeddingTokens() {
-        return this.embeddingTokens;
     }
 
     /**
@@ -88,7 +77,6 @@ public class UpsertChunksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String embeddingTokens; 
         private String jobId; 
         private String message; 
         private String requestId; 
@@ -97,27 +85,12 @@ public class UpsertChunksResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpsertChunksResponseBody model) {
-            this.embeddingTokens = model.embeddingTokens;
+        private Builder(EnableCollectionGraphRAGResponseBody model) {
             this.jobId = model.jobId;
             this.message = model.message;
             this.requestId = model.requestId;
             this.status = model.status;
         } 
-
-        /**
-         * <p>Number of tokens used during vectorization.</p>
-         * <blockquote>
-         * <p>A token refers to the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        public Builder embeddingTokens(String embeddingTokens) {
-            this.embeddingTokens = embeddingTokens;
-            return this;
-        }
 
         /**
          * JobId.
@@ -128,10 +101,7 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,10 +109,7 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,22 +117,15 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API execution status, with the following values:</p>
-         * <ul>
-         * <li><strong>success</strong>: Execution succeeded.</li>
-         * <li><strong>fail</strong>: Execution failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
-        public UpsertChunksResponseBody build() {
-            return new UpsertChunksResponseBody(this);
+        public EnableCollectionGraphRAGResponseBody build() {
+            return new EnableCollectionGraphRAGResponseBody(this);
         } 
 
     } 
