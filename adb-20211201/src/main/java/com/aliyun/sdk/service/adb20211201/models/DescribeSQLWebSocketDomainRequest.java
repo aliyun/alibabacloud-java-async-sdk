@@ -23,6 +23,10 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Module")
+    private String module;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -30,6 +34,7 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
     private DescribeSQLWebSocketDomainRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.module = builder.module;
         this.regionId = builder.regionId;
     }
 
@@ -54,6 +59,13 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
     }
 
     /**
+     * @return module
+     */
+    public String getModule() {
+        return this.module;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -62,6 +74,7 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSQLWebSocketDomainRequest, Builder> {
         private String DBClusterId; 
+        private String module; 
         private String regionId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
         private Builder(DescribeSQLWebSocketDomainRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.module = request.module;
             this.regionId = request.regionId;
         } 
 
@@ -87,6 +101,15 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Module.
+         */
+        public Builder module(String module) {
+            this.putQueryParameter("Module", module);
+            this.module = module;
             return this;
         }
 
