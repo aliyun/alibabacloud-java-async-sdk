@@ -14884,6 +14884,9 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SinkDataHubParameters")
         private SinkDataHubParameters sinkDataHubParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkDataWorksTriggerParameters")
+        private SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkDorisParameters")
         private SinkDorisParameters sinkDorisParameters;
 
@@ -14925,6 +14928,7 @@ public class CreateEventStreamingRequest extends Request {
             this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
             this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
             this.sinkDataHubParameters = builder.sinkDataHubParameters;
+            this.sinkDataWorksTriggerParameters = builder.sinkDataWorksTriggerParameters;
             this.sinkDorisParameters = builder.sinkDorisParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
@@ -14993,6 +14997,13 @@ public class CreateEventStreamingRequest extends Request {
          */
         public SinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        /**
+         * @return sinkDataWorksTriggerParameters
+         */
+        public SinkDataWorksTriggerParameters getSinkDataWorksTriggerParameters() {
+            return this.sinkDataWorksTriggerParameters;
         }
 
         /**
@@ -15080,6 +15091,7 @@ public class CreateEventStreamingRequest extends Request {
             private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
             private SinkDashVectorParameters sinkDashVectorParameters; 
             private SinkDataHubParameters sinkDataHubParameters; 
+            private SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters; 
             private SinkDorisParameters sinkDorisParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
@@ -15103,6 +15115,7 @@ public class CreateEventStreamingRequest extends Request {
                 this.sinkCustomizedKafkaParameters = model.sinkCustomizedKafkaParameters;
                 this.sinkDashVectorParameters = model.sinkDashVectorParameters;
                 this.sinkDataHubParameters = model.sinkDataHubParameters;
+                this.sinkDataWorksTriggerParameters = model.sinkDataWorksTriggerParameters;
                 this.sinkDorisParameters = model.sinkDorisParameters;
                 this.sinkFcParameters = model.sinkFcParameters;
                 this.sinkFnfParameters = model.sinkFnfParameters;
@@ -15169,6 +15182,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder sinkDataHubParameters(SinkDataHubParameters sinkDataHubParameters) {
                 this.sinkDataHubParameters = sinkDataHubParameters;
+                return this;
+            }
+
+            /**
+             * SinkDataWorksTriggerParameters.
+             */
+            public Builder sinkDataWorksTriggerParameters(SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters) {
+                this.sinkDataWorksTriggerParameters = sinkDataWorksTriggerParameters;
                 return this;
             }
 

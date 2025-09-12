@@ -56,6 +56,10 @@ public class UpdateEventSourceRequest extends Request {
     private SourceMNSParameters sourceMNSParameters;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceOSSEventParameters")
+    private SourceOSSEventParameters sourceOSSEventParameters;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
     private SourceRabbitMQParameters sourceRabbitMQParameters;
 
@@ -82,6 +86,7 @@ public class UpdateEventSourceRequest extends Request {
         this.sourceHttpEventParameters = builder.sourceHttpEventParameters;
         this.sourceKafkaParameters = builder.sourceKafkaParameters;
         this.sourceMNSParameters = builder.sourceMNSParameters;
+        this.sourceOSSEventParameters = builder.sourceOSSEventParameters;
         this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
         this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
         this.sourceSLSParameters = builder.sourceSLSParameters;
@@ -165,6 +170,13 @@ public class UpdateEventSourceRequest extends Request {
     }
 
     /**
+     * @return sourceOSSEventParameters
+     */
+    public SourceOSSEventParameters getSourceOSSEventParameters() {
+        return this.sourceOSSEventParameters;
+    }
+
+    /**
      * @return sourceRabbitMQParameters
      */
     public SourceRabbitMQParameters getSourceRabbitMQParameters() {
@@ -202,6 +214,7 @@ public class UpdateEventSourceRequest extends Request {
         private SourceHttpEventParameters sourceHttpEventParameters; 
         private SourceKafkaParameters sourceKafkaParameters; 
         private SourceMNSParameters sourceMNSParameters; 
+        private SourceOSSEventParameters sourceOSSEventParameters; 
         private SourceRabbitMQParameters sourceRabbitMQParameters; 
         private SourceRocketMQParameters sourceRocketMQParameters; 
         private SourceSLSParameters sourceSLSParameters; 
@@ -222,6 +235,7 @@ public class UpdateEventSourceRequest extends Request {
             this.sourceHttpEventParameters = request.sourceHttpEventParameters;
             this.sourceKafkaParameters = request.sourceKafkaParameters;
             this.sourceMNSParameters = request.sourceMNSParameters;
+            this.sourceOSSEventParameters = request.sourceOSSEventParameters;
             this.sourceRabbitMQParameters = request.sourceRabbitMQParameters;
             this.sourceRocketMQParameters = request.sourceRocketMQParameters;
             this.sourceSLSParameters = request.sourceSLSParameters;
@@ -327,6 +341,16 @@ public class UpdateEventSourceRequest extends Request {
             String sourceMNSParametersShrink = shrink(sourceMNSParameters, "SourceMNSParameters", "json");
             this.putBodyParameter("SourceMNSParameters", sourceMNSParametersShrink);
             this.sourceMNSParameters = sourceMNSParameters;
+            return this;
+        }
+
+        /**
+         * SourceOSSEventParameters.
+         */
+        public Builder sourceOSSEventParameters(SourceOSSEventParameters sourceOSSEventParameters) {
+            String sourceOSSEventParametersShrink = shrink(sourceOSSEventParameters, "SourceOSSEventParameters", "json");
+            this.putBodyParameter("SourceOSSEventParameters", sourceOSSEventParametersShrink);
+            this.sourceOSSEventParameters = sourceOSSEventParameters;
             return this;
         }
 
@@ -915,6 +939,219 @@ public class UpdateEventSourceRequest extends Request {
 
             public SourceMNSParameters build() {
                 return new SourceMNSParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventSourceRequest</p>
+     */
+    public static class MatchRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Suffix")
+        private String suffix;
+
+        @com.aliyun.core.annotation.NameInMap("MatchState")
+        private Boolean matchState;
+
+        @com.aliyun.core.annotation.NameInMap("Prefix")
+        private String prefix;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private MatchRules(Builder builder) {
+            this.suffix = builder.suffix;
+            this.matchState = builder.matchState;
+            this.prefix = builder.prefix;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MatchRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return suffix
+         */
+        public String getSuffix() {
+            return this.suffix;
+        }
+
+        /**
+         * @return matchState
+         */
+        public Boolean getMatchState() {
+            return this.matchState;
+        }
+
+        /**
+         * @return prefix
+         */
+        public String getPrefix() {
+            return this.prefix;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String suffix; 
+            private Boolean matchState; 
+            private String prefix; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchRules model) {
+                this.suffix = model.suffix;
+                this.matchState = model.matchState;
+                this.prefix = model.prefix;
+                this.name = model.name;
+            } 
+
+            /**
+             * Suffix.
+             */
+            public Builder suffix(String suffix) {
+                this.suffix = suffix;
+                return this;
+            }
+
+            /**
+             * MatchState.
+             */
+            public Builder matchState(Boolean matchState) {
+                this.matchState = matchState;
+                return this;
+            }
+
+            /**
+             * Prefix.
+             */
+            public Builder prefix(String prefix) {
+                this.prefix = prefix;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public MatchRules build() {
+                return new MatchRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventSourceRequest</p>
+     */
+    public static class SourceOSSEventParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EventTypes")
+        private java.util.List<String> eventTypes;
+
+        @com.aliyun.core.annotation.NameInMap("MatchRules")
+        private java.util.List<java.util.List<MatchRules>> matchRules;
+
+        @com.aliyun.core.annotation.NameInMap("StsRoleArn")
+        private String stsRoleArn;
+
+        private SourceOSSEventParameters(Builder builder) {
+            this.eventTypes = builder.eventTypes;
+            this.matchRules = builder.matchRules;
+            this.stsRoleArn = builder.stsRoleArn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceOSSEventParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eventTypes
+         */
+        public java.util.List<String> getEventTypes() {
+            return this.eventTypes;
+        }
+
+        /**
+         * @return matchRules
+         */
+        public java.util.List<java.util.List<MatchRules>> getMatchRules() {
+            return this.matchRules;
+        }
+
+        /**
+         * @return stsRoleArn
+         */
+        public String getStsRoleArn() {
+            return this.stsRoleArn;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> eventTypes; 
+            private java.util.List<java.util.List<MatchRules>> matchRules; 
+            private String stsRoleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceOSSEventParameters model) {
+                this.eventTypes = model.eventTypes;
+                this.matchRules = model.matchRules;
+                this.stsRoleArn = model.stsRoleArn;
+            } 
+
+            /**
+             * EventTypes.
+             */
+            public Builder eventTypes(java.util.List<String> eventTypes) {
+                this.eventTypes = eventTypes;
+                return this;
+            }
+
+            /**
+             * MatchRules.
+             */
+            public Builder matchRules(java.util.List<java.util.List<MatchRules>> matchRules) {
+                this.matchRules = matchRules;
+                return this;
+            }
+
+            /**
+             * StsRoleArn.
+             */
+            public Builder stsRoleArn(String stsRoleArn) {
+                this.stsRoleArn = stsRoleArn;
+                return this;
+            }
+
+            public SourceOSSEventParameters build() {
+                return new SourceOSSEventParameters(this);
             } 
 
         } 

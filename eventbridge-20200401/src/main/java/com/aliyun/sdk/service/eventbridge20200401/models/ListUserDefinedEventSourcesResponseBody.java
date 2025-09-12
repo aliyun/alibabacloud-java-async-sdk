@@ -758,6 +758,102 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
      *
      * <p>ListUserDefinedEventSourcesResponseBody</p>
      */
+    public static class SourceOSSEventParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EventTypes")
+        private java.util.List<String> eventTypes;
+
+        @com.aliyun.core.annotation.NameInMap("MatchRules")
+        private Object matchRules;
+
+        @com.aliyun.core.annotation.NameInMap("StsRoleArn")
+        private String stsRoleArn;
+
+        private SourceOSSEventParameters(Builder builder) {
+            this.eventTypes = builder.eventTypes;
+            this.matchRules = builder.matchRules;
+            this.stsRoleArn = builder.stsRoleArn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceOSSEventParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eventTypes
+         */
+        public java.util.List<String> getEventTypes() {
+            return this.eventTypes;
+        }
+
+        /**
+         * @return matchRules
+         */
+        public Object getMatchRules() {
+            return this.matchRules;
+        }
+
+        /**
+         * @return stsRoleArn
+         */
+        public String getStsRoleArn() {
+            return this.stsRoleArn;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> eventTypes; 
+            private Object matchRules; 
+            private String stsRoleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceOSSEventParameters model) {
+                this.eventTypes = model.eventTypes;
+                this.matchRules = model.matchRules;
+                this.stsRoleArn = model.stsRoleArn;
+            } 
+
+            /**
+             * EventTypes.
+             */
+            public Builder eventTypes(java.util.List<String> eventTypes) {
+                this.eventTypes = eventTypes;
+                return this;
+            }
+
+            /**
+             * MatchRules.
+             */
+            public Builder matchRules(Object matchRules) {
+                this.matchRules = matchRules;
+                return this;
+            }
+
+            /**
+             * StsRoleArn.
+             */
+            public Builder stsRoleArn(String stsRoleArn) {
+                this.stsRoleArn = stsRoleArn;
+                return this;
+            }
+
+            public SourceOSSEventParameters build() {
+                return new SourceOSSEventParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceRabbitMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -1569,6 +1665,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
         private SourceMNSParameters sourceMNSParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourceOSSEventParameters")
+        private SourceOSSEventParameters sourceOSSEventParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
@@ -1596,6 +1695,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             this.sourceHttpEventParameters = builder.sourceHttpEventParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
+            this.sourceOSSEventParameters = builder.sourceOSSEventParameters;
             this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
             this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
             this.sourceSLSParameters = builder.sourceSLSParameters;
@@ -1669,6 +1769,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceOSSEventParameters
+         */
+        public SourceOSSEventParameters getSourceOSSEventParameters() {
+            return this.sourceOSSEventParameters;
+        }
+
+        /**
          * @return sourceRabbitMQParameters
          */
         public SourceRabbitMQParameters getSourceRabbitMQParameters() {
@@ -1719,6 +1826,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private SourceHttpEventParameters sourceHttpEventParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
+            private SourceOSSEventParameters sourceOSSEventParameters; 
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQParameters sourceRocketMQParameters; 
             private SourceSLSParameters sourceSLSParameters; 
@@ -1738,6 +1846,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
                 this.sourceHttpEventParameters = model.sourceHttpEventParameters;
                 this.sourceKafkaParameters = model.sourceKafkaParameters;
                 this.sourceMNSParameters = model.sourceMNSParameters;
+                this.sourceOSSEventParameters = model.sourceOSSEventParameters;
                 this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
                 this.sourceRocketMQParameters = model.sourceRocketMQParameters;
                 this.sourceSLSParameters = model.sourceSLSParameters;
@@ -1822,6 +1931,14 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
+                return this;
+            }
+
+            /**
+             * SourceOSSEventParameters.
+             */
+            public Builder sourceOSSEventParameters(SourceOSSEventParameters sourceOSSEventParameters) {
+                this.sourceOSSEventParameters = sourceOSSEventParameters;
                 return this;
             }
 
