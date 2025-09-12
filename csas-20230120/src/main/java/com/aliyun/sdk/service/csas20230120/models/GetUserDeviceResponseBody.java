@@ -251,6 +251,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
+        @com.aliyun.core.annotation.NameInMap("AutoLoginStatus")
+        private String autoLoginStatus;
+
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
@@ -353,6 +356,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         private Device(Builder builder) {
             this.appStatus = builder.appStatus;
             this.appVersion = builder.appVersion;
+            this.autoLoginStatus = builder.autoLoginStatus;
             this.CPU = builder.CPU;
             this.createTime = builder.createTime;
             this.department = builder.department;
@@ -408,6 +412,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        /**
+         * @return autoLoginStatus
+         */
+        public String getAutoLoginStatus() {
+            return this.autoLoginStatus;
         }
 
         /**
@@ -644,6 +655,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public static final class Builder {
             private String appStatus; 
             private String appVersion; 
+            private String autoLoginStatus; 
             private String CPU; 
             private String createTime; 
             private String department; 
@@ -684,6 +696,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private Builder(Device model) {
                 this.appStatus = model.appStatus;
                 this.appVersion = model.appVersion;
+                this.autoLoginStatus = model.autoLoginStatus;
                 this.CPU = model.CPU;
                 this.createTime = model.createTime;
                 this.department = model.department;
@@ -732,6 +745,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
+             * AutoLoginStatus.
+             */
+            public Builder autoLoginStatus(String autoLoginStatus) {
+                this.autoLoginStatus = autoLoginStatus;
                 return this;
             }
 

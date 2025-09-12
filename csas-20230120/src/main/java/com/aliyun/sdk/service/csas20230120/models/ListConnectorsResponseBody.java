@@ -386,6 +386,12 @@ public class ListConnectorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List<Applications> applications;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterIP")
+        private String clusterIP;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterPort")
+        private String clusterPort;
+
         @com.aliyun.core.annotation.NameInMap("ConnectorClients")
         private java.util.List<ConnectorClients> connectorClients;
 
@@ -412,6 +418,8 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         private Connectors(Builder builder) {
             this.applications = builder.applications;
+            this.clusterIP = builder.clusterIP;
+            this.clusterPort = builder.clusterPort;
             this.connectorClients = builder.connectorClients;
             this.connectorId = builder.connectorId;
             this.createTime = builder.createTime;
@@ -435,6 +443,20 @@ public class ListConnectorsResponseBody extends TeaModel {
          */
         public java.util.List<Applications> getApplications() {
             return this.applications;
+        }
+
+        /**
+         * @return clusterIP
+         */
+        public String getClusterIP() {
+            return this.clusterIP;
+        }
+
+        /**
+         * @return clusterPort
+         */
+        public String getClusterPort() {
+            return this.clusterPort;
         }
 
         /**
@@ -495,6 +517,8 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Applications> applications; 
+            private String clusterIP; 
+            private String clusterPort; 
             private java.util.List<ConnectorClients> connectorClients; 
             private String connectorId; 
             private String createTime; 
@@ -509,6 +533,8 @@ public class ListConnectorsResponseBody extends TeaModel {
 
             private Builder(Connectors model) {
                 this.applications = model.applications;
+                this.clusterIP = model.clusterIP;
+                this.clusterPort = model.clusterPort;
                 this.connectorClients = model.connectorClients;
                 this.connectorId = model.connectorId;
                 this.createTime = model.createTime;
@@ -524,6 +550,22 @@ public class ListConnectorsResponseBody extends TeaModel {
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
+                return this;
+            }
+
+            /**
+             * ClusterIP.
+             */
+            public Builder clusterIP(String clusterIP) {
+                this.clusterIP = clusterIP;
+                return this;
+            }
+
+            /**
+             * ClusterPort.
+             */
+            public Builder clusterPort(String clusterPort) {
+                this.clusterPort = clusterPort;
                 return this;
             }
 

@@ -26,6 +26,10 @@ public class ListUserDevicesRequest extends Request {
     private java.util.List<String> appVersions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoLoginStatuses")
+    private java.util.List<String> autoLoginStatuses;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
@@ -115,6 +119,7 @@ public class ListUserDevicesRequest extends Request {
         super(builder);
         this.appStatuses = builder.appStatuses;
         this.appVersions = builder.appVersions;
+        this.autoLoginStatuses = builder.autoLoginStatuses;
         this.currentPage = builder.currentPage;
         this.department = builder.department;
         this.deviceBelong = builder.deviceBelong;
@@ -163,6 +168,13 @@ public class ListUserDevicesRequest extends Request {
      */
     public java.util.List<String> getAppVersions() {
         return this.appVersions;
+    }
+
+    /**
+     * @return autoLoginStatuses
+     */
+    public java.util.List<String> getAutoLoginStatuses() {
+        return this.autoLoginStatuses;
     }
 
     /**
@@ -315,6 +327,7 @@ public class ListUserDevicesRequest extends Request {
     public static final class Builder extends Request.Builder<ListUserDevicesRequest, Builder> {
         private java.util.List<String> appStatuses; 
         private java.util.List<String> appVersions; 
+        private java.util.List<String> autoLoginStatuses; 
         private Long currentPage; 
         private String department; 
         private String deviceBelong; 
@@ -345,6 +358,7 @@ public class ListUserDevicesRequest extends Request {
             super(request);
             this.appStatuses = request.appStatuses;
             this.appVersions = request.appVersions;
+            this.autoLoginStatuses = request.autoLoginStatuses;
             this.currentPage = request.currentPage;
             this.department = request.department;
             this.deviceBelong = request.deviceBelong;
@@ -383,6 +397,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder appVersions(java.util.List<String> appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
             this.appVersions = appVersions;
+            return this;
+        }
+
+        /**
+         * AutoLoginStatuses.
+         */
+        public Builder autoLoginStatuses(java.util.List<String> autoLoginStatuses) {
+            this.putQueryParameter("AutoLoginStatuses", autoLoginStatuses);
+            this.autoLoginStatuses = autoLoginStatuses;
             return this;
         }
 
