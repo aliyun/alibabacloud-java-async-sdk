@@ -30,6 +30,10 @@ public class SetSubscriptionAttributesRequest extends Request {
     private String notifyStrategy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StsRoleArn")
+    private String stsRoleArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
@@ -48,6 +52,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         this.regionId = builder.regionId;
         this.dlqPolicy = builder.dlqPolicy;
         this.notifyStrategy = builder.notifyStrategy;
+        this.stsRoleArn = builder.stsRoleArn;
         this.subscriptionName = builder.subscriptionName;
         this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.topicName = builder.topicName;
@@ -88,6 +93,13 @@ public class SetSubscriptionAttributesRequest extends Request {
     }
 
     /**
+     * @return stsRoleArn
+     */
+    public String getStsRoleArn() {
+        return this.stsRoleArn;
+    }
+
+    /**
      * @return subscriptionName
      */
     public String getSubscriptionName() {
@@ -112,6 +124,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         private String regionId; 
         private DlqPolicy dlqPolicy; 
         private String notifyStrategy; 
+        private String stsRoleArn; 
         private String subscriptionName; 
         private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private String topicName; 
@@ -125,6 +138,7 @@ public class SetSubscriptionAttributesRequest extends Request {
             this.regionId = request.regionId;
             this.dlqPolicy = request.dlqPolicy;
             this.notifyStrategy = request.notifyStrategy;
+            this.stsRoleArn = request.stsRoleArn;
             this.subscriptionName = request.subscriptionName;
             this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.topicName = request.topicName;
@@ -162,6 +176,15 @@ public class SetSubscriptionAttributesRequest extends Request {
         public Builder notifyStrategy(String notifyStrategy) {
             this.putQueryParameter("NotifyStrategy", notifyStrategy);
             this.notifyStrategy = notifyStrategy;
+            return this;
+        }
+
+        /**
+         * StsRoleArn.
+         */
+        public Builder stsRoleArn(String stsRoleArn) {
+            this.putQueryParameter("StsRoleArn", stsRoleArn);
+            this.stsRoleArn = stsRoleArn;
             return this;
         }
 
