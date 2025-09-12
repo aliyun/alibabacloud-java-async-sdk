@@ -20,6 +20,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateInstanceV1  CreateInstanceV1Request
+     * @return CreateInstanceV1Response
+     */
+    CompletableFuture<CreateInstanceV1Response> createInstanceV1(CreateInstanceV1Request request);
+
+    /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
+    CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     */
+    CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances.
      * Before you call this operation, take note of the following items:</p>
@@ -145,6 +169,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartInstanceResponse
      */
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
+    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateInstanceName  UpdateInstanceNameRequest

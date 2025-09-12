@@ -22,6 +22,10 @@ public class ModifyDiskSizeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FastMode")
+    private Boolean fastMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -43,6 +47,7 @@ public class ModifyDiskSizeRequest extends Request {
     private ModifyDiskSizeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.fastMode = builder.fastMode;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.promotionOptionNo = builder.promotionOptionNo;
@@ -67,6 +72,13 @@ public class ModifyDiskSizeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return fastMode
+     */
+    public Boolean getFastMode() {
+        return this.fastMode;
     }
 
     /**
@@ -99,6 +111,7 @@ public class ModifyDiskSizeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskSizeRequest, Builder> {
         private String regionId; 
+        private Boolean fastMode; 
         private String instanceId; 
         private String nodeGroupId; 
         private String promotionOptionNo; 
@@ -111,6 +124,7 @@ public class ModifyDiskSizeRequest extends Request {
         private Builder(ModifyDiskSizeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.fastMode = request.fastMode;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.promotionOptionNo = request.promotionOptionNo;
@@ -123,6 +137,15 @@ public class ModifyDiskSizeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * FastMode.
+         */
+        public Builder fastMode(Boolean fastMode) {
+            this.putQueryParameter("FastMode", fastMode);
+            this.fastMode = fastMode;
             return this;
         }
 
