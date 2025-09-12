@@ -444,6 +444,60 @@ public class CreateTaskRequest extends Request {
      *
      * <p>CreateTaskRequest</p>
      */
+    public static class AutoChapters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChapterGranularity")
+        private String chapterGranularity;
+
+        private AutoChapters(Builder builder) {
+            this.chapterGranularity = builder.chapterGranularity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoChapters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return chapterGranularity
+         */
+        public String getChapterGranularity() {
+            return this.chapterGranularity;
+        }
+
+        public static final class Builder {
+            private String chapterGranularity; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoChapters model) {
+                this.chapterGranularity = model.chapterGranularity;
+            } 
+
+            /**
+             * ChapterGranularity.
+             */
+            public Builder chapterGranularity(String chapterGranularity) {
+                this.chapterGranularity = chapterGranularity;
+                return this;
+            }
+
+            public AutoChapters build() {
+                return new AutoChapters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class ExtractionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -813,6 +867,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DomainEducationEnabled")
         private Boolean domainEducationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("FullTextSummaryFormat")
+        private String fullTextSummaryFormat;
+
         @com.aliyun.core.annotation.NameInMap("MaxKeywords")
         private Integer maxKeywords;
 
@@ -827,6 +884,7 @@ public class CreateTaskRequest extends Request {
 
         private ExtraParams(Builder builder) {
             this.domainEducationEnabled = builder.domainEducationEnabled;
+            this.fullTextSummaryFormat = builder.fullTextSummaryFormat;
             this.maxKeywords = builder.maxKeywords;
             this.nfixEnabled = builder.nfixEnabled;
             this.ocrAuxiliaryEnabled = builder.ocrAuxiliaryEnabled;
@@ -846,6 +904,13 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getDomainEducationEnabled() {
             return this.domainEducationEnabled;
+        }
+
+        /**
+         * @return fullTextSummaryFormat
+         */
+        public String getFullTextSummaryFormat() {
+            return this.fullTextSummaryFormat;
         }
 
         /**
@@ -878,6 +943,7 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Boolean domainEducationEnabled; 
+            private String fullTextSummaryFormat; 
             private Integer maxKeywords; 
             private Boolean nfixEnabled; 
             private Boolean ocrAuxiliaryEnabled; 
@@ -888,6 +954,7 @@ public class CreateTaskRequest extends Request {
 
             private Builder(ExtraParams model) {
                 this.domainEducationEnabled = model.domainEducationEnabled;
+                this.fullTextSummaryFormat = model.fullTextSummaryFormat;
                 this.maxKeywords = model.maxKeywords;
                 this.nfixEnabled = model.nfixEnabled;
                 this.ocrAuxiliaryEnabled = model.ocrAuxiliaryEnabled;
@@ -899,6 +966,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder domainEducationEnabled(Boolean domainEducationEnabled) {
                 this.domainEducationEnabled = domainEducationEnabled;
+                return this;
+            }
+
+            /**
+             * FullTextSummaryFormat.
+             */
+            public Builder fullTextSummaryFormat(String fullTextSummaryFormat) {
+                this.fullTextSummaryFormat = fullTextSummaryFormat;
                 return this;
             }
 
@@ -1590,6 +1665,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
+        @com.aliyun.core.annotation.NameInMap("ProfanityFilterEnabled")
+        private Boolean profanityFilterEnabled;
+
         @com.aliyun.core.annotation.NameInMap("RealtimeDiarizationEnabled")
         private Boolean realtimeDiarizationEnabled;
 
@@ -1601,6 +1679,7 @@ public class CreateTaskRequest extends Request {
             this.model = builder.model;
             this.outputLevel = builder.outputLevel;
             this.phraseId = builder.phraseId;
+            this.profanityFilterEnabled = builder.profanityFilterEnabled;
             this.realtimeDiarizationEnabled = builder.realtimeDiarizationEnabled;
         }
 
@@ -1662,6 +1741,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return profanityFilterEnabled
+         */
+        public Boolean getProfanityFilterEnabled() {
+            return this.profanityFilterEnabled;
+        }
+
+        /**
          * @return realtimeDiarizationEnabled
          */
         public Boolean getRealtimeDiarizationEnabled() {
@@ -1676,6 +1762,7 @@ public class CreateTaskRequest extends Request {
             private String model; 
             private Integer outputLevel; 
             private String phraseId; 
+            private Boolean profanityFilterEnabled; 
             private Boolean realtimeDiarizationEnabled; 
 
             private Builder() {
@@ -1689,6 +1776,7 @@ public class CreateTaskRequest extends Request {
                 this.model = model.model;
                 this.outputLevel = model.outputLevel;
                 this.phraseId = model.phraseId;
+                this.profanityFilterEnabled = model.profanityFilterEnabled;
                 this.realtimeDiarizationEnabled = model.realtimeDiarizationEnabled;
             } 
 
@@ -1745,6 +1833,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
+                return this;
+            }
+
+            /**
+             * ProfanityFilterEnabled.
+             */
+            public Builder profanityFilterEnabled(Boolean profanityFilterEnabled) {
+                this.profanityFilterEnabled = profanityFilterEnabled;
                 return this;
             }
 
@@ -1866,6 +1962,9 @@ public class CreateTaskRequest extends Request {
      * <p>CreateTaskRequest</p>
      */
     public static class Parameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoChapters")
+        private AutoChapters autoChapters;
+
         @com.aliyun.core.annotation.NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;
 
@@ -1890,11 +1989,17 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("IdentityRecognitionEnabled")
         private Boolean identityRecognitionEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("LlmOutputLanguage")
+        private String llmOutputLanguage;
+
         @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
         private MeetingAssistance meetingAssistance;
 
         @com.aliyun.core.annotation.NameInMap("MeetingAssistanceEnabled")
         private Boolean meetingAssistanceEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
 
         @com.aliyun.core.annotation.NameInMap("PptExtractionEnabled")
         private Boolean pptExtractionEnabled;
@@ -1927,6 +2032,7 @@ public class CreateTaskRequest extends Request {
         private Boolean translationEnabled;
 
         private Parameters(Builder builder) {
+            this.autoChapters = builder.autoChapters;
             this.autoChaptersEnabled = builder.autoChaptersEnabled;
             this.contentExtraction = builder.contentExtraction;
             this.contentExtractionEnabled = builder.contentExtractionEnabled;
@@ -1935,8 +2041,10 @@ public class CreateTaskRequest extends Request {
             this.extraParams = builder.extraParams;
             this.identityRecognition = builder.identityRecognition;
             this.identityRecognitionEnabled = builder.identityRecognitionEnabled;
+            this.llmOutputLanguage = builder.llmOutputLanguage;
             this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
+            this.model = builder.model;
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
             this.serviceInspection = builder.serviceInspection;
             this.serviceInspectionEnabled = builder.serviceInspectionEnabled;
@@ -1955,6 +2063,13 @@ public class CreateTaskRequest extends Request {
 
         public static Parameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoChapters
+         */
+        public AutoChapters getAutoChapters() {
+            return this.autoChapters;
         }
 
         /**
@@ -2014,6 +2129,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return llmOutputLanguage
+         */
+        public String getLlmOutputLanguage() {
+            return this.llmOutputLanguage;
+        }
+
+        /**
          * @return meetingAssistance
          */
         public MeetingAssistance getMeetingAssistance() {
@@ -2025,6 +2147,13 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getMeetingAssistanceEnabled() {
             return this.meetingAssistanceEnabled;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
         }
 
         /**
@@ -2098,6 +2227,7 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private AutoChapters autoChapters; 
             private Boolean autoChaptersEnabled; 
             private ContentExtraction contentExtraction; 
             private Boolean contentExtractionEnabled; 
@@ -2106,8 +2236,10 @@ public class CreateTaskRequest extends Request {
             private ExtraParams extraParams; 
             private IdentityRecognition identityRecognition; 
             private Boolean identityRecognitionEnabled; 
+            private String llmOutputLanguage; 
             private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
+            private String model; 
             private Boolean pptExtractionEnabled; 
             private ServiceInspection serviceInspection; 
             private Boolean serviceInspectionEnabled; 
@@ -2123,6 +2255,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             private Builder(Parameters model) {
+                this.autoChapters = model.autoChapters;
                 this.autoChaptersEnabled = model.autoChaptersEnabled;
                 this.contentExtraction = model.contentExtraction;
                 this.contentExtractionEnabled = model.contentExtractionEnabled;
@@ -2131,8 +2264,10 @@ public class CreateTaskRequest extends Request {
                 this.extraParams = model.extraParams;
                 this.identityRecognition = model.identityRecognition;
                 this.identityRecognitionEnabled = model.identityRecognitionEnabled;
+                this.llmOutputLanguage = model.llmOutputLanguage;
                 this.meetingAssistance = model.meetingAssistance;
                 this.meetingAssistanceEnabled = model.meetingAssistanceEnabled;
+                this.model = model.model;
                 this.pptExtractionEnabled = model.pptExtractionEnabled;
                 this.serviceInspection = model.serviceInspection;
                 this.serviceInspectionEnabled = model.serviceInspectionEnabled;
@@ -2144,6 +2279,14 @@ public class CreateTaskRequest extends Request {
                 this.translation = model.translation;
                 this.translationEnabled = model.translationEnabled;
             } 
+
+            /**
+             * AutoChapters.
+             */
+            public Builder autoChapters(AutoChapters autoChapters) {
+                this.autoChapters = autoChapters;
+                return this;
+            }
 
             /**
              * AutoChaptersEnabled.
@@ -2210,6 +2353,14 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
+             * LlmOutputLanguage.
+             */
+            public Builder llmOutputLanguage(String llmOutputLanguage) {
+                this.llmOutputLanguage = llmOutputLanguage;
+                return this;
+            }
+
+            /**
              * MeetingAssistance.
              */
             public Builder meetingAssistance(MeetingAssistance meetingAssistance) {
@@ -2222,6 +2373,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder meetingAssistanceEnabled(Boolean meetingAssistanceEnabled) {
                 this.meetingAssistanceEnabled = meetingAssistanceEnabled;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
                 return this;
             }
 
