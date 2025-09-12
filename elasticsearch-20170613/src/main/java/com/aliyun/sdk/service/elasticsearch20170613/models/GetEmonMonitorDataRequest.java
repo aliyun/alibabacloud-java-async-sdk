@@ -22,7 +22,7 @@ public class GetEmonMonitorDataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
@@ -89,7 +89,7 @@ public class GetEmonMonitorDataRequest extends Request {
          * body.
          */
         public Builder body(String body) {
-            this.putBodyParameter("body", body);
+            this.putQueryParameter("body", body);
             this.body = body;
             return this;
         }

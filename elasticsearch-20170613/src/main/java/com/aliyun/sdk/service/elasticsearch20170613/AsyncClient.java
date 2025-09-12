@@ -235,12 +235,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAckOperatorResponse> describeAckOperator(DescribeAckOperatorRequest request);
 
     /**
-     * @param request the request parameters of DescribeApm  DescribeApmRequest
-     * @return DescribeApmResponse
-     */
-    CompletableFuture<DescribeApmResponse> describeApm(DescribeApmRequest request);
-
-    /**
      * @param request the request parameters of DescribeCollector  DescribeCollectorRequest
      * @return DescribeCollectorResponse
      */
@@ -405,6 +399,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetElastictaskResponse> getElastictask(GetElastictaskRequest request);
 
     /**
+     * @param request the request parameters of GetEmonAlarmRecordStatisticsDistribute  GetEmonAlarmRecordStatisticsDistributeRequest
+     * @return GetEmonAlarmRecordStatisticsDistributeResponse
+     */
+    CompletableFuture<GetEmonAlarmRecordStatisticsDistributeResponse> getEmonAlarmRecordStatisticsDistribute(GetEmonAlarmRecordStatisticsDistributeRequest request);
+
+    /**
      * @param request the request parameters of GetEmonGrafanaAlerts  GetEmonGrafanaAlertsRequest
      * @return GetEmonGrafanaAlertsResponse
      */
@@ -547,12 +547,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAlternativeSnapshotReposResponse
      */
     CompletableFuture<ListAlternativeSnapshotReposResponse> listAlternativeSnapshotRepos(ListAlternativeSnapshotReposRequest request);
-
-    /**
-     * @param request the request parameters of ListApm  ListApmRequest
-     * @return ListApmResponse
-     */
-    CompletableFuture<ListApmResponse> listApm(ListApmRequest request);
 
     /**
      * @param request the request parameters of ListAvailableEsInstanceIds  ListAvailableEsInstanceIdsRequest
@@ -865,12 +859,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReinstallCollectorResponse> reinstallCollector(ReinstallCollectorRequest request);
 
     /**
-     * @param request the request parameters of RemoveApm  RemoveApmRequest
-     * @return RemoveApmResponse
-     */
-    CompletableFuture<RemoveApmResponse> removeApm(RemoveApmRequest request);
-
-    /**
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -936,22 +924,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ShrinkNodeResponse> shrinkNode(ShrinkNodeRequest request);
 
     /**
-     * @param request the request parameters of StartApm  StartApmRequest
-     * @return StartApmResponse
-     */
-    CompletableFuture<StartApmResponse> startApm(StartApmRequest request);
-
-    /**
      * @param request the request parameters of StartCollector  StartCollectorRequest
      * @return StartCollectorResponse
      */
     CompletableFuture<StartCollectorResponse> startCollector(StartCollectorRequest request);
-
-    /**
-     * @param request the request parameters of StopApm  StopApmRequest
-     * @return StopApmResponse
-     */
-    CompletableFuture<StopApmResponse> stopApm(StopApmRequest request);
 
     /**
      * @param request the request parameters of StopCollector  StopCollectorRequest
@@ -1045,12 +1021,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAliwsDictResponse
      */
     CompletableFuture<UpdateAliwsDictResponse> updateAliwsDict(UpdateAliwsDictRequest request);
-
-    /**
-     * @param request the request parameters of UpdateApm  UpdateApmRequest
-     * @return UpdateApmResponse
-     */
-    CompletableFuture<UpdateApmResponse> updateApm(UpdateApmRequest request);
 
     /**
      * @deprecated OpenAPI UpdateBlackIps is deprecated  * @param request  the request parameters of UpdateBlackIps  UpdateBlackIpsRequest

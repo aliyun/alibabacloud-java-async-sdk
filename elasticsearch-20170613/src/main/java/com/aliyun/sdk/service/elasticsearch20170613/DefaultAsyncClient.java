@@ -663,24 +663,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeApm  DescribeApmRequest
-     * @return DescribeApmResponse
-     */
-    @Override
-    public CompletableFuture<DescribeApmResponse> describeApm(DescribeApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeApm").setMethod(HttpMethod.GET).setPathRegex("/openapi/apm/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeApmResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DescribeCollector  DescribeCollectorRequest
      * @return DescribeCollectorResponse
      */
@@ -1157,6 +1139,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEmonAlarmRecordStatisticsDistribute  GetEmonAlarmRecordStatisticsDistributeRequest
+     * @return GetEmonAlarmRecordStatisticsDistributeResponse
+     */
+    @Override
+    public CompletableFuture<GetEmonAlarmRecordStatisticsDistributeResponse> getEmonAlarmRecordStatisticsDistribute(GetEmonAlarmRecordStatisticsDistributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEmonAlarmRecordStatisticsDistribute").setMethod(HttpMethod.GET).setPathRegex("/openapi/emon/alarm-record-statistics/distribute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEmonAlarmRecordStatisticsDistributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEmonAlarmRecordStatisticsDistributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetEmonGrafanaAlerts  GetEmonGrafanaAlertsRequest
      * @return GetEmonGrafanaAlertsResponse
      */
@@ -1547,24 +1547,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAlternativeSnapshotReposResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of ListApm  ListApmRequest
-     * @return ListApmResponse
-     */
-    @Override
-    public CompletableFuture<ListApmResponse> listApm(ListApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApm").setMethod(HttpMethod.GET).setPathRegex("/openapi/apm").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListApmResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2445,24 +2427,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RemoveApm  RemoveApmRequest
-     * @return RemoveApmResponse
-     */
-    @Override
-    public CompletableFuture<RemoveApmResponse> removeApm(RemoveApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveApm").setMethod(HttpMethod.DELETE).setPathRegex("/openapi/apm/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RemoveApmResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -2648,24 +2612,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of StartApm  StartApmRequest
-     * @return StartApmResponse
-     */
-    @Override
-    public CompletableFuture<StartApmResponse> startApm(StartApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartApm").setMethod(HttpMethod.POST).setPathRegex("/openapi/apm/{instanceId}/actions/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StartApmResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of StartCollector  StartCollectorRequest
      * @return StartCollectorResponse
      */
@@ -2678,24 +2624,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartCollectorResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of StopApm  StopApmRequest
-     * @return StopApmResponse
-     */
-    @Override
-    public CompletableFuture<StopApmResponse> stopApm(StopApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopApm").setMethod(HttpMethod.POST).setPathRegex("/openapi/apm/{instanceId}/actions/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StopApmResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2933,24 +2861,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAliwsDictResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of UpdateApm  UpdateApmRequest
-     * @return UpdateApmResponse
-     */
-    @Override
-    public CompletableFuture<UpdateApmResponse> updateApm(UpdateApmRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateApm").setMethod(HttpMethod.PUT).setPathRegex("/openapi/apm/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApmResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateApmResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

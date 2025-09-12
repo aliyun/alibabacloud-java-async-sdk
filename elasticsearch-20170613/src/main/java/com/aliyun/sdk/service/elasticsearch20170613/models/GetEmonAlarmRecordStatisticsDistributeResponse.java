@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeApmResponse} extends {@link TeaModel}
+ * {@link GetEmonAlarmRecordStatisticsDistributeResponse} extends {@link TeaModel}
  *
- * <p>DescribeApmResponse</p>
+ * <p>GetEmonAlarmRecordStatisticsDistributeResponse</p>
  */
-public class DescribeApmResponse extends Response {
+public class GetEmonAlarmRecordStatisticsDistributeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeApmResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeApmResponseBody body;
+    private GetEmonAlarmRecordStatisticsDistributeResponseBody body;
 
-    private DescribeApmResponse(BuilderImpl builder) {
+    private GetEmonAlarmRecordStatisticsDistributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeApmResponse create() {
+    public static GetEmonAlarmRecordStatisticsDistributeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeApmResponse extends Response {
     /**
      * @return body
      */
-    public DescribeApmResponseBody getBody() {
+    public GetEmonAlarmRecordStatisticsDistributeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeApmResponse, Builder> {
+    public interface Builder extends Response.Builder<GetEmonAlarmRecordStatisticsDistributeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeApmResponseBody body);
+        Builder body(GetEmonAlarmRecordStatisticsDistributeResponseBody body);
 
         @Override
-        DescribeApmResponse build();
+        GetEmonAlarmRecordStatisticsDistributeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeApmResponse, Builder>
+            extends Response.BuilderImpl<GetEmonAlarmRecordStatisticsDistributeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeApmResponseBody body; 
+        private GetEmonAlarmRecordStatisticsDistributeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeApmResponse response) {
+        private BuilderImpl(GetEmonAlarmRecordStatisticsDistributeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeApmResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeApmResponseBody body) {
+        public Builder body(GetEmonAlarmRecordStatisticsDistributeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeApmResponse build() {
-            return new DescribeApmResponse(this);
+        public GetEmonAlarmRecordStatisticsDistributeResponse build() {
+            return new GetEmonAlarmRecordStatisticsDistributeResponse(this);
         } 
 
     } 
