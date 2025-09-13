@@ -156,6 +156,60 @@ public class ShrinkClusterRequest extends Request {
      *
      * <p>ShrinkClusterRequest</p>
      */
+    public static class HyperNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HyperNodeId")
+        private String hyperNodeId;
+
+        private HyperNodes(Builder builder) {
+            this.hyperNodeId = builder.hyperNodeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HyperNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hyperNodeId
+         */
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
+        }
+
+        public static final class Builder {
+            private String hyperNodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HyperNodes model) {
+                this.hyperNodeId = model.hyperNodeId;
+            } 
+
+            /**
+             * HyperNodeId.
+             */
+            public Builder hyperNodeId(String hyperNodeId) {
+                this.hyperNodeId = hyperNodeId;
+                return this;
+            }
+
+            public HyperNodes build() {
+                return new HyperNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ShrinkClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ShrinkClusterRequest</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -214,6 +268,9 @@ public class ShrinkClusterRequest extends Request {
      * <p>ShrinkClusterRequest</p>
      */
     public static class NodeGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HyperNodes")
+        private java.util.List<HyperNodes> hyperNodes;
+
         @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
@@ -221,6 +278,7 @@ public class ShrinkClusterRequest extends Request {
         private java.util.List<Nodes> nodes;
 
         private NodeGroups(Builder builder) {
+            this.hyperNodes = builder.hyperNodes;
             this.nodeGroupId = builder.nodeGroupId;
             this.nodes = builder.nodes;
         }
@@ -231,6 +289,13 @@ public class ShrinkClusterRequest extends Request {
 
         public static NodeGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return hyperNodes
+         */
+        public java.util.List<HyperNodes> getHyperNodes() {
+            return this.hyperNodes;
         }
 
         /**
@@ -248,6 +313,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<HyperNodes> hyperNodes; 
             private String nodeGroupId; 
             private java.util.List<Nodes> nodes; 
 
@@ -255,9 +321,18 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             private Builder(NodeGroups model) {
+                this.hyperNodes = model.hyperNodes;
                 this.nodeGroupId = model.nodeGroupId;
                 this.nodes = model.nodes;
             } 
+
+            /**
+             * HyperNodes.
+             */
+            public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
+                this.hyperNodes = hyperNodes;
+                return this;
+            }
 
             /**
              * <p>The node group ID.</p>

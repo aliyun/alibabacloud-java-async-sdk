@@ -1808,6 +1808,288 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * DeleteWithNode.
+             */
+            public Builder deleteWithNode(Boolean deleteWithNode) {
+                this.deleteWithNode = deleteWithNode;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public DataDisk build() {
+                return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class HyperNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
+        private java.util.List<DataDisk> dataDisk;
+
+        @com.aliyun.core.annotation.NameInMap("Hostname")
+        private String hostname;
+
+        @com.aliyun.core.annotation.NameInMap("HyperNodeId")
+        private String hyperNodeId;
+
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
+        private String loginPassword;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private HyperNodes(Builder builder) {
+            this.dataDisk = builder.dataDisk;
+            this.hostname = builder.hostname;
+            this.hyperNodeId = builder.hyperNodeId;
+            this.loginPassword = builder.loginPassword;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HyperNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataDisk
+         */
+        public java.util.List<DataDisk> getDataDisk() {
+            return this.dataDisk;
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return hyperNodeId
+         */
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private java.util.List<DataDisk> dataDisk; 
+            private String hostname; 
+            private String hyperNodeId; 
+            private String loginPassword; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HyperNodes model) {
+                this.dataDisk = model.dataDisk;
+                this.hostname = model.hostname;
+                this.hyperNodeId = model.hyperNodeId;
+                this.loginPassword = model.loginPassword;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * DataDisk.
+             */
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
+                this.dataDisk = dataDisk;
+                return this;
+            }
+
+            /**
+             * Hostname.
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * HyperNodeId.
+             */
+            public Builder hyperNodeId(String hyperNodeId) {
+                this.hyperNodeId = hyperNodeId;
+                return this;
+            }
+
+            /**
+             * LoginPassword.
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
+                return this;
+            }
+
+            /**
+             * <p>VSwitch ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-asjdfklj</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jl36lqzmc06qogy0t5ll</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public HyperNodes build() {
+                return new HyperNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class NodesDataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("DeleteWithNode")
+        private Boolean deleteWithNode;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private NodesDataDisk(Builder builder) {
+            this.category = builder.category;
+            this.deleteWithNode = builder.deleteWithNode;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodesDataDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return deleteWithNode
+         */
+        public Boolean getDeleteWithNode() {
+            return this.deleteWithNode;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Boolean deleteWithNode; 
+            private String performanceLevel; 
+            private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodesDataDisk model) {
+                this.category = model.category;
+                this.deleteWithNode = model.deleteWithNode;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
              * <p>Type</p>
              * 
              * <strong>example:</strong>
@@ -1851,8 +2133,8 @@ public class CreateClusterRequest extends Request {
                 return this;
             }
 
-            public DataDisk build() {
-                return new DataDisk(this);
+            public NodesDataDisk build() {
+                return new NodesDataDisk(this);
             } 
 
         } 
@@ -1866,7 +2148,7 @@ public class CreateClusterRequest extends Request {
      */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List<DataDisk> dataDisk;
+        private java.util.List<NodesDataDisk> dataDisk;
 
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
@@ -1903,7 +2185,7 @@ public class CreateClusterRequest extends Request {
         /**
          * @return dataDisk
          */
-        public java.util.List<DataDisk> getDataDisk() {
+        public java.util.List<NodesDataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
@@ -1943,7 +2225,7 @@ public class CreateClusterRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List<DataDisk> dataDisk; 
+            private java.util.List<NodesDataDisk> dataDisk; 
             private String hostname; 
             private String loginPassword; 
             private String nodeId; 
@@ -1965,7 +2247,7 @@ public class CreateClusterRequest extends Request {
             /**
              * <p>Data disk specifications.</p>
              */
-            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<NodesDataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -2154,6 +2436,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
         private Boolean fileSystemMountEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("HyperNodes")
+        private java.util.List<HyperNodes> hyperNodes;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
@@ -2189,6 +2474,7 @@ public class CreateClusterRequest extends Request {
 
         private NodeGroups(Builder builder) {
             this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
+            this.hyperNodes = builder.hyperNodes;
             this.imageId = builder.imageId;
             this.keyPairName = builder.keyPairName;
             this.loginPassword = builder.loginPassword;
@@ -2215,6 +2501,13 @@ public class CreateClusterRequest extends Request {
          */
         public Boolean getFileSystemMountEnabled() {
             return this.fileSystemMountEnabled;
+        }
+
+        /**
+         * @return hyperNodes
+         */
+        public java.util.List<HyperNodes> getHyperNodes() {
+            return this.hyperNodes;
         }
 
         /**
@@ -2296,6 +2589,7 @@ public class CreateClusterRequest extends Request {
 
         public static final class Builder {
             private Boolean fileSystemMountEnabled; 
+            private java.util.List<HyperNodes> hyperNodes; 
             private String imageId; 
             private String keyPairName; 
             private String loginPassword; 
@@ -2313,6 +2607,7 @@ public class CreateClusterRequest extends Request {
 
             private Builder(NodeGroups model) {
                 this.fileSystemMountEnabled = model.fileSystemMountEnabled;
+                this.hyperNodes = model.hyperNodes;
                 this.imageId = model.imageId;
                 this.keyPairName = model.keyPairName;
                 this.loginPassword = model.loginPassword;
@@ -2334,6 +2629,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;
+                return this;
+            }
+
+            /**
+             * HyperNodes.
+             */
+            public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
+                this.hyperNodes = hyperNodes;
                 return this;
             }
 
