@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
     /**
+     * @param request the request parameters of CreateHybridCloudCluster  CreateHybridCloudClusterRequest
+     * @return CreateHybridCloudClusterResponse
+     */
+    CompletableFuture<CreateHybridCloudClusterResponse> createHybridCloudCluster(CreateHybridCloudClusterRequest request);
+
+    /**
      * @param request the request parameters of CreateHybridCloudClusterRule  CreateHybridCloudClusterRuleRequest
      * @return CreateHybridCloudClusterRuleResponse
      */
@@ -359,6 +365,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCnameCountResponse> describeCnameCount(DescribeCnameCountRequest request);
 
     /**
+     * @param request the request parameters of DescribeCommonLogFields  DescribeCommonLogFieldsRequest
+     * @return DescribeCommonLogFieldsResponse
+     */
+    CompletableFuture<DescribeCommonLogFieldsResponse> describeCommonLogFields(DescribeCommonLogFieldsRequest request);
+
+    /**
      * @param request the request parameters of DescribeCustomBaseRuleCompileResult  DescribeCustomBaseRuleCompileResultRequest
      * @return DescribeCustomBaseRuleCompileResultResponse
      */
@@ -375,6 +387,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDefaultHttpsResponse
      */
     CompletableFuture<DescribeDefaultHttpsResponse> describeDefaultHttps(DescribeDefaultHttpsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDefenseGroupValidResources  DescribeDefenseGroupValidResourcesRequest
+     * @return DescribeDefenseGroupValidResourcesResponse
+     */
+    CompletableFuture<DescribeDefenseGroupValidResourcesResponse> describeDefenseGroupValidResources(DescribeDefenseGroupValidResourcesRequest request);
 
     /**
      * @param request the request parameters of DescribeDefenseResource  DescribeDefenseResourceRequest
@@ -459,6 +477,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDefenseTemplateValidGroupsResponse
      */
     CompletableFuture<DescribeDefenseTemplateValidGroupsResponse> describeDefenseTemplateValidGroups(DescribeDefenseTemplateValidGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDefenseTemplateValidResources  DescribeDefenseTemplateValidResourcesRequest
+     * @return DescribeDefenseTemplateValidResourcesResponse
+     */
+    CompletableFuture<DescribeDefenseTemplateValidResourcesResponse> describeDefenseTemplateValidResources(DescribeDefenseTemplateValidResourcesRequest request);
 
     /**
      * @param request the request parameters of DescribeDefenseTemplates  DescribeDefenseTemplatesRequest
@@ -875,6 +899,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserEventTypeResponse> describeUserEventType(DescribeUserEventTypeRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserLogFieldConfig  DescribeUserLogFieldConfigRequest
+     * @return DescribeUserLogFieldConfigResponse
+     */
+    CompletableFuture<DescribeUserLogFieldConfigResponse> describeUserLogFieldConfig(DescribeUserLogFieldConfigRequest request);
+
+    /**
      * @param request the request parameters of DescribeUserSlsLogRegions  DescribeUserSlsLogRegionsRequest
      * @return DescribeUserSlsLogRegionsResponse
      */
@@ -1107,6 +1137,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTemplateResourcesResponse
      */
     CompletableFuture<ModifyTemplateResourcesResponse> modifyTemplateResources(ModifyTemplateResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserLogFieldConfig  ModifyUserLogFieldConfigRequest
+     * @return ModifyUserLogFieldConfigResponse
+     */
+    CompletableFuture<ModifyUserLogFieldConfigResponse> modifyUserLogFieldConfig(ModifyUserLogFieldConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserWafLogStatus  ModifyUserWafLogStatusRequest
+     * @return ModifyUserWafLogStatusResponse
+     */
+    CompletableFuture<ModifyUserWafLogStatusResponse> modifyUserWafLogStatus(ModifyUserWafLogStatusRequest request);
 
     /**
      * @param request the request parameters of ReCreateCloudResource  ReCreateCloudResourceRequest

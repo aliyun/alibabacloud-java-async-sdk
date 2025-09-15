@@ -263,6 +263,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateHybridCloudCluster  CreateHybridCloudClusterRequest
+     * @return CreateHybridCloudClusterResponse
+     */
+    @Override
+    public CompletableFuture<CreateHybridCloudClusterResponse> createHybridCloudCluster(CreateHybridCloudClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHybridCloudCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHybridCloudClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHybridCloudClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateHybridCloudClusterRule  CreateHybridCloudClusterRuleRequest
      * @return CreateHybridCloudClusterRuleResponse
      */
@@ -1076,6 +1094,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCommonLogFields  DescribeCommonLogFieldsRequest
+     * @return DescribeCommonLogFieldsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCommonLogFieldsResponse> describeCommonLogFields(DescribeCommonLogFieldsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCommonLogFields").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCommonLogFieldsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCommonLogFieldsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeCustomBaseRuleCompileResult  DescribeCustomBaseRuleCompileResultRequest
      * @return DescribeCustomBaseRuleCompileResultResponse
      */
@@ -1124,6 +1160,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDefaultHttpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDefenseGroupValidResources  DescribeDefenseGroupValidResourcesRequest
+     * @return DescribeDefenseGroupValidResourcesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDefenseGroupValidResourcesResponse> describeDefenseGroupValidResources(DescribeDefenseGroupValidResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDefenseGroupValidResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDefenseGroupValidResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDefenseGroupValidResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1376,6 +1430,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDefenseTemplateValidGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDefenseTemplateValidResources  DescribeDefenseTemplateValidResourcesRequest
+     * @return DescribeDefenseTemplateValidResourcesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDefenseTemplateValidResourcesResponse> describeDefenseTemplateValidResources(DescribeDefenseTemplateValidResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDefenseTemplateValidResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDefenseTemplateValidResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDefenseTemplateValidResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2576,6 +2648,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeUserLogFieldConfig  DescribeUserLogFieldConfigRequest
+     * @return DescribeUserLogFieldConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeUserLogFieldConfigResponse> describeUserLogFieldConfig(DescribeUserLogFieldConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUserLogFieldConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUserLogFieldConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeUserLogFieldConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeUserSlsLogRegions  DescribeUserSlsLogRegionsRequest
      * @return DescribeUserSlsLogRegionsResponse
      */
@@ -3272,6 +3362,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyTemplateResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyUserLogFieldConfig  ModifyUserLogFieldConfigRequest
+     * @return ModifyUserLogFieldConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyUserLogFieldConfigResponse> modifyUserLogFieldConfig(ModifyUserLogFieldConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyUserLogFieldConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyUserLogFieldConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyUserLogFieldConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyUserWafLogStatus  ModifyUserWafLogStatusRequest
+     * @return ModifyUserWafLogStatusResponse
+     */
+    @Override
+    public CompletableFuture<ModifyUserWafLogStatusResponse> modifyUserWafLogStatus(ModifyUserWafLogStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyUserWafLogStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyUserWafLogStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyUserWafLogStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
