@@ -110,6 +110,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private GetUserCertificateDetailResponseBody(Builder builder) {
         this.algorithm = builder.algorithm;
         this.buyInAliyun = builder.buyInAliyun;
@@ -142,6 +145,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.signCert = builder.signCert;
         this.signPrivateKey = builder.signPrivateKey;
         this.startDate = builder.startDate;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -373,6 +377,13 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.startDate;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
         private String algorithm; 
         private Boolean buyInAliyun; 
@@ -405,6 +416,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String signCert; 
         private String signPrivateKey; 
         private String startDate; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
         } 
@@ -441,6 +453,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             this.signCert = model.signCert;
             this.signPrivateKey = model.signPrivateKey;
             this.startDate = model.startDate;
+            this.tags = model.tags;
         } 
 
         /**
@@ -797,6 +810,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
         public GetUserCertificateDetailResponseBody build() {
             return new GetUserCertificateDetailResponseBody(this);
         } 
@@ -951,6 +972,81 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
 
             public CertChain build() {
                 return new CertChain(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetUserCertificateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserCertificateDetailResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
