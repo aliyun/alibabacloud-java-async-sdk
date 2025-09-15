@@ -145,6 +145,123 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
      *
      * <p>DescribeDesktopGroupSessionsResponseBody</p>
      */
+    public static class TerminalInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("ProductName")
+        private String productName;
+
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
+        private String serialNumber;
+
+        @com.aliyun.core.annotation.NameInMap("Uuid")
+        private String uuid;
+
+        private TerminalInfo(Builder builder) {
+            this.model = builder.model;
+            this.productName = builder.productName;
+            this.serialNumber = builder.serialNumber;
+            this.uuid = builder.uuid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TerminalInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return productName
+         */
+        public String getProductName() {
+            return this.productName;
+        }
+
+        /**
+         * @return serialNumber
+         */
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
+        public static final class Builder {
+            private String model; 
+            private String productName; 
+            private String serialNumber; 
+            private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(TerminalInfo model) {
+                this.model = model.model;
+                this.productName = model.productName;
+                this.serialNumber = model.serialNumber;
+                this.uuid = model.uuid;
+            } 
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * ProductName.
+             */
+            public Builder productName(String productName) {
+                this.productName = productName;
+                return this;
+            }
+
+            /**
+             * SerialNumber.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
+                return this;
+            }
+
+            /**
+             * Uuid.
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
+                return this;
+            }
+
+            public TerminalInfo build() {
+                return new TerminalInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDesktopGroupSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopGroupSessionsResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -200,6 +317,9 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
+        @com.aliyun.core.annotation.NameInMap("TerminalInfo")
+        private TerminalInfo terminalInfo;
+
         @com.aliyun.core.annotation.NameInMap("TotalConnectionDuration")
         private Long totalConnectionDuration;
 
@@ -222,6 +342,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.sessionIdleTime = builder.sessionIdleTime;
             this.sessionStatus = builder.sessionStatus;
+            this.terminalInfo = builder.terminalInfo;
             this.totalConnectionDuration = builder.totalConnectionDuration;
         }
 
@@ -360,6 +481,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return terminalInfo
+         */
+        public TerminalInfo getTerminalInfo() {
+            return this.terminalInfo;
+        }
+
+        /**
          * @return totalConnectionDuration
          */
         public Long getTotalConnectionDuration() {
@@ -385,6 +513,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             private String protocolType; 
             private Long sessionIdleTime; 
             private String sessionStatus; 
+            private TerminalInfo terminalInfo; 
             private Long totalConnectionDuration; 
 
             private Builder() {
@@ -409,6 +538,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
                 this.protocolType = model.protocolType;
                 this.sessionIdleTime = model.sessionIdleTime;
                 this.sessionStatus = model.sessionStatus;
+                this.terminalInfo = model.terminalInfo;
                 this.totalConnectionDuration = model.totalConnectionDuration;
             } 
 
@@ -632,6 +762,14 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
+                return this;
+            }
+
+            /**
+             * TerminalInfo.
+             */
+            public Builder terminalInfo(TerminalInfo terminalInfo) {
+                this.terminalInfo = terminalInfo;
                 return this;
             }
 

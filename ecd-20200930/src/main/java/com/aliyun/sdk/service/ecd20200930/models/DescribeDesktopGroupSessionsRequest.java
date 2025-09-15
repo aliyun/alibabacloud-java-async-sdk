@@ -18,12 +18,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopGroupSessionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
+    private java.util.List<String> desktopGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
+    private String desktopGroupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FillTerminalInfo")
+    private Boolean fillTerminalInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -51,8 +67,12 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
 
     private DescribeDesktopGroupSessionsRequest(Builder builder) {
         super(builder);
+        this.desktopGroupIds = builder.desktopGroupIds;
+        this.desktopGroupName = builder.desktopGroupName;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
+        this.fillTerminalInfo = builder.fillTerminalInfo;
+        this.language = builder.language;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownType = builder.ownType;
@@ -75,6 +95,20 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
+     * @return desktopGroupName
+     */
+    public String getDesktopGroupName() {
+        return this.desktopGroupName;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -86,6 +120,20 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
      */
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return fillTerminalInfo
+     */
+    public Boolean getFillTerminalInfo() {
+        return this.fillTerminalInfo;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -131,8 +179,12 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopGroupSessionsRequest, Builder> {
+        private java.util.List<String> desktopGroupIds; 
+        private String desktopGroupName; 
         private String endTime; 
         private String endUserId; 
+        private Boolean fillTerminalInfo; 
+        private String language; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer ownType; 
@@ -146,8 +198,12 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
 
         private Builder(DescribeDesktopGroupSessionsRequest request) {
             super(request);
+            this.desktopGroupIds = request.desktopGroupIds;
+            this.desktopGroupName = request.desktopGroupName;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
+            this.fillTerminalInfo = request.fillTerminalInfo;
+            this.language = request.language;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownType = request.ownType;
@@ -155,6 +211,24 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
             this.sessionStatus = request.sessionStatus;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * DesktopGroupIds.
+         */
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
+            this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
+            this.desktopGroupIds = desktopGroupIds;
+            return this;
+        }
+
+        /**
+         * DesktopGroupName.
+         */
+        public Builder desktopGroupName(String desktopGroupName) {
+            this.putQueryParameter("DesktopGroupName", desktopGroupName);
+            this.desktopGroupName = desktopGroupName;
+            return this;
+        }
 
         /**
          * <p>The end of the time range to query.</p>
@@ -177,6 +251,24 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * FillTerminalInfo.
+         */
+        public Builder fillTerminalInfo(Boolean fillTerminalInfo) {
+            this.putQueryParameter("FillTerminalInfo", fillTerminalInfo);
+            this.fillTerminalInfo = fillTerminalInfo;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

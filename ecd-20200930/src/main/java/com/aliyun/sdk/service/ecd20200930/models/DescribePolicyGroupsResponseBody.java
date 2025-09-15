@@ -1113,6 +1113,81 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
      *
      * <p>DescribePolicyGroupsResponseBody</p>
      */
+    public static class RecordEventLevels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
+        private String eventLevel;
+
+        @com.aliyun.core.annotation.NameInMap("EventType")
+        private String eventType;
+
+        private RecordEventLevels(Builder builder) {
+            this.eventLevel = builder.eventLevel;
+            this.eventType = builder.eventType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecordEventLevels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eventLevel
+         */
+        public String getEventLevel() {
+            return this.eventLevel;
+        }
+
+        /**
+         * @return eventType
+         */
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        public static final class Builder {
+            private String eventLevel; 
+            private String eventType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordEventLevels model) {
+                this.eventLevel = model.eventLevel;
+                this.eventType = model.eventType;
+            } 
+
+            /**
+             * EventLevel.
+             */
+            public Builder eventLevel(String eventLevel) {
+                this.eventLevel = eventLevel;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(String eventType) {
+                this.eventType = eventType;
+                return this;
+            }
+
+            public RecordEventLevels build() {
+                return new RecordEventLevels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGroupsResponseBody</p>
+     */
     public static class UsbSupplyRedirectRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1337,6 +1412,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRules")
         private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
+        @com.aliyun.core.annotation.NameInMap("AutoReconnect")
+        private String autoReconnect;
+
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
@@ -1466,8 +1544,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MobileRestart")
         private String mobileRestart;
 
+        @com.aliyun.core.annotation.NameInMap("MobileSafeMenu")
+        private String mobileSafeMenu;
+
         @com.aliyun.core.annotation.NameInMap("MobileShutdown")
         private String mobileShutdown;
+
+        @com.aliyun.core.annotation.NameInMap("MobileWuyingKeeper")
+        private String mobileWuyingKeeper;
+
+        @com.aliyun.core.annotation.NameInMap("MobileWyAssistant")
+        private String mobileWyAssistant;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1508,8 +1595,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordEventDuration")
         private Integer recordEventDuration;
 
+        @com.aliyun.core.annotation.NameInMap("RecordEventFileExts")
+        private java.util.List<String> recordEventFileExts;
+
         @com.aliyun.core.annotation.NameInMap("RecordEventFilePaths")
         private java.util.List<String> recordEventFilePaths;
+
+        @com.aliyun.core.annotation.NameInMap("RecordEventLevels")
+        private java.util.List<RecordEventLevels> recordEventLevels;
 
         @com.aliyun.core.annotation.NameInMap("RecordEventRegisters")
         private java.util.List<String> recordEventRegisters;
@@ -1666,6 +1759,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
+            this.autoReconnect = builder.autoReconnect;
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
             this.clientTypes = builder.clientTypes;
@@ -1709,7 +1803,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.memorySampleDuration = builder.memorySampleDuration;
             this.memorySingleRateLimit = builder.memorySingleRateLimit;
             this.mobileRestart = builder.mobileRestart;
+            this.mobileSafeMenu = builder.mobileSafeMenu;
             this.mobileShutdown = builder.mobileShutdown;
+            this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
+            this.mobileWyAssistant = builder.mobileWyAssistant;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
@@ -1723,7 +1820,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordContent = builder.recordContent;
             this.recordContentExpires = builder.recordContentExpires;
             this.recordEventDuration = builder.recordEventDuration;
+            this.recordEventFileExts = builder.recordEventFileExts;
             this.recordEventFilePaths = builder.recordEventFilePaths;
+            this.recordEventLevels = builder.recordEventLevels;
             this.recordEventRegisters = builder.recordEventRegisters;
             this.recording = builder.recording;
             this.recordingAudio = builder.recordingAudio;
@@ -1810,6 +1909,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List<AuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
             return this.authorizeSecurityPolicyRules;
+        }
+
+        /**
+         * @return autoReconnect
+         */
+        public String getAutoReconnect() {
+            return this.autoReconnect;
         }
 
         /**
@@ -2114,10 +2220,31 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mobileSafeMenu
+         */
+        public String getMobileSafeMenu() {
+            return this.mobileSafeMenu;
+        }
+
+        /**
          * @return mobileShutdown
          */
         public String getMobileShutdown() {
             return this.mobileShutdown;
+        }
+
+        /**
+         * @return mobileWuyingKeeper
+         */
+        public String getMobileWuyingKeeper() {
+            return this.mobileWuyingKeeper;
+        }
+
+        /**
+         * @return mobileWyAssistant
+         */
+        public String getMobileWyAssistant() {
+            return this.mobileWyAssistant;
         }
 
         /**
@@ -2212,10 +2339,24 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordEventFileExts
+         */
+        public java.util.List<String> getRecordEventFileExts() {
+            return this.recordEventFileExts;
+        }
+
+        /**
          * @return recordEventFilePaths
          */
         public java.util.List<String> getRecordEventFilePaths() {
             return this.recordEventFilePaths;
+        }
+
+        /**
+         * @return recordEventLevels
+         */
+        public java.util.List<RecordEventLevels> getRecordEventLevels() {
+            return this.recordEventLevels;
         }
 
         /**
@@ -2573,6 +2714,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String appContentProtection; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
+            private String autoReconnect; 
             private String cameraRedirect; 
             private String clientControlMenu; 
             private java.util.List<ClientTypes> clientTypes; 
@@ -2616,7 +2758,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer memorySampleDuration; 
             private Integer memorySingleRateLimit; 
             private String mobileRestart; 
+            private String mobileSafeMenu; 
             private String mobileShutdown; 
+            private String mobileWuyingKeeper; 
+            private String mobileWyAssistant; 
             private String name; 
             private String netRedirect; 
             private java.util.List<NetRedirectRule> netRedirectRule; 
@@ -2630,7 +2775,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String recordContent; 
             private Long recordContentExpires; 
             private Integer recordEventDuration; 
+            private java.util.List<String> recordEventFileExts; 
             private java.util.List<String> recordEventFilePaths; 
+            private java.util.List<RecordEventLevels> recordEventLevels; 
             private java.util.List<String> recordEventRegisters; 
             private String recording; 
             private String recordingAudio; 
@@ -2690,6 +2837,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.appContentProtection = model.appContentProtection;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
+                this.autoReconnect = model.autoReconnect;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
                 this.clientTypes = model.clientTypes;
@@ -2733,7 +2881,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.memorySampleDuration = model.memorySampleDuration;
                 this.memorySingleRateLimit = model.memorySingleRateLimit;
                 this.mobileRestart = model.mobileRestart;
+                this.mobileSafeMenu = model.mobileSafeMenu;
                 this.mobileShutdown = model.mobileShutdown;
+                this.mobileWuyingKeeper = model.mobileWuyingKeeper;
+                this.mobileWyAssistant = model.mobileWyAssistant;
                 this.name = model.name;
                 this.netRedirect = model.netRedirect;
                 this.netRedirectRule = model.netRedirectRule;
@@ -2747,7 +2898,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.recordContent = model.recordContent;
                 this.recordContentExpires = model.recordContentExpires;
                 this.recordEventDuration = model.recordEventDuration;
+                this.recordEventFileExts = model.recordEventFileExts;
                 this.recordEventFilePaths = model.recordEventFilePaths;
+                this.recordEventLevels = model.recordEventLevels;
                 this.recordEventRegisters = model.recordEventRegisters;
                 this.recording = model.recording;
                 this.recordingAudio = model.recordingAudio;
@@ -2843,6 +2996,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder authorizeSecurityPolicyRules(java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
+                return this;
+            }
+
+            /**
+             * AutoReconnect.
+             */
+            public Builder autoReconnect(String autoReconnect) {
+                this.autoReconnect = autoReconnect;
                 return this;
             }
 
@@ -3368,6 +3529,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * MobileSafeMenu.
+             */
+            public Builder mobileSafeMenu(String mobileSafeMenu) {
+                this.mobileSafeMenu = mobileSafeMenu;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether to display the shut down button in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace mobile clients (including the Android client and the iOS client).</p>
              * <blockquote>
              * <p>Mobile clients of V7.4 and higher versions required.</p>
@@ -3383,6 +3552,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder mobileShutdown(String mobileShutdown) {
                 this.mobileShutdown = mobileShutdown;
+                return this;
+            }
+
+            /**
+             * MobileWuyingKeeper.
+             */
+            public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
+                this.mobileWuyingKeeper = mobileWuyingKeeper;
+                return this;
+            }
+
+            /**
+             * MobileWyAssistant.
+             */
+            public Builder mobileWyAssistant(String mobileWyAssistant) {
+                this.mobileWyAssistant = mobileWyAssistant;
                 return this;
             }
 
@@ -3567,10 +3752,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RecordEventFileExts.
+             */
+            public Builder recordEventFileExts(java.util.List<String> recordEventFileExts) {
+                this.recordEventFileExts = recordEventFileExts;
+                return this;
+            }
+
+            /**
              * <p>The array of absolute paths of the monitored files in the screen recording audit policy.</p>
              */
             public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
                 this.recordEventFilePaths = recordEventFilePaths;
+                return this;
+            }
+
+            /**
+             * RecordEventLevels.
+             */
+            public Builder recordEventLevels(java.util.List<RecordEventLevels> recordEventLevels) {
+                this.recordEventLevels = recordEventLevels;
                 return this;
             }
 

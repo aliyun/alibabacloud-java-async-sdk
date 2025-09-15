@@ -42,6 +42,14 @@ public class DescribeDesktopSessionsRequest extends Request {
     private String endUserIdFilter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FillHardwareInfo")
+    private Boolean fillHardwareInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
@@ -82,6 +90,8 @@ public class DescribeDesktopSessionsRequest extends Request {
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
         this.endUserIdFilter = builder.endUserIdFilter;
+        this.fillHardwareInfo = builder.fillHardwareInfo;
+        this.language = builder.language;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -148,6 +158,20 @@ public class DescribeDesktopSessionsRequest extends Request {
     }
 
     /**
+     * @return fillHardwareInfo
+     */
+    public Boolean getFillHardwareInfo() {
+        return this.fillHardwareInfo;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return officeSiteId
      */
     public String getOfficeSiteId() {
@@ -210,6 +234,8 @@ public class DescribeDesktopSessionsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String endUserIdFilter; 
+        private Boolean fillHardwareInfo; 
+        private String language; 
         private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -231,6 +257,8 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
             this.endUserIdFilter = request.endUserIdFilter;
+            this.fillHardwareInfo = request.fillHardwareInfo;
+            this.language = request.language;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -307,6 +335,24 @@ public class DescribeDesktopSessionsRequest extends Request {
         public Builder endUserIdFilter(String endUserIdFilter) {
             this.putQueryParameter("EndUserIdFilter", endUserIdFilter);
             this.endUserIdFilter = endUserIdFilter;
+            return this;
+        }
+
+        /**
+         * FillHardwareInfo.
+         */
+        public Builder fillHardwareInfo(Boolean fillHardwareInfo) {
+            this.putQueryParameter("FillHardwareInfo", fillHardwareInfo);
+            this.fillHardwareInfo = fillHardwareInfo;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

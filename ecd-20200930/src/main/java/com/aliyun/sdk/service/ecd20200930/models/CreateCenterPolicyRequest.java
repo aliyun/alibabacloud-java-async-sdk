@@ -34,6 +34,10 @@ public class CreateCenterPolicyRequest extends Request {
     private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReconnect")
+    private String autoReconnect;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessType")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer businessType;
@@ -53,6 +57,14 @@ public class CreateCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Clipboard")
     private String clipboard;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClipboardGraineds")
+    private java.util.List<ClipboardGraineds> clipboardGraineds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClipboardScope")
+    private String clipboardScope;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ColorEnhancement")
@@ -199,8 +211,20 @@ public class CreateCenterPolicyRequest extends Request {
     private String mobileRestart;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileSafeMenu")
+    private String mobileSafeMenu;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MobileShutdown")
     private String mobileShutdown;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileWuyingKeeper")
+    private String mobileWuyingKeeper;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileWyAssistant")
+    private String mobileWyAssistant;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -236,8 +260,16 @@ public class CreateCenterPolicyRequest extends Request {
     private Integer recordEventDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordEventFileExts")
+    private java.util.List<String> recordEventFileExts;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordEventFilePaths")
     private java.util.List<String> recordEventFilePaths;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordEventLevels")
+    private java.util.List<RecordEventLevels> recordEventLevels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordEventRegisters")
@@ -459,11 +491,14 @@ public class CreateCenterPolicyRequest extends Request {
         this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
+        this.autoReconnect = builder.autoReconnect;
         this.businessType = builder.businessType;
         this.cameraRedirect = builder.cameraRedirect;
         this.clientControlMenu = builder.clientControlMenu;
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
+        this.clipboardGraineds = builder.clipboardGraineds;
+        this.clipboardScope = builder.clipboardScope;
         this.colorEnhancement = builder.colorEnhancement;
         this.cpdDriveClipboard = builder.cpdDriveClipboard;
         this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
@@ -500,7 +535,10 @@ public class CreateCenterPolicyRequest extends Request {
         this.memorySampleDuration = builder.memorySampleDuration;
         this.memorySingleRateLimit = builder.memorySingleRateLimit;
         this.mobileRestart = builder.mobileRestart;
+        this.mobileSafeMenu = builder.mobileSafeMenu;
         this.mobileShutdown = builder.mobileShutdown;
+        this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
+        this.mobileWyAssistant = builder.mobileWyAssistant;
         this.name = builder.name;
         this.netRedirect = builder.netRedirect;
         this.netRedirectRule = builder.netRedirectRule;
@@ -509,7 +547,9 @@ public class CreateCenterPolicyRequest extends Request {
         this.printerRedirect = builder.printerRedirect;
         this.qualityEnhancement = builder.qualityEnhancement;
         this.recordEventDuration = builder.recordEventDuration;
+        this.recordEventFileExts = builder.recordEventFileExts;
         this.recordEventFilePaths = builder.recordEventFilePaths;
+        this.recordEventLevels = builder.recordEventLevels;
         this.recordEventRegisters = builder.recordEventRegisters;
         this.recordEvents = builder.recordEvents;
         this.recording = builder.recording;
@@ -607,6 +647,13 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return autoReconnect
+     */
+    public String getAutoReconnect() {
+        return this.autoReconnect;
+    }
+
+    /**
      * @return businessType
      */
     public Integer getBusinessType() {
@@ -639,6 +686,20 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getClipboard() {
         return this.clipboard;
+    }
+
+    /**
+     * @return clipboardGraineds
+     */
+    public java.util.List<ClipboardGraineds> getClipboardGraineds() {
+        return this.clipboardGraineds;
+    }
+
+    /**
+     * @return clipboardScope
+     */
+    public String getClipboardScope() {
+        return this.clipboardScope;
     }
 
     /**
@@ -894,10 +955,31 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return mobileSafeMenu
+     */
+    public String getMobileSafeMenu() {
+        return this.mobileSafeMenu;
+    }
+
+    /**
      * @return mobileShutdown
      */
     public String getMobileShutdown() {
         return this.mobileShutdown;
+    }
+
+    /**
+     * @return mobileWuyingKeeper
+     */
+    public String getMobileWuyingKeeper() {
+        return this.mobileWuyingKeeper;
+    }
+
+    /**
+     * @return mobileWyAssistant
+     */
+    public String getMobileWyAssistant() {
+        return this.mobileWyAssistant;
     }
 
     /**
@@ -957,10 +1039,24 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return recordEventFileExts
+     */
+    public java.util.List<String> getRecordEventFileExts() {
+        return this.recordEventFileExts;
+    }
+
+    /**
      * @return recordEventFilePaths
      */
     public java.util.List<String> getRecordEventFilePaths() {
         return this.recordEventFilePaths;
+    }
+
+    /**
+     * @return recordEventLevels
+     */
+    public java.util.List<RecordEventLevels> getRecordEventLevels() {
+        return this.recordEventLevels;
     }
 
     /**
@@ -1339,11 +1435,14 @@ public class CreateCenterPolicyRequest extends Request {
         private String appContentProtection; 
         private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
+        private String autoReconnect; 
         private Integer businessType; 
         private String cameraRedirect; 
         private String clientControlMenu; 
         private java.util.List<ClientType> clientType; 
         private String clipboard; 
+        private java.util.List<ClipboardGraineds> clipboardGraineds; 
+        private String clipboardScope; 
         private String colorEnhancement; 
         private String cpdDriveClipboard; 
         private Integer cpuDownGradeDuration; 
@@ -1380,7 +1479,10 @@ public class CreateCenterPolicyRequest extends Request {
         private Integer memorySampleDuration; 
         private Integer memorySingleRateLimit; 
         private String mobileRestart; 
+        private String mobileSafeMenu; 
         private String mobileShutdown; 
+        private String mobileWuyingKeeper; 
+        private String mobileWyAssistant; 
         private String name; 
         private String netRedirect; 
         private java.util.List<NetRedirectRule> netRedirectRule; 
@@ -1389,7 +1491,9 @@ public class CreateCenterPolicyRequest extends Request {
         private String printerRedirect; 
         private String qualityEnhancement; 
         private Integer recordEventDuration; 
+        private java.util.List<String> recordEventFileExts; 
         private java.util.List<String> recordEventFilePaths; 
+        private java.util.List<RecordEventLevels> recordEventLevels; 
         private java.util.List<String> recordEventRegisters; 
         private java.util.List<String> recordEvents; 
         private String recording; 
@@ -1454,11 +1558,14 @@ public class CreateCenterPolicyRequest extends Request {
             this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
+            this.autoReconnect = request.autoReconnect;
             this.businessType = request.businessType;
             this.cameraRedirect = request.cameraRedirect;
             this.clientControlMenu = request.clientControlMenu;
             this.clientType = request.clientType;
             this.clipboard = request.clipboard;
+            this.clipboardGraineds = request.clipboardGraineds;
+            this.clipboardScope = request.clipboardScope;
             this.colorEnhancement = request.colorEnhancement;
             this.cpdDriveClipboard = request.cpdDriveClipboard;
             this.cpuDownGradeDuration = request.cpuDownGradeDuration;
@@ -1495,7 +1602,10 @@ public class CreateCenterPolicyRequest extends Request {
             this.memorySampleDuration = request.memorySampleDuration;
             this.memorySingleRateLimit = request.memorySingleRateLimit;
             this.mobileRestart = request.mobileRestart;
+            this.mobileSafeMenu = request.mobileSafeMenu;
             this.mobileShutdown = request.mobileShutdown;
+            this.mobileWuyingKeeper = request.mobileWuyingKeeper;
+            this.mobileWyAssistant = request.mobileWyAssistant;
             this.name = request.name;
             this.netRedirect = request.netRedirect;
             this.netRedirectRule = request.netRedirectRule;
@@ -1504,7 +1614,9 @@ public class CreateCenterPolicyRequest extends Request {
             this.printerRedirect = request.printerRedirect;
             this.qualityEnhancement = request.qualityEnhancement;
             this.recordEventDuration = request.recordEventDuration;
+            this.recordEventFileExts = request.recordEventFileExts;
             this.recordEventFilePaths = request.recordEventFilePaths;
+            this.recordEventLevels = request.recordEventLevels;
             this.recordEventRegisters = request.recordEventRegisters;
             this.recordEvents = request.recordEvents;
             this.recording = request.recording;
@@ -1617,6 +1729,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * AutoReconnect.
+         */
+        public Builder autoReconnect(String autoReconnect) {
+            this.putQueryParameter("AutoReconnect", autoReconnect);
+            this.autoReconnect = autoReconnect;
+            return this;
+        }
+
+        /**
          * <p>The business type.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -1685,6 +1806,24 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder clipboard(String clipboard) {
             this.putQueryParameter("Clipboard", clipboard);
             this.clipboard = clipboard;
+            return this;
+        }
+
+        /**
+         * ClipboardGraineds.
+         */
+        public Builder clipboardGraineds(java.util.List<ClipboardGraineds> clipboardGraineds) {
+            this.putQueryParameter("ClipboardGraineds", clipboardGraineds);
+            this.clipboardGraineds = clipboardGraineds;
+            return this;
+        }
+
+        /**
+         * ClipboardScope.
+         */
+        public Builder clipboardScope(String clipboardScope) {
+            this.putQueryParameter("ClipboardScope", clipboardScope);
+            this.clipboardScope = clipboardScope;
             return this;
         }
 
@@ -2177,6 +2316,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * MobileSafeMenu.
+         */
+        public Builder mobileSafeMenu(String mobileSafeMenu) {
+            this.putQueryParameter("MobileSafeMenu", mobileSafeMenu);
+            this.mobileSafeMenu = mobileSafeMenu;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
          * <blockquote>
          * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
@@ -2193,6 +2341,24 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder mobileShutdown(String mobileShutdown) {
             this.putQueryParameter("MobileShutdown", mobileShutdown);
             this.mobileShutdown = mobileShutdown;
+            return this;
+        }
+
+        /**
+         * MobileWuyingKeeper.
+         */
+        public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
+            this.putQueryParameter("MobileWuyingKeeper", mobileWuyingKeeper);
+            this.mobileWuyingKeeper = mobileWuyingKeeper;
+            return this;
+        }
+
+        /**
+         * MobileWyAssistant.
+         */
+        public Builder mobileWyAssistant(String mobileWyAssistant) {
+            this.putQueryParameter("MobileWyAssistant", mobileWyAssistant);
+            this.mobileWyAssistant = mobileWyAssistant;
             return this;
         }
 
@@ -2325,11 +2491,29 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * RecordEventFileExts.
+         */
+        public Builder recordEventFileExts(java.util.List<String> recordEventFileExts) {
+            this.putQueryParameter("RecordEventFileExts", recordEventFileExts);
+            this.recordEventFileExts = recordEventFileExts;
+            return this;
+        }
+
+        /**
          * <p>The absolute paths to screen recording files.</p>
          */
         public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
             this.putQueryParameter("RecordEventFilePaths", recordEventFilePaths);
             this.recordEventFilePaths = recordEventFilePaths;
+            return this;
+        }
+
+        /**
+         * RecordEventLevels.
+         */
+        public Builder recordEventLevels(java.util.List<RecordEventLevels> recordEventLevels) {
+            this.putQueryParameter("RecordEventLevels", recordEventLevels);
+            this.recordEventLevels = recordEventLevels;
             return this;
         }
 
@@ -3494,6 +3678,102 @@ public class CreateCenterPolicyRequest extends Request {
      *
      * <p>CreateCenterPolicyRequest</p>
      */
+    public static class ClipboardGraineds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClipboardSize")
+        private Integer clipboardSize;
+
+        @com.aliyun.core.annotation.NameInMap("ClipboardType")
+        private String clipboardType;
+
+        @com.aliyun.core.annotation.NameInMap("GrainedType")
+        private String grainedType;
+
+        private ClipboardGraineds(Builder builder) {
+            this.clipboardSize = builder.clipboardSize;
+            this.clipboardType = builder.clipboardType;
+            this.grainedType = builder.grainedType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClipboardGraineds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clipboardSize
+         */
+        public Integer getClipboardSize() {
+            return this.clipboardSize;
+        }
+
+        /**
+         * @return clipboardType
+         */
+        public String getClipboardType() {
+            return this.clipboardType;
+        }
+
+        /**
+         * @return grainedType
+         */
+        public String getGrainedType() {
+            return this.grainedType;
+        }
+
+        public static final class Builder {
+            private Integer clipboardSize; 
+            private String clipboardType; 
+            private String grainedType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClipboardGraineds model) {
+                this.clipboardSize = model.clipboardSize;
+                this.clipboardType = model.clipboardType;
+                this.grainedType = model.grainedType;
+            } 
+
+            /**
+             * ClipboardSize.
+             */
+            public Builder clipboardSize(Integer clipboardSize) {
+                this.clipboardSize = clipboardSize;
+                return this;
+            }
+
+            /**
+             * ClipboardType.
+             */
+            public Builder clipboardType(String clipboardType) {
+                this.clipboardType = clipboardType;
+                return this;
+            }
+
+            /**
+             * GrainedType.
+             */
+            public Builder grainedType(String grainedType) {
+                this.grainedType = grainedType;
+                return this;
+            }
+
+            public ClipboardGraineds build() {
+                return new ClipboardGraineds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCenterPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCenterPolicyRequest</p>
+     */
     public static class DeviceRedirects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
@@ -4011,6 +4291,81 @@ public class CreateCenterPolicyRequest extends Request {
 
             public NetRedirectRule build() {
                 return new NetRedirectRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCenterPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCenterPolicyRequest</p>
+     */
+    public static class RecordEventLevels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
+        private String eventLevel;
+
+        @com.aliyun.core.annotation.NameInMap("EventType")
+        private String eventType;
+
+        private RecordEventLevels(Builder builder) {
+            this.eventLevel = builder.eventLevel;
+            this.eventType = builder.eventType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecordEventLevels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eventLevel
+         */
+        public String getEventLevel() {
+            return this.eventLevel;
+        }
+
+        /**
+         * @return eventType
+         */
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        public static final class Builder {
+            private String eventLevel; 
+            private String eventType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordEventLevels model) {
+                this.eventLevel = model.eventLevel;
+                this.eventType = model.eventType;
+            } 
+
+            /**
+             * EventLevel.
+             */
+            public Builder eventLevel(String eventLevel) {
+                this.eventLevel = eventLevel;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(String eventType) {
+                this.eventType = eventType;
+                return this;
+            }
+
+            public RecordEventLevels build() {
+                return new RecordEventLevels(this);
             } 
 
         } 
