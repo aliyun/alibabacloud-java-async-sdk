@@ -2357,6 +2357,9 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScriptDetails")
         private ScriptDetails scriptDetails;
 
+        @com.aliyun.core.annotation.NameInMap("SqlMode")
+        private Integer sqlMode;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -2389,6 +2392,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             this.requestMethod = builder.requestMethod;
             this.responseContentType = builder.responseContentType;
             this.scriptDetails = builder.scriptDetails;
+            this.sqlMode = builder.sqlMode;
             this.status = builder.status;
             this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
@@ -2517,6 +2521,13 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlMode
+         */
+        public Integer getSqlMode() {
+            return this.sqlMode;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -2568,6 +2579,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Integer requestMethod; 
             private Integer responseContentType; 
             private ScriptDetails scriptDetails; 
+            private Integer sqlMode; 
             private Integer status; 
             private Long tenantId; 
             private Integer timeout; 
@@ -2594,6 +2606,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
                 this.requestMethod = model.requestMethod;
                 this.responseContentType = model.responseContentType;
                 this.scriptDetails = model.scriptDetails;
+                this.sqlMode = model.sqlMode;
                 this.status = model.status;
                 this.tenantId = model.tenantId;
                 this.timeout = model.timeout;
@@ -2765,6 +2778,14 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
              */
             public Builder scriptDetails(ScriptDetails scriptDetails) {
                 this.scriptDetails = scriptDetails;
+                return this;
+            }
+
+            /**
+             * SqlMode.
+             */
+            public Builder sqlMode(Integer sqlMode) {
+                this.sqlMode = sqlMode;
                 return this;
             }
 
