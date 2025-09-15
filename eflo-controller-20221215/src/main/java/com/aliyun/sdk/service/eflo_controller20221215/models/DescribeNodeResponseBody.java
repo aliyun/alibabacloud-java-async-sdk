@@ -41,6 +41,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HpnZone")
     private String hpnZone;
 
+    @com.aliyun.core.annotation.NameInMap("HyperNodeId")
+    private String hyperNodeId;
+
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -92,6 +95,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
         this.hostname = builder.hostname;
         this.hpnZone = builder.hpnZone;
+        this.hyperNodeId = builder.hyperNodeId;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.machineType = builder.machineType;
@@ -174,6 +178,13 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     public String getHpnZone() {
         return this.hpnZone;
+    }
+
+    /**
+     * @return hyperNodeId
+     */
+    public String getHyperNodeId() {
+        return this.hyperNodeId;
     }
 
     /**
@@ -283,6 +294,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private Boolean fileSystemMountEnabled; 
         private String hostname; 
         private String hpnZone; 
+        private String hyperNodeId; 
         private String imageId; 
         private String imageName; 
         private String machineType; 
@@ -310,6 +322,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             this.fileSystemMountEnabled = model.fileSystemMountEnabled;
             this.hostname = model.hostname;
             this.hpnZone = model.hpnZone;
+            this.hyperNodeId = model.hyperNodeId;
             this.imageId = model.imageId;
             this.imageName = model.imageName;
             this.machineType = model.machineType;
@@ -408,6 +421,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
+            return this;
+        }
+
+        /**
+         * HyperNodeId.
+         */
+        public Builder hyperNodeId(String hyperNodeId) {
+            this.hyperNodeId = hyperNodeId;
             return this;
         }
 

@@ -215,6 +215,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HpnZone")
         private String hpnZone;
 
+        @com.aliyun.core.annotation.NameInMap("HyperNodeId")
+        private String hyperNodeId;
+
         @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
@@ -241,6 +244,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
             this.hpnZone = builder.hpnZone;
+            this.hyperNodeId = builder.hyperNodeId;
             this.machineType = builder.machineType;
             this.nodeId = builder.nodeId;
             this.operatingState = builder.operatingState;
@@ -284,6 +288,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
          */
         public String getHpnZone() {
             return this.hpnZone;
+        }
+
+        /**
+         * @return hyperNodeId
+         */
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
         }
 
         /**
@@ -340,6 +351,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             private String createTime; 
             private String expiredTime; 
             private String hpnZone; 
+            private String hyperNodeId; 
             private String machineType; 
             private String nodeId; 
             private String operatingState; 
@@ -356,6 +368,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.expiredTime = model.expiredTime;
                 this.hpnZone = model.hpnZone;
+                this.hyperNodeId = model.hyperNodeId;
                 this.machineType = model.machineType;
                 this.nodeId = model.nodeId;
                 this.operatingState = model.operatingState;
@@ -406,6 +419,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
+                return this;
+            }
+
+            /**
+             * HyperNodeId.
+             */
+            public Builder hyperNodeId(String hyperNodeId) {
+                this.hyperNodeId = hyperNodeId;
                 return this;
             }
 
