@@ -103,7 +103,7 @@ public class ListJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Validation(maxLength = 200)
     private String status;
 
     @com.aliyun.core.annotation.Query

@@ -101,6 +101,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.NameInMap("RestartRecord")
+    private java.util.List<RestartRecord> restartRecord;
+
     @com.aliyun.core.annotation.NameInMap("RestartTimes")
     private String restartTimes;
 
@@ -169,6 +172,7 @@ public class GetJobResponseBody extends TeaModel {
         this.resourceId = builder.resourceId;
         this.resourceLevel = builder.resourceLevel;
         this.resourceType = builder.resourceType;
+        this.restartRecord = builder.restartRecord;
         this.restartTimes = builder.restartTimes;
         this.settings = builder.settings;
         this.status = builder.status;
@@ -393,6 +397,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return restartRecord
+     */
+    public java.util.List<RestartRecord> getRestartRecord() {
+        return this.restartRecord;
+    }
+
+    /**
      * @return restartTimes
      */
     public String getRestartTimes() {
@@ -512,6 +523,7 @@ public class GetJobResponseBody extends TeaModel {
         private String resourceId; 
         private String resourceLevel; 
         private String resourceType; 
+        private java.util.List<RestartRecord> restartRecord; 
         private String restartTimes; 
         private JobSettings settings; 
         private String status; 
@@ -558,6 +570,7 @@ public class GetJobResponseBody extends TeaModel {
             this.resourceId = model.resourceId;
             this.resourceLevel = model.resourceLevel;
             this.resourceType = model.resourceType;
+            this.restartRecord = model.restartRecord;
             this.restartTimes = model.restartTimes;
             this.settings = model.settings;
             this.status = model.status;
@@ -861,6 +874,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * RestartRecord.
+         */
+        public Builder restartRecord(java.util.List<RestartRecord> restartRecord) {
+            this.restartRecord = restartRecord;
             return this;
         }
 
@@ -1827,6 +1848,450 @@ public class GetJobResponseBody extends TeaModel {
 
             public Pods build() {
                 return new Pods(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class DetailErrorInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddJobLevelBlacklist")
+        private Boolean addJobLevelBlacklist;
+
+        @com.aliyun.core.annotation.NameInMap("AddNodeToBlacklist")
+        private Boolean addNodeToBlacklist;
+
+        @com.aliyun.core.annotation.NameInMap("DetailErrorMsg")
+        private String detailErrorMsg;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorSource")
+        private String errorSource;
+
+        @com.aliyun.core.annotation.NameInMap("Node")
+        private String node;
+
+        @com.aliyun.core.annotation.NameInMap("Pod")
+        private String pod;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerRestart")
+        private Boolean triggerRestart;
+
+        private DetailErrorInfoList(Builder builder) {
+            this.addJobLevelBlacklist = builder.addJobLevelBlacklist;
+            this.addNodeToBlacklist = builder.addNodeToBlacklist;
+            this.detailErrorMsg = builder.detailErrorMsg;
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
+            this.errorSource = builder.errorSource;
+            this.node = builder.node;
+            this.pod = builder.pod;
+            this.triggerRestart = builder.triggerRestart;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DetailErrorInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addJobLevelBlacklist
+         */
+        public Boolean getAddJobLevelBlacklist() {
+            return this.addJobLevelBlacklist;
+        }
+
+        /**
+         * @return addNodeToBlacklist
+         */
+        public Boolean getAddNodeToBlacklist() {
+            return this.addNodeToBlacklist;
+        }
+
+        /**
+         * @return detailErrorMsg
+         */
+        public String getDetailErrorMsg() {
+            return this.detailErrorMsg;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        /**
+         * @return errorSource
+         */
+        public String getErrorSource() {
+            return this.errorSource;
+        }
+
+        /**
+         * @return node
+         */
+        public String getNode() {
+            return this.node;
+        }
+
+        /**
+         * @return pod
+         */
+        public String getPod() {
+            return this.pod;
+        }
+
+        /**
+         * @return triggerRestart
+         */
+        public Boolean getTriggerRestart() {
+            return this.triggerRestart;
+        }
+
+        public static final class Builder {
+            private Boolean addJobLevelBlacklist; 
+            private Boolean addNodeToBlacklist; 
+            private String detailErrorMsg; 
+            private String errorCode; 
+            private String errorMsg; 
+            private String errorSource; 
+            private String node; 
+            private String pod; 
+            private Boolean triggerRestart; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailErrorInfoList model) {
+                this.addJobLevelBlacklist = model.addJobLevelBlacklist;
+                this.addNodeToBlacklist = model.addNodeToBlacklist;
+                this.detailErrorMsg = model.detailErrorMsg;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.errorSource = model.errorSource;
+                this.node = model.node;
+                this.pod = model.pod;
+                this.triggerRestart = model.triggerRestart;
+            } 
+
+            /**
+             * AddJobLevelBlacklist.
+             */
+            public Builder addJobLevelBlacklist(Boolean addJobLevelBlacklist) {
+                this.addJobLevelBlacklist = addJobLevelBlacklist;
+                return this;
+            }
+
+            /**
+             * AddNodeToBlacklist.
+             */
+            public Builder addNodeToBlacklist(Boolean addNodeToBlacklist) {
+                this.addNodeToBlacklist = addNodeToBlacklist;
+                return this;
+            }
+
+            /**
+             * DetailErrorMsg.
+             */
+            public Builder detailErrorMsg(String detailErrorMsg) {
+                this.detailErrorMsg = detailErrorMsg;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * ErrorSource.
+             */
+            public Builder errorSource(String errorSource) {
+                this.errorSource = errorSource;
+                return this;
+            }
+
+            /**
+             * Node.
+             */
+            public Builder node(String node) {
+                this.node = node;
+                return this;
+            }
+
+            /**
+             * Pod.
+             */
+            public Builder pod(String pod) {
+                this.pod = pod;
+                return this;
+            }
+
+            /**
+             * TriggerRestart.
+             */
+            public Builder triggerRestart(Boolean triggerRestart) {
+                this.triggerRestart = triggerRestart;
+                return this;
+            }
+
+            public DetailErrorInfoList build() {
+                return new DetailErrorInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class RestartRecord extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DetailErrorInfoList")
+        private java.util.List<DetailErrorInfoList> detailErrorInfoList;
+
+        @com.aliyun.core.annotation.NameInMap("JobRestartCount")
+        private Long jobRestartCount;
+
+        @com.aliyun.core.annotation.NameInMap("OccurPhase")
+        private String occurPhase;
+
+        @com.aliyun.core.annotation.NameInMap("OccurTime")
+        private String occurTime;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("RestartDurationInSec")
+        private Long restartDurationInSec;
+
+        @com.aliyun.core.annotation.NameInMap("RestartFailReason")
+        private String restartFailReason;
+
+        @com.aliyun.core.annotation.NameInMap("RestartStatus")
+        private String restartStatus;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerID")
+        private String triggerID;
+
+        private RestartRecord(Builder builder) {
+            this.detailErrorInfoList = builder.detailErrorInfoList;
+            this.jobRestartCount = builder.jobRestartCount;
+            this.occurPhase = builder.occurPhase;
+            this.occurTime = builder.occurTime;
+            this.reason = builder.reason;
+            this.restartDurationInSec = builder.restartDurationInSec;
+            this.restartFailReason = builder.restartFailReason;
+            this.restartStatus = builder.restartStatus;
+            this.triggerID = builder.triggerID;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RestartRecord create() {
+            return builder().build();
+        }
+
+        /**
+         * @return detailErrorInfoList
+         */
+        public java.util.List<DetailErrorInfoList> getDetailErrorInfoList() {
+            return this.detailErrorInfoList;
+        }
+
+        /**
+         * @return jobRestartCount
+         */
+        public Long getJobRestartCount() {
+            return this.jobRestartCount;
+        }
+
+        /**
+         * @return occurPhase
+         */
+        public String getOccurPhase() {
+            return this.occurPhase;
+        }
+
+        /**
+         * @return occurTime
+         */
+        public String getOccurTime() {
+            return this.occurTime;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return restartDurationInSec
+         */
+        public Long getRestartDurationInSec() {
+            return this.restartDurationInSec;
+        }
+
+        /**
+         * @return restartFailReason
+         */
+        public String getRestartFailReason() {
+            return this.restartFailReason;
+        }
+
+        /**
+         * @return restartStatus
+         */
+        public String getRestartStatus() {
+            return this.restartStatus;
+        }
+
+        /**
+         * @return triggerID
+         */
+        public String getTriggerID() {
+            return this.triggerID;
+        }
+
+        public static final class Builder {
+            private java.util.List<DetailErrorInfoList> detailErrorInfoList; 
+            private Long jobRestartCount; 
+            private String occurPhase; 
+            private String occurTime; 
+            private String reason; 
+            private Long restartDurationInSec; 
+            private String restartFailReason; 
+            private String restartStatus; 
+            private String triggerID; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestartRecord model) {
+                this.detailErrorInfoList = model.detailErrorInfoList;
+                this.jobRestartCount = model.jobRestartCount;
+                this.occurPhase = model.occurPhase;
+                this.occurTime = model.occurTime;
+                this.reason = model.reason;
+                this.restartDurationInSec = model.restartDurationInSec;
+                this.restartFailReason = model.restartFailReason;
+                this.restartStatus = model.restartStatus;
+                this.triggerID = model.triggerID;
+            } 
+
+            /**
+             * DetailErrorInfoList.
+             */
+            public Builder detailErrorInfoList(java.util.List<DetailErrorInfoList> detailErrorInfoList) {
+                this.detailErrorInfoList = detailErrorInfoList;
+                return this;
+            }
+
+            /**
+             * JobRestartCount.
+             */
+            public Builder jobRestartCount(Long jobRestartCount) {
+                this.jobRestartCount = jobRestartCount;
+                return this;
+            }
+
+            /**
+             * OccurPhase.
+             */
+            public Builder occurPhase(String occurPhase) {
+                this.occurPhase = occurPhase;
+                return this;
+            }
+
+            /**
+             * OccurTime.
+             */
+            public Builder occurTime(String occurTime) {
+                this.occurTime = occurTime;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * RestartDurationInSec.
+             */
+            public Builder restartDurationInSec(Long restartDurationInSec) {
+                this.restartDurationInSec = restartDurationInSec;
+                return this;
+            }
+
+            /**
+             * RestartFailReason.
+             */
+            public Builder restartFailReason(String restartFailReason) {
+                this.restartFailReason = restartFailReason;
+                return this;
+            }
+
+            /**
+             * RestartStatus.
+             */
+            public Builder restartStatus(String restartStatus) {
+                this.restartStatus = restartStatus;
+                return this;
+            }
+
+            /**
+             * TriggerID.
+             */
+            public Builder triggerID(String triggerID) {
+                this.triggerID = triggerID;
+                return this;
+            }
+
+            public RestartRecord build() {
+                return new RestartRecord(this);
             } 
 
         } 
