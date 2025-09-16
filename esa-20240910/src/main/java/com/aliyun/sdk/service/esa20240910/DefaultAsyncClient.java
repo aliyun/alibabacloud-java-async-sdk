@@ -440,6 +440,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateHttpIncomingRequestHeaderModificationRule  CreateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<CreateHttpIncomingRequestHeaderModificationRuleResponse> createHttpIncomingRequestHeaderModificationRule(CreateHttpIncomingRequestHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHttpIncomingRequestHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHttpIncomingRequestHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHttpIncomingRequestHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateHttpIncomingResponseHeaderModificationRule  CreateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<CreateHttpIncomingResponseHeaderModificationRuleResponse> createHttpIncomingResponseHeaderModificationRule(CreateHttpIncomingResponseHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHttpIncomingResponseHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHttpIncomingResponseHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHttpIncomingResponseHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateHttpRequestHeaderModificationRule  CreateHttpRequestHeaderModificationRuleRequest
      * @return CreateHttpRequestHeaderModificationRuleResponse
      */
@@ -752,6 +788,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRoutineCodeDeployment  CreateRoutineCodeDeploymentRequest
+     * @return CreateRoutineCodeDeploymentResponse
+     */
+    @Override
+    public CompletableFuture<CreateRoutineCodeDeploymentResponse> createRoutineCodeDeployment(CreateRoutineCodeDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRoutineCodeDeployment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRoutineCodeDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRoutineCodeDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateRoutineRelatedRecord  CreateRoutineRelatedRecordRequest
      * @return CreateRoutineRelatedRecordResponse
      */
@@ -782,6 +836,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateRoutineRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRoutineWithAssetsCodeVersion  CreateRoutineWithAssetsCodeVersionRequest
+     * @return CreateRoutineWithAssetsCodeVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateRoutineWithAssetsCodeVersionResponse> createRoutineWithAssetsCodeVersion(CreateRoutineWithAssetsCodeVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRoutineWithAssetsCodeVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRoutineWithAssetsCodeVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRoutineWithAssetsCodeVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1245,6 +1317,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEdgeContainerAppVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteHttpIncomingRequestHeaderModificationRule  DeleteHttpIncomingRequestHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHttpIncomingRequestHeaderModificationRuleResponse> deleteHttpIncomingRequestHeaderModificationRule(DeleteHttpIncomingRequestHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHttpIncomingRequestHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHttpIncomingRequestHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHttpIncomingRequestHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteHttpIncomingResponseHeaderModificationRule  DeleteHttpIncomingResponseHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHttpIncomingResponseHeaderModificationRuleResponse> deleteHttpIncomingResponseHeaderModificationRule(DeleteHttpIncomingResponseHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHttpIncomingResponseHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHttpIncomingResponseHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHttpIncomingResponseHeaderModificationRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2669,6 +2777,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetHttpIncomingRequestHeaderModificationRule  GetHttpIncomingRequestHeaderModificationRuleRequest
+     * @return GetHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<GetHttpIncomingRequestHeaderModificationRuleResponse> getHttpIncomingRequestHeaderModificationRule(GetHttpIncomingRequestHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetHttpIncomingRequestHeaderModificationRule").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHttpIncomingRequestHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHttpIncomingRequestHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetHttpIncomingResponseHeaderModificationRule  GetHttpIncomingResponseHeaderModificationRuleRequest
+     * @return GetHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<GetHttpIncomingResponseHeaderModificationRuleResponse> getHttpIncomingResponseHeaderModificationRule(GetHttpIncomingResponseHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetHttpIncomingResponseHeaderModificationRule").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHttpIncomingResponseHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHttpIncomingResponseHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetHttpRequestHeaderModificationRule  GetHttpRequestHeaderModificationRuleRequest
      * @return GetHttpRequestHeaderModificationRuleResponse
      */
@@ -3893,6 +4037,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListEdgeRoutineRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListHttpIncomingRequestHeaderModificationRules  ListHttpIncomingRequestHeaderModificationRulesRequest
+     * @return ListHttpIncomingRequestHeaderModificationRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListHttpIncomingRequestHeaderModificationRulesResponse> listHttpIncomingRequestHeaderModificationRules(ListHttpIncomingRequestHeaderModificationRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListHttpIncomingRequestHeaderModificationRules").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListHttpIncomingRequestHeaderModificationRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListHttpIncomingRequestHeaderModificationRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListHttpIncomingResponseHeaderModificationRules  ListHttpIncomingResponseHeaderModificationRulesRequest
+     * @return ListHttpIncomingResponseHeaderModificationRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListHttpIncomingResponseHeaderModificationRulesResponse> listHttpIncomingResponseHeaderModificationRules(ListHttpIncomingResponseHeaderModificationRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListHttpIncomingResponseHeaderModificationRules").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListHttpIncomingResponseHeaderModificationRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListHttpIncomingResponseHeaderModificationRulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5327,6 +5507,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateEdgeContainerAppResourceReserveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateHttpIncomingRequestHeaderModificationRule  UpdateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateHttpIncomingRequestHeaderModificationRuleResponse> updateHttpIncomingRequestHeaderModificationRule(UpdateHttpIncomingRequestHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateHttpIncomingRequestHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateHttpIncomingRequestHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateHttpIncomingRequestHeaderModificationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateHttpIncomingResponseHeaderModificationRule  UpdateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateHttpIncomingResponseHeaderModificationRuleResponse> updateHttpIncomingResponseHeaderModificationRule(UpdateHttpIncomingResponseHeaderModificationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateHttpIncomingResponseHeaderModificationRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateHttpIncomingResponseHeaderModificationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateHttpIncomingResponseHeaderModificationRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

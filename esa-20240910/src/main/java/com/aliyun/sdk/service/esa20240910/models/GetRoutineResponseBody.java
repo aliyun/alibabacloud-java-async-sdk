@@ -29,6 +29,9 @@ public class GetRoutineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Envs")
     private java.util.List<Envs> envs;
 
+    @com.aliyun.core.annotation.NameInMap("HasAssets")
+    private Boolean hasAssets;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -37,6 +40,7 @@ public class GetRoutineResponseBody extends TeaModel {
         this.defaultRelatedRecord = builder.defaultRelatedRecord;
         this.description = builder.description;
         this.envs = builder.envs;
+        this.hasAssets = builder.hasAssets;
         this.requestId = builder.requestId;
     }
 
@@ -81,6 +85,13 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     /**
+     * @return hasAssets
+     */
+    public Boolean getHasAssets() {
+        return this.hasAssets;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -92,6 +103,7 @@ public class GetRoutineResponseBody extends TeaModel {
         private String defaultRelatedRecord; 
         private String description; 
         private java.util.List<Envs> envs; 
+        private Boolean hasAssets; 
         private String requestId; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class GetRoutineResponseBody extends TeaModel {
             this.defaultRelatedRecord = model.defaultRelatedRecord;
             this.description = model.description;
             this.envs = model.envs;
+            this.hasAssets = model.hasAssets;
             this.requestId = model.requestId;
         } 
 
@@ -147,6 +160,14 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
+         * HasAssets.
+         */
+        public Builder hasAssets(Boolean hasAssets) {
+            this.hasAssets = hasAssets;
+            return this;
+        }
+
+        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
@@ -169,12 +190,255 @@ public class GetRoutineResponseBody extends TeaModel {
      *
      * <p>GetRoutineResponseBody</p>
      */
+    public static class CodeVersions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CodeVersion")
+        private String codeVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Long percentage;
+
+        private CodeVersions(Builder builder) {
+            this.codeVersion = builder.codeVersion;
+            this.createTime = builder.createTime;
+            this.description = builder.description;
+            this.percentage = builder.percentage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CodeVersions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return codeVersion
+         */
+        public String getCodeVersion() {
+            return this.codeVersion;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return percentage
+         */
+        public Long getPercentage() {
+            return this.percentage;
+        }
+
+        public static final class Builder {
+            private String codeVersion; 
+            private String createTime; 
+            private String description; 
+            private Long percentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(CodeVersions model) {
+                this.codeVersion = model.codeVersion;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.percentage = model.percentage;
+            } 
+
+            /**
+             * CodeVersion.
+             */
+            public Builder codeVersion(String codeVersion) {
+                this.codeVersion = codeVersion;
+                return this;
+            }
+
+            /**
+             * <p>The time when the routine was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-11T01:23:21Z</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The description of the routine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Long percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            public CodeVersions build() {
+                return new CodeVersions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRoutineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoutineResponseBody</p>
+     */
+    public static class CodeDeploy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CodeVersions")
+        private java.util.List<CodeVersions> codeVersions;
+
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
+        @com.aliyun.core.annotation.NameInMap("DeployId")
+        private String deployId;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
+        private CodeDeploy(Builder builder) {
+            this.codeVersions = builder.codeVersions;
+            this.creationTime = builder.creationTime;
+            this.deployId = builder.deployId;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CodeDeploy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return codeVersions
+         */
+        public java.util.List<CodeVersions> getCodeVersions() {
+            return this.codeVersions;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        /**
+         * @return deployId
+         */
+        public String getDeployId() {
+            return this.deployId;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<CodeVersions> codeVersions; 
+            private String creationTime; 
+            private String deployId; 
+            private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(CodeDeploy model) {
+                this.codeVersions = model.codeVersions;
+                this.creationTime = model.creationTime;
+                this.deployId = model.deployId;
+                this.strategy = model.strategy;
+            } 
+
+            /**
+             * CodeVersions.
+             */
+            public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
+                this.codeVersions = codeVersions;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DeployId.
+             */
+            public Builder deployId(String deployId) {
+                this.deployId = deployId;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public CodeDeploy build() {
+                return new CodeDeploy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRoutineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoutineResponseBody</p>
+     */
     public static class Envs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryAreaList")
         private java.util.List<String> canaryAreaList;
 
         @com.aliyun.core.annotation.NameInMap("CanaryCodeVersion")
         private String canaryCodeVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CodeDeploy")
+        private CodeDeploy codeDeploy;
 
         @com.aliyun.core.annotation.NameInMap("CodeVersion")
         private String codeVersion;
@@ -185,6 +449,7 @@ public class GetRoutineResponseBody extends TeaModel {
         private Envs(Builder builder) {
             this.canaryAreaList = builder.canaryAreaList;
             this.canaryCodeVersion = builder.canaryCodeVersion;
+            this.codeDeploy = builder.codeDeploy;
             this.codeVersion = builder.codeVersion;
             this.env = builder.env;
         }
@@ -212,6 +477,13 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
+         * @return codeDeploy
+         */
+        public CodeDeploy getCodeDeploy() {
+            return this.codeDeploy;
+        }
+
+        /**
          * @return codeVersion
          */
         public String getCodeVersion() {
@@ -228,6 +500,7 @@ public class GetRoutineResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> canaryAreaList; 
             private String canaryCodeVersion; 
+            private CodeDeploy codeDeploy; 
             private String codeVersion; 
             private String env; 
 
@@ -237,6 +510,7 @@ public class GetRoutineResponseBody extends TeaModel {
             private Builder(Envs model) {
                 this.canaryAreaList = model.canaryAreaList;
                 this.canaryCodeVersion = model.canaryCodeVersion;
+                this.codeDeploy = model.codeDeploy;
                 this.codeVersion = model.codeVersion;
                 this.env = model.env;
             } 
@@ -257,6 +531,14 @@ public class GetRoutineResponseBody extends TeaModel {
              */
             public Builder canaryCodeVersion(String canaryCodeVersion) {
                 this.canaryCodeVersion = canaryCodeVersion;
+                return this;
+            }
+
+            /**
+             * CodeDeploy.
+             */
+            public Builder codeDeploy(CodeDeploy codeDeploy) {
+                this.codeDeploy = codeDeploy;
                 return this;
             }
 

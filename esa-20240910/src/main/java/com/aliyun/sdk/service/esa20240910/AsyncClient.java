@@ -156,6 +156,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEdgeContainerAppVersionResponse> createEdgeContainerAppVersion(CreateEdgeContainerAppVersionRequest request);
 
     /**
+     * @param request the request parameters of CreateHttpIncomingRequestHeaderModificationRule  CreateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    CompletableFuture<CreateHttpIncomingRequestHeaderModificationRuleResponse> createHttpIncomingRequestHeaderModificationRule(CreateHttpIncomingRequestHeaderModificationRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateHttpIncomingResponseHeaderModificationRule  CreateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    CompletableFuture<CreateHttpIncomingResponseHeaderModificationRuleResponse> createHttpIncomingResponseHeaderModificationRule(CreateHttpIncomingResponseHeaderModificationRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateHttpRequestHeaderModificationRule  CreateHttpRequestHeaderModificationRuleRequest
      * @return CreateHttpRequestHeaderModificationRuleResponse
      */
@@ -264,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoutineResponse> createRoutine(CreateRoutineRequest request);
 
     /**
+     * @param request the request parameters of CreateRoutineCodeDeployment  CreateRoutineCodeDeploymentRequest
+     * @return CreateRoutineCodeDeploymentResponse
+     */
+    CompletableFuture<CreateRoutineCodeDeploymentResponse> createRoutineCodeDeployment(CreateRoutineCodeDeploymentRequest request);
+
+    /**
      * @param request the request parameters of CreateRoutineRelatedRecord  CreateRoutineRelatedRecordRequest
      * @return CreateRoutineRelatedRecordResponse
      */
@@ -274,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRoutineRouteResponse
      */
     CompletableFuture<CreateRoutineRouteResponse> createRoutineRoute(CreateRoutineRouteRequest request);
+
+    /**
+     * @param request the request parameters of CreateRoutineWithAssetsCodeVersion  CreateRoutineWithAssetsCodeVersionRequest
+     * @return CreateRoutineWithAssetsCodeVersionResponse
+     */
+    CompletableFuture<CreateRoutineWithAssetsCodeVersionResponse> createRoutineWithAssetsCodeVersion(CreateRoutineWithAssetsCodeVersionRequest request);
 
     /**
      * @param request the request parameters of CreateScheduledPreloadExecutions  CreateScheduledPreloadExecutionsRequest
@@ -449,6 +473,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEdgeContainerAppVersionResponse
      */
     CompletableFuture<DeleteEdgeContainerAppVersionResponse> deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteHttpIncomingRequestHeaderModificationRule  DeleteHttpIncomingRequestHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    CompletableFuture<DeleteHttpIncomingRequestHeaderModificationRuleResponse> deleteHttpIncomingRequestHeaderModificationRule(DeleteHttpIncomingRequestHeaderModificationRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteHttpIncomingResponseHeaderModificationRule  DeleteHttpIncomingResponseHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    CompletableFuture<DeleteHttpIncomingResponseHeaderModificationRuleResponse> deleteHttpIncomingResponseHeaderModificationRule(DeleteHttpIncomingResponseHeaderModificationRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteHttpRequestHeaderModificationRule  DeleteHttpRequestHeaderModificationRuleRequest
@@ -933,6 +969,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetErServiceResponse> getErService(GetErServiceRequest request);
 
     /**
+     * @param request the request parameters of GetHttpIncomingRequestHeaderModificationRule  GetHttpIncomingRequestHeaderModificationRuleRequest
+     * @return GetHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    CompletableFuture<GetHttpIncomingRequestHeaderModificationRuleResponse> getHttpIncomingRequestHeaderModificationRule(GetHttpIncomingRequestHeaderModificationRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetHttpIncomingResponseHeaderModificationRule  GetHttpIncomingResponseHeaderModificationRuleRequest
+     * @return GetHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    CompletableFuture<GetHttpIncomingResponseHeaderModificationRuleResponse> getHttpIncomingResponseHeaderModificationRule(GetHttpIncomingResponseHeaderModificationRuleRequest request);
+
+    /**
      * @param request the request parameters of GetHttpRequestHeaderModificationRule  GetHttpRequestHeaderModificationRuleRequest
      * @return GetHttpRequestHeaderModificationRuleResponse
      */
@@ -1369,6 +1417,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEdgeRoutineRecordsResponse
      */
     CompletableFuture<ListEdgeRoutineRecordsResponse> listEdgeRoutineRecords(ListEdgeRoutineRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListHttpIncomingRequestHeaderModificationRules  ListHttpIncomingRequestHeaderModificationRulesRequest
+     * @return ListHttpIncomingRequestHeaderModificationRulesResponse
+     */
+    CompletableFuture<ListHttpIncomingRequestHeaderModificationRulesResponse> listHttpIncomingRequestHeaderModificationRules(ListHttpIncomingRequestHeaderModificationRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListHttpIncomingResponseHeaderModificationRules  ListHttpIncomingResponseHeaderModificationRulesRequest
+     * @return ListHttpIncomingResponseHeaderModificationRulesResponse
+     */
+    CompletableFuture<ListHttpIncomingResponseHeaderModificationRulesResponse> listHttpIncomingResponseHeaderModificationRules(ListHttpIncomingResponseHeaderModificationRulesRequest request);
 
     /**
      * @param request the request parameters of ListHttpRequestHeaderModificationRules  ListHttpRequestHeaderModificationRulesRequest
@@ -1867,6 +1927,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEdgeContainerAppResourceReserveResponse
      */
     CompletableFuture<UpdateEdgeContainerAppResourceReserveResponse> updateEdgeContainerAppResourceReserve(UpdateEdgeContainerAppResourceReserveRequest request);
+
+    /**
+     * @param request the request parameters of UpdateHttpIncomingRequestHeaderModificationRule  UpdateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    CompletableFuture<UpdateHttpIncomingRequestHeaderModificationRuleResponse> updateHttpIncomingRequestHeaderModificationRule(UpdateHttpIncomingRequestHeaderModificationRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateHttpIncomingResponseHeaderModificationRule  UpdateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    CompletableFuture<UpdateHttpIncomingResponseHeaderModificationRuleResponse> updateHttpIncomingResponseHeaderModificationRule(UpdateHttpIncomingResponseHeaderModificationRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpRequestHeaderModificationRule  UpdateHttpRequestHeaderModificationRuleRequest

@@ -157,20 +157,90 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
      *
      * <p>ListRoutineCodeVersionsResponseBody</p>
      */
+    public static class ConfOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NotFoundStrategy")
+        private String notFoundStrategy;
+
+        private ConfOptions(Builder builder) {
+            this.notFoundStrategy = builder.notFoundStrategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return notFoundStrategy
+         */
+        public String getNotFoundStrategy() {
+            return this.notFoundStrategy;
+        }
+
+        public static final class Builder {
+            private String notFoundStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfOptions model) {
+                this.notFoundStrategy = model.notFoundStrategy;
+            } 
+
+            /**
+             * NotFoundStrategy.
+             */
+            public Builder notFoundStrategy(String notFoundStrategy) {
+                this.notFoundStrategy = notFoundStrategy;
+                return this;
+            }
+
+            public ConfOptions build() {
+                return new ConfOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListRoutineCodeVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoutineCodeVersionsResponseBody</p>
+     */
     public static class CodeVersions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BuildId")
+        private Long buildId;
+
         @com.aliyun.core.annotation.NameInMap("CodeDescription")
         private String codeDescription;
 
         @com.aliyun.core.annotation.NameInMap("CodeVersion")
         private String codeVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ConfOptions")
+        private ConfOptions confOptions;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+        private String extraInfo;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         private CodeVersions(Builder builder) {
+            this.buildId = builder.buildId;
             this.codeDescription = builder.codeDescription;
             this.codeVersion = builder.codeVersion;
+            this.confOptions = builder.confOptions;
             this.createTime = builder.createTime;
+            this.extraInfo = builder.extraInfo;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -179,6 +249,13 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
 
         public static CodeVersions create() {
             return builder().build();
+        }
+
+        /**
+         * @return buildId
+         */
+        public Long getBuildId() {
+            return this.buildId;
         }
 
         /**
@@ -196,25 +273,62 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return confOptions
+         */
+        public ConfOptions getConfOptions() {
+            return this.confOptions;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
             return this.createTime;
         }
 
+        /**
+         * @return extraInfo
+         */
+        public String getExtraInfo() {
+            return this.extraInfo;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
+            private Long buildId; 
             private String codeDescription; 
             private String codeVersion; 
+            private ConfOptions confOptions; 
             private String createTime; 
+            private String extraInfo; 
+            private String status; 
 
             private Builder() {
             } 
 
             private Builder(CodeVersions model) {
+                this.buildId = model.buildId;
                 this.codeDescription = model.codeDescription;
                 this.codeVersion = model.codeVersion;
+                this.confOptions = model.confOptions;
                 this.createTime = model.createTime;
+                this.extraInfo = model.extraInfo;
+                this.status = model.status;
             } 
+
+            /**
+             * BuildId.
+             */
+            public Builder buildId(Long buildId) {
+                this.buildId = buildId;
+                return this;
+            }
 
             /**
              * CodeDescription.
@@ -233,10 +347,34 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * ConfOptions.
+             */
+            public Builder confOptions(ConfOptions confOptions) {
+                this.confOptions = confOptions;
+                return this;
+            }
+
+            /**
              * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ExtraInfo.
+             */
+            public Builder extraInfo(String extraInfo) {
+                this.extraInfo = extraInfo;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

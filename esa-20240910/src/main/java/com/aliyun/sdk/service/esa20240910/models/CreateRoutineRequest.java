@@ -22,6 +22,10 @@ public class CreateRoutineRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HasAssets")
+    private Boolean hasAssets;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -29,6 +33,7 @@ public class CreateRoutineRequest extends Request {
     private CreateRoutineRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.hasAssets = builder.hasAssets;
         this.name = builder.name;
     }
 
@@ -53,6 +58,13 @@ public class CreateRoutineRequest extends Request {
     }
 
     /**
+     * @return hasAssets
+     */
+    public Boolean getHasAssets() {
+        return this.hasAssets;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -61,6 +73,7 @@ public class CreateRoutineRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRoutineRequest, Builder> {
         private String description; 
+        private Boolean hasAssets; 
         private String name; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CreateRoutineRequest extends Request {
         private Builder(CreateRoutineRequest request) {
             super(request);
             this.description = request.description;
+            this.hasAssets = request.hasAssets;
             this.name = request.name;
         } 
 
@@ -82,6 +96,15 @@ public class CreateRoutineRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * HasAssets.
+         */
+        public Builder hasAssets(Boolean hasAssets) {
+            this.putBodyParameter("HasAssets", hasAssets);
+            this.hasAssets = hasAssets;
             return this;
         }
 

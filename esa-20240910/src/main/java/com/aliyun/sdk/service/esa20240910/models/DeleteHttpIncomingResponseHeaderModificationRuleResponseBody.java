@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCrossBorderOptimizationResponseBody} extends {@link TeaModel}
+ * {@link DeleteHttpIncomingResponseHeaderModificationRuleResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateCrossBorderOptimizationResponseBody</p>
+ * <p>DeleteHttpIncomingResponseHeaderModificationRuleResponseBody</p>
  */
-public class UpdateCrossBorderOptimizationResponseBody extends TeaModel {
+public class DeleteHttpIncomingResponseHeaderModificationRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateCrossBorderOptimizationResponseBody(Builder builder) {
+    private DeleteHttpIncomingResponseHeaderModificationRuleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateCrossBorderOptimizationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateCrossBorderOptimizationResponseBody create() {
+    public static DeleteHttpIncomingResponseHeaderModificationRuleResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateCrossBorderOptimizationResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateCrossBorderOptimizationResponseBody model) {
+        private Builder(DeleteHttpIncomingResponseHeaderModificationRuleResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateCrossBorderOptimizationResponseBody build() {
-            return new UpdateCrossBorderOptimizationResponseBody(this);
+        public DeleteHttpIncomingResponseHeaderModificationRuleResponseBody build() {
+            return new DeleteHttpIncomingResponseHeaderModificationRuleResponseBody(this);
         } 
 
     } 

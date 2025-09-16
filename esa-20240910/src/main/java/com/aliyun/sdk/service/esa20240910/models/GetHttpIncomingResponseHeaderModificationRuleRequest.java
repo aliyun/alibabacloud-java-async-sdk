@@ -12,24 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCrossBorderOptimizationRequest} extends {@link RequestModel}
+ * {@link GetHttpIncomingResponseHeaderModificationRuleRequest} extends {@link RequestModel}
  *
- * <p>UpdateCrossBorderOptimizationRequest</p>
+ * <p>GetHttpIncomingResponseHeaderModificationRuleRequest</p>
  */
-public class UpdateCrossBorderOptimizationRequest extends Request {
+public class GetHttpIncomingResponseHeaderModificationRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String enable;
+    private Long configId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
-    private UpdateCrossBorderOptimizationRequest(Builder builder) {
+    private GetHttpIncomingResponseHeaderModificationRuleRequest(Builder builder) {
         super(builder);
-        this.enable = builder.enable;
+        this.configId = builder.configId;
         this.siteId = builder.siteId;
     }
 
@@ -37,7 +37,7 @@ public class UpdateCrossBorderOptimizationRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateCrossBorderOptimizationRequest create() {
+    public static GetHttpIncomingResponseHeaderModificationRuleRequest create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class UpdateCrossBorderOptimizationRequest extends Request {
     }
 
     /**
-     * @return enable
+     * @return configId
      */
-    public String getEnable() {
-        return this.enable;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -60,43 +60,37 @@ public class UpdateCrossBorderOptimizationRequest extends Request {
         return this.siteId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateCrossBorderOptimizationRequest, Builder> {
-        private String enable; 
+    public static final class Builder extends Request.Builder<GetHttpIncomingResponseHeaderModificationRuleRequest, Builder> {
+        private Long configId; 
         private Long siteId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateCrossBorderOptimizationRequest request) {
+        private Builder(GetHttpIncomingResponseHeaderModificationRuleRequest request) {
             super(request);
-            this.enable = request.enable;
+            this.configId = request.configId;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>Whether to enable Chinese mainland network access optimization. By default, it is disabled. Valid values:</p>
-         * <ul>
-         * <li>on</li>
-         * <li>off</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>on</p>
+         * <p>430509230649344</p>
          */
-        public Builder enable(String enable) {
-            this.putQueryParameter("Enable", enable);
-            this.enable = enable;
+        public Builder configId(Long configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
             return this;
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123</p>
+         * <p>347168101647504</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -105,8 +99,8 @@ public class UpdateCrossBorderOptimizationRequest extends Request {
         }
 
         @Override
-        public UpdateCrossBorderOptimizationRequest build() {
-            return new UpdateCrossBorderOptimizationRequest(this);
+        public GetHttpIncomingResponseHeaderModificationRuleRequest build() {
+            return new GetHttpIncomingResponseHeaderModificationRuleRequest(this);
         } 
 
     } 

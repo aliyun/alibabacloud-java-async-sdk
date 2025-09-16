@@ -203,15 +203,23 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultRelatedRecord")
+        private String defaultRelatedRecord;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("HasAssets")
+        private Boolean hasAssets;
 
         @com.aliyun.core.annotation.NameInMap("RoutineName")
         private String routineName;
 
         private Routines(Builder builder) {
             this.createTime = builder.createTime;
+            this.defaultRelatedRecord = builder.defaultRelatedRecord;
             this.description = builder.description;
+            this.hasAssets = builder.hasAssets;
             this.routineName = builder.routineName;
         }
 
@@ -231,10 +239,24 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return defaultRelatedRecord
+         */
+        public String getDefaultRelatedRecord() {
+            return this.defaultRelatedRecord;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return hasAssets
+         */
+        public Boolean getHasAssets() {
+            return this.hasAssets;
         }
 
         /**
@@ -246,7 +268,9 @@ public class ListUserRoutinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String defaultRelatedRecord; 
             private String description; 
+            private Boolean hasAssets; 
             private String routineName; 
 
             private Builder() {
@@ -254,7 +278,9 @@ public class ListUserRoutinesResponseBody extends TeaModel {
 
             private Builder(Routines model) {
                 this.createTime = model.createTime;
+                this.defaultRelatedRecord = model.defaultRelatedRecord;
                 this.description = model.description;
+                this.hasAssets = model.hasAssets;
                 this.routineName = model.routineName;
             } 
 
@@ -267,10 +293,26 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
+             * DefaultRelatedRecord.
+             */
+            public Builder defaultRelatedRecord(String defaultRelatedRecord) {
+                this.defaultRelatedRecord = defaultRelatedRecord;
+                return this;
+            }
+
+            /**
              * Description.
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * HasAssets.
+             */
+            public Builder hasAssets(Boolean hasAssets) {
+                this.hasAssets = hasAssets;
                 return this;
             }
 
