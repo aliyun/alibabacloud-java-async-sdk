@@ -71,6 +71,10 @@ public class UpdateRumAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Stop")
     private Boolean stop;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebSDKConfigJson")
+    private String webSDKConfigJson;
+
     private UpdateRumAppRequest(Builder builder) {
         super(builder);
         this.appConfig = builder.appConfig;
@@ -86,6 +90,7 @@ public class UpdateRumAppRequest extends Request {
         this.restart = builder.restart;
         this.serviceDomainOperationJson = builder.serviceDomainOperationJson;
         this.stop = builder.stop;
+        this.webSDKConfigJson = builder.webSDKConfigJson;
     }
 
     public static Builder builder() {
@@ -192,6 +197,13 @@ public class UpdateRumAppRequest extends Request {
         return this.stop;
     }
 
+    /**
+     * @return webSDKConfigJson
+     */
+    public String getWebSDKConfigJson() {
+        return this.webSDKConfigJson;
+    }
+
     public static final class Builder extends Request.Builder<UpdateRumAppRequest, Builder> {
         private String appConfig; 
         private Boolean autoRestart; 
@@ -206,6 +218,7 @@ public class UpdateRumAppRequest extends Request {
         private Boolean restart; 
         private String serviceDomainOperationJson; 
         private Boolean stop; 
+        private String webSDKConfigJson; 
 
         private Builder() {
             super();
@@ -226,6 +239,7 @@ public class UpdateRumAppRequest extends Request {
             this.restart = request.restart;
             this.serviceDomainOperationJson = request.serviceDomainOperationJson;
             this.stop = request.stop;
+            this.webSDKConfigJson = request.webSDKConfigJson;
         } 
 
         /**
@@ -383,6 +397,15 @@ public class UpdateRumAppRequest extends Request {
         public Builder stop(Boolean stop) {
             this.putQueryParameter("Stop", stop);
             this.stop = stop;
+            return this;
+        }
+
+        /**
+         * WebSDKConfigJson.
+         */
+        public Builder webSDKConfigJson(String webSDKConfigJson) {
+            this.putQueryParameter("WebSDKConfigJson", webSDKConfigJson);
+            this.webSDKConfigJson = webSDKConfigJson;
             return this;
         }
 

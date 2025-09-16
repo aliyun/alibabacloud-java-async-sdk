@@ -754,6 +754,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("WebSDKConfigJson")
+        private String webSDKConfigJson;
+
         private Data(Builder builder) {
             this.appConfig = builder.appConfig;
             this.appGroup = builder.appGroup;
@@ -777,6 +780,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.type = builder.type;
+            this.webSDKConfigJson = builder.webSDKConfigJson;
         }
 
         public static Builder builder() {
@@ -941,6 +945,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return webSDKConfigJson
+         */
+        public String getWebSDKConfigJson() {
+            return this.webSDKConfigJson;
+        }
+
         public static final class Builder {
             private String appConfig; 
             private String appGroup; 
@@ -964,6 +975,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
+            private String webSDKConfigJson; 
 
             private Builder() {
             } 
@@ -991,6 +1003,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
                 this.type = model.type;
+                this.webSDKConfigJson = model.webSDKConfigJson;
             } 
 
             /**
@@ -1223,6 +1236,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * WebSDKConfigJson.
+             */
+            public Builder webSDKConfigJson(String webSDKConfigJson) {
+                this.webSDKConfigJson = webSDKConfigJson;
                 return this;
             }
 
