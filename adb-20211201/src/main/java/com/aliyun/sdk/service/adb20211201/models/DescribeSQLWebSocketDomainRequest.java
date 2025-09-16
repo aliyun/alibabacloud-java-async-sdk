@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeSQLWebSocketDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
@@ -93,7 +92,6 @@ public class DescribeSQLWebSocketDomainRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1lw6g669zpi660</p>
