@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
+    CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation to delete an application, make sure that the application is in the <code>Destroyed_Success</code> state. Otherwise, the application fails to be deleted.`` You can call the <a href="https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-getapplication">GetApplication</a> operation to query the status of an application.</p>
      * 
@@ -75,6 +81,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteOperationSyncResponse
      */
     CompletableFuture<ExecuteOperationSyncResponse> executeOperationSync(ExecuteOperationSyncRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTask  ExecuteTaskRequest
+     * @return ExecuteTaskResponse
+     */
+    CompletableFuture<ExecuteTaskResponse> executeTask(ExecuteTaskRequest request);
 
     /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
@@ -135,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResult4QueryInstancePrice4ModifyResponse
      */
     CompletableFuture<GetResult4QueryInstancePrice4ModifyResponse> getResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request);
+
+    /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
+    CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     /**
      * @param request the request parameters of GetTemplate  GetTemplateRequest

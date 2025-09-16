@@ -30,6 +30,10 @@ public class CreateApplicationRequest extends Request {
     private java.util.Map<String, String> configuration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateAsync")
+    private Boolean createAsync;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List<Instances> instances;
 
@@ -60,6 +64,7 @@ public class CreateApplicationRequest extends Request {
         this.areaId = builder.areaId;
         this.clientToken = builder.clientToken;
         this.configuration = builder.configuration;
+        this.createAsync = builder.createAsync;
         this.instances = builder.instances;
         this.name = builder.name;
         this.processVariables = builder.processVariables;
@@ -100,6 +105,13 @@ public class CreateApplicationRequest extends Request {
      */
     public java.util.Map<String, String> getConfiguration() {
         return this.configuration;
+    }
+
+    /**
+     * @return createAsync
+     */
+    public Boolean getCreateAsync() {
+        return this.createAsync;
     }
 
     /**
@@ -148,6 +160,7 @@ public class CreateApplicationRequest extends Request {
         private String areaId; 
         private String clientToken; 
         private java.util.Map<String, String> configuration; 
+        private Boolean createAsync; 
         private java.util.List<Instances> instances; 
         private String name; 
         private java.util.Map<String, ?> processVariables; 
@@ -164,6 +177,7 @@ public class CreateApplicationRequest extends Request {
             this.areaId = request.areaId;
             this.clientToken = request.clientToken;
             this.configuration = request.configuration;
+            this.createAsync = request.createAsync;
             this.instances = request.instances;
             this.name = request.name;
             this.processVariables = request.processVariables;
@@ -206,6 +220,15 @@ public class CreateApplicationRequest extends Request {
             String configurationShrink = shrink(configuration, "Configuration", "json");
             this.putBodyParameter("Configuration", configurationShrink);
             this.configuration = configuration;
+            return this;
+        }
+
+        /**
+         * CreateAsync.
+         */
+        public Builder createAsync(Boolean createAsync) {
+            this.putBodyParameter("CreateAsync", createAsync);
+            this.createAsync = createAsync;
             return this;
         }
 
