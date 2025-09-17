@@ -106,7 +106,7 @@ public class DeleteWorkgroupRequest extends Request {
         }
 
         /**
-         * <p>The workgroup ID.</p>
+         * <p>The ID of the workgroup.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

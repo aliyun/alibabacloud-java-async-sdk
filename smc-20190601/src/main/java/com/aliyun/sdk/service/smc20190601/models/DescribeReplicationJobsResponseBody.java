@@ -1824,6 +1824,9 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
+        @com.aliyun.core.annotation.NameInMap("WorkgroupId")
+        private String workgroupId;
+
         private ReplicationJob(Builder builder) {
             this.businessStatus = builder.businessStatus;
             this.containerNamespace = builder.containerNamespace;
@@ -1868,6 +1871,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             this.vSwitchId = builder.vSwitchId;
             this.validTime = builder.validTime;
             this.vpcId = builder.vpcId;
+            this.workgroupId = builder.workgroupId;
         }
 
         public static Builder builder() {
@@ -2179,6 +2183,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        /**
+         * @return workgroupId
+         */
+        public String getWorkgroupId() {
+            return this.workgroupId;
+        }
+
         public static final class Builder {
             private String businessStatus; 
             private String containerNamespace; 
@@ -2223,6 +2234,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String validTime; 
             private String vpcId; 
+            private String workgroupId; 
 
             private Builder() {
             } 
@@ -2271,6 +2283,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
                 this.vSwitchId = model.vSwitchId;
                 this.validTime = model.validTime;
                 this.vpcId = model.vpcId;
+                this.workgroupId = model.workgroupId;
             } 
 
             /**
@@ -2776,6 +2789,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * WorkgroupId.
+             */
+            public Builder workgroupId(String workgroupId) {
+                this.workgroupId = workgroupId;
                 return this;
             }
 

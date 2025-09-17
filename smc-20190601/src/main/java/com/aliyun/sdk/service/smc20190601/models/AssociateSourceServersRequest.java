@@ -121,7 +121,7 @@ public class AssociateSourceServersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of migration sources. You can specify up to 50 IDs.</p>
+         * <p>The ID of the migration source. A workgroup can be associated with a maximum of 50 migration sources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sourceId(java.util.List<String> sourceId) {

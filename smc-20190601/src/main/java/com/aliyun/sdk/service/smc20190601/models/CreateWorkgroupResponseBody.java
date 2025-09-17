@@ -78,7 +78,7 @@ public class CreateWorkgroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workgroup ID.</p>
+         * <p>The ID of the workgroup.</p>
          * 
          * <strong>example:</strong>
          * <p>w-***</p>
