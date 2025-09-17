@@ -365,6 +365,12 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApproveContent")
         private ApproveContent approveContent;
 
+        @com.aliyun.core.annotation.NameInMap("FinishApprovalComment")
+        private String finishApprovalComment;
+
+        @com.aliyun.core.annotation.NameInMap("FinishApprovalTimestamp")
+        private Long finishApprovalTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
@@ -375,6 +381,8 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             this.applyBaseId = builder.applyBaseId;
             this.applyTimestamp = builder.applyTimestamp;
             this.approveContent = builder.approveContent;
+            this.finishApprovalComment = builder.finishApprovalComment;
+            this.finishApprovalTimestamp = builder.finishApprovalTimestamp;
             this.flowId = builder.flowId;
             this.flowStatus = builder.flowStatus;
         }
@@ -409,6 +417,20 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
 
         /**
+         * @return finishApprovalComment
+         */
+        public String getFinishApprovalComment() {
+            return this.finishApprovalComment;
+        }
+
+        /**
+         * @return finishApprovalTimestamp
+         */
+        public Long getFinishApprovalTimestamp() {
+            return this.finishApprovalTimestamp;
+        }
+
+        /**
          * @return flowId
          */
         public String getFlowId() {
@@ -426,6 +448,8 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private String applyBaseId; 
             private Long applyTimestamp; 
             private ApproveContent approveContent; 
+            private String finishApprovalComment; 
+            private Long finishApprovalTimestamp; 
             private String flowId; 
             private Integer flowStatus; 
 
@@ -436,6 +460,8 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
                 this.applyBaseId = model.applyBaseId;
                 this.applyTimestamp = model.applyTimestamp;
                 this.approveContent = model.approveContent;
+                this.finishApprovalComment = model.finishApprovalComment;
+                this.finishApprovalTimestamp = model.finishApprovalTimestamp;
                 this.flowId = model.flowId;
                 this.flowStatus = model.flowStatus;
             } 
@@ -467,6 +493,22 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
              */
             public Builder approveContent(ApproveContent approveContent) {
                 this.approveContent = approveContent;
+                return this;
+            }
+
+            /**
+             * FinishApprovalComment.
+             */
+            public Builder finishApprovalComment(String finishApprovalComment) {
+                this.finishApprovalComment = finishApprovalComment;
+                return this;
+            }
+
+            /**
+             * FinishApprovalTimestamp.
+             */
+            public Builder finishApprovalTimestamp(Long finishApprovalTimestamp) {
+                this.finishApprovalTimestamp = finishApprovalTimestamp;
                 return this;
             }
 

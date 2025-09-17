@@ -35,7 +35,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineType")
-    @Deprecated
     private String engineType;
 
     @com.aliyun.core.annotation.Query
@@ -48,8 +47,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
-    @Deprecated
-    @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Integer orderType;
 
     @com.aliyun.core.annotation.Query
@@ -245,11 +243,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         } 
 
         /**
-         * <p>The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system determines the value of this parameter based on the endpoint that is used to call the operation.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -258,7 +252,19 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * ApplyType.
+         * <p>设置申请单类型，枚举值为：</p>
+         * <ul>
+         * <li>[ MaxComputeTable]  MaxCompute表权限申请单</li>
+         * <li>[ MaxComputeFunction] MaxCompute函数申请单</li>
+         * <li>[ MaxComputeResource] MaxCompute资源申请单</li>
+         * <li>[ DLFSchema] DLF1.0版本Schema权限申请单</li>
+         * <li>[ DLFTable] DLF1.0版本表权限申请单</li>
+         * <li>[ DLFColumn] DLF1.0版本列权限申请单</li>
+         * <li>[ DsApiDeploy] 发布数据服务权限申请单</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxComputeTable</p>
          */
         public Builder applyType(String applyType) {
             this.putQueryParameter("ApplyType", applyType);
@@ -267,7 +273,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * CatalogName.
+         * <p>查询的数据目录名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.putQueryParameter("CatalogName", catalogName);

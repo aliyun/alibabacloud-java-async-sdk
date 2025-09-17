@@ -758,6 +758,12 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApproveContent")
         private ApproveContent approveContent;
 
+        @com.aliyun.core.annotation.NameInMap("FinishAapprovalTimestamp")
+        private Long finishAapprovalTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("FinishApprovalComment")
+        private String finishApprovalComment;
+
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
@@ -772,6 +778,8 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             this.applyTimestamp = builder.applyTimestamp;
             this.approveAccountList = builder.approveAccountList;
             this.approveContent = builder.approveContent;
+            this.finishAapprovalTimestamp = builder.finishAapprovalTimestamp;
+            this.finishApprovalComment = builder.finishApprovalComment;
             this.flowId = builder.flowId;
             this.flowStatus = builder.flowStatus;
             this.granteeObjectList = builder.granteeObjectList;
@@ -814,6 +822,20 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return finishAapprovalTimestamp
+         */
+        public Long getFinishAapprovalTimestamp() {
+            return this.finishAapprovalTimestamp;
+        }
+
+        /**
+         * @return finishApprovalComment
+         */
+        public String getFinishApprovalComment() {
+            return this.finishApprovalComment;
+        }
+
+        /**
          * @return flowId
          */
         public String getFlowId() {
@@ -839,6 +861,8 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private Long applyTimestamp; 
             private java.util.List<ApproveAccountList> approveAccountList; 
             private ApproveContent approveContent; 
+            private Long finishAapprovalTimestamp; 
+            private String finishApprovalComment; 
             private String flowId; 
             private Integer flowStatus; 
             private java.util.List<GranteeObjectList> granteeObjectList; 
@@ -851,6 +875,8 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
                 this.applyTimestamp = model.applyTimestamp;
                 this.approveAccountList = model.approveAccountList;
                 this.approveContent = model.approveContent;
+                this.finishAapprovalTimestamp = model.finishAapprovalTimestamp;
+                this.finishApprovalComment = model.finishApprovalComment;
                 this.flowId = model.flowId;
                 this.flowStatus = model.flowStatus;
                 this.granteeObjectList = model.granteeObjectList;
@@ -891,6 +917,22 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
              */
             public Builder approveContent(ApproveContent approveContent) {
                 this.approveContent = approveContent;
+                return this;
+            }
+
+            /**
+             * FinishAapprovalTimestamp.
+             */
+            public Builder finishAapprovalTimestamp(Long finishAapprovalTimestamp) {
+                this.finishAapprovalTimestamp = finishAapprovalTimestamp;
+                return this;
+            }
+
+            /**
+             * FinishApprovalComment.
+             */
+            public Builder finishApprovalComment(String finishApprovalComment) {
+                this.finishApprovalComment = finishApprovalComment;
                 return this;
             }
 
