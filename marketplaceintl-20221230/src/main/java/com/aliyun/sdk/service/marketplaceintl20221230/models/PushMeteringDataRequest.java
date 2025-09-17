@@ -116,6 +116,9 @@ public class PushMeteringDataRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MeteringEntity")
         private String meteringEntity;
 
+        @com.aliyun.core.annotation.NameInMap("PushOrderBizId")
+        private String pushOrderBizId;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
@@ -124,6 +127,7 @@ public class PushMeteringDataRequest extends Request {
             this.instanceId = builder.instanceId;
             this.meteringAssist = builder.meteringAssist;
             this.meteringEntity = builder.meteringEntity;
+            this.pushOrderBizId = builder.pushOrderBizId;
             this.startTime = builder.startTime;
         }
 
@@ -164,6 +168,13 @@ public class PushMeteringDataRequest extends Request {
         }
 
         /**
+         * @return pushOrderBizId
+         */
+        public String getPushOrderBizId() {
+            return this.pushOrderBizId;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -175,6 +186,7 @@ public class PushMeteringDataRequest extends Request {
             private String instanceId; 
             private String meteringAssist; 
             private String meteringEntity; 
+            private String pushOrderBizId; 
             private Long startTime; 
 
             private Builder() {
@@ -185,6 +197,7 @@ public class PushMeteringDataRequest extends Request {
                 this.instanceId = model.instanceId;
                 this.meteringAssist = model.meteringAssist;
                 this.meteringEntity = model.meteringEntity;
+                this.pushOrderBizId = model.pushOrderBizId;
                 this.startTime = model.startTime;
             } 
 
@@ -217,6 +230,14 @@ public class PushMeteringDataRequest extends Request {
              */
             public Builder meteringEntity(String meteringEntity) {
                 this.meteringEntity = meteringEntity;
+                return this;
+            }
+
+            /**
+             * PushOrderBizId.
+             */
+            public Builder pushOrderBizId(String pushOrderBizId) {
+                this.pushOrderBizId = pushOrderBizId;
                 return this;
             }
 

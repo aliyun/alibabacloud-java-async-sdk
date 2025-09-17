@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of DescribePushMeteringData  DescribePushMeteringDataRequest
+     * @return DescribePushMeteringDataResponse
+     */
+    CompletableFuture<DescribePushMeteringDataResponse> describePushMeteringData(DescribePushMeteringDataRequest request);
+
+    /**
      * @param request the request parameters of DescribeSellerInstances  DescribeSellerInstancesRequest
      * @return DescribeSellerInstancesResponse
      */
