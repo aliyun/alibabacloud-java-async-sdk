@@ -22,9 +22,17 @@ public class GetLoginTokenRequest extends Request {
     private String authenticationCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
+    private java.util.Map<String, String> availableFeatures;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientName")
+    private String clientName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientOS")
@@ -94,7 +102,9 @@ public class GetLoginTokenRequest extends Request {
     private GetLoginTokenRequest(Builder builder) {
         super(builder);
         this.authenticationCode = builder.authenticationCode;
+        this.availableFeatures = builder.availableFeatures;
         this.clientId = builder.clientId;
+        this.clientName = builder.clientName;
         this.clientOS = builder.clientOS;
         this.clientType = builder.clientType;
         this.clientVersion = builder.clientVersion;
@@ -134,10 +144,24 @@ public class GetLoginTokenRequest extends Request {
     }
 
     /**
+     * @return availableFeatures
+     */
+    public java.util.Map<String, String> getAvailableFeatures() {
+        return this.availableFeatures;
+    }
+
+    /**
      * @return clientId
      */
     public String getClientId() {
         return this.clientId;
+    }
+
+    /**
+     * @return clientName
+     */
+    public String getClientName() {
+        return this.clientName;
     }
 
     /**
@@ -254,7 +278,9 @@ public class GetLoginTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetLoginTokenRequest, Builder> {
         private String authenticationCode; 
+        private java.util.Map<String, String> availableFeatures; 
         private String clientId; 
+        private String clientName; 
         private String clientOS; 
         private String clientType; 
         private String clientVersion; 
@@ -279,7 +305,9 @@ public class GetLoginTokenRequest extends Request {
         private Builder(GetLoginTokenRequest request) {
             super(request);
             this.authenticationCode = request.authenticationCode;
+            this.availableFeatures = request.availableFeatures;
             this.clientId = request.clientId;
+            this.clientName = request.clientName;
             this.clientOS = request.clientOS;
             this.clientType = request.clientType;
             this.clientVersion = request.clientVersion;
@@ -311,6 +339,16 @@ public class GetLoginTokenRequest extends Request {
         }
 
         /**
+         * AvailableFeatures.
+         */
+        public Builder availableFeatures(java.util.Map<String, String> availableFeatures) {
+            String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
+            this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
+            this.availableFeatures = availableFeatures;
+            return this;
+        }
+
+        /**
          * <p>The ID of the Alibaba Cloud Workspace client. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
@@ -320,6 +358,15 @@ public class GetLoginTokenRequest extends Request {
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * ClientName.
+         */
+        public Builder clientName(String clientName) {
+            this.putQueryParameter("ClientName", clientName);
+            this.clientName = clientName;
             return this;
         }
 

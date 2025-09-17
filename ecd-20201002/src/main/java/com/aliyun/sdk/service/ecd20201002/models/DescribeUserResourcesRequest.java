@@ -48,6 +48,7 @@ public class DescribeUserResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DualCenterForward")
+    @Deprecated
     private Boolean dualCenterForward;
 
     @com.aliyun.core.annotation.Query
@@ -86,6 +87,14 @@ public class DescribeUserResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDesktopDurationList")
+    private Boolean queryDesktopDurationList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDesktopTimers")
+    private Boolean queryDesktopTimers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryFotaUpdate")
@@ -142,6 +151,8 @@ public class DescribeUserResourcesRequest extends Request {
         this.orderBy = builder.orderBy;
         this.productTypes = builder.productTypes;
         this.protocolType = builder.protocolType;
+        this.queryDesktopDurationList = builder.queryDesktopDurationList;
+        this.queryDesktopTimers = builder.queryDesktopTimers;
         this.queryFotaUpdate = builder.queryFotaUpdate;
         this.refreshFotaUpdate = builder.refreshFotaUpdate;
         this.resourceIds = builder.resourceIds;
@@ -286,6 +297,20 @@ public class DescribeUserResourcesRequest extends Request {
     }
 
     /**
+     * @return queryDesktopDurationList
+     */
+    public Boolean getQueryDesktopDurationList() {
+        return this.queryDesktopDurationList;
+    }
+
+    /**
+     * @return queryDesktopTimers
+     */
+    public Boolean getQueryDesktopTimers() {
+        return this.queryDesktopTimers;
+    }
+
+    /**
      * @return queryFotaUpdate
      */
     public Boolean getQueryFotaUpdate() {
@@ -366,6 +391,8 @@ public class DescribeUserResourcesRequest extends Request {
         private String orderBy; 
         private java.util.List<String> productTypes; 
         private String protocolType; 
+        private Boolean queryDesktopDurationList; 
+        private Boolean queryDesktopTimers; 
         private Boolean queryFotaUpdate; 
         private Boolean refreshFotaUpdate; 
         private java.util.List<String> resourceIds; 
@@ -399,6 +426,8 @@ public class DescribeUserResourcesRequest extends Request {
             this.orderBy = request.orderBy;
             this.productTypes = request.productTypes;
             this.protocolType = request.protocolType;
+            this.queryDesktopDurationList = request.queryDesktopDurationList;
+            this.queryDesktopTimers = request.queryDesktopTimers;
             this.queryFotaUpdate = request.queryFotaUpdate;
             this.refreshFotaUpdate = request.refreshFotaUpdate;
             this.resourceIds = request.resourceIds;
@@ -566,6 +595,24 @@ public class DescribeUserResourcesRequest extends Request {
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
             this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
+         * QueryDesktopDurationList.
+         */
+        public Builder queryDesktopDurationList(Boolean queryDesktopDurationList) {
+            this.putQueryParameter("QueryDesktopDurationList", queryDesktopDurationList);
+            this.queryDesktopDurationList = queryDesktopDurationList;
+            return this;
+        }
+
+        /**
+         * QueryDesktopTimers.
+         */
+        public Builder queryDesktopTimers(Boolean queryDesktopTimers) {
+            this.putQueryParameter("QueryDesktopTimers", queryDesktopTimers);
+            this.queryDesktopTimers = queryDesktopTimers;
             return this;
         }
 

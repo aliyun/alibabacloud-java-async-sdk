@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserResourcesResponseBody</p>
  */
 public class DescribeUserResourcesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -32,12 +35,17 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<Resources> resources;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeUserResourcesResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.queryFailedResourceTypes = builder.queryFailedResourceTypes;
         this.rankVersion = builder.rankVersion;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -50,6 +58,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -87,23 +102,42 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         return this.resources;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> queryFailedResourceTypes; 
         private Long rankVersion; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+        private Integer totalCount; 
 
         private Builder() {
         } 
 
         private Builder(DescribeUserResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
             this.queryFailedResourceTypes = model.queryFailedResourceTypes;
             this.rankVersion = model.rankVersion;
             this.requestId = model.requestId;
             this.resources = model.resources;
+            this.totalCount = model.totalCount;
         } 
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
 
         /**
          * NextToken.
@@ -142,6 +176,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
