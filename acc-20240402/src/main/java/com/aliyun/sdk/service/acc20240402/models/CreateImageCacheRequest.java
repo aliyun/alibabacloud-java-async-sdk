@@ -366,15 +366,15 @@ public class CreateImageCacheRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UsePlainHttp")
         private Boolean usePlainHttp;
 
-        @com.aliyun.core.annotation.NameInMap("UserName")
-        private String userName;
+        @com.aliyun.core.annotation.NameInMap("Username")
+        private String username;
 
         private ImageRegistryCredentials(Builder builder) {
             this.password = builder.password;
             this.server = builder.server;
             this.skipCertVerification = builder.skipCertVerification;
             this.usePlainHttp = builder.usePlainHttp;
-            this.userName = builder.userName;
+            this.username = builder.username;
         }
 
         public static Builder builder() {
@@ -414,10 +414,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * @return userName
+         * @return username
          */
-        public String getUserName() {
-            return this.userName;
+        public String getUsername() {
+            return this.username;
         }
 
         public static final class Builder {
@@ -425,7 +425,7 @@ public class CreateImageCacheRequest extends Request {
             private String server; 
             private Boolean skipCertVerification; 
             private Boolean usePlainHttp; 
-            private String userName; 
+            private String username; 
 
             private Builder() {
             } 
@@ -435,7 +435,7 @@ public class CreateImageCacheRequest extends Request {
                 this.server = model.server;
                 this.skipCertVerification = model.skipCertVerification;
                 this.usePlainHttp = model.usePlainHttp;
-                this.userName = model.userName;
+                this.username = model.username;
             } 
 
             /**
@@ -471,10 +471,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * UserName.
+             * Username.
              */
-            public Builder userName(String userName) {
-                this.userName = userName;
+            public Builder username(String username) {
+                this.username = username;
                 return this;
             }
 
