@@ -342,6 +342,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private Reason reason;
 
+        @com.aliyun.core.annotation.NameInMap("SignatureName")
+        private String signatureName;
+
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
@@ -360,6 +363,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.outerTemplateType = builder.outerTemplateType;
             this.reason = builder.reason;
+            this.signatureName = builder.signatureName;
             this.templateCode = builder.templateCode;
             this.templateContent = builder.templateContent;
             this.templateName = builder.templateName;
@@ -410,6 +414,13 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return signatureName
+         */
+        public String getSignatureName() {
+            return this.signatureName;
+        }
+
+        /**
          * @return templateCode
          */
         public String getTemplateCode() {
@@ -443,6 +454,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String orderId; 
             private Integer outerTemplateType; 
             private Reason reason; 
+            private String signatureName; 
             private String templateCode; 
             private String templateContent; 
             private String templateName; 
@@ -457,6 +469,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
                 this.orderId = model.orderId;
                 this.outerTemplateType = model.outerTemplateType;
                 this.reason = model.reason;
+                this.signatureName = model.signatureName;
                 this.templateCode = model.templateCode;
                 this.templateContent = model.templateContent;
                 this.templateName = model.templateName;
@@ -532,6 +545,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * SignatureName.
+             */
+            public Builder signatureName(String signatureName) {
+                this.signatureName = signatureName;
                 return this;
             }
 

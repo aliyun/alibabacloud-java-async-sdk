@@ -499,6 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendCardSmsResponse> sendCardSms(SendCardSmsRequest request);
 
     /**
+     * @param request the request parameters of SendLogisticsSms  SendLogisticsSmsRequest
+     * @return SendLogisticsSmsResponse
+     */
+    CompletableFuture<SendLogisticsSmsResponse> sendLogisticsSms(SendLogisticsSmsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
      * <ul>
@@ -600,5 +606,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ValidPhoneCodeResponse
      */
     CompletableFuture<ValidPhoneCodeResponse> validPhoneCode(ValidPhoneCodeRequest request);
+
+    /**
+     * @param request the request parameters of VerifyLogisticsSmsMailNo  VerifyLogisticsSmsMailNoRequest
+     * @return VerifyLogisticsSmsMailNoResponse
+     */
+    CompletableFuture<VerifyLogisticsSmsMailNoResponse> verifyLogisticsSmsMailNo(VerifyLogisticsSmsMailNoRequest request);
 
 }

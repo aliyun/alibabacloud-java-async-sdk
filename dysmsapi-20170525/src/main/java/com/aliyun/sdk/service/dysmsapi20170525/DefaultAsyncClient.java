@@ -1090,6 +1090,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SendLogisticsSms  SendLogisticsSmsRequest
+     * @return SendLogisticsSmsResponse
+     */
+    @Override
+    public CompletableFuture<SendLogisticsSmsResponse> sendLogisticsSms(SendLogisticsSmsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendLogisticsSms").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendLogisticsSmsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendLogisticsSmsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
      * <ul>
@@ -1307,6 +1325,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ValidPhoneCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VerifyLogisticsSmsMailNo  VerifyLogisticsSmsMailNoRequest
+     * @return VerifyLogisticsSmsMailNoResponse
+     */
+    @Override
+    public CompletableFuture<VerifyLogisticsSmsMailNoResponse> verifyLogisticsSmsMailNo(VerifyLogisticsSmsMailNoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VerifyLogisticsSmsMailNo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyLogisticsSmsMailNoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VerifyLogisticsSmsMailNoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -69,6 +69,10 @@ public class CreateSmsTemplateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer templateType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficDriving")
+    private String trafficDriving;
+
     private CreateSmsTemplateRequest(Builder builder) {
         super(builder);
         this.applySceneContent = builder.applySceneContent;
@@ -83,6 +87,7 @@ public class CreateSmsTemplateRequest extends Request {
         this.templateName = builder.templateName;
         this.templateRule = builder.templateRule;
         this.templateType = builder.templateType;
+        this.trafficDriving = builder.trafficDriving;
     }
 
     public static Builder builder() {
@@ -182,6 +187,13 @@ public class CreateSmsTemplateRequest extends Request {
         return this.templateType;
     }
 
+    /**
+     * @return trafficDriving
+     */
+    public String getTrafficDriving() {
+        return this.trafficDriving;
+    }
+
     public static final class Builder extends Request.Builder<CreateSmsTemplateRequest, Builder> {
         private String applySceneContent; 
         private Integer intlType; 
@@ -195,6 +207,7 @@ public class CreateSmsTemplateRequest extends Request {
         private String templateName; 
         private String templateRule; 
         private Integer templateType; 
+        private String trafficDriving; 
 
         private Builder() {
             super();
@@ -214,6 +227,7 @@ public class CreateSmsTemplateRequest extends Request {
             this.templateName = request.templateName;
             this.templateRule = request.templateRule;
             this.templateType = request.templateType;
+            this.trafficDriving = request.trafficDriving;
         } 
 
         /**
@@ -368,6 +382,15 @@ public class CreateSmsTemplateRequest extends Request {
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);
             this.templateType = templateType;
+            return this;
+        }
+
+        /**
+         * TrafficDriving.
+         */
+        public Builder trafficDriving(String trafficDriving) {
+            this.putQueryParameter("TrafficDriving", trafficDriving);
+            this.trafficDriving = trafficDriving;
             return this;
         }
 
