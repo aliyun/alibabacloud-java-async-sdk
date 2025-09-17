@@ -233,6 +233,9 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
+        @com.aliyun.core.annotation.NameInMap("Issue")
+        private String issue;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -245,6 +248,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         private LinkedVpcs(Builder builder) {
             this.defaultAccess = builder.defaultAccess;
             this.ip = builder.ip;
+            this.issue = builder.issue;
             this.status = builder.status;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
@@ -273,6 +277,13 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
+         * @return issue
+         */
+        public String getIssue() {
+            return this.issue;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -296,6 +307,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean defaultAccess; 
             private String ip; 
+            private String issue; 
             private String status; 
             private String vpcId; 
             private String vswitchId; 
@@ -306,6 +318,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             private Builder(LinkedVpcs model) {
                 this.defaultAccess = model.defaultAccess;
                 this.ip = model.ip;
+                this.issue = model.issue;
                 this.status = model.status;
                 this.vpcId = model.vpcId;
                 this.vswitchId = model.vswitchId;
@@ -330,6 +343,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
              */
             public Builder ip(String ip) {
                 this.ip = ip;
+                return this;
+            }
+
+            /**
+             * Issue.
+             */
+            public Builder issue(String issue) {
+                this.issue = issue;
                 return this;
             }
 
