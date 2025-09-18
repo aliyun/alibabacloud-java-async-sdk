@@ -71,6 +71,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RouterTableId")
     private String routerTableId;
 
+    @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlocks")
+    private SecondaryCidrBlocks secondaryCidrBlocks;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -96,6 +99,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         this.routeTableId = builder.routeTableId;
         this.routeTableIds = builder.routeTableIds;
         this.routerTableId = builder.routerTableId;
+        this.secondaryCidrBlocks = builder.secondaryCidrBlocks;
         this.status = builder.status;
         this.vSwitchIds = builder.vSwitchIds;
     }
@@ -239,6 +243,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return secondaryCidrBlocks
+     */
+    public SecondaryCidrBlocks getSecondaryCidrBlocks() {
+        return this.secondaryCidrBlocks;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -271,6 +282,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private String routeTableId; 
         private RouteTableIds routeTableIds; 
         private String routerTableId; 
+        private SecondaryCidrBlocks secondaryCidrBlocks; 
         private String status; 
         private VSwitchIds vSwitchIds; 
 
@@ -296,6 +308,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             this.routeTableId = model.routeTableId;
             this.routeTableIds = model.routeTableIds;
             this.routerTableId = model.routerTableId;
+            this.secondaryCidrBlocks = model.secondaryCidrBlocks;
             this.status = model.status;
             this.vSwitchIds = model.vSwitchIds;
         } 
@@ -474,6 +487,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
          */
         public Builder routerTableId(String routerTableId) {
             this.routerTableId = routerTableId;
+            return this;
+        }
+
+        /**
+         * SecondaryCidrBlocks.
+         */
+        public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
+            this.secondaryCidrBlocks = secondaryCidrBlocks;
             return this;
         }
 
@@ -963,6 +984,60 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
             public RouteTableIds build() {
                 return new RouteTableIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class SecondaryCidrBlocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
+        private java.util.List<String> secondaryCidrBlock;
+
+        private SecondaryCidrBlocks(Builder builder) {
+            this.secondaryCidrBlock = builder.secondaryCidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecondaryCidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secondaryCidrBlock
+         */
+        public java.util.List<String> getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> secondaryCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondaryCidrBlocks model) {
+                this.secondaryCidrBlock = model.secondaryCidrBlock;
+            } 
+
+            /**
+             * SecondaryCidrBlock.
+             */
+            public Builder secondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
+                this.secondaryCidrBlock = secondaryCidrBlock;
+                return this;
+            }
+
+            public SecondaryCidrBlocks build() {
+                return new SecondaryCidrBlocks(this);
             } 
 
         } 

@@ -20,6 +20,9 @@ public class CreateFileSystemResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllocationId")
     private java.util.List<String> allocationId;
 
+    @com.aliyun.core.annotation.NameInMap("AllocationIds")
+    private java.util.List<AllocationIds> allocationIds;
+
     @com.aliyun.core.annotation.NameInMap("BizStatusCode")
     private String bizStatusCode;
 
@@ -31,6 +34,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
 
     private CreateFileSystemResponseBody(Builder builder) {
         this.allocationId = builder.allocationId;
+        this.allocationIds = builder.allocationIds;
         this.bizStatusCode = builder.bizStatusCode;
         this.requestId = builder.requestId;
         this.unAllocationId = builder.unAllocationId;
@@ -56,6 +60,13 @@ public class CreateFileSystemResponseBody extends TeaModel {
     }
 
     /**
+     * @return allocationIds
+     */
+    public java.util.List<AllocationIds> getAllocationIds() {
+        return this.allocationIds;
+    }
+
+    /**
      * @return bizStatusCode
      */
     public String getBizStatusCode() {
@@ -78,6 +89,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> allocationId; 
+        private java.util.List<AllocationIds> allocationIds; 
         private String bizStatusCode; 
         private String requestId; 
         private java.util.List<String> unAllocationId; 
@@ -87,6 +99,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
 
         private Builder(CreateFileSystemResponseBody model) {
             this.allocationId = model.allocationId;
+            this.allocationIds = model.allocationIds;
             this.bizStatusCode = model.bizStatusCode;
             this.requestId = model.requestId;
             this.unAllocationId = model.unAllocationId;
@@ -97,6 +110,14 @@ public class CreateFileSystemResponseBody extends TeaModel {
          */
         public Builder allocationId(java.util.List<String> allocationId) {
             this.allocationId = allocationId;
+            return this;
+        }
+
+        /**
+         * AllocationIds.
+         */
+        public Builder allocationIds(java.util.List<AllocationIds> allocationIds) {
+            this.allocationIds = allocationIds;
             return this;
         }
 
@@ -140,4 +161,79 @@ public class CreateFileSystemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileSystemResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFileSystemResponseBody</p>
+     */
+    public static class AllocationIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+        private String ensRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        private AllocationIds(Builder builder) {
+            this.ensRegionId = builder.ensRegionId;
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AllocationIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ensRegionId
+         */
+        public String getEnsRegionId() {
+            return this.ensRegionId;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String ensRegionId; 
+            private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllocationIds model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+            } 
+
+            /**
+             * EnsRegionId.
+             */
+            public Builder ensRegionId(String ensRegionId) {
+                this.ensRegionId = ensRegionId;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public AllocationIds build() {
+                return new AllocationIds(this);
+            } 
+
+        } 
+
+    }
 }

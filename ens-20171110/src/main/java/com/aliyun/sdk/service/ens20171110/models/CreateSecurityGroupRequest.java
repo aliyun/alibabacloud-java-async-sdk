@@ -151,6 +151,12 @@ public class CreateSecurityGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String ipProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
+        private String ipv6DestCidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
+        private String ipv6SourceCidrIp;
+
         @com.aliyun.core.annotation.NameInMap("Policy")
         @com.aliyun.core.annotation.Validation(required = true)
         private String policy;
@@ -174,6 +180,8 @@ public class CreateSecurityGroupRequest extends Request {
             this.destCidrIp = builder.destCidrIp;
             this.direction = builder.direction;
             this.ipProtocol = builder.ipProtocol;
+            this.ipv6DestCidrIp = builder.ipv6DestCidrIp;
+            this.ipv6SourceCidrIp = builder.ipv6SourceCidrIp;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
             this.priority = builder.priority;
@@ -218,6 +226,20 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
+         * @return ipv6DestCidrIp
+         */
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
+        }
+
+        /**
+         * @return ipv6SourceCidrIp
+         */
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
+        }
+
+        /**
          * @return policy
          */
         public String getPolicy() {
@@ -257,6 +279,8 @@ public class CreateSecurityGroupRequest extends Request {
             private String destCidrIp; 
             private String direction; 
             private String ipProtocol; 
+            private String ipv6DestCidrIp; 
+            private String ipv6SourceCidrIp; 
             private String policy; 
             private String portRange; 
             private Integer priority; 
@@ -271,6 +295,8 @@ public class CreateSecurityGroupRequest extends Request {
                 this.destCidrIp = model.destCidrIp;
                 this.direction = model.direction;
                 this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
                 this.policy = model.policy;
                 this.portRange = model.portRange;
                 this.priority = model.priority;
@@ -331,6 +357,22 @@ public class CreateSecurityGroupRequest extends Request {
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
+                return this;
+            }
+
+            /**
+             * Ipv6DestCidrIp.
+             */
+            public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
+                this.ipv6DestCidrIp = ipv6DestCidrIp;
+                return this;
+            }
+
+            /**
+             * Ipv6SourceCidrIp.
+             */
+            public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
+                this.ipv6SourceCidrIp = ipv6SourceCidrIp;
                 return this;
             }
 

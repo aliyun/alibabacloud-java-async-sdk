@@ -223,6 +223,60 @@ public class DescribeNetworksResponseBody extends TeaModel {
      *
      * <p>DescribeNetworksResponseBody</p>
      */
+    public static class SecondaryCidrBlocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
+        private java.util.List<String> secondaryCidrBlock;
+
+        private SecondaryCidrBlocks(Builder builder) {
+            this.secondaryCidrBlock = builder.secondaryCidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecondaryCidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secondaryCidrBlock
+         */
+        public java.util.List<String> getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> secondaryCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondaryCidrBlocks model) {
+                this.secondaryCidrBlock = model.secondaryCidrBlock;
+            } 
+
+            /**
+             * SecondaryCidrBlock.
+             */
+            public Builder secondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
+                this.secondaryCidrBlock = secondaryCidrBlock;
+                return this;
+            }
+
+            public SecondaryCidrBlocks build() {
+                return new SecondaryCidrBlocks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworksResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -490,6 +544,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterTableId")
         private String routerTableId;
 
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlocks")
+        private SecondaryCidrBlocks secondaryCidrBlocks;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -511,6 +568,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             this.routeTableId = builder.routeTableId;
             this.routeTableIds = builder.routeTableIds;
             this.routerTableId = builder.routerTableId;
+            this.secondaryCidrBlocks = builder.secondaryCidrBlocks;
             this.status = builder.status;
             this.tags = builder.tags;
             this.vSwitchIds = builder.vSwitchIds;
@@ -602,6 +660,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryCidrBlocks
+         */
+        public SecondaryCidrBlocks getSecondaryCidrBlocks() {
+            return this.secondaryCidrBlocks;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -634,6 +699,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             private String routeTableId; 
             private RouteTableIds routeTableIds; 
             private String routerTableId; 
+            private SecondaryCidrBlocks secondaryCidrBlocks; 
             private String status; 
             private Tags tags; 
             private VSwitchIds vSwitchIds; 
@@ -653,6 +719,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
                 this.routeTableId = model.routeTableId;
                 this.routeTableIds = model.routeTableIds;
                 this.routerTableId = model.routerTableId;
+                this.secondaryCidrBlocks = model.secondaryCidrBlocks;
                 this.status = model.status;
                 this.tags = model.tags;
                 this.vSwitchIds = model.vSwitchIds;
@@ -773,6 +840,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
              */
             public Builder routerTableId(String routerTableId) {
                 this.routerTableId = routerTableId;
+                return this;
+            }
+
+            /**
+             * SecondaryCidrBlocks.
+             */
+            public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
+                this.secondaryCidrBlocks = secondaryCidrBlocks;
                 return this;
             }
 
