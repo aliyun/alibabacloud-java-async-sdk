@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExecuteSmartHomeScene  ExecuteSmartHomeSceneRequest
+     * @return ExecuteSmartHomeSceneResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteSmartHomeSceneResponse> executeSmartHomeScene(ExecuteSmartHomeSceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecuteSmartHomeScene").setMethod(HttpMethod.POST).setPathRegex("/v1.0/oauth2/iot/smart_home/scene/execute").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteSmartHomeSceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteSmartHomeSceneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSceneList  GetSceneListRequest
      * @return GetSceneListResponse
      */
@@ -88,6 +106,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSceneListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSmartHomeSceneList  GetSmartHomeSceneListRequest
+     * @return GetSmartHomeSceneListResponse
+     */
+    @Override
+    public CompletableFuture<GetSmartHomeSceneListResponse> getSmartHomeSceneList(GetSmartHomeSceneListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSmartHomeSceneList").setMethod(HttpMethod.GET).setPathRegex("/v1.0/oauth2/iot/smart_home/scene/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSmartHomeSceneListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSmartHomeSceneListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

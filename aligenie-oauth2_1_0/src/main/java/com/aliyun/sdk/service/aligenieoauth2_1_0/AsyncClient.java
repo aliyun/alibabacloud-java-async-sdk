@@ -32,10 +32,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteSceneResponse> executeScene(ExecuteSceneRequest request);
 
     /**
+     * @param request the request parameters of ExecuteSmartHomeScene  ExecuteSmartHomeSceneRequest
+     * @return ExecuteSmartHomeSceneResponse
+     */
+    CompletableFuture<ExecuteSmartHomeSceneResponse> executeSmartHomeScene(ExecuteSmartHomeSceneRequest request);
+
+    /**
      * @param request the request parameters of GetSceneList  GetSceneListRequest
      * @return GetSceneListResponse
      */
     CompletableFuture<GetSceneListResponse> getSceneList(GetSceneListRequest request);
+
+    /**
+     * @param request the request parameters of GetSmartHomeSceneList  GetSmartHomeSceneListRequest
+     * @return GetSmartHomeSceneListResponse
+     */
+    CompletableFuture<GetSmartHomeSceneListResponse> getSmartHomeSceneList(GetSmartHomeSceneListRequest request);
 
     /**
      * @param request the request parameters of GetUserBasicInfo  GetUserBasicInfoRequest

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreatePlayingListResponseBody} extends {@link TeaModel}
+ * {@link ExecuteSmartHomeSceneResponseBody} extends {@link TeaModel}
  *
- * <p>CreatePlayingListResponseBody</p>
+ * <p>ExecuteSmartHomeSceneResponseBody</p>
  */
-public class CreatePlayingListResponseBody extends TeaModel {
+public class ExecuteSmartHomeSceneResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreatePlayingListResponseBody(Builder builder) {
+    private ExecuteSmartHomeSceneResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class CreatePlayingListResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreatePlayingListResponseBody create() {
+    public static ExecuteSmartHomeSceneResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class CreatePlayingListResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreatePlayingListResponseBody model) {
+        private Builder(ExecuteSmartHomeSceneResponseBody model) {
             this.requestId = model.requestId;
         } 
 
@@ -61,8 +61,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
             return this;
         }
 
-        public CreatePlayingListResponseBody build() {
-            return new CreatePlayingListResponseBody(this);
+        public ExecuteSmartHomeSceneResponseBody build() {
+            return new ExecuteSmartHomeSceneResponseBody(this);
         } 
 
     } 
