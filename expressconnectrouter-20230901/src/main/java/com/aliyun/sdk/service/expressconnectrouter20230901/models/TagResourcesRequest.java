@@ -40,6 +40,10 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private TagResourcesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -47,6 +51,7 @@ public class TagResourcesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class TagResourcesRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private java.util.List<String> resourceId; 
         private String resourceType; 
         private java.util.List<Tag> tag; 
+        private String version; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class TagResourcesRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
+            this.version = request.version;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class TagResourcesRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

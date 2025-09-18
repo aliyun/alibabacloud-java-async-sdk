@@ -58,6 +58,10 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("QueryRegionId")
     private String queryRegionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeExpressConnectRouterRouteEntriesRequest(Builder builder) {
         super(builder);
         this.asPath = builder.asPath;
@@ -70,6 +74,7 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.nexthopInstanceId = builder.nexthopInstanceId;
         this.queryRegionId = builder.queryRegionId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -155,6 +160,13 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
         return this.queryRegionId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterRouteEntriesRequest, Builder> {
         private String asPath; 
         private String clientToken; 
@@ -166,6 +178,7 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
         private String nextToken; 
         private String nexthopInstanceId; 
         private String queryRegionId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -183,6 +196,7 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
             this.nextToken = request.nextToken;
             this.nexthopInstanceId = request.nexthopInstanceId;
             this.queryRegionId = request.queryRegionId;
+            this.version = request.version;
         } 
 
         /**
@@ -315,6 +329,15 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends Request {
         public Builder queryRegionId(String queryRegionId) {
             this.putBodyParameter("QueryRegionId", queryRegionId);
             this.queryRegionId = queryRegionId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

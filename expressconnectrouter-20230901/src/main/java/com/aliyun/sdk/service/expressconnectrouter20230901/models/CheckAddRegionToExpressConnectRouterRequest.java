@@ -35,12 +35,17 @@ public class CheckAddRegionToExpressConnectRouterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String freshRegionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private CheckAddRegionToExpressConnectRouterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.freshRegionId = builder.freshRegionId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class CheckAddRegionToExpressConnectRouterRequest extends Request {
         return this.freshRegionId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<CheckAddRegionToExpressConnectRouterRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
         private String freshRegionId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class CheckAddRegionToExpressConnectRouterRequest extends Request {
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.freshRegionId = request.freshRegionId;
+            this.version = request.version;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class CheckAddRegionToExpressConnectRouterRequest extends Request {
         public Builder freshRegionId(String freshRegionId) {
             this.putBodyParameter("FreshRegionId", freshRegionId);
             this.freshRegionId = freshRegionId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

@@ -49,6 +49,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeExpressConnectRouterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -59,6 +63,7 @@ public class DescribeExpressConnectRouterRequest extends Request {
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class DescribeExpressConnectRouterRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
@@ -139,6 +151,7 @@ public class DescribeExpressConnectRouterRequest extends Request {
         private String nextToken; 
         private String resourceGroupId; 
         private java.util.List<Tag> tag; 
+        private String version; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class DescribeExpressConnectRouterRequest extends Request {
             this.nextToken = request.nextToken;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
+            this.version = request.version;
         } 
 
         /**
@@ -258,6 +272,15 @@ public class DescribeExpressConnectRouterRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

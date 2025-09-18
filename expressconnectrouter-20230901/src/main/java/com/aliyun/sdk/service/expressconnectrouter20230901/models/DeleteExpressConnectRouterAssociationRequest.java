@@ -39,6 +39,10 @@ public class DeleteExpressConnectRouterAssociationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String ecrId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DeleteExpressConnectRouterAssociationRequest(Builder builder) {
         super(builder);
         this.associationId = builder.associationId;
@@ -46,6 +50,7 @@ public class DeleteExpressConnectRouterAssociationRequest extends Request {
         this.deleteAttachment = builder.deleteAttachment;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class DeleteExpressConnectRouterAssociationRequest extends Request {
         return this.ecrId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DeleteExpressConnectRouterAssociationRequest, Builder> {
         private String associationId; 
         private String clientToken; 
         private Boolean deleteAttachment; 
         private Boolean dryRun; 
         private String ecrId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class DeleteExpressConnectRouterAssociationRequest extends Request {
             this.deleteAttachment = request.deleteAttachment;
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
+            this.version = request.version;
         } 
 
         /**
@@ -187,6 +201,15 @@ public class DeleteExpressConnectRouterAssociationRequest extends Request {
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
             this.ecrId = ecrId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

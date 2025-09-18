@@ -43,6 +43,10 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TagKey")
     private java.util.List<String> tagKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private UntagResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
@@ -51,6 +55,7 @@ public class UntagResourcesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tagKey = builder.tagKey;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class UntagResourcesRequest extends Request {
         return this.tagKey;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String clientToken; 
@@ -115,6 +127,7 @@ public class UntagResourcesRequest extends Request {
         private java.util.List<String> resourceId; 
         private String resourceType; 
         private java.util.List<String> tagKey; 
+        private String version; 
 
         private Builder() {
             super();
@@ -128,6 +141,7 @@ public class UntagResourcesRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tagKey = request.tagKey;
+            this.version = request.version;
         } 
 
         /**
@@ -210,6 +224,15 @@ public class UntagResourcesRequest extends Request {
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putBodyParameter("TagKey", tagKey);
             this.tagKey = tagKey;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

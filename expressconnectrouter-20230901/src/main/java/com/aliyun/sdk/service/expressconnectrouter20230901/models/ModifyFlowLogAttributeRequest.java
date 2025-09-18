@@ -51,6 +51,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SamplingRate")
     private String samplingRate;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ModifyFlowLogAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -61,6 +65,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         this.flowLogName = builder.flowLogName;
         this.interval = builder.interval;
         this.samplingRate = builder.samplingRate;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class ModifyFlowLogAttributeRequest extends Request {
         return this.samplingRate;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ModifyFlowLogAttributeRequest, Builder> {
         private String clientToken; 
         private String description; 
@@ -141,6 +153,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         private String flowLogName; 
         private Integer interval; 
         private String samplingRate; 
+        private String version; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
             this.flowLogName = request.flowLogName;
             this.interval = request.interval;
             this.samplingRate = request.samplingRate;
+            this.version = request.version;
         } 
 
         /**
@@ -273,6 +287,15 @@ public class ModifyFlowLogAttributeRequest extends Request {
         public Builder samplingRate(String samplingRate) {
             this.putQueryParameter("SamplingRate", samplingRate);
             this.samplingRate = samplingRate;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

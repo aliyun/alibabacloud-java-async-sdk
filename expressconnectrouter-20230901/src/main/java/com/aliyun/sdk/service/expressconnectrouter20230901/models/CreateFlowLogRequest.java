@@ -74,6 +74,10 @@ public class CreateFlowLogRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private CreateFlowLogRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -89,6 +93,7 @@ public class CreateFlowLogRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.samplingRate = builder.samplingRate;
         this.tag = builder.tag;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -195,6 +200,13 @@ public class CreateFlowLogRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<CreateFlowLogRequest, Builder> {
         private String clientToken; 
         private String description; 
@@ -209,6 +221,7 @@ public class CreateFlowLogRequest extends Request {
         private String resourceGroupId; 
         private String samplingRate; 
         private java.util.List<Tag> tag; 
+        private String version; 
 
         private Builder() {
             super();
@@ -229,6 +242,7 @@ public class CreateFlowLogRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.samplingRate = request.samplingRate;
             this.tag = request.tag;
+            this.version = request.version;
         } 
 
         /**
@@ -431,6 +445,15 @@ public class CreateFlowLogRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

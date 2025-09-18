@@ -38,6 +38,10 @@ public class ModifyExpressConnectRouterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ModifyExpressConnectRouterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class ModifyExpressConnectRouterRequest extends Request {
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.name = builder.name;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ModifyExpressConnectRouterRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ModifyExpressConnectRouterRequest, Builder> {
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
         private String ecrId; 
         private String name; 
+        private String version; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class ModifyExpressConnectRouterRequest extends Request {
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.name = request.name;
+            this.version = request.version;
         } 
 
         /**
@@ -187,6 +201,15 @@ public class ModifyExpressConnectRouterRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

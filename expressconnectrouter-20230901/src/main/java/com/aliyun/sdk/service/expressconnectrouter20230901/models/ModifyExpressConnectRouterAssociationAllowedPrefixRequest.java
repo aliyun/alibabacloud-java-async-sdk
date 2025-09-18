@@ -47,6 +47,10 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ModifyExpressConnectRouterAssociationAllowedPrefixRequest(Builder builder) {
         super(builder);
         this.allowedPrefixes = builder.allowedPrefixes;
@@ -56,6 +60,7 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.ownerAccount = builder.ownerAccount;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         return this.ownerAccount;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ModifyExpressConnectRouterAssociationAllowedPrefixRequest, Builder> {
         private java.util.List<String> allowedPrefixes; 
         private String allowedPrefixesMode; 
@@ -128,6 +140,7 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         private Boolean dryRun; 
         private String ecrId; 
         private String ownerAccount; 
+        private String version; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.ownerAccount = request.ownerAccount;
+            this.version = request.version;
         } 
 
         /**
@@ -233,6 +247,15 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         public Builder ownerAccount(String ownerAccount) {
             this.putBodyParameter("OwnerAccount", ownerAccount);
             this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

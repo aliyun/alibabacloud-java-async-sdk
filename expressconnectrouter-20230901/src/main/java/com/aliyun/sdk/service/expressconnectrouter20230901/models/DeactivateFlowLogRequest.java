@@ -35,12 +35,17 @@ public class DeactivateFlowLogRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowLogId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DeactivateFlowLogRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.flowLogId = builder.flowLogId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class DeactivateFlowLogRequest extends Request {
         return this.flowLogId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DeactivateFlowLogRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
         private String flowLogId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class DeactivateFlowLogRequest extends Request {
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.flowLogId = request.flowLogId;
+            this.version = request.version;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class DeactivateFlowLogRequest extends Request {
         public Builder flowLogId(String flowLogId) {
             this.putBodyParameter("FlowLogId", flowLogId);
             this.flowLogId = flowLogId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

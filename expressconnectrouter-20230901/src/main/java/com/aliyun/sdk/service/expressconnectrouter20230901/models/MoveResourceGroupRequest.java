@@ -40,6 +40,10 @@ public class MoveResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private MoveResourceGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -47,6 +51,7 @@ public class MoveResourceGroupRequest extends Request {
         this.newResourceGroupId = builder.newResourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class MoveResourceGroupRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<MoveResourceGroupRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String newResourceGroupId; 
         private String resourceId; 
         private String resourceType; 
+        private String version; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class MoveResourceGroupRequest extends Request {
             this.newResourceGroupId = request.newResourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
+            this.version = request.version;
         } 
 
         /**
@@ -181,6 +195,15 @@ public class MoveResourceGroupRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

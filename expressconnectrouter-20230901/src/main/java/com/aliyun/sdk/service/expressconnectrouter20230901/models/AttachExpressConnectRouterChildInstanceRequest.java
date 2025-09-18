@@ -53,6 +53,10 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String ecrId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private AttachExpressConnectRouterChildInstanceRequest(Builder builder) {
         super(builder);
         this.childInstanceId = builder.childInstanceId;
@@ -63,6 +67,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -134,6 +139,13 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         return this.ecrId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<AttachExpressConnectRouterChildInstanceRequest, Builder> {
         private String childInstanceId; 
         private Long childInstanceOwnerId; 
@@ -143,6 +155,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private String ecrId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -158,6 +171,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
+            this.version = request.version;
         } 
 
         /**
@@ -268,6 +282,15 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
             this.ecrId = ecrId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

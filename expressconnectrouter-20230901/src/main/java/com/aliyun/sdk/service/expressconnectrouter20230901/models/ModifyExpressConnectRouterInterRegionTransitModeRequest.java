@@ -34,12 +34,17 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
     @com.aliyun.core.annotation.NameInMap("TransitModeList")
     private java.util.List<TransitModeList> transitModeList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ModifyExpressConnectRouterInterRegionTransitModeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.transitModeList = builder.transitModeList;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
         return this.transitModeList;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ModifyExpressConnectRouterInterRegionTransitModeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
         private java.util.List<TransitModeList> transitModeList; 
+        private String version; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.transitModeList = request.transitModeList;
+            this.version = request.version;
         } 
 
         /**
@@ -152,6 +166,15 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
         public Builder transitModeList(java.util.List<TransitModeList> transitModeList) {
             this.putBodyParameter("TransitModeList", transitModeList);
             this.transitModeList = transitModeList;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

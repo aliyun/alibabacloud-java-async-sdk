@@ -38,6 +38,10 @@ public class ListTagResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
@@ -45,6 +49,7 @@ public class ListTagResourcesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListTagResourcesRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> resourceId; 
         private String resourceType; 
         private java.util.List<Tag> tag; 
+        private String version; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class ListTagResourcesRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
+            this.version = request.version;
         } 
 
         /**
@@ -172,6 +186,15 @@ public class ListTagResourcesRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

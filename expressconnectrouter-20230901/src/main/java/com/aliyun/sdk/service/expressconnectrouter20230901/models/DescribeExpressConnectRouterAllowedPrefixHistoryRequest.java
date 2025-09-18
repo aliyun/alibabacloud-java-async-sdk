@@ -42,6 +42,10 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeExpressConnectRouterAllowedPrefixHistoryRequest(Builder builder) {
         super(builder);
         this.associationId = builder.associationId;
@@ -50,6 +54,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         this.ecrId = builder.ecrId;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -107,6 +112,13 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         return this.instanceType;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterAllowedPrefixHistoryRequest, Builder> {
         private String associationId; 
         private String clientToken; 
@@ -114,6 +126,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         private String ecrId; 
         private String instanceId; 
         private String instanceType; 
+        private String version; 
 
         private Builder() {
             super();
@@ -127,6 +140,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
             this.ecrId = request.ecrId;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.version = request.version;
         } 
 
         /**
@@ -217,6 +231,15 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

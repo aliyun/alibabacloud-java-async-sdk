@@ -26,10 +26,15 @@ public class ListExpressConnectRouterSupportedRegionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private ListExpressConnectRouterSupportedRegionRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.nodeType = builder.nodeType;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class ListExpressConnectRouterSupportedRegionRequest extends Request {
         return this.nodeType;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ListExpressConnectRouterSupportedRegionRequest, Builder> {
         private String clientToken; 
         private String nodeType; 
+        private String version; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class ListExpressConnectRouterSupportedRegionRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.nodeType = request.nodeType;
+            this.version = request.version;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class ListExpressConnectRouterSupportedRegionRequest extends Request {
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("NodeType", nodeType);
             this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

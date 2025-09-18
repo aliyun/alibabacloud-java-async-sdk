@@ -63,6 +63,10 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TransitRouterOwnerId")
     private Long transitRouterOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
@@ -84,6 +88,7 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
         this.ecrId = builder.ecrId;
         this.transitRouterId = builder.transitRouterId;
         this.transitRouterOwnerId = builder.transitRouterOwnerId;
+        this.version = builder.version;
         this.vpcId = builder.vpcId;
         this.vpcOwnerId = builder.vpcOwnerId;
     }
@@ -179,6 +184,13 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
     }
 
     /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -204,6 +216,7 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
         private String ecrId; 
         private String transitRouterId; 
         private Long transitRouterOwnerId; 
+        private String version; 
         private String vpcId; 
         private Long vpcOwnerId; 
 
@@ -224,6 +237,7 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
             this.ecrId = request.ecrId;
             this.transitRouterId = request.transitRouterId;
             this.transitRouterOwnerId = request.transitRouterOwnerId;
+            this.version = request.version;
             this.vpcId = request.vpcId;
             this.vpcOwnerId = request.vpcOwnerId;
         } 
@@ -377,6 +391,15 @@ public class CreateExpressConnectRouterAssociationRequest extends Request {
         public Builder transitRouterOwnerId(Long transitRouterOwnerId) {
             this.putBodyParameter("TransitRouterOwnerId", transitRouterOwnerId);
             this.transitRouterOwnerId = transitRouterOwnerId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

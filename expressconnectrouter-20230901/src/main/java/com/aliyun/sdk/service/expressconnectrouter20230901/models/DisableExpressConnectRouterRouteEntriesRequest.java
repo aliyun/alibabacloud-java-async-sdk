@@ -40,6 +40,10 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String nexthopInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DisableExpressConnectRouterRouteEntriesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -47,6 +51,7 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends Request {
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
         this.nexthopInstanceId = builder.nexthopInstanceId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends Request {
         return this.nexthopInstanceId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DisableExpressConnectRouterRouteEntriesRequest, Builder> {
         private String clientToken; 
         private String destinationCidrBlock; 
         private Boolean dryRun; 
         private String ecrId; 
         private String nexthopInstanceId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends Request {
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
             this.nexthopInstanceId = request.nexthopInstanceId;
+            this.version = request.version;
         } 
 
         /**
@@ -185,6 +199,15 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends Request {
         public Builder nexthopInstanceId(String nexthopInstanceId) {
             this.putBodyParameter("NexthopInstanceId", nexthopInstanceId);
             this.nexthopInstanceId = nexthopInstanceId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

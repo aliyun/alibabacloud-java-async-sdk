@@ -38,6 +38,10 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Req
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeDisabledExpressConnectRouterRouteEntriesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Req
         this.ecrId = builder.ecrId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Req
         return this.nextToken;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDisabledExpressConnectRouterRouteEntriesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String version; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Req
             this.ecrId = request.ecrId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.version = request.version;
         } 
 
         /**
@@ -185,6 +199,15 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Req
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

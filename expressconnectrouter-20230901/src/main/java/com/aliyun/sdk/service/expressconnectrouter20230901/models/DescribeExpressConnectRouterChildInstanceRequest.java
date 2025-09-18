@@ -54,6 +54,10 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeExpressConnectRouterChildInstanceRequest(Builder builder) {
         super(builder);
         this.associationId = builder.associationId;
@@ -65,6 +69,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
         this.ecrId = builder.ecrId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -143,6 +148,13 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterChildInstanceRequest, Builder> {
         private String associationId; 
         private String childInstanceId; 
@@ -153,6 +165,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
         private String ecrId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String version; 
 
         private Builder() {
             super();
@@ -169,6 +182,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
             this.ecrId = request.ecrId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.version = request.version;
         } 
 
         /**
@@ -289,6 +303,15 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

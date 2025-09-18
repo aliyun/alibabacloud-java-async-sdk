@@ -66,6 +66,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
     @com.aliyun.core.annotation.NameInMap("TagModels")
     private java.util.List<TagModels> tagModels;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private DescribeInstanceGrantedToExpressConnectRouterRequest(Builder builder) {
         super(builder);
         this.callerType = builder.callerType;
@@ -80,6 +84,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
         this.tagModels = builder.tagModels;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -179,6 +184,13 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         return this.tagModels;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceGrantedToExpressConnectRouterRequest, Builder> {
         private String callerType; 
         private String clientToken; 
@@ -192,6 +204,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         private String nextToken; 
         private String resourceGroupId; 
         private java.util.List<TagModels> tagModels; 
+        private String version; 
 
         private Builder() {
             super();
@@ -211,6 +224,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
             this.nextToken = request.nextToken;
             this.resourceGroupId = request.resourceGroupId;
             this.tagModels = request.tagModels;
+            this.version = request.version;
         } 
 
         /**
@@ -372,6 +386,15 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         public Builder tagModels(java.util.List<TagModels> tagModels) {
             this.putBodyParameter("TagModels", tagModels);
             this.tagModels = tagModels;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 
