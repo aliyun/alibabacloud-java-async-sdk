@@ -143,11 +143,11 @@ public class DescribeCACertificateListRequest extends Request {
         } 
 
         /**
-         * <p>CaStatus.</p>
+         * <p>Ca status.</p>
          * <ul>
-         * <li>issue：inUse.</li>
-         * <li>forbidden ：forbidden.</li>
-         * <li>revoke：revoked.</li>
+         * <li>issue: inUse.</li>
+         * <li>forbidden: forbidden.</li>
+         * <li>revoke: revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,9 +162,9 @@ public class DescribeCACertificateListRequest extends Request {
         /**
          * <p>The type of the certificate. Valid values:</p>
          * <ul>
-         * <li>root：rootCA.</li>
-         * <li>subRoot：subCA.</li>
-         * <li>externalCa：import.</li>
+         * <li>root: rootCA.</li>
+         * <li>subRoot: subCA.</li>
+         * <li>externalCa: import.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,9 +206,9 @@ public class DescribeCACertificateListRequest extends Request {
         /**
          * <p>The CA Issuer Type.</p>
          * <ul>
-         * <li>local：Private certificate.</li>
-         * <li>iTrusChina： Compliance CA.</li>
-         * <li>external：External Import.</li>
+         * <li>local: Private certificate.</li>
+         * <li>iTrusChina: Compliance CA.</li>
+         * <li>external: External Import.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,8 +235,8 @@ public class DescribeCACertificateListRequest extends Request {
         /**
          * <p>valid time.</p>
          * <ul>
-         * <li>valid：means in the valid period.</li>
-         * <li>notValid：means expired.</li>
+         * <li>valid: means in the valid period.</li>
+         * <li>notValid: means expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>

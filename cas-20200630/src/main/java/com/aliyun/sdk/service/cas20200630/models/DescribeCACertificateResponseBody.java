@@ -161,8 +161,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrlUrl")
         private String crlUrl;
 
+        @com.aliyun.core.annotation.NameInMap("FullAlgorithm")
+        private String fullAlgorithm;
+
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
+
+        @com.aliyun.core.annotation.NameInMap("IssuerType")
+        private String issuerType;
 
         @com.aliyun.core.annotation.NameInMap("KeySize")
         private Integer keySize;
@@ -206,6 +212,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
+        @com.aliyun.core.annotation.NameInMap("Years")
+        private Integer years;
+
         private Certificate(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
@@ -220,7 +229,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.crlDay = builder.crlDay;
             this.crlStatus = builder.crlStatus;
             this.crlUrl = builder.crlUrl;
+            this.fullAlgorithm = builder.fullAlgorithm;
             this.identifier = builder.identifier;
+            this.issuerType = builder.issuerType;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
             this.md5 = builder.md5;
@@ -235,6 +246,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.status = builder.status;
             this.subjectDN = builder.subjectDN;
             this.x509Certificate = builder.x509Certificate;
+            this.years = builder.years;
         }
 
         public static Builder builder() {
@@ -337,10 +349,24 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullAlgorithm
+         */
+        public String getFullAlgorithm() {
+            return this.fullAlgorithm;
+        }
+
+        /**
          * @return identifier
          */
         public String getIdentifier() {
             return this.identifier;
+        }
+
+        /**
+         * @return issuerType
+         */
+        public String getIssuerType() {
+            return this.issuerType;
         }
 
         /**
@@ -441,6 +467,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             return this.x509Certificate;
         }
 
+        /**
+         * @return years
+         */
+        public Integer getYears() {
+            return this.years;
+        }
+
         public static final class Builder {
             private Long afterDate; 
             private String algorithm; 
@@ -455,7 +488,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Integer crlDay; 
             private String crlStatus; 
             private String crlUrl; 
+            private String fullAlgorithm; 
             private String identifier; 
+            private String issuerType; 
             private Integer keySize; 
             private String locality; 
             private String md5; 
@@ -470,6 +505,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private String status; 
             private String subjectDN; 
             private String x509Certificate; 
+            private Integer years; 
 
             private Builder() {
             } 
@@ -488,7 +524,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
                 this.crlDay = model.crlDay;
                 this.crlStatus = model.crlStatus;
                 this.crlUrl = model.crlUrl;
+                this.fullAlgorithm = model.fullAlgorithm;
                 this.identifier = model.identifier;
+                this.issuerType = model.issuerType;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
                 this.md5 = model.md5;
@@ -503,6 +541,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
                 this.status = model.status;
                 this.subjectDN = model.subjectDN;
                 this.x509Certificate = model.x509Certificate;
+                this.years = model.years;
             } 
 
             /**
@@ -667,6 +706,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
+             * FullAlgorithm.
+             */
+            public Builder fullAlgorithm(String fullAlgorithm) {
+                this.fullAlgorithm = fullAlgorithm;
+                return this;
+            }
+
+            /**
              * <p>The unique identifier of the CA certificate.</p>
              * 
              * <strong>example:</strong>
@@ -674,6 +721,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * IssuerType.
+             */
+            public Builder issuerType(String issuerType) {
+                this.issuerType = issuerType;
                 return this;
             }
 
@@ -843,6 +898,17 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;
+                return this;
+            }
+
+            /**
+             * <p>The validity period of the CA certificate. Unit: years.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder years(Integer years) {
+                this.years = years;
                 return this;
             }
 

@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateRootCACertificateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Algorithm")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommonName")
@@ -59,6 +62,7 @@ public class CreateRootCACertificateRequest extends Request {
     private CreateRootCACertificateRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
+        this.clientToken = builder.clientToken;
         this.commonName = builder.commonName;
         this.countryCode = builder.countryCode;
         this.locality = builder.locality;
@@ -86,6 +90,13 @@ public class CreateRootCACertificateRequest extends Request {
      */
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -139,6 +150,7 @@ public class CreateRootCACertificateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRootCACertificateRequest, Builder> {
         private String algorithm; 
+        private String clientToken; 
         private String commonName; 
         private String countryCode; 
         private String locality; 
@@ -154,6 +166,7 @@ public class CreateRootCACertificateRequest extends Request {
         private Builder(CreateRootCACertificateRequest request) {
             super(request);
             this.algorithm = request.algorithm;
+            this.clientToken = request.clientToken;
             this.commonName = request.commonName;
             this.countryCode = request.countryCode;
             this.locality = request.locality;
@@ -175,7 +188,6 @@ public class CreateRootCACertificateRequest extends Request {
          * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
          * </ul>
          * <p>The encryption algorithm of the root CA certificate must be consistent with the <strong>encryption algorithm</strong> of the private root CA instance that you purchase. For example, if the <strong>encryption algorithm</strong> of the private root CA instance that you purchase is <strong>RSA</strong>, the key algorithm of the root CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA_2048</p>
@@ -183,6 +195,15 @@ public class CreateRootCACertificateRequest extends Request {
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
             this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

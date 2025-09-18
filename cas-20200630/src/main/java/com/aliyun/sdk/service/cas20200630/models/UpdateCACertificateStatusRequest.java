@@ -18,17 +18,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCACertificateStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Identifier")
     @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private UpdateCACertificateStatusRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.identifier = builder.identifier;
         this.status = builder.status;
     }
@@ -47,6 +51,13 @@ public class UpdateCACertificateStatusRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return identifier
      */
     public String getIdentifier() {
@@ -61,6 +72,7 @@ public class UpdateCACertificateStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCACertificateStatusRequest, Builder> {
+        private String clientToken; 
         private String identifier; 
         private String status; 
 
@@ -70,9 +82,19 @@ public class UpdateCACertificateStatusRequest extends Request {
 
         private Builder(UpdateCACertificateStatusRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.identifier = request.identifier;
             this.status = request.status;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The unique identifier of the CA certificate whose status you want to change.</p>
@@ -95,7 +117,6 @@ public class UpdateCACertificateStatusRequest extends Request {
          * <blockquote>
          * <p> You can call this operation only if the status of a CA certificate is <strong>ISSUE</strong>. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the status of a CA certificate.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>REVOKE</p>

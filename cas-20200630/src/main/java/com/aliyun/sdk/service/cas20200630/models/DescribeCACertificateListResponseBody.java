@@ -215,6 +215,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
+        @com.aliyun.core.annotation.NameInMap("Gift")
+        private Integer gift;
+
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
@@ -257,6 +260,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubjectDN")
         private String subjectDN;
 
+        @com.aliyun.core.annotation.NameInMap("Trial")
+        private Integer trial;
+
         @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
@@ -271,6 +277,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.gift = builder.gift;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
@@ -285,6 +292,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             this.state = builder.state;
             this.status = builder.status;
             this.subjectDN = builder.subjectDN;
+            this.trial = builder.trial;
             this.x509Certificate = builder.x509Certificate;
             this.years = builder.years;
         }
@@ -344,6 +352,13 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return gift
+         */
+        public Integer getGift() {
+            return this.gift;
         }
 
         /**
@@ -445,6 +460,13 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return trial
+         */
+        public Integer getTrial() {
+            return this.trial;
+        }
+
+        /**
          * @return x509Certificate
          */
         public String getX509Certificate() {
@@ -466,6 +488,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private Integer gift; 
             private String identifier; 
             private Integer keySize; 
             private String locality; 
@@ -480,6 +503,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             private String state; 
             private String status; 
             private String subjectDN; 
+            private Integer trial; 
             private String x509Certificate; 
             private Integer years; 
 
@@ -494,6 +518,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
+                this.gift = model.gift;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
@@ -508,6 +533,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
                 this.state = model.state;
                 this.status = model.status;
                 this.subjectDN = model.subjectDN;
+                this.trial = model.trial;
                 this.x509Certificate = model.x509Certificate;
                 this.years = model.years;
             } 
@@ -596,6 +622,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * Gift.
+             */
+            public Builder gift(Integer gift) {
+                this.gift = gift;
                 return this;
             }
 
@@ -764,6 +798,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
+                return this;
+            }
+
+            /**
+             * Trial.
+             */
+            public Builder trial(Integer trial) {
+                this.trial = trial;
                 return this;
             }
 
