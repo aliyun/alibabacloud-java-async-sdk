@@ -60,6 +60,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -126,8 +130,25 @@ public class ListInstancesResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed information about the failed permission verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -135,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +164,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -151,7 +175,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to find instance c-123xxx</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -159,7 +186,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +197,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD-1234-5678-EFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +208,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +219,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -276,8 +315,30 @@ public class ListInstancesResponseBody extends TeaModel {
             private String diskType; 
             private Integer replica; 
 
+            private Builder() {
+            } 
+
+            private Builder(MilvusResourceInfoList model) {
+                this.componentType = model.componentType;
+                this.cuNum = model.cuNum;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+                this.replica = model.replica;
+            } 
+
             /**
-             * ComponentType.
+             * <p>The type of the component. Valid values:</p>
+             * <ul>
+             * <li>standalone</li>
+             * <li>proxy</li>
+             * <li>mix_coordinator</li>
+             * <li>query</li>
+             * <li>index</li>
+             * <li>data</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standalone</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -285,7 +346,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CuNum.
+             * <p>The number of CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder cuNum(Integer cuNum) {
                 this.cuNum = cuNum;
@@ -293,7 +357,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -301,7 +368,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>essd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -309,7 +379,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Replica.
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -427,8 +500,24 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer totalCuNum; 
             private Integer totalDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfo model) {
+                this.attuPort = model.attuPort;
+                this.internetUrl = model.internetUrl;
+                this.intranetUrl = model.intranetUrl;
+                this.milvusResourceInfoList = model.milvusResourceInfoList;
+                this.proxyPort = model.proxyPort;
+                this.totalCuNum = model.totalCuNum;
+                this.totalDiskSize = model.totalDiskSize;
+            } 
+
             /**
-             * AttuPort.
+             * <p>The port of the Attu component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder attuPort(Integer attuPort) {
                 this.attuPort = attuPort;
@@ -436,7 +525,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetUrl.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-123xxx.milvus.aliyuncs.com</p>
              */
             public Builder internetUrl(String internetUrl) {
                 this.internetUrl = internetUrl;
@@ -444,7 +536,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetUrl.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-123xxx-internal.milvus.aliyuncs.com</p>
              */
             public Builder intranetUrl(String intranetUrl) {
                 this.intranetUrl = intranetUrl;
@@ -452,7 +547,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MilvusResourceInfoList.
+             * <p>The resource details.</p>
              */
             public Builder milvusResourceInfoList(java.util.List<MilvusResourceInfoList> milvusResourceInfoList) {
                 this.milvusResourceInfoList = milvusResourceInfoList;
@@ -460,7 +555,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyPort.
+             * <p>The proxy port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19530</p>
              */
             public Builder proxyPort(Integer proxyPort) {
                 this.proxyPort = proxyPort;
@@ -468,7 +566,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCuNum.
+             * <p>The number of CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder totalCuNum(Integer totalCuNum) {
                 this.totalCuNum = totalCuNum;
@@ -476,7 +577,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDiskSize.
+             * <p>The total capacity of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder totalDiskSize(Integer totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -485,6 +589,81 @@ public class ListInstancesResponseBody extends TeaModel {
 
             public ClusterInfo build() {
                 return new ClusterInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -545,6 +724,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SgId")
         private String sgId;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -571,6 +753,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
+            this.tags = builder.tags;
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
             this.zoneId = builder.zoneId;
@@ -697,6 +880,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -734,9 +924,36 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Integer runningTime; 
             private String sgId; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
             private String vswId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoBackup = model.autoBackup;
+                this.beginTime = model.beginTime;
+                this.clusterInfo = model.clusterInfo;
+                this.clusterName = model.clusterName;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.nodeType = model.nodeType;
+                this.openPublicNet = model.openPublicNet;
+                this.packageType = model.packageType;
+                this.payType = model.payType;
+                this.productCode = model.productCode;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.runningTime = model.runningTime;
+                this.sgId = model.sgId;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswId = model.vswId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * AutoBackup.
@@ -747,7 +964,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718608505000</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -755,7 +975,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterInfo.
+             * <p>The instance details.</p>
              */
             public Builder clusterInfo(ClusterInfo clusterInfo) {
                 this.clusterInfo = clusterInfo;
@@ -763,7 +983,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>milvus-test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -771,7 +994,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721232000000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -779,7 +1005,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-123xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -787,7 +1016,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The status of the bastion host. Valid values:</p>
+             * <ul>
+             * <li>creating.</li>
+             * <li>running.</li>
+             * <li>updating. Cluster scaling (up/down), configuration changes, and enabling/disabling public network access.</li>
+             * <li>disable. The cluster has expired and needs to be renewed for activation.</li>
+             * <li>deleting.</li>
+             * <li>deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -803,7 +1043,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OpenPublicNet.
+             * <p>Indicates whether Internet access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder openPublicNet(Boolean openPublicNet) {
                 this.openPublicNet = openPublicNet;
@@ -811,7 +1054,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * <p>The specification details. Valid values:</p>
+             * <ul>
+             * <li>trial.</li>
+             * <li>standard.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>trial</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -819,7 +1069,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li>0: pay-as-you-go</li>
+             * <li>1: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -827,7 +1084,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>milvus_milvuspre_public_cn</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -835,7 +1095,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -843,7 +1106,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-123xxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -851,7 +1117,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTime.
+             * <p>The runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>536611</p>
              */
             public Builder runningTime(Integer runningTime) {
                 this.runningTime = runningTime;
@@ -859,7 +1128,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SgId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-123xxx</p>
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -867,7 +1139,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-123xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -875,7 +1158,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VswId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-123xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -883,7 +1169,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

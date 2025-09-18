@@ -49,7 +49,7 @@ public class UpdateAccessControlListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +110,10 @@ public class UpdateAccessControlListRequest extends Request {
         }
 
         /**
-         * AclId.
+         * <p>The ID of public network access control</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-123xxx</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -119,7 +122,10 @@ public class UpdateAccessControlListRequest extends Request {
         }
 
         /**
-         * Cidr.
+         * <p>The CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24,172.16.0.0/16</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -128,7 +134,10 @@ public class UpdateAccessControlListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-123xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

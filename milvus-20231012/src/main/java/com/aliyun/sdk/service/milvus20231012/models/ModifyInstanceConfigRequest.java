@@ -51,7 +51,7 @@ public class ModifyInstanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,6 +112,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The reason for the update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * UserConfig.
+         * <p>User-defined configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
          */
         public Builder userConfig(String userConfig) {
             this.putQueryParameter("UserConfig", userConfig);

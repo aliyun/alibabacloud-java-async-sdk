@@ -1,3 +1,6 @@
+2025-09-18 Version: 1.0.9
+- Generated java-async 2023-10-12 for milvus.
+
 2025-02-26 Version: 1.0.8
 - Generated java-async 2023-10-12 for milvus.
 

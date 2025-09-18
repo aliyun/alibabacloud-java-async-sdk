@@ -56,6 +56,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -114,8 +118,24 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessControlListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.errMessage = model.errMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed information about the failed permission verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -123,7 +143,7 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +151,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to find instance c-123xxx</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -139,7 +162,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -147,7 +173,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -155,7 +184,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD-1234-5678-EFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +195,10 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,8 +255,19 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
             private String aclId; 
             private java.util.List<String> cidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aclId = model.aclId;
+                this.cidr = model.cidr;
+            } 
+
             /**
-             * AclId.
+             * <p>AclId for public network access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-xxxx</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -229,7 +275,7 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
             }
 
             /**
-             * Cidr.
+             * <p>The CIDR blocks.</p>
              */
             public Builder cidr(java.util.List<String> cidr) {
                 this.cidr = cidr;

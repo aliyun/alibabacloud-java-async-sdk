@@ -43,6 +43,10 @@ public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -51,6 +55,7 @@ public class ListInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -61,7 +66,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,6 +113,13 @@ public class ListInstancesRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String clusterId; 
         private String clusterName; 
@@ -115,6 +127,7 @@ public class ListInstancesRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -128,10 +141,14 @@ public class ListInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
-         * ClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-123xxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -140,7 +157,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>milvus-test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -149,7 +169,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,7 +181,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,7 +193,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,11 +205,24 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 
@@ -191,4 +233,79 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstancesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
