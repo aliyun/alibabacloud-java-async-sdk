@@ -1670,6 +1670,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeHybridCloudBasicMonitor  DescribeHybridCloudBasicMonitorRequest
+     * @return DescribeHybridCloudBasicMonitorResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudBasicMonitorResponse> describeHybridCloudBasicMonitor(DescribeHybridCloudBasicMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudBasicMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudBasicMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudBasicMonitorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeHybridCloudClusterRule  DescribeHybridCloudClusterRuleRequest
      * @return DescribeHybridCloudClusterRuleResponse
      */
@@ -1700,6 +1718,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeHybridCloudClusterRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudClusterServers  DescribeHybridCloudClusterServersRequest
+     * @return DescribeHybridCloudClusterServersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudClusterServersResponse> describeHybridCloudClusterServers(DescribeHybridCloudClusterServersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudClusterServers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudClusterServersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudClusterServersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1742,6 +1778,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeHybridCloudProcessMonitor  DescribeHybridCloudProcessMonitorRequest
+     * @return DescribeHybridCloudProcessMonitorResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudProcessMonitorResponse> describeHybridCloudProcessMonitor(DescribeHybridCloudProcessMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudProcessMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudProcessMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudProcessMonitorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudResourceDetail  DescribeHybridCloudResourceDetailRequest
+     * @return DescribeHybridCloudResourceDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudResourceDetailResponse> describeHybridCloudResourceDetail(DescribeHybridCloudResourceDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudResourceDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudResourceDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudResourceDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeHybridCloudResources  DescribeHybridCloudResourcesRequest
      * @return DescribeHybridCloudResourcesResponse
      */
@@ -1754,6 +1826,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeHybridCloudResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudSdkServers  DescribeHybridCloudSdkServersRequest
+     * @return DescribeHybridCloudSdkServersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudSdkServersResponse> describeHybridCloudSdkServers(DescribeHybridCloudSdkServersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudSdkServers").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudSdkServersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudSdkServersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1778,6 +1868,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeHybridCloudSupportRegions  DescribeHybridCloudSupportRegionsRequest
+     * @return DescribeHybridCloudSupportRegionsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudSupportRegionsResponse> describeHybridCloudSupportRegions(DescribeHybridCloudSupportRegionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudSupportRegions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudSupportRegionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudSupportRegionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeHybridCloudUnassignedMachines  DescribeHybridCloudUnassignedMachinesRequest
      * @return DescribeHybridCloudUnassignedMachinesResponse
      */
@@ -1790,6 +1898,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeHybridCloudUnassignedMachinesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudUnsupportPorts  DescribeHybridCloudUnsupportPortsRequest
+     * @return DescribeHybridCloudUnsupportPortsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridCloudUnsupportPortsResponse> describeHybridCloudUnsupportPorts(DescribeHybridCloudUnsupportPortsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridCloudUnsupportPorts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridCloudUnsupportPortsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridCloudUnsupportPortsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3146,6 +3272,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDomainPunishStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyHybridCloudCluster  ModifyHybridCloudClusterRequest
+     * @return ModifyHybridCloudClusterResponse
+     */
+    @Override
+    public CompletableFuture<ModifyHybridCloudClusterResponse> modifyHybridCloudCluster(ModifyHybridCloudClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyHybridCloudCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyHybridCloudClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyHybridCloudClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

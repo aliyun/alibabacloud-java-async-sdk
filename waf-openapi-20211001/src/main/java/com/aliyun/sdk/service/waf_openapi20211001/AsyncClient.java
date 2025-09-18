@@ -557,6 +557,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFreeUserEventsResponse> describeFreeUserEvents(DescribeFreeUserEventsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHybridCloudBasicMonitor  DescribeHybridCloudBasicMonitorRequest
+     * @return DescribeHybridCloudBasicMonitorResponse
+     */
+    CompletableFuture<DescribeHybridCloudBasicMonitorResponse> describeHybridCloudBasicMonitor(DescribeHybridCloudBasicMonitorRequest request);
+
+    /**
      * @param request the request parameters of DescribeHybridCloudClusterRule  DescribeHybridCloudClusterRuleRequest
      * @return DescribeHybridCloudClusterRuleResponse
      */
@@ -567,6 +573,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHybridCloudClusterRulesResponse
      */
     CompletableFuture<DescribeHybridCloudClusterRulesResponse> describeHybridCloudClusterRules(DescribeHybridCloudClusterRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudClusterServers  DescribeHybridCloudClusterServersRequest
+     * @return DescribeHybridCloudClusterServersResponse
+     */
+    CompletableFuture<DescribeHybridCloudClusterServersResponse> describeHybridCloudClusterServers(DescribeHybridCloudClusterServersRequest request);
 
     /**
      * @param request the request parameters of DescribeHybridCloudClusters  DescribeHybridCloudClustersRequest
@@ -581,10 +593,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudGroupsResponse> describeHybridCloudGroups(DescribeHybridCloudGroupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHybridCloudProcessMonitor  DescribeHybridCloudProcessMonitorRequest
+     * @return DescribeHybridCloudProcessMonitorResponse
+     */
+    CompletableFuture<DescribeHybridCloudProcessMonitorResponse> describeHybridCloudProcessMonitor(DescribeHybridCloudProcessMonitorRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudResourceDetail  DescribeHybridCloudResourceDetailRequest
+     * @return DescribeHybridCloudResourceDetailResponse
+     */
+    CompletableFuture<DescribeHybridCloudResourceDetailResponse> describeHybridCloudResourceDetail(DescribeHybridCloudResourceDetailRequest request);
+
+    /**
      * @param request the request parameters of DescribeHybridCloudResources  DescribeHybridCloudResourcesRequest
      * @return DescribeHybridCloudResourcesResponse
      */
     CompletableFuture<DescribeHybridCloudResourcesResponse> describeHybridCloudResources(DescribeHybridCloudResourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudSdkServers  DescribeHybridCloudSdkServersRequest
+     * @return DescribeHybridCloudSdkServersResponse
+     */
+    CompletableFuture<DescribeHybridCloudSdkServersResponse> describeHybridCloudSdkServers(DescribeHybridCloudSdkServersRequest request);
 
     /**
      * @param request the request parameters of DescribeHybridCloudServerRegions  DescribeHybridCloudServerRegionsRequest
@@ -593,10 +623,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudServerRegionsResponse> describeHybridCloudServerRegions(DescribeHybridCloudServerRegionsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHybridCloudSupportRegions  DescribeHybridCloudSupportRegionsRequest
+     * @return DescribeHybridCloudSupportRegionsResponse
+     */
+    CompletableFuture<DescribeHybridCloudSupportRegionsResponse> describeHybridCloudSupportRegions(DescribeHybridCloudSupportRegionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeHybridCloudUnassignedMachines  DescribeHybridCloudUnassignedMachinesRequest
      * @return DescribeHybridCloudUnassignedMachinesResponse
      */
     CompletableFuture<DescribeHybridCloudUnassignedMachinesResponse> describeHybridCloudUnassignedMachines(DescribeHybridCloudUnassignedMachinesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudUnsupportPorts  DescribeHybridCloudUnsupportPortsRequest
+     * @return DescribeHybridCloudUnsupportPortsResponse
+     */
+    CompletableFuture<DescribeHybridCloudUnsupportPortsResponse> describeHybridCloudUnsupportPorts(DescribeHybridCloudUnsupportPortsRequest request);
 
     /**
      * @param request the request parameters of DescribeHybridCloudUser  DescribeHybridCloudUserRequest
@@ -1065,6 +1107,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDomainPunishStatusResponse
      */
     CompletableFuture<ModifyDomainPunishStatusResponse> modifyDomainPunishStatus(ModifyDomainPunishStatusRequest request);
+
+    /**
+     * @param request the request parameters of ModifyHybridCloudCluster  ModifyHybridCloudClusterRequest
+     * @return ModifyHybridCloudClusterResponse
+     */
+    CompletableFuture<ModifyHybridCloudClusterResponse> modifyHybridCloudCluster(ModifyHybridCloudClusterRequest request);
 
     /**
      * @param request the request parameters of ModifyHybridCloudClusterBypassStatus  ModifyHybridCloudClusterBypassStatusRequest

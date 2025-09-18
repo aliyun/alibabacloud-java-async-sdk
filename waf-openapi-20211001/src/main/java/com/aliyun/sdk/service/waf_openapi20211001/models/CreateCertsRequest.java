@@ -31,6 +31,7 @@ public class CreateCertsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
@@ -169,6 +170,7 @@ public class CreateCertsRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_v2_public_cn-20p****nw01</p>

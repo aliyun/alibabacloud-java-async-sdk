@@ -1279,8 +1279,20 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SniHost")
         private String sniHost;
 
+        @com.aliyun.core.annotation.NameInMap("WLProxyClientIp")
+        private Boolean WLProxyClientIp;
+
+        @com.aliyun.core.annotation.NameInMap("WebServerType")
+        private Boolean webServerType;
+
         @com.aliyun.core.annotation.NameInMap("WriteTimeout")
         private Integer writeTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("XClientIp")
+        private Boolean xClientIp;
+
+        @com.aliyun.core.annotation.NameInMap("XTrueIp")
+        private Boolean xTrueIp;
 
         @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
@@ -1302,7 +1314,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.retry = builder.retry;
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
+            this.WLProxyClientIp = builder.WLProxyClientIp;
+            this.webServerType = builder.webServerType;
             this.writeTimeout = builder.writeTimeout;
+            this.xClientIp = builder.xClientIp;
+            this.xTrueIp = builder.xTrueIp;
             this.xffProto = builder.xffProto;
         }
 
@@ -1427,10 +1443,38 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return WLProxyClientIp
+         */
+        public Boolean getWLProxyClientIp() {
+            return this.WLProxyClientIp;
+        }
+
+        /**
+         * @return webServerType
+         */
+        public Boolean getWebServerType() {
+            return this.webServerType;
+        }
+
+        /**
          * @return writeTimeout
          */
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        /**
+         * @return xClientIp
+         */
+        public Boolean getXClientIp() {
+            return this.xClientIp;
+        }
+
+        /**
+         * @return xTrueIp
+         */
+        public Boolean getXTrueIp() {
+            return this.xTrueIp;
         }
 
         /**
@@ -1457,7 +1501,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Boolean retry; 
             private Boolean sniEnabled; 
             private String sniHost; 
+            private Boolean WLProxyClientIp; 
+            private Boolean webServerType; 
             private Integer writeTimeout; 
+            private Boolean xClientIp; 
+            private Boolean xTrueIp; 
             private Boolean xffProto; 
 
             private Builder() {
@@ -1480,7 +1528,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
                 this.retry = model.retry;
                 this.sniEnabled = model.sniEnabled;
                 this.sniHost = model.sniHost;
+                this.WLProxyClientIp = model.WLProxyClientIp;
+                this.webServerType = model.webServerType;
                 this.writeTimeout = model.writeTimeout;
+                this.xClientIp = model.xClientIp;
+                this.xTrueIp = model.xTrueIp;
                 this.xffProto = model.xffProto;
             } 
 
@@ -1670,6 +1722,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
+             * WLProxyClientIp.
+             */
+            public Builder WLProxyClientIp(Boolean WLProxyClientIp) {
+                this.WLProxyClientIp = WLProxyClientIp;
+                return this;
+            }
+
+            /**
+             * WebServerType.
+             */
+            public Builder webServerType(Boolean webServerType) {
+                this.webServerType = webServerType;
+                return this;
+            }
+
+            /**
              * <p>The write timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
              * 
              * <strong>example:</strong>
@@ -1677,6 +1745,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * XClientIp.
+             */
+            public Builder xClientIp(Boolean xClientIp) {
+                this.xClientIp = xClientIp;
+                return this;
+            }
+
+            /**
+             * XTrueIp.
+             */
+            public Builder xTrueIp(Boolean xTrueIp) {
+                this.xTrueIp = xTrueIp;
                 return this;
             }
 

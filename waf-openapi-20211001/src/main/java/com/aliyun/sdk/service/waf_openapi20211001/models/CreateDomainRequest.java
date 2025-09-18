@@ -982,9 +982,21 @@ public class CreateDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SniHost")
         private String sniHost;
 
+        @com.aliyun.core.annotation.NameInMap("WLProxyClientIp")
+        private Boolean WLProxyClientIp;
+
+        @com.aliyun.core.annotation.NameInMap("WebServerType")
+        private Boolean webServerType;
+
         @com.aliyun.core.annotation.NameInMap("WriteTimeout")
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("XClientIp")
+        private Boolean xClientIp;
+
+        @com.aliyun.core.annotation.NameInMap("XTrueIp")
+        private Boolean xTrueIp;
 
         @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
@@ -1006,7 +1018,11 @@ public class CreateDomainRequest extends Request {
             this.routingRules = builder.routingRules;
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
+            this.WLProxyClientIp = builder.WLProxyClientIp;
+            this.webServerType = builder.webServerType;
             this.writeTimeout = builder.writeTimeout;
+            this.xClientIp = builder.xClientIp;
+            this.xTrueIp = builder.xTrueIp;
             this.xffProto = builder.xffProto;
         }
 
@@ -1131,10 +1147,38 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
+         * @return WLProxyClientIp
+         */
+        public Boolean getWLProxyClientIp() {
+            return this.WLProxyClientIp;
+        }
+
+        /**
+         * @return webServerType
+         */
+        public Boolean getWebServerType() {
+            return this.webServerType;
+        }
+
+        /**
          * @return writeTimeout
          */
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        /**
+         * @return xClientIp
+         */
+        public Boolean getXClientIp() {
+            return this.xClientIp;
+        }
+
+        /**
+         * @return xTrueIp
+         */
+        public Boolean getXTrueIp() {
+            return this.xTrueIp;
         }
 
         /**
@@ -1161,7 +1205,11 @@ public class CreateDomainRequest extends Request {
             private String routingRules; 
             private Boolean sniEnabled; 
             private String sniHost; 
+            private Boolean WLProxyClientIp; 
+            private Boolean webServerType; 
             private Integer writeTimeout; 
+            private Boolean xClientIp; 
+            private Boolean xTrueIp; 
             private Boolean xffProto; 
 
             private Builder() {
@@ -1184,7 +1232,11 @@ public class CreateDomainRequest extends Request {
                 this.routingRules = model.routingRules;
                 this.sniEnabled = model.sniEnabled;
                 this.sniHost = model.sniHost;
+                this.WLProxyClientIp = model.WLProxyClientIp;
+                this.webServerType = model.webServerType;
                 this.writeTimeout = model.writeTimeout;
+                this.xClientIp = model.xClientIp;
+                this.xTrueIp = model.xTrueIp;
                 this.xffProto = model.xffProto;
             } 
 
@@ -1402,6 +1454,22 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
+             * WLProxyClientIp.
+             */
+            public Builder WLProxyClientIp(Boolean WLProxyClientIp) {
+                this.WLProxyClientIp = WLProxyClientIp;
+                return this;
+            }
+
+            /**
+             * WebServerType.
+             */
+            public Builder webServerType(Boolean webServerType) {
+                this.webServerType = webServerType;
+                return this;
+            }
+
+            /**
              * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
@@ -1409,6 +1477,22 @@ public class CreateDomainRequest extends Request {
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * XClientIp.
+             */
+            public Builder xClientIp(Boolean xClientIp) {
+                this.xClientIp = xClientIp;
+                return this;
+            }
+
+            /**
+             * XTrueIp.
+             */
+            public Builder xTrueIp(Boolean xTrueIp) {
+                this.xTrueIp = xTrueIp;
                 return this;
             }
 
