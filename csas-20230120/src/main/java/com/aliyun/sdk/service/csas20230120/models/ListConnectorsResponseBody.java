@@ -80,7 +80,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
         /**
-         * Connectors.
+         * <p>List of Connectors.</p>
          */
         public Builder connectors(java.util.List<Connectors> connectors) {
             this.connectors = connectors;
@@ -88,7 +88,10 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of Connectors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -162,7 +168,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>Internal network access application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-e12860ef6c48****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -170,7 +179,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>Internal network access application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_name</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -263,7 +275,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionStatus.
+             * <p>Connection status between ConnectorClient and ConnectorServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disconnected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -271,7 +286,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>Unique device identifier for the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C50A2386-F851-4F11-920B-DF7148DA0C22</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -279,7 +297,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Hostname of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector_client</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -287,7 +308,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>Public IP of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.1</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -354,7 +378,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * End.
+             * <p>End time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:00</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -362,7 +389,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>Start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20:00</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -546,7 +576,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * Applications.
+             * <p>Collection of associated internal network access applications.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -554,7 +584,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterIP.
+             * <p>Cluster IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder clusterIP(String clusterIP) {
                 this.clusterIP = clusterIP;
@@ -562,7 +595,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterPort.
+             * <p>Cluster port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder clusterPort(String clusterPort) {
                 this.clusterPort = clusterPort;
@@ -570,7 +606,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorClients.
+             * <p>Collection of deployed ConnectorClients.</p>
              */
             public Builder connectorClients(java.util.List<ConnectorClients> connectorClients) {
                 this.connectorClients = connectorClients;
@@ -578,7 +614,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ConnectorID。</p>
+             * <p>Connector ID.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-94db94e06b98****</p>
@@ -589,7 +625,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time of the Connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-27 18:10:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -597,7 +636,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -605,7 +647,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -613,7 +658,14 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Connector connection status. Values:</p>
+             * <ul>
+             * <li><strong>Online</strong>: Online.</li>
+             * <li><strong>Offline</strong>: Offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -621,7 +673,14 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStatus.
+             * <p>Connector instance status. Values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder switchStatus(String switchStatus) {
                 this.switchStatus = switchStatus;
@@ -629,7 +688,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeTime.
+             * <p>Connector upgrade time.</p>
              */
             public Builder upgradeTime(UpgradeTime upgradeTime) {
                 this.upgradeTime = upgradeTime;

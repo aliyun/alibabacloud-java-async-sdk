@@ -131,7 +131,7 @@ public class ListConnectorsRequest extends Request {
         } 
 
         /**
-         * ConnectorIds.
+         * <p>Collection of Connector IDs. Up to 100 Connector IDs can be entered.</p>
          */
         public Builder connectorIds(java.util.List<String> connectorIds) {
             this.putQueryParameter("ConnectorIds", connectorIds);
@@ -140,6 +140,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the current page in a paginated query. Range: 1~10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Connector name. Length: 1~128 characters, supporting Chinese and both uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,6 +165,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
+         * <p>The number of items per page in a paginated query. Range: 1~1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +178,14 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Connector connection status. Values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: Online.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -182,7 +194,14 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * SwitchStatus.
+         * <p>Connector instance status. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder switchStatus(String switchStatus) {
             this.putQueryParameter("SwitchStatus", switchStatus);

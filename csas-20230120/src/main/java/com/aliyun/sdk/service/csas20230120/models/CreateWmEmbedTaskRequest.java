@@ -17,7 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWmEmbedTaskRequest</p>
  */
 public class CreateWmEmbedTaskRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AudioControl")
+    private AudioControl audioControl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CsvControl")
     private CsvControl csvControl;
 
@@ -48,8 +52,16 @@ public class CreateWmEmbedTaskRequest extends Request {
     private Long imageEmbedLevel;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvisibleEnable")
+    private Boolean invisibleEnable;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoBitrate")
     private String videoBitrate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VideoControl")
+    private VideoControl videoControl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoIsLong")
@@ -76,6 +88,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
     private CreateWmEmbedTaskRequest(Builder builder) {
         super(builder);
+        this.audioControl = builder.audioControl;
         this.csvControl = builder.csvControl;
         this.documentControl = builder.documentControl;
         this.fileUrl = builder.fileUrl;
@@ -83,7 +96,9 @@ public class CreateWmEmbedTaskRequest extends Request {
         this.imageControl = builder.imageControl;
         this.imageEmbedJpegQuality = builder.imageEmbedJpegQuality;
         this.imageEmbedLevel = builder.imageEmbedLevel;
+        this.invisibleEnable = builder.invisibleEnable;
         this.videoBitrate = builder.videoBitrate;
+        this.videoControl = builder.videoControl;
         this.videoIsLong = builder.videoIsLong;
         this.wmInfoBytesB64 = builder.wmInfoBytesB64;
         this.wmInfoSize = builder.wmInfoSize;
@@ -102,6 +117,13 @@ public class CreateWmEmbedTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return audioControl
+     */
+    public AudioControl getAudioControl() {
+        return this.audioControl;
     }
 
     /**
@@ -154,10 +176,24 @@ public class CreateWmEmbedTaskRequest extends Request {
     }
 
     /**
+     * @return invisibleEnable
+     */
+    public Boolean getInvisibleEnable() {
+        return this.invisibleEnable;
+    }
+
+    /**
      * @return videoBitrate
      */
     public String getVideoBitrate() {
         return this.videoBitrate;
+    }
+
+    /**
+     * @return videoControl
+     */
+    public VideoControl getVideoControl() {
+        return this.videoControl;
     }
 
     /**
@@ -196,6 +232,7 @@ public class CreateWmEmbedTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWmEmbedTaskRequest, Builder> {
+        private AudioControl audioControl; 
         private CsvControl csvControl; 
         private DocumentControl documentControl; 
         private String fileUrl; 
@@ -203,7 +240,9 @@ public class CreateWmEmbedTaskRequest extends Request {
         private ImageControl imageControl; 
         private Long imageEmbedJpegQuality; 
         private Long imageEmbedLevel; 
+        private Boolean invisibleEnable; 
         private String videoBitrate; 
+        private VideoControl videoControl; 
         private Boolean videoIsLong; 
         private String wmInfoBytesB64; 
         private Long wmInfoSize; 
@@ -216,6 +255,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         private Builder(CreateWmEmbedTaskRequest request) {
             super(request);
+            this.audioControl = request.audioControl;
             this.csvControl = request.csvControl;
             this.documentControl = request.documentControl;
             this.fileUrl = request.fileUrl;
@@ -223,7 +263,9 @@ public class CreateWmEmbedTaskRequest extends Request {
             this.imageControl = request.imageControl;
             this.imageEmbedJpegQuality = request.imageEmbedJpegQuality;
             this.imageEmbedLevel = request.imageEmbedLevel;
+            this.invisibleEnable = request.invisibleEnable;
             this.videoBitrate = request.videoBitrate;
+            this.videoControl = request.videoControl;
             this.videoIsLong = request.videoIsLong;
             this.wmInfoBytesB64 = request.wmInfoBytesB64;
             this.wmInfoSize = request.wmInfoSize;
@@ -232,11 +274,21 @@ public class CreateWmEmbedTaskRequest extends Request {
         } 
 
         /**
+         * AudioControl.
+         */
+        public Builder audioControl(AudioControl audioControl) {
+            String audioControlShrink = shrink(audioControl, "AudioControl", "json");
+            this.putBodyParameter("AudioControl", audioControlShrink);
+            this.audioControl = audioControl;
+            return this;
+        }
+
+        /**
          * CsvControl.
          */
         public Builder csvControl(CsvControl csvControl) {
             String csvControlShrink = shrink(csvControl, "CsvControl", "json");
-            this.putQueryParameter("CsvControl", csvControlShrink);
+            this.putBodyParameter("CsvControl", csvControlShrink);
             this.csvControl = csvControl;
             return this;
         }
@@ -304,11 +356,30 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
+         * InvisibleEnable.
+         */
+        public Builder invisibleEnable(Boolean invisibleEnable) {
+            this.putBodyParameter("InvisibleEnable", invisibleEnable);
+            this.invisibleEnable = invisibleEnable;
+            return this;
+        }
+
+        /**
          * VideoBitrate.
          */
         public Builder videoBitrate(String videoBitrate) {
             this.putBodyParameter("VideoBitrate", videoBitrate);
             this.videoBitrate = videoBitrate;
+            return this;
+        }
+
+        /**
+         * VideoControl.
+         */
+        public Builder videoControl(VideoControl videoControl) {
+            String videoControlShrink = shrink(videoControl, "VideoControl", "json");
+            this.putBodyParameter("VideoControl", videoControlShrink);
+            this.videoControl = videoControl;
             return this;
         }
 
@@ -367,6 +438,135 @@ public class CreateWmEmbedTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class MetadataControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("XmpKvBase64")
+        private String xmpKvBase64;
+
+        private MetadataControl(Builder builder) {
+            this.enable = builder.enable;
+            this.xmpKvBase64 = builder.xmpKvBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetadataControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return xmpKvBase64
+         */
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String xmpKvBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetadataControl model) {
+                this.enable = model.enable;
+                this.xmpKvBase64 = model.xmpKvBase64;
+            } 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * XmpKvBase64.
+             */
+            public Builder xmpKvBase64(String xmpKvBase64) {
+                this.xmpKvBase64 = xmpKvBase64;
+                return this;
+            }
+
+            public MetadataControl build() {
+                return new MetadataControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class AudioControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MetadataControl")
+        private MetadataControl metadataControl;
+
+        private AudioControl(Builder builder) {
+            this.metadataControl = builder.metadataControl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metadataControl
+         */
+        public MetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
+        public static final class Builder {
+            private MetadataControl metadataControl; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioControl model) {
+                this.metadataControl = model.metadataControl;
+            } 
+
+            /**
+             * MetadataControl.
+             */
+            public Builder metadataControl(MetadataControl metadataControl) {
+                this.metadataControl = metadataControl;
+                return this;
+            }
+
+            public AudioControl build() {
+                return new AudioControl(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
@@ -1192,6 +1392,9 @@ public class CreateWmEmbedTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Angle")
         private Long angle;
 
+        @com.aliyun.core.annotation.NameInMap("Enhance")
+        private Boolean enhance;
+
         @com.aliyun.core.annotation.NameInMap("LogoBase64")
         private String logoBase64;
 
@@ -1227,6 +1430,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         private LogoVisibleControl(Builder builder) {
             this.angle = builder.angle;
+            this.enhance = builder.enhance;
             this.logoBase64 = builder.logoBase64;
             this.margin = builder.margin;
             this.mode = builder.mode;
@@ -1253,6 +1457,13 @@ public class CreateWmEmbedTaskRequest extends Request {
          */
         public Long getAngle() {
             return this.angle;
+        }
+
+        /**
+         * @return enhance
+         */
+        public Boolean getEnhance() {
+            return this.enhance;
         }
 
         /**
@@ -1334,6 +1545,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         public static final class Builder {
             private Long angle; 
+            private Boolean enhance; 
             private String logoBase64; 
             private Margin margin; 
             private String mode; 
@@ -1351,6 +1563,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
             private Builder(LogoVisibleControl model) {
                 this.angle = model.angle;
+                this.enhance = model.enhance;
                 this.logoBase64 = model.logoBase64;
                 this.margin = model.margin;
                 this.mode = model.mode;
@@ -1369,6 +1582,14 @@ public class CreateWmEmbedTaskRequest extends Request {
              */
             public Builder angle(Long angle) {
                 this.angle = angle;
+                return this;
+            }
+
+            /**
+             * Enhance.
+             */
+            public Builder enhance(Boolean enhance) {
+                this.enhance = enhance;
                 return this;
             }
 
@@ -1473,14 +1694,14 @@ public class CreateWmEmbedTaskRequest extends Request {
      *
      * <p>CreateWmEmbedTaskRequest</p>
      */
-    public static class MetadataControl extends TeaModel {
+    public static class ImageControlMetadataControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("XmpKvBase64")
         private String xmpKvBase64;
 
-        private MetadataControl(Builder builder) {
+        private ImageControlMetadataControl(Builder builder) {
             this.enable = builder.enable;
             this.xmpKvBase64 = builder.xmpKvBase64;
         }
@@ -1489,7 +1710,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             return new Builder();
         }
 
-        public static MetadataControl create() {
+        public static ImageControlMetadataControl create() {
             return builder().build();
         }
 
@@ -1514,7 +1735,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(MetadataControl model) {
+            private Builder(ImageControlMetadataControl model) {
                 this.enable = model.enable;
                 this.xmpKvBase64 = model.xmpKvBase64;
             } 
@@ -1535,8 +1756,8 @@ public class CreateWmEmbedTaskRequest extends Request {
                 return this;
             }
 
-            public MetadataControl build() {
-                return new MetadataControl(this);
+            public ImageControlMetadataControl build() {
+                return new ImageControlMetadataControl(this);
             } 
 
         } 
@@ -1997,7 +2218,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         private LogoVisibleControl logoVisibleControl;
 
         @com.aliyun.core.annotation.NameInMap("MetadataControl")
-        private MetadataControl metadataControl;
+        private ImageControlMetadataControl metadataControl;
 
         @com.aliyun.core.annotation.NameInMap("TextVisibleControl")
         private TextVisibleControl textVisibleControl;
@@ -2026,7 +2247,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         /**
          * @return metadataControl
          */
-        public MetadataControl getMetadataControl() {
+        public ImageControlMetadataControl getMetadataControl() {
             return this.metadataControl;
         }
 
@@ -2039,7 +2260,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         public static final class Builder {
             private LogoVisibleControl logoVisibleControl; 
-            private MetadataControl metadataControl; 
+            private ImageControlMetadataControl metadataControl; 
             private TextVisibleControl textVisibleControl; 
 
             private Builder() {
@@ -2062,7 +2283,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             /**
              * MetadataControl.
              */
-            public Builder metadataControl(MetadataControl metadataControl) {
+            public Builder metadataControl(ImageControlMetadataControl metadataControl) {
                 this.metadataControl = metadataControl;
                 return this;
             }
@@ -2077,6 +2298,453 @@ public class CreateWmEmbedTaskRequest extends Request {
 
             public ImageControl build() {
                 return new ImageControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class VideoControlMetadataControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("XmpKvBase64")
+        private String xmpKvBase64;
+
+        private VideoControlMetadataControl(Builder builder) {
+            this.enable = builder.enable;
+            this.xmpKvBase64 = builder.xmpKvBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoControlMetadataControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return xmpKvBase64
+         */
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String xmpKvBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoControlMetadataControl model) {
+                this.enable = model.enable;
+                this.xmpKvBase64 = model.xmpKvBase64;
+            } 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * XmpKvBase64.
+             */
+            public Builder xmpKvBase64(String xmpKvBase64) {
+                this.xmpKvBase64 = xmpKvBase64;
+                return this;
+            }
+
+            public VideoControlMetadataControl build() {
+                return new VideoControlMetadataControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class VideoControlTextVisibleControlMargin extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bottom")
+        private Integer bottom;
+
+        @com.aliyun.core.annotation.NameInMap("Right")
+        private Integer right;
+
+        private VideoControlTextVisibleControlMargin(Builder builder) {
+            this.bottom = builder.bottom;
+            this.right = builder.right;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoControlTextVisibleControlMargin create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bottom
+         */
+        public Integer getBottom() {
+            return this.bottom;
+        }
+
+        /**
+         * @return right
+         */
+        public Integer getRight() {
+            return this.right;
+        }
+
+        public static final class Builder {
+            private Integer bottom; 
+            private Integer right; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoControlTextVisibleControlMargin model) {
+                this.bottom = model.bottom;
+                this.right = model.right;
+            } 
+
+            /**
+             * Bottom.
+             */
+            public Builder bottom(Integer bottom) {
+                this.bottom = bottom;
+                return this;
+            }
+
+            /**
+             * Right.
+             */
+            public Builder right(Integer right) {
+                this.right = right;
+                return this;
+            }
+
+            public VideoControlTextVisibleControlMargin build() {
+                return new VideoControlTextVisibleControlMargin(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class VideoControlTextVisibleControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private String fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        private Integer fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("Margin")
+        private VideoControlTextVisibleControlMargin margin;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("Opacity")
+        private Integer opacity;
+
+        @com.aliyun.core.annotation.NameInMap("PosX")
+        private Integer posX;
+
+        @com.aliyun.core.annotation.NameInMap("PosY")
+        private Integer posY;
+
+        @com.aliyun.core.annotation.NameInMap("Visible")
+        private Boolean visible;
+
+        @com.aliyun.core.annotation.NameInMap("VisibleText")
+        private String visibleText;
+
+        private VideoControlTextVisibleControl(Builder builder) {
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.margin = builder.margin;
+            this.mode = builder.mode;
+            this.opacity = builder.opacity;
+            this.posX = builder.posX;
+            this.posY = builder.posY;
+            this.visible = builder.visible;
+            this.visibleText = builder.visibleText;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoControlTextVisibleControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fontColor
+         */
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public Integer getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return margin
+         */
+        public VideoControlTextVisibleControlMargin getMargin() {
+            return this.margin;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return opacity
+         */
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        /**
+         * @return posX
+         */
+        public Integer getPosX() {
+            return this.posX;
+        }
+
+        /**
+         * @return posY
+         */
+        public Integer getPosY() {
+            return this.posY;
+        }
+
+        /**
+         * @return visible
+         */
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+        /**
+         * @return visibleText
+         */
+        public String getVisibleText() {
+            return this.visibleText;
+        }
+
+        public static final class Builder {
+            private String fontColor; 
+            private Integer fontSize; 
+            private VideoControlTextVisibleControlMargin margin; 
+            private String mode; 
+            private Integer opacity; 
+            private Integer posX; 
+            private Integer posY; 
+            private Boolean visible; 
+            private String visibleText; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoControlTextVisibleControl model) {
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.margin = model.margin;
+                this.mode = model.mode;
+                this.opacity = model.opacity;
+                this.posX = model.posX;
+                this.posY = model.posY;
+                this.visible = model.visible;
+                this.visibleText = model.visibleText;
+            } 
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(String fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(Integer fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * Margin.
+             */
+            public Builder margin(VideoControlTextVisibleControlMargin margin) {
+                this.margin = margin;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * Opacity.
+             */
+            public Builder opacity(Integer opacity) {
+                this.opacity = opacity;
+                return this;
+            }
+
+            /**
+             * PosX.
+             */
+            public Builder posX(Integer posX) {
+                this.posX = posX;
+                return this;
+            }
+
+            /**
+             * PosY.
+             */
+            public Builder posY(Integer posY) {
+                this.posY = posY;
+                return this;
+            }
+
+            /**
+             * Visible.
+             */
+            public Builder visible(Boolean visible) {
+                this.visible = visible;
+                return this;
+            }
+
+            /**
+             * VisibleText.
+             */
+            public Builder visibleText(String visibleText) {
+                this.visibleText = visibleText;
+                return this;
+            }
+
+            public VideoControlTextVisibleControl build() {
+                return new VideoControlTextVisibleControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class VideoControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MetadataControl")
+        private VideoControlMetadataControl metadataControl;
+
+        @com.aliyun.core.annotation.NameInMap("TextVisibleControl")
+        private VideoControlTextVisibleControl textVisibleControl;
+
+        private VideoControl(Builder builder) {
+            this.metadataControl = builder.metadataControl;
+            this.textVisibleControl = builder.textVisibleControl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metadataControl
+         */
+        public VideoControlMetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
+        /**
+         * @return textVisibleControl
+         */
+        public VideoControlTextVisibleControl getTextVisibleControl() {
+            return this.textVisibleControl;
+        }
+
+        public static final class Builder {
+            private VideoControlMetadataControl metadataControl; 
+            private VideoControlTextVisibleControl textVisibleControl; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoControl model) {
+                this.metadataControl = model.metadataControl;
+                this.textVisibleControl = model.textVisibleControl;
+            } 
+
+            /**
+             * MetadataControl.
+             */
+            public Builder metadataControl(VideoControlMetadataControl metadataControl) {
+                this.metadataControl = metadataControl;
+                return this;
+            }
+
+            /**
+             * TextVisibleControl.
+             */
+            public Builder textVisibleControl(VideoControlTextVisibleControl textVisibleControl) {
+                this.textVisibleControl = textVisibleControl;
+                return this;
+            }
+
+            public VideoControl build() {
+                return new VideoControl(this);
             } 
 
         } 

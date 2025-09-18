@@ -26,6 +26,9 @@ public class OpenStructSaseUser extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Departments")
     private java.util.List<OpenStructSaseDepartment> departments;
 
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
@@ -66,6 +69,7 @@ public class OpenStructSaseUser extends TeaModel {
         this.createTimeUnix = builder.createTimeUnix;
         this.customFields = builder.customFields;
         this.departments = builder.departments;
+        this.description = builder.description;
         this.email = builder.email;
         this.idpConfigId = builder.idpConfigId;
         this.leaveTimeUnix = builder.leaveTimeUnix;
@@ -111,6 +115,13 @@ public class OpenStructSaseUser extends TeaModel {
      */
     public java.util.List<OpenStructSaseDepartment> getDepartments() {
         return this.departments;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -201,6 +212,7 @@ public class OpenStructSaseUser extends TeaModel {
         private Long createTimeUnix; 
         private java.util.List<IdpCustomField> customFields; 
         private java.util.List<OpenStructSaseDepartment> departments; 
+        private String description; 
         private String email; 
         private String idpConfigId; 
         private Long leaveTimeUnix; 
@@ -221,6 +233,7 @@ public class OpenStructSaseUser extends TeaModel {
             this.createTimeUnix = model.createTimeUnix;
             this.customFields = model.customFields;
             this.departments = model.departments;
+            this.description = model.description;
             this.email = model.email;
             this.idpConfigId = model.idpConfigId;
             this.leaveTimeUnix = model.leaveTimeUnix;
@@ -256,6 +269,14 @@ public class OpenStructSaseUser extends TeaModel {
          */
         public Builder departments(java.util.List<OpenStructSaseDepartment> departments) {
             this.departments = departments;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
