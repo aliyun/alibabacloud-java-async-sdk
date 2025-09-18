@@ -67,7 +67,6 @@ public class CreateApsKafkaHudiJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JsonParseLevel")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer jsonParseLevel;
 
     @com.aliyun.core.annotation.Body
@@ -556,10 +555,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * JsonParseLevel.
          */
         public Builder jsonParseLevel(Integer jsonParseLevel) {
             this.putBodyParameter("JsonParseLevel", jsonParseLevel);
