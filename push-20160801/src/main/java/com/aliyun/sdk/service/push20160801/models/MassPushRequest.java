@@ -160,6 +160,9 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidHonorTargetUserType")
         private Integer androidHonorTargetUserType;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidHuaweiLiveNotificationPayload")
+        private String androidHuaweiLiveNotificationPayload;
+
         @com.aliyun.core.annotation.NameInMap("AndroidHuaweiReceiptId")
         private String androidHuaweiReceiptId;
 
@@ -325,6 +328,9 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HarmonyInboxContent")
         private String harmonyInboxContent;
 
+        @com.aliyun.core.annotation.NameInMap("HarmonyLiveViewPayload")
+        private String harmonyLiveViewPayload;
+
         @com.aliyun.core.annotation.NameInMap("HarmonyNotificationSlotType")
         private String harmonyNotificationSlotType;
 
@@ -462,6 +468,7 @@ public class MassPushRequest extends Request {
             this.androidBigTitle = builder.androidBigTitle;
             this.androidExtParameters = builder.androidExtParameters;
             this.androidHonorTargetUserType = builder.androidHonorTargetUserType;
+            this.androidHuaweiLiveNotificationPayload = builder.androidHuaweiLiveNotificationPayload;
             this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
             this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
             this.androidImageUrl = builder.androidImageUrl;
@@ -515,6 +522,7 @@ public class MassPushRequest extends Request {
             this.harmonyExtensionPush = builder.harmonyExtensionPush;
             this.harmonyImageUrl = builder.harmonyImageUrl;
             this.harmonyInboxContent = builder.harmonyInboxContent;
+            this.harmonyLiveViewPayload = builder.harmonyLiveViewPayload;
             this.harmonyNotificationSlotType = builder.harmonyNotificationSlotType;
             this.harmonyNotifyId = builder.harmonyNotifyId;
             this.harmonyReceiptId = builder.harmonyReceiptId;
@@ -627,6 +635,13 @@ public class MassPushRequest extends Request {
          */
         public Integer getAndroidHonorTargetUserType() {
             return this.androidHonorTargetUserType;
+        }
+
+        /**
+         * @return androidHuaweiLiveNotificationPayload
+         */
+        public String getAndroidHuaweiLiveNotificationPayload() {
+            return this.androidHuaweiLiveNotificationPayload;
         }
 
         /**
@@ -1001,6 +1016,13 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return harmonyLiveViewPayload
+         */
+        public String getHarmonyLiveViewPayload() {
+            return this.harmonyLiveViewPayload;
+        }
+
+        /**
          * @return harmonyNotificationSlotType
          */
         public String getHarmonyNotificationSlotType() {
@@ -1297,6 +1319,7 @@ public class MassPushRequest extends Request {
             private String androidBigTitle; 
             private String androidExtParameters; 
             private Integer androidHonorTargetUserType; 
+            private String androidHuaweiLiveNotificationPayload; 
             private String androidHuaweiReceiptId; 
             private Integer androidHuaweiTargetUserType; 
             private String androidImageUrl; 
@@ -1350,6 +1373,7 @@ public class MassPushRequest extends Request {
             private Boolean harmonyExtensionPush; 
             private String harmonyImageUrl; 
             private String harmonyInboxContent; 
+            private String harmonyLiveViewPayload; 
             private String harmonyNotificationSlotType; 
             private Integer harmonyNotifyId; 
             private String harmonyReceiptId; 
@@ -1405,6 +1429,7 @@ public class MassPushRequest extends Request {
                 this.androidBigTitle = model.androidBigTitle;
                 this.androidExtParameters = model.androidExtParameters;
                 this.androidHonorTargetUserType = model.androidHonorTargetUserType;
+                this.androidHuaweiLiveNotificationPayload = model.androidHuaweiLiveNotificationPayload;
                 this.androidHuaweiReceiptId = model.androidHuaweiReceiptId;
                 this.androidHuaweiTargetUserType = model.androidHuaweiTargetUserType;
                 this.androidImageUrl = model.androidImageUrl;
@@ -1458,6 +1483,7 @@ public class MassPushRequest extends Request {
                 this.harmonyExtensionPush = model.harmonyExtensionPush;
                 this.harmonyImageUrl = model.harmonyImageUrl;
                 this.harmonyInboxContent = model.harmonyInboxContent;
+                this.harmonyLiveViewPayload = model.harmonyLiveViewPayload;
                 this.harmonyNotificationSlotType = model.harmonyNotificationSlotType;
                 this.harmonyNotifyId = model.harmonyNotifyId;
                 this.harmonyReceiptId = model.harmonyReceiptId;
@@ -1570,6 +1596,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidHonorTargetUserType(Integer androidHonorTargetUserType) {
                 this.androidHonorTargetUserType = androidHonorTargetUserType;
+                return this;
+            }
+
+            /**
+             * AndroidHuaweiLiveNotificationPayload.
+             */
+            public Builder androidHuaweiLiveNotificationPayload(String androidHuaweiLiveNotificationPayload) {
+                this.androidHuaweiLiveNotificationPayload = androidHuaweiLiveNotificationPayload;
                 return this;
             }
 
@@ -1997,6 +2031,14 @@ public class MassPushRequest extends Request {
              */
             public Builder harmonyInboxContent(String harmonyInboxContent) {
                 this.harmonyInboxContent = harmonyInboxContent;
+                return this;
+            }
+
+            /**
+             * HarmonyLiveViewPayload.
+             */
+            public Builder harmonyLiveViewPayload(String harmonyLiveViewPayload) {
+                this.harmonyLiveViewPayload = harmonyLiveViewPayload;
                 return this;
             }
 

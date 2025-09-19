@@ -56,6 +56,10 @@ public class PushRequest extends Request {
     private Integer androidHonorTargetUserType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidHuaweiLiveNotificationPayload")
+    private String androidHuaweiLiveNotificationPayload;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidHuaweiReceiptId")
     private String androidHuaweiReceiptId;
 
@@ -281,6 +285,10 @@ public class PushRequest extends Request {
     private String harmonyInboxContent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyLiveViewPayload")
+    private String harmonyLiveViewPayload;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HarmonyNotificationSlotType")
     private String harmonyNotificationSlotType;
 
@@ -485,6 +493,7 @@ public class PushRequest extends Request {
         this.androidBigTitle = builder.androidBigTitle;
         this.androidExtParameters = builder.androidExtParameters;
         this.androidHonorTargetUserType = builder.androidHonorTargetUserType;
+        this.androidHuaweiLiveNotificationPayload = builder.androidHuaweiLiveNotificationPayload;
         this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
         this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
         this.androidImageUrl = builder.androidImageUrl;
@@ -539,6 +548,7 @@ public class PushRequest extends Request {
         this.harmonyExtensionPush = builder.harmonyExtensionPush;
         this.harmonyImageUrl = builder.harmonyImageUrl;
         this.harmonyInboxContent = builder.harmonyInboxContent;
+        this.harmonyLiveViewPayload = builder.harmonyLiveViewPayload;
         this.harmonyNotificationSlotType = builder.harmonyNotificationSlotType;
         this.harmonyNotifyId = builder.harmonyNotifyId;
         this.harmonyReceiptId = builder.harmonyReceiptId;
@@ -662,6 +672,13 @@ public class PushRequest extends Request {
      */
     public Integer getAndroidHonorTargetUserType() {
         return this.androidHonorTargetUserType;
+    }
+
+    /**
+     * @return androidHuaweiLiveNotificationPayload
+     */
+    public String getAndroidHuaweiLiveNotificationPayload() {
+        return this.androidHuaweiLiveNotificationPayload;
     }
 
     /**
@@ -1043,6 +1060,13 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return harmonyLiveViewPayload
+     */
+    public String getHarmonyLiveViewPayload() {
+        return this.harmonyLiveViewPayload;
+    }
+
+    /**
      * @return harmonyNotificationSlotType
      */
     public String getHarmonyNotificationSlotType() {
@@ -1381,6 +1405,7 @@ public class PushRequest extends Request {
         private String androidBigTitle; 
         private String androidExtParameters; 
         private Integer androidHonorTargetUserType; 
+        private String androidHuaweiLiveNotificationPayload; 
         private String androidHuaweiReceiptId; 
         private Integer androidHuaweiTargetUserType; 
         private String androidImageUrl; 
@@ -1435,6 +1460,7 @@ public class PushRequest extends Request {
         private Boolean harmonyExtensionPush; 
         private String harmonyImageUrl; 
         private String harmonyInboxContent; 
+        private String harmonyLiveViewPayload; 
         private String harmonyNotificationSlotType; 
         private Integer harmonyNotifyId; 
         private String harmonyReceiptId; 
@@ -1498,6 +1524,7 @@ public class PushRequest extends Request {
             this.androidBigTitle = request.androidBigTitle;
             this.androidExtParameters = request.androidExtParameters;
             this.androidHonorTargetUserType = request.androidHonorTargetUserType;
+            this.androidHuaweiLiveNotificationPayload = request.androidHuaweiLiveNotificationPayload;
             this.androidHuaweiReceiptId = request.androidHuaweiReceiptId;
             this.androidHuaweiTargetUserType = request.androidHuaweiTargetUserType;
             this.androidImageUrl = request.androidImageUrl;
@@ -1552,6 +1579,7 @@ public class PushRequest extends Request {
             this.harmonyExtensionPush = request.harmonyExtensionPush;
             this.harmonyImageUrl = request.harmonyImageUrl;
             this.harmonyInboxContent = request.harmonyInboxContent;
+            this.harmonyLiveViewPayload = request.harmonyLiveViewPayload;
             this.harmonyNotificationSlotType = request.harmonyNotificationSlotType;
             this.harmonyNotifyId = request.harmonyNotifyId;
             this.harmonyReceiptId = request.harmonyReceiptId;
@@ -1679,6 +1707,15 @@ public class PushRequest extends Request {
         public Builder androidHonorTargetUserType(Integer androidHonorTargetUserType) {
             this.putQueryParameter("AndroidHonorTargetUserType", androidHonorTargetUserType);
             this.androidHonorTargetUserType = androidHonorTargetUserType;
+            return this;
+        }
+
+        /**
+         * AndroidHuaweiLiveNotificationPayload.
+         */
+        public Builder androidHuaweiLiveNotificationPayload(String androidHuaweiLiveNotificationPayload) {
+            this.putQueryParameter("AndroidHuaweiLiveNotificationPayload", androidHuaweiLiveNotificationPayload);
+            this.androidHuaweiLiveNotificationPayload = androidHuaweiLiveNotificationPayload;
             return this;
         }
 
@@ -2173,6 +2210,15 @@ public class PushRequest extends Request {
         public Builder harmonyInboxContent(String harmonyInboxContent) {
             this.putQueryParameter("HarmonyInboxContent", harmonyInboxContent);
             this.harmonyInboxContent = harmonyInboxContent;
+            return this;
+        }
+
+        /**
+         * HarmonyLiveViewPayload.
+         */
+        public Builder harmonyLiveViewPayload(String harmonyLiveViewPayload) {
+            this.putQueryParameter("HarmonyLiveViewPayload", harmonyLiveViewPayload);
+            this.harmonyLiveViewPayload = harmonyLiveViewPayload;
             return this;
         }
 
