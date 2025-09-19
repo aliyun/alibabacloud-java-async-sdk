@@ -84,6 +84,9 @@ public class GenMetaKnowledgeAssetRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);

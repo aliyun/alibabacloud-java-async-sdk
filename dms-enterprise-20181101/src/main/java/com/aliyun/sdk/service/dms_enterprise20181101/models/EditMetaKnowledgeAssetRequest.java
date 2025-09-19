@@ -142,6 +142,9 @@ public class EditMetaKnowledgeAssetRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder assetDescription(String assetDescription) {
             this.putQueryParameter("AssetDescription", assetDescription);
@@ -160,6 +163,9 @@ public class EditMetaKnowledgeAssetRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1930****</p>
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -169,6 +175,9 @@ public class EditMetaKnowledgeAssetRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -200,8 +200,14 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
      * <p>CreateDifyInstanceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppUuid")
+        private String appUuid;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
@@ -228,7 +234,9 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         private String zoneId;
 
         private Data(Builder builder) {
+            this.appUuid = builder.appUuid;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.replicas = builder.replicas;
             this.resourceQuota = builder.resourceQuota;
             this.securityGroupId = builder.securityGroupId;
@@ -248,10 +256,24 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return appUuid
+         */
+        public String getAppUuid() {
+            return this.appUuid;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         /**
@@ -311,7 +333,9 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appUuid; 
             private String instanceId; 
+            private String instanceName; 
             private Integer replicas; 
             private String resourceQuota; 
             private String securityGroupId; 
@@ -325,7 +349,9 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.appUuid = model.appUuid;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
                 this.replicas = model.replicas;
                 this.resourceQuota = model.resourceQuota;
                 this.securityGroupId = model.securityGroupId;
@@ -337,10 +363,26 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
             } 
 
             /**
+             * AppUuid.
+             */
+            public Builder appUuid(String appUuid) {
+                this.appUuid = appUuid;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
                 return this;
             }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTableKnowledgeInfoRequest} extends {@link RequestModel}
+ * {@link AnswerSqlSyntaxByMetaAgentRequest} extends {@link RequestModel}
  *
- * <p>GetTableKnowledgeInfoRequest</p>
+ * <p>AnswerSqlSyntaxByMetaAgentRequest</p>
  */
-public class GetTableKnowledgeInfoRequest extends Request {
+public class AnswerSqlSyntaxByMetaAgentRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -24,30 +24,29 @@ public class GetTableKnowledgeInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Integer dbId;
+    private String dbId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TableName")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String tableName;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private String model;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TableSchemaName")
-    private String tableSchemaName;
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
 
-    private GetTableKnowledgeInfoRequest(Builder builder) {
+    private AnswerSqlSyntaxByMetaAgentRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.dbId = builder.dbId;
-        this.tableName = builder.tableName;
-        this.tableSchemaName = builder.tableSchemaName;
+        this.model = builder.model;
+        this.query = builder.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetTableKnowledgeInfoRequest create() {
+    public static AnswerSqlSyntaxByMetaAgentRequest create() {
         return builder().build();
     }
 
@@ -66,40 +65,40 @@ public class GetTableKnowledgeInfoRequest extends Request {
     /**
      * @return dbId
      */
-    public Integer getDbId() {
+    public String getDbId() {
         return this.dbId;
     }
 
     /**
-     * @return tableName
+     * @return model
      */
-    public String getTableName() {
-        return this.tableName;
+    public String getModel() {
+        return this.model;
     }
 
     /**
-     * @return tableSchemaName
+     * @return query
      */
-    public String getTableSchemaName() {
-        return this.tableSchemaName;
+    public String getQuery() {
+        return this.query;
     }
 
-    public static final class Builder extends Request.Builder<GetTableKnowledgeInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<AnswerSqlSyntaxByMetaAgentRequest, Builder> {
         private String regionId; 
-        private Integer dbId; 
-        private String tableName; 
-        private String tableSchemaName; 
+        private String dbId; 
+        private String model; 
+        private String query; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetTableKnowledgeInfoRequest request) {
+        private Builder(AnswerSqlSyntaxByMetaAgentRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.dbId = request.dbId;
-            this.tableName = request.tableName;
-            this.tableSchemaName = request.tableSchemaName;
+            this.model = request.model;
+            this.query = request.query;
         } 
 
         /**
@@ -115,38 +114,35 @@ public class GetTableKnowledgeInfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>325</p>
+         * <p>1***</p>
          */
-        public Builder dbId(Integer dbId) {
+        public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
             this.dbId = dbId;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>table_name</p>
+         * Model.
          */
-        public Builder tableName(String tableName) {
-            this.putQueryParameter("TableName", tableName);
-            this.tableName = tableName;
+        public Builder model(String model) {
+            this.putQueryParameter("Model", model);
+            this.model = model;
             return this;
         }
 
         /**
-         * TableSchemaName.
+         * Query.
          */
-        public Builder tableSchemaName(String tableSchemaName) {
-            this.putQueryParameter("TableSchemaName", tableSchemaName);
-            this.tableSchemaName = tableSchemaName;
+        public Builder query(String query) {
+            this.putQueryParameter("Query", query);
+            this.query = query;
             return this;
         }
 
         @Override
-        public GetTableKnowledgeInfoRequest build() {
-            return new GetTableKnowledgeInfoRequest(this);
+        public AnswerSqlSyntaxByMetaAgentRequest build() {
+            return new AnswerSqlSyntaxByMetaAgentRequest(this);
         } 
 
     } 

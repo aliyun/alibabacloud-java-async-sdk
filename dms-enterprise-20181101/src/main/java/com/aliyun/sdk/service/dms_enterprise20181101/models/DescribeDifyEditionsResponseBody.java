@@ -206,9 +206,13 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enterprise")
         private java.util.List<String> enterprise;
 
+        @com.aliyun.core.annotation.NameInMap("OpenCommunity")
+        private java.util.List<String> openCommunity;
+
         private Data(Builder builder) {
             this.community = builder.community;
             this.enterprise = builder.enterprise;
+            this.openCommunity = builder.openCommunity;
         }
 
         public static Builder builder() {
@@ -233,9 +237,17 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
             return this.enterprise;
         }
 
+        /**
+         * @return openCommunity
+         */
+        public java.util.List<String> getOpenCommunity() {
+            return this.openCommunity;
+        }
+
         public static final class Builder {
             private java.util.List<String> community; 
             private java.util.List<String> enterprise; 
+            private java.util.List<String> openCommunity; 
 
             private Builder() {
             } 
@@ -243,6 +255,7 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.community = model.community;
                 this.enterprise = model.enterprise;
+                this.openCommunity = model.openCommunity;
             } 
 
             /**
@@ -258,6 +271,14 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
              */
             public Builder enterprise(java.util.List<String> enterprise) {
                 this.enterprise = enterprise;
+                return this;
+            }
+
+            /**
+             * OpenCommunity.
+             */
+            public Builder openCommunity(java.util.List<String> openCommunity) {
+                this.openCommunity = openCommunity;
                 return this;
             }
 

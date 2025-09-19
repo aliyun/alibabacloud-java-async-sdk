@@ -91,6 +91,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AnalyzeSQLLineageResponse> analyzeSQLLineage(AnalyzeSQLLineageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * @param request the request parameters of AnswerSqlSyntaxByMetaAgent  AnswerSqlSyntaxByMetaAgentRequest
+     * @return AnswerSqlSyntaxByMetaAgentResponse
+     */
+    CompletableFuture<AnswerSqlSyntaxByMetaAgentResponse> answerSqlSyntaxByMetaAgent(AnswerSqlSyntaxByMetaAgentRequest request);
+
+    /**
      * @param request the request parameters of ApproveOrder  ApproveOrderRequest
      * @return ApproveOrderResponse
      */
@@ -725,6 +734,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteStructSyncResponse
      */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * @param request the request parameters of FixSqlByMetaAgent  FixSqlByMetaAgentRequest
+     * @return FixSqlByMetaAgentResponse
+     */
+    CompletableFuture<FixSqlByMetaAgentResponse> fixSqlByMetaAgent(FixSqlByMetaAgentRequest request);
 
     /**
      * @param request the request parameters of GenMetaKnowledgeAsset  GenMetaKnowledgeAssetRequest
@@ -1729,6 +1747,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OfflineTaskFlowResponse
      */
     CompletableFuture<OfflineTaskFlowResponse> offlineTaskFlow(OfflineTaskFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * @param request the request parameters of OptimizeSqlByMetaAgent  OptimizeSqlByMetaAgentRequest
+     * @return OptimizeSqlByMetaAgentResponse
+     */
+    CompletableFuture<OptimizeSqlByMetaAgentResponse> optimizeSqlByMetaAgent(OptimizeSqlByMetaAgentRequest request);
 
     /**
      * <b>description</b> :

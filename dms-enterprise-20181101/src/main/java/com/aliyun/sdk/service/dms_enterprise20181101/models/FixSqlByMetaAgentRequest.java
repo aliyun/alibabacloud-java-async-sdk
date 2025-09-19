@@ -1,0 +1,200 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link FixSqlByMetaAgentRequest} extends {@link RequestModel}
+ *
+ * <p>FixSqlByMetaAgentRequest</p>
+ */
+public class FixSqlByMetaAgentRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String dbId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Error")
+    private String error;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private String model;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sql")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sql;
+
+    private FixSqlByMetaAgentRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.dbId = builder.dbId;
+        this.error = builder.error;
+        this.model = builder.model;
+        this.query = builder.query;
+        this.sql = builder.sql;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static FixSqlByMetaAgentRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return dbId
+     */
+    public String getDbId() {
+        return this.dbId;
+    }
+
+    /**
+     * @return error
+     */
+    public String getError() {
+        return this.error;
+    }
+
+    /**
+     * @return model
+     */
+    public String getModel() {
+        return this.model;
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
+     * @return sql
+     */
+    public String getSql() {
+        return this.sql;
+    }
+
+    public static final class Builder extends Request.Builder<FixSqlByMetaAgentRequest, Builder> {
+        private String regionId; 
+        private String dbId; 
+        private String error; 
+        private String model; 
+        private String query; 
+        private String sql; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(FixSqlByMetaAgentRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.dbId = request.dbId;
+            this.error = request.error;
+            this.model = request.model;
+            this.query = request.query;
+            this.sql = request.sql;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***</p>
+         */
+        public Builder dbId(String dbId) {
+            this.putQueryParameter("DbId", dbId);
+            this.dbId = dbId;
+            return this;
+        }
+
+        /**
+         * Error.
+         */
+        public Builder error(String error) {
+            this.putQueryParameter("Error", error);
+            this.error = error;
+            return this;
+        }
+
+        /**
+         * Model.
+         */
+        public Builder model(String model) {
+            this.putQueryParameter("Model", model);
+            this.model = model;
+            return this;
+        }
+
+        /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("Query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from table where col = 1</p>
+         */
+        public Builder sql(String sql) {
+            this.putQueryParameter("Sql", sql);
+            this.sql = sql;
+            return this;
+        }
+
+        @Override
+        public FixSqlByMetaAgentRequest build() {
+            return new FixSqlByMetaAgentRequest(this);
+        } 
+
+    } 
+
+}

@@ -207,6 +207,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * @param request the request parameters of AnswerSqlSyntaxByMetaAgent  AnswerSqlSyntaxByMetaAgentRequest
+     * @return AnswerSqlSyntaxByMetaAgentResponse
+     */
+    @Override
+    public CompletableFuture<AnswerSqlSyntaxByMetaAgentResponse> answerSqlSyntaxByMetaAgent(AnswerSqlSyntaxByMetaAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AnswerSqlSyntaxByMetaAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnswerSqlSyntaxByMetaAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AnswerSqlSyntaxByMetaAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ApproveOrder  ApproveOrderRequest
      * @return ApproveOrderResponse
      */
@@ -1773,6 +1794,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ExecuteStructSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * @param request the request parameters of FixSqlByMetaAgent  FixSqlByMetaAgentRequest
+     * @return FixSqlByMetaAgentResponse
+     */
+    @Override
+    public CompletableFuture<FixSqlByMetaAgentResponse> fixSqlByMetaAgent(FixSqlByMetaAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FixSqlByMetaAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FixSqlByMetaAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FixSqlByMetaAgentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4601,6 +4643,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OfflineTaskFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * @param request the request parameters of OptimizeSqlByMetaAgent  OptimizeSqlByMetaAgentRequest
+     * @return OptimizeSqlByMetaAgentResponse
+     */
+    @Override
+    public CompletableFuture<OptimizeSqlByMetaAgentResponse> optimizeSqlByMetaAgent(OptimizeSqlByMetaAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OptimizeSqlByMetaAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OptimizeSqlByMetaAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OptimizeSqlByMetaAgentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

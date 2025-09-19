@@ -260,6 +260,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("InternetUrl")
         private String internetUrl;
 
@@ -291,6 +294,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             this.enterpriseInternetUrl = builder.enterpriseInternetUrl;
             this.enterpriseIntranetUrl = builder.enterpriseIntranetUrl;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.internetUrl = builder.internetUrl;
             this.intranetUrl = builder.intranetUrl;
             this.majorVersion = builder.majorVersion;
@@ -349,6 +353,13 @@ public class ListDifyInstancesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         /**
@@ -414,6 +425,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             private String enterpriseInternetUrl; 
             private String enterpriseIntranetUrl; 
             private String instanceId; 
+            private String instanceName; 
             private String internetUrl; 
             private String intranetUrl; 
             private String majorVersion; 
@@ -433,6 +445,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
                 this.enterpriseInternetUrl = model.enterpriseInternetUrl;
                 this.enterpriseIntranetUrl = model.enterpriseIntranetUrl;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
                 this.internetUrl = model.internetUrl;
                 this.intranetUrl = model.intranetUrl;
                 this.majorVersion = model.majorVersion;
@@ -488,6 +501,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
                 return this;
             }
 
