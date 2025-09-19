@@ -1,3 +1,6 @@
+2025-09-19 Version: 2.0.6
+- Generated java-async 2023-02-28 for VpcIpam.
+
 2025-07-02 Version: 2.0.4
 - Generated java-async 2023-02-28 for VpcIpam.
 

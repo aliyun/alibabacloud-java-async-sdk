@@ -174,7 +174,7 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the managed region of the IPAM pool.</p>
+         * <p>The ID of the hosted region of the IPAM pool.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 

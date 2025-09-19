@@ -59,6 +59,10 @@ public class CreateIpamPoolRequest extends Request {
     private String ipamScopeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+    private String ipv6Isp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -107,6 +111,7 @@ public class CreateIpamPoolRequest extends Request {
         this.ipamPoolDescription = builder.ipamPoolDescription;
         this.ipamPoolName = builder.ipamPoolName;
         this.ipamScopeId = builder.ipamScopeId;
+        this.ipv6Isp = builder.ipv6Isp;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.poolRegionId = builder.poolRegionId;
@@ -202,6 +207,13 @@ public class CreateIpamPoolRequest extends Request {
     }
 
     /**
+     * @return ipv6Isp
+     */
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -275,6 +287,7 @@ public class CreateIpamPoolRequest extends Request {
         private String ipamPoolDescription; 
         private String ipamPoolName; 
         private String ipamScopeId; 
+        private String ipv6Isp; 
         private String ownerAccount; 
         private Long ownerId; 
         private String poolRegionId; 
@@ -301,6 +314,7 @@ public class CreateIpamPoolRequest extends Request {
             this.ipamPoolDescription = request.ipamPoolDescription;
             this.ipamPoolName = request.ipamPoolName;
             this.ipamScopeId = request.ipamScopeId;
+            this.ipv6Isp = request.ipv6Isp;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.poolRegionId = request.poolRegionId;
@@ -313,8 +327,10 @@ public class CreateIpamPoolRequest extends Request {
         } 
 
         /**
-         * <p>The default network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * <p>The default network mask assigned by the IPAM address pool.  </p>
+         * <blockquote>
+         * <p>The IPv4 network mask value range is 0 to 32 bits, and the IPv6 network mask value range is 0 to 128 bits.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -326,8 +342,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * <p>The maximum network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * <p>The maximum network mask assigned by the IPAM address pool.  </p>
+         * <blockquote>
+         * <p>The IPv4 network mask value range is <strong>0 to 32</strong> bits, and the IPv6 network mask value range is <strong>0 to 128</strong> bits.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -339,8 +357,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * <p>The minimum network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * <p>The minimum network mask assigned by the IPAM address pool.  </p>
+         * <blockquote>
+         * <p>The IPv4 network mask value range is <strong>0 to 32</strong> bits, and the IPv6 network mask value range is <strong>0 to 128</strong> bits.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -395,7 +415,11 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * <p>The IP version. Only <strong>IPv4</strong> is supported.</p>
+         * <p>IP address protocol version. Values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong>: IPv4 protocol.</li>
+         * <li><strong>IPv6</strong>: IPv6 protocol.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -407,8 +431,8 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * <p>The description of the IPAM pool.</p>
-         * <p>It must be 2 to 256 characters in length. It must start with a letter, but cannot start with a <code>http://</code> or <code>https://</code>. This parameter is empty by default.</p>
+         * <p>Description of the IPAM address pool. 
+         * The length should be between 1 to 256 characters, and it must start with an uppercase or lowercase English letter or a Chinese character, but cannot begin with <code>http://</code> or <code>https://</code>. If left blank, the default value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>test description</p>
@@ -442,6 +466,27 @@ public class CreateIpamPoolRequest extends Request {
         public Builder ipamScopeId(String ipamScopeId) {
             this.putQueryParameter("IpamScopeId", ipamScopeId);
             this.ipamScopeId = ipamScopeId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default)</li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaTelecom</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
+        public Builder ipv6Isp(String ipv6Isp) {
+            this.putQueryParameter("Ipv6Isp", ipv6Isp);
+            this.ipv6Isp = ipv6Isp;
             return this;
         }
 

@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddIpamPoolCidrResponseBody</p>
  */
 public class AddIpamPoolCidrResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Cidr")
+    private String cidr;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddIpamPoolCidrResponseBody(Builder builder) {
+        this.cidr = builder.cidr;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class AddIpamPoolCidrResponseBody extends TeaModel {
     }
 
     /**
+     * @return cidr
+     */
+    public String getCidr() {
+        return this.cidr;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,27 @@ public class AddIpamPoolCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String cidr; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(AddIpamPoolCidrResponseBody model) {
+            this.cidr = model.cidr;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * <p>The successfully provisioned CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
+        public Builder cidr(String cidr) {
+            this.cidr = cidr;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

@@ -291,6 +291,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoImport")
         private Boolean autoImport;
 
+        @com.aliyun.core.annotation.NameInMap("Cidrs")
+        private java.util.List<String> cidrs;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -320,6 +323,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IpamScopeType")
         private String ipamScopeType;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+        private String ipv6Isp;
 
         @com.aliyun.core.annotation.NameInMap("IsShared")
         private Boolean isShared;
@@ -353,6 +359,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             this.allocationMaxCidrMask = builder.allocationMaxCidrMask;
             this.allocationMinCidrMask = builder.allocationMinCidrMask;
             this.autoImport = builder.autoImport;
+            this.cidrs = builder.cidrs;
             this.createTime = builder.createTime;
             this.hasSubPool = builder.hasSubPool;
             this.ipVersion = builder.ipVersion;
@@ -363,6 +370,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             this.ipamRegionId = builder.ipamRegionId;
             this.ipamScopeId = builder.ipamScopeId;
             this.ipamScopeType = builder.ipamScopeType;
+            this.ipv6Isp = builder.ipv6Isp;
             this.isShared = builder.isShared;
             this.ownerId = builder.ownerId;
             this.poolDepth = builder.poolDepth;
@@ -408,6 +416,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
          */
         public Boolean getAutoImport() {
             return this.autoImport;
+        }
+
+        /**
+         * @return cidrs
+         */
+        public java.util.List<String> getCidrs() {
+            return this.cidrs;
         }
 
         /**
@@ -481,6 +496,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6Isp
+         */
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+        /**
          * @return isShared
          */
         public Boolean getIsShared() {
@@ -548,6 +570,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private Integer allocationMaxCidrMask; 
             private Integer allocationMinCidrMask; 
             private Boolean autoImport; 
+            private java.util.List<String> cidrs; 
             private String createTime; 
             private Boolean hasSubPool; 
             private String ipVersion; 
@@ -558,6 +581,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private String ipamRegionId; 
             private String ipamScopeId; 
             private String ipamScopeType; 
+            private String ipv6Isp; 
             private Boolean isShared; 
             private Long ownerId; 
             private Integer poolDepth; 
@@ -576,6 +600,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
                 this.allocationMaxCidrMask = model.allocationMaxCidrMask;
                 this.allocationMinCidrMask = model.allocationMinCidrMask;
                 this.autoImport = model.autoImport;
+                this.cidrs = model.cidrs;
                 this.createTime = model.createTime;
                 this.hasSubPool = model.hasSubPool;
                 this.ipVersion = model.ipVersion;
@@ -586,6 +611,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
                 this.ipamRegionId = model.ipamRegionId;
                 this.ipamScopeId = model.ipamScopeId;
                 this.ipamScopeType = model.ipamScopeType;
+                this.ipv6Isp = model.ipv6Isp;
                 this.isShared = model.isShared;
                 this.ownerId = model.ownerId;
                 this.poolDepth = model.poolDepth;
@@ -641,6 +667,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
              */
             public Builder autoImport(Boolean autoImport) {
                 this.autoImport = autoImport;
+                return this;
+            }
+
+            /**
+             * Cidrs.
+             */
+            public Builder cidrs(java.util.List<String> cidrs) {
+                this.cidrs = cidrs;
                 return this;
             }
 
@@ -759,6 +793,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
              */
             public Builder ipamScopeType(String ipamScopeType) {
                 this.ipamScopeType = ipamScopeType;
+                return this;
+            }
+
+            /**
+             * Ipv6Isp.
+             */
+            public Builder ipv6Isp(String ipv6Isp) {
+                this.ipv6Isp = ipv6Isp;
                 return this;
             }
 

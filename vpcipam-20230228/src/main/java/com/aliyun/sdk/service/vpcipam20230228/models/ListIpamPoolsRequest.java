@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListIpamPoolsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolIds")
     private java.util.List<String> ipamPoolIds;
 
@@ -28,6 +32,10 @@ public class ListIpamPoolsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamScopeId")
     private String ipamScopeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+    private String ipv6Isp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsShared")
@@ -81,9 +89,11 @@ public class ListIpamPoolsRequest extends Request {
 
     private ListIpamPoolsRequest(Builder builder) {
         super(builder);
+        this.ipVersion = builder.ipVersion;
         this.ipamPoolIds = builder.ipamPoolIds;
         this.ipamPoolName = builder.ipamPoolName;
         this.ipamScopeId = builder.ipamScopeId;
+        this.ipv6Isp = builder.ipv6Isp;
         this.isShared = builder.isShared;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -112,6 +122,13 @@ public class ListIpamPoolsRequest extends Request {
     }
 
     /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
+    /**
      * @return ipamPoolIds
      */
     public java.util.List<String> getIpamPoolIds() {
@@ -130,6 +147,13 @@ public class ListIpamPoolsRequest extends Request {
      */
     public String getIpamScopeId() {
         return this.ipamScopeId;
+    }
+
+    /**
+     * @return ipv6Isp
+     */
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
     }
 
     /**
@@ -217,9 +241,11 @@ public class ListIpamPoolsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListIpamPoolsRequest, Builder> {
+        private String ipVersion; 
         private java.util.List<String> ipamPoolIds; 
         private String ipamPoolName; 
         private String ipamScopeId; 
+        private String ipv6Isp; 
         private Boolean isShared; 
         private Integer maxResults; 
         private String nextToken; 
@@ -239,9 +265,11 @@ public class ListIpamPoolsRequest extends Request {
 
         private Builder(ListIpamPoolsRequest request) {
             super(request);
+            this.ipVersion = request.ipVersion;
             this.ipamPoolIds = request.ipamPoolIds;
             this.ipamPoolName = request.ipamPoolName;
             this.ipamScopeId = request.ipamScopeId;
+            this.ipv6Isp = request.ipv6Isp;
             this.isShared = request.isShared;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -255,6 +283,15 @@ public class ListIpamPoolsRequest extends Request {
             this.sourceIpamPoolId = request.sourceIpamPoolId;
             this.tags = request.tags;
         } 
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
 
         /**
          * <p>The IDs of IPAM pools. Valid values of N: 1 to 100. A maximum of 100 IPAM pools can be queried at a time.</p>
@@ -287,6 +324,15 @@ public class ListIpamPoolsRequest extends Request {
         public Builder ipamScopeId(String ipamScopeId) {
             this.putQueryParameter("IpamScopeId", ipamScopeId);
             this.ipamScopeId = ipamScopeId;
+            return this;
+        }
+
+        /**
+         * Ipv6Isp.
+         */
+        public Builder ipv6Isp(String ipv6Isp) {
+            this.putQueryParameter("Ipv6Isp", ipv6Isp);
+            this.ipv6Isp = ipv6Isp;
             return this;
         }
 

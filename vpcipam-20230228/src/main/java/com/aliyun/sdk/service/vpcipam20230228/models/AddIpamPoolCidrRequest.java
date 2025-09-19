@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddIpamPoolCidrRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cidr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cidr;
 
     @com.aliyun.core.annotation.Query
@@ -36,6 +35,10 @@ public class AddIpamPoolCidrRequest extends Request {
     private String ipamPoolId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetmaskLength")
+    private Integer netmaskLength;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -46,6 +49,7 @@ public class AddIpamPoolCidrRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipamPoolId = builder.ipamPoolId;
+        this.netmaskLength = builder.netmaskLength;
         this.regionId = builder.regionId;
     }
 
@@ -91,6 +95,13 @@ public class AddIpamPoolCidrRequest extends Request {
     }
 
     /**
+     * @return netmaskLength
+     */
+    public Integer getNetmaskLength() {
+        return this.netmaskLength;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -102,6 +113,7 @@ public class AddIpamPoolCidrRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String ipamPoolId; 
+        private Integer netmaskLength; 
         private String regionId; 
 
         private Builder() {
@@ -114,15 +126,15 @@ public class AddIpamPoolCidrRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipamPoolId = request.ipamPoolId;
+            this.netmaskLength = request.netmaskLength;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The CIDR block that you want to provision.</p>
+         * <p>The CIDR block to be provisioned. </p>
          * <blockquote>
-         * <p> Only IPv4 CIDR blocks are supported.</p>
+         * <p>For private top-level pools, provisioning can only be done by entering a CIDR block.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
@@ -174,6 +186,21 @@ public class AddIpamPoolCidrRequest extends Request {
         public Builder ipamPoolId(String ipamPoolId) {
             this.putQueryParameter("IpamPoolId", ipamPoolId);
             this.ipamPoolId = ipamPoolId;
+            return this;
+        }
+
+        /**
+         * <p>Provision CIDR address segments through a mask method.  </p>
+         * <blockquote>
+         * <p>The public IPv6 top-level pool only supports provisioning via a mask.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
+        public Builder netmaskLength(Integer netmaskLength) {
+            this.putQueryParameter("NetmaskLength", netmaskLength);
+            this.netmaskLength = netmaskLength;
             return this;
         }
 
