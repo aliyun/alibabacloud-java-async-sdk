@@ -154,6 +154,18 @@ public class PushRequest extends Request {
     private String androidOpenUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateContentParameters")
+    private java.util.Map<String, String> androidOppoPrivateContentParameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateMsgTemplateId")
+    private String androidOppoPrivateMsgTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateTitleParameters")
+    private java.util.Map<String, String> androidOppoPrivateTitleParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidPopupActivity")
     private String androidPopupActivity;
 
@@ -375,18 +387,6 @@ public class PushRequest extends Request {
     private Boolean trim;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("androidOppoPrivateContentParameters")
-    private java.util.Map<String, String> androidOppoPrivateContentParameters;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("androidOppoPrivateMsgTemplateId")
-    private String androidOppoPrivateMsgTemplateId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("androidOppoPrivateTitleParameters")
-    private java.util.Map<String, String> androidOppoPrivateTitleParameters;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("iOSApnsEnv")
     private String iOSApnsEnv;
 
@@ -509,6 +509,9 @@ public class PushRequest extends Request {
         this.androidNotifyType = builder.androidNotifyType;
         this.androidOpenType = builder.androidOpenType;
         this.androidOpenUrl = builder.androidOpenUrl;
+        this.androidOppoPrivateContentParameters = builder.androidOppoPrivateContentParameters;
+        this.androidOppoPrivateMsgTemplateId = builder.androidOppoPrivateMsgTemplateId;
+        this.androidOppoPrivateTitleParameters = builder.androidOppoPrivateTitleParameters;
         this.androidPopupActivity = builder.androidPopupActivity;
         this.androidPopupBody = builder.androidPopupBody;
         this.androidPopupTitle = builder.androidPopupTitle;
@@ -561,9 +564,6 @@ public class PushRequest extends Request {
         this.targetValue = builder.targetValue;
         this.title = builder.title;
         this.trim = builder.trim;
-        this.androidOppoPrivateContentParameters = builder.androidOppoPrivateContentParameters;
-        this.androidOppoPrivateMsgTemplateId = builder.androidOppoPrivateMsgTemplateId;
-        this.androidOppoPrivateTitleParameters = builder.androidOppoPrivateTitleParameters;
         this.iOSApnsEnv = builder.iOSApnsEnv;
         this.iOSBadge = builder.iOSBadge;
         this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
@@ -830,6 +830,27 @@ public class PushRequest extends Request {
      */
     public String getAndroidOpenUrl() {
         return this.androidOpenUrl;
+    }
+
+    /**
+     * @return androidOppoPrivateContentParameters
+     */
+    public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
+        return this.androidOppoPrivateContentParameters;
+    }
+
+    /**
+     * @return androidOppoPrivateMsgTemplateId
+     */
+    public String getAndroidOppoPrivateMsgTemplateId() {
+        return this.androidOppoPrivateMsgTemplateId;
+    }
+
+    /**
+     * @return androidOppoPrivateTitleParameters
+     */
+    public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
+        return this.androidOppoPrivateTitleParameters;
     }
 
     /**
@@ -1197,27 +1218,6 @@ public class PushRequest extends Request {
     }
 
     /**
-     * @return androidOppoPrivateContentParameters
-     */
-    public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
-        return this.androidOppoPrivateContentParameters;
-    }
-
-    /**
-     * @return androidOppoPrivateMsgTemplateId
-     */
-    public String getAndroidOppoPrivateMsgTemplateId() {
-        return this.androidOppoPrivateMsgTemplateId;
-    }
-
-    /**
-     * @return androidOppoPrivateTitleParameters
-     */
-    public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
-        return this.androidOppoPrivateTitleParameters;
-    }
-
-    /**
      * @return iOSApnsEnv
      */
     public String getIOSApnsEnv() {
@@ -1405,6 +1405,9 @@ public class PushRequest extends Request {
         private String androidNotifyType; 
         private String androidOpenType; 
         private String androidOpenUrl; 
+        private java.util.Map<String, String> androidOppoPrivateContentParameters; 
+        private String androidOppoPrivateMsgTemplateId; 
+        private java.util.Map<String, String> androidOppoPrivateTitleParameters; 
         private String androidPopupActivity; 
         private String androidPopupBody; 
         private String androidPopupTitle; 
@@ -1457,9 +1460,6 @@ public class PushRequest extends Request {
         private String targetValue; 
         private String title; 
         private Boolean trim; 
-        private java.util.Map<String, String> androidOppoPrivateContentParameters; 
-        private String androidOppoPrivateMsgTemplateId; 
-        private java.util.Map<String, String> androidOppoPrivateTitleParameters; 
         private String iOSApnsEnv; 
         private Integer iOSBadge; 
         private Boolean iOSBadgeAutoIncrement; 
@@ -1522,6 +1522,9 @@ public class PushRequest extends Request {
             this.androidNotifyType = request.androidNotifyType;
             this.androidOpenType = request.androidOpenType;
             this.androidOpenUrl = request.androidOpenUrl;
+            this.androidOppoPrivateContentParameters = request.androidOppoPrivateContentParameters;
+            this.androidOppoPrivateMsgTemplateId = request.androidOppoPrivateMsgTemplateId;
+            this.androidOppoPrivateTitleParameters = request.androidOppoPrivateTitleParameters;
             this.androidPopupActivity = request.androidPopupActivity;
             this.androidPopupBody = request.androidPopupBody;
             this.androidPopupTitle = request.androidPopupTitle;
@@ -1574,9 +1577,6 @@ public class PushRequest extends Request {
             this.targetValue = request.targetValue;
             this.title = request.title;
             this.trim = request.trim;
-            this.androidOppoPrivateContentParameters = request.androidOppoPrivateContentParameters;
-            this.androidOppoPrivateMsgTemplateId = request.androidOppoPrivateMsgTemplateId;
-            this.androidOppoPrivateTitleParameters = request.androidOppoPrivateTitleParameters;
             this.iOSApnsEnv = request.iOSApnsEnv;
             this.iOSBadge = request.iOSBadge;
             this.iOSBadgeAutoIncrement = request.iOSBadgeAutoIncrement;
@@ -1895,6 +1895,35 @@ public class PushRequest extends Request {
         public Builder androidOpenUrl(String androidOpenUrl) {
             this.putQueryParameter("AndroidOpenUrl", androidOpenUrl);
             this.androidOpenUrl = androidOpenUrl;
+            return this;
+        }
+
+        /**
+         * AndroidOppoPrivateContentParameters.
+         */
+        public Builder androidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
+            String androidOppoPrivateContentParametersShrink = shrink(androidOppoPrivateContentParameters, "AndroidOppoPrivateContentParameters", "json");
+            this.putQueryParameter("AndroidOppoPrivateContentParameters", androidOppoPrivateContentParametersShrink);
+            this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
+            return this;
+        }
+
+        /**
+         * AndroidOppoPrivateMsgTemplateId.
+         */
+        public Builder androidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+            this.putQueryParameter("AndroidOppoPrivateMsgTemplateId", androidOppoPrivateMsgTemplateId);
+            this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
+            return this;
+        }
+
+        /**
+         * AndroidOppoPrivateTitleParameters.
+         */
+        public Builder androidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
+            String androidOppoPrivateTitleParametersShrink = shrink(androidOppoPrivateTitleParameters, "AndroidOppoPrivateTitleParameters", "json");
+            this.putQueryParameter("AndroidOppoPrivateTitleParameters", androidOppoPrivateTitleParametersShrink);
+            this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
             return this;
         }
 
@@ -2378,35 +2407,6 @@ public class PushRequest extends Request {
         public Builder trim(Boolean trim) {
             this.putQueryParameter("Trim", trim);
             this.trim = trim;
-            return this;
-        }
-
-        /**
-         * androidOppoPrivateContentParameters.
-         */
-        public Builder androidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
-            String androidOppoPrivateContentParametersShrink = shrink(androidOppoPrivateContentParameters, "androidOppoPrivateContentParameters", "json");
-            this.putQueryParameter("androidOppoPrivateContentParameters", androidOppoPrivateContentParametersShrink);
-            this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
-            return this;
-        }
-
-        /**
-         * androidOppoPrivateMsgTemplateId.
-         */
-        public Builder androidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
-            this.putQueryParameter("androidOppoPrivateMsgTemplateId", androidOppoPrivateMsgTemplateId);
-            this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
-            return this;
-        }
-
-        /**
-         * androidOppoPrivateTitleParameters.
-         */
-        public Builder androidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
-            String androidOppoPrivateTitleParametersShrink = shrink(androidOppoPrivateTitleParameters, "androidOppoPrivateTitleParameters", "json");
-            this.putQueryParameter("androidOppoPrivateTitleParameters", androidOppoPrivateTitleParametersShrink);
-            this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
             return this;
         }
 

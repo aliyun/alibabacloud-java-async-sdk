@@ -232,6 +232,15 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidOpenUrl")
         private String androidOpenUrl;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateContentParameters")
+        private java.util.Map<String, String> androidOppoPrivateContentParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateMsgTemplateId")
+        private String androidOppoPrivateMsgTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateTitleParameters")
+        private java.util.Map<String, String> androidOppoPrivateTitleParameters;
+
         @com.aliyun.core.annotation.NameInMap("AndroidPopupActivity")
         private String androidPopupActivity;
 
@@ -377,15 +386,6 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Trim")
         private Boolean trim;
 
-        @com.aliyun.core.annotation.NameInMap("androidOppoPrivateContentParameters")
-        private java.util.Map<String, String> androidOppoPrivateContentParameters;
-
-        @com.aliyun.core.annotation.NameInMap("androidOppoPrivateMsgTemplateId")
-        private String androidOppoPrivateMsgTemplateId;
-
-        @com.aliyun.core.annotation.NameInMap("androidOppoPrivateTitleParameters")
-        private java.util.Map<String, String> androidOppoPrivateTitleParameters;
-
         @com.aliyun.core.annotation.NameInMap("iOSApnsEnv")
         private String iOSApnsEnv;
 
@@ -486,6 +486,9 @@ public class MassPushRequest extends Request {
             this.androidNotifyType = builder.androidNotifyType;
             this.androidOpenType = builder.androidOpenType;
             this.androidOpenUrl = builder.androidOpenUrl;
+            this.androidOppoPrivateContentParameters = builder.androidOppoPrivateContentParameters;
+            this.androidOppoPrivateMsgTemplateId = builder.androidOppoPrivateMsgTemplateId;
+            this.androidOppoPrivateTitleParameters = builder.androidOppoPrivateTitleParameters;
             this.androidPopupActivity = builder.androidPopupActivity;
             this.androidPopupBody = builder.androidPopupBody;
             this.androidPopupTitle = builder.androidPopupTitle;
@@ -531,9 +534,6 @@ public class MassPushRequest extends Request {
             this.targetValue = builder.targetValue;
             this.title = builder.title;
             this.trim = builder.trim;
-            this.androidOppoPrivateContentParameters = builder.androidOppoPrivateContentParameters;
-            this.androidOppoPrivateMsgTemplateId = builder.androidOppoPrivateMsgTemplateId;
-            this.androidOppoPrivateTitleParameters = builder.androidOppoPrivateTitleParameters;
             this.iOSApnsEnv = builder.iOSApnsEnv;
             this.iOSBadge = builder.iOSBadge;
             this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
@@ -795,6 +795,27 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidOpenUrl() {
             return this.androidOpenUrl;
+        }
+
+        /**
+         * @return androidOppoPrivateContentParameters
+         */
+        public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
+            return this.androidOppoPrivateContentParameters;
+        }
+
+        /**
+         * @return androidOppoPrivateMsgTemplateId
+         */
+        public String getAndroidOppoPrivateMsgTemplateId() {
+            return this.androidOppoPrivateMsgTemplateId;
+        }
+
+        /**
+         * @return androidOppoPrivateTitleParameters
+         */
+        public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
+            return this.androidOppoPrivateTitleParameters;
         }
 
         /**
@@ -1113,27 +1134,6 @@ public class MassPushRequest extends Request {
         }
 
         /**
-         * @return androidOppoPrivateContentParameters
-         */
-        public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
-            return this.androidOppoPrivateContentParameters;
-        }
-
-        /**
-         * @return androidOppoPrivateMsgTemplateId
-         */
-        public String getAndroidOppoPrivateMsgTemplateId() {
-            return this.androidOppoPrivateMsgTemplateId;
-        }
-
-        /**
-         * @return androidOppoPrivateTitleParameters
-         */
-        public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
-            return this.androidOppoPrivateTitleParameters;
-        }
-
-        /**
          * @return iOSApnsEnv
          */
         public String getIOSApnsEnv() {
@@ -1321,6 +1321,9 @@ public class MassPushRequest extends Request {
             private String androidNotifyType; 
             private String androidOpenType; 
             private String androidOpenUrl; 
+            private java.util.Map<String, String> androidOppoPrivateContentParameters; 
+            private String androidOppoPrivateMsgTemplateId; 
+            private java.util.Map<String, String> androidOppoPrivateTitleParameters; 
             private String androidPopupActivity; 
             private String androidPopupBody; 
             private String androidPopupTitle; 
@@ -1366,9 +1369,6 @@ public class MassPushRequest extends Request {
             private String targetValue; 
             private String title; 
             private Boolean trim; 
-            private java.util.Map<String, String> androidOppoPrivateContentParameters; 
-            private String androidOppoPrivateMsgTemplateId; 
-            private java.util.Map<String, String> androidOppoPrivateTitleParameters; 
             private String iOSApnsEnv; 
             private Integer iOSBadge; 
             private Boolean iOSBadgeAutoIncrement; 
@@ -1429,6 +1429,9 @@ public class MassPushRequest extends Request {
                 this.androidNotifyType = model.androidNotifyType;
                 this.androidOpenType = model.androidOpenType;
                 this.androidOpenUrl = model.androidOpenUrl;
+                this.androidOppoPrivateContentParameters = model.androidOppoPrivateContentParameters;
+                this.androidOppoPrivateMsgTemplateId = model.androidOppoPrivateMsgTemplateId;
+                this.androidOppoPrivateTitleParameters = model.androidOppoPrivateTitleParameters;
                 this.androidPopupActivity = model.androidPopupActivity;
                 this.androidPopupBody = model.androidPopupBody;
                 this.androidPopupTitle = model.androidPopupTitle;
@@ -1474,9 +1477,6 @@ public class MassPushRequest extends Request {
                 this.targetValue = model.targetValue;
                 this.title = model.title;
                 this.trim = model.trim;
-                this.androidOppoPrivateContentParameters = model.androidOppoPrivateContentParameters;
-                this.androidOppoPrivateMsgTemplateId = model.androidOppoPrivateMsgTemplateId;
-                this.androidOppoPrivateTitleParameters = model.androidOppoPrivateTitleParameters;
                 this.iOSApnsEnv = model.iOSApnsEnv;
                 this.iOSBadge = model.iOSBadge;
                 this.iOSBadgeAutoIncrement = model.iOSBadgeAutoIncrement;
@@ -1762,6 +1762,30 @@ public class MassPushRequest extends Request {
              */
             public Builder androidOpenUrl(String androidOpenUrl) {
                 this.androidOpenUrl = androidOpenUrl;
+                return this;
+            }
+
+            /**
+             * AndroidOppoPrivateContentParameters.
+             */
+            public Builder androidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
+                this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
+                return this;
+            }
+
+            /**
+             * AndroidOppoPrivateMsgTemplateId.
+             */
+            public Builder androidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+                this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
+                return this;
+            }
+
+            /**
+             * AndroidOppoPrivateTitleParameters.
+             */
+            public Builder androidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
+                this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
                 return this;
             }
 
@@ -2134,30 +2158,6 @@ public class MassPushRequest extends Request {
              */
             public Builder trim(Boolean trim) {
                 this.trim = trim;
-                return this;
-            }
-
-            /**
-             * androidOppoPrivateContentParameters.
-             */
-            public Builder androidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
-                this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
-                return this;
-            }
-
-            /**
-             * androidOppoPrivateMsgTemplateId.
-             */
-            public Builder androidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
-                this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
-                return this;
-            }
-
-            /**
-             * androidOppoPrivateTitleParameters.
-             */
-            public Builder androidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
-                this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
                 return this;
             }
 
