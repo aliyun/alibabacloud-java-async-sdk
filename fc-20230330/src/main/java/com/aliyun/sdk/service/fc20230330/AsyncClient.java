@@ -58,6 +58,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request);
 
     /**
+     * @param request the request parameters of CreateSession  CreateSessionRequest
+     * @return CreateSessionResponse
+     */
+    CompletableFuture<CreateSessionResponse> createSession(CreateSessionRequest request);
+
+    /**
      * @param request the request parameters of CreateTrigger  CreateTriggerRequest
      * @return CreateTriggerResponse
      */
@@ -122,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteScalingConfigResponse
      */
     CompletableFuture<DeleteScalingConfigResponse> deleteScalingConfig(DeleteScalingConfigRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSession  DeleteSessionRequest
+     * @return DeleteSessionResponse
+     */
+    CompletableFuture<DeleteSessionResponse> deleteSession(DeleteSessionRequest request);
 
     /**
      * @param request the request parameters of DeleteTrigger  DeleteTriggerRequest
@@ -223,6 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetScalingConfigResponse> getScalingConfig(GetScalingConfigRequest request);
 
     /**
+     * @param request the request parameters of GetSession  GetSessionRequest
+     * @return GetSessionResponse
+     */
+    CompletableFuture<GetSessionResponse> getSession(GetSessionRequest request);
+
+    /**
      * @param request the request parameters of GetTrigger  GetTriggerRequest
      * @return GetTriggerResponse
      */
@@ -312,6 +330,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListScalingConfigsResponse
      */
     CompletableFuture<ListScalingConfigsResponse> listScalingConfigs(ListScalingConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListSessions  ListSessionsRequest
+     * @return ListSessionsResponse
+     */
+    CompletableFuture<ListSessionsResponse> listSessions(ListSessionsRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
@@ -405,6 +429,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFunctionResponse
      */
     CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSession  UpdateSessionRequest
+     * @return UpdateSessionResponse
+     */
+    CompletableFuture<UpdateSessionResponse> updateSession(UpdateSessionRequest request);
 
     /**
      * @param request the request parameters of UpdateTrigger  UpdateTriggerRequest

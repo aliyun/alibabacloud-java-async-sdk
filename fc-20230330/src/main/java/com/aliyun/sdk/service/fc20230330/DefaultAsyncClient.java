@@ -136,6 +136,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSession  CreateSessionRequest
+     * @return CreateSessionResponse
+     */
+    @Override
+    public CompletableFuture<CreateSessionResponse> createSession(CreateSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSession").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/sessions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTrigger  CreateTriggerRequest
      * @return CreateTriggerResponse
      */
@@ -328,6 +346,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSession  DeleteSessionRequest
+     * @return DeleteSessionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSessionResponse> deleteSession(DeleteSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSession").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/sessions/{sessionId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -625,6 +661,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSession  GetSessionRequest
+     * @return GetSessionResponse
+     */
+    @Override
+    public CompletableFuture<GetSessionResponse> getSession(GetSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSession").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/sessions/{sessionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTrigger  GetTriggerRequest
      * @return GetTriggerResponse
      */
@@ -909,6 +963,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSessions  ListSessionsRequest
+     * @return ListSessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListSessionsResponse> listSessions(ListSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSessions").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/sessions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1176,6 +1248,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateFunctionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSession  UpdateSessionRequest
+     * @return UpdateSessionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSessionResponse> updateSession(UpdateSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateSession").setMethod(HttpMethod.PUT).setPathRegex("/2023-03-30/functions/{functionName}/sessions/{sessionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
