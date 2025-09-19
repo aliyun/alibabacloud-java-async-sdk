@@ -20,10 +20,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BindAppDomain  BindAppDomainRequest
+     * @return BindAppDomainResponse
+     */
+    CompletableFuture<BindAppDomainResponse> bindAppDomain(BindAppDomainRequest request);
+
+    /**
      * @param request the request parameters of CreateLogoTask  CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
      */
     CompletableFuture<CreateLogoTaskResponse> createLogoTask(CreateLogoTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppDomainCertificate  DeleteAppDomainCertificateRequest
+     * @return DeleteAppDomainCertificateResponse
+     */
+    CompletableFuture<DeleteAppDomainCertificateResponse> deleteAppDomainCertificate(DeleteAppDomainCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppDomainRedirect  DeleteAppDomainRedirectRequest
+     * @return DeleteAppDomainRedirectResponse
+     */
+    CompletableFuture<DeleteAppDomainRedirectResponse> deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAppDomainDnsRecord  DescribeAppDomainDnsRecordRequest
+     * @return DescribeAppDomainDnsRecordResponse
+     */
+    CompletableFuture<DescribeAppDomainDnsRecordResponse> describeAppDomainDnsRecord(DescribeAppDomainDnsRecordRequest request);
 
     /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
@@ -50,6 +74,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserTmpIdentityForPartnerResponse> getUserTmpIdentityForPartner(GetUserTmpIdentityForPartnerRequest request);
 
     /**
+     * @param request the request parameters of ListAppDomainRedirectRecords  ListAppDomainRedirectRecordsRequest
+     * @return ListAppDomainRedirectRecordsResponse
+     */
+    CompletableFuture<ListAppDomainRedirectRecordsResponse> listAppDomainRedirectRecords(ListAppDomainRedirectRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListAppInstanceDomains  ListAppInstanceDomainsRequest
+     * @return ListAppInstanceDomainsResponse
+     */
+    CompletableFuture<ListAppInstanceDomainsResponse> listAppInstanceDomains(ListAppInstanceDomainsRequest request);
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
@@ -68,9 +104,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchImageResponse> searchImage(SearchImageRequest request);
 
     /**
+     * @param request the request parameters of SetAppDomainCertificate  SetAppDomainCertificateRequest
+     * @return SetAppDomainCertificateResponse
+     */
+    CompletableFuture<SetAppDomainCertificateResponse> setAppDomainCertificate(SetAppDomainCertificateRequest request);
+
+    /**
      * @param request the request parameters of SyncAppInstanceForPartner  SyncAppInstanceForPartnerRequest
      * @return SyncAppInstanceForPartnerResponse
      */
     CompletableFuture<SyncAppInstanceForPartnerResponse> syncAppInstanceForPartner(SyncAppInstanceForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of UnbindAppDomain  UnbindAppDomainRequest
+     * @return UnbindAppDomainResponse
+     */
+    CompletableFuture<UnbindAppDomainResponse> unbindAppDomain(UnbindAppDomainRequest request);
 
 }
