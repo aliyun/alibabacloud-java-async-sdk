@@ -118,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProvisionConfigResponse> deleteProvisionConfig(DeleteProvisionConfigRequest request);
 
     /**
+     * @param request the request parameters of DeleteScalingConfig  DeleteScalingConfigRequest
+     * @return DeleteScalingConfigResponse
+     */
+    CompletableFuture<DeleteScalingConfigResponse> deleteScalingConfig(DeleteScalingConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteTrigger  DeleteTriggerRequest
      * @return DeleteTriggerResponse
      */
@@ -211,6 +217,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request);
 
     /**
+     * @param request the request parameters of GetScalingConfig  GetScalingConfigRequest
+     * @return GetScalingConfigResponse
+     */
+    CompletableFuture<GetScalingConfigResponse> getScalingConfig(GetScalingConfigRequest request);
+
+    /**
      * @param request the request parameters of GetTrigger  GetTriggerRequest
      * @return GetTriggerResponse
      */
@@ -296,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request);
 
     /**
+     * @param request the request parameters of ListScalingConfigs  ListScalingConfigsRequest
+     * @return ListScalingConfigsResponse
+     */
+    CompletableFuture<ListScalingConfigsResponse> listScalingConfigs(ListScalingConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -342,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutProvisionConfigResponse
      */
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
+
+    /**
+     * @param request the request parameters of PutScalingConfig  PutScalingConfigRequest
+     * @return PutScalingConfigResponse
+     */
+    CompletableFuture<PutScalingConfigResponse> putScalingConfig(PutScalingConfigRequest request);
 
     /**
      * @param request the request parameters of StopAsyncTask  StopAsyncTaskRequest

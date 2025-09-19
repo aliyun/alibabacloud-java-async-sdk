@@ -21,7 +21,7 @@ public class ResidentResourceAllocationStatus extends TeaModel {
     private String lastAllocatedTime;
 
     @com.aliyun.core.annotation.NameInMap("lastAllocation")
-    private ResidentResourceAllocation lastAllocation;
+    private java.util.List<ResidentResourceAllocation> lastAllocation;
 
     private ResidentResourceAllocationStatus(Builder builder) {
         this.lastAllocatedTime = builder.lastAllocatedTime;
@@ -50,13 +50,13 @@ public class ResidentResourceAllocationStatus extends TeaModel {
     /**
      * @return lastAllocation
      */
-    public ResidentResourceAllocation getLastAllocation() {
+    public java.util.List<ResidentResourceAllocation> getLastAllocation() {
         return this.lastAllocation;
     }
 
     public static final class Builder {
         private String lastAllocatedTime; 
-        private ResidentResourceAllocation lastAllocation; 
+        private java.util.List<ResidentResourceAllocation> lastAllocation; 
 
         private Builder() {
         } 
@@ -77,7 +77,7 @@ public class ResidentResourceAllocationStatus extends TeaModel {
         /**
          * lastAllocation.
          */
-        public Builder lastAllocation(ResidentResourceAllocation lastAllocation) {
+        public Builder lastAllocation(java.util.List<ResidentResourceAllocation> lastAllocation) {
             this.lastAllocation = lastAllocation;
             return this;
         }

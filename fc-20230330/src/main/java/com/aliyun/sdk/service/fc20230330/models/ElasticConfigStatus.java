@@ -38,6 +38,9 @@ public class ElasticConfigStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("scheduledPolicies")
     private java.util.List<ScheduledPolicy> scheduledPolicies;
 
+    @com.aliyun.core.annotation.NameInMap("targetInstances")
+    private Long targetInstances;
+
     private ElasticConfigStatus(Builder builder) {
         this.currentError = builder.currentError;
         this.currentInstances = builder.currentInstances;
@@ -46,6 +49,7 @@ public class ElasticConfigStatus extends TeaModel {
         this.residentPoolId = builder.residentPoolId;
         this.scalingPolicies = builder.scalingPolicies;
         this.scheduledPolicies = builder.scheduledPolicies;
+        this.targetInstances = builder.targetInstances;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class ElasticConfigStatus extends TeaModel {
         return this.scheduledPolicies;
     }
 
+    /**
+     * @return targetInstances
+     */
+    public Long getTargetInstances() {
+        return this.targetInstances;
+    }
+
     public static final class Builder {
         private String currentError; 
         private Long currentInstances; 
@@ -117,6 +128,7 @@ public class ElasticConfigStatus extends TeaModel {
         private String residentPoolId; 
         private java.util.List<ScalingPolicy> scalingPolicies; 
         private java.util.List<ScheduledPolicy> scheduledPolicies; 
+        private Long targetInstances; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class ElasticConfigStatus extends TeaModel {
             this.residentPoolId = model.residentPoolId;
             this.scalingPolicies = model.scalingPolicies;
             this.scheduledPolicies = model.scheduledPolicies;
+            this.targetInstances = model.targetInstances;
         } 
 
         /**
@@ -184,6 +197,14 @@ public class ElasticConfigStatus extends TeaModel {
          */
         public Builder scheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
             this.scheduledPolicies = scheduledPolicies;
+            return this;
+        }
+
+        /**
+         * targetInstances.
+         */
+        public Builder targetInstances(Long targetInstances) {
+            this.targetInstances = targetInstances;
             return this;
         }
 

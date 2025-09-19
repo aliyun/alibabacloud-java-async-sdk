@@ -17,27 +17,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScalingConfigStatus</p>
  */
 public class ScalingConfigStatus extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("functionName")
-    private String functionName;
+    @com.aliyun.core.annotation.NameInMap("currentError")
+    private String currentError;
 
-    @com.aliyun.core.annotation.NameInMap("qualifier")
-    private String qualifier;
+    @com.aliyun.core.annotation.NameInMap("currentInstances")
+    private Long currentInstances;
 
-    @com.aliyun.core.annotation.NameInMap("residentConfig")
-    private ResidentConfig residentConfig;
+    @com.aliyun.core.annotation.NameInMap("functionArn")
+    private String functionArn;
 
-    @com.aliyun.core.annotation.NameInMap("resourceType")
-    private String resourceType;
+    @com.aliyun.core.annotation.NameInMap("horizontalScalingPolicies")
+    private java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
-    @com.aliyun.core.annotation.NameInMap("scalingStatus")
-    private ScalingStatus scalingStatus;
+    @com.aliyun.core.annotation.NameInMap("minInstances")
+    private Long minInstances;
+
+    @com.aliyun.core.annotation.NameInMap("residentPoolId")
+    private String residentPoolId;
+
+    @com.aliyun.core.annotation.NameInMap("scheduledPolicies")
+    private java.util.List<ScheduledPolicy> scheduledPolicies;
+
+    @com.aliyun.core.annotation.NameInMap("targetInstances")
+    private Long targetInstances;
 
     private ScalingConfigStatus(Builder builder) {
-        this.functionName = builder.functionName;
-        this.qualifier = builder.qualifier;
-        this.residentConfig = builder.residentConfig;
-        this.resourceType = builder.resourceType;
-        this.scalingStatus = builder.scalingStatus;
+        this.currentError = builder.currentError;
+        this.currentInstances = builder.currentInstances;
+        this.functionArn = builder.functionArn;
+        this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
+        this.minInstances = builder.minInstances;
+        this.residentPoolId = builder.residentPoolId;
+        this.scheduledPolicies = builder.scheduledPolicies;
+        this.targetInstances = builder.targetInstances;
     }
 
     public static Builder builder() {
@@ -53,95 +65,146 @@ public class ScalingConfigStatus extends TeaModel {
     }
 
     /**
-     * @return functionName
+     * @return currentError
      */
-    public String getFunctionName() {
-        return this.functionName;
+    public String getCurrentError() {
+        return this.currentError;
     }
 
     /**
-     * @return qualifier
+     * @return currentInstances
      */
-    public String getQualifier() {
-        return this.qualifier;
+    public Long getCurrentInstances() {
+        return this.currentInstances;
     }
 
     /**
-     * @return residentConfig
+     * @return functionArn
      */
-    public ResidentConfig getResidentConfig() {
-        return this.residentConfig;
+    public String getFunctionArn() {
+        return this.functionArn;
     }
 
     /**
-     * @return resourceType
+     * @return horizontalScalingPolicies
      */
-    public String getResourceType() {
-        return this.resourceType;
+    public java.util.List<ScalingPolicy> getHorizontalScalingPolicies() {
+        return this.horizontalScalingPolicies;
     }
 
     /**
-     * @return scalingStatus
+     * @return minInstances
      */
-    public ScalingStatus getScalingStatus() {
-        return this.scalingStatus;
+    public Long getMinInstances() {
+        return this.minInstances;
+    }
+
+    /**
+     * @return residentPoolId
+     */
+    public String getResidentPoolId() {
+        return this.residentPoolId;
+    }
+
+    /**
+     * @return scheduledPolicies
+     */
+    public java.util.List<ScheduledPolicy> getScheduledPolicies() {
+        return this.scheduledPolicies;
+    }
+
+    /**
+     * @return targetInstances
+     */
+    public Long getTargetInstances() {
+        return this.targetInstances;
     }
 
     public static final class Builder {
-        private String functionName; 
-        private String qualifier; 
-        private ResidentConfig residentConfig; 
-        private String resourceType; 
-        private ScalingStatus scalingStatus; 
+        private String currentError; 
+        private Long currentInstances; 
+        private String functionArn; 
+        private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
+        private Long minInstances; 
+        private String residentPoolId; 
+        private java.util.List<ScheduledPolicy> scheduledPolicies; 
+        private Long targetInstances; 
 
         private Builder() {
         } 
 
         private Builder(ScalingConfigStatus model) {
-            this.functionName = model.functionName;
-            this.qualifier = model.qualifier;
-            this.residentConfig = model.residentConfig;
-            this.resourceType = model.resourceType;
-            this.scalingStatus = model.scalingStatus;
+            this.currentError = model.currentError;
+            this.currentInstances = model.currentInstances;
+            this.functionArn = model.functionArn;
+            this.horizontalScalingPolicies = model.horizontalScalingPolicies;
+            this.minInstances = model.minInstances;
+            this.residentPoolId = model.residentPoolId;
+            this.scheduledPolicies = model.scheduledPolicies;
+            this.targetInstances = model.targetInstances;
         } 
 
         /**
-         * functionName.
+         * currentError.
          */
-        public Builder functionName(String functionName) {
-            this.functionName = functionName;
+        public Builder currentError(String currentError) {
+            this.currentError = currentError;
             return this;
         }
 
         /**
-         * qualifier.
+         * currentInstances.
          */
-        public Builder qualifier(String qualifier) {
-            this.qualifier = qualifier;
+        public Builder currentInstances(Long currentInstances) {
+            this.currentInstances = currentInstances;
             return this;
         }
 
         /**
-         * residentConfig.
+         * functionArn.
          */
-        public Builder residentConfig(ResidentConfig residentConfig) {
-            this.residentConfig = residentConfig;
+        public Builder functionArn(String functionArn) {
+            this.functionArn = functionArn;
             return this;
         }
 
         /**
-         * resourceType.
+         * horizontalScalingPolicies.
          */
-        public Builder resourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public Builder horizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
+            this.horizontalScalingPolicies = horizontalScalingPolicies;
             return this;
         }
 
         /**
-         * scalingStatus.
+         * minInstances.
          */
-        public Builder scalingStatus(ScalingStatus scalingStatus) {
-            this.scalingStatus = scalingStatus;
+        public Builder minInstances(Long minInstances) {
+            this.minInstances = minInstances;
+            return this;
+        }
+
+        /**
+         * residentPoolId.
+         */
+        public Builder residentPoolId(String residentPoolId) {
+            this.residentPoolId = residentPoolId;
+            return this;
+        }
+
+        /**
+         * scheduledPolicies.
+         */
+        public Builder scheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
+            this.scheduledPolicies = scheduledPolicies;
+            return this;
+        }
+
+        /**
+         * targetInstances.
+         */
+        public Builder targetInstances(Long targetInstances) {
+            this.targetInstances = targetInstances;
             return this;
         }
 

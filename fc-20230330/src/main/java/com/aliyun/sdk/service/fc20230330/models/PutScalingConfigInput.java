@@ -17,15 +17,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutScalingConfigInput</p>
  */
 public class PutScalingConfigInput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("residentConfig")
-    private ResidentConfig residentConfig;
+    @com.aliyun.core.annotation.NameInMap("horizontalScalingPolicies")
+    private java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
-    @com.aliyun.core.annotation.NameInMap("resourceType")
-    private String resourceType;
+    @com.aliyun.core.annotation.NameInMap("minInstances")
+    private Long minInstances;
+
+    @com.aliyun.core.annotation.NameInMap("residentPoolId")
+    private String residentPoolId;
+
+    @com.aliyun.core.annotation.NameInMap("scheduledPolicies")
+    private java.util.List<ScheduledPolicy> scheduledPolicies;
 
     private PutScalingConfigInput(Builder builder) {
-        this.residentConfig = builder.residentConfig;
-        this.resourceType = builder.resourceType;
+        this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
+        this.minInstances = builder.minInstances;
+        this.residentPoolId = builder.residentPoolId;
+        this.scheduledPolicies = builder.scheduledPolicies;
     }
 
     public static Builder builder() {
@@ -41,44 +49,78 @@ public class PutScalingConfigInput extends TeaModel {
     }
 
     /**
-     * @return residentConfig
+     * @return horizontalScalingPolicies
      */
-    public ResidentConfig getResidentConfig() {
-        return this.residentConfig;
+    public java.util.List<ScalingPolicy> getHorizontalScalingPolicies() {
+        return this.horizontalScalingPolicies;
     }
 
     /**
-     * @return resourceType
+     * @return minInstances
      */
-    public String getResourceType() {
-        return this.resourceType;
+    public Long getMinInstances() {
+        return this.minInstances;
+    }
+
+    /**
+     * @return residentPoolId
+     */
+    public String getResidentPoolId() {
+        return this.residentPoolId;
+    }
+
+    /**
+     * @return scheduledPolicies
+     */
+    public java.util.List<ScheduledPolicy> getScheduledPolicies() {
+        return this.scheduledPolicies;
     }
 
     public static final class Builder {
-        private ResidentConfig residentConfig; 
-        private String resourceType; 
+        private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
+        private Long minInstances; 
+        private String residentPoolId; 
+        private java.util.List<ScheduledPolicy> scheduledPolicies; 
 
         private Builder() {
         } 
 
         private Builder(PutScalingConfigInput model) {
-            this.residentConfig = model.residentConfig;
-            this.resourceType = model.resourceType;
+            this.horizontalScalingPolicies = model.horizontalScalingPolicies;
+            this.minInstances = model.minInstances;
+            this.residentPoolId = model.residentPoolId;
+            this.scheduledPolicies = model.scheduledPolicies;
         } 
 
         /**
-         * residentConfig.
+         * horizontalScalingPolicies.
          */
-        public Builder residentConfig(ResidentConfig residentConfig) {
-            this.residentConfig = residentConfig;
+        public Builder horizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
+            this.horizontalScalingPolicies = horizontalScalingPolicies;
             return this;
         }
 
         /**
-         * resourceType.
+         * minInstances.
          */
-        public Builder resourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public Builder minInstances(Long minInstances) {
+            this.minInstances = minInstances;
+            return this;
+        }
+
+        /**
+         * residentPoolId.
+         */
+        public Builder residentPoolId(String residentPoolId) {
+            this.residentPoolId = residentPoolId;
+            return this;
+        }
+
+        /**
+         * scheduledPolicies.
+         */
+        public Builder scheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
+            this.scheduledPolicies = scheduledPolicies;
             return this;
         }
 

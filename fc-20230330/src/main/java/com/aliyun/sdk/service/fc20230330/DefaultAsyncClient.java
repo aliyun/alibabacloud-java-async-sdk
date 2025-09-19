@@ -316,6 +316,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteScalingConfig  DeleteScalingConfigRequest
+     * @return DeleteScalingConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteScalingConfigResponse> deleteScalingConfig(DeleteScalingConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteScalingConfig").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/scaling-config").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScalingConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteTrigger  DeleteTriggerRequest
      * @return DeleteTriggerResponse
      */
@@ -589,6 +607,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetScalingConfig  GetScalingConfigRequest
+     * @return GetScalingConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetScalingConfigResponse> getScalingConfig(GetScalingConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetScalingConfig").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/scaling-config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetScalingConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTrigger  GetTriggerRequest
      * @return GetTriggerResponse
      */
@@ -855,6 +891,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListScalingConfigs  ListScalingConfigsRequest
+     * @return ListScalingConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListScalingConfigsResponse> listScalingConfigs(ListScalingConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListScalingConfigs").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/scaling-configs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListScalingConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListScalingConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -993,6 +1047,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutProvisionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PutScalingConfig  PutScalingConfigRequest
+     * @return PutScalingConfigResponse
+     */
+    @Override
+    public CompletableFuture<PutScalingConfigResponse> putScalingConfig(PutScalingConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutScalingConfig").setMethod(HttpMethod.PUT).setPathRegex("/2023-03-30/functions/{functionName}/scaling-config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutScalingConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutScalingConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

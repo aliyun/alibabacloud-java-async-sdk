@@ -20,8 +20,12 @@ public class UpdateResidentResourcePoolInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("useScaling")
+    private Boolean useScaling;
+
     private UpdateResidentResourcePoolInput(Builder builder) {
         this.name = builder.name;
+        this.useScaling = builder.useScaling;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class UpdateResidentResourcePoolInput extends TeaModel {
         return this.name;
     }
 
+    /**
+     * @return useScaling
+     */
+    public Boolean getUseScaling() {
+        return this.useScaling;
+    }
+
     public static final class Builder {
         private String name; 
+        private Boolean useScaling; 
 
         private Builder() {
         } 
 
         private Builder(UpdateResidentResourcePoolInput model) {
             this.name = model.name;
+            this.useScaling = model.useScaling;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class UpdateResidentResourcePoolInput extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * useScaling.
+         */
+        public Builder useScaling(Boolean useScaling) {
+            this.useScaling = useScaling;
             return this;
         }
 
