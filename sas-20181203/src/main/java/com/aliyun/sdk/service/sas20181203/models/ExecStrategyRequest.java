@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExecStrategyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecAction")
+    private String execAction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -27,6 +31,7 @@ public class ExecStrategyRequest extends Request {
 
     private ExecStrategyRequest(Builder builder) {
         super(builder);
+        this.execAction = builder.execAction;
         this.lang = builder.lang;
         this.strategyId = builder.strategyId;
     }
@@ -39,9 +44,16 @@ public class ExecStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return execAction
+     */
+    public String getExecAction() {
+        return this.execAction;
     }
 
     /**
@@ -59,6 +71,7 @@ public class ExecStrategyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExecStrategyRequest, Builder> {
+        private String execAction; 
         private String lang; 
         private Integer strategyId; 
 
@@ -68,9 +81,19 @@ public class ExecStrategyRequest extends Request {
 
         private Builder(ExecStrategyRequest request) {
             super(request);
+            this.execAction = request.execAction;
             this.lang = request.lang;
             this.strategyId = request.strategyId;
         } 
+
+        /**
+         * ExecAction.
+         */
+        public Builder execAction(String execAction) {
+            this.putQueryParameter("ExecAction", execAction);
+            this.execAction = execAction;
+            return this;
+        }
 
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>

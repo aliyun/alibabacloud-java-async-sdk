@@ -66,6 +66,10 @@ public class ExportVulRequest extends Request {
     private String path;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RaspDefend")
+    private Integer raspDefend;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
@@ -96,6 +100,7 @@ public class ExportVulRequest extends Request {
         this.lang = builder.lang;
         this.necessity = builder.necessity;
         this.path = builder.path;
+        this.raspDefend = builder.raspDefend;
         this.searchTags = builder.searchTags;
         this.type = builder.type;
         this.uuids = builder.uuids;
@@ -110,7 +115,7 @@ public class ExportVulRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +205,13 @@ public class ExportVulRequest extends Request {
     }
 
     /**
+     * @return raspDefend
+     */
+    public Integer getRaspDefend() {
+        return this.raspDefend;
+    }
+
+    /**
      * @return searchTags
      */
     public String getSearchTags() {
@@ -240,6 +252,7 @@ public class ExportVulRequest extends Request {
         private String lang; 
         private String necessity; 
         private String path; 
+        private Integer raspDefend; 
         private String searchTags; 
         private String type; 
         private String uuids; 
@@ -263,6 +276,7 @@ public class ExportVulRequest extends Request {
             this.lang = request.lang;
             this.necessity = request.necessity;
             this.path = request.path;
+            this.raspDefend = request.raspDefend;
             this.searchTags = request.searchTags;
             this.type = request.type;
             this.uuids = request.uuids;
@@ -435,6 +449,15 @@ public class ExportVulRequest extends Request {
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
             this.path = path;
+            return this;
+        }
+
+        /**
+         * RaspDefend.
+         */
+        public Builder raspDefend(Integer raspDefend) {
+            this.putQueryParameter("RaspDefend", raspDefend);
+            this.raspDefend = raspDefend;
             return this;
         }
 

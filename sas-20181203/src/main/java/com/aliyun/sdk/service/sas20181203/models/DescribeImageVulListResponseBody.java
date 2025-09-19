@@ -48,6 +48,10 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -90,6 +94,17 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private Integer totalCount; 
         private java.util.List<VulRecords> vulRecords; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageVulListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vulRecords = model.vulRecords;
+        } 
+
         /**
          * <p>The page number of the returned page.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Default value: <strong>10</strong></p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +128,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</p>
@@ -124,7 +139,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of vulnerabilities returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,7 +150,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vulnerabilities.</p>
+         * <p>An array that consists of the vulnerabilities.</p>
          */
         public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -264,6 +279,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String updateCmd; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(RpmEntityList model) {
+                this.fullVersion = model.fullVersion;
+                this.layer = model.layer;
+                this.matchDetail = model.matchDetail;
+                this.matchList = model.matchList;
+                this.name = model.name;
+                this.path = model.path;
+                this.updateCmd = model.updateCmd;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The complete version number of the package.</p>
              * 
@@ -298,7 +327,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the rules that are used to detect the vulnerability.</p>
+             * <p>The details of the rule that is used to detect the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;libseccomp2 version less than equals 2.3.3-4&quot;]</p>
@@ -320,7 +349,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the software that has the vulnerability.</p>
+             * <p>The path of the software that has the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/lib64/libssh2.so.1</p>
@@ -415,6 +444,15 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String osRelease; 
             private java.util.List<RpmEntityList> rpmEntityList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendContentJson model) {
+                this.os = model.os;
+                this.osRelease = model.osRelease;
+                this.rpmEntityList = model.rpmEntityList;
+            } 
+
             /**
              * <p>The name of the operating system.</p>
              * 
@@ -438,7 +476,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the packages of the software that has the vulnerability.</p>
+             * <p>The details of the package of the software that has the vulnerability.</p>
              */
             public Builder rpmEntityList(java.util.List<RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
@@ -534,6 +572,9 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
+        @com.aliyun.core.annotation.NameInMap("RuleTag")
+        private String ruleTag;
+
         @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
 
@@ -584,6 +625,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             this.related = builder.related;
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
+            this.ruleTag = builder.ruleTag;
             this.scanTime = builder.scanTime;
             this.status = builder.status;
             this.tag = builder.tag;
@@ -778,6 +820,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleTag
+         */
+        public String getRuleTag() {
+            return this.ruleTag;
+        }
+
+        /**
          * @return scanTime
          */
         public Long getScanTime() {
@@ -859,6 +908,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String related; 
             private String repoName; 
             private String repoNamespace; 
+            private String ruleTag; 
             private Long scanTime; 
             private Integer status; 
             private String tag; 
@@ -867,6 +917,46 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String targetType; 
             private String type; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulRecords model) {
+                this.aliasName = model.aliasName;
+                this.canFix = model.canFix;
+                this.canUpdate = model.canUpdate;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.containerId = model.containerId;
+                this.extendContentJson = model.extendContentJson;
+                this.firstTs = model.firstTs;
+                this.image = model.image;
+                this.imageDigest = model.imageDigest;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lastTs = model.lastTs;
+                this.layers = model.layers;
+                this.maliciousSource = model.maliciousSource;
+                this.modifyTs = model.modifyTs;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.necessity = model.necessity;
+                this.pod = model.pod;
+                this.primaryId = model.primaryId;
+                this.related = model.related;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.ruleTag = model.ruleTag;
+                this.scanTime = model.scanTime;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The alias of the vulnerability.</p>
@@ -882,8 +972,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: yes</li>
+             * <li><strong>no</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -895,10 +985,10 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
+             * <p>Indicates whether the package of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1156,6 +1246,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The tag of this vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>AI</strong>: AI-related components.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
+             */
+            public Builder ruleTag(String ruleTag) {
+                this.ruleTag = ruleTag;
+                return this;
+            }
+
+            /**
              * <p>The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
@@ -1182,7 +1286,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the vulnerability.</p>
+             * <p>The tag that is added to the image vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>oval</p>
@@ -1217,8 +1321,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             /**
              * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
              * <ul>
-             * <li><strong>ECS_IMAGE</strong>: image</li>
              * <li><strong>ECS_SNAPSHOT</strong>: snapshot</li>
+             * <li><strong>ECS_IMAGE</strong>: image</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1230,7 +1334,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.</p>
+             * <p>The type of the vulnerability. The value is fixed as CVE, which indicates image vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>cve</p>

@@ -40,6 +40,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerInstanceList
      */
@@ -65,6 +69,15 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         private java.util.List<ContainerInstanceList> containerInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerInstancesResponseBody model) {
+            this.containerInstanceList = model.containerInstanceList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the container asset.</p>
@@ -490,6 +503,43 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private String updateMark; 
             private Integer vulCount; 
             private String vulStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerInstanceList model) {
+                this.alarmCount = model.alarmCount;
+                this.alarmStatus = model.alarmStatus;
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.containerId = model.containerId;
+                this.createTimestamp = model.createTimestamp;
+                this.exposed = model.exposed;
+                this.exposedDetail = model.exposedDetail;
+                this.hcCount = model.hcCount;
+                this.hcStatus = model.hcStatus;
+                this.hostIp = model.hostIp;
+                this.image = model.image;
+                this.imageDigest = model.imageDigest;
+                this.imageId = model.imageId;
+                this.imageRepoName = model.imageRepoName;
+                this.imageRepoNamespace = model.imageRepoNamespace;
+                this.imageRepoTag = model.imageRepoTag;
+                this.imageUuid = model.imageUuid;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.nodeInfo = model.nodeInfo;
+                this.nodeName = model.nodeName;
+                this.pod = model.pod;
+                this.podIp = model.podIp;
+                this.regionId = model.regionId;
+                this.riskCount = model.riskCount;
+                this.riskStatus = model.riskStatus;
+                this.updateMark = model.updateMark;
+                this.vulCount = model.vulCount;
+                this.vulStatus = model.vulStatus;
+            } 
 
             /**
              * <p>The number of alerts.</p>
@@ -926,6 +976,16 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

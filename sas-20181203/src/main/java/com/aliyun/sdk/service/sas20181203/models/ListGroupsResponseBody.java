@@ -56,6 +56,10 @@ public class ListGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListGroupsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.list = model.list;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -251,6 +268,15 @@ public class ListGroupsResponseBody extends TeaModel {
             private Long groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.groupFlag = model.groupFlag;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>The server group type. Valid values:</p>
              * <ul>
@@ -374,6 +400,17 @@ public class ListGroupsResponseBody extends TeaModel {
             private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.nextToken = model.nextToken;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

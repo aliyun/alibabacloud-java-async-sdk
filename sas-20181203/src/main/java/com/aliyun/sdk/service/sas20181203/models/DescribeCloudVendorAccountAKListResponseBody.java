@@ -40,6 +40,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudVendorAccountAKs
      */
@@ -65,6 +69,15 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         private java.util.List<CloudVendorAccountAKs> cloudVendorAccountAKs; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudVendorAccountAKListResponseBody model) {
+            this.cloudVendorAccountAKs = model.cloudVendorAccountAKs;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AccessKey pairs.</p>
@@ -215,6 +228,20 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private String trailMessage; 
             private String trailStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthModules model) {
+                this.message = model.message;
+                this.module = model.module;
+                this.moduleAssetType = model.moduleAssetType;
+                this.moduleDisp = model.moduleDisp;
+                this.moduleServiceStatus = model.moduleServiceStatus;
+                this.moduleStatement = model.moduleStatement;
+                this.trailMessage = model.trailMessage;
+                this.trailStatus = model.trailStatus;
+            } 
+
             /**
              * <p>The error message of the module.</p>
              * 
@@ -346,6 +373,12 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthModules")
         private java.util.List<AuthModules> authModules;
 
+        @com.aliyun.core.annotation.NameInMap("CtdrCloudUserId")
+        private String ctdrCloudUserId;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
+        private String extendInfo;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
@@ -368,6 +401,8 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             this.akType = builder.akType;
             this.authId = builder.authId;
             this.authModules = builder.authModules;
+            this.ctdrCloudUserId = builder.ctdrCloudUserId;
+            this.extendInfo = builder.extendInfo;
             this.message = builder.message;
             this.secretId = builder.secretId;
             this.serviceStatus = builder.serviceStatus;
@@ -403,6 +438,20 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
          */
         public java.util.List<AuthModules> getAuthModules() {
             return this.authModules;
+        }
+
+        /**
+         * @return ctdrCloudUserId
+         */
+        public String getCtdrCloudUserId() {
+            return this.ctdrCloudUserId;
+        }
+
+        /**
+         * @return extendInfo
+         */
+        public String getExtendInfo() {
+            return this.extendInfo;
         }
 
         /**
@@ -451,12 +500,31 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private String akType; 
             private Long authId; 
             private java.util.List<AuthModules> authModules; 
+            private String ctdrCloudUserId; 
+            private String extendInfo; 
             private String message; 
             private String secretId; 
             private Integer serviceStatus; 
             private Integer status; 
             private String vendor; 
             private String vendorAuthAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudVendorAccountAKs model) {
+                this.akType = model.akType;
+                this.authId = model.authId;
+                this.authModules = model.authModules;
+                this.ctdrCloudUserId = model.ctdrCloudUserId;
+                this.extendInfo = model.extendInfo;
+                this.message = model.message;
+                this.secretId = model.secretId;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.vendor = model.vendor;
+                this.vendorAuthAlias = model.vendorAuthAlias;
+            } 
 
             /**
              * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
@@ -489,6 +557,22 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
              */
             public Builder authModules(java.util.List<AuthModules> authModules) {
                 this.authModules = authModules;
+                return this;
+            }
+
+            /**
+             * CtdrCloudUserId.
+             */
+            public Builder ctdrCloudUserId(String ctdrCloudUserId) {
+                this.ctdrCloudUserId = ctdrCloudUserId;
+                return this;
+            }
+
+            /**
+             * ExtendInfo.
+             */
+            public Builder extendInfo(String extendInfo) {
+                this.extendInfo = extendInfo;
                 return this;
             }
 
@@ -648,6 +732,16 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

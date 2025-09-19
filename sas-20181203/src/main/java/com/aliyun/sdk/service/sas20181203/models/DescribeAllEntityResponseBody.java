@@ -36,6 +36,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entityList
      */
@@ -53,6 +57,14 @@ public class DescribeAllEntityResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EntityList> entityList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllEntityResponseBody model) {
+            this.entityList = model.entityList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of servers.</p>
@@ -182,6 +194,19 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             private String ip; 
             private String os; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityList model) {
+                this.groupId = model.groupId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.os = model.os;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the asset group.</p>

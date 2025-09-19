@@ -36,6 +36,10 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return concernNecessity
      */
@@ -53,6 +57,14 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> concernNecessity; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConcernNecessityResponseBody model) {
+            this.concernNecessity = model.concernNecessity;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The priorities to fix the vulnerabilities. Valid values:</p>

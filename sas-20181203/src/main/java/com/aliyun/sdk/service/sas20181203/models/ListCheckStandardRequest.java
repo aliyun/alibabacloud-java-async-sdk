@@ -34,6 +34,10 @@ public class ListCheckStandardRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List<String> vendors;
 
@@ -43,6 +47,7 @@ public class ListCheckStandardRequest extends Request {
         this.instanceSubTypes = builder.instanceSubTypes;
         this.instanceTypes = builder.instanceTypes;
         this.lang = builder.lang;
+        this.taskSources = builder.taskSources;
         this.vendors = builder.vendors;
     }
 
@@ -54,7 +59,7 @@ public class ListCheckStandardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,6 +93,13 @@ public class ListCheckStandardRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List<String> getVendors() {
@@ -99,6 +111,7 @@ public class ListCheckStandardRequest extends Request {
         private java.util.List<String> instanceSubTypes; 
         private java.util.List<String> instanceTypes; 
         private String lang; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> vendors; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListCheckStandardRequest extends Request {
             this.instanceSubTypes = request.instanceSubTypes;
             this.instanceTypes = request.instanceTypes;
             this.lang = request.lang;
+            this.taskSources = request.taskSources;
             this.vendors = request.vendors;
         } 
 
@@ -154,6 +168,15 @@ public class ListCheckStandardRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

@@ -44,6 +44,10 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -77,6 +81,16 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudAssetInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the cloud assets.</p>
@@ -169,6 +183,9 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityInfo")
         private String securityInfo;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
@@ -185,6 +202,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.riskStatus = builder.riskStatus;
             this.securityInfo = builder.securityInfo;
+            this.tags = builder.tags;
             this.vendor = builder.vendor;
         }
 
@@ -281,6 +299,13 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vendor
          */
         public Integer getVendor() {
@@ -300,7 +325,28 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String riskStatus; 
             private String securityInfo; 
+            private java.util.List<String> tags; 
             private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.alarmStatus = model.alarmStatus;
+                this.assetSubType = model.assetSubType;
+                this.assetSubTypeName = model.assetSubTypeName;
+                this.assetType = model.assetType;
+                this.assetTypeName = model.assetTypeName;
+                this.createdTime = model.createdTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.regionId = model.regionId;
+                this.riskStatus = model.riskStatus;
+                this.securityInfo = model.securityInfo;
+                this.tags = model.tags;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>Indicates whether alerts are generated for the cloud asset. Valid values:</p>
@@ -598,6 +644,14 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Tag list.</p>
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * <p>The service provider (SP) of the cloud asset. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud</li>
@@ -689,6 +743,16 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

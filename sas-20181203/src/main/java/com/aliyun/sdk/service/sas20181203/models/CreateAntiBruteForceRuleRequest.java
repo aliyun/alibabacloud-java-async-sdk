@@ -79,7 +79,7 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -368,6 +368,15 @@ public class CreateAntiBruteForceRuleRequest extends Request {
             private String rdp; 
             private String sqlServer; 
             private String ssh; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolType model) {
+                this.rdp = model.rdp;
+                this.sqlServer = model.sqlServer;
+                this.ssh = model.ssh;
+            } 
 
             /**
              * <p>Whether to enable RDP interception, default is on. Values: </p>

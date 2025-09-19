@@ -34,7 +34,7 @@ public class ModifyAssetCleanConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,6 +129,15 @@ public class ModifyAssetCleanConfigRequest extends Request {
             private Integer cleanDays; 
             private Integer status; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetCleanConfigs model) {
+                this.cleanDays = model.cleanDays;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>

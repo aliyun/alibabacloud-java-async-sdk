@@ -48,6 +48,10 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lastCheckTime
      */
@@ -89,6 +93,17 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         private Integer riskNum; 
         private String targetInfo; 
         private java.util.List<String> uuids; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLatestScanTaskResponseBody model) {
+            this.lastCheckTime = model.lastCheckTime;
+            this.requestId = model.requestId;
+            this.riskNum = model.riskNum;
+            this.targetInfo = model.targetInfo;
+            this.uuids = model.uuids;
+        } 
 
         /**
          * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>

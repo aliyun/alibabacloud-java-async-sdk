@@ -56,6 +56,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListHoneypotResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHoneypotResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.list = model.list;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -323,6 +340,21 @@ public class ListHoneypotResponseBody extends TeaModel {
             private String presetId; 
             private java.util.List<String> state; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.controlNodeName = model.controlNodeName;
+                this.honeypotId = model.honeypotId;
+                this.honeypotImageDisplayName = model.honeypotImageDisplayName;
+                this.honeypotImageId = model.honeypotImageId;
+                this.honeypotImageName = model.honeypotImageName;
+                this.honeypotName = model.honeypotName;
+                this.nodeId = model.nodeId;
+                this.presetId = model.presetId;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The name of the management node.</p>
              * 
@@ -493,6 +525,16 @@ public class ListHoneypotResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -46,7 +46,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -175,6 +175,14 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         public static final class Builder {
             private String aliasName; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulAutoRepairConfigList model) {
+                this.aliasName = model.aliasName;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

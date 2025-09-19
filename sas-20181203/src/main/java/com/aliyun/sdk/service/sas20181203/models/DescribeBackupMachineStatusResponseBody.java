@@ -36,6 +36,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupMachineStatus
      */
@@ -53,6 +57,14 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
     public static final class Builder {
         private BackupMachineStatus backupMachineStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupMachineStatusResponseBody model) {
+            this.backupMachineStatus = model.backupMachineStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The backup status of the server.</p>
@@ -122,6 +134,14 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String errorCode; 
             private String errorStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorList model) {
+                this.errorCode = model.errorCode;
+                this.errorStatus = model.errorStatus;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -315,6 +335,24 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String status; 
             private String uuid; 
             private String vaultId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupMachineStatus model) {
+                this.clientId = model.clientId;
+                this.clientStatus = model.clientStatus;
+                this.clientVersion = model.clientVersion;
+                this.errorCode = model.errorCode;
+                this.errorList = model.errorList;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.savedBackupCount = model.savedBackupCount;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.uuid = model.uuid;
+                this.vaultId = model.vaultId;
+            } 
 
             /**
              * <p>The ID of the anti-ransomware agent.</p>

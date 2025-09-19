@@ -48,6 +48,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -90,6 +94,17 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEmgVulItemResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.groupedVulItems = model.groupedVulItems;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the urgent vulnerabilities.</p>
+         * <p>An array that consists of the urgent vulnerabilities returned.</p>
          */
         public Builder groupedVulItems(java.util.List<GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -161,6 +176,9 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("GmtLastCheck")
         private Long gmtLastCheck;
 
@@ -188,6 +206,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         private GroupedVulItems(Builder builder) {
             this.aliasName = builder.aliasName;
             this.checkType = builder.checkType;
+            this.description = builder.description;
             this.gmtLastCheck = builder.gmtLastCheck;
             this.gmtPublish = builder.gmtPublish;
             this.name = builder.name;
@@ -218,6 +237,13 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
          */
         public Integer getCheckType() {
             return this.checkType;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -279,6 +305,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
             private Integer checkType; 
+            private String description; 
             private Long gmtLastCheck; 
             private Long gmtPublish; 
             private String name; 
@@ -287,6 +314,23 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             private Integer raspDefend; 
             private Integer status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupedVulItems model) {
+                this.aliasName = model.aliasName;
+                this.checkType = model.checkType;
+                this.description = model.description;
+                this.gmtLastCheck = model.gmtLastCheck;
+                this.gmtPublish = model.gmtPublish;
+                this.name = model.name;
+                this.pendingCount = model.pendingCount;
+                this.progress = model.progress;
+                this.raspDefend = model.raspDefend;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the urgent vulnerability.</p>
@@ -311,6 +355,17 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The introduction to the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -322,7 +377,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</p>
+             * <p>The timestamp when the urgent vulnerability was last disclosed. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1618887687000</p>
@@ -357,7 +412,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             /**
              * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
              * <blockquote>
-             * <p> This parameter takes effect only when an urgent vulnerability is being detected.</p>
+             * <p> This parameter is returned only when an urgent vulnerability is being detected.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -372,11 +427,11 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
              * <p>Indicates whether the application protection feature is supported. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: no</li>
-             * <li><strong>1</strong>: yes</li>
-             * </ul>
-             * <blockquote>
+             * <li><strong>1</strong>: yes<blockquote>
              * <p> If this parameter is not returned, the application protection is not supported.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>

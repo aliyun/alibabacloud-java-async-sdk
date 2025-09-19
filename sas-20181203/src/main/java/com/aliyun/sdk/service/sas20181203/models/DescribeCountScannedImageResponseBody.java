@@ -36,6 +36,10 @@ public class DescribeCountScannedImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCountScannedImageResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer scannedCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCountScannedImageResponseBody model) {
+            this.requestId = model.requestId;
+            this.scannedCount = model.scannedCount;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

@@ -36,6 +36,10 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventTypes
      */
@@ -53,6 +57,14 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EventTypes> eventTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNsasSuspEventTypeResponseBody model) {
+            this.eventTypes = model.eventTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about the alert type.</p>
@@ -134,6 +146,15 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             private String name; 
             private Integer suspEventCount; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventTypes model) {
+                this.name = model.name;
+                this.suspEventCount = model.suspEventCount;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the alert type.</p>

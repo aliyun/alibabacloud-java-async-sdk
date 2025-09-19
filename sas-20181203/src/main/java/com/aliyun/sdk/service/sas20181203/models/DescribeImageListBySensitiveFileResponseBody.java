@@ -56,6 +56,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageListBySensitiveFileResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.imageInfos = model.imageInfos;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -347,6 +364,23 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String tag; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageInfos model) {
+                this.digest = model.digest;
+                this.firstScanTime = model.firstScanTime;
+                this.instanceId = model.instanceId;
+                this.lastScanTime = model.lastScanTime;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.riskLevel = model.riskLevel;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>The image digest.</p>
              * 
@@ -564,6 +598,17 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String lastRowKey; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.lastRowKey = model.lastRowKey;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

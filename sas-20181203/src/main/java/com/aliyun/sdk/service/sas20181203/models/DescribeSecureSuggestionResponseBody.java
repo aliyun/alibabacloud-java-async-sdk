@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecureSuggestionResponseBody</p>
  */
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CalTime")
+    private Long calTime;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -27,6 +30,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeSecureSuggestionResponseBody(Builder builder) {
+        this.calTime = builder.calTime;
         this.requestId = builder.requestId;
         this.suggestions = builder.suggestions;
         this.totalCount = builder.totalCount;
@@ -38,6 +42,17 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
 
     public static DescribeSecureSuggestionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return calTime
+     */
+    public Long getCalTime() {
+        return this.calTime;
     }
 
     /**
@@ -62,9 +77,31 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long calTime; 
         private String requestId; 
         private java.util.List<Suggestions> suggestions; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecureSuggestionResponseBody model) {
+            this.calTime = model.calTime;
+            this.requestId = model.requestId;
+            this.suggestions = model.suggestions;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * <p>The timestamp of security score calculation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755744253000</p>
+         */
+        public Builder calTime(Long calTime) {
+            this.calTime = calTime;
+            return this;
+        }
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -157,6 +194,15 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private String description; 
             private String subType; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.description = model.description;
+                this.subType = model.subType;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The description of the suggestion.</p>
@@ -293,6 +339,15 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private java.util.List<Detail> detail; 
             private Integer points; 
             private String suggestType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Suggestions model) {
+                this.detail = model.detail;
+                this.points = model.points;
+                this.suggestType = model.suggestType;
+            } 
 
             /**
              * <p>The details of the suggestion.</p>

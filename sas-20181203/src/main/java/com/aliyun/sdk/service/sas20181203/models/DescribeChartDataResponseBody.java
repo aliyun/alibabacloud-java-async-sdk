@@ -72,6 +72,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allChartSubTypeList
      */
@@ -161,6 +165,23 @@ public class DescribeChartDataResponseBody extends TeaModel {
         private String properyArrayValue; 
         private String requestId; 
         private SingleData singleData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChartDataResponseBody model) {
+            this.allChartSubTypeList = model.allChartSubTypeList;
+            this.chartDataType = model.chartDataType;
+            this.chartSubTypeList = model.chartSubTypeList;
+            this.chartType = model.chartType;
+            this.coordinateData = model.coordinateData;
+            this.multipleData = model.multipleData;
+            this.propertyArrayValue = model.propertyArrayValue;
+            this.propertyValue = model.propertyValue;
+            this.properyArrayValue = model.properyArrayValue;
+            this.requestId = model.requestId;
+            this.singleData = model.singleData;
+        } 
 
         /**
          * <p>The valid values for all subtypes of the chart.</p>
@@ -336,6 +357,14 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String subType; 
             private String subTypeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllChartSubTypeList model) {
+                this.subType = model.subType;
+                this.subTypeName = model.subTypeName;
+            } 
+
             /**
              * <p>The subtype of the chart.</p>
              * 
@@ -433,6 +462,16 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String type; 
             private java.util.List<String> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(YAxisList model) {
+                this.name = model.name;
+                this.subType = model.subType;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the data type.</p>
              * 
@@ -525,6 +564,14 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private java.util.List<String> xAxis; 
             private java.util.List<YAxisList> yAxisList; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoordinateData model) {
+                this.xAxis = model.xAxis;
+                this.yAxisList = model.yAxisList;
+            } 
+
             /**
              * <p>The x-axis values.</p>
              */
@@ -615,6 +662,16 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultipleData model) {
+                this.color = model.color;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The font color, which is an RGBA value.</p>
@@ -722,6 +779,15 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SingleData model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the data type.</p>

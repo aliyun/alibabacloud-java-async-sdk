@@ -36,6 +36,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssScanConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -131,6 +143,9 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RealTimeIncr")
+        private Boolean realTimeIncr;
+
         @com.aliyun.core.annotation.NameInMap("ScanDayList")
         private java.util.List<Integer> scanDayList;
 
@@ -153,6 +168,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             this.lastModifiedStartTime = builder.lastModifiedStartTime;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.name = builder.name;
+            this.realTimeIncr = builder.realTimeIncr;
             this.scanDayList = builder.scanDayList;
             this.startTime = builder.startTime;
         }
@@ -271,6 +287,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return realTimeIncr
+         */
+        public Boolean getRealTimeIncr() {
+            return this.realTimeIncr;
+        }
+
+        /**
          * @return scanDayList
          */
         public java.util.List<Integer> getScanDayList() {
@@ -300,8 +323,33 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private Long lastModifiedStartTime; 
             private Long lastUpdateTime; 
             private String name; 
+            private Boolean realTimeIncr; 
             private java.util.List<Integer> scanDayList; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allKeyPrefix = model.allKeyPrefix;
+                this.bucketCount = model.bucketCount;
+                this.bucketName = model.bucketName;
+                this.bucketNameList = model.bucketNameList;
+                this.decompressMaxFileCount = model.decompressMaxFileCount;
+                this.decompressMaxLayer = model.decompressMaxLayer;
+                this.decryptionList = model.decryptionList;
+                this.enable = model.enable;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.keyPrefixList = model.keyPrefixList;
+                this.keySuffixList = model.keySuffixList;
+                this.lastModifiedStartTime = model.lastModifiedStartTime;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.name = model.name;
+                this.realTimeIncr = model.realTimeIncr;
+                this.scanDayList = model.scanDayList;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>Indicates whether the prefixes of all objects are matched.</p>
@@ -457,6 +505,17 @@ public class GetOssScanConfigResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder realTimeIncr(Boolean realTimeIncr) {
+                this.realTimeIncr = realTimeIncr;
                 return this;
             }
 

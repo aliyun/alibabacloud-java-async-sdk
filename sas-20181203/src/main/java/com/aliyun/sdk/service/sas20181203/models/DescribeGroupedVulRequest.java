@@ -30,12 +30,24 @@ public class DescribeGroupedVulRequest extends Request {
     private String attachTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
     private String containerFieldName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldValue")
+    private String containerFieldValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CveId")
+    private String cveId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dealed")
@@ -56,6 +68,10 @@ public class DescribeGroupedVulRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RaspDefend")
+    private Integer raspDefend;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
@@ -82,13 +98,17 @@ public class DescribeGroupedVulRequest extends Request {
         this.aliasName = builder.aliasName;
         this.assetType = builder.assetType;
         this.attachTypes = builder.attachTypes;
+        this.clusterId = builder.clusterId;
         this.containerFieldName = builder.containerFieldName;
+        this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
+        this.cveId = builder.cveId;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
         this.lang = builder.lang;
         this.necessity = builder.necessity;
         this.pageSize = builder.pageSize;
+        this.raspDefend = builder.raspDefend;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.searchTags = builder.searchTags;
         this.targetType = builder.targetType;
@@ -104,7 +124,7 @@ public class DescribeGroupedVulRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +151,13 @@ public class DescribeGroupedVulRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return containerFieldName
      */
     public String getContainerFieldName() {
@@ -138,10 +165,24 @@ public class DescribeGroupedVulRequest extends Request {
     }
 
     /**
+     * @return containerFieldValue
+     */
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return cveId
+     */
+    public String getCveId() {
+        return this.cveId;
     }
 
     /**
@@ -177,6 +218,13 @@ public class DescribeGroupedVulRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return raspDefend
+     */
+    public Integer getRaspDefend() {
+        return this.raspDefend;
     }
 
     /**
@@ -218,13 +266,17 @@ public class DescribeGroupedVulRequest extends Request {
         private String aliasName; 
         private String assetType; 
         private String attachTypes; 
+        private String clusterId; 
         private String containerFieldName; 
+        private String containerFieldValue; 
         private Integer currentPage; 
+        private String cveId; 
         private String dealed; 
         private String groupId; 
         private String lang; 
         private String necessity; 
         private Integer pageSize; 
+        private Integer raspDefend; 
         private Long resourceDirectoryAccountId; 
         private String searchTags; 
         private String targetType; 
@@ -240,13 +292,17 @@ public class DescribeGroupedVulRequest extends Request {
             this.aliasName = request.aliasName;
             this.assetType = request.assetType;
             this.attachTypes = request.attachTypes;
+            this.clusterId = request.clusterId;
             this.containerFieldName = request.containerFieldName;
+            this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
+            this.cveId = request.cveId;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
             this.lang = request.lang;
             this.necessity = request.necessity;
             this.pageSize = request.pageSize;
+            this.raspDefend = request.raspDefend;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.searchTags = request.searchTags;
             this.targetType = request.targetType;
@@ -299,6 +355,18 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c88fb10da1168494091db6aafc5dd****</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
          * <p>The key of the condition that is used to query containers. Valid values:</p>
          * <ul>
          * <li><strong>instanceId</strong>: the ID of the asset</li>
@@ -325,6 +393,18 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
+         * <p>The value specified by <strong>ContainerFieldName</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc914b0df156d40148412afe4a581****</p>
+         */
+        public Builder containerFieldValue(String containerFieldValue) {
+            this.putQueryParameter("ContainerFieldValue", containerFieldValue);
+            this.containerFieldValue = containerFieldValue;
+            return this;
+        }
+
+        /**
          * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -333,6 +413,21 @@ public class DescribeGroupedVulRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * <p>The CVE ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to query the CVE ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2017-15420</p>
+         */
+        public Builder cveId(String cveId) {
+            this.putQueryParameter("CveId", cveId);
+            this.cveId = cveId;
             return this;
         }
 
@@ -406,6 +501,15 @@ public class DescribeGroupedVulRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RaspDefend.
+         */
+        public Builder raspDefend(Integer raspDefend) {
+            this.putQueryParameter("RaspDefend", raspDefend);
+            this.raspDefend = raspDefend;
             return this;
         }
 

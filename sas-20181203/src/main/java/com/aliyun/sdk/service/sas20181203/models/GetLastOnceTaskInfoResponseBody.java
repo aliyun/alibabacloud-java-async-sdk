@@ -52,6 +52,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectTime
      */
@@ -101,6 +105,18 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         private Long taskId; 
         private TaskInfo taskInfo; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLastOnceTaskInfoResponseBody model) {
+            this.collectTime = model.collectTime;
+            this.finishCount = model.finishCount;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskInfo = model.taskInfo;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The time at which the task was run.</p>
@@ -226,6 +242,15 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             private Integer progress; 
             private String result; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.progress = model.progress;
+                this.result = model.result;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The progress of the task in percentage.</p>

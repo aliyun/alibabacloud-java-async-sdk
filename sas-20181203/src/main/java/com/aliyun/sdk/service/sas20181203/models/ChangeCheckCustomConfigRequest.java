@@ -49,7 +49,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,6 +212,15 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String operation; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomConfigs model) {
+                this.name = model.name;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
              * 
@@ -319,6 +328,16 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String name; 
             private String operation; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepairConfigs model) {
+                this.flowId = model.flowId;
+                this.name = model.name;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The ID of the fixing process.</p>

@@ -40,6 +40,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<RuleList> ruleList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSystemClientRulesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.ruleList = model.ruleList;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -155,6 +168,15 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The page number of the returned page.</p>
              * 
@@ -238,6 +260,14 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String policyKey; 
             private String policyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policyKey = model.policyKey;
+                this.policyName = model.policyName;
+            } 
 
             /**
              * <p>The policy key.</p>
@@ -407,6 +437,22 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private Integer status; 
             private Boolean switchEnable; 
             private String switchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.aggregationName = model.aggregationName;
+                this.description = model.description;
+                this.platform = model.platform;
+                this.policies = model.policies;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.status = model.status;
+                this.switchEnable = model.switchEnable;
+                this.switchId = model.switchId;
+            } 
 
             /**
              * <p>The name of the aggregation type for the system defense rule.</p>

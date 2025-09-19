@@ -40,6 +40,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyPortDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -381,6 +404,24 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private String procName; 
             private String proto; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.bindIp = model.bindIp;
+                this.createTimestamp = model.createTimestamp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.pid = model.pid;
+                this.port = model.port;
+                this.procName = model.procName;
+                this.proto = model.proto;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The IP address bound to the port.</p>

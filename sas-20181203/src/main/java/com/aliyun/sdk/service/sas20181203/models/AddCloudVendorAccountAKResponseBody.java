@@ -36,6 +36,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddCloudVendorAccountAKResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AccessKey pair that is added.</p>
@@ -171,6 +183,18 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private Integer moduleServiceStatus; 
             private String moduleStatement; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthModules model) {
+                this.message = model.message;
+                this.module = model.module;
+                this.moduleAssetType = model.moduleAssetType;
+                this.moduleDisp = model.moduleDisp;
+                this.moduleServiceStatus = model.moduleServiceStatus;
+                this.moduleStatement = model.moduleStatement;
+            } 
+
             /**
              * <p>The error message of the module.</p>
              * 
@@ -272,6 +296,9 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthModules")
         private java.util.List<AuthModules> authModules;
 
+        @com.aliyun.core.annotation.NameInMap("CtdrCloudUserId")
+        private String ctdrCloudUserId;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
@@ -294,6 +321,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             this.akType = builder.akType;
             this.authId = builder.authId;
             this.authModules = builder.authModules;
+            this.ctdrCloudUserId = builder.ctdrCloudUserId;
             this.message = builder.message;
             this.secretId = builder.secretId;
             this.serviceStatus = builder.serviceStatus;
@@ -329,6 +357,13 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
          */
         public java.util.List<AuthModules> getAuthModules() {
             return this.authModules;
+        }
+
+        /**
+         * @return ctdrCloudUserId
+         */
+        public String getCtdrCloudUserId() {
+            return this.ctdrCloudUserId;
         }
 
         /**
@@ -377,12 +412,29 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private String akType; 
             private Long authId; 
             private java.util.List<AuthModules> authModules; 
+            private String ctdrCloudUserId; 
             private String message; 
             private String secretId; 
             private Integer serviceStatus; 
             private Integer status; 
             private String vendor; 
             private String vendorAuthAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.akType = model.akType;
+                this.authId = model.authId;
+                this.authModules = model.authModules;
+                this.ctdrCloudUserId = model.ctdrCloudUserId;
+                this.message = model.message;
+                this.secretId = model.secretId;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.vendor = model.vendor;
+                this.vendorAuthAlias = model.vendorAuthAlias;
+            } 
 
             /**
              * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
@@ -415,6 +467,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
              */
             public Builder authModules(java.util.List<AuthModules> authModules) {
                 this.authModules = authModules;
+                return this;
+            }
+
+            /**
+             * CtdrCloudUserId.
+             */
+            public Builder ctdrCloudUserId(String ctdrCloudUserId) {
+                this.ctdrCloudUserId = ctdrCloudUserId;
                 return this;
             }
 

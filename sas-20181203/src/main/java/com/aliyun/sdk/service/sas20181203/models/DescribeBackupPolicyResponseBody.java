@@ -36,6 +36,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupPolicyDetail
      */
@@ -53,6 +57,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private BackupPolicyDetail backupPolicyDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupPolicyDetail = model.backupPolicyDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the anti-ransomware policy.</p>
@@ -194,6 +206,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private java.util.List<String> uuidList; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupPolicyDetail model) {
+                this.clientStatus = model.clientStatus;
+                this.id = model.id;
+                this.name = model.name;
+                this.policy = model.policy;
+                this.policyVersion = model.policyVersion;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.uuidList = model.uuidList;
+            } 
 
             /**
              * <p>The status of the anti-ransomware agent. Valid values:</p>

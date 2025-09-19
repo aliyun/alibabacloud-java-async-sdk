@@ -27,8 +27,16 @@ public class AddCloudVendorAccountAKRequest extends Request {
     private java.util.List<String> authModules;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CtdrCloudUserId")
+    private String ctdrCloudUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
+    private String extendInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -69,7 +77,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
         super(builder);
         this.akType = builder.akType;
         this.authModules = builder.authModules;
+        this.ctdrCloudUserId = builder.ctdrCloudUserId;
         this.domain = builder.domain;
+        this.extendInfo = builder.extendInfo;
         this.lang = builder.lang;
         this.regions = builder.regions;
         this.secretId = builder.secretId;
@@ -88,7 +98,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,10 +118,24 @@ public class AddCloudVendorAccountAKRequest extends Request {
     }
 
     /**
+     * @return ctdrCloudUserId
+     */
+    public String getCtdrCloudUserId() {
+        return this.ctdrCloudUserId;
+    }
+
+    /**
      * @return domain
      */
     public String getDomain() {
         return this.domain;
+    }
+
+    /**
+     * @return extendInfo
+     */
+    public String getExtendInfo() {
+        return this.extendInfo;
     }
 
     /**
@@ -173,7 +197,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
     public static final class Builder extends Request.Builder<AddCloudVendorAccountAKRequest, Builder> {
         private String akType; 
         private java.util.List<String> authModules; 
+        private String ctdrCloudUserId; 
         private String domain; 
+        private String extendInfo; 
         private String lang; 
         private java.util.List<String> regions; 
         private String secretId; 
@@ -191,7 +217,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
             super(request);
             this.akType = request.akType;
             this.authModules = request.authModules;
+            this.ctdrCloudUserId = request.ctdrCloudUserId;
             this.domain = request.domain;
+            this.extendInfo = request.extendInfo;
             this.lang = request.lang;
             this.regions = request.regions;
             this.secretId = request.secretId;
@@ -229,6 +257,15 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
+         * CtdrCloudUserId.
+         */
+        public Builder ctdrCloudUserId(String ctdrCloudUserId) {
+            this.putQueryParameter("CtdrCloudUserId", ctdrCloudUserId);
+            this.ctdrCloudUserId = ctdrCloudUserId;
+            return this;
+        }
+
+        /**
          * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
          * <ul>
          * <li><strong>china</strong></li>
@@ -241,6 +278,15 @@ public class AddCloudVendorAccountAKRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtendInfo.
+         */
+        public Builder extendInfo(String extendInfo) {
+            this.putQueryParameter("ExtendInfo", extendInfo);
+            this.extendInfo = extendInfo;
             return this;
         }
 

@@ -36,6 +36,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerWebDefenseAppList
      */
@@ -53,6 +57,14 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     public static final class Builder {
         private java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSasContainerWebDefenseRuleApplicationResponseBody model) {
+            this.containerWebDefenseAppList = model.containerWebDefenseAppList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The applications.</p>
@@ -182,6 +194,19 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             private Long id; 
             private Long ruleId; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerWebDefenseAppList model) {
+                this.aliUid = model.aliUid;
+                this.clusterId = model.clusterId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleId = model.ruleId;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The user ID.</p>

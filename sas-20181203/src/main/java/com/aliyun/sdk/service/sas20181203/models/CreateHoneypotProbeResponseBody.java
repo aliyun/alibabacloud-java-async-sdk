@@ -52,6 +52,10 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHoneypotProbeResponseBody model) {
+            this.code = model.code;
+            this.honeypotProbe = model.honeypotProbe;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -206,6 +222,13 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String probeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HoneypotProbe model) {
+                this.probeId = model.probeId;
+            } 
 
             /**
              * <p>The ID of the probe.</p>

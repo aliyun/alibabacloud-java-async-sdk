@@ -40,6 +40,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOssBucketScanInfoResponseBody model) {
+            this.data = model.data;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -310,6 +323,28 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             private String storageClass; 
             private Boolean support; 
             private Long totalObject; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bucketName = model.bucketName;
+                this.configStatus = model.configStatus;
+                this.decompressStatus = model.decompressStatus;
+                this.highRisk = model.highRisk;
+                this.lastScanEndTime = model.lastScanEndTime;
+                this.lastScanTime = model.lastScanTime;
+                this.lowRisk = model.lowRisk;
+                this.mediumRisk = model.mediumRisk;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.scanObject = model.scanObject;
+                this.scanned = model.scanned;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.support = model.support;
+                this.totalObject = model.totalObject;
+            } 
 
             /**
              * <p>The name of the bucket.</p>
@@ -578,6 +613,15 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

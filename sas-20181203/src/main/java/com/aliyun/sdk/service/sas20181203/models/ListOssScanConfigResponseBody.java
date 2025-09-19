@@ -40,6 +40,10 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOssScanConfigResponseBody model) {
+            this.data = model.data;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -148,6 +161,9 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RealTimeIncr")
+        private Boolean realTimeIncr;
+
         @com.aliyun.core.annotation.NameInMap("ScanDayList")
         private java.util.List<Integer> scanDayList;
 
@@ -169,6 +185,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             this.lastModifiedStartTime = builder.lastModifiedStartTime;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.name = builder.name;
+            this.realTimeIncr = builder.realTimeIncr;
             this.scanDayList = builder.scanDayList;
             this.startTime = builder.startTime;
         }
@@ -280,6 +297,13 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return realTimeIncr
+         */
+        public Boolean getRealTimeIncr() {
+            return this.realTimeIncr;
+        }
+
+        /**
          * @return scanDayList
          */
         public java.util.List<Integer> getScanDayList() {
@@ -308,8 +332,32 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private Long lastModifiedStartTime; 
             private Long lastUpdateTime; 
             private String name; 
+            private Boolean realTimeIncr; 
             private java.util.List<Integer> scanDayList; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allKeyPrefix = model.allKeyPrefix;
+                this.bucketCount = model.bucketCount;
+                this.bucketNameList = model.bucketNameList;
+                this.decompressMaxFileCount = model.decompressMaxFileCount;
+                this.decompressMaxLayer = model.decompressMaxLayer;
+                this.decryptionList = model.decryptionList;
+                this.enable = model.enable;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.keyPrefixList = model.keyPrefixList;
+                this.keySuffixList = model.keySuffixList;
+                this.lastModifiedStartTime = model.lastModifiedStartTime;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.name = model.name;
+                this.realTimeIncr = model.realTimeIncr;
+                this.scanDayList = model.scanDayList;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>Indicates whether the prefixes of all objects are matched.</p>
@@ -458,6 +506,17 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder realTimeIncr(Boolean realTimeIncr) {
+                this.realTimeIncr = realTimeIncr;
+                return this;
+            }
+
+            /**
              * <p>The days on which the scan is executed in a week.</p>
              */
             public Builder scanDayList(java.util.List<Integer> scanDayList) {
@@ -538,6 +597,15 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

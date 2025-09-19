@@ -36,6 +36,10 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientConf
      */
@@ -53,6 +57,14 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
     public static final class Builder {
         private ClientConf clientConf; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClientConfSetupResponseBody model) {
+            this.clientConf = model.clientConf;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations of the Security Center agent.</p>
@@ -134,6 +146,15 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             private String config; 
             private String strategyTag; 
             private String strategyTagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientConf model) {
+                this.config = model.config;
+                this.strategyTag = model.strategyTag;
+                this.strategyTagValue = model.strategyTagValue;
+            } 
 
             /**
              * <p>The configurations of the usage for the Security Center agent.</p>

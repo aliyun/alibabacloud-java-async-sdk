@@ -36,6 +36,10 @@ public class DescribeVendorListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVendorListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> vendorNameList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVendorListResponseBody model) {
+            this.requestId = model.requestId;
+            this.vendorNameList = model.vendorNameList;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

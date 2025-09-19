@@ -36,6 +36,10 @@ public class FixCheckWarningsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchId
      */
@@ -53,6 +57,14 @@ public class FixCheckWarningsResponseBody extends TeaModel {
     public static final class Builder {
         private Long batchId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FixCheckWarningsResponseBody model) {
+            this.batchId = model.batchId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the baseline risk item that has been fixed by using the Batch Repair feature.</p>

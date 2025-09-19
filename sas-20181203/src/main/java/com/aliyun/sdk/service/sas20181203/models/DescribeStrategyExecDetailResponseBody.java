@@ -64,6 +64,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -137,6 +141,21 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         private String source; 
         private String startTime; 
         private Integer successCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStrategyExecDetailResponseBody model) {
+            this.endTime = model.endTime;
+            this.failCount = model.failCount;
+            this.failedEcsList = model.failedEcsList;
+            this.inProcessCount = model.inProcessCount;
+            this.percent = model.percent;
+            this.requestId = model.requestId;
+            this.source = model.source;
+            this.startTime = model.startTime;
+            this.successCount = model.successCount;
+        } 
 
         /**
          * <p>The time when the baseline check ends.</p>
@@ -323,6 +342,17 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedEcsList model) {
+                this.ip = model.ip;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.reason = model.reason;
+            } 
 
             /**
              * <p>The IP address of the server on which the baseline check was performed.</p>

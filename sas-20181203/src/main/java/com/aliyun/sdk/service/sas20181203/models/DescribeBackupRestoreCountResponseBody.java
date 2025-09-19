@@ -36,6 +36,10 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupRestoreCount
      */
@@ -53,6 +57,14 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
     public static final class Builder {
         private BackupRestoreCount backupRestoreCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupRestoreCountResponseBody model) {
+            this.backupRestoreCount = model.backupRestoreCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics of restoration tasks.</p>
@@ -122,6 +134,14 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         public static final class Builder {
             private Integer recovering; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupRestoreCount model) {
+                this.recovering = model.recovering;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The number of the restoration tasks that are in the <strong>being restored</strong> state.</p>

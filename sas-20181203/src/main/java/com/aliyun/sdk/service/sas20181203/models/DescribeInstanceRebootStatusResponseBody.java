@@ -40,6 +40,10 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return rebootStatuses
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         private java.util.List<RebootStatuses> rebootStatuses; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceRebootStatusResponseBody model) {
+            this.rebootStatuses = model.rebootStatuses;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the status information about the servers that you restart.</p>
@@ -169,6 +182,16 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             private String msg; 
             private Integer rebootStatus; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(RebootStatuses model) {
+                this.code = model.code;
+                this.msg = model.msg;
+                this.rebootStatus = model.rebootStatus;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The error code that is returned when the server failed to be restarted. Valid values:</p>

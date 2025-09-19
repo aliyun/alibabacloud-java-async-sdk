@@ -102,6 +102,10 @@ public class DescribeImageVulListRequest extends Request {
     private String repoRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleTag")
+    private String ruleTag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private java.util.List<String> scanRange;
 
@@ -145,6 +149,7 @@ public class DescribeImageVulListRequest extends Request {
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.ruleTag = builder.ruleTag;
         this.scanRange = builder.scanRange;
         this.statusList = builder.statusList;
         this.tag = builder.tag;
@@ -160,7 +165,7 @@ public class DescribeImageVulListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -313,6 +318,13 @@ public class DescribeImageVulListRequest extends Request {
     }
 
     /**
+     * @return ruleTag
+     */
+    public String getRuleTag() {
+        return this.ruleTag;
+    }
+
+    /**
      * @return scanRange
      */
     public java.util.List<String> getScanRange() {
@@ -369,6 +381,7 @@ public class DescribeImageVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private String ruleTag; 
         private java.util.List<String> scanRange; 
         private String statusList; 
         private String tag; 
@@ -402,6 +415,7 @@ public class DescribeImageVulListRequest extends Request {
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.ruleTag = request.ruleTag;
             this.scanRange = request.scanRange;
             this.statusList = request.statusList;
             this.tag = request.tag;
@@ -458,7 +472,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong></p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -472,8 +486,8 @@ public class DescribeImageVulListRequest extends Request {
         /**
          * <p>Specifies whether the vulnerability is handled. Valid values:</p>
          * <ul>
-         * <li><strong>y</strong>: handled</li>
-         * <li><strong>n</strong>: unhandled</li>
+         * <li><strong>y</strong>: yes</li>
+         * <li><strong>n</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -579,7 +593,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong></p>
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -639,7 +653,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>libssh2</p>
@@ -675,6 +689,21 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
+         * <p>The tag of this vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>AI</strong>: AI-related components.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        public Builder ruleTag(String ruleTag) {
+            this.putQueryParameter("RuleTag", ruleTag);
+            this.ruleTag = ruleTag;
+            return this;
+        }
+
+        /**
          * <p>The types of the assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
@@ -701,7 +730,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the image.</p>
+         * <p>The tag that is added to the image vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>oval</p>

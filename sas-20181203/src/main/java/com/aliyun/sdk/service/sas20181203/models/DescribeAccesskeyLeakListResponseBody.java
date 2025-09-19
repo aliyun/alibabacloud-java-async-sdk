@@ -56,6 +56,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyLeakList
      */
@@ -113,6 +117,19 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccesskeyLeakListResponseBody model) {
+            this.accessKeyLeakList = model.accessKeyLeakList;
+            this.akLeakCount = model.akLeakCount;
+            this.currentPage = model.currentPage;
+            this.gmtLast = model.gmtLast;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details about AccessKey pair leaks.</p>
@@ -346,11 +363,28 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             private String url; 
             private String userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyLeakList model) {
+                this.accesskeyId = model.accesskeyId;
+                this.aliUserName = model.aliUserName;
+                this.asset = model.asset;
+                this.dealTime = model.dealTime;
+                this.dealType = model.dealType;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.status = model.status;
+                this.type = model.type;
+                this.url = model.url;
+                this.userType = model.userType;
+            } 
+
             /**
              * <p>The ID of the AccessKey pair that is leaked.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI4Fytv7ALKzkNVBV6****</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accesskeyId(String accesskeyId) {
                 this.accesskeyId = accesskeyId;

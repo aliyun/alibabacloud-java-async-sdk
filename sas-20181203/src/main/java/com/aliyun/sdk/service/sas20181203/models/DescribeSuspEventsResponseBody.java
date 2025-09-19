@@ -52,6 +52,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SuspEvents> suspEvents; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSuspEventsResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.suspEvents = model.suspEvents;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -239,6 +255,16 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String value; 
             private String valueDisplay; 
 
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.nameDisplay = model.nameDisplay;
+                this.type = model.type;
+                this.value = model.value;
+                this.valueDisplay = model.valueDisplay;
+            } 
+
             /**
              * <p>The display name of the alert event.</p>
              * 
@@ -346,6 +372,15 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private Long noteId; 
             private String noteTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventNotes model) {
+                this.note = model.note;
+                this.noteId = model.noteId;
+                this.noteTime = model.noteTime;
+            } 
+
             /**
              * <p>The note.</p>
              * 
@@ -429,6 +464,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public static final class Builder {
             private String tacticDisplayName; 
             private String tacticId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TacticItems model) {
+                this.tacticDisplayName = model.tacticDisplayName;
+                this.tacticId = model.tacticId;
+            } 
 
             /**
              * <p>The tactic name of ATT&amp;CK.</p>
@@ -1138,6 +1181,67 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String uniqueInfo; 
             private String uuid; 
             private String clusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspEvents model) {
+                this.advanced = model.advanced;
+                this.alarmEventName = model.alarmEventName;
+                this.alarmEventNameDisplay = model.alarmEventNameDisplay;
+                this.alarmEventType = model.alarmEventType;
+                this.alarmEventTypeDisplay = model.alarmEventTypeDisplay;
+                this.alarmUniqueInfo = model.alarmUniqueInfo;
+                this.appName = model.appName;
+                this.autoBreaking = model.autoBreaking;
+                this.canBeDealOnLine = model.canBeDealOnLine;
+                this.canCancelFault = model.canCancelFault;
+                this.containHwMode = model.containHwMode;
+                this.containerId = model.containerId;
+                this.containerImageId = model.containerImageId;
+                this.containerImageName = model.containerImageName;
+                this.dataSource = model.dataSource;
+                this.desc = model.desc;
+                this.details = model.details;
+                this.displaySandboxResult = model.displaySandboxResult;
+                this.eventNotes = model.eventNotes;
+                this.eventStatus = model.eventStatus;
+                this.eventSubType = model.eventSubType;
+                this.hasTraceInfo = model.hasTraceInfo;
+                this.id = model.id;
+                this.imageUuid = model.imageUuid;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.k8sClusterId = model.k8sClusterId;
+                this.k8sClusterName = model.k8sClusterName;
+                this.k8sNamespace = model.k8sNamespace;
+                this.k8sNodeId = model.k8sNodeId;
+                this.k8sNodeName = model.k8sNodeName;
+                this.k8sPodName = model.k8sPodName;
+                this.largeModel = model.largeModel;
+                this.lastTime = model.lastTime;
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.level = model.level;
+                this.maliciousRuleStatus = model.maliciousRuleStatus;
+                this.markList = model.markList;
+                this.markMisRules = model.markMisRules;
+                this.name = model.name;
+                this.occurrenceTime = model.occurrenceTime;
+                this.occurrenceTimeStamp = model.occurrenceTimeStamp;
+                this.operateErrorCode = model.operateErrorCode;
+                this.operateMsg = model.operateMsg;
+                this.operateTime = model.operateTime;
+                this.saleVersion = model.saleVersion;
+                this.securityEventIds = model.securityEventIds;
+                this.sourceAliUid = model.sourceAliUid;
+                this.stages = model.stages;
+                this.tacticItems = model.tacticItems;
+                this.uniqueInfo = model.uniqueInfo;
+                this.uuid = model.uuid;
+                this.clusterId = model.clusterId;
+            } 
 
             /**
              * <p>Indicates whether the alert event was analyzed offline.</p>

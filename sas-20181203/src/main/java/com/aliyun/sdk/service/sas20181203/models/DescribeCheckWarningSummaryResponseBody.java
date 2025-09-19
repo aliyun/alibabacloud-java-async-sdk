@@ -52,6 +52,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<WarningSummarys> warningSummarys; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckWarningSummaryResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.warningSummarys = model.warningSummarys;
+        } 
 
         /**
          * <p>The number of check items returned on the current page.</p>
@@ -358,6 +374,26 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             private String subTypeAlias; 
             private String typeAlias; 
             private Integer warningMachineCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarningSummarys model) {
+                this.checkCount = model.checkCount;
+                this.checkExploit = model.checkExploit;
+                this.containerRisk = model.containerRisk;
+                this.databaseRisk = model.databaseRisk;
+                this.highWarningCount = model.highWarningCount;
+                this.lastFoundTime = model.lastFoundTime;
+                this.level = model.level;
+                this.lowWarningCount = model.lowWarningCount;
+                this.mediumWarningCount = model.mediumWarningCount;
+                this.riskId = model.riskId;
+                this.riskName = model.riskName;
+                this.subTypeAlias = model.subTypeAlias;
+                this.typeAlias = model.typeAlias;
+                this.warningMachineCount = model.warningMachineCount;
+            } 
 
             /**
              * <p>The number of check items.</p>

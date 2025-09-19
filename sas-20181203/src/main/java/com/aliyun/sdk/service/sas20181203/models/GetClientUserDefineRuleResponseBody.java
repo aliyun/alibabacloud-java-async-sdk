@@ -36,6 +36,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserDefineRuleDetail userDefineRuleDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClientUserDefineRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.userDefineRuleDetail = model.userDefineRuleDetail;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -338,6 +350,32 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             private String registryContent; 
             private String registryKey; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRuleDetail model) {
+                this.actionType = model.actionType;
+                this.cmdline = model.cmdline;
+                this.domain = model.domain;
+                this.filePath = model.filePath;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.id = model.id;
+                this.md5List = model.md5List;
+                this.name = model.name;
+                this.newFilePath = model.newFilePath;
+                this.parentCmdline = model.parentCmdline;
+                this.parentProcPath = model.parentProcPath;
+                this.platform = model.platform;
+                this.port = model.port;
+                this.portStr = model.portStr;
+                this.procPath = model.procPath;
+                this.registryContent = model.registryContent;
+                this.registryKey = model.registryKey;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The action of the custom defense rule. Valid values:</p>

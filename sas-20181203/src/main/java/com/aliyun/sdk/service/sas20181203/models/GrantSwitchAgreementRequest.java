@@ -22,6 +22,10 @@ public class GrantSwitchAgreementRequest extends Request {
     private Boolean isAgree;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsImmediate")
+    private Boolean isImmediate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -32,6 +36,7 @@ public class GrantSwitchAgreementRequest extends Request {
     private GrantSwitchAgreementRequest(Builder builder) {
         super(builder);
         this.isAgree = builder.isAgree;
+        this.isImmediate = builder.isImmediate;
         this.lang = builder.lang;
         this.type = builder.type;
     }
@@ -44,7 +49,7 @@ public class GrantSwitchAgreementRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +59,13 @@ public class GrantSwitchAgreementRequest extends Request {
      */
     public Boolean getIsAgree() {
         return this.isAgree;
+    }
+
+    /**
+     * @return isImmediate
+     */
+    public Boolean getIsImmediate() {
+        return this.isImmediate;
     }
 
     /**
@@ -72,6 +84,7 @@ public class GrantSwitchAgreementRequest extends Request {
 
     public static final class Builder extends Request.Builder<GrantSwitchAgreementRequest, Builder> {
         private Boolean isAgree; 
+        private Boolean isImmediate; 
         private String lang; 
         private String type; 
 
@@ -82,6 +95,7 @@ public class GrantSwitchAgreementRequest extends Request {
         private Builder(GrantSwitchAgreementRequest request) {
             super(request);
             this.isAgree = request.isAgree;
+            this.isImmediate = request.isImmediate;
             this.lang = request.lang;
             this.type = request.type;
         } 
@@ -95,6 +109,15 @@ public class GrantSwitchAgreementRequest extends Request {
         public Builder isAgree(Boolean isAgree) {
             this.putQueryParameter("IsAgree", isAgree);
             this.isAgree = isAgree;
+            return this;
+        }
+
+        /**
+         * IsImmediate.
+         */
+        public Builder isImmediate(Boolean isImmediate) {
+            this.putQueryParameter("IsImmediate", isImmediate);
+            this.isImmediate = isImmediate;
             return this;
         }
 

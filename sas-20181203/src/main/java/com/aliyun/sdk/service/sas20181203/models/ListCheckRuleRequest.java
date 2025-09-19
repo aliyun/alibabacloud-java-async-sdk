@@ -45,6 +45,10 @@ public class ListCheckRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
     private ListCheckRuleRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
@@ -54,6 +58,7 @@ public class ListCheckRuleRequest extends Request {
         this.pageSize = builder.pageSize;
         this.ruleType = builder.ruleType;
         this.scopeType = builder.scopeType;
+        this.taskSources = builder.taskSources;
     }
 
     public static Builder builder() {
@@ -64,7 +69,7 @@ public class ListCheckRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +123,13 @@ public class ListCheckRuleRequest extends Request {
         return this.scopeType;
     }
 
+    /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
     public static final class Builder extends Request.Builder<ListCheckRuleRequest, Builder> {
         private Long checkId; 
         private String checkName; 
@@ -126,6 +138,7 @@ public class ListCheckRuleRequest extends Request {
         private Integer pageSize; 
         private String ruleType; 
         private String scopeType; 
+        private java.util.List<String> taskSources; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class ListCheckRuleRequest extends Request {
             this.pageSize = request.pageSize;
             this.ruleType = request.ruleType;
             this.scopeType = request.scopeType;
+            this.taskSources = request.taskSources;
         } 
 
         /**
@@ -237,6 +251,15 @@ public class ListCheckRuleRequest extends Request {
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
             this.scopeType = scopeType;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

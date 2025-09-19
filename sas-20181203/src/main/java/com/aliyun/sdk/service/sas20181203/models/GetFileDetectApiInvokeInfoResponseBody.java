@@ -36,6 +36,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileDetectApiInvokeInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returns the response body.</p>
@@ -89,11 +101,20 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthCount")
         private Long authCount;
 
+        @com.aliyun.core.annotation.NameInMap("AuthCountInSaleVersion")
+        private Long authCountInSaleVersion;
+
         @com.aliyun.core.annotation.NameInMap("Expire")
         private Long expire;
 
         @com.aliyun.core.annotation.NameInMap("FlowRate")
         private Integer flowRate;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeCount")
+        private Long invokeCount;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeCountInSaleVersion")
+        private Long invokeCountInSaleVersion;
 
         @com.aliyun.core.annotation.NameInMap("RemainAuthCount")
         private Long remainAuthCount;
@@ -106,8 +127,11 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.authCount = builder.authCount;
+            this.authCountInSaleVersion = builder.authCountInSaleVersion;
             this.expire = builder.expire;
             this.flowRate = builder.flowRate;
+            this.invokeCount = builder.invokeCount;
+            this.invokeCountInSaleVersion = builder.invokeCountInSaleVersion;
             this.remainAuthCount = builder.remainAuthCount;
             this.saleVersion = builder.saleVersion;
             this.timeUnit = builder.timeUnit;
@@ -129,6 +153,13 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return authCountInSaleVersion
+         */
+        public Long getAuthCountInSaleVersion() {
+            return this.authCountInSaleVersion;
+        }
+
+        /**
          * @return expire
          */
         public Long getExpire() {
@@ -140,6 +171,20 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
          */
         public Integer getFlowRate() {
             return this.flowRate;
+        }
+
+        /**
+         * @return invokeCount
+         */
+        public Long getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        /**
+         * @return invokeCountInSaleVersion
+         */
+        public Long getInvokeCountInSaleVersion() {
+            return this.invokeCountInSaleVersion;
         }
 
         /**
@@ -165,11 +210,29 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long authCount; 
+            private Long authCountInSaleVersion; 
             private Long expire; 
             private Integer flowRate; 
+            private Long invokeCount; 
+            private Long invokeCountInSaleVersion; 
             private Long remainAuthCount; 
             private Integer saleVersion; 
             private String timeUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authCount = model.authCount;
+                this.authCountInSaleVersion = model.authCountInSaleVersion;
+                this.expire = model.expire;
+                this.flowRate = model.flowRate;
+                this.invokeCount = model.invokeCount;
+                this.invokeCountInSaleVersion = model.invokeCountInSaleVersion;
+                this.remainAuthCount = model.remainAuthCount;
+                this.saleVersion = model.saleVersion;
+                this.timeUnit = model.timeUnit;
+            } 
 
             /**
              * <p>The total number of authorizations.</p>
@@ -179,6 +242,17 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
              */
             public Builder authCount(Long authCount) {
                 this.authCount = authCount;
+                return this;
+            }
+
+            /**
+             * <p>The total number of authorizations(excluding trials).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder authCountInSaleVersion(Long authCountInSaleVersion) {
+                this.authCountInSaleVersion = authCountInSaleVersion;
                 return this;
             }
 
@@ -201,6 +275,28 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
              */
             public Builder flowRate(Integer flowRate) {
                 this.flowRate = flowRate;
+                return this;
+            }
+
+            /**
+             * <p>The number of authorizations used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder invokeCount(Long invokeCount) {
+                this.invokeCount = invokeCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of authorizations used(excluding trials).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder invokeCountInSaleVersion(Long invokeCountInSaleVersion) {
+                this.invokeCountInSaleVersion = invokeCountInSaleVersion;
                 return this;
             }
 

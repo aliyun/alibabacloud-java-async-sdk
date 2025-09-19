@@ -36,6 +36,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceStatisticsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The risk information about assets.</p>
@@ -116,6 +128,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CmsNum")
         private Integer cmsNum;
 
+        @com.aliyun.core.annotation.NameInMap("CspmHighRiskNum")
+        private String cspmHighRiskNum;
+
         @com.aliyun.core.annotation.NameInMap("CspmNum")
         private Integer cspmNum;
 
@@ -128,11 +143,23 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Health")
         private Integer health;
 
+        @com.aliyun.core.annotation.NameInMap("RemindSuspiciousNum")
+        private String remindSuspiciousNum;
+
         @com.aliyun.core.annotation.NameInMap("ScaNum")
         private Integer scaNum;
 
+        @com.aliyun.core.annotation.NameInMap("SeriousSuspiciousNum")
+        private String seriousSuspiciousNum;
+
+        @com.aliyun.core.annotation.NameInMap("SuspectSuspiciousNum")
+        private String suspectSuspiciousNum;
+
         @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
+
+        @com.aliyun.core.annotation.NameInMap("SysAsapVulCount")
+        private String sysAsapVulCount;
 
         @com.aliyun.core.annotation.NameInMap("SysNum")
         private Integer sysNum;
@@ -160,12 +187,17 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.agentlessVulSys = builder.agentlessVulSys;
             this.appNum = builder.appNum;
             this.cmsNum = builder.cmsNum;
+            this.cspmHighRiskNum = builder.cspmHighRiskNum;
             this.cspmNum = builder.cspmNum;
             this.cveNum = builder.cveNum;
             this.emgNum = builder.emgNum;
             this.health = builder.health;
+            this.remindSuspiciousNum = builder.remindSuspiciousNum;
             this.scaNum = builder.scaNum;
+            this.seriousSuspiciousNum = builder.seriousSuspiciousNum;
+            this.suspectSuspiciousNum = builder.suspectSuspiciousNum;
             this.suspicious = builder.suspicious;
+            this.sysAsapVulCount = builder.sysAsapVulCount;
             this.sysNum = builder.sysNum;
             this.trojan = builder.trojan;
             this.uuid = builder.uuid;
@@ -252,6 +284,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return cspmHighRiskNum
+         */
+        public String getCspmHighRiskNum() {
+            return this.cspmHighRiskNum;
+        }
+
+        /**
          * @return cspmNum
          */
         public Integer getCspmNum() {
@@ -280,6 +319,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remindSuspiciousNum
+         */
+        public String getRemindSuspiciousNum() {
+            return this.remindSuspiciousNum;
+        }
+
+        /**
          * @return scaNum
          */
         public Integer getScaNum() {
@@ -287,10 +333,31 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return seriousSuspiciousNum
+         */
+        public String getSeriousSuspiciousNum() {
+            return this.seriousSuspiciousNum;
+        }
+
+        /**
+         * @return suspectSuspiciousNum
+         */
+        public String getSuspectSuspiciousNum() {
+            return this.suspectSuspiciousNum;
+        }
+
+        /**
          * @return suspicious
          */
         public Integer getSuspicious() {
             return this.suspicious;
+        }
+
+        /**
+         * @return sysAsapVulCount
+         */
+        public String getSysAsapVulCount() {
+            return this.sysAsapVulCount;
         }
 
         /**
@@ -339,17 +406,54 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer agentlessVulSys; 
             private Integer appNum; 
             private Integer cmsNum; 
+            private String cspmHighRiskNum; 
             private Integer cspmNum; 
             private Integer cveNum; 
             private Integer emgNum; 
             private Integer health; 
+            private String remindSuspiciousNum; 
             private Integer scaNum; 
+            private String seriousSuspiciousNum; 
+            private String suspectSuspiciousNum; 
             private Integer suspicious; 
+            private String sysAsapVulCount; 
             private Integer sysNum; 
             private Integer trojan; 
             private String uuid; 
             private Integer vul; 
             private Integer weakPWNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.agentlessAll = model.agentlessAll;
+                this.agentlessBaseline = model.agentlessBaseline;
+                this.agentlessMalicious = model.agentlessMalicious;
+                this.agentlessSensitiveFile = model.agentlessSensitiveFile;
+                this.agentlessVulCve = model.agentlessVulCve;
+                this.agentlessVulSca = model.agentlessVulSca;
+                this.agentlessVulSys = model.agentlessVulSys;
+                this.appNum = model.appNum;
+                this.cmsNum = model.cmsNum;
+                this.cspmHighRiskNum = model.cspmHighRiskNum;
+                this.cspmNum = model.cspmNum;
+                this.cveNum = model.cveNum;
+                this.emgNum = model.emgNum;
+                this.health = model.health;
+                this.remindSuspiciousNum = model.remindSuspiciousNum;
+                this.scaNum = model.scaNum;
+                this.seriousSuspiciousNum = model.seriousSuspiciousNum;
+                this.suspectSuspiciousNum = model.suspectSuspiciousNum;
+                this.suspicious = model.suspicious;
+                this.sysAsapVulCount = model.sysAsapVulCount;
+                this.sysNum = model.sysNum;
+                this.trojan = model.trojan;
+                this.uuid = model.uuid;
+                this.vul = model.vul;
+                this.weakPWNum = model.weakPWNum;
+            } 
 
             /**
              * <p>The number of unusual logons to the asset.</p>
@@ -462,6 +566,17 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Number of high-risk CSPM issues in the system</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder cspmHighRiskNum(String cspmHighRiskNum) {
+                this.cspmHighRiskNum = cspmHighRiskNum;
+                return this;
+            }
+
+            /**
              * <p>The number of configuration risks detected on the asset.</p>
              * 
              * <strong>example:</strong>
@@ -506,6 +621,17 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Number of security alerts for asset existence reminders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder remindSuspiciousNum(String remindSuspiciousNum) {
+                this.remindSuspiciousNum = remindSuspiciousNum;
+                return this;
+            }
+
+            /**
              * <p>The number of middleware vulnerabilities detected on the asset.</p>
              * 
              * <strong>example:</strong>
@@ -517,6 +643,28 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Number of high-risk security alerts for the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder seriousSuspiciousNum(String seriousSuspiciousNum) {
+                this.seriousSuspiciousNum = seriousSuspiciousNum;
+                return this;
+            }
+
+            /**
+             * <p>Number of suspicious security alerts for the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder suspectSuspiciousNum(String suspectSuspiciousNum) {
+                this.suspectSuspiciousNum = suspectSuspiciousNum;
+                return this;
+            }
+
+            /**
              * <p>The number of alerts generated for the asset.</p>
              * 
              * <strong>example:</strong>
@@ -524,6 +672,17 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;
+                return this;
+            }
+
+            /**
+             * <p>Number of system vulnerabilities in the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder sysAsapVulCount(String sysAsapVulCount) {
+                this.sysAsapVulCount = sysAsapVulCount;
                 return this;
             }
 

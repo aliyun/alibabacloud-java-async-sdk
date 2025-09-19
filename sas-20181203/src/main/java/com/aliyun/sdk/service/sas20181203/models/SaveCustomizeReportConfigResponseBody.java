@@ -36,6 +36,10 @@ public class SaveCustomizeReportConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reportId
      */
@@ -53,6 +57,14 @@ public class SaveCustomizeReportConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Long reportId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveCustomizeReportConfigResponseBody model) {
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the report.</p>

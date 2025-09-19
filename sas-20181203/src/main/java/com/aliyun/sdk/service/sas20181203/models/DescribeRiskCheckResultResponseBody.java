@@ -56,6 +56,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -113,6 +117,19 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskCheckResultResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.list = model.list;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -237,6 +254,14 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> contentResource; 
             private String resourceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskItemResources model) {
+                this.contentResource = model.contentResource;
+                this.resourceName = model.resourceName;
+            } 
 
             /**
              * <p>The details about the check results.</p>
@@ -457,6 +482,26 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private Long taskId; 
             private String title; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.affectedCount = model.affectedCount;
+                this.checkTime = model.checkTime;
+                this.itemId = model.itemId;
+                this.remainingTime = model.remainingTime;
+                this.repairStatus = model.repairStatus;
+                this.riskAssertType = model.riskAssertType;
+                this.riskItemResources = model.riskItemResources;
+                this.riskLevel = model.riskLevel;
+                this.sort = model.sort;
+                this.startStatus = model.startStatus;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of affected assets.</p>

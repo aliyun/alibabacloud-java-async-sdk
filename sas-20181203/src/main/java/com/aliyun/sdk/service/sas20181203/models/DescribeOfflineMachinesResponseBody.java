@@ -48,6 +48,10 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOfflineMachinesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.machineList = model.machineList;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -287,6 +302,22 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             private String uuid; 
             private Integer vendor; 
             private String vendorName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineList model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.machineRegion = model.machineRegion;
+                this.os = model.os;
+                this.regionId = model.regionId;
+                this.uuid = model.uuid;
+                this.vendor = model.vendor;
+                this.vendorName = model.vendorName;
+            } 
 
             /**
              * <p>The ID of the server.</p>

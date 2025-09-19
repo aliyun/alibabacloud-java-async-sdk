@@ -56,6 +56,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHoneypotProbeResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.list = model.list;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -250,6 +267,15 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String ecsInstanceId; 
             private String nodeId; 
             private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlNode model) {
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+            } 
 
             /**
              * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
@@ -442,6 +468,23 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String status; 
             private String uuid; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.controlNode = model.controlNode;
+                this.deployTime = model.deployTime;
+                this.displayName = model.displayName;
+                this.hostIp = model.hostIp;
+                this.osType = model.osType;
+                this.probeId = model.probeId;
+                this.probeType = model.probeType;
+                this.probeVersion = model.probeVersion;
+                this.status = model.status;
+                this.uuid = model.uuid;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The information about the management node.</p>
@@ -655,6 +698,16 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

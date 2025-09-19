@@ -56,6 +56,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authCount
      */
@@ -113,6 +117,19 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         private Long expireTime; 
         private String requestId; 
         private Integer whiteCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebLockStatusResponseBody model) {
+            this.authCount = model.authCount;
+            this.bindCount = model.bindCount;
+            this.blockCount = model.blockCount;
+            this.dirCount = model.dirCount;
+            this.expireTime = model.expireTime;
+            this.requestId = model.requestId;
+            this.whiteCount = model.whiteCount;
+        } 
 
         /**
          * <p>The total quota that you purchase for web tamper proofing.</p>

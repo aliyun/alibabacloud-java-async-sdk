@@ -52,6 +52,10 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         private String requestId; 
         private Boolean success; 
         private Long timeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySecurityEventMarkMissIndividuallyResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timeCost = model.timeCost;
+        } 
 
         /**
          * <p>The status code of the alert event.</p>

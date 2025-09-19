@@ -40,6 +40,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseList
      */
@@ -65,6 +69,15 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         private java.util.List<DatabaseList> databaseList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUniBackupDatabaseResponseBody model) {
+            this.databaseList = model.databaseList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about the databases.</p>
@@ -238,6 +251,22 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private String instanceUuid; 
             private Long policyId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseList model) {
+                this.agentStatus = model.agentStatus;
+                this.createdByProduct = model.createdByProduct;
+                this.databaseName = model.databaseName;
+                this.databaseType = model.databaseType;
+                this.databaseVersion = model.databaseVersion;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceUuid = model.instanceUuid;
+                this.policyId = model.policyId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The status of the anti-ransomware agent. Valid values:</p>
@@ -442,6 +471,16 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

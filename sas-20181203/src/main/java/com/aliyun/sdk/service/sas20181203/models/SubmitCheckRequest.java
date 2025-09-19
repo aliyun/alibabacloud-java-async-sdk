@@ -21,9 +21,14 @@ public class SubmitCheckRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private String scanRange;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSource")
+    private String taskSource;
+
     private SubmitCheckRequest(Builder builder) {
         super(builder);
         this.scanRange = builder.scanRange;
+        this.taskSource = builder.taskSource;
     }
 
     public static Builder builder() {
@@ -34,7 +39,7 @@ public class SubmitCheckRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -46,8 +51,16 @@ public class SubmitCheckRequest extends Request {
         return this.scanRange;
     }
 
+    /**
+     * @return taskSource
+     */
+    public String getTaskSource() {
+        return this.taskSource;
+    }
+
     public static final class Builder extends Request.Builder<SubmitCheckRequest, Builder> {
         private String scanRange; 
+        private String taskSource; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class SubmitCheckRequest extends Request {
         private Builder(SubmitCheckRequest request) {
             super(request);
             this.scanRange = request.scanRange;
+            this.taskSource = request.taskSource;
         } 
 
         /**
@@ -71,6 +85,15 @@ public class SubmitCheckRequest extends Request {
         public Builder scanRange(String scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
+            return this;
+        }
+
+        /**
+         * TaskSource.
+         */
+        public Builder taskSource(String taskSource) {
+            this.putQueryParameter("TaskSource", taskSource);
+            this.taskSource = taskSource;
             return this;
         }
 

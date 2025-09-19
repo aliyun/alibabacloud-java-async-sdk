@@ -26,6 +26,10 @@ public class ListCheckResultRequest extends Request {
     private String checkKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckTypes")
+    private java.util.List<String> checkTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -79,6 +83,10 @@ public class ListCheckResultRequest extends Request {
     private java.util.List<String> statuses;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
     private java.util.List<String> types;
 
@@ -90,6 +98,7 @@ public class ListCheckResultRequest extends Request {
         super(builder);
         this.checkIds = builder.checkIds;
         this.checkKey = builder.checkKey;
+        this.checkTypes = builder.checkTypes;
         this.currentPage = builder.currentPage;
         this.customParam = builder.customParam;
         this.instanceIds = builder.instanceIds;
@@ -103,6 +112,7 @@ public class ListCheckResultRequest extends Request {
         this.sortTypes = builder.sortTypes;
         this.standardIds = builder.standardIds;
         this.statuses = builder.statuses;
+        this.taskSources = builder.taskSources;
         this.types = builder.types;
         this.vendors = builder.vendors;
     }
@@ -115,7 +125,7 @@ public class ListCheckResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +142,13 @@ public class ListCheckResultRequest extends Request {
      */
     public String getCheckKey() {
         return this.checkKey;
+    }
+
+    /**
+     * @return checkTypes
+     */
+    public java.util.List<String> getCheckTypes() {
+        return this.checkTypes;
     }
 
     /**
@@ -226,6 +243,13 @@ public class ListCheckResultRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return types
      */
     public java.util.List<String> getTypes() {
@@ -242,6 +266,7 @@ public class ListCheckResultRequest extends Request {
     public static final class Builder extends Request.Builder<ListCheckResultRequest, Builder> {
         private java.util.List<Long> checkIds; 
         private String checkKey; 
+        private java.util.List<String> checkTypes; 
         private Integer currentPage; 
         private Boolean customParam; 
         private java.util.List<String> instanceIds; 
@@ -255,6 +280,7 @@ public class ListCheckResultRequest extends Request {
         private java.util.List<String> sortTypes; 
         private java.util.List<Long> standardIds; 
         private java.util.List<String> statuses; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> types; 
         private java.util.List<String> vendors; 
 
@@ -266,6 +292,7 @@ public class ListCheckResultRequest extends Request {
             super(request);
             this.checkIds = request.checkIds;
             this.checkKey = request.checkKey;
+            this.checkTypes = request.checkTypes;
             this.currentPage = request.currentPage;
             this.customParam = request.customParam;
             this.instanceIds = request.instanceIds;
@@ -279,6 +306,7 @@ public class ListCheckResultRequest extends Request {
             this.sortTypes = request.sortTypes;
             this.standardIds = request.standardIds;
             this.statuses = request.statuses;
+            this.taskSources = request.taskSources;
             this.types = request.types;
             this.vendors = request.vendors;
         } 
@@ -301,6 +329,15 @@ public class ListCheckResultRequest extends Request {
         public Builder checkKey(String checkKey) {
             this.putQueryParameter("CheckKey", checkKey);
             this.checkKey = checkKey;
+            return this;
+        }
+
+        /**
+         * <p>Source type of the situation awareness check item.</p>
+         */
+        public Builder checkTypes(java.util.List<String> checkTypes) {
+            this.putQueryParameter("CheckTypes", checkTypes);
+            this.checkTypes = checkTypes;
             return this;
         }
 
@@ -489,6 +526,15 @@ public class ListCheckResultRequest extends Request {
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
+            return this;
+        }
+
+        /**
+         * <p>Delete the custom category in a custom inspection item.</p>
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

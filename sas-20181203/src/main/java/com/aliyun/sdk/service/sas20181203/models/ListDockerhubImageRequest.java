@@ -35,7 +35,7 @@ public class ListDockerhubImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class ListDockerhubImageRequest extends Request {
         } 
 
         /**
-         * <p>Image query condition, supports the format of <code>[namespace/]repoName[:version]</code>, where the conditions within <code>[]</code> are optional.</p>
+         * <p>The query condition for images. You can query images in the <code>[namespace/]repoName[:version]</code> format. Conditions in <code>[]</code> are optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

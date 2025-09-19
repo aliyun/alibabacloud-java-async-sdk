@@ -36,6 +36,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterPluginInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the plug-in.</p>
@@ -242,6 +254,24 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String pluginVersion; 
             private String uuid; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePluginInfoList model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.installed = model.installed;
+                this.machineInternetIp = model.machineInternetIp;
+                this.machineIntranetIp = model.machineIntranetIp;
+                this.machineName = model.machineName;
+                this.machineType = model.machineType;
+                this.online = model.online;
+                this.pluginName = model.pluginName;
+                this.pluginVersion = model.pluginVersion;
+                this.uuid = model.uuid;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The error code returned.</p>
@@ -464,6 +494,16 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String clusterName; 
             private String clusterStatus; 
             private java.util.List<NodePluginInfoList> nodePluginInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterStatus = model.clusterStatus;
+                this.nodePluginInfoList = model.nodePluginInfoList;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>

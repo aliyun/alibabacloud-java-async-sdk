@@ -56,6 +56,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -113,6 +117,19 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListContainerDefenseRuleClustersResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.code = model.code;
+            this.count = model.count;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The clusters.</p>
@@ -265,6 +282,16 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             private String clusterId; 
             private java.util.List<String> namespaces; 
             private Long ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.allNamespace = model.allNamespace;
+                this.clusterId = model.clusterId;
+                this.namespaces = model.namespaces;
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>Indicates whether all namespaces are included. Valid values:</p>

@@ -36,6 +36,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageRegistryInfos
      */
@@ -53,6 +57,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageRegistryInfos> imageRegistryInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateRegistryListResponseBody model) {
+            this.imageRegistryInfos = model.imageRegistryInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the image repositories.</p>
@@ -314,6 +326,30 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             private String userName; 
             private String vpcId; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryInfos model) {
+                this.aliUid = model.aliUid;
+                this.domainName = model.domainName;
+                this.id = model.id;
+                this.jenkinsEnv = model.jenkinsEnv;
+                this.netType = model.netType;
+                this.password = model.password;
+                this.persistenceDay = model.persistenceDay;
+                this.protocolType = model.protocolType;
+                this.regionId = model.regionId;
+                this.registryHostIp = model.registryHostIp;
+                this.registryName = model.registryName;
+                this.registryType = model.registryType;
+                this.registryVersion = model.registryVersion;
+                this.token = model.token;
+                this.transPerHour = model.transPerHour;
+                this.userName = model.userName;
+                this.vpcId = model.vpcId;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The ID of the user.</p>

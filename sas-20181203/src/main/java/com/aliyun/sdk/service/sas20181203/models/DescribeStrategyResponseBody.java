@@ -36,6 +36,10 @@ public class DescribeStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Strategies> strategies; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStrategyResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategies = model.strategies;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -135,6 +147,15 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private String target; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigTargets model) {
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
              * <ul>
@@ -211,6 +232,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecStatus")
         private Integer execStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ExecutionType")
+        private String executionType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
@@ -246,6 +270,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             this.ecsCount = builder.ecsCount;
             this.endTime = builder.endTime;
             this.execStatus = builder.execStatus;
+            this.executionType = builder.executionType;
             this.id = builder.id;
             this.name = builder.name;
             this.passRate = builder.passRate;
@@ -312,6 +337,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
          */
         public Integer getExecStatus() {
             return this.execStatus;
+        }
+
+        /**
+         * @return executionType
+         */
+        public String getExecutionType() {
+            return this.executionType;
         }
 
         /**
@@ -385,6 +417,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer ecsCount; 
             private String endTime; 
             private Integer execStatus; 
+            private String executionType; 
             private Integer id; 
             private String name; 
             private Integer passRate; 
@@ -394,6 +427,29 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private String startTime; 
             private Integer type; 
             private Long userModifyTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategies model) {
+                this.configTargets = model.configTargets;
+                this.customType = model.customType;
+                this.cycleDays = model.cycleDays;
+                this.cycleStartTime = model.cycleStartTime;
+                this.ecsCount = model.ecsCount;
+                this.endTime = model.endTime;
+                this.execStatus = model.execStatus;
+                this.executionType = model.executionType;
+                this.id = model.id;
+                this.name = model.name;
+                this.passRate = model.passRate;
+                this.percent = model.percent;
+                this.processRate = model.processRate;
+                this.riskCount = model.riskCount;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.userModifyTime = model.userModifyTime;
+            } 
 
             /**
              * <p>The details of the assets to which the baseline check policy is applied.</p>
@@ -486,6 +542,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
              */
             public Builder execStatus(Integer execStatus) {
                 this.execStatus = execStatus;
+                return this;
+            }
+
+            /**
+             * ExecutionType.
+             */
+            public Builder executionType(String executionType) {
+                this.executionType = executionType;
                 return this;
             }
 

@@ -36,6 +36,10 @@ public class CreateCycleTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -54,8 +58,19 @@ public class CreateCycleTaskResponseBody extends TeaModel {
         private String configId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateCycleTaskResponseBody model) {
+            this.configId = model.configId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ConfigId.
+         * <p>The ID of the task configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00cfa8161da093089e6804ba6a33****</p>
          */
         public Builder configId(String configId) {
             this.configId = configId;

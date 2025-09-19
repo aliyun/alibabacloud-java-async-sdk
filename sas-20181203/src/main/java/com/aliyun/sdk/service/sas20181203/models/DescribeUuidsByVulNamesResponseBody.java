@@ -40,6 +40,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineInfoStatistics
      */
@@ -65,6 +69,15 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         private java.util.List<MachineInfoStatistics> machineInfoStatistics; 
         private String requestId; 
         private Integer vulCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUuidsByVulNamesResponseBody model) {
+            this.machineInfoStatistics = model.machineInfoStatistics;
+            this.requestId = model.requestId;
+            this.vulCount = model.vulCount;
+        } 
 
         /**
          * <p>The statistics about the servers.</p>
@@ -217,6 +230,20 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             private String os; 
             private String regionId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineInfoStatistics model) {
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.machineInstanceId = model.machineInstanceId;
+                this.machineIp = model.machineIp;
+                this.machineName = model.machineName;
+                this.os = model.os;
+                this.regionId = model.regionId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The public IP address of the server on which the exception was detected.</p>

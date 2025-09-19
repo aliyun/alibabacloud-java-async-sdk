@@ -44,6 +44,10 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         private Integer httpStatusCode; 
         private String requestId; 
         private Long timeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryJenkinsImageRegistryPersistenceDayResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.timeCost = model.timeCost;
+        } 
 
         /**
          * <p>The retention period. Unit: days.</p>

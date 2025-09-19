@@ -60,6 +60,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessid
      */
@@ -126,11 +130,25 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         private String securityToken; 
         private String signature; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizedDictUploadInfoResponseBody model) {
+            this.accessid = model.accessid;
+            this.expire = model.expire;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.securityToken = model.securityToken;
+            this.signature = model.signature;
+        } 
+
         /**
          * <p>The AccessKey ID that is required to access the OSS object.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G1mgPbjvG********</p>
+         * <p>yourAccessKeyID</p>
          */
         public Builder accessid(String accessid) {
             this.accessid = accessid;

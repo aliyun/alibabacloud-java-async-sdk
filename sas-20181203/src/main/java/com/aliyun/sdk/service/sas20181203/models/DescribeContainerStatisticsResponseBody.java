@@ -36,6 +36,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerStatisticsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The alert statistics of container assets.</p>
@@ -170,6 +182,18 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             private Integer totalAlarmCount; 
             private Integer totalNode; 
             private Integer hasRiskNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.remindAlarmCount = model.remindAlarmCount;
+                this.seriousAlarmCount = model.seriousAlarmCount;
+                this.suspiciousAlarmCount = model.suspiciousAlarmCount;
+                this.totalAlarmCount = model.totalAlarmCount;
+                this.totalNode = model.totalNode;
+                this.hasRiskNode = model.hasRiskNode;
+            } 
 
             /**
              * <p>The number of alerts whose risk level is <strong>Reminder</strong>.</p>

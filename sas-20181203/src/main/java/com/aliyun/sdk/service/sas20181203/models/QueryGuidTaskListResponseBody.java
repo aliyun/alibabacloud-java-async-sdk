@@ -36,6 +36,10 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return guideTaskConfigList
      */
@@ -53,6 +57,14 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<GuideTaskConfigList> guideTaskConfigList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGuidTaskListResponseBody model) {
+            this.guideTaskConfigList = model.guideTaskConfigList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of beginner tasks.</p>
@@ -134,6 +146,15 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             private String isRewardTaked; 
             private String reward; 
             private String rewardConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RewardData model) {
+                this.isRewardTaked = model.isRewardTaked;
+                this.reward = model.reward;
+                this.rewardConfig = model.rewardConfig;
+            } 
 
             /**
              * <p>Indicates whether the reward is claimed. Valid values:</p>
@@ -276,6 +297,17 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             private Integer status; 
             private Integer taskId; 
             private String taskTypeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GuideTaskConfigList model) {
+                this.rewardData = model.rewardData;
+                this.securityScore = model.securityScore;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskTypeName = model.taskTypeName;
+            } 
 
             /**
              * <p>The information about the reward for a complete task.</p>

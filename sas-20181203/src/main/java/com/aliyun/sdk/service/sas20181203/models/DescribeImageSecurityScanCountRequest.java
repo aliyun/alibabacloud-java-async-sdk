@@ -79,7 +79,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +185,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         } 
 
         /**
-         * <p>Cluster ID for image security scanning.</p>
+         * <p>The ID of the cluster that you want to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>cdbbe7aa56cbf4b8f830f83718d26****</p>
@@ -197,11 +197,11 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Whether it has been processed. Values:</p>
+         * <p>The handling status. Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: Processed </li>
-         * <li><strong>N</strong>: Not processed </li>
-         * <li><strong>A</strong>: All</li>
+         * <li><strong>Y</strong>: handled.</li>
+         * <li><strong>N</strong>: unhandled.</li>
+         * <li><strong>A</strong>: all.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>SHA256 value of the image digest.</p>
+         * <p>The SHA-256 value of the image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>a7978d51f5eddf7612ab15ae46bd4b4257bf59da77c2aafc9d9d8ab41bb3****</p>
@@ -226,7 +226,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Image tag.</p>
+         * <p>The tag of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>c958b80f-prd_default-9bb0****</p>
@@ -238,7 +238,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Image UUID.</p>
+         * <p>The UUID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>325bfa067ae6c678e59e8a1b34cc****</p>
@@ -250,7 +250,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Container image repository ID.</p>
+         * <p>The ID of the Container Registry repository.</p>
          * 
          * <strong>example:</strong>
          * <p>3df5b5a1f2339eb7ebc7d474b8d4****</p>
@@ -262,9 +262,9 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Specifies the container image instance ID.</p>
+         * <p>The ID of the Container Registry instance.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> API to obtain this parameter.</p>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain the ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the container image repository.</p>
+         * <p>The region ID of the Container Registry repository.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -289,7 +289,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Scanning scope.</p>
+         * <p>The assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -298,7 +298,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>Instance IDs for image security scanning.</p>
+         * <p>The IDs of the instances that you want to scan.</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -40,6 +40,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<ProcessDetails> processDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationProcessDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.processDetails = model.processDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -261,6 +284,14 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private String checkShowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Checks model) {
+                this.checkId = model.checkId;
+                this.checkShowName = model.checkShowName;
+            } 
 
             /**
              * <p>The ID of the check item associated with the operation subtask.</p>
@@ -430,6 +461,22 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             private Long startTime; 
             private Integer statusCode; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessDetails model) {
+                this.assetSubType = model.assetSubType;
+                this.assetType = model.assetType;
+                this.assetVendor = model.assetVendor;
+                this.checks = model.checks;
+                this.createTime = model.createTime;
+                this.detailTaskId = model.detailTaskId;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The subtype of the asset associated with the operation subtask.</p>

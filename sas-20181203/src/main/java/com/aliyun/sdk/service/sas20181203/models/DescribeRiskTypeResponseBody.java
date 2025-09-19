@@ -36,6 +36,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RiskTypes> riskTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskTypeResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskTypes = model.riskTypes;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -182,6 +194,19 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String paramDesc; 
             private String paramName; 
             private Integer paramType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.enumValue = model.enumValue;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.paramDefaultValue = model.paramDefaultValue;
+                this.paramDesc = model.paramDesc;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+            } 
 
             /**
              * <p>If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</p>
@@ -339,6 +364,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String ruleDesc; 
             private String ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.optional = model.optional;
+                this.paramList = model.paramList;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>Indicates whether the baseline can be edited. Valid values:</p>
              * <ul>
@@ -458,6 +493,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private Long checkId; 
             private String checkItem; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckDetails model) {
+                this.checkDesc = model.checkDesc;
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The description of the baseline.</p>
@@ -586,6 +631,17 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private java.util.List<CheckDetails> checkDetails; 
             private String supportedOs; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubTypes model) {
+                this.alias = model.alias;
+                this.authFlag = model.authFlag;
+                this.checkDetails = model.checkDetails;
+                this.supportedOs = model.supportedOs;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The alias of the baseline subtype.</p>
@@ -721,6 +777,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private Boolean authFlag; 
             private java.util.List<SubTypes> subTypes; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskTypes model) {
+                this.alias = model.alias;
+                this.authFlag = model.authFlag;
+                this.subTypes = model.subTypes;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The alias of the baseline type.</p>

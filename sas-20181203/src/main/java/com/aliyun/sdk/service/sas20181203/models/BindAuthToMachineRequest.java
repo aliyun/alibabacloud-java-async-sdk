@@ -79,7 +79,7 @@ public class BindAuthToMachineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -284,8 +284,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>The logical relationship that you want to use to evaluate multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>****</li>
-         * <li><strong>AND</strong>****</li>
+         * <li><strong>OR</strong></li>
+         * <li><strong>AND</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

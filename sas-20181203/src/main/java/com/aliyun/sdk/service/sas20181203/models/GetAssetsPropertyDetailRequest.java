@@ -70,7 +70,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -319,6 +319,14 @@ public class GetAssetsPropertyDetailRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchCriteriaList model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the condition. Valid values:</p>

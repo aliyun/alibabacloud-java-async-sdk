@@ -33,12 +33,17 @@ public class GetCheckStructureRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
     private GetCheckStructureRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.taskSources = builder.taskSources;
     }
 
     public static Builder builder() {
@@ -49,7 +54,7 @@ public class GetCheckStructureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,11 +87,19 @@ public class GetCheckStructureRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
     public static final class Builder extends Request.Builder<GetCheckStructureRequest, Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
         private String regionId; 
+        private java.util.List<String> taskSources; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class GetCheckStructureRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.taskSources = request.taskSources;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class GetCheckStructureRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

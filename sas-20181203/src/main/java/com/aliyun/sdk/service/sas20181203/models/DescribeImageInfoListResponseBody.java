@@ -36,6 +36,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageInfos
      */
@@ -53,6 +57,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageInfos> imageInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageInfoListResponseBody model) {
+            this.imageInfos = model.imageInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about images.</p>
@@ -134,6 +146,9 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SourceBizTag")
+        private String sourceBizTag;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -169,6 +184,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             this.repoNamespace = builder.repoNamespace;
             this.repoType = builder.repoType;
             this.riskStatus = builder.riskStatus;
+            this.sourceBizTag = builder.sourceBizTag;
             this.status = builder.status;
             this.tag = builder.tag;
             this.tagImmutable = builder.tagImmutable;
@@ -298,6 +314,13 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceBizTag
+         */
+        public String getSourceBizTag() {
+            return this.sourceBizTag;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -356,12 +379,42 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             private String repoNamespace; 
             private String repoType; 
             private String riskStatus; 
+            private String sourceBizTag; 
             private String status; 
             private String tag; 
             private Integer tagImmutable; 
             private String uuid; 
             private Integer vulCount; 
             private String vulStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageInfos model) {
+                this.alarmCount = model.alarmCount;
+                this.alarmStatus = model.alarmStatus;
+                this.digest = model.digest;
+                this.endpoints = model.endpoints;
+                this.imageCreate = model.imageCreate;
+                this.imageId = model.imageId;
+                this.imageSize = model.imageSize;
+                this.imageUpdate = model.imageUpdate;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.registryType = model.registryType;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoType = model.repoType;
+                this.riskStatus = model.riskStatus;
+                this.sourceBizTag = model.sourceBizTag;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tagImmutable = model.tagImmutable;
+                this.uuid = model.uuid;
+                this.vulCount = model.vulCount;
+                this.vulStatus = model.vulStatus;
+            } 
 
             /**
              * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
@@ -548,6 +601,17 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
+                return this;
+            }
+
+            /**
+             * <p>The usage label of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAI</p>
+             */
+            public Builder sourceBizTag(String sourceBizTag) {
+                this.sourceBizTag = sourceBizTag;
                 return this;
             }
 

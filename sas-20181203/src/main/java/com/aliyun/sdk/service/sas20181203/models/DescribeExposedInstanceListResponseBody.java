@@ -40,6 +40,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exposedInstances
      */
@@ -65,6 +69,15 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         private java.util.List<ExposedInstances> exposedInstances; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExposedInstanceListResponseBody model) {
+            this.exposedInstances = model.exposedInstances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the exposures.</p>
@@ -105,6 +118,135 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
      *
      * <p>DescribeExposedInstanceListResponseBody</p>
      */
+    public static class ExposureComponentList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentBizType")
+        private String componentBizType;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
+        private String componentName;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentVersion")
+        private String componentVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ListenPort")
+        private String listenPort;
+
+        private ExposureComponentList(Builder builder) {
+            this.componentBizType = builder.componentBizType;
+            this.componentName = builder.componentName;
+            this.componentVersion = builder.componentVersion;
+            this.listenPort = builder.listenPort;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExposureComponentList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentBizType
+         */
+        public String getComponentBizType() {
+            return this.componentBizType;
+        }
+
+        /**
+         * @return componentName
+         */
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        /**
+         * @return componentVersion
+         */
+        public String getComponentVersion() {
+            return this.componentVersion;
+        }
+
+        /**
+         * @return listenPort
+         */
+        public String getListenPort() {
+            return this.listenPort;
+        }
+
+        public static final class Builder {
+            private String componentBizType; 
+            private String componentName; 
+            private String componentVersion; 
+            private String listenPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExposureComponentList model) {
+                this.componentBizType = model.componentBizType;
+                this.componentName = model.componentName;
+                this.componentVersion = model.componentVersion;
+                this.listenPort = model.listenPort;
+            } 
+
+            /**
+             * <p>Expose component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_service</p>
+             */
+            public Builder componentBizType(String componentBizType) {
+                this.componentBizType = componentBizType;
+                return this;
+            }
+
+            /**
+             * <p>Expose components.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openssh</p>
+             */
+            public Builder componentName(String componentName) {
+                this.componentName = componentName;
+                return this;
+            }
+
+            /**
+             * <p>Expose component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.7p1</p>
+             */
+            public Builder componentVersion(String componentVersion) {
+                this.componentVersion = componentVersion;
+                return this;
+            }
+
+            /**
+             * <p>Exposed port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
+             */
+            public Builder listenPort(String listenPort) {
+                this.listenPort = listenPort;
+                return this;
+            }
+
+            public ExposureComponentList build() {
+                return new ExposureComponentList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeExposedInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceListResponseBody</p>
+     */
     public static class ExposedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapVulCount")
         private Integer asapVulCount;
@@ -123,6 +265,9 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
+
+        @com.aliyun.core.annotation.NameInMap("ExposureComponentList")
+        private java.util.List<ExposureComponentList> exposureComponentList;
 
         @com.aliyun.core.annotation.NameInMap("ExposureIp")
         private String exposureIp;
@@ -176,6 +321,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             this.cspmAlarmCount = builder.cspmAlarmCount;
             this.exploitHealthCount = builder.exploitHealthCount;
             this.exposureComponent = builder.exposureComponent;
+            this.exposureComponentList = builder.exposureComponentList;
             this.exposureIp = builder.exposureIp;
             this.exposurePort = builder.exposurePort;
             this.exposureType = builder.exposureType;
@@ -241,6 +387,13 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
          */
         public String getExposureComponent() {
             return this.exposureComponent;
+        }
+
+        /**
+         * @return exposureComponentList
+         */
+        public java.util.List<ExposureComponentList> getExposureComponentList() {
+            return this.exposureComponentList;
         }
 
         /**
@@ -355,6 +508,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private Integer cspmAlarmCount; 
             private Integer exploitHealthCount; 
             private String exposureComponent; 
+            private java.util.List<ExposureComponentList> exposureComponentList; 
             private String exposureIp; 
             private String exposurePort; 
             private String exposureType; 
@@ -370,6 +524,34 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private String regionId; 
             private Integer totalVulCount; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExposedInstances model) {
+                this.asapVulCount = model.asapVulCount;
+                this.assetType = model.assetType;
+                this.cloudAssetInfo = model.cloudAssetInfo;
+                this.cspmAlarmCount = model.cspmAlarmCount;
+                this.exploitHealthCount = model.exploitHealthCount;
+                this.exposureComponent = model.exposureComponent;
+                this.exposureComponentList = model.exposureComponentList;
+                this.exposureIp = model.exposureIp;
+                this.exposurePort = model.exposurePort;
+                this.exposureType = model.exposureType;
+                this.exposureTypeId = model.exposureTypeId;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.laterVulCount = model.laterVulCount;
+                this.nntfVulCount = model.nntfVulCount;
+                this.regionId = model.regionId;
+                this.totalVulCount = model.totalVulCount;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
@@ -451,6 +633,14 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
+                return this;
+            }
+
+            /**
+             * <p>Expose component information list.</p>
+             */
+            public Builder exposureComponentList(java.util.List<ExposureComponentList> exposureComponentList) {
+                this.exposureComponentList = exposureComponentList;
                 return this;
             }
 
@@ -710,6 +900,16 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

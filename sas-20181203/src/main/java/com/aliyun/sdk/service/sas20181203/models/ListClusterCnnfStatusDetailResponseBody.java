@@ -36,6 +36,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterCnnfStatusDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the protection status of the container firewall.</p>
@@ -242,6 +254,24 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             private String pluginVersion; 
             private String status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.installed = model.installed;
+                this.instanceId = model.instanceId;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.invalidType = model.invalidType;
+                this.machineName = model.machineName;
+                this.machineType = model.machineType;
+                this.pluginName = model.pluginName;
+                this.pluginVersion = model.pluginVersion;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>

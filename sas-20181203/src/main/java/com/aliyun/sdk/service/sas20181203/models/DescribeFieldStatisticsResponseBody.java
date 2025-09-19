@@ -36,6 +36,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupedFields
      */
@@ -53,6 +57,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private GroupedFields groupedFields; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFieldStatisticsResponseBody model) {
+            this.groupedFields = model.groupedFields;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about servers that are returned.</p>
@@ -103,6 +115,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GeneralAssetCount")
         private Integer generalAssetCount;
+
+        @com.aliyun.core.annotation.NameInMap("GoogleInstanceCount")
+        private Integer googleInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
@@ -179,6 +194,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UnprotectedInstanceCount")
         private Integer unprotectedInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("VolcengineInstanceCount")
+        private Integer volcengineInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("VpcCount")
         private Integer vpcCount;
 
@@ -189,6 +207,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.exposedInstanceCoreCount = builder.exposedInstanceCoreCount;
             this.exposedInstanceCount = builder.exposedInstanceCount;
             this.generalAssetCount = builder.generalAssetCount;
+            this.googleInstanceCount = builder.googleInstanceCount;
             this.groupCount = builder.groupCount;
             this.huaweiInstanceCount = builder.huaweiInstanceCount;
             this.idcInstanceCount = builder.idcInstanceCount;
@@ -214,6 +233,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.unKnowStatusInstanceCount = builder.unKnowStatusInstanceCount;
             this.unprotectedInstanceCoreCount = builder.unprotectedInstanceCoreCount;
             this.unprotectedInstanceCount = builder.unprotectedInstanceCount;
+            this.volcengineInstanceCount = builder.volcengineInstanceCount;
             this.vpcCount = builder.vpcCount;
         }
 
@@ -265,6 +285,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getGeneralAssetCount() {
             return this.generalAssetCount;
+        }
+
+        /**
+         * @return googleInstanceCount
+         */
+        public Integer getGoogleInstanceCount() {
+            return this.googleInstanceCount;
         }
 
         /**
@@ -443,6 +470,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return volcengineInstanceCount
+         */
+        public Integer getVolcengineInstanceCount() {
+            return this.volcengineInstanceCount;
+        }
+
+        /**
          * @return vpcCount
          */
         public Integer getVpcCount() {
@@ -456,6 +490,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Long exposedInstanceCoreCount; 
             private Integer exposedInstanceCount; 
             private Integer generalAssetCount; 
+            private Integer googleInstanceCount; 
             private Integer groupCount; 
             private Integer huaweiInstanceCount; 
             private Integer idcInstanceCount; 
@@ -481,7 +516,48 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer unKnowStatusInstanceCount; 
             private Long unprotectedInstanceCoreCount; 
             private Integer unprotectedInstanceCount; 
+            private Integer volcengineInstanceCount; 
             private Integer vpcCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupedFields model) {
+                this.aliYunInstanceCount = model.aliYunInstanceCount;
+                this.awsInstanceCount = model.awsInstanceCount;
+                this.azureInstanceCount = model.azureInstanceCount;
+                this.exposedInstanceCoreCount = model.exposedInstanceCoreCount;
+                this.exposedInstanceCount = model.exposedInstanceCount;
+                this.generalAssetCount = model.generalAssetCount;
+                this.googleInstanceCount = model.googleInstanceCount;
+                this.groupCount = model.groupCount;
+                this.huaweiInstanceCount = model.huaweiInstanceCount;
+                this.idcInstanceCount = model.idcInstanceCount;
+                this.importantAssetCount = model.importantAssetCount;
+                this.instanceCoreCount = model.instanceCoreCount;
+                this.instanceCount = model.instanceCount;
+                this.instanceSyncTaskCount = model.instanceSyncTaskCount;
+                this.newInstanceCoreCount = model.newInstanceCoreCount;
+                this.newInstanceCount = model.newInstanceCount;
+                this.noRiskInstanceCount = model.noRiskInstanceCount;
+                this.notBindMachineInstanceCount = model.notBindMachineInstanceCount;
+                this.notRunningStatusCoreCount = model.notRunningStatusCoreCount;
+                this.notRunningStatusCount = model.notRunningStatusCount;
+                this.offlineInstanceCount = model.offlineInstanceCount;
+                this.outMachineInstanceCount = model.outMachineInstanceCount;
+                this.pauseInstanceCount = model.pauseInstanceCount;
+                this.regionCount = model.regionCount;
+                this.riskInstanceCoreCount = model.riskInstanceCoreCount;
+                this.riskInstanceCount = model.riskInstanceCount;
+                this.tencentInstanceCount = model.tencentInstanceCount;
+                this.testAssetCount = model.testAssetCount;
+                this.tripartiteInstanceCount = model.tripartiteInstanceCount;
+                this.unKnowStatusInstanceCount = model.unKnowStatusInstanceCount;
+                this.unprotectedInstanceCoreCount = model.unprotectedInstanceCoreCount;
+                this.unprotectedInstanceCount = model.unprotectedInstanceCount;
+                this.volcengineInstanceCount = model.volcengineInstanceCount;
+                this.vpcCount = model.vpcCount;
+            } 
 
             /**
              * <p>The number of assets that are deployed on Alibaba Cloud.</p>
@@ -546,6 +622,17 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder generalAssetCount(Integer generalAssetCount) {
                 this.generalAssetCount = generalAssetCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of instances that are provisioned by third-party providers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder googleInstanceCount(Integer googleInstanceCount) {
+                this.googleInstanceCount = googleInstanceCount;
                 return this;
             }
 
@@ -821,6 +908,17 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder unprotectedInstanceCount(Integer unprotectedInstanceCount) {
                 this.unprotectedInstanceCount = unprotectedInstanceCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of instances that are provisioned by third-party providers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder volcengineInstanceCount(Integer volcengineInstanceCount) {
+                this.volcengineInstanceCount = volcengineInstanceCount;
                 return this;
             }
 

@@ -40,6 +40,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBaselineCheckWhiteRecordResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The whitelist rules.</p>
@@ -105,6 +118,87 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
      *
      * <p>ListBaselineCheckWhiteRecordResponseBody</p>
      */
+    public static class ContainerItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerNames")
+        private String containerNames;
+
+        @com.aliyun.core.annotation.NameInMap("Uuid")
+        private String uuid;
+
+        private ContainerItems(Builder builder) {
+            this.containerNames = builder.containerNames;
+            this.uuid = builder.uuid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContainerItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerNames
+         */
+        public String getContainerNames() {
+            return this.containerNames;
+        }
+
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
+        public static final class Builder {
+            private String containerNames; 
+            private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerItems model) {
+                this.containerNames = model.containerNames;
+                this.uuid = model.uuid;
+            } 
+
+            /**
+             * <p>Names of the whitelisted containers for the current asset, separated by English commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;anythingllm,ChuanhuChat&quot;</p>
+             */
+            public Builder containerNames(String containerNames) {
+                this.containerNames = containerNames;
+                return this;
+            }
+
+            /**
+             * <p>Server UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>beeea5c2-1857-4b2b-a794-7d21eae*****</p>
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
+                return this;
+            }
+
+            public ContainerItems build() {
+                return new ContainerItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBaselineCheckWhiteRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselineCheckWhiteRecordResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
@@ -117,6 +211,9 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CheckTypeDisName")
         private String checkTypeDisName;
+
+        @com.aliyun.core.annotation.NameInMap("ContainerItems")
+        private java.util.List<ContainerItems> containerItems;
 
         @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
@@ -141,6 +238,7 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             this.checkItem = builder.checkItem;
             this.checkType = builder.checkType;
             this.checkTypeDisName = builder.checkTypeDisName;
+            this.containerItems = builder.containerItems;
             this.lang = builder.lang;
             this.reason = builder.reason;
             this.recordId = builder.recordId;
@@ -183,6 +281,13 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
          */
         public String getCheckTypeDisName() {
             return this.checkTypeDisName;
+        }
+
+        /**
+         * @return containerItems
+         */
+        public java.util.List<ContainerItems> getContainerItems() {
+            return this.containerItems;
         }
 
         /**
@@ -232,12 +337,30 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private String checkItem; 
             private String checkType; 
             private String checkTypeDisName; 
+            private java.util.List<ContainerItems> containerItems; 
             private String lang; 
             private String reason; 
             private Long recordId; 
             private String source; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+                this.checkType = model.checkType;
+                this.checkTypeDisName = model.checkTypeDisName;
+                this.containerItems = model.containerItems;
+                this.lang = model.lang;
+                this.reason = model.reason;
+                this.recordId = model.recordId;
+                this.source = model.source;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -280,6 +403,14 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
              */
             public Builder checkTypeDisName(String checkTypeDisName) {
                 this.checkTypeDisName = checkTypeDisName;
+                return this;
+            }
+
+            /**
+             * <p>List of whitelisted container names in the check item.</p>
+             */
+            public Builder containerItems(java.util.List<ContainerItems> containerItems) {
+                this.containerItems = containerItems;
                 return this;
             }
 
@@ -435,6 +566,16 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

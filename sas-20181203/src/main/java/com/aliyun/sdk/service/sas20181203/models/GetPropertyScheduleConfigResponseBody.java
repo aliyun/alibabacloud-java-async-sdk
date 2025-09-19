@@ -36,6 +36,10 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return propertyScheduleConfig
      */
@@ -53,6 +57,14 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private PropertyScheduleConfig propertyScheduleConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPropertyScheduleConfigResponseBody model) {
+            this.propertyScheduleConfig = model.propertyScheduleConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations for the collection frequency of asset fingerprints.</p>
@@ -134,6 +146,15 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
             private Long nextScheduleTime; 
             private String scheduleTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyScheduleConfig model) {
+                this.nextScheduleTime = model.nextScheduleTime;
+                this.scheduleTime = model.scheduleTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The timestamp when the next collection of asset fingerprints starts. Unit: milliseconds.</p>

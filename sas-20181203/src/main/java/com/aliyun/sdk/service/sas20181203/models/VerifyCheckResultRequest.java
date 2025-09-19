@@ -21,9 +21,14 @@ public class VerifyCheckResultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CheckIds")
     private java.util.List<Long> checkIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSource")
+    private String taskSource;
+
     private VerifyCheckResultRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
+        this.taskSource = builder.taskSource;
     }
 
     public static Builder builder() {
@@ -34,7 +39,7 @@ public class VerifyCheckResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -46,8 +51,16 @@ public class VerifyCheckResultRequest extends Request {
         return this.checkIds;
     }
 
+    /**
+     * @return taskSource
+     */
+    public String getTaskSource() {
+        return this.taskSource;
+    }
+
     public static final class Builder extends Request.Builder<VerifyCheckResultRequest, Builder> {
         private java.util.List<Long> checkIds; 
+        private String taskSource; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class VerifyCheckResultRequest extends Request {
         private Builder(VerifyCheckResultRequest request) {
             super(request);
             this.checkIds = request.checkIds;
+            this.taskSource = request.taskSource;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class VerifyCheckResultRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * TaskSource.
+         */
+        public Builder taskSource(String taskSource) {
+            this.putQueryParameter("TaskSource", taskSource);
+            this.taskSource = taskSource;
             return this;
         }
 

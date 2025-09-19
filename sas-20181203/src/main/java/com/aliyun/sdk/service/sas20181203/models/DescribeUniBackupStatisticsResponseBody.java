@@ -56,6 +56,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return protectedDatabaseCount
      */
@@ -113,6 +117,19 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         private Integer totalRecoverableCount; 
         private Integer totalRestoreTaskCount; 
         private Integer unprotectedDatabaseCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUniBackupStatisticsResponseBody model) {
+            this.protectedDatabaseCount = model.protectedDatabaseCount;
+            this.regionCountList = model.regionCountList;
+            this.requestId = model.requestId;
+            this.restoringTaskCount = model.restoringTaskCount;
+            this.totalRecoverableCount = model.totalRecoverableCount;
+            this.totalRestoreTaskCount = model.totalRestoreTaskCount;
+            this.unprotectedDatabaseCount = model.unprotectedDatabaseCount;
+        } 
 
         /**
          * <p>The number of protected database instances.</p>
@@ -237,6 +254,14 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         public static final class Builder {
             private String automaticCount; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionCountList model) {
+                this.automaticCount = model.automaticCount;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The number of database instances that are automatically scanned.</p>

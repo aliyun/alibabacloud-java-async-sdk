@@ -36,6 +36,10 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createSimilarSecurityEventsQueryTaskResponse
      */
@@ -53,6 +57,14 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
     public static final class Builder {
         private CreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSimilarSecurityEventsQueryTaskResponseBody model) {
+            this.createSimilarSecurityEventsQueryTaskResponse = model.createSimilarSecurityEventsQueryTaskResponse;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the task that queries alert events of the same alert type.</p>
@@ -122,6 +134,14 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateSimilarSecurityEventsQueryTaskResponse model) {
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The status of the task. Valid values:</p>

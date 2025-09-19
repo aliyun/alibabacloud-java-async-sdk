@@ -40,6 +40,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListOperationProcessResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Processes> processes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationProcessResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.processes = model.processes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class ListOperationProcessResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -228,6 +251,12 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DetailTaskReadyCount")
+        private Integer detailTaskReadyCount;
+
+        @com.aliyun.core.annotation.NameInMap("DetailTaskTotalCount")
+        private Integer detailTaskTotalCount;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -243,6 +272,9 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TaskSource")
+        private String taskSource;
+
         @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
@@ -251,11 +283,14 @@ public class ListOperationProcessResponseBody extends TeaModel {
 
         private Processes(Builder builder) {
             this.createTime = builder.createTime;
+            this.detailTaskReadyCount = builder.detailTaskReadyCount;
+            this.detailTaskTotalCount = builder.detailTaskTotalCount;
             this.endTime = builder.endTime;
             this.finishCount = builder.finishCount;
             this.startTime = builder.startTime;
             this.statusCode = builder.statusCode;
             this.taskId = builder.taskId;
+            this.taskSource = builder.taskSource;
             this.taskType = builder.taskType;
             this.totalCount = builder.totalCount;
         }
@@ -273,6 +308,20 @@ public class ListOperationProcessResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return detailTaskReadyCount
+         */
+        public Integer getDetailTaskReadyCount() {
+            return this.detailTaskReadyCount;
+        }
+
+        /**
+         * @return detailTaskTotalCount
+         */
+        public Integer getDetailTaskTotalCount() {
+            return this.detailTaskTotalCount;
         }
 
         /**
@@ -311,6 +360,13 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskSource
+         */
+        public String getTaskSource() {
+            return this.taskSource;
+        }
+
+        /**
          * @return taskType
          */
         public String getTaskType() {
@@ -326,13 +382,33 @@ public class ListOperationProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private Integer detailTaskReadyCount; 
+            private Integer detailTaskTotalCount; 
             private Long endTime; 
             private Integer finishCount; 
             private Long startTime; 
             private Integer statusCode; 
             private String taskId; 
+            private String taskSource; 
             private String taskType; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.createTime = model.createTime;
+                this.detailTaskReadyCount = model.detailTaskReadyCount;
+                this.detailTaskTotalCount = model.detailTaskTotalCount;
+                this.endTime = model.endTime;
+                this.finishCount = model.finishCount;
+                this.startTime = model.startTime;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+                this.taskSource = model.taskSource;
+                this.taskType = model.taskType;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the task was created. Unit: milliseconds.</p>
@@ -342,6 +418,22 @@ public class ListOperationProcessResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DetailTaskReadyCount.
+             */
+            public Builder detailTaskReadyCount(Integer detailTaskReadyCount) {
+                this.detailTaskReadyCount = detailTaskReadyCount;
+                return this;
+            }
+
+            /**
+             * DetailTaskTotalCount.
+             */
+            public Builder detailTaskTotalCount(Integer detailTaskTotalCount) {
+                this.detailTaskTotalCount = detailTaskTotalCount;
                 return this;
             }
 
@@ -403,6 +495,14 @@ public class ListOperationProcessResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TaskSource.
+             */
+            public Builder taskSource(String taskSource) {
+                this.taskSource = taskSource;
                 return this;
             }
 

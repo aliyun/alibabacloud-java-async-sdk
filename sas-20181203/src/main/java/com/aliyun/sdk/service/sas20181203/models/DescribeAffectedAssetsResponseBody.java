@@ -40,6 +40,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetList
      */
@@ -65,6 +69,15 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         private java.util.List<AssetList> assetList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAffectedAssetsResponseBody model) {
+            this.assetList = model.assetList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the affected servers.</p>
@@ -190,6 +203,18 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             private String intranetIp; 
             private Integer riskNum; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetList model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.riskNum = model.riskNum;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the server.</p>
@@ -331,6 +356,16 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -36,6 +36,10 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TargetConfig targetConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommonTargetResultListResponseBody model) {
+            this.requestId = model.requestId;
+            this.targetConfig = model.targetConfig;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -170,6 +182,18 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             private String targetType; 
             private String totalCount; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetConfig model) {
+                this.flag = model.flag;
+                this.targetDefault = model.targetDefault;
+                this.targetList = model.targetList;
+                this.targetType = model.targetType;
+                this.totalCount = model.totalCount;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The identifier that indicates whether the configuration item is applied to the server. Valid values:</p>

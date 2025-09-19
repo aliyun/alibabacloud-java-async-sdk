@@ -36,6 +36,10 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAssetSelectionConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -147,6 +159,16 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             private Long selectionKey; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.businessType = model.businessType;
+                this.platform = model.platform;
+                this.selectionKey = model.selectionKey;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * <p>The business type that is selected for the asset. Valid values:</p>
              * <ul>
@@ -191,7 +213,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             /**
              * <p>The dimension based on which the asset is selected. Valid values:</p>
              * <ul>
-             * <li><strong>group</strong>: The asset is selected by server.</li>
+             * <li><strong>instance</strong>: The asset is selected by server.</li>
              * <li><strong>group</strong>: The asset is selected by group.</li>
              * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
              * </ul>

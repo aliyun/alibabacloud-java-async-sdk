@@ -40,6 +40,10 @@ public class ListCheckItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkItems
      */
@@ -65,6 +69,15 @@ public class ListCheckItemResponseBody extends TeaModel {
         private java.util.List<CheckItems> checkItems; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckItemResponseBody model) {
+            this.checkItems = model.checkItems;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The check items.</p>
@@ -179,6 +192,17 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String typeDefine; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomConfigs model) {
+                this.defaultValue = model.defaultValue;
+                this.name = model.name;
+                this.showName = model.showName;
+                this.typeDefine = model.typeDefine;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The default value of the check item. The value is a string.</p>
              * 
@@ -285,6 +309,14 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Description model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The type of the description of the check item. Valid value:</p>
              * <ul>
@@ -330,6 +362,9 @@ public class ListCheckItemResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckShowName")
         private String checkShowName;
 
+        @com.aliyun.core.annotation.NameInMap("CheckType")
+        private String checkType;
+
         @com.aliyun.core.annotation.NameInMap("CustomConfigs")
         private java.util.List<CustomConfigs> customConfigs;
 
@@ -357,6 +392,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         private CheckItems(Builder builder) {
             this.checkId = builder.checkId;
             this.checkShowName = builder.checkShowName;
+            this.checkType = builder.checkType;
             this.customConfigs = builder.customConfigs;
             this.description = builder.description;
             this.estimatedCount = builder.estimatedCount;
@@ -387,6 +423,13 @@ public class ListCheckItemResponseBody extends TeaModel {
          */
         public String getCheckShowName() {
             return this.checkShowName;
+        }
+
+        /**
+         * @return checkType
+         */
+        public String getCheckType() {
+            return this.checkType;
         }
 
         /**
@@ -448,6 +491,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private String checkShowName; 
+            private String checkType; 
             private java.util.List<CustomConfigs> customConfigs; 
             private Description description; 
             private Integer estimatedCount; 
@@ -456,6 +500,23 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String riskLevel; 
             private java.util.List<Long> sectionIds; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckItems model) {
+                this.checkId = model.checkId;
+                this.checkShowName = model.checkShowName;
+                this.checkType = model.checkType;
+                this.customConfigs = model.customConfigs;
+                this.description = model.description;
+                this.estimatedCount = model.estimatedCount;
+                this.instanceSubType = model.instanceSubType;
+                this.instanceType = model.instanceType;
+                this.riskLevel = model.riskLevel;
+                this.sectionIds = model.sectionIds;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -476,6 +537,21 @@ public class ListCheckItemResponseBody extends TeaModel {
              */
             public Builder checkShowName(String checkShowName) {
                 this.checkShowName = checkShowName;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the Situation Awareness check item: </p>
+             * <ul>
+             * <li><strong>CUSTOM</strong>: User-defined </li>
+             * <li><strong>SYSTEM</strong>: Predefined by the Situation Awareness platform</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
+             */
+            public Builder checkType(String checkType) {
+                this.checkType = checkType;
                 return this;
             }
 
@@ -701,6 +777,16 @@ public class ListCheckItemResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

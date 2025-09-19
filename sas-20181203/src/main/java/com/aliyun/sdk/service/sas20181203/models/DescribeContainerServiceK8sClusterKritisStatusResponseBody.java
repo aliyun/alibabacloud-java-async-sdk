@@ -36,6 +36,10 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return kritisStatus
      */
@@ -53,6 +57,14 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
     public static final class Builder {
         private KritisStatus kritisStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerServiceK8sClusterKritisStatusResponseBody model) {
+            this.kritisStatus = model.kritisStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Kritis status of the ACK cluster.</p>
@@ -110,6 +122,13 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
 
         public static final class Builder {
             private Boolean install; 
+
+            private Builder() {
+            } 
+
+            private Builder(KritisStatus model) {
+                this.install = model.install;
+            } 
 
             /**
              * <p>Indicates whether Kritis is installed. Valid values:</p>

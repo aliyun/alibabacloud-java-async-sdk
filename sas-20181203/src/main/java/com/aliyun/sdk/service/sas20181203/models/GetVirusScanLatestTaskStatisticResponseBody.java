@@ -36,6 +36,10 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVirusScanLatestTaskStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the virus scan task.</p>
@@ -266,6 +278,26 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             private Integer suspiciousMachine; 
             private String taskId; 
             private Integer unCompleteMachine; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completeMachine = model.completeMachine;
+                this.machineName = model.machineName;
+                this.progress = model.progress;
+                this.riskLevel = model.riskLevel;
+                this.safeMachine = model.safeMachine;
+                this.scanMachine = model.scanMachine;
+                this.scanPath = model.scanPath;
+                this.scanTime = model.scanTime;
+                this.scanType = model.scanType;
+                this.status = model.status;
+                this.suspiciousCount = model.suspiciousCount;
+                this.suspiciousMachine = model.suspiciousMachine;
+                this.taskId = model.taskId;
+                this.unCompleteMachine = model.unCompleteMachine;
+            } 
 
             /**
              * <p>The number of machines on which the virus scan task is complete.</p>

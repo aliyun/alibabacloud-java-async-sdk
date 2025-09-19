@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetContainerDefenseRuleDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
     private GetContainerDefenseRuleDetailRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.ruleId = builder.ruleId;
     }
 
@@ -34,9 +39,16 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -47,6 +59,7 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetContainerDefenseRuleDetailRequest, Builder> {
+        private String lang; 
         private Long ruleId; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
 
         private Builder(GetContainerDefenseRuleDetailRequest request) {
             super(request);
+            this.lang = request.lang;
             this.ruleId = request.ruleId;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * <p>The rule ID.</p>

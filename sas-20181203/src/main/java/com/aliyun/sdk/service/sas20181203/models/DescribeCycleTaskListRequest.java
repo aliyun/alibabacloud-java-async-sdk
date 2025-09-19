@@ -54,7 +54,7 @@ public class DescribeCycleTaskListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,13 @@ public class DescribeCycleTaskListRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>The ID of the task configuration.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~CreateCycleTask~~">CreateCycleTask</a> operation to query the IDs of task configurations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>f93b6ee24cfd0aad44b897ad5051****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);

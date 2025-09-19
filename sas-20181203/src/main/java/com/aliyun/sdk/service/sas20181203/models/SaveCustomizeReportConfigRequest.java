@@ -22,6 +22,10 @@ public class SaveCustomizeReportConfigRequest extends Request {
     private String groupType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberAccountSyncFlag")
+    private Boolean memberAccountSyncFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PinnedTime")
     private Long pinnedTime;
 
@@ -100,6 +104,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
     private SaveCustomizeReportConfigRequest(Builder builder) {
         super(builder);
         this.groupType = builder.groupType;
+        this.memberAccountSyncFlag = builder.memberAccountSyncFlag;
         this.pinnedTime = builder.pinnedTime;
         this.recipients = builder.recipients;
         this.reportDays = builder.reportDays;
@@ -128,7 +133,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,6 +143,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
      */
     public String getGroupType() {
         return this.groupType;
+    }
+
+    /**
+     * @return memberAccountSyncFlag
+     */
+    public Boolean getMemberAccountSyncFlag() {
+        return this.memberAccountSyncFlag;
     }
 
     /**
@@ -268,6 +280,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<SaveCustomizeReportConfigRequest, Builder> {
         private String groupType; 
+        private Boolean memberAccountSyncFlag; 
         private Long pinnedTime; 
         private String recipients; 
         private Integer reportDays; 
@@ -294,6 +307,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         private Builder(SaveCustomizeReportConfigRequest request) {
             super(request);
             this.groupType = request.groupType;
+            this.memberAccountSyncFlag = request.memberAccountSyncFlag;
             this.pinnedTime = request.pinnedTime;
             this.recipients = request.recipients;
             this.reportDays = request.reportDays;
@@ -330,6 +344,15 @@ public class SaveCustomizeReportConfigRequest extends Request {
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * MemberAccountSyncFlag.
+         */
+        public Builder memberAccountSyncFlag(Boolean memberAccountSyncFlag) {
+            this.putQueryParameter("MemberAccountSyncFlag", memberAccountSyncFlag);
+            this.memberAccountSyncFlag = memberAccountSyncFlag;
             return this;
         }
 

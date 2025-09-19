@@ -61,7 +61,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,7 +163,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
          * <p>The AccessKey ID that you want to query. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4Fytv7ALKzkNVBV6****</p>
+         * <p>yourAccessKeyID</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);

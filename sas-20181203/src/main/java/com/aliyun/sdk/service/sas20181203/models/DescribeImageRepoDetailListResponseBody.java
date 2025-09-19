@@ -40,6 +40,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageRepoResponses
      */
@@ -65,6 +69,15 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         private java.util.List<ImageRepoResponses> imageRepoResponses; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageRepoDetailListResponseBody model) {
+            this.imageRepoResponses = model.imageRepoResponses;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about image repositories.</p>
@@ -148,6 +161,9 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SourceBizTag")
+        private String sourceBizTag;
+
         @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
@@ -169,6 +185,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
             this.riskStatus = builder.riskStatus;
+            this.sourceBizTag = builder.sourceBizTag;
             this.vulCount = builder.vulCount;
             this.vulStatus = builder.vulStatus;
         }
@@ -280,6 +297,13 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceBizTag
+         */
+        public String getSourceBizTag() {
+            return this.sourceBizTag;
+        }
+
+        /**
          * @return vulCount
          */
         public Integer getVulCount() {
@@ -308,8 +332,32 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespace; 
             private String riskStatus; 
+            private String sourceBizTag; 
             private Integer vulCount; 
             private String vulStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageRepoResponses model) {
+                this.alarmCount = model.alarmCount;
+                this.alarmStatus = model.alarmStatus;
+                this.endpoints = model.endpoints;
+                this.hasRiskImageCount = model.hasRiskImageCount;
+                this.hcCount = model.hcCount;
+                this.hcStatus = model.hcStatus;
+                this.imageCount = model.imageCount;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.registryType = model.registryType;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.riskStatus = model.riskStatus;
+                this.sourceBizTag = model.sourceBizTag;
+                this.vulCount = model.vulCount;
+                this.vulStatus = model.vulStatus;
+            } 
 
             /**
              * <p>The number of alerts that are generated for the image repository.</p>
@@ -503,6 +551,17 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The usage label of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAI</p>
+             */
+            public Builder sourceBizTag(String sourceBizTag) {
+                this.sourceBizTag = sourceBizTag;
+                return this;
+            }
+
+            /**
              * <p>The number of vulnerabilities detected on the image repository.</p>
              * 
              * <strong>example:</strong>
@@ -602,6 +661,16 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

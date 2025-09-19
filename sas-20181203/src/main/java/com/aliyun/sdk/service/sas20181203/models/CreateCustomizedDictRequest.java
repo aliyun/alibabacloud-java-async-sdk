@@ -22,12 +22,17 @@ public class CreateCustomizedDictRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Override")
+    private Boolean override;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private CreateCustomizedDictRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.override = builder.override;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -39,7 +44,7 @@ public class CreateCustomizedDictRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -52,6 +57,13 @@ public class CreateCustomizedDictRequest extends Request {
     }
 
     /**
+     * @return override
+     */
+    public Boolean getOverride() {
+        return this.override;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -60,6 +72,7 @@ public class CreateCustomizedDictRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCustomizedDictRequest, Builder> {
         private String lang; 
+        private Boolean override; 
         private String sourceIp; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class CreateCustomizedDictRequest extends Request {
         private Builder(CreateCustomizedDictRequest request) {
             super(request);
             this.lang = request.lang;
+            this.override = request.override;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -85,6 +99,15 @@ public class CreateCustomizedDictRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Override.
+         */
+        public Builder override(Boolean override) {
+            this.putQueryParameter("Override", override);
+            this.override = override;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindCount
      */
@@ -65,6 +69,15 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         private Long bindCount; 
         private String requestId; 
         private Integer resultCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePostPaidBindRelResponseBody model) {
+            this.bindCount = model.bindCount;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+        } 
 
         /**
          * <p>Number of servers successfully bound</p>

@@ -132,6 +132,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return account
      */
@@ -341,6 +345,38 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         private Integer vulLaterSum; 
         private Integer vulNntfSum; 
         private Integer vulTotal; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTotalStatisticsResponseBody model) {
+            this.account = model.account;
+            this.health = model.health;
+            this.healthTotal = model.healthTotal;
+            this.healthdealedTotal = model.healthdealedTotal;
+            this.healthhighTotal = model.healthhighTotal;
+            this.healthlowTotal = model.healthlowTotal;
+            this.healthmediumTotal = model.healthmediumTotal;
+            this.healthseriousTotal = model.healthseriousTotal;
+            this.newsuspicious = model.newsuspicious;
+            this.online = model.online;
+            this.patch = model.patch;
+            this.requestId = model.requestId;
+            this.suspicious = model.suspicious;
+            this.suspiciousTotal = model.suspiciousTotal;
+            this.suspiciousdealedTotal = model.suspiciousdealedTotal;
+            this.suspicioushighTotal = model.suspicioushighTotal;
+            this.suspiciouslowTotal = model.suspiciouslowTotal;
+            this.suspiciousmediumTotal = model.suspiciousmediumTotal;
+            this.suspiciousseriousTotal = model.suspiciousseriousTotal;
+            this.trojan = model.trojan;
+            this.vul = model.vul;
+            this.vulAsapSum = model.vulAsapSum;
+            this.vulDealedTotal = model.vulDealedTotal;
+            this.vulLaterSum = model.vulLaterSum;
+            this.vulNntfSum = model.vulNntfSum;
+            this.vulTotal = model.vulTotal;
+        } 
 
         /**
          * <p>The number of logons to the asset.</p>

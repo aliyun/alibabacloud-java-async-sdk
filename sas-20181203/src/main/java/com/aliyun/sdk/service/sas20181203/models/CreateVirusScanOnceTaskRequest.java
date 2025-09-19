@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateVirusScanOnceTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    private String param;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanPath")
     private java.util.List<String> scanPath;
 
@@ -31,6 +35,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 
     private CreateVirusScanOnceTaskRequest(Builder builder) {
         super(builder);
+        this.param = builder.param;
         this.scanPath = builder.scanPath;
         this.scanType = builder.scanType;
         this.selectionKey = builder.selectionKey;
@@ -44,9 +49,16 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return param
+     */
+    public String getParam() {
+        return this.param;
     }
 
     /**
@@ -71,6 +83,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirusScanOnceTaskRequest, Builder> {
+        private String param; 
         private java.util.List<String> scanPath; 
         private String scanType; 
         private String selectionKey; 
@@ -81,10 +94,26 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 
         private Builder(CreateVirusScanOnceTaskRequest request) {
             super(request);
+            this.param = request.param;
             this.scanPath = request.scanPath;
             this.scanType = request.scanType;
             this.selectionKey = request.selectionKey;
         } 
+
+        /**
+         * <p>Additional information fields: </p>
+         * <ul>
+         * <li><strong>additionType</strong>: The type of extended scan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;additionType&quot;:[&quot;SCAN_MEMORY&quot;]}</p>
+         */
+        public Builder param(String param) {
+            this.putQueryParameter("Param", param);
+            this.param = param;
+            return this;
+        }
 
         /**
          * <p>The information about the scan path that is required for a custom scan.</p>

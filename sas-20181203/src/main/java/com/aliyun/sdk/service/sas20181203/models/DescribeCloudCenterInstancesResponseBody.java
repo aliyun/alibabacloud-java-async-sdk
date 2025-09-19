@@ -44,6 +44,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -77,6 +81,16 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudCenterInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the assets.</p>
@@ -196,6 +210,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupTrace")
         private String groupTrace;
 
+        @com.aliyun.core.annotation.NameInMap("HasContainer")
+        private String hasContainer;
+
         @com.aliyun.core.annotation.NameInMap("HcStatus")
         private String hcStatus;
 
@@ -265,6 +282,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SafeEventCount")
         private Integer safeEventCount;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
+        private String serviceId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -317,6 +337,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.flagName = builder.flagName;
             this.groupId = builder.groupId;
             this.groupTrace = builder.groupTrace;
+            this.hasContainer = builder.hasContainer;
             this.hcStatus = builder.hcStatus;
             this.healthCheckCount = builder.healthCheckCount;
             this.importance = builder.importance;
@@ -340,6 +361,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.riskCount = builder.riskCount;
             this.riskStatus = builder.riskStatus;
             this.safeEventCount = builder.safeEventCount;
+            this.serviceId = builder.serviceId;
             this.status = builder.status;
             this.tag = builder.tag;
             this.tagId = builder.tagId;
@@ -508,6 +530,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasContainer
+         */
+        public String getHasContainer() {
+            return this.hasContainer;
+        }
+
+        /**
          * @return hcStatus
          */
         public String getHcStatus() {
@@ -669,6 +698,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -760,6 +796,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String flagName; 
             private Long groupId; 
             private String groupTrace; 
+            private String hasContainer; 
             private String hcStatus; 
             private Integer healthCheckCount; 
             private Integer importance; 
@@ -783,6 +820,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String riskCount; 
             private String riskStatus; 
             private Integer safeEventCount; 
+            private String serviceId; 
             private String status; 
             private String tag; 
             private String tagId; 
@@ -793,6 +831,68 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String vpcInstanceId; 
             private Integer vulCount; 
             private String vulStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.alarmStatus = model.alarmStatus;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.assetType = model.assetType;
+                this.assetTypeName = model.assetTypeName;
+                this.authModifyTime = model.authModifyTime;
+                this.authVersion = model.authVersion;
+                this.authVersionName = model.authVersionName;
+                this.bind = model.bind;
+                this.clientStatus = model.clientStatus;
+                this.clientSubStatus = model.clientSubStatus;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.cores = model.cores;
+                this.cpuInfo = model.cpuInfo;
+                this.createdTime = model.createdTime;
+                this.exposedStatus = model.exposedStatus;
+                this.flag = model.flag;
+                this.flagName = model.flagName;
+                this.groupId = model.groupId;
+                this.groupTrace = model.groupTrace;
+                this.hasContainer = model.hasContainer;
+                this.hcStatus = model.hcStatus;
+                this.healthCheckCount = model.healthCheckCount;
+                this.importance = model.importance;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.ipListString = model.ipListString;
+                this.kernel = model.kernel;
+                this.lastLoginTimestamp = model.lastLoginTimestamp;
+                this.macListString = model.macListString;
+                this.mem = model.mem;
+                this.os = model.os;
+                this.osName = model.osName;
+                this.podCount = model.podCount;
+                this.postPaidFlag = model.postPaidFlag;
+                this.region = model.region;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.riskCount = model.riskCount;
+                this.riskStatus = model.riskStatus;
+                this.safeEventCount = model.safeEventCount;
+                this.serviceId = model.serviceId;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tagId = model.tagId;
+                this.tagResources = model.tagResources;
+                this.uuid = model.uuid;
+                this.vendor = model.vendor;
+                this.vendorName = model.vendorName;
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.vulCount = model.vulCount;
+                this.vulStatus = model.vulStatus;
+            } 
 
             /**
              * <p>Indicates whether alerts are generated on the asset. Valid values:</p>
@@ -1052,19 +1152,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service provider of the asset. Valid values:</p>
+             * <p>Asset vendor. Values: </p>
              * <ul>
-             * <li><strong>ALIYUN</strong></li>
+             * <li><strong>ALIYUN</strong> </li>
              * <li><strong>OUT</strong></li>
-             * <li><strong>IDC</strong></li>
-             * <li><strong>Tencent</strong></li>
-             * <li><strong>HUAWEICLOUD</strong></li>
-             * <li><strong>Azure</strong></li>
-             * <li><strong>AWS</strong></li>
-             * <li><strong>ASK</strong></li>
-             * <li><strong>TRIPARTITE</strong></li>
-             * <li><strong>SAE</strong></li>
-             * <li><strong>PAI</strong></li>
+             * <li><strong>IDC</strong> </li>
+             * <li><strong>Tencent</strong> </li>
+             * <li><strong>HUAWEICLOUD</strong> </li>
+             * <li><strong>Azure</strong> </li>
+             * <li><strong>AWS</strong> </li>
+             * <li><strong>ASK</strong> </li>
+             * <li><strong>TRIPARTITE</strong> </li>
+             * <li><strong>SAE</strong> </li>
+             * <li><strong>PAI</strong> </li>
+             * <li><strong>google</strong> </li>
+             * <li><strong>VOLCENGINE</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1094,6 +1196,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder groupTrace(String groupTrace) {
                 this.groupTrace = groupTrace;
+                return this;
+            }
+
+            /**
+             * <p>Indicates if containers are included. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong>: yes.</li>
+             * <li><strong>NO</strong>: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
+             */
+            public Builder hasContainer(String hasContainer) {
+                this.hasContainer = hasContainer;
                 return this;
             }
 
@@ -1408,6 +1525,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Service ID. Only available for PAI instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-76jlywunsif09bp15p</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
              * <p>The status of the asset. Valid values:</p>
              * <ul>
              * <li><strong>Running</strong>: running</li>
@@ -1467,15 +1595,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service provider of the asset. Valid values:</p>
+             * <p>Asset vendor. Values:</p>
              * <ul>
              * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
              * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
              * <li><strong>2</strong>: an asset in a data center</li>
-             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, <strong>16</strong>: an asset from a third-party cloud service provider</li>
              * <li><strong>8</strong>: a lightweight asset</li>
-             * <li><strong>9</strong>: a SAE instance</li>
-             * <li><strong>10</strong>: an instance in PAI</li>
+             * <li><strong>9</strong>: a Serverless App Engine (SAE) instance</li>
+             * <li><strong>10</strong>: an instance in Platform for AI (PAI)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1487,19 +1615,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service provider for the asset.</p>
-             * <p>Valid values:</p>
+             * <p>The name of the service provider for the asset.
+             * Values:</p>
              * <ul>
-             * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+             * <li><strong>ALIYUN</strong>: Alibaba Cloud </li>
              * <li><strong>OUT</strong>: a third-party service provider</li>
-             * <li><strong>IDC</strong>: a data center</li>
+             * <li><strong>IDC</strong>: an asset in a data center</li>
              * <li><strong>TENCENT</strong>: Tencent Cloud</li>
              * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
              * <li><strong>Microsoft</strong>: Microsoft Azure</li>
              * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
              * <li><strong>TRIPARTITE</strong>: a lightweight server</li>
-             * <li><strong>SAE</strong>: a SAE instance</li>
-             * <li><strong>PAI</strong>: an instance in PAI</li>
+             * <li><strong>SAE</strong>: a Serverless App Engine (SAE) instance</li>
+             * <li><strong>PAI</strong>: an instance in Platform for AI (PAI)</li>
+             * <li><strong>VOLCENGINE</strong>: VOLCENGINE Cloud</li>
+             * <li><strong>google</strong>: GOOGLE Cloud</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1633,6 +1763,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.nextToken = model.nextToken;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

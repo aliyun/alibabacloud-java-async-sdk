@@ -52,6 +52,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         private java.util.List<Processes> processes; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWhiteListProcessResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.processes = model.processes;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -286,6 +302,20 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             private String processName; 
             private Integer processType; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.filePath = model.filePath;
+                this.id = model.id;
+                this.level = model.level;
+                this.md5 = model.md5;
+                this.processId = model.processId;
+                this.processName = model.processName;
+                this.processType = model.processType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The path to the process startup file.</p>

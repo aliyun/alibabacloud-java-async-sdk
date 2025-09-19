@@ -36,6 +36,10 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RiskCheckJobConfig riskCheckJobConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityCheckScheduleConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskCheckJobConfig = model.riskCheckJobConfig;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             private String daysOfWeek; 
             private Integer endTime; 
             private Integer startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskCheckJobConfig model) {
+                this.daysOfWeek = model.daysOfWeek;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).</p>

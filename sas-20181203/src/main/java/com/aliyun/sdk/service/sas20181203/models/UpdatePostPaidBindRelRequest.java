@@ -29,11 +29,16 @@ public class UpdatePostPaidBindRelRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BindAction")
     private java.util.List<BindAction> bindAction;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateIfNecessary")
+    private Boolean updateIfNecessary;
+
     private UpdatePostPaidBindRelRequest(Builder builder) {
         super(builder);
         this.autoBind = builder.autoBind;
         this.autoBindVersion = builder.autoBindVersion;
         this.bindAction = builder.bindAction;
+        this.updateIfNecessary = builder.updateIfNecessary;
     }
 
     public static Builder builder() {
@@ -44,7 +49,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,18 @@ public class UpdatePostPaidBindRelRequest extends Request {
         return this.bindAction;
     }
 
+    /**
+     * @return updateIfNecessary
+     */
+    public Boolean getUpdateIfNecessary() {
+        return this.updateIfNecessary;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePostPaidBindRelRequest, Builder> {
         private Integer autoBind; 
         private Integer autoBindVersion; 
         private java.util.List<BindAction> bindAction; 
+        private Boolean updateIfNecessary; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             this.autoBind = request.autoBind;
             this.autoBindVersion = request.autoBindVersion;
             this.bindAction = request.bindAction;
+            this.updateIfNecessary = request.updateIfNecessary;
         } 
 
         /**
@@ -127,6 +141,15 @@ public class UpdatePostPaidBindRelRequest extends Request {
         public Builder bindAction(java.util.List<BindAction> bindAction) {
             this.putQueryParameter("BindAction", bindAction);
             this.bindAction = bindAction;
+            return this;
+        }
+
+        /**
+         * UpdateIfNecessary.
+         */
+        public Builder updateIfNecessary(Boolean updateIfNecessary) {
+            this.putQueryParameter("UpdateIfNecessary", updateIfNecessary);
+            this.updateIfNecessary = updateIfNecessary;
             return this;
         }
 
@@ -192,6 +215,15 @@ public class UpdatePostPaidBindRelRequest extends Request {
             private Boolean bindAll; 
             private java.util.List<String> uuidList; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindAction model) {
+                this.bindAll = model.bindAll;
+                this.uuidList = model.uuidList;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>

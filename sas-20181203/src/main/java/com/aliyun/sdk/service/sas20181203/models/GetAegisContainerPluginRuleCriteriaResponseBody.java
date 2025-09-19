@@ -36,6 +36,10 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return criteriaList
      */
@@ -53,6 +57,14 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAegisContainerPluginRuleCriteriaResponseBody model) {
+            this.criteriaList = model.criteriaList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the search condition.</p>
@@ -134,6 +146,15 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String values; 
+
+            private Builder() {
+            } 
+
+            private Builder(CriteriaList model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The name of the search condition. Valid values:</p>

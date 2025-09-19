@@ -40,6 +40,10 @@ public class ListOperationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationTasks
      */
@@ -66,8 +70,17 @@ public class ListOperationTaskResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOperationTaskResponseBody model) {
+            this.operationTasks = model.operationTasks;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>操作任务的详细实例信息列表。</p>
+         * <p>Detailed instance information list of operation tasks.</p>
          */
         public Builder operationTasks(java.util.List<OperationTasks> operationTasks) {
             this.operationTasks = operationTasks;
@@ -323,8 +336,31 @@ public class ListOperationTaskResponseBody extends TeaModel {
             private String taskId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationTasks model) {
+                this.checkId = model.checkId;
+                this.checkShowName = model.checkShowName;
+                this.dealTime = model.dealTime;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.instanceFreed = model.instanceFreed;
+                this.instanceId = model.instanceId;
+                this.lastCheckTime = model.lastCheckTime;
+                this.regionId = model.regionId;
+                this.repairSupportType = model.repairSupportType;
+                this.riskLevel = model.riskLevel;
+                this.rootTaskId = model.rootTaskId;
+                this.status = model.status;
+                this.statusShowName = model.statusShowName;
+                this.supportRollBack = model.supportRollBack;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>检查项的ID。</p>
+             * <p>The ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -416,7 +452,7 @@ public class ListOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>服务器所在的地域的ID。</p>
+             * <p>The ID of the region where the server is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>
@@ -443,11 +479,11 @@ public class ListOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描出的告警的风险等级。取值：</p>
+             * <p>The risk level of the detected alert. Values:</p>
              * <ul>
-             * <li><strong>high</strong>：高危。</li>
-             * <li><strong>medium</strong>：中危。</li>
-             * <li><strong>low</strong>：低危。</li>
+             * <li><strong>high</strong>: High risk.</li>
+             * <li><strong>medium</strong>: Medium risk. </li>
+             * <li><strong>low</strong>: Low risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -628,6 +664,16 @@ public class ListOperationTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -36,6 +36,10 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileProtectRuleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -218,6 +230,22 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
             private String switchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.action = model.action;
+                this.alertLevel = model.alertLevel;
+                this.fileOps = model.fileOps;
+                this.filePaths = model.filePaths;
+                this.id = model.id;
+                this.platform = model.platform;
+                this.procPaths = model.procPaths;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.switchId = model.switchId;
+            } 
 
             /**
              * <p>The handling method of the rule. Valid values:</p>

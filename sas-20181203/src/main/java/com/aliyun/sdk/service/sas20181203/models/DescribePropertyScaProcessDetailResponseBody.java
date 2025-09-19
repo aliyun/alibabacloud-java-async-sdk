@@ -40,6 +40,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyScaProcessDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -252,6 +275,9 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
         private Propertys(Builder builder) {
             this.cmdline = builder.cmdline;
             this.createTimestamp = builder.createTimestamp;
@@ -262,6 +288,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             this.name = builder.name;
             this.pid = builder.pid;
             this.uuid = builder.uuid;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -335,6 +362,13 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             return this.uuid;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String cmdline; 
             private Long createTimestamp; 
@@ -345,6 +379,23 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             private String name; 
             private String pid; 
             private String uuid; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.cmdline = model.cmdline;
+                this.createTimestamp = model.createTimestamp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.name = model.name;
+                this.pid = model.pid;
+                this.uuid = model.uuid;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The command line of the process.</p>
@@ -442,6 +493,14 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

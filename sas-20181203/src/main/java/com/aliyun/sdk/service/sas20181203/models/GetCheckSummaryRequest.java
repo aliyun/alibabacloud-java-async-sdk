@@ -30,6 +30,10 @@ public class GetCheckSummaryRequest extends Request {
     private String resourceDirectoryAccountId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List<String> vendors;
 
@@ -38,6 +42,7 @@ public class GetCheckSummaryRequest extends Request {
         this.isItemStatistic = builder.isItemStatistic;
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.taskSources = builder.taskSources;
         this.vendors = builder.vendors;
     }
 
@@ -49,7 +54,7 @@ public class GetCheckSummaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,6 +81,13 @@ public class GetCheckSummaryRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List<String> getVendors() {
@@ -86,6 +98,7 @@ public class GetCheckSummaryRequest extends Request {
         private Boolean isItemStatistic; 
         private String lang; 
         private String resourceDirectoryAccountId; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> vendors; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class GetCheckSummaryRequest extends Request {
             this.isItemStatistic = request.isItemStatistic;
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.taskSources = request.taskSources;
             this.vendors = request.vendors;
         } 
 
@@ -144,6 +158,15 @@ public class GetCheckSummaryRequest extends Request {
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

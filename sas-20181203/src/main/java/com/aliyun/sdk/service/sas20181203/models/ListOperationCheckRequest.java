@@ -61,7 +61,7 @@ public class ListOperationCheckRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -274,6 +274,15 @@ public class ListOperationCheckRequest extends Request {
             private String instanceId; 
             private String regionId; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationTaskInstances model) {
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>Cloud asset instance ID.</p>

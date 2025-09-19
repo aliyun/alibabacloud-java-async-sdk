@@ -36,6 +36,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAegisContainerPluginRuleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -230,6 +242,23 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             private java.util.List<String> selectedPolicy; 
             private String switchId; 
             private java.util.List<String> whiteImages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.mode = model.mode;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleTemplateId = model.ruleTemplateId;
+                this.ruleTemplateName = model.ruleTemplateName;
+                this.selectedPolicy = model.selectedPolicy;
+                this.switchId = model.switchId;
+                this.whiteImages = model.whiteImages;
+            } 
 
             /**
              * <p>The timestamp when the rule was created. Unit: milliseconds.</p>

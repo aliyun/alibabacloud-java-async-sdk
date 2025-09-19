@@ -23,6 +23,10 @@ public class DescribeScreenScoreThreadRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private Integer source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
@@ -30,6 +34,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
     private DescribeScreenScoreThreadRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.source = builder.source;
         this.startTime = builder.startTime;
     }
 
@@ -41,7 +46,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +59,13 @@ public class DescribeScreenScoreThreadRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public Integer getSource() {
+        return this.source;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -62,6 +74,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeScreenScoreThreadRequest, Builder> {
         private Long endTime; 
+        private Integer source; 
         private Long startTime; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
         private Builder(DescribeScreenScoreThreadRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.source = request.source;
             this.startTime = request.startTime;
         } 
 
@@ -84,6 +98,22 @@ public class DescribeScreenScoreThreadRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>Source of security score, default is Cloud Security Center if left empty. Enum values: </p>
+         * <ul>
+         * <li>0:Cloud Security Center. </li>
+         * <li>1:Yaochi Console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder source(Integer source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

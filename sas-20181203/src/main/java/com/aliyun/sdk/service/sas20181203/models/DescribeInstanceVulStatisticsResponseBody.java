@@ -36,6 +36,10 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VulStat vulStat; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceVulStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.vulStat = model.vulStat;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
             private String asapCount; 
             private String laterCount; 
             private String nntfCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulStat model) {
+                this.asapCount = model.asapCount;
+                this.laterCount = model.laterCount;
+                this.nntfCount = model.nntfCount;
+            } 
 
             /**
              * <p>The number of high-risk vulnerabilities.</p>

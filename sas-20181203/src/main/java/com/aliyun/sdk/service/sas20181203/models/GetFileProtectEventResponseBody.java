@@ -36,6 +36,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileProtectEventResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileProtectEventResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the returned data.</p>
@@ -140,6 +152,12 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private String userName;
+
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
@@ -162,6 +180,8 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.ruleName = builder.ruleName;
             this.status = builder.status;
+            this.userId = builder.userId;
+            this.userName = builder.userName;
             this.uuid = builder.uuid;
         }
 
@@ -300,6 +320,20 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        /**
          * @return uuid
          */
         public String getUuid() {
@@ -325,7 +359,36 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String remark; 
             private String ruleName; 
             private Integer status; 
+            private String userId; 
+            private String userName; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertLevel = model.alertLevel;
+                this.cmdLine = model.cmdLine;
+                this.filePath = model.filePath;
+                this.filePermission = model.filePermission;
+                this.firstTime = model.firstTime;
+                this.handleTime = model.handleTime;
+                this.id = model.id;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.latestTime = model.latestTime;
+                this.operation = model.operation;
+                this.platform = model.platform;
+                this.procPath = model.procPath;
+                this.processId = model.processId;
+                this.remark = model.remark;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The severity of alerts. Valid values:</p>
@@ -537,6 +600,22 @@ public class GetFileProtectEventResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

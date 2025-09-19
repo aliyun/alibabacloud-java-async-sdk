@@ -36,6 +36,10 @@ public class DescribeDomainSecureScoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainSecureScoreResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer securityScore; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSecureScoreResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityScore = model.securityScore;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

@@ -52,6 +52,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHoneypotNodeResponseBody model) {
+            this.code = model.code;
+            this.honeypotNode = model.honeypotNode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -350,6 +366,25 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             private java.util.List<String> securityGroupProbeIpList; 
             private Integer totalStatus; 
             private Boolean upgradeAvailable; 
+
+            private Builder() {
+            } 
+
+            private Builder(HoneypotNode model) {
+                this.allowHoneypotAccessInternet = model.allowHoneypotAccessInternet;
+                this.createTime = model.createTime;
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.honeypotTotalCount = model.honeypotTotalCount;
+                this.honeypotUsedCount = model.honeypotUsedCount;
+                this.nodeId = model.nodeId;
+                this.nodeIp = model.nodeIp;
+                this.nodeName = model.nodeName;
+                this.probeTotalCount = model.probeTotalCount;
+                this.probeUsedCount = model.probeUsedCount;
+                this.securityGroupProbeIpList = model.securityGroupProbeIpList;
+                this.totalStatus = model.totalStatus;
+                this.upgradeAvailable = model.upgradeAvailable;
+            } 
 
             /**
              * <p>Indicates whether a honeypot is allowed to access the Internet. Valid values:</p>

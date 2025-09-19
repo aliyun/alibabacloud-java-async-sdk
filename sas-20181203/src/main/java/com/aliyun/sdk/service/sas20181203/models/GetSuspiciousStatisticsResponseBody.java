@@ -48,6 +48,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remindCount
      */
@@ -89,6 +93,17 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         private Integer seriousCount; 
         private Integer suspiciousCount; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuspiciousStatisticsResponseBody model) {
+            this.remindCount = model.remindCount;
+            this.requestId = model.requestId;
+            this.seriousCount = model.seriousCount;
+            this.suspiciousCount = model.suspiciousCount;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of alerts whose Emergency level is Reminder.</p>

@@ -40,6 +40,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connects
      */
@@ -65,6 +69,15 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         private java.util.List<Connects> connects; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FindContainerNetworkConnectResponseBody model) {
+            this.connects = model.connects;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the network connections.</p>
@@ -131,6 +144,13 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         public static final class Builder {
             private String containerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DstContainer model) {
+                this.containerId = model.containerId;
+            } 
+
             /**
              * <p>The ID of the destination container.</p>
              * 
@@ -180,6 +200,13 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
         public static final class Builder {
             private String containerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcContainer model) {
+                this.containerId = model.containerId;
+            } 
 
             /**
              * <p>The ID of the source container.</p>
@@ -326,6 +353,21 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private SrcContainer srcContainer; 
             private String srcIp; 
             private String srcPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connects model) {
+                this.dstContainer = model.dstContainer;
+                this.dstIp = model.dstIp;
+                this.dstPort = model.dstPort;
+                this.firstTime = model.firstTime;
+                this.id = model.id;
+                this.lastTime = model.lastTime;
+                this.srcContainer = model.srcContainer;
+                this.srcIp = model.srcIp;
+                this.srcPort = model.srcPort;
+            } 
 
             /**
              * <p>The information about the destination container.</p>
@@ -500,6 +542,16 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private Long currentPage; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -44,7 +44,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +224,18 @@ public class DeleteBackupSnapshotRequest extends Request {
             private String snapshotId; 
             private String sourceType; 
             private String vaultId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupSnapshotList model) {
+                this.clientId = model.clientId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.snapshotId = model.snapshotId;
+                this.sourceType = model.sourceType;
+                this.vaultId = model.vaultId;
+            } 
 
             /**
              * <p>The ID of the Cloud Backup client.</p>

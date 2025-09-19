@@ -36,6 +36,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assets
      */
@@ -53,6 +57,14 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Assets> assets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetsSecurityEventSummaryResponseBody model) {
+            this.assets = model.assets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of risk information about containers.</p>
@@ -134,6 +146,15 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             private String assetType; 
             private Long riskCount; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assets model) {
+                this.assetType = model.assetType;
+                this.riskCount = model.riskCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The type of the asset. Valid values:</p>

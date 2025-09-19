@@ -22,12 +22,17 @@ public class GetCheckCountStatisticRequest extends Request {
     private String statisticType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List<String> vendors;
 
     private GetCheckCountStatisticRequest(Builder builder) {
         super(builder);
         this.statisticType = builder.statisticType;
+        this.taskSources = builder.taskSources;
         this.vendors = builder.vendors;
     }
 
@@ -39,7 +44,7 @@ public class GetCheckCountStatisticRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -52,6 +57,13 @@ public class GetCheckCountStatisticRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List<String> getVendors() {
@@ -60,6 +72,7 @@ public class GetCheckCountStatisticRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetCheckCountStatisticRequest, Builder> {
         private String statisticType; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> vendors; 
 
         private Builder() {
@@ -69,15 +82,17 @@ public class GetCheckCountStatisticRequest extends Request {
         private Builder(GetCheckCountStatisticRequest request) {
             super(request);
             this.statisticType = request.statisticType;
+            this.taskSources = request.taskSources;
             this.vendors = request.vendors;
         } 
 
         /**
-         * <p>Type of data statistics. Values:  </p>
+         * <p>The type of the statistics. Valid values:</p>
          * <ul>
-         * <li><strong>user</strong>: Top 5 over-authorized users.  </li>
-         * <li><strong>role</strong>: Top 5 over-authorized roles.  </li>
-         * <li><strong>instance</strong>: Top 5 risky cloud products.</li>
+         * <li><strong>user</strong>: the top five users that are granted excessive permissions.</li>
+         * <li><strong>role</strong>: the top five roles that are granted excessive permissions.</li>
+         * <li><strong>instance</strong>: the top five cloud services on which risks are detected.</li>
+         * <li><strong>host</strong>: the top five servers on which baseline risks are detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +105,16 @@ public class GetCheckCountStatisticRequest extends Request {
         }
 
         /**
-         * <p>List of cloud vendors.</p>
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
+            return this;
+        }
+
+        /**
+         * <p>The cloud service providers.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);

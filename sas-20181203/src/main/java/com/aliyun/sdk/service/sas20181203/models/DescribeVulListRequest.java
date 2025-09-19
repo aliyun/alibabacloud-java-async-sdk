@@ -26,6 +26,10 @@ public class DescribeVulListRequest extends Request {
     private String attachTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -62,6 +66,10 @@ public class DescribeVulListRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RaspDefend")
+    private Integer raspDefend;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
@@ -72,6 +80,10 @@ public class DescribeVulListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
     private String statusList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    private String targetType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -94,6 +106,7 @@ public class DescribeVulListRequest extends Request {
         super(builder);
         this.aliasName = builder.aliasName;
         this.attachTypes = builder.attachTypes;
+        this.clusterId = builder.clusterId;
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
@@ -103,9 +116,11 @@ public class DescribeVulListRequest extends Request {
         this.necessity = builder.necessity;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
+        this.raspDefend = builder.raspDefend;
         this.remark = builder.remark;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statusList = builder.statusList;
+        this.targetType = builder.targetType;
         this.type = builder.type;
         this.useNextToken = builder.useNextToken;
         this.uuids = builder.uuids;
@@ -120,7 +135,7 @@ public class DescribeVulListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,6 +152,13 @@ public class DescribeVulListRequest extends Request {
      */
     public String getAttachTypes() {
         return this.attachTypes;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -203,6 +225,13 @@ public class DescribeVulListRequest extends Request {
     }
 
     /**
+     * @return raspDefend
+     */
+    public Integer getRaspDefend() {
+        return this.raspDefend;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -221,6 +250,13 @@ public class DescribeVulListRequest extends Request {
      */
     public String getStatusList() {
         return this.statusList;
+    }
+
+    /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
     }
 
     /**
@@ -254,6 +290,7 @@ public class DescribeVulListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVulListRequest, Builder> {
         private String aliasName; 
         private String attachTypes; 
+        private String clusterId; 
         private Integer currentPage; 
         private String dealed; 
         private String groupId; 
@@ -263,9 +300,11 @@ public class DescribeVulListRequest extends Request {
         private String necessity; 
         private String nextToken; 
         private Integer pageSize; 
+        private Integer raspDefend; 
         private String remark; 
         private Long resourceDirectoryAccountId; 
         private String statusList; 
+        private String targetType; 
         private String type; 
         private Boolean useNextToken; 
         private String uuids; 
@@ -279,6 +318,7 @@ public class DescribeVulListRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.attachTypes = request.attachTypes;
+            this.clusterId = request.clusterId;
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
@@ -288,9 +328,11 @@ public class DescribeVulListRequest extends Request {
             this.necessity = request.necessity;
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
+            this.raspDefend = request.raspDefend;
             this.remark = request.remark;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statusList = request.statusList;
+            this.targetType = request.targetType;
             this.type = request.type;
             this.useNextToken = request.useNextToken;
             this.uuids = request.uuids;
@@ -321,6 +363,18 @@ public class DescribeVulListRequest extends Request {
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
             this.attachTypes = attachTypes;
+            return this;
+        }
+
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c88fb10da1168494091db6aafc5dd****</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 
@@ -449,6 +503,24 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: no.</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder raspDefend(Integer raspDefend) {
+            this.putQueryParameter("RaspDefend", raspDefend);
+            this.raspDefend = raspDefend;
+            return this;
+        }
+
+        /**
          * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset.</p>
          * 
          * <strong>example:</strong>
@@ -499,6 +571,23 @@ public class DescribeVulListRequest extends Request {
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
+            return this;
+        }
+
+        /**
+         * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
+         * <ul>
+         * <li><strong>k8s</strong>: Kubernetes component.</li>
+         * <li><strong>uuid</strong>: server.</li>
+         * <li><strong>containerId</strong>: container.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s</p>
+         */
+        public Builder targetType(String targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 

@@ -36,6 +36,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reportList
      */
@@ -53,6 +57,14 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ReportList> reportList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeReportListResponseBody model) {
+            this.reportList = model.reportList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The reports.</p>
@@ -218,6 +230,22 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             private Integer reportType; 
             private String reportVersion; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReportList model) {
+                this.isDefault = model.isDefault;
+                this.pinnedTime = model.pinnedTime;
+                this.reportDays = model.reportDays;
+                this.reportEndDate = model.reportEndDate;
+                this.reportId = model.reportId;
+                this.reportStartDate = model.reportStartDate;
+                this.reportStatus = model.reportStatus;
+                this.reportType = model.reportType;
+                this.reportVersion = model.reportVersion;
+                this.title = model.title;
+            } 
 
             /**
              * <p>Indicates whether the report is the default report. Valid values:</p>

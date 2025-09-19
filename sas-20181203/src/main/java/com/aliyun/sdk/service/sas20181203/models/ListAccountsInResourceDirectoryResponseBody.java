@@ -36,6 +36,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -53,6 +57,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Accounts> accounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccountsInResourceDirectoryResponseBody model) {
+            this.accounts = model.accounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The members in the resource directory.</p>
@@ -89,11 +101,24 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("BuySas")
+        @Deprecated
+        private Integer buySas;
+
+        @com.aliyun.core.annotation.NameInMap("BuySasNew")
+        private Boolean buySasNew;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private Integer chargeType;
+
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceBuyType")
+        private Integer instanceBuyType;
 
         @com.aliyun.core.annotation.NameInMap("IsMaAccount")
         private String isMaAccount;
@@ -110,18 +135,30 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSiemDaAccount")
         private String isSiemDaAccount;
 
+        @com.aliyun.core.annotation.NameInMap("PostPayModuleSwitch")
+        private String postPayModuleSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("SaleInstance")
+        private String saleInstance;
+
         @com.aliyun.core.annotation.NameInMap("SasVersion")
         private String sasVersion;
 
         private Accounts(Builder builder) {
             this.accountId = builder.accountId;
+            this.buySas = builder.buySas;
+            this.buySasNew = builder.buySasNew;
+            this.chargeType = builder.chargeType;
             this.displayName = builder.displayName;
             this.folderId = builder.folderId;
+            this.instanceBuyType = builder.instanceBuyType;
             this.isMaAccount = builder.isMaAccount;
             this.isMarked = builder.isMarked;
             this.isSasDaAccount = builder.isSasDaAccount;
             this.isSiemControlAccount = builder.isSiemControlAccount;
             this.isSiemDaAccount = builder.isSiemDaAccount;
+            this.postPayModuleSwitch = builder.postPayModuleSwitch;
+            this.saleInstance = builder.saleInstance;
             this.sasVersion = builder.sasVersion;
         }
 
@@ -141,6 +178,27 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return buySas
+         */
+        public Integer getBuySas() {
+            return this.buySas;
+        }
+
+        /**
+         * @return buySasNew
+         */
+        public Boolean getBuySasNew() {
+            return this.buySasNew;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public Integer getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
          * @return displayName
          */
         public String getDisplayName() {
@@ -152,6 +210,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
          */
         public String getFolderId() {
             return this.folderId;
+        }
+
+        /**
+         * @return instanceBuyType
+         */
+        public Integer getInstanceBuyType() {
+            return this.instanceBuyType;
         }
 
         /**
@@ -190,6 +255,20 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return postPayModuleSwitch
+         */
+        public String getPostPayModuleSwitch() {
+            return this.postPayModuleSwitch;
+        }
+
+        /**
+         * @return saleInstance
+         */
+        public String getSaleInstance() {
+            return this.saleInstance;
+        }
+
+        /**
          * @return sasVersion
          */
         public String getSasVersion() {
@@ -198,14 +277,41 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountId; 
+            private Integer buySas; 
+            private Boolean buySasNew; 
+            private Integer chargeType; 
             private String displayName; 
             private String folderId; 
+            private Integer instanceBuyType; 
             private String isMaAccount; 
             private String isMarked; 
             private String isSasDaAccount; 
             private String isSiemControlAccount; 
             private String isSiemDaAccount; 
+            private String postPayModuleSwitch; 
+            private String saleInstance; 
             private String sasVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountId = model.accountId;
+                this.buySas = model.buySas;
+                this.buySasNew = model.buySasNew;
+                this.chargeType = model.chargeType;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.instanceBuyType = model.instanceBuyType;
+                this.isMaAccount = model.isMaAccount;
+                this.isMarked = model.isMarked;
+                this.isSasDaAccount = model.isSasDaAccount;
+                this.isSiemControlAccount = model.isSiemControlAccount;
+                this.isSiemDaAccount = model.isSiemDaAccount;
+                this.postPayModuleSwitch = model.postPayModuleSwitch;
+                this.saleInstance = model.saleInstance;
+                this.sasVersion = model.sasVersion;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>
@@ -215,6 +321,30 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * BuySas.
+             */
+            public Builder buySas(Integer buySas) {
+                this.buySas = buySas;
+                return this;
+            }
+
+            /**
+             * BuySasNew.
+             */
+            public Builder buySasNew(Boolean buySasNew) {
+                this.buySasNew = buySasNew;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(Integer chargeType) {
+                this.chargeType = chargeType;
                 return this;
             }
 
@@ -237,6 +367,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
+                return this;
+            }
+
+            /**
+             * InstanceBuyType.
+             */
+            public Builder instanceBuyType(Integer instanceBuyType) {
+                this.instanceBuyType = instanceBuyType;
                 return this;
             }
 
@@ -308,6 +446,22 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder isSiemDaAccount(String isSiemDaAccount) {
                 this.isSiemDaAccount = isSiemDaAccount;
+                return this;
+            }
+
+            /**
+             * PostPayModuleSwitch.
+             */
+            public Builder postPayModuleSwitch(String postPayModuleSwitch) {
+                this.postPayModuleSwitch = postPayModuleSwitch;
+                return this;
+            }
+
+            /**
+             * SaleInstance.
+             */
+            public Builder saleInstance(String saleInstance) {
+                this.saleInstance = saleInstance;
                 return this;
             }
 

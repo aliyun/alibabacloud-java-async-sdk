@@ -36,6 +36,10 @@ public class GetRdTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetRdTreeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRdTreeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The processing result.</p>
@@ -134,6 +146,15 @@ public class GetRdTreeResponseBody extends TeaModel {
             private java.util.List<?> children; 
             private String folderId; 
             private String folderName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.children = model.children;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+            } 
 
             /**
              * <p>The subfolder.</p>

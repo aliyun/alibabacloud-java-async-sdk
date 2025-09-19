@@ -36,6 +36,10 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return k8sClusters
      */
@@ -53,6 +57,14 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<K8sClusters> k8sClusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerServiceK8sClustersResponseBody model) {
+            this.k8sClusters = model.k8sClusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the clusters.</p>
@@ -122,6 +134,14 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(K8sClusters model) {
+                this.clusterId = model.clusterId;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>

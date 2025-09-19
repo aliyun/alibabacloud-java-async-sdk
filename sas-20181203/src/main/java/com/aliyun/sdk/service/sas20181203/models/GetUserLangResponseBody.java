@@ -36,6 +36,10 @@ public class GetUserLangResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetUserLangResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SasUserLang sasUserLang; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserLangResponseBody model) {
+            this.requestId = model.requestId;
+            this.sasUserLang = model.sasUserLang;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class GetUserLangResponseBody extends TeaModel {
 
         public static final class Builder {
             private String lang; 
+
+            private Builder() {
+            } 
+
+            private Builder(SasUserLang model) {
+                this.lang = model.lang;
+            } 
 
             /**
              * <p>The language specified for log analysis. Valid values:</p>

@@ -44,6 +44,10 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         private Integer httpStatusCode; 
         private String requestId; 
         private Long timeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateJenkinsImageRegistryPersistenceDayResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.timeCost = model.timeCost;
+        } 
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>

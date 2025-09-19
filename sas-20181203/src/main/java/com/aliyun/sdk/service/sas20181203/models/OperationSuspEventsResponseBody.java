@@ -40,6 +40,10 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessCode
      */
@@ -65,6 +69,15 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         private String accessCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperationSuspEventsResponseBody model) {
+            this.accessCode = model.accessCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Indicates whether you have access permissions. Valid values:</p>

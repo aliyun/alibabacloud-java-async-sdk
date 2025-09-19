@@ -40,6 +40,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logMetaList
      */
@@ -65,6 +69,15 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         private java.util.List<LogMetaList> logMetaList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogMetaResponseBody model) {
+            this.logMetaList = model.logMetaList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the configurations of the log analysis feature.</p>
@@ -253,6 +266,23 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             private String userLogStore; 
             private String userProject; 
             private String userRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogMetaList model) {
+                this.category = model.category;
+                this.hotTtl = model.hotTtl;
+                this.logDesc = model.logDesc;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.status = model.status;
+                this.topic = model.topic;
+                this.ttl = model.ttl;
+                this.userLogStore = model.userLogStore;
+                this.userProject = model.userProject;
+                this.userRegion = model.userRegion;
+            } 
 
             /**
              * <p>The category of logs. Valid values:</p>

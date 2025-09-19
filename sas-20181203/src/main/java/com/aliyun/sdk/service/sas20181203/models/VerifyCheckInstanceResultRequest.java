@@ -25,10 +25,15 @@ public class VerifyCheckInstanceResultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSource")
+    private String taskSource;
+
     private VerifyCheckInstanceResultRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
         this.instanceIds = builder.instanceIds;
+        this.taskSource = builder.taskSource;
     }
 
     public static Builder builder() {
@@ -39,7 +44,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -58,9 +63,17 @@ public class VerifyCheckInstanceResultRequest extends Request {
         return this.instanceIds;
     }
 
+    /**
+     * @return taskSource
+     */
+    public String getTaskSource() {
+        return this.taskSource;
+    }
+
     public static final class Builder extends Request.Builder<VerifyCheckInstanceResultRequest, Builder> {
         private Long checkId; 
         private java.util.List<String> instanceIds; 
+        private String taskSource; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
             super(request);
             this.checkId = request.checkId;
             this.instanceIds = request.instanceIds;
+            this.taskSource = request.taskSource;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class VerifyCheckInstanceResultRequest extends Request {
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * TaskSource.
+         */
+        public Builder taskSource(String taskSource) {
+            this.putQueryParameter("TaskSource", taskSource);
+            this.taskSource = taskSource;
             return this;
         }
 

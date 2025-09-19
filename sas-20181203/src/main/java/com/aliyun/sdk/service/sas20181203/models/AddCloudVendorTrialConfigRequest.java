@@ -47,7 +47,7 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,9 +90,9 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         } 
 
         /**
-         * <p>Unique ID of the AK.</p>
+         * <p>The AccessKey ID.</p>
          * <blockquote>
-         * <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to get the AuthId.</h2>
+         * <p> <a href="#-describecloudvendoraccountaklist--authid"></a>You can call the <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> operation to query the AccessKey ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -106,10 +106,10 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * <p>Enter multi-cloud configuration information:</p>
+         * <p>The configurations of the third-party cloud asset. Valid values:</p>
          * <ul>
-         * <li><em>AWS</em>: Parameters include sqsQueueName, sqsRegion</li>
-         * <li><em>Tencent</em>: Parameters include kafkaUserName, kafkaBootstrapServers, kafkaTopic</li>
+         * <li><em>AWS</em>: Configure the sqsQueueName and sqsRegion parameters.</li>
+         * <li><em>Tencent</em>: Configure the kafkaUserName, kafkaBootstrapServers, and kafkaTopic parameters.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -123,10 +123,10 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * <p>Cloud asset vendor. Values:</p>
+         * <p>The service provider of the cloud asset. Valid values:</p>
          * <ul>
-         * <li><strong>Tencent</strong>: Tencent Cloud</li>
-         * <li><strong>AWS</strong>: AWS (Note: The original text incorrectly states &quot;Microsoft&quot;, which should be &quot;AWS&quot; based on context.)</li>
+         * <li><strong>Tencent</strong>: Tencent Cloud.</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

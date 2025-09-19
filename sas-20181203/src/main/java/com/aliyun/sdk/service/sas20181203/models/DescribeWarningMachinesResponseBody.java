@@ -52,6 +52,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<WarningMachines> warningMachines; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWarningMachinesResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.warningMachines = model.warningMachines;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -178,6 +194,9 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
      * <p>DescribeWarningMachinesResponseBody</p>
      */
     public static class WarningMachines extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetType")
+        private String assetType;
+
         @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
@@ -211,6 +230,9 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
+        @com.aliyun.core.annotation.NameInMap("Online")
+        private Boolean online;
+
         @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
@@ -227,6 +249,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private String uuid;
 
         private WarningMachines(Builder builder) {
+            this.assetType = builder.assetType;
             this.authVersion = builder.authVersion;
             this.bind = builder.bind;
             this.containerId = builder.containerId;
@@ -238,6 +261,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             this.intranetIp = builder.intranetIp;
             this.lowWarningCount = builder.lowWarningCount;
             this.mediumWarningCount = builder.mediumWarningCount;
+            this.online = builder.online;
             this.passCount = builder.passCount;
             this.portOpen = builder.portOpen;
             this.regionId = builder.regionId;
@@ -251,6 +275,13 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
 
         public static WarningMachines create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetType
+         */
+        public String getAssetType() {
+            return this.assetType;
         }
 
         /**
@@ -331,6 +362,13 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return online
+         */
+        public Boolean getOnline() {
+            return this.online;
+        }
+
+        /**
          * @return passCount
          */
         public Integer getPassCount() {
@@ -366,6 +404,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String assetType; 
             private Integer authVersion; 
             private Boolean bind; 
             private String containerId; 
@@ -377,11 +416,44 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             private String intranetIp; 
             private Integer lowWarningCount; 
             private Integer mediumWarningCount; 
+            private Boolean online; 
             private Integer passCount; 
             private Boolean portOpen; 
             private String regionId; 
             private Integer status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarningMachines model) {
+                this.assetType = model.assetType;
+                this.authVersion = model.authVersion;
+                this.bind = model.bind;
+                this.containerId = model.containerId;
+                this.containerName = model.containerName;
+                this.highWarningCount = model.highWarningCount;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lowWarningCount = model.lowWarningCount;
+                this.mediumWarningCount = model.mediumWarningCount;
+                this.online = model.online;
+                this.passCount = model.passCount;
+                this.portOpen = model.portOpen;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
+
+            /**
+             * AssetType.
+             */
+            public Builder assetType(String assetType) {
+                this.assetType = assetType;
+                return this;
+            }
 
             /**
              * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
@@ -513,6 +585,21 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the agent is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder online(Boolean online) {
+                this.online = online;
                 return this;
             }
 

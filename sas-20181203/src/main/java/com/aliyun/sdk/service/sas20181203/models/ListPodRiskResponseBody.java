@@ -40,6 +40,10 @@ public class ListPodRiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListPodRiskResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PodRiskList> podRiskList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPodRiskResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.podRiskList = model.podRiskList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class ListPodRiskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -369,6 +392,23 @@ public class ListPodRiskResponseBody extends TeaModel {
             private String pod; 
             private String podIp; 
             private Integer vulCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodRiskList model) {
+                this.alarmCount = model.alarmCount;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.createTime = model.createTime;
+                this.hcCount = model.hcCount;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.nodeName = model.nodeName;
+                this.pod = model.pod;
+                this.podIp = model.podIp;
+                this.vulCount = model.vulCount;
+            } 
 
             /**
              * <p>The number of alerts that are generated for the pod.</p>

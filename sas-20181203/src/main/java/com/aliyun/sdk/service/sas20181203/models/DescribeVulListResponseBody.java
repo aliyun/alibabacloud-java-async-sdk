@@ -52,6 +52,10 @@ public class DescribeVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class DescribeVulListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VulRecords> vulRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.nextToken = model.nextToken;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vulRecords = model.vulRecords;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -274,6 +290,19 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String status; 
             private String timeFactor; 
             private String totalScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Necessity model) {
+                this.assetsFactor = model.assetsFactor;
+                this.cvssFactor = model.cvssFactor;
+                this.enviromentFactor = model.enviromentFactor;
+                this.isCalc = model.isCalc;
+                this.status = model.status;
+                this.timeFactor = model.timeFactor;
+                this.totalScore = model.totalScore;
+            } 
 
             /**
              * <p>The asset importance score. Valid values:</p>
@@ -530,6 +559,23 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String pid; 
             private String updateCmd; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(RpmEntityList model) {
+                this.containerName = model.containerName;
+                this.extendField = model.extendField;
+                this.fullVersion = model.fullVersion;
+                this.imageName = model.imageName;
+                this.matchDetail = model.matchDetail;
+                this.matchList = model.matchList;
+                this.name = model.name;
+                this.path = model.path;
+                this.pid = model.pid;
+                this.updateCmd = model.updateCmd;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the container.</p>
@@ -856,6 +902,27 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String target; 
             private java.util.List<String> cveList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendContentJson model) {
+                this.absolutePath = model.absolutePath;
+                this.aliasName = model.aliasName;
+                this.description = model.description;
+                this.emgProof = model.emgProof;
+                this.ip = model.ip;
+                this.lastTs = model.lastTs;
+                this.necessity = model.necessity;
+                this.os = model.os;
+                this.osRelease = model.osRelease;
+                this.primaryId = model.primaryId;
+                this.rpmEntityList = model.rpmEntityList;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.target = model.target;
+                this.cveList = model.cveList;
+            } 
+
             /**
              * <p>The path to the package of the software that has the vulnerability.</p>
              * 
@@ -1059,6 +1126,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -1094,6 +1164,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("Necessity")
         private String necessity;
@@ -1137,6 +1210,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultMessage")
         private String resultMessage;
 
+        @com.aliyun.core.annotation.NameInMap("RuleTag")
+        private String ruleTag;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -1156,6 +1232,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.extendContentJson = builder.extendContentJson;
             this.firstTs = builder.firstTs;
             this.groupId = builder.groupId;
+            this.image = builder.image;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
@@ -1168,6 +1245,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.lastTs = builder.lastTs;
             this.modifyTs = builder.modifyTs;
             this.name = builder.name;
+            this.namespace = builder.namespace;
             this.necessity = builder.necessity;
             this.online = builder.online;
             this.osName = builder.osName;
@@ -1182,6 +1260,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.repairTs = builder.repairTs;
             this.resultCode = builder.resultCode;
             this.resultMessage = builder.resultMessage;
+            this.ruleTag = builder.ruleTag;
             this.status = builder.status;
             this.tag = builder.tag;
             this.type = builder.type;
@@ -1236,6 +1315,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public Integer getGroupId() {
             return this.groupId;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
         }
 
         /**
@@ -1320,6 +1406,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
         }
 
         /**
@@ -1421,6 +1514,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleTag
+         */
+        public String getRuleTag() {
+            return this.ruleTag;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -1455,6 +1555,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
             private Integer groupId; 
+            private String image; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
@@ -1467,6 +1568,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private Long lastTs; 
             private Long modifyTs; 
             private String name; 
+            private String namespace; 
             private String necessity; 
             private Boolean online; 
             private String osName; 
@@ -1481,10 +1583,56 @@ public class DescribeVulListResponseBody extends TeaModel {
             private Long repairTs; 
             private String resultCode; 
             private String resultMessage; 
+            private String ruleTag; 
             private Integer status; 
             private String tag; 
             private String type; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulRecords model) {
+                this.aliasName = model.aliasName;
+                this.authVersion = model.authVersion;
+                this.bind = model.bind;
+                this.extendContentJson = model.extendContentJson;
+                this.firstTs = model.firstTs;
+                this.groupId = model.groupId;
+                this.image = model.image;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.k8sClusterId = model.k8sClusterId;
+                this.k8sNamespace = model.k8sNamespace;
+                this.k8sNodeId = model.k8sNodeId;
+                this.k8sNodeName = model.k8sNodeName;
+                this.k8sPodName = model.k8sPodName;
+                this.lastTs = model.lastTs;
+                this.modifyTs = model.modifyTs;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.necessity = model.necessity;
+                this.online = model.online;
+                this.osName = model.osName;
+                this.osVersion = model.osVersion;
+                this.primaryId = model.primaryId;
+                this.progress = model.progress;
+                this.raspDefend = model.raspDefend;
+                this.raspStatus = model.raspStatus;
+                this.realRisk = model.realRisk;
+                this.regionId = model.regionId;
+                this.related = model.related;
+                this.repairTs = model.repairTs;
+                this.resultCode = model.resultCode;
+                this.resultMessage = model.resultMessage;
+                this.ruleTag = model.ruleTag;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The name of the vulnerability.</p>
@@ -1558,6 +1706,17 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-cn-<strong>-vpc.ack.</strong>.com/acs/ack-node-problem-detector:v0.8.16-8ed7053-**</p>
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
@@ -1705,6 +1864,17 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -1888,6 +2058,20 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;
+                return this;
+            }
+
+            /**
+             * <p>The tag of this vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>AI</strong>: AI-related components.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
+             */
+            public Builder ruleTag(String ruleTag) {
+                this.ruleTag = ruleTag;
                 return this;
             }
 

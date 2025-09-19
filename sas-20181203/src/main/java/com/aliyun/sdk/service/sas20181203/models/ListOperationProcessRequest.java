@@ -42,6 +42,10 @@ public class ListOperationProcessRequest extends Request {
     private java.util.List<String> taskIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskTypes")
     private java.util.List<String> taskTypes;
 
@@ -53,6 +57,7 @@ public class ListOperationProcessRequest extends Request {
         this.startTime = builder.startTime;
         this.statusCodes = builder.statusCodes;
         this.taskIds = builder.taskIds;
+        this.taskSources = builder.taskSources;
         this.taskTypes = builder.taskTypes;
     }
 
@@ -64,7 +69,7 @@ public class ListOperationProcessRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,6 +117,13 @@ public class ListOperationProcessRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return taskTypes
      */
     public java.util.List<String> getTaskTypes() {
@@ -125,6 +137,7 @@ public class ListOperationProcessRequest extends Request {
         private Long startTime; 
         private java.util.List<Integer> statusCodes; 
         private java.util.List<String> taskIds; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> taskTypes; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class ListOperationProcessRequest extends Request {
             this.startTime = request.startTime;
             this.statusCodes = request.statusCodes;
             this.taskIds = request.taskIds;
+            this.taskSources = request.taskSources;
             this.taskTypes = request.taskTypes;
         } 
 
@@ -205,6 +219,15 @@ public class ListOperationProcessRequest extends Request {
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
             this.taskIds = taskIds;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

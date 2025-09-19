@@ -23,12 +23,16 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityScoreCategoryList")
+    private java.util.List<SecurityScoreCategoryList> securityScoreCategoryList;
+
     @com.aliyun.core.annotation.NameInMap("SecurityScoreRuleList")
     private java.util.List<SecurityScoreRuleList> securityScoreRuleList;
 
     private GetSecurityScoreRuleResponseBody(Builder builder) {
         this.enableStatus = builder.enableStatus;
         this.requestId = builder.requestId;
+        this.securityScoreCategoryList = builder.securityScoreCategoryList;
         this.securityScoreRuleList = builder.securityScoreRuleList;
     }
 
@@ -38,6 +42,10 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
 
     public static GetSecurityScoreRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -55,6 +63,13 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityScoreCategoryList
+     */
+    public java.util.List<SecurityScoreCategoryList> getSecurityScoreCategoryList() {
+        return this.securityScoreCategoryList;
+    }
+
+    /**
      * @return securityScoreRuleList
      */
     public java.util.List<SecurityScoreRuleList> getSecurityScoreRuleList() {
@@ -64,7 +79,18 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean enableStatus; 
         private String requestId; 
+        private java.util.List<SecurityScoreCategoryList> securityScoreCategoryList; 
         private java.util.List<SecurityScoreRuleList> securityScoreRuleList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSecurityScoreRuleResponseBody model) {
+            this.enableStatus = model.enableStatus;
+            this.requestId = model.requestId;
+            this.securityScoreCategoryList = model.securityScoreCategoryList;
+            this.securityScoreRuleList = model.securityScoreRuleList;
+        } 
 
         /**
          * <p>The status of the custom settings of the security score feature.</p>
@@ -93,7 +119,15 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of deduction modules that are supported by the security score feature.</p>
+         * <p>The information about the new version of the security score rule.</p>
+         */
+        public Builder securityScoreCategoryList(java.util.List<SecurityScoreCategoryList> securityScoreCategoryList) {
+            this.securityScoreCategoryList = securityScoreCategoryList;
+            return this;
+        }
+
+        /**
+         * <p>The information about the old version of the security score rule.</p>
          */
         public Builder securityScoreRuleList(java.util.List<SecurityScoreRuleList> securityScoreRuleList) {
             this.securityScoreRuleList = securityScoreRuleList;
@@ -173,6 +207,417 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             private Integer scoreThreshold; 
             private String subRuleType; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreItemList model) {
+                this.score = model.score;
+                this.scoreThreshold = model.scoreThreshold;
+                this.subRuleType = model.subRuleType;
+                this.title = model.title;
+            } 
+
+            /**
+             * <p>The deduction score for the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder score(Integer score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The threshold of the deduction score for the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder scoreThreshold(Integer scoreThreshold) {
+                this.scoreThreshold = scoreThreshold;
+                return this;
+            }
+
+            /**
+             * <p>The type of the sub-deduction item. Valid values:</p>
+             * <ul>
+             * <li><strong>SS_SAS_WEAK_PW</strong>: unhandled weak password risk.</li>
+             * <li><strong>SS_SAS_ALARM</strong>: unhandled alert in Security Center.</li>
+             * <li><strong>SS_SAS_EMG_VUL</strong>: unfixed urgent vulnerability.</li>
+             * <li><strong>SS_SAS_APP_VUL</strong>: unfixed application vulnerability.</li>
+             * <li><strong>SS_SAS_SYS_VUL</strong>: unfixed system vulnerability.</li>
+             * <li><strong>SS_SAS_CLOUD_HC</strong>: unhandled cloud security posture management (CSPM) risk.</li>
+             * <li><strong>SS_SDDP_DATA_RISK</strong>: unhandled data security risk.</li>
+             * <li><strong>SS_WAF_API_RISK</strong>: unhandled API security risk.</li>
+             * <li><strong>SS_DDOS_BH_ASSET</strong>: asset on which blackhole filtering is triggered.</li>
+             * <li><strong>SS_SAS_AK_LEAK</strong>: unhandled AK/SK leak event.</li>
+             * <li><strong>SS_PRODUCT_CONNECT</strong>: security service not integrated.</li>
+             * <li><strong>SS_KEY_CONFIG</strong>: key feature configuration.</li>
+             * <li><strong>SS_PRODUCT_EXPIRE</strong>: service that is about to expire.</li>
+             * <li><strong>SS_AI_RISK</strong>: AI application risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SSI_AI_VUL_RISK</p>
+             */
+            public Builder subRuleType(String subRuleType) {
+                this.subRuleType = subRuleType;
+                return this;
+            }
+
+            /**
+             * <p>The name of the sub-deduction item of the security score rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unfixed application vulnerabilities</p>
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public SecurityScoreItemList build() {
+                return new SecurityScoreItemList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSecurityScoreRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityScoreRuleResponseBody</p>
+     */
+    public static class SecurityRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Integer score;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityScoreItemList")
+        private java.util.List<SecurityScoreItemList> securityScoreItemList;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private SecurityRuleList(Builder builder) {
+            this.ruleType = builder.ruleType;
+            this.score = builder.score;
+            this.securityScoreItemList = builder.securityScoreItemList;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityRuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return score
+         */
+        public Integer getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return securityScoreItemList
+         */
+        public java.util.List<SecurityScoreItemList> getSecurityScoreItemList() {
+            return this.securityScoreItemList;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String ruleType; 
+            private Integer score; 
+            private java.util.List<SecurityScoreItemList> securityScoreItemList; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityRuleList model) {
+                this.ruleType = model.ruleType;
+                this.score = model.score;
+                this.securityScoreItemList = model.securityScoreItemList;
+                this.title = model.title;
+            } 
+
+            /**
+             * <p>The type of the security score rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SS_AI_RISK</p>
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * <p>The threshold of deduction for the security score rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder score(Integer score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The sub-deduction items of the security score rule.</p>
+             */
+            public Builder securityScoreItemList(java.util.List<SecurityScoreItemList> securityScoreItemList) {
+                this.securityScoreItemList = securityScoreItemList;
+                return this;
+            }
+
+            /**
+             * <p>The name of the security score rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI application risks</p>
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public SecurityRuleList build() {
+                return new SecurityRuleList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSecurityScoreRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityScoreRuleResponseBody</p>
+     */
+    public static class SecurityScoreCategoryList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Integer score;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityRuleList")
+        private java.util.List<SecurityRuleList> securityRuleList;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private SecurityScoreCategoryList(Builder builder) {
+            this.category = builder.category;
+            this.score = builder.score;
+            this.securityRuleList = builder.securityRuleList;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityScoreCategoryList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return score
+         */
+        public Integer getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return securityRuleList
+         */
+        public java.util.List<SecurityRuleList> getSecurityRuleList() {
+            return this.securityRuleList;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Integer score; 
+            private java.util.List<SecurityRuleList> securityRuleList; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreCategoryList model) {
+                this.category = model.category;
+                this.score = model.score;
+                this.securityRuleList = model.securityRuleList;
+                this.title = model.title;
+            } 
+
+            /**
+             * <p>The category of the security score rule. Valid values:</p>
+             * <ul>
+             * <li><strong>SS_SAS_HANDLE</strong>: security governance.</li>
+             * <li><strong>SS_SAS_RESPOND</strong>: security response.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SS_SAS_HANDLE</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>The threshold of deduction for the security score rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
+             */
+            public Builder score(Integer score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The deduction items of the security score rule.</p>
+             */
+            public Builder securityRuleList(java.util.List<SecurityRuleList> securityRuleList) {
+                this.securityRuleList = securityRuleList;
+                return this;
+            }
+
+            /**
+             * <p>The category of the security score rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security governance</p>
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public SecurityScoreCategoryList build() {
+                return new SecurityScoreCategoryList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSecurityScoreRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityScoreRuleResponseBody</p>
+     */
+    public static class SecurityScoreRuleListSecurityScoreItemList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Integer score;
+
+        @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
+        private Integer scoreThreshold;
+
+        @com.aliyun.core.annotation.NameInMap("SubRuleType")
+        private String subRuleType;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private SecurityScoreRuleListSecurityScoreItemList(Builder builder) {
+            this.score = builder.score;
+            this.scoreThreshold = builder.scoreThreshold;
+            this.subRuleType = builder.subRuleType;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityScoreRuleListSecurityScoreItemList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return score
+         */
+        public Integer getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return scoreThreshold
+         */
+        public Integer getScoreThreshold() {
+            return this.scoreThreshold;
+        }
+
+        /**
+         * @return subRuleType
+         */
+        public String getSubRuleType() {
+            return this.subRuleType;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private Integer score; 
+            private Integer scoreThreshold; 
+            private String subRuleType; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreRuleListSecurityScoreItemList model) {
+                this.score = model.score;
+                this.scoreThreshold = model.scoreThreshold;
+                this.subRuleType = model.subRuleType;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The penalty point of the deduction item.</p>
@@ -267,8 +712,8 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
                 return this;
             }
 
-            public SecurityScoreItemList build() {
-                return new SecurityScoreItemList(this);
+            public SecurityScoreRuleListSecurityScoreItemList build() {
+                return new SecurityScoreRuleListSecurityScoreItemList(this);
             } 
 
         } 
@@ -288,7 +733,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         private Integer score;
 
         @com.aliyun.core.annotation.NameInMap("SecurityScoreItemList")
-        private java.util.List<SecurityScoreItemList> securityScoreItemList;
+        private java.util.List<SecurityScoreRuleListSecurityScoreItemList> securityScoreItemList;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -325,7 +770,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         /**
          * @return securityScoreItemList
          */
-        public java.util.List<SecurityScoreItemList> getSecurityScoreItemList() {
+        public java.util.List<SecurityScoreRuleListSecurityScoreItemList> getSecurityScoreItemList() {
             return this.securityScoreItemList;
         }
 
@@ -339,8 +784,18 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String ruleType; 
             private Integer score; 
-            private java.util.List<SecurityScoreItemList> securityScoreItemList; 
+            private java.util.List<SecurityScoreRuleListSecurityScoreItemList> securityScoreItemList; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreRuleList model) {
+                this.ruleType = model.ruleType;
+                this.score = model.score;
+                this.securityScoreItemList = model.securityScoreItemList;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The deduction module that is supported by the security score feature. Valid values:</p>
@@ -378,7 +833,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             /**
              * <p>The deduction items of the deduction module.</p>
              */
-            public Builder securityScoreItemList(java.util.List<SecurityScoreItemList> securityScoreItemList) {
+            public Builder securityScoreItemList(java.util.List<SecurityScoreRuleListSecurityScoreItemList> securityScoreItemList) {
                 this.securityScoreItemList = securityScoreItemList;
                 return this;
             }

@@ -36,6 +36,10 @@ public class UpdateClientAlertModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class UpdateClientAlertModeResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateClientAlertModeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>

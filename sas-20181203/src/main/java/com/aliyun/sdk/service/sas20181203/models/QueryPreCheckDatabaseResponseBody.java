@@ -56,6 +56,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return completedTime
      */
@@ -113,6 +117,19 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         private String requestId; 
         private String result; 
         private Long updatedTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPreCheckDatabaseResponseBody model) {
+            this.completedTime = model.completedTime;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.updatedTime = model.updatedTime;
+        } 
 
         /**
          * <p>The time when the precheck task was complete.</p>

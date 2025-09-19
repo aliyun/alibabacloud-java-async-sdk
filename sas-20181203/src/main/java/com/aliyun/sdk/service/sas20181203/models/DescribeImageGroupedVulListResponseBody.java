@@ -48,6 +48,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageGroupedVulListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.groupedVulItems = model.groupedVulItems;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -179,6 +194,9 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NntfCount")
         private Integer nntfCount;
 
+        @com.aliyun.core.annotation.NameInMap("RuleTag")
+        private String ruleTag;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -197,6 +215,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             this.laterCount = builder.laterCount;
             this.name = builder.name;
             this.nntfCount = builder.nntfCount;
+            this.ruleTag = builder.ruleTag;
             this.status = builder.status;
             this.tags = builder.tags;
             this.type = builder.type;
@@ -267,6 +286,13 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleTag
+         */
+        public String getRuleTag() {
+            return this.ruleTag;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -296,9 +322,28 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             private Integer laterCount; 
             private String name; 
             private Integer nntfCount; 
+            private String ruleTag; 
             private Integer status; 
             private String tags; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupedVulItems model) {
+                this.aliasName = model.aliasName;
+                this.asapCount = model.asapCount;
+                this.canFix = model.canFix;
+                this.gmtLast = model.gmtLast;
+                this.lastScanTime = model.lastScanTime;
+                this.laterCount = model.laterCount;
+                this.name = model.name;
+                this.nntfCount = model.nntfCount;
+                this.ruleTag = model.ruleTag;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The alias of the vulnerability.</p>
@@ -389,6 +434,20 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
+                return this;
+            }
+
+            /**
+             * <p>The tag of this vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>AI</strong>: AI-related components.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
+             */
+            public Builder ruleTag(String ruleTag) {
+                this.ruleTag = ruleTag;
                 return this;
             }
 

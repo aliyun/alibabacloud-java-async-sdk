@@ -40,6 +40,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyProcDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -234,6 +257,9 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EuidName")
         private String euidName;
 
+        @com.aliyun.core.annotation.NameInMap("FileHash")
+        private String fileHash;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -283,6 +309,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             this.cmdline = builder.cmdline;
             this.createTimestamp = builder.createTimestamp;
             this.euidName = builder.euidName;
+            this.fileHash = builder.fileHash;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
@@ -327,6 +354,13 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
          */
         public String getEuidName() {
             return this.euidName;
+        }
+
+        /**
+         * @return fileHash
+         */
+        public String getFileHash() {
+            return this.fileHash;
         }
 
         /**
@@ -438,6 +472,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private String cmdline; 
             private Long createTimestamp; 
             private String euidName; 
+            private String fileHash; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
@@ -453,6 +488,31 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private String state; 
             private String user; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.cmdline = model.cmdline;
+                this.createTimestamp = model.createTimestamp;
+                this.euidName = model.euidName;
+                this.fileHash = model.fileHash;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.isPackage = model.isPackage;
+                this.md5 = model.md5;
+                this.name = model.name;
+                this.path = model.path;
+                this.pid = model.pid;
+                this.pname = model.pname;
+                this.startTime = model.startTime;
+                this.startTimeDt = model.startTimeDt;
+                this.state = model.state;
+                this.user = model.user;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The startup parameter of the process.</p>
@@ -484,6 +544,14 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
              */
             public Builder euidName(String euidName) {
                 this.euidName = euidName;
+                return this;
+            }
+
+            /**
+             * FileHash.
+             */
+            public Builder fileHash(String fileHash) {
+                this.fileHash = fileHash;
                 return this;
             }
 

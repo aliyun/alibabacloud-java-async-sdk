@@ -40,6 +40,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Rules> rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAntiBruteForceRulesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -273,6 +296,15 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private String rdp; 
             private String sqlServer; 
             private String ssh; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolType model) {
+                this.rdp = model.rdp;
+                this.sqlServer = model.sqlServer;
+                this.ssh = model.ssh;
+            } 
 
             /**
              * <p>RDP interception method, values: </p>
@@ -477,6 +509,23 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private ProtocolType protocolType; 
             private Integer span; 
             private java.util.List<String> uuidList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.createTimestamp = model.createTimestamp;
+                this.defaultRule = model.defaultRule;
+                this.enableSmartRule = model.enableSmartRule;
+                this.failCount = model.failCount;
+                this.forbiddenTime = model.forbiddenTime;
+                this.id = model.id;
+                this.machineCount = model.machineCount;
+                this.name = model.name;
+                this.protocolType = model.protocolType;
+                this.span = model.span;
+                this.uuidList = model.uuidList;
+            } 
 
             /**
              * <p>防暴力破解规则创建时间戳。单位：毫秒。</p>

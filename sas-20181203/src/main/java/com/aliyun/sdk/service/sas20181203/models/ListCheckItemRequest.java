@@ -29,11 +29,16 @@ public class ListCheckItemRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
     private ListCheckItemRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.taskSources = builder.taskSources;
     }
 
     public static Builder builder() {
@@ -44,7 +49,7 @@ public class ListCheckItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,18 @@ public class ListCheckItemRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
     public static final class Builder extends Request.Builder<ListCheckItemRequest, Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
+        private java.util.List<String> taskSources; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListCheckItemRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.taskSources = request.taskSources;
         } 
 
         /**
@@ -123,6 +137,15 @@ public class ListCheckItemRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>List of task sources.</p>
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

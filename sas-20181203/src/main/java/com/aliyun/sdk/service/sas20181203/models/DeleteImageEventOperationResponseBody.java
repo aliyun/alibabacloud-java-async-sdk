@@ -48,6 +48,10 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteImageEventOperationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -183,6 +198,13 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+            } 
 
             /**
              * <p>The primary key of the alert handling rule.</p>

@@ -40,6 +40,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListObjectScanEventResponseBody model) {
+            this.data = model.data;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -178,6 +191,17 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private String valueDisplay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.name = model.name;
+                this.nameDisplay = model.nameDisplay;
+                this.type = model.type;
+                this.value = model.value;
+                this.valueDisplay = model.valueDisplay;
+            } 
 
             /**
              * <p>The name of the parameter in the file details.</p>
@@ -441,6 +465,27 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String sha256; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bucketName = model.bucketName;
+                this.details = model.details;
+                this.displaySandboxResult = model.displaySandboxResult;
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.filePath = model.filePath;
+                this.firstTime = model.firstTime;
+                this.hasSubEvent = model.hasSubEvent;
+                this.lastTime = model.lastTime;
+                this.md5 = model.md5;
+                this.ossKey = model.ossKey;
+                this.riskLevel = model.riskLevel;
+                this.sha1 = model.sha1;
+                this.sha256 = model.sha256;
+                this.source = model.source;
+            } 
+
             /**
              * <p>The name of the OSS bucket.</p>
              * 
@@ -682,6 +727,15 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

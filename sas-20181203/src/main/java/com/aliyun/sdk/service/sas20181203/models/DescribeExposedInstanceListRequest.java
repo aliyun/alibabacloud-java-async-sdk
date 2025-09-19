@@ -34,6 +34,10 @@ public class DescribeExposedInstanceListRequest extends Request {
     private String exposureComponent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExposureComponentBizType")
+    private String exposureComponentBizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExposureIp")
     private String exposureIp;
 
@@ -75,6 +79,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         this.cspmStatus = builder.cspmStatus;
         this.currentPage = builder.currentPage;
         this.exposureComponent = builder.exposureComponent;
+        this.exposureComponentBizType = builder.exposureComponentBizType;
         this.exposureIp = builder.exposureIp;
         this.exposurePort = builder.exposurePort;
         this.groupId = builder.groupId;
@@ -94,7 +99,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,6 +130,13 @@ public class DescribeExposedInstanceListRequest extends Request {
      */
     public String getExposureComponent() {
         return this.exposureComponent;
+    }
+
+    /**
+     * @return exposureComponentBizType
+     */
+    public String getExposureComponentBizType() {
+        return this.exposureComponentBizType;
     }
 
     /**
@@ -195,6 +207,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         private Boolean cspmStatus; 
         private Integer currentPage; 
         private String exposureComponent; 
+        private String exposureComponentBizType; 
         private String exposureIp; 
         private String exposurePort; 
         private Long groupId; 
@@ -215,6 +228,7 @@ public class DescribeExposedInstanceListRequest extends Request {
             this.cspmStatus = request.cspmStatus;
             this.currentPage = request.currentPage;
             this.exposureComponent = request.exposureComponent;
+            this.exposureComponentBizType = request.exposureComponentBizType;
             this.exposureIp = request.exposureIp;
             this.exposurePort = request.exposurePort;
             this.groupId = request.groupId;
@@ -281,6 +295,18 @@ public class DescribeExposedInstanceListRequest extends Request {
         public Builder exposureComponent(String exposureComponent) {
             this.putQueryParameter("ExposureComponent", exposureComponent);
             this.exposureComponent = exposureComponent;
+            return this;
+        }
+
+        /**
+         * <p>Expose component type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_service</p>
+         */
+        public Builder exposureComponentBizType(String exposureComponentBizType) {
+            this.putQueryParameter("ExposureComponentBizType", exposureComponentBizType);
+            this.exposureComponentBizType = exposureComponentBizType;
             return this;
         }
 

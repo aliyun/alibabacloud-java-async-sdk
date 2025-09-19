@@ -36,6 +36,10 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterHostEvent
      */
@@ -53,6 +57,14 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterHostEvent clusterHostEvent; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterHostSecuritySummaryResponseBody model) {
+            this.clusterHostEvent = model.clusterHostEvent;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The alert details of the hosts.</p>
@@ -122,6 +134,14 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmEvent model) {
+                this.count = model.count;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The number of alerts.</p>
@@ -201,6 +221,14 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private Long count; 
             private String riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaselineEvent model) {
+                this.count = model.count;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The number of baselines.</p>
              * 
@@ -278,6 +306,14 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulEvent model) {
+                this.count = model.count;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The number of vulnerabilities.</p>
@@ -368,6 +404,15 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private java.util.List<AlarmEvent> alarmEvent; 
             private java.util.List<BaselineEvent> baselineEvent; 
             private java.util.List<VulEvent> vulEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterHostEvent model) {
+                this.alarmEvent = model.alarmEvent;
+                this.baselineEvent = model.baselineEvent;
+                this.vulEvent = model.vulEvent;
+            } 
 
             /**
              * <p>The alert details of the host.</p>

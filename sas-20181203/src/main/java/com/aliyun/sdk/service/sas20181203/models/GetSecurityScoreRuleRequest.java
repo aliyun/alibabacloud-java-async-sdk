@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSecurityScoreRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalType")
+    private String calType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private GetSecurityScoreRuleRequest(Builder builder) {
         super(builder);
+        this.calType = builder.calType;
         this.lang = builder.lang;
     }
 
@@ -34,9 +39,16 @@ public class GetSecurityScoreRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return calType
+     */
+    public String getCalType() {
+        return this.calType;
     }
 
     /**
@@ -47,6 +59,7 @@ public class GetSecurityScoreRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetSecurityScoreRuleRequest, Builder> {
+        private String calType; 
         private String lang; 
 
         private Builder() {
@@ -55,8 +68,21 @@ public class GetSecurityScoreRuleRequest extends Request {
 
         private Builder(GetSecurityScoreRuleRequest request) {
             super(request);
+            this.calType = request.calType;
             this.lang = request.lang;
         } 
+
+        /**
+         * <p>The old or new version of the security score rule. If you set this parameter to <strong>home_security_score</strong>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home_security_score</p>
+         */
+        public Builder calType(String calType) {
+            this.putQueryParameter("CalType", calType);
+            this.calType = calType;
+            return this;
+        }
 
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>

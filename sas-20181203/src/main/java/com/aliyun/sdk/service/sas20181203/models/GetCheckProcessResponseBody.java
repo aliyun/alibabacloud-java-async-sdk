@@ -48,6 +48,10 @@ public class GetCheckProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return finishCount
      */
@@ -89,6 +93,17 @@ public class GetCheckProcessResponseBody extends TeaModel {
         private String statusCode; 
         private String taskId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCheckProcessResponseBody model) {
+            this.finishCount = model.finishCount;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+            this.taskId = model.taskId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The total number of assets on which the task is complete.</p>

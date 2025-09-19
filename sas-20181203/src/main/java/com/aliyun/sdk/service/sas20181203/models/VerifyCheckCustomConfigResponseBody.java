@@ -20,6 +20,9 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorCheckConfigs")
     private java.util.List<ErrorCheckConfigs> errorCheckConfigs;
 
+    @com.aliyun.core.annotation.NameInMap("ErrorCheckCustomConfig")
+    private ErrorCheckCustomConfig errorCheckCustomConfig;
+
     @com.aliyun.core.annotation.NameInMap("ErrorRepairConfigs")
     private java.util.List<ErrorRepairConfigs> errorRepairConfigs;
 
@@ -28,6 +31,7 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
 
     private VerifyCheckCustomConfigResponseBody(Builder builder) {
         this.errorCheckConfigs = builder.errorCheckConfigs;
+        this.errorCheckCustomConfig = builder.errorCheckCustomConfig;
         this.errorRepairConfigs = builder.errorRepairConfigs;
         this.requestId = builder.requestId;
     }
@@ -40,11 +44,22 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCheckConfigs
      */
     public java.util.List<ErrorCheckConfigs> getErrorCheckConfigs() {
         return this.errorCheckConfigs;
+    }
+
+    /**
+     * @return errorCheckCustomConfig
+     */
+    public ErrorCheckCustomConfig getErrorCheckCustomConfig() {
+        return this.errorCheckCustomConfig;
     }
 
     /**
@@ -63,14 +78,33 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<ErrorCheckConfigs> errorCheckConfigs; 
+        private ErrorCheckCustomConfig errorCheckCustomConfig; 
         private java.util.List<ErrorRepairConfigs> errorRepairConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyCheckCustomConfigResponseBody model) {
+            this.errorCheckConfigs = model.errorCheckConfigs;
+            this.errorCheckCustomConfig = model.errorCheckCustomConfig;
+            this.errorRepairConfigs = model.errorRepairConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of check parameters with configuration errors.</p>
          */
         public Builder errorCheckConfigs(java.util.List<ErrorCheckConfigs> errorCheckConfigs) {
             this.errorCheckConfigs = errorCheckConfigs;
+            return this;
+        }
+
+        /**
+         * <p>Check the error code returned by the custom check item.</p>
+         */
+        public Builder errorCheckCustomConfig(ErrorCheckCustomConfig errorCheckCustomConfig) {
+            this.errorCheckCustomConfig = errorCheckCustomConfig;
             return this;
         }
 
@@ -154,6 +188,15 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(LinkErrorConfigs model) {
+                this.name = model.name;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Name of the check item configuration, unique within the same check item.</p>
@@ -291,6 +334,18 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorCheckConfigs model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.linkErrorConfigs = model.linkErrorConfigs;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Error code.</p>
              * 
@@ -370,6 +425,91 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
      *
      * <p>VerifyCheckCustomConfigResponseBody</p>
      */
+    public static class ErrorCheckCustomConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
+        private ErrorCheckCustomConfig(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ErrorCheckCustomConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public static final class Builder {
+            private String errorCode; 
+            private String errorMsg; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorCheckCustomConfig model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+            } 
+
+            /**
+             * <p>Error code when failed. This parameter is not returned upon success. </p>
+             * <ul>
+             * <li><strong>CspmVerifyCheckCustomItemNoPass</strong>: The asset did not pass the set custom rules. </li>
+             * <li><strong>CspmVerifyCheckCustomItemError</strong>: Verification error, there is an issue with the input rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CspmVerifyCheckCustomItemNoPass</p>
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creation verification failed.</p>
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            public ErrorCheckCustomConfig build() {
+                return new ErrorCheckCustomConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VerifyCheckCustomConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyCheckCustomConfigResponseBody</p>
+     */
     public static class ErrorRepairConfigsLinkErrorConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -419,6 +559,15 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorRepairConfigsLinkErrorConfigs model) {
+                this.name = model.name;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Name of the check item&quot;s configuration, unique within the same check item.</p>
@@ -555,6 +704,18 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorRepairConfigs model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.linkErrorConfigs = model.linkErrorConfigs;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Error code.</p>

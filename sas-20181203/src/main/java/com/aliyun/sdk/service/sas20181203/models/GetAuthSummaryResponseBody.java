@@ -38,6 +38,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HighestVersion")
     private Integer highestVersion;
 
+    @com.aliyun.core.annotation.NameInMap("InvalidBindStatus")
+    private String invalidBindStatus;
+
     @com.aliyun.core.annotation.NameInMap("IsMultiVersion")
     private Integer isMultiVersion;
 
@@ -70,6 +73,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         this.defaultAuthToAll = builder.defaultAuthToAll;
         this.hasPreBindSetting = builder.hasPreBindSetting;
         this.highestVersion = builder.highestVersion;
+        this.invalidBindStatus = builder.invalidBindStatus;
         this.isMultiVersion = builder.isMultiVersion;
         this.machine = builder.machine;
         this.postPaidHighestVersion = builder.postPaidHighestVersion;
@@ -86,6 +90,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
     public static GetAuthSummaryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -135,6 +143,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
      */
     public Integer getHighestVersion() {
         return this.highestVersion;
+    }
+
+    /**
+     * @return invalidBindStatus
+     */
+    public String getInvalidBindStatus() {
+        return this.invalidBindStatus;
     }
 
     /**
@@ -201,6 +216,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Integer defaultAuthToAll; 
         private Boolean hasPreBindSetting; 
         private Integer highestVersion; 
+        private String invalidBindStatus; 
         private Integer isMultiVersion; 
         private Machine machine; 
         private String postPaidHighestVersion; 
@@ -209,6 +225,28 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private java.util.List<PostPaidVersionSummary> postPaidVersionSummary; 
         private String requestId; 
         private java.util.List<VersionSummary> versionSummary; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAuthSummaryResponseBody model) {
+            this.allowPartialBuy = model.allowPartialBuy;
+            this.allowUpgradePartialBuy = model.allowUpgradePartialBuy;
+            this.allowUserUnbind = model.allowUserUnbind;
+            this.autoBind = model.autoBind;
+            this.defaultAuthToAll = model.defaultAuthToAll;
+            this.hasPreBindSetting = model.hasPreBindSetting;
+            this.highestVersion = model.highestVersion;
+            this.invalidBindStatus = model.invalidBindStatus;
+            this.isMultiVersion = model.isMultiVersion;
+            this.machine = model.machine;
+            this.postPaidHighestVersion = model.postPaidHighestVersion;
+            this.postPaidHostAutoBind = model.postPaidHostAutoBind;
+            this.postPaidHostAutoBindVersion = model.postPaidHostAutoBindVersion;
+            this.postPaidVersionSummary = model.postPaidVersionSummary;
+            this.requestId = model.requestId;
+            this.versionSummary = model.versionSummary;
+        } 
 
         /**
          * <p>Indicates whether you can purchase protection quota on demand when you purchase Security Center. Valid values:</p>
@@ -319,6 +357,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         public Builder highestVersion(Integer highestVersion) {
             this.highestVersion = highestVersion;
+            return this;
+        }
+
+        /**
+         * InvalidBindStatus.
+         */
+        public Builder invalidBindStatus(String invalidBindStatus) {
+            this.invalidBindStatus = invalidBindStatus;
             return this;
         }
 
@@ -551,6 +597,22 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Integer unBindCoreCount; 
             private Integer unBindEcsCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Machine model) {
+                this.bindCoreCount = model.bindCoreCount;
+                this.bindEcsCount = model.bindEcsCount;
+                this.postPaidBindCoreCount = model.postPaidBindCoreCount;
+                this.postPaidBindEcsCount = model.postPaidBindEcsCount;
+                this.riskCoreCount = model.riskCoreCount;
+                this.riskEcsCount = model.riskEcsCount;
+                this.totalCoreCount = model.totalCoreCount;
+                this.totalEcsCount = model.totalEcsCount;
+                this.unBindCoreCount = model.unBindCoreCount;
+                this.unBindEcsCount = model.unBindEcsCount;
+            } 
+
             /**
              * <p>The number of cores of the assets that are bound to Security Center.</p>
              * 
@@ -747,6 +809,17 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Long usedCoreCount; 
             private Long usedEcsCount; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostPaidVersionSummary model) {
+                this.authBindType = model.authBindType;
+                this.index = model.index;
+                this.usedCoreCount = model.usedCoreCount;
+                this.usedEcsCount = model.usedEcsCount;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The type of authorization consumed during binding, with values: - <strong>ASSET</strong>: Consumes the number of authorized devices - <strong>CORE</strong>: Consumes the number of authorized cores - <strong>ASSET_AND_CORE</strong>: Consumes both the number of authorized devices and cores.</p>
@@ -961,6 +1034,23 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Integer usedCoreCount; 
             private Integer usedEcsCount; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSummary model) {
+                this.authBindType = model.authBindType;
+                this.index = model.index;
+                this.totalCoreAuthCount = model.totalCoreAuthCount;
+                this.totalCount = model.totalCount;
+                this.totalEcsAuthCount = model.totalEcsAuthCount;
+                this.unUsedCount = model.unUsedCount;
+                this.unusedCoreAuthCount = model.unusedCoreAuthCount;
+                this.unusedEcsAuthCount = model.unusedEcsAuthCount;
+                this.usedCoreCount = model.usedCoreCount;
+                this.usedEcsCount = model.usedEcsCount;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The type of the quota that is consumed. Valid values:</p>

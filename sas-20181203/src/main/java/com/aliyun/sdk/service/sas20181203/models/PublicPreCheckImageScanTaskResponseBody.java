@@ -36,6 +36,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PublicPreCheckImageScanTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned if the call is successful.</p>
@@ -122,6 +134,14 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Integer needAuthCount; 
             private Integer scanImageCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.needAuthCount = model.needAuthCount;
+                this.scanImageCount = model.scanImageCount;
+            } 
 
             /**
              * <p>The number of images to scan in the task.</p>

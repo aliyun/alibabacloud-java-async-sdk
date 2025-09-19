@@ -40,6 +40,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertySoftwareDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -381,6 +404,24 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private String path; 
             private String uuid; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.createTimestamp = model.createTimestamp;
+                this.installTime = model.installTime;
+                this.installTimeDt = model.installTimeDt;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.path = model.path;
+                this.uuid = model.uuid;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.</p>

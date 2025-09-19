@@ -40,6 +40,10 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TargetConfigs> targetConfigs; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulTargetConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.targetConfigs = model.targetConfigs;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -157,6 +170,15 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             private String config; 
             private String overAllConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetConfigs model) {
+                this.config = model.config;
+                this.overAllConfig = model.overAllConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the vulnerability scan feature is enabled for the server.</p>

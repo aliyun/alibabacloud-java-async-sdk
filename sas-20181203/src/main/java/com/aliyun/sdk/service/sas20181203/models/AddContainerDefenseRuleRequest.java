@@ -69,7 +69,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -324,6 +324,15 @@ public class AddContainerDefenseRuleRequest extends Request {
             private String clusterId; 
             private java.util.List<String> namespaces; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.allNamespace = model.allNamespace;
+                this.clusterId = model.clusterId;
+                this.namespaces = model.namespaces;
+            } 
+
             /**
              * <p>Specifies whether to include all namespaces. Valid values:</p>
              * <ul>
@@ -424,6 +433,15 @@ public class AddContainerDefenseRuleRequest extends Request {
             private java.util.List<String> hash; 
             private java.util.List<String> image; 
             private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Whitelist model) {
+                this.hash = model.hash;
+                this.image = model.image;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The hash values of the files that need to be added to the whitelist.</p>

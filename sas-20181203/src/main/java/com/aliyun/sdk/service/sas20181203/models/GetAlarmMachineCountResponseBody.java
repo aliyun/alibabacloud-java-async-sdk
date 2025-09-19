@@ -36,6 +36,10 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlarmMachineCountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -110,6 +122,13 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer machineCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.machineCount = model.machineCount;
+            } 
 
             /**
              * <p>The number of servers on which alerts are generated.</p>

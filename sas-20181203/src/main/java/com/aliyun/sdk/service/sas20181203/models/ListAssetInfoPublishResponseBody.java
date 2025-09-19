@@ -36,6 +36,10 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetList
      */
@@ -53,6 +57,14 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AssetList> assetList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAssetInfoPublishResponseBody model) {
+            this.assetList = model.assetList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The servers.</p>
@@ -158,6 +170,17 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             private Integer status; 
             private Boolean upgradeEnable; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetList model) {
+                this.curVersion = model.curVersion;
+                this.lastUpgradeTime = model.lastUpgradeTime;
+                this.status = model.status;
+                this.upgradeEnable = model.upgradeEnable;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The version of the Security Center agent.</p>

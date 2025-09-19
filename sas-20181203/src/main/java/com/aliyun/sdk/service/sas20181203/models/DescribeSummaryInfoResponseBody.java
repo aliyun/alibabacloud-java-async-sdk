@@ -48,6 +48,10 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aegisClientOfflineCount
      */
@@ -89,6 +93,17 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         private String requestId; 
         private Integer securityScore; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSummaryInfoResponseBody model) {
+            this.aegisClientOfflineCount = model.aegisClientOfflineCount;
+            this.aegisClientOnlineCount = model.aegisClientOnlineCount;
+            this.requestId = model.requestId;
+            this.securityScore = model.securityScore;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The number of unprotected assets.</p>

@@ -50,7 +50,7 @@ public class ListCheckRuleInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,14 @@ public class ListCheckRuleInstanceRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>Asset instance ID.</p>

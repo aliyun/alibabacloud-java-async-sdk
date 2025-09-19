@@ -40,6 +40,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulListPageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -217,6 +230,20 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             private String otherId; 
             private Long releaseTime; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cveId = model.cveId;
+                this.extAegis = model.extAegis;
+                this.id = model.id;
+                this.isAegis = model.isAegis;
+                this.isSas = model.isSas;
+                this.otherId = model.otherId;
+                this.releaseTime = model.releaseTime;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</p>

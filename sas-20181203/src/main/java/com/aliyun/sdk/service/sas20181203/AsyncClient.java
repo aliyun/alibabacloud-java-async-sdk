@@ -230,13 +230,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeUserLangResponse> changeUserLang(ChangeUserLangRequest request);
 
     /**
-     * @deprecated OpenAPI CheckQuaraFileId is deprecated  * @param request  the request parameters of CheckQuaraFileId  CheckQuaraFileIdRequest
-     * @return CheckQuaraFileIdResponse
-     */
-    @Deprecated
-    CompletableFuture<CheckQuaraFileIdResponse> checkQuaraFileId(CheckQuaraFileIdRequest request);
-
-    /**
      * @param request the request parameters of CheckSecurityEventId  CheckSecurityEventIdRequest
      * @return CheckSecurityEventIdResponse
      */
@@ -294,6 +287,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAssetSelectionConfigResponse> createAssetSelectionConfig(CreateAssetSelectionConfigRequest request);
 
     /**
+     * @param request the request parameters of CreateAttackPathSensitiveAssetConfig  CreateAttackPathSensitiveAssetConfigRequest
+     * @return CreateAttackPathSensitiveAssetConfigResponse
+     */
+    CompletableFuture<CreateAttackPathSensitiveAssetConfigResponse> createAttackPathSensitiveAssetConfig(CreateAttackPathSensitiveAssetConfigRequest request);
+
+    /**
+     * @param request the request parameters of CreateAttackPathWhitelist  CreateAttackPathWhitelistRequest
+     * @return CreateAttackPathWhitelistResponse
+     */
+    CompletableFuture<CreateAttackPathWhitelistResponse> createAttackPathWhitelist(CreateAttackPathWhitelistRequest request);
+
+    /**
      * @param request the request parameters of CreateAttestor  CreateAttestorRequest
      * @return CreateAttestorResponse
      */
@@ -348,9 +353,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCycleTaskResponse> createCycleTask(CreateCycleTaskRequest request);
 
     /**
-     * @param request the request parameters of CreateDynamicDict  CreateDynamicDictRequest
+     * @deprecated OpenAPI CreateDynamicDict is deprecated, please use Sas::2018-12-03::CreateCustomizedDict instead.  * @param request  the request parameters of CreateDynamicDict  CreateDynamicDictRequest
      * @return CreateDynamicDictResponse
      */
+    @Deprecated
     CompletableFuture<CreateDynamicDictResponse> createDynamicDict(CreateDynamicDictRequest request);
 
     /**
@@ -606,6 +612,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAntiBruteForceRuleResponse> deleteAntiBruteForceRule(DeleteAntiBruteForceRuleRequest request);
 
     /**
+     * @param request the request parameters of DeleteAttackPathSensitiveAssetConfig  DeleteAttackPathSensitiveAssetConfigRequest
+     * @return DeleteAttackPathSensitiveAssetConfigResponse
+     */
+    CompletableFuture<DeleteAttackPathSensitiveAssetConfigResponse> deleteAttackPathSensitiveAssetConfig(DeleteAttackPathSensitiveAssetConfigRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAttackPathWhitelist  DeleteAttackPathWhitelistRequest
+     * @return DeleteAttackPathWhitelistResponse
+     */
+    CompletableFuture<DeleteAttackPathWhitelistResponse> deleteAttackPathWhitelist(DeleteAttackPathWhitelistRequest request);
+
+    /**
      * @param request the request parameters of DeleteAttestor  DeleteAttestorRequest
      * @return DeleteAttestorResponse
      */
@@ -646,6 +664,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBinarySecurityPolicyResponse
      */
     CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCheckPolicy  DeleteCheckPolicyRequest
+     * @return DeleteCheckPolicyResponse
+     */
+    CompletableFuture<DeleteCheckPolicyResponse> deleteCheckPolicy(DeleteCheckPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteClientUserDefineRule  DeleteClientUserDefineRuleRequest
@@ -925,6 +949,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVulWhitelistResponse> deleteVulWhitelist(DeleteVulWhitelistRequest request);
 
     /**
+     * @param request the request parameters of DescribeAIAssetSummary  DescribeAIAssetSummaryRequest
+     * @return DescribeAIAssetSummaryResponse
+     */
+    CompletableFuture<DescribeAIAssetSummaryResponse> describeAIAssetSummary(DescribeAIAssetSummaryRequest request);
+
+    /**
      * @param request the request parameters of DescribeAccessKeyLeakDetail  DescribeAccessKeyLeakDetailRequest
      * @return DescribeAccessKeyLeakDetailResponse
      */
@@ -970,9 +1000,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAlarmEventDetailResponse> describeAlarmEventDetail(DescribeAlarmEventDetailRequest request);
 
     /**
-     * @param request the request parameters of DescribeAlarmEventStackInfo  DescribeAlarmEventStackInfoRequest
+     * @deprecated OpenAPI DescribeAlarmEventStackInfo is deprecated  * @param request  the request parameters of DescribeAlarmEventStackInfo  DescribeAlarmEventStackInfoRequest
      * @return DescribeAlarmEventStackInfoResponse
      */
+    @Deprecated
     CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request);
 
     /**
@@ -1526,15 +1557,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainSecureVulListResponse> describeDomainSecureVulList(DescribeDomainSecureVulListRequest request);
 
     /**
-     * @param request the request parameters of DescribeDynamicDict  DescribeDynamicDictRequest
+     * @deprecated OpenAPI DescribeDynamicDict is deprecated, please use Sas::2018-12-03::DescribeCustomizedDict instead.  * @param request  the request parameters of DescribeDynamicDict  DescribeDynamicDictRequest
      * @return DescribeDynamicDictResponse
      */
+    @Deprecated
     CompletableFuture<DescribeDynamicDictResponse> describeDynamicDict(DescribeDynamicDictRequest request);
 
     /**
-     * @param request the request parameters of DescribeDynamicDictUploadInfo  DescribeDynamicDictUploadInfoRequest
+     * @deprecated OpenAPI DescribeDynamicDictUploadInfo is deprecated, please use Sas::2018-12-03::DescribeCustomizedDictUploadInfo instead.  * @param request  the request parameters of DescribeDynamicDictUploadInfo  DescribeDynamicDictUploadInfoRequest
      * @return DescribeDynamicDictUploadInfoResponse
      */
+    @Deprecated
     CompletableFuture<DescribeDynamicDictUploadInfoResponse> describeDynamicDictUploadInfo(DescribeDynamicDictUploadInfoRequest request);
 
     /**
@@ -1911,7 +1944,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To query the information about the recently detected image vulnerabilities, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.</p>
+     * <p>To query the information about the recently detected image vulnerabilities, call the <a href="https://help.aliyun.com/document_detail/411723.html">PublicCreateImageScanTask</a> operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.</p>
      * 
      * @param request the request parameters of DescribeImageVulList  DescribeImageVulListRequest
      * @return DescribeImageVulListResponse
@@ -2068,6 +2101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOnceTaskLeafRecordPageResponse> describeOnceTaskLeafRecordPage(DescribeOnceTaskLeafRecordPageRequest request);
 
     /**
+     * @param request the request parameters of DescribePluginSummary  DescribePluginSummaryRequest
+     * @return DescribePluginSummaryResponse
+     */
+    CompletableFuture<DescribePluginSummaryResponse> describePluginSummary(DescribePluginSummaryRequest request);
+
+    /**
      * @param request the request parameters of DescribePropertyCount  DescribePropertyCountRequest
      * @return DescribePropertyCountResponse
      */
@@ -2150,13 +2189,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePropertyTypeScaItemResponse
      */
     CompletableFuture<DescribePropertyTypeScaItemResponse> describePropertyTypeScaItem(DescribePropertyTypeScaItemRequest request);
-
-    /**
-     * @deprecated OpenAPI DescribePropertyUsageNewest is deprecated, please use Sas::2018-12-03::DescribeOnceTask instead.  * @param request  the request parameters of DescribePropertyUsageNewest  DescribePropertyUsageNewestRequest
-     * @return DescribePropertyUsageNewestResponse
-     */
-    @Deprecated
-    CompletableFuture<DescribePropertyUsageNewestResponse> describePropertyUsageNewest(DescribePropertyUsageNewestRequest request);
 
     /**
      * <b>description</b> :
@@ -2987,9 +3019,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportVulResponse> exportVul(ExportVulRequest request);
 
     /**
-     * @param request the request parameters of ExportWarning  ExportWarningRequest
+     * @deprecated OpenAPI ExportWarning is deprecated, please use Sas::2018-12-03::ExportRecord instead.  * @param request  the request parameters of ExportWarning  ExportWarningRequest
      * @return ExportWarningResponse
      */
+    @Deprecated
     CompletableFuture<ExportWarningResponse> exportWarning(ExportWarningRequest request);
 
     /**
@@ -3090,6 +3123,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAssetsPropertyItemResponse
      */
     CompletableFuture<GetAssetsPropertyItemResponse> getAssetsPropertyItem(GetAssetsPropertyItemRequest request);
+
+    /**
+     * @param request the request parameters of GetAttackPathEventDetail  GetAttackPathEventDetailRequest
+     * @return GetAttackPathEventDetailResponse
+     */
+    CompletableFuture<GetAttackPathEventDetailResponse> getAttackPathEventDetail(GetAttackPathEventDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetAttackPathEventStatistics  GetAttackPathEventStatisticsRequest
+     * @return GetAttackPathEventStatisticsResponse
+     */
+    CompletableFuture<GetAttackPathEventStatisticsResponse> getAttackPathEventStatistics(GetAttackPathEventStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of GetAttackPathSensitiveAssetConfig  GetAttackPathSensitiveAssetConfigRequest
+     * @return GetAttackPathSensitiveAssetConfigResponse
+     */
+    CompletableFuture<GetAttackPathSensitiveAssetConfigResponse> getAttackPathSensitiveAssetConfig(GetAttackPathSensitiveAssetConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAttackPathWhitelist  GetAttackPathWhitelistRequest
+     * @return GetAttackPathWhitelistResponse
+     */
+    CompletableFuture<GetAttackPathWhitelistResponse> getAttackPathWhitelist(GetAttackPathWhitelistRequest request);
 
     /**
      * @param request the request parameters of GetAttackTypeList  GetAttackTypeListRequest
@@ -3732,6 +3789,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IgnoreIdcProbeScanResultResponse> ignoreIdcProbeScanResult(IgnoreIdcProbeScanResultRequest request);
 
     /**
+     * @param request the request parameters of InstallAegisForLingjun  InstallAegisForLingjunRequest
+     * @return InstallAegisForLingjunResponse
+     */
+    CompletableFuture<InstallAegisForLingjunResponse> installAegisForLingjun(InstallAegisForLingjunRequest request);
+
+    /**
      * @param request the request parameters of InstallBackupClient  InstallBackupClientRequest
      * @return InstallBackupClientResponse
      */
@@ -3786,6 +3849,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAegisContainerPluginRuleResponse
      */
     CompletableFuture<ListAegisContainerPluginRuleResponse> listAegisContainerPluginRule(ListAegisContainerPluginRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListAegisForLingjunStatus  ListAegisForLingjunStatusRequest
+     * @return ListAegisForLingjunStatusResponse
+     */
+    CompletableFuture<ListAegisForLingjunStatusResponse> listAegisForLingjunStatus(ListAegisForLingjunStatusRequest request);
 
     /**
      * @param request the request parameters of ListAgentlessAsset  ListAgentlessAssetRequest
@@ -3854,10 +3923,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAssetSelectionTargetResponse> listAssetSelectionTarget(ListAssetSelectionTargetRequest request);
 
     /**
+     * @param request the request parameters of ListAttackPathEvent  ListAttackPathEventRequest
+     * @return ListAttackPathEventResponse
+     */
+    CompletableFuture<ListAttackPathEventResponse> listAttackPathEvent(ListAttackPathEventRequest request);
+
+    /**
+     * @param request the request parameters of ListAttackPathWhitelist  ListAttackPathWhitelistRequest
+     * @return ListAttackPathWhitelistResponse
+     */
+    CompletableFuture<ListAttackPathWhitelistResponse> listAttackPathWhitelist(ListAttackPathWhitelistRequest request);
+
+    /**
      * @param request the request parameters of ListAutoTagRules  ListAutoTagRulesRequest
      * @return ListAutoTagRulesResponse
      */
     CompletableFuture<ListAutoTagRulesResponse> listAutoTagRules(ListAutoTagRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListAvailableAttackPath  ListAvailableAttackPathRequest
+     * @return ListAvailableAttackPathResponse
+     */
+    CompletableFuture<ListAvailableAttackPathResponse> listAvailableAttackPath(ListAvailableAttackPathRequest request);
 
     /**
      * @param request the request parameters of ListAvailableHoneypot  ListAvailableHoneypotRequest
@@ -4287,12 +4374,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublishBatchResponse> listPublishBatch(ListPublishBatchRequest request);
 
     /**
-     * @param request the request parameters of ListQueryRaspAppInfo  ListQueryRaspAppInfoRequest
-     * @return ListQueryRaspAppInfoResponse
-     */
-    CompletableFuture<ListQueryRaspAppInfoResponse> listQueryRaspAppInfo(ListQueryRaspAppInfoRequest request);
-
-    /**
      * <b>description</b> :
      * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
      * 
@@ -4312,6 +4393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSasContainerWebDefenseRuleResponse
      */
     CompletableFuture<ListSasContainerWebDefenseRuleResponse> listSasContainerWebDefenseRule(ListSasContainerWebDefenseRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListSupportAttackPathAsset  ListSupportAttackPathAssetRequest
+     * @return ListSupportAttackPathAssetResponse
+     */
+    CompletableFuture<ListSupportAttackPathAssetResponse> listSupportAttackPathAsset(ListSupportAttackPathAssetRequest request);
 
     /**
      * @param request the request parameters of ListSupportObjectSuffix  ListSupportObjectSuffixRequest
@@ -5056,12 +5143,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request);
 
     /**
-     * @param request the request parameters of QueryAssetDetailByUUID  QueryAssetDetailByUUIDRequest
-     * @return QueryAssetDetailByUUIDResponse
-     */
-    CompletableFuture<QueryAssetDetailByUUIDResponse> queryAssetDetailByUUID(QueryAssetDetailByUUIDRequest request);
-
-    /**
      * @param request the request parameters of QueryAttackCount  QueryAttackCountRequest
      * @return QueryAttackCountResponse
      */
@@ -5095,42 +5176,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryGuidTaskListResponse
      */
     CompletableFuture<QueryGuidTaskListResponse> queryGuidTaskList(QueryGuidTaskListRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentIconList  QueryIncidentIconListRequest
-     * @return QueryIncidentIconListResponse
-     */
-    CompletableFuture<QueryIncidentIconListResponse> queryIncidentIconList(QueryIncidentIconListRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentSubNodesCount  QueryIncidentSubNodesCountRequest
-     * @return QueryIncidentSubNodesCountResponse
-     */
-    CompletableFuture<QueryIncidentSubNodesCountResponse> queryIncidentSubNodesCount(QueryIncidentSubNodesCountRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentTracingDetail  QueryIncidentTracingDetailRequest
-     * @return QueryIncidentTracingDetailResponse
-     */
-    CompletableFuture<QueryIncidentTracingDetailResponse> queryIncidentTracingDetail(QueryIncidentTracingDetailRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentTracingJudge  QueryIncidentTracingJudgeRequest
-     * @return QueryIncidentTracingJudgeResponse
-     */
-    CompletableFuture<QueryIncidentTracingJudgeResponse> queryIncidentTracingJudge(QueryIncidentTracingJudgeRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentVertexExtendInfo  QueryIncidentVertexExtendInfoRequest
-     * @return QueryIncidentVertexExtendInfoResponse
-     */
-    CompletableFuture<QueryIncidentVertexExtendInfoResponse> queryIncidentVertexExtendInfo(QueryIncidentVertexExtendInfoRequest request);
-
-    /**
-     * @param request the request parameters of QueryIncidentVertexNodes  QueryIncidentVertexNodesRequest
-     * @return QueryIncidentVertexNodesResponse
-     */
-    CompletableFuture<QueryIncidentVertexNodesResponse> queryIncidentVertexNodes(QueryIncidentVertexNodesRequest request);
 
     /**
      * @param request the request parameters of QueryJenkinsImageRegistryPersistenceDay  QueryJenkinsImageRegistryPersistenceDayRequest
@@ -5428,6 +5473,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAlarmEventResponse
      */
     CompletableFuture<UpdateAlarmEventResponse> updateAlarmEvent(UpdateAlarmEventRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAttackPathSensitiveAssetConfig  UpdateAttackPathSensitiveAssetConfigRequest
+     * @return UpdateAttackPathSensitiveAssetConfigResponse
+     */
+    CompletableFuture<UpdateAttackPathSensitiveAssetConfigResponse> updateAttackPathSensitiveAssetConfig(UpdateAttackPathSensitiveAssetConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAttackPathWhitelist  UpdateAttackPathWhitelistRequest
+     * @return UpdateAttackPathWhitelistResponse
+     */
+    CompletableFuture<UpdateAttackPathWhitelistResponse> updateAttackPathWhitelist(UpdateAttackPathWhitelistRequest request);
 
     /**
      * @param request the request parameters of UpdateBaselineCheckWhiteRecord  UpdateBaselineCheckWhiteRecordRequest

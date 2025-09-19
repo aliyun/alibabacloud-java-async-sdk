@@ -40,6 +40,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cycleScheduleResponseList
      */
@@ -65,6 +69,15 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         private java.util.List<CycleScheduleResponseList> cycleScheduleResponseList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCycleTaskListResponseBody model) {
+            this.cycleScheduleResponseList = model.cycleScheduleResponseList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of periodic scan tasks.</p>
@@ -262,6 +275,24 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private Integer targetStartTime; 
             private String taskName; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CycleScheduleResponseList model) {
+                this.configId = model.configId;
+                this.enable = model.enable;
+                this.firstDateStr = model.firstDateStr;
+                this.intervalPeriod = model.intervalPeriod;
+                this.lastTaskId = model.lastTaskId;
+                this.nextStartTimeStr = model.nextStartTimeStr;
+                this.param = model.param;
+                this.periodUnit = model.periodUnit;
+                this.targetEndTime = model.targetEndTime;
+                this.targetStartTime = model.targetStartTime;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The configuration ID.</p>
@@ -477,6 +508,16 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

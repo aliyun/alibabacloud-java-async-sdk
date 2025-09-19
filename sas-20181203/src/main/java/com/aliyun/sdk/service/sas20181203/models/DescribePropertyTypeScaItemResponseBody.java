@@ -40,6 +40,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PropertyTypeItems> propertyTypeItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyTypeScaItemResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertyTypeItems = model.propertyTypeItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -261,6 +284,14 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyTypeItems model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the middleware type.</p>

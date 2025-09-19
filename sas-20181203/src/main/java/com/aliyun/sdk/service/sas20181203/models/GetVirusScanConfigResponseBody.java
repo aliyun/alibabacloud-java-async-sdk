@@ -36,6 +36,10 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVirusScanConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned if the request was successful.</p>
@@ -86,6 +98,9 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
      * <p>GetVirusScanConfigResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdditionType")
+        private java.util.List<String> additionType;
+
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
@@ -117,6 +132,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         private String taskType;
 
         private Data(Builder builder) {
+            this.additionType = builder.additionType;
             this.configId = builder.configId;
             this.enable = builder.enable;
             this.intervalPeriod = builder.intervalPeriod;
@@ -135,6 +151,13 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionType
+         */
+        public java.util.List<String> getAdditionType() {
+            return this.additionType;
         }
 
         /**
@@ -208,6 +231,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> additionType; 
             private String configId; 
             private Integer enable; 
             private Integer intervalPeriod; 
@@ -218,6 +242,31 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             private Integer targetEndTime; 
             private Integer targetStartTime; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.additionType = model.additionType;
+                this.configId = model.configId;
+                this.enable = model.enable;
+                this.intervalPeriod = model.intervalPeriod;
+                this.periodUnit = model.periodUnit;
+                this.scanPath = model.scanPath;
+                this.scanType = model.scanType;
+                this.selectionKey = model.selectionKey;
+                this.targetEndTime = model.targetEndTime;
+                this.targetStartTime = model.targetStartTime;
+                this.taskType = model.taskType;
+            } 
+
+            /**
+             * <p>Extended scan types.</p>
+             */
+            public Builder additionType(java.util.List<String> additionType) {
+                this.additionType = additionType;
+                return this;
+            }
 
             /**
              * <p>The ID of the task configuration.</p>

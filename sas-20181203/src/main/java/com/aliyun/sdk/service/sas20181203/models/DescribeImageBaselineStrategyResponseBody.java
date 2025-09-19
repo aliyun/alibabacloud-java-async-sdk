@@ -36,6 +36,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Strategy strategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageBaselineStrategyResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategy = model.strategy;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String classKey; 
             private String itemKey; 
             private String nameKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaselineItemList model) {
+                this.classKey = model.classKey;
+                this.itemKey = model.itemKey;
+                this.nameKey = model.nameKey;
+            } 
 
             /**
              * <p>The key of the baseline type.</p>
@@ -278,6 +299,19 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String strategyName; 
             private Integer totalItemCount; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.baselineItem = model.baselineItem;
+                this.baselineItemList = model.baselineItemList;
+                this.selectedItemCount = model.selectedItemCount;
+                this.strategyId = model.strategyId;
+                this.strategyName = model.strategyName;
+                this.totalItemCount = model.totalItemCount;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The baseline check policy for agentless detection.</p>

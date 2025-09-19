@@ -36,6 +36,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateJenkinsImageScanTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -170,6 +182,18 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             private String repoRegionId; 
             private String taskId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.imageScanCapacity = model.imageScanCapacity;
+                this.repoId = model.repoId;
+                this.repoInstanceId = model.repoInstanceId;
+                this.repoRegionId = model.repoRegionId;
+                this.taskId = model.taskId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The quota for image scan.</p>

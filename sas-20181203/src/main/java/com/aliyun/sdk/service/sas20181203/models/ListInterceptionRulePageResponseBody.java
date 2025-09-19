@@ -40,6 +40,10 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return interceptionRuleList
      */
@@ -65,6 +69,15 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
         private java.util.List<InterceptionRuleList> interceptionRuleList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInterceptionRulePageResponseBody model) {
+            this.interceptionRuleList = model.interceptionRuleList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of information about the defense rules.</p>
@@ -226,6 +239,21 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private Integer targetId; 
             private String targetName; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DstTarget model) {
+                this.appName = model.appName;
+                this.imageList = model.imageList;
+                this.namespace = model.namespace;
+                this.ports = model.ports;
+                this.ruleType = model.ruleType;
+                this.tagList = model.tagList;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The name of the application.</p>
@@ -445,6 +473,20 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SrcTarget model) {
+                this.appName = model.appName;
+                this.imageList = model.imageList;
+                this.namespace = model.namespace;
+                this.ruleType = model.ruleType;
+                this.tagList = model.tagList;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * <p>The name of the application.</p>
              * 
@@ -655,6 +697,20 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private String ruleType; 
             private SrcTarget srcTarget; 
 
+            private Builder() {
+            } 
+
+            private Builder(InterceptionRuleList model) {
+                this.dstTarget = model.dstTarget;
+                this.interceptType = model.interceptType;
+                this.orderIndex = model.orderIndex;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleSwitch = model.ruleSwitch;
+                this.ruleType = model.ruleType;
+                this.srcTarget = model.srcTarget;
+            } 
+
             /**
              * <p>The destination network object.</p>
              */
@@ -821,6 +877,16 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

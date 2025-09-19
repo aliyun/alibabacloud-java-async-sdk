@@ -26,6 +26,9 @@ public class GetDefenceCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SuspiciousDealtCount")
+    private Integer suspiciousDealtCount;
+
     @com.aliyun.core.annotation.NameInMap("TamperProof15Days")
     private Integer tamperProof15Days;
 
@@ -36,6 +39,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         this.defenceCount15Days = builder.defenceCount15Days;
         this.defenceCountTotal = builder.defenceCountTotal;
         this.requestId = builder.requestId;
+        this.suspiciousDealtCount = builder.suspiciousDealtCount;
         this.tamperProof15Days = builder.tamperProof15Days;
         this.tamperProofTotal = builder.tamperProofTotal;
     }
@@ -46,6 +50,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
 
     public static GetDefenceCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,6 +78,13 @@ public class GetDefenceCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return suspiciousDealtCount
+     */
+    public Integer getSuspiciousDealtCount() {
+        return this.suspiciousDealtCount;
+    }
+
+    /**
      * @return tamperProof15Days
      */
     public Integer getTamperProof15Days() {
@@ -87,8 +102,21 @@ public class GetDefenceCountResponseBody extends TeaModel {
         private Integer defenceCount15Days; 
         private Integer defenceCountTotal; 
         private String requestId; 
+        private Integer suspiciousDealtCount; 
         private Integer tamperProof15Days; 
         private Integer tamperProofTotal; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDefenceCountResponseBody model) {
+            this.defenceCount15Days = model.defenceCount15Days;
+            this.defenceCountTotal = model.defenceCountTotal;
+            this.requestId = model.requestId;
+            this.suspiciousDealtCount = model.suspiciousDealtCount;
+            this.tamperProof15Days = model.tamperProof15Days;
+            this.tamperProofTotal = model.tamperProofTotal;
+        } 
 
         /**
          * <p>The number of handled alerts of the precise defense type in the last 15 days.</p>
@@ -120,6 +148,17 @@ public class GetDefenceCountResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The number of handled security alerts of Cloud Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder suspiciousDealtCount(Integer suspiciousDealtCount) {
+            this.suspiciousDealtCount = suspiciousDealtCount;
             return this;
         }
 

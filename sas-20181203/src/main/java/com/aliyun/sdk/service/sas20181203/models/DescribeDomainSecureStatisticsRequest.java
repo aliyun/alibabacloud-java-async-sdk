@@ -39,7 +39,7 @@ public class DescribeDomainSecureStatisticsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,7 @@ public class DescribeDomainSecureStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The source IP address of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>113.87.<em>.</em></p>

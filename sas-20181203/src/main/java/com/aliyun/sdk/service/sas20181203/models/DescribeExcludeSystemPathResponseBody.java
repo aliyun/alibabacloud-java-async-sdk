@@ -40,6 +40,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return excludePaths
      */
@@ -65,6 +69,15 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         private java.util.List<ExcludePaths> excludePaths; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExcludeSystemPathResponseBody model) {
+            this.excludePaths = model.excludePaths;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of the directories that are excluded.</p>
@@ -142,6 +155,14 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         public static final class Builder {
             private String os; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExcludePaths model) {
+                this.os = model.os;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The operating system of the server. Valid values:</p>
@@ -243,6 +264,16 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

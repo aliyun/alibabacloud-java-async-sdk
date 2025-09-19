@@ -56,6 +56,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListCheckTypesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckTypesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -266,6 +283,16 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private Long checkId; 
             private String checkItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckDetails model) {
+                this.affiliatedRiskTypes = model.affiliatedRiskTypes;
+                this.affiliatedRisks = model.affiliatedRisks;
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+            } 
+
             /**
              * <p>The list of the baseline categories of attribution.</p>
              */
@@ -366,6 +393,15 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private java.util.List<CheckDetails> checkDetails; 
             private String checkType; 
             private String checkTypeDisName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.checkDetails = model.checkDetails;
+                this.checkType = model.checkType;
+                this.checkTypeDisName = model.checkTypeDisName;
+            } 
 
             /**
              * <p>The detail of check items.</p>

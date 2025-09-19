@@ -48,6 +48,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appCount
      */
@@ -89,6 +93,17 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         private Integer raspDefendCount; 
         private String requestId; 
         private Integer sysCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulMetaCountStatisticsResponseBody model) {
+            this.appCount = model.appCount;
+            this.cveCount = model.cveCount;
+            this.raspDefendCount = model.raspDefendCount;
+            this.requestId = model.requestId;
+            this.sysCount = model.sysCount;
+        } 
 
         /**
          * <p>The number of application vulnerabilities.</p>

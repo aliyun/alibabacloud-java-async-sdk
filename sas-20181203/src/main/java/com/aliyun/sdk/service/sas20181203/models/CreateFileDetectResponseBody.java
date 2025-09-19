@@ -36,6 +36,10 @@ public class CreateFileDetectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hashKey
      */
@@ -53,6 +57,14 @@ public class CreateFileDetectResponseBody extends TeaModel {
     public static final class Builder {
         private String hashKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFileDetectResponseBody model) {
+            this.hashKey = model.hashKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The identifier of the file.</p>

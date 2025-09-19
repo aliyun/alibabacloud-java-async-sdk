@@ -36,6 +36,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cves
      */
@@ -53,6 +57,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Cves> cves; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulDetailsResponseBody model) {
+            this.cves = model.cves;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the vulnerability.</p>
@@ -135,6 +147,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String demoVideoUrl; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(Classifys model) {
+                this.classify = model.classify;
+                this.demoVideoUrl = model.demoVideoUrl;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The type of the vulnerability.</p>
              * 
@@ -189,12 +210,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private java.util.List<Classifys> classifys;
 
         @com.aliyun.core.annotation.NameInMap("CnvdId")
+        @Deprecated
         private String cnvdId;
 
         @com.aliyun.core.annotation.NameInMap("Complexity")
+        @Deprecated
         private String complexity;
 
         @com.aliyun.core.annotation.NameInMap("Content")
+        @Deprecated
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("CveId")
@@ -210,27 +234,34 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String cvssVector;
 
         @com.aliyun.core.annotation.NameInMap("InstanceName")
+        @Deprecated
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("InternetIp")
+        @Deprecated
         private String internetIp;
 
         @com.aliyun.core.annotation.NameInMap("IntranetIp")
+        @Deprecated
         private String intranetIp;
 
         @com.aliyun.core.annotation.NameInMap("OtherId")
         private String otherId;
 
         @com.aliyun.core.annotation.NameInMap("Poc")
+        @Deprecated
         private String poc;
 
         @com.aliyun.core.annotation.NameInMap("PocCreateTime")
+        @Deprecated
         private Long pocCreateTime;
 
         @com.aliyun.core.annotation.NameInMap("PocDisclosureTime")
+        @Deprecated
         private Long pocDisclosureTime;
 
         @com.aliyun.core.annotation.NameInMap("Product")
+        @Deprecated
         private String product;
 
         @com.aliyun.core.annotation.NameInMap("Reference")
@@ -246,15 +277,18 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String summary;
 
         @com.aliyun.core.annotation.NameInMap("TargetId")
+        @Deprecated
         private String targetId;
 
         @com.aliyun.core.annotation.NameInMap("TargetName")
+        @Deprecated
         private String targetName;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
+        @Deprecated
         private String vendor;
 
         @com.aliyun.core.annotation.NameInMap("VulLevel")
@@ -506,6 +540,38 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String title; 
             private String vendor; 
             private String vulLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cves model) {
+                this.classify = model.classify;
+                this.classifys = model.classifys;
+                this.cnvdId = model.cnvdId;
+                this.complexity = model.complexity;
+                this.content = model.content;
+                this.cveId = model.cveId;
+                this.cveLink = model.cveLink;
+                this.cvssScore = model.cvssScore;
+                this.cvssVector = model.cvssVector;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.otherId = model.otherId;
+                this.poc = model.poc;
+                this.pocCreateTime = model.pocCreateTime;
+                this.pocDisclosureTime = model.pocDisclosureTime;
+                this.product = model.product;
+                this.reference = model.reference;
+                this.releaseTime = model.releaseTime;
+                this.solution = model.solution;
+                this.summary = model.summary;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.title = model.title;
+                this.vendor = model.vendor;
+                this.vulLevel = model.vulLevel;
+            } 
 
             /**
              * <p>The type of the vulnerability.</p>

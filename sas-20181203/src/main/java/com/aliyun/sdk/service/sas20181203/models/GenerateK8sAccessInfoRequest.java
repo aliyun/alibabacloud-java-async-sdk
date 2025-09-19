@@ -47,6 +47,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
     private String clusterName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuArch")
+    private String cpuArch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireDate")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long expireDate;
@@ -70,6 +74,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         this.auditProject = builder.auditProject;
         this.auditRegionId = builder.auditRegionId;
         this.clusterName = builder.clusterName;
+        this.cpuArch = builder.cpuArch;
         this.expireDate = builder.expireDate;
         this.groupId = builder.groupId;
         this.vendor = builder.vendor;
@@ -83,7 +88,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,6 +143,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
     }
 
     /**
+     * @return cpuArch
+     */
+    public String getCpuArch() {
+        return this.cpuArch;
+    }
+
+    /**
      * @return expireDate
      */
     public Long getExpireDate() {
@@ -166,6 +178,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         private String auditProject; 
         private String auditRegionId; 
         private String clusterName; 
+        private String cpuArch; 
         private Long expireDate; 
         private Long groupId; 
         private String vendor; 
@@ -183,6 +196,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
             this.auditProject = request.auditProject;
             this.auditRegionId = request.auditRegionId;
             this.clusterName = request.clusterName;
+            this.cpuArch = request.cpuArch;
             this.expireDate = request.expireDate;
             this.groupId = request.groupId;
             this.vendor = request.vendor;
@@ -270,6 +284,15 @@ public class GenerateK8sAccessInfoRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * CpuArch.
+         */
+        public Builder cpuArch(String cpuArch) {
+            this.putQueryParameter("CpuArch", cpuArch);
+            this.cpuArch = cpuArch;
             return this;
         }
 

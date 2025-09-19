@@ -36,6 +36,10 @@ public class DescribeAllRegionsStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAllRegionsStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllRegionsStatisticsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -170,6 +182,18 @@ public class DescribeAllRegionsStatisticsResponseBody extends TeaModel {
             private Integer suspicious; 
             private Integer trojan; 
             private Integer vul; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.health = model.health;
+                this.newSuspicious = model.newSuspicious;
+                this.suspicious = model.suspicious;
+                this.trojan = model.trojan;
+                this.vul = model.vul;
+            } 
 
             /**
              * <p>The number of logons to the asset.</p>

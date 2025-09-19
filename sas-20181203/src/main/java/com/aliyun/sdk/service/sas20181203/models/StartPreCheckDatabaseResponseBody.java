@@ -36,6 +36,10 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createMark
      */
@@ -53,6 +57,14 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private String createMark; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartPreCheckDatabaseResponseBody model) {
+            this.createMark = model.createMark;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the database precheck task.</p>

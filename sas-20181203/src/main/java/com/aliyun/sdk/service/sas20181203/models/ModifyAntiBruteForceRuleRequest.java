@@ -80,7 +80,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -396,6 +396,15 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             private String rdp; 
             private String sqlServer; 
             private String ssh; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolType model) {
+                this.rdp = model.rdp;
+                this.sqlServer = model.sqlServer;
+                this.ssh = model.ssh;
+            } 
 
             /**
              * <p>Whether to modify the RDP interception method, which is enabled by default. Values:</p>

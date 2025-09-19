@@ -26,6 +26,10 @@ public class IgnoreCheckItemsRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerItems")
+    private java.util.List<ContainerItems> containerItems;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -50,6 +54,7 @@ public class IgnoreCheckItemsRequest extends Request {
         super(builder);
         this.checkAndRiskTypeList = builder.checkAndRiskTypeList;
         this.checkIds = builder.checkIds;
+        this.containerItems = builder.containerItems;
         this.lang = builder.lang;
         this.reason = builder.reason;
         this.source = builder.source;
@@ -65,7 +70,7 @@ public class IgnoreCheckItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,6 +87,13 @@ public class IgnoreCheckItemsRequest extends Request {
      */
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    /**
+     * @return containerItems
+     */
+    public java.util.List<ContainerItems> getContainerItems() {
+        return this.containerItems;
     }
 
     /**
@@ -122,6 +134,7 @@ public class IgnoreCheckItemsRequest extends Request {
     public static final class Builder extends Request.Builder<IgnoreCheckItemsRequest, Builder> {
         private java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList; 
         private java.util.List<Long> checkIds; 
+        private java.util.List<ContainerItems> containerItems; 
         private String lang; 
         private String reason; 
         private String source; 
@@ -136,6 +149,7 @@ public class IgnoreCheckItemsRequest extends Request {
             super(request);
             this.checkAndRiskTypeList = request.checkAndRiskTypeList;
             this.checkIds = request.checkIds;
+            this.containerItems = request.containerItems;
             this.lang = request.lang;
             this.reason = request.reason;
             this.source = request.source;
@@ -158,6 +172,15 @@ public class IgnoreCheckItemsRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * <p>List of container names that need to be whitelisted.</p>
+         */
+        public Builder containerItems(java.util.List<ContainerItems> containerItems) {
+            this.putQueryParameter("ContainerItems", containerItems);
+            this.containerItems = containerItems;
             return this;
         }
 
@@ -285,6 +308,14 @@ public class IgnoreCheckItemsRequest extends Request {
             private Long checkId; 
             private String riskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckAndRiskTypeList model) {
+                this.checkId = model.checkId;
+                this.riskType = model.riskType;
+            } 
+
             /**
              * <p>The ID of the check item.</p>
              * 
@@ -309,6 +340,90 @@ public class IgnoreCheckItemsRequest extends Request {
 
             public CheckAndRiskTypeList build() {
                 return new CheckAndRiskTypeList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IgnoreCheckItemsRequest} extends {@link TeaModel}
+     *
+     * <p>IgnoreCheckItemsRequest</p>
+     */
+    public static class ContainerItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerNames")
+        private String containerNames;
+
+        @com.aliyun.core.annotation.NameInMap("Uuid")
+        private String uuid;
+
+        private ContainerItems(Builder builder) {
+            this.containerNames = builder.containerNames;
+            this.uuid = builder.uuid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContainerItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerNames
+         */
+        public String getContainerNames() {
+            return this.containerNames;
+        }
+
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
+        public static final class Builder {
+            private String containerNames; 
+            private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerItems model) {
+                this.containerNames = model.containerNames;
+                this.uuid = model.uuid;
+            } 
+
+            /**
+             * <p>The names of the containers that need to be whitelisted for the current asset, separated by English commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;anythingllm,ChuanhuChat&quot;</p>
+             */
+            public Builder containerNames(String containerNames) {
+                this.containerNames = containerNames;
+                return this;
+            }
+
+            /**
+             * <p>The UUID of the server.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>14eb2fb6-ab02-4869-a1e1-2cdb0f7*****</p>
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
+                return this;
+            }
+
+            public ContainerItems build() {
+                return new ContainerItems(this);
             } 
 
         } 

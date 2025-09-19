@@ -36,6 +36,10 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAssetSelectionConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,6 +146,15 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
             private String platform; 
             private String selectionKey; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.platform = model.platform;
+                this.selectionKey = model.selectionKey;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The operating system of the asset. Valid values:</p>

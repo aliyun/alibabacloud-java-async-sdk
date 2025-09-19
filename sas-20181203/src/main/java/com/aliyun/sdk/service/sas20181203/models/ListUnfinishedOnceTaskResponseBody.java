@@ -36,6 +36,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onceTasks
      */
@@ -53,6 +57,14 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OnceTasks> onceTasks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUnfinishedOnceTaskResponseBody model) {
+            this.onceTasks = model.onceTasks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the tasks.</p>
@@ -278,6 +290,27 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private String repoNamespace; 
             private String repoRegionId; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskImageInfo model) {
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.digest = model.digest;
+                this.image = model.image;
+                this.nodeInstanceId = model.nodeInstanceId;
+                this.nodeIp = model.nodeIp;
+                this.nodeName = model.nodeName;
+                this.pod = model.pod;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoRegionId = model.repoRegionId;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The name of the application.</p>
@@ -662,6 +695,28 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private String taskName; 
             private String taskType; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnceTasks model) {
+                this.endTime = model.endTime;
+                this.finish = model.finish;
+                this.finishCount = model.finishCount;
+                this.progress = model.progress;
+                this.realRunTime = model.realRunTime;
+                this.resultInfo = model.resultInfo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusText = model.statusText;
+                this.target = model.target;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+                this.taskImageInfo = model.taskImageInfo;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the task ends.</p>

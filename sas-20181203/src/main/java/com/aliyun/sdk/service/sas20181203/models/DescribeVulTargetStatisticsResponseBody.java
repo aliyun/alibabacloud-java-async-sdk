@@ -48,6 +48,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TargetStats> targetStats; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulTargetStatisticsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.targetStats = model.targetStats;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -203,6 +218,15 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private String flag; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>Indicates whether the configurations are applied to the server. Valid values:</p>
@@ -319,6 +343,16 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private Integer totalCount; 
             private Integer uuidCount; 
             private String vulType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetStats model) {
+                this.targets = model.targets;
+                this.totalCount = model.totalCount;
+                this.uuidCount = model.uuidCount;
+                this.vulType = model.vulType;
+            } 
 
             /**
              * <p>An array that consists of available servers.</p>

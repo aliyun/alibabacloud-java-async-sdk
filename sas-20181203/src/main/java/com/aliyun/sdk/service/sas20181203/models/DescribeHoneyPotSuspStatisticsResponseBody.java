@@ -36,6 +36,10 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHoneyPotSuspStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.suspHoneyPotStatisticsResponse = model.suspHoneyPotStatisticsResponse;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -170,6 +182,18 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             private String type; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspHoneyPotStatisticsResponse model) {
+                this.count = model.count;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The total number of alerts that are generated for the asset.</p>

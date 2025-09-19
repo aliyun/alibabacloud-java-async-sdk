@@ -40,6 +40,10 @@ public class ModifyContainerScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ModifyContainerScanConfigResponseBody extends TeaModel {
         private Boolean data; 
         private Integer httpStatusCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyContainerScanConfigResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>

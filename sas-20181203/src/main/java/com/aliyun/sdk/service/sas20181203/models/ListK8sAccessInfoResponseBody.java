@@ -36,6 +36,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return k8sAccessInfos
      */
@@ -53,6 +57,14 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<K8sAccessInfos> k8sAccessInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListK8sAccessInfoResponseBody model) {
+            this.k8sAccessInfos = model.k8sAccessInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the Kubernetes clusters.</p>
@@ -104,6 +116,9 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
+        @com.aliyun.core.annotation.NameInMap("CpuArch")
+        private String cpuArch;
+
         @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
@@ -129,6 +144,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             this.auditRegionId = builder.auditRegionId;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
+            this.cpuArch = builder.cpuArch;
             this.expireDate = builder.expireDate;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
@@ -188,6 +204,13 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpuArch
+         */
+        public String getCpuArch() {
+            return this.cpuArch;
+        }
+
+        /**
          * @return expireDate
          */
         public Long getExpireDate() {
@@ -236,12 +259,32 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             private String auditRegionId; 
             private String clusterId; 
             private String clusterName; 
+            private String cpuArch; 
             private Long expireDate; 
             private String groupId; 
             private String groupName; 
             private Long id; 
             private String installKey; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(K8sAccessInfos model) {
+                this.aliUid = model.aliUid;
+                this.auditLogStore = model.auditLogStore;
+                this.auditProject = model.auditProject;
+                this.auditRegionId = model.auditRegionId;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.cpuArch = model.cpuArch;
+                this.expireDate = model.expireDate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.installKey = model.installKey;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -306,6 +349,14 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * CpuArch.
+             */
+            public Builder cpuArch(String cpuArch) {
+                this.cpuArch = cpuArch;
                 return this;
             }
 

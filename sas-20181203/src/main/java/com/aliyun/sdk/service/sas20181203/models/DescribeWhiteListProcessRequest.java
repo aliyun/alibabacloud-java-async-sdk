@@ -75,7 +75,7 @@ public class DescribeWhiteListProcessRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,7 +250,7 @@ public class DescribeWhiteListProcessRequest extends Request {
          * <p>The name of the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>sys_creat</p>
+         * <p>JAVA</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

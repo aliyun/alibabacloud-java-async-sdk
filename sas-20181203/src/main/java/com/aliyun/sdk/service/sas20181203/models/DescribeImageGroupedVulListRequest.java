@@ -94,6 +94,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
     private String repoRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleTag")
+    private String ruleTag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private java.util.List<String> scanRange;
 
@@ -126,6 +130,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.ruleTag = builder.ruleTag;
         this.scanRange = builder.scanRange;
         this.type = builder.type;
         this.uuids = builder.uuids;
@@ -139,7 +144,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -278,6 +283,13 @@ public class DescribeImageGroupedVulListRequest extends Request {
     }
 
     /**
+     * @return ruleTag
+     */
+    public String getRuleTag() {
+        return this.ruleTag;
+    }
+
+    /**
      * @return scanRange
      */
     public java.util.List<String> getScanRange() {
@@ -318,6 +330,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private String ruleTag; 
         private java.util.List<String> scanRange; 
         private String type; 
         private String uuids; 
@@ -347,6 +360,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.ruleTag = request.ruleTag;
             this.scanRange = request.scanRange;
             this.type = request.type;
             this.uuids = request.uuids;
@@ -593,6 +607,21 @@ public class DescribeImageGroupedVulListRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * <p>The tag of this vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>AI</strong>: AI-related components.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        public Builder ruleTag(String ruleTag) {
+            this.putQueryParameter("RuleTag", ruleTag);
+            this.ruleTag = ruleTag;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoTagRuleList
      */
@@ -65,6 +69,15 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         private java.util.List<AutoTagRuleList> autoTagRuleList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAutoTagRulesResponseBody model) {
+            this.autoTagRuleList = model.autoTagRuleList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The asset auto-tagging rules.</p>
@@ -226,6 +239,21 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             private String ruleName; 
             private String tagContext; 
             private String tagType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoTagRuleList model) {
+                this.aliUid = model.aliUid;
+                this.createTimestamp = model.createTimestamp;
+                this.expression = model.expression;
+                this.id = model.id;
+                this.modifiedTimestamp = model.modifiedTimestamp;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleName = model.ruleName;
+                this.tagContext = model.tagContext;
+                this.tagType = model.tagType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -404,6 +432,16 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

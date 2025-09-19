@@ -36,6 +36,10 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StartegyTargets> startegyTargets; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizedStrategyTargetsResponseBody model) {
+            this.requestId = model.requestId;
+            this.startegyTargets = model.startegyTargets;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             private Long strategyId; 
             private String strategyName; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartegyTargets model) {
+                this.groupId = model.groupId;
+                this.strategyId = model.strategyId;
+                this.strategyName = model.strategyName;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the server group.</p>

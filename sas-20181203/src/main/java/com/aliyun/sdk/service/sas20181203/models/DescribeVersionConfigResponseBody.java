@@ -23,6 +23,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllowPartialBuy")
     private Integer allowPartialBuy;
 
+    @com.aliyun.core.annotation.NameInMap("AntiRansomwareCapacity")
+    private Integer antiRansomwareCapacity;
+
     @com.aliyun.core.annotation.NameInMap("AntiRansomwareService")
     private Integer antiRansomwareService;
 
@@ -46,6 +49,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
     private Long imageScanCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceBuyType")
+    private Integer instanceBuyType;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -76,6 +82,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("MergedVersion")
     private Integer mergedVersion;
+
+    @com.aliyun.core.annotation.NameInMap("MultiVersion")
+    private String multiVersion;
 
     @com.aliyun.core.annotation.NameInMap("NewThreatAnalysis")
     private Integer newThreatAnalysis;
@@ -146,6 +155,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     private DescribeVersionConfigResponseBody(Builder builder) {
         this.agentlessCapacity = builder.agentlessCapacity;
         this.allowPartialBuy = builder.allowPartialBuy;
+        this.antiRansomwareCapacity = builder.antiRansomwareCapacity;
         this.antiRansomwareService = builder.antiRansomwareService;
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
@@ -154,6 +164,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
         this.imageScanCapacity = builder.imageScanCapacity;
+        this.instanceBuyType = builder.instanceBuyType;
         this.instanceId = builder.instanceId;
         this.isNewContainerVersion = builder.isNewContainerVersion;
         this.isNewMultiVersion = builder.isNewMultiVersion;
@@ -164,6 +175,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.mergedVersion = builder.mergedVersion;
+        this.multiVersion = builder.multiVersion;
         this.newThreatAnalysis = builder.newThreatAnalysis;
         this.openTime = builder.openTime;
         this.postPayHostVersion = builder.postPayHostVersion;
@@ -196,6 +208,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentlessCapacity
      */
@@ -208,6 +224,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getAllowPartialBuy() {
         return this.allowPartialBuy;
+    }
+
+    /**
+     * @return antiRansomwareCapacity
+     */
+    public Integer getAntiRansomwareCapacity() {
+        return this.antiRansomwareCapacity;
     }
 
     /**
@@ -264,6 +287,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Long getImageScanCapacity() {
         return this.imageScanCapacity;
+    }
+
+    /**
+     * @return instanceBuyType
+     */
+    public Integer getInstanceBuyType() {
+        return this.instanceBuyType;
     }
 
     /**
@@ -334,6 +364,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getMergedVersion() {
         return this.mergedVersion;
+    }
+
+    /**
+     * @return multiVersion
+     */
+    public String getMultiVersion() {
+        return this.multiVersion;
     }
 
     /**
@@ -493,6 +530,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Long agentlessCapacity; 
         private Integer allowPartialBuy; 
+        private Integer antiRansomwareCapacity; 
         private Integer antiRansomwareService; 
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
@@ -501,6 +539,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer highestVersion; 
         private Long honeypotCapacity; 
         private Long imageScanCapacity; 
+        private Integer instanceBuyType; 
         private String instanceId; 
         private Boolean isNewContainerVersion; 
         private Boolean isNewMultiVersion; 
@@ -511,6 +550,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
         private Integer mergedVersion; 
+        private String multiVersion; 
         private Integer newThreatAnalysis; 
         private Long openTime; 
         private Integer postPayHostVersion; 
@@ -533,6 +573,57 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long vulFixCapacity; 
         private Integer webLock; 
         private Long webLockAuthCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVersionConfigResponseBody model) {
+            this.agentlessCapacity = model.agentlessCapacity;
+            this.allowPartialBuy = model.allowPartialBuy;
+            this.antiRansomwareCapacity = model.antiRansomwareCapacity;
+            this.antiRansomwareService = model.antiRansomwareService;
+            this.appWhiteList = model.appWhiteList;
+            this.appWhiteListAuthCount = model.appWhiteListAuthCount;
+            this.assetLevel = model.assetLevel;
+            this.cspmCapacity = model.cspmCapacity;
+            this.highestVersion = model.highestVersion;
+            this.honeypotCapacity = model.honeypotCapacity;
+            this.imageScanCapacity = model.imageScanCapacity;
+            this.instanceBuyType = model.instanceBuyType;
+            this.instanceId = model.instanceId;
+            this.isNewContainerVersion = model.isNewContainerVersion;
+            this.isNewMultiVersion = model.isNewMultiVersion;
+            this.isOverBalance = model.isOverBalance;
+            this.isPostpay = model.isPostpay;
+            this.isTrialVersion = model.isTrialVersion;
+            this.lastTrailEndTime = model.lastTrailEndTime;
+            this.MVAuthCount = model.MVAuthCount;
+            this.MVUnusedAuthCount = model.MVUnusedAuthCount;
+            this.mergedVersion = model.mergedVersion;
+            this.multiVersion = model.multiVersion;
+            this.newThreatAnalysis = model.newThreatAnalysis;
+            this.openTime = model.openTime;
+            this.postPayHostVersion = model.postPayHostVersion;
+            this.postPayInstanceId = model.postPayInstanceId;
+            this.postPayModuleSwitch = model.postPayModuleSwitch;
+            this.postPayOpenTime = model.postPayOpenTime;
+            this.postPayStatus = model.postPayStatus;
+            this.raspCapacity = model.raspCapacity;
+            this.releaseTime = model.releaseTime;
+            this.requestId = model.requestId;
+            this.sasLog = model.sasLog;
+            this.sasScreen = model.sasScreen;
+            this.sdkCapacity = model.sdkCapacity;
+            this.slsCapacity = model.slsCapacity;
+            this.threatAnalysisCapacity = model.threatAnalysisCapacity;
+            this.threatAnalysisFlow = model.threatAnalysisFlow;
+            this.userDefinedAlarms = model.userDefinedAlarms;
+            this.version = model.version;
+            this.vmCores = model.vmCores;
+            this.vulFixCapacity = model.vulFixCapacity;
+            this.webLock = model.webLock;
+            this.webLockAuthCount = model.webLockAuthCount;
+        } 
 
         /**
          * <p>The quota for agentless detection.</p>
@@ -560,6 +651,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder allowPartialBuy(Integer allowPartialBuy) {
             this.allowPartialBuy = allowPartialBuy;
+            return this;
+        }
+
+        /**
+         * AntiRansomwareCapacity.
+         */
+        public Builder antiRansomwareCapacity(Integer antiRansomwareCapacity) {
+            this.antiRansomwareCapacity = antiRansomwareCapacity;
             return this;
         }
 
@@ -670,6 +769,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder imageScanCapacity(Long imageScanCapacity) {
             this.imageScanCapacity = imageScanCapacity;
+            return this;
+        }
+
+        /**
+         * InstanceBuyType.
+         */
+        public Builder instanceBuyType(Integer instanceBuyType) {
+            this.instanceBuyType = instanceBuyType;
             return this;
         }
 
@@ -803,6 +910,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder mergedVersion(Integer mergedVersion) {
             this.mergedVersion = mergedVersion;
+            return this;
+        }
+
+        /**
+         * MultiVersion.
+         */
+        public Builder multiVersion(String multiVersion) {
+            this.multiVersion = multiVersion;
             return this;
         }
 

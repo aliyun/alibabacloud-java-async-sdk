@@ -26,6 +26,9 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Integer isDefault;
 
+    @com.aliyun.core.annotation.NameInMap("MemberAccountSyncFlag")
+    private Boolean memberAccountSyncFlag;
+
     @com.aliyun.core.annotation.NameInMap("PinnedTime")
     private Long pinnedTime;
 
@@ -87,6 +90,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         this.chartIds = builder.chartIds;
         this.groupType = builder.groupType;
         this.isDefault = builder.isDefault;
+        this.memberAccountSyncFlag = builder.memberAccountSyncFlag;
         this.pinnedTime = builder.pinnedTime;
         this.recipients = builder.recipients;
         this.reportDays = builder.reportDays;
@@ -116,6 +120,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chartIds
      */
@@ -135,6 +143,13 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
      */
     public Integer getIsDefault() {
         return this.isDefault;
+    }
+
+    /**
+     * @return memberAccountSyncFlag
+     */
+    public Boolean getMemberAccountSyncFlag() {
+        return this.memberAccountSyncFlag;
     }
 
     /**
@@ -274,6 +289,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         private String chartIds; 
         private String groupType; 
         private Integer isDefault; 
+        private Boolean memberAccountSyncFlag; 
         private Long pinnedTime; 
         private String recipients; 
         private Integer reportDays; 
@@ -293,6 +309,35 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         private String targetGroups; 
         private String targetUids; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeReportConfigDetailResponseBody model) {
+            this.chartIds = model.chartIds;
+            this.groupType = model.groupType;
+            this.isDefault = model.isDefault;
+            this.memberAccountSyncFlag = model.memberAccountSyncFlag;
+            this.pinnedTime = model.pinnedTime;
+            this.recipients = model.recipients;
+            this.reportDays = model.reportDays;
+            this.reportEndDate = model.reportEndDate;
+            this.reportId = model.reportId;
+            this.reportLang = model.reportLang;
+            this.reportSendType = model.reportSendType;
+            this.reportStartDate = model.reportStartDate;
+            this.reportStatus = model.reportStatus;
+            this.reportType = model.reportType;
+            this.requestId = model.requestId;
+            this.sendEndTime = model.sendEndTime;
+            this.sendPeriodDays = model.sendPeriodDays;
+            this.sendPeriodType = model.sendPeriodType;
+            this.sendStartTime = model.sendStartTime;
+            this.sendTime = model.sendTime;
+            this.targetGroups = model.targetGroups;
+            this.targetUids = model.targetUids;
+            this.title = model.title;
+        } 
 
         /**
          * <p>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</p>
@@ -332,6 +377,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
          */
         public Builder isDefault(Integer isDefault) {
             this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
+         * MemberAccountSyncFlag.
+         */
+        public Builder memberAccountSyncFlag(Boolean memberAccountSyncFlag) {
+            this.memberAccountSyncFlag = memberAccountSyncFlag;
             return this;
         }
 

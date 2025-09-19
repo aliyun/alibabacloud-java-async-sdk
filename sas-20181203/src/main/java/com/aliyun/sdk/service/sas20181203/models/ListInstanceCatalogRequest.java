@@ -22,6 +22,10 @@ public class ListInstanceCatalogRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyCustom")
+    private Boolean onlyCustom;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -34,15 +38,21 @@ public class ListInstanceCatalogRequest extends Request {
     private java.util.List<Long> standardIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskSources")
+    private java.util.List<String> taskSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
     private java.util.List<String> types;
 
     private ListInstanceCatalogRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.onlyCustom = builder.onlyCustom;
         this.regionId = builder.regionId;
         this.requirementIds = builder.requirementIds;
         this.standardIds = builder.standardIds;
+        this.taskSources = builder.taskSources;
         this.types = builder.types;
     }
 
@@ -54,7 +64,7 @@ public class ListInstanceCatalogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,6 +74,13 @@ public class ListInstanceCatalogRequest extends Request {
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return onlyCustom
+     */
+    public Boolean getOnlyCustom() {
+        return this.onlyCustom;
     }
 
     /**
@@ -88,6 +105,13 @@ public class ListInstanceCatalogRequest extends Request {
     }
 
     /**
+     * @return taskSources
+     */
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
+    }
+
+    /**
      * @return types
      */
     public java.util.List<String> getTypes() {
@@ -96,9 +120,11 @@ public class ListInstanceCatalogRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstanceCatalogRequest, Builder> {
         private String lang; 
+        private Boolean onlyCustom; 
         private String regionId; 
         private java.util.List<Long> requirementIds; 
         private java.util.List<Long> standardIds; 
+        private java.util.List<String> taskSources; 
         private java.util.List<String> types; 
 
         private Builder() {
@@ -108,9 +134,11 @@ public class ListInstanceCatalogRequest extends Request {
         private Builder(ListInstanceCatalogRequest request) {
             super(request);
             this.lang = request.lang;
+            this.onlyCustom = request.onlyCustom;
             this.regionId = request.regionId;
             this.requirementIds = request.requirementIds;
             this.standardIds = request.standardIds;
+            this.taskSources = request.taskSources;
             this.types = request.types;
         } 
 
@@ -127,6 +155,22 @@ public class ListInstanceCatalogRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to filter the assets that support custom checks. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Filter assets that support custom checks.</li>
+         * <li><strong>false</strong>: All assets are selected. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder onlyCustom(Boolean onlyCustom) {
+            this.putQueryParameter("OnlyCustom", onlyCustom);
+            this.onlyCustom = onlyCustom;
             return this;
         }
 
@@ -161,6 +205,15 @@ public class ListInstanceCatalogRequest extends Request {
         public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
+            return this;
+        }
+
+        /**
+         * TaskSources.
+         */
+        public Builder taskSources(java.util.List<String> taskSources) {
+            this.putQueryParameter("TaskSources", taskSources);
+            this.taskSources = taskSources;
             return this;
         }
 

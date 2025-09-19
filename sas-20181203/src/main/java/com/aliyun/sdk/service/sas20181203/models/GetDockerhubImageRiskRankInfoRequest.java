@@ -34,7 +34,7 @@ public class GetDockerhubImageRiskRankInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,7 @@ public class GetDockerhubImageRiskRankInfoRequest extends Request {
         } 
 
         /**
-         * <p>The types of image dimensions to be counted.</p>
+         * <p>The dimension types.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

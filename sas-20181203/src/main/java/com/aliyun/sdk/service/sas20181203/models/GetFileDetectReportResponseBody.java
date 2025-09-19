@@ -48,6 +48,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileDetectReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -279,6 +294,21 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             private Boolean showTab; 
             private Long threatLevel; 
             private String threatTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.basic = model.basic;
+                this.fileHash = model.fileHash;
+                this.filename = model.filename;
+                this.hasData = model.hasData;
+                this.intelligences = model.intelligences;
+                this.sandbox = model.sandbox;
+                this.showTab = model.showTab;
+                this.threatLevel = model.threatLevel;
+                this.threatTypes = model.threatTypes;
+            } 
 
             /**
              * <p>The basic information about the detected file.</p>

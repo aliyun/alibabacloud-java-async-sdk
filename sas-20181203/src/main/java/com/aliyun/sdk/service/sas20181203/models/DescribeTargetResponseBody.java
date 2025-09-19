@@ -40,6 +40,10 @@ public class DescribeTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTargetResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Targets> targets; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTargetResponseBody model) {
+            this.requestId = model.requestId;
+            this.targets = model.targets;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -157,6 +170,15 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String flag; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The flag that is added to the server. This parameter can be empty.</p>

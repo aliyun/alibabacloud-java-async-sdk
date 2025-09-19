@@ -36,6 +36,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileProtectDashboardResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             private Integer pluginCount; 
             private Integer pluginOfflineCount; 
             private Integer pluginOnlineCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableRuleCount = model.enableRuleCount;
+                this.pluginCount = model.pluginCount;
+                this.pluginOfflineCount = model.pluginOfflineCount;
+                this.pluginOnlineCount = model.pluginOnlineCount;
+            } 
 
             /**
              * <p>The total number of enabled rules.</p>

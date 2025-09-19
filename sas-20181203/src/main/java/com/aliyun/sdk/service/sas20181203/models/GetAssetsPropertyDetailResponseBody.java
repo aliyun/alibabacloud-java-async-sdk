@@ -40,6 +40,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAssetsPropertyDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -234,11 +257,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
+        private String endPoint;
+
+        @com.aliyun.core.annotation.NameInMap("File")
+        private String file;
+
         @com.aliyun.core.annotation.NameInMap("Filepath")
         private String filepath;
 
         @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("InstallationPath")
+        private String installationPath;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -257,6 +289,15 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ListenProtocol")
         private String listenProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("MiddlewareName")
+        private String middlewareName;
+
+        @com.aliyun.core.annotation.NameInMap("MiddlewareVersion")
+        private String middlewareVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -301,14 +342,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             this.containerName = builder.containerName;
             this.createTimestamp = builder.createTimestamp;
             this.domain = builder.domain;
+            this.endPoint = builder.endPoint;
+            this.file = builder.file;
             this.filepath = builder.filepath;
             this.imageName = builder.imageName;
+            this.installationPath = builder.installationPath;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.ip = builder.ip;
             this.listenProtocol = builder.listenProtocol;
+            this.middlewareName = builder.middlewareName;
+            this.middlewareVersion = builder.middlewareVersion;
+            this.modelName = builder.modelName;
             this.moduleName = builder.moduleName;
             this.path = builder.path;
             this.pathMode = builder.pathMode;
@@ -354,6 +401,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return endPoint
+         */
+        public String getEndPoint() {
+            return this.endPoint;
+        }
+
+        /**
+         * @return file
+         */
+        public String getFile() {
+            return this.file;
+        }
+
+        /**
          * @return filepath
          */
         public String getFilepath() {
@@ -365,6 +426,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         public String getImageName() {
             return this.imageName;
+        }
+
+        /**
+         * @return installationPath
+         */
+        public String getInstallationPath() {
+            return this.installationPath;
         }
 
         /**
@@ -407,6 +475,27 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         public String getListenProtocol() {
             return this.listenProtocol;
+        }
+
+        /**
+         * @return middlewareName
+         */
+        public String getMiddlewareName() {
+            return this.middlewareName;
+        }
+
+        /**
+         * @return middlewareVersion
+         */
+        public String getMiddlewareVersion() {
+            return this.middlewareVersion;
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
         }
 
         /**
@@ -504,14 +593,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String containerName; 
             private Long createTimestamp; 
             private String domain; 
+            private String endPoint; 
+            private String file; 
             private String filepath; 
             private String imageName; 
+            private String installationPath; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
             private String ip; 
             private String listenProtocol; 
+            private String middlewareName; 
+            private String middlewareVersion; 
+            private String modelName; 
             private String moduleName; 
             private String path; 
             private String pathMode; 
@@ -525,6 +620,42 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String user; 
             private String uuid; 
             private String webPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.containerName = model.containerName;
+                this.createTimestamp = model.createTimestamp;
+                this.domain = model.domain;
+                this.endPoint = model.endPoint;
+                this.file = model.file;
+                this.filepath = model.filepath;
+                this.imageName = model.imageName;
+                this.installationPath = model.installationPath;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.listenProtocol = model.listenProtocol;
+                this.middlewareName = model.middlewareName;
+                this.middlewareVersion = model.middlewareVersion;
+                this.modelName = model.modelName;
+                this.moduleName = model.moduleName;
+                this.path = model.path;
+                this.pathMode = model.pathMode;
+                this.pid = model.pid;
+                this.port = model.port;
+                this.processStarted = model.processStarted;
+                this.regionId = model.regionId;
+                this.serverType = model.serverType;
+                this.size = model.size;
+                this.usedByCount = model.usedByCount;
+                this.user = model.user;
+                this.uuid = model.uuid;
+                this.webPath = model.webPath;
+            } 
 
             /**
              * <p>The name of the container.</p>
@@ -563,6 +694,22 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
+             * EndPoint.
+             */
+            public Builder endPoint(String endPoint) {
+                this.endPoint = endPoint;
+                return this;
+            }
+
+            /**
+             * File.
+             */
+            public Builder file(String file) {
+                this.file = file;
+                return this;
+            }
+
+            /**
              * <p>The path to the kernel module file.</p>
              * <blockquote>
              * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
@@ -584,6 +731,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * InstallationPath.
+             */
+            public Builder installationPath(String installationPath) {
+                this.installationPath = installationPath;
                 return this;
             }
 
@@ -653,6 +808,30 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              */
             public Builder listenProtocol(String listenProtocol) {
                 this.listenProtocol = listenProtocol;
+                return this;
+            }
+
+            /**
+             * MiddlewareName.
+             */
+            public Builder middlewareName(String middlewareName) {
+                this.middlewareName = middlewareName;
+                return this;
+            }
+
+            /**
+             * MiddlewareVersion.
+             */
+            public Builder middlewareVersion(String middlewareVersion) {
+                this.middlewareVersion = middlewareVersion;
+                return this;
+            }
+
+            /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
                 return this;
             }
 

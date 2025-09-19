@@ -62,6 +62,10 @@ public class CreateOssScanConfigRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealTimeIncr")
+    private Boolean realTimeIncr;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanDayList")
     private java.util.List<Integer> scanDayList;
 
@@ -82,6 +86,7 @@ public class CreateOssScanConfigRequest extends Request {
         this.keySuffixList = builder.keySuffixList;
         this.lastModifiedStartTime = builder.lastModifiedStartTime;
         this.name = builder.name;
+        this.realTimeIncr = builder.realTimeIncr;
         this.scanDayList = builder.scanDayList;
         this.startTime = builder.startTime;
     }
@@ -94,7 +99,7 @@ public class CreateOssScanConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,6 +182,13 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return realTimeIncr
+     */
+    public Boolean getRealTimeIncr() {
+        return this.realTimeIncr;
+    }
+
+    /**
      * @return scanDayList
      */
     public java.util.List<Integer> getScanDayList() {
@@ -202,6 +214,7 @@ public class CreateOssScanConfigRequest extends Request {
         private java.util.List<String> keySuffixList; 
         private Long lastModifiedStartTime; 
         private String name; 
+        private Boolean realTimeIncr; 
         private java.util.List<Integer> scanDayList; 
         private String startTime; 
 
@@ -222,6 +235,7 @@ public class CreateOssScanConfigRequest extends Request {
             this.keySuffixList = request.keySuffixList;
             this.lastModifiedStartTime = request.lastModifiedStartTime;
             this.name = request.name;
+            this.realTimeIncr = request.realTimeIncr;
             this.scanDayList = request.scanDayList;
             this.startTime = request.startTime;
         } 
@@ -347,6 +361,18 @@ public class CreateOssScanConfigRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder realTimeIncr(Boolean realTimeIncr) {
+            this.putQueryParameter("RealTimeIncr", realTimeIncr);
+            this.realTimeIncr = realTimeIncr;
             return this;
         }
 

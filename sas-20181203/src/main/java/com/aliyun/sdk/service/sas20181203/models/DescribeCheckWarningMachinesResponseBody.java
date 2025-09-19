@@ -48,6 +48,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         private java.util.List<Machines> machines; 
         private Integer pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckWarningMachinesResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.machines = model.machines;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of the servers on which the same risk item is detected.</p>
@@ -251,6 +266,19 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             private String intranetIp; 
             private String regionId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Machines model) {
+                this.bind = model.bind;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.regionId = model.regionId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>

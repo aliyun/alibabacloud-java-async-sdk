@@ -40,6 +40,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupedInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the assets.</p>
@@ -226,6 +239,21 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private String os; 
             private String riskInstanceCount; 
             private String unProtectedInstanceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.asapVulInstanceCount = model.asapVulInstanceCount;
+                this.authVersionCheckCount = model.authVersionCheckCount;
+                this.fieldAliasName = model.fieldAliasName;
+                this.groupFlag = model.groupFlag;
+                this.instanceCoreCount = model.instanceCoreCount;
+                this.instanceCount = model.instanceCount;
+                this.os = model.os;
+                this.riskInstanceCount = model.riskInstanceCount;
+                this.unProtectedInstanceCount = model.unProtectedInstanceCount;
+            } 
 
             /**
              * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
@@ -417,6 +445,16 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

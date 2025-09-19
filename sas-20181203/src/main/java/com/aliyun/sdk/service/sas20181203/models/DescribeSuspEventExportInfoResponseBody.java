@@ -72,6 +72,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportStatus
      */
@@ -162,6 +166,23 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSuspEventExportInfoResponseBody model) {
+            this.exportStatus = model.exportStatus;
+            this.fileName = model.fileName;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.link = model.link;
+            this.progress = model.progress;
+            this.properties = model.properties;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.type = model.type;
+        } 
+
         /**
          * <p>The handling status for the exception. Valid values:</p>
          * <ul>
@@ -227,7 +248,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
          * <p>The URL at which you can download the exported Excel file.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
+         * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=yourAccessKeyID&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
          */
         public Builder link(String link) {
             this.link = link;

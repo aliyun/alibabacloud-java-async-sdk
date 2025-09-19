@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePropertyCountResponseBody</p>
  */
 public class DescribePropertyCountResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgentlessLlmService")
+    private Integer agentlessLlmService;
+
+    @com.aliyun.core.annotation.NameInMap("AgentlessScaAiComponent")
+    private Integer agentlessScaAiComponent;
+
     @com.aliyun.core.annotation.NameInMap("Autorun")
     private Integer autorun;
 
@@ -54,6 +60,8 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     private Integer webserver;
 
     private DescribePropertyCountResponseBody(Builder builder) {
+        this.agentlessLlmService = builder.agentlessLlmService;
+        this.agentlessScaAiComponent = builder.agentlessScaAiComponent;
         this.autorun = builder.autorun;
         this.cron = builder.cron;
         this.database = builder.database;
@@ -74,6 +82,24 @@ public class DescribePropertyCountResponseBody extends TeaModel {
 
     public static DescribePropertyCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return agentlessLlmService
+     */
+    public Integer getAgentlessLlmService() {
+        return this.agentlessLlmService;
+    }
+
+    /**
+     * @return agentlessScaAiComponent
+     */
+    public Integer getAgentlessScaAiComponent() {
+        return this.agentlessScaAiComponent;
     }
 
     /**
@@ -161,6 +187,8 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer agentlessLlmService; 
+        private Integer agentlessScaAiComponent; 
         private Integer autorun; 
         private Integer cron; 
         private Integer database; 
@@ -173,6 +201,42 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         private Integer user; 
         private Integer web; 
         private Integer webserver; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyCountResponseBody model) {
+            this.agentlessLlmService = model.agentlessLlmService;
+            this.agentlessScaAiComponent = model.agentlessScaAiComponent;
+            this.autorun = model.autorun;
+            this.cron = model.cron;
+            this.database = model.database;
+            this.lkm = model.lkm;
+            this.port = model.port;
+            this.process = model.process;
+            this.requestId = model.requestId;
+            this.sca = model.sca;
+            this.software = model.software;
+            this.user = model.user;
+            this.web = model.web;
+            this.webserver = model.webserver;
+        } 
+
+        /**
+         * AgentlessLlmService.
+         */
+        public Builder agentlessLlmService(Integer agentlessLlmService) {
+            this.agentlessLlmService = agentlessLlmService;
+            return this;
+        }
+
+        /**
+         * AgentlessScaAiComponent.
+         */
+        public Builder agentlessScaAiComponent(Integer agentlessScaAiComponent) {
+            this.agentlessScaAiComponent = agentlessScaAiComponent;
+            return this;
+        }
 
         /**
          * <p>The number of startup items.</p>

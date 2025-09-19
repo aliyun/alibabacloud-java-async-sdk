@@ -34,6 +34,10 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
     private Long recordId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveContainerUuids")
+    private java.util.List<String> removeContainerUuids;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
@@ -47,6 +51,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
         this.lang = builder.lang;
         this.reason = builder.reason;
         this.recordId = builder.recordId;
+        this.removeContainerUuids = builder.removeContainerUuids;
         this.source = builder.source;
         this.targetType = builder.targetType;
     }
@@ -59,7 +64,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,6 +98,13 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
     }
 
     /**
+     * @return removeContainerUuids
+     */
+    public java.util.List<String> getRemoveContainerUuids() {
+        return this.removeContainerUuids;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -111,6 +123,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
         private String lang; 
         private String reason; 
         private Long recordId; 
+        private java.util.List<String> removeContainerUuids; 
         private String source; 
         private String targetType; 
 
@@ -124,6 +137,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
             this.lang = request.lang;
             this.reason = request.reason;
             this.recordId = request.recordId;
+            this.removeContainerUuids = request.removeContainerUuids;
             this.source = request.source;
             this.targetType = request.targetType;
         } 
@@ -180,6 +194,15 @@ public class UpdateBaselineCheckWhiteRecordRequest extends Request {
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
             this.recordId = recordId;
+            return this;
+        }
+
+        /**
+         * <p>A list of asset UUIDs from which container names need to be removed from the whitelist.</p>
+         */
+        public Builder removeContainerUuids(java.util.List<String> removeContainerUuids) {
+            this.putQueryParameter("RemoveContainerUuids", removeContainerUuids);
+            this.removeContainerUuids = removeContainerUuids;
             return this;
         }
 

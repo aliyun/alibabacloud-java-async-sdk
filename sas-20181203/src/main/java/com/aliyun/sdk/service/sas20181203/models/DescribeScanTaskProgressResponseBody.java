@@ -40,6 +40,10 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         private String requestId; 
         private String scanTaskProgress; 
         private String targetInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScanTaskProgressResponseBody model) {
+            this.requestId = model.requestId;
+            this.scanTaskProgress = model.scanTaskProgress;
+            this.targetInfo = model.targetInfo;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

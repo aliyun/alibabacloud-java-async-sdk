@@ -36,6 +36,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregationTypeList
      */
@@ -53,6 +57,14 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AggregationTypeList> aggregationTypeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSystemRuleAggregationTypesResponseBody model) {
+            this.aggregationTypeList = model.aggregationTypeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the aggregation types.</p>
@@ -122,6 +134,14 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AggregationTypeList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the aggregation type.</p>
