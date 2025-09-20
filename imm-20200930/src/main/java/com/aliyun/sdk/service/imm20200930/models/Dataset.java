@@ -59,6 +59,9 @@ public class Dataset extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
+    @com.aliyun.core.annotation.NameInMap("WorkflowParameters")
+    private java.util.List<WorkflowParameter> workflowParameters;
+
     private Dataset(Builder builder) {
         this.bindCount = builder.bindCount;
         this.createTime = builder.createTime;
@@ -74,6 +77,7 @@ public class Dataset extends TeaModel {
         this.templateId = builder.templateId;
         this.totalFileSize = builder.totalFileSize;
         this.updateTime = builder.updateTime;
+        this.workflowParameters = builder.workflowParameters;
     }
 
     public static Builder builder() {
@@ -186,6 +190,13 @@ public class Dataset extends TeaModel {
         return this.updateTime;
     }
 
+    /**
+     * @return workflowParameters
+     */
+    public java.util.List<WorkflowParameter> getWorkflowParameters() {
+        return this.workflowParameters;
+    }
+
     public static final class Builder {
         private Long bindCount; 
         private String createTime; 
@@ -201,6 +212,7 @@ public class Dataset extends TeaModel {
         private String templateId; 
         private Long totalFileSize; 
         private String updateTime; 
+        private java.util.List<WorkflowParameter> workflowParameters; 
 
         private Builder() {
         } 
@@ -220,6 +232,7 @@ public class Dataset extends TeaModel {
             this.templateId = model.templateId;
             this.totalFileSize = model.totalFileSize;
             this.updateTime = model.updateTime;
+            this.workflowParameters = model.workflowParameters;
         } 
 
         /**
@@ -331,6 +344,14 @@ public class Dataset extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * WorkflowParameters.
+         */
+        public Builder workflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
+            this.workflowParameters = workflowParameters;
             return this;
         }
 

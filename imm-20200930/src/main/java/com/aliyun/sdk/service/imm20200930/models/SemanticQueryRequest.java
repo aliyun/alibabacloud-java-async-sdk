@@ -45,7 +45,6 @@ public class SemanticQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
     @com.aliyun.core.annotation.Query
@@ -231,7 +230,6 @@ public class SemanticQueryRequest extends Request {
 
         /**
          * <p>The content of the query that you input.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
