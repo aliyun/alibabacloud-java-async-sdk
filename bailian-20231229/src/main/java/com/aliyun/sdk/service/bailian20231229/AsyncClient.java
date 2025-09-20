@@ -63,6 +63,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
     /**
+     * @param request the request parameters of ChangeParseSetting  ChangeParseSettingRequest
+     * @return ChangeParseSettingResponse
+     */
+    CompletableFuture<ChangeParseSettingResponse> changeParseSetting(ChangeParseSettingRequest request);
+
+    /**
      * @param request the request parameters of CreateAndPulishAgent  CreateAndPulishAgentRequest
      * @return CreateAndPulishAgentResponse
      */
@@ -198,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlipayUrlResponse> getAlipayUrl(GetAlipayUrlRequest request);
 
     /**
+     * @param request the request parameters of GetAvailableParserTypes  GetAvailableParserTypesRequest
+     * @return GetAvailableParserTypesResponse
+     */
+    CompletableFuture<GetAvailableParserTypesResponse> getAvailableParserTypes(GetAvailableParserTypesRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
@@ -223,6 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMemoryNodeResponse> getMemoryNode(GetMemoryNodeRequest request);
 
     /**
+     * @param request the request parameters of GetParseSettings  GetParseSettingsRequest
+     * @return GetParseSettingsResponse
+     */
+    CompletableFuture<GetParseSettingsResponse> getParseSettings(GetParseSettingsRequest request);
+
+    /**
      * @param request the request parameters of GetPromptTemplate  GetPromptTemplateRequest
      * @return GetPromptTemplateResponse
      */
@@ -233,6 +251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPublishedAgentResponse
      */
     CompletableFuture<GetPublishedAgentResponse> getPublishedAgent(GetPublishedAgentRequest request);
+
+    /**
+     * @param request the request parameters of HighCodeDeploy  HighCodeDeployRequest
+     * @return HighCodeDeployResponse
+     */
+    CompletableFuture<HighCodeDeployResponse> highCodeDeploy(HighCodeDeployRequest request);
 
     /**
      * @param request the request parameters of ListCategory  ListCategoryRequest

@@ -131,6 +131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeParseSetting  ChangeParseSettingRequest
+     * @return ChangeParseSettingResponse
+     */
+    @Override
+    public CompletableFuture<ChangeParseSettingResponse> changeParseSetting(ChangeParseSettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChangeParseSetting").setMethod(HttpMethod.PUT).setPathRegex("/{WorkspaceId}/datacenter/parser/settings").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeParseSettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeParseSettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAndPulishAgent  CreateAndPulishAgentRequest
      * @return CreateAndPulishAgentResponse
      */
@@ -470,6 +488,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAvailableParserTypes  GetAvailableParserTypesRequest
+     * @return GetAvailableParserTypesResponse
+     */
+    @Override
+    public CompletableFuture<GetAvailableParserTypesResponse> getAvailableParserTypes(GetAvailableParserTypesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAvailableParserTypes").setMethod(HttpMethod.GET).setPathRegex("/{WorkspaceId}/datacenter/parser/parsertype").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAvailableParserTypesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAvailableParserTypesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
@@ -531,6 +567,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetParseSettings  GetParseSettingsRequest
+     * @return GetParseSettingsResponse
+     */
+    @Override
+    public CompletableFuture<GetParseSettingsResponse> getParseSettings(GetParseSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetParseSettings").setMethod(HttpMethod.GET).setPathRegex("/{WorkspaceId}/datacenter/parser/settings").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetParseSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetParseSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPromptTemplate  GetPromptTemplateRequest
      * @return GetPromptTemplateResponse
      */
@@ -561,6 +615,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetPublishedAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of HighCodeDeploy  HighCodeDeployRequest
+     * @return HighCodeDeployResponse
+     */
+    @Override
+    public CompletableFuture<HighCodeDeployResponse> highCodeDeploy(HighCodeDeployRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HighCodeDeploy").setMethod(HttpMethod.POST).setPathRegex("/openapi/{workspaceId}/highCode/publish").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HighCodeDeployResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HighCodeDeployResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
