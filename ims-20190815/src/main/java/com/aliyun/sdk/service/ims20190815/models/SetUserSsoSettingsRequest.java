@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SetUserSsoSettingsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
+    private String authnSignAlgo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuxiliaryDomain")
     private String auxiliaryDomain;
 
@@ -35,6 +39,7 @@ public class SetUserSsoSettingsRequest extends Request {
 
     private SetUserSsoSettingsRequest(Builder builder) {
         super(builder);
+        this.authnSignAlgo = builder.authnSignAlgo;
         this.auxiliaryDomain = builder.auxiliaryDomain;
         this.metadataDocument = builder.metadataDocument;
         this.ssoEnabled = builder.ssoEnabled;
@@ -52,6 +57,13 @@ public class SetUserSsoSettingsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authnSignAlgo
+     */
+    public String getAuthnSignAlgo() {
+        return this.authnSignAlgo;
     }
 
     /**
@@ -83,6 +95,7 @@ public class SetUserSsoSettingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetUserSsoSettingsRequest, Builder> {
+        private String authnSignAlgo; 
         private String auxiliaryDomain; 
         private String metadataDocument; 
         private Boolean ssoEnabled; 
@@ -94,11 +107,21 @@ public class SetUserSsoSettingsRequest extends Request {
 
         private Builder(SetUserSsoSettingsRequest request) {
             super(request);
+            this.authnSignAlgo = request.authnSignAlgo;
             this.auxiliaryDomain = request.auxiliaryDomain;
             this.metadataDocument = request.metadataDocument;
             this.ssoEnabled = request.ssoEnabled;
             this.ssoLoginWithDomain = request.ssoLoginWithDomain;
         } 
+
+        /**
+         * AuthnSignAlgo.
+         */
+        public Builder authnSignAlgo(String authnSignAlgo) {
+            this.putQueryParameter("AuthnSignAlgo", authnSignAlgo);
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
 
         /**
          * <p>The auxiliary domain name.</p>

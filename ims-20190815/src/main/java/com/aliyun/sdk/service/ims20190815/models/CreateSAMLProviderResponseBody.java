@@ -101,6 +101,9 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
+        @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
+        private String authnSignAlgo;
+
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
@@ -115,6 +118,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
 
         private SAMLProvider(Builder builder) {
             this.arn = builder.arn;
+            this.authnSignAlgo = builder.authnSignAlgo;
             this.createDate = builder.createDate;
             this.description = builder.description;
             this.SAMLProviderName = builder.SAMLProviderName;
@@ -134,6 +138,13 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
          */
         public String getArn() {
             return this.arn;
+        }
+
+        /**
+         * @return authnSignAlgo
+         */
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
         }
 
         /**
@@ -166,6 +177,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String arn; 
+            private String authnSignAlgo; 
             private String createDate; 
             private String description; 
             private String SAMLProviderName; 
@@ -176,6 +188,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
 
             private Builder(SAMLProvider model) {
                 this.arn = model.arn;
+                this.authnSignAlgo = model.authnSignAlgo;
                 this.createDate = model.createDate;
                 this.description = model.description;
                 this.SAMLProviderName = model.SAMLProviderName;
@@ -190,6 +203,14 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
              */
             public Builder arn(String arn) {
                 this.arn = arn;
+                return this;
+            }
+
+            /**
+             * AuthnSignAlgo.
+             */
+            public Builder authnSignAlgo(String authnSignAlgo) {
+                this.authnSignAlgo = authnSignAlgo;
                 return this;
             }
 

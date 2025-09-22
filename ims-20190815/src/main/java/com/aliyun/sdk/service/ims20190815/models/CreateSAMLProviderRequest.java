@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSAMLProviderRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
+    private String authnSignAlgo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -32,6 +36,7 @@ public class CreateSAMLProviderRequest extends Request {
 
     private CreateSAMLProviderRequest(Builder builder) {
         super(builder);
+        this.authnSignAlgo = builder.authnSignAlgo;
         this.description = builder.description;
         this.encodedSAMLMetadataDocument = builder.encodedSAMLMetadataDocument;
         this.SAMLProviderName = builder.SAMLProviderName;
@@ -48,6 +53,13 @@ public class CreateSAMLProviderRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authnSignAlgo
+     */
+    public String getAuthnSignAlgo() {
+        return this.authnSignAlgo;
     }
 
     /**
@@ -72,6 +84,7 @@ public class CreateSAMLProviderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSAMLProviderRequest, Builder> {
+        private String authnSignAlgo; 
         private String description; 
         private String encodedSAMLMetadataDocument; 
         private String SAMLProviderName; 
@@ -82,10 +95,20 @@ public class CreateSAMLProviderRequest extends Request {
 
         private Builder(CreateSAMLProviderRequest request) {
             super(request);
+            this.authnSignAlgo = request.authnSignAlgo;
             this.description = request.description;
             this.encodedSAMLMetadataDocument = request.encodedSAMLMetadataDocument;
             this.SAMLProviderName = request.SAMLProviderName;
         } 
+
+        /**
+         * AuthnSignAlgo.
+         */
+        public Builder authnSignAlgo(String authnSignAlgo) {
+            this.putQueryParameter("AuthnSignAlgo", authnSignAlgo);
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
 
         /**
          * <p>The description.</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateSAMLProviderRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
+    private String authnSignAlgo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewDescription")
     private String newDescription;
 
@@ -32,6 +36,7 @@ public class UpdateSAMLProviderRequest extends Request {
 
     private UpdateSAMLProviderRequest(Builder builder) {
         super(builder);
+        this.authnSignAlgo = builder.authnSignAlgo;
         this.newDescription = builder.newDescription;
         this.newEncodedSAMLMetadataDocument = builder.newEncodedSAMLMetadataDocument;
         this.SAMLProviderName = builder.SAMLProviderName;
@@ -48,6 +53,13 @@ public class UpdateSAMLProviderRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authnSignAlgo
+     */
+    public String getAuthnSignAlgo() {
+        return this.authnSignAlgo;
     }
 
     /**
@@ -72,6 +84,7 @@ public class UpdateSAMLProviderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateSAMLProviderRequest, Builder> {
+        private String authnSignAlgo; 
         private String newDescription; 
         private String newEncodedSAMLMetadataDocument; 
         private String SAMLProviderName; 
@@ -82,10 +95,20 @@ public class UpdateSAMLProviderRequest extends Request {
 
         private Builder(UpdateSAMLProviderRequest request) {
             super(request);
+            this.authnSignAlgo = request.authnSignAlgo;
             this.newDescription = request.newDescription;
             this.newEncodedSAMLMetadataDocument = request.newEncodedSAMLMetadataDocument;
             this.SAMLProviderName = request.SAMLProviderName;
         } 
+
+        /**
+         * AuthnSignAlgo.
+         */
+        public Builder authnSignAlgo(String authnSignAlgo) {
+            this.putQueryParameter("AuthnSignAlgo", authnSignAlgo);
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
 
         /**
          * <p>The new description.</p>

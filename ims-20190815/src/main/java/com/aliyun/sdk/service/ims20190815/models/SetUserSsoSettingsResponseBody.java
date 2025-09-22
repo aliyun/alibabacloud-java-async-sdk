@@ -98,6 +98,9 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
      * <p>SetUserSsoSettingsResponseBody</p>
      */
     public static class UserSsoSettings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
+        private String authnSignAlgo;
+
         @com.aliyun.core.annotation.NameInMap("AuxiliaryDomain")
         private String auxiliaryDomain;
 
@@ -111,6 +114,7 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
         private Boolean ssoLoginWithDomain;
 
         private UserSsoSettings(Builder builder) {
+            this.authnSignAlgo = builder.authnSignAlgo;
             this.auxiliaryDomain = builder.auxiliaryDomain;
             this.metadataDocument = builder.metadataDocument;
             this.ssoEnabled = builder.ssoEnabled;
@@ -123,6 +127,13 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
 
         public static UserSsoSettings create() {
             return builder().build();
+        }
+
+        /**
+         * @return authnSignAlgo
+         */
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
         }
 
         /**
@@ -154,6 +165,7 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authnSignAlgo; 
             private String auxiliaryDomain; 
             private String metadataDocument; 
             private Boolean ssoEnabled; 
@@ -163,11 +175,20 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
             } 
 
             private Builder(UserSsoSettings model) {
+                this.authnSignAlgo = model.authnSignAlgo;
                 this.auxiliaryDomain = model.auxiliaryDomain;
                 this.metadataDocument = model.metadataDocument;
                 this.ssoEnabled = model.ssoEnabled;
                 this.ssoLoginWithDomain = model.ssoLoginWithDomain;
             } 
+
+            /**
+             * AuthnSignAlgo.
+             */
+            public Builder authnSignAlgo(String authnSignAlgo) {
+                this.authnSignAlgo = authnSignAlgo;
+                return this;
+            }
 
             /**
              * <p>The auxiliary domain name.</p>
