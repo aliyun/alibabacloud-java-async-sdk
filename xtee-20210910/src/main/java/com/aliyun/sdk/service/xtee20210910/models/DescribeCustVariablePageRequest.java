@@ -45,6 +45,10 @@ public class DescribeCustVariablePageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("regId")
     private String regId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     private DescribeCustVariablePageRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
@@ -54,6 +58,7 @@ public class DescribeCustVariablePageRequest extends Request {
         this.eventCode = builder.eventCode;
         this.pageSize = builder.pageSize;
         this.regId = builder.regId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class DescribeCustVariablePageRequest extends Request {
         return this.regId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCustVariablePageRequest, Builder> {
         private String lang; 
         private String createType; 
@@ -126,6 +138,7 @@ public class DescribeCustVariablePageRequest extends Request {
         private String eventCode; 
         private Integer pageSize; 
         private String regId; 
+        private String status; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class DescribeCustVariablePageRequest extends Request {
             this.eventCode = request.eventCode;
             this.pageSize = request.pageSize;
             this.regId = request.regId;
+            this.status = request.status;
         } 
 
         /**
@@ -159,7 +173,7 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Creation type</p>
+         * <p>Creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -183,7 +197,7 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Description</p>
+         * <p>Description.</p>
          * 
          * <strong>example:</strong>
          * <p>累计变量描述</p>
@@ -195,7 +209,7 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Event code</p>
+         * <p>Event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aheldm3876</p>
@@ -207,7 +221,7 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Number of records per page, default value: 10</p>
+         * <p>Number of records per page, default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +233,7 @@ public class DescribeCustVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Region code</p>
+         * <p>Region code.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -227,6 +241,18 @@ public class DescribeCustVariablePageRequest extends Request {
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
             this.regId = regId;
+            return this;
+        }
+
+        /**
+         * <p>status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 

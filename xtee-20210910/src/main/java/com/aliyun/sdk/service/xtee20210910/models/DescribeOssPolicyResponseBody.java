@@ -122,7 +122,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
          * <p>accessId, a parameter used in OSS SDK uploads, corresponding to OSSAccessKeyId</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAIpeYTKEbC0v10</p>
+         * <p>LTAxxxxxxxxxxxx</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;

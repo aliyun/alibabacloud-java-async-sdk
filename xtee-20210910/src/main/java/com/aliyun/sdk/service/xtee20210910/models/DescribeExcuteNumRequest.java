@@ -130,7 +130,11 @@ public class DescribeExcuteNumRequest extends Request {
         } 
 
         /**
+         * <p>Service code.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf_all</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -139,7 +143,10 @@ public class DescribeExcuteNumRequest extends Request {
         }
 
         /**
-         * Degree.
+         * <p>This field is currently unused and has no query significance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂时不需要传入</p>
          */
         public Builder degree(String degree) {
             this.putQueryParameter("Degree", degree);
@@ -148,7 +155,10 @@ public class DescribeExcuteNumRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date, format yyyy-MM-dd, e.g., 2025-03-13.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-15</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -157,7 +167,14 @@ public class DescribeExcuteNumRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -166,7 +183,10 @@ public class DescribeExcuteNumRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>Request source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220.250.21.83</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -175,7 +195,10 @@ public class DescribeExcuteNumRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date, format yyyy-MM-dd, e.g., 2025-03-10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

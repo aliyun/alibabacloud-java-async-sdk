@@ -587,6 +587,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventUploadPolicyResponse> describeEventUploadPolicy(DescribeEventUploadPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Cumulative Variable List Query</p>
+     * 
      * @param request the request parameters of DescribeEventVariableList  DescribeEventVariableListRequest
      * @return DescribeEventVariableListResponse
      */
@@ -828,6 +831,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNameListVariablePageListResponse
      */
     CompletableFuture<DescribeNameListVariablePageListResponse> describeNameListVariablePageList(DescribeNameListVariablePageListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOperationLogMonitoring  DescribeOperationLogMonitoringRequest
+     * @return DescribeOperationLogMonitoringResponse
+     */
+    CompletableFuture<DescribeOperationLogMonitoringResponse> describeOperationLogMonitoring(DescribeOperationLogMonitoringRequest request);
 
     /**
      * @param request the request parameters of DescribeOperationLogPageList  DescribeOperationLogPageListRequest
@@ -1356,6 +1365,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVariableSceneListResponse
      */
     CompletableFuture<DescribeVariableSceneListResponse> describeVariableSceneList(DescribeVariableSceneListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVersionPageList  DescribeVersionPageListRequest
+     * @return DescribeVersionPageListResponse
+     */
+    CompletableFuture<DescribeVersionPageListResponse> describeVersionPageList(DescribeVersionPageListRequest request);
 
     /**
      * @param request the request parameters of DownloadSmapleBatch  DownloadSmapleBatchRequest

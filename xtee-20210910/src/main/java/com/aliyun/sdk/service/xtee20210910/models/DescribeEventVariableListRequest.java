@@ -145,7 +145,10 @@ public class DescribeEventVariableListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. The values are: - <strong>zh</strong>: Chinese - <strong>en</strong>: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +157,10 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
-         * createType.
+         * <p>Create Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder createType(String createType) {
             this.putQueryParameter("createType", createType);
@@ -163,7 +169,13 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
-         * filterDTO.
+         * <p>Filter object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;type&quot;: &quot;EXPRESSION&quot;,
+         *     &quot;name&quot;: &quot;ex_NgR6nDVD821c&quot;
+         * }</p>
          */
         public Builder filterDTO(String filterDTO) {
             this.putQueryParameter("filterDTO", filterDTO);
@@ -172,7 +184,11 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
+         * <p>Associated event eventCode.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_awkhwh0314</p>
          */
         public Builder refObjId(String refObjId) {
             this.putQueryParameter("refObjId", refObjId);
@@ -181,7 +197,11 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
+         * <p>Association Type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EVENT</p>
          */
         public Builder refObjType(String refObjType) {
             this.putQueryParameter("refObjType", refObjType);
@@ -190,7 +210,10 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
-         * regId.
+         * <p>Region Code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regId(String regId) {
             this.putQueryParameter("regId", regId);
@@ -199,7 +222,10 @@ public class DescribeEventVariableListRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

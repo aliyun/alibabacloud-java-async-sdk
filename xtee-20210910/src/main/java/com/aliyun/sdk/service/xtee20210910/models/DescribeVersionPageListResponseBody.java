@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeExpressionVariablePageResponseBody} extends {@link TeaModel}
+ * {@link DescribeVersionPageListResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeExpressionVariablePageResponseBody</p>
+ * <p>DescribeVersionPageListResponseBody</p>
  */
-public class DescribeExpressionVariablePageResponseBody extends TeaModel {
+public class DescribeVersionPageListResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -35,7 +41,9 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalPage")
     private Integer totalPage;
 
-    private DescribeExpressionVariablePageResponseBody(Builder builder) {
+    private DescribeVersionPageListResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
@@ -48,12 +56,26 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeExpressionVariablePageResponseBody create() {
+    public static DescribeVersionPageListResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -99,6 +121,8 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
         private Integer currentPage; 
         private Integer pageSize; 
@@ -109,7 +133,9 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DescribeExpressionVariablePageResponseBody model) {
+        private Builder(DescribeVersionPageListResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.currentPage = model.currentPage;
             this.pageSize = model.pageSize;
@@ -117,6 +143,28 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             this.totalItem = model.totalItem;
             this.totalPage = model.totalPage;
         } 
+
+        /**
+         * <p>The maximum amount of data to be read in this call, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>用来表示当前调用返回读取到的位置。空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>Request ID.</p>
@@ -141,7 +189,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size, with a default value of 10.</p>
+         * <p>Number of items per page, with a default value of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -163,7 +211,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
          * <p>Total number of items.</p>
          * 
          * <strong>example:</strong>
-         * <p>31</p>
+         * <p>10</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -174,31 +222,37 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
          * <p>Total number of pages.</p>
          * 
          * <strong>example:</strong>
-         * <p>9</p>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
             return this;
         }
 
-        public DescribeExpressionVariablePageResponseBody build() {
-            return new DescribeExpressionVariablePageResponseBody(this);
+        public DescribeVersionPageListResponseBody build() {
+            return new DescribeVersionPageListResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DescribeExpressionVariablePageResponseBody} extends {@link TeaModel}
+     * {@link DescribeVersionPageListResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeExpressionVariablePageResponseBody</p>
+     * <p>DescribeVersionPageListResponseBody</p>
      */
     public static class ResultObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("creator")
+        private String creator;
+
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("eventName")
-        private String eventName;
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
+        private Long gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
@@ -206,34 +260,40 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @com.aliyun.core.annotation.NameInMap("name")
-        private String name;
+        @com.aliyun.core.annotation.NameInMap("modifier")
+        private String modifier;
 
-        @com.aliyun.core.annotation.NameInMap("outputs")
-        private String outputs;
+        @com.aliyun.core.annotation.NameInMap("objectCode")
+        private String objectCode;
 
-        @com.aliyun.core.annotation.NameInMap("ruleList")
-        private java.util.List<String> ruleList;
+        @com.aliyun.core.annotation.NameInMap("objectId")
+        private Long objectId;
 
-        @com.aliyun.core.annotation.NameInMap("status")
-        private String status;
+        @com.aliyun.core.annotation.NameInMap("region")
+        private String region;
 
-        @com.aliyun.core.annotation.NameInMap("title")
-        private String title;
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("userId")
+        private Long userId;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
         private ResultObject(Builder builder) {
+            this.content = builder.content;
+            this.creator = builder.creator;
             this.description = builder.description;
-            this.eventName = builder.eventName;
+            this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
-            this.name = builder.name;
-            this.outputs = builder.outputs;
-            this.ruleList = builder.ruleList;
-            this.status = builder.status;
-            this.title = builder.title;
+            this.modifier = builder.modifier;
+            this.objectCode = builder.objectCode;
+            this.objectId = builder.objectId;
+            this.region = builder.region;
+            this.type = builder.type;
+            this.userId = builder.userId;
             this.version = builder.version;
         }
 
@@ -246,6 +306,20 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -253,10 +327,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * @return eventName
+         * @return gmtCreate
          */
-        public String getEventName() {
-            return this.eventName;
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         /**
@@ -274,38 +348,45 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * @return name
+         * @return modifier
          */
-        public String getName() {
-            return this.name;
+        public String getModifier() {
+            return this.modifier;
         }
 
         /**
-         * @return outputs
+         * @return objectCode
          */
-        public String getOutputs() {
-            return this.outputs;
+        public String getObjectCode() {
+            return this.objectCode;
         }
 
         /**
-         * @return ruleList
+         * @return objectId
          */
-        public java.util.List<String> getRuleList() {
-            return this.ruleList;
+        public Long getObjectId() {
+            return this.objectId;
         }
 
         /**
-         * @return status
+         * @return region
          */
-        public String getStatus() {
-            return this.status;
+        public String getRegion() {
+            return this.region;
         }
 
         /**
-         * @return title
+         * @return type
          */
-        public String getTitle() {
-            return this.title;
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return userId
+         */
+        public Long getUserId() {
+            return this.userId;
         }
 
         /**
@@ -316,35 +397,63 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String content; 
+            private String creator; 
             private String description; 
-            private String eventName; 
+            private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
-            private String name; 
-            private String outputs; 
-            private java.util.List<String> ruleList; 
-            private String status; 
-            private String title; 
+            private String modifier; 
+            private String objectCode; 
+            private Long objectId; 
+            private String region; 
+            private String type; 
+            private Long userId; 
             private Long version; 
 
             private Builder() {
             } 
 
             private Builder(ResultObject model) {
+                this.content = model.content;
+                this.creator = model.creator;
                 this.description = model.description;
-                this.eventName = model.eventName;
+                this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
-                this.name = model.name;
-                this.outputs = model.outputs;
-                this.ruleList = model.ruleList;
-                this.status = model.status;
-                this.title = model.title;
+                this.modifier = model.modifier;
+                this.objectCode = model.objectCode;
+                this.objectId = model.objectId;
+                this.region = model.region;
+                this.type = model.type;
+                this.userId = model.userId;
                 this.version = model.version;
             } 
 
             /**
-             * <p>Description information.</p>
+             * <p>Change content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;description&quot;:&quot;自定义变量&quot;,&quot;expression&quot;:&quot;1&quot;,&quot;expressionTitle&quot;:&quot;1&quot;,&quot;expressionVariable&quot;:&quot;&quot;,&quot;fieldRank&quot;:0,&quot;id&quot;:392023,&quot;name&quot;:&quot;ex_OERlw0Zqfb23&quot;,&quot;outlier&quot;:&quot;SYS_ERROR&quot;,&quot;outputs&quot;:&quot;STRING&quot;,&quot;refObjId&quot;:&quot;de_auevox0336&quot;,&quot;region&quot;:&quot;SH&quot;,&quot;title&quot;:&quot;自定义变量&quot;,&quot;version&quot;:4}</p>
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * <p>Creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
+                return this;
+            }
+
+            /**
+             * <p>Variable description.</p>
              * 
              * <strong>example:</strong>
              * <p>变量描述</p>
@@ -355,13 +464,13 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Event name.</p>
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
-             * <p>注册风险</p>
+             * <p>1621578648000</p>
              */
-            public Builder eventName(String eventName) {
-                this.eventName = eventName;
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
                 return this;
             }
 
@@ -377,10 +486,10 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary key of custom variable.</p>
+             * <p>Primary key ID of the version.</p>
              * 
              * <strong>example:</strong>
-             * <p>2793</p>
+             * <p>808</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -388,59 +497,73 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query variable name.</p>
+             * <p>Modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
+             */
+            public Builder modifier(String modifier) {
+                this.modifier = modifier;
+                return this;
+            }
+
+            /**
+             * <p>Name of the variable.</p>
              * 
              * <strong>example:</strong>
              * <p>ex_OERlw0Zqfb23</p>
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder objectCode(String objectCode) {
+                this.objectCode = objectCode;
                 return this;
             }
 
             /**
-             * <p>Variable return type.</p>
+             * <p>Primary key ID of the variable.</p>
              * 
              * <strong>example:</strong>
-             * <p>DOUBLE</p>
+             * <p>392023</p>
              */
-            public Builder outputs(String outputs) {
-                this.outputs = outputs;
+            public Builder objectId(Long objectId) {
+                this.objectId = objectId;
                 return this;
             }
 
             /**
-             * <p>Associated Strategies.</p>
-             */
-            public Builder ruleList(java.util.List<String> ruleList) {
-                this.ruleList = ruleList;
-                return this;
-            }
-
-            /**
-             * <p>Status.</p>
+             * <p>Region ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ENABLE</p>
+             * <p>cn-hangzhou</p>
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder region(String region) {
+                this.region = region;
                 return this;
             }
 
             /**
-             * <p>Title.</p>
+             * <p>Variable type.</p>
              * 
              * <strong>example:</strong>
-             * <p>获取手机号前7位自定义变量</p>
+             * <p>EXPRESSION</p>
              */
-            public Builder title(String title) {
-                this.title = title;
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
             /**
-             * <p>Version information.</p>
+             * <p>User UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151222222222226</p>
+             */
+            public Builder userId(Long userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * <p>Version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -189,7 +189,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Event code</p>
+         * <p>Event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aamexg3015,de_aamexg3342</p>
@@ -201,7 +201,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Variable return type</p>
+         * <p>Variable return type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -213,7 +213,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Page size, with a default value of 10</p>
+         * <p>Page size, with a default value of 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Region code</p>
+         * <p>Region code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class DescribeExpressionVariablePageRequest extends Request {
         }
 
         /**
-         * <p>Variable name/description</p>
+         * <p>Variable name/description.</p>
          * 
          * <strong>example:</strong>
          * <p>自定义变量</p>

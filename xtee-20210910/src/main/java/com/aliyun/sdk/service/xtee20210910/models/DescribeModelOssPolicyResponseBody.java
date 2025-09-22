@@ -148,7 +148,7 @@ public class DescribeModelOssPolicyResponseBody extends TeaModel {
          * <p>Access ID for OSS.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAIpeYTKEbC0v10</p>
+         * <p>LTAxxxxxxxxxxxx</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -159,7 +159,7 @@ public class DescribeModelOssPolicyResponseBody extends TeaModel {
          * <p>Address.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://saf-ai.oss-cn-shanghai.aliyuncs.com">https://saf-ai.oss-cn-shanghai.aliyuncs.com</a></p>
+         * <p><a href="https://xxxxxxxx-xxxxxxx.aliyuncs.com">https://xxxxxxxx-xxxxxxx.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;

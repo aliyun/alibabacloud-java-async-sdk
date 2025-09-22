@@ -141,7 +141,7 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size, default value is 10</p>
+         * <p>Page size, default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +152,7 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned object</p>
+         * <p>Returned object.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -160,7 +160,7 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items</p>
+         * <p>Total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -171,7 +171,7 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages</p>
+         * <p>Total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,6 +200,9 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("eventName")
+        private String eventName;
+
         @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
@@ -208,6 +211,9 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ruleList")
+        private java.util.List<String> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -218,9 +224,11 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         private ResultObject(Builder builder) {
             this.dataVersion = builder.dataVersion;
             this.description = builder.description;
+            this.eventName = builder.eventName;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.name = builder.name;
+            this.ruleList = builder.ruleList;
             this.status = builder.status;
             this.title = builder.title;
         }
@@ -248,6 +256,13 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventName
+         */
+        public String getEventName() {
+            return this.eventName;
+        }
+
+        /**
          * @return gmtModified
          */
         public Long getGmtModified() {
@@ -269,6 +284,13 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleList
+         */
+        public java.util.List<String> getRuleList() {
+            return this.ruleList;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -285,9 +307,11 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
         public static final class Builder {
             private Long dataVersion; 
             private String description; 
+            private String eventName; 
             private Long gmtModified; 
             private Long id; 
             private String name; 
+            private java.util.List<String> ruleList; 
             private String status; 
             private String title; 
 
@@ -297,9 +321,11 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
             private Builder(ResultObject model) {
                 this.dataVersion = model.dataVersion;
                 this.description = model.description;
+                this.eventName = model.eventName;
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.name = model.name;
+                this.ruleList = model.ruleList;
                 this.status = model.status;
                 this.title = model.title;
             } 
@@ -327,7 +353,18 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time</p>
+             * <p>event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册事件</p>
+             */
+            public Builder eventName(String eventName) {
+                this.eventName = eventName;
+                return this;
+            }
+
+            /**
+             * <p>Modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1565701886000</p>
@@ -338,7 +375,7 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary key ID of accumulated variable</p>
+             * <p>Primary key ID of accumulated variable.</p>
              * 
              * <strong>example:</strong>
              * <p>497</p>
@@ -349,13 +386,21 @@ public class DescribeCustVariablePageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Accumulated variable name: generated by backend</p>
+             * <p>Accumulated variable name: generated by backend.</p>
              * 
              * <strong>example:</strong>
              * <p>xLMfE9K161d</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>Associated Strategies.</p>
+             */
+            public Builder ruleList(java.util.List<String> ruleList) {
+                this.ruleList = ruleList;
                 return this;
             }
 

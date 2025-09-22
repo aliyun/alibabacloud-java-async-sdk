@@ -119,7 +119,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,7 +130,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         }
 
         /**
-         * currentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -135,7 +141,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         }
 
         /**
-         * resultObject.
+         * <p>Returned object.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -151,7 +160,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         }
 
         /**
-         * totalItem.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalItem(Integer totalItem) {
             this.totalItem = totalItem;
@@ -159,7 +171,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         }
 
         /**
-         * totalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -342,7 +357,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             } 
 
             /**
-             * accountId.
+             * <p>Account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631801314885832</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -350,7 +368,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * email.
+             * <p>Email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxxx@123.com">xxxx@123.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -358,7 +379,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ip。</p>
+             * <p>IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.200.5.100</p>
@@ -369,7 +390,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * mobile.
+             * <p>Mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13817606333</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -377,7 +401,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * nickName.
+             * <p>Nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>昵称</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -385,7 +412,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>546F8063-0104-5271-9EB7-56FB3F375BAD</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -393,7 +423,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -401,7 +434,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * service.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>注册事件</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -409,7 +445,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>Tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm0102</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -417,7 +456,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>Transaction time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737101348000</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -425,7 +467,10 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
             }
 
             /**
-             * umid.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4239</p>
              */
             public Builder umid(String umid) {
                 this.umid = umid;

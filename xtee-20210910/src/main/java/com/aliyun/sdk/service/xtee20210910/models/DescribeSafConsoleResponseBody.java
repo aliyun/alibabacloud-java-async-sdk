@@ -67,7 +67,10 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeSafConsoleResponseBody extends TeaModel {
         }
 
         /**
-         * bizData.
+         * <p>Returned result.</p>
          */
         public Builder bizData(java.util.List<String> bizData) {
             this.bizData = bizData;

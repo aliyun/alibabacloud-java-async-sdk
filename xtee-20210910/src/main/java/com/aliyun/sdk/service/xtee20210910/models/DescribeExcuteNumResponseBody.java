@@ -80,7 +80,7 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
         } 
 
         /**
-         * Categories.
+         * <p>Service category names.</p>
          */
         public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
@@ -88,7 +88,7 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

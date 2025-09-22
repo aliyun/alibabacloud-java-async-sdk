@@ -1735,6 +1735,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cumulative Variable List Query</p>
+     * 
      * @param request the request parameters of DescribeEventVariableList  DescribeEventVariableListRequest
      * @return DescribeEventVariableListResponse
      */
@@ -2452,6 +2455,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeNameListVariablePageListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeOperationLogMonitoring  DescribeOperationLogMonitoringRequest
+     * @return DescribeOperationLogMonitoringResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOperationLogMonitoringResponse> describeOperationLogMonitoring(DescribeOperationLogMonitoringRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOperationLogMonitoring").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOperationLogMonitoringResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOperationLogMonitoringResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4024,6 +4045,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeVariableSceneListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeVersionPageList  DescribeVersionPageListRequest
+     * @return DescribeVersionPageListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVersionPageListResponse> describeVersionPageList(DescribeVersionPageListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVersionPageList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVersionPageListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVersionPageListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

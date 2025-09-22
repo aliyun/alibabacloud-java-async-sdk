@@ -88,7 +88,14 @@ public class DescribeSafConsoleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,7 +104,10 @@ public class DescribeSafConsoleRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>Query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ei_riskLpInfo</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);
@@ -106,7 +116,11 @@ public class DescribeSafConsoleRequest extends Request {
         }
 
         /**
+         * <p>Service to be called.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ei_riskLpInfo</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("service", service);

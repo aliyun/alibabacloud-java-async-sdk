@@ -12,30 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeOperationLogPageListRequest} extends {@link RequestModel}
+ * {@link DescribeOperationLogMonitoringRequest} extends {@link RequestModel}
  *
- * <p>DescribeOperationLogPageListRequest</p>
+ * <p>DescribeOperationLogMonitoringRequest</p>
  */
-public class DescribeOperationLogPageListRequest extends Request {
+public class DescribeOperationLogMonitoringRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("currentPage")
-    private Integer currentPage;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endDate")
-    private Long endDate;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("operationSummary")
-    private String operationSummary;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Integer pageSize;
+    private String endDate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regId")
@@ -43,19 +31,16 @@ public class DescribeOperationLogPageListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startDate")
-    private Long startDate;
+    private String startDate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("userNameSearch")
     private String userNameSearch;
 
-    private DescribeOperationLogPageListRequest(Builder builder) {
+    private DescribeOperationLogMonitoringRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.currentPage = builder.currentPage;
         this.endDate = builder.endDate;
-        this.operationSummary = builder.operationSummary;
-        this.pageSize = builder.pageSize;
         this.regId = builder.regId;
         this.startDate = builder.startDate;
         this.userNameSearch = builder.userNameSearch;
@@ -65,7 +50,7 @@ public class DescribeOperationLogPageListRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeOperationLogPageListRequest create() {
+    public static DescribeOperationLogMonitoringRequest create() {
         return builder().build();
     }
 
@@ -82,31 +67,10 @@ public class DescribeOperationLogPageListRequest extends Request {
     }
 
     /**
-     * @return currentPage
-     */
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    /**
      * @return endDate
      */
-    public Long getEndDate() {
+    public String getEndDate() {
         return this.endDate;
-    }
-
-    /**
-     * @return operationSummary
-     */
-    public String getOperationSummary() {
-        return this.operationSummary;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     /**
@@ -119,7 +83,7 @@ public class DescribeOperationLogPageListRequest extends Request {
     /**
      * @return startDate
      */
-    public Long getStartDate() {
+    public String getStartDate() {
         return this.startDate;
     }
 
@@ -130,36 +94,30 @@ public class DescribeOperationLogPageListRequest extends Request {
         return this.userNameSearch;
     }
 
-    public static final class Builder extends Request.Builder<DescribeOperationLogPageListRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeOperationLogMonitoringRequest, Builder> {
         private String lang; 
-        private Integer currentPage; 
-        private Long endDate; 
-        private String operationSummary; 
-        private Integer pageSize; 
+        private String endDate; 
         private String regId; 
-        private Long startDate; 
+        private String startDate; 
         private String userNameSearch; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeOperationLogPageListRequest request) {
+        private Builder(DescribeOperationLogMonitoringRequest request) {
             super(request);
             this.lang = request.lang;
-            this.currentPage = request.currentPage;
             this.endDate = request.endDate;
-            this.operationSummary = request.operationSummary;
-            this.pageSize = request.pageSize;
             this.regId = request.regId;
             this.startDate = request.startDate;
             this.userNameSearch = request.userNameSearch;
         } 
 
         /**
-         * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+         * <p>Language type of the returned message. Values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -173,50 +131,14 @@ public class DescribeOperationLogPageListRequest extends Request {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>End date (in yyyy-MM-dd format, and the interval from the start date cannot exceed 90 days)</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2025-07-30</p>
          */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("currentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * <p>End time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733364850919</p>
-         */
-        public Builder endDate(Long endDate) {
+        public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);
             this.endDate = endDate;
-            return this;
-        }
-
-        /**
-         * <p>Operation Summary.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Update</p>
-         */
-        public Builder operationSummary(String operationSummary) {
-            this.putQueryParameter("operationSummary", operationSummary);
-            this.operationSummary = operationSummary;
-            return this;
-        }
-
-        /**
-         * <p>Page size, default value is 10</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
             return this;
         }
 
@@ -233,19 +155,19 @@ public class DescribeOperationLogPageListRequest extends Request {
         }
 
         /**
-         * <p>Start time.</p>
+         * <p>Start date (in yyyy-MM-dd format, and the interval from the current date cannot exceed 90 days)</p>
          * 
          * <strong>example:</strong>
-         * <p>1733364850919</p>
+         * <p>2025-07-19</p>
          */
-        public Builder startDate(Long startDate) {
+        public Builder startDate(String startDate) {
             this.putQueryParameter("startDate", startDate);
             this.startDate = startDate;
             return this;
         }
 
         /**
-         * <p>User Name Search.</p>
+         * <p>Operator.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -257,8 +179,8 @@ public class DescribeOperationLogPageListRequest extends Request {
         }
 
         @Override
-        public DescribeOperationLogPageListRequest build() {
-            return new DescribeOperationLogPageListRequest(this);
+        public DescribeOperationLogMonitoringRequest build() {
+            return new DescribeOperationLogMonitoringRequest(this);
         } 
 
     } 
