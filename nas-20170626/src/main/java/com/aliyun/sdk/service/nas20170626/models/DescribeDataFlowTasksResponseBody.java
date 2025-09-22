@@ -558,6 +558,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TransferFileListPath")
+        private String transferFileListPath;
+
         private Task(Builder builder) {
             this.conflictPolicy = builder.conflictPolicy;
             this.createTime = builder.createTime;
@@ -581,6 +584,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             this.status = builder.status;
             this.taskAction = builder.taskAction;
             this.taskId = builder.taskId;
+            this.transferFileListPath = builder.transferFileListPath;
         }
 
         public static Builder builder() {
@@ -745,6 +749,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return transferFileListPath
+         */
+        public String getTransferFileListPath() {
+            return this.transferFileListPath;
+        }
+
         public static final class Builder {
             private String conflictPolicy; 
             private String createTime; 
@@ -768,6 +779,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String status; 
             private String taskAction; 
             private String taskId; 
+            private String transferFileListPath; 
 
             private Builder() {
             } 
@@ -795,6 +807,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
                 this.status = model.status;
                 this.taskAction = model.taskAction;
                 this.taskId = model.taskId;
+                this.transferFileListPath = model.transferFileListPath;
             } 
 
             /**
@@ -1108,6 +1121,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TransferFileListPath.
+             */
+            public Builder transferFileListPath(String transferFileListPath) {
+                this.transferFileListPath = transferFileListPath;
                 return this;
             }
 

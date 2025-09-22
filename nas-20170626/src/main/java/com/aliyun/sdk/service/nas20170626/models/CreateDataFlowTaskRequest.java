@@ -72,6 +72,10 @@ public class CreateDataFlowTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskAction")
     private String taskAction;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferFileListPath")
+    private String transferFileListPath;
+
     private CreateDataFlowTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -87,6 +91,7 @@ public class CreateDataFlowTaskRequest extends Request {
         this.includes = builder.includes;
         this.srcTaskId = builder.srcTaskId;
         this.taskAction = builder.taskAction;
+        this.transferFileListPath = builder.transferFileListPath;
     }
 
     public static Builder builder() {
@@ -193,6 +198,13 @@ public class CreateDataFlowTaskRequest extends Request {
         return this.taskAction;
     }
 
+    /**
+     * @return transferFileListPath
+     */
+    public String getTransferFileListPath() {
+        return this.transferFileListPath;
+    }
+
     public static final class Builder extends Request.Builder<CreateDataFlowTaskRequest, Builder> {
         private String clientToken; 
         private String conflictPolicy; 
@@ -207,6 +219,7 @@ public class CreateDataFlowTaskRequest extends Request {
         private String includes; 
         private String srcTaskId; 
         private String taskAction; 
+        private String transferFileListPath; 
 
         private Builder() {
             super();
@@ -227,6 +240,7 @@ public class CreateDataFlowTaskRequest extends Request {
             this.includes = request.includes;
             this.srcTaskId = request.srcTaskId;
             this.taskAction = request.taskAction;
+            this.transferFileListPath = request.transferFileListPath;
         } 
 
         /**
@@ -481,6 +495,15 @@ public class CreateDataFlowTaskRequest extends Request {
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
             this.taskAction = taskAction;
+            return this;
+        }
+
+        /**
+         * TransferFileListPath.
+         */
+        public Builder transferFileListPath(String transferFileListPath) {
+            this.putQueryParameter("TransferFileListPath", transferFileListPath);
+            this.transferFileListPath = transferFileListPath;
             return this;
         }
 

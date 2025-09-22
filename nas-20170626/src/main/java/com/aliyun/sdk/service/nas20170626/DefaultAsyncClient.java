@@ -31,9 +31,38 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2017-06-26";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-chengdu", "nas.aliyuncs.com"),
-            new TeaPair("me-east-1", "nas.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "nas.aliyuncs.com")
+            new TeaPair("cn-hangzhou-finance", "nas.cn-hangzhou-dg-a01.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "nas.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "nas.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "nas.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "nas.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "nas.aliyuncs.com"),
+            new TeaPair("cn-fujian", "nas.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "nas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "nas.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "nas.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "nas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "nas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "nas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "nas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "nas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "nas.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "nas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "nas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "nas.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "nas.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "nas.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
