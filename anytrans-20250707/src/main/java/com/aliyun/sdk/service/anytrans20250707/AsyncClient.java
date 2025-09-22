@@ -74,6 +74,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitLongTextTranslateTaskResponse> submitLongTextTranslateTask(SubmitLongTextTranslateTaskRequest request);
 
     /**
+     * @param request the request parameters of TermEdit  TermEditRequest
+     * @return TermEditResponse
+     */
+    CompletableFuture<TermEditResponse> termEdit(TermEditRequest request);
+
+    /**
+     * @param request the request parameters of TermQuery  TermQueryRequest
+     * @return TermQueryResponse
+     */
+    CompletableFuture<TermQueryResponse> termQuery(TermQueryRequest request);
+
+    /**
      * @param request the request parameters of TextTranslate  TextTranslateRequest
      * @return TextTranslateResponse
      */
