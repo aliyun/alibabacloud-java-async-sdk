@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDocTranslateTask  GetDocTranslateTaskRequest
+     * @return GetDocTranslateTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetDocTranslateTaskResponse> getDocTranslateTask(GetDocTranslateTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDocTranslateTask").setMethod(HttpMethod.POST).setPathRegex("/anytrans/translate/doc/get").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDocTranslateTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDocTranslateTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetHtmlTranslateTask  GetHtmlTranslateTaskRequest
      * @return GetHtmlTranslateTaskResponse
      */
@@ -106,6 +124,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetLongTextTranslateTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitDocTranslateTask  SubmitDocTranslateTaskRequest
+     * @return SubmitDocTranslateTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitDocTranslateTaskResponse> submitDocTranslateTask(SubmitDocTranslateTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitDocTranslateTask").setMethod(HttpMethod.POST).setPathRegex("/anytrans/translate/doc/submit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitDocTranslateTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitDocTranslateTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

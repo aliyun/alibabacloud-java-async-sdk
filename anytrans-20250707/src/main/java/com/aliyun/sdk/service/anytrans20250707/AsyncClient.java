@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchTranslateResponse> batchTranslate(BatchTranslateRequest request);
 
     /**
+     * @param request the request parameters of GetDocTranslateTask  GetDocTranslateTaskRequest
+     * @return GetDocTranslateTaskResponse
+     */
+    CompletableFuture<GetDocTranslateTaskResponse> getDocTranslateTask(GetDocTranslateTaskRequest request);
+
+    /**
      * @param request the request parameters of GetHtmlTranslateTask  GetHtmlTranslateTaskRequest
      * @return GetHtmlTranslateTaskResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLongTextTranslateTaskResponse
      */
     CompletableFuture<GetLongTextTranslateTaskResponse> getLongTextTranslateTask(GetLongTextTranslateTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitDocTranslateTask  SubmitDocTranslateTaskRequest
+     * @return SubmitDocTranslateTaskResponse
+     */
+    CompletableFuture<SubmitDocTranslateTaskResponse> submitDocTranslateTask(SubmitDocTranslateTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitHtmlTranslateTask  SubmitHtmlTranslateTaskRequest
