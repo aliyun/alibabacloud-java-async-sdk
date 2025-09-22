@@ -62,9 +62,51 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceIpWhitelistResponse> describeInstanceIpWhitelist(DescribeInstanceIpWhitelistRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceStorageConfig  DescribeInstanceStorageConfigRequest
+     * @return DescribeInstanceStorageConfigResponse
+     */
+    CompletableFuture<DescribeInstanceStorageConfigResponse> describeInstanceStorageConfig(DescribeInstanceStorageConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
+     * @return ModifyInstanceAuthConfigResponse
+     */
+    CompletableFuture<ModifyInstanceAuthConfigResponse> modifyInstanceAuthConfig(ModifyInstanceAuthConfigRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceIpWhitelist  ModifyInstanceIpWhitelistRequest
      * @return ModifyInstanceIpWhitelistResponse
      */
     CompletableFuture<ModifyInstanceIpWhitelistResponse> modifyInstanceIpWhitelist(ModifyInstanceIpWhitelistRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
+     * @return ModifyInstanceStorageConfigResponse
+     */
+    CompletableFuture<ModifyInstanceStorageConfigResponse> modifyInstanceStorageConfig(ModifyInstanceStorageConfigRequest request);
+
+    /**
+     * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
+     * @return ResetInstancePasswordResponse
+     */
+    CompletableFuture<ResetInstancePasswordResponse> resetInstancePassword(ResetInstancePasswordRequest request);
+
+    /**
+     * @param request the request parameters of RestartInstance  RestartInstanceRequest
+     * @return RestartInstanceResponse
+     */
+    CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StartInstance  StartInstanceRequest
+     * @return StartInstanceResponse
+     */
+    CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StopInstance  StopInstanceRequest
+     * @return StopInstanceResponse
+     */
+    CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
 }
