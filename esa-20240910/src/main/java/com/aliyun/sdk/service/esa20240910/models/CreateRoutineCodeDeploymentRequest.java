@@ -118,7 +118,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>production</p>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putBodyParameter("Env", env);
@@ -128,6 +128,9 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -210,6 +213,9 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723599747213377175</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -218,6 +224,9 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Long percentage) {
                 this.percentage = percentage;

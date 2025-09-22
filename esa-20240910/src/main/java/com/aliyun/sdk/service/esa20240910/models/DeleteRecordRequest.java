@@ -22,9 +22,14 @@ public class DeleteRecordRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long recordId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
     private DeleteRecordRequest(Builder builder) {
         super(builder);
         this.recordId = builder.recordId;
+        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteRecordRequest extends Request {
         return this.recordId;
     }
 
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public static final class Builder extends Request.Builder<DeleteRecordRequest, Builder> {
         private Long recordId; 
+        private String securityToken; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteRecordRequest extends Request {
         private Builder(DeleteRecordRequest request) {
             super(request);
             this.recordId = request.recordId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class DeleteRecordRequest extends Request {
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
             this.recordId = recordId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

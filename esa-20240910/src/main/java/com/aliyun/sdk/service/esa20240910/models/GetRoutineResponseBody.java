@@ -431,26 +431,14 @@ public class GetRoutineResponseBody extends TeaModel {
      * <p>GetRoutineResponseBody</p>
      */
     public static class Envs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CanaryAreaList")
-        private java.util.List<String> canaryAreaList;
-
-        @com.aliyun.core.annotation.NameInMap("CanaryCodeVersion")
-        private String canaryCodeVersion;
-
         @com.aliyun.core.annotation.NameInMap("CodeDeploy")
         private CodeDeploy codeDeploy;
-
-        @com.aliyun.core.annotation.NameInMap("CodeVersion")
-        private String codeVersion;
 
         @com.aliyun.core.annotation.NameInMap("Env")
         private String env;
 
         private Envs(Builder builder) {
-            this.canaryAreaList = builder.canaryAreaList;
-            this.canaryCodeVersion = builder.canaryCodeVersion;
             this.codeDeploy = builder.codeDeploy;
-            this.codeVersion = builder.codeVersion;
             this.env = builder.env;
         }
 
@@ -463,31 +451,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * @return canaryAreaList
-         */
-        public java.util.List<String> getCanaryAreaList() {
-            return this.canaryAreaList;
-        }
-
-        /**
-         * @return canaryCodeVersion
-         */
-        public String getCanaryCodeVersion() {
-            return this.canaryCodeVersion;
-        }
-
-        /**
          * @return codeDeploy
          */
         public CodeDeploy getCodeDeploy() {
             return this.codeDeploy;
-        }
-
-        /**
-         * @return codeVersion
-         */
-        public String getCodeVersion() {
-            return this.codeVersion;
         }
 
         /**
@@ -498,58 +465,22 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<String> canaryAreaList; 
-            private String canaryCodeVersion; 
             private CodeDeploy codeDeploy; 
-            private String codeVersion; 
             private String env; 
 
             private Builder() {
             } 
 
             private Builder(Envs model) {
-                this.canaryAreaList = model.canaryAreaList;
-                this.canaryCodeVersion = model.canaryCodeVersion;
                 this.codeDeploy = model.codeDeploy;
-                this.codeVersion = model.codeVersion;
                 this.env = model.env;
             } 
-
-            /**
-             * <p>The regions for canary release.</p>
-             */
-            public Builder canaryAreaList(java.util.List<String> canaryAreaList) {
-                this.canaryAreaList = canaryAreaList;
-                return this;
-            }
-
-            /**
-             * <p>The version number for canary release.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1710120201067577628</p>
-             */
-            public Builder canaryCodeVersion(String canaryCodeVersion) {
-                this.canaryCodeVersion = canaryCodeVersion;
-                return this;
-            }
 
             /**
              * CodeDeploy.
              */
             public Builder codeDeploy(CodeDeploy codeDeploy) {
                 this.codeDeploy = codeDeploy;
-                return this;
-            }
-
-            /**
-             * <p>The version number of the code in the environment.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1710120201067577628</p>
-             */
-            public Builder codeVersion(String codeVersion) {
-                this.codeVersion = codeVersion;
                 return this;
             }
 

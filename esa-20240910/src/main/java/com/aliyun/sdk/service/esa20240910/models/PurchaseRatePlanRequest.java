@@ -31,6 +31,10 @@ public class PurchaseRatePlanRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    private String channel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
@@ -63,6 +67,7 @@ public class PurchaseRatePlanRequest extends Request {
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.channel = builder.channel;
         this.chargeType = builder.chargeType;
         this.coverage = builder.coverage;
         this.period = builder.period;
@@ -104,6 +109,13 @@ public class PurchaseRatePlanRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
@@ -159,6 +171,7 @@ public class PurchaseRatePlanRequest extends Request {
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private String channel; 
         private String chargeType; 
         private String coverage; 
         private Integer period; 
@@ -176,6 +189,7 @@ public class PurchaseRatePlanRequest extends Request {
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.channel = request.channel;
             this.chargeType = request.chargeType;
             this.coverage = request.coverage;
             this.period = request.period;
@@ -219,6 +233,15 @@ public class PurchaseRatePlanRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * Channel.
+         */
+        public Builder channel(String channel) {
+            this.putQueryParameter("Channel", channel);
+            this.channel = channel;
             return this;
         }
 

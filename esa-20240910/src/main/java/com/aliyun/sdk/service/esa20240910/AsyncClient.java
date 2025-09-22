@@ -349,6 +349,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSlrRoleForRealtimeLogResponse> createSlrRoleForRealtimeLog(CreateSlrRoleForRealtimeLogRequest request);
 
     /**
+     * @param request the request parameters of CreateTransportLayerApplication  CreateTransportLayerApplicationRequest
+     * @return CreateTransportLayerApplicationResponse
+     */
+    CompletableFuture<CreateTransportLayerApplicationResponse> createTransportLayerApplication(CreateTransportLayerApplicationRequest request);
+
+    /**
      * @param request the request parameters of CreateUrlObservation  CreateUrlObservationRequest
      * @return CreateUrlObservationResponse
      */
@@ -656,6 +662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSiteOriginClientCertificateResponse
      */
     CompletableFuture<DeleteSiteOriginClientCertificateResponse> deleteSiteOriginClientCertificate(DeleteSiteOriginClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTransportLayerApplication  DeleteTransportLayerApplicationRequest
+     * @return DeleteTransportLayerApplicationResponse
+     */
+    CompletableFuture<DeleteTransportLayerApplicationResponse> deleteTransportLayerApplication(DeleteTransportLayerApplicationRequest request);
 
     /**
      * @param request the request parameters of DeleteUrlObservation  DeleteUrlObservationRequest
@@ -1140,6 +1152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoutineResponse> getRoutine(GetRoutineRequest request);
 
     /**
+     * @param request the request parameters of GetRoutineCodeVersion  GetRoutineCodeVersionRequest
+     * @return GetRoutineCodeVersionResponse
+     */
+    CompletableFuture<GetRoutineCodeVersionResponse> getRoutineCodeVersion(GetRoutineCodeVersionRequest request);
+
+    /**
      * @param request the request parameters of GetRoutineRoute  GetRoutineRouteRequest
      * @return GetRoutineRouteResponse
      */
@@ -1258,6 +1276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTieredCacheResponse
      */
     CompletableFuture<GetTieredCacheResponse> getTieredCache(GetTieredCacheRequest request);
+
+    /**
+     * @param request the request parameters of GetTransportLayerApplication  GetTransportLayerApplicationRequest
+     * @return GetTransportLayerApplicationResponse
+     */
+    CompletableFuture<GetTransportLayerApplicationResponse> getTransportLayerApplication(GetTransportLayerApplicationRequest request);
 
     /**
      * @param request the request parameters of GetUploadTask  GetUploadTaskRequest
@@ -1636,6 +1660,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListTransportLayerApplications  ListTransportLayerApplicationsRequest
+     * @return ListTransportLayerApplicationsResponse
+     */
+    CompletableFuture<ListTransportLayerApplicationsResponse> listTransportLayerApplications(ListTransportLayerApplicationsRequest request);
 
     /**
      * @param request the request parameters of ListUploadTasks  ListUploadTasksRequest
@@ -2069,6 +2099,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRewriteUrlRuleResponse> updateRewriteUrlRule(UpdateRewriteUrlRuleRequest request);
 
     /**
+     * @param request the request parameters of UpdateRoutineConfigDescription  UpdateRoutineConfigDescriptionRequest
+     * @return UpdateRoutineConfigDescriptionResponse
+     */
+    CompletableFuture<UpdateRoutineConfigDescriptionResponse> updateRoutineConfigDescription(UpdateRoutineConfigDescriptionRequest request);
+
+    /**
      * @param request the request parameters of UpdateRoutineRoute  UpdateRoutineRouteRequest
      * @return UpdateRoutineRouteResponse
      */
@@ -2146,6 +2182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTieredCacheResponse
      */
     CompletableFuture<UpdateTieredCacheResponse> updateTieredCache(UpdateTieredCacheRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTransportLayerApplication  UpdateTransportLayerApplicationRequest
+     * @return UpdateTransportLayerApplicationResponse
+     */
+    CompletableFuture<UpdateTransportLayerApplicationResponse> updateTransportLayerApplication(UpdateTransportLayerApplicationRequest request);
 
     /**
      * @param request the request parameters of UpdateUrlObservation  UpdateUrlObservationRequest

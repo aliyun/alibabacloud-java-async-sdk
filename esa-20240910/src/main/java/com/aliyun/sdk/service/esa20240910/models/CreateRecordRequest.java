@@ -58,6 +58,7 @@ public class CreateRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ttl;
 
     @com.aliyun.core.annotation.Query
@@ -337,6 +338,7 @@ public class CreateRecordRequest extends Request {
 
         /**
          * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
