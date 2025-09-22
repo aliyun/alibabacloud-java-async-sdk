@@ -96,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImageModerationResponse> imageModeration(ImageModerationRequest request);
 
     /**
+     * @param request the request parameters of ImageQueueModeration  ImageQueueModerationRequest
+     * @return ImageQueueModerationResponse
+     */
+    CompletableFuture<ImageQueueModerationResponse> imageQueueModeration(ImageQueueModerationRequest request);
+
+    /**
      * @param request the request parameters of ManualCallback  ManualCallbackRequest
      * @return ManualCallbackResponse
      */
