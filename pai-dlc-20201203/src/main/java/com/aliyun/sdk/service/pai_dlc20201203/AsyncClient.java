@@ -47,6 +47,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTensorboardResponse> deleteTensorboard(DeleteTensorboardRequest request);
 
     /**
+     * @param request the request parameters of GetDashboard  GetDashboardRequest
+     * @return GetDashboardResponse
+     */
+    CompletableFuture<GetDashboardResponse> getDashboard(GetDashboardRequest request);
+
+    /**
      * @param request the request parameters of GetJob  GetJobRequest
      * @return GetJobResponse
      */
