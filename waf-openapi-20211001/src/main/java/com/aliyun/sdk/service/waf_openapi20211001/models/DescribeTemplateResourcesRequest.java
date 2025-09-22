@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTemplateResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetApi")
+    private String assetApi;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -55,6 +59,7 @@ public class DescribeTemplateResourcesRequest extends Request {
 
     private DescribeTemplateResourcesRequest(Builder builder) {
         super(builder);
+        this.assetApi = builder.assetApi;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -76,6 +81,13 @@ public class DescribeTemplateResourcesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assetApi
+     */
+    public String getAssetApi() {
+        return this.assetApi;
     }
 
     /**
@@ -135,6 +147,7 @@ public class DescribeTemplateResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTemplateResourcesRequest, Builder> {
+        private String assetApi; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -150,6 +163,7 @@ public class DescribeTemplateResourcesRequest extends Request {
 
         private Builder(DescribeTemplateResourcesRequest request) {
             super(request);
+            this.assetApi = request.assetApi;
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -159,6 +173,15 @@ public class DescribeTemplateResourcesRequest extends Request {
             this.resourceType = request.resourceType;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * AssetApi.
+         */
+        public Builder assetApi(String assetApi) {
+            this.putQueryParameter("AssetApi", assetApi);
+            this.assetApi = assetApi;
+            return this;
+        }
 
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>

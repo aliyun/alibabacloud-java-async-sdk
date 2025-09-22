@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyTemplateResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindAssets")
+    private java.util.List<String> bindAssets;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BindResourceGroups")
     private java.util.List<String> bindResourceGroups;
 
@@ -44,6 +48,10 @@ public class ModifyTemplateResourcesRequest extends Request {
     private Long templateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnbindAssets")
+    private java.util.List<String> unbindAssets;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnbindResourceGroups")
     private java.util.List<String> unbindResourceGroups;
 
@@ -53,12 +61,14 @@ public class ModifyTemplateResourcesRequest extends Request {
 
     private ModifyTemplateResourcesRequest(Builder builder) {
         super(builder);
+        this.bindAssets = builder.bindAssets;
         this.bindResourceGroups = builder.bindResourceGroups;
         this.bindResources = builder.bindResources;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.templateId = builder.templateId;
+        this.unbindAssets = builder.unbindAssets;
         this.unbindResourceGroups = builder.unbindResourceGroups;
         this.unbindResources = builder.unbindResources;
     }
@@ -74,6 +84,13 @@ public class ModifyTemplateResourcesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bindAssets
+     */
+    public java.util.List<String> getBindAssets() {
+        return this.bindAssets;
     }
 
     /**
@@ -119,6 +136,13 @@ public class ModifyTemplateResourcesRequest extends Request {
     }
 
     /**
+     * @return unbindAssets
+     */
+    public java.util.List<String> getUnbindAssets() {
+        return this.unbindAssets;
+    }
+
+    /**
      * @return unbindResourceGroups
      */
     public java.util.List<String> getUnbindResourceGroups() {
@@ -133,12 +157,14 @@ public class ModifyTemplateResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTemplateResourcesRequest, Builder> {
+        private java.util.List<String> bindAssets; 
         private java.util.List<String> bindResourceGroups; 
         private java.util.List<String> bindResources; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long templateId; 
+        private java.util.List<String> unbindAssets; 
         private java.util.List<String> unbindResourceGroups; 
         private java.util.List<String> unbindResources; 
 
@@ -148,15 +174,26 @@ public class ModifyTemplateResourcesRequest extends Request {
 
         private Builder(ModifyTemplateResourcesRequest request) {
             super(request);
+            this.bindAssets = request.bindAssets;
             this.bindResourceGroups = request.bindResourceGroups;
             this.bindResources = request.bindResources;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.templateId = request.templateId;
+            this.unbindAssets = request.unbindAssets;
             this.unbindResourceGroups = request.unbindResourceGroups;
             this.unbindResources = request.unbindResources;
         } 
+
+        /**
+         * BindAssets.
+         */
+        public Builder bindAssets(java.util.List<String> bindAssets) {
+            this.putQueryParameter("BindAssets", bindAssets);
+            this.bindAssets = bindAssets;
+            return this;
+        }
 
         /**
          * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
@@ -230,6 +267,15 @@ public class ModifyTemplateResourcesRequest extends Request {
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * UnbindAssets.
+         */
+        public Builder unbindAssets(java.util.List<String> unbindAssets) {
+            this.putQueryParameter("UnbindAssets", unbindAssets);
+            this.unbindAssets = unbindAssets;
             return this;
         }
 

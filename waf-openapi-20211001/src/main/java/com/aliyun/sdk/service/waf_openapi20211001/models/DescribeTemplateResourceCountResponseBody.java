@@ -98,6 +98,9 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
      * <p>DescribeTemplateResourceCountResponseBody</p>
      */
     public static class ResourceCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetCount")
+        private Integer assetCount;
+
         @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
@@ -108,6 +111,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         private Long templateId;
 
         private ResourceCount(Builder builder) {
+            this.assetCount = builder.assetCount;
             this.groupCount = builder.groupCount;
             this.singleCount = builder.singleCount;
             this.templateId = builder.templateId;
@@ -119,6 +123,13 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
 
         public static ResourceCount create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetCount
+         */
+        public Integer getAssetCount() {
+            return this.assetCount;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer assetCount; 
             private Integer groupCount; 
             private Integer singleCount; 
             private Long templateId; 
@@ -151,10 +163,19 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
             } 
 
             private Builder(ResourceCount model) {
+                this.assetCount = model.assetCount;
                 this.groupCount = model.groupCount;
                 this.singleCount = model.singleCount;
                 this.templateId = model.templateId;
             } 
+
+            /**
+             * AssetCount.
+             */
+            public Builder assetCount(Integer assetCount) {
+                this.assetCount = assetCount;
+                return this;
+            }
 
             /**
              * <p>The number of protected object groups.</p>
