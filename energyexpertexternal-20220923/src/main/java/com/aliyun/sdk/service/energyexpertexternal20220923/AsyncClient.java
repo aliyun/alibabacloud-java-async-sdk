@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddFolder  AddFolderRequest
+     * @return AddFolderResponse
+     */
+    CompletableFuture<AddFolderResponse> addFolder(AddFolderRequest request);
+
+    /**
      * @param request the request parameters of BatchSaveInstructionStatus  BatchSaveInstructionStatusRequest
      * @return BatchSaveInstructionStatusResponse
      */
@@ -64,6 +70,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateChatSessionResponse
      */
     CompletableFuture<CreateChatSessionResponse> createChatSession(CreateChatSessionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     */
+    CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFolder  DeleteFolderRequest
+     * @return DeleteFolderResponse
+     */
+    CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
     /**
      * @param request the request parameters of EditProhibitedDevices  EditProhibitedDevicesRequest

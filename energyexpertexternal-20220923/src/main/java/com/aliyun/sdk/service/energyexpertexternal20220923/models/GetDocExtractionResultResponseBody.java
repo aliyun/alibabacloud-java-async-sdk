@@ -410,7 +410,7 @@ public class GetDocExtractionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of document parsing results</p>
+             * <p>Details of document extraction results</p>
              */
             public Builder kvListInfo(java.util.List<KvListInfo> kvListInfo) {
                 this.kvListInfo = kvListInfo;

@@ -41,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddFolder  AddFolderRequest
+     * @return AddFolderResponse
+     */
+    @Override
+    public CompletableFuture<AddFolderResponse> addFolder(AddFolderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddFolder").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aidoc/folder/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddFolderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddFolderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchSaveInstructionStatus  BatchSaveInstructionStatusRequest
      * @return BatchSaveInstructionStatusResponse
      */
@@ -149,6 +167,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateChatSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDocument").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/aidoc/document/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteFolder  DeleteFolderRequest
+     * @return DeleteFolderResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFolder").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/aidoc/folder/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFolderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFolderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
