@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.marketing_event20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
@@ -51,6 +56,10 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -61,7 +70,7 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,12 +111,25 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySessionByActivityIdPopResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -120,7 +142,7 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -286,6 +308,20 @@ public class QuerySessionByActivityIdPopResponseBody extends TeaModel {
             private String name; 
             private String nameEn; 
             private String startDateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.descriptionEn = model.descriptionEn;
+                this.endDateTime = model.endDateTime;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+                this.nameEn = model.nameEn;
+                this.startDateTime = model.startDateTime;
+            } 
 
             /**
              * Description.

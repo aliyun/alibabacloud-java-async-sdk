@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.marketing_event20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySingleActivityInfoResponseBody</p>
  */
 public class QuerySingleActivityInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private String httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -28,8 +39,10 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
     private Boolean success;
 
     private QuerySingleActivityInfoResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -43,6 +56,17 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     /**
      * @return code
      */
@@ -53,8 +77,15 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -79,11 +110,34 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
+        private String httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySingleActivityInfoResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -96,8 +150,16 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(String httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -270,6 +332,22 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
             private String mobile; 
             private String QRCode; 
             private String reportFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activityId = model.activityId;
+                this.channelName = model.channelName;
+                this.companyName = model.companyName;
+                this.customerName = model.customerName;
+                this.email = model.email;
+                this.id = model.id;
+                this.isVipCustomer = model.isVipCustomer;
+                this.mobile = model.mobile;
+                this.QRCode = model.QRCode;
+                this.reportFields = model.reportFields;
+            } 
 
             /**
              * ActivityId.

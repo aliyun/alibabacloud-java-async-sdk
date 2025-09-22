@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.marketing_event20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
@@ -43,10 +48,14 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,16 +88,27 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(FindGuestCredentialsRecordResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -187,6 +207,15 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerNickName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LevelOneOwner model) {
+                this.ownerEmpIdOrTelephone = model.ownerEmpIdOrTelephone;
+                this.ownerName = model.ownerName;
+                this.ownerNickName = model.ownerNickName;
+            } 
+
             /**
              * OwnerEmpIdOrTelephone.
              */
@@ -273,6 +302,15 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             private String ownerEmpIdOrTelephone; 
             private String ownerName; 
             private String ownerNickName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LevelThreeOwner model) {
+                this.ownerEmpIdOrTelephone = model.ownerEmpIdOrTelephone;
+                this.ownerName = model.ownerName;
+                this.ownerNickName = model.ownerNickName;
+            } 
 
             /**
              * OwnerEmpIdOrTelephone.
@@ -361,6 +399,15 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerNickName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LevelTwoOwner model) {
+                this.ownerEmpIdOrTelephone = model.ownerEmpIdOrTelephone;
+                this.ownerName = model.ownerName;
+                this.ownerNickName = model.ownerNickName;
+            } 
+
             /**
              * OwnerEmpIdOrTelephone.
              */
@@ -409,19 +456,19 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         private String levelOneChannelName;
 
         @com.aliyun.core.annotation.NameInMap("LevelOneOwner")
-        private java.util.List < LevelOneOwner> levelOneOwner;
+        private java.util.List<LevelOneOwner> levelOneOwner;
 
         @com.aliyun.core.annotation.NameInMap("LevelThreeChannelName")
         private String levelThreeChannelName;
 
         @com.aliyun.core.annotation.NameInMap("LevelThreeOwner")
-        private java.util.List < LevelThreeOwner> levelThreeOwner;
+        private java.util.List<LevelThreeOwner> levelThreeOwner;
 
         @com.aliyun.core.annotation.NameInMap("LevelTwoChannelName")
         private String levelTwoChannelName;
 
         @com.aliyun.core.annotation.NameInMap("LevelTwoOwner")
-        private java.util.List < LevelTwoOwner> levelTwoOwner;
+        private java.util.List<LevelTwoOwner> levelTwoOwner;
 
         private ChannelLevelInfo(Builder builder) {
             this.channelId = builder.channelId;
@@ -466,7 +513,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         /**
          * @return levelOneOwner
          */
-        public java.util.List < LevelOneOwner> getLevelOneOwner() {
+        public java.util.List<LevelOneOwner> getLevelOneOwner() {
             return this.levelOneOwner;
         }
 
@@ -480,7 +527,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         /**
          * @return levelThreeOwner
          */
-        public java.util.List < LevelThreeOwner> getLevelThreeOwner() {
+        public java.util.List<LevelThreeOwner> getLevelThreeOwner() {
             return this.levelThreeOwner;
         }
 
@@ -494,7 +541,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         /**
          * @return levelTwoOwner
          */
-        public java.util.List < LevelTwoOwner> getLevelTwoOwner() {
+        public java.util.List<LevelTwoOwner> getLevelTwoOwner() {
             return this.levelTwoOwner;
         }
 
@@ -502,11 +549,25 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             private Long channelId; 
             private String channelName; 
             private String levelOneChannelName; 
-            private java.util.List < LevelOneOwner> levelOneOwner; 
+            private java.util.List<LevelOneOwner> levelOneOwner; 
             private String levelThreeChannelName; 
-            private java.util.List < LevelThreeOwner> levelThreeOwner; 
+            private java.util.List<LevelThreeOwner> levelThreeOwner; 
             private String levelTwoChannelName; 
-            private java.util.List < LevelTwoOwner> levelTwoOwner; 
+            private java.util.List<LevelTwoOwner> levelTwoOwner; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelLevelInfo model) {
+                this.channelId = model.channelId;
+                this.channelName = model.channelName;
+                this.levelOneChannelName = model.levelOneChannelName;
+                this.levelOneOwner = model.levelOneOwner;
+                this.levelThreeChannelName = model.levelThreeChannelName;
+                this.levelThreeOwner = model.levelThreeOwner;
+                this.levelTwoChannelName = model.levelTwoChannelName;
+                this.levelTwoOwner = model.levelTwoOwner;
+            } 
 
             /**
              * ChannelId.
@@ -535,7 +596,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             /**
              * LevelOneOwner.
              */
-            public Builder levelOneOwner(java.util.List < LevelOneOwner> levelOneOwner) {
+            public Builder levelOneOwner(java.util.List<LevelOneOwner> levelOneOwner) {
                 this.levelOneOwner = levelOneOwner;
                 return this;
             }
@@ -551,7 +612,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             /**
              * LevelThreeOwner.
              */
-            public Builder levelThreeOwner(java.util.List < LevelThreeOwner> levelThreeOwner) {
+            public Builder levelThreeOwner(java.util.List<LevelThreeOwner> levelThreeOwner) {
                 this.levelThreeOwner = levelThreeOwner;
                 return this;
             }
@@ -567,7 +628,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             /**
              * LevelTwoOwner.
              */
-            public Builder levelTwoOwner(java.util.List < LevelTwoOwner> levelTwoOwner) {
+            public Builder levelTwoOwner(java.util.List<LevelTwoOwner> levelTwoOwner) {
                 this.levelTwoOwner = levelTwoOwner;
                 return this;
             }
@@ -587,7 +648,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Admin")
-        private java.util.Map < String, ? > admin;
+        private java.util.Map<String, ?> admin;
 
         @com.aliyun.core.annotation.NameInMap("ChannelId")
         private Long channelId;
@@ -640,7 +701,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         /**
          * @return admin
          */
-        public java.util.Map < String, ? > getAdmin() {
+        public java.util.Map<String, ?> getAdmin() {
             return this.admin;
         }
 
@@ -708,7 +769,7 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > admin; 
+            private java.util.Map<String, ?> admin; 
             private Long channelId; 
             private ChannelLevelInfo channelLevelInfo; 
             private String companyName; 
@@ -719,10 +780,26 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
             private String name; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.admin = model.admin;
+                this.channelId = model.channelId;
+                this.channelLevelInfo = model.channelLevelInfo;
+                this.companyName = model.companyName;
+                this.credentialsCode = model.credentialsCode;
+                this.credentialsName = model.credentialsName;
+                this.idNumber = model.idNumber;
+                this.idType = model.idType;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * Admin.
              */
-            public Builder admin(java.util.Map < String, ? > admin) {
+            public Builder admin(java.util.Map<String, ?> admin) {
                 this.admin = admin;
                 return this;
             }
