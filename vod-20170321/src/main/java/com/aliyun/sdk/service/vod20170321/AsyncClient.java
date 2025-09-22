@@ -1390,6 +1390,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodUserDomainsResponse> describeVodUserDomains(DescribeVodUserDomainsRequest request);
 
     /**
+     * @param request the request parameters of DescribeVodUserVipsByDomain  DescribeVodUserVipsByDomainRequest
+     * @return DescribeVodUserVipsByDomainResponse
+     */
+    CompletableFuture<DescribeVodUserVipsByDomainResponse> describeVodUserVipsByDomain(DescribeVodUserVipsByDomainRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * 
