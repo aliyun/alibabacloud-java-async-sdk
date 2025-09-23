@@ -50,10 +50,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AsyncEditTimelineResponse> asyncEditTimeline(AsyncEditTimelineRequest request);
 
     /**
+     * @param request the request parameters of AsyncUploadTenderDoc  AsyncUploadTenderDocRequest
+     * @return AsyncUploadTenderDocResponse
+     */
+    CompletableFuture<AsyncUploadTenderDocResponse> asyncUploadTenderDoc(AsyncUploadTenderDocRequest request);
+
+    /**
      * @param request the request parameters of AsyncUploadVideo  AsyncUploadVideoRequest
      * @return AsyncUploadVideoResponse
      */
     CompletableFuture<AsyncUploadVideoResponse> asyncUploadVideo(AsyncUploadVideoRequest request);
+
+    /**
+     * @param request the request parameters of AsyncWritingBiddingDoc  AsyncWritingBiddingDocRequest
+     * @return AsyncWritingBiddingDocResponse
+     */
+    CompletableFuture<AsyncWritingBiddingDocResponse> asyncWritingBiddingDoc(AsyncWritingBiddingDocRequest request);
 
     /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
@@ -194,10 +206,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DownloadAuditNoteResponse> downloadAuditNote(DownloadAuditNoteRequest request);
 
     /**
+     * @param request the request parameters of DownloadBiddingDoc  DownloadBiddingDocRequest
+     * @return DownloadBiddingDocResponse
+     */
+    CompletableFuture<DownloadBiddingDocResponse> downloadBiddingDoc(DownloadBiddingDocRequest request);
+
+    /**
      * @param request the request parameters of EditAuditTerms  EditAuditTermsRequest
      * @return EditAuditTermsResponse
      */
     CompletableFuture<EditAuditTermsResponse> editAuditTerms(EditAuditTermsRequest request);
+
+    /**
+     * @param request the request parameters of EditBiddingDoc  EditBiddingDocRequest
+     * @return EditBiddingDocResponse
+     */
+    CompletableFuture<EditBiddingDocResponse> editBiddingDoc(EditBiddingDocRequest request);
 
     /**
      * @param request the request parameters of ExportAnalysisTagDetailByTaskId  ExportAnalysisTagDetailByTaskIdRequest
@@ -318,6 +342,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAvailableAuditNotesResponse
      */
     CompletableFuture<GetAvailableAuditNotesResponse> getAvailableAuditNotes(GetAvailableAuditNotesRequest request);
+
+    /**
+     * @param request the request parameters of GetBiddingDocInfo  GetBiddingDocInfoRequest
+     * @return GetBiddingDocInfoResponse
+     */
+    CompletableFuture<GetBiddingDocInfoResponse> getBiddingDocInfo(GetBiddingDocInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetBiddingRemainLimitNum  GetBiddingRemainLimitNumRequest
+     * @return GetBiddingRemainLimitNumResponse
+     */
+    CompletableFuture<GetBiddingRemainLimitNumResponse> getBiddingRemainLimitNum(GetBiddingRemainLimitNumRequest request);
 
     /**
      * @param request the request parameters of GetCategoriesByTaskId  GetCategoriesByTaskIdRequest
@@ -534,6 +570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAuditTermsResponse
      */
     CompletableFuture<ListAuditTermsResponse> listAuditTerms(ListAuditTermsRequest request);
+
+    /**
+     * @param request the request parameters of ListBiddingDoc  ListBiddingDocRequest
+     * @return ListBiddingDocResponse
+     */
+    CompletableFuture<ListBiddingDocResponse> listBiddingDoc(ListBiddingDocRequest request);
 
     /**
      * @param request the request parameters of ListBuildConfigs  ListBuildConfigsRequest

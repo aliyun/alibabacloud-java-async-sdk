@@ -131,6 +131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AsyncUploadTenderDoc  AsyncUploadTenderDocRequest
+     * @return AsyncUploadTenderDocResponse
+     */
+    @Override
+    public CompletableFuture<AsyncUploadTenderDocResponse> asyncUploadTenderDoc(AsyncUploadTenderDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncUploadTenderDoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncUploadTenderDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncUploadTenderDocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AsyncUploadVideo  AsyncUploadVideoRequest
      * @return AsyncUploadVideoResponse
      */
@@ -143,6 +161,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AsyncUploadVideoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AsyncWritingBiddingDoc  AsyncWritingBiddingDocRequest
+     * @return AsyncWritingBiddingDocResponse
+     */
+    @Override
+    public CompletableFuture<AsyncWritingBiddingDocResponse> asyncWritingBiddingDoc(AsyncWritingBiddingDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncWritingBiddingDoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncWritingBiddingDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncWritingBiddingDocResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -563,6 +599,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DownloadBiddingDoc  DownloadBiddingDocRequest
+     * @return DownloadBiddingDocResponse
+     */
+    @Override
+    public CompletableFuture<DownloadBiddingDocResponse> downloadBiddingDoc(DownloadBiddingDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadBiddingDoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadBiddingDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadBiddingDocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EditAuditTerms  EditAuditTermsRequest
      * @return EditAuditTermsResponse
      */
@@ -575,6 +629,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EditAuditTermsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EditBiddingDoc  EditBiddingDocRequest
+     * @return EditBiddingDocResponse
+     */
+    @Override
+    public CompletableFuture<EditBiddingDocResponse> editBiddingDoc(EditBiddingDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EditBiddingDoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EditBiddingDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EditBiddingDocResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -935,6 +1007,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAvailableAuditNotesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBiddingDocInfo  GetBiddingDocInfoRequest
+     * @return GetBiddingDocInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetBiddingDocInfoResponse> getBiddingDocInfo(GetBiddingDocInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBiddingDocInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBiddingDocInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBiddingDocInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBiddingRemainLimitNum  GetBiddingRemainLimitNumRequest
+     * @return GetBiddingRemainLimitNumResponse
+     */
+    @Override
+    public CompletableFuture<GetBiddingRemainLimitNumResponse> getBiddingRemainLimitNum(GetBiddingRemainLimitNumRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBiddingRemainLimitNum").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBiddingRemainLimitNumResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBiddingRemainLimitNumResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1583,6 +1691,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAuditTermsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBiddingDoc  ListBiddingDocRequest
+     * @return ListBiddingDocResponse
+     */
+    @Override
+    public CompletableFuture<ListBiddingDocResponse> listBiddingDoc(ListBiddingDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBiddingDoc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBiddingDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBiddingDocResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
