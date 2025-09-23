@@ -56,6 +56,9 @@ public class UpdateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String handler;
 
+    @com.aliyun.core.annotation.NameInMap("idleTimeout")
+    private Integer idleTimeout;
+
     @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
 
@@ -118,6 +121,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.environmentVariables = builder.environmentVariables;
         this.gpuConfig = builder.gpuConfig;
         this.handler = builder.handler;
+        this.idleTimeout = builder.idleTimeout;
         this.instanceConcurrency = builder.instanceConcurrency;
         this.instanceIsolationMode = builder.instanceIsolationMode;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
@@ -230,6 +234,13 @@ public class UpdateFunctionInput extends TeaModel {
      */
     public String getHandler() {
         return this.handler;
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -357,6 +368,7 @@ public class UpdateFunctionInput extends TeaModel {
         private java.util.Map<String, String> environmentVariables; 
         private GPUConfig gpuConfig; 
         private String handler; 
+        private Integer idleTimeout; 
         private Integer instanceConcurrency; 
         private String instanceIsolationMode; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
@@ -390,6 +402,7 @@ public class UpdateFunctionInput extends TeaModel {
             this.environmentVariables = model.environmentVariables;
             this.gpuConfig = model.gpuConfig;
             this.handler = model.handler;
+            this.idleTimeout = model.idleTimeout;
             this.instanceConcurrency = model.instanceConcurrency;
             this.instanceIsolationMode = model.instanceIsolationMode;
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
@@ -501,6 +514,14 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder handler(String handler) {
             this.handler = handler;
+            return this;
+        }
+
+        /**
+         * idleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
             return this;
         }
 

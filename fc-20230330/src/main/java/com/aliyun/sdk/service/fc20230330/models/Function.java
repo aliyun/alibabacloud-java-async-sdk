@@ -69,6 +69,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("handler")
     private String handler;
 
+    @com.aliyun.core.annotation.NameInMap("idleTimeout")
+    private Integer idleTimeout;
+
     @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
 
@@ -165,6 +168,7 @@ public class Function extends TeaModel {
         this.functionName = builder.functionName;
         this.gpuConfig = builder.gpuConfig;
         this.handler = builder.handler;
+        this.idleTimeout = builder.idleTimeout;
         this.instanceConcurrency = builder.instanceConcurrency;
         this.instanceIsolationMode = builder.instanceIsolationMode;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
@@ -322,6 +326,13 @@ public class Function extends TeaModel {
      */
     public String getHandler() {
         return this.handler;
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -524,6 +535,7 @@ public class Function extends TeaModel {
         private String functionName; 
         private GPUConfig gpuConfig; 
         private String handler; 
+        private Integer idleTimeout; 
         private Integer instanceConcurrency; 
         private String instanceIsolationMode; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
@@ -572,6 +584,7 @@ public class Function extends TeaModel {
             this.functionName = model.functionName;
             this.gpuConfig = model.gpuConfig;
             this.handler = model.handler;
+            this.idleTimeout = model.idleTimeout;
             this.instanceConcurrency = model.instanceConcurrency;
             this.instanceIsolationMode = model.instanceIsolationMode;
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
@@ -733,6 +746,14 @@ public class Function extends TeaModel {
          */
         public Builder handler(String handler) {
             this.handler = handler;
+            return this;
+        }
+
+        /**
+         * idleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
             return this;
         }
 
