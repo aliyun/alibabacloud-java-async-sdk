@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,6 +30,10 @@ public class ListSharedTargetsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArn")
+    private String resourceArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
@@ -35,7 +44,7 @@ public class ListSharedTargetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
-    private java.util.List < String > resourceShareIds;
+    private java.util.List<String> resourceShareIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -43,13 +52,14 @@ public class ListSharedTargetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
-    private java.util.List < String > targets;
+    private java.util.List<String> targets;
 
     private ListSharedTargetsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceArn = builder.resourceArn;
         this.resourceId = builder.resourceId;
         this.resourceOwner = builder.resourceOwner;
         this.resourceShareIds = builder.resourceShareIds;
@@ -65,7 +75,7 @@ public class ListSharedTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -92,6 +102,13 @@ public class ListSharedTargetsRequest extends Request {
     }
 
     /**
+     * @return resourceArn
+     */
+    public String getResourceArn() {
+        return this.resourceArn;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -108,7 +125,7 @@ public class ListSharedTargetsRequest extends Request {
     /**
      * @return resourceShareIds
      */
-    public java.util.List < String > getResourceShareIds() {
+    public java.util.List<String> getResourceShareIds() {
         return this.resourceShareIds;
     }
 
@@ -122,7 +139,7 @@ public class ListSharedTargetsRequest extends Request {
     /**
      * @return targets
      */
-    public java.util.List < String > getTargets() {
+    public java.util.List<String> getTargets() {
         return this.targets;
     }
 
@@ -130,11 +147,12 @@ public class ListSharedTargetsRequest extends Request {
         private String regionId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String resourceArn; 
         private String resourceId; 
         private String resourceOwner; 
-        private java.util.List < String > resourceShareIds; 
+        private java.util.List<String> resourceShareIds; 
         private String resourceType; 
-        private java.util.List < String > targets; 
+        private java.util.List<String> targets; 
 
         private Builder() {
             super();
@@ -145,6 +163,7 @@ public class ListSharedTargetsRequest extends Request {
             this.regionId = request.regionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceArn = request.resourceArn;
             this.resourceId = request.resourceId;
             this.resourceOwner = request.resourceOwner;
             this.resourceShareIds = request.resourceShareIds;
@@ -187,6 +206,15 @@ public class ListSharedTargetsRequest extends Request {
         }
 
         /**
+         * ResourceArn.
+         */
+        public Builder resourceArn(String resourceArn) {
+            this.putQueryParameter("ResourceArn", resourceArn);
+            this.resourceArn = resourceArn;
+            return this;
+        }
+
+        /**
          * <p>The ID of the shared resource.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +250,7 @@ public class ListSharedTargetsRequest extends Request {
          * <strong>example:</strong>
          * <p>rs-6GRmdD3X****</p>
          */
-        public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
+        public Builder resourceShareIds(java.util.List<String> resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
             this.resourceShareIds = resourceShareIds;
             return this;
@@ -247,7 +275,7 @@ public class ListSharedTargetsRequest extends Request {
          * <strong>example:</strong>
          * <p>114240524784****</p>
          */
-        public Builder targets(java.util.List < String > targets) {
+        public Builder targets(java.util.List<String> targets) {
             this.putQueryParameter("Targets", targets);
             this.targets = targets;
             return this;

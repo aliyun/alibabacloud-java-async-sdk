@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateResourceShareResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class CreateResourceShareResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceShare resourceShare; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceShareResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceShare = model.resourceShare;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -177,6 +194,19 @@ public class CreateResourceShareResponseBody extends TeaModel {
             private String resourceShareOwner; 
             private String resourceShareStatus; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceShare model) {
+                this.allowExternalTargets = model.allowExternalTargets;
+                this.createTime = model.createTime;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareName = model.resourceShareName;
+                this.resourceShareOwner = model.resourceShareOwner;
+                this.resourceShareStatus = model.resourceShareStatus;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>

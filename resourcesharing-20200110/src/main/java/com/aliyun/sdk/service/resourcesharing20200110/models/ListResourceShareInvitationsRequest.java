@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,11 @@ public class ListResourceShareInvitationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
-    private java.util.List < String > resourceShareIds;
+    private java.util.List<String> resourceShareIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareInvitationIds")
-    private java.util.List < String > resourceShareInvitationIds;
+    private java.util.List<String> resourceShareInvitationIds;
 
     private ListResourceShareInvitationsRequest(Builder builder) {
         super(builder);
@@ -49,7 +54,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,14 +83,14 @@ public class ListResourceShareInvitationsRequest extends Request {
     /**
      * @return resourceShareIds
      */
-    public java.util.List < String > getResourceShareIds() {
+    public java.util.List<String> getResourceShareIds() {
         return this.resourceShareIds;
     }
 
     /**
      * @return resourceShareInvitationIds
      */
-    public java.util.List < String > getResourceShareInvitationIds() {
+    public java.util.List<String> getResourceShareInvitationIds() {
         return this.resourceShareInvitationIds;
     }
 
@@ -93,8 +98,8 @@ public class ListResourceShareInvitationsRequest extends Request {
         private String regionId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceShareIds; 
-        private java.util.List < String > resourceShareInvitationIds; 
+        private java.util.List<String> resourceShareIds; 
+        private java.util.List<String> resourceShareInvitationIds; 
 
         private Builder() {
             super();
@@ -146,7 +151,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         /**
          * <p>The IDs of the resource shares.</p>
          */
-        public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
+        public Builder resourceShareIds(java.util.List<String> resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
             this.resourceShareIds = resourceShareIds;
             return this;
@@ -155,7 +160,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         /**
          * <p>The IDs of the resource sharing invitations.</p>
          */
-        public Builder resourceShareInvitationIds(java.util.List < String > resourceShareInvitationIds) {
+        public Builder resourceShareInvitationIds(java.util.List<String> resourceShareInvitationIds) {
             this.putQueryParameter("ResourceShareInvitationIds", resourceShareInvitationIds);
             this.resourceShareInvitationIds = resourceShareInvitationIds;
             return this;

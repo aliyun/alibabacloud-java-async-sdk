@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceShares")
-    private java.util.List < ResourceShares> resourceShares;
+    private java.util.List<ResourceShares> resourceShares;
 
     private ListResourceSharesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListResourceSharesResponseBody extends TeaModel {
 
     public static ListResourceSharesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,26 @@ public class ListResourceSharesResponseBody extends TeaModel {
     /**
      * @return resourceShares
      */
-    public java.util.List < ResourceShares> getResourceShares() {
+    public java.util.List<ResourceShares> getResourceShares() {
         return this.resourceShares;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceShares> resourceShares; 
+        private java.util.List<ResourceShares> resourceShares; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceSharesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceShares = model.resourceShares;
+        } 
 
         /**
-         * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -73,7 +91,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</p>
@@ -84,9 +102,9 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the resource shares.</p>
+         * <p>The information about the resource shares.</p>
          */
-        public Builder resourceShares(java.util.List < ResourceShares> resourceShares) {
+        public Builder resourceShares(java.util.List<ResourceShares> resourceShares) {
             this.resourceShares = resourceShares;
             return this;
         }
@@ -141,8 +159,19 @@ public class ListResourceSharesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -150,7 +179,10 @@ public class ListResourceSharesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -193,7 +225,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         private String resourceShareStatus;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -270,7 +302,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -289,8 +321,23 @@ public class ListResourceSharesResponseBody extends TeaModel {
             private String resourceShareName; 
             private String resourceShareOwner; 
             private String resourceShareStatus; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceShares model) {
+                this.allowExternalTargets = model.allowExternalTargets;
+                this.createTime = model.createTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareName = model.resourceShareName;
+                this.resourceShareOwner = model.resourceShareOwner;
+                this.resourceShareStatus = model.resourceShareStatus;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
@@ -319,7 +366,10 @@ public class ListResourceSharesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz5nlvlak****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -362,13 +412,13 @@ public class ListResourceSharesResponseBody extends TeaModel {
             /**
              * <p>The status of the resource share. Valid values:</p>
              * <ul>
-             * <li>Active: The resource share is enabled.</li>
-             * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
-             * <li>Deleting: The resource share is being deleted.</li>
-             * <li>Deleted: The resource share is deleted.</li>
+             * <li>Active</li>
+             * <li>Pending</li>
+             * <li>Deleting</li>
+             * <li>Deleted</li>
              * </ul>
              * <blockquote>
-             * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+             * <p> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -380,9 +430,9 @@ public class ListResourceSharesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

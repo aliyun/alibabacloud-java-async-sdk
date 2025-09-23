@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceShareAssociations")
-    private java.util.List < ResourceShareAssociations> resourceShareAssociations;
+    private java.util.List<ResourceShareAssociations> resourceShareAssociations;
 
     private ListResourceShareAssociationsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
 
     public static ListResourceShareAssociationsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
     /**
      * @return resourceShareAssociations
      */
-    public java.util.List < ResourceShareAssociations> getResourceShareAssociations() {
+    public java.util.List<ResourceShareAssociations> getResourceShareAssociations() {
         return this.resourceShareAssociations;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceShareAssociations> resourceShareAssociations; 
+        private java.util.List<ResourceShareAssociations> resourceShareAssociations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceShareAssociationsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceShareAssociations = model.resourceShareAssociations;
+        } 
 
         /**
          * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
@@ -86,7 +104,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         /**
          * <p>The information of the entities.</p>
          */
-        public Builder resourceShareAssociations(java.util.List < ResourceShareAssociations> resourceShareAssociations) {
+        public Builder resourceShareAssociations(java.util.List<ResourceShareAssociations> resourceShareAssociations) {
             this.resourceShareAssociations = resourceShareAssociations;
             return this;
         }
@@ -122,6 +140,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -135,6 +156,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             this.failureDescription = builder.failureDescription;
             this.failureReason = builder.failureReason;
             this.operationType = builder.operationType;
+            this.resourceArn = builder.resourceArn;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
         }
@@ -190,6 +212,13 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -210,8 +239,24 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private String failureDescription; 
             private String failureReason; 
             private String operationType; 
+            private String resourceArn; 
             private String status; 
             private String statusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociationFailedDetails model) {
+                this.associateType = model.associateType;
+                this.entityId = model.entityId;
+                this.entityType = model.entityType;
+                this.failureDescription = model.failureDescription;
+                this.failureReason = model.failureReason;
+                this.operationType = model.operationType;
+                this.resourceArn = model.resourceArn;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+            } 
 
             /**
              * <p>This parameter is deprecated. The OperationType parameter is used instead.</p>
@@ -299,6 +344,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
+                return this;
+            }
+
+            /**
              * <p>This parameter is deprecated. The FailureReason parameter is used instead.</p>
              * 
              * <strong>example:</strong>
@@ -335,7 +388,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
      */
     public static class ResourceShareAssociations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociationFailedDetails")
-        private java.util.List < AssociationFailedDetails> associationFailedDetails;
+        private java.util.List<AssociationFailedDetails> associationFailedDetails;
 
         @com.aliyun.core.annotation.NameInMap("AssociationStatus")
         private String associationStatus;
@@ -358,6 +411,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("External")
         private Boolean external;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
+
         @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
@@ -379,6 +435,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
             this.external = builder.external;
+            this.resourceArn = builder.resourceArn;
             this.resourceShareId = builder.resourceShareId;
             this.resourceShareName = builder.resourceShareName;
             this.targetProperty = builder.targetProperty;
@@ -396,7 +453,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         /**
          * @return associationFailedDetails
          */
-        public java.util.List < AssociationFailedDetails> getAssociationFailedDetails() {
+        public java.util.List<AssociationFailedDetails> getAssociationFailedDetails() {
             return this.associationFailedDetails;
         }
 
@@ -450,6 +507,13 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
+        /**
          * @return resourceShareId
          */
         public String getResourceShareId() {
@@ -478,7 +542,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AssociationFailedDetails> associationFailedDetails; 
+            private java.util.List<AssociationFailedDetails> associationFailedDetails; 
             private String associationStatus; 
             private String associationStatusMessage; 
             private String associationType; 
@@ -486,15 +550,35 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private String entityId; 
             private String entityType; 
             private Boolean external; 
+            private String resourceArn; 
             private String resourceShareId; 
             private String resourceShareName; 
             private String targetProperty; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceShareAssociations model) {
+                this.associationFailedDetails = model.associationFailedDetails;
+                this.associationStatus = model.associationStatus;
+                this.associationStatusMessage = model.associationStatusMessage;
+                this.associationType = model.associationType;
+                this.createTime = model.createTime;
+                this.entityId = model.entityId;
+                this.entityType = model.entityType;
+                this.external = model.external;
+                this.resourceArn = model.resourceArn;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareName = model.resourceShareName;
+                this.targetProperty = model.targetProperty;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The information about the failure.</p>
              */
-            public Builder associationFailedDetails(java.util.List < AssociationFailedDetails> associationFailedDetails) {
+            public Builder associationFailedDetails(java.util.List<AssociationFailedDetails> associationFailedDetails) {
                 this.associationFailedDetails = associationFailedDetails;
                 return this;
             }
@@ -603,6 +687,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
              */
             public Builder external(Boolean external) {
                 this.external = external;
+                return this;
+            }
+
+            /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
                 return this;
             }
 

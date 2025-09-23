@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,8 +30,12 @@ public class ListSharedResourcesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArns")
+    private java.util.List<String> resourceArns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwner")
@@ -35,7 +44,7 @@ public class ListSharedResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
-    private java.util.List < String > resourceShareIds;
+    private java.util.List<String> resourceShareIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -50,6 +59,7 @@ public class ListSharedResourcesRequest extends Request {
         this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceArns = builder.resourceArns;
         this.resourceIds = builder.resourceIds;
         this.resourceOwner = builder.resourceOwner;
         this.resourceShareIds = builder.resourceShareIds;
@@ -65,7 +75,7 @@ public class ListSharedResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -92,9 +102,16 @@ public class ListSharedResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceArns
+     */
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
+    }
+
+    /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -108,7 +125,7 @@ public class ListSharedResourcesRequest extends Request {
     /**
      * @return resourceShareIds
      */
-    public java.util.List < String > getResourceShareIds() {
+    public java.util.List<String> getResourceShareIds() {
         return this.resourceShareIds;
     }
 
@@ -130,9 +147,10 @@ public class ListSharedResourcesRequest extends Request {
         private String regionId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceArns; 
+        private java.util.List<String> resourceIds; 
         private String resourceOwner; 
-        private java.util.List < String > resourceShareIds; 
+        private java.util.List<String> resourceShareIds; 
         private String resourceType; 
         private String target; 
 
@@ -145,6 +163,7 @@ public class ListSharedResourcesRequest extends Request {
             this.regionId = request.regionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceArns = request.resourceArns;
             this.resourceIds = request.resourceIds;
             this.resourceOwner = request.resourceOwner;
             this.resourceShareIds = request.resourceShareIds;
@@ -187,12 +206,21 @@ public class ListSharedResourcesRequest extends Request {
         }
 
         /**
+         * ResourceArns.
+         */
+        public Builder resourceArns(java.util.List<String> resourceArns) {
+            this.putQueryParameter("ResourceArns", resourceArns);
+            this.resourceArns = resourceArns;
+            return this;
+        }
+
+        /**
          * <p>The ID of a shared resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1upw03qyz8n7us9****</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -221,7 +249,7 @@ public class ListSharedResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>rs-6GRmdD3X****</p>
          */
-        public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
+        public Builder resourceShareIds(java.util.List<String> resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
             this.resourceShareIds = resourceShareIds;
             return this;

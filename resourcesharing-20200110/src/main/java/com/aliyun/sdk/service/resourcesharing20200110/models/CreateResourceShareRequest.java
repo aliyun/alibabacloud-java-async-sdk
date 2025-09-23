@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,11 @@ public class CreateResourceShareRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionNames")
-    private java.util.List < String > permissionNames;
+    private java.util.List<String> permissionNames;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArns")
+    private java.util.List<String> resourceArns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -35,25 +44,26 @@ public class CreateResourceShareRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetProperties")
-    private java.util.List < TargetProperties> targetProperties;
+    private java.util.List<TargetProperties> targetProperties;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
-    private java.util.List < String > targets;
+    private java.util.List<String> targets;
 
     private CreateResourceShareRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.allowExternalTargets = builder.allowExternalTargets;
         this.permissionNames = builder.permissionNames;
+        this.resourceArns = builder.resourceArns;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceShareName = builder.resourceShareName;
         this.resources = builder.resources;
@@ -70,7 +80,7 @@ public class CreateResourceShareRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -92,8 +102,15 @@ public class CreateResourceShareRequest extends Request {
     /**
      * @return permissionNames
      */
-    public java.util.List < String > getPermissionNames() {
+    public java.util.List<String> getPermissionNames() {
         return this.permissionNames;
+    }
+
+    /**
+     * @return resourceArns
+     */
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     /**
@@ -113,41 +130,42 @@ public class CreateResourceShareRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return targetProperties
      */
-    public java.util.List < TargetProperties> getTargetProperties() {
+    public java.util.List<TargetProperties> getTargetProperties() {
         return this.targetProperties;
     }
 
     /**
      * @return targets
      */
-    public java.util.List < String > getTargets() {
+    public java.util.List<String> getTargets() {
         return this.targets;
     }
 
     public static final class Builder extends Request.Builder<CreateResourceShareRequest, Builder> {
         private String regionId; 
         private Boolean allowExternalTargets; 
-        private java.util.List < String > permissionNames; 
+        private java.util.List<String> permissionNames; 
+        private java.util.List<String> resourceArns; 
         private String resourceGroupId; 
         private String resourceShareName; 
-        private java.util.List < Resources> resources; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < TargetProperties> targetProperties; 
-        private java.util.List < String > targets; 
+        private java.util.List<Resources> resources; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<TargetProperties> targetProperties; 
+        private java.util.List<String> targets; 
 
         private Builder() {
             super();
@@ -158,6 +176,7 @@ public class CreateResourceShareRequest extends Request {
             this.regionId = request.regionId;
             this.allowExternalTargets = request.allowExternalTargets;
             this.permissionNames = request.permissionNames;
+            this.resourceArns = request.resourceArns;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceShareName = request.resourceShareName;
             this.resources = request.resources;
@@ -194,14 +213,26 @@ public class CreateResourceShareRequest extends Request {
         /**
          * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
          */
-        public Builder permissionNames(java.util.List < String > permissionNames) {
+        public Builder permissionNames(java.util.List<String> permissionNames) {
             this.putQueryParameter("PermissionNames", permissionNames);
             this.permissionNames = permissionNames;
             return this;
         }
 
         /**
-         * ResourceGroupId.
+         * ResourceArns.
+         */
+        public Builder resourceArns(java.util.List<String> resourceArns) {
+            this.putQueryParameter("ResourceArns", resourceArns);
+            this.resourceArns = resourceArns;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz5nlvlak****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -227,16 +258,16 @@ public class CreateResourceShareRequest extends Request {
         /**
          * <p>The information about the shared resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
             this.resources = resources;
             return this;
         }
 
         /**
-         * Tag.
+         * <p>The tags. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -248,7 +279,7 @@ public class CreateResourceShareRequest extends Request {
          * <p> This parameter is available only when you specify an Alibaba Cloud service as a principal.</p>
          * </blockquote>
          */
-        public Builder targetProperties(java.util.List < TargetProperties> targetProperties) {
+        public Builder targetProperties(java.util.List<TargetProperties> targetProperties) {
             this.putQueryParameter("TargetProperties", targetProperties);
             this.targetProperties = targetProperties;
             return this;
@@ -260,7 +291,7 @@ public class CreateResourceShareRequest extends Request {
          * <strong>example:</strong>
          * <p>172050525300****</p>
          */
-        public Builder targets(java.util.List < String > targets) {
+        public Builder targets(java.util.List<String> targets) {
             this.putQueryParameter("Targets", targets);
             this.targets = targets;
             return this;
@@ -316,6 +347,14 @@ public class CreateResourceShareRequest extends Request {
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The ID of a shared resource.</p>
@@ -399,8 +438,22 @@ public class CreateResourceShareRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p> The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +461,13 @@ public class CreateResourceShareRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p> The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -465,6 +524,14 @@ public class CreateResourceShareRequest extends Request {
         public static final class Builder {
             private String property; 
             private String targetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetProperties model) {
+                this.property = model.property;
+                this.targetId = model.targetId;
+            } 
 
             /**
              * <p>The property parameter of the principal. For example, you can specify a parameter that indicates the time range for resource sharing. Valid values of <code>timeRangeType</code>:</p>

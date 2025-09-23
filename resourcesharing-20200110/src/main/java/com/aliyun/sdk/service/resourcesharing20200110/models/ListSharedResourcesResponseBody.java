@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSharedResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SharedResources")
-    private java.util.List < SharedResources> sharedResources;
+    private java.util.List<SharedResources> sharedResources;
 
     private ListSharedResourcesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
 
     public static ListSharedResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListSharedResourcesResponseBody extends TeaModel {
     /**
      * @return sharedResources
      */
-    public java.util.List < SharedResources> getSharedResources() {
+    public java.util.List<SharedResources> getSharedResources() {
         return this.sharedResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SharedResources> sharedResources; 
+        private java.util.List<SharedResources> sharedResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSharedResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.sharedResources = model.sharedResources;
+        } 
 
         /**
          * <p>The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
@@ -86,7 +104,7 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         /**
          * <p>The information of the shared resources.</p>
          */
-        public Builder sharedResources(java.util.List < SharedResources> sharedResources) {
+        public Builder sharedResources(java.util.List<SharedResources> sharedResources) {
             this.sharedResources = sharedResources;
             return this;
         }
@@ -106,6 +124,9 @@ public class ListSharedResourcesResponseBody extends TeaModel {
     public static class SharedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -127,6 +148,7 @@ public class ListSharedResourcesResponseBody extends TeaModel {
 
         private SharedResources(Builder builder) {
             this.createTime = builder.createTime;
+            this.resourceArn = builder.resourceArn;
             this.resourceId = builder.resourceId;
             this.resourceShareId = builder.resourceShareId;
             this.resourceStatus = builder.resourceStatus;
@@ -148,6 +170,13 @@ public class ListSharedResourcesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         /**
@@ -194,12 +223,27 @@ public class ListSharedResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String resourceArn; 
             private String resourceId; 
             private String resourceShareId; 
             private String resourceStatus; 
             private String resourceStatusMessage; 
             private String resourceType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedResources model) {
+                this.createTime = model.createTime;
+                this.resourceArn = model.resourceArn;
+                this.resourceId = model.resourceId;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceStatusMessage = model.resourceStatusMessage;
+                this.resourceType = model.resourceType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the shared resource was associated with the resource share.</p>
@@ -209,6 +253,14 @@ public class ListSharedResourcesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
                 return this;
             }
 

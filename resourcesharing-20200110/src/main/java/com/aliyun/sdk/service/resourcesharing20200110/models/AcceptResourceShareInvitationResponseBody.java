@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceShareInvitation resourceShareInvitation; 
+
+        private Builder() {
+        } 
+
+        private Builder(AcceptResourceShareInvitationResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceShareInvitation = model.resourceShareInvitation;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -93,6 +110,9 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -110,6 +130,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             this.failureDescription = builder.failureDescription;
             this.failureReason = builder.failureReason;
             this.operationType = builder.operationType;
+            this.resourceArn = builder.resourceArn;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -153,6 +174,13 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -185,10 +213,26 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String failureDescription; 
             private String failureReason; 
             private String operationType; 
+            private String resourceArn; 
             private String resourceId; 
             private String resourceType; 
             private String status; 
             private String statusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcceptInvitationFailedDetails model) {
+                this.associateType = model.associateType;
+                this.failureDescription = model.failureDescription;
+                this.failureReason = model.failureReason;
+                this.operationType = model.operationType;
+                this.resourceArn = model.resourceArn;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+            } 
 
             /**
              * <p>This parameter is deprecated. The OperationType parameter is used instead.</p>
@@ -240,6 +284,14 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
                 return this;
             }
 
@@ -303,7 +355,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
      */
     public static class ResourceShareInvitation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceptInvitationFailedDetails")
-        private java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails;
+        private java.util.List<AcceptInvitationFailedDetails> acceptInvitationFailedDetails;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -355,7 +407,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         /**
          * @return acceptInvitationFailedDetails
          */
-        public java.util.List < AcceptInvitationFailedDetails> getAcceptInvitationFailedDetails() {
+        public java.util.List<AcceptInvitationFailedDetails> getAcceptInvitationFailedDetails() {
             return this.acceptInvitationFailedDetails;
         }
 
@@ -409,7 +461,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails; 
+            private java.util.List<AcceptInvitationFailedDetails> acceptInvitationFailedDetails; 
             private String createTime; 
             private String receiverAccountId; 
             private String resourceShareId; 
@@ -418,10 +470,24 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String senderAccountId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceShareInvitation model) {
+                this.acceptInvitationFailedDetails = model.acceptInvitationFailedDetails;
+                this.createTime = model.createTime;
+                this.receiverAccountId = model.receiverAccountId;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareInvitationId = model.resourceShareInvitationId;
+                this.resourceShareName = model.resourceShareName;
+                this.senderAccountId = model.senderAccountId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The information about the failure.</p>
              */
-            public Builder acceptInvitationFailedDetails(java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails) {
+            public Builder acceptInvitationFailedDetails(java.util.List<AcceptInvitationFailedDetails> acceptInvitationFailedDetails) {
                 this.acceptInvitationFailedDetails = acceptInvitationFailedDetails;
                 return this;
             }

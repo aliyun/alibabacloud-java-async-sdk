@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return permission
      */
@@ -48,6 +57,14 @@ public class GetPermissionResponseBody extends TeaModel {
     public static final class Builder {
         private Permission permission; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPermissionResponseBody model) {
+            this.permission = model.permission;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the permission.</p>
@@ -189,6 +206,20 @@ public class GetPermissionResponseBody extends TeaModel {
             private String permissionVersion; 
             private String resourceType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permission model) {
+                this.createTime = model.createTime;
+                this.defaultPermission = model.defaultPermission;
+                this.defaultVersion = model.defaultVersion;
+                this.permission = model.permission;
+                this.permissionName = model.permissionName;
+                this.permissionVersion = model.permissionVersion;
+                this.resourceType = model.resourceType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The creation time.</p>

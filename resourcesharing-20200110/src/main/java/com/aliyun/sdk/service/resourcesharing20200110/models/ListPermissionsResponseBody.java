@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    private java.util.List<Permissions> permissions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class ListPermissionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -45,7 +54,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -58,8 +67,17 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPermissionsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.permissions = model.permissions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
@@ -75,7 +93,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         /**
          * <p>The information about the permission.</p>
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
@@ -200,6 +218,19 @@ public class ListPermissionsResponseBody extends TeaModel {
             private String permissionVersion; 
             private String resourceType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.createTime = model.createTime;
+                this.defaultPermission = model.defaultPermission;
+                this.defaultVersion = model.defaultVersion;
+                this.permissionName = model.permissionName;
+                this.permissionVersion = model.permissionVersion;
+                this.resourceType = model.resourceType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The creation time.</p>

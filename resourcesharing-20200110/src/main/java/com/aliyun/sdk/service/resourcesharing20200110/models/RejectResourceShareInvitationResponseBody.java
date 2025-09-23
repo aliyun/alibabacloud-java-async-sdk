@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceShareInvitation resourceShareInvitation; 
+
+        private Builder() {
+        } 
+
+        private Builder(RejectResourceShareInvitationResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceShareInvitation = model.resourceShareInvitation;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -184,6 +201,19 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
             private String resourceShareName; 
             private String senderAccountId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceShareInvitation model) {
+                this.createTime = model.createTime;
+                this.receiverAccountId = model.receiverAccountId;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareInvitationId = model.resourceShareInvitationId;
+                this.resourceShareName = model.resourceShareName;
+                this.senderAccountId = model.senderAccountId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the invitation was created. The time is displayed in UTC.</p>

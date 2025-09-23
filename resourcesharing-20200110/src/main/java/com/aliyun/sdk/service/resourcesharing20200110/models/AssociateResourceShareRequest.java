@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,11 @@ public class AssociateResourceShareRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionNames")
-    private java.util.List < String > permissionNames;
+    private java.util.List<String> permissionNames;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArns")
+    private java.util.List<String> resourceArns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareId")
@@ -27,20 +36,21 @@ public class AssociateResourceShareRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetProperties")
-    private java.util.List < TargetProperties> targetProperties;
+    private java.util.List<TargetProperties> targetProperties;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
-    private java.util.List < String > targets;
+    private java.util.List<String> targets;
 
     private AssociateResourceShareRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.permissionNames = builder.permissionNames;
+        this.resourceArns = builder.resourceArns;
         this.resourceShareId = builder.resourceShareId;
         this.resources = builder.resources;
         this.targetProperties = builder.targetProperties;
@@ -55,7 +65,7 @@ public class AssociateResourceShareRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,8 +80,15 @@ public class AssociateResourceShareRequest extends Request {
     /**
      * @return permissionNames
      */
-    public java.util.List < String > getPermissionNames() {
+    public java.util.List<String> getPermissionNames() {
         return this.permissionNames;
+    }
+
+    /**
+     * @return resourceArns
+     */
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     /**
@@ -84,31 +101,32 @@ public class AssociateResourceShareRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     /**
      * @return targetProperties
      */
-    public java.util.List < TargetProperties> getTargetProperties() {
+    public java.util.List<TargetProperties> getTargetProperties() {
         return this.targetProperties;
     }
 
     /**
      * @return targets
      */
-    public java.util.List < String > getTargets() {
+    public java.util.List<String> getTargets() {
         return this.targets;
     }
 
     public static final class Builder extends Request.Builder<AssociateResourceShareRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > permissionNames; 
+        private java.util.List<String> permissionNames; 
+        private java.util.List<String> resourceArns; 
         private String resourceShareId; 
-        private java.util.List < Resources> resources; 
-        private java.util.List < TargetProperties> targetProperties; 
-        private java.util.List < String > targets; 
+        private java.util.List<Resources> resources; 
+        private java.util.List<TargetProperties> targetProperties; 
+        private java.util.List<String> targets; 
 
         private Builder() {
             super();
@@ -118,6 +136,7 @@ public class AssociateResourceShareRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.permissionNames = request.permissionNames;
+            this.resourceArns = request.resourceArns;
             this.resourceShareId = request.resourceShareId;
             this.resources = request.resources;
             this.targetProperties = request.targetProperties;
@@ -136,9 +155,18 @@ public class AssociateResourceShareRequest extends Request {
         /**
          * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
          */
-        public Builder permissionNames(java.util.List < String > permissionNames) {
+        public Builder permissionNames(java.util.List<String> permissionNames) {
             this.putQueryParameter("PermissionNames", permissionNames);
             this.permissionNames = permissionNames;
+            return this;
+        }
+
+        /**
+         * ResourceArns.
+         */
+        public Builder resourceArns(java.util.List<String> resourceArns) {
+            this.putQueryParameter("ResourceArns", resourceArns);
+            this.resourceArns = resourceArns;
             return this;
         }
 
@@ -158,7 +186,7 @@ public class AssociateResourceShareRequest extends Request {
         /**
          * <p>The information about the resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
             this.resources = resources;
             return this;
@@ -170,7 +198,7 @@ public class AssociateResourceShareRequest extends Request {
          * <p> This parameter is available only when you specify an Alibaba Cloud service as a principal.</p>
          * </blockquote>
          */
-        public Builder targetProperties(java.util.List < TargetProperties> targetProperties) {
+        public Builder targetProperties(java.util.List<TargetProperties> targetProperties) {
             this.putQueryParameter("TargetProperties", targetProperties);
             this.targetProperties = targetProperties;
             return this;
@@ -182,7 +210,7 @@ public class AssociateResourceShareRequest extends Request {
          * <strong>example:</strong>
          * <p>172050525300****</p>
          */
-        public Builder targets(java.util.List < String > targets) {
+        public Builder targets(java.util.List<String> targets) {
             this.putQueryParameter("Targets", targets);
             this.targets = targets;
             return this;
@@ -238,6 +266,14 @@ public class AssociateResourceShareRequest extends Request {
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The ID of a shared resource.</p>
@@ -320,6 +356,14 @@ public class AssociateResourceShareRequest extends Request {
         public static final class Builder {
             private String property; 
             private String targetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetProperties model) {
+                this.property = model.property;
+                this.targetId = model.targetId;
+            } 
 
             /**
              * <p>The property parameter of the principal. For example, you can specify a parameter that indicates the time range for resource sharing. Valid values of <code>timeRangeType</code>:</p>

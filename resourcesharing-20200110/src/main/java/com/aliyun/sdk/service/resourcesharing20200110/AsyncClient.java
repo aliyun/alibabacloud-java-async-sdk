@@ -183,7 +183,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created within the account <code>151266687691****</code>:</p>
      * <ul>
      * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
      * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,12 +39,16 @@ public class ListResourceShareAssociationsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArn")
+    private String resourceArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
-    private java.util.List < String > resourceShareIds;
+    private java.util.List<String> resourceShareIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Target")
@@ -52,6 +61,7 @@ public class ListResourceShareAssociationsRequest extends Request {
         this.associationType = builder.associationType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceArn = builder.resourceArn;
         this.resourceId = builder.resourceId;
         this.resourceShareIds = builder.resourceShareIds;
         this.target = builder.target;
@@ -65,7 +75,7 @@ public class ListResourceShareAssociationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,6 +116,13 @@ public class ListResourceShareAssociationsRequest extends Request {
     }
 
     /**
+     * @return resourceArn
+     */
+    public String getResourceArn() {
+        return this.resourceArn;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -115,7 +132,7 @@ public class ListResourceShareAssociationsRequest extends Request {
     /**
      * @return resourceShareIds
      */
-    public java.util.List < String > getResourceShareIds() {
+    public java.util.List<String> getResourceShareIds() {
         return this.resourceShareIds;
     }
 
@@ -132,8 +149,9 @@ public class ListResourceShareAssociationsRequest extends Request {
         private String associationType; 
         private Integer maxResults; 
         private String nextToken; 
+        private String resourceArn; 
         private String resourceId; 
-        private java.util.List < String > resourceShareIds; 
+        private java.util.List<String> resourceShareIds; 
         private String target; 
 
         private Builder() {
@@ -147,6 +165,7 @@ public class ListResourceShareAssociationsRequest extends Request {
             this.associationType = request.associationType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceArn = request.resourceArn;
             this.resourceId = request.resourceId;
             this.resourceShareIds = request.resourceShareIds;
             this.target = request.target;
@@ -226,6 +245,15 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
+         * ResourceArn.
+         */
+        public Builder resourceArn(String resourceArn) {
+            this.putQueryParameter("ResourceArn", resourceArn);
+            this.resourceArn = resourceArn;
+            return this;
+        }
+
+        /**
          * <p>The ID of the resource.</p>
          * <blockquote>
          * <p> This parameter is unavailable if you set the <code>AssociationType</code> parameter to <code>Target</code>.</p>
@@ -247,7 +275,7 @@ public class ListResourceShareAssociationsRequest extends Request {
          * <strong>example:</strong>
          * <p>rs-6GRmdD3X****</p>
          */
-        public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
+        public Builder resourceShareIds(java.util.List<String> resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
             this.resourceShareIds = resourceShareIds;
             return this;

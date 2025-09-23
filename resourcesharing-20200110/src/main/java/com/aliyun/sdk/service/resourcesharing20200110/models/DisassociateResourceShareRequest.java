@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,6 +22,10 @@ public class DisassociateResourceShareRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArns")
+    private java.util.List<String> resourceArns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwner")
     private String resourceOwner;
 
@@ -27,15 +36,16 @@ public class DisassociateResourceShareRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
-    private java.util.List < String > targets;
+    private java.util.List<String> targets;
 
     private DisassociateResourceShareRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.resourceArns = builder.resourceArns;
         this.resourceOwner = builder.resourceOwner;
         this.resourceShareId = builder.resourceShareId;
         this.resources = builder.resources;
@@ -50,7 +60,7 @@ public class DisassociateResourceShareRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +70,13 @@ public class DisassociateResourceShareRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceArns
+     */
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     /**
@@ -79,23 +96,24 @@ public class DisassociateResourceShareRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     /**
      * @return targets
      */
-    public java.util.List < String > getTargets() {
+    public java.util.List<String> getTargets() {
         return this.targets;
     }
 
     public static final class Builder extends Request.Builder<DisassociateResourceShareRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> resourceArns; 
         private String resourceOwner; 
         private String resourceShareId; 
-        private java.util.List < Resources> resources; 
-        private java.util.List < String > targets; 
+        private java.util.List<Resources> resources; 
+        private java.util.List<String> targets; 
 
         private Builder() {
             super();
@@ -104,6 +122,7 @@ public class DisassociateResourceShareRequest extends Request {
         private Builder(DisassociateResourceShareRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.resourceArns = request.resourceArns;
             this.resourceOwner = request.resourceOwner;
             this.resourceShareId = request.resourceShareId;
             this.resources = request.resources;
@@ -116,6 +135,15 @@ public class DisassociateResourceShareRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceArns.
+         */
+        public Builder resourceArns(java.util.List<String> resourceArns) {
+            this.putQueryParameter("ResourceArns", resourceArns);
+            this.resourceArns = resourceArns;
             return this;
         }
 
@@ -151,7 +179,7 @@ public class DisassociateResourceShareRequest extends Request {
         /**
          * <p>The information about the resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
             this.resources = resources;
             return this;
@@ -163,7 +191,7 @@ public class DisassociateResourceShareRequest extends Request {
          * <strong>example:</strong>
          * <p>172050525300****</p>
          */
-        public Builder targets(java.util.List < String > targets) {
+        public Builder targets(java.util.List<String> targets) {
             this.putQueryParameter("Targets", targets);
             this.targets = targets;
             return this;
@@ -219,6 +247,14 @@ public class DisassociateResourceShareRequest extends Request {
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The ID of the shared resource.</p>

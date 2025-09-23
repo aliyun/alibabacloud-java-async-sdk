@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableSharingWithRd
      */
@@ -48,6 +57,14 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
     public static final class Builder {
         private Boolean enableSharingWithRd; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckSharingWithResourceDirectoryStatusResponseBody model) {
+            this.enableSharingWithRd = model.enableSharingWithRd;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether resource sharing within a resource directory is enabled. Valid values:</p>

@@ -1,3 +1,6 @@
+2025-09-23 Version: 1.0.8
+- Generated java-async 2020-01-10 for ResourceSharing.
+
 2024-11-19 Version: 1.0.7
 - Generated java-async 2020-01-10 for ResourceSharing.
 

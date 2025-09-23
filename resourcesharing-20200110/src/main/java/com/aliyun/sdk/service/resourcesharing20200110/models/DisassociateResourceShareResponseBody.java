@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceShareAssociations")
-    private java.util.List < ResourceShareAssociations> resourceShareAssociations;
+    private java.util.List<ResourceShareAssociations> resourceShareAssociations;
 
     private DisassociateResourceShareResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
     /**
      * @return resourceShareAssociations
      */
-    public java.util.List < ResourceShareAssociations> getResourceShareAssociations() {
+    public java.util.List<ResourceShareAssociations> getResourceShareAssociations() {
         return this.resourceShareAssociations;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceShareAssociations> resourceShareAssociations; 
+        private java.util.List<ResourceShareAssociations> resourceShareAssociations; 
+
+        private Builder() {
+        } 
+
+        private Builder(DisassociateResourceShareResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceShareAssociations = model.resourceShareAssociations;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         /**
          * <p>The information about the entities that are associated with the resource share.</p>
          */
-        public Builder resourceShareAssociations(java.util.List < ResourceShareAssociations> resourceShareAssociations) {
+        public Builder resourceShareAssociations(java.util.List<ResourceShareAssociations> resourceShareAssociations) {
             this.resourceShareAssociations = resourceShareAssociations;
             return this;
         }
@@ -99,6 +116,9 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
+
         @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
@@ -118,6 +138,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
+            this.resourceArn = builder.resourceArn;
             this.resourceShareId = builder.resourceShareId;
             this.resourceShareName = builder.resourceShareName;
             this.targetProperty = builder.targetProperty;
@@ -175,6 +196,13 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
+        /**
          * @return resourceShareId
          */
         public String getResourceShareId() {
@@ -209,10 +237,28 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
             private String createTime; 
             private String entityId; 
             private String entityType; 
+            private String resourceArn; 
             private String resourceShareId; 
             private String resourceShareName; 
             private String targetProperty; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceShareAssociations model) {
+                this.associationStatus = model.associationStatus;
+                this.associationStatusMessage = model.associationStatusMessage;
+                this.associationType = model.associationType;
+                this.createTime = model.createTime;
+                this.entityId = model.entityId;
+                this.entityType = model.entityType;
+                this.resourceArn = model.resourceArn;
+                this.resourceShareId = model.resourceShareId;
+                this.resourceShareName = model.resourceShareName;
+                this.targetProperty = model.targetProperty;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The association status. Valid values:</p>
@@ -303,6 +349,14 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
                 return this;
             }
 

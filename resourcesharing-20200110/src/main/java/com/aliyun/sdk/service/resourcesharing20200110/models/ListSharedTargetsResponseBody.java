@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSharedTargetsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SharedTargets")
-    private java.util.List < SharedTargets> sharedTargets;
+    private java.util.List<SharedTargets> sharedTargets;
 
     private ListSharedTargetsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
 
     public static ListSharedTargetsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListSharedTargetsResponseBody extends TeaModel {
     /**
      * @return sharedTargets
      */
-    public java.util.List < SharedTargets> getSharedTargets() {
+    public java.util.List<SharedTargets> getSharedTargets() {
         return this.sharedTargets;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SharedTargets> sharedTargets; 
+        private java.util.List<SharedTargets> sharedTargets; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSharedTargetsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.sharedTargets = model.sharedTargets;
+        } 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
@@ -86,7 +104,7 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         /**
          * <p>The information of the principals.</p>
          */
-        public Builder sharedTargets(java.util.List < SharedTargets> sharedTargets) {
+        public Builder sharedTargets(java.util.List<SharedTargets> sharedTargets) {
             this.sharedTargets = sharedTargets;
             return this;
         }
@@ -188,6 +206,18 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             private String targetId; 
             private String targetProperty; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedTargets model) {
+                this.createTime = model.createTime;
+                this.external = model.external;
+                this.resourceShareId = model.resourceShareId;
+                this.targetId = model.targetId;
+                this.targetProperty = model.targetProperty;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the principal was associated with the resource share.</p>

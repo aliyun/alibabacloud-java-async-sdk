@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class ListResourceSharesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
-    private java.util.List < String > resourceShareIds;
+    private java.util.List<String> resourceShareIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareName")
@@ -51,7 +56,7 @@ public class ListResourceSharesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListResourceSharesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class ListResourceSharesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +130,7 @@ public class ListResourceSharesRequest extends Request {
     /**
      * @return resourceShareIds
      */
-    public java.util.List < String > getResourceShareIds() {
+    public java.util.List<String> getResourceShareIds() {
         return this.resourceShareIds;
     }
 
@@ -146,7 +151,7 @@ public class ListResourceSharesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -157,10 +162,10 @@ public class ListResourceSharesRequest extends Request {
         private String permissionName; 
         private String resourceGroupId; 
         private String resourceOwner; 
-        private java.util.List < String > resourceShareIds; 
+        private java.util.List<String> resourceShareIds; 
         private String resourceShareName; 
         private String resourceShareStatus; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -203,7 +208,7 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -215,7 +220,7 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * <p>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
+         * <p>The information about the permissions. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunRSDefaultPermissionVSwitch</p>
@@ -227,7 +232,10 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz5nlvlak****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -253,12 +261,13 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * <p>The ID of a resource share.</p>
+         * <p>The IDs of the resource shares.</p>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>rs-PqysnzIj****</p>
          */
-        public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
+        public Builder resourceShareIds(java.util.List<String> resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
             this.resourceShareIds = resourceShareIds;
             return this;
@@ -277,15 +286,15 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * <p>The status of the resource share. Valid values:</p>
+         * <p>The status of the resource shares. Valid values:</p>
          * <ul>
-         * <li>Active: The resource share is enabled.</li>
-         * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
-         * <li>Deleting: The resource share is being deleted.</li>
-         * <li>Deleted: The resource share is deleted.</li>
+         * <li>Active</li>
+         * <li>Pending</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
          * </ul>
          * <blockquote>
-         * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+         * <p> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -298,9 +307,9 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -357,8 +366,22 @@ public class ListResourceSharesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p> The tag key can be 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -366,7 +389,13 @@ public class ListResourceSharesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p> The tag value can be 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
