@@ -396,6 +396,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExecuteMigrationOperation  ExecuteMigrationOperationRequest
+     * @return ExecuteMigrationOperationResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteMigrationOperationResponse> executeMigrationOperation(ExecuteMigrationOperationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecuteMigrationOperation").setMethod(HttpMethod.POST).setPathRegex("/migrations/{migrationId}/stages/{stageType}/operations/{operationId}/execute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteMigrationOperationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteMigrationOperationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FinishMigrationStage  FinishMigrationStageRequest
+     * @return FinishMigrationStageResponse
+     */
+    @Override
+    public CompletableFuture<FinishMigrationStageResponse> finishMigrationStage(FinishMigrationStageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FinishMigrationStage").setMethod(HttpMethod.POST).setPathRegex("/migrations/{migrationId}/stages/{stageType}/finish").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FinishMigrationStageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FinishMigrationStageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -878,6 +914,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListMetricMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMigrationOperations  ListMigrationOperationsRequest
+     * @return ListMigrationOperationsResponse
+     */
+    @Override
+    public CompletableFuture<ListMigrationOperationsResponse> listMigrationOperations(ListMigrationOperationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMigrationOperations").setMethod(HttpMethod.GET).setPathRegex("/migrations/{migrationId}/stages/{stageType}/operations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMigrationOperationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMigrationOperationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

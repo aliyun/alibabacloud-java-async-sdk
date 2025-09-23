@@ -160,6 +160,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
 
     /**
+     * @param request the request parameters of ExecuteMigrationOperation  ExecuteMigrationOperationRequest
+     * @return ExecuteMigrationOperationResponse
+     */
+    CompletableFuture<ExecuteMigrationOperationResponse> executeMigrationOperation(ExecuteMigrationOperationRequest request);
+
+    /**
+     * @param request the request parameters of FinishMigrationStage  FinishMigrationStageRequest
+     * @return FinishMigrationStageResponse
+     */
+    CompletableFuture<FinishMigrationStageResponse> finishMigrationStage(FinishMigrationStageRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -334,6 +346,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMetricMetaResponse
      */
     CompletableFuture<ListMetricMetaResponse> listMetricMeta(ListMetricMetaRequest request);
+
+    /**
+     * @param request the request parameters of ListMigrationOperations  ListMigrationOperationsRequest
+     * @return ListMigrationOperationsResponse
+     */
+    CompletableFuture<ListMigrationOperationsResponse> listMigrationOperations(ListMigrationOperationsRequest request);
 
     /**
      * @param request the request parameters of ListRegions  ListRegionsRequest
