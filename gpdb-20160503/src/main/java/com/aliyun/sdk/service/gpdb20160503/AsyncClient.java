@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAINode  AddAINodeRequest
+     * @return AddAINodeResponse
+     */
+    CompletableFuture<AddAINodeResponse> addAINode(AddAINodeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see <a href="https://help.aliyun.com/document_detail/204879.html">Endpoints of an instance and its primary coordinator node</a>.</p>
      * <h2>Limits</h2>
@@ -187,6 +193,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJDBCDataSourceResponse> createJDBCDataSource(CreateJDBCDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateModelService  CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     */
+    CompletableFuture<CreateModelServiceResponse> createModelService(CreateModelServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
      * @return CreateNamespaceResponse
      */
@@ -252,6 +264,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateVectorIndexResponse
      */
     CompletableFuture<CreateVectorIndexResponse> createVectorIndex(CreateVectorIndexRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAINode  DeleteAINodeRequest
+     * @return DeleteAINodeResponse
+     */
+    CompletableFuture<DeleteAINodeResponse> deleteAINode(DeleteAINodeRequest request);
 
     /**
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
@@ -349,6 +367,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteJDBCDataSourceResponse
      */
     CompletableFuture<DeleteJDBCDataSourceResponse> deleteJDBCDataSource(DeleteJDBCDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     */
+    CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
 
     /**
      * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
@@ -775,6 +799,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLogBackupsResponse> describeLogBackups(DescribeLogBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeModelService  DescribeModelServiceRequest
+     * @return DescribeModelServiceResponse
+     */
+    CompletableFuture<DescribeModelServiceResponse> describeModelService(DescribeModelServiceRequest request);
+
+    /**
      * @param request the request parameters of DescribeModifyParameterLog  DescribeModifyParameterLogRequest
      * @return DescribeModifyParameterLogResponse
      */
@@ -1084,6 +1114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InitVectorDatabaseResponse> initVectorDatabase(InitVectorDatabaseRequest request);
 
     /**
+     * @param request the request parameters of ListAINodePools  ListAINodePoolsRequest
+     * @return ListAINodePoolsResponse
+     */
+    CompletableFuture<ListAINodePoolsResponse> listAINodePools(ListAINodePoolsRequest request);
+
+    /**
      * @param request the request parameters of ListBackupJobs  ListBackupJobsRequest
      * @return ListBackupJobsResponse
      */
@@ -1138,6 +1174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceExtensionsResponse> listInstanceExtensions(ListInstanceExtensionsRequest request);
 
     /**
+     * @param request the request parameters of ListModelServices  ListModelServicesRequest
+     * @return ListModelServicesResponse
+     */
+    CompletableFuture<ListModelServicesResponse> listModelServices(ListModelServicesRequest request);
+
+    /**
      * @param request the request parameters of ListNamespaces  ListNamespacesRequest
      * @return ListNamespacesResponse
      */
@@ -1184,6 +1226,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSupabaseProjectsResponse
      */
     CompletableFuture<ListSupabaseProjectsResponse> listSupabaseProjects(ListSupabaseProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListSupportModels  ListSupportModelsRequest
+     * @return ListSupportModelsResponse
+     */
+    CompletableFuture<ListSupportModelsResponse> listSupportModels(ListSupportModelsRequest request);
 
     /**
      * @param request the request parameters of ListTables  ListTablesRequest
