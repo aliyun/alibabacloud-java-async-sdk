@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private Integer code;
+    private String code;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -47,7 +47,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -66,7 +66,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private String message; 
         private String requestId; 
 
@@ -85,7 +85,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>200</p>
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeResourceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private Long code;
+    private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
@@ -51,7 +51,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Long getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -77,7 +77,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long code; 
+        private String code; 
         private String data; 
         private String message; 
         private String requestId; 
@@ -98,7 +98,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>200</p>
          */
-        public Builder code(Long code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

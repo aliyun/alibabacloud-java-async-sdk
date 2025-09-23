@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private Integer code;
+    private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List<Data> data;
@@ -59,7 +59,7 @@ public class ListApplicationResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -99,7 +99,7 @@ public class ListApplicationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private java.util.List<Data> data; 
         private String message; 
         private Integer nextToken; 
@@ -124,7 +124,7 @@ public class ListApplicationResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>200</p>
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
