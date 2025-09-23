@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchTranslateRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("appName")
+    private String appName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ext")
     private Ext ext;
 
@@ -51,6 +55,7 @@ public class BatchTranslateRequest extends Request {
 
     private BatchTranslateRequest(Builder builder) {
         super(builder);
+        this.appName = builder.appName;
         this.ext = builder.ext;
         this.format = builder.format;
         this.scene = builder.scene;
@@ -71,6 +76,13 @@ public class BatchTranslateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
     }
 
     /**
@@ -123,6 +135,7 @@ public class BatchTranslateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchTranslateRequest, Builder> {
+        private String appName; 
         private Ext ext; 
         private String format; 
         private String scene; 
@@ -137,6 +150,7 @@ public class BatchTranslateRequest extends Request {
 
         private Builder(BatchTranslateRequest request) {
             super(request);
+            this.appName = request.appName;
             this.ext = request.ext;
             this.format = request.format;
             this.scene = request.scene;
@@ -145,6 +159,15 @@ public class BatchTranslateRequest extends Request {
             this.text = request.text;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * appName.
+         */
+        public Builder appName(String appName) {
+            this.putBodyParameter("appName", appName);
+            this.appName = appName;
+            return this;
+        }
 
         /**
          * ext.
@@ -227,6 +250,60 @@ public class BatchTranslateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchTranslateRequest} extends {@link TeaModel}
+     *
+     * <p>BatchTranslateRequest</p>
+     */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("skipCsiCheck")
+        private Boolean skipCsiCheck;
+
+        private Config(Builder builder) {
+            this.skipCsiCheck = builder.skipCsiCheck;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return skipCsiCheck
+         */
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
+        public static final class Builder {
+            private Boolean skipCsiCheck; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.skipCsiCheck = model.skipCsiCheck;
+            } 
+
+            /**
+             * skipCsiCheck.
+             */
+            public Builder skipCsiCheck(Boolean skipCsiCheck) {
+                this.skipCsiCheck = skipCsiCheck;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link BatchTranslateRequest} extends {@link TeaModel}
@@ -480,6 +557,9 @@ public class BatchTranslateRequest extends Request {
      * <p>BatchTranslateRequest</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
         @com.aliyun.core.annotation.NameInMap("domainHint")
         private String domainHint;
 
@@ -496,6 +576,7 @@ public class BatchTranslateRequest extends Request {
         private TextTransform textTransform;
 
         private Ext(Builder builder) {
+            this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
             this.sensitives = builder.sensitives;
@@ -509,6 +590,13 @@ public class BatchTranslateRequest extends Request {
 
         public static Ext create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
         }
 
         /**
@@ -547,6 +635,7 @@ public class BatchTranslateRequest extends Request {
         }
 
         public static final class Builder {
+            private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
             private java.util.List<String> sensitives; 
@@ -557,12 +646,21 @@ public class BatchTranslateRequest extends Request {
             } 
 
             private Builder(Ext model) {
+                this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
             } 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
 
             /**
              * domainHint.

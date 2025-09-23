@@ -1,3 +1,6 @@
+2025-09-23 Version: 2.0.0
+- Generated java-async 2025-07-07 for AnyTrans.
+
 2025-09-22 Version: 1.0.7
 - Generated java-async 2025-07-07 for AnyTrans.
 

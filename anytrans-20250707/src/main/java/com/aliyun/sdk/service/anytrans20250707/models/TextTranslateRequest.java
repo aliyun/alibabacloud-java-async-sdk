@@ -232,6 +232,60 @@ public class TextTranslateRequest extends Request {
      *
      * <p>TextTranslateRequest</p>
      */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("skipCsiCheck")
+        private Boolean skipCsiCheck;
+
+        private Config(Builder builder) {
+            this.skipCsiCheck = builder.skipCsiCheck;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return skipCsiCheck
+         */
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
+        public static final class Builder {
+            private Boolean skipCsiCheck; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.skipCsiCheck = model.skipCsiCheck;
+            } 
+
+            /**
+             * skipCsiCheck.
+             */
+            public Builder skipCsiCheck(Boolean skipCsiCheck) {
+                this.skipCsiCheck = skipCsiCheck;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextTranslateRequest} extends {@link TeaModel}
+     *
+     * <p>TextTranslateRequest</p>
+     */
     public static class Examples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("src")
         private String src;
@@ -479,6 +533,9 @@ public class TextTranslateRequest extends Request {
      * <p>TextTranslateRequest</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
         @com.aliyun.core.annotation.NameInMap("domainHint")
         private String domainHint;
 
@@ -495,6 +552,7 @@ public class TextTranslateRequest extends Request {
         private TextTransform textTransform;
 
         private Ext(Builder builder) {
+            this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
             this.sensitives = builder.sensitives;
@@ -508,6 +566,13 @@ public class TextTranslateRequest extends Request {
 
         public static Ext create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
         }
 
         /**
@@ -546,6 +611,7 @@ public class TextTranslateRequest extends Request {
         }
 
         public static final class Builder {
+            private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
             private java.util.List<String> sensitives; 
@@ -556,12 +622,21 @@ public class TextTranslateRequest extends Request {
             } 
 
             private Builder(Ext model) {
+                this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
             } 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
 
             /**
              * domainHint.
