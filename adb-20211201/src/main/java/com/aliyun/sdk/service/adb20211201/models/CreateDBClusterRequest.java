@@ -51,6 +51,10 @@ public class CreateDBClusterRequest extends Request {
     private Boolean enableDefaultResourcePool;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSSL")
+    private Boolean enableSSL;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KmsId")
     private String kmsId;
 
@@ -145,6 +149,7 @@ public class CreateDBClusterRequest extends Request {
         this.DBClusterVersion = builder.DBClusterVersion;
         this.diskEncryption = builder.diskEncryption;
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
+        this.enableSSL = builder.enableSSL;
         this.kmsId = builder.kmsId;
         this.payType = builder.payType;
         this.period = builder.period;
@@ -234,6 +239,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public Boolean getEnableDefaultResourcePool() {
         return this.enableDefaultResourcePool;
+    }
+
+    /**
+     * @return enableSSL
+     */
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
     }
 
     /**
@@ -385,6 +397,7 @@ public class CreateDBClusterRequest extends Request {
         private String DBClusterVersion; 
         private Boolean diskEncryption; 
         private Boolean enableDefaultResourcePool; 
+        private Boolean enableSSL; 
         private String kmsId; 
         private String payType; 
         private String period; 
@@ -420,6 +433,7 @@ public class CreateDBClusterRequest extends Request {
             this.DBClusterVersion = request.DBClusterVersion;
             this.diskEncryption = request.diskEncryption;
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
+            this.enableSSL = request.enableSSL;
             this.kmsId = request.kmsId;
             this.payType = request.payType;
             this.period = request.period;
@@ -553,6 +567,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
             this.enableDefaultResourcePool = enableDefaultResourcePool;
+            return this;
+        }
+
+        /**
+         * EnableSSL.
+         */
+        public Builder enableSSL(Boolean enableSSL) {
+            this.putQueryParameter("EnableSSL", enableSSL);
+            this.enableSSL = enableSSL;
             return this;
         }
 

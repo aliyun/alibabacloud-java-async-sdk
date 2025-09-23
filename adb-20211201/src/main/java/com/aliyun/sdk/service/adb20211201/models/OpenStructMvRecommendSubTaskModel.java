@@ -20,8 +20,17 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
+    @com.aliyun.core.annotation.NameInMap("MinRewriteQueryCount")
+    private Integer minRewriteQueryCount;
+
+    @com.aliyun.core.annotation.NameInMap("MinRewriteQueryPattern")
+    private Integer minRewriteQueryPattern;
+
     @com.aliyun.core.annotation.NameInMap("ScanQueriesCount")
     private Long scanQueriesCount;
+
+    @com.aliyun.core.annotation.NameInMap("SlowQueryThreshold")
+    private Integer slowQueryThreshold;
 
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
@@ -37,7 +46,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
 
     private OpenStructMvRecommendSubTaskModel(Builder builder) {
         this.endTime = builder.endTime;
+        this.minRewriteQueryCount = builder.minRewriteQueryCount;
+        this.minRewriteQueryPattern = builder.minRewriteQueryPattern;
         this.scanQueriesCount = builder.scanQueriesCount;
+        this.slowQueryThreshold = builder.slowQueryThreshold;
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.subQueriesCount = builder.subQueriesCount;
@@ -64,10 +76,31 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
     }
 
     /**
+     * @return minRewriteQueryCount
+     */
+    public Integer getMinRewriteQueryCount() {
+        return this.minRewriteQueryCount;
+    }
+
+    /**
+     * @return minRewriteQueryPattern
+     */
+    public Integer getMinRewriteQueryPattern() {
+        return this.minRewriteQueryPattern;
+    }
+
+    /**
      * @return scanQueriesCount
      */
     public Long getScanQueriesCount() {
         return this.scanQueriesCount;
+    }
+
+    /**
+     * @return slowQueryThreshold
+     */
+    public Integer getSlowQueryThreshold() {
+        return this.slowQueryThreshold;
     }
 
     /**
@@ -100,7 +133,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
 
     public static final class Builder {
         private String endTime; 
+        private Integer minRewriteQueryCount; 
+        private Integer minRewriteQueryPattern; 
         private Long scanQueriesCount; 
+        private Integer slowQueryThreshold; 
         private String startTime; 
         private String status; 
         private Long subQueriesCount; 
@@ -111,7 +147,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
 
         private Builder(OpenStructMvRecommendSubTaskModel model) {
             this.endTime = model.endTime;
+            this.minRewriteQueryCount = model.minRewriteQueryCount;
+            this.minRewriteQueryPattern = model.minRewriteQueryPattern;
             this.scanQueriesCount = model.scanQueriesCount;
+            this.slowQueryThreshold = model.slowQueryThreshold;
             this.startTime = model.startTime;
             this.status = model.status;
             this.subQueriesCount = model.subQueriesCount;
@@ -127,10 +166,34 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
+         * MinRewriteQueryCount.
+         */
+        public Builder minRewriteQueryCount(Integer minRewriteQueryCount) {
+            this.minRewriteQueryCount = minRewriteQueryCount;
+            return this;
+        }
+
+        /**
+         * MinRewriteQueryPattern.
+         */
+        public Builder minRewriteQueryPattern(Integer minRewriteQueryPattern) {
+            this.minRewriteQueryPattern = minRewriteQueryPattern;
+            return this;
+        }
+
+        /**
          * ScanQueriesCount.
          */
         public Builder scanQueriesCount(Long scanQueriesCount) {
             this.scanQueriesCount = scanQueriesCount;
+            return this;
+        }
+
+        /**
+         * SlowQueryThreshold.
+         */
+        public Builder slowQueryThreshold(Integer slowQueryThreshold) {
+            this.slowQueryThreshold = slowQueryThreshold;
             return this;
         }
 

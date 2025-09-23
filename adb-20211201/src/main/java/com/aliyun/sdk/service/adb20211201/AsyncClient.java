@@ -101,6 +101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request);
 
     /**
+     * @param request the request parameters of ConfigureResultExport  ConfigureResultExportRequest
+     * @return ConfigureResultExportResponse
+     */
+    CompletableFuture<ConfigureResultExportResponse> configureResultExport(ConfigureResultExportRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -153,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateApsSlsADBJobResponse
      */
     CompletableFuture<CreateApsSlsADBJobResponse> createApsSlsADBJob(CreateApsSlsADBJobRequest request);
+
+    /**
+     * @param request the request parameters of CreateBackup  CreateBackupRequest
+     * @return CreateBackupResponse
+     */
+    CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
      * <b>description</b> :
@@ -924,6 +936,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeResourceGroupSpecResponse
      */
     CompletableFuture<DescribeResourceGroupSpecResponse> describeResourceGroupSpec(DescribeResourceGroupSpecRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResultExportConfig  DescribeResultExportConfigRequest
+     * @return DescribeResultExportConfigResponse
+     */
+    CompletableFuture<DescribeResultExportConfigResponse> describeResultExportConfig(DescribeResultExportConfigRequest request);
 
     /**
      * <b>description</b> :

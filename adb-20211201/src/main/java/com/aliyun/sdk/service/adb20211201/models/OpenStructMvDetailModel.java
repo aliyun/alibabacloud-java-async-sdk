@@ -23,6 +23,12 @@ public class OpenStructMvDetailModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BaseTableNames")
     private java.util.List<java.util.List<String>> baseTableNames;
 
+    @com.aliyun.core.annotation.NameInMap("EnableDelayAlert")
+    private Integer enableDelayAlert;
+
+    @com.aliyun.core.annotation.NameInMap("EnableFailureAlert")
+    private Integer enableFailureAlert;
+
     @com.aliyun.core.annotation.NameInMap("ExplicitHit")
     private Long explicitHit;
 
@@ -34,6 +40,9 @@ public class OpenStructMvDetailModel extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("IsInactive")
     private Boolean isInactive;
+
+    @com.aliyun.core.annotation.NameInMap("LatencyTolerance")
+    private Integer latencyTolerance;
 
     @com.aliyun.core.annotation.NameInMap("LocalSize")
     private Long localSize;
@@ -62,10 +71,13 @@ public class OpenStructMvDetailModel extends TeaModel {
     private OpenStructMvDetailModel(Builder builder) {
         this.baseTableInfos = builder.baseTableInfos;
         this.baseTableNames = builder.baseTableNames;
+        this.enableDelayAlert = builder.enableDelayAlert;
+        this.enableFailureAlert = builder.enableFailureAlert;
         this.explicitHit = builder.explicitHit;
         this.firstRefreshTime = builder.firstRefreshTime;
         this.implicitHit = builder.implicitHit;
         this.isInactive = builder.isInactive;
+        this.latencyTolerance = builder.latencyTolerance;
         this.localSize = builder.localSize;
         this.queryRewriteEnabled = builder.queryRewriteEnabled;
         this.refreshInterval = builder.refreshInterval;
@@ -103,6 +115,20 @@ public class OpenStructMvDetailModel extends TeaModel {
     }
 
     /**
+     * @return enableDelayAlert
+     */
+    public Integer getEnableDelayAlert() {
+        return this.enableDelayAlert;
+    }
+
+    /**
+     * @return enableFailureAlert
+     */
+    public Integer getEnableFailureAlert() {
+        return this.enableFailureAlert;
+    }
+
+    /**
      * @return explicitHit
      */
     public Long getExplicitHit() {
@@ -128,6 +154,13 @@ public class OpenStructMvDetailModel extends TeaModel {
      */
     public Boolean getIsInactive() {
         return this.isInactive;
+    }
+
+    /**
+     * @return latencyTolerance
+     */
+    public Integer getLatencyTolerance() {
+        return this.latencyTolerance;
     }
 
     /**
@@ -189,10 +222,13 @@ public class OpenStructMvDetailModel extends TeaModel {
     public static final class Builder {
         private java.util.List<BaseTableInfos> baseTableInfos; 
         private java.util.List<java.util.List<String>> baseTableNames; 
+        private Integer enableDelayAlert; 
+        private Integer enableFailureAlert; 
         private Long explicitHit; 
         private String firstRefreshTime; 
         private Long implicitHit; 
         private Boolean isInactive; 
+        private Integer latencyTolerance; 
         private Long localSize; 
         private Boolean queryRewriteEnabled; 
         private String refreshInterval; 
@@ -208,10 +244,13 @@ public class OpenStructMvDetailModel extends TeaModel {
         private Builder(OpenStructMvDetailModel model) {
             this.baseTableInfos = model.baseTableInfos;
             this.baseTableNames = model.baseTableNames;
+            this.enableDelayAlert = model.enableDelayAlert;
+            this.enableFailureAlert = model.enableFailureAlert;
             this.explicitHit = model.explicitHit;
             this.firstRefreshTime = model.firstRefreshTime;
             this.implicitHit = model.implicitHit;
             this.isInactive = model.isInactive;
+            this.latencyTolerance = model.latencyTolerance;
             this.localSize = model.localSize;
             this.queryRewriteEnabled = model.queryRewriteEnabled;
             this.refreshInterval = model.refreshInterval;
@@ -235,6 +274,22 @@ public class OpenStructMvDetailModel extends TeaModel {
          */
         public Builder baseTableNames(java.util.List<java.util.List<String>> baseTableNames) {
             this.baseTableNames = baseTableNames;
+            return this;
+        }
+
+        /**
+         * EnableDelayAlert.
+         */
+        public Builder enableDelayAlert(Integer enableDelayAlert) {
+            this.enableDelayAlert = enableDelayAlert;
+            return this;
+        }
+
+        /**
+         * EnableFailureAlert.
+         */
+        public Builder enableFailureAlert(Integer enableFailureAlert) {
+            this.enableFailureAlert = enableFailureAlert;
             return this;
         }
 
@@ -267,6 +322,14 @@ public class OpenStructMvDetailModel extends TeaModel {
          */
         public Builder isInactive(Boolean isInactive) {
             this.isInactive = isInactive;
+            return this;
+        }
+
+        /**
+         * LatencyTolerance.
+         */
+        public Builder latencyTolerance(Integer latencyTolerance) {
+            this.latencyTolerance = latencyTolerance;
             return this;
         }
 
