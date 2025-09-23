@@ -93,7 +93,10 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -120,7 +126,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,8 +152,14 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterruptPage")
         private String interruptPage;
 
+        @com.aliyun.core.annotation.NameInMap("InterruptPageEn")
+        private String interruptPageEn;
+
         @com.aliyun.core.annotation.NameInMap("LogInfo")
         private java.util.List<String> logInfo;
+
+        @com.aliyun.core.annotation.NameInMap("LogInfoEn")
+        private java.util.List<String> logInfoEn;
 
         @com.aliyun.core.annotation.NameInMap("LogStatisticsInfo")
         private String logStatisticsInfo;
@@ -167,7 +179,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.extInfo = builder.extInfo;
             this.interruptPage = builder.interruptPage;
+            this.interruptPageEn = builder.interruptPageEn;
             this.logInfo = builder.logInfo;
+            this.logInfoEn = builder.logInfoEn;
             this.logStatisticsInfo = builder.logStatisticsInfo;
             this.passed = builder.passed;
             this.subCode = builder.subCode;
@@ -198,10 +212,24 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return interruptPageEn
+         */
+        public String getInterruptPageEn() {
+            return this.interruptPageEn;
+        }
+
+        /**
          * @return logInfo
          */
         public java.util.List<String> getLogInfo() {
             return this.logInfo;
+        }
+
+        /**
+         * @return logInfoEn
+         */
+        public java.util.List<String> getLogInfoEn() {
+            return this.logInfoEn;
         }
 
         /**
@@ -242,7 +270,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         public static final class Builder {
             private String extInfo; 
             private String interruptPage; 
+            private String interruptPageEn; 
             private java.util.List<String> logInfo; 
+            private java.util.List<String> logInfoEn; 
             private String logStatisticsInfo; 
             private String passed; 
             private String subCode; 
@@ -255,7 +285,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             private Builder(Result model) {
                 this.extInfo = model.extInfo;
                 this.interruptPage = model.interruptPage;
+                this.interruptPageEn = model.interruptPageEn;
                 this.logInfo = model.logInfo;
+                this.logInfoEn = model.logInfoEn;
                 this.logStatisticsInfo = model.logStatisticsInfo;
                 this.passed = model.passed;
                 this.subCode = model.subCode;
@@ -264,7 +296,10 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtInfo.
+             * <p>Extended information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extInfo(String extInfo) {
                 this.extInfo = extInfo;
@@ -272,7 +307,25 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * InterruptPage.
+             * <p>Records the last page where the authentication was interrupted.</p>
+             * <ul>
+             * <li>Page not started</li>
+             * <li>OCR guide page</li>
+             * <li>OCR camera authorization</li>
+             * <li>OCR document capture page</li>
+             * <li>OCR recognition loading</li>
+             * <li>OCR recognition result editing page</li>
+             * <li>OCR recognition result editing loading</li>
+             * <li>Liveness detection guide page</li>
+             * <li>Liveness detection camera authorization page</li>
+             * <li>Liveness detection page</li>
+             * <li>Liveness detection fallback page</li>
+             * <li>Liveness detection retry</li>
+             * <li>Liveness detection loading</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OCR拍摄证件页面</p>
              */
             public Builder interruptPage(String interruptPage) {
                 this.interruptPage = interruptPage;
@@ -280,7 +333,35 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInfo.
+             * <p>The page where the authentication process stops. Possible English values:</p>
+             * <p>The following are the values in an unordered list:</p>
+             * <ul>
+             * <li><p>LOADING</p>
+             * </li>
+             * <li><p>GUIDE</p>
+             * </li>
+             * <li><p>FACE</p>
+             * </li>
+             * <li><p>OCR_SCAN</p>
+             * </li>
+             * <li><p>OCR_RESULT</p>
+             * </li>
+             * <li><p>NFC_INPUT</p>
+             * </li>
+             * <li><p>NFC_READ</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LOADING</p>
+             */
+            public Builder interruptPageEn(String interruptPageEn) {
+                this.interruptPageEn = interruptPageEn;
+                return this;
+            }
+
+            /**
+             * <p>SDK operation log details</p>
              */
             public Builder logInfo(java.util.List<String> logInfo) {
                 this.logInfo = logInfo;
@@ -288,7 +369,35 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogStatisticsInfo.
+             * <p>SDK Operation Log Details (English Version)</p>
+             */
+            public Builder logInfoEn(java.util.List<String> logInfoEn) {
+                this.logInfoEn = logInfoEn;
+                return this;
+            }
+
+            /**
+             * <p>SDK operation log statistics details</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *           &quot;faceOverTimes&quot;: 0,
+             *           &quot;hasFaceOverTimes&quot;: false,
+             *           &quot;hasFacePermissionRefuse&quot;: false,
+             *           &quot;hasOcrEdit&quot;: true,
+             *           &quot;hasOcrEditOverTimes&quot;: false,
+             *           &quot;hasOcrOverTimes&quot;: true,
+             *           &quot;hasOcrPermissionRefuse&quot;: false,
+             *           &quot;ocrEditOverTimes&quot;: 0,
+             *           &quot;ocrEditTimes&quot;: 1,
+             *           &quot;ocrOverTimes&quot;: 1,
+             *           &quot;pageStayTimeInfo&quot;: {
+             *             &quot;LOADING&quot;: &quot;1615&quot;,
+             *             &quot;OCR_SCAN&quot;: &quot;37446&quot;,
+             *             &quot;OCR_RESULT&quot;: &quot;1338&quot;,
+             *             &quot;FACE&quot;: &quot;8707&quot;
+             *           }
+             *         }</p>
              */
             public Builder logStatisticsInfo(String logStatisticsInfo) {
                 this.logStatisticsInfo = logStatisticsInfo;
@@ -296,7 +405,14 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the authentication passed.</p>
+             * <ul>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -304,7 +420,10 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Sub-result code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -312,7 +431,28 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyErrorCode.
+             * <p>Authentication interruption error codes</p>
+             * <ul>
+             * <li>1000: The user completed the face scanning process, and the suggested authentication result is pass</li>
+             * <li>1001: The user completed the face scanning process, and the suggested authentication result is fail</li>
+             * <li>1002: System error</li>
+             * <li>1003: SDK initialization failed, please check if the client time is correct</li>
+             * <li>1004: Camera permission error</li>
+             * <li>1005: Network error</li>
+             * <li>1006: User exited</li>
+             * <li>1007: Invalid TransactionId</li>
+             * <li>1009: Client timestamp error</li>
+             * <li>1011: Incorrect document type submitted</li>
+             * <li>1012: Missing or format validation failure of key information on the recognized document</li>
+             * <li>1013: Poor image quality</li>
+             * <li>1014: Exceeded the upper limit of errors</li>
+             * <li>1015: Android system version too low</li>
+             * <li>1016: Camera permission not obtained</li>
+             * <li>9999: Suspected authentication process interruption</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder verifyErrorCode(String verifyErrorCode) {
                 this.verifyErrorCode = verifyErrorCode;
@@ -320,7 +460,15 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyStatus.
+             * <p>Authentication status, values:</p>
+             * <ul>
+             * <li>0: finished (authentication completed)</li>
+             * <li>1: unfinished (authentication interrupted)</li>
+             * <li>2: notstart (authentication not started)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder verifyStatus(String verifyStatus) {
                 this.verifyStatus = verifyStatus;

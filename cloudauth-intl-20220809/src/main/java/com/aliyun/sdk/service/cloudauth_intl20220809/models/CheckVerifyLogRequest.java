@@ -73,7 +73,10 @@ public class CheckVerifyLogRequest extends Request {
         } 
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. Supports a combination of letters and numbers, with a maximum length of 32 characters. Ensure uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a***353888</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putBodyParameter("MerchantBizId", merchantBizId);
@@ -82,7 +85,10 @@ public class CheckVerifyLogRequest extends Request {
         }
 
         /**
-         * TransactionId.
+         * <p>The unique identifier for the entire authentication process. This value needs to be obtained by calling Initialize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hksb7ba1b*********015d694361bee4</p>
          */
         public Builder transactionId(String transactionId) {
             this.putBodyParameter("TransactionId", transactionId);

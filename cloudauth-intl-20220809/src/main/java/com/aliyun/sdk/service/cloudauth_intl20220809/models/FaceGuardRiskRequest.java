@@ -101,7 +101,10 @@ public class FaceGuardRiskRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The unique ID of the current business authentication. It is used with FACE_GUARD for verification during queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * DeviceToken.
+         * <p>The deviceToken obtained from the client SDK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tk9SSUQuMS*****************ZDNmNWY5NzQxOW1o</p>
          */
         public Builder deviceToken(String deviceToken) {
             this.putQueryParameter("DeviceToken", deviceToken);
@@ -119,7 +125,10 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A custom unique business identifier. It is used to locate and troubleshoot issues. The identifier can be a combination of letters and digits up to 32 characters long. Ensure that it is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c83ce0101d34eff886b1f7d1cdef67f</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -128,7 +137,10 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code. Set this to the static field <strong>FACE_GUARD</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FACE_GUARD</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

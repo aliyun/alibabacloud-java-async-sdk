@@ -154,7 +154,13 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * FaceBase64.
+         * <p>Input the Base64 encoded format of the face image.</p>
+         * <blockquote>
+         * <p>Choose one of FaceUrl or FaceBase64 to input.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder faceBase64(String faceBase64) {
             this.putBodyParameter("FaceBase64", faceBase64);
@@ -163,7 +169,10 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * FaceInputType.
+         * <p>Input <strong>IMAGE</strong>, indicating a face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder faceInputType(String faceInputType) {
             this.putQueryParameter("FaceInputType", faceInputType);
@@ -172,7 +181,13 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * FaceUrl.
+         * <p>Input the URL address of the face image.</p>
+         * <blockquote>
+         * <p>Choose one of FaceUrl or FaceBase64 to input.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
          */
         public Builder faceUrl(String faceUrl) {
             this.putQueryParameter("FaceUrl", faceUrl);
@@ -181,6 +196,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
+         * <p>A unique identifier for the merchant&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters are composed of a custom abbreviation defined by the merchant, the middle part can include a period of time, and the latter part can use a random or incremental sequence.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +209,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
+         * <p>The product solution to be integrated. Value: <strong>FACE_DEEPFAKE</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +222,10 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, including letters, numbers, or underscores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);

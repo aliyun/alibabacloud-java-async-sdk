@@ -115,7 +115,10 @@ public class CheckResultRequest extends Request {
         } 
 
         /**
-         * ExtraImageControlList.
+         * <p>Return additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder extraImageControlList(String extraImageControlList) {
             this.putQueryParameter("ExtraImageControlList", extraImageControlList);
@@ -124,7 +127,14 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * IsReturnImage.
+         * <p>Whether to return images.</p>
+         * <ul>
+         * <li>Y: Return</li>
+         * <li>N: Do not return</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder isReturnImage(String isReturnImage) {
             this.putQueryParameter("IsReturnImage", isReturnImage);
@@ -133,7 +143,10 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>djs20d***9-dsskc</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -142,7 +155,10 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * ReturnFiveCategorySpoofResult.
+         * <p>Whether to return anti-fraud detection results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder returnFiveCategorySpoofResult(String returnFiveCategorySpoofResult) {
             this.putQueryParameter("ReturnFiveCategorySpoofResult", returnFiveCategorySpoofResult);
@@ -151,7 +167,10 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * TransactionId.
+         * <p>Authentication ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ab0b***cbde97</p>
          */
         public Builder transactionId(String transactionId) {
             this.putQueryParameter("TransactionId", transactionId);

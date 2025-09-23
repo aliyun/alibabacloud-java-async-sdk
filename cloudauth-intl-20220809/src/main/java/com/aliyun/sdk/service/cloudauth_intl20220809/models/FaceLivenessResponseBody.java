@@ -93,7 +93,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#3d0ed52f967g6">The response code.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A detailed description of the response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42EA58CA-5DF4-55D5-82C4-5E7A40DA62BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result object</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -222,7 +231,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             } 
 
             /**
-             * FaceAge.
+             * <p>The predicted age of the person in the image. The prediction may fail, resulting in an empty value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder faceAge(Integer faceAge) {
                 this.faceAge = faceAge;
@@ -230,7 +242,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * FaceAttack.
+             * <p>Indicates whether a presentation attack was detected on the captured face. Y means an attack was detected. N means no attack was detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder faceAttack(String faceAttack) {
                 this.faceAttack = faceAttack;
@@ -238,7 +253,16 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * FaceGender.
+             * <p>The predicted gender of the person in the image. The prediction may fail, resulting in an empty value.</p>
+             * <ul>
+             * <li><p><strong>M</strong>: Male</p>
+             * </li>
+             * <li><p><strong>F</strong>: Female</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>M</p>
              */
             public Builder faceGender(String faceGender) {
                 this.faceGender = faceGender;
@@ -246,7 +270,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * FaceQualityScore.
+             * <p>Optional. The quality score of the live face. The value ranges from 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87.19</p>
              */
             public Builder faceQualityScore(Double faceQualityScore) {
                 this.faceQualityScore = faceQualityScore;
@@ -254,7 +281,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * OcclusionResult.
+             * <p>Optional. Indicates whether the face is occluded. Y means the face is occluded. N means the face is not occluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder occlusionResult(String occlusionResult) {
                 this.occlusionResult = occlusionResult;
@@ -347,7 +377,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtFaceInfo.
+             * <p>The results of the passive liveness detection. The value is in the JSON format. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#5ff42f7274agz">ExtFaceInfo</a>.</p>
              */
             public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -355,7 +385,16 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>The authentication result. Valid values:</p>
+             * <ul>
+             * <li><p>Y: The authentication is passed.</p>
+             * </li>
+             * <li><p>N: The authentication is not passed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -363,7 +402,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>The code that corresponds to the verification result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#5ff3e16174tl2">ResultObject.SubCode error codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -371,7 +413,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

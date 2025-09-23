@@ -115,7 +115,14 @@ public class Mobile3MetaVerifyIntlRequest extends Request {
         } 
 
         /**
-         * IdentifyNum.
+         * <p>ID number</p>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plaintext</li>
+         * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>429001********8211</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
@@ -124,7 +131,14 @@ public class Mobile3MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>Mobile phone number.</p>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plaintext</li>
+         * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>186****1234</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -133,7 +147,14 @@ public class Mobile3MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type:</p>
+         * <ul>
+         * <li>normal: unencrypted</li>
+         * <li>md5: md5 encrypted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -142,7 +163,10 @@ public class Mobile3MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product solution to be integrated, with a fixed value: MOBILE_3META</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MOBILE_3META</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -151,7 +175,14 @@ public class Mobile3MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>Name</p>
+         * <ul>
+         * <li>When paramType is set to normal, enter the plaintext</li>
+         * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FaceCompareRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacePictureQualityCheck")
+    private String facePictureQualityCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
@@ -39,6 +43,7 @@ public class FaceCompareRequest extends Request {
 
     private FaceCompareRequest(Builder builder) {
         super(builder);
+        this.facePictureQualityCheck = builder.facePictureQualityCheck;
         this.merchantBizId = builder.merchantBizId;
         this.sourceFacePicture = builder.sourceFacePicture;
         this.sourceFacePictureUrl = builder.sourceFacePictureUrl;
@@ -57,6 +62,13 @@ public class FaceCompareRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return facePictureQualityCheck
+     */
+    public String getFacePictureQualityCheck() {
+        return this.facePictureQualityCheck;
     }
 
     /**
@@ -95,6 +107,7 @@ public class FaceCompareRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FaceCompareRequest, Builder> {
+        private String facePictureQualityCheck; 
         private String merchantBizId; 
         private String sourceFacePicture; 
         private String sourceFacePictureUrl; 
@@ -107,6 +120,7 @@ public class FaceCompareRequest extends Request {
 
         private Builder(FaceCompareRequest request) {
             super(request);
+            this.facePictureQualityCheck = request.facePictureQualityCheck;
             this.merchantBizId = request.merchantBizId;
             this.sourceFacePicture = request.sourceFacePicture;
             this.sourceFacePictureUrl = request.sourceFacePictureUrl;
@@ -115,7 +129,22 @@ public class FaceCompareRequest extends Request {
         } 
 
         /**
-         * MerchantBizId.
+         * <p>是否开启传入人脸图片质量检测</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
+        public Builder facePictureQualityCheck(String facePictureQualityCheck) {
+            this.putQueryParameter("FacePictureQualityCheck", facePictureQualityCheck);
+            this.facePictureQualityCheck = facePictureQualityCheck;
+            return this;
+        }
+
+        /**
+         * <p>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -133,7 +162,13 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * SourceFacePictureUrl.
+         * <p>The URL of the portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+         * <blockquote>
+         * <p>You must specify either SourceFacePicture or SourceFacePictureUrl.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***face1.jpeg</p>
          */
         public Builder sourceFacePictureUrl(String sourceFacePictureUrl) {
             this.putQueryParameter("SourceFacePictureUrl", sourceFacePictureUrl);
@@ -151,7 +186,13 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * TargetFacePictureUrl.
+         * <p>The URL of the base portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+         * <blockquote>
+         * <p>You must specify either TargetFacePicture or TargetFacePictureUrl.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***face2.jpeg</p>
          */
         public Builder targetFacePictureUrl(String targetFacePictureUrl) {
             this.putQueryParameter("TargetFacePictureUrl", targetFacePictureUrl);

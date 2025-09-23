@@ -93,7 +93,10 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EB35****87EBA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -183,7 +192,15 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>Verification result code.</p>
+             * <ul>
+             * <li>1: Consistent (charged)</li>
+             * <li>2: Inconsistent (charged)</li>
+             * <li>3: No record found (not charged)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -191,7 +208,35 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Verification details:</p>
+             * <ul>
+             * <li><strong>101</strong>: Verification passed.</li>
+             * <li><strong>201</strong>: Authentication information does not match, cardholder information is incorrect.</li>
+             * <li><strong>202</strong>: Authentication information does not match, bank card has not been activated for authenticated payments.</li>
+             * <li><strong>203</strong>: Authentication information does not match, bank card has expired.</li>
+             * <li><strong>204</strong>: Authentication information does not match, bank card is a restricted card.</li>
+             * <li><strong>205</strong>: Authentication information does not match, this card has been confiscated.</li>
+             * <li><strong>206</strong>: Authentication information does not match, bank card is invalid.</li>
+             * <li><strong>207</strong>: Authentication information does not match, this card has no corresponding issuing bank.</li>
+             * <li><strong>208</strong>: Authentication information does not match, this card is uninitialized or dormant.</li>
+             * <li><strong>209</strong>: Authentication information does not match, this card is a cheating card or swallowed card.</li>
+             * <li><strong>210</strong>: Authentication information does not match, this card has been reported lost.</li>
+             * <li><strong>211</strong>: Authentication information does not match, password error limit exceeded.</li>
+             * <li><strong>212</strong>: Authentication information does not match, issuing bank does not support this transaction.</li>
+             * <li><strong>213</strong>: Authentication information does not match, card status is abnormal or card is invalid.</li>
+             * <li><strong>214</strong>: Authentication information does not match, no phone number reserved.</li>
+             * <li><strong>215</strong>: Authentication information does not match, entered password, expiration date, or CVN2 is incorrect.</li>
+             * <li><strong>216</strong>: Authentication information does not match, other card anomalies.</li>
+             * <li><strong>301</strong>: Unable to verify, bank card does not support this service.</li>
+             * <li><strong>302</strong>: Unable to verify, verification failed or bank refused verification, please contact the issuing bank.</li>
+             * <li><strong>303</strong>: Unable to verify, bank card does not currently support phone number verification.</li>
+             * <li><strong>304</strong>: Unable to verify, bank card number is incorrect.</li>
+             * <li><strong>305</strong>: Unable to verify, other reasons.</li>
+             * <li><strong>306</strong>: Unable to verify, verification attempt limit exceeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

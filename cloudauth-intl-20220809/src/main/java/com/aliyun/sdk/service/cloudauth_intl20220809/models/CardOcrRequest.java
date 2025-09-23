@@ -171,7 +171,10 @@ public class CardOcrRequest extends Request {
         } 
 
         /**
-         * DocType.
+         * <p>Document type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000006</p>
          */
         public Builder docType(String docType) {
             this.putQueryParameter("DocType", docType);
@@ -180,7 +183,14 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * IdFaceQuality.
+         * <p>Whether to perform face quality detection on the document</p>
+         * <ul>
+         * <li>T: Indicates that detection is needed</li>
+         * <li>F: Indicates that detection is not needed (default F)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         public Builder idFaceQuality(String idFaceQuality) {
             this.putQueryParameter("IdFaceQuality", idFaceQuality);
@@ -189,7 +199,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * IdOcrPictureBase64.
+         * <p>Base64 on the front of the document image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder idOcrPictureBase64(String idOcrPictureBase64) {
             this.putBodyParameter("IdOcrPictureBase64", idOcrPictureBase64);
@@ -198,7 +211,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * IdOcrPictureUrl.
+         * <p>URL of the front side of the document image</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
          */
         public Builder idOcrPictureUrl(String idOcrPictureUrl) {
             this.putQueryParameter("IdOcrPictureUrl", idOcrPictureUrl);
@@ -207,7 +223,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dso9322***dsjsd22</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -216,7 +235,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>Merchant user ID or other identifiers that can be used to identify specific users, such as phone numbers, email addresses, etc. It is strongly recommended to pre-desensitize the value of the userId field, for example, by hashing the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -225,7 +247,14 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * Ocr.
+         * <p>Whether to perform document OCR</p>
+         * <ul>
+         * <li>T: Indicates that document OCR is required (default T)</li>
+         * <li>F: Indicates that it is not required</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>T</p>
          */
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
@@ -234,7 +263,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID_OCR_MIN</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -243,7 +275,14 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * Spoof.
+         * <p>Whether to enable anti-counterfeiting detection</p>
+         * <ul>
+         * <li>T: Indicates to enable anti-counterfeiting</li>
+         * <li>F: Indicates to disable (default F)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         public Builder spoof(String spoof) {
             this.putQueryParameter("Spoof", spoof);

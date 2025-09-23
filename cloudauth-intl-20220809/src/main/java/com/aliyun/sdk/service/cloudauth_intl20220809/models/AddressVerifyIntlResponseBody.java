@@ -93,7 +93,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -222,7 +231,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * AddressInfo.
+             * <p>Address verification details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0-3000</p>
              */
             public Builder addressInfo(String addressInfo) {
                 this.addressInfo = addressInfo;
@@ -230,7 +242,15 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name:</p>
+             * <ul>
+             * <li>CMCC: China Mobile</li>
+             * <li>CTCC: China Telecom</li>
+             * <li>CUCC: China Unicom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -238,7 +258,14 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Verification result, values:</p>
+             * <ul>
+             * <li>Y: Yes, the verified address distance is less than or equal to 10KM.</li>
+             * <li>N: No, the verified address distance is greater than 10KM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -246,7 +273,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Authentication result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -254,7 +284,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Unique identifier for the authentication request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hksb7ba1b28130d24e015d69********</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

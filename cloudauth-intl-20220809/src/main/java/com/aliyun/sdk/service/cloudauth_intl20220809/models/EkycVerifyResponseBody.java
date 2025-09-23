@@ -93,7 +93,10 @@ public class EkycVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#GiGmf">response code</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class EkycVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A detailed description of the response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result object</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -225,7 +231,15 @@ public class EkycVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtFaceInfo.
+             * <p>Information about the face liveness verification result. For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#JJ40j">ExtFaceInfo</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             * &quot;faceAttack&quot;: &quot;N&quot;,
+             * &quot;faceComparisonScore&quot;: 52.57,
+             * &quot;facePassed&quot;: &quot;N&quot;,
+             * &quot;authorityComparisonScore&quot;: 80.39
+             * }</p>
              */
             public Builder extFaceInfo(String extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -233,7 +247,29 @@ public class EkycVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * ExtIdInfo.
+             * <p>Information about the certificate detection result.</p>
+             * <p>For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#iWOBY">ExtIdInfo</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;ocrIdInfo&quot;: {
+             *     &quot;expiryDate&quot;: &quot;&quot;,
+             *     &quot;originOfIssue&quot;: &quot;Exit and Entry Administration of the Ministry of Public Security&quot;,
+             *     &quot;englishName&quot;: &quot;LI SI&quot;,
+             *     &quot;sex&quot;: &quot;Male&quot;,
+             *     &quot;name&quot;: &quot;Li Si&quot;,
+             *     &quot;idNumber&quot;: &quot;H11111112&quot;,
+             *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
+             *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
+             *   },
+             *   &quot;ocrIdPassed&quot;: &quot;N&quot;,
+             *   &quot;spoofInfo&quot;: {
+             *     &quot;spoofResult&quot;: &quot;Y&quot;,
+             *     &quot;spoofType&quot;: [
+             *       &quot;SCREEN_REMARK&quot;
+             *     ]
+             *   }
+             * }</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -241,7 +277,16 @@ public class EkycVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>The final authentication result. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Y</strong>: The authentication is passed.</p>
+             * </li>
+             * <li><p><strong>N</strong>: The authentication fails.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -249,7 +294,10 @@ public class EkycVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#HCGLb">Error codes for ResultObject.SubCode</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -257,7 +305,10 @@ public class EkycVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ab0b***cbde97</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

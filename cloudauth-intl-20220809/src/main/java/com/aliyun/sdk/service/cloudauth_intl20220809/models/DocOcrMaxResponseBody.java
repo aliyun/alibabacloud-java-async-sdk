@@ -93,7 +93,10 @@ public class DocOcrMaxResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DocOcrMaxResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DocOcrMaxResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -120,7 +126,7 @@ public class DocOcrMaxResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -212,7 +218,24 @@ public class DocOcrMaxResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtIdInfo.
+             * <p>Card and document recognition result	Only returned when the interface response is successful</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;docType&quot;: &quot;PPTW01&quot;,
+             *   &quot;ocrIdInfo&quot;: {
+             *     &quot;passportNo&quot;: &quot;36*******&quot;,
+             *     &quot;expiryDate&quot;: &quot;2032/02/10&quot;,
+             *     &quot;placeOfBirth&quot;: &quot;TAIWAN&quot;,
+             *     &quot;surname&quot;: &quot;CHEN&quot;,
+             *     &quot;givenname&quot;: &quot;LIN-CHUN&quot;,
+             *     &quot;countryCode&quot;: &quot;TWN&quot;,
+             *     &quot;sex&quot;: &quot;F&quot;,
+             *     &quot;personalNo&quot;: &quot;S22********&quot;,
+             *     &quot;issueDate&quot;: &quot;2022/02/10&quot;,
+             *     &quot;birthDate&quot;: &quot;1988/10/04&quot;
+             *   }
+             * }</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -220,7 +243,14 @@ public class DocOcrMaxResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the authentication passed.</p>
+             * <ul>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -228,7 +258,10 @@ public class DocOcrMaxResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Sub-result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -236,7 +269,10 @@ public class DocOcrMaxResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Authentication ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hk573be80f944d95ac812e0*******a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

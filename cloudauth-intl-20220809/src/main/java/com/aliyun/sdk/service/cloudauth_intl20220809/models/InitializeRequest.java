@@ -26,6 +26,10 @@ public class InitializeRequest extends Request {
     private String authorize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRegistration")
+    private String autoRegistration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackToken")
     private String callbackToken;
 
@@ -78,8 +82,16 @@ public class InitializeRequest extends Request {
     private String documentNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EditOcrResult")
+    private String editOcrResult;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperienceCode")
     private String experienceCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceGroupCodes")
+    private String faceGroupCodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FacePictureBase64")
@@ -88,6 +100,14 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FacePictureUrl")
     private String facePictureUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceRegisterGroupCode")
+    private String faceRegisterGroupCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceVerifyThreshold")
+    private String faceVerifyThreshold;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdFaceQuality")
@@ -146,8 +166,16 @@ public class InitializeRequest extends Request {
     private String productFlow;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnFaces")
+    private String returnFaces;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReturnUrl")
     private String returnUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaveFacePicture")
+    private String saveFacePicture;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
@@ -174,13 +202,26 @@ public class InitializeRequest extends Request {
     private String styleConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFacePicture")
+    private String targetFacePicture;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFacePictureUrl")
+    private String targetFacePictureUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UseNFC")
     private String useNFC;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyModel")
+    private String verifyModel;
 
     private InitializeRequest(Builder builder) {
         super(builder);
         this.appQualityCheck = builder.appQualityCheck;
         this.authorize = builder.authorize;
+        this.autoRegistration = builder.autoRegistration;
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
         this.chameleonFrameEnable = builder.chameleonFrameEnable;
@@ -194,9 +235,13 @@ public class InitializeRequest extends Request {
         this.docType = builder.docType;
         this.docVideo = builder.docVideo;
         this.documentNumber = builder.documentNumber;
+        this.editOcrResult = builder.editOcrResult;
         this.experienceCode = builder.experienceCode;
+        this.faceGroupCodes = builder.faceGroupCodes;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
+        this.faceRegisterGroupCode = builder.faceRegisterGroupCode;
+        this.faceVerifyThreshold = builder.faceVerifyThreshold;
         this.idFaceQuality = builder.idFaceQuality;
         this.idSpoof = builder.idSpoof;
         this.idThreshold = builder.idThreshold;
@@ -211,14 +256,19 @@ public class InitializeRequest extends Request {
         this.procedurePriority = builder.procedurePriority;
         this.productCode = builder.productCode;
         this.productFlow = builder.productFlow;
+        this.returnFaces = builder.returnFaces;
         this.returnUrl = builder.returnUrl;
+        this.saveFacePicture = builder.saveFacePicture;
         this.sceneCode = builder.sceneCode;
         this.securityLevel = builder.securityLevel;
         this.showAlbumIcon = builder.showAlbumIcon;
         this.showGuidePage = builder.showGuidePage;
         this.showOcrResult = builder.showOcrResult;
         this.styleConfig = builder.styleConfig;
+        this.targetFacePicture = builder.targetFacePicture;
+        this.targetFacePictureUrl = builder.targetFacePictureUrl;
         this.useNFC = builder.useNFC;
+        this.verifyModel = builder.verifyModel;
     }
 
     public static Builder builder() {
@@ -246,6 +296,13 @@ public class InitializeRequest extends Request {
      */
     public String getAuthorize() {
         return this.authorize;
+    }
+
+    /**
+     * @return autoRegistration
+     */
+    public String getAutoRegistration() {
+        return this.autoRegistration;
     }
 
     /**
@@ -340,10 +397,24 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return editOcrResult
+     */
+    public String getEditOcrResult() {
+        return this.editOcrResult;
+    }
+
+    /**
      * @return experienceCode
      */
     public String getExperienceCode() {
         return this.experienceCode;
+    }
+
+    /**
+     * @return faceGroupCodes
+     */
+    public String getFaceGroupCodes() {
+        return this.faceGroupCodes;
     }
 
     /**
@@ -358,6 +429,20 @@ public class InitializeRequest extends Request {
      */
     public String getFacePictureUrl() {
         return this.facePictureUrl;
+    }
+
+    /**
+     * @return faceRegisterGroupCode
+     */
+    public String getFaceRegisterGroupCode() {
+        return this.faceRegisterGroupCode;
+    }
+
+    /**
+     * @return faceVerifyThreshold
+     */
+    public String getFaceVerifyThreshold() {
+        return this.faceVerifyThreshold;
     }
 
     /**
@@ -459,10 +544,24 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return returnFaces
+     */
+    public String getReturnFaces() {
+        return this.returnFaces;
+    }
+
+    /**
      * @return returnUrl
      */
     public String getReturnUrl() {
         return this.returnUrl;
+    }
+
+    /**
+     * @return saveFacePicture
+     */
+    public String getSaveFacePicture() {
+        return this.saveFacePicture;
     }
 
     /**
@@ -508,15 +607,37 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return targetFacePicture
+     */
+    public String getTargetFacePicture() {
+        return this.targetFacePicture;
+    }
+
+    /**
+     * @return targetFacePictureUrl
+     */
+    public String getTargetFacePictureUrl() {
+        return this.targetFacePictureUrl;
+    }
+
+    /**
      * @return useNFC
      */
     public String getUseNFC() {
         return this.useNFC;
     }
 
+    /**
+     * @return verifyModel
+     */
+    public String getVerifyModel() {
+        return this.verifyModel;
+    }
+
     public static final class Builder extends Request.Builder<InitializeRequest, Builder> {
         private String appQualityCheck; 
         private String authorize; 
+        private String autoRegistration; 
         private String callbackToken; 
         private String callbackUrl; 
         private String chameleonFrameEnable; 
@@ -530,9 +651,13 @@ public class InitializeRequest extends Request {
         private String docType; 
         private String docVideo; 
         private String documentNumber; 
+        private String editOcrResult; 
         private String experienceCode; 
+        private String faceGroupCodes; 
         private String facePictureBase64; 
         private String facePictureUrl; 
+        private String faceRegisterGroupCode; 
+        private String faceVerifyThreshold; 
         private String idFaceQuality; 
         private String idSpoof; 
         private String idThreshold; 
@@ -547,14 +672,19 @@ public class InitializeRequest extends Request {
         private String procedurePriority; 
         private String productCode; 
         private String productFlow; 
+        private String returnFaces; 
         private String returnUrl; 
+        private String saveFacePicture; 
         private String sceneCode; 
         private String securityLevel; 
         private String showAlbumIcon; 
         private String showGuidePage; 
         private String showOcrResult; 
         private String styleConfig; 
+        private String targetFacePicture; 
+        private String targetFacePictureUrl; 
         private String useNFC; 
+        private String verifyModel; 
 
         private Builder() {
             super();
@@ -564,6 +694,7 @@ public class InitializeRequest extends Request {
             super(request);
             this.appQualityCheck = request.appQualityCheck;
             this.authorize = request.authorize;
+            this.autoRegistration = request.autoRegistration;
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
             this.chameleonFrameEnable = request.chameleonFrameEnable;
@@ -577,9 +708,13 @@ public class InitializeRequest extends Request {
             this.docType = request.docType;
             this.docVideo = request.docVideo;
             this.documentNumber = request.documentNumber;
+            this.editOcrResult = request.editOcrResult;
             this.experienceCode = request.experienceCode;
+            this.faceGroupCodes = request.faceGroupCodes;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
+            this.faceRegisterGroupCode = request.faceRegisterGroupCode;
+            this.faceVerifyThreshold = request.faceVerifyThreshold;
             this.idFaceQuality = request.idFaceQuality;
             this.idSpoof = request.idSpoof;
             this.idThreshold = request.idThreshold;
@@ -594,14 +729,19 @@ public class InitializeRequest extends Request {
             this.procedurePriority = request.procedurePriority;
             this.productCode = request.productCode;
             this.productFlow = request.productFlow;
+            this.returnFaces = request.returnFaces;
             this.returnUrl = request.returnUrl;
+            this.saveFacePicture = request.saveFacePicture;
             this.sceneCode = request.sceneCode;
             this.securityLevel = request.securityLevel;
             this.showAlbumIcon = request.showAlbumIcon;
             this.showGuidePage = request.showGuidePage;
             this.showOcrResult = request.showOcrResult;
             this.styleConfig = request.styleConfig;
+            this.targetFacePicture = request.targetFacePicture;
+            this.targetFacePictureUrl = request.targetFacePictureUrl;
             this.useNFC = request.useNFC;
+            this.verifyModel = request.verifyModel;
         } 
 
         /**
@@ -619,6 +759,15 @@ public class InitializeRequest extends Request {
         public Builder authorize(String authorize) {
             this.putQueryParameter("Authorize", authorize);
             this.authorize = authorize;
+            return this;
+        }
+
+        /**
+         * AutoRegistration.
+         */
+        public Builder autoRegistration(String autoRegistration) {
+            this.putQueryParameter("AutoRegistration", autoRegistration);
+            this.autoRegistration = autoRegistration;
             return this;
         }
 
@@ -741,11 +890,29 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * EditOcrResult.
+         */
+        public Builder editOcrResult(String editOcrResult) {
+            this.putQueryParameter("EditOcrResult", editOcrResult);
+            this.editOcrResult = editOcrResult;
+            return this;
+        }
+
+        /**
          * ExperienceCode.
          */
         public Builder experienceCode(String experienceCode) {
             this.putQueryParameter("ExperienceCode", experienceCode);
             this.experienceCode = experienceCode;
+            return this;
+        }
+
+        /**
+         * FaceGroupCodes.
+         */
+        public Builder faceGroupCodes(String faceGroupCodes) {
+            this.putQueryParameter("FaceGroupCodes", faceGroupCodes);
+            this.faceGroupCodes = faceGroupCodes;
             return this;
         }
 
@@ -764,6 +931,24 @@ public class InitializeRequest extends Request {
         public Builder facePictureUrl(String facePictureUrl) {
             this.putQueryParameter("FacePictureUrl", facePictureUrl);
             this.facePictureUrl = facePictureUrl;
+            return this;
+        }
+
+        /**
+         * FaceRegisterGroupCode.
+         */
+        public Builder faceRegisterGroupCode(String faceRegisterGroupCode) {
+            this.putQueryParameter("FaceRegisterGroupCode", faceRegisterGroupCode);
+            this.faceRegisterGroupCode = faceRegisterGroupCode;
+            return this;
+        }
+
+        /**
+         * FaceVerifyThreshold.
+         */
+        public Builder faceVerifyThreshold(String faceVerifyThreshold) {
+            this.putQueryParameter("FaceVerifyThreshold", faceVerifyThreshold);
+            this.faceVerifyThreshold = faceVerifyThreshold;
             return this;
         }
 
@@ -899,11 +1084,29 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * ReturnFaces.
+         */
+        public Builder returnFaces(String returnFaces) {
+            this.putQueryParameter("ReturnFaces", returnFaces);
+            this.returnFaces = returnFaces;
+            return this;
+        }
+
+        /**
          * ReturnUrl.
          */
         public Builder returnUrl(String returnUrl) {
             this.putQueryParameter("ReturnUrl", returnUrl);
             this.returnUrl = returnUrl;
+            return this;
+        }
+
+        /**
+         * SaveFacePicture.
+         */
+        public Builder saveFacePicture(String saveFacePicture) {
+            this.putQueryParameter("SaveFacePicture", saveFacePicture);
+            this.saveFacePicture = saveFacePicture;
             return this;
         }
 
@@ -962,11 +1165,38 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * TargetFacePicture.
+         */
+        public Builder targetFacePicture(String targetFacePicture) {
+            this.putQueryParameter("TargetFacePicture", targetFacePicture);
+            this.targetFacePicture = targetFacePicture;
+            return this;
+        }
+
+        /**
+         * TargetFacePictureUrl.
+         */
+        public Builder targetFacePictureUrl(String targetFacePictureUrl) {
+            this.putQueryParameter("TargetFacePictureUrl", targetFacePictureUrl);
+            this.targetFacePictureUrl = targetFacePictureUrl;
+            return this;
+        }
+
+        /**
          * UseNFC.
          */
         public Builder useNFC(String useNFC) {
             this.putQueryParameter("UseNFC", useNFC);
             this.useNFC = useNFC;
+            return this;
+        }
+
+        /**
+         * VerifyModel.
+         */
+        public Builder verifyModel(String verifyModel) {
+            this.putQueryParameter("VerifyModel", verifyModel);
+            this.verifyModel = verifyModel;
             return this;
         }
 

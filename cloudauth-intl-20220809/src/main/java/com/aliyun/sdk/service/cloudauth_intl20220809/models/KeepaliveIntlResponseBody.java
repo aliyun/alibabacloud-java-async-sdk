@@ -93,7 +93,10 @@ public class KeepaliveIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/client-connection-hold?spm=a3c0i.23458820.2359477120.1.48207d3ftEYld2#74d291dfaaxci">return code.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class KeepaliveIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A detailed description of the Code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class KeepaliveIntlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EB35****87EBA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class KeepaliveIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +179,10 @@ public class KeepaliveIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * Result.
+             * <p>The result of the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder result(String result) {
                 this.result = result;

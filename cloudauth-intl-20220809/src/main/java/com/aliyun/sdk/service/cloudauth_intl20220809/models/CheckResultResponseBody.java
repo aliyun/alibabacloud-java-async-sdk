@@ -93,7 +93,10 @@ public class CheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -120,7 +126,7 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -264,7 +270,10 @@ public class CheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * EkycResult.
+             * <p>Authentication result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder ekycResult(String ekycResult) {
                 this.ekycResult = ekycResult;
@@ -272,7 +281,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtBasicInfo.
+             * <p>Extended basic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder extBasicInfo(String extBasicInfo) {
                 this.extBasicInfo = extBasicInfo;
@@ -280,7 +292,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtFaceInfo.
+             * <p>Face information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder extFaceInfo(String extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -288,7 +303,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtIdInfo.
+             * <p>ID information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -296,7 +314,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtInfo.
+             * <p>Extended information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extInfo(String extInfo) {
                 this.extInfo = extInfo;
@@ -304,7 +325,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtRiskInfo.
+             * <p>Risk information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder extRiskInfo(String extRiskInfo) {
                 this.extRiskInfo = extRiskInfo;
@@ -312,7 +336,14 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the authentication is passed.</p>
+             * <ul>
+             * <li>Y: Passed</li>
+             * <li>N: Not passed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -320,7 +351,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Sub-result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

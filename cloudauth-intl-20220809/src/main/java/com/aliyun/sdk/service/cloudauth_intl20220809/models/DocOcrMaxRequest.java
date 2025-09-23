@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DocOcrMaxRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DocPage")
+    private String docPage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
@@ -67,6 +71,7 @@ public class DocOcrMaxRequest extends Request {
 
     private DocOcrMaxRequest(Builder builder) {
         super(builder);
+        this.docPage = builder.docPage;
         this.docType = builder.docType;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
         this.idOcrPictureUrl = builder.idOcrPictureUrl;
@@ -92,6 +97,13 @@ public class DocOcrMaxRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return docPage
+     */
+    public String getDocPage() {
+        return this.docPage;
     }
 
     /**
@@ -179,6 +191,7 @@ public class DocOcrMaxRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DocOcrMaxRequest, Builder> {
+        private String docPage; 
         private String docType; 
         private String idOcrPictureBase64; 
         private String idOcrPictureUrl; 
@@ -198,6 +211,7 @@ public class DocOcrMaxRequest extends Request {
 
         private Builder(DocOcrMaxRequest request) {
             super(request);
+            this.docPage = request.docPage;
             this.docType = request.docType;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
             this.idOcrPictureUrl = request.idOcrPictureUrl;
@@ -213,7 +227,30 @@ public class DocOcrMaxRequest extends Request {
         } 
 
         /**
-         * DocType.
+         * <p>Page expected to be recognized</p>
+         * <ul>
+         * <li><p>01 (default): ID portrait.</p>
+         * </li>
+         * <li><p>02: Back of the certificate</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
+        public Builder docPage(String docPage) {
+            this.putBodyParameter("DocPage", docPage);
+            this.docPage = docPage;
+            return this;
+        }
+
+        /**
+         * <p>Document type.
+         * Format: Country (region) code + document type abbreviation + page (optional)
+         * Note: If provided, it will automatically check if it matches the model recognition result; if empty, the document type will be returned after model recognition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNSSC01</p>
          */
         public Builder docType(String docType) {
             this.putBodyParameter("DocType", docType);
@@ -222,7 +259,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * IdOcrPictureBase64.
+         * <p>Document image, base64 encoded binary stream</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder idOcrPictureBase64(String idOcrPictureBase64) {
             this.putBodyParameter("IdOcrPictureBase64", idOcrPictureBase64);
@@ -231,7 +271,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * IdOcrPictureUrl.
+         * <p>Document image URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***********.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</p>
          */
         public Builder idOcrPictureUrl(String idOcrPictureUrl) {
             this.putBodyParameter("IdOcrPictureUrl", idOcrPictureUrl);
@@ -240,7 +283,16 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * IdSpoof.
+         * <p>Whether to turn on the certificate anti-counterfeiting function:</p>
+         * <ul>
+         * <li><p>T: open</p>
+         * </li>
+         * <li><p>F (default): not turned on.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         public Builder idSpoof(String idSpoof) {
             this.putBodyParameter("IdSpoof", idSpoof);
@@ -249,7 +301,16 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * IdThreshold.
+         * <p>Custom OCR quality detection threshold mode:</p>
+         * <ul>
+         * <li>0: System default</li>
+         * <li>1: Strict mode</li>
+         * <li>2: Lenient mode</li>
+         * <li>3 (default): Disable quality detection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder idThreshold(String idThreshold) {
             this.putBodyParameter("IdThreshold", idThreshold);
@@ -258,7 +319,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putBodyParameter("MerchantBizId", merchantBizId);
@@ -267,7 +331,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putBodyParameter("MerchantUserId", merchantUserId);
@@ -276,7 +343,12 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * OcrModel.
+         * <p>OCR recognition mode.
+         * 0: General document mode.
+         * 1: Custom mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ocrModel(String ocrModel) {
             this.putBodyParameter("OcrModel", ocrModel);
@@ -285,7 +357,11 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product solution to be integrated.</p>
+         * <p>Value: ID_OCR_MAX</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID_OCR_MAX</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -294,7 +370,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>Prompt (for custom mode)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxocr识别</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -303,7 +382,10 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Custom scene code, used to distinguish business scenarios, a 10-digit number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("SceneCode", sceneCode);
@@ -312,7 +394,14 @@ public class DocOcrMaxRequest extends Request {
         }
 
         /**
-         * Spoof.
+         * <p>Whether to enable document anti-counterfeiting function, default is not enabled.</p>
+         * <ul>
+         * <li>T: Enable document anti-counterfeiting function.</li>
+         * <li>F: Do not enable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         public Builder spoof(String spoof) {
             this.putBodyParameter("Spoof", spoof);

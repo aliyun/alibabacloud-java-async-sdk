@@ -93,7 +93,10 @@ public class FaceCompareResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/facecompare?spm=a3c0i.23458820.2359477120.28.21167d3fzUmXQC#c43fd16d07mae">response code</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class FaceCompareResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The detailed description of the response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,7 @@ public class FaceCompareResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result object</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -199,7 +205,10 @@ public class FaceCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * FaceComparisonScore.
+             * <p>The face comparison score. The value ranges from 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder faceComparisonScore(Double faceComparisonScore) {
                 this.faceComparisonScore = faceComparisonScore;
@@ -207,7 +216,16 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>The final authentication result. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Y</strong>: The authentication is passed.</p>
+             * </li>
+             * <li><p><strong>N</strong>: The authentication failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -215,7 +233,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

@@ -93,7 +93,10 @@ public class CardOcrResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</p>
@@ -120,7 +126,7 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -225,7 +231,29 @@ public class CardOcrResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtCardInfo.
+             * <p>Document recognition result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;idFaceQualityScore&quot;: 98.90,
+             *   &quot;ocrIdInfo&quot;: {
+             *     &quot;expiryDate&quot;: &quot;2024-04-20&quot;,
+             *     &quot;placeOfIssue&quot;: &quot;广东&quot;,
+             *     &quot;englishName&quot;: &quot;ZHENGJIAN,YANGBEN&quot;,
+             *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+             *     &quot;sex&quot;: &quot;女&quot;,
+             *     &quot;name&quot;: &quot;证件样本&quot;,
+             *     &quot;idNumber&quot;: &quot;C00000000&quot;,
+             *     &quot;issueDate&quot;: &quot;2014-04-21&quot;,
+             *     &quot;birthDate&quot;: &quot;1981-08-03&quot;
+             *   },
+             *   &quot;spoofInfo&quot;: {
+             *     &quot;spoofResult&quot;: &quot;N&quot;,
+             *     &quot;spoofType&quot;: [
+             *       &quot;SCREEN_REMARK&quot;
+             *     ]
+             *   }
+             * }</p>
              */
             public Builder extCardInfo(String extCardInfo) {
                 this.extCardInfo = extCardInfo;
@@ -233,7 +261,10 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * ExtIdInfo.
+             * <p>Additional result information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -241,7 +272,14 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the authentication passed.</p>
+             * <ul>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -249,7 +287,10 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Sub-result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -257,7 +298,10 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Unique identifier for the authentication request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

@@ -93,7 +93,10 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EB35****87EBA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -183,7 +192,10 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
             } 
 
             /**
-             * DeleteResult.
+             * <p>Deletion result. Y indicates successful deletion, N indicates failed deletion</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y/N</p>
              */
             public Builder deleteResult(String deleteResult) {
                 this.deleteResult = deleteResult;
@@ -191,7 +203,10 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Unique identifier of the authentication request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ab0b***cbde97</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

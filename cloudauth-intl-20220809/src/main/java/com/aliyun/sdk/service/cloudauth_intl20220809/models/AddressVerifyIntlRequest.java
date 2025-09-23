@@ -227,6 +227,11 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
+         * <p>Verification address type:</p>
+         * <ul>
+         * <li>“0”: Text address</li>
+         * <li>“1”: Latitude and longitude</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +244,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * DefaultCity.
+         * <p>Default city</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
          */
         public Builder defaultCity(String defaultCity) {
             this.putQueryParameter("DefaultCity", defaultCity);
@@ -248,7 +256,11 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
+         * <p>Country name, currently only supports: China</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国</p>
          */
         public Builder defaultCountry(String defaultCountry) {
             this.putQueryParameter("DefaultCountry", defaultCountry);
@@ -257,7 +269,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * DefaultDistrict.
+         * <p>Default district</p>
+         * 
+         * <strong>example:</strong>
+         * <p>余杭区</p>
          */
         public Builder defaultDistrict(String defaultDistrict) {
             this.putQueryParameter("DefaultDistrict", defaultDistrict);
@@ -266,7 +281,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * DefaultProvince.
+         * <p>Default province</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省</p>
          */
         public Builder defaultProvince(String defaultProvince) {
             this.putQueryParameter("DefaultProvince", defaultProvince);
@@ -275,7 +293,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * Latitude.
+         * <p>Latitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“31.2304”</p>
          */
         public Builder latitude(String latitude) {
             this.putQueryParameter("Latitude", latitude);
@@ -284,7 +305,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * Longitude.
+         * <p>Longitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“121.4737”</p>
          */
         public Builder longitude(String longitude) {
             this.putQueryParameter("Longitude", longitude);
@@ -293,6 +317,7 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
+         * <p>Supports Chinese mobile phone numbers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,6 +330,7 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
+         * <p>Fixed value: ADD_VERIFY_PRO</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,7 +343,10 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>Detailed address text content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里巴巴西溪园区</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -326,6 +355,11 @@ public class AddressVerifyIntlRequest extends Request {
         }
 
         /**
+         * <p>Address verification method:</p>
+         * <ul>
+         * <li>HOME: Home address verification</li>
+         * <li>WORK: Work address verification</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

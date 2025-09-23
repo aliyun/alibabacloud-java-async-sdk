@@ -93,7 +93,10 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#22facb6ab6ui1">Return to Code</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A detailed description of the response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B97D932-7FF5-517D-BF39-7CA1BEE3CDD9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -183,7 +192,16 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * Passed.
+             * <p>The final authentication result. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Y</strong>, via</p>
+             * </li>
+             * <li><p><strong>N</strong>: The authentication is not passed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -191,7 +209,10 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#d1f36d445az8i">ResultObject.SubCode error codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

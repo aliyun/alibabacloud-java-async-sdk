@@ -93,7 +93,10 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of Success indicates that the API operation responded successfully. For more information about how to determine the authentication result, expand the <strong>Return codes</strong> section below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A detailed description of the return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result object</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -212,7 +218,11 @@ public class FaceGuardRiskResponseBody extends TeaModel {
             } 
 
             /**
-             * GuardRiskScore.
+             * <p>The device risk probability predicted by the Device Guard algorithm. A higher score indicates a higher device risk.</p>
+             * <p>Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder guardRiskScore(Double guardRiskScore) {
                 this.guardRiskScore = guardRiskScore;
@@ -220,7 +230,20 @@ public class FaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskExtends.
+             * <p>Extended information. This is empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;code&quot;: 200
+             *   &quot;message&quot;:&quot;success&quot;
+             *   &quot;umid&quot;:&quot;07d3295d3d597b425d102a7f********&quot;,
+             *   &quot;sip&quot;:&quot;198.51.100.1&quot;,
+             *   &quot;durationMs&quot; : 4968931
+             *   &quot;queryCount&quot;:1,
+             *   &quot;querySessionCount&quot;:1,
+             *   &quot;queryUmidCount&quot;:1
+             *   &quot;platform&quot;:&quot;Android
+             * }</p>
              */
             public Builder riskExtends(String riskExtends) {
                 this.riskExtends = riskExtends;
@@ -228,7 +251,10 @@ public class FaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTags.
+             * <p>The device risk tags. Multiple risk tags are separated by commas (<strong>,</strong>). For more information about the risk tags and their meanings, expand the <strong>Risk tags (RiskTags)</strong> section below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROOT,VPN,HOOK</p>
              */
             public Builder riskTags(String riskTags) {
                 this.riskTags = riskTags;
@@ -236,7 +262,10 @@ public class FaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hk573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

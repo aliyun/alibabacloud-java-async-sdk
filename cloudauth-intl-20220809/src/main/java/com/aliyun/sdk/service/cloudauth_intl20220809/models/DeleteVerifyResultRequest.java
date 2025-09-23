@@ -87,7 +87,10 @@ public class DeleteVerifyResultRequest extends Request {
         } 
 
         /**
-         * DeleteAfterQuery.
+         * <p>Whether to depend on the query interface when deleting data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y / N</p>
          */
         public Builder deleteAfterQuery(String deleteAfterQuery) {
             this.putQueryParameter("DeleteAfterQuery", deleteAfterQuery);
@@ -96,7 +99,10 @@ public class DeleteVerifyResultRequest extends Request {
         }
 
         /**
-         * DeleteType.
+         * <p>Type of data to be deleted</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Img / Text / All</p>
          */
         public Builder deleteType(String deleteType) {
             this.putQueryParameter("DeleteType", deleteType);
@@ -105,7 +111,10 @@ public class DeleteVerifyResultRequest extends Request {
         }
 
         /**
-         * TransactionId.
+         * <p>Unique identifier of the authentication request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ab0b***cbde97</p>
          */
         public Builder transactionId(String transactionId) {
             this.putQueryParameter("TransactionId", transactionId);

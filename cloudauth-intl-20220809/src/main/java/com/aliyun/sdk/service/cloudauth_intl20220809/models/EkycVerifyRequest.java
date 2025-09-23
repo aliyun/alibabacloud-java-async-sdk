@@ -227,7 +227,19 @@ public class EkycVerifyRequest extends Request {
         } 
 
         /**
-         * Authorize.
+         * <p>Specifies whether to enable identity verification against the official database:</p>
+         * <ul>
+         * <li><p><strong>T</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>F</strong>: Disable. (Default)</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This feature is currently available only for second-generation resident ID cards of the Chinese mainland.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>T</p>
          */
         public Builder authorize(String authorize) {
             this.putQueryParameter("Authorize", authorize);
@@ -236,7 +248,16 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * Crop.
+         * <p>Specifies whether to crop the face image:</p>
+         * <ul>
+         * <li><p><strong>T</strong>: Allows cropping.</p>
+         * </li>
+         * <li><p><strong>F</strong>: Disallows cropping. (Default)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         public Builder crop(String crop) {
             this.putQueryParameter("Crop", crop);
@@ -245,7 +266,17 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * DocName.
+         * <p>The user&quot;s real name.</p>
+         * <blockquote>
+         * <p>If Authorize is set to T and the certificate type is Chinese mainland resident ID card, you must enter at least one of the following groups of information:</p>
+         * <ul>
+         * <li>DocName and DocNo.</li>
+         * <li>IdOcrPictureBase64 or IdOcrPictureUrl.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder docName(String docName) {
             this.putQueryParameter("DocName", docName);
@@ -254,7 +285,17 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * DocNo.
+         * <p>The user&quot;s certificate number.</p>
+         * <blockquote>
+         * <p>If Authorize is set to <strong>T</strong> and the certificate type is Chinese mainland resident ID card, you must enter at least one of the following groups of information:</p>
+         * <ul>
+         * <li>DocName and DocNo.</li>
+         * <li>IdOcrPictureBase64 or IdOcrPictureUrl.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>410***************</p>
          */
         public Builder docNo(String docNo) {
             this.putQueryParameter("DocNo", docNo);
@@ -263,7 +304,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * DocType.
+         * <p>The certificate type, which is uniquely identified by an 8-digit number. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#Hu5TG">Certificate types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000001</p>
          */
         public Builder docType(String docType) {
             this.putQueryParameter("DocType", docType);
@@ -281,7 +325,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * FacePictureUrl.
+         * <p>The URL of the portrait image. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
          */
         public Builder facePictureUrl(String facePictureUrl) {
             this.putQueryParameter("FacePictureUrl", facePictureUrl);
@@ -299,7 +346,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * IdOcrPictureUrl.
+         * <p>The URL of the certificate image. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
          */
         public Builder idOcrPictureUrl(String idOcrPictureUrl) {
             this.putQueryParameter("IdOcrPictureUrl", idOcrPictureUrl);
@@ -308,7 +358,20 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * IdThreshold.
+         * <p>The custom OCR quality detection threshold mode:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Standard mode</p>
+         * </li>
+         * <li><p><strong>1</strong>: Strict mode</p>
+         * </li>
+         * <li><p><strong>2</strong>: Loose mode</p>
+         * </li>
+         * <li><p><strong>3</strong> (default): Disables quality detection</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder idThreshold(String idThreshold) {
             this.putQueryParameter("IdThreshold", idThreshold);
@@ -317,7 +380,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier that you customize. It is used to locate and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure that the identifier is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -326,7 +392,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>A custom user ID or another identifier that can identify a specific user, such as a mobile number or an email address. Desensitize the value of this field in advance, for example, by hashing the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -335,7 +404,10 @@ public class EkycVerifyRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product solution to integrate. Set the value to <strong>eKYC_MIN</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eKYC_MIN</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

@@ -93,7 +93,10 @@ public class DocOcrResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DocOcrResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DocOcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -120,7 +126,7 @@ public class DocOcrResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -212,7 +218,28 @@ public class DocOcrResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtIdInfo.
+             * <p>Card and document recognition result	Only returned when the interface response is successful</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;idFaceQualityScore&quot;: 98.0
+             *   &quot;ocrIdInfo&quot;: {
+             *     &quot;expiryDate&quot;: &quot;&quot;,
+             *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+             *     &quot;englishName&quot;: &quot;LI SI&quot;,
+             *     &quot;sex&quot;: &quot;男&quot;,
+             *     &quot;name&quot;: &quot;李四&quot;,
+             *     &quot;idNumber&quot;: &quot;H11111112&quot;,
+             *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
+             *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
+             *   },
+             *   &quot;spoofInfo&quot;: {
+             *     &quot;spoofResult&quot;: &quot;Y&quot;,
+             *     &quot;spoofType&quot;: [
+             *       &quot;SCREEN_REMARK&quot;
+             *     ]
+             *   }
+             * }</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -220,7 +247,14 @@ public class DocOcrResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Whether the authentication passed.</p>
+             * <ul>
+             * <li>Y: Passed</li>
+             * <li>N: Not passed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -228,7 +262,10 @@ public class DocOcrResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Sub-result code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -236,7 +273,10 @@ public class DocOcrResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Unique identifier of the authentication request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

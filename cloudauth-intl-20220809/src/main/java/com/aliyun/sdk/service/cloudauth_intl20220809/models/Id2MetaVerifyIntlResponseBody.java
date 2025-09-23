@@ -93,7 +93,10 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/ok4bwxwmu1n94o76?spm=a2c63.p38356.0.i54#942707fca218x">Status codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The detailed description of the response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFA11401-C961-5E89-A2D3-BF9883E5CC3D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +179,18 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>The verification result:</p>
+             * <ul>
+             * <li><p>1: The information is consistent. This result is billable.</p>
+             * </li>
+             * <li><p>2: The information is inconsistent. This result is billable.</p>
+             * </li>
+             * <li><p>3: No record is found. This result is not billable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
