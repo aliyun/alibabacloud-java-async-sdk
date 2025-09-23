@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryAppMetadataRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeMs")
+    private Long endTimeMs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetaIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private String metaIds;
@@ -37,12 +41,18 @@ public class QueryAppMetadataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimeMs")
+    private Long startTimeMs;
+
     private QueryAppMetadataRequest(Builder builder) {
         super(builder);
+        this.endTimeMs = builder.endTimeMs;
         this.metaIds = builder.metaIds;
         this.metaType = builder.metaType;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.startTimeMs = builder.startTimeMs;
     }
 
     public static Builder builder() {
@@ -56,6 +66,13 @@ public class QueryAppMetadataRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTimeMs
+     */
+    public Long getEndTimeMs() {
+        return this.endTimeMs;
     }
 
     /**
@@ -86,11 +103,20 @@ public class QueryAppMetadataRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return startTimeMs
+     */
+    public Long getStartTimeMs() {
+        return this.startTimeMs;
+    }
+
     public static final class Builder extends Request.Builder<QueryAppMetadataRequest, Builder> {
+        private Long endTimeMs; 
         private String metaIds; 
         private String metaType; 
         private String pid; 
         private String regionId; 
+        private Long startTimeMs; 
 
         private Builder() {
             super();
@@ -98,11 +124,22 @@ public class QueryAppMetadataRequest extends Request {
 
         private Builder(QueryAppMetadataRequest request) {
             super(request);
+            this.endTimeMs = request.endTimeMs;
             this.metaIds = request.metaIds;
             this.metaType = request.metaType;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.startTimeMs = request.startTimeMs;
         } 
+
+        /**
+         * EndTimeMs.
+         */
+        public Builder endTimeMs(Long endTimeMs) {
+            this.putQueryParameter("EndTimeMs", endTimeMs);
+            this.endTimeMs = endTimeMs;
+            return this;
+        }
 
         /**
          * <p>The metadata IDs. Separate multiple IDs with commas (,).</p>
@@ -158,6 +195,15 @@ public class QueryAppMetadataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StartTimeMs.
+         */
+        public Builder startTimeMs(Long startTimeMs) {
+            this.putQueryParameter("StartTimeMs", startTimeMs);
+            this.startTimeMs = startTimeMs;
             return this;
         }
 
