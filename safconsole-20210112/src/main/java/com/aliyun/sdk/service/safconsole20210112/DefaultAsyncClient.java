@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of RevokeFeedback  RevokeFeedbackRequest
+     * @return RevokeFeedbackResponse
+     */
     @Override
     public CompletableFuture<RevokeFeedbackResponse> revokeFeedback(RevokeFeedbackRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendFeedback  SendFeedbackRequest
+     * @return SendFeedbackResponse
+     */
     @Override
     public CompletableFuture<SendFeedbackResponse> sendFeedback(SendFeedbackRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadSampleApi  UploadSampleApiRequest
+     * @return UploadSampleApiResponse
+     */
     @Override
     public CompletableFuture<UploadSampleApiResponse> uploadSampleApi(UploadSampleApiRequest request) {
         try {

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.safconsole20210112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadSampleApiResponseBody} extends {@link TeaModel}
  *
  * <p>UploadSampleApiResponseBody</p>
  */
 public class UploadSampleApiResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private UploadSampleApiResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UploadSampleApiResponseBody extends TeaModel {
 
     public static UploadSampleApiResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class UploadSampleApiResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UploadSampleApiResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>Request code returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class UploadSampleApiResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +115,10 @@ public class UploadSampleApiResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,10 @@ public class UploadSampleApiResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicator of whether the access was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
