@@ -44,6 +44,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImportInfo")
     private String importInfo;
 
+    @com.aliyun.core.annotation.NameInMap("IsShared")
+    private Boolean isShared;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Label> labels;
 
@@ -76,6 +79,12 @@ public class GetDatasetResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SharedFrom")
+    private DatasetShareRelationship sharedFrom;
+
+    @com.aliyun.core.annotation.NameInMap("SharingConfig")
+    private SharingConfig sharingConfig;
 
     @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
     private String sourceDatasetId;
@@ -111,6 +120,7 @@ public class GetDatasetResponseBody extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.importInfo = builder.importInfo;
+        this.isShared = builder.isShared;
         this.labels = builder.labels;
         this.latestVersion = builder.latestVersion;
         this.mountAccess = builder.mountAccess;
@@ -122,6 +132,8 @@ public class GetDatasetResponseBody extends TeaModel {
         this.provider = builder.provider;
         this.providerType = builder.providerType;
         this.requestId = builder.requestId;
+        this.sharedFrom = builder.sharedFrom;
+        this.sharingConfig = builder.sharingConfig;
         this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceDatasetVersion = builder.sourceDatasetVersion;
         this.sourceId = builder.sourceId;
@@ -208,6 +220,13 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
+    /**
      * @return labels
      */
     public java.util.List<Label> getLabels() {
@@ -285,6 +304,20 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return sharedFrom
+     */
+    public DatasetShareRelationship getSharedFrom() {
+        return this.sharedFrom;
+    }
+
+    /**
+     * @return sharingConfig
+     */
+    public SharingConfig getSharingConfig() {
+        return this.sharingConfig;
+    }
+
+    /**
      * @return sourceDatasetId
      */
     public String getSourceDatasetId() {
@@ -350,6 +383,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String importInfo; 
+        private Boolean isShared; 
         private java.util.List<Label> labels; 
         private DatasetVersion latestVersion; 
         private String mountAccess; 
@@ -361,6 +395,8 @@ public class GetDatasetResponseBody extends TeaModel {
         private String provider; 
         private String providerType; 
         private String requestId; 
+        private DatasetShareRelationship sharedFrom; 
+        private SharingConfig sharingConfig; 
         private String sourceDatasetId; 
         private String sourceDatasetVersion; 
         private String sourceId; 
@@ -383,6 +419,7 @@ public class GetDatasetResponseBody extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.importInfo = model.importInfo;
+            this.isShared = model.isShared;
             this.labels = model.labels;
             this.latestVersion = model.latestVersion;
             this.mountAccess = model.mountAccess;
@@ -394,6 +431,8 @@ public class GetDatasetResponseBody extends TeaModel {
             this.provider = model.provider;
             this.providerType = model.providerType;
             this.requestId = model.requestId;
+            this.sharedFrom = model.sharedFrom;
+            this.sharingConfig = model.sharingConfig;
             this.sourceDatasetId = model.sourceDatasetId;
             this.sourceDatasetVersion = model.sourceDatasetVersion;
             this.sourceId = model.sourceId;
@@ -527,6 +566,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.isShared = isShared;
+            return this;
+        }
+
+        /**
          * <p>The tags.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
@@ -653,6 +700,22 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * SharedFrom.
+         */
+        public Builder sharedFrom(DatasetShareRelationship sharedFrom) {
+            this.sharedFrom = sharedFrom;
+            return this;
+        }
+
+        /**
+         * SharingConfig.
+         */
+        public Builder sharingConfig(SharingConfig sharingConfig) {
+            this.sharingConfig = sharingConfig;
+            return this;
+        }
+
+        /**
          * <p>The ID of the source dataset generated from a labeling job of iTAG.</p>
          * 
          * <strong>example:</strong>
@@ -760,4 +823,58 @@ public class GetDatasetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDatasetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetResponseBody</p>
+     */
+    public static class SharingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SharedTo")
+        private java.util.List<DatasetShareRelationship> sharedTo;
+
+        private SharingConfig(Builder builder) {
+            this.sharedTo = builder.sharedTo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SharingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sharedTo
+         */
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
+        public static final class Builder {
+            private java.util.List<DatasetShareRelationship> sharedTo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharingConfig model) {
+                this.sharedTo = model.sharedTo;
+            } 
+
+            /**
+             * SharedTo.
+             */
+            public Builder sharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+                this.sharedTo = sharedTo;
+                return this;
+            }
+
+            public SharingConfig build() {
+                return new SharingConfig(this);
+            } 
+
+        } 
+
+    }
 }

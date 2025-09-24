@@ -22,12 +22,17 @@ public class ListWorkspaceUsersRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private ListWorkspaceUsersRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.userId = builder.userId;
         this.userName = builder.userName;
     }
 
@@ -52,6 +57,13 @@ public class ListWorkspaceUsersRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -60,6 +72,7 @@ public class ListWorkspaceUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListWorkspaceUsersRequest, Builder> {
         private String workspaceId; 
+        private String userId; 
         private String userName; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class ListWorkspaceUsersRequest extends Request {
         private Builder(ListWorkspaceUsersRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.userId = request.userId;
             this.userName = request.userName;
         } 
 
@@ -81,6 +95,15 @@ public class ListWorkspaceUsersRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 

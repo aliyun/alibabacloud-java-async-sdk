@@ -59,6 +59,10 @@ public class CreateModelRequest extends Request {
     private String origin;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParameterSize")
+    private Long parameterSize;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Label> tag;
 
@@ -82,6 +86,7 @@ public class CreateModelRequest extends Request {
         this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
+        this.parameterSize = builder.parameterSize;
         this.tag = builder.tag;
         this.task = builder.task;
         this.workspaceId = builder.workspaceId;
@@ -171,6 +176,13 @@ public class CreateModelRequest extends Request {
     }
 
     /**
+     * @return parameterSize
+     */
+    public Long getParameterSize() {
+        return this.parameterSize;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Label> getTag() {
@@ -202,6 +214,7 @@ public class CreateModelRequest extends Request {
         private String modelType; 
         private Long orderNumber; 
         private String origin; 
+        private Long parameterSize; 
         private java.util.List<Label> tag; 
         private String task; 
         private String workspaceId; 
@@ -222,6 +235,7 @@ public class CreateModelRequest extends Request {
             this.modelType = request.modelType;
             this.orderNumber = request.orderNumber;
             this.origin = request.origin;
+            this.parameterSize = request.parameterSize;
             this.tag = request.tag;
             this.task = request.task;
             this.workspaceId = request.workspaceId;
@@ -348,6 +362,15 @@ public class CreateModelRequest extends Request {
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
             this.origin = origin;
+            return this;
+        }
+
+        /**
+         * ParameterSize.
+         */
+        public Builder parameterSize(Long parameterSize) {
+            this.putBodyParameter("ParameterSize", parameterSize);
+            this.parameterSize = parameterSize;
             return this;
         }
 

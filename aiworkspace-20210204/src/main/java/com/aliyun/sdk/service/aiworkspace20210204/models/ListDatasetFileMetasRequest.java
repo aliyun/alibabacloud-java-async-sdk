@@ -53,6 +53,14 @@ public class ListDatasetFileMetasRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryContentTypeIncludeAny")
+    private java.util.List<String> queryContentTypeIncludeAny;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryExpression")
+    private String queryExpression;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryFileDir")
     private String queryFileDir;
 
@@ -110,7 +118,7 @@ public class ListDatasetFileMetasRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopK")
-    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 5000, minimum = 1)
     private Integer topK;
 
     @com.aliyun.core.annotation.Query
@@ -128,6 +136,8 @@ public class ListDatasetFileMetasRequest extends Request {
         this.nextToken = builder.nextToken;
         this.order = builder.order;
         this.pageSize = builder.pageSize;
+        this.queryContentTypeIncludeAny = builder.queryContentTypeIncludeAny;
+        this.queryExpression = builder.queryExpression;
         this.queryFileDir = builder.queryFileDir;
         this.queryFileName = builder.queryFileName;
         this.queryFileTypeIncludeAny = builder.queryFileTypeIncludeAny;
@@ -213,6 +223,20 @@ public class ListDatasetFileMetasRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return queryContentTypeIncludeAny
+     */
+    public java.util.List<String> getQueryContentTypeIncludeAny() {
+        return this.queryContentTypeIncludeAny;
+    }
+
+    /**
+     * @return queryExpression
+     */
+    public String getQueryExpression() {
+        return this.queryExpression;
     }
 
     /**
@@ -336,6 +360,8 @@ public class ListDatasetFileMetasRequest extends Request {
         private String nextToken; 
         private String order; 
         private Integer pageSize; 
+        private java.util.List<String> queryContentTypeIncludeAny; 
+        private String queryExpression; 
         private String queryFileDir; 
         private String queryFileName; 
         private java.util.List<String> queryFileTypeIncludeAny; 
@@ -367,6 +393,8 @@ public class ListDatasetFileMetasRequest extends Request {
             this.nextToken = request.nextToken;
             this.order = request.order;
             this.pageSize = request.pageSize;
+            this.queryContentTypeIncludeAny = request.queryContentTypeIncludeAny;
+            this.queryExpression = request.queryExpression;
             this.queryFileDir = request.queryFileDir;
             this.queryFileName = request.queryFileName;
             this.queryFileTypeIncludeAny = request.queryFileTypeIncludeAny;
@@ -485,6 +513,25 @@ public class ListDatasetFileMetasRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * QueryContentTypeIncludeAny.
+         */
+        public Builder queryContentTypeIncludeAny(java.util.List<String> queryContentTypeIncludeAny) {
+            String queryContentTypeIncludeAnyShrink = shrink(queryContentTypeIncludeAny, "QueryContentTypeIncludeAny", "simple");
+            this.putQueryParameter("QueryContentTypeIncludeAny", queryContentTypeIncludeAnyShrink);
+            this.queryContentTypeIncludeAny = queryContentTypeIncludeAny;
+            return this;
+        }
+
+        /**
+         * QueryExpression.
+         */
+        public Builder queryExpression(String queryExpression) {
+            this.putQueryParameter("QueryExpression", queryExpression);
+            this.queryExpression = queryExpression;
             return this;
         }
 

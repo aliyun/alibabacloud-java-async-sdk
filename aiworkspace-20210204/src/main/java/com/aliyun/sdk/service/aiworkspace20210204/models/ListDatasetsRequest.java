@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDatasetsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataSourceTypes")
     private String dataSourceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataTypes")
     private String dataTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
@@ -54,6 +62,10 @@ public class ListDatasetsRequest extends Request {
     private String provider;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareScope")
+    private String shareScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -75,8 +87,10 @@ public class ListDatasetsRequest extends Request {
 
     private ListDatasetsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.dataSourceTypes = builder.dataSourceTypes;
         this.dataTypes = builder.dataTypes;
+        this.edition = builder.edition;
         this.label = builder.label;
         this.name = builder.name;
         this.order = builder.order;
@@ -84,6 +98,7 @@ public class ListDatasetsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.properties = builder.properties;
         this.provider = builder.provider;
+        this.shareScope = builder.shareScope;
         this.sortBy = builder.sortBy;
         this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceId = builder.sourceId;
@@ -105,6 +120,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
      * @return dataSourceTypes
      */
     public String getDataSourceTypes() {
@@ -116,6 +138,13 @@ public class ListDatasetsRequest extends Request {
      */
     public String getDataTypes() {
         return this.dataTypes;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -168,6 +197,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return shareScope
+     */
+    public String getShareScope() {
+        return this.shareScope;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -203,8 +239,10 @@ public class ListDatasetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDatasetsRequest, Builder> {
+        private String accessibility; 
         private String dataSourceTypes; 
         private String dataTypes; 
+        private String edition; 
         private String label; 
         private String name; 
         private String order; 
@@ -212,6 +250,7 @@ public class ListDatasetsRequest extends Request {
         private Integer pageSize; 
         private String properties; 
         private String provider; 
+        private String shareScope; 
         private String sortBy; 
         private String sourceDatasetId; 
         private String sourceId; 
@@ -224,8 +263,10 @@ public class ListDatasetsRequest extends Request {
 
         private Builder(ListDatasetsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.dataSourceTypes = request.dataSourceTypes;
             this.dataTypes = request.dataTypes;
+            this.edition = request.edition;
             this.label = request.label;
             this.name = request.name;
             this.order = request.order;
@@ -233,12 +274,22 @@ public class ListDatasetsRequest extends Request {
             this.pageSize = request.pageSize;
             this.properties = request.properties;
             this.provider = request.provider;
+            this.shareScope = request.shareScope;
             this.sortBy = request.sortBy;
             this.sourceDatasetId = request.sourceDatasetId;
             this.sourceId = request.sourceId;
             this.sourceTypes = request.sourceTypes;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</p>
@@ -272,6 +323,15 @@ public class ListDatasetsRequest extends Request {
         public Builder dataTypes(String dataTypes) {
             this.putQueryParameter("DataTypes", dataTypes);
             this.dataTypes = dataTypes;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 
@@ -364,6 +424,15 @@ public class ListDatasetsRequest extends Request {
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * ShareScope.
+         */
+        public Builder shareScope(String shareScope) {
+            this.putQueryParameter("ShareScope", shareScope);
+            this.shareScope = shareScope;
             return this;
         }
 

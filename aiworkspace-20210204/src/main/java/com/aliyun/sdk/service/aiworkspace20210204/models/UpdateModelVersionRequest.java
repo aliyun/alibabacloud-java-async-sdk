@@ -36,6 +36,10 @@ public class UpdateModelVersionRequest extends Request {
     private java.util.Map<String, ?> compressionSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DistillationSpec")
+    private java.util.Map<String, ?> distillationSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map<String, ?> evaluationSpec;
 
@@ -77,6 +81,7 @@ public class UpdateModelVersionRequest extends Request {
         this.versionName = builder.versionName;
         this.approvalStatus = builder.approvalStatus;
         this.compressionSpec = builder.compressionSpec;
+        this.distillationSpec = builder.distillationSpec;
         this.evaluationSpec = builder.evaluationSpec;
         this.extraInfo = builder.extraInfo;
         this.inferenceSpec = builder.inferenceSpec;
@@ -127,6 +132,13 @@ public class UpdateModelVersionRequest extends Request {
      */
     public java.util.Map<String, ?> getCompressionSpec() {
         return this.compressionSpec;
+    }
+
+    /**
+     * @return distillationSpec
+     */
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
     }
 
     /**
@@ -197,6 +209,7 @@ public class UpdateModelVersionRequest extends Request {
         private String versionName; 
         private String approvalStatus; 
         private java.util.Map<String, ?> compressionSpec; 
+        private java.util.Map<String, ?> distillationSpec; 
         private java.util.Map<String, ?> evaluationSpec; 
         private java.util.Map<String, ?> extraInfo; 
         private java.util.Map<String, ?> inferenceSpec; 
@@ -217,6 +230,7 @@ public class UpdateModelVersionRequest extends Request {
             this.versionName = request.versionName;
             this.approvalStatus = request.approvalStatus;
             this.compressionSpec = request.compressionSpec;
+            this.distillationSpec = request.distillationSpec;
             this.evaluationSpec = request.evaluationSpec;
             this.extraInfo = request.extraInfo;
             this.inferenceSpec = request.inferenceSpec;
@@ -280,6 +294,15 @@ public class UpdateModelVersionRequest extends Request {
         public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
             this.putBodyParameter("CompressionSpec", compressionSpec);
             this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * DistillationSpec.
+         */
+        public Builder distillationSpec(java.util.Map<String, ?> distillationSpec) {
+            this.putBodyParameter("DistillationSpec", distillationSpec);
+            this.distillationSpec = distillationSpec;
             return this;
         }
 

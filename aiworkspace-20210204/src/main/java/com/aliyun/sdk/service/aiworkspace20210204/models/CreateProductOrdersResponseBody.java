@@ -26,6 +26,9 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
+    @com.aliyun.core.annotation.NameInMap("ProductIds")
+    private java.util.List<String> productIds;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -33,6 +36,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         this.buyProductRequestId = builder.buyProductRequestId;
         this.message = builder.message;
         this.orderId = builder.orderId;
+        this.productIds = builder.productIds;
         this.requestId = builder.requestId;
     }
 
@@ -70,6 +74,13 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     }
 
     /**
+     * @return productIds
+     */
+    public java.util.List<String> getProductIds() {
+        return this.productIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -80,6 +91,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         private String buyProductRequestId; 
         private String message; 
         private String orderId; 
+        private java.util.List<String> productIds; 
         private String requestId; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
             this.buyProductRequestId = model.buyProductRequestId;
             this.message = model.message;
             this.orderId = model.orderId;
+            this.productIds = model.productIds;
             this.requestId = model.requestId;
         } 
 
@@ -119,6 +132,14 @@ public class CreateProductOrdersResponseBody extends TeaModel {
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * ProductIds.
+         */
+        public Builder productIds(java.util.List<String> productIds) {
+            this.productIds = productIds;
             return this;
         }
 

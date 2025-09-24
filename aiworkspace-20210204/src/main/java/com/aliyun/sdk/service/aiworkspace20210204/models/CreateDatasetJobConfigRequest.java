@@ -33,6 +33,10 @@ public class CreateDatasetJobConfigRequest extends Request {
     private String configType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+    private String datasetVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -42,6 +46,7 @@ public class CreateDatasetJobConfigRequest extends Request {
         this.datasetId = builder.datasetId;
         this.config = builder.config;
         this.configType = builder.configType;
+        this.datasetVersion = builder.datasetVersion;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -80,6 +85,13 @@ public class CreateDatasetJobConfigRequest extends Request {
     }
 
     /**
+     * @return datasetVersion
+     */
+    public String getDatasetVersion() {
+        return this.datasetVersion;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -90,6 +102,7 @@ public class CreateDatasetJobConfigRequest extends Request {
         private String datasetId; 
         private String config; 
         private String configType; 
+        private String datasetVersion; 
         private String workspaceId; 
 
         private Builder() {
@@ -101,6 +114,7 @@ public class CreateDatasetJobConfigRequest extends Request {
             this.datasetId = request.datasetId;
             this.config = request.config;
             this.configType = request.configType;
+            this.datasetVersion = request.datasetVersion;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -153,6 +167,15 @@ public class CreateDatasetJobConfigRequest extends Request {
         public Builder configType(String configType) {
             this.putBodyParameter("ConfigType", configType);
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * DatasetVersion.
+         */
+        public Builder datasetVersion(String datasetVersion) {
+            this.putBodyParameter("DatasetVersion", datasetVersion);
+            this.datasetVersion = datasetVersion;
             return this;
         }
 

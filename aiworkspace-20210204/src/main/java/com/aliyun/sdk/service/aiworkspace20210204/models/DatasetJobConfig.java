@@ -29,6 +29,9 @@ public class DatasetJobConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatasetJobConfigId")
     private String datasetJobConfigId;
 
+    @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+    private String datasetVersion;
+
     @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
@@ -40,6 +43,7 @@ public class DatasetJobConfig extends TeaModel {
         this.configType = builder.configType;
         this.createTime = builder.createTime;
         this.datasetJobConfigId = builder.datasetJobConfigId;
+        this.datasetVersion = builder.datasetVersion;
         this.modifyTime = builder.modifyTime;
         this.workspaceId = builder.workspaceId;
     }
@@ -85,6 +89,13 @@ public class DatasetJobConfig extends TeaModel {
     }
 
     /**
+     * @return datasetVersion
+     */
+    public String getDatasetVersion() {
+        return this.datasetVersion;
+    }
+
+    /**
      * @return modifyTime
      */
     public String getModifyTime() {
@@ -103,6 +114,7 @@ public class DatasetJobConfig extends TeaModel {
         private String configType; 
         private String createTime; 
         private String datasetJobConfigId; 
+        private String datasetVersion; 
         private String modifyTime; 
         private String workspaceId; 
 
@@ -114,6 +126,7 @@ public class DatasetJobConfig extends TeaModel {
             this.configType = model.configType;
             this.createTime = model.createTime;
             this.datasetJobConfigId = model.datasetJobConfigId;
+            this.datasetVersion = model.datasetVersion;
             this.modifyTime = model.modifyTime;
             this.workspaceId = model.workspaceId;
         } 
@@ -147,6 +160,14 @@ public class DatasetJobConfig extends TeaModel {
          */
         public Builder datasetJobConfigId(String datasetJobConfigId) {
             this.datasetJobConfigId = datasetJobConfigId;
+            return this;
+        }
+
+        /**
+         * DatasetVersion.
+         */
+        public Builder datasetVersion(String datasetVersion) {
+            this.datasetVersion = datasetVersion;
             return this;
         }
 

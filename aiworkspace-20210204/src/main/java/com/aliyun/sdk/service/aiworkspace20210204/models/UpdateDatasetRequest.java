@@ -42,6 +42,10 @@ public class UpdateDatasetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SharingConfig")
+    private SharingConfig sharingConfig;
+
     private UpdateDatasetRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
@@ -50,6 +54,7 @@ public class UpdateDatasetRequest extends Request {
         this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
         this.name = builder.name;
         this.options = builder.options;
+        this.sharingConfig = builder.sharingConfig;
     }
 
     public static Builder builder() {
@@ -107,6 +112,13 @@ public class UpdateDatasetRequest extends Request {
         return this.options;
     }
 
+    /**
+     * @return sharingConfig
+     */
+    public SharingConfig getSharingConfig() {
+        return this.sharingConfig;
+    }
+
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String datasetId; 
         private String description; 
@@ -114,6 +126,7 @@ public class UpdateDatasetRequest extends Request {
         private java.util.List<String> mountAccessReadWriteRoleIdList; 
         private String name; 
         private String options; 
+        private SharingConfig sharingConfig; 
 
         private Builder() {
             super();
@@ -127,6 +140,7 @@ public class UpdateDatasetRequest extends Request {
             this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
             this.name = request.name;
             this.options = request.options;
+            this.sharingConfig = request.sharingConfig;
         } 
 
         /**
@@ -200,6 +214,15 @@ public class UpdateDatasetRequest extends Request {
             return this;
         }
 
+        /**
+         * SharingConfig.
+         */
+        public Builder sharingConfig(SharingConfig sharingConfig) {
+            this.putBodyParameter("SharingConfig", sharingConfig);
+            this.sharingConfig = sharingConfig;
+            return this;
+        }
+
         @Override
         public UpdateDatasetRequest build() {
             return new UpdateDatasetRequest(this);
@@ -207,4 +230,58 @@ public class UpdateDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
+    public static class SharingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SharedTo")
+        private java.util.List<DatasetShareRelationship> sharedTo;
+
+        private SharingConfig(Builder builder) {
+            this.sharedTo = builder.sharedTo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SharingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sharedTo
+         */
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
+        public static final class Builder {
+            private java.util.List<DatasetShareRelationship> sharedTo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharingConfig model) {
+                this.sharedTo = model.sharedTo;
+            } 
+
+            /**
+             * SharedTo.
+             */
+            public Builder sharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+                this.sharedTo = sharedTo;
+                return this;
+            }
+
+            public SharingConfig build() {
+                return new SharingConfig(this);
+            } 
+
+        } 
+
+    }
 }

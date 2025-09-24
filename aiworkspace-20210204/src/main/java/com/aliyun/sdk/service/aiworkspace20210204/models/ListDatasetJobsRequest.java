@@ -31,12 +31,24 @@ public class ListDatasetJobsRequest extends Request {
     private String jobAction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -47,8 +59,11 @@ public class ListDatasetJobsRequest extends Request {
         this.datasetId = builder.datasetId;
         this.datasetVersion = builder.datasetVersion;
         this.jobAction = builder.jobAction;
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sortBy = builder.sortBy;
+        this.status = builder.status;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -87,6 +102,13 @@ public class ListDatasetJobsRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -101,6 +123,20 @@ public class ListDatasetJobsRequest extends Request {
     }
 
     /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -111,8 +147,11 @@ public class ListDatasetJobsRequest extends Request {
         private String datasetId; 
         private String datasetVersion; 
         private String jobAction; 
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sortBy; 
+        private String status; 
         private String workspaceId; 
 
         private Builder() {
@@ -124,8 +163,11 @@ public class ListDatasetJobsRequest extends Request {
             this.datasetId = request.datasetId;
             this.datasetVersion = request.datasetVersion;
             this.jobAction = request.jobAction;
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.status = request.status;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -167,6 +209,15 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +238,24 @@ public class ListDatasetJobsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

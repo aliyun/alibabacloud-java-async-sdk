@@ -23,6 +23,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CompressionSpec")
     private java.util.Map<String, ?> compressionSpec;
 
+    @com.aliyun.core.annotation.NameInMap("DistillationSpec")
+    private java.util.Map<String, ?> distillationSpec;
+
     @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map<String, ?> evaluationSpec;
 
@@ -83,6 +86,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     private GetModelVersionResponseBody(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
         this.compressionSpec = builder.compressionSpec;
+        this.distillationSpec = builder.distillationSpec;
         this.evaluationSpec = builder.evaluationSpec;
         this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
@@ -128,6 +132,13 @@ public class GetModelVersionResponseBody extends TeaModel {
      */
     public java.util.Map<String, ?> getCompressionSpec() {
         return this.compressionSpec;
+    }
+
+    /**
+     * @return distillationSpec
+     */
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
     }
 
     /**
@@ -266,6 +277,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String approvalStatus; 
         private java.util.Map<String, ?> compressionSpec; 
+        private java.util.Map<String, ?> distillationSpec; 
         private java.util.Map<String, ?> evaluationSpec; 
         private java.util.Map<String, ?> extraInfo; 
         private String formatType; 
@@ -292,6 +304,7 @@ public class GetModelVersionResponseBody extends TeaModel {
         private Builder(GetModelVersionResponseBody model) {
             this.approvalStatus = model.approvalStatus;
             this.compressionSpec = model.compressionSpec;
+            this.distillationSpec = model.distillationSpec;
             this.evaluationSpec = model.evaluationSpec;
             this.extraInfo = model.extraInfo;
             this.formatType = model.formatType;
@@ -337,6 +350,14 @@ public class GetModelVersionResponseBody extends TeaModel {
          */
         public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
             this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * DistillationSpec.
+         */
+        public Builder distillationSpec(java.util.Map<String, ?> distillationSpec) {
+            this.distillationSpec = distillationSpec;
             return this;
         }
 

@@ -29,6 +29,9 @@ public class GetModelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
+    @com.aliyun.core.annotation.NameInMap("GmtLatestVersionModifiedTime")
+    private String gmtLatestVersionModifiedTime;
+
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
@@ -62,6 +65,9 @@ public class GetModelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
+    @com.aliyun.core.annotation.NameInMap("ParameterSize")
+    private Long parameterSize;
+
     @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
@@ -82,6 +88,7 @@ public class GetModelResponseBody extends TeaModel {
         this.domain = builder.domain;
         this.extraInfo = builder.extraInfo;
         this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtLatestVersionModifiedTime = builder.gmtLatestVersionModifiedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
         this.latestVersion = builder.latestVersion;
@@ -93,6 +100,7 @@ public class GetModelResponseBody extends TeaModel {
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
         this.ownerId = builder.ownerId;
+        this.parameterSize = builder.parameterSize;
         this.provider = builder.provider;
         this.requestId = builder.requestId;
         this.task = builder.task;
@@ -138,6 +146,13 @@ public class GetModelResponseBody extends TeaModel {
      */
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtLatestVersionModifiedTime
+     */
+    public String getGmtLatestVersionModifiedTime() {
+        return this.gmtLatestVersionModifiedTime;
     }
 
     /**
@@ -218,6 +233,13 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     /**
+     * @return parameterSize
+     */
+    public Long getParameterSize() {
+        return this.parameterSize;
+    }
+
+    /**
      * @return provider
      */
     public String getProvider() {
@@ -257,6 +279,7 @@ public class GetModelResponseBody extends TeaModel {
         private String domain; 
         private java.util.Map<String, ?> extraInfo; 
         private String gmtCreateTime; 
+        private String gmtLatestVersionModifiedTime; 
         private String gmtModifiedTime; 
         private java.util.List<Label> labels; 
         private ModelVersion latestVersion; 
@@ -268,6 +291,7 @@ public class GetModelResponseBody extends TeaModel {
         private Long orderNumber; 
         private String origin; 
         private String ownerId; 
+        private Long parameterSize; 
         private String provider; 
         private String requestId; 
         private String task; 
@@ -282,6 +306,7 @@ public class GetModelResponseBody extends TeaModel {
             this.domain = model.domain;
             this.extraInfo = model.extraInfo;
             this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtLatestVersionModifiedTime = model.gmtLatestVersionModifiedTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.labels = model.labels;
             this.latestVersion = model.latestVersion;
@@ -293,6 +318,7 @@ public class GetModelResponseBody extends TeaModel {
             this.orderNumber = model.orderNumber;
             this.origin = model.origin;
             this.ownerId = model.ownerId;
+            this.parameterSize = model.parameterSize;
             this.provider = model.provider;
             this.requestId = model.requestId;
             this.task = model.task;
@@ -353,6 +379,14 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtLatestVersionModifiedTime.
+         */
+        public Builder gmtLatestVersionModifiedTime(String gmtLatestVersionModifiedTime) {
+            this.gmtLatestVersionModifiedTime = gmtLatestVersionModifiedTime;
             return this;
         }
 
@@ -462,6 +496,14 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ParameterSize.
+         */
+        public Builder parameterSize(Long parameterSize) {
+            this.parameterSize = parameterSize;
             return this;
         }
 

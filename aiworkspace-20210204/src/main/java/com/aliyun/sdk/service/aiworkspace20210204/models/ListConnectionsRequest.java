@@ -30,6 +30,10 @@ public class ListConnectionsRequest extends Request {
     private java.util.List<String> connectionTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
+    private String creator;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptOption")
     private String encryptOption;
 
@@ -70,6 +74,7 @@ public class ListConnectionsRequest extends Request {
         this.connectionIds = builder.connectionIds;
         this.connectionName = builder.connectionName;
         this.connectionTypes = builder.connectionTypes;
+        this.creator = builder.creator;
         this.encryptOption = builder.encryptOption;
         this.maxResults = builder.maxResults;
         this.model = builder.model;
@@ -113,6 +118,13 @@ public class ListConnectionsRequest extends Request {
      */
     public java.util.List<String> getConnectionTypes() {
         return this.connectionTypes;
+    }
+
+    /**
+     * @return creator
+     */
+    public String getCreator() {
+        return this.creator;
     }
 
     /**
@@ -182,6 +194,7 @@ public class ListConnectionsRequest extends Request {
         private java.util.List<String> connectionIds; 
         private String connectionName; 
         private java.util.List<String> connectionTypes; 
+        private String creator; 
         private String encryptOption; 
         private Integer maxResults; 
         private String model; 
@@ -201,6 +214,7 @@ public class ListConnectionsRequest extends Request {
             this.connectionIds = request.connectionIds;
             this.connectionName = request.connectionName;
             this.connectionTypes = request.connectionTypes;
+            this.creator = request.creator;
             this.encryptOption = request.encryptOption;
             this.maxResults = request.maxResults;
             this.model = request.model;
@@ -238,6 +252,15 @@ public class ListConnectionsRequest extends Request {
             String connectionTypesShrink = shrink(connectionTypes, "ConnectionTypes", "simple");
             this.putQueryParameter("ConnectionTypes", connectionTypesShrink);
             this.connectionTypes = connectionTypes;
+            return this;
+        }
+
+        /**
+         * Creator.
+         */
+        public Builder creator(String creator) {
+            this.putQueryParameter("Creator", creator);
+            this.creator = creator;
             return this;
         }
 

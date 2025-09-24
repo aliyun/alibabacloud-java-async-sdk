@@ -125,8 +125,8 @@ public class ListProductsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @com.aliyun.core.annotation.NameInMap("ProductInstanceId")
-        private String productInstanceId;
+        @com.aliyun.core.annotation.NameInMap("ProductId")
+        private String productId;
 
         @com.aliyun.core.annotation.NameInMap("PurchaseUrl")
         private String purchaseUrl;
@@ -135,7 +135,7 @@ public class ListProductsResponseBody extends TeaModel {
             this.hasPermissionToPurchase = builder.hasPermissionToPurchase;
             this.isPurchased = builder.isPurchased;
             this.productCode = builder.productCode;
-            this.productInstanceId = builder.productInstanceId;
+            this.productId = builder.productId;
             this.purchaseUrl = builder.purchaseUrl;
         }
 
@@ -169,10 +169,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * @return productInstanceId
+         * @return productId
          */
-        public String getProductInstanceId() {
-            return this.productInstanceId;
+        public String getProductId() {
+            return this.productId;
         }
 
         /**
@@ -186,7 +186,7 @@ public class ListProductsResponseBody extends TeaModel {
             private Boolean hasPermissionToPurchase; 
             private Boolean isPurchased; 
             private String productCode; 
-            private String productInstanceId; 
+            private String productId; 
             private String purchaseUrl; 
 
             private Builder() {
@@ -196,7 +196,7 @@ public class ListProductsResponseBody extends TeaModel {
                 this.hasPermissionToPurchase = model.hasPermissionToPurchase;
                 this.isPurchased = model.isPurchased;
                 this.productCode = model.productCode;
-                this.productInstanceId = model.productInstanceId;
+                this.productId = model.productId;
                 this.purchaseUrl = model.purchaseUrl;
             } 
 
@@ -225,10 +225,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductInstanceId.
+             * ProductId.
              */
-            public Builder productInstanceId(String productInstanceId) {
-                this.productInstanceId = productInstanceId;
+            public Builder productId(String productId) {
+                this.productId = productId;
                 return this;
             }
 

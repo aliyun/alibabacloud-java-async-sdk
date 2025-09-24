@@ -59,6 +59,10 @@ public class UpdateModelRequest extends Request {
     private String origin;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParameterSize")
+    private Long parameterSize;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
@@ -74,6 +78,7 @@ public class UpdateModelRequest extends Request {
         this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
+        this.parameterSize = builder.parameterSize;
         this.task = builder.task;
     }
 
@@ -161,6 +166,13 @@ public class UpdateModelRequest extends Request {
     }
 
     /**
+     * @return parameterSize
+     */
+    public Long getParameterSize() {
+        return this.parameterSize;
+    }
+
+    /**
      * @return task
      */
     public String getTask() {
@@ -178,6 +190,7 @@ public class UpdateModelRequest extends Request {
         private String modelType; 
         private Long orderNumber; 
         private String origin; 
+        private Long parameterSize; 
         private String task; 
 
         private Builder() {
@@ -196,6 +209,7 @@ public class UpdateModelRequest extends Request {
             this.modelType = request.modelType;
             this.orderNumber = request.orderNumber;
             this.origin = request.origin;
+            this.parameterSize = request.parameterSize;
             this.task = request.task;
         } 
 
@@ -323,6 +337,15 @@ public class UpdateModelRequest extends Request {
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
             this.origin = origin;
+            return this;
+        }
+
+        /**
+         * ParameterSize.
+         */
+        public Builder parameterSize(Long parameterSize) {
+            this.putBodyParameter("ParameterSize", parameterSize);
+            this.parameterSize = parameterSize;
             return this;
         }
 

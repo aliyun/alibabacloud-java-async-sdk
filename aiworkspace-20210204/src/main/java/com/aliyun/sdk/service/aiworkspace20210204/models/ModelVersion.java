@@ -23,6 +23,9 @@ public class ModelVersion extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CompressionSpec")
     private java.util.Map<String, ?> compressionSpec;
 
+    @com.aliyun.core.annotation.NameInMap("DistillationSpec")
+    private java.util.Map<String, ?> distillationSpec;
+
     @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map<String, ?> evaluationSpec;
 
@@ -45,7 +48,7 @@ public class ModelVersion extends TeaModel {
     private java.util.Map<String, ?> inferenceSpec;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List<Label> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map<String, ?> metrics;
@@ -80,6 +83,7 @@ public class ModelVersion extends TeaModel {
     private ModelVersion(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
         this.compressionSpec = builder.compressionSpec;
+        this.distillationSpec = builder.distillationSpec;
         this.evaluationSpec = builder.evaluationSpec;
         this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
@@ -124,6 +128,13 @@ public class ModelVersion extends TeaModel {
      */
     public java.util.Map<String, ?> getCompressionSpec() {
         return this.compressionSpec;
+    }
+
+    /**
+     * @return distillationSpec
+     */
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
     }
 
     /**
@@ -178,7 +189,7 @@ public class ModelVersion extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List<Label> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -255,6 +266,7 @@ public class ModelVersion extends TeaModel {
     public static final class Builder {
         private String approvalStatus; 
         private java.util.Map<String, ?> compressionSpec; 
+        private java.util.Map<String, ?> distillationSpec; 
         private java.util.Map<String, ?> evaluationSpec; 
         private java.util.Map<String, ?> extraInfo; 
         private String formatType; 
@@ -262,7 +274,7 @@ public class ModelVersion extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.Map<String, ?> inferenceSpec; 
-        private java.util.List<Label> labels; 
+        private java.util.List<Labels> labels; 
         private java.util.Map<String, ?> metrics; 
         private String options; 
         private String ownerId; 
@@ -280,6 +292,7 @@ public class ModelVersion extends TeaModel {
         private Builder(ModelVersion model) {
             this.approvalStatus = model.approvalStatus;
             this.compressionSpec = model.compressionSpec;
+            this.distillationSpec = model.distillationSpec;
             this.evaluationSpec = model.evaluationSpec;
             this.extraInfo = model.extraInfo;
             this.formatType = model.formatType;
@@ -313,6 +326,14 @@ public class ModelVersion extends TeaModel {
          */
         public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
             this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * DistillationSpec.
+         */
+        public Builder distillationSpec(java.util.Map<String, ?> distillationSpec) {
+            this.distillationSpec = distillationSpec;
             return this;
         }
 
@@ -375,7 +396,7 @@ public class ModelVersion extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List<Label> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -466,4 +487,79 @@ public class ModelVersion extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModelVersion} extends {@link TeaModel}
+     *
+     * <p>ModelVersion</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

@@ -431,6 +431,9 @@ public class CreateConnectionRequest extends Request {
      * <p>CreateConnectionRequest</p>
      */
     public static class ResourceMeta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Extra")
+        private String extra;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -438,6 +441,7 @@ public class CreateConnectionRequest extends Request {
         private String instanceName;
 
         private ResourceMeta(Builder builder) {
+            this.extra = builder.extra;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
         }
@@ -448,6 +452,13 @@ public class CreateConnectionRequest extends Request {
 
         public static ResourceMeta create() {
             return builder().build();
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -465,6 +476,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         public static final class Builder {
+            private String extra; 
             private String instanceId; 
             private String instanceName; 
 
@@ -472,9 +484,18 @@ public class CreateConnectionRequest extends Request {
             } 
 
             private Builder(ResourceMeta model) {
+                this.extra = model.extra;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
             } 
+
+            /**
+             * Extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
+                return this;
+            }
 
             /**
              * <p>The instance ID.</p>

@@ -44,6 +44,9 @@ public class Dataset extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImportInfo")
     private String importInfo;
 
+    @com.aliyun.core.annotation.NameInMap("IsShared")
+    private Boolean isShared;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Label> labels;
 
@@ -70,6 +73,12 @@ public class Dataset extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ProviderType")
     private String providerType;
+
+    @com.aliyun.core.annotation.NameInMap("SharedFrom")
+    private DatasetShareRelationship sharedFrom;
+
+    @com.aliyun.core.annotation.NameInMap("SharingConfig")
+    private SharingConfig sharingConfig;
 
     @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
     private String sourceDatasetId;
@@ -105,6 +114,7 @@ public class Dataset extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.importInfo = builder.importInfo;
+        this.isShared = builder.isShared;
         this.labels = builder.labels;
         this.latestVersion = builder.latestVersion;
         this.mountAccess = builder.mountAccess;
@@ -114,6 +124,8 @@ public class Dataset extends TeaModel {
         this.ownerId = builder.ownerId;
         this.property = builder.property;
         this.providerType = builder.providerType;
+        this.sharedFrom = builder.sharedFrom;
+        this.sharingConfig = builder.sharingConfig;
         this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceDatasetVersion = builder.sourceDatasetVersion;
         this.sourceId = builder.sourceId;
@@ -200,6 +212,13 @@ public class Dataset extends TeaModel {
     }
 
     /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
+    /**
      * @return labels
      */
     public java.util.List<Label> getLabels() {
@@ -260,6 +279,20 @@ public class Dataset extends TeaModel {
      */
     public String getProviderType() {
         return this.providerType;
+    }
+
+    /**
+     * @return sharedFrom
+     */
+    public DatasetShareRelationship getSharedFrom() {
+        return this.sharedFrom;
+    }
+
+    /**
+     * @return sharingConfig
+     */
+    public SharingConfig getSharingConfig() {
+        return this.sharingConfig;
     }
 
     /**
@@ -328,6 +361,7 @@ public class Dataset extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String importInfo; 
+        private Boolean isShared; 
         private java.util.List<Label> labels; 
         private DatasetVersion latestVersion; 
         private String mountAccess; 
@@ -337,6 +371,8 @@ public class Dataset extends TeaModel {
         private String ownerId; 
         private String property; 
         private String providerType; 
+        private DatasetShareRelationship sharedFrom; 
+        private SharingConfig sharingConfig; 
         private String sourceDatasetId; 
         private String sourceDatasetVersion; 
         private String sourceId; 
@@ -359,6 +395,7 @@ public class Dataset extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.importInfo = model.importInfo;
+            this.isShared = model.isShared;
             this.labels = model.labels;
             this.latestVersion = model.latestVersion;
             this.mountAccess = model.mountAccess;
@@ -368,6 +405,8 @@ public class Dataset extends TeaModel {
             this.ownerId = model.ownerId;
             this.property = model.property;
             this.providerType = model.providerType;
+            this.sharedFrom = model.sharedFrom;
+            this.sharingConfig = model.sharingConfig;
             this.sourceDatasetId = model.sourceDatasetId;
             this.sourceDatasetVersion = model.sourceDatasetVersion;
             this.sourceId = model.sourceId;
@@ -451,6 +490,14 @@ public class Dataset extends TeaModel {
         }
 
         /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.isShared = isShared;
+            return this;
+        }
+
+        /**
          * Labels.
          */
         public Builder labels(java.util.List<Label> labels) {
@@ -519,6 +566,22 @@ public class Dataset extends TeaModel {
          */
         public Builder providerType(String providerType) {
             this.providerType = providerType;
+            return this;
+        }
+
+        /**
+         * SharedFrom.
+         */
+        public Builder sharedFrom(DatasetShareRelationship sharedFrom) {
+            this.sharedFrom = sharedFrom;
+            return this;
+        }
+
+        /**
+         * SharingConfig.
+         */
+        public Builder sharingConfig(SharingConfig sharingConfig) {
+            this.sharingConfig = sharingConfig;
             return this;
         }
 
@@ -592,4 +655,58 @@ public class Dataset extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Dataset} extends {@link TeaModel}
+     *
+     * <p>Dataset</p>
+     */
+    public static class SharingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SharedTo")
+        private java.util.List<DatasetShareRelationship> sharedTo;
+
+        private SharingConfig(Builder builder) {
+            this.sharedTo = builder.sharedTo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SharingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sharedTo
+         */
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
+        public static final class Builder {
+            private java.util.List<DatasetShareRelationship> sharedTo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharingConfig model) {
+                this.sharedTo = model.sharedTo;
+            } 
+
+            /**
+             * SharedTo.
+             */
+            public Builder sharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+                this.sharedTo = sharedTo;
+                return this;
+            }
+
+            public SharingConfig build() {
+                return new SharingConfig(this);
+            } 
+
+        } 
+
+    }
 }

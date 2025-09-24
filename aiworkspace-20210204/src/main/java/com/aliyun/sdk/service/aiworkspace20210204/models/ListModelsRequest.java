@@ -22,6 +22,10 @@ public class ListModelsRequest extends Request {
     private String collections;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private java.util.List<Conditions> conditions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -80,6 +84,7 @@ public class ListModelsRequest extends Request {
     private ListModelsRequest(Builder builder) {
         super(builder);
         this.collections = builder.collections;
+        this.conditions = builder.conditions;
         this.domain = builder.domain;
         this.label = builder.label;
         this.modelName = builder.modelName;
@@ -114,6 +119,13 @@ public class ListModelsRequest extends Request {
      */
     public String getCollections() {
         return this.collections;
+    }
+
+    /**
+     * @return conditions
+     */
+    public java.util.List<Conditions> getConditions() {
+        return this.conditions;
     }
 
     /**
@@ -216,6 +228,7 @@ public class ListModelsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListModelsRequest, Builder> {
         private String collections; 
+        private java.util.List<Conditions> conditions; 
         private String domain; 
         private String label; 
         private String modelName; 
@@ -238,6 +251,7 @@ public class ListModelsRequest extends Request {
         private Builder(ListModelsRequest request) {
             super(request);
             this.collections = request.collections;
+            this.conditions = request.conditions;
             this.domain = request.domain;
             this.label = request.label;
             this.modelName = request.modelName;
@@ -263,6 +277,16 @@ public class ListModelsRequest extends Request {
         public Builder collections(String collections) {
             this.putQueryParameter("Collections", collections);
             this.collections = collections;
+            return this;
+        }
+
+        /**
+         * Conditions.
+         */
+        public Builder conditions(java.util.List<Conditions> conditions) {
+            String conditionsShrink = shrink(conditions, "Conditions", "json");
+            this.putQueryParameter("Conditions", conditionsShrink);
+            this.conditions = conditions;
             return this;
         }
 
@@ -440,6 +464,102 @@ public class ListModelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListModelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListModelsRequest</p>
+     */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Column")
+        private String column;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Conditions(Builder builder) {
+            this.column = builder.column;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return column
+         */
+        public String getColumn() {
+            return this.column;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String column; 
+            private String operator; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.column = model.column;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
+            /**
+             * Column.
+             */
+            public Builder column(String column) {
+                this.column = column;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListModelsRequest} extends {@link TeaModel}

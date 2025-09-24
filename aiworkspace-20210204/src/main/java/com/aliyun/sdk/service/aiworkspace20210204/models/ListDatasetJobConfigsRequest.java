@@ -27,6 +27,10 @@ public class ListDatasetJobConfigsRequest extends Request {
     private String configType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+    private String datasetVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
@@ -42,6 +46,7 @@ public class ListDatasetJobConfigsRequest extends Request {
         super(builder);
         this.datasetId = builder.datasetId;
         this.configType = builder.configType;
+        this.datasetVersion = builder.datasetVersion;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.workspaceId = builder.workspaceId;
@@ -75,6 +80,13 @@ public class ListDatasetJobConfigsRequest extends Request {
     }
 
     /**
+     * @return datasetVersion
+     */
+    public String getDatasetVersion() {
+        return this.datasetVersion;
+    }
+
+    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -98,6 +110,7 @@ public class ListDatasetJobConfigsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDatasetJobConfigsRequest, Builder> {
         private String datasetId; 
         private String configType; 
+        private String datasetVersion; 
         private String pageNumber; 
         private String pageSize; 
         private String workspaceId; 
@@ -110,6 +123,7 @@ public class ListDatasetJobConfigsRequest extends Request {
             super(request);
             this.datasetId = request.datasetId;
             this.configType = request.configType;
+            this.datasetVersion = request.datasetVersion;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.workspaceId = request.workspaceId;
@@ -141,6 +155,15 @@ public class ListDatasetJobConfigsRequest extends Request {
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * DatasetVersion.
+         */
+        public Builder datasetVersion(String datasetVersion) {
+            this.putQueryParameter("DatasetVersion", datasetVersion);
+            this.datasetVersion = datasetVersion;
             return this;
         }
 
