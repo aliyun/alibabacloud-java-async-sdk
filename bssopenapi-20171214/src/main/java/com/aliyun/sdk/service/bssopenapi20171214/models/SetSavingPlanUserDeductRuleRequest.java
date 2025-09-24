@@ -49,7 +49,7 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -189,6 +189,14 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
             private java.util.List<Long> accountIds; 
             private String ecId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcIdAccountIds model) {
+                this.accountIds = model.accountIds;
+                this.ecId = model.ecId;
+            } 
+
             /**
              * AccountIds.
              */
@@ -267,6 +275,15 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
             private String commodityCode; 
             private String moduleCode; 
             private Boolean skipDeduct; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDeductRules model) {
+                this.commodityCode = model.commodityCode;
+                this.moduleCode = model.moduleCode;
+                this.skipDeduct = model.skipDeduct;
+            } 
 
             /**
              * CommodityCode.

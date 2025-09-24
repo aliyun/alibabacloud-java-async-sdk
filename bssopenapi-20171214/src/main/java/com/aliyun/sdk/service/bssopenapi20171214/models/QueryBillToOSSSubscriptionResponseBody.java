@@ -48,6 +48,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBillToOSSSubscriptionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -252,6 +267,19 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private String subscribeTime; 
             private String subscribeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.bucketOwnerId = model.bucketOwnerId;
+                this.bucketPath = model.bucketPath;
+                this.rowLimitPerFile = model.rowLimitPerFile;
+                this.subscribeBucket = model.subscribeBucket;
+                this.subscribeLanguage = model.subscribeLanguage;
+                this.subscribeTime = model.subscribeTime;
+                this.subscribeType = model.subscribeType;
+            } 
+
             /**
              * <p>The owner ID of the Object Storage Service (OSS) bucket.</p>
              * 
@@ -377,6 +405,13 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Item> item; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
+
             /**
              * Item.
              */
@@ -447,6 +482,15 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private String accountID; 
             private String accountName; 
             private Items items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountID = model.accountID;
+                this.accountName = model.accountName;
+                this.items = model.items;
+            } 
 
             /**
              * <p>The ID of the account used to perform the query.</p>

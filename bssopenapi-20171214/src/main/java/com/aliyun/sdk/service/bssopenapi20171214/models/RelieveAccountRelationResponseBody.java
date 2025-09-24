@@ -48,6 +48,10 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RelieveAccountRelationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -179,6 +194,13 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String hostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+            } 
 
             /**
              * <p>hostid</p>

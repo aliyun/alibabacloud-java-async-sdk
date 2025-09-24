@@ -48,6 +48,10 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -708,6 +723,58 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody
             private Double unusedAmortizationRoundDownDiscount; 
             private String zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.amortizationPeriod = model.amortizationPeriod;
+                this.amortizationPeriodDay = model.amortizationPeriodDay;
+                this.amortizationStatus = model.amortizationStatus;
+                this.billAccountID = model.billAccountID;
+                this.billAccountName = model.billAccountName;
+                this.billOwnerID = model.billOwnerID;
+                this.billOwnerName = model.billOwnerName;
+                this.bizType = model.bizType;
+                this.consumePeriod = model.consumePeriod;
+                this.costUnit = model.costUnit;
+                this.costUnitCode = model.costUnitCode;
+                this.currentAmortizationDeductedByCoupons = model.currentAmortizationDeductedByCoupons;
+                this.currentAmortizationInvoiceDiscount = model.currentAmortizationInvoiceDiscount;
+                this.currentAmortizationPretaxAmount = model.currentAmortizationPretaxAmount;
+                this.currentAmortizationPretaxGrossAmount = model.currentAmortizationPretaxGrossAmount;
+                this.currentAmortizationRoundDownDiscount = model.currentAmortizationRoundDownDiscount;
+                this.deductedByCoupons = model.deductedByCoupons;
+                this.instanceConfig = model.instanceConfig;
+                this.instanceID = model.instanceID;
+                this.internetIP = model.internetIP;
+                this.intranetIP = model.intranetIP;
+                this.invoiceDiscount = model.invoiceDiscount;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.productCode = model.productCode;
+                this.productDetail = model.productDetail;
+                this.productDetailCode = model.productDetailCode;
+                this.productName = model.productName;
+                this.referFrInstanceID = model.referFrInstanceID;
+                this.referFrOwnerID = model.referFrOwnerID;
+                this.referFrProductDetailCode = model.referFrProductDetailCode;
+                this.region = model.region;
+                this.resourceGroup = model.resourceGroup;
+                this.roundDownDiscount = model.roundDownDiscount;
+                this.splitAccountName = model.splitAccountName;
+                this.splitItemID = model.splitItemID;
+                this.splitItemName = model.splitItemName;
+                this.splitProductDetail = model.splitProductDetail;
+                this.subscriptionType = model.subscriptionType;
+                this.tag = model.tag;
+                this.unusedAmortizationDeductedByCoupons = model.unusedAmortizationDeductedByCoupons;
+                this.unusedAmortizationInvoiceDiscount = model.unusedAmortizationInvoiceDiscount;
+                this.unusedAmortizationPretaxAmount = model.unusedAmortizationPretaxAmount;
+                this.unusedAmortizationPretaxGrossAmount = model.unusedAmortizationPretaxGrossAmount;
+                this.unusedAmortizationRoundDownDiscount = model.unusedAmortizationRoundDownDiscount;
+                this.zone = model.zone;
+            } 
+
             /**
              * AmortizationPeriod.
              */
@@ -1174,6 +1241,18 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountID = model.accountID;
+                this.accountName = model.accountName;
+                this.items = model.items;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * AccountID.

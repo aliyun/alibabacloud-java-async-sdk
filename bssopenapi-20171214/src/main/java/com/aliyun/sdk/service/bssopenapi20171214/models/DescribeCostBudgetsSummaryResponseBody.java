@@ -48,6 +48,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCostBudgetsSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -239,6 +254,18 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             private String budgetType; 
             private java.util.Map<String, ?> calculatedValues; 
             private java.util.Map<String, ?> consumePeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.budget = model.budget;
+                this.budgetName = model.budgetName;
+                this.budgetStatus = model.budgetStatus;
+                this.budgetType = model.budgetType;
+                this.calculatedValues = model.calculatedValues;
+                this.consumePeriod = model.consumePeriod;
+            } 
 
             /**
              * <p>The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.</p>
@@ -392,6 +419,17 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.items = model.items;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The site of the host.</p>

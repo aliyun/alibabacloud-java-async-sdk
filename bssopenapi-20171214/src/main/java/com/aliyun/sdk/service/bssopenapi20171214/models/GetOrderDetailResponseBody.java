@@ -48,6 +48,10 @@ public class GetOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrderDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -204,6 +219,15 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String moduleApiCode; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillModuleProperties model) {
+                this.attrApiCode = model.attrApiCode;
+                this.moduleApiCode = model.moduleApiCode;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The attribute code of the configured item.</p>
              * 
@@ -275,6 +299,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BillModuleProperties> billModuleProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillModuleConfigBillModuleProperties model) {
+                this.billModuleProperties = model.billModuleProperties;
+            } 
 
             /**
              * billModuleProperties.
@@ -359,6 +390,16 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String code; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillModuleConfig model) {
+                this.apiCode = model.apiCode;
+                this.billModuleProperties = model.billModuleProperties;
+                this.code = model.code;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The API code of the configuration item.</p>
              * 
@@ -439,6 +480,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BillModuleConfig> billModuleConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderBillModuleConfig model) {
+                this.billModuleConfig = model.billModuleConfig;
+            } 
+
             /**
              * billModuleConfig.
              */
@@ -509,6 +557,15 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String code; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleProperties model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The attribute code of the configured item.</p>
@@ -582,6 +639,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ModuleProperties> moduleProperties; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalModuleConfigModuleProperties model) {
+                this.moduleProperties = model.moduleProperties;
+            } 
+
             /**
              * moduleProperties.
              */
@@ -653,6 +717,15 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private OriginalModuleConfigModuleProperties moduleProperties; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalModuleConfig model) {
+                this.code = model.code;
+                this.moduleProperties = model.moduleProperties;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The code of the configuration item.</p>
              * 
@@ -721,6 +794,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OriginalModuleConfig> originalModuleConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderOriginalModuleConfig model) {
+                this.originalModuleConfig = model.originalModuleConfig;
+            } 
 
             /**
              * originalModuleConfig.
@@ -1117,6 +1197,42 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String usageEndTime; 
             private String usageStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.afterTaxAmount = model.afterTaxAmount;
+                this.billModuleConfig = model.billModuleConfig;
+                this.commodityCode = model.commodityCode;
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.currency = model.currency;
+                this.extendInfos = model.extendInfos;
+                this.instanceIDs = model.instanceIDs;
+                this.operator = model.operator;
+                this.orderId = model.orderId;
+                this.orderSubType = model.orderSubType;
+                this.orderType = model.orderType;
+                this.originalConfig = model.originalConfig;
+                this.originalModuleConfig = model.originalModuleConfig;
+                this.paymentCurrency = model.paymentCurrency;
+                this.paymentStatus = model.paymentStatus;
+                this.paymentTime = model.paymentTime;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxAmountLocal = model.pretaxAmountLocal;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+                this.quantity = model.quantity;
+                this.region = model.region;
+                this.relatedOrderId = model.relatedOrderId;
+                this.subOrderId = model.subOrderId;
+                this.subscriptionType = model.subscriptionType;
+                this.tax = model.tax;
+                this.usageEndTime = model.usageEndTime;
+                this.usageStartTime = model.usageStartTime;
+            } 
+
             /**
              * <p>The aftertaxt amount of the order.</p>
              * 
@@ -1477,6 +1593,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Order> order; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderList model) {
+                this.order = model.order;
+            } 
+
             /**
              * Order.
              */
@@ -1571,6 +1694,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostName = model.hostName;
+                this.orderList = model.orderList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The hostname.</p>

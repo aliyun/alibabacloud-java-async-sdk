@@ -48,6 +48,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAvailableInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -384,6 +399,30 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private String subStatus; 
             private String subscriptionType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.expectedReleaseTime = model.expectedReleaseTime;
+                this.instanceID = model.instanceID;
+                this.ownerId = model.ownerId;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+                this.region = model.region;
+                this.releaseTime = model.releaseTime;
+                this.renewStatus = model.renewStatus;
+                this.renewalDuration = model.renewalDuration;
+                this.renewalDurationUnit = model.renewalDurationUnit;
+                this.seller = model.seller;
+                this.sellerId = model.sellerId;
+                this.status = model.status;
+                this.stopTime = model.stopTime;
+                this.subStatus = model.subStatus;
+                this.subscriptionType = model.subscriptionType;
+            } 
+
             /**
              * <p>The time when the specified instance was created.</p>
              * 
@@ -669,6 +708,16 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceList = model.instanceList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The instances returned.</p>

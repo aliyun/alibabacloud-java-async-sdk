@@ -48,6 +48,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAccountRelationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountRelationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -264,6 +279,20 @@ public class GetAccountRelationResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.childUserId = model.childUserId;
+                this.endTime = model.endTime;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.parentUserId = model.parentUserId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account that is used as a member.</p>
              * 
@@ -333,13 +362,13 @@ public class GetAccountRelationResponseBody extends TeaModel {
             /**
              * <p>The status of the financial relationship between the management account and the member.</p>
              * <ul>
-             * <li>RELATED 【Association established】</li>
-             * <li>CONFIRMING 【To be confirmed by the other party】</li>
-             * <li>REJECTED 【Refused by the other party】</li>
-             * <li>CONNECTION_CANCELED 【Financial sub-account cancel request】</li>
-             * <li>CONNECTION_MASTER_CANCEL 【Financial master account cancel invitation】</li>
-             * <li>CHANGE_CONFIRMING 【Relationship change to be confirmed】</li>
-             * <li>INITIAL 【Initial new relationship status】</li>
+             * <li>RELATED [Association established]</li>
+             * <li>CONFIRMING [To be confirmed by the other party]</li>
+             * <li>REJECTED [Refused by the other party]</li>
+             * <li>CONNECTION_CANCELED [Financial sub-account cancel request]</li>
+             * <li>CONNECTION_MASTER_CANCEL [Financial master account cancel invitation]</li>
+             * <li>CHANGE_CONFIRMING [Relationship change to be confirmed]</li>
+             * <li>INITIAL [Initial new relationship status]</li>
              * </ul>
              * 
              * <strong>example:</strong>

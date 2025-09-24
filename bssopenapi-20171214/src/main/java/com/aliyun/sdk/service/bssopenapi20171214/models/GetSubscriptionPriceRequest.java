@@ -88,7 +88,7 @@ public class GetSubscriptionPriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -417,6 +417,16 @@ public class GetSubscriptionPriceRequest extends Request {
             private String moduleCode; 
             private Integer moduleStatus; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleList model) {
+                this.config = model.config;
+                this.moduleCode = model.moduleCode;
+                this.moduleStatus = model.moduleStatus;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>

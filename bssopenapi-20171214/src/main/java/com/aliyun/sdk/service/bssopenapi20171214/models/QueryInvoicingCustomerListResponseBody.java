@@ -48,6 +48,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInvoicingCustomerListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -420,6 +435,33 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             private Long userId; 
             private String userNick; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerInvoice model) {
+                this.adjustType = model.adjustType;
+                this.bank = model.bank;
+                this.bankNo = model.bankNo;
+                this.customerType = model.customerType;
+                this.defaultRemark = model.defaultRemark;
+                this.endCycle = model.endCycle;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.invoiceTitle = model.invoiceTitle;
+                this.issueType = model.issueType;
+                this.operatingLicenseAddress = model.operatingLicenseAddress;
+                this.operatingLicensePhone = model.operatingLicensePhone;
+                this.registerNo = model.registerNo;
+                this.startCycle = model.startCycle;
+                this.status = model.status;
+                this.taxationLicense = model.taxationLicense;
+                this.taxpayerType = model.taxpayerType;
+                this.titleChangeInstructions = model.titleChangeInstructions;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
+
             /**
              * <p>The type of invoice that was changed to.</p>
              * 
@@ -702,6 +744,13 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CustomerInvoice> customerInvoice; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerInvoiceList model) {
+                this.customerInvoice = model.customerInvoice;
+            } 
+
             /**
              * CustomerInvoice.
              */
@@ -748,6 +797,13 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
 
         public static final class Builder {
             private CustomerInvoiceList customerInvoiceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customerInvoiceList = model.customerInvoiceList;
+            } 
 
             /**
              * <p>The information about the invoice.</p>

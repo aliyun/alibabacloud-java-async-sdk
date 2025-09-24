@@ -48,6 +48,10 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteCostUnitResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -203,6 +218,15 @@ public class DeleteCostUnitResponseBody extends TeaModel {
             private Boolean isSuccess; 
             private Long ownerUid; 
             private Long unitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isSuccess = model.isSuccess;
+                this.ownerUid = model.ownerUid;
+                this.unitId = model.unitId;
+            } 
 
             /**
              * <p>Indicates whether the call is complete.</p>

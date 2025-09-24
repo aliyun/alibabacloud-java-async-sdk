@@ -48,6 +48,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySavingsPlansDeductLogResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -381,6 +396,30 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private String startTime; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.billModule = model.billModule;
+                this.billingCycle = model.billingCycle;
+                this.billingOfficialPrice = model.billingOfficialPrice;
+                this.deductCommodity = model.deductCommodity;
+                this.deductFee = model.deductFee;
+                this.deductInstanceId = model.deductInstanceId;
+                this.deductRate = model.deductRate;
+                this.deductedOfficialPrice = model.deductedOfficialPrice;
+                this.discountRate = model.discountRate;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.instanceSpec = model.instanceSpec;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.ownerId = model.ownerId;
+                this.region = model.region;
+                this.savingsType = model.savingsType;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The billable item for which the fee is deducted.</p>
              */
@@ -630,6 +669,16 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The deduction details.</p>

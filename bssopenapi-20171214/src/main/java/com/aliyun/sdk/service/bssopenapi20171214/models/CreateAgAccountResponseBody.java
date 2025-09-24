@@ -48,6 +48,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agRelationDto
      */
@@ -89,6 +93,17 @@ public class CreateAgAccountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAgAccountResponseBody model) {
+            this.agRelationDto = model.agRelationDto;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.</p>
@@ -215,6 +230,16 @@ public class CreateAgAccountResponseBody extends TeaModel {
             private String pk; 
             private String ramAdminRoleName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgRelationDto model) {
+                this.mpk = model.mpk;
+                this.pk = model.pk;
+                this.ramAdminRoleName = model.ramAdminRoleName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the account that is used to call the CreateAgAccount operation.</p>

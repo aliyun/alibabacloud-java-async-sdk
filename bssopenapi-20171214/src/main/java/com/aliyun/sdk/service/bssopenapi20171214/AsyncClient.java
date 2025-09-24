@@ -324,7 +324,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ol>
      * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * @param request the request parameters of InquiryPriceRefundInstance  InquiryPriceRefundInstanceRequest
@@ -349,6 +349,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceResponse
      */
     CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request);
+
+    /**
+     * @param request the request parameters of PayOrder  PayOrderRequest
+     * @return PayOrderResponse
+     */
+    CompletableFuture<PayOrderResponse> payOrder(PayOrderRequest request);
 
     /**
      * @param request the request parameters of QueryAccountBalance  QueryAccountBalanceRequest
@@ -630,7 +636,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ol>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
      * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * @param request the request parameters of RefundInstance  RefundInstanceRequest

@@ -67,7 +67,7 @@ public class RenewChangeInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -269,6 +269,14 @@ public class RenewChangeInstanceRequest extends Request {
         public static final class Builder {
             private String code; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
 
             /**
              * <p>This parameter is required.</p>

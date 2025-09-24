@@ -48,6 +48,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCostUnitResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCostUnitResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -216,6 +231,16 @@ public class QueryCostUnitResponseBody extends TeaModel {
             private Long unitId; 
             private String unitName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CostUnitDtoList model) {
+                this.ownerUid = model.ownerUid;
+                this.parentUnitId = model.parentUnitId;
+                this.unitId = model.unitId;
+                this.unitName = model.unitName;
+            } 
+
             /**
              * <p>The user ID of the cost center owner.</p>
              * 
@@ -334,6 +359,16 @@ public class QueryCostUnitResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.costUnitDtoList = model.costUnitDtoList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The cost centers.</p>

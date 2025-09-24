@@ -48,6 +48,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPriceEntityListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -204,6 +219,15 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private String priceFactorName; 
             private java.util.List<String> priceFactorValueList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceFactorList model) {
+                this.priceFactorCode = model.priceFactorCode;
+                this.priceFactorName = model.priceFactorName;
+                this.priceFactorValueList = model.priceFactorValueList;
+            } 
+
             /**
              * <p>The code of the factor.</p>
              * 
@@ -297,6 +321,15 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private String priceEntityName; 
             private java.util.List<PriceFactorList> priceFactorList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceEntityInfoList model) {
+                this.priceEntityCode = model.priceEntityCode;
+                this.priceEntityName = model.priceEntityName;
+                this.priceFactorList = model.priceFactorList;
+            } 
+
             /**
              * <p>The code of the billable item.</p>
              * 
@@ -365,6 +398,13 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PriceEntityInfoList> priceEntityInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.priceEntityInfoList = model.priceEntityInfoList;
+            } 
 
             /**
              * <p>The information about the billable items.</p>

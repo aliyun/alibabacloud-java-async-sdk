@@ -48,6 +48,10 @@ public class QueryOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryOrdersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOrdersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -372,6 +387,29 @@ public class QueryOrdersResponseBody extends TeaModel {
             private String subscriptionType; 
             private String tax; 
 
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.afterTaxAmount = model.afterTaxAmount;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.currency = model.currency;
+                this.orderId = model.orderId;
+                this.orderType = model.orderType;
+                this.paymentCurrency = model.paymentCurrency;
+                this.paymentStatus = model.paymentStatus;
+                this.paymentTime = model.paymentTime;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxAmountLocal = model.pretaxAmountLocal;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+                this.relatedOrderId = model.relatedOrderId;
+                this.subscriptionType = model.subscriptionType;
+                this.tax = model.tax;
+            } 
+
             /**
              * <p>The aftertax amount of the order.</p>
              * 
@@ -616,6 +654,13 @@ public class QueryOrdersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Order> order; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderList model) {
+                this.order = model.order;
+            } 
+
             /**
              * Order.
              */
@@ -710,6 +755,17 @@ public class QueryOrdersResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostName = model.hostName;
+                this.orderList = model.orderList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The hostname.</p>

@@ -48,6 +48,10 @@ public class QueryRedeemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryRedeemResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRedeemResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -288,6 +303,22 @@ public class QueryRedeemResponseBody extends TeaModel {
             private String specification; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Redeem model) {
+                this.applicableProducts = model.applicableProducts;
+                this.balance = model.balance;
+                this.effectiveTime = model.effectiveTime;
+                this.expiryTime = model.expiryTime;
+                this.grantedTime = model.grantedTime;
+                this.nominalValue = model.nominalValue;
+                this.redeemId = model.redeemId;
+                this.redeemNo = model.redeemNo;
+                this.specification = model.specification;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The services to which the redemption coupon is applicable.</p>
              * 
@@ -449,6 +480,13 @@ public class QueryRedeemResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Redeem> redeem; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataRedeem model) {
+                this.redeem = model.redeem;
+            } 
+
             /**
              * Redeem.
              */
@@ -531,6 +569,16 @@ public class QueryRedeemResponseBody extends TeaModel {
             private Long pageSize; 
             private DataRedeem redeem; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.redeem = model.redeem;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

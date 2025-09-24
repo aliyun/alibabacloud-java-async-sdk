@@ -48,6 +48,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceCoverageDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -408,6 +423,32 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             private String zone; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.capacityUnit = model.capacityUnit;
+                this.commodityCode = model.commodityCode;
+                this.commodityName = model.commodityName;
+                this.coveragePercentage = model.coveragePercentage;
+                this.currency = model.currency;
+                this.deductQuantity = model.deductQuantity;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.instanceSpec = model.instanceSpec;
+                this.paymentAmount = model.paymentAmount;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.region = model.region;
+                this.regionNo = model.regionNo;
+                this.startTime = model.startTime;
+                this.totalQuantity = model.totalQuantity;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.zone = model.zone;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
              * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
              */
@@ -687,6 +728,16 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data entries.</p>

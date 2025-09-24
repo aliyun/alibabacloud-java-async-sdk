@@ -62,6 +62,10 @@ public class ApplyInvoiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserRemark")
     private String userRemark;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("emails")
+    private String emails;
+
     private ApplyInvoiceRequest(Builder builder) {
         super(builder);
         this.addressId = builder.addressId;
@@ -74,6 +78,7 @@ public class ApplyInvoiceRequest extends Request {
         this.processWay = builder.processWay;
         this.selectedIds = builder.selectedIds;
         this.userRemark = builder.userRemark;
+        this.emails = builder.emails;
     }
 
     public static Builder builder() {
@@ -84,7 +89,7 @@ public class ApplyInvoiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,6 +164,13 @@ public class ApplyInvoiceRequest extends Request {
         return this.userRemark;
     }
 
+    /**
+     * @return emails
+     */
+    public String getEmails() {
+        return this.emails;
+    }
+
     public static final class Builder extends Request.Builder<ApplyInvoiceRequest, Builder> {
         private Long addressId; 
         private String applyUserNick; 
@@ -170,6 +182,7 @@ public class ApplyInvoiceRequest extends Request {
         private Integer processWay; 
         private java.util.List<Long> selectedIds; 
         private String userRemark; 
+        private String emails; 
 
         private Builder() {
             super();
@@ -187,6 +200,7 @@ public class ApplyInvoiceRequest extends Request {
             this.processWay = request.processWay;
             this.selectedIds = request.selectedIds;
             this.userRemark = request.userRemark;
+            this.emails = request.emails;
         } 
 
         /**
@@ -312,6 +326,15 @@ public class ApplyInvoiceRequest extends Request {
         public Builder userRemark(String userRemark) {
             this.putQueryParameter("UserRemark", userRemark);
             this.userRemark = userRemark;
+            return this;
+        }
+
+        /**
+         * emails.
+         */
+        public Builder emails(String emails) {
+            this.putQueryParameter("emails", emails);
+            this.emails = emails;
             return this;
         }
 

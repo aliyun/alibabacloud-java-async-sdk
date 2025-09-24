@@ -48,6 +48,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySkuPriceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -215,6 +230,16 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private String max; 
             private String min; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RangeList model) {
+                this.factorCode = model.factorCode;
+                this.max = model.max;
+                this.min = model.min;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the pricing factor.</p>
@@ -383,6 +408,20 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private java.util.List<RangeList> rangeList; 
             private String usageUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(CskuPriceList model) {
+                this.cskuCode = model.cskuCode;
+                this.currency = model.currency;
+                this.price = model.price;
+                this.priceMode = model.priceMode;
+                this.priceType = model.priceType;
+                this.priceUnit = model.priceUnit;
+                this.rangeList = model.rangeList;
+                this.usageUnit = model.usageUnit;
+            } 
+
             /**
              * <p>The unique code of the SKU price.</p>
              * 
@@ -531,6 +570,15 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private String skuCode; 
             private java.util.Map<String, String> skuFactorMap; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkuPriceList model) {
+                this.cskuPriceList = model.cskuPriceList;
+                this.skuCode = model.skuCode;
+                this.skuFactorMap = model.skuFactorMap;
+            } 
+
             /**
              * <p>The prices of the SKUs.</p>
              */
@@ -621,6 +669,15 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private java.util.List<SkuPriceList> skuPriceList; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkuPricePage model) {
+                this.nextPageToken = model.nextPageToken;
+                this.skuPriceList = model.skuPriceList;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The token that is used to query the next page.</p>
              * 
@@ -689,6 +746,13 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private SkuPricePage skuPricePage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.skuPricePage = model.skuPricePage;
+            } 
 
             /**
              * <p>The SKUs of the pricing object.</p>

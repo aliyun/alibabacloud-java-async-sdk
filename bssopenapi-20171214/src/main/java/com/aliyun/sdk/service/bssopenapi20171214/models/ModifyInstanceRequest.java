@@ -72,7 +72,7 @@ public class ModifyInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -312,6 +312,14 @@ public class ModifyInstanceRequest extends Request {
         public static final class Builder {
             private String code; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.</p>

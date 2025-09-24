@@ -48,6 +48,10 @@ public class QueryPermissionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryPermissionListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPermissionListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -215,6 +230,16 @@ public class QueryPermissionListResponseBody extends TeaModel {
             private String permissionCode; 
             private String permissionName; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionList model) {
+                this.endTime = model.endTime;
+                this.permissionCode = model.permissionCode;
+                this.permissionName = model.permissionName;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The time when the permission expired. If no value is returned, the permission is still valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission expired at 20:00:00 on May 23, 2016 (UTC+8).</p>
@@ -382,6 +407,20 @@ public class QueryPermissionListResponseBody extends TeaModel {
             private String setupTime; 
             private String startTime; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.masterId = model.masterId;
+                this.memberId = model.memberId;
+                this.permissionList = model.permissionList;
+                this.relationType = model.relationType;
+                this.setupTime = model.setupTime;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The time when the relationship expired. If no value is returned, the relationship is still valid.</p>

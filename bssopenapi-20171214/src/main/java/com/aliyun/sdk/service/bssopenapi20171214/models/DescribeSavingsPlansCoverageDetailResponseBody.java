@@ -48,6 +48,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSavingsPlansCoverageDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -324,6 +339,25 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.coveragePercentage = model.coveragePercentage;
+                this.currency = model.currency;
+                this.deductAmount = model.deductAmount;
+                this.endPeriod = model.endPeriod;
+                this.instanceId = model.instanceId;
+                this.instanceSpec = model.instanceSpec;
+                this.ownerId = model.ownerId;
+                this.postpaidCost = model.postpaidCost;
+                this.region = model.region;
+                this.startPeriod = model.startPeriod;
+                this.totalAmount = model.totalAmount;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The coverage.</p>
              * 
@@ -523,6 +557,15 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data entries.</p>

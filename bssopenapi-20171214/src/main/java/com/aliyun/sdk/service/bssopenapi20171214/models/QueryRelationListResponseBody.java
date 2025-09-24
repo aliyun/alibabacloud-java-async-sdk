@@ -48,6 +48,10 @@ public class QueryRelationListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryRelationListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRelationListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -288,6 +303,22 @@ public class QueryRelationListResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(FinancialRelationInfoList model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountNickName = model.accountNickName;
+                this.accountType = model.accountType;
+                this.endTime = model.endTime;
+                this.relationId = model.relationId;
+                this.relationType = model.relationType;
+                this.setupTime = model.setupTime;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -472,6 +503,16 @@ public class QueryRelationListResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.financialRelationInfoList = model.financialRelationInfoList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The relationships.</p>

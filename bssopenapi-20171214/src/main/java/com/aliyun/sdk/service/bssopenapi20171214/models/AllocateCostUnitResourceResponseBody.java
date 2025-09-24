@@ -48,6 +48,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateCostUnitResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -203,6 +218,15 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             private Boolean isSuccess; 
             private Long toUnitId; 
             private Long toUnitUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isSuccess = model.isSuccess;
+                this.toUnitId = model.toUnitId;
+                this.toUnitUserId = model.toUnitUserId;
+            } 
 
             /**
              * <p>Indicates whether resources are allocated to the specified cost center. Valid values:</p>

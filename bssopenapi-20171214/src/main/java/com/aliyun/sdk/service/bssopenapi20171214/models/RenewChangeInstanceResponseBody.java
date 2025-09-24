@@ -48,6 +48,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewChangeInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -182,6 +197,14 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String hostId; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * HostId.

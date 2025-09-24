@@ -883,7 +883,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ol>
      * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * @param request the request parameters of InquiryPriceRefundInstance  InquiryPriceRefundInstanceRequest
@@ -952,6 +952,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PayOrder  PayOrderRequest
+     * @return PayOrderResponse
+     */
+    @Override
+    public CompletableFuture<PayOrderResponse> payOrder(PayOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PayOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PayOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PayOrderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1693,7 +1711,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ol>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
      * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * @param request the request parameters of RefundInstance  RefundInstanceRequest

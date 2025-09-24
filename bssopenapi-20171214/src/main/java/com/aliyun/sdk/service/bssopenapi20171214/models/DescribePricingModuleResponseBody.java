@@ -48,6 +48,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePricingModuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -216,6 +231,16 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeValue model) {
+                this.name = model.name;
+                this.remark = model.remark;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The attribute value that corresponds to the module code.</p>
              * 
@@ -306,6 +331,13 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AttributeValue> attributeValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.attributeValue = model.attributeValue;
+            } 
+
             /**
              * AttributeValue.
              */
@@ -389,6 +421,16 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private String unit; 
             private Values values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attribute model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The code of the attribute.</p>
              * 
@@ -469,6 +511,13 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Attribute> attribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeList model) {
+                this.attribute = model.attribute;
+            } 
+
             /**
              * Attribute.
              */
@@ -515,6 +564,13 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> configList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.configList = model.configList;
+            } 
 
             /**
              * ConfigList.
@@ -610,6 +666,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private String moduleCode; 
             private String moduleName; 
             private String priceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.configList = model.configList;
+                this.currency = model.currency;
+                this.moduleCode = model.moduleCode;
+                this.moduleName = model.moduleName;
+                this.priceType = model.priceType;
+            } 
 
             /**
              * ConfigList.
@@ -710,6 +777,13 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Module> module; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleList model) {
+                this.module = model.module;
+            } 
+
             /**
              * Module.
              */
@@ -768,6 +842,14 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         public static final class Builder {
             private AttributeList attributeList; 
             private ModuleList moduleList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attributeList = model.attributeList;
+                this.moduleList = model.moduleList;
+            } 
 
             /**
              * <p>The module attributes.</p>

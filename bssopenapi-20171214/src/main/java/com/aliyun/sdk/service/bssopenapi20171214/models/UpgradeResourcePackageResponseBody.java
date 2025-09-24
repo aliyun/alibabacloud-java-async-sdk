@@ -52,6 +52,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeResourcePackageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -214,6 +230,14 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private Long orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The ID of the resource plan.</p>

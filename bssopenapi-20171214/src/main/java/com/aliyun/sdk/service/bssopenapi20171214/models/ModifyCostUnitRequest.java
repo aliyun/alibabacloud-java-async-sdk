@@ -34,7 +34,7 @@ public class ModifyCostUnitRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +132,15 @@ public class ModifyCostUnitRequest extends Request {
             private String newUnitName; 
             private Long ownerUid; 
             private Long unitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnitEntityList model) {
+                this.newUnitName = model.newUnitName;
+                this.ownerUid = model.ownerUid;
+                this.unitId = model.unitId;
+            } 
 
             /**
              * <p>The new name of the cost center.</p>

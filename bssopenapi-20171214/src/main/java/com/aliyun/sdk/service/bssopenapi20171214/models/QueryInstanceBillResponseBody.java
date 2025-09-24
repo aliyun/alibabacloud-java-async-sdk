@@ -48,6 +48,10 @@ public class QueryInstanceBillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryInstanceBillResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInstanceBillResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -660,6 +675,53 @@ public class QueryInstanceBillResponseBody extends TeaModel {
             private String usageUnit; 
             private String zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.adjustAmount = model.adjustAmount;
+                this.billingDate = model.billingDate;
+                this.billingItem = model.billingItem;
+                this.billingType = model.billingType;
+                this.cashAmount = model.cashAmount;
+                this.commodityCode = model.commodityCode;
+                this.costUnit = model.costUnit;
+                this.currency = model.currency;
+                this.deductedByCashCoupons = model.deductedByCashCoupons;
+                this.deductedByCoupons = model.deductedByCoupons;
+                this.deductedByPrepaidCard = model.deductedByPrepaidCard;
+                this.deductedByResourcePackage = model.deductedByResourcePackage;
+                this.instanceConfig = model.instanceConfig;
+                this.instanceID = model.instanceID;
+                this.instanceSpec = model.instanceSpec;
+                this.internetIP = model.internetIP;
+                this.intranetIP = model.intranetIP;
+                this.invoiceDiscount = model.invoiceDiscount;
+                this.item = model.item;
+                this.listPrice = model.listPrice;
+                this.listPriceUnit = model.listPriceUnit;
+                this.nickName = model.nickName;
+                this.outstandingAmount = model.outstandingAmount;
+                this.ownerID = model.ownerID;
+                this.paymentAmount = model.paymentAmount;
+                this.pipCode = model.pipCode;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.productCode = model.productCode;
+                this.productDetail = model.productDetail;
+                this.productName = model.productName;
+                this.productType = model.productType;
+                this.region = model.region;
+                this.resourceGroup = model.resourceGroup;
+                this.servicePeriod = model.servicePeriod;
+                this.servicePeriodUnit = model.servicePeriodUnit;
+                this.subscriptionType = model.subscriptionType;
+                this.tag = model.tag;
+                this.usage = model.usage;
+                this.usageUnit = model.usageUnit;
+                this.zone = model.zone;
+            } 
+
             /**
              * <p>The amount deducted by using credit refunds.</p>
              * 
@@ -1167,6 +1229,13 @@ public class QueryInstanceBillResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Item> item; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
+
             /**
              * <p>The type of the bill.</p>
              * <ul>
@@ -1294,6 +1363,19 @@ public class QueryInstanceBillResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountID = model.accountID;
+                this.accountName = model.accountName;
+                this.billingCycle = model.billingCycle;
+                this.items = model.items;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The ID of the account.</p>

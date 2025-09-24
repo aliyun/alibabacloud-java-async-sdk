@@ -48,6 +48,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceCoverageTotalResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -192,6 +207,14 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private Float coveragePercentage; 
             private String period; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeriodCoverage model) {
+                this.coveragePercentage = model.coveragePercentage;
+                this.period = model.period;
+            } 
+
             /**
              * <p>The coverage rate of deduction plans within the specified period.</p>
              * 
@@ -290,6 +313,16 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private Float deductQuantity; 
             private Float totalQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalCoverage model) {
+                this.capacityUnit = model.capacityUnit;
+                this.coveragePercentage = model.coveragePercentage;
+                this.deductQuantity = model.deductQuantity;
+                this.totalQuantity = model.totalQuantity;
+            } 
+
             /**
              * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
              */
@@ -381,6 +414,14 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PeriodCoverage> periodCoverage; 
             private TotalCoverage totalCoverage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.periodCoverage = model.periodCoverage;
+                this.totalCoverage = model.totalCoverage;
+            } 
 
             /**
              * <p>The information about the coverage rate of deduction plans within a period.</p>

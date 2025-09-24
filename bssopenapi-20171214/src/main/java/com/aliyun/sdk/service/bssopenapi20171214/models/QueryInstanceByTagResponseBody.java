@@ -52,6 +52,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TagResource> tagResource; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInstanceByTagResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagResource = model.tagResource;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -215,6 +231,14 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -299,6 +323,15 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The ID of the resource.</p>

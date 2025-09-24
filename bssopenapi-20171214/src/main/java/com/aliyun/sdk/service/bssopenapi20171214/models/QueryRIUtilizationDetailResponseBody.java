@@ -48,6 +48,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRIUtilizationDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -276,6 +291,21 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private String instanceSpec; 
             private String RIInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailList model) {
+                this.deductDate = model.deductDate;
+                this.deductFactorTotal = model.deductFactorTotal;
+                this.deductHours = model.deductHours;
+                this.deductQuantity = model.deductQuantity;
+                this.deductedCommodityCode = model.deductedCommodityCode;
+                this.deductedInstanceId = model.deductedInstanceId;
+                this.deductedProductDetail = model.deductedProductDetail;
+                this.instanceSpec = model.instanceSpec;
+                this.RIInstanceId = model.RIInstanceId;
+            } 
+
             /**
              * <p>The time when the fees are deducted by using the RI.</p>
              * 
@@ -414,6 +444,13 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DetailList> detailList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDetailList model) {
+                this.detailList = model.detailList;
+            } 
+
             /**
              * DetailList.
              */
@@ -496,6 +533,16 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private Long pageNum; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detailList = model.detailList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The usage details of the RI.</p>

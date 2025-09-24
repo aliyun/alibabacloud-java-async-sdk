@@ -62,7 +62,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +265,15 @@ public class GetPayAsYouGoPriceRequest extends Request {
             private String config; 
             private String moduleCode; 
             private String priceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleList model) {
+                this.config = model.config;
+                this.moduleCode = model.moduleCode;
+                this.priceType = model.priceType;
+            } 
 
             /**
              * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>

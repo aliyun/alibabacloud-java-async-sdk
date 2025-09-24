@@ -48,6 +48,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCostUnitResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -215,6 +230,16 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Long parentUnitId; 
             private Long unitId; 
             private String unitName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostUnit model) {
+                this.ownerUid = model.ownerUid;
+                this.parentUnitId = model.parentUnitId;
+                this.unitId = model.unitId;
+                this.unitName = model.unitName;
+            } 
 
             /**
              * <p>The user ID of the cost center owner.</p>
@@ -370,6 +395,19 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Long totalResourceGroupCount; 
             private Long totalUserCount; 
             private Long userCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostUnitStatisInfo model) {
+                this.resourceCount = model.resourceCount;
+                this.resourceGroupCount = model.resourceGroupCount;
+                this.subUnitCount = model.subUnitCount;
+                this.totalResourceCount = model.totalResourceCount;
+                this.totalResourceGroupCount = model.totalResourceGroupCount;
+                this.totalUserCount = model.totalUserCount;
+                this.userCount = model.userCount;
+            } 
 
             /**
              * <p>The number of resource instances in the cost center.</p>
@@ -655,6 +693,27 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Long resourceUserId; 
             private String resourceUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceInstanceDtoList model) {
+                this.apportionCode = model.apportionCode;
+                this.apportionName = model.apportionName;
+                this.commodityCode = model.commodityCode;
+                this.commodityName = model.commodityName;
+                this.pipCode = model.pipCode;
+                this.relatedResources = model.relatedResources;
+                this.resourceGroup = model.resourceGroup;
+                this.resourceId = model.resourceId;
+                this.resourceNick = model.resourceNick;
+                this.resourceSource = model.resourceSource;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceTag = model.resourceTag;
+                this.resourceType = model.resourceType;
+                this.resourceUserId = model.resourceUserId;
+                this.resourceUserName = model.resourceUserName;
+            } 
+
             /**
              * <p>The split code of the resource.</p>
              * 
@@ -922,6 +981,18 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ResourceInstanceDtoList> resourceInstanceDtoList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.costUnit = model.costUnit;
+                this.costUnitStatisInfo = model.costUnitStatisInfo;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.resourceInstanceDtoList = model.resourceInstanceDtoList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the cost center.</p>

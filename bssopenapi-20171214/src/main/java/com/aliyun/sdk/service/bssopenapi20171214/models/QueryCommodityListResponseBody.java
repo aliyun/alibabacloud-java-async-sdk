@@ -48,6 +48,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCommodityListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCommodityListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -204,6 +219,15 @@ public class QueryCommodityListResponseBody extends TeaModel {
             private String commodityCode; 
             private String commodityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommodityList model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.commodityName = model.commodityName;
+            } 
+
             /**
              * <p>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</p>
              * 
@@ -275,6 +299,13 @@ public class QueryCommodityListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CommodityList> commodityList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.commodityList = model.commodityList;
+            } 
 
             /**
              * <p>The information about the service.</p>

@@ -48,6 +48,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateCostUnitResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCostUnitResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -216,6 +231,16 @@ public class CreateCostUnitResponseBody extends TeaModel {
             private Long unitId; 
             private String unitName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CostUnitDtoList model) {
+                this.ownerUid = model.ownerUid;
+                this.parentUnitId = model.parentUnitId;
+                this.unitId = model.unitId;
+                this.unitName = model.unitName;
+            } 
+
             /**
              * <p>The user ID of the owner of the cost center.</p>
              * 
@@ -298,6 +323,13 @@ public class CreateCostUnitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CostUnitDtoList> costUnitDtoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.costUnitDtoList = model.costUnitDtoList;
+            } 
 
             /**
              * <p>The list of cost center entities.</p>

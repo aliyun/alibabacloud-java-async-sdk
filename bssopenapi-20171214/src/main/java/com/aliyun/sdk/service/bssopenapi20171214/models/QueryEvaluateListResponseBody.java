@@ -48,6 +48,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEvaluateListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -420,6 +435,33 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             private Long userId; 
             private String userNick; 
 
+            private Builder() {
+            } 
+
+            private Builder(Evaluate model) {
+                this.billCycle = model.billCycle;
+                this.billId = model.billId;
+                this.bizTime = model.bizTime;
+                this.bizType = model.bizType;
+                this.canInvoiceAmount = model.canInvoiceAmount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.invoicedAmount = model.invoicedAmount;
+                this.itemId = model.itemId;
+                this.name = model.name;
+                this.offsetAcceptAmount = model.offsetAcceptAmount;
+                this.offsetCostAmount = model.offsetCostAmount;
+                this.opId = model.opId;
+                this.originalAmount = model.originalAmount;
+                this.outBizId = model.outBizId;
+                this.presentAmount = model.presentAmount;
+                this.status = model.status;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
+
             /**
              * <p>The billing cycle.</p>
              * 
@@ -703,6 +745,13 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Evaluate> evaluate; 
 
+            private Builder() {
+            } 
+
+            private Builder(EvaluateList model) {
+                this.evaluate = model.evaluate;
+            } 
+
             /**
              * Evaluate.
              */
@@ -821,6 +870,19 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             private Integer totalCount; 
             private Long totalInvoiceAmount; 
             private Long totalUnAppliedInvoiceAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.evaluateList = model.evaluateList;
+                this.hostId = model.hostId;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalInvoiceAmount = model.totalInvoiceAmount;
+                this.totalUnAppliedInvoiceAmount = model.totalUnAppliedInvoiceAmount;
+            } 
 
             /**
              * <p>The data returned.</p>

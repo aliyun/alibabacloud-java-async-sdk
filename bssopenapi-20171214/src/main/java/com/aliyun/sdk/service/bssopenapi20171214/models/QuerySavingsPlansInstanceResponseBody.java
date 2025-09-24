@@ -48,6 +48,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySavingsPlansInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -191,6 +206,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -523,6 +546,36 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private String totalSave; 
             private String utilization; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.allocationStatus = model.allocationStatus;
+                this.commodityCode = model.commodityCode;
+                this.currency = model.currency;
+                this.currentPoolValue = model.currentPoolValue;
+                this.cycle = model.cycle;
+                this.deductCycleType = model.deductCycleType;
+                this.endTime = model.endTime;
+                this.endTimestamp = model.endTimestamp;
+                this.instanceFamily = model.instanceFamily;
+                this.instanceId = model.instanceId;
+                this.lastBillTotalUsage = model.lastBillTotalUsage;
+                this.lastBillUtilization = model.lastBillUtilization;
+                this.payMode = model.payMode;
+                this.poolValue = model.poolValue;
+                this.prepayFee = model.prepayFee;
+                this.region = model.region;
+                this.restPoolValue = model.restPoolValue;
+                this.savingsType = model.savingsType;
+                this.startTime = model.startTime;
+                this.startTimestamp = model.startTimestamp;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.totalSave = model.totalSave;
+                this.utilization = model.utilization;
+            } 
+
             /**
              * <p>The allocation status. Valid values:</p>
              * <ul>
@@ -850,6 +903,16 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details about the instances.</p>

@@ -52,6 +52,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryResellerUserAlarmThresholdResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -223,6 +239,16 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             private Integer numerator; 
             private String thresholdAmount; 
             private Integer thresholdType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.denominator = model.denominator;
+                this.numerator = model.numerator;
+                this.thresholdAmount = model.thresholdAmount;
+                this.thresholdType = model.thresholdType;
+            } 
 
             /**
              * Denominator.

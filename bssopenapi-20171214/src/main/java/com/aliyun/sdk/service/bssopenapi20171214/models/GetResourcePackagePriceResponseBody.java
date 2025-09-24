@@ -48,6 +48,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourcePackagePriceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -192,6 +207,14 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Promotion model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the promotion.</p>
              * 
@@ -252,6 +275,13 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Promotion> promotion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Promotions model) {
+                this.promotion = model.promotion;
+            } 
 
             /**
              * Promotion.
@@ -347,6 +377,17 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Promotions promotions; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.promotions = model.promotions;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The type of the currency.</p>

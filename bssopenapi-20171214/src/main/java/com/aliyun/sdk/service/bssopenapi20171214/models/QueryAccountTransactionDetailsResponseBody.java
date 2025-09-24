@@ -48,6 +48,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAccountTransactionDetailsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -324,6 +339,25 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private String transactionTime; 
             private String transactionType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountTransactionsList model) {
+                this.amount = model.amount;
+                this.balance = model.balance;
+                this.billingCycle = model.billingCycle;
+                this.fundType = model.fundType;
+                this.recordID = model.recordID;
+                this.remarks = model.remarks;
+                this.transactionAccount = model.transactionAccount;
+                this.transactionChannel = model.transactionChannel;
+                this.transactionChannelSN = model.transactionChannelSN;
+                this.transactionFlow = model.transactionFlow;
+                this.transactionNumber = model.transactionNumber;
+                this.transactionTime = model.transactionTime;
+                this.transactionType = model.transactionType;
+            } 
+
             /**
              * <p>The amount of the transaction.</p>
              * 
@@ -509,6 +543,13 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AccountTransactionsList> accountTransactionsList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataAccountTransactionsList model) {
+                this.accountTransactionsList = model.accountTransactionsList;
+            } 
+
             /**
              * AccountTransactionsList.
              */
@@ -603,6 +644,17 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountName = model.accountName;
+                this.accountTransactionsList = model.accountTransactionsList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The name of the account.</p>

@@ -48,6 +48,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceUsageTotalResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -191,6 +206,14 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public static final class Builder {
             private String period; 
             private Float usagePercentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeriodCoverage model) {
+                this.period = model.period;
+                this.usagePercentage = model.usagePercentage;
+            } 
 
             /**
              * <p>The period.</p>
@@ -301,6 +324,17 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private Float savedCost; 
             private Float usagePercentage; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalUsage model) {
+                this.postpaidCost = model.postpaidCost;
+                this.potentialSavedCost = model.potentialSavedCost;
+                this.reservationCost = model.reservationCost;
+                this.savedCost = model.savedCost;
+                this.usagePercentage = model.usagePercentage;
+            } 
+
             /**
              * <p>The total costs of pay-as-you-go instances.</p>
              * 
@@ -406,6 +440,14 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PeriodCoverage> periodCoverage; 
             private TotalUsage totalUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.periodCoverage = model.periodCoverage;
+                this.totalUsage = model.totalUsage;
+            } 
 
             /**
              * <p>The usage of resource plans in the specified period.</p>

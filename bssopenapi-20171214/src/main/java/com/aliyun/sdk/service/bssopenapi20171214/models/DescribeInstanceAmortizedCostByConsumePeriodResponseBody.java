@@ -48,6 +48,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAmortizedCostByConsumePeriodResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -900,6 +915,74 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String tag; 
             private String zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.afterDiscountAmount = model.afterDiscountAmount;
+                this.amortizationPeriod = model.amortizationPeriod;
+                this.amortizationStatus = model.amortizationStatus;
+                this.billAccountID = model.billAccountID;
+                this.billAccountName = model.billAccountName;
+                this.billOwnerID = model.billOwnerID;
+                this.billOwnerName = model.billOwnerName;
+                this.bizType = model.bizType;
+                this.consumePeriod = model.consumePeriod;
+                this.costUnit = model.costUnit;
+                this.costUnitCode = model.costUnitCode;
+                this.currentAmortizationAfterDiscountAmount = model.currentAmortizationAfterDiscountAmount;
+                this.currentAmortizationDeductedByCashCoupons = model.currentAmortizationDeductedByCashCoupons;
+                this.currentAmortizationDeductedByCoupons = model.currentAmortizationDeductedByCoupons;
+                this.currentAmortizationDeductedByPrepaidCard = model.currentAmortizationDeductedByPrepaidCard;
+                this.currentAmortizationExpenditureAmount = model.currentAmortizationExpenditureAmount;
+                this.currentAmortizationInvoiceDiscount = model.currentAmortizationInvoiceDiscount;
+                this.currentAmortizationPretaxAmount = model.currentAmortizationPretaxAmount;
+                this.currentAmortizationPretaxGrossAmount = model.currentAmortizationPretaxGrossAmount;
+                this.currentAmortizationRoundDownDiscount = model.currentAmortizationRoundDownDiscount;
+                this.deductedByCashCoupons = model.deductedByCashCoupons;
+                this.deductedByCoupons = model.deductedByCoupons;
+                this.deductedByPrepaidCard = model.deductedByPrepaidCard;
+                this.expenditureAmount = model.expenditureAmount;
+                this.instanceID = model.instanceID;
+                this.internetIP = model.internetIP;
+                this.intranetIP = model.intranetIP;
+                this.invoiceDiscount = model.invoiceDiscount;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.previouslyAmortizedAfterDiscountAmount = model.previouslyAmortizedAfterDiscountAmount;
+                this.previouslyAmortizedDeductedByCashCoupons = model.previouslyAmortizedDeductedByCashCoupons;
+                this.previouslyAmortizedDeductedByCoupons = model.previouslyAmortizedDeductedByCoupons;
+                this.previouslyAmortizedDeductedByPrepaidCard = model.previouslyAmortizedDeductedByPrepaidCard;
+                this.previouslyAmortizedExpenditureAmount = model.previouslyAmortizedExpenditureAmount;
+                this.previouslyAmortizedInvoiceDiscount = model.previouslyAmortizedInvoiceDiscount;
+                this.previouslyAmortizedPretaxAmount = model.previouslyAmortizedPretaxAmount;
+                this.previouslyAmortizedPretaxGrossAmount = model.previouslyAmortizedPretaxGrossAmount;
+                this.previouslyAmortizedRoundDownDiscount = model.previouslyAmortizedRoundDownDiscount;
+                this.productCode = model.productCode;
+                this.productDetail = model.productDetail;
+                this.productDetailCode = model.productDetailCode;
+                this.productName = model.productName;
+                this.region = model.region;
+                this.remainingAmortizationAfterDiscountAmount = model.remainingAmortizationAfterDiscountAmount;
+                this.remainingAmortizationDeductedByCashCoupons = model.remainingAmortizationDeductedByCashCoupons;
+                this.remainingAmortizationDeductedByCoupons = model.remainingAmortizationDeductedByCoupons;
+                this.remainingAmortizationDeductedByPrepaidCard = model.remainingAmortizationDeductedByPrepaidCard;
+                this.remainingAmortizationExpenditureAmount = model.remainingAmortizationExpenditureAmount;
+                this.remainingAmortizationInvoiceDiscount = model.remainingAmortizationInvoiceDiscount;
+                this.remainingAmortizationPretaxAmount = model.remainingAmortizationPretaxAmount;
+                this.remainingAmortizationPretaxGrossAmount = model.remainingAmortizationPretaxGrossAmount;
+                this.remainingAmortizationRoundDownDiscount = model.remainingAmortizationRoundDownDiscount;
+                this.resourceGroup = model.resourceGroup;
+                this.roundDownDiscount = model.roundDownDiscount;
+                this.splitAccountName = model.splitAccountName;
+                this.splitItemID = model.splitItemID;
+                this.splitItemName = model.splitItemName;
+                this.splitProductDetail = model.splitProductDetail;
+                this.subscriptionType = model.subscriptionType;
+                this.tag = model.tag;
+                this.zone = model.zone;
+            } 
+
             /**
              * AfterDiscountAmount.
              */
@@ -1494,6 +1577,18 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountID = model.accountID;
+                this.accountName = model.accountName;
+                this.items = model.items;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * AccountID.

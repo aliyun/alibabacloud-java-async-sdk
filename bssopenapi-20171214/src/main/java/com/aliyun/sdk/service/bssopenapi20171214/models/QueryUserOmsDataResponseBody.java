@@ -48,6 +48,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserOmsDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -203,6 +218,15 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             private String hostId; 
             private String marker; 
             private java.util.List<java.util.Map<String, ?>> omsData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.marker = model.marker;
+                this.omsData = model.omsData;
+            } 
 
             /**
              * <p>The ID of the host.</p>

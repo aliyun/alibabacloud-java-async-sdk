@@ -48,6 +48,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInstanceGaapCostResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -780,6 +795,64 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             private String usageEndDate; 
             private String usageStartDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.accountingUnit = model.accountingUnit;
+                this.billType = model.billType;
+                this.billingCycle = model.billingCycle;
+                this.currency = model.currency;
+                this.deductedByCashCoupons = model.deductedByCashCoupons;
+                this.deductedByCoupons = model.deductedByCoupons;
+                this.deductedByPrepaidCard = model.deductedByPrepaidCard;
+                this.gaapDeductedByCashCoupons = model.gaapDeductedByCashCoupons;
+                this.gaapDeductedByCoupons = model.gaapDeductedByCoupons;
+                this.gaapDeductedByPrepaidCard = model.gaapDeductedByPrepaidCard;
+                this.gaapPaymentAmount = model.gaapPaymentAmount;
+                this.gaapPretaxAmount = model.gaapPretaxAmount;
+                this.gaapPretaxAmountLocal = model.gaapPretaxAmountLocal;
+                this.gaapPretaxGrossAmount = model.gaapPretaxGrossAmount;
+                this.gaapPricingDiscount = model.gaapPricingDiscount;
+                this.instanceID = model.instanceID;
+                this.monthGaapDeductedByCashCoupons = model.monthGaapDeductedByCashCoupons;
+                this.monthGaapDeductedByCoupons = model.monthGaapDeductedByCoupons;
+                this.monthGaapDeductedByPrepaidCard = model.monthGaapDeductedByPrepaidCard;
+                this.monthGaapPaymentAmount = model.monthGaapPaymentAmount;
+                this.monthGaapPretaxAmount = model.monthGaapPretaxAmount;
+                this.monthGaapPretaxAmountLocal = model.monthGaapPretaxAmountLocal;
+                this.monthGaapPretaxGrossAmount = model.monthGaapPretaxGrossAmount;
+                this.monthGaapPricingDiscount = model.monthGaapPricingDiscount;
+                this.orderId = model.orderId;
+                this.orderType = model.orderType;
+                this.ownerID = model.ownerID;
+                this.payTime = model.payTime;
+                this.payerAccount = model.payerAccount;
+                this.paymentAmount = model.paymentAmount;
+                this.paymentCurrency = model.paymentCurrency;
+                this.pretaxAmount = model.pretaxAmount;
+                this.pretaxAmountLocal = model.pretaxAmountLocal;
+                this.pretaxGrossAmount = model.pretaxGrossAmount;
+                this.pricingDiscount = model.pricingDiscount;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+                this.region = model.region;
+                this.resourceGroup = model.resourceGroup;
+                this.subOrderId = model.subOrderId;
+                this.subscriptionType = model.subscriptionType;
+                this.tag = model.tag;
+                this.unallocatedDeductedByCashCoupons = model.unallocatedDeductedByCashCoupons;
+                this.unallocatedDeductedByCoupons = model.unallocatedDeductedByCoupons;
+                this.unallocatedDeductedByPrepaidCard = model.unallocatedDeductedByPrepaidCard;
+                this.unallocatedPaymentAmount = model.unallocatedPaymentAmount;
+                this.unallocatedPretaxAmount = model.unallocatedPretaxAmount;
+                this.unallocatedPretaxAmountLocal = model.unallocatedPretaxAmountLocal;
+                this.unallocatedPretaxGrossAmount = model.unallocatedPretaxGrossAmount;
+                this.unallocatedPricingDiscount = model.unallocatedPricingDiscount;
+                this.usageEndDate = model.usageEndDate;
+                this.usageStartDate = model.usageStartDate;
+            } 
+
             /**
              * AccountingUnit.
              */
@@ -1235,6 +1308,13 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Module> module; 
 
+            private Builder() {
+            } 
+
+            private Builder(Modules model) {
+                this.module = model.module;
+            } 
+
             /**
              * Module.
              */
@@ -1329,6 +1409,17 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.modules = model.modules;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * HostId.

@@ -48,6 +48,10 @@ public class QueryProductListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryProductListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryProductListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -216,6 +231,16 @@ public class QueryProductListResponseBody extends TeaModel {
             private String productType; 
             private String subscriptionType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Product model) {
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.productType = model.productType;
+                this.subscriptionType = model.subscriptionType;
+            } 
+
             /**
              * <p>The code of the service.</p>
              * 
@@ -303,6 +328,13 @@ public class QueryProductListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Product> product; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductList model) {
+                this.product = model.product;
+            } 
+
             /**
              * Product.
              */
@@ -385,6 +417,16 @@ public class QueryProductListResponseBody extends TeaModel {
             private Integer pageSize; 
             private ProductList productList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.productList = model.productList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

@@ -48,6 +48,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPrepaidCardsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -288,6 +303,22 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             private String prepaidCardNo; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrepaidCard model) {
+                this.applicableProducts = model.applicableProducts;
+                this.applicableScenarios = model.applicableScenarios;
+                this.balance = model.balance;
+                this.effectiveTime = model.effectiveTime;
+                this.expiryTime = model.expiryTime;
+                this.grantedTime = model.grantedTime;
+                this.nominalValue = model.nominalValue;
+                this.prepaidCardId = model.prepaidCardId;
+                this.prepaidCardNo = model.prepaidCardNo;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The services to which the prepaid card is applicable.</p>
              * 
@@ -441,6 +472,13 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrepaidCard> prepaidCard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.prepaidCard = model.prepaidCard;
+            } 
 
             /**
              * PrepaidCard.

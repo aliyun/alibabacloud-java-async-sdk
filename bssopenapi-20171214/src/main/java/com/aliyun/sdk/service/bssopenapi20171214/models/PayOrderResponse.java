@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QuerySplitItemBillResponse} extends {@link TeaModel}
+ * {@link PayOrderResponse} extends {@link TeaModel}
  *
- * <p>QuerySplitItemBillResponse</p>
+ * <p>PayOrderResponse</p>
  */
-public class QuerySplitItemBillResponse extends Response {
+public class PayOrderResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class QuerySplitItemBillResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private QuerySplitItemBillResponseBody body;
+    private PayOrderResponseBody body;
 
-    private QuerySplitItemBillResponse(BuilderImpl builder) {
+    private PayOrderResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QuerySplitItemBillResponse create() {
+    public static PayOrderResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class QuerySplitItemBillResponse extends Response {
     /**
      * @return body
      */
-    public QuerySplitItemBillResponseBody getBody() {
+    public PayOrderResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QuerySplitItemBillResponse, Builder> {
+    public interface Builder extends Response.Builder<PayOrderResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QuerySplitItemBillResponseBody body);
+        Builder body(PayOrderResponseBody body);
 
         @Override
-        QuerySplitItemBillResponse build();
+        PayOrderResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QuerySplitItemBillResponse, Builder>
+            extends Response.BuilderImpl<PayOrderResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private QuerySplitItemBillResponseBody body; 
+        private PayOrderResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QuerySplitItemBillResponse response) {
+        private BuilderImpl(PayOrderResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class QuerySplitItemBillResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QuerySplitItemBillResponseBody body) {
+        public Builder body(PayOrderResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QuerySplitItemBillResponse build() {
-            return new QuerySplitItemBillResponse(this);
+        public PayOrderResponse build() {
+            return new PayOrderResponse(this);
         } 
 
     } 

@@ -48,6 +48,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAccountBalanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -239,6 +254,18 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             private String currency; 
             private String mybankCreditAmount; 
             private String quotaLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableAmount = model.availableAmount;
+                this.availableCashAmount = model.availableCashAmount;
+                this.creditAmount = model.creditAmount;
+                this.currency = model.currency;
+                this.mybankCreditAmount = model.mybankCreditAmount;
+                this.quotaLimit = model.quotaLimit;
+            } 
 
             /**
              * <p>The available balance of the account.</p>

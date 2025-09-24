@@ -86,7 +86,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -258,7 +258,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The cycle type of the prepaid period</p>
+         * <ul>
+         * <li>PricingCycle=1 indicates that the unit of the prepaid period is in years; </li>
+         * <li>PricingCycle=2 indicates that the unit of the prepaid period is in months; </li>
+         * <li>PricingCycle=3 indicates that the unit of the prepaid period is in days;</li>
+         * <li>Default value: PricingCycle=2</li>
+         * </ul>
+         * <p>Applicable only to certain product types (ProductType being ddos_originpre_public_cn, ddosDip, ddoscoo, ddos_originpre_public_intl, ddosDip_intl, ddoscoo_intl)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pricingCycle(Long pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -392,6 +402,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String code; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.</p>

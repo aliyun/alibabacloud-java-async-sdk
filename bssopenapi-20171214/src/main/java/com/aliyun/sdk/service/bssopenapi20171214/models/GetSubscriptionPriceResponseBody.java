@@ -48,6 +48,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSubscriptionPriceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -228,6 +243,17 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float originalCost; 
             private Float unitPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleDetail model) {
+                this.costAfterDiscount = model.costAfterDiscount;
+                this.invoiceDiscount = model.invoiceDiscount;
+                this.moduleCode = model.moduleCode;
+                this.originalCost = model.originalCost;
+                this.unitPrice = model.unitPrice;
+            } 
+
             /**
              * <p>The discount price.</p>
              * 
@@ -322,6 +348,13 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ModuleDetail> moduleDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleDetails model) {
+                this.moduleDetail = model.moduleDetail;
+            } 
+
             /**
              * ModuleDetail.
              */
@@ -392,6 +425,15 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private String promotionDesc; 
             private Long promotionId; 
             private String promotionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionDetail model) {
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
 
             /**
              * <p>The description of the discount.</p>
@@ -464,6 +506,13 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PromotionDetail> promotionDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionDetails model) {
+                this.promotionDetail = model.promotionDetail;
+            } 
 
             /**
              * PromotionDetail.
@@ -583,6 +632,19 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private PromotionDetails promotionDetails; 
             private Integer quantity; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.moduleDetails = model.moduleDetails;
+                this.originalPrice = model.originalPrice;
+                this.promotionDetails = model.promotionDetails;
+                this.quantity = model.quantity;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The type of currency. Valid values:</p>

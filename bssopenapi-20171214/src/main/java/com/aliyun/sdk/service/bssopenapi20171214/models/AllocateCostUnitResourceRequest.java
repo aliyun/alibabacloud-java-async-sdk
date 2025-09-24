@@ -59,7 +59,7 @@ public class AllocateCostUnitResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -266,6 +266,16 @@ public class AllocateCostUnitResourceRequest extends Request {
             private String commodityCode; 
             private String resourceId; 
             private Long resourceUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceInstanceList model) {
+                this.apportionCode = model.apportionCode;
+                this.commodityCode = model.commodityCode;
+                this.resourceId = model.resourceId;
+                this.resourceUserId = model.resourceUserId;
+            } 
 
             /**
              * <p>The split item of the shared instance. This parameter is required only for shared instances.</p>

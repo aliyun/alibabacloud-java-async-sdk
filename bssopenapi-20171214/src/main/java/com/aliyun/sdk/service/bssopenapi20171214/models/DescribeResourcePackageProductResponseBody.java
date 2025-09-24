@@ -52,6 +52,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourcePackageProductResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -215,6 +231,14 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the property.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Property> property; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.property = model.property;
+            } 
 
             /**
              * Property.
@@ -346,6 +377,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Integer value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableDuration model) {
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the validity period.</p>
@@ -424,6 +464,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AvailableDuration> availableDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableDurations model) {
+                this.availableDuration = model.availableDuration;
+            } 
+
             /**
              * AvailableDuration.
              */
@@ -495,6 +542,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Specification model) {
+                this.availableDurations = model.availableDurations;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The validity periods available for the resource plan.</p>
              */
@@ -563,6 +619,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Specification> specification; 
+
+            private Builder() {
+            } 
+
+            private Builder(Specifications model) {
+                this.specification = model.specification;
+            } 
 
             /**
              * Specification.
@@ -647,6 +710,16 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private Properties properties; 
             private Specifications specifications; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageType model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.properties = model.properties;
+                this.specifications = model.specifications;
+            } 
+
             /**
              * <p>The code of the resource plan.</p>
              * 
@@ -723,6 +796,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PackageType> packageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageTypes model) {
+                this.packageType = model.packageType;
+            } 
 
             /**
              * PackageType.
@@ -807,6 +887,16 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String productCode; 
             private String productType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcePackage model) {
+                this.name = model.name;
+                this.packageTypes = model.packageTypes;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+            } 
+
             /**
              * <p>The name of the resource plan.</p>
              * 
@@ -887,6 +977,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResourcePackage> resourcePackage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcePackages model) {
+                this.resourcePackage = model.resourcePackage;
+            } 
+
             /**
              * ResourcePackage.
              */
@@ -933,6 +1030,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private ResourcePackages resourcePackages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resourcePackages = model.resourcePackages;
+            } 
 
             /**
              * <p>The details about the resource plans.</p>

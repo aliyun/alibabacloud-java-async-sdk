@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSavingsPlansInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommodityCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
@@ -69,6 +73,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
 
     private CreateSavingsPlansInstanceRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.commodityCode = builder.commodityCode;
         this.duration = builder.duration;
         this.effectiveDate = builder.effectiveDate;
@@ -90,9 +95,16 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -173,6 +185,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSavingsPlansInstanceRequest, Builder> {
+        private Boolean autoPay; 
         private String commodityCode; 
         private String duration; 
         private String effectiveDate; 
@@ -191,6 +204,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
 
         private Builder(CreateSavingsPlansInstanceRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.commodityCode = request.commodityCode;
             this.duration = request.duration;
             this.effectiveDate = request.effectiveDate;
@@ -203,6 +217,15 @@ public class CreateSavingsPlansInstanceRequest extends Request {
             this.specification = request.specification;
             this.type = request.type;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * <p>The code of the service.</p>

@@ -34,7 +34,7 @@ public class CreateCostUnitRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +132,15 @@ public class CreateCostUnitRequest extends Request {
             private Long ownerUid; 
             private Long parentUnitId; 
             private String unitName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnitEntityList model) {
+                this.ownerUid = model.ownerUid;
+                this.parentUnitId = model.parentUnitId;
+                this.unitName = model.unitName;
+            } 
 
             /**
              * <p>The user ID of the owner of the cost center.</p>

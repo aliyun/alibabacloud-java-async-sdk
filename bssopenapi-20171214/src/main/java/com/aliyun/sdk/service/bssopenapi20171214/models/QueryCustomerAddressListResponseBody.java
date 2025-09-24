@@ -48,6 +48,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCustomerAddressListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -312,6 +327,24 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             private Long userId; 
             private String userNick; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerInvoiceAddress model) {
+                this.addressee = model.addressee;
+                this.bizType = model.bizType;
+                this.city = model.city;
+                this.county = model.county;
+                this.deliveryAddress = model.deliveryAddress;
+                this.id = model.id;
+                this.phone = model.phone;
+                this.postalCode = model.postalCode;
+                this.province = model.province;
+                this.street = model.street;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
+
             /**
              * <p>The addressee.</p>
              * 
@@ -483,6 +516,13 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CustomerInvoiceAddress> customerInvoiceAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerInvoiceAddressList model) {
+                this.customerInvoiceAddress = model.customerInvoiceAddress;
+            } 
+
             /**
              * CustomerInvoiceAddress.
              */
@@ -529,6 +569,13 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
 
         public static final class Builder {
             private CustomerInvoiceAddressList customerInvoiceAddressList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customerInvoiceAddressList = model.customerInvoiceAddressList;
+            } 
 
             /**
              * <p>The details of addresses to which invoices are mailed.</p>

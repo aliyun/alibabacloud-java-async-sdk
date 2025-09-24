@@ -60,6 +60,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryResourcePackageInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -248,6 +266,13 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> product; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicableProducts model) {
+                this.product = model.product;
+            } 
 
             /**
              * Product.
@@ -452,6 +477,26 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             private String totalAmount; 
             private String totalAmountUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.applicableProducts = model.applicableProducts;
+                this.commodityCode = model.commodityCode;
+                this.deductType = model.deductType;
+                this.effectiveTime = model.effectiveTime;
+                this.expiryTime = model.expiryTime;
+                this.instanceId = model.instanceId;
+                this.packageType = model.packageType;
+                this.region = model.region;
+                this.remainingAmount = model.remainingAmount;
+                this.remainingAmountUnit = model.remainingAmountUnit;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.totalAmount = model.totalAmount;
+                this.totalAmountUnit = model.totalAmountUnit;
+            } 
+
             /**
              * <p>The services to which the resource plan is applicable.</p>
              */
@@ -643,6 +688,13 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Instance> instance; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
+
             /**
              * Instance.
              */
@@ -737,6 +789,17 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             private String pageNum; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.instances = model.instances;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The ID of the host.</p>

@@ -48,6 +48,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCashCouponsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -300,6 +315,23 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             private String nominalValue; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CashCoupon model) {
+                this.applicableProducts = model.applicableProducts;
+                this.applicableScenarios = model.applicableScenarios;
+                this.balance = model.balance;
+                this.cashCouponId = model.cashCouponId;
+                this.cashCouponNo = model.cashCouponNo;
+                this.description = model.description;
+                this.effectiveTime = model.effectiveTime;
+                this.expiryTime = model.expiryTime;
+                this.grantedTime = model.grantedTime;
+                this.nominalValue = model.nominalValue;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The service to which the voucher is applicable.</p>
              * 
@@ -464,6 +496,13 @@ public class QueryCashCouponsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CashCoupon> cashCoupon; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cashCoupon = model.cashCoupon;
+            } 
 
             /**
              * CashCoupon.

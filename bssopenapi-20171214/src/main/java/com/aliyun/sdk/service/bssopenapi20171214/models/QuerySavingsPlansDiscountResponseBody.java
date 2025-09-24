@@ -48,6 +48,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySavingsPlansDiscountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -288,6 +303,22 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private String spec; 
             private String spnType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.commodityName = model.commodityName;
+                this.contractDiscountRate = model.contractDiscountRate;
+                this.cycle = model.cycle;
+                this.discountRate = model.discountRate;
+                this.moduleName = model.moduleName;
+                this.payMode = model.payMode;
+                this.region = model.region;
+                this.regionCode = model.regionCode;
+                this.spec = model.spec;
+                this.spnType = model.spnType;
+            } 
+
             /**
              * <p>The details of the service.</p>
              * 
@@ -453,6 +484,14 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         public static final class Builder {
             private String hostId; 
             private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.items = model.items;
+            } 
 
             /**
              * <p>The IP address of the request.</p>

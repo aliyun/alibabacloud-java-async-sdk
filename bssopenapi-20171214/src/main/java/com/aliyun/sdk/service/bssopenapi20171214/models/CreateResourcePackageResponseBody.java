@@ -52,6 +52,10 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,11 +106,20 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateResourcePackageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +127,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,10 +135,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful!</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,10 +143,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>202407022550621</p>
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -144,10 +151,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,10 +159,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,11 +216,16 @@ public class CreateResourcePackageResponseBody extends TeaModel {
             private String instanceId; 
             private Long orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * <p>The ID of the resource plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSSBAG-cn-****s</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -227,10 +233,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202407022550621</p>
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

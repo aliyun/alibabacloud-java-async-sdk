@@ -48,6 +48,10 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSavingsPlansUsageDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -324,6 +339,25 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.currency = model.currency;
+                this.deductValue = model.deductValue;
+                this.endPeriod = model.endPeriod;
+                this.instanceId = model.instanceId;
+                this.poolValue = model.poolValue;
+                this.postpaidCost = model.postpaidCost;
+                this.savedCost = model.savedCost;
+                this.startPeriod = model.startPeriod;
+                this.status = model.status;
+                this.type = model.type;
+                this.usagePercentage = model.usagePercentage;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The currency.</p>
              * 
@@ -527,6 +561,15 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data entries.</p>

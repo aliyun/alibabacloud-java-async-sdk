@@ -48,6 +48,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class AddAccountRelationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddAccountRelationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -191,6 +206,14 @@ public class AddAccountRelationResponseBody extends TeaModel {
         public static final class Builder {
             private String hostId; 
             private Long relationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hostId = model.hostId;
+                this.relationId = model.relationId;
+            } 
 
             /**
              * <p>The IP address of the request</p>

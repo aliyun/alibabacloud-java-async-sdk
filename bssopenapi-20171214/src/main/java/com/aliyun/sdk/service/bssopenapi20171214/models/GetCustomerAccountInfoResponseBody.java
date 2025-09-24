@@ -48,6 +48,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomerAccountInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -239,6 +254,18 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             private Boolean isCertified; 
             private String loginEmail; 
             private Long mpk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountType = model.accountType;
+                this.creditLimitStatus = model.creditLimitStatus;
+                this.hostingStatus = model.hostingStatus;
+                this.isCertified = model.isCertified;
+                this.loginEmail = model.loginEmail;
+                this.mpk = model.mpk;
+            } 
 
             /**
              * <p>The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.</p>

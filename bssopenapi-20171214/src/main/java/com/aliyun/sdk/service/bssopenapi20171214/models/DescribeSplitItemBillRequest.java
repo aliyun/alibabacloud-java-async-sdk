@@ -106,7 +106,7 @@ public class DescribeSplitItemBillRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -490,6 +490,14 @@ public class DescribeSplitItemBillRequest extends Request {
         public static final class Builder {
             private String tagKey; 
             private java.util.List<String> tagValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagFilter model) {
+                this.tagKey = model.tagKey;
+                this.tagValues = model.tagValues;
+            } 
 
             /**
              * <p>The TagFilter.N parameter is used to query bills that match a specified tag. The value of the TagFilter.N parameter must be a key-value pair. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>

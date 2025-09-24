@@ -48,6 +48,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSavingsPlansCoverageTotalResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -192,6 +207,14 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private Float percentage; 
             private String period; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeriodCoverage model) {
+                this.percentage = model.percentage;
+                this.period = model.period;
+            } 
+
             /**
              * <p>The coverage.</p>
              * 
@@ -266,6 +289,14 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private Float coveragePercentage; 
             private Float deductAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalCoverage model) {
+                this.coveragePercentage = model.coveragePercentage;
+                this.deductAmount = model.deductAmount;
+            } 
+
             /**
              * <p>The total coverage.</p>
              * 
@@ -338,6 +369,14 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PeriodCoverage> periodCoverage; 
             private TotalCoverage totalCoverage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.periodCoverage = model.periodCoverage;
+                this.totalCoverage = model.totalCoverage;
+            } 
 
             /**
              * <p>The coverage in different periods.</p>

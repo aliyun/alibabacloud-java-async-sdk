@@ -48,6 +48,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFinancialAccountInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -239,6 +254,18 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             private String memberGroupName; 
             private String memberNickName; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountType = model.accountType;
+                this.isFinancialAccount = model.isFinancialAccount;
+                this.memberGroupId = model.memberGroupId;
+                this.memberGroupName = model.memberGroupName;
+                this.memberNickName = model.memberNickName;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</p>
