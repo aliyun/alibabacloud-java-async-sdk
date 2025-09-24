@@ -20,10 +20,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AbortDBClusterMigration  AbortDBClusterMigrationRequest
+     * @return AbortDBClusterMigrationResponse
+     */
+    CompletableFuture<AbortDBClusterMigrationResponse> abortDBClusterMigration(AbortDBClusterMigrationRequest request);
+
+    /**
+     * @param request the request parameters of AddEncryptionDBRolePrivilege  AddEncryptionDBRolePrivilegeRequest
+     * @return AddEncryptionDBRolePrivilegeResponse
+     */
+    CompletableFuture<AddEncryptionDBRolePrivilegeResponse> addEncryptionDBRolePrivilege(AddEncryptionDBRolePrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of AddFirewallRules  AddFirewallRulesRequest
+     * @return AddFirewallRulesResponse
+     */
+    CompletableFuture<AddFirewallRulesResponse> addFirewallRules(AddFirewallRulesRequest request);
+
+    /**
+     * @param request the request parameters of AddSQLRateLimitingRules  AddSQLRateLimitingRulesRequest
+     * @return AddSQLRateLimitingRulesResponse
+     */
+    CompletableFuture<AddSQLRateLimitingRulesResponse> addSQLRateLimitingRules(AddSQLRateLimitingRulesRequest request);
+
+    /**
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
     CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of CancelCronJobPolicyServerless  CancelCronJobPolicyServerlessRequest
+     * @return CancelCronJobPolicyServerlessResponse
+     */
+    CompletableFuture<CancelCronJobPolicyServerlessResponse> cancelCronJobPolicyServerless(CancelCronJobPolicyServerlessRequest request);
 
     /**
      * @param request the request parameters of CancelScheduleTasks  CancelScheduleTasksRequest
@@ -36,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckAccountNameResponse
      */
     CompletableFuture<CheckAccountNameResponse> checkAccountName(CheckAccountNameRequest request);
+
+    /**
+     * @param request the request parameters of CheckConnectionString  CheckConnectionStringRequest
+     * @return CheckConnectionStringResponse
+     */
+    CompletableFuture<CheckConnectionStringResponse> checkConnectionString(CheckConnectionStringRequest request);
 
     /**
      * @param request the request parameters of CheckDBName  CheckDBNameRequest
@@ -77,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloseDBClusterMigrationResponse> closeDBClusterMigration(CloseDBClusterMigrationRequest request);
 
     /**
+     * @param request the request parameters of ContinueDBClusterMigration  ContinueDBClusterMigrationRequest
+     * @return ContinueDBClusterMigrationResponse
+     */
+    CompletableFuture<ContinueDBClusterMigrationResponse> continueDBClusterMigration(ContinueDBClusterMigrationRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -108,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateColdStorageInstanceResponse
      */
     CompletableFuture<CreateColdStorageInstanceResponse> createColdStorageInstance(CreateColdStorageInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateCronJobPolicyServerless  CreateCronJobPolicyServerlessRequest
+     * @return CreateCronJobPolicyServerlessResponse
+     */
+    CompletableFuture<CreateCronJobPolicyServerlessResponse> createCronJobPolicyServerless(CreateCronJobPolicyServerlessRequest request);
 
     /**
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
@@ -168,6 +216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     /**
+     * @param request the request parameters of CreateExtensions  CreateExtensionsRequest
+     * @return CreateExtensionsResponse
+     */
+    CompletableFuture<CreateExtensionsResponse> createExtensions(CreateExtensionsRequest request);
+
+    /**
      * @param request the request parameters of CreateGlobalDataNetwork  CreateGlobalDataNetworkRequest
      * @return CreateGlobalDataNetworkResponse
      */
@@ -189,6 +243,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateGlobalSecurityIPGroupResponse
      */
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateNetworkChannel  CreateNetworkChannelRequest
+     * @return CreateNetworkChannelResponse
+     */
+    CompletableFuture<CreateNetworkChannelResponse> createNetworkChannel(CreateNetworkChannelRequest request);
 
     /**
      * @param request the request parameters of CreateOrGetVirtualLicenseOrder  CreateOrGetVirtualLicenseOrderRequest
@@ -309,6 +369,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
 
     /**
+     * @param request the request parameters of DeleteEncryptionDBRolePrivilege  DeleteEncryptionDBRolePrivilegeRequest
+     * @return DeleteEncryptionDBRolePrivilegeResponse
+     */
+    CompletableFuture<DeleteEncryptionDBRolePrivilegeResponse> deleteEncryptionDBRolePrivilege(DeleteEncryptionDBRolePrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteExtensions  DeleteExtensionsRequest
+     * @return DeleteExtensionsResponse
+     */
+    CompletableFuture<DeleteExtensionsResponse> deleteExtensions(DeleteExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFirewallRules  DeleteFirewallRulesRequest
+     * @return DeleteFirewallRulesResponse
+     */
+    CompletableFuture<DeleteFirewallRulesResponse> deleteFirewallRules(DeleteFirewallRulesRequest request);
+
+    /**
      * @param request the request parameters of DeleteGlobalDataNetwork  DeleteGlobalDataNetworkRequest
      * @return DeleteGlobalDataNetworkResponse
      */
@@ -338,6 +416,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request);
 
     /**
+     * @param request the request parameters of DeleteNetworkChannel  DeleteNetworkChannelRequest
+     * @return DeleteNetworkChannelResponse
+     */
+    CompletableFuture<DeleteNetworkChannelResponse> deleteNetworkChannel(DeleteNetworkChannelRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
      * <blockquote>
@@ -350,10 +434,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteSQLRateLimitingRules  DeleteSQLRateLimitingRulesRequest
+     * @return DeleteSQLRateLimitingRulesResponse
+     */
+    CompletableFuture<DeleteSQLRateLimitingRulesResponse> deleteSQLRateLimitingRules(DeleteSQLRateLimitingRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterAttribute  DescribeAIDBClusterAttributeRequest
+     * @return DescribeAIDBClusterAttributeResponse
+     */
+    CompletableFuture<DescribeAIDBClusterAttributeResponse> describeAIDBClusterAttribute(DescribeAIDBClusterAttributeRequest request);
+
+    /**
      * @param request the request parameters of DescribeAIDBClusterPerformance  DescribeAIDBClusterPerformanceRequest
      * @return DescribeAIDBClusterPerformanceResponse
      */
     CompletableFuture<DescribeAIDBClusterPerformanceResponse> describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusters  DescribeAIDBClustersRequest
+     * @return DescribeAIDBClustersResponse
+     */
+    CompletableFuture<DescribeAIDBClustersResponse> describeAIDBClusters(DescribeAIDBClustersRequest request);
 
     /**
      * @param request the request parameters of DescribeAITaskStatus  DescribeAITaskStatusRequest
@@ -380,6 +482,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeActivationCodesResponse> describeActivationCodes(DescribeActivationCodesRequest request);
 
     /**
+     * @param request the request parameters of DescribeActiveOperationMaintainConf  DescribeActiveOperationMaintainConfRequest
+     * @return DescribeActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintainConfResponse> describeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request);
+
+    /**
      * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
      */
@@ -392,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAutoRenewAttributeResponse> describeAutoRenewAttribute(DescribeAutoRenewAttributeRequest request);
 
     /**
+     * @param request the request parameters of DescribeAvailableCrossRegions  DescribeAvailableCrossRegionsRequest
+     * @return DescribeAvailableCrossRegionsResponse
+     */
+    CompletableFuture<DescribeAvailableCrossRegionsResponse> describeAvailableCrossRegions(DescribeAvailableCrossRegionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeBackupLogs  DescribeBackupLogsRequest
      * @return DescribeBackupLogsResponse
      */
@@ -402,6 +516,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBackupPolicyResponse
      */
     CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackupRegions  DescribeBackupRegionsRequest
+     * @return DescribeBackupRegionsResponse
+     */
+    CompletableFuture<DescribeBackupRegionsResponse> describeBackupRegions(DescribeBackupRegionsRequest request);
 
     /**
      * @param request the request parameters of DescribeBackupTasks  DescribeBackupTasksRequest
@@ -426,6 +546,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeClassListResponse
      */
     CompletableFuture<DescribeClassListResponse> describeClassList(DescribeClassListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeColdStorageInstance  DescribeColdStorageInstanceRequest
+     * @return DescribeColdStorageInstanceResponse
+     */
+    CompletableFuture<DescribeColdStorageInstanceResponse> describeColdStorageInstance(DescribeColdStorageInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCronJobPolicyServerless  DescribeCronJobPolicyServerlessRequest
+     * @return DescribeCronJobPolicyServerlessResponse
+     */
+    CompletableFuture<DescribeCronJobPolicyServerlessResponse> describeCronJobPolicyServerless(DescribeCronJobPolicyServerlessRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCrossCloudLevels  DescribeCrossCloudLevelsRequest
+     * @return DescribeCrossCloudLevelsResponse
+     */
+    CompletableFuture<DescribeCrossCloudLevelsResponse> describeCrossCloudLevels(DescribeCrossCloudLevelsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCrossCloudRegion  DescribeCrossCloudRegionRequest
+     * @return DescribeCrossCloudRegionResponse
+     */
+    CompletableFuture<DescribeCrossCloudRegionResponse> describeCrossCloudRegion(DescribeCrossCloudRegionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCrossCloudRegionMappingToAliyun  DescribeCrossCloudRegionMappingToAliyunRequest
+     * @return DescribeCrossCloudRegionMappingToAliyunResponse
+     */
+    CompletableFuture<DescribeCrossCloudRegionMappingToAliyunResponse> describeCrossCloudRegionMappingToAliyun(DescribeCrossCloudRegionMappingToAliyunRequest request);
 
     /**
      * @param request the request parameters of DescribeDBClusterAccessWhitelist  DescribeDBClusterAccessWhitelistRequest
@@ -458,6 +608,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterConnectivityResponse> describeDBClusterConnectivity(DescribeDBClusterConnectivityRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterEncryptionKey  DescribeDBClusterEncryptionKeyRequest
+     * @return DescribeDBClusterEncryptionKeyResponse
+     */
+    CompletableFuture<DescribeDBClusterEncryptionKeyResponse> describeDBClusterEncryptionKey(DescribeDBClusterEncryptionKeyRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusterEndpoints  DescribeDBClusterEndpointsRequest
      * @return DescribeDBClusterEndpointsResponse
      */
@@ -477,6 +633,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBClusterMonitorResponse
      */
     CompletableFuture<DescribeDBClusterMonitorResponse> describeDBClusterMonitor(DescribeDBClusterMonitorRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBClusterNetInfo  DescribeDBClusterNetInfoRequest
+     * @return DescribeDBClusterNetInfoResponse
+     */
+    CompletableFuture<DescribeDBClusterNetInfoResponse> describeDBClusterNetInfo(DescribeDBClusterNetInfoRequest request);
 
     /**
      * @param request the request parameters of DescribeDBClusterParameters  DescribeDBClusterParametersRequest
@@ -509,6 +671,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBClusterPerformanceResponse
      */
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBClusterProxy  DescribeDBClusterProxyRequest
+     * @return DescribeDBClusterProxyResponse
+     */
+    CompletableFuture<DescribeDBClusterProxyResponse> describeDBClusterProxy(DescribeDBClusterProxyRequest request);
 
     /**
      * @param request the request parameters of DescribeDBClusterSSL  DescribeDBClusterSSLRequest
@@ -553,6 +721,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInitializeVariableResponse> describeDBInitializeVariable(DescribeDBInitializeVariableRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstancePerformance  DescribeDBInstancePerformanceRequest
+     * @return DescribeDBInstancePerformanceResponse
+     */
+    CompletableFuture<DescribeDBInstancePerformanceResponse> describeDBInstancePerformance(DescribeDBInstancePerformanceRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
@@ -562,6 +736,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBLinksResponse
      */
     CompletableFuture<DescribeDBLinksResponse> describeDBLinks(DescribeDBLinksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBLogFiles  DescribeDBLogFilesRequest
+     * @return DescribeDBLogFilesResponse
+     */
+    CompletableFuture<DescribeDBLogFilesResponse> describeDBLogFiles(DescribeDBLogFilesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBMiniEngineVersions  DescribeDBMiniEngineVersionsRequest
+     * @return DescribeDBMiniEngineVersionsResponse
+     */
+    CompletableFuture<DescribeDBMiniEngineVersionsResponse> describeDBMiniEngineVersions(DescribeDBMiniEngineVersionsRequest request);
 
     /**
      * <b>description</b> :
@@ -631,6 +817,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeEncryptionDBRolePrivilege  DescribeEncryptionDBRolePrivilegeRequest
+     * @return DescribeEncryptionDBRolePrivilegeResponse
+     */
+    CompletableFuture<DescribeEncryptionDBRolePrivilegeResponse> describeEncryptionDBRolePrivilege(DescribeEncryptionDBRolePrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEncryptionDBSecret  DescribeEncryptionDBSecretRequest
+     * @return DescribeEncryptionDBSecretResponse
+     */
+    CompletableFuture<DescribeEncryptionDBSecretResponse> describeEncryptionDBSecret(DescribeEncryptionDBSecretRequest request);
+
+    /**
+     * @param request the request parameters of DescribeExtensions  DescribeExtensionsRequest
+     * @return DescribeExtensionsResponse
+     */
+    CompletableFuture<DescribeExtensionsResponse> describeExtensions(DescribeExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeFirewallRules  DescribeFirewallRulesRequest
+     * @return DescribeFirewallRulesResponse
+     */
+    CompletableFuture<DescribeFirewallRulesResponse> describeFirewallRules(DescribeFirewallRulesRequest request);
+
+    /**
      * @param request the request parameters of DescribeGlobalDataNetworkList  DescribeGlobalDataNetworkListRequest
      * @return DescribeGlobalDataNetworkListResponse
      */
@@ -673,6 +883,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHistoryTasksResponse> describeHistoryTasks(DescribeHistoryTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryTasksStat  DescribeHistoryTasksStatRequest
+     * @return DescribeHistoryTasksStatResponse
+     */
+    CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
+
+    /**
      * @param request the request parameters of DescribeLicenseOrderDetails  DescribeLicenseOrderDetailsRequest
      * @return DescribeLicenseOrderDetailsResponse
      */
@@ -683,6 +899,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeLicenseOrdersResponse
      */
     CompletableFuture<DescribeLicenseOrdersResponse> describeLicenseOrders(DescribeLicenseOrdersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLocalAvailableRecoveryTime  DescribeLocalAvailableRecoveryTimeRequest
+     * @return DescribeLocalAvailableRecoveryTimeResponse
+     */
+    CompletableFuture<DescribeLocalAvailableRecoveryTimeResponse> describeLocalAvailableRecoveryTime(DescribeLocalAvailableRecoveryTimeRequest request);
 
     /**
      * @param request the request parameters of DescribeLogBackupPolicy  DescribeLogBackupPolicyRequest
@@ -701,6 +923,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMetaListResponse
      */
     CompletableFuture<DescribeMetaListResponse> describeMetaList(DescribeMetaListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeModifyParameterLog  DescribeModifyParameterLogRequest
+     * @return DescribeModifyParameterLogResponse
+     */
+    CompletableFuture<DescribeModifyParameterLogResponse> describeModifyParameterLog(DescribeModifyParameterLogRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNetworkChannel  DescribeNetworkChannelRequest
+     * @return DescribeNetworkChannelResponse
+     */
+    CompletableFuture<DescribeNetworkChannelResponse> describeNetworkChannel(DescribeNetworkChannelRequest request);
 
     /**
      * <b>description</b> :
@@ -751,10 +985,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarSQLCollectorPolicyResponse> describePolarSQLCollectorPolicy(DescribePolarSQLCollectorPolicyRequest request);
 
     /**
+     * @param request the request parameters of DescribeRdsVSwitchs  DescribeRdsVSwitchsRequest
+     * @return DescribeRdsVSwitchsResponse
+     */
+    CompletableFuture<DescribeRdsVSwitchsResponse> describeRdsVSwitchs(DescribeRdsVSwitchsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
+     * @return DescribeRdsVpcsResponse
+     */
+    CompletableFuture<DescribeRdsVpcsResponse> describeRdsVpcs(DescribeRdsVpcsRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResourcePackages  DescribeResourcePackagesRequest
+     * @return DescribeResourcePackagesResponse
+     */
+    CompletableFuture<DescribeResourcePackagesResponse> describeResourcePackages(DescribeResourcePackagesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSQLRateLimitingRules  DescribeSQLRateLimitingRulesRequest
+     * @return DescribeSQLRateLimitingRulesResponse
+     */
+    CompletableFuture<DescribeSQLRateLimitingRulesResponse> describeSQLRateLimitingRules(DescribeSQLRateLimitingRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeScheduleTasks  DescribeScheduleTasksRequest
@@ -800,10 +1058,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeUpgradeReport  DescribeUpgradeReportRequest
+     * @return DescribeUpgradeReportResponse
+     */
+    CompletableFuture<DescribeUpgradeReportResponse> describeUpgradeReport(DescribeUpgradeReportRequest request);
+
+    /**
      * @param request the request parameters of DescribeUserEncryptionKeyList  DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
      */
     CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVSwitchList  DescribeVSwitchListRequest
+     * @return DescribeVSwitchListResponse
+     */
+    CompletableFuture<DescribeVSwitchListResponse> describeVSwitchList(DescribeVSwitchListRequest request);
 
     /**
      * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
@@ -812,10 +1082,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
+    CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
+    CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
+
+    /**
+     * @param request the request parameters of DisableDBClusterOrca  DisableDBClusterOrcaRequest
+     * @return DisableDBClusterOrcaResponse
+     */
+    CompletableFuture<DisableDBClusterOrcaResponse> disableDBClusterOrca(DisableDBClusterOrcaRequest request);
+
+    /**
      * @param request the request parameters of DisableDBClusterServerless  DisableDBClusterServerlessRequest
      * @return DisableDBClusterServerlessResponse
      */
     CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request);
+
+    /**
+     * @param request the request parameters of EnableDBClusterOrca  EnableDBClusterOrcaRequest
+     * @return EnableDBClusterOrcaResponse
+     */
+    CompletableFuture<EnableDBClusterOrcaResponse> enableDBClusterOrca(EnableDBClusterOrcaRequest request);
 
     /**
      * @param request the request parameters of EnableDBClusterServerless  EnableDBClusterServerlessRequest
@@ -830,16 +1124,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of EnableSQLRateLimitingRules  EnableSQLRateLimitingRulesRequest
+     * @return EnableSQLRateLimitingRulesResponse
+     */
+    CompletableFuture<EnableSQLRateLimitingRulesResponse> enableSQLRateLimitingRules(EnableSQLRateLimitingRulesRequest request);
+
+    /**
      * @param request the request parameters of EvaluateRegionResource  EvaluateRegionResourceRequest
      * @return EvaluateRegionResourceResponse
      */
     CompletableFuture<EvaluateRegionResourceResponse> evaluateRegionResource(EvaluateRegionResourceRequest request);
 
     /**
+     * @param request the request parameters of ExecuteCrossCloudOpenAPI  ExecuteCrossCloudOpenAPIRequest
+     * @return ExecuteCrossCloudOpenAPIResponse
+     */
+    CompletableFuture<ExecuteCrossCloudOpenAPIResponse> executeCrossCloudOpenAPI(ExecuteCrossCloudOpenAPIRequest request);
+
+    /**
      * @param request the request parameters of FailoverDBCluster  FailoverDBClusterRequest
      * @return FailoverDBClusterResponse
      */
     CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request);
+
+    /**
+     * @param request the request parameters of GenerateUpgradeReportForSyncClone  GenerateUpgradeReportForSyncCloneRequest
+     * @return GenerateUpgradeReportForSyncCloneResponse
+     */
+    CompletableFuture<GenerateUpgradeReportForSyncCloneResponse> generateUpgradeReportForSyncClone(GenerateUpgradeReportForSyncCloneRequest request);
 
     /**
      * <b>description</b> :
@@ -859,10 +1171,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request);
 
     /**
+     * @param request the request parameters of ListOrders  ListOrdersRequest
+     * @return ListOrdersResponse
+     */
+    CompletableFuture<ListOrdersResponse> listOrders(ListOrdersRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListTagResourcesForRegion  ListTagResourcesForRegionRequest
+     * @return ListTagResourcesForRegionResponse
+     */
+    CompletableFuture<ListTagResourcesForRegionResponse> listTagResourcesForRegion(ListTagResourcesForRegionRequest request);
 
     /**
      * @param request the request parameters of ManuallyStartDBCluster  ManuallyStartDBClusterRequest
@@ -871,16 +1195,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManuallyStartDBClusterResponse> manuallyStartDBCluster(ManuallyStartDBClusterRequest request);
 
     /**
+     * @param request the request parameters of ModifyAIDBClusterDescription  ModifyAIDBClusterDescriptionRequest
+     * @return ModifyAIDBClusterDescriptionResponse
+     */
+    CompletableFuture<ModifyAIDBClusterDescriptionResponse> modifyAIDBClusterDescription(ModifyAIDBClusterDescriptionRequest request);
+
+    /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyAccountLockState  ModifyAccountLockStateRequest
+     * @return ModifyAccountLockStateResponse
+     */
+    CompletableFuture<ModifyAccountLockStateResponse> modifyAccountLockState(ModifyAccountLockStateRequest request);
+
+    /**
      * @param request the request parameters of ModifyAccountPassword  ModifyAccountPasswordRequest
      * @return ModifyAccountPasswordResponse
      */
     CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationMaintainConf  ModifyActiveOperationMaintainConfRequest
+     * @return ModifyActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<ModifyActiveOperationMaintainConfResponse> modifyActiveOperationMaintainConf(ModifyActiveOperationMaintainConfRequest request);
 
     /**
      * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
@@ -904,6 +1246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyBackupPolicyResponse
      */
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCronJobPolicyServerless  ModifyCronJobPolicyServerlessRequest
+     * @return ModifyCronJobPolicyServerlessResponse
+     */
+    CompletableFuture<ModifyCronJobPolicyServerlessResponse> modifyCronJobPolicyServerless(ModifyCronJobPolicyServerlessRequest request);
 
     /**
      * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
@@ -978,6 +1326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBClusterMigrationResponse
      */
     CompletableFuture<ModifyDBClusterMigrationResponse> modifyDBClusterMigration(ModifyDBClusterMigrationRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterMigrationEndpoint  ModifyDBClusterMigrationEndpointRequest
+     * @return ModifyDBClusterMigrationEndpointResponse
+     */
+    CompletableFuture<ModifyDBClusterMigrationEndpointResponse> modifyDBClusterMigrationEndpoint(ModifyDBClusterMigrationEndpointRequest request);
 
     /**
      * <b>description</b> :
@@ -1064,6 +1418,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterTDEResponse> modifyDBClusterTDE(ModifyDBClusterTDERequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterVpc  ModifyDBClusterVpcRequest
+     * @return ModifyDBClusterVpcResponse
+     */
+    CompletableFuture<ModifyDBClusterVpcResponse> modifyDBClusterVpc(ModifyDBClusterVpcRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBDescription  ModifyDBDescriptionRequest
      * @return ModifyDBDescriptionResponse
      */
@@ -1082,10 +1442,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBNodeClassResponse> modifyDBNodeClass(ModifyDBNodeClassRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBNodeConfig  ModifyDBNodeConfigRequest
+     * @return ModifyDBNodeConfigResponse
+     */
+    CompletableFuture<ModifyDBNodeConfigResponse> modifyDBNodeConfig(ModifyDBNodeConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBNodeDescription  ModifyDBNodeDescriptionRequest
+     * @return ModifyDBNodeDescriptionResponse
+     */
+    CompletableFuture<ModifyDBNodeDescriptionResponse> modifyDBNodeDescription(ModifyDBNodeDescriptionRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBNodeHotReplicaMode  ModifyDBNodeHotReplicaModeRequest
      * @return ModifyDBNodeHotReplicaModeResponse
      */
     CompletableFuture<ModifyDBNodeHotReplicaModeResponse> modifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBNodeSccMode  ModifyDBNodeSccModeRequest
+     * @return ModifyDBNodeSccModeResponse
+     */
+    CompletableFuture<ModifyDBNodeSccModeResponse> modifyDBNodeSccMode(ModifyDBNodeSccModeRequest request);
 
     /**
      * @param request the request parameters of ModifyDBNodesClass  ModifyDBNodesClassRequest
@@ -1098,6 +1476,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBNodesParametersResponse
      */
     CompletableFuture<ModifyDBNodesParametersResponse> modifyDBNodesParameters(ModifyDBNodesParametersRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEncryptionDBRolePrivilege  ModifyEncryptionDBRolePrivilegeRequest
+     * @return ModifyEncryptionDBRolePrivilegeResponse
+     */
+    CompletableFuture<ModifyEncryptionDBRolePrivilegeResponse> modifyEncryptionDBRolePrivilege(ModifyEncryptionDBRolePrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEncryptionDBSecret  ModifyEncryptionDBSecretRequest
+     * @return ModifyEncryptionDBSecretResponse
+     */
+    CompletableFuture<ModifyEncryptionDBSecretResponse> modifyEncryptionDBSecret(ModifyEncryptionDBSecretRequest request);
+
+    /**
+     * @param request the request parameters of ModifyFirewallRules  ModifyFirewallRulesRequest
+     * @return ModifyFirewallRulesResponse
+     */
+    CompletableFuture<ModifyFirewallRulesResponse> modifyFirewallRules(ModifyFirewallRulesRequest request);
 
     /**
      * @param request the request parameters of ModifyGlobalDatabaseNetwork  ModifyGlobalDatabaseNetworkRequest
@@ -1142,6 +1538,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
 
     /**
+     * @param request the request parameters of ModifyResourcePackage  ModifyResourcePackageRequest
+     * @return ModifyResourcePackageResponse
+     */
+    CompletableFuture<ModifyResourcePackageResponse> modifyResourcePackage(ModifyResourcePackageRequest request);
+
+    /**
+     * @param request the request parameters of ModifySQLRateLimitingRules  ModifySQLRateLimitingRulesRequest
+     * @return ModifySQLRateLimitingRulesResponse
+     */
+    CompletableFuture<ModifySQLRateLimitingRulesResponse> modifySQLRateLimitingRules(ModifySQLRateLimitingRulesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyScheduleTask  ModifyScheduleTaskRequest
+     * @return ModifyScheduleTaskResponse
+     */
+    CompletableFuture<ModifyScheduleTaskResponse> modifyScheduleTask(ModifyScheduleTaskRequest request);
+
+    /**
      * @param request the request parameters of OpenAITask  OpenAITaskRequest
      * @return OpenAITaskResponse
      */
@@ -1183,6 +1597,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetAccountResponse
      */
     CompletableFuture<ResetAccountResponse> resetAccount(ResetAccountRequest request);
+
+    /**
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     */
+    CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
     /**
      * @param request the request parameters of ResetGlobalDatabaseNetwork  ResetGlobalDatabaseNetworkRequest
@@ -1252,6 +1672,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExtensions  UpdateExtensionsRequest
+     * @return UpdateExtensionsResponse
+     */
+    CompletableFuture<UpdateExtensionsResponse> updateExtensions(UpdateExtensionsRequest request);
 
     /**
      * <b>description</b> :

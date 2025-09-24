@@ -42,6 +42,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     private String startTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubGroupName")
+    private String subGroupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -52,6 +56,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         this.interval = builder.interval;
         this.key = builder.key;
         this.startTime = builder.startTime;
+        this.subGroupName = builder.subGroupName;
         this.type = builder.type;
     }
 
@@ -104,6 +109,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     }
 
     /**
+     * @return subGroupName
+     */
+    public String getSubGroupName() {
+        return this.subGroupName;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -116,6 +128,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         private String interval; 
         private String key; 
         private String startTime; 
+        private String subGroupName; 
         private String type; 
 
         private Builder() {
@@ -129,6 +142,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             this.interval = request.interval;
             this.key = request.key;
             this.startTime = request.startTime;
+            this.subGroupName = request.subGroupName;
             this.type = request.type;
         } 
 
@@ -196,6 +210,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * SubGroupName.
+         */
+        public Builder subGroupName(String subGroupName) {
+            this.putQueryParameter("SubGroupName", subGroupName);
+            this.subGroupName = subGroupName;
             return this;
         }
 

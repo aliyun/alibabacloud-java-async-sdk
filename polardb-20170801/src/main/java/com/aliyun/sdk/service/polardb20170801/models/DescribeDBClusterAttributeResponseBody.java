@@ -1776,6 +1776,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DBNodeCXLRemoteMemory")
+        private String DBNodeCXLRemoteMemory;
+
         @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
@@ -1850,6 +1853,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.addedCpuCores = builder.addedCpuCores;
             this.cpuCores = builder.cpuCores;
             this.creationTime = builder.creationTime;
+            this.DBNodeCXLRemoteMemory = builder.DBNodeCXLRemoteMemory;
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeDescription = builder.DBNodeDescription;
             this.DBNodeId = builder.DBNodeId;
@@ -1902,6 +1906,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return DBNodeCXLRemoteMemory
+         */
+        public String getDBNodeCXLRemoteMemory() {
+            return this.DBNodeCXLRemoteMemory;
         }
 
         /**
@@ -2069,6 +2080,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String addedCpuCores; 
             private String cpuCores; 
             private String creationTime; 
+            private String DBNodeCXLRemoteMemory; 
             private String DBNodeClass; 
             private String DBNodeDescription; 
             private String DBNodeId; 
@@ -2100,6 +2112,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.addedCpuCores = model.addedCpuCores;
                 this.cpuCores = model.cpuCores;
                 this.creationTime = model.creationTime;
+                this.DBNodeCXLRemoteMemory = model.DBNodeCXLRemoteMemory;
                 this.DBNodeClass = model.DBNodeClass;
                 this.DBNodeDescription = model.DBNodeDescription;
                 this.DBNodeId = model.DBNodeId;
@@ -2155,6 +2168,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DBNodeCXLRemoteMemory.
+             */
+            public Builder DBNodeCXLRemoteMemory(String DBNodeCXLRemoteMemory) {
+                this.DBNodeCXLRemoteMemory = DBNodeCXLRemoteMemory;
                 return this;
             }
 

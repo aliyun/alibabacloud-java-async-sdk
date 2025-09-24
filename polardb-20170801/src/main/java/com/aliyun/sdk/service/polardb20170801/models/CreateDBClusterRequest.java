@@ -190,6 +190,10 @@ public class CreateDBClusterRequest extends Request {
     private String sourceResourceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceUid")
+    private Long sourceUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandbyAZ")
     private String standbyAZ;
 
@@ -211,7 +215,7 @@ public class CreateDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSpace")
-    @com.aliyun.core.annotation.Validation(maximum = 64000, minimum = 10)
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 10)
     private Long storageSpace;
 
     @com.aliyun.core.annotation.Query
@@ -299,6 +303,7 @@ public class CreateDBClusterRequest extends Request {
         this.securityIPList = builder.securityIPList;
         this.serverlessType = builder.serverlessType;
         this.sourceResourceId = builder.sourceResourceId;
+        this.sourceUid = builder.sourceUid;
         this.standbyAZ = builder.standbyAZ;
         this.storageAutoScale = builder.storageAutoScale;
         this.storageEncryption = builder.storageEncryption;
@@ -625,6 +630,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return sourceUid
+     */
+    public Long getSourceUid() {
+        return this.sourceUid;
+    }
+
+    /**
      * @return standbyAZ
      */
     public String getStandbyAZ() {
@@ -779,6 +791,7 @@ public class CreateDBClusterRequest extends Request {
         private String securityIPList; 
         private String serverlessType; 
         private String sourceResourceId; 
+        private Long sourceUid; 
         private String standbyAZ; 
         private String storageAutoScale; 
         private Boolean storageEncryption; 
@@ -844,6 +857,7 @@ public class CreateDBClusterRequest extends Request {
             this.securityIPList = request.securityIPList;
             this.serverlessType = request.serverlessType;
             this.sourceResourceId = request.sourceResourceId;
+            this.sourceUid = request.sourceUid;
             this.standbyAZ = request.standbyAZ;
             this.storageAutoScale = request.storageAutoScale;
             this.storageEncryption = request.storageEncryption;
@@ -1607,6 +1621,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder sourceResourceId(String sourceResourceId) {
             this.putQueryParameter("SourceResourceId", sourceResourceId);
             this.sourceResourceId = sourceResourceId;
+            return this;
+        }
+
+        /**
+         * SourceUid.
+         */
+        public Builder sourceUid(Long sourceUid) {
+            this.putQueryParameter("SourceUid", sourceUid);
+            this.sourceUid = sourceUid;
             return this;
         }
 

@@ -23,12 +23,28 @@ public class RestartDBNodeRequest extends Request {
     private String DBNodeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromTimeService")
+    private String fromTimeService;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
+    private String plannedEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
+    private String plannedStartTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -41,8 +57,12 @@ public class RestartDBNodeRequest extends Request {
     private RestartDBNodeRequest(Builder builder) {
         super(builder);
         this.DBNodeId = builder.DBNodeId;
+        this.fromTimeService = builder.fromTimeService;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.plannedEndTime = builder.plannedEndTime;
+        this.plannedStartTime = builder.plannedStartTime;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -68,6 +88,13 @@ public class RestartDBNodeRequest extends Request {
     }
 
     /**
+     * @return fromTimeService
+     */
+    public String getFromTimeService() {
+        return this.fromTimeService;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -79,6 +106,27 @@ public class RestartDBNodeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return plannedEndTime
+     */
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    /**
+     * @return plannedStartTime
+     */
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,8 +145,12 @@ public class RestartDBNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<RestartDBNodeRequest, Builder> {
         private String DBNodeId; 
+        private String fromTimeService; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String plannedEndTime; 
+        private String plannedStartTime; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -109,8 +161,12 @@ public class RestartDBNodeRequest extends Request {
         private Builder(RestartDBNodeRequest request) {
             super(request);
             this.DBNodeId = request.DBNodeId;
+            this.fromTimeService = request.fromTimeService;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -132,6 +188,15 @@ public class RestartDBNodeRequest extends Request {
         }
 
         /**
+         * FromTimeService.
+         */
+        public Builder fromTimeService(String fromTimeService) {
+            this.putQueryParameter("FromTimeService", fromTimeService);
+            this.fromTimeService = fromTimeService;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -146,6 +211,33 @@ public class RestartDBNodeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PlannedEndTime.
+         */
+        public Builder plannedEndTime(String plannedEndTime) {
+            this.putQueryParameter("PlannedEndTime", plannedEndTime);
+            this.plannedEndTime = plannedEndTime;
+            return this;
+        }
+
+        /**
+         * PlannedStartTime.
+         */
+        public Builder plannedStartTime(String plannedStartTime) {
+            this.putQueryParameter("PlannedStartTime", plannedStartTime);
+            this.plannedStartTime = plannedStartTime;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
