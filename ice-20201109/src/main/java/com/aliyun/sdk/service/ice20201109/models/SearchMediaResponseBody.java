@@ -1856,6 +1856,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StreamStatus")
+        private String streamStatus;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -1892,6 +1895,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.source = builder.source;
             this.spriteImages = builder.spriteImages;
             this.status = builder.status;
+            this.streamStatus = builder.streamStatus;
             this.title = builder.title;
             this.transcodeStatus = builder.transcodeStatus;
             this.uploadSource = builder.uploadSource;
@@ -2048,6 +2052,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return streamStatus
+         */
+        public String getStreamStatus() {
+            return this.streamStatus;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -2103,6 +2114,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String source; 
             private String spriteImages; 
             private String status; 
+            private String streamStatus; 
             private String title; 
             private String transcodeStatus; 
             private String uploadSource; 
@@ -2133,6 +2145,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.source = model.source;
                 this.spriteImages = model.spriteImages;
                 this.status = model.status;
+                this.streamStatus = model.streamStatus;
                 this.title = model.title;
                 this.transcodeStatus = model.transcodeStatus;
                 this.uploadSource = model.uploadSource;
@@ -2348,6 +2361,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StreamStatus.
+             */
+            public Builder streamStatus(String streamStatus) {
+                this.streamStatus = streamStatus;
                 return this;
             }
 

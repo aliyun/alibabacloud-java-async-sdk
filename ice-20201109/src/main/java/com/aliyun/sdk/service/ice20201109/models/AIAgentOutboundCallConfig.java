@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AIAgentOutboundCallConfig</p>
  */
 public class AIAgentOutboundCallConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AmbientSoundConfig")
+    private AmbientSoundConfig ambientSoundConfig;
+
     @com.aliyun.core.annotation.NameInMap("AsrConfig")
     private AsrConfig asrConfig;
 
@@ -42,6 +45,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     private TurnDetectionConfig turnDetectionConfig;
 
     private AIAgentOutboundCallConfig(Builder builder) {
+        this.ambientSoundConfig = builder.ambientSoundConfig;
         this.asrConfig = builder.asrConfig;
         this.enableIntelligentSegment = builder.enableIntelligentSegment;
         this.greeting = builder.greeting;
@@ -62,6 +66,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ambientSoundConfig
+     */
+    public AmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
     }
 
     /**
@@ -121,6 +132,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private AmbientSoundConfig ambientSoundConfig; 
         private AsrConfig asrConfig; 
         private Boolean enableIntelligentSegment; 
         private String greeting; 
@@ -134,6 +146,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         } 
 
         private Builder(AIAgentOutboundCallConfig model) {
+            this.ambientSoundConfig = model.ambientSoundConfig;
             this.asrConfig = model.asrConfig;
             this.enableIntelligentSegment = model.enableIntelligentSegment;
             this.greeting = model.greeting;
@@ -143,6 +156,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             this.ttsConfig = model.ttsConfig;
             this.turnDetectionConfig = model.turnDetectionConfig;
         } 
+
+        /**
+         * AmbientSoundConfig.
+         */
+        public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
+            this.ambientSoundConfig = ambientSoundConfig;
+            return this;
+        }
 
         /**
          * AsrConfig.
@@ -214,6 +235,81 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentOutboundCallConfig</p>
+     */
+    public static class AmbientSoundConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Integer volume;
+
+        private AmbientSoundConfig(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AmbientSoundConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(AmbientSoundConfig model) {
+                this.resourceId = model.resourceId;
+                this.volume = model.volume;
+            } 
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AmbientSoundConfig build() {
+                return new AmbientSoundConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}

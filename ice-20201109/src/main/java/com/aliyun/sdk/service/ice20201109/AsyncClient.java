@@ -95,6 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMediaMarksResponse> addMediaMarks(AddMediaMarksRequest request);
 
     /**
+     * @param request the request parameters of AddStreamTagToSearchLib  AddStreamTagToSearchLibRequest
+     * @return AddStreamTagToSearchLibResponse
+     */
+    CompletableFuture<AddStreamTagToSearchLibResponse> addStreamTagToSearchLib(AddStreamTagToSearchLibRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
@@ -160,6 +166,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloseMediaConnectFlowFailoverResponse
      */
     CompletableFuture<CloseMediaConnectFlowFailoverResponse> closeMediaConnectFlowFailover(CloseMediaConnectFlowFailoverRequest request);
+
+    /**
+     * @param request the request parameters of CloseStreamToSearchLib  CloseStreamToSearchLibRequest
+     * @return CloseStreamToSearchLibResponse
+     */
+    CompletableFuture<CloseStreamToSearchLibResponse> closeStreamToSearchLib(CloseStreamToSearchLibRequest request);
 
     /**
      * @param request the request parameters of CreateAudit  CreateAuditRequest
@@ -368,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSourceLocationResponse
      */
     CompletableFuture<CreateSourceLocationResponse> createSourceLocation(CreateSourceLocationRequest request);
+
+    /**
+     * @param request the request parameters of CreateStreamToSearchLib  CreateStreamToSearchLibRequest
+     * @return CreateStreamToSearchLibResponse
+     */
+    CompletableFuture<CreateStreamToSearchLibResponse> createStreamToSearchLib(CreateStreamToSearchLibRequest request);
 
     /**
      * <b>description</b> :
@@ -1251,6 +1269,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetStorageListResponse
      */
     CompletableFuture<GetStorageListResponse> getStorageList(GetStorageListRequest request);
+
+    /**
+     * @param request the request parameters of GetStreamTagList  GetStreamTagListRequest
+     * @return GetStreamTagListResponse
+     */
+    CompletableFuture<GetStreamTagListResponse> getStreamTagList(GetStreamTagListRequest request);
 
     /**
      * @param request the request parameters of GetSystemTemplate  GetSystemTemplateRequest

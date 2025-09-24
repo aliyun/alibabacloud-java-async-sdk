@@ -178,7 +178,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insx6-1310</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -472,13 +475,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
              * <ul>
              * <li>Inited: The task is initialized.</li>
              * <li>Running</li>
-             * <li>Success</li>
-             * <li>Failed</li>
+             * <li>Complete</li>
+             * <li>Error</li>
              * <li>Cancelled</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Created</p>
+             * <p>Inited</p>
              */
             public Builder state(String state) {
                 this.state = state;

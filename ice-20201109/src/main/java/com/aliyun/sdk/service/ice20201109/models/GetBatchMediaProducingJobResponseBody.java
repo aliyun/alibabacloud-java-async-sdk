@@ -336,6 +336,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
+        @com.aliyun.core.annotation.NameInMap("ExtendInput")
+        private String extendInput;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendOutput")
+        private String extendOutput;
+
         @com.aliyun.core.annotation.NameInMap("InputConfig")
         private String inputConfig;
 
@@ -365,6 +371,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.editingConfig = builder.editingConfig;
             this.extend = builder.extend;
+            this.extendInput = builder.extendInput;
+            this.extendOutput = builder.extendOutput;
             this.inputConfig = builder.inputConfig;
             this.jobId = builder.jobId;
             this.jobType = builder.jobType;
@@ -409,6 +417,20 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
          */
         public String getExtend() {
             return this.extend;
+        }
+
+        /**
+         * @return extendInput
+         */
+        public String getExtendInput() {
+            return this.extendInput;
+        }
+
+        /**
+         * @return extendOutput
+         */
+        public String getExtendOutput() {
+            return this.extendOutput;
         }
 
         /**
@@ -472,6 +494,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String createTime; 
             private String editingConfig; 
             private String extend; 
+            private String extendInput; 
+            private String extendOutput; 
             private String inputConfig; 
             private String jobId; 
             private String jobType; 
@@ -489,6 +513,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.editingConfig = model.editingConfig;
                 this.extend = model.extend;
+                this.extendInput = model.extendInput;
+                this.extendOutput = model.extendOutput;
                 this.inputConfig = model.inputConfig;
                 this.jobId = model.jobId;
                 this.jobType = model.jobType;
@@ -556,6 +582,22 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
              */
             public Builder extend(String extend) {
                 this.extend = extend;
+                return this;
+            }
+
+            /**
+             * ExtendInput.
+             */
+            public Builder extendInput(String extendInput) {
+                this.extendInput = extendInput;
+                return this;
+            }
+
+            /**
+             * ExtendOutput.
+             */
+            public Builder extendOutput(String extendOutput) {
+                this.extendOutput = extendOutput;
                 return this;
             }
 

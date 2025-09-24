@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AIAgentConfig</p>
  */
 public class AIAgentConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AmbientSoundConfig")
+    private AmbientSoundConfig ambientSoundConfig;
+
     @com.aliyun.core.annotation.NameInMap("AsrConfig")
     private AsrConfig asrConfig;
 
@@ -81,6 +84,7 @@ public class AIAgentConfig extends TeaModel {
     private String workflowOverrideParams;
 
     private AIAgentConfig(Builder builder) {
+        this.ambientSoundConfig = builder.ambientSoundConfig;
         this.asrConfig = builder.asrConfig;
         this.avatarConfig = builder.avatarConfig;
         this.avatarUrl = builder.avatarUrl;
@@ -114,6 +118,13 @@ public class AIAgentConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ambientSoundConfig
+     */
+    public AmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
     }
 
     /**
@@ -264,6 +275,7 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private AmbientSoundConfig ambientSoundConfig; 
         private AsrConfig asrConfig; 
         private AvatarConfig avatarConfig; 
         private String avatarUrl; 
@@ -290,6 +302,7 @@ public class AIAgentConfig extends TeaModel {
         } 
 
         private Builder(AIAgentConfig model) {
+            this.ambientSoundConfig = model.ambientSoundConfig;
             this.asrConfig = model.asrConfig;
             this.avatarConfig = model.avatarConfig;
             this.avatarUrl = model.avatarUrl;
@@ -312,6 +325,14 @@ public class AIAgentConfig extends TeaModel {
             this.wakeUpQuery = model.wakeUpQuery;
             this.workflowOverrideParams = model.workflowOverrideParams;
         } 
+
+        /**
+         * AmbientSoundConfig.
+         */
+        public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
+            this.ambientSoundConfig = ambientSoundConfig;
+            return this;
+        }
 
         /**
          * AsrConfig.
@@ -487,6 +508,81 @@ public class AIAgentConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class AmbientSoundConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Integer volume;
+
+        private AmbientSoundConfig(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AmbientSoundConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(AmbientSoundConfig model) {
+                this.resourceId = model.resourceId;
+                this.volume = model.volume;
+            } 
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AmbientSoundConfig build() {
+                return new AmbientSoundConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AIAgentConfig} extends {@link TeaModel}
@@ -1708,6 +1804,60 @@ public class AIAgentConfig extends TeaModel {
      *
      * <p>AIAgentConfig</p>
      */
+    public static class LookAway extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private LookAway(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LookAway create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(LookAway model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public LookAway build() {
+                return new LookAway(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
     public static class PeopleCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -1847,6 +1997,9 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvalidFrameMotion")
         private InvalidFrameMotion invalidFrameMotion;
 
+        @com.aliyun.core.annotation.NameInMap("LookAway")
+        private LookAway lookAway;
+
         @com.aliyun.core.annotation.NameInMap("PeopleCount")
         private PeopleCount peopleCount;
 
@@ -1857,6 +2010,7 @@ public class AIAgentConfig extends TeaModel {
             this.equipment = builder.equipment;
             this.headMotion = builder.headMotion;
             this.invalidFrameMotion = builder.invalidFrameMotion;
+            this.lookAway = builder.lookAway;
             this.peopleCount = builder.peopleCount;
             this.stillFrameMotion = builder.stillFrameMotion;
         }
@@ -1891,6 +2045,13 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * @return lookAway
+         */
+        public LookAway getLookAway() {
+            return this.lookAway;
+        }
+
+        /**
          * @return peopleCount
          */
         public PeopleCount getPeopleCount() {
@@ -1908,6 +2069,7 @@ public class AIAgentConfig extends TeaModel {
             private Equipment equipment; 
             private HeadMotion headMotion; 
             private InvalidFrameMotion invalidFrameMotion; 
+            private LookAway lookAway; 
             private PeopleCount peopleCount; 
             private StillFrameMotion stillFrameMotion; 
 
@@ -1918,6 +2080,7 @@ public class AIAgentConfig extends TeaModel {
                 this.equipment = model.equipment;
                 this.headMotion = model.headMotion;
                 this.invalidFrameMotion = model.invalidFrameMotion;
+                this.lookAway = model.lookAway;
                 this.peopleCount = model.peopleCount;
                 this.stillFrameMotion = model.stillFrameMotion;
             } 
@@ -1943,6 +2106,14 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder invalidFrameMotion(InvalidFrameMotion invalidFrameMotion) {
                 this.invalidFrameMotion = invalidFrameMotion;
+                return this;
+            }
+
+            /**
+             * LookAway.
+             */
+            public Builder lookAway(LookAway lookAway) {
+                this.lookAway = lookAway;
                 return this;
             }
 

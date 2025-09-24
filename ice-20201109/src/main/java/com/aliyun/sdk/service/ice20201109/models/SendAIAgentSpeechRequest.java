@@ -31,11 +31,16 @@ public class SendAIAgentSpeechRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private SendAIAgentSpeechRequest(Builder builder) {
         super(builder);
         this.enableInterrupt = builder.enableInterrupt;
         this.instanceId = builder.instanceId;
         this.text = builder.text;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class SendAIAgentSpeechRequest extends Request {
         return this.text;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<SendAIAgentSpeechRequest, Builder> {
         private Boolean enableInterrupt; 
         private String instanceId; 
         private String text; 
+        private String type; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class SendAIAgentSpeechRequest extends Request {
             this.enableInterrupt = request.enableInterrupt;
             this.instanceId = request.instanceId;
             this.text = request.text;
+            this.type = request.type;
         } 
 
         /**
@@ -118,6 +132,15 @@ public class SendAIAgentSpeechRequest extends Request {
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
             this.text = text;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

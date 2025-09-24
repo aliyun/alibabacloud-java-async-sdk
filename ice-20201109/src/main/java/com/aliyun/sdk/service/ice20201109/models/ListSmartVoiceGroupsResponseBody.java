@@ -116,6 +116,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceSource")
+        private String voiceSource;
+
         @com.aliyun.core.annotation.NameInMap("VoiceType")
         private String voiceType;
 
@@ -129,6 +132,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             this.supportSampleRate = builder.supportSampleRate;
             this.tag = builder.tag;
             this.voice = builder.voice;
+            this.voiceSource = builder.voiceSource;
             this.voiceType = builder.voiceType;
             this.voiceUrl = builder.voiceUrl;
         }
@@ -184,6 +188,13 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return voiceSource
+         */
+        public String getVoiceSource() {
+            return this.voiceSource;
+        }
+
+        /**
          * @return voiceType
          */
         public String getVoiceType() {
@@ -204,6 +215,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private String supportSampleRate; 
             private String tag; 
             private String voice; 
+            private String voiceSource; 
             private String voiceType; 
             private String voiceUrl; 
 
@@ -217,6 +229,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
                 this.supportSampleRate = model.supportSampleRate;
                 this.tag = model.tag;
                 this.voice = model.voice;
+                this.voiceSource = model.voiceSource;
                 this.voiceType = model.voiceType;
                 this.voiceUrl = model.voiceUrl;
             } 
@@ -269,6 +282,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
              */
             public Builder voice(String voice) {
                 this.voice = voice;
+                return this;
+            }
+
+            /**
+             * VoiceSource.
+             */
+            public Builder voiceSource(String voiceSource) {
+                this.voiceSource = voiceSource;
                 return this;
             }
 
