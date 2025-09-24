@@ -1,3 +1,6 @@
+2025-09-24 Version: 1.0.24
+- Generated java-async 2020-01-16 for DAS.
+
 2025-09-09 Version: 1.0.22
 - Generated java-async 2020-01-16 for DAS.
 

@@ -269,11 +269,20 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPUTimeSeconds")
         private Double CPUTimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("Cmd")
+        private String cmd;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
         @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
+
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        private String dbId;
 
         @com.aliyun.core.annotation.NameInMap("DbInstanceName")
         private String dbInstanceName;
@@ -311,6 +320,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("OriginTime")
+        private String originTime;
+
         @com.aliyun.core.annotation.NameInMap("PhysicalIOReads")
         private Long physicalIOReads;
 
@@ -329,6 +344,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueryTimeSeconds")
         private Double queryTimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("RequestSize")
+        private Long requestSize;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseSize")
+        private Long responseSize;
+
         @com.aliyun.core.annotation.NameInMap("ReturnItemNumbers")
         private String returnItemNumbers;
 
@@ -346,6 +367,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Long rowsSent;
+
+        @com.aliyun.core.annotation.NameInMap("Rt")
+        private Long rt;
 
         @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
@@ -388,8 +412,11 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.applicationName = builder.applicationName;
             this.CPUTime = builder.CPUTime;
             this.CPUTimeSeconds = builder.CPUTimeSeconds;
+            this.clientIp = builder.clientIp;
+            this.cmd = builder.cmd;
             this.command = builder.command;
             this.DBName = builder.DBName;
+            this.dbId = builder.dbId;
             this.dbInstanceName = builder.dbInstanceName;
             this.docsExamined = builder.docsExamined;
             this.frows = builder.frows;
@@ -402,18 +429,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.lockTimeSeconds = builder.lockTimeSeconds;
             this.logicalIOReads = builder.logicalIOReads;
             this.namespace = builder.namespace;
+            this.nodeId = builder.nodeId;
+            this.originTime = builder.originTime;
             this.physicalIOReads = builder.physicalIOReads;
             this.psql = builder.psql;
             this.queryId = builder.queryId;
             this.queryStartTime = builder.queryStartTime;
             this.queryTime = builder.queryTime;
             this.queryTimeSeconds = builder.queryTimeSeconds;
+            this.requestSize = builder.requestSize;
+            this.responseSize = builder.responseSize;
             this.returnItemNumbers = builder.returnItemNumbers;
             this.returnNum = builder.returnNum;
             this.rows = builder.rows;
             this.rowsCountAffected = builder.rowsCountAffected;
             this.rowsExamined = builder.rowsExamined;
             this.rowsSent = builder.rowsSent;
+            this.rt = builder.rt;
             this.SQLText = builder.SQLText;
             this.scheme = builder.scheme;
             this.scnt = builder.scnt;
@@ -465,6 +497,20 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return cmd
+         */
+        public String getCmd() {
+            return this.cmd;
+        }
+
+        /**
          * @return command
          */
         public String getCommand() {
@@ -476,6 +522,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public String getDBName() {
             return this.DBName;
+        }
+
+        /**
+         * @return dbId
+         */
+        public String getDbId() {
+            return this.dbId;
         }
 
         /**
@@ -563,6 +616,20 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return originTime
+         */
+        public String getOriginTime() {
+            return this.originTime;
+        }
+
+        /**
          * @return physicalIOReads
          */
         public Long getPhysicalIOReads() {
@@ -605,6 +672,20 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return requestSize
+         */
+        public Long getRequestSize() {
+            return this.requestSize;
+        }
+
+        /**
+         * @return responseSize
+         */
+        public Long getResponseSize() {
+            return this.responseSize;
+        }
+
+        /**
          * @return returnItemNumbers
          */
         public String getReturnItemNumbers() {
@@ -644,6 +725,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public Long getRowsSent() {
             return this.rowsSent;
+        }
+
+        /**
+         * @return rt
+         */
+        public Long getRt() {
+            return this.rt;
         }
 
         /**
@@ -735,8 +823,11 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String applicationName; 
             private Double CPUTime; 
             private Double CPUTimeSeconds; 
+            private String clientIp; 
+            private String cmd; 
             private String command; 
             private String DBName; 
+            private String dbId; 
             private String dbInstanceName; 
             private String docsExamined; 
             private Long frows; 
@@ -749,18 +840,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Double lockTimeSeconds; 
             private Long logicalIOReads; 
             private String namespace; 
+            private String nodeId; 
+            private String originTime; 
             private Long physicalIOReads; 
             private String psql; 
             private String queryId; 
             private String queryStartTime; 
             private Long queryTime; 
             private Double queryTimeSeconds; 
+            private Long requestSize; 
+            private Long responseSize; 
             private String returnItemNumbers; 
             private String returnNum; 
             private Long rows; 
             private Long rowsCountAffected; 
             private Long rowsExamined; 
             private Long rowsSent; 
+            private Long rt; 
             private String SQLText; 
             private String scheme; 
             private Long scnt; 
@@ -782,8 +878,11 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.applicationName = model.applicationName;
                 this.CPUTime = model.CPUTime;
                 this.CPUTimeSeconds = model.CPUTimeSeconds;
+                this.clientIp = model.clientIp;
+                this.cmd = model.cmd;
                 this.command = model.command;
                 this.DBName = model.DBName;
+                this.dbId = model.dbId;
                 this.dbInstanceName = model.dbInstanceName;
                 this.docsExamined = model.docsExamined;
                 this.frows = model.frows;
@@ -796,18 +895,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.lockTimeSeconds = model.lockTimeSeconds;
                 this.logicalIOReads = model.logicalIOReads;
                 this.namespace = model.namespace;
+                this.nodeId = model.nodeId;
+                this.originTime = model.originTime;
                 this.physicalIOReads = model.physicalIOReads;
                 this.psql = model.psql;
                 this.queryId = model.queryId;
                 this.queryStartTime = model.queryStartTime;
                 this.queryTime = model.queryTime;
                 this.queryTimeSeconds = model.queryTimeSeconds;
+                this.requestSize = model.requestSize;
+                this.responseSize = model.responseSize;
                 this.returnItemNumbers = model.returnItemNumbers;
                 this.returnNum = model.returnNum;
                 this.rows = model.rows;
                 this.rowsCountAffected = model.rowsCountAffected;
                 this.rowsExamined = model.rowsExamined;
                 this.rowsSent = model.rowsSent;
+                this.rt = model.rt;
                 this.SQLText = model.SQLText;
                 this.scheme = model.scheme;
                 this.scnt = model.scnt;
@@ -855,6 +959,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * Cmd.
+             */
+            public Builder cmd(String cmd) {
+                this.cmd = cmd;
+                return this;
+            }
+
+            /**
              * Command.
              */
             public Builder command(String command) {
@@ -867,6 +987,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
+                return this;
+            }
+
+            /**
+             * DbId.
+             */
+            public Builder dbId(String dbId) {
+                this.dbId = dbId;
                 return this;
             }
 
@@ -967,6 +1095,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * OriginTime.
+             */
+            public Builder originTime(String originTime) {
+                this.originTime = originTime;
+                return this;
+            }
+
+            /**
              * PhysicalIOReads.
              */
             public Builder physicalIOReads(Long physicalIOReads) {
@@ -1015,6 +1159,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * RequestSize.
+             */
+            public Builder requestSize(Long requestSize) {
+                this.requestSize = requestSize;
+                return this;
+            }
+
+            /**
+             * ResponseSize.
+             */
+            public Builder responseSize(Long responseSize) {
+                this.responseSize = responseSize;
+                return this;
+            }
+
+            /**
              * ReturnItemNumbers.
              */
             public Builder returnItemNumbers(String returnItemNumbers) {
@@ -1059,6 +1219,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder rowsSent(Long rowsSent) {
                 this.rowsSent = rowsSent;
+                return this;
+            }
+
+            /**
+             * Rt.
+             */
+            public Builder rt(Long rt) {
+                this.rt = rt;
                 return this;
             }
 

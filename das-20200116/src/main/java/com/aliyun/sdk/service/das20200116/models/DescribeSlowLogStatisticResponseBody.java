@@ -839,6 +839,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgQueryTimeSeconds")
         private Double avgQueryTimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("AvgRequestSize")
+        private Double avgRequestSize;
+
+        @com.aliyun.core.annotation.NameInMap("AvgResponseSize")
+        private Double avgResponseSize;
+
         @com.aliyun.core.annotation.NameInMap("AvgReturnNum")
         private Double avgReturnNum;
 
@@ -854,6 +860,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgRowsSent")
         private Double avgRowsSent;
 
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
+        private Double avgRt;
+
         @com.aliyun.core.annotation.NameInMap("AvgScnt")
         private Double avgScnt;
 
@@ -862,6 +871,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CPUTimeSeconds")
         private Double CPUTimeSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("Cmd")
+        private String cmd;
 
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -877,6 +892,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
+
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        private String dbId;
 
         @com.aliyun.core.annotation.NameInMap("DbInstanceName")
         private String dbInstanceName;
@@ -962,6 +980,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxQueryTimeSeconds")
         private Double maxQueryTimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("MaxRequestSize")
+        private Double maxRequestSize;
+
+        @com.aliyun.core.annotation.NameInMap("MaxResponseSize")
+        private Double maxResponseSize;
+
         @com.aliyun.core.annotation.NameInMap("MaxReturnNum")
         private Long maxReturnNum;
 
@@ -976,6 +1000,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MaxRowsSent")
         private Long maxRowsSent;
+
+        @com.aliyun.core.annotation.NameInMap("MaxRt")
+        private Double maxRt;
 
         @com.aliyun.core.annotation.NameInMap("MaxScnt")
         private Long maxScnt;
@@ -1064,6 +1091,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
         @com.aliyun.core.annotation.NameInMap("Trend")
         private java.util.List<Trend> trend;
 
@@ -1085,19 +1115,25 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.avgPhysicalIOReads = builder.avgPhysicalIOReads;
             this.avgQueryTime = builder.avgQueryTime;
             this.avgQueryTimeSeconds = builder.avgQueryTimeSeconds;
+            this.avgRequestSize = builder.avgRequestSize;
+            this.avgResponseSize = builder.avgResponseSize;
             this.avgReturnNum = builder.avgReturnNum;
             this.avgRows = builder.avgRows;
             this.avgRowsCountAffected = builder.avgRowsCountAffected;
             this.avgRowsExamined = builder.avgRowsExamined;
             this.avgRowsSent = builder.avgRowsSent;
+            this.avgRt = builder.avgRt;
             this.avgScnt = builder.avgScnt;
             this.CPUTime = builder.CPUTime;
             this.CPUTimeSeconds = builder.CPUTimeSeconds;
+            this.clientIp = builder.clientIp;
+            this.cmd = builder.cmd;
             this.command = builder.command;
             this.count = builder.count;
             this.countRate = builder.countRate;
             this.DBName = builder.DBName;
             this.database = builder.database;
+            this.dbId = builder.dbId;
             this.dbInstanceName = builder.dbInstanceName;
             this.docExamined = builder.docExamined;
             this.docsExamined = builder.docsExamined;
@@ -1126,11 +1162,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.maxPhysicalIOReads = builder.maxPhysicalIOReads;
             this.maxQueryTime = builder.maxQueryTime;
             this.maxQueryTimeSeconds = builder.maxQueryTimeSeconds;
+            this.maxRequestSize = builder.maxRequestSize;
+            this.maxResponseSize = builder.maxResponseSize;
             this.maxReturnNum = builder.maxReturnNum;
             this.maxRows = builder.maxRows;
             this.maxRowsCountAffected = builder.maxRowsCountAffected;
             this.maxRowsExamined = builder.maxRowsExamined;
             this.maxRowsSent = builder.maxRowsSent;
+            this.maxRt = builder.maxRt;
             this.maxScnt = builder.maxScnt;
             this.namespace = builder.namespace;
             this.nodeType = builder.nodeType;
@@ -1160,6 +1199,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.tableName = builder.tableName;
             this.threadId = builder.threadId;
             this.timestamp = builder.timestamp;
+            this.totalCount = builder.totalCount;
             this.trend = builder.trend;
             this.user = builder.user;
         }
@@ -1271,6 +1311,20 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgRequestSize
+         */
+        public Double getAvgRequestSize() {
+            return this.avgRequestSize;
+        }
+
+        /**
+         * @return avgResponseSize
+         */
+        public Double getAvgResponseSize() {
+            return this.avgResponseSize;
+        }
+
+        /**
          * @return avgReturnNum
          */
         public Double getAvgReturnNum() {
@@ -1306,6 +1360,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgRt
+         */
+        public Double getAvgRt() {
+            return this.avgRt;
+        }
+
+        /**
          * @return avgScnt
          */
         public Double getAvgScnt() {
@@ -1324,6 +1385,20 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public Double getCPUTimeSeconds() {
             return this.CPUTimeSeconds;
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return cmd
+         */
+        public String getCmd() {
+            return this.cmd;
         }
 
         /**
@@ -1359,6 +1434,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public String getDatabase() {
             return this.database;
+        }
+
+        /**
+         * @return dbId
+         */
+        public String getDbId() {
+            return this.dbId;
         }
 
         /**
@@ -1558,6 +1640,20 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRequestSize
+         */
+        public Double getMaxRequestSize() {
+            return this.maxRequestSize;
+        }
+
+        /**
+         * @return maxResponseSize
+         */
+        public Double getMaxResponseSize() {
+            return this.maxResponseSize;
+        }
+
+        /**
          * @return maxReturnNum
          */
         public Long getMaxReturnNum() {
@@ -1590,6 +1686,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public Long getMaxRowsSent() {
             return this.maxRowsSent;
+        }
+
+        /**
+         * @return maxRt
+         */
+        public Double getMaxRt() {
+            return this.maxRt;
         }
 
         /**
@@ -1796,6 +1899,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        /**
          * @return trend
          */
         public java.util.List<Trend> getTrend() {
@@ -1824,19 +1934,25 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Double avgPhysicalIOReads; 
             private Double avgQueryTime; 
             private Double avgQueryTimeSeconds; 
+            private Double avgRequestSize; 
+            private Double avgResponseSize; 
             private Double avgReturnNum; 
             private Double avgRows; 
             private Double avgRowsCountAffected; 
             private Double avgRowsExamined; 
             private Double avgRowsSent; 
+            private Double avgRt; 
             private Double avgScnt; 
             private Double CPUTime; 
             private Double CPUTimeSeconds; 
+            private String clientIp; 
+            private String cmd; 
             private String command; 
             private Long count; 
             private Double countRate; 
             private String DBName; 
             private String database; 
+            private String dbId; 
             private String dbInstanceName; 
             private Long docExamined; 
             private Long docsExamined; 
@@ -1865,11 +1981,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Long maxPhysicalIOReads; 
             private Double maxQueryTime; 
             private Double maxQueryTimeSeconds; 
+            private Double maxRequestSize; 
+            private Double maxResponseSize; 
             private Long maxReturnNum; 
             private Long maxRows; 
             private Long maxRowsCountAffected; 
             private Long maxRowsExamined; 
             private Long maxRowsSent; 
+            private Double maxRt; 
             private Long maxScnt; 
             private String namespace; 
             private String nodeType; 
@@ -1899,6 +2018,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private String tableName; 
             private String threadId; 
             private Long timestamp; 
+            private Long totalCount; 
             private java.util.List<Trend> trend; 
             private String user; 
 
@@ -1920,19 +2040,25 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
                 this.avgPhysicalIOReads = model.avgPhysicalIOReads;
                 this.avgQueryTime = model.avgQueryTime;
                 this.avgQueryTimeSeconds = model.avgQueryTimeSeconds;
+                this.avgRequestSize = model.avgRequestSize;
+                this.avgResponseSize = model.avgResponseSize;
                 this.avgReturnNum = model.avgReturnNum;
                 this.avgRows = model.avgRows;
                 this.avgRowsCountAffected = model.avgRowsCountAffected;
                 this.avgRowsExamined = model.avgRowsExamined;
                 this.avgRowsSent = model.avgRowsSent;
+                this.avgRt = model.avgRt;
                 this.avgScnt = model.avgScnt;
                 this.CPUTime = model.CPUTime;
                 this.CPUTimeSeconds = model.CPUTimeSeconds;
+                this.clientIp = model.clientIp;
+                this.cmd = model.cmd;
                 this.command = model.command;
                 this.count = model.count;
                 this.countRate = model.countRate;
                 this.DBName = model.DBName;
                 this.database = model.database;
+                this.dbId = model.dbId;
                 this.dbInstanceName = model.dbInstanceName;
                 this.docExamined = model.docExamined;
                 this.docsExamined = model.docsExamined;
@@ -1961,11 +2087,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
                 this.maxPhysicalIOReads = model.maxPhysicalIOReads;
                 this.maxQueryTime = model.maxQueryTime;
                 this.maxQueryTimeSeconds = model.maxQueryTimeSeconds;
+                this.maxRequestSize = model.maxRequestSize;
+                this.maxResponseSize = model.maxResponseSize;
                 this.maxReturnNum = model.maxReturnNum;
                 this.maxRows = model.maxRows;
                 this.maxRowsCountAffected = model.maxRowsCountAffected;
                 this.maxRowsExamined = model.maxRowsExamined;
                 this.maxRowsSent = model.maxRowsSent;
+                this.maxRt = model.maxRt;
                 this.maxScnt = model.maxScnt;
                 this.namespace = model.namespace;
                 this.nodeType = model.nodeType;
@@ -1995,6 +2124,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
                 this.tableName = model.tableName;
                 this.threadId = model.threadId;
                 this.timestamp = model.timestamp;
+                this.totalCount = model.totalCount;
                 this.trend = model.trend;
                 this.user = model.user;
             } 
@@ -2112,6 +2242,22 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * AvgRequestSize.
+             */
+            public Builder avgRequestSize(Double avgRequestSize) {
+                this.avgRequestSize = avgRequestSize;
+                return this;
+            }
+
+            /**
+             * AvgResponseSize.
+             */
+            public Builder avgResponseSize(Double avgResponseSize) {
+                this.avgResponseSize = avgResponseSize;
+                return this;
+            }
+
+            /**
              * AvgReturnNum.
              */
             public Builder avgReturnNum(Double avgReturnNum) {
@@ -2152,6 +2298,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * AvgRt.
+             */
+            public Builder avgRt(Double avgRt) {
+                this.avgRt = avgRt;
+                return this;
+            }
+
+            /**
              * AvgScnt.
              */
             public Builder avgScnt(Double avgScnt) {
@@ -2172,6 +2326,22 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder CPUTimeSeconds(Double CPUTimeSeconds) {
                 this.CPUTimeSeconds = CPUTimeSeconds;
+                return this;
+            }
+
+            /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * Cmd.
+             */
+            public Builder cmd(String cmd) {
+                this.cmd = cmd;
                 return this;
             }
 
@@ -2212,6 +2382,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder database(String database) {
                 this.database = database;
+                return this;
+            }
+
+            /**
+             * DbId.
+             */
+            public Builder dbId(String dbId) {
+                this.dbId = dbId;
                 return this;
             }
 
@@ -2440,6 +2618,22 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * MaxRequestSize.
+             */
+            public Builder maxRequestSize(Double maxRequestSize) {
+                this.maxRequestSize = maxRequestSize;
+                return this;
+            }
+
+            /**
+             * MaxResponseSize.
+             */
+            public Builder maxResponseSize(Double maxResponseSize) {
+                this.maxResponseSize = maxResponseSize;
+                return this;
+            }
+
+            /**
              * MaxReturnNum.
              */
             public Builder maxReturnNum(Long maxReturnNum) {
@@ -2476,6 +2670,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder maxRowsSent(Long maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
+                return this;
+            }
+
+            /**
+             * MaxRt.
+             */
+            public Builder maxRt(Double maxRt) {
+                this.maxRt = maxRt;
                 return this;
             }
 
@@ -2711,6 +2913,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 
