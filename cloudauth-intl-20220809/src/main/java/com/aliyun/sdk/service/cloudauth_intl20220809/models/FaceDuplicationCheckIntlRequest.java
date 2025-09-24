@@ -296,7 +296,14 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * AutoRegistration.
+         * <p>Indicates whether to automatically register the face to the specified face library if no duplicate face is found.</p>
+         * <ul>
+         * <li>0- Auto-register (default)</li>
+         * <li>1- Do not register</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder autoRegistration(String autoRegistration) {
             this.putBodyParameter("AutoRegistration", autoRegistration);
@@ -305,7 +312,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * FaceGroupCodes.
+         * <p>The face library code created through the console, supporting up to 10 face libraries simultaneously. When multiple face library codes are passed, they should be separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232344，23444</p>
          */
         public Builder faceGroupCodes(String faceGroupCodes) {
             this.putBodyParameter("FaceGroupCodes", faceGroupCodes);
@@ -314,7 +324,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * FaceRegisterGroupCode.
+         * <p>Face registration library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e0c34a77f</p>
          */
         public Builder faceRegisterGroupCode(String faceRegisterGroupCode) {
             this.putBodyParameter("FaceRegisterGroupCode", faceRegisterGroupCode);
@@ -323,7 +336,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * FaceVerifyThreshold.
+         * <p>Face matching threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder faceVerifyThreshold(String faceVerifyThreshold) {
             this.putBodyParameter("FaceVerifyThreshold", faceVerifyThreshold);
@@ -332,7 +348,14 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * Liveness.
+         * <p>Whether to enable silent liveness detection</p>
+         * <ul>
+         * <li>0- Disabled</li>
+         * <li>1- Enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder liveness(String liveness) {
             this.putBodyParameter("Liveness", liveness);
@@ -341,6 +364,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
+         * <p>A unique business identifier for troubleshooting purposes. It supports a combination of 32 alphanumeric characters, please ensure its uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,6 +377,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
+         * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,6 +390,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
+         * <p>Product code</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +403,14 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * ReturnFaces.
+         * <p>When there are multiple faces above the matching threshold, you can use this parameter to customize the number of returned faces</p>
+         * <ul>
+         * <li>Default returns 1</li>
+         * <li>Maximum support 5</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnFaces(String returnFaces) {
             this.putBodyParameter("ReturnFaces", returnFaces);
@@ -386,7 +419,14 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * SaveFacePicture.
+         * <p>Distinguishes between saving the face image and features</p>
+         * <ul>
+         * <li>0- Face (default)</li>
+         * <li>1- Features</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder saveFacePicture(String saveFacePicture) {
             this.putBodyParameter("SaveFacePicture", saveFacePicture);
@@ -395,7 +435,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Your custom authentication scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("SceneCode", sceneCode);
@@ -404,7 +447,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * SourceFacePicture.
+         * <p>Base64 encoded portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder sourceFacePicture(String sourceFacePicture) {
             this.putBodyParameter("SourceFacePicture", sourceFacePicture);
@@ -413,7 +459,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * SourceFacePictureUrl.
+         * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***face1.jpeg</p>
          */
         public Builder sourceFacePictureUrl(String sourceFacePictureUrl) {
             this.putBodyParameter("SourceFacePictureUrl", sourceFacePictureUrl);
@@ -422,7 +471,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * TargetFacePicture.
+         * <p>Base64 encoded portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder targetFacePicture(String targetFacePicture) {
             this.putBodyParameter("TargetFacePicture", targetFacePicture);
@@ -431,7 +483,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * TargetFacePictureUrl.
+         * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***face2.jpeg</p>
          */
         public Builder targetFacePictureUrl(String targetFacePictureUrl) {
             this.putBodyParameter("TargetFacePictureUrl", targetFacePictureUrl);
@@ -440,6 +495,12 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
+         * <p>Verification type</p>
+         * <ul>
+         * <li>0- 1:N (default)</li>
+         * <li>1- 1:1</li>
+         * <li>2- 1:N + 1:1</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class InitializeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -212,7 +218,10 @@ public class InitializeResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientCfg.
+             * <p>Client configuration</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder clientCfg(String clientCfg) {
                 this.clientCfg = clientCfg;
@@ -220,7 +229,13 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>Standard encryption protocol for authentication.</p>
+             * <blockquote>
+             * <p>This field is required when integrating with H5 web pages using iframe embedding.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hksb7ba1b28130d24e015d*********</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -228,7 +243,10 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Authentication ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08573be80f944d95ac812e019e3655a8</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;
@@ -236,7 +254,10 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionUrl.
+             * <p>Web authentication URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http****</p>
              */
             public Builder transactionUrl(String transactionUrl) {
                 this.transactionUrl = transactionUrl;

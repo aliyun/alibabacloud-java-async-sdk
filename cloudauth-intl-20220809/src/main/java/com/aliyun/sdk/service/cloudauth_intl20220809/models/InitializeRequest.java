@@ -745,7 +745,15 @@ public class InitializeRequest extends Request {
         } 
 
         /**
-         * AppQualityCheck.
+         * <p><warning>This feature is currently not supported by <strong>Web SDK</strong>. Please refer to the App SDK integration if needed.</warning></p>
+         * <p>Whether to enable strict face quality detection:</p>
+         * <ul>
+         * <li>Y: Enable (default)</li>
+         * <li>N: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder appQualityCheck(String appQualityCheck) {
             this.putQueryParameter("AppQualityCheck", appQualityCheck);
@@ -754,7 +762,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * Authorize.
+         * <p>Whether to enable authoritative identity verification, currently applicable only to the second-generation ID card in mainland China. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder authorize(String authorize) {
             this.putQueryParameter("Authorize", authorize);
@@ -763,7 +774,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * AutoRegistration.
+         * <p>Whether to enable automatic registration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder autoRegistration(String autoRegistration) {
             this.putQueryParameter("AutoRegistration", autoRegistration);
@@ -772,7 +786,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * CallbackToken.
+         * <p>Security Token, used for preventing duplication and tampering. If this parameter is passed, the CallbackToken field will be displayed in the callback address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ca5c68d869344ea8eeb30cdfd544544-6358700</p>
          */
         public Builder callbackToken(String callbackToken) {
             this.putQueryParameter("CallbackToken", callbackToken);
@@ -781,7 +798,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>Callback notification address for authentication results. The default callback request method is GET, and the callback address must start with https. After completing the authentication, the platform will call back this address and automatically add the transactionId, passed, and subcode fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -790,7 +810,14 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ChameleonFrameEnable.
+         * <p>Whether to enable adaptive color-changing window border</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enable</li>
+         * <li><strong>N</strong>: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder chameleonFrameEnable(String chameleonFrameEnable) {
             this.putQueryParameter("ChameleonFrameEnable", chameleonFrameEnable);
@@ -799,7 +826,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * Crop.
+         * <p>Whether to crop. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder crop(String crop) {
             this.putQueryParameter("Crop", crop);
@@ -808,7 +838,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DateOfBirth.
+         * <p>Date of birth on the document</p>
+         * <p><strong>MRTDInput = 2</strong> is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dateOfBirth(String dateOfBirth) {
             this.putQueryParameter("DateOfBirth", dateOfBirth);
@@ -817,7 +853,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DateOfExpiry.
+         * <p>Expiration date on the document</p>
+         * <p><strong>MRTDInput = 2</strong> is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dateOfExpiry(String dateOfExpiry) {
             this.putQueryParameter("DateOfExpiry", dateOfExpiry);
@@ -826,7 +868,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocName.
+         * <p>User&quot;s real name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder docName(String docName) {
             this.putQueryParameter("DocName", docName);
@@ -835,7 +880,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocNo.
+         * <p>User&quot;s document number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411xxxxxxxxxxx0001</p>
          */
         public Builder docNo(String docNo) {
             this.putQueryParameter("DocNo", docNo);
@@ -844,7 +892,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocPageConfig.
+         * <p>Customer-defined input to specify whether to collect more pages</p>
          */
         public Builder docPageConfig(java.util.List<String> docPageConfig) {
             String docPageConfigShrink = shrink(docPageConfig, "DocPageConfig", "json");
@@ -854,7 +902,14 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocScanMode.
+         * <p>Document capture mode.</p>
+         * <ul>
+         * <li>manual: Manual capture.</li>
+         * <li>auto: Automatic capture (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder docScanMode(String docScanMode) {
             this.putQueryParameter("DocScanMode", docScanMode);
@@ -863,7 +918,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocType.
+         * <p>Document type, uniquely identified by an 8-digit combination.
+         * Note: This parameter is required only when ProductCode is KYC_GLOBAL, OCR_GLOBAL, or IDR_GLOBAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>​01560000</p>
          */
         public Builder docType(String docType) {
             this.putQueryParameter("DocType", docType);
@@ -872,7 +931,19 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocVideo.
+         * <p>Whether to require a video for evidence.</p>
+         * <ul>
+         * <li><p>N: Not required (default).</p>
+         * </li>
+         * <li><p>Y: During the authentication process, a 1~2 second video of the user&quot;s face will be captured and returned via the query interface.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Due to the large size of the video file, the system may discard it when the network is unstable, prioritizing the transmission of necessary images for authentication.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder docVideo(String docVideo) {
             this.putQueryParameter("DocVideo", docVideo);
@@ -881,7 +952,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * DocumentNumber.
+         * <p>Document number</p>
+         * <p><strong>MRTDInput = 2</strong> is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder documentNumber(String documentNumber) {
             this.putQueryParameter("DocumentNumber", documentNumber);
@@ -890,7 +967,16 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * EditOcrResult.
+         * <p>In the document OCR recognition step, whether the recognition result page is editable:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Not editable</p>
+         * </li>
+         * <li><p><strong>1</strong> (default): Editable</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder editOcrResult(String editOcrResult) {
             this.putQueryParameter("EditOcrResult", editOcrResult);
@@ -899,7 +985,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ExperienceCode.
+         * <p>Experience code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9be7b7d0180041219e5ab03ac6dab5fb</p>
          */
         public Builder experienceCode(String experienceCode) {
             this.putQueryParameter("ExperienceCode", experienceCode);
@@ -908,7 +997,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FaceGroupCodes.
+         * <p>Face library to be compared</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e0c34a77f</p>
          */
         public Builder faceGroupCodes(String faceGroupCodes) {
             this.putQueryParameter("FaceGroupCodes", faceGroupCodes);
@@ -917,7 +1009,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FacePictureBase64.
+         * <p>Base64 encoded face image. If you choose to pass the face image via FacePictureBase64, please check the image size and do not upload images larger than 1 MB.
+         * When productCode is FV_GLOBAL, choose one of the parameters between FacePictureBase64 and FacePictureUrl to pass in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         public Builder facePictureBase64(String facePictureBase64) {
             this.putBodyParameter("FacePictureBase64", facePictureBase64);
@@ -926,7 +1022,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FacePictureUrl.
+         * <p>Face image URL. A publicly accessible HTTP or HTTPS link. When productCode is FV_GLOBAL, choose one of the parameters between FacePictureUrl and FacePictureBase to pass in.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder facePictureUrl(String facePictureUrl) {
             this.putQueryParameter("FacePictureUrl", facePictureUrl);
@@ -935,7 +1034,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FaceRegisterGroupCode.
+         * <p>Face library for registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e0c34a77f</p>
          */
         public Builder faceRegisterGroupCode(String faceRegisterGroupCode) {
             this.putQueryParameter("FaceRegisterGroupCode", faceRegisterGroupCode);
@@ -944,7 +1046,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FaceVerifyThreshold.
+         * <p>Face verification threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder faceVerifyThreshold(String faceVerifyThreshold) {
             this.putQueryParameter("FaceVerifyThreshold", faceVerifyThreshold);
@@ -953,7 +1058,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * IdFaceQuality.
+         * <p>Face image quality. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder idFaceQuality(String idFaceQuality) {
             this.putQueryParameter("IdFaceQuality", idFaceQuality);
@@ -962,7 +1070,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * IdSpoof.
+         * <p>Whether to enable certificate anti-counterfeiting detection. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder idSpoof(String idSpoof) {
             this.putQueryParameter("IdSpoof", idSpoof);
@@ -971,7 +1082,16 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * IdThreshold.
+         * <p>Custom OCR quality detection threshold mode:</p>
+         * <ul>
+         * <li><strong>0</strong>: Standard mode</li>
+         * <li><strong>1</strong>: Strict mode</li>
+         * <li><strong>2</strong>: Lenient mode</li>
+         * <li><strong>3</strong> (default): Disable quality detection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder idThreshold(String idThreshold) {
             this.putQueryParameter("IdThreshold", idThreshold);
@@ -980,7 +1100,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * LanguageConfig.
+         * <p>Language configuration. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder languageConfig(String languageConfig) {
             this.putQueryParameter("LanguageConfig", languageConfig);
@@ -989,7 +1112,18 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * MRTDInput.
+         * <p>Source of MRTD verification parameters. This parameter is required to decrypt information when reading the document chip via NFC.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: User input</p>
+         * </li>
+         * <li><p><strong>1</strong>: OCR read</p>
+         * </li>
+         * <li><p><strong>2</strong>: Passed through the API</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder MRTDInput(String MRTDInput) {
             this.putQueryParameter("MRTDInput", MRTDInput);
@@ -998,7 +1132,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a***353888</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -1007,7 +1144,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>Your custom user ID or other identifiers that can recognize specific users, such as phone numbers or email addresses. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1221****6543</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -1016,7 +1156,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * MetaInfo.
+         * <p>Metainfo environment parameter, which needs to be obtained through the client SDK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bioMetaInfo&quot;:&quot;4.1.0:2916352,0&quot;,&quot;deviceType&quot;:&quot;web&quot;,&quot;ua&quot;:&quot;Mozilla/5.0 (Macintosh</p>
          */
         public Builder metaInfo(String metaInfo) {
             this.putQueryParameter("MetaInfo", metaInfo);
@@ -1025,7 +1168,26 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The type of liveness detection to be performed:</p>
+         * <ul>
+         * <li><p><strong>LIVENESS</strong> (default): Blinking action liveness detection.</p>
+         * </li>
+         * <li><p><strong>PHOTINUS_LIVENESS</strong>: Blinking action liveness + photinus liveness dual detection.</p>
+         * </li>
+         * <li><p><strong>PHOTINUS_FAR_NEAR_LIVENESS</strong>:
+         * Blinking action + far/near + photinus liveness detection.
+         * (Only supported by APP SDK or Flutter integration based on APP SDK)</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK Publishing Record</a>.</li>
+         * <li>PC does not support photinus liveness dual detection.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PHOTINUS_LIVENESS</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -1034,12 +1196,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>OCR。</p>
+         * <p>Whether to enable OCR. (IDV product input parameter)</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>Y</p>
          */
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
@@ -1048,7 +1208,19 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * Pages.
+         * <p>Page configuration for collection, multiple pages are connected using commas. The value range is as follows:</p>
+         * <ul>
+         * <li><p><strong>01</strong>: Front side of the document</p>
+         * </li>
+         * <li><p><strong>01,02</strong>: Front and back sides of the document</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>When this value is 01,02, currently only Chinese and Vietnamese IDs are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder pages(String pages) {
             this.putQueryParameter("Pages", pages);
@@ -1057,7 +1229,22 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ProcedurePriority.
+         * <p>When compatibility issues occur with H5-based mobile authentication, whether to allow a fallback handling method.</p>
+         * <ul>
+         * <li><p><strong>url</strong> (default): Support fallback. The page displays the authentication URL, which users can copy and open in another browser to continue the authentication process.</p>
+         * </li>
+         * <li><p><strong>keep</strong>: Do not support fallback. Directly return the error reason and end the authentication process.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This switch is not supported on PC.</li>
+         * <li>If the business scenario involves completing authentication through an embedded web page in an app, it is recommended to set this parameter to <code>keep</code> to disallow URL fallback.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder procedurePriority(String procedurePriority) {
             this.putQueryParameter("ProcedurePriority", procedurePriority);
@@ -1066,7 +1253,17 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product solution to be integrated. The values are as follows:</p>
+         * <ul>
+         * <li>KYC_GLOBAL (eKYC product solution)</li>
+         * <li>FV_GLOBAL (Live Face Verification)</li>
+         * <li>FL_GLOBAL (Liveness Detection)</li>
+         * <li>IDR_GLOBAL (Single Document Verification)</li>
+         * <li>OCR_GLOBAL (Single Document OCR)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KYC_GLOBAL</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -1075,7 +1272,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ProductFlow.
+         * <p>Supports card and face sequential arrangement:</p>
+         * <ul>
+         * <li>DOC_FACE (default)</li>
+         * <li>FACE_DOC</li>
+         * </ul>
+         * <p>Note: This parameter is required only when ProductCode is KYC_GLOBAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOC_FACE</p>
          */
         public Builder productFlow(String productFlow) {
             this.putQueryParameter("ProductFlow", productFlow);
@@ -1084,7 +1289,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ReturnFaces.
+         * <p>Number of duplicate faces returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnFaces(String returnFaces) {
             this.putQueryParameter("ReturnFaces", returnFaces);
@@ -1093,7 +1301,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ReturnUrl.
+         * <p>Client-side callback address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http*****</p>
          */
         public Builder returnUrl(String returnUrl) {
             this.putQueryParameter("ReturnUrl", returnUrl);
@@ -1102,7 +1313,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * SaveFacePicture.
+         * <p>Whether to save the face image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder saveFacePicture(String saveFacePicture) {
             this.putQueryParameter("SaveFacePicture", saveFacePicture);
@@ -1111,7 +1325,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Scene code. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****123</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -1120,7 +1337,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * SecurityLevel.
+         * <p>Represents different security levels in the authentication process. The available values are as follows:</p>
+         * <p>01: Normal mode (default).
+         * 02: Secure mode, a relatively strict mode, suitable for high-risk scenarios. (IDV product input parameter)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder securityLevel(String securityLevel) {
             this.putQueryParameter("SecurityLevel", securityLevel);
@@ -1129,7 +1351,16 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ShowAlbumIcon.
+         * <p>In the document OCR recognition step, whether to display the album upload entry:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Display (default)</p>
+         * </li>
+         * <li><p><strong>0</strong>: Do not display</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showAlbumIcon(String showAlbumIcon) {
             this.putQueryParameter("ShowAlbumIcon", showAlbumIcon);
@@ -1138,7 +1369,16 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ShowGuidePage.
+         * <p>Switch to control whether to display the guide page:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Display (default)</p>
+         * </li>
+         * <li><p><strong>0</strong>: Do not display</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showGuidePage(String showGuidePage) {
             this.putQueryParameter("ShowGuidePage", showGuidePage);
@@ -1147,7 +1387,16 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ShowOcrResult.
+         * <p>In the document OCR recognition step, whether to display the recognition result page:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Display (default)</p>
+         * </li>
+         * <li><p><strong>0</strong>: Do not display</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showOcrResult(String showOcrResult) {
             this.putQueryParameter("ShowOcrResult", showOcrResult);
@@ -1156,7 +1405,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * StyleConfig.
+         * <p>Custom UI configuration. Based on the configuration template, convert your custom UI configuration into a JSON string and pass it through this interface. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI Customization</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;guidepage:&quot;: {<strong><strong>}, 
+         *   &quot;ocrPage&quot;: {</strong></strong>},
+         *   &quot;ocrResultPage&quot;: [<strong><strong>],
+         *   &quot;facePage&quot;: {</strong></strong>},
+         * }</p>
          */
         public Builder styleConfig(String styleConfig) {
             this.putQueryParameter("StyleConfig", styleConfig);
@@ -1165,7 +1422,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * TargetFacePicture.
+         * <p>Base64 encoding of the portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder targetFacePicture(String targetFacePicture) {
             this.putQueryParameter("TargetFacePicture", targetFacePicture);
@@ -1174,7 +1434,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * TargetFacePictureUrl.
+         * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
          */
         public Builder targetFacePictureUrl(String targetFacePictureUrl) {
             this.putQueryParameter("TargetFacePictureUrl", targetFacePictureUrl);
@@ -1183,7 +1446,14 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * UseNFC.
+         * <p>When <strong>DocType</strong>=01000000 (global passport), you can choose whether to enable NFC verification.</p>
+         * <ul>
+         * <li><strong>Y</strong> (enable)</li>
+         * <li><strong>N</strong> (disable)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder useNFC(String useNFC) {
             this.putQueryParameter("UseNFC", useNFC);
@@ -1192,7 +1462,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * VerifyModel.
+         * <p>Type of verification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder verifyModel(String verifyModel) {
             this.putQueryParameter("VerifyModel", verifyModel);

@@ -82,7 +82,10 @@ public class DeleteFaceRecordRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>Primary Key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344537</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

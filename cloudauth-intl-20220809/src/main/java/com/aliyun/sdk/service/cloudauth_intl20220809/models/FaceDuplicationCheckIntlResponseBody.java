@@ -93,7 +93,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -120,7 +126,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -303,7 +309,12 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * DuplicateFace.
+             * <p>Returns the face library face ID and UserID when a duplicate face is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             * {&quot;faceGroupCode&quot;:&quot;sg7<strong><strong>uzt&quot;,&quot;faceId&quot;:&quot;f5a921</strong></strong>***9e792ec84c8f0ca592a&quot;}
+             * ]</p>
              */
             public Builder duplicateFace(String duplicateFace) {
                 this.duplicateFace = duplicateFace;
@@ -311,7 +322,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceAge.
+             * <p>The estimated age of the face, which may not be returned if the prediction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder faceAge(String faceAge) {
                 this.faceAge = faceAge;
@@ -319,7 +333,11 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceAttack.
+             * <p>Indicates whether the captured face involves a liveness attack, Y for an attack, N for no attack.
+             * Returned when silent liveness detection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder faceAttack(String faceAttack) {
                 this.faceAttack = faceAttack;
@@ -327,7 +345,11 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceAttackScore.
+             * <p>The probability of a liveness attack detected by silent liveness detection. The value range is 0 to 100.
+             * Returned when silent liveness detection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder faceAttackScore(String faceAttackScore) {
                 this.faceAttackScore = faceAttackScore;
@@ -335,7 +357,11 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceComparisonScore.
+             * <p>When the verification mode is 1 or 2, returns the 1:1 verification comparison score
+             * Comparison score range 0～100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder faceComparisonScore(String faceComparisonScore) {
                 this.faceComparisonScore = faceComparisonScore;
@@ -343,7 +369,14 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceGender.
+             * <p>The predicted gender of the face in the image, which may not be returned if the prediction fails.</p>
+             * <ul>
+             * <li>M: Male</li>
+             * <li>F: Female</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>M</p>
              */
             public Builder faceGender(String faceGender) {
                 this.faceGender = faceGender;
@@ -351,7 +384,14 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FacePassed.
+             * <p>Final authentication result, values:</p>
+             * <ul>
+             * <li>Y: Passed</li>
+             * <li>N: Not passed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder facePassed(String facePassed) {
                 this.facePassed = facePassed;
@@ -359,7 +399,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceRegistrationId.
+             * <p>Returns the corresponding FACEID only when the customer sets auto-registration and the face registration is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e792ec84c8f0ca592a</p>
              */
             public Builder faceRegistrationId(String faceRegistrationId) {
                 this.faceRegistrationId = faceRegistrationId;
@@ -367,7 +410,14 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FaceRegistrationResult.
+             * <p>Face registration result </p>
+             * <ul>
+             * <li>0- Failed </li>
+             * <li>1- Succeeded</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder faceRegistrationResult(Integer faceRegistrationResult) {
                 this.faceRegistrationResult = faceRegistrationResult;
@@ -375,7 +425,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Description of the authentication result. For more information, see ResultObject.SubCode error code description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -383,7 +436,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionId.
+             * <p>Unique identifier of the authentication request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ab0b***cbde97</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

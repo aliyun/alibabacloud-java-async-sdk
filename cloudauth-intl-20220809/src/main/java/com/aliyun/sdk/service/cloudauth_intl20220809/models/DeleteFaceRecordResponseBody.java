@@ -93,7 +93,10 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,7 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>

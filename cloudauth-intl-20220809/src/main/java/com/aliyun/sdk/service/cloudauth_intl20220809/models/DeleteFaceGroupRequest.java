@@ -83,6 +83,7 @@ public class DeleteFaceGroupRequest extends Request {
         }
 
         /**
+         * <p>Primary key ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
