@@ -951,6 +951,9 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
      * <p>GetJobExecutionProgressResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
         @com.aliyun.core.annotation.NameInMap("JobDescription")
         private String jobDescription;
 
@@ -959,6 +962,9 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ShardingProgress")
         private java.util.List<ShardingProgress> shardingProgress;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("TaskProgress")
         private java.util.List<TaskProgress> taskProgress;
@@ -970,9 +976,11 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         private java.util.List<WorkerProgress> workerProgress;
 
         private Data(Builder builder) {
+            this.endTime = builder.endTime;
             this.jobDescription = builder.jobDescription;
             this.rootProgress = builder.rootProgress;
             this.shardingProgress = builder.shardingProgress;
+            this.startTime = builder.startTime;
             this.taskProgress = builder.taskProgress;
             this.totalProgress = builder.totalProgress;
             this.workerProgress = builder.workerProgress;
@@ -984,6 +992,13 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -1008,6 +1023,13 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return taskProgress
          */
         public java.util.List<TaskProgress> getTaskProgress() {
@@ -1029,9 +1051,11 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String endTime; 
             private String jobDescription; 
             private RootProgress rootProgress; 
             private java.util.List<ShardingProgress> shardingProgress; 
+            private String startTime; 
             private java.util.List<TaskProgress> taskProgress; 
             private TotalProgress totalProgress; 
             private java.util.List<WorkerProgress> workerProgress; 
@@ -1040,13 +1064,23 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.endTime = model.endTime;
                 this.jobDescription = model.jobDescription;
                 this.rootProgress = model.rootProgress;
                 this.shardingProgress = model.shardingProgress;
+                this.startTime = model.startTime;
                 this.taskProgress = model.taskProgress;
                 this.totalProgress = model.totalProgress;
                 this.workerProgress = model.workerProgress;
             } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
 
             /**
              * JobDescription.
@@ -1069,6 +1103,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
              */
             public Builder shardingProgress(java.util.List<ShardingProgress> shardingProgress) {
                 this.shardingProgress = shardingProgress;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

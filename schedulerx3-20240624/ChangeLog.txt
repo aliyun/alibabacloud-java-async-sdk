@@ -1,3 +1,6 @@
+2025-09-24 Version: 1.0.10
+- Generated java-async 2024-06-24 for SchedulerX3.
+
 2025-08-22 Version: 1.0.9
 - Generated java-async 2024-06-24 for SchedulerX3.
 

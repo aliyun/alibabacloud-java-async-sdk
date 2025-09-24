@@ -22,6 +22,10 @@ public class CreateClusterRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
@@ -32,9 +36,18 @@ public class CreateClusterRequest extends Request {
     private String clusterSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(maximum = 9, minimum = 1)
+    private Integer duration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EngineType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String engineType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
+    private String pricingCycle;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
@@ -53,9 +66,12 @@ public class CreateClusterRequest extends Request {
     private CreateClusterRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.chargeType = builder.chargeType;
         this.clusterName = builder.clusterName;
         this.clusterSpec = builder.clusterSpec;
+        this.duration = builder.duration;
         this.engineType = builder.engineType;
+        this.pricingCycle = builder.pricingCycle;
         this.tag = builder.tag;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
@@ -82,6 +98,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
      * @return clusterName
      */
     public String getClusterName() {
@@ -96,10 +119,24 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return duration
+     */
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    /**
      * @return engineType
      */
     public String getEngineType() {
         return this.engineType;
+    }
+
+    /**
+     * @return pricingCycle
+     */
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
     /**
@@ -125,9 +162,12 @@ public class CreateClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
         private String regionId; 
+        private String chargeType; 
         private String clusterName; 
         private String clusterSpec; 
+        private Integer duration; 
         private String engineType; 
+        private String pricingCycle; 
         private java.util.List<Tag> tag; 
         private java.util.List<VSwitches> vSwitches; 
         private String vpcId; 
@@ -139,9 +179,12 @@ public class CreateClusterRequest extends Request {
         private Builder(CreateClusterRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.chargeType = request.chargeType;
             this.clusterName = request.clusterName;
             this.clusterSpec = request.clusterSpec;
+            this.duration = request.duration;
             this.engineType = request.engineType;
+            this.pricingCycle = request.pricingCycle;
             this.tag = request.tag;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
@@ -153,6 +196,15 @@ public class CreateClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putBodyParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
             return this;
         }
 
@@ -181,6 +233,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * Duration.
+         */
+        public Builder duration(Integer duration) {
+            this.putBodyParameter("Duration", duration);
+            this.duration = duration;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +250,15 @@ public class CreateClusterRequest extends Request {
         public Builder engineType(String engineType) {
             this.putBodyParameter("EngineType", engineType);
             this.engineType = engineType;
+            return this;
+        }
+
+        /**
+         * PricingCycle.
+         */
+        public Builder pricingCycle(String pricingCycle) {
+            this.putBodyParameter("PricingCycle", pricingCycle);
+            this.pricingCycle = pricingCycle;
             return this;
         }
 

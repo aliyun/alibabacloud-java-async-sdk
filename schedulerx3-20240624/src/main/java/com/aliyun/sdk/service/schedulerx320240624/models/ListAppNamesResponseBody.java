@@ -164,17 +164,25 @@ public class ListAppNamesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private Integer appType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("WorkerRegistry")
+        private String workerRegistry;
+
         private Data(Builder builder) {
             this.appGroupId = builder.appGroupId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.id = builder.id;
             this.title = builder.title;
+            this.workerRegistry = builder.workerRegistry;
         }
 
         public static Builder builder() {
@@ -200,6 +208,13 @@ public class ListAppNamesResponseBody extends TeaModel {
         }
 
         /**
+         * @return appType
+         */
+        public Integer getAppType() {
+            return this.appType;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -213,11 +228,20 @@ public class ListAppNamesResponseBody extends TeaModel {
             return this.title;
         }
 
+        /**
+         * @return workerRegistry
+         */
+        public String getWorkerRegistry() {
+            return this.workerRegistry;
+        }
+
         public static final class Builder {
             private String appGroupId; 
             private String appName; 
+            private Integer appType; 
             private Long id; 
             private String title; 
+            private String workerRegistry; 
 
             private Builder() {
             } 
@@ -225,8 +249,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.appGroupId = model.appGroupId;
                 this.appName = model.appName;
+                this.appType = model.appType;
                 this.id = model.id;
                 this.title = model.title;
+                this.workerRegistry = model.workerRegistry;
             } 
 
             /**
@@ -246,6 +272,14 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
+             * AppType.
+             */
+            public Builder appType(Integer appType) {
+                this.appType = appType;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(Long id) {
@@ -258,6 +292,14 @@ public class ListAppNamesResponseBody extends TeaModel {
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * WorkerRegistry.
+             */
+            public Builder workerRegistry(String workerRegistry) {
+                this.workerRegistry = workerRegistry;
                 return this;
             }
 

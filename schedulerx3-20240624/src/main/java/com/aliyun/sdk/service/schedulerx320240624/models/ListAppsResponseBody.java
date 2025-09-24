@@ -202,6 +202,9 @@ public class ListAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Updater")
         private String updater;
 
+        @com.aliyun.core.annotation.NameInMap("WorkerRegistry")
+        private String workerRegistry;
+
         private Records(Builder builder) {
             this.accessToken = builder.accessToken;
             this.appName = builder.appName;
@@ -217,6 +220,7 @@ public class ListAppsResponseBody extends TeaModel {
             this.maxJobs = builder.maxJobs;
             this.title = builder.title;
             this.updater = builder.updater;
+            this.workerRegistry = builder.workerRegistry;
         }
 
         public static Builder builder() {
@@ -325,6 +329,13 @@ public class ListAppsResponseBody extends TeaModel {
             return this.updater;
         }
 
+        /**
+         * @return workerRegistry
+         */
+        public String getWorkerRegistry() {
+            return this.workerRegistry;
+        }
+
         public static final class Builder {
             private String accessToken; 
             private String appName; 
@@ -340,6 +351,7 @@ public class ListAppsResponseBody extends TeaModel {
             private Integer maxJobs; 
             private String title; 
             private String updater; 
+            private String workerRegistry; 
 
             private Builder() {
             } 
@@ -359,6 +371,7 @@ public class ListAppsResponseBody extends TeaModel {
                 this.maxJobs = model.maxJobs;
                 this.title = model.title;
                 this.updater = model.updater;
+                this.workerRegistry = model.workerRegistry;
             } 
 
             /**
@@ -473,6 +486,14 @@ public class ListAppsResponseBody extends TeaModel {
              */
             public Builder updater(String updater) {
                 this.updater = updater;
+                return this;
+            }
+
+            /**
+             * WorkerRegistry.
+             */
+            public Builder workerRegistry(String workerRegistry) {
+                this.workerRegistry = workerRegistry;
                 return this;
             }
 
