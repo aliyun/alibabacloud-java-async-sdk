@@ -987,6 +987,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSparkAppTypeResponse> describeSparkAppType(DescribeSparkAppTypeRequest request);
 
     /**
+     * @param request the request parameters of DescribeSparkAuditLogRecords  DescribeSparkAuditLogRecordsRequest
+     * @return DescribeSparkAuditLogRecordsResponse
+     */
+    CompletableFuture<DescribeSparkAuditLogRecordsResponse> describeSparkAuditLogRecords(DescribeSparkAuditLogRecordsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -1821,6 +1827,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPerformanceViewResponse
      */
     CompletableFuture<ModifyPerformanceViewResponse> modifyPerformanceView(ModifyPerformanceViewRequest request);
+
+    /**
+     * @param request the request parameters of ModifySqlTemplatePosition  ModifySqlTemplatePositionRequest
+     * @return ModifySqlTemplatePositionResponse
+     */
+    CompletableFuture<ModifySqlTemplatePositionResponse> modifySqlTemplatePosition(ModifySqlTemplatePositionRequest request);
 
     /**
      * @param request the request parameters of ModifyUserEniVswitchOptions  ModifyUserEniVswitchOptionsRequest

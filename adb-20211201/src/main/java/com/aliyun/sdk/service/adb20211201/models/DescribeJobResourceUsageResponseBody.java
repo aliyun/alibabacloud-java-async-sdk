@@ -290,12 +290,16 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("UseCachePool")
+        private Boolean useCachePool;
+
         private JobAcuUsage(Builder builder) {
             this.acuUsageDetail = builder.acuUsageDetail;
             this.jobEndTime = builder.jobEndTime;
             this.jobId = builder.jobId;
             this.jobStartTime = builder.jobStartTime;
             this.resourceGroupName = builder.resourceGroupName;
+            this.useCachePool = builder.useCachePool;
         }
 
         public static Builder builder() {
@@ -341,12 +345,20 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             return this.resourceGroupName;
         }
 
+        /**
+         * @return useCachePool
+         */
+        public Boolean getUseCachePool() {
+            return this.useCachePool;
+        }
+
         public static final class Builder {
             private AcuUsageDetail acuUsageDetail; 
             private String jobEndTime; 
             private String jobId; 
             private String jobStartTime; 
             private String resourceGroupName; 
+            private Boolean useCachePool; 
 
             private Builder() {
             } 
@@ -357,6 +369,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
                 this.jobId = model.jobId;
                 this.jobStartTime = model.jobStartTime;
                 this.resourceGroupName = model.resourceGroupName;
+                this.useCachePool = model.useCachePool;
             } 
 
             /**
@@ -408,6 +421,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
+                return this;
+            }
+
+            /**
+             * UseCachePool.
+             */
+            public Builder useCachePool(Boolean useCachePool) {
+                this.useCachePool = useCachePool;
                 return this;
             }
 
