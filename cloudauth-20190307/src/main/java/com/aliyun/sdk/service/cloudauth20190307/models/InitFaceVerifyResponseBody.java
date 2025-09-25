@@ -93,7 +93,10 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 indicates success, other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Result object.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -183,7 +192,10 @@ public class InitFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique identifier for real-person authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -191,7 +203,23 @@ public class InitFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * CertifyUrl.
+             * <p>URL for real-person authentication in a Web browser, which will redirect according to the ReturnUrl parameter after authentication.</p>
+             * <blockquote>
+             * <p>Notice: </p>
+             * </blockquote>
+             * <ul>
+             * <li><p>The CertifyUrl returned by the initialization interface is valid for <strong>30 minutes and can only be used once</strong>. Please use it within the validity period to avoid reuse.</p>
+             * </li>
+             * <li><p>This parameter requires the correct input of <strong>MetaInfo</strong> to return a CertifyUrl that matches the client. If you cannot obtain it, please check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
+             * </li>
+             * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, it is recommended not to apply access control to this domain name.</p>
+             * </li>
+             * <li><p>When redirecting in the browser, try not to use incognito mode or modify the URL, as this may result in a <strong>signature error</strong>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://t.aliyun.com/">https://t.aliyun.com/</a>****</p>
              */
             public Builder certifyUrl(String certifyUrl) {
                 this.certifyUrl = certifyUrl;

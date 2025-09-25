@@ -106,7 +106,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number being queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceInfoList.
+         * <p>Array of device information.</p>
          */
         public Builder deviceInfoList(DeviceInfoList deviceInfoList) {
             this.deviceInfoList = deviceInfoList;
@@ -122,7 +125,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginDay.
+             * <p>Authorization start date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20180101</p>
              */
             public Builder beginDay(String beginDay) {
                 this.beginDay = beginDay;
@@ -251,7 +266,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * <p>Corresponds to the BizType in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FACE_TEST</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -259,7 +277,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Corresponds to the DeviceId in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -267,7 +288,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredDay.
+             * <p>Authorization expiration date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20180101</p>
              */
             public Builder expiredDay(String expiredDay) {
                 this.expiredDay = expiredDay;
@@ -275,7 +299,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserDeviceId.
+             * <p>Corresponds to the UserDeviceId in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3iJ1AY$oHcu7mC69</p>
              */
             public Builder userDeviceId(String userDeviceId) {
                 this.userDeviceId = userDeviceId;

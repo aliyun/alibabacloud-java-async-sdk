@@ -93,7 +93,10 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code, <strong>200</strong> indicates successful response from the interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -120,7 +126,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -199,7 +205,10 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique real-person authentication identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha43d9cabd52d370d9f4cca9468f71e</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -207,7 +216,19 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskExtends.
+             * <p>Extended information, in JSON format. (Customized return based on tenant requirements)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;code&quot;: 200
+             *   &quot;badNet&quot;:false,
+             *   &quot;umid&quot;:&quot;74e37355171ab62230063569350d368e&quot;,
+             *   &quot;fileTags&quot;:&quot;basic_root,basic_hook&quot;,
+             *   &quot;queryCount&quot;:1,
+             *   &quot;querySessionCount&quot;:1,
+             *   &quot;queryUmidCount&quot;:1
+             *   &quot;platform&quot;:&quot;Android&quot;
+             * }</p>
              */
             public Builder riskExtends(String riskExtends) {
                 this.riskExtends = riskExtends;
@@ -215,7 +236,16 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTags.
+             * <p>Device risk tags.</p>
+             * <ul>
+             * <li><p>Multiple device risk tags are separated by commas (,). For example, “ROOT,VPN,HOOK”,</p>
+             * </li>
+             * <li><p>For more information about device risk tags and their meanings, please refer to the official documentation on Face Guard Tag Descriptions.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROOT,VPN,HOOK</p>
              */
             public Builder riskTags(String riskTags) {
                 this.riskTags = riskTags;

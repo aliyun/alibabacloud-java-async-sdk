@@ -132,7 +132,11 @@ public class CreateVerifySettingRequest extends Request {
         } 
 
         /**
+         * <p>Verification scenario name, supporting Chinese, English, numbers, and hyphens (-), with a maximum of 20 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户注册</p>
          */
         public Builder bizName(String bizName) {
             this.putQueryParameter("BizName", bizName);
@@ -141,6 +145,7 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
+         * <p>Verification scenario identifier, supporting English letters, numbers, and hyphens (-), with a maximum of 20 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +158,10 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
-         * GuideStep.
+         * <p>Whether to use the system&quot;s default guide page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder guideStep(Boolean guideStep) {
             this.putQueryParameter("GuideStep", guideStep);
@@ -162,7 +170,10 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
-         * PrivacyStep.
+         * <p>Whether to use the system&quot;s default authorization page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privacyStep(Boolean privacyStep) {
             this.putQueryParameter("PrivacyStep", privacyStep);
@@ -171,7 +182,10 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
-         * ResultStep.
+         * <p>Whether to use the system&quot;s default result page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder resultStep(Boolean resultStep) {
             this.putQueryParameter("ResultStep", resultStep);
@@ -180,6 +194,7 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
+         * <p>The name of the authentication solution to use, such as <strong>RPBasic</strong>, <strong>RPBioOnly</strong>, etc. For all supported authentication solutions, see <a href="https://help.aliyun.com/document_detail/127521.html">Authentication Solutions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

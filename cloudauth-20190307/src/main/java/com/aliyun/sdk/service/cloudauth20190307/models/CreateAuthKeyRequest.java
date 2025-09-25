@@ -101,7 +101,10 @@ public class CreateAuthKeyRequest extends Request {
         } 
 
         /**
-         * AuthYears.
+         * <p>When the Test flag is false or empty, AuthYears is required, in years, with a range of [1,100]. A value of 100 indicates permanent authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authYears(Integer authYears) {
             this.putQueryParameter("AuthYears", authYears);
@@ -110,7 +113,10 @@ public class CreateAuthKeyRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>Business type. No more than 64 characters. Can be used to note specific business, such as different face usage scenarios of the access party or the customer identifier to be delivered. It is recommended to pass this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FACE_TEST</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -119,7 +125,10 @@ public class CreateAuthKeyRequest extends Request {
         }
 
         /**
-         * Test.
+         * <p>Test flag. If true, it indicates using test authorization with a default duration of 30 days; if false, the authorization duration will be based on AuthYears.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder test(Boolean test) {
             this.putQueryParameter("Test", test);
@@ -128,7 +137,10 @@ public class CreateAuthKeyRequest extends Request {
         }
 
         /**
-         * UserDeviceId.
+         * <p>User device ID. No more than 64 characters. Can be used to identify a specific device, and it is suggested to use the physical number of the device. It is recommended to pass this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3iJ1AY$oHcu7mC69</p>
          */
         public Builder userDeviceId(String userDeviceId) {
             this.putQueryParameter("UserDeviceId", userDeviceId);

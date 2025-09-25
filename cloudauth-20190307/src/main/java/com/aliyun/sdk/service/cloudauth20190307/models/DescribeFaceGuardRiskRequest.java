@@ -124,7 +124,10 @@ public class DescribeFaceGuardRiskRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Authentication ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aba9830f471a4335af4612c8adaa91b0</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class DescribeFaceGuardRiskRequest extends Request {
         }
 
         /**
-         * DeviceToken.
+         * <p>Risk identification - device token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
          */
         public Builder deviceToken(String deviceToken) {
             this.putQueryParameter("DeviceToken", deviceToken);
@@ -142,7 +148,11 @@ public class DescribeFaceGuardRiskRequest extends Request {
         }
 
         /**
-         * OuterOrderNo.
+         * <p>This identifier is used for subsequent troubleshooting, and you need to ensure that this value is unique in your business.</p>
+         * <p>Supports the use of English letters (including uppercase and lowercase) and numbers, with a maximum length of 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c35xxxx</p>
          */
         public Builder outerOrderNo(String outerOrderNo) {
             this.putQueryParameter("OuterOrderNo", outerOrderNo);
@@ -151,7 +161,10 @@ public class DescribeFaceGuardRiskRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Product code, fixed value: FACE_GUARD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FACE_GUARD</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

@@ -93,7 +93,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code: 200 for success, others for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -183,7 +192,14 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The call was successful.</li>
+             * <li><strong>false</strong>: The call failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -191,7 +207,16 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * VlContent.
+             * <p>Image understanding result:</p>
+             * <ul>
+             * <li><p>When PromptModel is DEFAULT, the output format refers to the example on the right.</p>
+             * </li>
+             * <li><p>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;这张图有没有明显的PS特征&quot;:0,&quot;图片是否为正常经营照片&quot;:1,&quot;图片中有没有58、美团、大众点评字样&quot;:0,&quot;这张图有没有网站信息&quot;:0,&quot;图片经营的场景是否为酒店&quot;:0}</p>
              */
             public Builder vlContent(String vlContent) {
                 this.vlContent = vlContent;
@@ -336,7 +361,17 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * MaterialInfo.
+             * <p>Additional information in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{</p>
+             * <p>&quot;sameBackgroundDetail&quot;: {</p>
+             * <p>// 相似背景对于的原始图请求RequestId</p>
+             * <p>&quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;</p>
+             * <p>// 相似背景对于的原始图请求商户ID</p>
+             * <p>&quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot;</p>
+             * <p>}</p>
+             * <p>}</p>
              */
             public Builder materialInfo(String materialInfo) {
                 this.materialInfo = materialInfo;
@@ -344,7 +379,20 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * OcrInfo.
+             * <p>OCR recognition result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *    &quot;certNo&quot;:&quot;20216*********&quot;,
+             *   &quot;certType&quot;:&quot;小学教师资格&quot;,
+             *    &quot;gender&quot;:&quot;男&quot;,
+             *    &quot;subject&quot;:&quot;美术&quot;,
+             *     &quot;name&quot;:&quot;李**&quot;,
+             *     &quot;ext_info&quot;:&quot;{}&quot;,
+             *     &quot;birthDate&quot;:&quot;1998-07-28&quot;,
+             *     &quot;idNo&quot;:&quot;620************&quot;,
+             *     &quot;certOrg&quot;:&quot;&quot;
+             * }</p>
              */
             public Builder ocrInfo(String ocrInfo) {
                 this.ocrInfo = ocrInfo;
@@ -352,7 +400,15 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Risk result</p>
+             * <ul>
+             * <li><strong>0</strong>: Low risk</li>
+             * <li><strong>1</strong>: High risk</li>
+             * <li><strong>2</strong>: Suspicious</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -360,7 +416,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskScore.
+             * <p>Risk score map.</p>
              */
             public Builder riskScore(java.util.Map<String, String> riskScore) {
                 this.riskScore = riskScore;
@@ -368,7 +424,18 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTag.
+             * <p>Risk tags, separated by commas (,), including:</p>
+             * <ul>
+             * <li><strong>PS</strong>: Image manipulation.</li>
+             * <li><strong>SCREEN_PHOTO</strong>: Screen recapture.</li>
+             * <li><strong>SCREENSHOT</strong>: Screenshot.</li>
+             * <li><strong>WATERMARK</strong>: Watermark.</li>
+             * <li><strong>SAME_BACKGROUND</strong>: Similar background.</li>
+             * <li><strong>ORIGINAL_PHOTO</strong>: Not the original image</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PS,SCREEN_PHOTO</p>
              */
             public Builder riskTag(String riskTag) {
                 this.riskTag = riskTag;
@@ -376,7 +443,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyDetail.
+             * <p>Authority verification details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder verifyDetail(String verifyDetail) {
                 this.verifyDetail = verifyDetail;
@@ -384,7 +454,12 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyResult.
+             * <p>The verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;
@@ -392,7 +467,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * VlResult.
+             * <p>Qwen interpretation.</p>
              */
             public Builder vlResult(VlResult vlResult) {
                 this.vlResult = vlResult;

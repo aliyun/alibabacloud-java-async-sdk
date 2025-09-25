@@ -158,7 +158,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.currentPage = currentPage;
@@ -174,7 +180,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>List of returned data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -198,7 +210,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-A***B-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the response was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -214,7 +232,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +243,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalPage(String totalPage) {
             this.totalPage = totalPage;
@@ -340,7 +364,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>Date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-24T00:00:00.000Z</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -348,7 +375,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>Product scheme code, please refer to the financial-grade real-person help documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID_PLUS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -356,7 +386,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>Scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**40</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -364,7 +397,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>Scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****实名认证</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -372,7 +408,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>Number of successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(String successCount) {
                 this.successCount = successCount;
@@ -380,7 +419,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

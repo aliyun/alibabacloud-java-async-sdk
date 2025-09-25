@@ -264,7 +264,10 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * CertNum.
+         * <p>Relevant certificate number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4601*****</p>
          */
         public Builder certNum(String certNum) {
             this.putQueryParameter("CertNum", certNum);
@@ -273,7 +276,28 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * CredName.
+         * <ul>
+         * <li>01: Personal ID cards<ul>
+         * <li><strong>0101</strong>: ID card</li>
+         * <li><strong>0102</strong>: Bank card</li>
+         * <li><strong>0104</strong>: Teacher qualification certificate</li>
+         * <li><strong>0107</strong>: Student ID card</li>
+         * </ul>
+         * </li>
+         * <li>02: Business scenario<ul>
+         * <li><strong>0201</strong>: Storefront photo</li>
+         * <li><strong>0202</strong>: Counter photo</li>
+         * <li><strong>0203</strong>: Scene photo</li>
+         * </ul>
+         * </li>
+         * <li>03: Corporate qualifications<ul>
+         * <li><strong>0301</strong>: Business license</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0104</p>
          */
         public Builder credName(String credName) {
             this.putQueryParameter("CredName", credName);
@@ -282,7 +306,15 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * CredType.
+         * <p>Credential type:</p>
+         * <ul>
+         * <li>01: Personal ID cards</li>
+         * <li>02: Business scenario</li>
+         * <li>03: Corporate qualifications</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder credType(String credType) {
             this.putQueryParameter("CredType", credType);
@@ -291,7 +323,18 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>ID number:</p>
+         * <p>Note
+         * Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</p>
+         * <ul>
+         * <li><p>When paramType is normal: enter the plaintext ID number.</p>
+         * </li>
+         * <li><p>When paramType is md5: first 6 digits of the ID number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID number (plaintext).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>429001********8211</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
@@ -300,7 +343,10 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * ImageContext.
+         * <p>Base64 encoded image, choose one from <code>imageUrl</code>, <code>imageFile</code>, or <code>imageContext</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder imageContext(String imageContext) {
             this.putBodyParameter("ImageContext", imageContext);
@@ -309,7 +355,10 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>Image URL, choose one from <code>imageUrl</code>, <code>imageFile</code>, or <code>imageContext</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -318,7 +367,14 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * IsCheck.
+         * <p>Whether to enable authoritative authentication</p>
+         * <ul>
+         * <li><strong><strong>0</strong></strong>: No</li>
+         * <li><strong>1</strong>: Yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isCheck(String isCheck) {
             this.putQueryParameter("IsCheck", isCheck);
@@ -327,7 +383,17 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * IsOCR.
+         * <p>Whether to enable OCR recognition.</p>
+         * <ul>
+         * <li><strong>0</strong>: No</li>
+         * <li><strong>1</strong>: Yes</li>
+         * </ul>
+         * <blockquote>
+         * <p>IsOCR can be set to 1 only when <strong>CredType</strong> is 01.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isOCR(String isOCR) {
             this.putQueryParameter("IsOCR", isOCR);
@@ -336,7 +402,10 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * MerchantDetail.
+         * <p>Merchant details:</p>
+         * <blockquote>
+         * <p>This field is required when PromptModel is set to DEFAULT.</p>
+         * </blockquote>
          */
         public Builder merchantDetail(java.util.List<MerchantDetail> merchantDetail) {
             String merchantDetailShrink = shrink(merchantDetail, "MerchantDetail", "json");
@@ -346,7 +415,13 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * MerchantId.
+         * <p>Merchant ID. </p>
+         * <blockquote>
+         * <p>This field is required when <strong><strong>CredName</strong></strong> is set to <strong>02</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>913100********KW8P</p>
          */
         public Builder merchantId(String merchantId) {
             this.putQueryParameter("MerchantId", merchantId);
@@ -355,7 +430,22 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Invocation mode:</p>
+         * <ul>
+         * <li><p><strong>ANTI_FAKE_CHECK</strong>: Image anti-forgery check</p>
+         * </li>
+         * <li><p><strong>ANTI_FAKE_VL</strong>: Image anti-forgery check and semantic understanding</p>
+         * </li>
+         * <li><p><strong>IMAGE_VL_COG</strong>: Image semantic understanding</p>
+         * </li>
+         * </ul>
+         * <p>Default value: ANTI_FAKE_CHECK</p>
+         * <blockquote>
+         * <p>When <strong>CredType</strong> is set to 02, <strong>ProductCode</strong> can only be ANTI_FAKE_VL or IMAGE_VL_COG.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ANTI_FAKE_CHECK</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -364,7 +454,15 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>Customer-defined prompt content for image semantic understanding.</p>
+         * <blockquote>
+         * <p>This field is required when PromptModel is set to CUSTOM.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -373,7 +471,19 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * PromptModel.
+         * <p>Prompt acquisition method for image semantic understanding:</p>
+         * <ul>
+         * <li><p><strong>DEFAULT</strong>: System default</p>
+         * </li>
+         * <li><p><strong>CUSTOM</strong>: Customer-defined</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>When <strong>ProductCode</strong> is set to <strong>ANTI_FAKE_VL</strong> or <strong>IMAGE_VL_COG</strong>, this parameter must be provided.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder promptModel(String promptModel) {
             this.putQueryParameter("PromptModel", promptModel);
@@ -382,7 +492,10 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>UserName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -450,7 +563,13 @@ public class CredentialVerifyRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The private key of the certificate.</p>
+             * <blockquote>
+             * <p> If this parameter is specified, you must also specify <strong>CertName</strong> and <strong>Cert</strong>. If <strong>CertName</strong>, <strong>Cert</strong>, and <strong>Key</strong> are specified, you do not need to specify <strong>CertId</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>keyword</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -458,7 +577,12 @@ public class CredentialVerifyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Keyword value.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder value(String value) {
                 this.value = value;

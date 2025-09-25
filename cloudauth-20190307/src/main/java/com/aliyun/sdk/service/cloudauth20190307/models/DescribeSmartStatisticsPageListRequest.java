@@ -134,6 +134,7 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         } 
 
         /**
+         * <p>Current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
+         * <p>End time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
+         * <p>Number of items per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,7 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
+         * <p>Scene ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>ServiceCode for the real person cloud product, only value: <strong>cloudauthst</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudauthst</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -191,6 +198,7 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
+         * <p>Start time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

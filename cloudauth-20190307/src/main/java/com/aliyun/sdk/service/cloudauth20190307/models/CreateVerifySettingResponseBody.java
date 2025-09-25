@@ -106,7 +106,10 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         } 
 
         /**
-         * BizName.
+         * <p>Verification scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户注册</p>
          */
         public Builder bizName(String bizName) {
             this.bizName = bizName;
@@ -114,7 +117,10 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         }
 
         /**
-         * BizType.
+         * <p>Verification scenario identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserRegister</p>
          */
         public Builder bizType(String bizType) {
             this.bizType = bizType;
@@ -122,7 +128,10 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Solution.
+         * <p>Authentication solution name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPBasic</p>
          */
         public Builder solution(String solution) {
             this.solution = solution;
@@ -138,7 +150,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         }
 
         /**
-         * StepList.
+         * <p>Authentication steps</p>
          */
         public Builder stepList(java.util.List<String> stepList) {
             this.stepList = stepList;

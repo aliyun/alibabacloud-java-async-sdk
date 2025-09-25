@@ -67,7 +67,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * OssUploadToken.
+         * <p>Information about the OSS upload Token.</p>
          */
         public Builder ossUploadToken(OssUploadToken ossUploadToken) {
             this.ossUploadToken = ossUploadToken;
@@ -75,7 +75,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FA2C773-47DB-4156-B1EE-5B047321A939</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>OSS bucket for file storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudauth-zhangjiakou-external</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -214,7 +220,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * EndPoint.
+             * <p>Access endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -222,7 +231,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582636610000</p>
              */
             public Builder expired(Long expired) {
                 this.expired = expired;
@@ -230,7 +242,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The Key required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NU8rUBj****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -238,7 +253,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>File storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod/RdNLC@Ox2n-1s7NMt</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -246,7 +264,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Secret.
+             * <p>The Secret required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FwmnyoqT8dHj7nJLuM67T****</p>
              */
             public Builder secret(String secret) {
                 this.secret = secret;
@@ -254,7 +275,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The Token required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>
              */
             public Builder token(String token) {
                 this.token = token;

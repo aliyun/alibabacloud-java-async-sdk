@@ -119,7 +119,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>Returned data list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -135,7 +138,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96943***4E39F805</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -290,7 +305,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>Date. Format: <i>month/day</i></p>
+             * 
+             * <strong>example:</strong>
+             * <p>11/8</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -298,7 +316,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * PassRate.
+             * <p>Pass rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder passRate(String passRate) {
                 this.passRate = passRate;
@@ -306,7 +327,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>Product solution Code, please refer to the Enhanced Real Person Help Documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMART_VERIFY</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -314,7 +338,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>Scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**40</p>
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -322,7 +349,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>Scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****实名认证</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -330,7 +360,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>Number of successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -338,7 +371,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

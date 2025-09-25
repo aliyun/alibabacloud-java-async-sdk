@@ -110,7 +110,10 @@ public class DescribeFaceVerifyRequest extends Request {
         }
 
         /**
-         * CertifyId.
+         * <p>Unique identifier for real-person authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
          */
         public Builder certifyId(String certifyId) {
             this.putQueryParameter("CertifyId", certifyId);
@@ -119,7 +122,10 @@ public class DescribeFaceVerifyRequest extends Request {
         }
 
         /**
-         * PictureReturnType.
+         * <p>Image return type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JPG</p>
          */
         public Builder pictureReturnType(String pictureReturnType) {
             this.putQueryParameter("PictureReturnType", pictureReturnType);
@@ -128,7 +134,10 @@ public class DescribeFaceVerifyRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000006</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);

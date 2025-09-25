@@ -67,7 +67,10 @@ public class CreateAuthKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthKey.
+         * <p>The key that can be used for authorization activation. The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth.1KQMcnLd4m37LN2D0F0WCD-1qtQI$</p>
          */
         public Builder authKey(String authKey) {
             this.authKey = authKey;
@@ -75,7 +78,10 @@ public class CreateAuthKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

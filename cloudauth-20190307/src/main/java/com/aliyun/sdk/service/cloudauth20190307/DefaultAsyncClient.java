@@ -158,6 +158,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateAuthKey  CreateAuthKeyRequest
      * @return CreateAuthKeyResponse
      */
@@ -176,6 +182,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
      * @param request the request parameters of CreateVerifySetting  CreateVerifySettingRequest
      * @return CreateVerifySettingResponse
      */
@@ -261,6 +270,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
+     * 
      * @param request the request parameters of DescribeCardVerify  DescribeCardVerifyRequest
      * @return DescribeCardVerifyResponse
      */
@@ -279,6 +291,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * 
      * @param request the request parameters of DescribeDeviceInfo  DescribeDeviceInfoRequest
      * @return DescribeDeviceInfoResponse
      */
@@ -315,6 +330,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeFaceVerify  DescribeFaceVerifyRequest
      * @return DescribeFaceVerifyResponse
      */
@@ -387,6 +408,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</p>
+     * <blockquote>
+     * <p>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+     * Request Method: HTTPS POST and GET.
+     * Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+     * Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeVerifyResult  DescribeVerifyResultRequest
      * @return DescribeVerifyResultResponse
      */
@@ -405,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.
+     * Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</p>
+     * 
      * @param request the request parameters of DescribeVerifySDK  DescribeVerifySDKRequest
      * @return DescribeVerifySDKResponse
      */
@@ -423,6 +457,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+     * Request Method: HTTPS POST and GET
+     * API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+     * Applicable Scope: This interface is suitable for wireless SDK integration.
+     * Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
+     * Image Restrictions:</p>
+     * <ul>
+     * <li>Relative or absolute paths of local images are not supported.</li>
+     * <li>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image must be at least 64*64 pixels (px).</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeVerifyToken  DescribeVerifyTokenRequest
      * @return DescribeVerifyTokenResponse
      */
@@ -441,6 +489,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.
+     * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+     * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
+     * <ul>
+     * <li>HTTP Address: A publicly accessible HTTP address. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 Encoding: An image encoded through base64, with the format being <code>base64://&lt;image base64 string&gt;</code>.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</li>
+     * <li>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <code>data:image/png;base64</code>, should be removed.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DetectFaceAttributes  DetectFaceAttributesRequest
      * @return DetectFaceAttributesResponse
      */
@@ -541,6 +603,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * <h4>Image Format Requirements</h4>
+     * <p>When performing real-person authentication, please provide images that meet all of the following conditions:</p>
+     * <ul>
+     * <li>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</li>
+     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt;1MB.</li>
+     * <li>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</li>
+     * </ul>
+     * 
      * @param request the request parameters of InitFaceVerify  InitFaceVerifyRequest
      * @return InitFaceVerifyResponse
      */
@@ -577,6 +655,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</p>
+     * 
      * @param request the request parameters of LivenessFaceVerify  LivenessFaceVerifyRequest
      * @return LivenessFaceVerifyResponse
      */
@@ -924,6 +1005,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+     * Request Method: HTTPS POST and GET.
+     * API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+     * Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+     * Image Upload Address Explanation:</p>
+     * <ul>
+     * <li>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image should be at least 64*64 pixels.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</li>
+     * </ul>
+     * 
      * @param request the request parameters of VerifyMaterial  VerifyMaterialRequest
      * @return VerifyMaterialResponse
      */

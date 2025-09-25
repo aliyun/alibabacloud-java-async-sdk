@@ -93,7 +93,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code, <strong>200</strong> indicates successful API response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -209,7 +218,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>Unique identifier for the real-person authentication request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
@@ -217,7 +229,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialInfo.
+             * <p>Attachment information of the face authentication subject, including data such as face quality, face attack, face or OCR image, and intent verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</p>
              */
             public Builder materialInfo(String materialInfo) {
                 this.materialInfo = materialInfo;
@@ -225,7 +240,16 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>Authentication result, values:</p>
+             * <ul>
+             * <li><p>T: Passed</p>
+             * </li>
+             * <li><p>F: Not passed</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>T</p>
              */
             public Builder passed(String passed) {
                 this.passed = passed;
@@ -233,7 +257,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Authentication result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

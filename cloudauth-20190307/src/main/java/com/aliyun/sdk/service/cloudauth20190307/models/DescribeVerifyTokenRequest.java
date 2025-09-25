@@ -257,6 +257,10 @@ public class DescribeVerifyTokenRequest extends Request {
         } 
 
         /**
+         * <p>Verification ID. A unique ID that identifies a verification task, not exceeding 64 characters. For a single verification task, the system supports unlimited submissions until the final verification is passed and the task is completed.</p>
+         * <blockquote>
+         * <p>Different BizIds are required for different verification tasks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,6 +273,7 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
+         * <p>Identifier for the business scenario using the real person authentication service. Please refer to <a href="https://help.aliyun.com/document_detail/127885.html">Business Settings</a> and complete the creation in the console first.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +286,12 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * CallbackSeed.
+         * <p>Callback seed.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder callbackSeed(String callbackSeed) {
             this.putQueryParameter("CallbackSeed", callbackSeed);
@@ -290,7 +300,12 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>Callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -299,7 +314,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * FaceRetainedImageUrl.
+         * <p>HTTP or HTTPS link to the retained portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
          */
         public Builder faceRetainedImageUrl(String faceRetainedImageUrl) {
             this.putQueryParameter("FaceRetainedImageUrl", faceRetainedImageUrl);
@@ -308,7 +326,12 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * FailedRedirectUrl.
+         * <p>Redirect URL for failed verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder failedRedirectUrl(String failedRedirectUrl) {
             this.putQueryParameter("FailedRedirectUrl", failedRedirectUrl);
@@ -317,7 +340,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * IdCardBackImageUrl.
+         * <p>HTTP or HTTPS link to the national emblem side of the ID card image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
          */
         public Builder idCardBackImageUrl(String idCardBackImageUrl) {
             this.putQueryParameter("IdCardBackImageUrl", idCardBackImageUrl);
@@ -326,7 +352,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * IdCardFrontImageUrl.
+         * <p>HTTP or HTTPS link to the portrait side of the ID card image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
          */
         public Builder idCardFrontImageUrl(String idCardFrontImageUrl) {
             this.putQueryParameter("IdCardFrontImageUrl", idCardFrontImageUrl);
@@ -335,7 +364,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * IdCardNumber.
+         * <p>ID card number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330100xxxxxxxxxxxx</p>
          */
         public Builder idCardNumber(String idCardNumber) {
             this.putQueryParameter("IdCardNumber", idCardNumber);
@@ -344,7 +376,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -353,7 +388,12 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * PassedRedirectUrl.
+         * <p>Redirect URL upon successful verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder passedRedirectUrl(String passedRedirectUrl) {
             this.putQueryParameter("PassedRedirectUrl", passedRedirectUrl);
@@ -362,7 +402,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>ID of the end user, such as the account ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user111</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -371,7 +414,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * UserIp.
+         * <p>User IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.<em><strong>.</strong></em></p>
          */
         public Builder userIp(String userIp) {
             this.putQueryParameter("UserIp", userIp);
@@ -380,7 +426,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * UserPhoneNumber.
+         * <p>User phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187********</p>
          */
         public Builder userPhoneNumber(String userPhoneNumber) {
             this.putQueryParameter("UserPhoneNumber", userPhoneNumber);
@@ -389,7 +438,10 @@ public class DescribeVerifyTokenRequest extends Request {
         }
 
         /**
-         * UserRegistTime.
+         * <p>User registration time. Expressed in timestamp format, unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder userRegistTime(Long userRegistTime) {
             this.putQueryParameter("UserRegistTime", userRegistTime);

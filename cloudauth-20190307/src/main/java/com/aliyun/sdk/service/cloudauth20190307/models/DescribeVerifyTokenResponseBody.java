@@ -93,7 +93,7 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * OssUploadToken.
+         * <p>OSS upload token information.</p>
          */
         public Builder ossUploadToken(OssUploadToken ossUploadToken) {
             this.ossUploadToken = ossUploadToken;
@@ -101,7 +101,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * VerifyPageUrl.
+         * <p>The entry link for the original H5 verification scheme, which has been discontinued and no longer supports new integrations. If you need to integrate an H5 verification scheme, it is recommended to use the <a href="https://help.aliyun.com/document_detail/173779.html">PC or mobile H5 web integration solution</a> of financial-grade real-person authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
          */
         public Builder verifyPageUrl(String verifyPageUrl) {
             this.verifyPageUrl = verifyPageUrl;
@@ -117,7 +123,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * VerifyToken.
+         * <p>The token for this verification, used to link various interfaces in the verification request, valid for 30 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c302c0797679457685410ee51a5ba375</p>
          */
         public Builder verifyToken(String verifyToken) {
             this.verifyToken = verifyToken;
@@ -248,7 +257,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>OSS file storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudauth-zhangjiakou-external</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -256,7 +268,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * EndPoint.
+             * <p>Access endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -264,7 +279,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Expiration time. Expressed in timestamp format, unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582636610000</p>
              */
             public Builder expired(Long expired) {
                 this.expired = expired;
@@ -272,7 +290,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The key required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NU8rUBj****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +301,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>File storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod/RdNLC@Ox2n-1s7NMt</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -288,7 +312,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Secret.
+             * <p>The secret required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FwmnyoqT8dHj7nJLuM67T****</p>
              */
             public Builder secret(String secret) {
                 this.secret = secret;
@@ -296,7 +323,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The token required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>
              */
             public Builder token(String token) {
                 this.token = token;

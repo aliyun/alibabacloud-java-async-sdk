@@ -264,7 +264,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * CertifyId.
+         * <p>Unique identifier for real-person authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
          */
         public Builder certifyId(String certifyId) {
             this.putBodyParameter("CertifyId", certifyId);
@@ -273,7 +276,16 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * Crop.
+         * <p>Whether to allow cropping of the face image:</p>
+         * <ul>
+         * <li><p>T: Allow cropping</p>
+         * </li>
+         * <li><p>F (default): Do not allow cropping.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>T</p>
          */
         public Builder crop(String crop) {
             this.putBodyParameter("Crop", crop);
@@ -282,7 +294,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * DeviceToken.
+         * <p>Device token, used for risk identification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
          */
         public Builder deviceToken(String deviceToken) {
             this.putBodyParameter("DeviceToken", deviceToken);
@@ -291,7 +306,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * FaceContrastPicture.
+         * <p>Base64 encoded photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
          */
         public Builder faceContrastPicture(String faceContrastPicture) {
             this.putBodyParameter("FaceContrastPicture", faceContrastPicture);
@@ -300,7 +318,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * FaceContrastPictureUrl.
+         * <p>Image URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ware.cdeledu.com/upfile/uploadPic/2025/03/21/dd62fbb9c966433ab0ba9a7252816b30.jpg">https://ware.cdeledu.com/upfile/uploadPic/2025/03/21/dd62fbb9c966433ab0ba9a7252816b30.jpg</a></p>
          */
         public Builder faceContrastPictureUrl(String faceContrastPictureUrl) {
             this.putBodyParameter("FaceContrastPictureUrl", faceContrastPictureUrl);
@@ -309,7 +330,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>User&quot;s network IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.xxx.xxx.xxx</p>
          */
         public Builder ip(String ip) {
             this.putBodyParameter("Ip", ip);
@@ -318,7 +342,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>User&quot;s mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130xxxxxxxx</p>
          */
         public Builder mobile(String mobile) {
             this.putBodyParameter("Mobile", mobile);
@@ -327,7 +354,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>Liveness detection parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FRONT_CAMERA_LIVENESS</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -336,7 +366,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * <p>Authorized OSS bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-aliyun-cloudauth-1494517779820665</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putBodyParameter("OssBucketName", ossBucketName);
@@ -345,7 +378,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * OssObjectName.
+         * <p>Authorized OSS file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>facedetect/17483113370916034.jpg</p>
          */
         public Builder ossObjectName(String ossObjectName) {
             this.putBodyParameter("OssObjectName", ossObjectName);
@@ -354,7 +390,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * OuterOrderNo.
+         * <p>A unique business identifier defined by the client side, used for subsequent troubleshooting. The value should be a combination of letters and numbers up to 32 characters long, ensuring uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
          */
         public Builder outerOrderNo(String outerOrderNo) {
             this.putBodyParameter("OuterOrderNo", outerOrderNo);
@@ -363,7 +402,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Fixed value: LR_FR_MIN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LR_FR_MIN</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -372,7 +414,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Authentication scenario ID. This ID is automatically generated after creating an authentication scenario in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000****</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -381,7 +426,10 @@ public class LivenessFaceVerifyRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Your custom user ID (up to 100 characters), please ensure it is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);

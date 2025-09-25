@@ -129,7 +129,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -138,7 +141,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>Required, end time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-30</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -147,7 +153,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +165,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID_PLUS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -165,7 +177,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>Scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36**01</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -174,7 +189,10 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Required, start time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
