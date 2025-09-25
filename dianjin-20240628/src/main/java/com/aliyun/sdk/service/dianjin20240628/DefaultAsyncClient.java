@@ -347,6 +347,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDialogLog  GetDialogLogRequest
+     * @return GetDialogLogResponse
+     */
+    @Override
+    public CompletableFuture<GetDialogLogResponse> getDialogLog(GetDialogLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDialogLog").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/dialog/log").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDialogLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDialogLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocumentChunkList  GetDocumentChunkListRequest
      * @return GetDocumentChunkListResponse
      */

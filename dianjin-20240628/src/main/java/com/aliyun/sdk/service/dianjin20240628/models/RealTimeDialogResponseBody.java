@@ -191,6 +191,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("selfDirectedScriptFullContent")
         private String selfDirectedScriptFullContent;
 
+        @com.aliyun.core.annotation.NameInMap("skipCurrentRecognize")
+        private Boolean skipCurrentRecognize;
+
         private Delta(Builder builder) {
             this.analysisProcess = builder.analysisProcess;
             this.callTime = builder.callTime;
@@ -203,6 +206,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             this.recommendScript = builder.recommendScript;
             this.selfDirectedScript = builder.selfDirectedScript;
             this.selfDirectedScriptFullContent = builder.selfDirectedScriptFullContent;
+            this.skipCurrentRecognize = builder.skipCurrentRecognize;
         }
 
         public static Builder builder() {
@@ -290,6 +294,13 @@ public class RealTimeDialogResponseBody extends TeaModel {
             return this.selfDirectedScriptFullContent;
         }
 
+        /**
+         * @return skipCurrentRecognize
+         */
+        public Boolean getSkipCurrentRecognize() {
+            return this.skipCurrentRecognize;
+        }
+
         public static final class Builder {
             private String analysisProcess; 
             private String callTime; 
@@ -302,6 +313,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String recommendScript; 
             private String selfDirectedScript; 
             private String selfDirectedScriptFullContent; 
+            private Boolean skipCurrentRecognize; 
 
             private Builder() {
             } 
@@ -318,6 +330,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
                 this.recommendScript = model.recommendScript;
                 this.selfDirectedScript = model.selfDirectedScript;
                 this.selfDirectedScriptFullContent = model.selfDirectedScriptFullContent;
+                this.skipCurrentRecognize = model.skipCurrentRecognize;
             } 
 
             /**
@@ -411,6 +424,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * skipCurrentRecognize.
+             */
+            public Builder skipCurrentRecognize(Boolean skipCurrentRecognize) {
+                this.skipCurrentRecognize = skipCurrentRecognize;
+                return this;
+            }
+
             public Delta build() {
                 return new Delta(this);
             } 
@@ -458,6 +479,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("selfDirectedScriptFullContent")
         private String selfDirectedScriptFullContent;
 
+        @com.aliyun.core.annotation.NameInMap("skipCurrentRecognize")
+        private Boolean skipCurrentRecognize;
+
         private Message(Builder builder) {
             this.analysisProcess = builder.analysisProcess;
             this.callTime = builder.callTime;
@@ -470,6 +494,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             this.recommendScript = builder.recommendScript;
             this.selfDirectedScript = builder.selfDirectedScript;
             this.selfDirectedScriptFullContent = builder.selfDirectedScriptFullContent;
+            this.skipCurrentRecognize = builder.skipCurrentRecognize;
         }
 
         public static Builder builder() {
@@ -557,6 +582,13 @@ public class RealTimeDialogResponseBody extends TeaModel {
             return this.selfDirectedScriptFullContent;
         }
 
+        /**
+         * @return skipCurrentRecognize
+         */
+        public Boolean getSkipCurrentRecognize() {
+            return this.skipCurrentRecognize;
+        }
+
         public static final class Builder {
             private String analysisProcess; 
             private String callTime; 
@@ -569,6 +601,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String recommendScript; 
             private String selfDirectedScript; 
             private String selfDirectedScriptFullContent; 
+            private Boolean skipCurrentRecognize; 
 
             private Builder() {
             } 
@@ -585,6 +618,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
                 this.recommendScript = model.recommendScript;
                 this.selfDirectedScript = model.selfDirectedScript;
                 this.selfDirectedScriptFullContent = model.selfDirectedScriptFullContent;
+                this.skipCurrentRecognize = model.skipCurrentRecognize;
             } 
 
             /**
@@ -675,6 +709,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
              */
             public Builder selfDirectedScriptFullContent(String selfDirectedScriptFullContent) {
                 this.selfDirectedScriptFullContent = selfDirectedScriptFullContent;
+                return this;
+            }
+
+            /**
+             * skipCurrentRecognize.
+             */
+            public Builder skipCurrentRecognize(Boolean skipCurrentRecognize) {
+                this.skipCurrentRecognize = skipCurrentRecognize;
                 return this;
             }
 
