@@ -62,6 +62,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceIpWhitelistResponse> describeInstanceIpWhitelist(DescribeInstanceIpWhitelistRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceRAGConfig  DescribeInstanceRAGConfigRequest
+     * @return DescribeInstanceRAGConfigResponse
+     */
+    CompletableFuture<DescribeInstanceRAGConfigResponse> describeInstanceRAGConfig(DescribeInstanceRAGConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
+     * @return DescribeInstanceSSLResponse
+     */
+    CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceStorageConfig  DescribeInstanceStorageConfigRequest
      * @return DescribeInstanceStorageConfigResponse
      */
@@ -78,6 +90,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceIpWhitelistResponse
      */
     CompletableFuture<ModifyInstanceIpWhitelistResponse> modifyInstanceIpWhitelist(ModifyInstanceIpWhitelistRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceRAGConfig  ModifyInstanceRAGConfigRequest
+     * @return ModifyInstanceRAGConfigResponse
+     */
+    CompletableFuture<ModifyInstanceRAGConfigResponse> modifyInstanceRAGConfig(ModifyInstanceRAGConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
+     * @return ModifyInstanceSSLResponse
+     */
+    CompletableFuture<ModifyInstanceSSLResponse> modifyInstanceSSL(ModifyInstanceSSLRequest request);
 
     /**
      * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
