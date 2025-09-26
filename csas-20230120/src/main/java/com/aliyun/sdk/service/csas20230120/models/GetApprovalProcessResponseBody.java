@@ -98,11 +98,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private FieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -122,6 +126,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -130,6 +141,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -137,6 +149,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(FieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -145,6 +158,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -290,11 +311,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DeviceRegistrationPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -314,6 +339,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -322,6 +354,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -329,6 +362,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(DeviceRegistrationPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -337,6 +371,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -482,11 +524,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DlpSendPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -506,6 +552,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -514,6 +567,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -521,6 +575,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(DlpSendPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -529,6 +584,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -674,11 +737,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DomainBlacklistPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -698,6 +765,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -706,6 +780,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -713,6 +788,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(DomainBlacklistPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -721,6 +797,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -866,11 +950,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DomainWhitelistPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -890,6 +978,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -898,6 +993,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -905,6 +1001,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(DomainWhitelistPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -913,6 +1010,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1058,11 +1163,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private EndpointHardeningPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1082,6 +1191,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1090,6 +1206,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1097,6 +1214,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(EndpointHardeningPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1105,6 +1223,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1250,11 +1376,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private PeripheralBlockPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1274,6 +1404,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1282,6 +1419,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1289,6 +1427,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(PeripheralBlockPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1297,6 +1436,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1517,11 +1664,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private SoftwareBlockPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1541,6 +1692,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1549,6 +1707,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1556,6 +1715,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(SoftwareBlockPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1564,6 +1724,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1709,11 +1877,15 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private SoftwareHardeningPoliciesFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1733,6 +1905,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1741,6 +1920,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1748,6 +1928,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
             private Builder(SoftwareHardeningPoliciesFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1756,6 +1937,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 

@@ -274,11 +274,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private FieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -298,6 +302,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -306,6 +317,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -313,6 +325,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(FieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -321,6 +334,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -445,11 +466,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DeviceRegistrationSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -469,6 +494,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -477,6 +509,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -484,6 +517,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(DeviceRegistrationSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -492,6 +526,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -616,11 +658,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DlpSendSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -640,6 +686,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -648,6 +701,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -655,6 +709,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(DlpSendSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -663,6 +718,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -787,11 +850,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DomainBlacklistSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -811,6 +878,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -819,6 +893,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -826,6 +901,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(DomainBlacklistSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -834,6 +910,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -958,11 +1042,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private DomainWhitelistSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -982,6 +1070,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -990,6 +1085,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -997,6 +1093,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(DomainWhitelistSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1005,6 +1102,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1129,11 +1234,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private EndpointHardeningSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1153,6 +1262,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1161,6 +1277,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1168,6 +1285,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(EndpointHardeningSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1176,6 +1294,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1300,11 +1426,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private PeripheralBlockSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1324,6 +1454,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1332,6 +1469,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1339,6 +1477,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(PeripheralBlockSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1347,6 +1486,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1471,11 +1618,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private SoftwareBlockSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1495,6 +1646,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1503,6 +1661,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1510,6 +1669,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(SoftwareBlockSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1518,6 +1678,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
@@ -1642,11 +1810,15 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("SystemField")
         private String systemField;
 
         private SoftwareHardeningSchemaConfigFieldMap(Builder builder) {
             this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
             this.systemField = builder.systemField;
         }
 
@@ -1666,6 +1838,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
          * @return systemField
          */
         public String getSystemField() {
@@ -1674,6 +1853,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
         public static final class Builder {
             private String displayField; 
+            private String displayFieldValue; 
             private String systemField; 
 
             private Builder() {
@@ -1681,6 +1861,7 @@ public class UpdateApprovalProcessRequest extends Request {
 
             private Builder(SoftwareHardeningSchemaConfigFieldMap model) {
                 this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
                 this.systemField = model.systemField;
             } 
 
@@ -1689,6 +1870,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
                 return this;
             }
 
