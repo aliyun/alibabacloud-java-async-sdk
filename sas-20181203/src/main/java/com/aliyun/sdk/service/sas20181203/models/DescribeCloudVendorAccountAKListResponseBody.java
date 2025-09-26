@@ -397,6 +397,12 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
         private String vendorAuthAlias;
 
+        @com.aliyun.core.annotation.NameInMap("VendorUid")
+        private String vendorUid;
+
+        @com.aliyun.core.annotation.NameInMap("VendorUserName")
+        private String vendorUserName;
+
         private CloudVendorAccountAKs(Builder builder) {
             this.akType = builder.akType;
             this.authId = builder.authId;
@@ -409,6 +415,8 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             this.status = builder.status;
             this.vendor = builder.vendor;
             this.vendorAuthAlias = builder.vendorAuthAlias;
+            this.vendorUid = builder.vendorUid;
+            this.vendorUserName = builder.vendorUserName;
         }
 
         public static Builder builder() {
@@ -496,6 +504,20 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             return this.vendorAuthAlias;
         }
 
+        /**
+         * @return vendorUid
+         */
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        /**
+         * @return vendorUserName
+         */
+        public String getVendorUserName() {
+            return this.vendorUserName;
+        }
+
         public static final class Builder {
             private String akType; 
             private Long authId; 
@@ -508,6 +530,8 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private Integer status; 
             private String vendor; 
             private String vendorAuthAlias; 
+            private String vendorUid; 
+            private String vendorUserName; 
 
             private Builder() {
             } 
@@ -524,6 +548,8 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
                 this.status = model.status;
                 this.vendor = model.vendor;
                 this.vendorAuthAlias = model.vendorAuthAlias;
+                this.vendorUid = model.vendorUid;
+                this.vendorUserName = model.vendorUserName;
             } 
 
             /**
@@ -655,6 +681,22 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
              */
             public Builder vendorAuthAlias(String vendorAuthAlias) {
                 this.vendorAuthAlias = vendorAuthAlias;
+                return this;
+            }
+
+            /**
+             * VendorUid.
+             */
+            public Builder vendorUid(String vendorUid) {
+                this.vendorUid = vendorUid;
+                return this;
+            }
+
+            /**
+             * VendorUserName.
+             */
+            public Builder vendorUserName(String vendorUserName) {
+                this.vendorUserName = vendorUserName;
                 return this;
             }
 

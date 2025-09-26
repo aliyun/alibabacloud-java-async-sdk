@@ -400,6 +400,9 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
+        @com.aliyun.core.annotation.NameInMap("VendorUserName")
+        private String vendorUserName;
+
         private BasicData(Builder builder) {
             this.id = builder.id;
             this.instanceId = builder.instanceId;
@@ -408,6 +411,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
+            this.vendorUserName = builder.vendorUserName;
         }
 
         public static Builder builder() {
@@ -467,6 +471,13 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             return this.statusMessage;
         }
 
+        /**
+         * @return vendorUserName
+         */
+        public String getVendorUserName() {
+            return this.vendorUserName;
+        }
+
         public static final class Builder {
             private Long id; 
             private String instanceId; 
@@ -475,6 +486,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String statusMessage; 
+            private String vendorUserName; 
 
             private Builder() {
             } 
@@ -487,6 +499,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.status = model.status;
                 this.statusMessage = model.statusMessage;
+                this.vendorUserName = model.vendorUserName;
             } 
 
             /**
@@ -567,6 +580,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
+                return this;
+            }
+
+            /**
+             * VendorUserName.
+             */
+            public Builder vendorUserName(String vendorUserName) {
+                this.vendorUserName = vendorUserName;
                 return this;
             }
 

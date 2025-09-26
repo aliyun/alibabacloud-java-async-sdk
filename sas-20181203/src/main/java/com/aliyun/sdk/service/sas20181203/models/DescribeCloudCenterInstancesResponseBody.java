@@ -306,6 +306,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VendorName")
         private String vendorName;
 
+        @com.aliyun.core.annotation.NameInMap("VendorUid")
+        private String vendorUid;
+
+        @com.aliyun.core.annotation.NameInMap("VendorUserName")
+        private String vendorUserName;
+
         @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
@@ -369,6 +375,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.uuid = builder.uuid;
             this.vendor = builder.vendor;
             this.vendorName = builder.vendorName;
+            this.vendorUid = builder.vendorUid;
+            this.vendorUserName = builder.vendorUserName;
             this.vpcInstanceId = builder.vpcInstanceId;
             this.vulCount = builder.vulCount;
             this.vulStatus = builder.vulStatus;
@@ -754,6 +762,20 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vendorUid
+         */
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        /**
+         * @return vendorUserName
+         */
+        public String getVendorUserName() {
+            return this.vendorUserName;
+        }
+
+        /**
          * @return vpcInstanceId
          */
         public String getVpcInstanceId() {
@@ -828,6 +850,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String uuid; 
             private Integer vendor; 
             private String vendorName; 
+            private String vendorUid; 
+            private String vendorUserName; 
             private String vpcInstanceId; 
             private Integer vulCount; 
             private String vulStatus; 
@@ -889,6 +913,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
                 this.uuid = model.uuid;
                 this.vendor = model.vendor;
                 this.vendorName = model.vendorName;
+                this.vendorUid = model.vendorUid;
+                this.vendorUserName = model.vendorUserName;
                 this.vpcInstanceId = model.vpcInstanceId;
                 this.vulCount = model.vulCount;
                 this.vulStatus = model.vulStatus;
@@ -1637,6 +1663,22 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;
+                return this;
+            }
+
+            /**
+             * VendorUid.
+             */
+            public Builder vendorUid(String vendorUid) {
+                this.vendorUid = vendorUid;
+                return this;
+            }
+
+            /**
+             * VendorUserName.
+             */
+            public Builder vendorUserName(String vendorUserName) {
+                this.vendorUserName = vendorUserName;
                 return this;
             }
 

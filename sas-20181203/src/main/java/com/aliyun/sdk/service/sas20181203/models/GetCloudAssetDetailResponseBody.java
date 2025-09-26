@@ -152,6 +152,9 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
+        @com.aliyun.core.annotation.NameInMap("OriginalAssetInfo")
+        private String originalAssetInfo;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -164,6 +167,12 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
+        @com.aliyun.core.annotation.NameInMap("VendorUid")
+        private String vendorUid;
+
+        @com.aliyun.core.annotation.NameInMap("VendorUserName")
+        private String vendorUserName;
+
         private Instances(Builder builder) {
             this.alarmStatus = builder.alarmStatus;
             this.assetSubType = builder.assetSubType;
@@ -175,10 +184,13 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
+            this.originalAssetInfo = builder.originalAssetInfo;
             this.regionId = builder.regionId;
             this.riskStatus = builder.riskStatus;
             this.securityInfo = builder.securityInfo;
             this.vendor = builder.vendor;
+            this.vendorUid = builder.vendorUid;
+            this.vendorUserName = builder.vendorUserName;
         }
 
         public static Builder builder() {
@@ -260,6 +272,13 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalAssetInfo
+         */
+        public String getOriginalAssetInfo() {
+            return this.originalAssetInfo;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -287,6 +306,20 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             return this.vendor;
         }
 
+        /**
+         * @return vendorUid
+         */
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        /**
+         * @return vendorUserName
+         */
+        public String getVendorUserName() {
+            return this.vendorUserName;
+        }
+
         public static final class Builder {
             private String alarmStatus; 
             private Integer assetSubType; 
@@ -298,10 +331,13 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
+            private String originalAssetInfo; 
             private String regionId; 
             private String riskStatus; 
             private String securityInfo; 
             private Integer vendor; 
+            private String vendorUid; 
+            private String vendorUserName; 
 
             private Builder() {
             } 
@@ -317,10 +353,13 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.internetIp = model.internetIp;
+                this.originalAssetInfo = model.originalAssetInfo;
                 this.regionId = model.regionId;
                 this.riskStatus = model.riskStatus;
                 this.securityInfo = model.securityInfo;
                 this.vendor = model.vendor;
+                this.vendorUid = model.vendorUid;
+                this.vendorUserName = model.vendorUserName;
             } 
 
             /**
@@ -462,6 +501,14 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
+             * OriginalAssetInfo.
+             */
+            public Builder originalAssetInfo(String originalAssetInfo) {
+                this.originalAssetInfo = originalAssetInfo;
+                return this;
+            }
+
+            /**
              * <p>The region in which the cloud asset resides.</p>
              * <blockquote>
              * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
@@ -516,6 +563,22 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
+                return this;
+            }
+
+            /**
+             * VendorUid.
+             */
+            public Builder vendorUid(String vendorUid) {
+                this.vendorUid = vendorUid;
+                return this;
+            }
+
+            /**
+             * VendorUserName.
+             */
+            public Builder vendorUserName(String vendorUserName) {
+                this.vendorUserName = vendorUserName;
                 return this;
             }
 
