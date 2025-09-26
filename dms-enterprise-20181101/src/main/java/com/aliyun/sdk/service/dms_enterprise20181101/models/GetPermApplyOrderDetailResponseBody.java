@@ -720,6 +720,256 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
      *
      * <p>GetPermApplyOrderDetailResponseBody</p>
      */
+    public static class RowInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        private String columnName;
+
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        private Long dbId;
+
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        private Boolean logic;
+
+        @com.aliyun.core.annotation.NameInMap("MatchMode")
+        private String matchMode;
+
+        @com.aliyun.core.annotation.NameInMap("RowGroupId")
+        private Long rowGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
+        private String schemaName;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        private RowInfo(Builder builder) {
+            this.columnName = builder.columnName;
+            this.dbId = builder.dbId;
+            this.logic = builder.logic;
+            this.matchMode = builder.matchMode;
+            this.rowGroupId = builder.rowGroupId;
+            this.schemaName = builder.schemaName;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RowInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnName
+         */
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        /**
+         * @return dbId
+         */
+        public Long getDbId() {
+            return this.dbId;
+        }
+
+        /**
+         * @return logic
+         */
+        public Boolean getLogic() {
+            return this.logic;
+        }
+
+        /**
+         * @return matchMode
+         */
+        public String getMatchMode() {
+            return this.matchMode;
+        }
+
+        /**
+         * @return rowGroupId
+         */
+        public Long getRowGroupId() {
+            return this.rowGroupId;
+        }
+
+        /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private String columnName; 
+            private Long dbId; 
+            private Boolean logic; 
+            private String matchMode; 
+            private Long rowGroupId; 
+            private String schemaName; 
+            private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RowInfo model) {
+                this.columnName = model.columnName;
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+                this.matchMode = model.matchMode;
+                this.rowGroupId = model.rowGroupId;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
+            /**
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_col</p>
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
+             */
+            public Builder dbId(Long dbId) {
+                this.dbId = dbId;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder logic(Boolean logic) {
+                this.logic = logic;
+                return this;
+            }
+
+            /**
+             * MatchMode.
+             */
+            public Builder matchMode(String matchMode) {
+                this.matchMode = matchMode;
+                return this;
+            }
+
+            /**
+             * RowGroupId.
+             */
+            public Builder rowGroupId(Long rowGroupId) {
+                this.rowGroupId = rowGroupId;
+                return this;
+            }
+
+            /**
+             * SchemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
+            /**
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tb</p>
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public RowInfo build() {
+                return new RowInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
+    public static class RowValueInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RowValue")
+        private String rowValue;
+
+        private RowValueInfo(Builder builder) {
+            this.rowValue = builder.rowValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RowValueInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rowValue
+         */
+        public String getRowValue() {
+            return this.rowValue;
+        }
+
+        public static final class Builder {
+            private String rowValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(RowValueInfo model) {
+                this.rowValue = model.rowValue;
+            } 
+
+            /**
+             * RowValue.
+             */
+            public Builder rowValue(String rowValue) {
+                this.rowValue = rowValue;
+                return this;
+            }
+
+            public RowValueInfo build() {
+                return new RowValueInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class TableInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
@@ -787,6 +1037,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceInfo")
         private InstanceInfo instanceInfo;
 
+        @com.aliyun.core.annotation.NameInMap("RowInfo")
+        private RowInfo rowInfo;
+
+        @com.aliyun.core.annotation.NameInMap("RowValueInfo")
+        private RowValueInfo rowValueInfo;
+
         @com.aliyun.core.annotation.NameInMap("TableInfo")
         private TableInfo tableInfo;
 
@@ -794,6 +1050,8 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             this.columnInfo = builder.columnInfo;
             this.databaseInfo = builder.databaseInfo;
             this.instanceInfo = builder.instanceInfo;
+            this.rowInfo = builder.rowInfo;
+            this.rowValueInfo = builder.rowValueInfo;
             this.tableInfo = builder.tableInfo;
         }
 
@@ -827,6 +1085,20 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return rowInfo
+         */
+        public RowInfo getRowInfo() {
+            return this.rowInfo;
+        }
+
+        /**
+         * @return rowValueInfo
+         */
+        public RowValueInfo getRowValueInfo() {
+            return this.rowValueInfo;
+        }
+
+        /**
          * @return tableInfo
          */
         public TableInfo getTableInfo() {
@@ -837,6 +1109,8 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private ColumnInfo columnInfo; 
             private DatabaseInfo databaseInfo; 
             private InstanceInfo instanceInfo; 
+            private RowInfo rowInfo; 
+            private RowValueInfo rowValueInfo; 
             private TableInfo tableInfo; 
 
             private Builder() {
@@ -846,6 +1120,8 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
                 this.columnInfo = model.columnInfo;
                 this.databaseInfo = model.databaseInfo;
                 this.instanceInfo = model.instanceInfo;
+                this.rowInfo = model.rowInfo;
+                this.rowValueInfo = model.rowValueInfo;
                 this.tableInfo = model.tableInfo;
             } 
 
@@ -870,6 +1146,22 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
              */
             public Builder instanceInfo(InstanceInfo instanceInfo) {
                 this.instanceInfo = instanceInfo;
+                return this;
+            }
+
+            /**
+             * RowInfo.
+             */
+            public Builder rowInfo(RowInfo rowInfo) {
+                this.rowInfo = rowInfo;
+                return this;
+            }
+
+            /**
+             * RowValueInfo.
+             */
+            public Builder rowValueInfo(RowValueInfo rowValueInfo) {
+                this.rowValueInfo = rowValueInfo;
                 return this;
             }
 
