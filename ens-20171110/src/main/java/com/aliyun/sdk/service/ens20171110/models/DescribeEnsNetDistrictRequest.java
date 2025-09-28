@@ -22,6 +22,10 @@ public class DescribeEnsNetDistrictRequest extends Request {
     private String netDistrictCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetDistrictCodeNode")
+    private Boolean netDistrictCodeNode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetLevelCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String netLevelCode;
@@ -29,6 +33,7 @@ public class DescribeEnsNetDistrictRequest extends Request {
     private DescribeEnsNetDistrictRequest(Builder builder) {
         super(builder);
         this.netDistrictCode = builder.netDistrictCode;
+        this.netDistrictCodeNode = builder.netDistrictCodeNode;
         this.netLevelCode = builder.netLevelCode;
     }
 
@@ -53,6 +58,13 @@ public class DescribeEnsNetDistrictRequest extends Request {
     }
 
     /**
+     * @return netDistrictCodeNode
+     */
+    public Boolean getNetDistrictCodeNode() {
+        return this.netDistrictCodeNode;
+    }
+
+    /**
      * @return netLevelCode
      */
     public String getNetLevelCode() {
@@ -61,6 +73,7 @@ public class DescribeEnsNetDistrictRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeEnsNetDistrictRequest, Builder> {
         private String netDistrictCode; 
+        private Boolean netDistrictCodeNode; 
         private String netLevelCode; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DescribeEnsNetDistrictRequest extends Request {
         private Builder(DescribeEnsNetDistrictRequest request) {
             super(request);
             this.netDistrictCode = request.netDistrictCode;
+            this.netDistrictCodeNode = request.netDistrictCodeNode;
             this.netLevelCode = request.netLevelCode;
         } 
 
@@ -84,6 +98,15 @@ public class DescribeEnsNetDistrictRequest extends Request {
         public Builder netDistrictCode(String netDistrictCode) {
             this.putQueryParameter("NetDistrictCode", netDistrictCode);
             this.netDistrictCode = netDistrictCode;
+            return this;
+        }
+
+        /**
+         * NetDistrictCodeNode.
+         */
+        public Builder netDistrictCodeNode(Boolean netDistrictCodeNode) {
+            this.putQueryParameter("NetDistrictCodeNode", netDistrictCodeNode);
+            this.netDistrictCodeNode = netDistrictCodeNode;
             return this;
         }
 

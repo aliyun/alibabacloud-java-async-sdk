@@ -322,6 +322,71 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchEventMigrateInstance  BatchEventMigrateInstanceRequest
+     * @return BatchEventMigrateInstanceResponse
+     */
+    @Override
+    public CompletableFuture<BatchEventMigrateInstanceResponse> batchEventMigrateInstance(BatchEventMigrateInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchEventMigrateInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchEventMigrateInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchEventMigrateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>Action</code> 参数固定为 <code>BatchEventRebootInstance</code>。</li>
+     * <li><code>Version</code> 参数固定为 <code>2017-11-10</code>。</li>
+     * <li><code>EventInfos</code> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</li>
+     * <li>如果选择预约执行，则必须提供 <code>PlanTime</code> 字段的时间戳。</li>
+     * <li>返回结果中，<code>Results</code> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</li>
+     * <li>错误情况下，返回相应的错误代码和消息。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BatchEventRebootInstance  BatchEventRebootInstanceRequest
+     * @return BatchEventRebootInstanceResponse
+     */
+    @Override
+    public CompletableFuture<BatchEventRebootInstanceResponse> batchEventRebootInstance(BatchEventRebootInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchEventRebootInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchEventRebootInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchEventRebootInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchEventRedeployInstance  BatchEventRedeployInstanceRequest
+     * @return BatchEventRedeployInstanceResponse
+     */
+    @Override
+    public CompletableFuture<BatchEventRedeployInstanceResponse> batchEventRedeployInstance(BatchEventRedeployInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchEventRedeployInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchEventRedeployInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchEventRedeployInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CleanDistData  CleanDistDataRequest
      * @return CleanDistDataResponse
      */
@@ -2500,6 +2565,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
+     * @return DescribeHistoryEventsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHistoryEventsResponse> describeHistoryEvents(DescribeHistoryEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHistoryEvents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHistoryEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHistoryEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeImageInfos  DescribeImageInfosRequest
      * @return DescribeImageInfosResponse
      */
@@ -3641,6 +3724,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DistApplicationDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EventMigrateInstance  EventMigrateInstanceRequest
+     * @return EventMigrateInstanceResponse
+     */
+    @Override
+    public CompletableFuture<EventMigrateInstanceResponse> eventMigrateInstance(EventMigrateInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventMigrateInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventMigrateInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EventMigrateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于触发一个实例的重启事件。</li>
+     * <li><code>OpsType</code>参数可选，若不提供，默认为<code>scheduled</code>（预约执行）。</li>
+     * <li>当选择<code>scheduled</code>时，必须提供<code>PlanTime</code>参数，格式为时间戳（毫秒）。</li>
+     * <li>如果需要立即执行重启，请设置<code>OpsType</code>为<code>immediate</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of EventRebootInstance  EventRebootInstanceRequest
+     * @return EventRebootInstanceResponse
+     */
+    @Override
+    public CompletableFuture<EventRebootInstanceResponse> eventRebootInstance(EventRebootInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventRebootInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventRebootInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EventRebootInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EventRedeployInstance  EventRedeployInstanceRequest
+     * @return EventRedeployInstanceResponse
+     */
+    @Override
+    public CompletableFuture<EventRedeployInstanceResponse> eventRedeployInstance(EventRedeployInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventRedeployInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventRedeployInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EventRedeployInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -146,6 +146,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeSecurityGroupEgressResponse> authorizeSecurityGroupEgress(AuthorizeSecurityGroupEgressRequest request);
 
     /**
+     * @param request the request parameters of BatchEventMigrateInstance  BatchEventMigrateInstanceRequest
+     * @return BatchEventMigrateInstanceResponse
+     */
+    CompletableFuture<BatchEventMigrateInstanceResponse> batchEventMigrateInstance(BatchEventMigrateInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>Action</code> 参数固定为 <code>BatchEventRebootInstance</code>。</li>
+     * <li><code>Version</code> 参数固定为 <code>2017-11-10</code>。</li>
+     * <li><code>EventInfos</code> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</li>
+     * <li>如果选择预约执行，则必须提供 <code>PlanTime</code> 字段的时间戳。</li>
+     * <li>返回结果中，<code>Results</code> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</li>
+     * <li>错误情况下，返回相应的错误代码和消息。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BatchEventRebootInstance  BatchEventRebootInstanceRequest
+     * @return BatchEventRebootInstanceResponse
+     */
+    CompletableFuture<BatchEventRebootInstanceResponse> batchEventRebootInstance(BatchEventRebootInstanceRequest request);
+
+    /**
+     * @param request the request parameters of BatchEventRedeployInstance  BatchEventRedeployInstanceRequest
+     * @return BatchEventRedeployInstanceResponse
+     */
+    CompletableFuture<BatchEventRedeployInstanceResponse> batchEventRedeployInstance(BatchEventRedeployInstanceRequest request);
+
+    /**
      * @param request the request parameters of CleanDistData  CleanDistDataRequest
      * @return CleanDistDataResponse
      */
@@ -956,6 +985,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHaVipsResponse> describeHaVips(DescribeHaVipsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
+     * @return DescribeHistoryEventsResponse
+     */
+    CompletableFuture<DescribeHistoryEventsResponse> describeHistoryEvents(DescribeHistoryEventsRequest request);
+
+    /**
      * @param request the request parameters of DescribeImageInfos  DescribeImageInfosRequest
      * @return DescribeImageInfosResponse
      */
@@ -1393,6 +1428,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DistApplicationDataResponse
      */
     CompletableFuture<DistApplicationDataResponse> distApplicationData(DistApplicationDataRequest request);
+
+    /**
+     * @param request the request parameters of EventMigrateInstance  EventMigrateInstanceRequest
+     * @return EventMigrateInstanceResponse
+     */
+    CompletableFuture<EventMigrateInstanceResponse> eventMigrateInstance(EventMigrateInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于触发一个实例的重启事件。</li>
+     * <li><code>OpsType</code>参数可选，若不提供，默认为<code>scheduled</code>（预约执行）。</li>
+     * <li>当选择<code>scheduled</code>时，必须提供<code>PlanTime</code>参数，格式为时间戳（毫秒）。</li>
+     * <li>如果需要立即执行重启，请设置<code>OpsType</code>为<code>immediate</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of EventRebootInstance  EventRebootInstanceRequest
+     * @return EventRebootInstanceResponse
+     */
+    CompletableFuture<EventRebootInstanceResponse> eventRebootInstance(EventRebootInstanceRequest request);
+
+    /**
+     * @param request the request parameters of EventRedeployInstance  EventRedeployInstanceRequest
+     * @return EventRedeployInstanceResponse
+     */
+    CompletableFuture<EventRedeployInstanceResponse> eventRedeployInstance(EventRedeployInstanceRequest request);
 
     /**
      * @param request the request parameters of ExportBillDetailData  ExportBillDetailDataRequest
