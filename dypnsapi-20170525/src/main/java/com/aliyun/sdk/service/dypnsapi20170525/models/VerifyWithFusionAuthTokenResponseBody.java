@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
 
     public static VerifyWithFusionAuthTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyWithFusionAuthTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.</p>
@@ -198,6 +218,15 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             private String phoneNumber; 
             private Long phoneScore; 
             private String verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.phoneNumber = model.phoneNumber;
+                this.phoneScore = model.phoneScore;
+                this.verifyResult = model.verifyResult;
+            } 
 
             /**
              * <p>The phone number, which is returned when the verification is successful.</p>

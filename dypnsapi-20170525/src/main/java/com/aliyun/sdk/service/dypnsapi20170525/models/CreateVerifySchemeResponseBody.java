@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
 
     public static CreateVerifySchemeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVerifySchemeResponseBody model) {
+            this.code = model.code;
+            this.gateVerifySchemeDTO = model.gateVerifySchemeDTO;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -205,6 +226,13 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String schemeCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(GateVerifySchemeDTO model) {
+                this.schemeCode = model.schemeCode;
+            } 
 
             /**
              * <p>The service code.</p>

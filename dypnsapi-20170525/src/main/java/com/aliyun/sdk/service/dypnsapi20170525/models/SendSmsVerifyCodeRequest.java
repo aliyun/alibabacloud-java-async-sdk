@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendSmsVerifyCodeRequest</p>
  */
 public class SendSmsVerifyCodeRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRetry")
+    private Long autoRetry;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CodeLength")
     private Long codeLength;
@@ -86,6 +95,7 @@ public class SendSmsVerifyCodeRequest extends Request {
 
     private SendSmsVerifyCodeRequest(Builder builder) {
         super(builder);
+        this.autoRetry = builder.autoRetry;
         this.codeLength = builder.codeLength;
         this.codeType = builder.codeType;
         this.countryCode = builder.countryCode;
@@ -113,9 +123,16 @@ public class SendSmsVerifyCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRetry
+     */
+    public Long getAutoRetry() {
+        return this.autoRetry;
     }
 
     /**
@@ -238,6 +255,7 @@ public class SendSmsVerifyCodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendSmsVerifyCodeRequest, Builder> {
+        private Long autoRetry; 
         private Long codeLength; 
         private Long codeType; 
         private String countryCode; 
@@ -262,6 +280,7 @@ public class SendSmsVerifyCodeRequest extends Request {
 
         private Builder(SendSmsVerifyCodeRequest request) {
             super(request);
+            this.autoRetry = request.autoRetry;
             this.codeLength = request.codeLength;
             this.codeType = request.codeType;
             this.countryCode = request.countryCode;
@@ -280,6 +299,15 @@ public class SendSmsVerifyCodeRequest extends Request {
             this.templateParam = request.templateParam;
             this.validTime = request.validTime;
         } 
+
+        /**
+         * AutoRetry.
+         */
+        public Builder autoRetry(Long autoRetry) {
+            this.putQueryParameter("AutoRetry", autoRetry);
+            this.autoRetry = autoRetry;
+            return this;
+        }
 
         /**
          * <p>The length of the verification code. Default value: 4. Valid values: 4 to 8.</p>

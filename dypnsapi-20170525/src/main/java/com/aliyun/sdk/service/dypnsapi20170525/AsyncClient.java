@@ -134,20 +134,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSmsAuthTokensResponse> getSmsAuthTokens(GetSmsAuthTokensRequest request);
 
     /**
-     * @deprecated OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.  * @param request  the request parameters of JyCreateVerifyScheme  JyCreateVerifySchemeRequest
-     * @return JyCreateVerifySchemeResponse
-     */
-    @Deprecated
-    CompletableFuture<JyCreateVerifySchemeResponse> jyCreateVerifyScheme(JyCreateVerifySchemeRequest request);
-
-    /**
-     * @deprecated OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.  * @param request  the request parameters of JyQueryAppInfoBySceneCode  JyQueryAppInfoBySceneCodeRequest
-     * @return JyQueryAppInfoBySceneCodeResponse
-     */
-    @Deprecated
-    CompletableFuture<JyQueryAppInfoBySceneCodeResponse> jyQueryAppInfoBySceneCode(JyQueryAppInfoBySceneCodeRequest request);
-
-    /**
      * <b>description</b> :
      * <h3><a href="#qps"></a>QPS limits</h3>
      * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>

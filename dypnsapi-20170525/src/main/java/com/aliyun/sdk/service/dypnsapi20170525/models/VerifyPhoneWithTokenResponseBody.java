@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         private GateVerify gateVerify; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyPhoneWithTokenResponseBody model) {
+            this.code = model.code;
+            this.gateVerify = model.gateVerify;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -167,6 +186,14 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         public static final class Builder {
             private String verifyId; 
             private String verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(GateVerify model) {
+                this.verifyId = model.verifyId;
+                this.verifyResult = model.verifyResult;
+            } 
 
             /**
              * <p>The external ID.</p>

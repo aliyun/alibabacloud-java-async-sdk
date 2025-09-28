@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGateVerifyStatisticPublicResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -192,6 +211,16 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             private Long totalSuccess; 
             private Long totalUnknown; 
 
+            private Builder() {
+            } 
+
+            private Builder(DayStatistic model) {
+                this.statisticDateStr = model.statisticDateStr;
+                this.totalFail = model.totalFail;
+                this.totalSuccess = model.totalSuccess;
+                this.totalUnknown = model.totalUnknown;
+            } 
+
             /**
              * <p>The date. This field is accurate to the day. The value of this field is in the YYYYMMDD format. Example: 20220103.</p>
              * 
@@ -251,7 +280,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DayStatistic")
-        private java.util.List < DayStatistic> dayStatistic;
+        private java.util.List<DayStatistic> dayStatistic;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -284,7 +313,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         /**
          * @return dayStatistic
          */
-        public java.util.List < DayStatistic> getDayStatistic() {
+        public java.util.List<DayStatistic> getDayStatistic() {
             return this.dayStatistic;
         }
 
@@ -317,16 +346,27 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DayStatistic> dayStatistic; 
+            private java.util.List<DayStatistic> dayStatistic; 
             private Long total; 
             private Long totalFail; 
             private Long totalSuccess; 
             private Long totalUnknown; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dayStatistic = model.dayStatistic;
+                this.total = model.total;
+                this.totalFail = model.totalFail;
+                this.totalSuccess = model.totalSuccess;
+                this.totalUnknown = model.totalUnknown;
+            } 
+
             /**
              * <p>The information about the daily calls.</p>
              */
-            public Builder dayStatistic(java.util.List < DayStatistic> dayStatistic) {
+            public Builder dayStatistic(java.util.List<DayStatistic> dayStatistic) {
                 this.dayStatistic = dayStatistic;
                 return this;
             }

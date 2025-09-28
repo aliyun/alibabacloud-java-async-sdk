@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.List < Model> model;
+    private java.util.List<Model> model;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,6 +50,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
 
     public static QuerySendDetailsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,7 +80,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -93,9 +102,21 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySendDetailsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -134,7 +155,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -286,6 +307,20 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             private String sendDate; 
             private Long sendStatus; 
             private String templateCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.content = model.content;
+                this.errCode = model.errCode;
+                this.outId = model.outId;
+                this.phoneNum = model.phoneNum;
+                this.receiveDate = model.receiveDate;
+                this.sendDate = model.sendDate;
+                this.sendStatus = model.sendStatus;
+                this.templateCode = model.templateCode;
+            } 
 
             /**
              * <p>The content of the text message.</p>

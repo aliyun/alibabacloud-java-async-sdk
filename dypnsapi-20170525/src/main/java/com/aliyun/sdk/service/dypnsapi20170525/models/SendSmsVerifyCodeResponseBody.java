@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,6 +29,9 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
@@ -32,6 +40,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -41,6 +50,10 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
 
     public static SendSmsVerifyCodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +85,13 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -83,7 +103,20 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private Model model; 
+        private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendSmsVerifyCodeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -123,6 +156,14 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
          */
         public Builder model(Model model) {
             this.model = model;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -214,6 +255,16 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
             private String outId; 
             private String requestId; 
             private String verifyCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.bizId = model.bizId;
+                this.outId = model.outId;
+                this.requestId = model.requestId;
+                this.verifyCode = model.verifyCode;
+            } 
 
             /**
              * <p>The business ID.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SchemeQueryResultDTO schemeQueryResultDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVerifySchemeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.schemeQueryResultDTO = model.schemeQueryResultDTO;
+        } 
 
         /**
          * <p>The response code. OK indicates that the request is successful. For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</p>
@@ -151,6 +170,13 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appEncryptInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemeQueryResultDTO model) {
+                this.appEncryptInfo = model.appEncryptInfo;
+            } 
 
             /**
              * <p>The key generated when you create a service in the console.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class GetAuthTokenResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private TokenInfo tokenInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAuthTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.tokenInfo = model.tokenInfo;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -167,6 +186,14 @@ public class GetAuthTokenResponseBody extends TeaModel {
         public static final class Builder {
             private String accessToken; 
             private String jwtToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(TokenInfo model) {
+                this.accessToken = model.accessToken;
+                this.jwtToken = model.jwtToken;
+            } 
 
             /**
              * <p>The business authentication token.</p>

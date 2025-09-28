@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
 
     public static CheckSmsVerifyCodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         private String message; 
         private Model model; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckSmsVerifyCodeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -194,6 +214,14 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String outId; 
             private String verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.outId = model.outId;
+                this.verifyResult = model.verifyResult;
+            } 
 
             /**
              * <p>The external ID.</p>

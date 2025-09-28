@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGateVerifyBillingPublicResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -228,6 +247,19 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             private String sceneName; 
             private String singlePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneBillingList model) {
+                this.add = model.add;
+                this.amount = model.amount;
+                this.appName = model.appName;
+                this.itemName = model.itemName;
+                this.sceneCode = model.sceneCode;
+                this.sceneName = model.sceneName;
+                this.singlePrice = model.singlePrice;
+            } 
+
             /**
              * <p>The billable items.</p>
              * 
@@ -323,7 +355,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         private String amountSum;
 
         @com.aliyun.core.annotation.NameInMap("SceneBillingList")
-        private java.util.List < SceneBillingList> sceneBillingList;
+        private java.util.List<SceneBillingList> sceneBillingList;
 
         private Data(Builder builder) {
             this.amountSum = builder.amountSum;
@@ -348,13 +380,21 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         /**
          * @return sceneBillingList
          */
-        public java.util.List < SceneBillingList> getSceneBillingList() {
+        public java.util.List<SceneBillingList> getSceneBillingList() {
             return this.sceneBillingList;
         }
 
         public static final class Builder {
             private String amountSum; 
-            private java.util.List < SceneBillingList> sceneBillingList; 
+            private java.util.List<SceneBillingList> sceneBillingList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.amountSum = model.amountSum;
+                this.sceneBillingList = model.sceneBillingList;
+            } 
 
             /**
              * <p>The fees generated for all verification services. Unitrogen: CNY.</p>
@@ -370,7 +410,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             /**
              * <p>The details of fees.</p>
              */
-            public Builder sceneBillingList(java.util.List < SceneBillingList> sceneBillingList) {
+            public Builder sceneBillingList(java.util.List<SceneBillingList> sceneBillingList) {
                 this.sceneBillingList = sceneBillingList;
                 return this;
             }
