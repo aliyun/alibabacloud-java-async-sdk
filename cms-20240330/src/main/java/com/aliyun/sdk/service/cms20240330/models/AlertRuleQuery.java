@@ -23,8 +23,14 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dimensions")
     private java.util.List<java.util.Map<String, String>> dimensions;
 
+    @com.aliyun.core.annotation.NameInMap("domain")
+    private String domain;
+
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
+
+    @com.aliyun.core.annotation.NameInMap("entityFilter")
+    private EntityFilter entityFilter;
 
     @com.aliyun.core.annotation.NameInMap("expr")
     private String expr;
@@ -40,6 +46,12 @@ public class AlertRuleQuery extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
+
+    @com.aliyun.core.annotation.NameInMap("metric")
+    private String metric;
+
+    @com.aliyun.core.annotation.NameInMap("metricSet")
+    private String metricSet;
 
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
@@ -63,12 +75,16 @@ public class AlertRuleQuery extends TeaModel {
     private AlertRuleQuery(Builder builder) {
         this.checkAfterDataComplete = builder.checkAfterDataComplete;
         this.dimensions = builder.dimensions;
+        this.domain = builder.domain;
         this.duration = builder.duration;
+        this.entityFilter = builder.entityFilter;
         this.expr = builder.expr;
         this.firstJoin = builder.firstJoin;
         this.groupFieldList = builder.groupFieldList;
         this.groupId = builder.groupId;
         this.groupType = builder.groupType;
+        this.metric = builder.metric;
+        this.metricSet = builder.metricSet;
         this.namespace = builder.namespace;
         this.queries = builder.queries;
         this.relationType = builder.relationType;
@@ -104,10 +120,24 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
      * @return duration
      */
     public Long getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return entityFilter
+     */
+    public EntityFilter getEntityFilter() {
+        return this.entityFilter;
     }
 
     /**
@@ -143,6 +173,20 @@ public class AlertRuleQuery extends TeaModel {
      */
     public String getGroupType() {
         return this.groupType;
+    }
+
+    /**
+     * @return metric
+     */
+    public String getMetric() {
+        return this.metric;
+    }
+
+    /**
+     * @return metricSet
+     */
+    public String getMetricSet() {
+        return this.metricSet;
     }
 
     /**
@@ -190,12 +234,16 @@ public class AlertRuleQuery extends TeaModel {
     public static final class Builder {
         private Boolean checkAfterDataComplete; 
         private java.util.List<java.util.Map<String, String>> dimensions; 
+        private String domain; 
         private Long duration; 
+        private EntityFilter entityFilter; 
         private String expr; 
         private AlertRuleSlsQueryJoin firstJoin; 
         private java.util.List<String> groupFieldList; 
         private String groupId; 
         private String groupType; 
+        private String metric; 
+        private String metricSet; 
         private String namespace; 
         private java.util.List<Queries> queries; 
         private String relationType; 
@@ -209,12 +257,16 @@ public class AlertRuleQuery extends TeaModel {
         private Builder(AlertRuleQuery model) {
             this.checkAfterDataComplete = model.checkAfterDataComplete;
             this.dimensions = model.dimensions;
+            this.domain = model.domain;
             this.duration = model.duration;
+            this.entityFilter = model.entityFilter;
             this.expr = model.expr;
             this.firstJoin = model.firstJoin;
             this.groupFieldList = model.groupFieldList;
             this.groupId = model.groupId;
             this.groupType = model.groupType;
+            this.metric = model.metric;
+            this.metricSet = model.metricSet;
             this.namespace = model.namespace;
             this.queries = model.queries;
             this.relationType = model.relationType;
@@ -240,10 +292,26 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * domain.
+         */
+        public Builder domain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+
+        /**
          * duration.
          */
         public Builder duration(Long duration) {
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * entityFilter.
+         */
+        public Builder entityFilter(EntityFilter entityFilter) {
+            this.entityFilter = entityFilter;
             return this;
         }
 
@@ -284,6 +352,22 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * metric.
+         */
+        public Builder metric(String metric) {
+            this.metric = metric;
+            return this;
+        }
+
+        /**
+         * metricSet.
+         */
+        public Builder metricSet(String metricSet) {
+            this.metricSet = metricSet;
             return this;
         }
 
@@ -342,6 +426,199 @@ public class AlertRuleQuery extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class Filters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("field")
+        private String field;
+
+        @com.aliyun.core.annotation.NameInMap("operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Filters(Builder builder) {
+            this.field = builder.field;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return field
+         */
+        public String getField() {
+            return this.field;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String field; 
+            private String operator; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.field = model.field;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
+            /**
+             * field.
+             */
+            public Builder field(String field) {
+                this.field = field;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Filters build() {
+                return new Filters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class EntityFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("filters")
+        private java.util.List<Filters> filters;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private EntityFilter(Builder builder) {
+            this.domain = builder.domain;
+            this.filters = builder.filters;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EntityFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return filters
+         */
+        public java.util.List<Filters> getFilters() {
+            return this.filters;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private java.util.List<Filters> filters; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityFilter model) {
+                this.domain = model.domain;
+                this.filters = model.filters;
+                this.type = model.type;
+            } 
+
+            /**
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * filters.
+             */
+            public Builder filters(java.util.List<Filters> filters) {
+                this.filters = filters;
+                return this;
+            }
+
+            /**
+             * <p>查询类型</p>
+             * <p>This parameter is required.</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public EntityFilter build() {
+                return new EntityFilter(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AlertRuleQuery} extends {@link TeaModel}

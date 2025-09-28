@@ -230,10 +230,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * @param request the request parameters of ListIntegrationPolicies  ListIntegrationPoliciesRequest
+     * @return ListIntegrationPoliciesResponse
+     */
+    CompletableFuture<ListIntegrationPoliciesResponse> listIntegrationPolicies(ListIntegrationPoliciesRequest request);
+
+    /**
      * @param request the request parameters of ListIntegrationPolicyCustomScrapeJobRules  ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
      */
     CompletableFuture<ListIntegrationPolicyCustomScrapeJobRulesResponse> listIntegrationPolicyCustomScrapeJobRules(ListIntegrationPolicyCustomScrapeJobRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListIntegrationPolicyDashboards  ListIntegrationPolicyDashboardsRequest
+     * @return ListIntegrationPolicyDashboardsResponse
+     */
+    CompletableFuture<ListIntegrationPolicyDashboardsResponse> listIntegrationPolicyDashboards(ListIntegrationPolicyDashboardsRequest request);
 
     /**
      * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
