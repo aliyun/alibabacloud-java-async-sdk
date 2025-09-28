@@ -35,6 +35,7 @@ public class UploadUserCertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Query
@@ -229,6 +230,7 @@ public class UploadUserCertificateRequest extends Request {
          * <blockquote>
          * <p> The name must be unique within an Alibaba Cloud account.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cert-1</p>
