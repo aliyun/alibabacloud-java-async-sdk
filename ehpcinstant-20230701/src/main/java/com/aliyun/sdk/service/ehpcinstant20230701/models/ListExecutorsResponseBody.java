@@ -425,6 +425,9 @@ public class ListExecutorsResponseBody extends TeaModel {
      * <p>ListExecutorsResponseBody</p>
      */
     public static class Executors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocationSpec")
+        private String allocationSpec;
+
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
@@ -495,6 +498,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         private String vswitchId;
 
         private Executors(Builder builder) {
+            this.allocationSpec = builder.allocationSpec;
             this.appName = builder.appName;
             this.arrayIndex = builder.arrayIndex;
             this.blockDuration = builder.blockDuration;
@@ -526,6 +530,13 @@ public class ListExecutorsResponseBody extends TeaModel {
 
         public static Executors create() {
             return builder().build();
+        }
+
+        /**
+         * @return allocationSpec
+         */
+        public String getAllocationSpec() {
+            return this.allocationSpec;
         }
 
         /**
@@ -690,6 +701,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String allocationSpec; 
             private String appName; 
             private Integer arrayIndex; 
             private Integer blockDuration; 
@@ -718,6 +730,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             private Builder(Executors model) {
+                this.allocationSpec = model.allocationSpec;
                 this.appName = model.appName;
                 this.arrayIndex = model.arrayIndex;
                 this.blockDuration = model.blockDuration;
@@ -742,6 +755,14 @@ public class ListExecutorsResponseBody extends TeaModel {
                 this.taskSustainable = model.taskSustainable;
                 this.vswitchId = model.vswitchId;
             } 
+
+            /**
+             * AllocationSpec.
+             */
+            public Builder allocationSpec(String allocationSpec) {
+                this.allocationSpec = allocationSpec;
+                return this;
+            }
 
             /**
              * AppName.

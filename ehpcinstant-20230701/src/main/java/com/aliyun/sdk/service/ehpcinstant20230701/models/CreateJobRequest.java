@@ -1028,6 +1028,12 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("EnableHT")
+        private Boolean enableHT;
+
+        @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
+        private String hostNamePrefix;
+
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List<String> instanceTypes;
 
@@ -1037,6 +1043,8 @@ public class CreateJobRequest extends Request {
         private Resource(Builder builder) {
             this.cores = builder.cores;
             this.disks = builder.disks;
+            this.enableHT = builder.enableHT;
+            this.hostNamePrefix = builder.hostNamePrefix;
             this.instanceTypes = builder.instanceTypes;
             this.memory = builder.memory;
         }
@@ -1064,6 +1072,20 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return enableHT
+         */
+        public Boolean getEnableHT() {
+            return this.enableHT;
+        }
+
+        /**
+         * @return hostNamePrefix
+         */
+        public String getHostNamePrefix() {
+            return this.hostNamePrefix;
+        }
+
+        /**
          * @return instanceTypes
          */
         public java.util.List<String> getInstanceTypes() {
@@ -1080,6 +1102,8 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private Float cores; 
             private java.util.List<Disks> disks; 
+            private Boolean enableHT; 
+            private String hostNamePrefix; 
             private java.util.List<String> instanceTypes; 
             private Float memory; 
 
@@ -1089,6 +1113,8 @@ public class CreateJobRequest extends Request {
             private Builder(Resource model) {
                 this.cores = model.cores;
                 this.disks = model.disks;
+                this.enableHT = model.enableHT;
+                this.hostNamePrefix = model.hostNamePrefix;
                 this.instanceTypes = model.instanceTypes;
                 this.memory = model.memory;
             } 
@@ -1106,6 +1132,22 @@ public class CreateJobRequest extends Request {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * EnableHT.
+             */
+            public Builder enableHT(Boolean enableHT) {
+                this.enableHT = enableHT;
+                return this;
+            }
+
+            /**
+             * HostNamePrefix.
+             */
+            public Builder hostNamePrefix(String hostNamePrefix) {
+                this.hostNamePrefix = hostNamePrefix;
                 return this;
             }
 

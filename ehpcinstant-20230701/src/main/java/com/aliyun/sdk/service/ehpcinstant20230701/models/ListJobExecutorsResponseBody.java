@@ -518,6 +518,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
      * <p>ListJobExecutorsResponseBody</p>
      */
     public static class Executors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocationSpec")
+        private String allocationSpec;
+
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
 
@@ -561,6 +564,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         private java.util.List<Tags> tags;
 
         private Executors(Builder builder) {
+            this.allocationSpec = builder.allocationSpec;
             this.arrayIndex = builder.arrayIndex;
             this.blockDuration = builder.blockDuration;
             this.createTime = builder.createTime;
@@ -583,6 +587,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
         public static Executors create() {
             return builder().build();
+        }
+
+        /**
+         * @return allocationSpec
+         */
+        public String getAllocationSpec() {
+            return this.allocationSpec;
         }
 
         /**
@@ -684,6 +695,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String allocationSpec; 
             private Integer arrayIndex; 
             private Integer blockDuration; 
             private String createTime; 
@@ -703,6 +715,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             } 
 
             private Builder(Executors model) {
+                this.allocationSpec = model.allocationSpec;
                 this.arrayIndex = model.arrayIndex;
                 this.blockDuration = model.blockDuration;
                 this.createTime = model.createTime;
@@ -718,6 +731,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
                 this.statusReason = model.statusReason;
                 this.tags = model.tags;
             } 
+
+            /**
+             * AllocationSpec.
+             */
+            public Builder allocationSpec(String allocationSpec) {
+                this.allocationSpec = allocationSpec;
+                return this;
+            }
 
             /**
              * ArrayIndex.
