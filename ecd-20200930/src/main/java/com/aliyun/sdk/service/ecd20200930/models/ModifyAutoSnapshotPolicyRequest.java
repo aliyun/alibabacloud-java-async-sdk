@@ -22,6 +22,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
     private String cronExpression;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
@@ -43,6 +47,7 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
     private ModifyAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
         this.cronExpression = builder.cronExpression;
+        this.diskType = builder.diskType;
         this.policyId = builder.policyId;
         this.policyName = builder.policyName;
         this.regionId = builder.regionId;
@@ -67,6 +72,13 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
      */
     public String getCronExpression() {
         return this.cronExpression;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -99,6 +111,7 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAutoSnapshotPolicyRequest, Builder> {
         private String cronExpression; 
+        private String diskType; 
         private String policyId; 
         private String policyName; 
         private String regionId; 
@@ -111,6 +124,7 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         private Builder(ModifyAutoSnapshotPolicyRequest request) {
             super(request);
             this.cronExpression = request.cronExpression;
+            this.diskType = request.diskType;
             this.policyId = request.policyId;
             this.policyName = request.policyName;
             this.regionId = request.regionId;
@@ -126,6 +140,15 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
             this.cronExpression = cronExpression;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

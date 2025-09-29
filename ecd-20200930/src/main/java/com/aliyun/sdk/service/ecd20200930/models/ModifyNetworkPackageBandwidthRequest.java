@@ -23,7 +23,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 2)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20000, minimum = 2)
     private Integer bandwidth;
 
     @com.aliyun.core.annotation.Query

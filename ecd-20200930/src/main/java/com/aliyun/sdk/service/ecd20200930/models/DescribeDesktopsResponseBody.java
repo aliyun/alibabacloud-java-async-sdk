@@ -1453,6 +1453,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroups")
         private java.util.List<ResourceGroups> resourceGroups;
 
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
+        private String serialNumber;
+
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
@@ -1545,6 +1548,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.resourceGroups = builder.resourceGroups;
+            this.serialNumber = builder.serialNumber;
             this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
             this.snapshotPolicyId = builder.snapshotPolicyId;
@@ -1933,6 +1937,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serialNumber
+         */
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
          * @return sessionType
          */
         public String getSessionType() {
@@ -2076,6 +2087,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String progress; 
             private String protocolType; 
             private java.util.List<ResourceGroups> resourceGroups; 
+            private String serialNumber; 
             private String sessionType; 
             private java.util.List<Sessions> sessions; 
             private String snapshotPolicyId; 
@@ -2146,6 +2158,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.progress = model.progress;
                 this.protocolType = model.protocolType;
                 this.resourceGroups = model.resourceGroups;
+                this.serialNumber = model.serialNumber;
                 this.sessionType = model.sessionType;
                 this.sessions = model.sessions;
                 this.snapshotPolicyId = model.snapshotPolicyId;
@@ -2766,6 +2779,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
+                return this;
+            }
+
+            /**
+             * SerialNumber.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
                 return this;
             }
 

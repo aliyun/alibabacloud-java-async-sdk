@@ -131,6 +131,9 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopNum")
         private Integer desktopNum;
 
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
@@ -153,6 +156,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.cronExpression = builder.cronExpression;
             this.desktopNum = builder.desktopNum;
+            this.diskType = builder.diskType;
             this.policyId = builder.policyId;
             this.policyName = builder.policyName;
             this.regionId = builder.regionId;
@@ -188,6 +192,13 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
          */
         public Integer getDesktopNum() {
             return this.desktopNum;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
         }
 
         /**
@@ -236,6 +247,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             private String creationTime; 
             private String cronExpression; 
             private Integer desktopNum; 
+            private String diskType; 
             private String policyId; 
             private String policyName; 
             private String regionId; 
@@ -250,6 +262,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.cronExpression = model.cronExpression;
                 this.desktopNum = model.desktopNum;
+                this.diskType = model.diskType;
                 this.policyId = model.policyId;
                 this.policyName = model.policyName;
                 this.regionId = model.regionId;
@@ -288,6 +301,14 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
              */
             public Builder desktopNum(Integer desktopNum) {
                 this.desktopNum = desktopNum;
+                return this;
+            }
+
+            /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
                 return this;
             }
 

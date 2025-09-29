@@ -31,6 +31,10 @@ public class CreateNetworkPackageRequest extends Request {
     private Integer bandwidth;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelCookie")
+    private String channelCookie;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
@@ -68,6 +72,7 @@ public class CreateNetworkPackageRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bandwidth = builder.bandwidth;
+        this.channelCookie = builder.channelCookie;
         this.internetChargeType = builder.internetChargeType;
         this.officeSiteId = builder.officeSiteId;
         this.payType = builder.payType;
@@ -110,6 +115,13 @@ public class CreateNetworkPackageRequest extends Request {
      */
     public Integer getBandwidth() {
         return this.bandwidth;
+    }
+
+    /**
+     * @return channelCookie
+     */
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     /**
@@ -172,6 +184,7 @@ public class CreateNetworkPackageRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private Integer bandwidth; 
+        private String channelCookie; 
         private String internetChargeType; 
         private String officeSiteId; 
         private String payType; 
@@ -190,6 +203,7 @@ public class CreateNetworkPackageRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bandwidth = request.bandwidth;
+            this.channelCookie = request.channelCookie;
             this.internetChargeType = request.internetChargeType;
             this.officeSiteId = request.officeSiteId;
             this.payType = request.payType;
@@ -273,6 +287,15 @@ public class CreateNetworkPackageRequest extends Request {
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
             this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * ChannelCookie.
+         */
+        public Builder channelCookie(String channelCookie) {
+            this.putQueryParameter("ChannelCookie", channelCookie);
+            this.channelCookie = channelCookie;
             return this;
         }
 

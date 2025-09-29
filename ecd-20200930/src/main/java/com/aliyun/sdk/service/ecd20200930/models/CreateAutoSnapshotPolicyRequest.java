@@ -23,6 +23,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private String cronExpression;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 2)
     private String policyName;
@@ -40,6 +44,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private CreateAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
         this.cronExpression = builder.cronExpression;
+        this.diskType = builder.diskType;
         this.policyName = builder.policyName;
         this.regionId = builder.regionId;
         this.retentionDays = builder.retentionDays;
@@ -66,6 +71,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return policyName
      */
     public String getPolicyName() {
@@ -88,6 +100,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAutoSnapshotPolicyRequest, Builder> {
         private String cronExpression; 
+        private String diskType; 
         private String policyName; 
         private String regionId; 
         private Integer retentionDays; 
@@ -99,6 +112,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         private Builder(CreateAutoSnapshotPolicyRequest request) {
             super(request);
             this.cronExpression = request.cronExpression;
+            this.diskType = request.diskType;
             this.policyName = request.policyName;
             this.regionId = request.regionId;
             this.retentionDays = request.retentionDays;
@@ -114,6 +128,15 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
             this.cronExpression = cronExpression;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

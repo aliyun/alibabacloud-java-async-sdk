@@ -43,6 +43,10 @@ public class CreateDesktopsRequest extends Request {
     private java.util.List<BundleModels> bundleModels;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelCookie")
+    private String channelCookie;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
@@ -175,6 +179,7 @@ public class CreateDesktopsRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.bundleId = builder.bundleId;
         this.bundleModels = builder.bundleModels;
+        this.channelCookie = builder.channelCookie;
         this.chargeType = builder.chargeType;
         this.desktopAttachment = builder.desktopAttachment;
         this.desktopMemberIp = builder.desktopMemberIp;
@@ -261,6 +266,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public java.util.List<BundleModels> getBundleModels() {
         return this.bundleModels;
+    }
+
+    /**
+     * @return channelCookie
+     */
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     /**
@@ -487,6 +499,7 @@ public class CreateDesktopsRequest extends Request {
         private Boolean autoRenew; 
         private String bundleId; 
         private java.util.List<BundleModels> bundleModels; 
+        private String channelCookie; 
         private String chargeType; 
         private DesktopAttachment desktopAttachment; 
         private String desktopMemberIp; 
@@ -531,6 +544,7 @@ public class CreateDesktopsRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.bundleId = request.bundleId;
             this.bundleModels = request.bundleModels;
+            this.channelCookie = request.channelCookie;
             this.chargeType = request.chargeType;
             this.desktopAttachment = request.desktopAttachment;
             this.desktopMemberIp = request.desktopMemberIp;
@@ -627,6 +641,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder bundleModels(java.util.List<BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
             this.bundleModels = bundleModels;
+            return this;
+        }
+
+        /**
+         * ChannelCookie.
+         */
+        public Builder channelCookie(String channelCookie) {
+            this.putQueryParameter("ChannelCookie", channelCookie);
+            this.channelCookie = channelCookie;
             return this;
         }
 
