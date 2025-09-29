@@ -359,6 +359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExpandDataVolumeResponse> expandDataVolume(ExpandDataVolumeRequest request);
 
     /**
+     * @param request the request parameters of ExpandPhoneDataVolume  ExpandPhoneDataVolumeRequest
+     * @return ExpandPhoneDataVolumeResponse
+     */
+    CompletableFuture<ExpandPhoneDataVolumeResponse> expandPhoneDataVolume(ExpandPhoneDataVolumeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</p>
      * 

@@ -23,9 +23,13 @@ public class RunCommandResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RunCommandInfos")
+    private java.util.List<RunCommandInfos> runCommandInfos;
+
     private RunCommandResponseBody(Builder builder) {
         this.invokeId = builder.invokeId;
         this.requestId = builder.requestId;
+        this.runCommandInfos = builder.runCommandInfos;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class RunCommandResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return runCommandInfos
+     */
+    public java.util.List<RunCommandInfos> getRunCommandInfos() {
+        return this.runCommandInfos;
+    }
+
     public static final class Builder {
         private String invokeId; 
         private String requestId; 
+        private java.util.List<RunCommandInfos> runCommandInfos; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class RunCommandResponseBody extends TeaModel {
         private Builder(RunCommandResponseBody model) {
             this.invokeId = model.invokeId;
             this.requestId = model.requestId;
+            this.runCommandInfos = model.runCommandInfos;
         } 
 
         /**
@@ -88,10 +101,96 @@ public class RunCommandResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * RunCommandInfos.
+         */
+        public Builder runCommandInfos(java.util.List<RunCommandInfos> runCommandInfos) {
+            this.runCommandInfos = runCommandInfos;
+            return this;
+        }
+
         public RunCommandResponseBody build() {
             return new RunCommandResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link RunCommandResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCommandResponseBody</p>
+     */
+    public static class RunCommandInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
+        private String invokeId;
+
+        private RunCommandInfos(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.invokeId = builder.invokeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RunCommandInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return invokeId
+         */
+        public String getInvokeId() {
+            return this.invokeId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private String invokeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunCommandInfos model) {
+                this.instanceId = model.instanceId;
+                this.invokeId = model.invokeId;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the command execution. You can use the command execution ID to query the output of a command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-gov2ujrk32v4****</p>
+             */
+            public Builder invokeId(String invokeId) {
+                this.invokeId = invokeId;
+                return this;
+            }
+
+            public RunCommandInfos build() {
+                return new RunCommandInfos(this);
+            } 
+
+        } 
+
+    }
 }

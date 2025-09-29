@@ -218,6 +218,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SystemVersion")
+        private String systemVersion;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -244,6 +247,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             this.sourceAppInfoList = builder.sourceAppInfoList;
             this.sourceFilePathList = builder.sourceFilePathList;
             this.status = builder.status;
+            this.systemVersion = builder.systemVersion;
             this.taskId = builder.taskId;
             this.uploadEndpoint = builder.uploadEndpoint;
             this.uploadType = builder.uploadType;
@@ -370,6 +374,13 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemVersion
+         */
+        public String getSystemVersion() {
+            return this.systemVersion;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -407,6 +418,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private java.util.List<String> sourceAppInfoList; 
             private java.util.List<String> sourceFilePathList; 
             private String status; 
+            private String systemVersion; 
             private String taskId; 
             private String uploadEndpoint; 
             private String uploadType; 
@@ -431,6 +443,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
                 this.sourceAppInfoList = model.sourceAppInfoList;
                 this.sourceFilePathList = model.sourceFilePathList;
                 this.status = model.status;
+                this.systemVersion = model.systemVersion;
                 this.taskId = model.taskId;
                 this.uploadEndpoint = model.uploadEndpoint;
                 this.uploadType = model.uploadType;
@@ -608,6 +621,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SystemVersion.
+             */
+            public Builder systemVersion(String systemVersion) {
+                this.systemVersion = systemVersion;
                 return this;
             }
 

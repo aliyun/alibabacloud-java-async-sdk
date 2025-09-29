@@ -22,6 +22,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayConfig")
+    private String displayConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DownBandwidthLimit")
     private Integer downBandwidthLimit;
 
@@ -52,6 +56,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
     private ChangeCloudPhoneNodeRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.displayConfig = builder.displayConfig;
         this.downBandwidthLimit = builder.downBandwidthLimit;
         this.instanceType = builder.instanceType;
         this.nodeId = builder.nodeId;
@@ -79,6 +84,13 @@ public class ChangeCloudPhoneNodeRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return displayConfig
+     */
+    public String getDisplayConfig() {
+        return this.displayConfig;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ChangeCloudPhoneNodeRequest, Builder> {
         private Boolean autoPay; 
+        private String displayConfig; 
         private Integer downBandwidthLimit; 
         private String instanceType; 
         private String nodeId; 
@@ -147,6 +160,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         private Builder(ChangeCloudPhoneNodeRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.displayConfig = request.displayConfig;
             this.downBandwidthLimit = request.downBandwidthLimit;
             this.instanceType = request.instanceType;
             this.nodeId = request.nodeId;
@@ -162,6 +176,15 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * DisplayConfig.
+         */
+        public Builder displayConfig(String displayConfig) {
+            this.putQueryParameter("DisplayConfig", displayConfig);
+            this.displayConfig = displayConfig;
             return this;
         }
 

@@ -347,6 +347,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
+        private String imageVersion;
+
         @com.aliyun.core.annotation.NameInMap("InstalledAppList")
         private String installedAppList;
 
@@ -423,6 +426,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
             this.imageId = builder.imageId;
+            this.imageVersion = builder.imageVersion;
             this.installedAppList = builder.installedAppList;
             this.instanceGroupId = builder.instanceGroupId;
             this.instanceGroupName = builder.instanceGroupName;
@@ -556,6 +560,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return imageVersion
+         */
+        public String getImageVersion() {
+            return this.imageVersion;
         }
 
         /**
@@ -714,6 +725,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String gmtExpired; 
             private String gmtModified; 
             private String imageId; 
+            private String imageVersion; 
             private String installedAppList; 
             private String instanceGroupId; 
             private String instanceGroupName; 
@@ -754,6 +766,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
                 this.gmtExpired = model.gmtExpired;
                 this.gmtModified = model.gmtModified;
                 this.imageId = model.imageId;
+                this.imageVersion = model.imageVersion;
                 this.installedAppList = model.installedAppList;
                 this.instanceGroupId = model.instanceGroupId;
                 this.instanceGroupName = model.instanceGroupName;
@@ -926,6 +939,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageVersion.
+             */
+            public Builder imageVersion(String imageVersion) {
+                this.imageVersion = imageVersion;
                 return this;
             }
 

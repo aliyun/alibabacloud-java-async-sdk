@@ -746,6 +746,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("InternetStatus")
+        private String internetStatus;
+
         @com.aliyun.core.annotation.NameInMap("KeyPairId")
         private String keyPairId;
 
@@ -844,6 +847,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageVersion = builder.imageVersion;
             this.instanceType = builder.instanceType;
+            this.internetStatus = builder.internetStatus;
             this.keyPairId = builder.keyPairId;
             this.memory = builder.memory;
             this.networkInterfaceIp = builder.networkInterfaceIp;
@@ -1054,6 +1058,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return internetStatus
+         */
+        public String getInternetStatus() {
+            return this.internetStatus;
+        }
+
+        /**
          * @return keyPairId
          */
         public String getKeyPairId() {
@@ -1247,6 +1258,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String imageId; 
             private String imageVersion; 
             private String instanceType; 
+            private String internetStatus; 
             private String keyPairId; 
             private Integer memory; 
             private String networkInterfaceIp; 
@@ -1301,6 +1313,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.imageVersion = model.imageVersion;
                 this.instanceType = model.instanceType;
+                this.internetStatus = model.internetStatus;
                 this.keyPairId = model.keyPairId;
                 this.memory = model.memory;
                 this.networkInterfaceIp = model.networkInterfaceIp;
@@ -1575,6 +1588,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InternetStatus.
+             */
+            public Builder internetStatus(String internetStatus) {
+                this.internetStatus = internetStatus;
                 return this;
             }
 
