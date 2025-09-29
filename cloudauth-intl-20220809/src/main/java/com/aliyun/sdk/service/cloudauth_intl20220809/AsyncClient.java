@@ -72,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckVerifyLogResponse> checkVerifyLog(CheckVerifyLogRequest request);
 
     /**
+     * @param request the request parameters of CredentialGetResultIntl  CredentialGetResultIntlRequest
+     * @return CredentialGetResultIntlResponse
+     */
+    CompletableFuture<CredentialGetResultIntlResponse> credentialGetResultIntl(CredentialGetResultIntlRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</p>
      * 
@@ -79,6 +85,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CredentialRecognitionIntlResponse
      */
     CompletableFuture<CredentialRecognitionIntlResponse> credentialRecognitionIntl(CredentialRecognitionIntlRequest request);
+
+    /**
+     * @param request the request parameters of CredentialSubmitIntl  CredentialSubmitIntlRequest
+     * @return CredentialSubmitIntlResponse
+     */
+    CompletableFuture<CredentialSubmitIntlResponse> credentialSubmitIntl(CredentialSubmitIntlRequest request);
 
     /**
      * <b>description</b> :
@@ -130,6 +142,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FaceCompareResponse
      */
     CompletableFuture<FaceCompareResponse> faceCompare(FaceCompareRequest request);
+
+    /**
+     * @param request the request parameters of FaceCrossCompareIntl  FaceCrossCompareIntlRequest
+     * @return FaceCrossCompareIntlResponse
+     */
+    CompletableFuture<FaceCrossCompareIntlResponse> faceCrossCompareIntl(FaceCrossCompareIntlRequest request);
 
     /**
      * @param request the request parameters of FaceDuplicationCheckIntl  FaceDuplicationCheckIntlRequest
@@ -220,5 +238,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TempAccessTokenIntlResponse
      */
     CompletableFuture<TempAccessTokenIntlResponse> tempAccessTokenIntl(TempAccessTokenIntlRequest request);
+
+    /**
+     * @param request the request parameters of TempOssUrlIntl  TempOssUrlIntlRequest
+     * @return TempOssUrlIntlResponse
+     */
+    CompletableFuture<TempOssUrlIntlResponse> tempOssUrlIntl(TempOssUrlIntlRequest request);
 
 }
