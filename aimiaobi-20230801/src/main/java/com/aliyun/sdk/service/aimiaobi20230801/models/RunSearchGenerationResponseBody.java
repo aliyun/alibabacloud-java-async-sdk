@@ -496,9 +496,150 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
+    public static class ClipInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("From")
+        private Double from;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("To")
+        private Double to;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private ClipInfos(Builder builder) {
+            this.from = builder.from;
+            this.score = builder.score;
+            this.text = builder.text;
+            this.to = builder.to;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClipInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return from
+         */
+        public Double getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return to
+         */
+        public Double getTo() {
+            return this.to;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Double from; 
+            private Double score; 
+            private String text; 
+            private Double to; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
+            /**
+             * From.
+             */
+            public Builder from(Double from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * To.
+             */
+            public Builder to(Double to) {
+                this.to = to;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public ClipInfos build() {
+                return new ClipInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
     public static class SearchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Article")
         private Article article;
+
+        @com.aliyun.core.annotation.NameInMap("ClipInfos")
+        private java.util.List<ClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -506,10 +647,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
+        @com.aliyun.core.annotation.NameInMap("TraceabilityId")
+        private String traceabilityId;
+
         private SearchResult(Builder builder) {
             this.article = builder.article;
+            this.clipInfos = builder.clipInfos;
             this.fileUrl = builder.fileUrl;
             this.mediaId = builder.mediaId;
+            this.traceabilityId = builder.traceabilityId;
         }
 
         public static Builder builder() {
@@ -528,6 +674,498 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return clipInfos
+         */
+        public java.util.List<ClipInfos> getClipInfos() {
+            return this.clipInfos;
+        }
+
+        /**
+         * @return fileUrl
+         */
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        /**
+         * @return traceabilityId
+         */
+        public String getTraceabilityId() {
+            return this.traceabilityId;
+        }
+
+        public static final class Builder {
+            private Article article; 
+            private java.util.List<ClipInfos> clipInfos; 
+            private String fileUrl; 
+            private String mediaId; 
+            private String traceabilityId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.traceabilityId = model.traceabilityId;
+            } 
+
+            /**
+             * Article.
+             */
+            public Builder article(Article article) {
+                this.article = article;
+                return this;
+            }
+
+            /**
+             * ClipInfos.
+             */
+            public Builder clipInfos(java.util.List<ClipInfos> clipInfos) {
+                this.clipInfos = clipInfos;
+                return this;
+            }
+
+            /**
+             * FileUrl.
+             */
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * TraceabilityId.
+             */
+            public Builder traceabilityId(String traceabilityId) {
+                this.traceabilityId = traceabilityId;
+                return this;
+            }
+
+            public SearchResult build() {
+                return new SearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class AudioSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SearchResult")
+        private java.util.List<SearchResult> searchResult;
+
+        private AudioSearchResult(Builder builder) {
+            this.searchResult = builder.searchResult;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return searchResult
+         */
+        public java.util.List<SearchResult> getSearchResult() {
+            return this.searchResult;
+        }
+
+        public static final class Builder {
+            private java.util.List<SearchResult> searchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioSearchResult model) {
+                this.searchResult = model.searchResult;
+            } 
+
+            /**
+             * SearchResult.
+             */
+            public Builder searchResult(java.util.List<SearchResult> searchResult) {
+                this.searchResult = searchResult;
+                return this;
+            }
+
+            public AudioSearchResult build() {
+                return new AudioSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class SearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DocId")
+        private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
+        private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
+        private String searchSourceName;
+
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private SearchResultArticle(Builder builder) {
+            this.docId = builder.docId;
+            this.docUuid = builder.docUuid;
+            this.searchSourceName = builder.searchSourceName;
+            this.summary = builder.summary;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchResultArticle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return docUuid
+         */
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        /**
+         * @return searchSourceName
+         */
+        public String getSearchSourceName() {
+            return this.searchSourceName;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String docId; 
+            private String docUuid; 
+            private String searchSourceName; 
+            private String summary; 
+            private String title; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * DocId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * DocUuid.
+             */
+            public Builder docUuid(String docUuid) {
+                this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * SearchSourceName.
+             */
+            public Builder searchSourceName(String searchSourceName) {
+                this.searchSourceName = searchSourceName;
+                return this;
+            }
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public SearchResultArticle build() {
+                return new SearchResultArticle(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class SearchResultClipInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("From")
+        private Double from;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("To")
+        private Double to;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private SearchResultClipInfos(Builder builder) {
+            this.from = builder.from;
+            this.score = builder.score;
+            this.text = builder.text;
+            this.to = builder.to;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchResultClipInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return from
+         */
+        public Double getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return to
+         */
+        public Double getTo() {
+            return this.to;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Double from; 
+            private Double score; 
+            private String text; 
+            private Double to; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchResultClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
+            /**
+             * From.
+             */
+            public Builder from(Double from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * To.
+             */
+            public Builder to(Double to) {
+                this.to = to;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public SearchResultClipInfos build() {
+                return new SearchResultClipInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class AudioSearchResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Article")
+        private SearchResultArticle article;
+
+        @com.aliyun.core.annotation.NameInMap("ClipInfos")
+        private java.util.List<SearchResultClipInfos> clipInfos;
+
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private String fileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private AudioSearchResultSearchResult(Builder builder) {
+            this.article = builder.article;
+            this.clipInfos = builder.clipInfos;
+            this.fileUrl = builder.fileUrl;
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioSearchResultSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return article
+         */
+        public SearchResultArticle getArticle() {
+            return this.article;
+        }
+
+        /**
+         * @return clipInfos
+         */
+        public java.util.List<SearchResultClipInfos> getClipInfos() {
+            return this.clipInfos;
+        }
+
+        /**
          * @return fileUrl
          */
         public String getFileUrl() {
@@ -542,14 +1180,396 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Article article; 
+            private SearchResultArticle article; 
+            private java.util.List<SearchResultClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaId; 
 
             private Builder() {
             } 
 
-            private Builder(SearchResult model) {
+            private Builder(AudioSearchResultSearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
+            /**
+             * Article.
+             */
+            public Builder article(SearchResultArticle article) {
+                this.article = article;
+                return this;
+            }
+
+            /**
+             * ClipInfos.
+             */
+            public Builder clipInfos(java.util.List<SearchResultClipInfos> clipInfos) {
+                this.clipInfos = clipInfos;
+                return this;
+            }
+
+            /**
+             * FileUrl.
+             */
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            public AudioSearchResultSearchResult build() {
+                return new AudioSearchResultSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class ClusterTopicsAudioSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Current")
+        private Integer current;
+
+        @com.aliyun.core.annotation.NameInMap("SearchResult")
+        private AudioSearchResultSearchResult searchResult;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
+
+        private ClusterTopicsAudioSearchResult(Builder builder) {
+            this.current = builder.current;
+            this.searchResult = builder.searchResult;
+            this.size = builder.size;
+            this.total = builder.total;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterTopicsAudioSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return current
+         */
+        public Integer getCurrent() {
+            return this.current;
+        }
+
+        /**
+         * @return searchResult
+         */
+        public AudioSearchResultSearchResult getSearchResult() {
+            return this.searchResult;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public static final class Builder {
+            private Integer current; 
+            private AudioSearchResultSearchResult searchResult; 
+            private Integer size; 
+            private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterTopicsAudioSearchResult model) {
+                this.current = model.current;
+                this.searchResult = model.searchResult;
+                this.size = model.size;
+                this.total = model.total;
+            } 
+
+            /**
+             * Current.
+             */
+            public Builder current(Integer current) {
+                this.current = current;
+                return this;
+            }
+
+            /**
+             * SearchResult.
+             */
+            public Builder searchResult(AudioSearchResultSearchResult searchResult) {
+                this.searchResult = searchResult;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
+                return this;
+            }
+
+            public ClusterTopicsAudioSearchResult build() {
+                return new ClusterTopicsAudioSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class ImageSearchResultSearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DocId")
+        private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
+        private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
+        private String searchSourceName;
+
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private ImageSearchResultSearchResultArticle(Builder builder) {
+            this.docId = builder.docId;
+            this.docUuid = builder.docUuid;
+            this.searchSourceName = builder.searchSourceName;
+            this.summary = builder.summary;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageSearchResultSearchResultArticle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return docUuid
+         */
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        /**
+         * @return searchSourceName
+         */
+        public String getSearchSourceName() {
+            return this.searchSourceName;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String docId; 
+            private String docUuid; 
+            private String searchSourceName; 
+            private String summary; 
+            private String title; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageSearchResultSearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * DocId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * DocUuid.
+             */
+            public Builder docUuid(String docUuid) {
+                this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * SearchSourceName.
+             */
+            public Builder searchSourceName(String searchSourceName) {
+                this.searchSourceName = searchSourceName;
+                return this;
+            }
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public ImageSearchResultSearchResultArticle build() {
+                return new ImageSearchResultSearchResultArticle(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class ImageSearchResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Article")
+        private ImageSearchResultSearchResultArticle article;
+
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private String fileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private ImageSearchResultSearchResult(Builder builder) {
+            this.article = builder.article;
+            this.fileUrl = builder.fileUrl;
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageSearchResultSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return article
+         */
+        public ImageSearchResultSearchResultArticle getArticle() {
+            return this.article;
+        }
+
+        /**
+         * @return fileUrl
+         */
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public static final class Builder {
+            private ImageSearchResultSearchResultArticle article; 
+            private String fileUrl; 
+            private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageSearchResultSearchResult model) {
                 this.article = model.article;
                 this.fileUrl = model.fileUrl;
                 this.mediaId = model.mediaId;
@@ -558,7 +1578,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * Article.
              */
-            public Builder article(Article article) {
+            public Builder article(ImageSearchResultSearchResultArticle article) {
                 this.article = article;
                 return this;
             }
@@ -579,8 +1599,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public SearchResult build() {
-                return new SearchResult(this);
+            public ImageSearchResultSearchResult build() {
+                return new ImageSearchResultSearchResult(this);
             } 
 
         } 
@@ -597,7 +1617,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private Integer current;
 
         @com.aliyun.core.annotation.NameInMap("SearchResult")
-        private java.util.List<SearchResult> searchResult;
+        private java.util.List<ImageSearchResultSearchResult> searchResult;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -630,7 +1650,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return searchResult
          */
-        public java.util.List<SearchResult> getSearchResult() {
+        public java.util.List<ImageSearchResultSearchResult> getSearchResult() {
             return this.searchResult;
         }
 
@@ -650,7 +1670,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer current; 
-            private java.util.List<SearchResult> searchResult; 
+            private java.util.List<ImageSearchResultSearchResult> searchResult; 
             private Integer size; 
             private Integer total; 
 
@@ -675,7 +1695,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * SearchResult.
              */
-            public Builder searchResult(java.util.List<SearchResult> searchResult) {
+            public Builder searchResult(java.util.List<ImageSearchResultSearchResult> searchResult) {
                 this.searchResult = searchResult;
                 return this;
             }
@@ -1165,7 +2185,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class SearchResultArticle extends TeaModel {
+    public static class VideoSearchResultSearchResultArticle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
@@ -1184,7 +2204,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        private SearchResultArticle(Builder builder) {
+        private VideoSearchResultSearchResultArticle(Builder builder) {
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.searchSourceName = builder.searchSourceName;
@@ -1197,7 +2217,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SearchResultArticle create() {
+        public static VideoSearchResultSearchResultArticle create() {
             return builder().build();
         }
 
@@ -1254,7 +2274,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SearchResultArticle model) {
+            private Builder(VideoSearchResultSearchResultArticle model) {
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
                 this.searchSourceName = model.searchSourceName;
@@ -1311,8 +2331,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public SearchResultArticle build() {
-                return new SearchResultArticle(this);
+            public VideoSearchResultSearchResultArticle build() {
+                return new VideoSearchResultSearchResultArticle(this);
             } 
 
         } 
@@ -1324,7 +2344,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class ClipInfos extends TeaModel {
+    public static class VideoSearchResultSearchResultClipInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
@@ -1340,7 +2360,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        private ClipInfos(Builder builder) {
+        private VideoSearchResultSearchResultClipInfos(Builder builder) {
             this.from = builder.from;
             this.score = builder.score;
             this.text = builder.text;
@@ -1352,7 +2372,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ClipInfos create() {
+        public static VideoSearchResultSearchResultClipInfos create() {
             return builder().build();
         }
 
@@ -1401,7 +2421,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(ClipInfos model) {
+            private Builder(VideoSearchResultSearchResultClipInfos model) {
                 this.from = model.from;
                 this.score = model.score;
                 this.text = model.text;
@@ -1449,8 +2469,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public ClipInfos build() {
-                return new ClipInfos(this);
+            public VideoSearchResultSearchResultClipInfos build() {
+                return new VideoSearchResultSearchResultClipInfos(this);
             } 
 
         } 
@@ -1464,10 +2484,10 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      */
     public static class VideoSearchResultSearchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Article")
-        private SearchResultArticle article;
+        private VideoSearchResultSearchResultArticle article;
 
         @com.aliyun.core.annotation.NameInMap("ClipInfos")
-        private java.util.List<ClipInfos> clipInfos;
+        private java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -1493,14 +2513,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return article
          */
-        public SearchResultArticle getArticle() {
+        public VideoSearchResultSearchResultArticle getArticle() {
             return this.article;
         }
 
         /**
          * @return clipInfos
          */
-        public java.util.List<ClipInfos> getClipInfos() {
+        public java.util.List<VideoSearchResultSearchResultClipInfos> getClipInfos() {
             return this.clipInfos;
         }
 
@@ -1519,8 +2539,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private SearchResultArticle article; 
-            private java.util.List<ClipInfos> clipInfos; 
+            private VideoSearchResultSearchResultArticle article; 
+            private java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaId; 
 
@@ -1537,7 +2557,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * Article.
              */
-            public Builder article(SearchResultArticle article) {
+            public Builder article(VideoSearchResultSearchResultArticle article) {
                 this.article = article;
                 return this;
             }
@@ -1545,7 +2565,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * ClipInfos.
              */
-            public Builder clipInfos(java.util.List<ClipInfos> clipInfos) {
+            public Builder clipInfos(java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos) {
                 this.clipInfos = clipInfos;
                 return this;
             }
@@ -1697,6 +2717,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class ClusterTopics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AudioSearchResult")
+        private ClusterTopicsAudioSearchResult audioSearchResult;
+
         @com.aliyun.core.annotation.NameInMap("ImageSearchResult")
         private ImageSearchResult imageSearchResult;
 
@@ -1710,6 +2733,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private VideoSearchResult videoSearchResult;
 
         private ClusterTopics(Builder builder) {
+            this.audioSearchResult = builder.audioSearchResult;
             this.imageSearchResult = builder.imageSearchResult;
             this.textSearchResult = builder.textSearchResult;
             this.topic = builder.topic;
@@ -1722,6 +2746,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static ClusterTopics create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioSearchResult
+         */
+        public ClusterTopicsAudioSearchResult getAudioSearchResult() {
+            return this.audioSearchResult;
         }
 
         /**
@@ -1753,6 +2784,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ClusterTopicsAudioSearchResult audioSearchResult; 
             private ImageSearchResult imageSearchResult; 
             private TextSearchResult textSearchResult; 
             private String topic; 
@@ -1762,11 +2794,20 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(ClusterTopics model) {
+                this.audioSearchResult = model.audioSearchResult;
                 this.imageSearchResult = model.imageSearchResult;
                 this.textSearchResult = model.textSearchResult;
                 this.topic = model.topic;
                 this.videoSearchResult = model.videoSearchResult;
             } 
+
+            /**
+             * AudioSearchResult.
+             */
+            public Builder audioSearchResult(ClusterTopicsAudioSearchResult audioSearchResult) {
+                this.audioSearchResult = audioSearchResult;
+                return this;
+            }
 
             /**
              * ImageSearchResult.
@@ -2905,7 +3946,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class ImageSearchResultSearchResultArticle extends TeaModel {
+    public static class GeneratedContentImageSearchResultSearchResultArticle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
@@ -2924,7 +3965,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        private ImageSearchResultSearchResultArticle(Builder builder) {
+        private GeneratedContentImageSearchResultSearchResultArticle(Builder builder) {
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.searchSourceName = builder.searchSourceName;
@@ -2937,7 +3978,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ImageSearchResultSearchResultArticle create() {
+        public static GeneratedContentImageSearchResultSearchResultArticle create() {
             return builder().build();
         }
 
@@ -2994,7 +4035,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(ImageSearchResultSearchResultArticle model) {
+            private Builder(GeneratedContentImageSearchResultSearchResultArticle model) {
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
                 this.searchSourceName = model.searchSourceName;
@@ -3051,8 +4092,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public ImageSearchResultSearchResultArticle build() {
-                return new ImageSearchResultSearchResultArticle(this);
+            public GeneratedContentImageSearchResultSearchResultArticle build() {
+                return new GeneratedContentImageSearchResultSearchResultArticle(this);
             } 
 
         } 
@@ -3064,9 +4105,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class ImageSearchResultSearchResult extends TeaModel {
+    public static class GeneratedContentImageSearchResultSearchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Article")
-        private ImageSearchResultSearchResultArticle article;
+        private GeneratedContentImageSearchResultSearchResultArticle article;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -3074,24 +4115,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        private ImageSearchResultSearchResult(Builder builder) {
+        @com.aliyun.core.annotation.NameInMap("TraceabilityId")
+        private String traceabilityId;
+
+        private GeneratedContentImageSearchResultSearchResult(Builder builder) {
             this.article = builder.article;
             this.fileUrl = builder.fileUrl;
             this.mediaId = builder.mediaId;
+            this.traceabilityId = builder.traceabilityId;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ImageSearchResultSearchResult create() {
+        public static GeneratedContentImageSearchResultSearchResult create() {
             return builder().build();
         }
 
         /**
          * @return article
          */
-        public ImageSearchResultSearchResultArticle getArticle() {
+        public GeneratedContentImageSearchResultSearchResultArticle getArticle() {
             return this.article;
         }
 
@@ -3109,24 +4154,33 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        /**
+         * @return traceabilityId
+         */
+        public String getTraceabilityId() {
+            return this.traceabilityId;
+        }
+
         public static final class Builder {
-            private ImageSearchResultSearchResultArticle article; 
+            private GeneratedContentImageSearchResultSearchResultArticle article; 
             private String fileUrl; 
             private String mediaId; 
+            private String traceabilityId; 
 
             private Builder() {
             } 
 
-            private Builder(ImageSearchResultSearchResult model) {
+            private Builder(GeneratedContentImageSearchResultSearchResult model) {
                 this.article = model.article;
                 this.fileUrl = model.fileUrl;
                 this.mediaId = model.mediaId;
+                this.traceabilityId = model.traceabilityId;
             } 
 
             /**
              * Article.
              */
-            public Builder article(ImageSearchResultSearchResultArticle article) {
+            public Builder article(GeneratedContentImageSearchResultSearchResultArticle article) {
                 this.article = article;
                 return this;
             }
@@ -3147,8 +4201,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public ImageSearchResultSearchResult build() {
-                return new ImageSearchResultSearchResult(this);
+            /**
+             * TraceabilityId.
+             */
+            public Builder traceabilityId(String traceabilityId) {
+                this.traceabilityId = traceabilityId;
+                return this;
+            }
+
+            public GeneratedContentImageSearchResultSearchResult build() {
+                return new GeneratedContentImageSearchResultSearchResult(this);
             } 
 
         } 
@@ -3162,7 +4224,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      */
     public static class GeneratedContentImageSearchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SearchResult")
-        private java.util.List<ImageSearchResultSearchResult> searchResult;
+        private java.util.List<GeneratedContentImageSearchResultSearchResult> searchResult;
 
         private GeneratedContentImageSearchResult(Builder builder) {
             this.searchResult = builder.searchResult;
@@ -3179,12 +4241,12 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return searchResult
          */
-        public java.util.List<ImageSearchResultSearchResult> getSearchResult() {
+        public java.util.List<GeneratedContentImageSearchResultSearchResult> getSearchResult() {
             return this.searchResult;
         }
 
         public static final class Builder {
-            private java.util.List<ImageSearchResultSearchResult> searchResult; 
+            private java.util.List<GeneratedContentImageSearchResultSearchResult> searchResult; 
 
             private Builder() {
             } 
@@ -3196,7 +4258,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * SearchResult.
              */
-            public Builder searchResult(java.util.List<ImageSearchResultSearchResult> searchResult) {
+            public Builder searchResult(java.util.List<GeneratedContentImageSearchResultSearchResult> searchResult) {
                 this.searchResult = searchResult;
                 return this;
             }
@@ -4001,6 +5063,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class NewsCoordinate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaType")
+        private String mediaType;
+
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
@@ -4011,6 +5076,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private Integer z;
 
         private NewsCoordinate(Builder builder) {
+            this.mediaType = builder.mediaType;
             this.x = builder.x;
             this.y = builder.y;
             this.z = builder.z;
@@ -4022,6 +5088,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static NewsCoordinate create() {
             return builder().build();
+        }
+
+        /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         /**
@@ -4046,6 +5119,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String mediaType; 
             private Integer x; 
             private Integer y; 
             private Integer z; 
@@ -4054,10 +5128,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(NewsCoordinate model) {
+                this.mediaType = model.mediaType;
                 this.x = model.x;
                 this.y = model.y;
                 this.z = model.z;
             } 
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
+                return this;
+            }
 
             /**
              * X.
@@ -4405,7 +5488,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class SearchResultClipInfos extends TeaModel {
+    public static class MultimodalSearchResultListSearchResultClipInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
@@ -4421,7 +5504,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        private SearchResultClipInfos(Builder builder) {
+        private MultimodalSearchResultListSearchResultClipInfos(Builder builder) {
             this.from = builder.from;
             this.score = builder.score;
             this.text = builder.text;
@@ -4433,7 +5516,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SearchResultClipInfos create() {
+        public static MultimodalSearchResultListSearchResultClipInfos create() {
             return builder().build();
         }
 
@@ -4482,7 +5565,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SearchResultClipInfos model) {
+            private Builder(MultimodalSearchResultListSearchResultClipInfos model) {
                 this.from = model.from;
                 this.score = model.score;
                 this.text = model.text;
@@ -4530,8 +5613,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public SearchResultClipInfos build() {
-                return new SearchResultClipInfos(this);
+            public MultimodalSearchResultListSearchResultClipInfos build() {
+                return new MultimodalSearchResultListSearchResultClipInfos(this);
             } 
 
         } 
@@ -4548,7 +5631,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private MultimodalSearchResultListSearchResultArticle article;
 
         @com.aliyun.core.annotation.NameInMap("ClipInfos")
-        private java.util.List<SearchResultClipInfos> clipInfos;
+        private java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -4585,7 +5668,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return clipInfos
          */
-        public java.util.List<SearchResultClipInfos> getClipInfos() {
+        public java.util.List<MultimodalSearchResultListSearchResultClipInfos> getClipInfos() {
             return this.clipInfos;
         }
 
@@ -4612,7 +5695,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private MultimodalSearchResultListSearchResultArticle article; 
-            private java.util.List<SearchResultClipInfos> clipInfos; 
+            private java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
@@ -4639,7 +5722,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * ClipInfos.
              */
-            public Builder clipInfos(java.util.List<SearchResultClipInfos> clipInfos) {
+            public Builder clipInfos(java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos) {
                 this.clipInfos = clipInfos;
                 return this;
             }
@@ -5810,6 +6893,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("TraceabilityId")
+        private String traceabilityId;
+
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
@@ -5823,6 +6909,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
             this.title = builder.title;
+            this.traceabilityId = builder.traceabilityId;
             this.url = builder.url;
         }
 
@@ -5898,6 +6985,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return traceabilityId
+         */
+        public String getTraceabilityId() {
+            return this.traceabilityId;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -5914,6 +7008,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String searchSourceType; 
             private String summary; 
             private String title; 
+            private String traceabilityId; 
             private String url; 
 
             private Builder() {
@@ -5929,6 +7024,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
                 this.title = model.title;
+                this.traceabilityId = model.traceabilityId;
                 this.url = model.url;
             } 
 
@@ -6001,6 +7097,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * TraceabilityId.
+             */
+            public Builder traceabilityId(String traceabilityId) {
+                this.traceabilityId = traceabilityId;
                 return this;
             }
 
@@ -6239,6 +7343,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class CoordinatesNewsCoordinate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaType")
+        private String mediaType;
+
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
@@ -6249,6 +7356,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private Integer z;
 
         private CoordinatesNewsCoordinate(Builder builder) {
+            this.mediaType = builder.mediaType;
             this.x = builder.x;
             this.y = builder.y;
             this.z = builder.z;
@@ -6260,6 +7368,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static CoordinatesNewsCoordinate create() {
             return builder().build();
+        }
+
+        /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         /**
@@ -6284,6 +7399,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String mediaType; 
             private Integer x; 
             private Integer y; 
             private Integer z; 
@@ -6292,10 +7408,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(CoordinatesNewsCoordinate model) {
+                this.mediaType = model.mediaType;
                 this.x = model.x;
                 this.y = model.y;
                 this.z = model.z;
             } 
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
+                return this;
+            }
 
             /**
              * X.
@@ -6643,7 +7768,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class MultimodalSearchResultListSearchResultClipInfos extends TeaModel {
+    public static class TimelineResultMultimodalSearchResultListSearchResultClipInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
@@ -6659,7 +7784,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        private MultimodalSearchResultListSearchResultClipInfos(Builder builder) {
+        private TimelineResultMultimodalSearchResultListSearchResultClipInfos(Builder builder) {
             this.from = builder.from;
             this.score = builder.score;
             this.text = builder.text;
@@ -6671,7 +7796,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static MultimodalSearchResultListSearchResultClipInfos create() {
+        public static TimelineResultMultimodalSearchResultListSearchResultClipInfos create() {
             return builder().build();
         }
 
@@ -6720,7 +7845,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(MultimodalSearchResultListSearchResultClipInfos model) {
+            private Builder(TimelineResultMultimodalSearchResultListSearchResultClipInfos model) {
                 this.from = model.from;
                 this.score = model.score;
                 this.text = model.text;
@@ -6768,8 +7893,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public MultimodalSearchResultListSearchResultClipInfos build() {
-                return new MultimodalSearchResultListSearchResultClipInfos(this);
+            public TimelineResultMultimodalSearchResultListSearchResultClipInfos build() {
+                return new TimelineResultMultimodalSearchResultListSearchResultClipInfos(this);
             } 
 
         } 
@@ -6786,7 +7911,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private TimelineResultMultimodalSearchResultListSearchResultArticle article;
 
         @com.aliyun.core.annotation.NameInMap("ClipInfos")
-        private java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos;
+        private java.util.List<TimelineResultMultimodalSearchResultListSearchResultClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -6823,7 +7948,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return clipInfos
          */
-        public java.util.List<MultimodalSearchResultListSearchResultClipInfos> getClipInfos() {
+        public java.util.List<TimelineResultMultimodalSearchResultListSearchResultClipInfos> getClipInfos() {
             return this.clipInfos;
         }
 
@@ -6850,7 +7975,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private TimelineResultMultimodalSearchResultListSearchResultArticle article; 
-            private java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos; 
+            private java.util.List<TimelineResultMultimodalSearchResultListSearchResultClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
@@ -6877,7 +8002,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * ClipInfos.
              */
-            public Builder clipInfos(java.util.List<MultimodalSearchResultListSearchResultClipInfos> clipInfos) {
+            public Builder clipInfos(java.util.List<TimelineResultMultimodalSearchResultListSearchResultClipInfos> clipInfos) {
                 this.clipInfos = clipInfos;
                 return this;
             }
@@ -7894,7 +9019,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class VideoSearchResultSearchResultArticle extends TeaModel {
+    public static class GeneratedContentVideoSearchResultSearchResultArticle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
@@ -7913,7 +9038,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        private VideoSearchResultSearchResultArticle(Builder builder) {
+        private GeneratedContentVideoSearchResultSearchResultArticle(Builder builder) {
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.searchSourceName = builder.searchSourceName;
@@ -7926,7 +9051,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static VideoSearchResultSearchResultArticle create() {
+        public static GeneratedContentVideoSearchResultSearchResultArticle create() {
             return builder().build();
         }
 
@@ -7983,7 +9108,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(VideoSearchResultSearchResultArticle model) {
+            private Builder(GeneratedContentVideoSearchResultSearchResultArticle model) {
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
                 this.searchSourceName = model.searchSourceName;
@@ -8040,8 +9165,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public VideoSearchResultSearchResultArticle build() {
-                return new VideoSearchResultSearchResultArticle(this);
+            public GeneratedContentVideoSearchResultSearchResultArticle build() {
+                return new GeneratedContentVideoSearchResultSearchResultArticle(this);
             } 
 
         } 
@@ -8053,7 +9178,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
-    public static class VideoSearchResultSearchResultClipInfos extends TeaModel {
+    public static class GeneratedContentVideoSearchResultSearchResultClipInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
@@ -8069,7 +9194,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        private VideoSearchResultSearchResultClipInfos(Builder builder) {
+        private GeneratedContentVideoSearchResultSearchResultClipInfos(Builder builder) {
             this.from = builder.from;
             this.score = builder.score;
             this.text = builder.text;
@@ -8081,7 +9206,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static VideoSearchResultSearchResultClipInfos create() {
+        public static GeneratedContentVideoSearchResultSearchResultClipInfos create() {
             return builder().build();
         }
 
@@ -8130,7 +9255,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(VideoSearchResultSearchResultClipInfos model) {
+            private Builder(GeneratedContentVideoSearchResultSearchResultClipInfos model) {
                 this.from = model.from;
                 this.score = model.score;
                 this.text = model.text;
@@ -8178,8 +9303,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public VideoSearchResultSearchResultClipInfos build() {
-                return new VideoSearchResultSearchResultClipInfos(this);
+            public GeneratedContentVideoSearchResultSearchResultClipInfos build() {
+                return new GeneratedContentVideoSearchResultSearchResultClipInfos(this);
             } 
 
         } 
@@ -8193,10 +9318,10 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      */
     public static class GeneratedContentVideoSearchResultSearchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Article")
-        private VideoSearchResultSearchResultArticle article;
+        private GeneratedContentVideoSearchResultSearchResultArticle article;
 
         @com.aliyun.core.annotation.NameInMap("ClipInfos")
-        private java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos;
+        private java.util.List<GeneratedContentVideoSearchResultSearchResultClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -8204,11 +9329,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
+        @com.aliyun.core.annotation.NameInMap("TraceabilityId")
+        private String traceabilityId;
+
         private GeneratedContentVideoSearchResultSearchResult(Builder builder) {
             this.article = builder.article;
             this.clipInfos = builder.clipInfos;
             this.fileUrl = builder.fileUrl;
             this.mediaId = builder.mediaId;
+            this.traceabilityId = builder.traceabilityId;
         }
 
         public static Builder builder() {
@@ -8222,14 +9351,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         /**
          * @return article
          */
-        public VideoSearchResultSearchResultArticle getArticle() {
+        public GeneratedContentVideoSearchResultSearchResultArticle getArticle() {
             return this.article;
         }
 
         /**
          * @return clipInfos
          */
-        public java.util.List<VideoSearchResultSearchResultClipInfos> getClipInfos() {
+        public java.util.List<GeneratedContentVideoSearchResultSearchResultClipInfos> getClipInfos() {
             return this.clipInfos;
         }
 
@@ -8247,11 +9376,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        /**
+         * @return traceabilityId
+         */
+        public String getTraceabilityId() {
+            return this.traceabilityId;
+        }
+
         public static final class Builder {
-            private VideoSearchResultSearchResultArticle article; 
-            private java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos; 
+            private GeneratedContentVideoSearchResultSearchResultArticle article; 
+            private java.util.List<GeneratedContentVideoSearchResultSearchResultClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaId; 
+            private String traceabilityId; 
 
             private Builder() {
             } 
@@ -8261,12 +9398,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.clipInfos = model.clipInfos;
                 this.fileUrl = model.fileUrl;
                 this.mediaId = model.mediaId;
+                this.traceabilityId = model.traceabilityId;
             } 
 
             /**
              * Article.
              */
-            public Builder article(VideoSearchResultSearchResultArticle article) {
+            public Builder article(GeneratedContentVideoSearchResultSearchResultArticle article) {
                 this.article = article;
                 return this;
             }
@@ -8274,7 +9412,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             /**
              * ClipInfos.
              */
-            public Builder clipInfos(java.util.List<VideoSearchResultSearchResultClipInfos> clipInfos) {
+            public Builder clipInfos(java.util.List<GeneratedContentVideoSearchResultSearchResultClipInfos> clipInfos) {
                 this.clipInfos = clipInfos;
                 return this;
             }
@@ -8292,6 +9430,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * TraceabilityId.
+             */
+            public Builder traceabilityId(String traceabilityId) {
+                this.traceabilityId = traceabilityId;
                 return this;
             }
 
@@ -8363,6 +9509,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class GeneratedContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AudioSearchResult")
+        private AudioSearchResult audioSearchResult;
+
         @com.aliyun.core.annotation.NameInMap("ClusterTopicResult")
         private ClusterTopicResult clusterTopicResult;
 
@@ -8388,6 +9537,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private GeneratedContentVideoSearchResult videoSearchResult;
 
         private GeneratedContent(Builder builder) {
+            this.audioSearchResult = builder.audioSearchResult;
             this.clusterTopicResult = builder.clusterTopicResult;
             this.excerptResult = builder.excerptResult;
             this.imageSearchResult = builder.imageSearchResult;
@@ -8404,6 +9554,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static GeneratedContent create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioSearchResult
+         */
+        public AudioSearchResult getAudioSearchResult() {
+            return this.audioSearchResult;
         }
 
         /**
@@ -8463,6 +9620,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AudioSearchResult audioSearchResult; 
             private ClusterTopicResult clusterTopicResult; 
             private ExcerptResult excerptResult; 
             private GeneratedContentImageSearchResult imageSearchResult; 
@@ -8476,6 +9634,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(GeneratedContent model) {
+                this.audioSearchResult = model.audioSearchResult;
                 this.clusterTopicResult = model.clusterTopicResult;
                 this.excerptResult = model.excerptResult;
                 this.imageSearchResult = model.imageSearchResult;
@@ -8485,6 +9644,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.timelineResult = model.timelineResult;
                 this.videoSearchResult = model.videoSearchResult;
             } 
+
+            /**
+             * AudioSearchResult.
+             */
+            public Builder audioSearchResult(AudioSearchResult audioSearchResult) {
+                this.audioSearchResult = audioSearchResult;
+                return this;
+            }
 
             /**
              * ClusterTopicResult.
@@ -9040,12 +10207,571 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
+    public static class Audios extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private Audios(Builder builder) {
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Audios create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public static final class Builder {
+            private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Audios model) {
+                this.mediaId = model.mediaId;
+            } 
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            public Audios build() {
+                return new Audios(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private Images(Builder builder) {
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Images create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public static final class Builder {
+            private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.mediaId = model.mediaId;
+            } 
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            public Images build() {
+                return new Images(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class Texts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
+        private String docUuid;
+
+        private Texts(Builder builder) {
+            this.docUuid = builder.docUuid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Texts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return docUuid
+         */
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        public static final class Builder {
+            private String docUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Texts model) {
+                this.docUuid = model.docUuid;
+            } 
+
+            /**
+             * DocUuid.
+             */
+            public Builder docUuid(String docUuid) {
+                this.docUuid = docUuid;
+                return this;
+            }
+
+            public Texts build() {
+                return new Texts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class Videos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private Videos(Builder builder) {
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Videos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public static final class Builder {
+            private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Videos model) {
+                this.mediaId = model.mediaId;
+            } 
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            public Videos build() {
+                return new Videos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class MessagesSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Audios")
+        private java.util.List<Audios> audios;
+
+        @com.aliyun.core.annotation.NameInMap("Images")
+        private java.util.List<Images> images;
+
+        @com.aliyun.core.annotation.NameInMap("MultimodalSearchQuery")
+        private String multimodalSearchQuery;
+
+        @com.aliyun.core.annotation.NameInMap("Texts")
+        private java.util.List<Texts> texts;
+
+        @com.aliyun.core.annotation.NameInMap("Videos")
+        private java.util.List<Videos> videos;
+
+        private MessagesSearchResult(Builder builder) {
+            this.audios = builder.audios;
+            this.images = builder.images;
+            this.multimodalSearchQuery = builder.multimodalSearchQuery;
+            this.texts = builder.texts;
+            this.videos = builder.videos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MessagesSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return audios
+         */
+        public java.util.List<Audios> getAudios() {
+            return this.audios;
+        }
+
+        /**
+         * @return images
+         */
+        public java.util.List<Images> getImages() {
+            return this.images;
+        }
+
+        /**
+         * @return multimodalSearchQuery
+         */
+        public String getMultimodalSearchQuery() {
+            return this.multimodalSearchQuery;
+        }
+
+        /**
+         * @return texts
+         */
+        public java.util.List<Texts> getTexts() {
+            return this.texts;
+        }
+
+        /**
+         * @return videos
+         */
+        public java.util.List<Videos> getVideos() {
+            return this.videos;
+        }
+
+        public static final class Builder {
+            private java.util.List<Audios> audios; 
+            private java.util.List<Images> images; 
+            private String multimodalSearchQuery; 
+            private java.util.List<Texts> texts; 
+            private java.util.List<Videos> videos; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessagesSearchResult model) {
+                this.audios = model.audios;
+                this.images = model.images;
+                this.multimodalSearchQuery = model.multimodalSearchQuery;
+                this.texts = model.texts;
+                this.videos = model.videos;
+            } 
+
+            /**
+             * Audios.
+             */
+            public Builder audios(java.util.List<Audios> audios) {
+                this.audios = audios;
+                return this;
+            }
+
+            /**
+             * Images.
+             */
+            public Builder images(java.util.List<Images> images) {
+                this.images = images;
+                return this;
+            }
+
+            /**
+             * MultimodalSearchQuery.
+             */
+            public Builder multimodalSearchQuery(String multimodalSearchQuery) {
+                this.multimodalSearchQuery = multimodalSearchQuery;
+                return this;
+            }
+
+            /**
+             * Texts.
+             */
+            public Builder texts(java.util.List<Texts> texts) {
+                this.texts = texts;
+                return this;
+            }
+
+            /**
+             * Videos.
+             */
+            public Builder videos(java.util.List<Videos> videos) {
+                this.videos = videos;
+                return this;
+            }
+
+            public MessagesSearchResult build() {
+                return new MessagesSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class Messages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Clarifications")
+        private Boolean clarifications;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("GenerateFinished")
+        private Boolean generateFinished;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("NodeCode")
+        private String nodeCode;
+
+        @com.aliyun.core.annotation.NameInMap("SearchQueries")
+        private java.util.List<String> searchQueries;
+
+        @com.aliyun.core.annotation.NameInMap("SearchQuery")
+        private String searchQuery;
+
+        @com.aliyun.core.annotation.NameInMap("SearchResult")
+        private java.util.List<MessagesSearchResult> searchResult;
+
+        private Messages(Builder builder) {
+            this.clarifications = builder.clarifications;
+            this.content = builder.content;
+            this.generateFinished = builder.generateFinished;
+            this.id = builder.id;
+            this.nodeCode = builder.nodeCode;
+            this.searchQueries = builder.searchQueries;
+            this.searchQuery = builder.searchQuery;
+            this.searchResult = builder.searchResult;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Messages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clarifications
+         */
+        public Boolean getClarifications() {
+            return this.clarifications;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return generateFinished
+         */
+        public Boolean getGenerateFinished() {
+            return this.generateFinished;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return nodeCode
+         */
+        public String getNodeCode() {
+            return this.nodeCode;
+        }
+
+        /**
+         * @return searchQueries
+         */
+        public java.util.List<String> getSearchQueries() {
+            return this.searchQueries;
+        }
+
+        /**
+         * @return searchQuery
+         */
+        public String getSearchQuery() {
+            return this.searchQuery;
+        }
+
+        /**
+         * @return searchResult
+         */
+        public java.util.List<MessagesSearchResult> getSearchResult() {
+            return this.searchResult;
+        }
+
+        public static final class Builder {
+            private Boolean clarifications; 
+            private String content; 
+            private Boolean generateFinished; 
+            private String id; 
+            private String nodeCode; 
+            private java.util.List<String> searchQueries; 
+            private String searchQuery; 
+            private java.util.List<MessagesSearchResult> searchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.clarifications = model.clarifications;
+                this.content = model.content;
+                this.generateFinished = model.generateFinished;
+                this.id = model.id;
+                this.nodeCode = model.nodeCode;
+                this.searchQueries = model.searchQueries;
+                this.searchQuery = model.searchQuery;
+                this.searchResult = model.searchResult;
+            } 
+
+            /**
+             * Clarifications.
+             */
+            public Builder clarifications(Boolean clarifications) {
+                this.clarifications = clarifications;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * GenerateFinished.
+             */
+            public Builder generateFinished(Boolean generateFinished) {
+                this.generateFinished = generateFinished;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * NodeCode.
+             */
+            public Builder nodeCode(String nodeCode) {
+                this.nodeCode = nodeCode;
+                return this;
+            }
+
+            /**
+             * SearchQueries.
+             */
+            public Builder searchQueries(java.util.List<String> searchQueries) {
+                this.searchQueries = searchQueries;
+                return this;
+            }
+
+            /**
+             * SearchQuery.
+             */
+            public Builder searchQuery(String searchQuery) {
+                this.searchQuery = searchQuery;
+                return this;
+            }
+
+            /**
+             * SearchResult.
+             */
+            public Builder searchResult(java.util.List<MessagesSearchResult> searchResult) {
+                this.searchResult = searchResult;
+                return this;
+            }
+
+            public Messages build() {
+                return new Messages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentContext")
         private AgentContext agentContext;
 
+        @com.aliyun.core.annotation.NameInMap("Messages")
+        private java.util.List<Messages> messages;
+
         private Output(Builder builder) {
             this.agentContext = builder.agentContext;
+            this.messages = builder.messages;
         }
 
         public static Builder builder() {
@@ -9063,14 +10789,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.agentContext;
         }
 
+        /**
+         * @return messages
+         */
+        public java.util.List<Messages> getMessages() {
+            return this.messages;
+        }
+
         public static final class Builder {
             private AgentContext agentContext; 
+            private java.util.List<Messages> messages; 
 
             private Builder() {
             } 
 
             private Builder(Output model) {
                 this.agentContext = model.agentContext;
+                this.messages = model.messages;
             } 
 
             /**
@@ -9078,6 +10813,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder agentContext(AgentContext agentContext) {
                 this.agentContext = agentContext;
+                return this;
+            }
+
+            /**
+             * Messages.
+             */
+            public Builder messages(java.util.List<Messages> messages) {
+                this.messages = messages;
                 return this;
             }
 

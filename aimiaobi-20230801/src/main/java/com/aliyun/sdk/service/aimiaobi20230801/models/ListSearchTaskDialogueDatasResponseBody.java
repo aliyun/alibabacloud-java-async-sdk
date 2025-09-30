@@ -20,6 +20,9 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Articles")
     private java.util.List<Articles> articles;
 
+    @com.aliyun.core.annotation.NameInMap("Audios")
+    private java.util.List<Audios> audios;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -58,6 +61,7 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     private ListSearchTaskDialogueDatasResponseBody(Builder builder) {
         this.articles = builder.articles;
+        this.audios = builder.audios;
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.images = builder.images;
@@ -89,6 +93,13 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
      */
     public java.util.List<Articles> getArticles() {
         return this.articles;
+    }
+
+    /**
+     * @return audios
+     */
+    public java.util.List<Audios> getAudios() {
+        return this.audios;
     }
 
     /**
@@ -177,6 +188,7 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Articles> articles; 
+        private java.util.List<Audios> audios; 
         private String code; 
         private Integer httpStatusCode; 
         private java.util.List<Images> images; 
@@ -195,6 +207,7 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
         private Builder(ListSearchTaskDialogueDatasResponseBody model) {
             this.articles = model.articles;
+            this.audios = model.audios;
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.images = model.images;
@@ -214,6 +227,14 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
          */
         public Builder articles(java.util.List<Articles> articles) {
             this.articles = articles;
+            return this;
+        }
+
+        /**
+         * Audios.
+         */
+        public Builder audios(java.util.List<Audios> audios) {
+            this.audios = audios;
             return this;
         }
 
@@ -758,6 +779,81 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
             public Articles build() {
                 return new Articles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSearchTaskDialogueDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchTaskDialogueDatasResponseBody</p>
+     */
+    public static class Audios extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private String fileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        private Audios(Builder builder) {
+            this.fileUrl = builder.fileUrl;
+            this.mediaId = builder.mediaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Audios create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileUrl
+         */
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public static final class Builder {
+            private String fileUrl; 
+            private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Audios model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
+            /**
+             * FileUrl.
+             */
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            public Audios build() {
+                return new Audios(this);
             } 
 
         } 

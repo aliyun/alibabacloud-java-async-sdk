@@ -30,6 +30,10 @@ public class RunSearchGenerationRequest extends Request {
     private ChatConfig chatConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    private String fileUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelId")
     private String modelId;
 
@@ -55,6 +59,7 @@ public class RunSearchGenerationRequest extends Request {
         this.regionId = builder.regionId;
         this.agentContext = builder.agentContext;
         this.chatConfig = builder.chatConfig;
+        this.fileUrl = builder.fileUrl;
         this.modelId = builder.modelId;
         this.originalSessionId = builder.originalSessionId;
         this.prompt = builder.prompt;
@@ -97,6 +102,13 @@ public class RunSearchGenerationRequest extends Request {
     }
 
     /**
+     * @return fileUrl
+     */
+    public String getFileUrl() {
+        return this.fileUrl;
+    }
+
+    /**
      * @return modelId
      */
     public String getModelId() {
@@ -135,6 +147,7 @@ public class RunSearchGenerationRequest extends Request {
         private String regionId; 
         private AgentContext agentContext; 
         private ChatConfig chatConfig; 
+        private String fileUrl; 
         private String modelId; 
         private String originalSessionId; 
         private String prompt; 
@@ -150,6 +163,7 @@ public class RunSearchGenerationRequest extends Request {
             this.regionId = request.regionId;
             this.agentContext = request.agentContext;
             this.chatConfig = request.chatConfig;
+            this.fileUrl = request.fileUrl;
             this.modelId = request.modelId;
             this.originalSessionId = request.originalSessionId;
             this.prompt = request.prompt;
@@ -183,6 +197,15 @@ public class RunSearchGenerationRequest extends Request {
             String chatConfigShrink = shrink(chatConfig, "ChatConfig", "json");
             this.putBodyParameter("ChatConfig", chatConfigShrink);
             this.chatConfig = chatConfig;
+            return this;
+        }
+
+        /**
+         * FileUrl.
+         */
+        public Builder fileUrl(String fileUrl) {
+            this.putBodyParameter("FileUrl", fileUrl);
+            this.fileUrl = fileUrl;
             return this;
         }
 
