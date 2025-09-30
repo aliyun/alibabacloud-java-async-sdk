@@ -73,6 +73,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelUpsertCollectionDataJobResponse> cancelUpsertCollectionDataJob(CancelUpsertCollectionDataJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
+     * @return ChatWithKnowledgeBaseResponse
+     */
+    CompletableFuture<ChatWithKnowledgeBaseResponse> chatWithKnowledgeBase(ChatWithKnowledgeBaseRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
+     * @return ChatWithKnowledgeBaseStreamResponse
+     */
+    CompletableFuture<ChatWithKnowledgeBaseStreamResponse> chatWithKnowledgeBaseStream(ChatWithKnowledgeBaseStreamRequest request);
+
+    ResponseIterable<ChatWithKnowledgeBaseStreamResponseBody> chatWithKnowledgeBaseStreamWithResponseIterable(ChatWithKnowledgeBaseStreamRequest request);
+
+    /**
      * @param request the request parameters of CheckHadoopDataSource  CheckHadoopDataSourceRequest
      * @return CheckHadoopDataSourceResponse
      */

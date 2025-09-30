@@ -173,9 +173,63 @@ public class QueryCollectionDataResponseBody extends TeaModel {
      *
      * <p>QueryCollectionDataResponseBody</p>
      */
+    public static class Indices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Indice")
+        private java.util.List<Integer> indice;
+
+        private Indices(Builder builder) {
+            this.indice = builder.indice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Indices create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indice
+         */
+        public java.util.List<Integer> getIndice() {
+            return this.indice;
+        }
+
+        public static final class Builder {
+            private java.util.List<Integer> indice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Indices model) {
+                this.indice = model.indice;
+            } 
+
+            /**
+             * Indice.
+             */
+            public Builder indice(java.util.List<Integer> indice) {
+                this.indice = indice;
+                return this;
+            }
+
+            public Indices build() {
+                return new Indices(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("value")
-        private java.util.List<Double> value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<Float> value;
 
         private Values(Builder builder) {
             this.value = builder.value;
@@ -192,6 +246,135 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         /**
          * @return value
          */
+        public java.util.List<Float> getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private java.util.List<Float> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.value = model.value;
+            } 
+
+            /**
+             * Value.
+             */
+            public Builder value(java.util.List<Float> value) {
+                this.value = value;
+                return this;
+            }
+
+            public Values build() {
+                return new Values(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
+    public static class SparseValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Indices")
+        private Indices indices;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private Values values;
+
+        private SparseValues(Builder builder) {
+            this.indices = builder.indices;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SparseValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indices
+         */
+        public Indices getIndices() {
+            return this.indices;
+        }
+
+        /**
+         * @return values
+         */
+        public Values getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private Indices indices; 
+            private Values values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparseValues model) {
+                this.indices = model.indices;
+                this.values = model.values;
+            } 
+
+            /**
+             * Indices.
+             */
+            public Builder indices(Indices indices) {
+                this.indices = indices;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(Values values) {
+                this.values = values;
+                return this;
+            }
+
+            public SparseValues build() {
+                return new SparseValues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
+    public static class MatchValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("value")
+        private java.util.List<Double> value;
+
+        private MatchValues(Builder builder) {
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MatchValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return value
+         */
         public java.util.List<Double> getValue() {
             return this.value;
         }
@@ -202,7 +385,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Values model) {
+            private Builder(MatchValues model) {
                 this.value = model.value;
             } 
 
@@ -214,8 +397,8 @@ public class QueryCollectionDataResponseBody extends TeaModel {
                 return this;
             }
 
-            public Values build() {
-                return new Values(this);
+            public MatchValues build() {
+                return new MatchValues(this);
             } 
 
         } 
@@ -240,14 +423,18 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
+        @com.aliyun.core.annotation.NameInMap("SparseValues")
+        private SparseValues sparseValues;
+
         @com.aliyun.core.annotation.NameInMap("Values")
-        private Values values;
+        private MatchValues values;
 
         private Match(Builder builder) {
             this.id = builder.id;
             this.metadata = builder.metadata;
             this.metadataV2 = builder.metadataV2;
             this.score = builder.score;
+            this.sparseValues = builder.sparseValues;
             this.values = builder.values;
         }
 
@@ -288,9 +475,16 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return sparseValues
+         */
+        public SparseValues getSparseValues() {
+            return this.sparseValues;
+        }
+
+        /**
          * @return values
          */
-        public Values getValues() {
+        public MatchValues getValues() {
             return this.values;
         }
 
@@ -299,7 +493,8 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private java.util.Map<String, String> metadata; 
             private java.util.Map<String, ?> metadataV2; 
             private Double score; 
-            private Values values; 
+            private SparseValues sparseValues; 
+            private MatchValues values; 
 
             private Builder() {
             } 
@@ -309,6 +504,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
                 this.metadata = model.metadata;
                 this.metadataV2 = model.metadataV2;
                 this.score = model.score;
+                this.sparseValues = model.sparseValues;
                 this.values = model.values;
             } 
 
@@ -351,9 +547,17 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
+             * SparseValues.
+             */
+            public Builder sparseValues(SparseValues sparseValues) {
+                this.sparseValues = sparseValues;
+                return this;
+            }
+
+            /**
              * <p>List of vector data.</p>
              */
-            public Builder values(Values values) {
+            public Builder values(MatchValues values) {
                 this.values = values;
                 return this;
             }

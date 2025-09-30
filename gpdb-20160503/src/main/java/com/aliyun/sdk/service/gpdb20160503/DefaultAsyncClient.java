@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.gpdb20160503;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.gpdb20160503.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -176,6 +177,58 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
+     * @return ChatWithKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<ChatWithKnowledgeBaseResponse> chatWithKnowledgeBase(ChatWithKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChatWithKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatWithKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatWithKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
+     * @return ChatWithKnowledgeBaseStreamResponse
+     */
+    @Override
+    public CompletableFuture<ChatWithKnowledgeBaseStreamResponse> chatWithKnowledgeBaseStream(ChatWithKnowledgeBaseStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChatWithKnowledgeBaseStream").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatWithKnowledgeBaseStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatWithKnowledgeBaseStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatWithKnowledgeBaseStreamResponseBody> chatWithKnowledgeBaseStreamWithResponseIterable(ChatWithKnowledgeBaseStreamRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ChatWithKnowledgeBaseStream").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ChatWithKnowledgeBaseStreamResponseBodyIterator iterator = ChatWithKnowledgeBaseStreamResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

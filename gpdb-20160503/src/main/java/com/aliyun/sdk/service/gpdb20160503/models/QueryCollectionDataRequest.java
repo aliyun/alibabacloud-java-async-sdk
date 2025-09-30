@@ -47,6 +47,10 @@ public class QueryCollectionDataRequest extends Request {
     private String includeMetadataFields;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeSparseValues")
+    private Boolean includeSparseValues;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeValues")
     private Boolean includeValues;
 
@@ -110,6 +114,7 @@ public class QueryCollectionDataRequest extends Request {
         this.hybridSearch = builder.hybridSearch;
         this.hybridSearchArgs = builder.hybridSearchArgs;
         this.includeMetadataFields = builder.includeMetadataFields;
+        this.includeSparseValues = builder.includeSparseValues;
         this.includeValues = builder.includeValues;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
@@ -185,6 +190,13 @@ public class QueryCollectionDataRequest extends Request {
      */
     public String getIncludeMetadataFields() {
         return this.includeMetadataFields;
+    }
+
+    /**
+     * @return includeSparseValues
+     */
+    public Boolean getIncludeSparseValues() {
+        return this.includeSparseValues;
     }
 
     /**
@@ -286,6 +298,7 @@ public class QueryCollectionDataRequest extends Request {
         private String hybridSearch; 
         private java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs; 
         private String includeMetadataFields; 
+        private Boolean includeSparseValues; 
         private Boolean includeValues; 
         private String metrics; 
         private String namespace; 
@@ -313,6 +326,7 @@ public class QueryCollectionDataRequest extends Request {
             this.hybridSearch = request.hybridSearch;
             this.hybridSearchArgs = request.hybridSearchArgs;
             this.includeMetadataFields = request.includeMetadataFields;
+            this.includeSparseValues = request.includeSparseValues;
             this.includeValues = request.includeValues;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
@@ -442,6 +456,15 @@ public class QueryCollectionDataRequest extends Request {
         public Builder includeMetadataFields(String includeMetadataFields) {
             this.putQueryParameter("IncludeMetadataFields", includeMetadataFields);
             this.includeMetadataFields = includeMetadataFields;
+            return this;
+        }
+
+        /**
+         * IncludeSparseValues.
+         */
+        public Builder includeSparseValues(Boolean includeSparseValues) {
+            this.putQueryParameter("IncludeSparseValues", includeSparseValues);
+            this.includeSparseValues = includeSparseValues;
             return this;
         }
 
