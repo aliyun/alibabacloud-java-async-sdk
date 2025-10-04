@@ -42,6 +42,10 @@ public class CreateWuyingServerRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdempotenceToken")
+    private String idempotenceToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -101,6 +105,7 @@ public class CreateWuyingServerRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.dataDisk = builder.dataDisk;
+        this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
         this.officeSiteId = builder.officeSiteId;
         this.password = builder.password;
@@ -169,6 +174,13 @@ public class CreateWuyingServerRequest extends Request {
      */
     public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return idempotenceToken
+     */
+    public String getIdempotenceToken() {
+        return this.idempotenceToken;
     }
 
     /**
@@ -269,6 +281,7 @@ public class CreateWuyingServerRequest extends Request {
         private String bizRegionId; 
         private String chargeType; 
         private java.util.List<DataDisk> dataDisk; 
+        private String idempotenceToken; 
         private String imageId; 
         private String officeSiteId; 
         private String password; 
@@ -295,6 +308,7 @@ public class CreateWuyingServerRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.dataDisk = request.dataDisk;
+            this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
             this.officeSiteId = request.officeSiteId;
             this.password = request.password;
@@ -361,6 +375,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putBodyParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
+            return this;
+        }
+
+        /**
+         * IdempotenceToken.
+         */
+        public Builder idempotenceToken(String idempotenceToken) {
+            this.putBodyParameter("IdempotenceToken", idempotenceToken);
+            this.idempotenceToken = idempotenceToken;
             return this;
         }
 

@@ -70,6 +70,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppInstancesResponse> deleteAppInstances(DeleteAppInstancesRequest request);
 
     /**
+     * @param request the request parameters of DeleteWuyingServer  DeleteWuyingServerRequest
+     * @return DeleteWuyingServerResponse
+     */
+    CompletableFuture<DeleteWuyingServerResponse> deleteWuyingServer(DeleteWuyingServerRequest request);
+
+    /**
      * @param request the request parameters of GetAppInstanceGroup  GetAppInstanceGroupRequest
      * @return GetAppInstanceGroupResponse
      */
