@@ -201,7 +201,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * DstEntityName.
+         * <p>The destination entity name. Supports fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dstName</p>
          */
         public Builder dstEntityName(String dstEntityName) {
             this.putQueryParameter("DstEntityName", dstEntityName);
@@ -210,7 +213,14 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which schemas are sorted. Default value: Asc. Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending.</li>
+         * <li>Desc: descending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -219,7 +229,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +241,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -237,7 +253,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default value: Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -264,7 +283,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * SrcEntityName.
+         * <p>The source entity name. Supports fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srcName</p>
          */
         public Builder srcEntityName(String srcEntityName) {
             this.putQueryParameter("SrcEntityName", srcEntityName);

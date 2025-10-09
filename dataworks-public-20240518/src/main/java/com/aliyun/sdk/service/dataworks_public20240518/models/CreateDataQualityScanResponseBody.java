@@ -67,7 +67,10 @@ public class CreateDataQualityScanResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Returns the ID of the created data source sharing rule, which uniquely identifies the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676303114031776</p>
          */
         public Builder id(Long id) {
             this.id = id;

@@ -67,7 +67,7 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * DataQualityTemplate.
+         * <p>The data quality rule template.</p>
          */
         public Builder dataQualityTemplate(DataQualityTemplate dataQualityTemplate) {
             this.dataQualityTemplate = dataQualityTemplate;
@@ -75,7 +75,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The API request ID, which is generated as a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the data quality rule template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1606724043000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The creator of the data quality rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238428342865</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -235,7 +244,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data quality rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -243,7 +255,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the data quality rule template was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1606724043000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -251,7 +266,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The last updater of the data quality rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238428342865</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -259,7 +277,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the data quality rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238428342865</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -267,7 +288,10 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97535</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -275,7 +299,16 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
+             *     &quot;id_not_null_cnt&quot;: {
+             *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = &quot;$[yyyymmdd-1]&quot;;&quot;
+             *     },
+             *     &quot;identity&quot;: &quot;819cf1f8-29be-4f94-a9d0-c5c06c0c3d2a&quot;
+             * }</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

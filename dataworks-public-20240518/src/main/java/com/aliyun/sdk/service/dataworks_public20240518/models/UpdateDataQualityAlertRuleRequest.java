@@ -138,7 +138,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>The alert condition of the data quality monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
          */
         public Builder condition(String condition) {
             this.putBodyParameter("Condition", condition);
@@ -147,7 +150,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105412</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -156,7 +162,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>Alert notification configurations.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -166,7 +172,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -175,7 +184,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The monitored target of the data quality monitoring rule.</p>
          */
         public Builder target(Target target) {
             String targetShrink = shrink(target, "Target", "json");
@@ -258,7 +267,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * Extension.
+             * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:true}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -266,6 +278,17 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
+             * <p>The type of alert recipients.</p>
+             * <ul>
+             * <li>AliUid</li>
+             * <li>WebhookUrl</li>
+             * <li>DingdingUrl</li>
+             * <li>WeixinUrl</li>
+             * <li>FeishuUrl</li>
+             * <li>TaskOwner</li>
+             * <li>DataQualityScanOwner</li>
+             * <li>ShiftSchedule</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -277,7 +300,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * ReceiverValues.
+             * <p>The value of alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -345,6 +368,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
+             * <p>The list of alert channels. You can set both Email and Sms at the same time. In other cases, only one channel can be set.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -353,7 +377,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * Receivers.
+             * <p>The alert recipients.</p>
              */
             public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
@@ -420,7 +444,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * Ids.
+             * <p>The list of monitored target IDs. Currently, only one ID can be set.</p>
              */
             public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
@@ -428,7 +452,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the monitored target. Only DataQualityScan is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQualityScan</p>
              */
             public Builder type(String type) {
                 this.type = type;

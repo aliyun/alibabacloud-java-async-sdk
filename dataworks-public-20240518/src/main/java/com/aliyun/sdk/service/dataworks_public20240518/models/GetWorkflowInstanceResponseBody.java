@@ -97,6 +97,81 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
      *
      * <p>GetWorkflowInstanceResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowInstanceResponseBody</p>
+     */
     public static class WorkflowInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizDate")
         private Long bizDate;
@@ -134,6 +209,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -156,6 +234,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this.startedTime = builder.startedTime;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.workflowId = builder.workflowId;
             this.workflowParameters = builder.workflowParameters;
@@ -254,6 +333,13 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -287,6 +373,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private Long projectId; 
             private Long startedTime; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long workflowId; 
             private String workflowParameters; 
@@ -307,6 +394,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
                 this.projectId = model.projectId;
                 this.startedTime = model.startedTime;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.type = model.type;
                 this.workflowId = model.workflowId;
                 this.workflowParameters = model.workflowParameters;
@@ -455,6 +543,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -97,6 +97,81 @@ public class ListWorkflowsResponseBody extends TeaModel {
      *
      * <p>ListWorkflowsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWorkflowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowsResponseBody</p>
+     */
     public static class Trigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
@@ -296,6 +371,9 @@ public class ListWorkflowsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("Trigger")
         private Trigger trigger;
 
@@ -312,6 +390,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.parameters = builder.parameters;
             this.projectId = builder.projectId;
+            this.tags = builder.tags;
             this.trigger = builder.trigger;
         }
 
@@ -408,6 +487,13 @@ public class ListWorkflowsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return trigger
          */
         public Trigger getTrigger() {
@@ -427,6 +513,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private String owner; 
             private String parameters; 
             private Long projectId; 
+            private java.util.List<Tags> tags; 
             private Trigger trigger; 
 
             private Builder() {
@@ -445,6 +532,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
                 this.owner = model.owner;
                 this.parameters = model.parameters;
                 this.projectId = model.projectId;
+                this.tags = model.tags;
                 this.trigger = model.trigger;
             } 
 
@@ -581,6 +669,14 @@ public class ListWorkflowsResponseBody extends TeaModel {
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

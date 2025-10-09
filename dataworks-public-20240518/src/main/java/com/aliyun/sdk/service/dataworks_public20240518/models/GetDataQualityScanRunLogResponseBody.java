@@ -67,7 +67,7 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
         } 
 
         /**
-         * LogSegment.
+         * <p>The task log information.</p>
          */
         public Builder logSegment(LogSegment logSegment) {
             this.logSegment = logSegment;
@@ -75,7 +75,10 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,11 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Log.
+             * <p>The task log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running on Serverless_resource_group_xxxxx
+             * Begin to check rule ***</p>
              */
             public Builder log(String log) {
                 this.log = log;
@@ -149,7 +156,10 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
             }
 
             /**
-             * NextOffset.
+             * <p>The starting offset of the next log segment. A value of -1 indicates that all logs have been read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512000</p>
              */
             public Builder nextOffset(Long nextOffset) {
                 this.nextOffset = nextOffset;

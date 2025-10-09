@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDataQualityAlertRuleResponseBody} extends {@link TeaModel}
+ * {@link CreateComponentResponseBody} extends {@link TeaModel}
  *
- * <p>CreateDataQualityAlertRuleResponseBody</p>
+ * <p>CreateComponentResponseBody</p>
  */
-public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
+public class CreateComponentResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    private String componentId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateDataQualityAlertRuleResponseBody(Builder builder) {
-        this.id = builder.id;
+    private CreateComponentResponseBody(Builder builder) {
+        this.componentId = builder.componentId;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +32,7 @@ public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateDataQualityAlertRuleResponseBody create() {
+    public static CreateComponentResponseBody create() {
         return builder().build();
     }
 
@@ -41,10 +41,10 @@ public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
     }
 
     /**
-     * @return id
+     * @return componentId
      */
-    public Long getId() {
-        return this.id;
+    public String getComponentId() {
+        return this.componentId;
     }
 
     /**
@@ -55,41 +55,38 @@ public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long id; 
+        private String componentId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateDataQualityAlertRuleResponseBody model) {
-            this.id = model.id;
+        private Builder(CreateComponentResponseBody model) {
+            this.componentId = model.componentId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The user-defined rule ID returned after the monitoring rule is successfully created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1010543619</p>
+         * ComponentId.
          */
-        public Builder id(Long id) {
-            this.id = id;
+        public Builder componentId(String componentId) {
+            this.componentId = componentId;
             return this;
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc14115***159376359</p>
+         * <p>adssd****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateDataQualityAlertRuleResponseBody build() {
-            return new CreateDataQualityAlertRuleResponseBody(this);
+        public CreateComponentResponseBody build() {
+            return new CreateComponentResponseBody(this);
         } 
 
     } 

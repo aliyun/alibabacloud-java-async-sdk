@@ -67,7 +67,10 @@ public class CreateDataQualityTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The unique identifier of the newly created rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-DEFINED:2001</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateDataQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The API request ID, which is generated as a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

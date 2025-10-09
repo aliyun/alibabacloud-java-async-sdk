@@ -230,6 +230,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateComponent  CreateComponentRequest
+     * @return CreateComponentResponse
+     */
+    @Override
+    public CompletableFuture<CreateComponentResponse> createComponent(CreateComponentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateComponent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateComponentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateComponentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
      */
@@ -293,6 +311,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityAlertRule  CreateDataQualityAlertRuleRequest
      * @return CreateDataQualityAlertRuleResponse
      */
@@ -386,6 +407,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityScan  CreateDataQualityScanRequest
      * @return CreateDataQualityScanResponse
      */
@@ -404,6 +428,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityScanRun  CreateDataQualityScanRunRequest
      * @return CreateDataQualityScanRunResponse
      */
@@ -422,6 +449,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityTemplate  CreateDataQualityTemplateRequest
      * @return CreateDataQualityTemplateResponse
      */
@@ -859,6 +889,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteComponent  DeleteComponentRequest
+     * @return DeleteComponentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteComponentResponse> deleteComponent(DeleteComponentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteComponent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteComponentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteComponentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
      * @return DeleteDIAlarmRuleResponse
      */
@@ -919,6 +972,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Subscribe to DataWorks Basic Edition or a higher version to use this API.</p>
+     * 
      * @param request the request parameters of DeleteDataQualityAlertRule  DeleteDataQualityAlertRuleRequest
      * @return DeleteDataQualityAlertRuleResponse
      */
@@ -991,6 +1047,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteDataQualityScan  DeleteDataQualityScanRequest
      * @return DeleteDataQualityScanResponse
      */
@@ -1009,6 +1068,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li><strong>Id</strong>: the unique identifier of the user-defined rule template, in the format <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
+     * <li><strong>ProjectId</strong>: The ID of the DataWorks project to which the rule template belongs.
+     * This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <code>Id</code> and <code>ProjectId</code> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteDataQualityTemplate  DeleteDataQualityTemplateRequest
      * @return DeleteDataQualityTemplateResponse
      */
@@ -1617,6 +1684,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetComponent  GetComponentRequest
+     * @return GetComponentResponse
+     */
+    @Override
+    public CompletableFuture<GetComponentResponse> getComponent(GetComponentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetComponent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetComponentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetComponentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1680,6 +1765,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityAlertRule  GetDataQualityAlertRuleRequest
      * @return GetDataQualityAlertRuleResponse
      */
@@ -1776,6 +1864,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScan  GetDataQualityScanRequest
      * @return GetDataQualityScanResponse
      */
@@ -1794,6 +1885,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScanRun  GetDataQualityScanRunRequest
      * @return GetDataQualityScanRunResponse
      */
@@ -1812,6 +1906,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScanRunLog  GetDataQualityScanRunLogRequest
      * @return GetDataQualityScanRunLogResponse
      */
@@ -1830,6 +1927,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityTemplate  GetDataQualityTemplateRequest
      * @return GetDataQualityTemplateResponse
      */
@@ -2576,6 +2676,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListComponents  ListComponentsRequest
+     * @return ListComponentsResponse
+     */
+    @Override
+    public CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListComponents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListComponentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListComponentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCrawlerTypes  ListCrawlerTypesRequest
      * @return ListCrawlerTypesResponse
      */
@@ -2738,6 +2856,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityAlertRules  ListDataQualityAlertRulesRequest
      * @return ListDataQualityAlertRulesResponse
      */
@@ -2858,6 +2979,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityScanRuns  ListDataQualityScanRunsRequest
      * @return ListDataQualityScanRunsResponse
      */
@@ -2876,6 +3000,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityScans  ListDataQualityScansRequest
      * @return ListDataQualityScansResponse
      */
@@ -2894,6 +3021,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityTemplates  ListDataQualityTemplatesRequest
      * @return ListDataQualityTemplatesResponse
      */
@@ -4219,6 +4349,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</p>
+     * 
+     * @param request the request parameters of UpdateComponent  UpdateComponentRequest
+     * @return UpdateComponentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateComponentResponse> updateComponent(UpdateComponentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateComponent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateComponentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateComponentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
      */
@@ -4279,6 +4430,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityAlertRule  UpdateDataQualityAlertRuleRequest
      * @return UpdateDataQualityAlertRuleResponse
      */
@@ -4354,6 +4508,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityScan  UpdateDataQualityScanRequest
      * @return UpdateDataQualityScanResponse
      */
@@ -4372,6 +4529,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityTemplate  UpdateDataQualityTemplateRequest
      * @return UpdateDataQualityTemplateResponse
      */

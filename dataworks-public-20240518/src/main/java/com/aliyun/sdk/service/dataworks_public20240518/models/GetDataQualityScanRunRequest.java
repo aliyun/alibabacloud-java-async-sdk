@@ -82,7 +82,10 @@ public class GetDataQualityScanRunRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The data quality monitoring run record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1006059507</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

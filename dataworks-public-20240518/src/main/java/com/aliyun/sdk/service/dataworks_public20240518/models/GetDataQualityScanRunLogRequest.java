@@ -96,7 +96,10 @@ public class GetDataQualityScanRunLogRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the data quality monitor run record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -105,7 +108,10 @@ public class GetDataQualityScanRunLogRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>The starting position of the log, in bytes, relative to the beginning of the file. Each query returns a maximum of 512 KB of content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("Offset", offset);

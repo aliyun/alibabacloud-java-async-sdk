@@ -326,7 +326,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node output.</p>
              * 
              * <strong>example:</strong>
              * <p>623731286945488XXXX</p>
@@ -537,7 +537,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -620,7 +620,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node outputs.</p>
+             * <p>The node output list.</p>
              */
             public Builder nodeOutputs(java.util.List<NodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -628,7 +628,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tables.</p>
+             * <p>The table list.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
@@ -636,7 +636,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variables.</p>
+             * <p>The variable list.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -804,7 +804,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node output.</p>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
@@ -980,7 +980,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of the variable. Valid values:</p>
+             * <p>The variable scope. Valid values:</p>
              * <ul>
              * <li>NodeParameter</li>
              * <li>NodeContext</li>
@@ -997,7 +997,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the variable. Valid values:</p>
+             * <p>The variable type. Valid values:</p>
              * <ul>
              * <li>NoKvVariableExpression</li>
              * <li>Constant</li>
@@ -1015,7 +1015,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -1098,7 +1098,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node outputs.</p>
+             * <p>The node output list.</p>
              */
             public Builder nodeOutputs(java.util.List<OutputsNodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -1106,7 +1106,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tables.</p>
+             * <p>The table list.</p>
              */
             public Builder tables(java.util.List<OutputsTables> tables) {
                 this.tables = tables;
@@ -1114,7 +1114,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variables.</p>
+             * <p>The variable list.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1181,7 +1181,10 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroup.
+             * <p>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_XXXX</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1510,7 +1513,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period.</p>
+             * <p>Timeout.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1591,7 +1594,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1713,7 +1716,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CRON expression for scheduling.</p>
+             * <p>The cron expression for scheduling</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -1768,12 +1771,12 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the trigger.</p>
+             * <p>The trigger type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Scheduler</li>
-             * <li>Manual</li>
-             * <li>Steaming</li>
+             * <li>Scheduler: periodic scheduling</li>
+             * <li>Manual: manual trigger</li>
+             * <li>Streaming: streaming task</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2039,7 +2042,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the node was created. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the node in DataStudio was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1722910655000</p>
@@ -2050,7 +2053,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data source.</p>
+             * <p>The data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -2080,7 +2083,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input of the node.</p>
+             * <p>The node input.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -2088,7 +2091,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the node in DataStudio was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1722910655000</p>
@@ -2110,7 +2113,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node output.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -2118,7 +2121,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the node.</p>
+             * <p>The owner of nodes in DataStudio.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -2181,7 +2184,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags. This parameter is not in use.</p>
+             * <p>The tag information (not in use).</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -2293,7 +2296,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The nodes.</p>
+             * <p>The list of nodes in DataStudio.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

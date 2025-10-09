@@ -195,7 +195,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the node. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,7 +207,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the data to retrieve, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +219,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default is 10, and the maximum is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

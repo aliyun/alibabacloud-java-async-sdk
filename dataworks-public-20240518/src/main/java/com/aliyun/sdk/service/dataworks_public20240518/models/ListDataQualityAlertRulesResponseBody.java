@@ -67,7 +67,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageInfo.
+         * <p>Alert rule configurations.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,7 +75,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Extension.
+             * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:true}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -162,7 +168,20 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverType.
+             * <p>The type of alert recipients.</p>
+             * <ul>
+             * <li>ShiftSchedule</li>
+             * <li>WebhookUrl</li>
+             * <li>FeishuUrl</li>
+             * <li>TaskOwner</li>
+             * <li>WeixinUrl</li>
+             * <li>DingdingUrl</li>
+             * <li>DataQualityScanOwner</li>
+             * <li>AliUid</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AliUid</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -170,7 +189,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverValues.
+             * <p>The value of alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -237,7 +256,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Channels.
+             * <p>In Channels, you can set both Email and Sms at the same time. In other cases, only one channel can be set.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -245,7 +264,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Receivers.
+             * <p>The alert recipients.</p>
              */
             public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
@@ -312,7 +331,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Ids.
+             * <p>The list of monitored target IDs</p>
              */
             public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
@@ -320,7 +339,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the monitored target. Only DataQualityScan is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQualityScan</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -426,7 +448,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Condition.
+             * <p>The alert conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -434,7 +459,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data quality monitor alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26433</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -442,7 +470,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Notification.
+             * <p>Alert notification configurations.</p>
              */
             public Builder notification(Notification notification) {
                 this.notification = notification;
@@ -450,7 +478,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59094</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -458,7 +489,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>Monitored targets of the data quality alert rule.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -551,7 +582,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataQualityAlertRules.
+             * <p>The list of alert rule configurations.</p>
              */
             public Builder dataQualityAlertRules(java.util.List<DataQualityAlertRules> dataQualityAlertRules) {
                 this.dataQualityAlertRules = dataQualityAlertRules;
@@ -559,7 +590,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -567,7 +601,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -575,7 +612,10 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>335</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

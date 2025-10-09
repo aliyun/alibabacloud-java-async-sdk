@@ -223,6 +223,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
+         * <p>The idempotency token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +236,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * ComputeResource.
+         * <p>The compute engine used at runtime. If not specified, the data source defined in the Spec is used.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             String computeResourceShrink = shrink(computeResource, "ComputeResource", "json");
@@ -245,7 +246,10 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the data quality monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily data quality scanning of ods tables.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -254,7 +258,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Hooks.
+         * <p>The Hook configurations after the data quality monitoring run ends.</p>
          */
         public Builder hooks(java.util.List<Hooks> hooks) {
             String hooksShrink = shrink(hooks, "Hooks", "json");
@@ -264,7 +268,10 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The data quality monitoring name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data_quality_scan_001</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -273,7 +280,10 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The ID of the user who owns of the data quality monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -282,7 +292,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The definition of execution parameters for the data quality monitoring.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -292,7 +302,10 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -301,7 +314,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * RuntimeResource.
+         * <p>The resource group used during execution of the data quality monitoring.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -311,7 +324,35 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>Spec code for the content of the data quality monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;datasets&quot;: [
+         *         {
+         *             &quot;type&quot;: &quot;Table&quot;,
+         *             &quot;dataSource&quot;: {
+         *                 &quot;name&quot;: &quot;odps_first&quot;,
+         *                 &quot;envType&quot;: &quot;Prod&quot;
+         *             },
+         *             &quot;tables&quot;: [
+         *                 &quot;ods_d_user_info&quot;
+         *             ],
+         *             &quot;filter&quot;: &quot;pt = $[yyyymmdd-1]&quot;
+         *         }
+         *     ],
+         *     &quot;rules&quot;: [
+         *         {
+         *             &quot;assertion&quot;: &quot;row_count &gt; 0&quot;
+         *         }, {
+         *             &quot;templateId&quot;: &quot;SYSTEM:field:null_value:fixed&quot;,
+         *             &quot;pass&quot;: &quot;when = 0&quot;,
+         *             &quot;name&quot;: &quot;The id cannot be empty.&quot;,
+         *             &quot;severity&quot;: &quot;High&quot;,
+         *              &quot;identity&quot;: &quot;a-customized-data-quality-rule-uuid&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);
@@ -320,7 +361,7 @@ public class CreateDataQualityScanRequest extends Request {
         }
 
         /**
-         * Trigger.
+         * <p>The trigger configurations of the data quality monitoring task.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -402,7 +443,16 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * Engine.
+             * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Hive: Hive SQL</li>
+             * <li>Spark: Spark SQL</li>
+             * <li>Kyuubi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -410,7 +460,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * HiveConf.
+             * <p>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mapreduce.job.queuename=dq_queue</p>
              */
             public Builder hiveConf(java.util.Map<String, ?> hiveConf) {
                 this.hiveConf = hiveConf;
@@ -418,7 +471,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * SparkConf.
+             * <p>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.yarn.queue=dq_queue</p>
              */
             public Builder sparkConf(java.util.Map<String, ?> sparkConf) {
                 this.sparkConf = sparkConf;
@@ -498,7 +554,15 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * EnvType.
+             * <p>The workspace environment to which the compute engine belongs.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment .</li>
+             * <li>Dev: development environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -506,7 +570,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the compute engine, which is a unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr_first</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -514,7 +581,7 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Runtime.
+             * <p>More settings for data quality monitoring at runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -581,7 +648,11 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * Condition.
+             * <p>The Hook trigger condition. The hook will run if the condition is met. Currently, only one type of expression syntax is supported:</p>
+             * <p>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <code>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</code>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>results.any { r -&gt; r.status == &quot;Fail&quot; &amp;&amp; r.rule.severity == &quot;Normal&quot; || r.status == &quot;Error&quot; &amp;&amp; r.rule.severity == &quot;High&quot; || r.status == &quot;Warn&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -589,7 +660,14 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the Hook.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>BlockTaskInstance: Blocks the scheduling of the task instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BlockTaskInstance</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -656,7 +734,10 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>triggerTime</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -664,7 +745,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$[yyyymmdd-1]</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -744,7 +828,10 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * Cu.
+             * <p>The default number of CUs configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(Float cu) {
                 this.cu = cu;
@@ -752,7 +839,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0525242e-d0ee-4bda-bc73-765d82f6a34a</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -760,7 +850,10 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -827,7 +920,7 @@ public class CreateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * TaskIds.
+             * <p>If the trigger mode is set to BySchedule, the scheduling task ID must be specified.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -835,7 +928,15 @@ public class CreateDataQualityScanRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The trigger mode of the monitoring task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ByManual: Manual trigger. This is the default setting.</li>
+             * <li>BySchedule: Triggered by a scheduled task instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BySchedule</p>
              */
             public Builder type(String type) {
                 this.type = type;

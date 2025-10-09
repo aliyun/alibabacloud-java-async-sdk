@@ -82,7 +82,10 @@ public class GetDataQualityScanRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

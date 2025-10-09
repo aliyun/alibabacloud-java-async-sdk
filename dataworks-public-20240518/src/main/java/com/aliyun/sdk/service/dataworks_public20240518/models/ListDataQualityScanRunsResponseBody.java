@@ -67,7 +67,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageInfo.
+         * <p>The page information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,7 +75,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +155,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value. You can use a scheduling time expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$[yyyy-mm-dd-1]</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -255,7 +264,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the data quality monitor starts running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -263,7 +275,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the data quality monitor stops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -271,7 +286,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data quality monitor running record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3155</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -279,7 +297,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameters configured for the instance.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -287,7 +305,17 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance.</p>
+             * <ul>
+             * <li>Pass</li>
+             * <li>Running</li>
+             * <li>Error</li>
+             * <li>Warn</li>
+             * <li>Fail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fail</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -380,7 +408,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataQualityScanRuns.
+             * <p>The list of data quality monitor run records.</p>
              */
             public Builder dataQualityScanRuns(java.util.List<DataQualityScanRuns> dataQualityScanRuns) {
                 this.dataQualityScanRuns = dataQualityScanRuns;
@@ -388,7 +416,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number of the results. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -396,7 +427,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -404,7 +438,10 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

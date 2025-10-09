@@ -89,6 +89,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBusinessResponse> createBusiness(CreateBusinessRequest request);
 
     /**
+     * @param request the request parameters of CreateComponent  CreateComponentRequest
+     * @return CreateComponentResponse
+     */
+    CompletableFuture<CreateComponentResponse> createComponent(CreateComponentRequest request);
+
+    /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
      */
@@ -116,6 +122,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataAssetTagResponse> createDataAssetTag(CreateDataAssetTagRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityAlertRule  CreateDataQualityAlertRuleRequest
      * @return CreateDataQualityAlertRuleResponse
      */
@@ -149,18 +158,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataQualityRuleTemplateResponse> createDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityScan  CreateDataQualityScanRequest
      * @return CreateDataQualityScanResponse
      */
     CompletableFuture<CreateDataQualityScanResponse> createDataQualityScan(CreateDataQualityScanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityScanRun  CreateDataQualityScanRunRequest
      * @return CreateDataQualityScanRunResponse
      */
     CompletableFuture<CreateDataQualityScanRunResponse> createDataQualityScanRun(CreateDataQualityScanRunRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityTemplate  CreateDataQualityTemplateRequest
      * @return CreateDataQualityTemplateResponse
      */
@@ -346,6 +364,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteComponent  DeleteComponentRequest
+     * @return DeleteComponentResponse
+     */
+    CompletableFuture<DeleteComponentResponse> deleteComponent(DeleteComponentRequest request);
+
+    /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
      * @return DeleteDIAlarmRuleResponse
      */
@@ -370,6 +399,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataAssetTagResponse> deleteDataAssetTag(DeleteDataAssetTagRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Subscribe to DataWorks Basic Edition or a higher version to use this API.</p>
+     * 
      * @param request the request parameters of DeleteDataQualityAlertRule  DeleteDataQualityAlertRuleRequest
      * @return DeleteDataQualityAlertRuleResponse
      */
@@ -394,12 +426,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataQualityRuleTemplateResponse> deleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteDataQualityScan  DeleteDataQualityScanRequest
      * @return DeleteDataQualityScanResponse
      */
     CompletableFuture<DeleteDataQualityScanResponse> deleteDataQualityScan(DeleteDataQualityScanRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li><strong>Id</strong>: the unique identifier of the user-defined rule template, in the format <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
+     * <li><strong>ProjectId</strong>: The ID of the DataWorks project to which the rule template belongs.
+     * This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <code>Id</code> and <code>ProjectId</code> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteDataQualityTemplate  DeleteDataQualityTemplateRequest
      * @return DeleteDataQualityTemplateResponse
      */
@@ -660,6 +703,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetColumnResponse> getColumn(GetColumnRequest request);
 
     /**
+     * @param request the request parameters of GetComponent  GetComponentRequest
+     * @return GetComponentResponse
+     */
+    CompletableFuture<GetComponentResponse> getComponent(GetComponentRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -687,6 +736,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDIJobLogResponse> getDIJobLog(GetDIJobLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityAlertRule  GetDataQualityAlertRuleRequest
      * @return GetDataQualityAlertRuleResponse
      */
@@ -723,24 +775,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataQualityRuleTemplateResponse> getDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScan  GetDataQualityScanRequest
      * @return GetDataQualityScanResponse
      */
     CompletableFuture<GetDataQualityScanResponse> getDataQualityScan(GetDataQualityScanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScanRun  GetDataQualityScanRunRequest
      * @return GetDataQualityScanRunResponse
      */
     CompletableFuture<GetDataQualityScanRunResponse> getDataQualityScanRun(GetDataQualityScanRunRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityScanRunLog  GetDataQualityScanRunLogRequest
      * @return GetDataQualityScanRunLogResponse
      */
     CompletableFuture<GetDataQualityScanRunLogResponse> getDataQualityScanRunLog(GetDataQualityScanRunLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDataQualityTemplate  GetDataQualityTemplateRequest
      * @return GetDataQualityTemplateResponse
      */
@@ -1031,6 +1095,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request);
 
     /**
+     * @param request the request parameters of ListComponents  ListComponentsRequest
+     * @return ListComponentsResponse
+     */
+    CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request);
+
+    /**
      * @param request the request parameters of ListCrawlerTypes  ListCrawlerTypesRequest
      * @return ListCrawlerTypesResponse
      */
@@ -1097,6 +1167,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataAssetsResponse> listDataAssets(ListDataAssetsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityAlertRules  ListDataQualityAlertRulesRequest
      * @return ListDataQualityAlertRulesResponse
      */
@@ -1145,18 +1218,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataQualityRulesResponse> listDataQualityRules(ListDataQualityRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityScanRuns  ListDataQualityScanRunsRequest
      * @return ListDataQualityScanRunsResponse
      */
     CompletableFuture<ListDataQualityScanRunsResponse> listDataQualityScanRuns(ListDataQualityScanRunsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityScans  ListDataQualityScansRequest
      * @return ListDataQualityScansResponse
      */
     CompletableFuture<ListDataQualityScansResponse> listDataQualityScans(ListDataQualityScansRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityTemplates  ListDataQualityTemplatesRequest
      * @return ListDataQualityTemplatesResponse
      */
@@ -1666,6 +1748,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateColumnBusinessMetadataResponse> updateColumnBusinessMetadata(UpdateColumnBusinessMetadataRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</p>
+     * 
+     * @param request the request parameters of UpdateComponent  UpdateComponentRequest
+     * @return UpdateComponentResponse
+     */
+    CompletableFuture<UpdateComponentResponse> updateComponent(UpdateComponentRequest request);
+
+    /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
      */
@@ -1690,6 +1781,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDataAssetTagResponse> updateDataAssetTag(UpdateDataAssetTagRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityAlertRule  UpdateDataQualityAlertRuleRequest
      * @return UpdateDataQualityAlertRuleResponse
      */
@@ -1717,12 +1811,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDataQualityRuleTemplateResponse> updateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityScan  UpdateDataQualityScanRequest
      * @return UpdateDataQualityScanResponse
      */
     CompletableFuture<UpdateDataQualityScanResponse> updateDataQualityScan(UpdateDataQualityScanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityTemplate  UpdateDataQualityTemplateRequest
      * @return UpdateDataQualityTemplateResponse
      */

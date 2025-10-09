@@ -67,7 +67,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
         } 
 
         /**
-         * DataQualityScan.
+         * <p>Data quality monitoring details.</p>
          */
         public Builder dataQualityScan(DataQualityScan dataQualityScan) {
             this.dataQualityScan = dataQualityScan;
@@ -157,7 +157,16 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * Engine.
+             * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Hive: Hive SQL</li>
+             * <li>Spark: Spark SQL</li>
+             * <li>Kyuubi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -165,7 +174,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * HiveConf.
+             * <p>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mapreduce.job.queuename=dq_queue</p>
              */
             public Builder hiveConf(java.util.Map<String, ?> hiveConf) {
                 this.hiveConf = hiveConf;
@@ -173,7 +185,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * SparkConf.
+             * <p>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.yarn.queue=dq_queue</p>
              */
             public Builder sparkConf(java.util.Map<String, ?> sparkConf) {
                 this.sparkConf = sparkConf;
@@ -253,7 +268,15 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * EnvType.
+             * <p>The workspace environment to which the compute engine belongs.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment .</li>
+             * <li>Dev: development environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -261,7 +284,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the compute engine, which is a unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_to_holo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +295,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Runtime.
+             * <p>More settings for data quality monitor at runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -336,7 +362,13 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * Condition.
+             * <p>The Hook trigger condition. The hook will run if the condition is met. Currently, only one type of expression syntax is supported:</p>
+             * <ul>
+             * <li>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <code>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</code>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>results.any { r -&gt; r.status == &quot;Fail&quot; &amp;&amp; r.rule.severity == &quot;Normal&quot; || r.status == &quot;Error&quot; &amp;&amp; r.rule.severity == &quot;High&quot; || r.status == &quot;Warn&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -344,7 +376,14 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the Hook.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>BlockTaskInstance: BlockTaskInstance: Blocks the scheduling of the task instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BlockTaskInstance</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -411,7 +450,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e2e_autolabel</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -419,7 +461,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -499,7 +544,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * Cu.
+             * <p>Reserved compute units (CU) for the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cu(Float cu) {
                 this.cu = cu;
@@ -507,7 +555,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122878</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -515,7 +566,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The image ID used in the runtime configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hp-tlp-e2e-repo-registry-vpc.cn-heyuan-acdr-1.cr.aliyuncs.com/hp-service/worker:9b28b6d-202506091008</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -582,7 +636,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskIds.
+             * <p>If the trigger mode is set to BySchedule, the scheduling task ID must be specified.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -590,7 +644,15 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger mode of the monitoring task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ByManual: Manual trigger. This is the default setting.</li>
+             * <li>BySchedule: Triggered by a scheduled task instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BySchedule</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -826,7 +888,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputeResource.
+             * <p>The compute engine used at runtime. Optional. If not specified, the data source defined in the Spec is used.</p>
              */
             public Builder computeResource(ComputeResource computeResource) {
                 this.computeResource = computeResource;
@@ -834,7 +896,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the data quality monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731550150000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -842,7 +907,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who creates the data quality monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2374924198591250</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -850,7 +918,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The data quality monitor description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aily data quality scanning of ods tables.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -858,7 +929,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Hooks.
+             * <p>The Hook configurations after the data quality monitoring run ends.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -866,7 +937,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The data quality monitoring ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -874,7 +948,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Last modified time of the data quality monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731550150000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -882,7 +959,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The ID of the user who last modifies the data quality monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23482597582479</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -890,7 +970,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The data quality monitor name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_quality_scan_001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -898,7 +981,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the user who owns the data quality monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231263586109857423</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -906,7 +992,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The definition of execution parameters for the data quality monitor.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -914,7 +1000,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID where the data quality monitor resides. You can obtain the workspace ID by calling the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -922,7 +1011,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The resource group used during the running of the data quality monitor.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -930,7 +1019,35 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>Spec code for the content of the data quality monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;datasets&quot;: [
+             *         {
+             *             &quot;type&quot;: &quot;Table&quot;,
+             *             &quot;dataSource&quot;: {
+             *                 &quot;name&quot;: &quot;odps_first&quot;,
+             *                 &quot;envType&quot;: &quot;Prod&quot;
+             *             },
+             *             &quot;tables&quot;: [
+             *                 &quot;ods_d_user_info&quot;
+             *             ],
+             *             &quot;filter&quot;: &quot;pt = $[yyyymmdd-1]&quot;
+             *         }
+             *     ],
+             *     &quot;rules&quot;: [
+             *         {
+             *             &quot;assertion&quot;: &quot;row_count &gt; 0&quot;
+             *         }, {
+             *             &quot;templateId&quot;: &quot;SYSTEM:field:null_value:fixed&quot;,
+             *             &quot;pass&quot;: &quot;when = 0&quot;,
+             *             &quot;name&quot;: &quot;The id cannot be empty.&quot;,
+             *             &quot;severity&quot;: &quot;High&quot;,
+             *              &quot;identity&quot;: &quot;a-customized-data-quality-rule-uuid&quot;
+             *         }
+             *     ]
+             * }</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -938,7 +1055,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The trigger configurations of the data quality monitoring task.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;

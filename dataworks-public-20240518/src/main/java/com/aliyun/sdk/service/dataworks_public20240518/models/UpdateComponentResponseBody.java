@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDataQualityTemplateResponseBody} extends {@link TeaModel}
+ * {@link UpdateComponentResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateDataQualityTemplateResponseBody</p>
+ * <p>UpdateComponentResponseBody</p>
  */
-public class UpdateDataQualityTemplateResponseBody extends TeaModel {
+public class UpdateComponentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateDataQualityTemplateResponseBody(Builder builder) {
+    private UpdateComponentResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -32,7 +32,7 @@ public class UpdateDataQualityTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateDataQualityTemplateResponseBody create() {
+    public static UpdateComponentResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +61,16 @@ public class UpdateDataQualityTemplateResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateDataQualityTemplateResponseBody model) {
+        private Builder(UpdateComponentResponseBody model) {
             this.requestId = model.requestId;
             this.success = model.success;
         } 
 
         /**
-         * <p>The API request ID, which is generated as a UUID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc14115***159376359</p>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateDataQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule template is updated.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -88,8 +88,8 @@ public class UpdateDataQualityTemplateResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateDataQualityTemplateResponseBody build() {
-            return new UpdateDataQualityTemplateResponseBody(this);
+        public UpdateComponentResponseBody build() {
+            return new UpdateComponentResponseBody(this);
         } 
 
     } 

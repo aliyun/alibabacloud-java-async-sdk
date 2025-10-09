@@ -181,7 +181,10 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * CreateTimeFrom.
+         * <p>The earliest time when the data quality monitor starts to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder createTimeFrom(Long createTimeFrom) {
             this.putQueryParameter("CreateTimeFrom", createTimeFrom);
@@ -190,7 +193,10 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * CreateTimeTo.
+         * <p>The latest time when the data quality monitor starts to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder createTimeTo(Long createTimeTo) {
             this.putQueryParameter("CreateTimeTo", createTimeTo);
@@ -199,7 +205,10 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * DataQualityScanId.
+         * <p>The ID of the data quality monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder dataQualityScanId(Long dataQualityScanId) {
             this.putQueryParameter("DataQualityScanId", dataQualityScanId);
@@ -208,7 +217,10 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the results. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +229,10 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,6 +241,7 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +254,14 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
+         * <ul>
+         * <li>CreateTime (Desc/Asc)</li>
+         * <li>Id (Desc/Asc)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -247,7 +270,17 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the data quality check result.</p>
+         * <ul>
+         * <li>Pass</li>
+         * <li>Running</li>
+         * <li>Error</li>
+         * <li>Fail</li>
+         * <li>Warn</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Fail</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

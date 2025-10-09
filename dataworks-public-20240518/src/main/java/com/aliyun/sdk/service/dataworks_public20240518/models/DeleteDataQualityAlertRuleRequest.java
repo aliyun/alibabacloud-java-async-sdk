@@ -82,7 +82,10 @@ public class DeleteDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the data quality rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

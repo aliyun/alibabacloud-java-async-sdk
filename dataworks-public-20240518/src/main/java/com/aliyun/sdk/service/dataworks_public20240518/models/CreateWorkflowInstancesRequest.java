@@ -288,7 +288,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
+         * <p>The project environment.</p>
          * <ul>
          * <li>Prod</li>
          * <li>Dev</li>
@@ -340,7 +340,14 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * TagCreationPolicy.
+         * <p>The tag creation policy. Valid values:</p>
+         * <ul>
+         * <li>Append: New tags are added on top of the existing tags of the manual workflow.</li>
+         * <li>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Append</p>
          */
         public Builder tagCreationPolicy(String tagCreationPolicy) {
             this.putBodyParameter("TagCreationPolicy", tagCreationPolicy);
@@ -349,7 +356,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The task tag list.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -376,10 +383,10 @@ public class CreateWorkflowInstancesRequest extends Request {
         /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>SupplementData: The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</li>
-         * <li>ManualWorkflow: If you set the Type parameter to ManualWorkflow, you must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</li>
-         * <li>Manual: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</li>
-         * <li>SmokeTest: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</li>
+         * <li>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</li>
+         * <li>ManualWorkflow: Manual workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</li>
+         * <li>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</li>
+         * <li>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -482,9 +489,9 @@ public class CreateWorkflowInstancesRequest extends Request {
             /**
              * <p>The alert notification method. Valid values:</p>
              * <ul>
-             * <li>Sms</li>
-             * <li>Mail</li>
-             * <li>SmsMail</li>
+             * <li>Sms: SMS only.</li>
+             * <li>Mail: mail only.</li>
+             * <li>SmsMail: SMS and mail.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -498,9 +505,9 @@ public class CreateWorkflowInstancesRequest extends Request {
             /**
              * <p>The alerting policy. Valid values:</p>
              * <ul>
-             * <li>Success: An alert is reported when data backfill succeeds.</li>
-             * <li>Failure: An alert is reported when data backfill fails.</li>
-             * <li>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</li>
+             * <li>Success: Alerts on success.</li>
+             * <li>Failure: Alerts on failure.</li>
+             * <li>SuccessFailure: Alerts on both success and failure.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -571,7 +578,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to block running if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</p>
+             * <p>Specifies whether to block execution if the analysis fails. Required when Type is set to SupplementData.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -582,7 +589,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</p>
+             * <p>Specifies whether to enable the analysis feature. Required when Type is set to SupplementData.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -678,7 +685,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The end time of running. Configure this parameter in the <code>hh:mm:ss</code> format. The time must be in the 24-hour clock. This parameter is required if you configure the RunPolicy parameter.</p>
+             * <p>The end time of running. Configure this parameter in the <code>hh:mm:ss</code> format (24-hour clock). This parameter is required if you configure the RunPolicy parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>23:59:59</p>
@@ -689,7 +696,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the instances can be run immediately during the time period in the future. Valid values: true and false.</p>
+             * <p>Specifies whether a task whose scheduled run time is in the future can be run immediately. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -700,7 +707,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The start time of running. Configure this parameter in the <code>hh:mm:ss</code> format. The time must be in the 24-hour clock. This parameter is required if you configure the RunPolicy parameter.</p>
+             * <p>The start time of running. Configure this parameter in the <code>hh:mm:ss</code> format (24-hour clock). This parameter is required if you configure the RunPolicy parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00:00</p>
@@ -711,7 +718,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The type of the time period during which the data is backfilled. This parameter is required if you configure the RunPolicy parameter.</p>
+             * <p>The time period type. This parameter is required if you configure the RunPolicy parameter. Valid values:</p>
              * <ul>
              * <li>Daily</li>
              * <li>Weekend</li>
@@ -949,7 +956,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The configurations for analysis. If you set the Type parameter to SupplementData, this parameter is required.</p>
+             * <p>The analysis configuration. Required when Type is set to SupplementData.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -957,7 +964,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the projects that do not need to be run.</p>
+             * <p>The IDs of the projects not to run.</p>
              */
             public Builder excludeProjectIds(java.util.List<Long> excludeProjectIds) {
                 this.excludeProjectIds = excludeProjectIds;
@@ -965,7 +972,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the tasks that do not need to be run.</p>
+             * <p>The IDs of the tasks not to run.</p>
              */
             public Builder excludeTaskIds(java.util.List<Long> excludeTaskIds) {
                 this.excludeTaskIds = excludeTaskIds;
@@ -973,7 +980,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the projects that need to be run.</p>
+             * <p>The IDs of the projects to run.</p>
              */
             public Builder includeProjectIds(java.util.List<Long> includeProjectIds) {
                 this.includeProjectIds = includeProjectIds;
@@ -981,7 +988,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the tasks that need to be run.</p>
+             * <p>The IDs of the tasks to run.</p>
              */
             public Builder includeTaskIds(java.util.List<Long> includeTaskIds) {
                 this.includeTaskIds = includeTaskIds;
@@ -989,12 +996,12 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The data backfill mode. Default value: ManualSelection. If you set the Type parameter to SupplementData, this parameter is required. Valid values:</p>
+             * <p>The data backfill mode. Default value: ManualSelection. Required when Type is set to SupplementData.</p>
              * <ul>
-             * <li>General: You can specify only <code>one root task ID</code>. The <code>IncludeTaskIds</code> parameter is optional. If you do not configure the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.</li>
-             * <li>ManualSelection: You can specify <code>multiple root task IDs</code>. The <code>IncludeTaskIds</code> parameter is optional. If you do not configure the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.</li>
-             * <li>Chain: If you set the Mode parameter to Chain, you must leave the <code>RootTaskIds</code> parameter empty and set the <code>IncludeTaskIds</code> parameter to the start task ID and the end task ID.</li>
-             * <li>AllDownstream: You can specify only one <code>root task ID</code>.</li>
+             * <li>General: You can specify only one value for <code>RootTaskIds</code>. The <code>IncludeTaskIds</code> parameter is optional. If it&quot;s not specified, it defaults to including <code>RootTaskIds</code>.</li>
+             * <li>ManualSelection: You can specify multiple values for <code>RootTaskIds</code>. The <code>IncludeTaskIds</code> parameter is optional. If it is not specified, it defaults to including <code>RootTaskIds</code>.</li>
+             * <li>Chain: If you set the Mode parameter to Chain, leave the <code>RootTaskIds</code> parameter empty and set the <code>IncludeTaskIds</code> parameter to the start task ID and the end task ID.</li>
+             * <li>AllDownstream: Only one <code>RootTaskId</code> can be specified.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1006,10 +1013,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The running order. Valid values:</p>
+             * <p>The execution order. Default value: Asc.</p>
              * <ul>
-             * <li>Asc (default): The tasks are sorted by data timestamp in ascending order.</li>
-             * <li>Desc: The tasks are sorted by data timestamp in descending order.</li>
+             * <li>Asc: ascending by business date.</li>
+             * <li>Desc: descending by business date.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1021,7 +1028,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The number of tasks that can be run in parallel. If you specify a value that ranges from 2 to 10, the value indicates the number of tasks that can be run in parallel. If you set the value to 1, the tasks are run one by one. If you set the Type parameter to SupplementData, this parameter is required.</p>
+             * <p>The task concurrency. Values from 2 to 10 indicate concurrency. A value of 1 indicates sequential execution. Required when Type = SupplementData.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1032,7 +1039,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The running priority. Valid values: 1 to 11. A larger value indicates a higher priority.</p>
+             * <p>The execution priority, range: 1–11. A higher value indicates higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1043,10 +1050,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The weight policy for the priority. Valid values:</p>
+             * <p>The priority weighting policy.</p>
              * <ul>
-             * <li><code>Disable</code>: No weight policy for the priority is enabled. This is the default value.</li>
-             * <li><code>Upstream</code>: The sum of the weights for the ancestor nodes of the current node is calculated. The more ancestor nodes, the higher the weight.</li>
+             * <li><code>Disable</code> (default): Do not enable.</li>
+             * <li><code>Upstream</code>: The priority is based on the total weight of upstream nodes. The deeper the hierarchy, the higher the weight.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1058,12 +1065,12 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The root task IDs.</p>
+             * <p>The list of root task IDs.</p>
              * <ul>
-             * <li>If you set the Type parameter to SupplementData and the Mode parameter to a value other than Chain, the RootTaskIds parameter is required.</li>
-             * <li>If you set the Type parameter to ManualWorkflow, the RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</li>
-             * <li>If you set the Type parameter to Manual, the RootTaskIds parameter is required. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</li>
-             * <li>If you set the Type parameter to SmokeTest, the RootTaskIds parameter is required. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</li>
+             * <li>When Type is set to SupplementData, RootTaskIds is required unless Mode is set to Chain.</li>
+             * <li>When Type is set to ManualWorkflow, RootTaskIds is optional. If it is not specified, the default root nodes of the manual workflow are used.</li>
+             * <li>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to run.</li>
+             * <li>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to run.</li>
              * </ul>
              */
             public Builder rootTaskIds(java.util.List<Long> rootTaskIds) {
@@ -1072,7 +1079,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The policy for running. If you leave this parameter empty, the task configuration is used.</p>
+             * <p>The run policy. If the parameter is left empty, the task configuration is used.</p>
              */
             public Builder runPolicy(RunPolicy runPolicy) {
                 this.runPolicy = runPolicy;
@@ -1080,7 +1087,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the custom resource group for scheduling. If you leave this parameter empty, the runtime configuration is used.</p>
+             * <p>Custom scheduling resource group ID. If left empty, the task configuration is used.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -1341,7 +1348,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1349,7 +1359,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

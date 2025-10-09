@@ -82,7 +82,10 @@ public class DeleteDataQualityTemplateRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the custom rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_DEFINED:2001</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

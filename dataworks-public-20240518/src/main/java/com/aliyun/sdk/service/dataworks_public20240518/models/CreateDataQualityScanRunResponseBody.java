@@ -67,7 +67,10 @@ public class CreateDataQualityScanRunResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The RunId that was successfully triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>248840</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateDataQualityScanRunResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115***159376359</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

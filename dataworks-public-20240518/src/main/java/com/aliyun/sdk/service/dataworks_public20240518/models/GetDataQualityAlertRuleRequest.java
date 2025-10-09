@@ -82,7 +82,10 @@ public class GetDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The data quality monitoring alert rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113642</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

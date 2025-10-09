@@ -12,18 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDataQualityTemplatesRequest} extends {@link RequestModel}
+ * {@link ListComponentsRequest} extends {@link RequestModel}
  *
- * <p>ListDataQualityTemplatesRequest</p>
+ * <p>ListComponentsRequest</p>
  */
-public class ListDataQualityTemplatesRequest extends Request {
+public class ListComponentsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Catalog")
-    private String catalog;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -31,20 +27,21 @@ public class ListDataQualityTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    private ListDataQualityTemplatesRequest(Builder builder) {
+    private ListComponentsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.catalog = builder.catalog;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -55,7 +52,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         return new Builder();
     }
 
-    public static ListDataQualityTemplatesRequest create() {
+    public static ListComponentsRequest create() {
         return builder().build();
     }
 
@@ -69,13 +66,6 @@ public class ListDataQualityTemplatesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return catalog
-     */
-    public String getCatalog() {
-        return this.catalog;
     }
 
     /**
@@ -106,9 +96,8 @@ public class ListDataQualityTemplatesRequest extends Request {
         return this.projectId;
     }
 
-    public static final class Builder extends Request.Builder<ListDataQualityTemplatesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListComponentsRequest, Builder> {
         private String regionId; 
-        private String catalog; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -118,10 +107,9 @@ public class ListDataQualityTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataQualityTemplatesRequest request) {
+        private Builder(ListComponentsRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.catalog = request.catalog;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -129,7 +117,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -138,22 +126,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The directory path to which the data quality template belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/timeliness/ods_layer</p>
-         */
-        public Builder catalog(String catalog) {
-            this.putQueryParameter("Catalog", catalog);
-            this.catalog = catalog;
-            return this;
-        }
-
-        /**
-         * <p>Fuzzy match for the template rule name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>table_rows</p>
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -162,10 +135,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 10.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,10 +144,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,10 +153,7 @@ public class ListDataQualityTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The project ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
+         * ProjectId.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -198,8 +162,8 @@ public class ListDataQualityTemplatesRequest extends Request {
         }
 
         @Override
-        public ListDataQualityTemplatesRequest build() {
-            return new ListDataQualityTemplatesRequest(this);
+        public ListComponentsRequest build() {
+            return new ListComponentsRequest(this);
         } 
 
     } 

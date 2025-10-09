@@ -379,10 +379,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
+         * <p>The project environment.</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li>Prod</li>
+         * <li>Dev</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class UpdateTaskRequest extends Request {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1</li>
+         * <li>T+1: the next day</li>
          * <li>Immediately</li>
          * </ul>
          * 
@@ -434,7 +434,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>Name.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -482,9 +482,9 @@ public class UpdateTaskRequest extends Request {
         /**
          * <p>The rerun mode. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * <li>AllDenied: The task cannot be rerun.</li>
+         * <li>FailureAllowed: The task can be rerun only after it fails.</li>
+         * <li>AllAllowed: The task can always be rerun.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,7 +509,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         * <p>Runtime environment configurations, such as resource group information.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -519,7 +519,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The script information.</p>
+         * <p>The run script information.</p>
          */
         public Builder script(Script script) {
             String scriptShrink = shrink(script, "Script", "json");
@@ -551,7 +551,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The trigger method.</p>
+         * <p>The triggering method.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -693,10 +693,10 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on level-1 descendant nodes</li>
-             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
-             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
-             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
+             * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
+             * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
+             * <li>Normal: Depends on nodes in the same cycle.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -709,7 +709,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the output of the ancestor task. This parameter is returned only if <code>same-cycle scheduling dependencies</code> and the node input are configured.</p>
+             * <p>The output identifier of the upstream task. (This parameter is returned only if <code>Normal</code> is set and the node input is configured.)</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -720,7 +720,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
+             * <p>The ID of the upstream task. (This parameter is returned only if <code>Normal</code> or <code>CrossCycleDependsOnOtherNode</code> is set and the node input is not configured.)</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -817,10 +817,10 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant</li>
-             * <li>PassThrough: node output</li>
-             * <li>System: variable</li>
-             * <li>NodeOutput: script output</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: node output.</li>
+             * <li>System: variable.</li>
+             * <li>NodeOutput: script output.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1041,10 +1041,10 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant</li>
-             * <li>PassThrough: node output</li>
-             * <li>System: variable</li>
-             * <li>NodeOutput: script output</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: node output.</li>
+             * <li>System: variable.</li>
+             * <li>NodeOutput: script output.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1226,7 +1226,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image configured for task running.</p>
+             * <p>The image ID used in the task runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -1237,7 +1237,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * <p>The identifier of the scheduling resource group used in the task runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -1262,6 +1262,7 @@ public class UpdateTaskRequest extends Request {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
+        @Deprecated
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
@@ -1318,7 +1319,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The script parameters.</p>
+             * <p>The script parameter list.</p>
              * 
              * <strong>example:</strong>
              * <p>para1=$bizdate</p>
@@ -1389,7 +1390,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of a tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1401,7 +1402,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of a tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1428,6 +1429,9 @@ public class UpdateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
 
+        @com.aliyun.core.annotation.NameInMap("CycleType")
+        private String cycleType;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
@@ -1442,6 +1446,7 @@ public class UpdateTaskRequest extends Request {
 
         private Trigger(Builder builder) {
             this.cron = builder.cron;
+            this.cycleType = builder.cycleType;
             this.endTime = builder.endTime;
             this.recurrence = builder.recurrence;
             this.startTime = builder.startTime;
@@ -1461,6 +1466,13 @@ public class UpdateTaskRequest extends Request {
          */
         public String getCron() {
             return this.cron;
+        }
+
+        /**
+         * @return cycleType
+         */
+        public String getCycleType() {
+            return this.cycleType;
         }
 
         /**
@@ -1493,6 +1505,7 @@ public class UpdateTaskRequest extends Request {
 
         public static final class Builder {
             private String cron; 
+            private String cycleType; 
             private String endTime; 
             private String recurrence; 
             private String startTime; 
@@ -1503,6 +1516,7 @@ public class UpdateTaskRequest extends Request {
 
             private Builder(Trigger model) {
                 this.cron = model.cron;
+                this.cycleType = model.cycleType;
                 this.endTime = model.endTime;
                 this.recurrence = model.recurrence;
                 this.startTime = model.startTime;
@@ -1510,7 +1524,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>The Cron expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -1521,7 +1535,15 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * CycleType.
+             */
+            public Builder cycleType(String cycleType) {
+                this.cycleType = cycleType;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -1548,7 +1570,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * <p>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -1559,10 +1581,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The trigger type. Valid values:</p>
+             * <p>The triggering type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: scheduling cycle-based trigger</li>
-             * <li>Manual: manual trigger</li>
+             * <li>Scheduler: periodically triggered</li>
+             * <li>Manual</li>
              * </ul>
              * 
              * <strong>example:</strong>

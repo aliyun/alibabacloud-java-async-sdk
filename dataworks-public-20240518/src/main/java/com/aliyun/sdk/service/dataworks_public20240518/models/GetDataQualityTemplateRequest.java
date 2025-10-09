@@ -82,7 +82,10 @@ public class GetDataQualityTemplateRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The data quality rule template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

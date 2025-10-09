@@ -12,31 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDataQualityTemplateRequest} extends {@link RequestModel}
+ * {@link UpdateComponentRequest} extends {@link RequestModel}
  *
- * <p>CreateDataQualityTemplateRequest</p>
+ * <p>UpdateComponentRequest</p>
  */
-public class CreateDataQualityTemplateRequest extends Request {
+public class UpdateComponentRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Owner")
-    private String owner;
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String componentId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
-    private CreateDataQualityTemplateRequest(Builder builder) {
+    private UpdateComponentRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.owner = builder.owner;
+        this.componentId = builder.componentId;
         this.projectId = builder.projectId;
         this.spec = builder.spec;
     }
@@ -45,7 +48,7 @@ public class CreateDataQualityTemplateRequest extends Request {
         return new Builder();
     }
 
-    public static CreateDataQualityTemplateRequest create() {
+    public static UpdateComponentRequest create() {
         return builder().build();
     }
 
@@ -62,10 +65,10 @@ public class CreateDataQualityTemplateRequest extends Request {
     }
 
     /**
-     * @return owner
+     * @return componentId
      */
-    public String getOwner() {
-        return this.owner;
+    public String getComponentId() {
+        return this.componentId;
     }
 
     /**
@@ -82,9 +85,9 @@ public class CreateDataQualityTemplateRequest extends Request {
         return this.spec;
     }
 
-    public static final class Builder extends Request.Builder<CreateDataQualityTemplateRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateComponentRequest, Builder> {
         private String regionId; 
-        private String owner; 
+        private String componentId; 
         private Long projectId; 
         private String spec; 
 
@@ -92,16 +95,17 @@ public class CreateDataQualityTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDataQualityTemplateRequest request) {
+        private Builder(UpdateComponentRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.owner = request.owner;
+            this.componentId = request.componentId;
             this.projectId = request.projectId;
             this.spec = request.spec;
         } 
 
         /**
-         * RegionId.
+         * <p>代表region的资源属性字段</p>
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -110,39 +114,48 @@ public class CreateDataQualityTemplateRequest extends Request {
         }
 
         /**
-         * <p>The owner ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1000000000001</p>
+         * <p>568780096083*******</p>
          */
-        public Builder owner(String owner) {
-            this.putBodyParameter("Owner", owner);
-            this.owner = owner;
+        public Builder componentId(String componentId) {
+            this.putBodyParameter("ComponentId", componentId);
+            this.componentId = componentId;
             return this;
         }
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
-            this.putBodyParameter("ProjectId", projectId);
+            this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;
         }
 
         /**
-         * <p>Detailed configuration Spec code of the rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+         * <p>The FlowSpec information for this UDF function. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
-         *     &quot;id_not_null_cnt&quot;: {
-         *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = &quot;$[yyyymmdd-1]&quot;;&quot;
-         *     },
-         *     &quot;identity&quot;: &quot;819cf1f8-29be-4f94-a9d0-c5c06c0c3d2a&quot;
+         *     &quot;kind&quot;: &quot;Component&quot;,
+         *     &quot;version&quot;: &quot;1.1.2&quot;,
+         *     &quot;spec&quot;: {
+         *         &quot;components&quot;: [
+         *             {
+         *                 &quot;id&quot;: &quot;568780096083*******&quot;,
+         *                 &quot;script&quot;: {
+         *                     &quot;content&quot;: &quot;select &quot;@@{para1}&quot;, &quot;@@{para2}&quot;&quot;
+         *                 }
+         *             }
+         *         ]
+         *     }
          * }</p>
          */
         public Builder spec(String spec) {
@@ -152,8 +165,8 @@ public class CreateDataQualityTemplateRequest extends Request {
         }
 
         @Override
-        public CreateDataQualityTemplateRequest build() {
-            return new CreateDataQualityTemplateRequest(this);
+        public UpdateComponentRequest build() {
+            return new UpdateComponentRequest(this);
         } 
 
     } 

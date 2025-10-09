@@ -80,7 +80,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination result.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +194,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
             } 
 
             /**
-             * LineageRelationships.
+             * <p>The list of data tables.</p>
              */
             public Builder lineageRelationships(java.util.List<LineageRelationship> lineageRelationships) {
                 this.lineageRelationships = lineageRelationships;
@@ -196,7 +202,10 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -204,7 +213,10 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -212,7 +224,10 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

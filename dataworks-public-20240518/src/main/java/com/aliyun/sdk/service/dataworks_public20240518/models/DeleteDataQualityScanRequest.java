@@ -96,7 +96,10 @@ public class DeleteDataQualityScanRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The deprecated parameter. No configuration is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -105,7 +108,10 @@ public class DeleteDataQualityScanRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the data quality monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
