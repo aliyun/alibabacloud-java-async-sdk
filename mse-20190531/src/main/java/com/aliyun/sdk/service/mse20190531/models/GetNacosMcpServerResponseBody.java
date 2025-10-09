@@ -554,6 +554,12 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
      * <p>GetNacosMcpServerResponseBody</p>
      */
     public static class ToolSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecuritySchemes")
+        private Object securitySchemes;
+
+        @com.aliyun.core.annotation.NameInMap("SpecificationType")
+        private String specificationType;
+
         @com.aliyun.core.annotation.NameInMap("Tools")
         private java.util.List<Tools> tools;
 
@@ -561,6 +567,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         private java.util.Map<String, DataToolSpecToolsMetaValue> toolsMeta;
 
         private ToolSpec(Builder builder) {
+            this.securitySchemes = builder.securitySchemes;
+            this.specificationType = builder.specificationType;
             this.tools = builder.tools;
             this.toolsMeta = builder.toolsMeta;
         }
@@ -571,6 +579,20 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
         public static ToolSpec create() {
             return builder().build();
+        }
+
+        /**
+         * @return securitySchemes
+         */
+        public Object getSecuritySchemes() {
+            return this.securitySchemes;
+        }
+
+        /**
+         * @return specificationType
+         */
+        public String getSpecificationType() {
+            return this.specificationType;
         }
 
         /**
@@ -588,6 +610,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Object securitySchemes; 
+            private String specificationType; 
             private java.util.List<Tools> tools; 
             private java.util.Map<String, DataToolSpecToolsMetaValue> toolsMeta; 
 
@@ -595,9 +619,27 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             private Builder(ToolSpec model) {
+                this.securitySchemes = model.securitySchemes;
+                this.specificationType = model.specificationType;
                 this.tools = model.tools;
                 this.toolsMeta = model.toolsMeta;
             } 
+
+            /**
+             * SecuritySchemes.
+             */
+            public Builder securitySchemes(Object securitySchemes) {
+                this.securitySchemes = securitySchemes;
+                return this;
+            }
+
+            /**
+             * SpecificationType.
+             */
+            public Builder specificationType(String specificationType) {
+                this.specificationType = specificationType;
+                return this;
+            }
 
             /**
              * Tools.

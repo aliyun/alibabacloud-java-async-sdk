@@ -21,6 +21,10 @@ public class CreateNacosMcpServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptToolSpec")
+    private Boolean encryptToolSpec;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndpointSpecification")
     private String endpointSpecification;
@@ -52,6 +56,7 @@ public class CreateNacosMcpServerRequest extends Request {
     private CreateNacosMcpServerRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.encryptToolSpec = builder.encryptToolSpec;
         this.endpointSpecification = builder.endpointSpecification;
         this.instanceId = builder.instanceId;
         this.namespaceId = builder.namespaceId;
@@ -79,6 +84,13 @@ public class CreateNacosMcpServerRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return encryptToolSpec
+     */
+    public Boolean getEncryptToolSpec() {
+        return this.encryptToolSpec;
     }
 
     /**
@@ -132,6 +144,7 @@ public class CreateNacosMcpServerRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNacosMcpServerRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean encryptToolSpec; 
         private String endpointSpecification; 
         private String instanceId; 
         private String namespaceId; 
@@ -147,6 +160,7 @@ public class CreateNacosMcpServerRequest extends Request {
         private Builder(CreateNacosMcpServerRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.encryptToolSpec = request.encryptToolSpec;
             this.endpointSpecification = request.endpointSpecification;
             this.instanceId = request.instanceId;
             this.namespaceId = request.namespaceId;
@@ -162,6 +176,15 @@ public class CreateNacosMcpServerRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * EncryptToolSpec.
+         */
+        public Builder encryptToolSpec(Boolean encryptToolSpec) {
+            this.putQueryParameter("EncryptToolSpec", encryptToolSpec);
+            this.encryptToolSpec = encryptToolSpec;
             return this;
         }
 

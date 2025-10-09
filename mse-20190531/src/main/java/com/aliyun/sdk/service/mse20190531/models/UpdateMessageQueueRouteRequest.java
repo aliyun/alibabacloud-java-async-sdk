@@ -40,6 +40,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
     private String filterSide;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrayBaseTags")
+    private java.util.List<String> grayBaseTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String namespace;
@@ -60,6 +64,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         this.appName = builder.appName;
         this.enable = builder.enable;
         this.filterSide = builder.filterSide;
+        this.grayBaseTags = builder.grayBaseTags;
         this.namespace = builder.namespace;
         this.region = builder.region;
         this.tags = builder.tags;
@@ -114,6 +119,13 @@ public class UpdateMessageQueueRouteRequest extends Request {
     }
 
     /**
+     * @return grayBaseTags
+     */
+    public java.util.List<String> getGrayBaseTags() {
+        return this.grayBaseTags;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -140,6 +152,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         private String appName; 
         private Boolean enable; 
         private String filterSide; 
+        private java.util.List<String> grayBaseTags; 
         private String namespace; 
         private String region; 
         private java.util.List<String> tags; 
@@ -155,6 +168,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
             this.appName = request.appName;
             this.enable = request.enable;
             this.filterSide = request.filterSide;
+            this.grayBaseTags = request.grayBaseTags;
             this.namespace = request.namespace;
             this.region = request.region;
             this.tags = request.tags;
@@ -223,6 +237,16 @@ public class UpdateMessageQueueRouteRequest extends Request {
         public Builder filterSide(String filterSide) {
             this.putQueryParameter("FilterSide", filterSide);
             this.filterSide = filterSide;
+            return this;
+        }
+
+        /**
+         * GrayBaseTags.
+         */
+        public Builder grayBaseTags(java.util.List<String> grayBaseTags) {
+            String grayBaseTagsShrink = shrink(grayBaseTags, "GrayBaseTags", "json");
+            this.putQueryParameter("GrayBaseTags", grayBaseTagsShrink);
+            this.grayBaseTags = grayBaseTags;
             return this;
         }
 

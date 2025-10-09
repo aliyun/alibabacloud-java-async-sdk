@@ -207,6 +207,9 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilterSide")
         private String filterSide;
 
+        @com.aliyun.core.annotation.NameInMap("GrayBaseTags")
+        private java.util.List<String> grayBaseTags;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
@@ -217,6 +220,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.enable = builder.enable;
             this.filterSide = builder.filterSide;
+            this.grayBaseTags = builder.grayBaseTags;
             this.region = builder.region;
             this.tags = builder.tags;
         }
@@ -251,6 +255,13 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return grayBaseTags
+         */
+        public java.util.List<String> getGrayBaseTags() {
+            return this.grayBaseTags;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -268,6 +279,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             private String appId; 
             private Boolean enable; 
             private String filterSide; 
+            private java.util.List<String> grayBaseTags; 
             private String region; 
             private java.util.List<String> tags; 
 
@@ -278,6 +290,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.enable = model.enable;
                 this.filterSide = model.filterSide;
+                this.grayBaseTags = model.grayBaseTags;
                 this.region = model.region;
                 this.tags = model.tags;
             } 
@@ -316,6 +329,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
              */
             public Builder filterSide(String filterSide) {
                 this.filterSide = filterSide;
+                return this;
+            }
+
+            /**
+             * GrayBaseTags.
+             */
+            public Builder grayBaseTags(java.util.List<String> grayBaseTags) {
+                this.grayBaseTags = grayBaseTags;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2025-10-09 Version: 6.0.49
+- Generated java-async 2019-05-31 for mse.
+
 2025-08-14 Version: 6.0.47
 - Generated java-async 2019-05-31 for mse.
 
