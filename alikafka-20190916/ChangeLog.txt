@@ -1,3 +1,6 @@
+2025-10-09 Version: 1.0.35
+- Generated java-async 2019-09-16 for alikafka.
+
 2025-08-18 Version: 1.0.34
 - Generated java-async 2019-09-16 for alikafka.
 

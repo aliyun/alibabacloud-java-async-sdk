@@ -401,6 +401,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
      * <p>GetConsumerProgressResponseBody</p>
      */
     public static class OffsetList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Accumulate")
+        private Long accumulate;
+
         @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
 
@@ -423,6 +426,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private Integer partition;
 
         private OffsetList(Builder builder) {
+            this.accumulate = builder.accumulate;
             this.brokerOffset = builder.brokerOffset;
             this.clientId = builder.clientId;
             this.clientIp = builder.clientIp;
@@ -438,6 +442,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static OffsetList create() {
             return builder().build();
+        }
+
+        /**
+         * @return accumulate
+         */
+        public Long getAccumulate() {
+            return this.accumulate;
         }
 
         /**
@@ -490,6 +501,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long accumulate; 
             private Long brokerOffset; 
             private String clientId; 
             private String clientIp; 
@@ -502,6 +514,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             } 
 
             private Builder(OffsetList model) {
+                this.accumulate = model.accumulate;
                 this.brokerOffset = model.brokerOffset;
                 this.clientId = model.clientId;
                 this.clientIp = model.clientIp;
@@ -510,6 +523,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
                 this.memberId = model.memberId;
                 this.partition = model.partition;
             } 
+
+            /**
+             * Accumulate.
+             */
+            public Builder accumulate(Long accumulate) {
+                this.accumulate = accumulate;
+                return this;
+            }
 
             /**
              * <p>The latest offset in the partition of the topic.</p>
