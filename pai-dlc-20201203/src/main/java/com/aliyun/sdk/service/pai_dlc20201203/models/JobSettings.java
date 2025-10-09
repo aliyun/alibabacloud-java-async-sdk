@@ -68,6 +68,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobReservedPolicy")
     private String jobReservedPolicy;
 
+    @com.aliyun.core.annotation.NameInMap("ModelConfig")
+    private ModelConfig modelConfig;
+
     @com.aliyun.core.annotation.NameInMap("OversoldType")
     private String oversoldType;
 
@@ -98,6 +101,7 @@ public class JobSettings extends TeaModel {
         this.errorMonitoringArgs = builder.errorMonitoringArgs;
         this.jobReservedMinutes = builder.jobReservedMinutes;
         this.jobReservedPolicy = builder.jobReservedPolicy;
+        this.modelConfig = builder.modelConfig;
         this.oversoldType = builder.oversoldType;
         this.pipelineId = builder.pipelineId;
         this.sanityCheckArgs = builder.sanityCheckArgs;
@@ -236,6 +240,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return modelConfig
+     */
+    public ModelConfig getModelConfig() {
+        return this.modelConfig;
+    }
+
+    /**
      * @return oversoldType
      */
     public String getOversoldType() {
@@ -281,6 +292,7 @@ public class JobSettings extends TeaModel {
         private String errorMonitoringArgs; 
         private Integer jobReservedMinutes; 
         private String jobReservedPolicy; 
+        private ModelConfig modelConfig; 
         private String oversoldType; 
         private String pipelineId; 
         private String sanityCheckArgs; 
@@ -307,6 +319,7 @@ public class JobSettings extends TeaModel {
             this.errorMonitoringArgs = model.errorMonitoringArgs;
             this.jobReservedMinutes = model.jobReservedMinutes;
             this.jobReservedPolicy = model.jobReservedPolicy;
+            this.modelConfig = model.modelConfig;
             this.oversoldType = model.oversoldType;
             this.pipelineId = model.pipelineId;
             this.sanityCheckArgs = model.sanityCheckArgs;
@@ -446,6 +459,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder jobReservedPolicy(String jobReservedPolicy) {
             this.jobReservedPolicy = jobReservedPolicy;
+            return this;
+        }
+
+        /**
+         * ModelConfig.
+         */
+        public Builder modelConfig(ModelConfig modelConfig) {
+            this.modelConfig = modelConfig;
             return this;
         }
 

@@ -38,6 +38,9 @@ public class PodItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
+    @com.aliyun.core.annotation.NameInMap("PodIp")
+    private String podIp;
+
     @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
@@ -58,6 +61,7 @@ public class PodItem extends TeaModel {
         this.ip = builder.ip;
         this.nodeName = builder.nodeName;
         this.podId = builder.podId;
+        this.podIp = builder.podIp;
         this.podUid = builder.podUid;
         this.status = builder.status;
         this.subStatus = builder.subStatus;
@@ -126,6 +130,13 @@ public class PodItem extends TeaModel {
     }
 
     /**
+     * @return podIp
+     */
+    public String getPodIp() {
+        return this.podIp;
+    }
+
+    /**
      * @return podUid
      */
     public String getPodUid() {
@@ -161,6 +172,7 @@ public class PodItem extends TeaModel {
         private String ip; 
         private String nodeName; 
         private String podId; 
+        private String podIp; 
         private String podUid; 
         private String status; 
         private String subStatus; 
@@ -177,6 +189,7 @@ public class PodItem extends TeaModel {
             this.ip = model.ip;
             this.nodeName = model.nodeName;
             this.podId = model.podId;
+            this.podIp = model.podIp;
             this.podUid = model.podUid;
             this.status = model.status;
             this.subStatus = model.subStatus;
@@ -236,6 +249,14 @@ public class PodItem extends TeaModel {
          */
         public Builder podId(String podId) {
             this.podId = podId;
+            return this;
+        }
+
+        /**
+         * PodIp.
+         */
+        public Builder podIp(String podIp) {
+            this.podIp = podIp;
             return this;
         }
 
