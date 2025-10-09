@@ -135,6 +135,9 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSiemDaAccount")
         private String isSiemDaAccount;
 
+        @com.aliyun.core.annotation.NameInMap("PostBasicService")
+        private Integer postBasicService;
+
         @com.aliyun.core.annotation.NameInMap("PostPayModuleSwitch")
         private String postPayModuleSwitch;
 
@@ -157,6 +160,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             this.isSasDaAccount = builder.isSasDaAccount;
             this.isSiemControlAccount = builder.isSiemControlAccount;
             this.isSiemDaAccount = builder.isSiemDaAccount;
+            this.postBasicService = builder.postBasicService;
             this.postPayModuleSwitch = builder.postPayModuleSwitch;
             this.saleInstance = builder.saleInstance;
             this.sasVersion = builder.sasVersion;
@@ -255,6 +259,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return postBasicService
+         */
+        public Integer getPostBasicService() {
+            return this.postBasicService;
+        }
+
+        /**
          * @return postPayModuleSwitch
          */
         public String getPostPayModuleSwitch() {
@@ -288,6 +299,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             private String isSasDaAccount; 
             private String isSiemControlAccount; 
             private String isSiemDaAccount; 
+            private Integer postBasicService; 
             private String postPayModuleSwitch; 
             private String saleInstance; 
             private String sasVersion; 
@@ -308,6 +320,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
                 this.isSasDaAccount = model.isSasDaAccount;
                 this.isSiemControlAccount = model.isSiemControlAccount;
                 this.isSiemDaAccount = model.isSiemDaAccount;
+                this.postBasicService = model.postBasicService;
                 this.postPayModuleSwitch = model.postPayModuleSwitch;
                 this.saleInstance = model.saleInstance;
                 this.sasVersion = model.sasVersion;
@@ -446,6 +459,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder isSiemDaAccount(String isSiemDaAccount) {
                 this.isSiemDaAccount = isSiemDaAccount;
+                return this;
+            }
+
+            /**
+             * PostBasicService.
+             */
+            public Builder postBasicService(Integer postBasicService) {
+                this.postBasicService = postBasicService;
                 return this;
             }
 

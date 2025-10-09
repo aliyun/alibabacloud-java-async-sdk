@@ -662,6 +662,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Stages")
         private String stages;
 
+        @com.aliyun.core.annotation.NameInMap("SupportOperateCode")
+        private String supportOperateCode;
+
         @com.aliyun.core.annotation.NameInMap("TacticItems")
         private java.util.List<TacticItems> tacticItems;
 
@@ -726,6 +729,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.securityEventIds = builder.securityEventIds;
             this.sourceAliUid = builder.sourceAliUid;
             this.stages = builder.stages;
+            this.supportOperateCode = builder.supportOperateCode;
             this.tacticItems = builder.tacticItems;
             this.uniqueInfo = builder.uniqueInfo;
             this.uuid = builder.uuid;
@@ -1098,6 +1102,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportOperateCode
+         */
+        public String getSupportOperateCode() {
+            return this.supportOperateCode;
+        }
+
+        /**
          * @return tacticItems
          */
         public java.util.List<TacticItems> getTacticItems() {
@@ -1177,6 +1188,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String securityEventIds; 
             private Long sourceAliUid; 
             private String stages; 
+            private String supportOperateCode; 
             private java.util.List<TacticItems> tacticItems; 
             private String uniqueInfo; 
             private String uuid; 
@@ -1237,6 +1249,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
                 this.securityEventIds = model.securityEventIds;
                 this.sourceAliUid = model.sourceAliUid;
                 this.stages = model.stages;
+                this.supportOperateCode = model.supportOperateCode;
                 this.tacticItems = model.tacticItems;
                 this.uniqueInfo = model.uniqueInfo;
                 this.uuid = model.uuid;
@@ -1839,6 +1852,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder stages(String stages) {
                 this.stages = stages;
+                return this;
+            }
+
+            /**
+             * SupportOperateCode.
+             */
+            public Builder supportOperateCode(String supportOperateCode) {
+                this.supportOperateCode = supportOperateCode;
                 return this;
             }
 

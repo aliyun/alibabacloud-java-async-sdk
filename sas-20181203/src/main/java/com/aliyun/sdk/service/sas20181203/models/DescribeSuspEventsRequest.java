@@ -133,6 +133,10 @@ public class DescribeSuspEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StrictMode")
     private String strictMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportOperateCodeList")
+    private java.util.List<String> supportOperateCodeList;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TacticId")
     private String tacticId;
@@ -188,6 +192,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
         this.strictMode = builder.strictMode;
+        this.supportOperateCodeList = builder.supportOperateCodeList;
         this.tacticId = builder.tacticId;
         this.targetType = builder.targetType;
         this.timeEnd = builder.timeEnd;
@@ -413,6 +418,13 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return supportOperateCodeList
+     */
+    public java.util.List<String> getSupportOperateCodeList() {
+        return this.supportOperateCodeList;
+    }
+
+    /**
      * @return tacticId
      */
     public String getTacticId() {
@@ -484,6 +496,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String sourceIp; 
         private String status; 
         private String strictMode; 
+        private java.util.List<String> supportOperateCodeList; 
         private String tacticId; 
         private String targetType; 
         private String timeEnd; 
@@ -526,6 +539,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.sourceIp = request.sourceIp;
             this.status = request.status;
             this.strictMode = request.strictMode;
+            this.supportOperateCodeList = request.supportOperateCodeList;
             this.tacticId = request.tacticId;
             this.targetType = request.targetType;
             this.timeEnd = request.timeEnd;
@@ -967,6 +981,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder strictMode(String strictMode) {
             this.putQueryParameter("StrictMode", strictMode);
             this.strictMode = strictMode;
+            return this;
+        }
+
+        /**
+         * SupportOperateCodeList.
+         */
+        public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
+            this.putQueryParameter("SupportOperateCodeList", supportOperateCodeList);
+            this.supportOperateCodeList = supportOperateCodeList;
             return this;
         }
 

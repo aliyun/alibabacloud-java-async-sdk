@@ -29,6 +29,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoBind")
     private Integer autoBind;
 
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeCheck")
+    private Integer clusterNodeCheck;
+
     @com.aliyun.core.annotation.NameInMap("DefaultAuthToAll")
     private Integer defaultAuthToAll;
 
@@ -70,6 +73,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         this.allowUpgradePartialBuy = builder.allowUpgradePartialBuy;
         this.allowUserUnbind = builder.allowUserUnbind;
         this.autoBind = builder.autoBind;
+        this.clusterNodeCheck = builder.clusterNodeCheck;
         this.defaultAuthToAll = builder.defaultAuthToAll;
         this.hasPreBindSetting = builder.hasPreBindSetting;
         this.highestVersion = builder.highestVersion;
@@ -122,6 +126,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
      */
     public Integer getAutoBind() {
         return this.autoBind;
+    }
+
+    /**
+     * @return clusterNodeCheck
+     */
+    public Integer getClusterNodeCheck() {
+        return this.clusterNodeCheck;
     }
 
     /**
@@ -213,6 +224,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Integer allowUpgradePartialBuy; 
         private Integer allowUserUnbind; 
         private Integer autoBind; 
+        private Integer clusterNodeCheck; 
         private Integer defaultAuthToAll; 
         private Boolean hasPreBindSetting; 
         private Integer highestVersion; 
@@ -234,6 +246,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             this.allowUpgradePartialBuy = model.allowUpgradePartialBuy;
             this.allowUserUnbind = model.allowUserUnbind;
             this.autoBind = model.autoBind;
+            this.clusterNodeCheck = model.clusterNodeCheck;
             this.defaultAuthToAll = model.defaultAuthToAll;
             this.hasPreBindSetting = model.hasPreBindSetting;
             this.highestVersion = model.highestVersion;
@@ -305,6 +318,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         public Builder autoBind(Integer autoBind) {
             this.autoBind = autoBind;
+            return this;
+        }
+
+        /**
+         * ClusterNodeCheck.
+         */
+        public Builder clusterNodeCheck(Integer clusterNodeCheck) {
+            this.clusterNodeCheck = clusterNodeCheck;
             return this;
         }
 

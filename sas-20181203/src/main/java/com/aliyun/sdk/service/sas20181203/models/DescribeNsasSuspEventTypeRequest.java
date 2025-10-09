@@ -50,6 +50,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
     private String sourceIp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportOperateCodeList")
+    private java.util.List<String> supportOperateCodeList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
@@ -63,6 +67,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         this.name = builder.name;
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
+        this.supportOperateCodeList = builder.supportOperateCodeList;
         this.uuids = builder.uuids;
     }
 
@@ -136,6 +141,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
     }
 
     /**
+     * @return supportOperateCodeList
+     */
+    public java.util.List<String> getSupportOperateCodeList() {
+        return this.supportOperateCodeList;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -151,6 +163,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         private String name; 
         private String remark; 
         private String sourceIp; 
+        private java.util.List<String> supportOperateCodeList; 
         private String uuids; 
 
         private Builder() {
@@ -167,6 +180,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
             this.name = request.name;
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
+            this.supportOperateCodeList = request.supportOperateCodeList;
             this.uuids = request.uuids;
         } 
 
@@ -274,6 +288,15 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
             this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * SupportOperateCodeList.
+         */
+        public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
+            this.putQueryParameter("SupportOperateCodeList", supportOperateCodeList);
+            this.supportOperateCodeList = supportOperateCodeList;
             return this;
         }
 

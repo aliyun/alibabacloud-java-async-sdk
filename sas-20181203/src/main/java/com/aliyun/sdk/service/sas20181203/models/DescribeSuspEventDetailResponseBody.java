@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSuspEventDetailResponseBody</p>
  */
 public class DescribeSuspEventDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AlarmUniqueInfo")
+    private String alarmUniqueInfo;
+
     @com.aliyun.core.annotation.NameInMap("CanBeDealOnLine")
     private Boolean canBeDealOnLine;
 
@@ -72,6 +75,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     private String uuid;
 
     private DescribeSuspEventDetailResponseBody(Builder builder) {
+        this.alarmUniqueInfo = builder.alarmUniqueInfo;
         this.canBeDealOnLine = builder.canBeDealOnLine;
         this.dataSource = builder.dataSource;
         this.details = builder.details;
@@ -102,6 +106,13 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alarmUniqueInfo
+     */
+    public String getAlarmUniqueInfo() {
+        return this.alarmUniqueInfo;
     }
 
     /**
@@ -231,6 +242,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String alarmUniqueInfo; 
         private Boolean canBeDealOnLine; 
         private String dataSource; 
         private java.util.List<Details> details; 
@@ -254,6 +266,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeSuspEventDetailResponseBody model) {
+            this.alarmUniqueInfo = model.alarmUniqueInfo;
             this.canBeDealOnLine = model.canBeDealOnLine;
             this.dataSource = model.dataSource;
             this.details = model.details;
@@ -273,6 +286,14 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             this.saleVersion = model.saleVersion;
             this.uuid = model.uuid;
         } 
+
+        /**
+         * AlarmUniqueInfo.
+         */
+        public Builder alarmUniqueInfo(String alarmUniqueInfo) {
+            this.alarmUniqueInfo = alarmUniqueInfo;
+            return this;
+        }
 
         /**
          * <p>Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:</p>
