@@ -30,6 +30,10 @@ public class StartTerminalSessionRequest extends Request {
     private String connectionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionOptions")
+    private EncryptionOptions encryptionOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceId;
@@ -76,6 +80,7 @@ public class StartTerminalSessionRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.commandLine = builder.commandLine;
         this.connectionType = builder.connectionType;
+        this.encryptionOptions = builder.encryptionOptions;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -120,6 +125,13 @@ public class StartTerminalSessionRequest extends Request {
      */
     public String getConnectionType() {
         return this.connectionType;
+    }
+
+    /**
+     * @return encryptionOptions
+     */
+    public EncryptionOptions getEncryptionOptions() {
+        return this.encryptionOptions;
     }
 
     /**
@@ -196,6 +208,7 @@ public class StartTerminalSessionRequest extends Request {
         private String sourceRegionId; 
         private String commandLine; 
         private String connectionType; 
+        private EncryptionOptions encryptionOptions; 
         private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -216,6 +229,7 @@ public class StartTerminalSessionRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.commandLine = request.commandLine;
             this.connectionType = request.connectionType;
+            this.encryptionOptions = request.encryptionOptions;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -265,6 +279,16 @@ public class StartTerminalSessionRequest extends Request {
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
             this.connectionType = connectionType;
+            return this;
+        }
+
+        /**
+         * EncryptionOptions.
+         */
+        public Builder encryptionOptions(EncryptionOptions encryptionOptions) {
+            String encryptionOptionsShrink = shrink(encryptionOptions, "EncryptionOptions", "json");
+            this.putQueryParameter("EncryptionOptions", encryptionOptionsShrink);
+            this.encryptionOptions = encryptionOptions;
             return this;
         }
 
@@ -383,4 +407,100 @@ public class StartTerminalSessionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartTerminalSessionRequest} extends {@link TeaModel}
+     *
+     * <p>StartTerminalSessionRequest</p>
+     */
+    public static class EncryptionOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        private EncryptionOptions(Builder builder) {
+            this.enabled = builder.enabled;
+            this.KMSKeyId = builder.KMSKeyId;
+            this.mode = builder.mode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EncryptionOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String KMSKeyId; 
+            private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(EncryptionOptions model) {
+                this.enabled = model.enabled;
+                this.KMSKeyId = model.KMSKeyId;
+                this.mode = model.mode;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            public EncryptionOptions build() {
+                return new EncryptionOptions(this);
+            } 
+
+        } 
+
+    }
 }

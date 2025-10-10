@@ -768,7 +768,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkOptions.
+         * <p>Details about network options.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder networkOptions(NetworkOptions networkOptions) {
             this.networkOptions = networkOptions;

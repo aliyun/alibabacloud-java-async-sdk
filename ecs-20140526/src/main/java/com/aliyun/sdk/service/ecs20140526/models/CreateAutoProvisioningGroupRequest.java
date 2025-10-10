@@ -1840,6 +1840,81 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      *
      * <p>CreateAutoProvisioningGroupRequest</p>
      */
+    public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Core")
+        private Integer core;
+
+        @com.aliyun.core.annotation.NameInMap("ThreadsPerCore")
+        private Integer threadsPerCore;
+
+        private CpuOptions(Builder builder) {
+            this.core = builder.core;
+            this.threadsPerCore = builder.threadsPerCore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CpuOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return core
+         */
+        public Integer getCore() {
+            return this.core;
+        }
+
+        /**
+         * @return threadsPerCore
+         */
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
+        }
+
+        public static final class Builder {
+            private Integer core; 
+            private Integer threadsPerCore; 
+
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.core = model.core;
+                this.threadsPerCore = model.threadsPerCore;
+            } 
+
+            /**
+             * Core.
+             */
+            public Builder core(Integer core) {
+                this.core = core;
+                return this;
+            }
+
+            /**
+             * ThreadsPerCore.
+             */
+            public Builder threadsPerCore(Integer threadsPerCore) {
+                this.threadsPerCore = threadsPerCore;
+                return this;
+            }
+
+            public CpuOptions build() {
+                return new CpuOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class ImageOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
         private Boolean loginAsNonRoot;
@@ -2076,6 +2151,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
         private Integer autoRenewPeriod;
 
+        @com.aliyun.core.annotation.NameInMap("CpuOptions")
+        private CpuOptions cpuOptions;
+
         @com.aliyun.core.annotation.NameInMap("ImageOptions")
         private ImageOptions imageOptions;
 
@@ -2128,6 +2206,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.userData = builder.userData;
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.cpuOptions = builder.cpuOptions;
             this.imageOptions = builder.imageOptions;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
@@ -2376,6 +2455,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return cpuOptions
+         */
+        public CpuOptions getCpuOptions() {
+            return this.cpuOptions;
+        }
+
+        /**
          * @return imageOptions
          */
         public ImageOptions getImageOptions() {
@@ -2451,6 +2537,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String userData; 
             private Boolean autoRenew; 
             private Integer autoRenewPeriod; 
+            private CpuOptions cpuOptions; 
             private ImageOptions imageOptions; 
             private Integer period; 
             private String periodUnit; 
@@ -2495,6 +2582,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 this.userData = model.userData;
                 this.autoRenew = model.autoRenew;
                 this.autoRenewPeriod = model.autoRenewPeriod;
+                this.cpuOptions = model.cpuOptions;
                 this.imageOptions = model.imageOptions;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
@@ -2944,6 +3032,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder autoRenewPeriod(Integer autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * CpuOptions.
+             */
+            public Builder cpuOptions(CpuOptions cpuOptions) {
+                this.cpuOptions = cpuOptions;
                 return this;
             }
 

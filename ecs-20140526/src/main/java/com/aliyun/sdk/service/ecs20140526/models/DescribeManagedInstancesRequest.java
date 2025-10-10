@@ -38,6 +38,10 @@ public class DescribeManagedInstancesRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineId")
+    private String machineId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -93,6 +97,7 @@ public class DescribeManagedInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceIp = builder.instanceIp;
         this.instanceName = builder.instanceName;
+        this.machineId = builder.machineId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.osType = builder.osType;
@@ -153,6 +158,13 @@ public class DescribeManagedInstancesRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return machineId
+     */
+    public String getMachineId() {
+        return this.machineId;
     }
 
     /**
@@ -245,6 +257,7 @@ public class DescribeManagedInstancesRequest extends Request {
         private java.util.List<String> instanceId; 
         private String instanceIp; 
         private String instanceName; 
+        private String machineId; 
         private Integer maxResults; 
         private String nextToken; 
         private String osType; 
@@ -269,6 +282,7 @@ public class DescribeManagedInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceIp = request.instanceIp;
             this.instanceName = request.instanceName;
+            this.machineId = request.machineId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.osType = request.osType;
@@ -337,6 +351,15 @@ public class DescribeManagedInstancesRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * MachineId.
+         */
+        public Builder machineId(String machineId) {
+            this.putQueryParameter("MachineId", machineId);
+            this.machineId = machineId;
             return this;
         }
 

@@ -1078,6 +1078,60 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      *
      * <p>DescribeLaunchTemplateVersionsResponseBody</p>
      */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
+        private String trustedSystemMode;
+
+        private SecurityOptions(Builder builder) {
+            this.trustedSystemMode = builder.trustedSystemMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trustedSystemMode
+         */
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
+        }
+
+        public static final class Builder {
+            private String trustedSystemMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.trustedSystemMode = model.trustedSystemMode;
+            } 
+
+            /**
+             * TrustedSystemMode.
+             */
+            public Builder trustedSystemMode(String trustedSystemMode) {
+                this.trustedSystemMode = trustedSystemMode;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLaunchTemplateVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplateVersionsResponseBody</p>
+     */
     public static class InstanceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1322,6 +1376,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private LaunchTemplateDataSecurityGroupIds securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+        private SecurityOptions securityOptions;
+
         @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
@@ -1419,6 +1476,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.securityOptions = builder.securityOptions;
             this.spotDuration = builder.spotDuration;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
@@ -1702,6 +1760,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityOptions
+         */
+        public SecurityOptions getSecurityOptions() {
+            return this.securityOptions;
+        }
+
+        /**
          * @return spotDuration
          */
         public Integer getSpotDuration() {
@@ -1878,6 +1943,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
             private LaunchTemplateDataSecurityGroupIds securityGroupIds; 
+            private SecurityOptions securityOptions; 
             private Integer spotDuration; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
@@ -1939,6 +2005,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
                 this.securityEnhancementStrategy = model.securityEnhancementStrategy;
                 this.securityGroupId = model.securityGroupId;
                 this.securityGroupIds = model.securityGroupIds;
+                this.securityOptions = model.securityOptions;
                 this.spotDuration = model.spotDuration;
                 this.spotPriceLimit = model.spotPriceLimit;
                 this.spotStrategy = model.spotStrategy;
@@ -2400,6 +2467,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder securityGroupIds(LaunchTemplateDataSecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * SecurityOptions.
+             */
+            public Builder securityOptions(SecurityOptions securityOptions) {
+                this.securityOptions = securityOptions;
                 return this;
             }
 

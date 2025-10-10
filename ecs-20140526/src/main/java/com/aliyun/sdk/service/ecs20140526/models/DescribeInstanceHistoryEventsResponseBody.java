@@ -674,6 +674,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InactiveDisks")
         private InactiveDisks inactiveDisks;
 
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        private String metricName;
+
+        @com.aliyun.core.annotation.NameInMap("MetricValue")
+        private String metricValue;
+
         @com.aliyun.core.annotation.NameInMap("MigrationOptions")
         private MigrationOptions migrationOptions;
 
@@ -703,6 +709,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.hostId = builder.hostId;
             this.hostType = builder.hostType;
             this.inactiveDisks = builder.inactiveDisks;
+            this.metricName = builder.metricName;
+            this.metricValue = builder.metricValue;
             this.migrationOptions = builder.migrationOptions;
             this.onlineRepairPolicy = builder.onlineRepairPolicy;
             this.punishDomain = builder.punishDomain;
@@ -770,6 +778,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return metricValue
+         */
+        public String getMetricValue() {
+            return this.metricValue;
+        }
+
+        /**
          * @return migrationOptions
          */
         public MigrationOptions getMigrationOptions() {
@@ -826,6 +848,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String hostId; 
             private String hostType; 
             private InactiveDisks inactiveDisks; 
+            private String metricName; 
+            private String metricValue; 
             private MigrationOptions migrationOptions; 
             private String onlineRepairPolicy; 
             private String punishDomain; 
@@ -845,6 +869,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
                 this.hostId = model.hostId;
                 this.hostType = model.hostType;
                 this.inactiveDisks = model.inactiveDisks;
+                this.metricName = model.metricName;
+                this.metricValue = model.metricValue;
                 this.migrationOptions = model.migrationOptions;
                 this.onlineRepairPolicy = model.onlineRepairPolicy;
                 this.punishDomain = model.punishDomain;
@@ -929,6 +955,22 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
+                return this;
+            }
+
+            /**
+             * MetricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * MetricValue.
+             */
+            public Builder metricValue(String metricValue) {
+                this.metricValue = metricValue;
                 return this;
             }
 

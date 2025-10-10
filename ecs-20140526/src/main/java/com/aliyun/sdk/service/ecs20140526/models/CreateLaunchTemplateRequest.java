@@ -196,6 +196,10 @@ public class CreateLaunchTemplateRequest extends Request {
     private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+    private SecurityOptions securityOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotDuration")
     private Integer spotDuration;
 
@@ -286,6 +290,7 @@ public class CreateLaunchTemplateRequest extends Request {
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
+        this.securityOptions = builder.securityOptions;
         this.spotDuration = builder.spotDuration;
         this.spotPriceLimit = builder.spotPriceLimit;
         this.spotStrategy = builder.spotStrategy;
@@ -621,6 +626,13 @@ public class CreateLaunchTemplateRequest extends Request {
     }
 
     /**
+     * @return securityOptions
+     */
+    public SecurityOptions getSecurityOptions() {
+        return this.securityOptions;
+    }
+
+    /**
      * @return spotDuration
      */
     public Integer getSpotDuration() {
@@ -742,6 +754,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private java.util.List<String> securityGroupIds; 
+        private SecurityOptions securityOptions; 
         private Integer spotDuration; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
@@ -804,6 +817,7 @@ public class CreateLaunchTemplateRequest extends Request {
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
+            this.securityOptions = request.securityOptions;
             this.spotDuration = request.spotDuration;
             this.spotPriceLimit = request.spotPriceLimit;
             this.spotStrategy = request.spotStrategy;
@@ -1419,6 +1433,15 @@ public class CreateLaunchTemplateRequest extends Request {
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+
+        /**
+         * SecurityOptions.
+         */
+        public Builder securityOptions(SecurityOptions securityOptions) {
+            this.putQueryParameter("SecurityOptions", securityOptions);
+            this.securityOptions = securityOptions;
             return this;
         }
 
@@ -2708,6 +2731,60 @@ public class CreateLaunchTemplateRequest extends Request {
 
             public NetworkInterface build() {
                 return new NetworkInterface(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateLaunchTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateRequest</p>
+     */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
+        private String trustedSystemMode;
+
+        private SecurityOptions(Builder builder) {
+            this.trustedSystemMode = builder.trustedSystemMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trustedSystemMode
+         */
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
+        }
+
+        public static final class Builder {
+            private String trustedSystemMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.trustedSystemMode = model.trustedSystemMode;
+            } 
+
+            /**
+             * TrustedSystemMode.
+             */
+            public Builder trustedSystemMode(String trustedSystemMode) {
+                this.trustedSystemMode = trustedSystemMode;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
             } 
 
         } 

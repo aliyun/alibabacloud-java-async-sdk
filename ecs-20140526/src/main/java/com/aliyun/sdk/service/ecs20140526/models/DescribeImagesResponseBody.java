@@ -1159,6 +1159,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSupportIoOptimized")
         private Boolean isSupportIoOptimized;
 
+        @com.aliyun.core.annotation.NameInMap("LicenseType")
+        private String licenseType;
+
         @com.aliyun.core.annotation.NameInMap("LoginAsNonRootSupported")
         private Boolean loginAsNonRootSupported;
 
@@ -1218,6 +1221,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.isSubscribed = builder.isSubscribed;
             this.isSupportCloudinit = builder.isSupportCloudinit;
             this.isSupportIoOptimized = builder.isSupportIoOptimized;
+            this.licenseType = builder.licenseType;
             this.loginAsNonRootSupported = builder.loginAsNonRootSupported;
             this.OSName = builder.OSName;
             this.OSNameEn = builder.OSNameEn;
@@ -1375,6 +1379,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return licenseType
+         */
+        public String getLicenseType() {
+            return this.licenseType;
+        }
+
+        /**
          * @return loginAsNonRootSupported
          */
         public Boolean getLoginAsNonRootSupported() {
@@ -1485,6 +1496,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private Boolean isSubscribed; 
             private Boolean isSupportCloudinit; 
             private Boolean isSupportIoOptimized; 
+            private String licenseType; 
             private Boolean loginAsNonRootSupported; 
             private String OSName; 
             private String OSNameEn; 
@@ -1522,6 +1534,7 @@ public class DescribeImagesResponseBody extends TeaModel {
                 this.isSubscribed = model.isSubscribed;
                 this.isSupportCloudinit = model.isSupportCloudinit;
                 this.isSupportIoOptimized = model.isSupportIoOptimized;
+                this.licenseType = model.licenseType;
                 this.loginAsNonRootSupported = model.loginAsNonRootSupported;
                 this.OSName = model.OSName;
                 this.OSNameEn = model.OSNameEn;
@@ -1755,6 +1768,14 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
                 this.isSupportIoOptimized = isSupportIoOptimized;
+                return this;
+            }
+
+            /**
+             * LicenseType.
+             */
+            public Builder licenseType(String licenseType) {
+                this.licenseType = licenseType;
                 return this;
             }
 
