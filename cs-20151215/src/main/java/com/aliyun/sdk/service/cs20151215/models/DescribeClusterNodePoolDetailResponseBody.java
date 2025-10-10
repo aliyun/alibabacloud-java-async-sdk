@@ -1667,12 +1667,70 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
+    public static class NodeOsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("hugepage")
+        private Hugepage hugepage;
+
+        private NodeOsConfig(Builder builder) {
+            this.hugepage = builder.hugepage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeOsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hugepage
+         */
+        public Hugepage getHugepage() {
+            return this.hugepage;
+        }
+
+        public static final class Builder {
+            private Hugepage hugepage; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeOsConfig model) {
+                this.hugepage = model.hugepage;
+            } 
+
+            /**
+             * hugepage.
+             */
+            public Builder hugepage(Hugepage hugepage) {
+                this.hugepage = hugepage;
+                return this;
+            }
+
+            public NodeOsConfig build() {
+                return new NodeOsConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
     public static class NodeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kubelet_configuration")
         private KubeletConfig kubeletConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("node_os_config")
+        private NodeOsConfig nodeOsConfig;
+
         private NodeConfig(Builder builder) {
             this.kubeletConfiguration = builder.kubeletConfiguration;
+            this.nodeOsConfig = builder.nodeOsConfig;
         }
 
         public static Builder builder() {
@@ -1690,14 +1748,23 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.kubeletConfiguration;
         }
 
+        /**
+         * @return nodeOsConfig
+         */
+        public NodeOsConfig getNodeOsConfig() {
+            return this.nodeOsConfig;
+        }
+
         public static final class Builder {
             private KubeletConfig kubeletConfiguration; 
+            private NodeOsConfig nodeOsConfig; 
 
             private Builder() {
             } 
 
             private Builder(NodeConfig model) {
                 this.kubeletConfiguration = model.kubeletConfiguration;
+                this.nodeOsConfig = model.nodeOsConfig;
             } 
 
             /**
@@ -1705,6 +1772,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
                 this.kubeletConfiguration = kubeletConfiguration;
+                return this;
+            }
+
+            /**
+             * node_os_config.
+             */
+            public Builder nodeOsConfig(NodeOsConfig nodeOsConfig) {
+                this.nodeOsConfig = nodeOsConfig;
                 return this;
             }
 
@@ -2033,6 +2108,81 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("private_pool_ids")
+        private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privatePoolIds; 
+            private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolOptions model) {
+                this.privatePoolIds = model.privatePoolIds;
+                this.strategy = model.strategy;
+            } 
+
+            /**
+             * private_pool_ids.
+             */
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
     public static class SpotPriceLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
@@ -2201,6 +2351,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rds_instances")
         private java.util.List<String> rdsInstances;
 
+        @com.aliyun.core.annotation.NameInMap("resource_pool_options")
+        private ResourcePoolOptions resourcePoolOptions;
+
         @com.aliyun.core.annotation.NameInMap("scaling_group_id")
         private String scalingGroupId;
 
@@ -2293,6 +2446,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.ramPolicy = builder.ramPolicy;
             this.ramRoleName = builder.ramRoleName;
             this.rdsInstances = builder.rdsInstances;
+            this.resourcePoolOptions = builder.resourcePoolOptions;
             this.scalingGroupId = builder.scalingGroupId;
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupId = builder.securityGroupId;
@@ -2521,6 +2675,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourcePoolOptions
+         */
+        public ResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
+        }
+
+        /**
          * @return scalingGroupId
          */
         public String getScalingGroupId() {
@@ -2696,6 +2857,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String ramPolicy; 
             private String ramRoleName; 
             private java.util.List<String> rdsInstances; 
+            private ResourcePoolOptions resourcePoolOptions; 
             private String scalingGroupId; 
             private String scalingPolicy; 
             private String securityGroupId; 
@@ -2750,6 +2912,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
                 this.ramPolicy = model.ramPolicy;
                 this.ramRoleName = model.ramRoleName;
                 this.rdsInstances = model.rdsInstances;
+                this.resourcePoolOptions = model.resourcePoolOptions;
                 this.scalingGroupId = model.scalingGroupId;
                 this.scalingPolicy = model.scalingPolicy;
                 this.securityGroupId = model.securityGroupId;
@@ -3093,6 +3256,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
+                return this;
+            }
+
+            /**
+             * resource_pool_options.
+             */
+            public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+                this.resourcePoolOptions = resourcePoolOptions;
                 return this;
             }
 

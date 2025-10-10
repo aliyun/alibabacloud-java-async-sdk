@@ -372,24 +372,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateEdgeMachine  CreateEdgeMachineRequest
-     * @return CreateEdgeMachineResponse
-     */
-    @Override
-    public CompletableFuture<CreateEdgeMachineResponse> createEdgeMachine(CreateEdgeMachineRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEdgeMachine").setMethod(HttpMethod.POST).setPathRegex("/edge_machines").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEdgeMachineResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateEdgeMachineResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @deprecated OpenAPI CreateKubernetesTrigger is deprecated, please use CS::2015-12-15::CreateTrigger instead.  * @param request  the request parameters of CreateKubernetesTrigger  CreateKubernetesTriggerRequest
      * @return CreateKubernetesTriggerResponse
      */
@@ -567,24 +549,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteClusterNodesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DeleteEdgeMachine  DeleteEdgeMachineRequest
-     * @return DeleteEdgeMachineResponse
-     */
-    @Override
-    public CompletableFuture<DeleteEdgeMachineResponse> deleteEdgeMachine(DeleteEdgeMachineRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEdgeMachine").setMethod(HttpMethod.DELETE).setPathRegex("/edge_machines/[edge_machineid]").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEdgeMachineResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteEdgeMachineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1037,7 +1001,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeClusters is deprecated, please use CS::2015-12-15::DescribeClustersV1 instead.  * @param request  the request parameters of DescribeClusters  DescribeClustersRequest
+     * @deprecated OpenAPI DescribeClusters is deprecated, please use CS::2015-12-15::DescribeClustersForRegion instead.  * @param request  the request parameters of DescribeClusters  DescribeClustersRequest
      * @return DescribeClustersResponse
      */
     @Deprecated
@@ -1086,79 +1050,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeClustersV1Response> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI DescribeEdgeMachineActiveProcess is deprecated  * @param request  the request parameters of DescribeEdgeMachineActiveProcess  DescribeEdgeMachineActiveProcessRequest
-     * @return DescribeEdgeMachineActiveProcessResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DescribeEdgeMachineActiveProcessResponse> describeEdgeMachineActiveProcess(DescribeEdgeMachineActiveProcessRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEdgeMachineActiveProcess").setMethod(HttpMethod.GET).setPathRegex("/edge_machines/[edge_machineid]/activeprocess").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeMachineActiveProcessResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeEdgeMachineActiveProcessResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachineModels  DescribeEdgeMachineModelsRequest
-     * @return DescribeEdgeMachineModelsResponse
-     */
-    @Override
-    public CompletableFuture<DescribeEdgeMachineModelsResponse> describeEdgeMachineModels(DescribeEdgeMachineModelsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEdgeMachineModels").setMethod(HttpMethod.GET).setPathRegex("/edge_machines/models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeMachineModelsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeEdgeMachineModelsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachineTunnelConfigDetail  DescribeEdgeMachineTunnelConfigDetailRequest
-     * @return DescribeEdgeMachineTunnelConfigDetailResponse
-     */
-    @Override
-    public CompletableFuture<DescribeEdgeMachineTunnelConfigDetailResponse> describeEdgeMachineTunnelConfigDetail(DescribeEdgeMachineTunnelConfigDetailRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEdgeMachineTunnelConfigDetail").setMethod(HttpMethod.POST).setPathRegex("/edge_machines/[edge_machineid]/tunnelconfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeMachineTunnelConfigDetailResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeEdgeMachineTunnelConfigDetailResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachines  DescribeEdgeMachinesRequest
-     * @return DescribeEdgeMachinesResponse
-     */
-    @Override
-    public CompletableFuture<DescribeEdgeMachinesResponse> describeEdgeMachines(DescribeEdgeMachinesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEdgeMachines").setMethod(HttpMethod.GET).setPathRegex("/edge_machines").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeMachinesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeEdgeMachinesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1513,25 +1404,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeUserQuotaResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI EdgeClusterAddEdgeMachine is deprecated  * @param request  the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
-     * @return EdgeClusterAddEdgeMachineResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EdgeClusterAddEdgeMachine").setMethod(HttpMethod.POST).setPathRegex("/clusters/[clusterid]/attachedgemachine/[edge_machineid]").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EdgeClusterAddEdgeMachineResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EdgeClusterAddEdgeMachineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1989,25 +1861,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyClusterConfiguration is deprecated, please use CS::2015-12-15::ModifyClusterAddon instead.  * @param request  the request parameters of ModifyClusterConfiguration  ModifyClusterConfigurationRequest
-     * @return ModifyClusterConfigurationResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<ModifyClusterConfigurationResponse> modifyClusterConfiguration(ModifyClusterConfigurationRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyClusterConfiguration").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{ClusterId}/configuration").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyClusterConfigurationResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyClusterConfigurationResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
      */
@@ -2339,25 +2192,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RunClusterInspectResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI ScaleCluster is deprecated, please use CS::2015-12-15::ModifyClusterNodePool instead.  * @param request  the request parameters of ScaleCluster  ScaleClusterRequest
-     * @return ScaleClusterResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<ScaleClusterResponse> scaleCluster(ScaleClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ScaleCluster").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{ClusterId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ScaleClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ScaleClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -261,9 +261,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private Boolean deletionProtection;
 
         @com.aliyun.core.annotation.NameInMap("docker_version")
+        @Deprecated
         private String dockerVersion;
 
         @com.aliyun.core.annotation.NameInMap("external_loadbalancer_id")
+        @Deprecated
         private String externalLoadbalancerId;
 
         @com.aliyun.core.annotation.NameInMap("init_version")
@@ -285,6 +287,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("network_mode")
+        @Deprecated
         private String networkMode;
 
         @com.aliyun.core.annotation.NameInMap("next_version")
@@ -294,6 +297,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private OperationPolicy operationPolicy;
 
         @com.aliyun.core.annotation.NameInMap("private_zone")
+        @Deprecated
         private Boolean privateZone;
 
         @com.aliyun.core.annotation.NameInMap("profile")
@@ -345,9 +349,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private java.util.List<String> vswitchIds;
 
         @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
+        @Deprecated
         private String workerRamRoleName;
 
         @com.aliyun.core.annotation.NameInMap("zone_id")
+        @Deprecated
         private String zoneId;
 
         private Clusters(Builder builder) {

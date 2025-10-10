@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("access_control_list")
+    @Deprecated
     private java.util.List<String> accessControlList;
 
     @com.aliyun.core.annotation.Body
@@ -72,7 +73,6 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cluster_type")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
     @com.aliyun.core.annotation.Body
@@ -184,6 +184,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("logging_type")
+    @Deprecated
     private String loggingType;
 
     @com.aliyun.core.annotation.Body
@@ -262,6 +263,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nat_gateway")
+    @Deprecated
     private Boolean natGateway;
 
     @com.aliyun.core.annotation.Body
@@ -275,6 +277,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("node_port_range")
+    @Deprecated
     private String nodePortRange;
 
     @com.aliyun.core.annotation.Body
@@ -312,6 +315,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pod_vswitch_ids")
+    @Deprecated
     private java.util.List<String> podVswitchIds;
 
     @com.aliyun.core.annotation.Body
@@ -342,6 +346,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runtime")
+    @Deprecated
     private Runtime runtime;
 
     @com.aliyun.core.annotation.Body
@@ -359,11 +364,11 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("service_cidr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCidr;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("service_discovery_types")
+    @Deprecated
     private java.util.List<String> serviceDiscoveryTypes;
 
     @com.aliyun.core.annotation.Body
@@ -403,6 +408,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_data")
+    @Deprecated
     private String userData;
 
     @com.aliyun.core.annotation.Body
@@ -1723,7 +1729,6 @@ public class CreateClusterRequest extends Request {
          * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</li>
          * <li><code>ExternalKubernetes</code>: registered cluster.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Kubernetes</p>
@@ -2627,7 +2632,6 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</p>
          * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.0.0/20</p>

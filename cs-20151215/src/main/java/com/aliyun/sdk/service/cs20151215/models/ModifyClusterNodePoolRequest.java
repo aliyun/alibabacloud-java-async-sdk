@@ -1689,6 +1689,81 @@ public class ModifyClusterNodePoolRequest extends Request {
      *
      * <p>ModifyClusterNodePoolRequest</p>
      */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("private_pool_ids")
+        private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privatePoolIds; 
+            private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolOptions model) {
+                this.privatePoolIds = model.privatePoolIds;
+                this.strategy = model.strategy;
+            } 
+
+            /**
+             * private_pool_ids.
+             */
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterNodePoolRequest</p>
+     */
     public static class SpotPriceLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
@@ -1842,6 +1917,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("rds_instances")
         private java.util.List<String> rdsInstances;
 
+        @com.aliyun.core.annotation.NameInMap("resource_pool_options")
+        private ResourcePoolOptions resourcePoolOptions;
+
         @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
 
@@ -1917,6 +1995,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.platform = builder.platform;
             this.privatePoolOptions = builder.privatePoolOptions;
             this.rdsInstances = builder.rdsInstances;
+            this.resourcePoolOptions = builder.resourcePoolOptions;
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupIds = builder.securityGroupIds;
             this.spotInstancePools = builder.spotInstancePools;
@@ -2106,6 +2185,13 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return resourcePoolOptions
+         */
+        public ResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
+        }
+
+        /**
          * @return scalingPolicy
          */
         public String getScalingPolicy() {
@@ -2248,6 +2334,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String platform; 
             private PrivatePoolOptions privatePoolOptions; 
             private java.util.List<String> rdsInstances; 
+            private ResourcePoolOptions resourcePoolOptions; 
             private String scalingPolicy; 
             private java.util.List<String> securityGroupIds; 
             private Long spotInstancePools; 
@@ -2293,6 +2380,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.platform = model.platform;
                 this.privatePoolOptions = model.privatePoolOptions;
                 this.rdsInstances = model.rdsInstances;
+                this.resourcePoolOptions = model.resourcePoolOptions;
                 this.scalingPolicy = model.scalingPolicy;
                 this.securityGroupIds = model.securityGroupIds;
                 this.spotInstancePools = model.spotInstancePools;
@@ -2609,6 +2697,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
+                return this;
+            }
+
+            /**
+             * resource_pool_options.
+             */
+            public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+                this.resourcePoolOptions = resourcePoolOptions;
                 return this;
             }
 

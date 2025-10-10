@@ -101,6 +101,9 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("serializeImagePulls")
     private Boolean serializeImagePulls;
 
+    @com.aliyun.core.annotation.NameInMap("serverTLSBootstrap")
+    private Boolean serverTLSBootstrap;
+
     @com.aliyun.core.annotation.NameInMap("systemReserved")
     private java.util.Map<String, ?> systemReserved;
 
@@ -139,6 +142,7 @@ public class KubeletConfig extends TeaModel {
         this.registryPullQPS = builder.registryPullQPS;
         this.reservedMemory = builder.reservedMemory;
         this.serializeImagePulls = builder.serializeImagePulls;
+        this.serverTLSBootstrap = builder.serverTLSBootstrap;
         this.systemReserved = builder.systemReserved;
         this.topologyManagerPolicy = builder.topologyManagerPolicy;
         this.tracing = builder.tracing;
@@ -353,6 +357,13 @@ public class KubeletConfig extends TeaModel {
     }
 
     /**
+     * @return serverTLSBootstrap
+     */
+    public Boolean getServerTLSBootstrap() {
+        return this.serverTLSBootstrap;
+    }
+
+    /**
      * @return systemReserved
      */
     public java.util.Map<String, ?> getSystemReserved() {
@@ -402,6 +413,7 @@ public class KubeletConfig extends TeaModel {
         private Long registryPullQPS; 
         private java.util.List<ReservedMemory> reservedMemory; 
         private Boolean serializeImagePulls; 
+        private Boolean serverTLSBootstrap; 
         private java.util.Map<String, ?> systemReserved; 
         private String topologyManagerPolicy; 
         private Tracing tracing; 
@@ -438,6 +450,7 @@ public class KubeletConfig extends TeaModel {
             this.registryPullQPS = model.registryPullQPS;
             this.reservedMemory = model.reservedMemory;
             this.serializeImagePulls = model.serializeImagePulls;
+            this.serverTLSBootstrap = model.serverTLSBootstrap;
             this.systemReserved = model.systemReserved;
             this.topologyManagerPolicy = model.topologyManagerPolicy;
             this.tracing = model.tracing;
@@ -664,6 +677,14 @@ public class KubeletConfig extends TeaModel {
          */
         public Builder serializeImagePulls(Boolean serializeImagePulls) {
             this.serializeImagePulls = serializeImagePulls;
+            return this;
+        }
+
+        /**
+         * serverTLSBootstrap.
+         */
+        public Builder serverTLSBootstrap(Boolean serverTLSBootstrap) {
+            this.serverTLSBootstrap = serverTLSBootstrap;
             return this;
         }
 

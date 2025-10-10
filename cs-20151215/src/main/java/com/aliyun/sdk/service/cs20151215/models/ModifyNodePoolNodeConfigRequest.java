@@ -206,10 +206,14 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
      * <p>ModifyNodePoolNodeConfigRequest</p>
      */
     public static class OsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("hugepage")
+        private Hugepage hugepage;
+
         @com.aliyun.core.annotation.NameInMap("sysctl")
         private java.util.Map<String, ?> sysctl;
 
         private OsConfig(Builder builder) {
+            this.hugepage = builder.hugepage;
             this.sysctl = builder.sysctl;
         }
 
@@ -222,6 +226,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
+         * @return hugepage
+         */
+        public Hugepage getHugepage() {
+            return this.hugepage;
+        }
+
+        /**
          * @return sysctl
          */
         public java.util.Map<String, ?> getSysctl() {
@@ -229,14 +240,24 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private Hugepage hugepage; 
             private java.util.Map<String, ?> sysctl; 
 
             private Builder() {
             } 
 
             private Builder(OsConfig model) {
+                this.hugepage = model.hugepage;
                 this.sysctl = model.sysctl;
             } 
+
+            /**
+             * hugepage.
+             */
+            public Builder hugepage(Hugepage hugepage) {
+                this.hugepage = hugepage;
+                return this;
+            }
 
             /**
              * <p>The sysctl configuration.</p>

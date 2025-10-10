@@ -37,6 +37,7 @@ public class UpgradeClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rolling_policy")
+    @Deprecated
     private RollingPolicy rollingPolicy;
 
     @com.aliyun.core.annotation.Body
@@ -220,6 +221,7 @@ public class UpgradeClusterRequest extends Request {
      */
     public static class RollingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
+        @Deprecated
         private Integer maxParallelism;
 
         private RollingPolicy(Builder builder) {

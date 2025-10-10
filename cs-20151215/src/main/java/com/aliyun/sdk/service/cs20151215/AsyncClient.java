@@ -141,12 +141,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterNodePoolResponse> createClusterNodePool(CreateClusterNodePoolRequest request);
 
     /**
-     * @param request the request parameters of CreateEdgeMachine  CreateEdgeMachineRequest
-     * @return CreateEdgeMachineResponse
-     */
-    CompletableFuture<CreateEdgeMachineResponse> createEdgeMachine(CreateEdgeMachineRequest request);
-
-    /**
      * @deprecated OpenAPI CreateKubernetesTrigger is deprecated, please use CS::2015-12-15::CreateTrigger instead.  * @param request  the request parameters of CreateKubernetesTrigger  CreateKubernetesTriggerRequest
      * @return CreateKubernetesTriggerResponse
      */
@@ -220,12 +214,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteClusterNodesResponse
      */
     CompletableFuture<DeleteClusterNodesResponse> deleteClusterNodes(DeleteClusterNodesRequest request);
-
-    /**
-     * @param request the request parameters of DeleteEdgeMachine  DeleteEdgeMachineRequest
-     * @return DeleteEdgeMachineResponse
-     */
-    CompletableFuture<DeleteEdgeMachineResponse> deleteEdgeMachine(DeleteEdgeMachineRequest request);
 
     /**
      * @deprecated OpenAPI DeleteKubernetesTrigger is deprecated, please use CS::2015-12-15::DeleteTrigger instead.  * @param request  the request parameters of DeleteKubernetesTrigger  DeleteKubernetesTriggerRequest
@@ -386,7 +374,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterVulsResponse> describeClusterVuls(DescribeClusterVulsRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeClusters is deprecated, please use CS::2015-12-15::DescribeClustersV1 instead.  * @param request  the request parameters of DescribeClusters  DescribeClustersRequest
+     * @deprecated OpenAPI DescribeClusters is deprecated, please use CS::2015-12-15::DescribeClustersForRegion instead.  * @param request  the request parameters of DescribeClusters  DescribeClustersRequest
      * @return DescribeClustersResponse
      */
     @Deprecated
@@ -403,31 +391,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeClustersV1Response
      */
     CompletableFuture<DescribeClustersV1Response> describeClustersV1(DescribeClustersV1Request request);
-
-    /**
-     * @deprecated OpenAPI DescribeEdgeMachineActiveProcess is deprecated  * @param request  the request parameters of DescribeEdgeMachineActiveProcess  DescribeEdgeMachineActiveProcessRequest
-     * @return DescribeEdgeMachineActiveProcessResponse
-     */
-    @Deprecated
-    CompletableFuture<DescribeEdgeMachineActiveProcessResponse> describeEdgeMachineActiveProcess(DescribeEdgeMachineActiveProcessRequest request);
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachineModels  DescribeEdgeMachineModelsRequest
-     * @return DescribeEdgeMachineModelsResponse
-     */
-    CompletableFuture<DescribeEdgeMachineModelsResponse> describeEdgeMachineModels(DescribeEdgeMachineModelsRequest request);
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachineTunnelConfigDetail  DescribeEdgeMachineTunnelConfigDetailRequest
-     * @return DescribeEdgeMachineTunnelConfigDetailResponse
-     */
-    CompletableFuture<DescribeEdgeMachineTunnelConfigDetailResponse> describeEdgeMachineTunnelConfigDetail(DescribeEdgeMachineTunnelConfigDetailRequest request);
-
-    /**
-     * @param request the request parameters of DescribeEdgeMachines  DescribeEdgeMachinesRequest
-     * @return DescribeEdgeMachinesResponse
-     */
-    CompletableFuture<DescribeEdgeMachinesResponse> describeEdgeMachines(DescribeEdgeMachinesRequest request);
 
     /**
      * @param request the request parameters of DescribeEvents  DescribeEventsRequest
@@ -554,13 +517,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUserQuotaResponse
      */
     CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request);
-
-    /**
-     * @deprecated OpenAPI EdgeClusterAddEdgeMachine is deprecated  * @param request  the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
-     * @return EdgeClusterAddEdgeMachineResponse
-     */
-    @Deprecated
-    CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request);
 
     /**
      * <b>description</b> :
@@ -738,13 +694,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyClusterAddonResponse> modifyClusterAddon(ModifyClusterAddonRequest request);
 
     /**
-     * @deprecated OpenAPI ModifyClusterConfiguration is deprecated, please use CS::2015-12-15::ModifyClusterAddon instead.  * @param request  the request parameters of ModifyClusterConfiguration  ModifyClusterConfigurationRequest
-     * @return ModifyClusterConfigurationResponse
-     */
-    @Deprecated
-    CompletableFuture<ModifyClusterConfigurationResponse> modifyClusterConfiguration(ModifyClusterConfigurationRequest request);
-
-    /**
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
      */
@@ -876,13 +825,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RunClusterInspectResponse
      */
     CompletableFuture<RunClusterInspectResponse> runClusterInspect(RunClusterInspectRequest request);
-
-    /**
-     * @deprecated OpenAPI ScaleCluster is deprecated, please use CS::2015-12-15::ModifyClusterNodePool instead.  * @param request  the request parameters of ScaleCluster  ScaleClusterRequest
-     * @return ScaleClusterResponse
-     */
-    @Deprecated
-    CompletableFuture<ScaleClusterResponse> scaleCluster(ScaleClusterRequest request);
 
     /**
      * @param request the request parameters of ScaleClusterNodePool  ScaleClusterNodePoolRequest

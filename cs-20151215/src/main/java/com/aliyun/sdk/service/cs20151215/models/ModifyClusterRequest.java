@@ -24,6 +24,7 @@ public class ModifyClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("access_control_list")
+    @Deprecated
     private java.util.List<String> accessControlList;
 
     @com.aliyun.core.annotation.Body
@@ -56,14 +57,17 @@ public class ModifyClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ingress_domain_rebinding")
+    @Deprecated
     private Boolean ingressDomainRebinding;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ingress_loadbalancer_id")
+    @Deprecated
     private String ingressLoadbalancerId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instance_deletion_protection")
+    @Deprecated
     private Boolean instanceDeletionProtection;
 
     @com.aliyun.core.annotation.Body
