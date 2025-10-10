@@ -22,6 +22,10 @@ public class NotifyAgentRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundMusic")
+    private BackgroundMusic backgroundMusic;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
@@ -48,6 +52,7 @@ public class NotifyAgentRequest extends Request {
     private NotifyAgentRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.backgroundMusic = builder.backgroundMusic;
         this.channelId = builder.channelId;
         this.customAttribute = builder.customAttribute;
         this.interruptable = builder.interruptable;
@@ -74,6 +79,13 @@ public class NotifyAgentRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return backgroundMusic
+     */
+    public BackgroundMusic getBackgroundMusic() {
+        return this.backgroundMusic;
     }
 
     /**
@@ -120,6 +132,7 @@ public class NotifyAgentRequest extends Request {
 
     public static final class Builder extends Request.Builder<NotifyAgentRequest, Builder> {
         private String appId; 
+        private BackgroundMusic backgroundMusic; 
         private String channelId; 
         private String customAttribute; 
         private Boolean interruptable; 
@@ -134,6 +147,7 @@ public class NotifyAgentRequest extends Request {
         private Builder(NotifyAgentRequest request) {
             super(request);
             this.appId = request.appId;
+            this.backgroundMusic = request.backgroundMusic;
             this.channelId = request.channelId;
             this.customAttribute = request.customAttribute;
             this.interruptable = request.interruptable;
@@ -148,6 +162,16 @@ public class NotifyAgentRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * BackgroundMusic.
+         */
+        public Builder backgroundMusic(BackgroundMusic backgroundMusic) {
+            String backgroundMusicShrink = shrink(backgroundMusic, "BackgroundMusic", "json");
+            this.putQueryParameter("BackgroundMusic", backgroundMusicShrink);
+            this.backgroundMusic = backgroundMusic;
             return this;
         }
 
@@ -212,4 +236,80 @@ public class NotifyAgentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link NotifyAgentRequest} extends {@link TeaModel}
+     *
+     * <p>NotifyAgentRequest</p>
+     */
+    public static class BackgroundMusic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        @com.aliyun.core.annotation.Validation(maxLength = 1000)
+        private String url;
+
+        private BackgroundMusic(Builder builder) {
+            this.format = builder.format;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackgroundMusic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String format; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackgroundMusic model) {
+                this.format = model.format;
+                this.url = model.url;
+            } 
+
+            /**
+             * format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public BackgroundMusic build() {
+                return new BackgroundMusic(this);
+            } 
+
+        } 
+
+    }
 }

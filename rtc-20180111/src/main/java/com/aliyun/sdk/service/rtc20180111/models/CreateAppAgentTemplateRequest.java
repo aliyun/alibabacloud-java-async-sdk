@@ -22,6 +22,10 @@ public class CreateAppAgentTemplateRequest extends Request {
     private AgentSilenceConfig agentSilenceConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AmbientSoundConfig")
+    private AmbientSoundConfig ambientSoundConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
@@ -31,12 +35,20 @@ public class CreateAppAgentTemplateRequest extends Request {
     private AsrConfig asrConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackChannelConfig")
+    private BackChannelConfig backChannelConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChatMode")
     private Integer chatMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Greeting")
     private String greeting;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InterruptConfig")
+    private InterruptConfig interruptConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InterruptMode")
@@ -62,10 +74,13 @@ public class CreateAppAgentTemplateRequest extends Request {
     private CreateAppAgentTemplateRequest(Builder builder) {
         super(builder);
         this.agentSilenceConfig = builder.agentSilenceConfig;
+        this.ambientSoundConfig = builder.ambientSoundConfig;
         this.appId = builder.appId;
         this.asrConfig = builder.asrConfig;
+        this.backChannelConfig = builder.backChannelConfig;
         this.chatMode = builder.chatMode;
         this.greeting = builder.greeting;
+        this.interruptConfig = builder.interruptConfig;
         this.interruptMode = builder.interruptMode;
         this.llmConfig = builder.llmConfig;
         this.name = builder.name;
@@ -94,6 +109,13 @@ public class CreateAppAgentTemplateRequest extends Request {
     }
 
     /**
+     * @return ambientSoundConfig
+     */
+    public AmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -108,6 +130,13 @@ public class CreateAppAgentTemplateRequest extends Request {
     }
 
     /**
+     * @return backChannelConfig
+     */
+    public BackChannelConfig getBackChannelConfig() {
+        return this.backChannelConfig;
+    }
+
+    /**
      * @return chatMode
      */
     public Integer getChatMode() {
@@ -119,6 +148,13 @@ public class CreateAppAgentTemplateRequest extends Request {
      */
     public String getGreeting() {
         return this.greeting;
+    }
+
+    /**
+     * @return interruptConfig
+     */
+    public InterruptConfig getInterruptConfig() {
+        return this.interruptConfig;
     }
 
     /**
@@ -158,10 +194,13 @@ public class CreateAppAgentTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAppAgentTemplateRequest, Builder> {
         private AgentSilenceConfig agentSilenceConfig; 
+        private AmbientSoundConfig ambientSoundConfig; 
         private String appId; 
         private AsrConfig asrConfig; 
+        private BackChannelConfig backChannelConfig; 
         private Integer chatMode; 
         private String greeting; 
+        private InterruptConfig interruptConfig; 
         private Integer interruptMode; 
         private LlmConfig llmConfig; 
         private String name; 
@@ -175,10 +214,13 @@ public class CreateAppAgentTemplateRequest extends Request {
         private Builder(CreateAppAgentTemplateRequest request) {
             super(request);
             this.agentSilenceConfig = request.agentSilenceConfig;
+            this.ambientSoundConfig = request.ambientSoundConfig;
             this.appId = request.appId;
             this.asrConfig = request.asrConfig;
+            this.backChannelConfig = request.backChannelConfig;
             this.chatMode = request.chatMode;
             this.greeting = request.greeting;
+            this.interruptConfig = request.interruptConfig;
             this.interruptMode = request.interruptMode;
             this.llmConfig = request.llmConfig;
             this.name = request.name;
@@ -193,6 +235,16 @@ public class CreateAppAgentTemplateRequest extends Request {
             String agentSilenceConfigShrink = shrink(agentSilenceConfig, "AgentSilenceConfig", "json");
             this.putQueryParameter("AgentSilenceConfig", agentSilenceConfigShrink);
             this.agentSilenceConfig = agentSilenceConfig;
+            return this;
+        }
+
+        /**
+         * AmbientSoundConfig.
+         */
+        public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
+            String ambientSoundConfigShrink = shrink(ambientSoundConfig, "AmbientSoundConfig", "json");
+            this.putQueryParameter("AmbientSoundConfig", ambientSoundConfigShrink);
+            this.ambientSoundConfig = ambientSoundConfig;
             return this;
         }
 
@@ -219,6 +271,16 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
+         * BackChannelConfig.
+         */
+        public Builder backChannelConfig(BackChannelConfig backChannelConfig) {
+            String backChannelConfigShrink = shrink(backChannelConfig, "BackChannelConfig", "json");
+            this.putQueryParameter("BackChannelConfig", backChannelConfigShrink);
+            this.backChannelConfig = backChannelConfig;
+            return this;
+        }
+
+        /**
          * ChatMode.
          */
         public Builder chatMode(Integer chatMode) {
@@ -233,6 +295,16 @@ public class CreateAppAgentTemplateRequest extends Request {
         public Builder greeting(String greeting) {
             this.putQueryParameter("Greeting", greeting);
             this.greeting = greeting;
+            return this;
+        }
+
+        /**
+         * InterruptConfig.
+         */
+        public Builder interruptConfig(InterruptConfig interruptConfig) {
+            String interruptConfigShrink = shrink(interruptConfig, "InterruptConfig", "json");
+            this.putQueryParameter("InterruptConfig", interruptConfigShrink);
+            this.interruptConfig = interruptConfig;
             return this;
         }
 
@@ -407,6 +479,83 @@ public class CreateAppAgentTemplateRequest extends Request {
 
             public AgentSilenceConfig build() {
                 return new AgentSilenceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAppAgentTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppAgentTemplateRequest</p>
+     */
+    public static class AmbientSoundConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SoundId")
+        @com.aliyun.core.annotation.Validation(maxLength = 30)
+        private String soundId;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer volume;
+
+        private AmbientSoundConfig(Builder builder) {
+            this.soundId = builder.soundId;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AmbientSoundConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return soundId
+         */
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String soundId; 
+            private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(AmbientSoundConfig model) {
+                this.soundId = model.soundId;
+                this.volume = model.volume;
+            } 
+
+            /**
+             * SoundId.
+             */
+            public Builder soundId(String soundId) {
+                this.soundId = soundId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AmbientSoundConfig build() {
+                return new AmbientSoundConfig(this);
             } 
 
         } 
@@ -687,6 +836,114 @@ public class CreateAppAgentTemplateRequest extends Request {
 
             public AsrConfig build() {
                 return new AsrConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAppAgentTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppAgentTemplateRequest</p>
+     */
+    public static class BackChannelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserTurnEnd")
+        private Boolean userTurnEnd;
+
+        private BackChannelConfig(Builder builder) {
+            this.userTurnEnd = builder.userTurnEnd;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userTurnEnd
+         */
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+        public static final class Builder {
+            private Boolean userTurnEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelConfig model) {
+                this.userTurnEnd = model.userTurnEnd;
+            } 
+
+            /**
+             * UserTurnEnd.
+             */
+            public Builder userTurnEnd(Boolean userTurnEnd) {
+                this.userTurnEnd = userTurnEnd;
+                return this;
+            }
+
+            public BackChannelConfig build() {
+                return new BackChannelConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAppAgentTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppAgentTemplateRequest</p>
+     */
+    public static class InterruptConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SemanticsInterrupt")
+        private Boolean semanticsInterrupt;
+
+        private InterruptConfig(Builder builder) {
+            this.semanticsInterrupt = builder.semanticsInterrupt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InterruptConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return semanticsInterrupt
+         */
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
+        }
+
+        public static final class Builder {
+            private Boolean semanticsInterrupt; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterruptConfig model) {
+                this.semanticsInterrupt = model.semanticsInterrupt;
+            } 
+
+            /**
+             * SemanticsInterrupt.
+             */
+            public Builder semanticsInterrupt(Boolean semanticsInterrupt) {
+                this.semanticsInterrupt = semanticsInterrupt;
+                return this;
+            }
+
+            public InterruptConfig build() {
+                return new InterruptConfig(this);
             } 
 
         } 

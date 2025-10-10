@@ -665,6 +665,190 @@ public class StartAgentRequest extends Request {
      *
      * <p>StartAgentRequest</p>
      */
+    public static class AmbientSoundConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SoundId")
+        private String soundId;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer volume;
+
+        private AmbientSoundConfig(Builder builder) {
+            this.soundId = builder.soundId;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AmbientSoundConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return soundId
+         */
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String soundId; 
+            private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(AmbientSoundConfig model) {
+                this.soundId = model.soundId;
+                this.volume = model.volume;
+            } 
+
+            /**
+             * SoundId.
+             */
+            public Builder soundId(String soundId) {
+                this.soundId = soundId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AmbientSoundConfig build() {
+                return new AmbientSoundConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartAgentRequest} extends {@link TeaModel}
+     *
+     * <p>StartAgentRequest</p>
+     */
+    public static class BackChannelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserTurnEnd")
+        private Boolean userTurnEnd;
+
+        private BackChannelConfig(Builder builder) {
+            this.userTurnEnd = builder.userTurnEnd;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userTurnEnd
+         */
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+        public static final class Builder {
+            private Boolean userTurnEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelConfig model) {
+                this.userTurnEnd = model.userTurnEnd;
+            } 
+
+            /**
+             * UserTurnEnd.
+             */
+            public Builder userTurnEnd(Boolean userTurnEnd) {
+                this.userTurnEnd = userTurnEnd;
+                return this;
+            }
+
+            public BackChannelConfig build() {
+                return new BackChannelConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartAgentRequest} extends {@link TeaModel}
+     *
+     * <p>StartAgentRequest</p>
+     */
+    public static class InterruptConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SemanticsInterrupt")
+        private Boolean semanticsInterrupt;
+
+        private InterruptConfig(Builder builder) {
+            this.semanticsInterrupt = builder.semanticsInterrupt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InterruptConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return semanticsInterrupt
+         */
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
+        }
+
+        public static final class Builder {
+            private Boolean semanticsInterrupt; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterruptConfig model) {
+                this.semanticsInterrupt = model.semanticsInterrupt;
+            } 
+
+            /**
+             * SemanticsInterrupt.
+             */
+            public Builder semanticsInterrupt(Boolean semanticsInterrupt) {
+                this.semanticsInterrupt = semanticsInterrupt;
+                return this;
+            }
+
+            public InterruptConfig build() {
+                return new InterruptConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartAgentRequest} extends {@link TeaModel}
+     *
+     * <p>StartAgentRequest</p>
+     */
     public static class LLMConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
@@ -1140,11 +1324,20 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AgentSilenceConfig")
         private AgentSilenceConfig agentSilenceConfig;
 
+        @com.aliyun.core.annotation.NameInMap("AmbientSoundConfig")
+        private AmbientSoundConfig ambientSoundConfig;
+
+        @com.aliyun.core.annotation.NameInMap("BackChannelConfig")
+        private BackChannelConfig backChannelConfig;
+
         @com.aliyun.core.annotation.NameInMap("ChatMode")
         private Integer chatMode;
 
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
+
+        @com.aliyun.core.annotation.NameInMap("InterruptConfig")
+        private InterruptConfig interruptConfig;
 
         @com.aliyun.core.annotation.NameInMap("InterruptMode")
         private Integer interruptMode;
@@ -1158,8 +1351,11 @@ public class StartAgentRequest extends Request {
         private VoiceChatConfig(Builder builder) {
             this.ASRConfig = builder.ASRConfig;
             this.agentSilenceConfig = builder.agentSilenceConfig;
+            this.ambientSoundConfig = builder.ambientSoundConfig;
+            this.backChannelConfig = builder.backChannelConfig;
             this.chatMode = builder.chatMode;
             this.greeting = builder.greeting;
+            this.interruptConfig = builder.interruptConfig;
             this.interruptMode = builder.interruptMode;
             this.LLMConfig = builder.LLMConfig;
             this.TTSConfig = builder.TTSConfig;
@@ -1188,6 +1384,20 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * @return ambientSoundConfig
+         */
+        public AmbientSoundConfig getAmbientSoundConfig() {
+            return this.ambientSoundConfig;
+        }
+
+        /**
+         * @return backChannelConfig
+         */
+        public BackChannelConfig getBackChannelConfig() {
+            return this.backChannelConfig;
+        }
+
+        /**
          * @return chatMode
          */
         public Integer getChatMode() {
@@ -1199,6 +1409,13 @@ public class StartAgentRequest extends Request {
          */
         public String getGreeting() {
             return this.greeting;
+        }
+
+        /**
+         * @return interruptConfig
+         */
+        public InterruptConfig getInterruptConfig() {
+            return this.interruptConfig;
         }
 
         /**
@@ -1225,8 +1442,11 @@ public class StartAgentRequest extends Request {
         public static final class Builder {
             private ASRConfig ASRConfig; 
             private AgentSilenceConfig agentSilenceConfig; 
+            private AmbientSoundConfig ambientSoundConfig; 
+            private BackChannelConfig backChannelConfig; 
             private Integer chatMode; 
             private String greeting; 
+            private InterruptConfig interruptConfig; 
             private Integer interruptMode; 
             private LLMConfig LLMConfig; 
             private TTSConfig TTSConfig; 
@@ -1237,8 +1457,11 @@ public class StartAgentRequest extends Request {
             private Builder(VoiceChatConfig model) {
                 this.ASRConfig = model.ASRConfig;
                 this.agentSilenceConfig = model.agentSilenceConfig;
+                this.ambientSoundConfig = model.ambientSoundConfig;
+                this.backChannelConfig = model.backChannelConfig;
                 this.chatMode = model.chatMode;
                 this.greeting = model.greeting;
+                this.interruptConfig = model.interruptConfig;
                 this.interruptMode = model.interruptMode;
                 this.LLMConfig = model.LLMConfig;
                 this.TTSConfig = model.TTSConfig;
@@ -1261,6 +1484,22 @@ public class StartAgentRequest extends Request {
             }
 
             /**
+             * AmbientSoundConfig.
+             */
+            public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
+                this.ambientSoundConfig = ambientSoundConfig;
+                return this;
+            }
+
+            /**
+             * BackChannelConfig.
+             */
+            public Builder backChannelConfig(BackChannelConfig backChannelConfig) {
+                this.backChannelConfig = backChannelConfig;
+                return this;
+            }
+
+            /**
              * ChatMode.
              */
             public Builder chatMode(Integer chatMode) {
@@ -1273,6 +1512,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
+                return this;
+            }
+
+            /**
+             * InterruptConfig.
+             */
+            public Builder interruptConfig(InterruptConfig interruptConfig) {
+                this.interruptConfig = interruptConfig;
                 return this;
             }
 

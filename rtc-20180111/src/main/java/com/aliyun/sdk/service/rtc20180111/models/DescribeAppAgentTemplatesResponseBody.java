@@ -256,6 +256,81 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
      *
      * <p>DescribeAppAgentTemplatesResponseBody</p>
      */
+    public static class AmbientSoundConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SoundId")
+        private String soundId;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Integer volume;
+
+        private AmbientSoundConfig(Builder builder) {
+            this.soundId = builder.soundId;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AmbientSoundConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return soundId
+         */
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String soundId; 
+            private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(AmbientSoundConfig model) {
+                this.soundId = model.soundId;
+                this.volume = model.volume;
+            } 
+
+            /**
+             * SoundId.
+             */
+            public Builder soundId(String soundId) {
+                this.soundId = soundId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AmbientSoundConfig build() {
+                return new AmbientSoundConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppAgentTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAgentTemplatesResponseBody</p>
+     */
     public static class VadConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterruptSpeechDuration")
         private Integer interruptSpeechDuration;
@@ -533,6 +608,114 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
             public AsrConfig build() {
                 return new AsrConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppAgentTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAgentTemplatesResponseBody</p>
+     */
+    public static class BackChannelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserTurnEnd")
+        private Boolean userTurnEnd;
+
+        private BackChannelConfig(Builder builder) {
+            this.userTurnEnd = builder.userTurnEnd;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userTurnEnd
+         */
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+        public static final class Builder {
+            private Boolean userTurnEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelConfig model) {
+                this.userTurnEnd = model.userTurnEnd;
+            } 
+
+            /**
+             * UserTurnEnd.
+             */
+            public Builder userTurnEnd(Boolean userTurnEnd) {
+                this.userTurnEnd = userTurnEnd;
+                return this;
+            }
+
+            public BackChannelConfig build() {
+                return new BackChannelConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppAgentTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAgentTemplatesResponseBody</p>
+     */
+    public static class InterruptConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SemanticsInterrupt")
+        private Boolean semanticsInterrupt;
+
+        private InterruptConfig(Builder builder) {
+            this.semanticsInterrupt = builder.semanticsInterrupt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InterruptConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return semanticsInterrupt
+         */
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
+        }
+
+        public static final class Builder {
+            private Boolean semanticsInterrupt; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterruptConfig model) {
+                this.semanticsInterrupt = model.semanticsInterrupt;
+            } 
+
+            /**
+             * SemanticsInterrupt.
+             */
+            public Builder semanticsInterrupt(Boolean semanticsInterrupt) {
+                this.semanticsInterrupt = semanticsInterrupt;
+                return this;
+            }
+
+            public InterruptConfig build() {
+                return new InterruptConfig(this);
             } 
 
         } 
@@ -1034,8 +1217,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentSilenceConfig")
         private AgentSilenceConfig agentSilenceConfig;
 
+        @com.aliyun.core.annotation.NameInMap("AmbientSoundConfig")
+        private AmbientSoundConfig ambientSoundConfig;
+
         @com.aliyun.core.annotation.NameInMap("AsrConfig")
         private AsrConfig asrConfig;
+
+        @com.aliyun.core.annotation.NameInMap("BackChannelConfig")
+        private BackChannelConfig backChannelConfig;
 
         @com.aliyun.core.annotation.NameInMap("ChatMode")
         private Integer chatMode;
@@ -1048,6 +1237,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("InterruptConfig")
+        private InterruptConfig interruptConfig;
 
         @com.aliyun.core.annotation.NameInMap("InterruptMode")
         private Integer interruptMode;
@@ -1066,11 +1258,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
         private Templates(Builder builder) {
             this.agentSilenceConfig = builder.agentSilenceConfig;
+            this.ambientSoundConfig = builder.ambientSoundConfig;
             this.asrConfig = builder.asrConfig;
+            this.backChannelConfig = builder.backChannelConfig;
             this.chatMode = builder.chatMode;
             this.createTime = builder.createTime;
             this.greeting = builder.greeting;
             this.id = builder.id;
+            this.interruptConfig = builder.interruptConfig;
             this.interruptMode = builder.interruptMode;
             this.llmConfig = builder.llmConfig;
             this.name = builder.name;
@@ -1094,10 +1289,24 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ambientSoundConfig
+         */
+        public AmbientSoundConfig getAmbientSoundConfig() {
+            return this.ambientSoundConfig;
+        }
+
+        /**
          * @return asrConfig
          */
         public AsrConfig getAsrConfig() {
             return this.asrConfig;
+        }
+
+        /**
+         * @return backChannelConfig
+         */
+        public BackChannelConfig getBackChannelConfig() {
+            return this.backChannelConfig;
         }
 
         /**
@@ -1126,6 +1335,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return interruptConfig
+         */
+        public InterruptConfig getInterruptConfig() {
+            return this.interruptConfig;
         }
 
         /**
@@ -1165,11 +1381,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private AgentSilenceConfig agentSilenceConfig; 
+            private AmbientSoundConfig ambientSoundConfig; 
             private AsrConfig asrConfig; 
+            private BackChannelConfig backChannelConfig; 
             private Integer chatMode; 
             private String createTime; 
             private String greeting; 
             private String id; 
+            private InterruptConfig interruptConfig; 
             private Integer interruptMode; 
             private LlmConfig llmConfig; 
             private String name; 
@@ -1181,11 +1400,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
             private Builder(Templates model) {
                 this.agentSilenceConfig = model.agentSilenceConfig;
+                this.ambientSoundConfig = model.ambientSoundConfig;
                 this.asrConfig = model.asrConfig;
+                this.backChannelConfig = model.backChannelConfig;
                 this.chatMode = model.chatMode;
                 this.createTime = model.createTime;
                 this.greeting = model.greeting;
                 this.id = model.id;
+                this.interruptConfig = model.interruptConfig;
                 this.interruptMode = model.interruptMode;
                 this.llmConfig = model.llmConfig;
                 this.name = model.name;
@@ -1202,10 +1424,26 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * AmbientSoundConfig.
+             */
+            public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
+                this.ambientSoundConfig = ambientSoundConfig;
+                return this;
+            }
+
+            /**
              * AsrConfig.
              */
             public Builder asrConfig(AsrConfig asrConfig) {
                 this.asrConfig = asrConfig;
+                return this;
+            }
+
+            /**
+             * BackChannelConfig.
+             */
+            public Builder backChannelConfig(BackChannelConfig backChannelConfig) {
+                this.backChannelConfig = backChannelConfig;
                 return this;
             }
 
@@ -1238,6 +1476,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InterruptConfig.
+             */
+            public Builder interruptConfig(InterruptConfig interruptConfig) {
+                this.interruptConfig = interruptConfig;
                 return this;
             }
 
