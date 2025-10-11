@@ -341,6 +341,9 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
      * <p>GetMultiAccountDeliveryChannelResponseBody</p>
      */
     public static class ResourceChangeDelivery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private String enabled;
+
         @com.aliyun.core.annotation.NameInMap("SlsProperties")
         private SlsProperties slsProperties;
 
@@ -351,6 +354,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         private String targetType;
 
         private ResourceChangeDelivery(Builder builder) {
+            this.enabled = builder.enabled;
             this.slsProperties = builder.slsProperties;
             this.targetArn = builder.targetArn;
             this.targetType = builder.targetType;
@@ -362,6 +366,13 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
 
         public static ResourceChangeDelivery create() {
             return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public String getEnabled() {
+            return this.enabled;
         }
 
         /**
@@ -386,6 +397,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String enabled; 
             private SlsProperties slsProperties; 
             private String targetArn; 
             private String targetType; 
@@ -394,10 +406,19 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             private Builder(ResourceChangeDelivery model) {
+                this.enabled = model.enabled;
                 this.slsProperties = model.slsProperties;
                 this.targetArn = model.targetArn;
                 this.targetType = model.targetType;
             } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(String enabled) {
+                this.enabled = enabled;
+                return this;
+            }
 
             /**
              * <p>The Simple Log Service configurations.</p>
@@ -506,6 +527,9 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliveryTime")
         private String deliveryTime;
 
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private String enabled;
+
         @com.aliyun.core.annotation.NameInMap("SlsProperties")
         private ResourceSnapshotDeliverySlsProperties slsProperties;
 
@@ -518,6 +542,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         private ResourceSnapshotDelivery(Builder builder) {
             this.customExpression = builder.customExpression;
             this.deliveryTime = builder.deliveryTime;
+            this.enabled = builder.enabled;
             this.slsProperties = builder.slsProperties;
             this.targetArn = builder.targetArn;
             this.targetType = builder.targetType;
@@ -546,6 +571,13 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
+         * @return enabled
+         */
+        public String getEnabled() {
+            return this.enabled;
+        }
+
+        /**
          * @return slsProperties
          */
         public ResourceSnapshotDeliverySlsProperties getSlsProperties() {
@@ -569,6 +601,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         public static final class Builder {
             private String customExpression; 
             private String deliveryTime; 
+            private String enabled; 
             private ResourceSnapshotDeliverySlsProperties slsProperties; 
             private String targetArn; 
             private String targetType; 
@@ -579,6 +612,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             private Builder(ResourceSnapshotDelivery model) {
                 this.customExpression = model.customExpression;
                 this.deliveryTime = model.deliveryTime;
+                this.enabled = model.enabled;
                 this.slsProperties = model.slsProperties;
                 this.targetArn = model.targetArn;
                 this.targetType = model.targetType;
@@ -603,6 +637,14 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
              */
             public Builder deliveryTime(String deliveryTime) {
                 this.deliveryTime = deliveryTime;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(String enabled) {
+                this.enabled = enabled;
                 return this;
             }
 
