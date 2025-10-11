@@ -50,6 +50,10 @@ public class RunWritingV2Request extends Request {
     private java.util.List<MiniDocs> miniDocs;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutlineList")
+    private java.util.List<WritingOutline> outlineList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Outlines")
     private java.util.List<Outlines> outlines;
 
@@ -68,6 +72,10 @@ public class RunWritingV2Request extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceTraceMethod")
+    private String sourceTraceMethod;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Step")
@@ -112,11 +120,13 @@ public class RunWritingV2Request extends Request {
         this.keywords = builder.keywords;
         this.language = builder.language;
         this.miniDocs = builder.miniDocs;
+        this.outlineList = builder.outlineList;
         this.outlines = builder.outlines;
         this.prompt = builder.prompt;
         this.promptMode = builder.promptMode;
         this.searchSources = builder.searchSources;
         this.sessionId = builder.sessionId;
+        this.sourceTraceMethod = builder.sourceTraceMethod;
         this.step = builder.step;
         this.summarization = builder.summarization;
         this.taskId = builder.taskId;
@@ -197,6 +207,13 @@ public class RunWritingV2Request extends Request {
     }
 
     /**
+     * @return outlineList
+     */
+    public java.util.List<WritingOutline> getOutlineList() {
+        return this.outlineList;
+    }
+
+    /**
      * @return outlines
      */
     public java.util.List<Outlines> getOutlines() {
@@ -229,6 +246,13 @@ public class RunWritingV2Request extends Request {
      */
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    /**
+     * @return sourceTraceMethod
+     */
+    public String getSourceTraceMethod() {
+        return this.sourceTraceMethod;
     }
 
     /**
@@ -296,11 +320,13 @@ public class RunWritingV2Request extends Request {
         private java.util.List<String> keywords; 
         private String language; 
         private java.util.List<MiniDocs> miniDocs; 
+        private java.util.List<WritingOutline> outlineList; 
         private java.util.List<Outlines> outlines; 
         private String prompt; 
         private String promptMode; 
         private java.util.List<SearchSources> searchSources; 
         private String sessionId; 
+        private String sourceTraceMethod; 
         private String step; 
         private java.util.List<Summarization> summarization; 
         private String taskId; 
@@ -324,11 +350,13 @@ public class RunWritingV2Request extends Request {
             this.keywords = request.keywords;
             this.language = request.language;
             this.miniDocs = request.miniDocs;
+            this.outlineList = request.outlineList;
             this.outlines = request.outlines;
             this.prompt = request.prompt;
             this.promptMode = request.promptMode;
             this.searchSources = request.searchSources;
             this.sessionId = request.sessionId;
+            this.sourceTraceMethod = request.sourceTraceMethod;
             this.step = request.step;
             this.summarization = request.summarization;
             this.taskId = request.taskId;
@@ -415,6 +443,16 @@ public class RunWritingV2Request extends Request {
         }
 
         /**
+         * OutlineList.
+         */
+        public Builder outlineList(java.util.List<WritingOutline> outlineList) {
+            String outlineListShrink = shrink(outlineList, "OutlineList", "json");
+            this.putBodyParameter("OutlineList", outlineListShrink);
+            this.outlineList = outlineList;
+            return this;
+        }
+
+        /**
          * Outlines.
          */
         public Builder outlines(java.util.List<Outlines> outlines) {
@@ -458,6 +496,15 @@ public class RunWritingV2Request extends Request {
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * SourceTraceMethod.
+         */
+        public Builder sourceTraceMethod(String sourceTraceMethod) {
+            this.putBodyParameter("SourceTraceMethod", sourceTraceMethod);
+            this.sourceTraceMethod = sourceTraceMethod;
             return this;
         }
 

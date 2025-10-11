@@ -584,20 +584,36 @@ public class RunWritingV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List<Articles> articles;
 
+        @com.aliyun.core.annotation.NameInMap("GenerateTraceability")
+        private GenerateTraceability generateTraceability;
+
         @com.aliyun.core.annotation.NameInMap("MiniDoc")
         private java.util.List<String> miniDoc;
+
+        @com.aliyun.core.annotation.NameInMap("Outlines")
+        private java.util.List<WritingOutline> outlines;
 
         @com.aliyun.core.annotation.NameInMap("SearchQuery")
         private String searchQuery;
 
+        @com.aliyun.core.annotation.NameInMap("SearchResult")
+        private OutlineSearchResult searchResult;
+
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
         private Output(Builder builder) {
             this.articles = builder.articles;
+            this.generateTraceability = builder.generateTraceability;
             this.miniDoc = builder.miniDoc;
+            this.outlines = builder.outlines;
             this.searchQuery = builder.searchQuery;
+            this.searchResult = builder.searchResult;
             this.text = builder.text;
+            this.title = builder.title;
         }
 
         public static Builder builder() {
@@ -616,10 +632,24 @@ public class RunWritingV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return generateTraceability
+         */
+        public GenerateTraceability getGenerateTraceability() {
+            return this.generateTraceability;
+        }
+
+        /**
          * @return miniDoc
          */
         public java.util.List<String> getMiniDoc() {
             return this.miniDoc;
+        }
+
+        /**
+         * @return outlines
+         */
+        public java.util.List<WritingOutline> getOutlines() {
+            return this.outlines;
         }
 
         /**
@@ -630,26 +660,48 @@ public class RunWritingV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchResult
+         */
+        public OutlineSearchResult getSearchResult() {
+            return this.searchResult;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
             return this.text;
         }
 
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
         public static final class Builder {
             private java.util.List<Articles> articles; 
+            private GenerateTraceability generateTraceability; 
             private java.util.List<String> miniDoc; 
+            private java.util.List<WritingOutline> outlines; 
             private String searchQuery; 
+            private OutlineSearchResult searchResult; 
             private String text; 
+            private String title; 
 
             private Builder() {
             } 
 
             private Builder(Output model) {
                 this.articles = model.articles;
+                this.generateTraceability = model.generateTraceability;
                 this.miniDoc = model.miniDoc;
+                this.outlines = model.outlines;
                 this.searchQuery = model.searchQuery;
+                this.searchResult = model.searchResult;
                 this.text = model.text;
+                this.title = model.title;
             } 
 
             /**
@@ -657,6 +709,14 @@ public class RunWritingV2ResponseBody extends TeaModel {
              */
             public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
+                return this;
+            }
+
+            /**
+             * GenerateTraceability.
+             */
+            public Builder generateTraceability(GenerateTraceability generateTraceability) {
+                this.generateTraceability = generateTraceability;
                 return this;
             }
 
@@ -669,6 +729,14 @@ public class RunWritingV2ResponseBody extends TeaModel {
             }
 
             /**
+             * Outlines.
+             */
+            public Builder outlines(java.util.List<WritingOutline> outlines) {
+                this.outlines = outlines;
+                return this;
+            }
+
+            /**
              * SearchQuery.
              */
             public Builder searchQuery(String searchQuery) {
@@ -677,10 +745,26 @@ public class RunWritingV2ResponseBody extends TeaModel {
             }
 
             /**
+             * SearchResult.
+             */
+            public Builder searchResult(OutlineSearchResult searchResult) {
+                this.searchResult = searchResult;
+                return this;
+            }
+
+            /**
              * Text.
              */
             public Builder text(String text) {
                 this.text = text;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
                 return this;
             }
 
