@@ -29,6 +29,9 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
+
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
@@ -52,6 +55,7 @@ public class Session extends TeaModel {
         this.createdTime = builder.createdTime;
         this.functionName = builder.functionName;
         this.lastModifiedTime = builder.lastModifiedTime;
+        this.nasConfig = builder.nasConfig;
         this.qualifier = builder.qualifier;
         this.sessionAffinityType = builder.sessionAffinityType;
         this.sessionId = builder.sessionId;
@@ -101,6 +105,13 @@ public class Session extends TeaModel {
     }
 
     /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
@@ -147,6 +158,7 @@ public class Session extends TeaModel {
         private String createdTime; 
         private String functionName; 
         private String lastModifiedTime; 
+        private NASConfig nasConfig; 
         private String qualifier; 
         private String sessionAffinityType; 
         private String sessionId; 
@@ -162,6 +174,7 @@ public class Session extends TeaModel {
             this.createdTime = model.createdTime;
             this.functionName = model.functionName;
             this.lastModifiedTime = model.lastModifiedTime;
+            this.nasConfig = model.nasConfig;
             this.qualifier = model.qualifier;
             this.sessionAffinityType = model.sessionAffinityType;
             this.sessionId = model.sessionId;
@@ -199,6 +212,14 @@ public class Session extends TeaModel {
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSessionInput</p>
  */
 public class CreateSessionInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
+
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutInSeconds")
     private Long sessionIdleTimeoutInSeconds;
 
@@ -24,6 +27,7 @@ public class CreateSessionInput extends TeaModel {
     private Long sessionTTLInSeconds;
 
     private CreateSessionInput(Builder builder) {
+        this.nasConfig = builder.nasConfig;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
     }
@@ -41,6 +45,13 @@ public class CreateSessionInput extends TeaModel {
     }
 
     /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    /**
      * @return sessionIdleTimeoutInSeconds
      */
     public Long getSessionIdleTimeoutInSeconds() {
@@ -55,6 +66,7 @@ public class CreateSessionInput extends TeaModel {
     }
 
     public static final class Builder {
+        private NASConfig nasConfig; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
 
@@ -62,9 +74,18 @@ public class CreateSessionInput extends TeaModel {
         } 
 
         private Builder(CreateSessionInput model) {
+            this.nasConfig = model.nasConfig;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
         } 
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
+            return this;
+        }
 
         /**
          * sessionIdleTimeoutInSeconds.

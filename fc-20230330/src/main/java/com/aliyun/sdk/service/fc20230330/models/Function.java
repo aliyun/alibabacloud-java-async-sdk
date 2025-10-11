@@ -41,7 +41,11 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disableInjectCredentials")
+    private String disableInjectCredentials;
+
     @com.aliyun.core.annotation.NameInMap("disableOndemand")
+    @Deprecated
     private Boolean disableOndemand;
 
     @com.aliyun.core.annotation.NameInMap("diskSize")
@@ -114,6 +118,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
+    @com.aliyun.core.annotation.NameInMap("polarFsConfig")
+    private PolarFsConfig polarFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
@@ -159,6 +166,7 @@ public class Function extends TeaModel {
         this.customDNS = builder.customDNS;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.disableInjectCredentials = builder.disableInjectCredentials;
         this.disableOndemand = builder.disableOndemand;
         this.diskSize = builder.diskSize;
         this.enableLongLiving = builder.enableLongLiving;
@@ -183,6 +191,7 @@ public class Function extends TeaModel {
         this.memorySize = builder.memorySize;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.polarFsConfig = builder.polarFsConfig;
         this.resourceGroupId = builder.resourceGroupId;
         this.role = builder.role;
         this.runtime = builder.runtime;
@@ -263,6 +272,13 @@ public class Function extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disableInjectCredentials
+     */
+    public String getDisableInjectCredentials() {
+        return this.disableInjectCredentials;
     }
 
     /**
@@ -434,6 +450,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return polarFsConfig
+     */
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -526,6 +549,7 @@ public class Function extends TeaModel {
         private CustomDNS customDNS; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private String disableInjectCredentials; 
         private Boolean disableOndemand; 
         private Integer diskSize; 
         private Boolean enableLongLiving; 
@@ -550,6 +574,7 @@ public class Function extends TeaModel {
         private Integer memorySize; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private PolarFsConfig polarFsConfig; 
         private String resourceGroupId; 
         private String role; 
         private String runtime; 
@@ -575,6 +600,7 @@ public class Function extends TeaModel {
             this.customDNS = model.customDNS;
             this.customRuntimeConfig = model.customRuntimeConfig;
             this.description = model.description;
+            this.disableInjectCredentials = model.disableInjectCredentials;
             this.disableOndemand = model.disableOndemand;
             this.diskSize = model.diskSize;
             this.enableLongLiving = model.enableLongLiving;
@@ -599,6 +625,7 @@ public class Function extends TeaModel {
             this.memorySize = model.memorySize;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
+            this.polarFsConfig = model.polarFsConfig;
             this.resourceGroupId = model.resourceGroupId;
             this.role = model.role;
             this.runtime = model.runtime;
@@ -674,6 +701,14 @@ public class Function extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * disableInjectCredentials.
+         */
+        public Builder disableInjectCredentials(String disableInjectCredentials) {
+            this.disableInjectCredentials = disableInjectCredentials;
             return this;
         }
 
@@ -866,6 +901,14 @@ public class Function extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * polarFsConfig.
+         */
+        public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
+            this.polarFsConfig = polarFsConfig;
             return this;
         }
 
