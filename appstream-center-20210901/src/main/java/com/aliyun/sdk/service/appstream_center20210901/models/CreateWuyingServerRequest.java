@@ -30,6 +30,11 @@ public class CreateWuyingServerRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 2)
+    private Integer bandwidth;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -48,6 +53,10 @@ public class CreateWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkStrategyType")
+    private String networkStrategyType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
@@ -102,11 +111,13 @@ public class CreateWuyingServerRequest extends Request {
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.bandwidth = builder.bandwidth;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.dataDisk = builder.dataDisk;
         this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
+        this.networkStrategyType = builder.networkStrategyType;
         this.officeSiteId = builder.officeSiteId;
         this.password = builder.password;
         this.period = builder.period;
@@ -156,6 +167,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return bandwidth
+     */
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    /**
      * @return bizRegionId
      */
     public String getBizRegionId() {
@@ -188,6 +206,13 @@ public class CreateWuyingServerRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return networkStrategyType
+     */
+    public String getNetworkStrategyType() {
+        return this.networkStrategyType;
     }
 
     /**
@@ -278,11 +303,13 @@ public class CreateWuyingServerRequest extends Request {
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private Integer bandwidth; 
         private String bizRegionId; 
         private String chargeType; 
         private java.util.List<DataDisk> dataDisk; 
         private String idempotenceToken; 
         private String imageId; 
+        private String networkStrategyType; 
         private String officeSiteId; 
         private String password; 
         private Integer period; 
@@ -305,11 +332,13 @@ public class CreateWuyingServerRequest extends Request {
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.bandwidth = request.bandwidth;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.dataDisk = request.dataDisk;
             this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
+            this.networkStrategyType = request.networkStrategyType;
             this.officeSiteId = request.officeSiteId;
             this.password = request.password;
             this.period = request.period;
@@ -348,6 +377,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * Bandwidth.
+         */
+        public Builder bandwidth(Integer bandwidth) {
+            this.putBodyParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
             return this;
         }
 
@@ -393,6 +431,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * NetworkStrategyType.
+         */
+        public Builder networkStrategyType(String networkStrategyType) {
+            this.putBodyParameter("NetworkStrategyType", networkStrategyType);
+            this.networkStrategyType = networkStrategyType;
             return this;
         }
 

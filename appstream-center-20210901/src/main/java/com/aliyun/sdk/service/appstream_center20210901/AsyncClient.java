@@ -76,6 +76,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWuyingServerResponse> deleteWuyingServer(DeleteWuyingServerRequest request);
 
     /**
+     * @param request the request parameters of DescribeWuyingServerEipInfo  DescribeWuyingServerEipInfoRequest
+     * @return DescribeWuyingServerEipInfoResponse
+     */
+    CompletableFuture<DescribeWuyingServerEipInfoResponse> describeWuyingServerEipInfo(DescribeWuyingServerEipInfoRequest request);
+
+    /**
      * @param request the request parameters of GetAppInstanceGroup  GetAppInstanceGroupRequest
      * @return GetAppInstanceGroupResponse
      */
