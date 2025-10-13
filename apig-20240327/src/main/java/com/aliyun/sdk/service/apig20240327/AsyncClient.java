@@ -26,10 +26,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddGatewaySecurityGroupRuleResponse> addGatewaySecurityGroupRule(AddGatewaySecurityGroupRuleRequest request);
 
     /**
+     * @param request the request parameters of BatchDeleteConsumerAuthorizationRule  BatchDeleteConsumerAuthorizationRuleRequest
+     * @return BatchDeleteConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> batchDeleteConsumerAuthorizationRule(BatchDeleteConsumerAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateAndAttachPolicy  CreateAndAttachPolicyRequest
+     * @return CreateAndAttachPolicyResponse
+     */
+    CompletableFuture<CreateAndAttachPolicyResponse> createAndAttachPolicy(CreateAndAttachPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumer  CreateConsumerRequest
+     * @return CreateConsumerResponse
+     */
+    CompletableFuture<CreateConsumerResponse> createConsumer(CreateConsumerRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumerAuthorizationRule  CreateConsumerAuthorizationRuleRequest
+     * @return CreateConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<CreateConsumerAuthorizationRuleResponse> createConsumerAuthorizationRule(CreateConsumerAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumerAuthorizationRules  CreateConsumerAuthorizationRulesRequest
+     * @return CreateConsumerAuthorizationRulesResponse
+     */
+    CompletableFuture<CreateConsumerAuthorizationRulesResponse> createConsumerAuthorizationRules(CreateConsumerAuthorizationRulesRequest request);
 
     /**
      * <b>description</b> :
@@ -50,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
     /**
+     * @param request the request parameters of CreateGateway  CreateGatewayRequest
+     * @return CreateGatewayResponse
+     */
+    CompletableFuture<CreateGatewayResponse> createGateway(CreateGatewayRequest request);
+
+    /**
      * @param request the request parameters of CreateHttpApi  CreateHttpApiRequest
      * @return CreateHttpApiResponse
      */
@@ -66,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateHttpApiRouteResponse
      */
     CompletableFuture<CreateHttpApiRouteResponse> createHttpApiRoute(CreateHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of CreateMcpServer  CreateMcpServerRequest
+     * @return CreateMcpServerResponse
+     */
+    CompletableFuture<CreateMcpServerResponse> createMcpServer(CreateMcpServerRequest request);
 
     /**
      * @param request the request parameters of CreatePluginAttachment  CreatePluginAttachmentRequest
@@ -93,6 +135,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateServiceResponse
      */
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
+     * @return DeleteConsumerResponse
+     */
+    CompletableFuture<DeleteConsumerResponse> deleteConsumer(DeleteConsumerRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConsumerAuthorizationRule  DeleteConsumerAuthorizationRuleRequest
+     * @return DeleteConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<DeleteConsumerAuthorizationRuleResponse> deleteConsumerAuthorizationRule(DeleteConsumerAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
@@ -138,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHttpApiRouteResponse> deleteHttpApiRoute(DeleteHttpApiRouteRequest request);
 
     /**
+     * @param request the request parameters of DeleteMcpServer  DeleteMcpServerRequest
+     * @return DeleteMcpServerResponse
+     */
+    CompletableFuture<DeleteMcpServerResponse> deleteMcpServer(DeleteMcpServerRequest request);
+
+    /**
      * @param request the request parameters of DeletePluginAttachment  DeletePluginAttachmentRequest
      * @return DeletePluginAttachmentResponse
      */
@@ -168,10 +228,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployHttpApiResponse> deployHttpApi(DeployHttpApiRequest request);
 
     /**
+     * @param request the request parameters of DeployMcpServer  DeployMcpServerRequest
+     * @return DeployMcpServerResponse
+     */
+    CompletableFuture<DeployMcpServerResponse> deployMcpServer(DeployMcpServerRequest request);
+
+    /**
      * @param request the request parameters of ExportHttpApi  ExportHttpApiRequest
      * @return ExportHttpApiResponse
      */
     CompletableFuture<ExportHttpApiResponse> exportHttpApi(ExportHttpApiRequest request);
+
+    /**
+     * @param request the request parameters of GetConsumer  GetConsumerRequest
+     * @return GetConsumerResponse
+     */
+    CompletableFuture<GetConsumerResponse> getConsumer(GetConsumerRequest request);
+
+    /**
+     * @param request the request parameters of GetConsumerAuthorizationRule  GetConsumerAuthorizationRuleRequest
+     * @return GetConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<GetConsumerAuthorizationRuleResponse> getConsumerAuthorizationRule(GetConsumerAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of GetDashboard  GetDashboardRequest
@@ -217,6 +295,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHttpApiRouteResponse> getHttpApiRoute(GetHttpApiRouteRequest request);
 
     /**
+     * @param request the request parameters of GetMcpServer  GetMcpServerRequest
+     * @return GetMcpServerResponse
+     */
+    CompletableFuture<GetMcpServerResponse> getMcpServer(GetMcpServerRequest request);
+
+    /**
      * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
      * @return GetPluginAttachmentResponse
      */
@@ -259,6 +343,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportHttpApiResponse> importHttpApi(ImportHttpApiRequest request);
 
     /**
+     * @param request the request parameters of InstallPlugin  InstallPluginRequest
+     * @return InstallPluginResponse
+     */
+    CompletableFuture<InstallPluginResponse> installPlugin(InstallPluginRequest request);
+
+    /**
+     * @param request the request parameters of ListConsumers  ListConsumersRequest
+     * @return ListConsumersResponse
+     */
+    CompletableFuture<ListConsumersResponse> listConsumers(ListConsumersRequest request);
+
+    /**
      * @param request the request parameters of ListDomains  ListDomainsRequest
      * @return ListDomainsResponse
      */
@@ -296,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
 
     /**
+     * @param request the request parameters of ListMcpServers  ListMcpServersRequest
+     * @return ListMcpServersResponse
+     */
+    CompletableFuture<ListMcpServersResponse> listMcpServers(ListMcpServersRequest request);
+
+    /**
      * @param request the request parameters of ListPluginAttachments  ListPluginAttachmentsRequest
      * @return ListPluginAttachmentsResponse
      */
@@ -306,6 +408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPluginsResponse
      */
     CompletableFuture<ListPluginsResponse> listPlugins(ListPluginsRequest request);
+
+    /**
+     * @param request the request parameters of ListPolicies  ListPoliciesRequest
+     * @return ListPoliciesResponse
+     */
+    CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
 
     /**
      * @param request the request parameters of ListPolicyClasses  ListPolicyClassesRequest
@@ -332,16 +440,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListZonesResponse> listZones(ListZonesRequest request);
 
     /**
+     * @param request the request parameters of QueryConsumerAuthorizationRules  QueryConsumerAuthorizationRulesRequest
+     * @return QueryConsumerAuthorizationRulesResponse
+     */
+    CompletableFuture<QueryConsumerAuthorizationRulesResponse> queryConsumerAuthorizationRules(QueryConsumerAuthorizationRulesRequest request);
+
+    /**
+     * @param request the request parameters of RemoveConsumerAuthorizationRule  RemoveConsumerAuthorizationRuleRequest
+     * @return RemoveConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<RemoveConsumerAuthorizationRuleResponse> removeConsumerAuthorizationRule(RemoveConsumerAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of RestartGateway  RestartGatewayRequest
      * @return RestartGatewayResponse
      */
     CompletableFuture<RestartGatewayResponse> restartGateway(RestartGatewayRequest request);
 
     /**
+     * @param request the request parameters of UnDeployMcpServer  UnDeployMcpServerRequest
+     * @return UnDeployMcpServerResponse
+     */
+    CompletableFuture<UnDeployMcpServerResponse> unDeployMcpServer(UnDeployMcpServerRequest request);
+
+    /**
      * @param request the request parameters of UndeployHttpApi  UndeployHttpApiRequest
      * @return UndeployHttpApiResponse
      */
     CompletableFuture<UndeployHttpApiResponse> undeployHttpApi(UndeployHttpApiRequest request);
+
+    /**
+     * @param request the request parameters of UninstallPlugin  UninstallPluginRequest
+     * @return UninstallPluginResponse
+     */
+    CompletableFuture<UninstallPluginResponse> uninstallPlugin(UninstallPluginRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAndAttachPolicy  UpdateAndAttachPolicyRequest
+     * @return UpdateAndAttachPolicyResponse
+     */
+    CompletableFuture<UpdateAndAttachPolicyResponse> updateAndAttachPolicy(UpdateAndAttachPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConsumer  UpdateConsumerRequest
+     * @return UpdateConsumerResponse
+     */
+    CompletableFuture<UpdateConsumerResponse> updateConsumer(UpdateConsumerRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConsumerAuthorizationRule  UpdateConsumerAuthorizationRuleRequest
+     * @return UpdateConsumerAuthorizationRuleResponse
+     */
+    CompletableFuture<UpdateConsumerAuthorizationRuleResponse> updateConsumerAuthorizationRule(UpdateConsumerAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
@@ -385,6 +535,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateHttpApiRouteResponse
      */
     CompletableFuture<UpdateHttpApiRouteResponse> updateHttpApiRoute(UpdateHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
+     * @return UpdateMcpServerResponse
+     */
+    CompletableFuture<UpdateMcpServerResponse> updateMcpServer(UpdateMcpServerRequest request);
 
     /**
      * @param request the request parameters of UpdatePluginAttachment  UpdatePluginAttachmentRequest

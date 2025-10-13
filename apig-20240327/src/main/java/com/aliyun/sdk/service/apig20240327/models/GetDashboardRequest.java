@@ -46,6 +46,10 @@ public class GetDashboardRequest extends Request {
     private String pluginId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("routeId")
+    private String routeId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("source")
     private String source;
 
@@ -62,6 +66,7 @@ public class GetDashboardRequest extends Request {
         this.name = builder.name;
         this.pluginClassId = builder.pluginClassId;
         this.pluginId = builder.pluginId;
+        this.routeId = builder.routeId;
         this.source = builder.source;
         this.upstreamCluster = builder.upstreamCluster;
     }
@@ -129,6 +134,13 @@ public class GetDashboardRequest extends Request {
     }
 
     /**
+     * @return routeId
+     */
+    public String getRouteId() {
+        return this.routeId;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -150,6 +162,7 @@ public class GetDashboardRequest extends Request {
         private String name; 
         private String pluginClassId; 
         private String pluginId; 
+        private String routeId; 
         private String source; 
         private String upstreamCluster; 
 
@@ -166,6 +179,7 @@ public class GetDashboardRequest extends Request {
             this.name = request.name;
             this.pluginClassId = request.pluginClassId;
             this.pluginId = request.pluginId;
+            this.routeId = request.routeId;
             this.source = request.source;
             this.upstreamCluster = request.upstreamCluster;
         } 
@@ -250,6 +264,15 @@ public class GetDashboardRequest extends Request {
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("pluginId", pluginId);
             this.pluginId = pluginId;
+            return this;
+        }
+
+        /**
+         * routeId.
+         */
+        public Builder routeId(String routeId) {
+            this.putQueryParameter("routeId", routeId);
+            this.routeId = routeId;
             return this;
         }
 

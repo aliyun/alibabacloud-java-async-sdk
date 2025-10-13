@@ -600,6 +600,81 @@ public class GetGatewayResponseBody extends TeaModel {
      *
      * <p>GetGatewayResponseBody</p>
      */
+    public static class MaintenancePeriod extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private String startTime;
+
+        private MaintenancePeriod(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaintenancePeriod create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaintenancePeriod model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public MaintenancePeriod build() {
+                return new MaintenancePeriod(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class SecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1123,6 +1198,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expireTimestamp")
         private Long expireTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+        private String gatewayEdition;
+
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
@@ -1134,6 +1212,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("loadBalancers")
         private java.util.List<LoadBalancers> loadBalancers;
+
+        @com.aliyun.core.annotation.NameInMap("maintenancePeriod")
+        private MaintenancePeriod maintenancePeriod;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1180,10 +1261,12 @@ public class GetGatewayResponseBody extends TeaModel {
             this.createTimestamp = builder.createTimestamp;
             this.environments = builder.environments;
             this.expireTimestamp = builder.expireTimestamp;
+            this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
             this.gatewayType = builder.gatewayType;
             this.isp = builder.isp;
             this.loadBalancers = builder.loadBalancers;
+            this.maintenancePeriod = builder.maintenancePeriod;
             this.name = builder.name;
             this.replicas = builder.replicas;
             this.resourceGroupId = builder.resourceGroupId;
@@ -1243,6 +1326,13 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return gatewayEdition
+         */
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
+        }
+
+        /**
          * @return gatewayId
          */
         public String getGatewayId() {
@@ -1268,6 +1358,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public java.util.List<LoadBalancers> getLoadBalancers() {
             return this.loadBalancers;
+        }
+
+        /**
+         * @return maintenancePeriod
+         */
+        public MaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
         }
 
         /**
@@ -1367,10 +1464,12 @@ public class GetGatewayResponseBody extends TeaModel {
             private Long createTimestamp; 
             private java.util.List<Environments> environments; 
             private Long expireTimestamp; 
+            private String gatewayEdition; 
             private String gatewayId; 
             private String gatewayType; 
             private String isp; 
             private java.util.List<LoadBalancers> loadBalancers; 
+            private MaintenancePeriod maintenancePeriod; 
             private String name; 
             private String replicas; 
             private String resourceGroupId; 
@@ -1394,10 +1493,12 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.createTimestamp = model.createTimestamp;
                 this.environments = model.environments;
                 this.expireTimestamp = model.expireTimestamp;
+                this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
                 this.gatewayType = model.gatewayType;
                 this.isp = model.isp;
                 this.loadBalancers = model.loadBalancers;
+                this.maintenancePeriod = model.maintenancePeriod;
                 this.name = model.name;
                 this.replicas = model.replicas;
                 this.resourceGroupId = model.resourceGroupId;
@@ -1473,6 +1574,14 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
+             * gatewayEdition.
+             */
+            public Builder gatewayEdition(String gatewayEdition) {
+                this.gatewayEdition = gatewayEdition;
+                return this;
+            }
+
+            /**
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
@@ -1511,6 +1620,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
+                return this;
+            }
+
+            /**
+             * maintenancePeriod.
+             */
+            public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
+                this.maintenancePeriod = maintenancePeriod;
                 return this;
             }
 

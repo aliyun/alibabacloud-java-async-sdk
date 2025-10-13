@@ -521,11 +521,15 @@ public class CreateHttpApiRouteRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("exposedUriPath")
         private String exposedUriPath;
 
+        @com.aliyun.core.annotation.NameInMap("mcpStatisticsEnable")
+        private Boolean mcpStatisticsEnable;
+
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
         private McpRouteConfig(Builder builder) {
             this.exposedUriPath = builder.exposedUriPath;
+            this.mcpStatisticsEnable = builder.mcpStatisticsEnable;
             this.protocol = builder.protocol;
         }
 
@@ -545,6 +549,13 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
+         * @return mcpStatisticsEnable
+         */
+        public Boolean getMcpStatisticsEnable() {
+            return this.mcpStatisticsEnable;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -553,6 +564,7 @@ public class CreateHttpApiRouteRequest extends Request {
 
         public static final class Builder {
             private String exposedUriPath; 
+            private Boolean mcpStatisticsEnable; 
             private String protocol; 
 
             private Builder() {
@@ -560,6 +572,7 @@ public class CreateHttpApiRouteRequest extends Request {
 
             private Builder(McpRouteConfig model) {
                 this.exposedUriPath = model.exposedUriPath;
+                this.mcpStatisticsEnable = model.mcpStatisticsEnable;
                 this.protocol = model.protocol;
             } 
 
@@ -568,6 +581,14 @@ public class CreateHttpApiRouteRequest extends Request {
              */
             public Builder exposedUriPath(String exposedUriPath) {
                 this.exposedUriPath = exposedUriPath;
+                return this;
+            }
+
+            /**
+             * mcpStatisticsEnable.
+             */
+            public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
+                this.mcpStatisticsEnable = mcpStatisticsEnable;
                 return this;
             }
 

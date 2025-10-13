@@ -895,6 +895,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expireTimestamp")
         private Long expireTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+        private String gatewayEdition;
+
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
@@ -954,6 +957,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.createFrom = builder.createFrom;
             this.createTimestamp = builder.createTimestamp;
             this.expireTimestamp = builder.expireTimestamp;
+            this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
             this.gatewayType = builder.gatewayType;
             this.legacy = builder.legacy;
@@ -1008,6 +1012,13 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public Long getExpireTimestamp() {
             return this.expireTimestamp;
+        }
+
+        /**
+         * @return gatewayEdition
+         */
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         /**
@@ -1141,6 +1152,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private String createFrom; 
             private Long createTimestamp; 
             private Long expireTimestamp; 
+            private String gatewayEdition; 
             private String gatewayId; 
             private String gatewayType; 
             private Boolean legacy; 
@@ -1168,6 +1180,7 @@ public class ListGatewaysResponseBody extends TeaModel {
                 this.createFrom = model.createFrom;
                 this.createTimestamp = model.createTimestamp;
                 this.expireTimestamp = model.expireTimestamp;
+                this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
                 this.gatewayType = model.gatewayType;
                 this.legacy = model.legacy;
@@ -1236,6 +1249,14 @@ public class ListGatewaysResponseBody extends TeaModel {
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
+                return this;
+            }
+
+            /**
+             * gatewayEdition.
+             */
+            public Builder gatewayEdition(String gatewayEdition) {
+                this.gatewayEdition = gatewayEdition;
                 return this;
             }
 

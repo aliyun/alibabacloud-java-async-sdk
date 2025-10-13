@@ -38,6 +38,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("gatewayInfo")
     private GatewayInfo gatewayInfo;
 
+    @com.aliyun.core.annotation.NameInMap("gatewayType")
+    private String gatewayType;
+
     @com.aliyun.core.annotation.NameInMap("mock")
     private HttpApiMockContract mock;
 
@@ -61,6 +64,7 @@ public class HttpApiDeployConfig extends TeaModel {
         this.environmentId = builder.environmentId;
         this.gatewayId = builder.gatewayId;
         this.gatewayInfo = builder.gatewayInfo;
+        this.gatewayType = builder.gatewayType;
         this.mock = builder.mock;
         this.policyConfigs = builder.policyConfigs;
         this.routeBackend = builder.routeBackend;
@@ -130,6 +134,13 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
+    /**
      * @return mock
      */
     public HttpApiMockContract getMock() {
@@ -172,6 +183,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private String environmentId; 
         private String gatewayId; 
         private GatewayInfo gatewayInfo; 
+        private String gatewayType; 
         private HttpApiMockContract mock; 
         private java.util.List<PolicyConfigs> policyConfigs; 
         private Backend routeBackend; 
@@ -189,6 +201,7 @@ public class HttpApiDeployConfig extends TeaModel {
             this.environmentId = model.environmentId;
             this.gatewayId = model.gatewayId;
             this.gatewayInfo = model.gatewayInfo;
+            this.gatewayType = model.gatewayType;
             this.mock = model.mock;
             this.policyConfigs = model.policyConfigs;
             this.routeBackend = model.routeBackend;
@@ -249,6 +262,14 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         public Builder gatewayInfo(GatewayInfo gatewayInfo) {
             this.gatewayInfo = gatewayInfo;
+            return this;
+        }
+
+        /**
+         * gatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
             return this;
         }
 
@@ -400,12 +421,87 @@ public class HttpApiDeployConfig extends TeaModel {
      *
      * <p>HttpApiDeployConfig</p>
      */
+    public static class AiFallbackConfigServiceConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        @com.aliyun.core.annotation.NameInMap("targetModelName")
+        private String targetModelName;
+
+        private AiFallbackConfigServiceConfigs(Builder builder) {
+            this.serviceId = builder.serviceId;
+            this.targetModelName = builder.targetModelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiFallbackConfigServiceConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return targetModelName
+         */
+        public String getTargetModelName() {
+            return this.targetModelName;
+        }
+
+        public static final class Builder {
+            private String serviceId; 
+            private String targetModelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiFallbackConfigServiceConfigs model) {
+                this.serviceId = model.serviceId;
+                this.targetModelName = model.targetModelName;
+            } 
+
+            /**
+             * serviceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * targetModelName.
+             */
+            public Builder targetModelName(String targetModelName) {
+                this.targetModelName = targetModelName;
+                return this;
+            }
+
+            public AiFallbackConfigServiceConfigs build() {
+                return new AiFallbackConfigServiceConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
     public static class AiFallbackConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("serviceIds")
-        private java.util.List<String> serviceIds;
+        @com.aliyun.core.annotation.NameInMap("serviceConfigs")
+        private java.util.List<AiFallbackConfigServiceConfigs> serviceConfigs;
 
         private AiFallbackConfig(Builder builder) {
-            this.serviceIds = builder.serviceIds;
+            this.serviceConfigs = builder.serviceConfigs;
         }
 
         public static Builder builder() {
@@ -417,27 +513,27 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * @return serviceIds
+         * @return serviceConfigs
          */
-        public java.util.List<String> getServiceIds() {
-            return this.serviceIds;
+        public java.util.List<AiFallbackConfigServiceConfigs> getServiceConfigs() {
+            return this.serviceConfigs;
         }
 
         public static final class Builder {
-            private java.util.List<String> serviceIds; 
+            private java.util.List<AiFallbackConfigServiceConfigs> serviceConfigs; 
 
             private Builder() {
             } 
 
             private Builder(AiFallbackConfig model) {
-                this.serviceIds = model.serviceIds;
+                this.serviceConfigs = model.serviceConfigs;
             } 
 
             /**
-             * serviceIds.
+             * serviceConfigs.
              */
-            public Builder serviceIds(java.util.List<String> serviceIds) {
-                this.serviceIds = serviceIds;
+            public Builder serviceConfigs(java.util.List<AiFallbackConfigServiceConfigs> serviceConfigs) {
+                this.serviceConfigs = serviceConfigs;
                 return this;
             }
 

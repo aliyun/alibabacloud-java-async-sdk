@@ -29,6 +29,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
+    @com.aliyun.core.annotation.NameInMap("expressType")
+    private String expressType;
+
     @com.aliyun.core.annotation.NameInMap("gatewayId")
     private String gatewayId;
 
@@ -41,11 +44,17 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("healthStatus")
     private String healthStatus;
 
+    @com.aliyun.core.annotation.NameInMap("labelDetails")
+    private java.util.List<LabelDetail> labelDetails;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
+
+    @com.aliyun.core.annotation.NameInMap("outlierEndpoints")
+    private java.util.List<String> outlierEndpoints;
 
     @com.aliyun.core.annotation.NameInMap("ports")
     private java.util.List<Ports> ports;
@@ -76,12 +85,15 @@ public class Service extends TeaModel {
         this.agentServiceConfig = builder.agentServiceConfig;
         this.aiServiceConfig = builder.aiServiceConfig;
         this.createTimestamp = builder.createTimestamp;
+        this.expressType = builder.expressType;
         this.gatewayId = builder.gatewayId;
         this.groupName = builder.groupName;
         this.healthCheck = builder.healthCheck;
         this.healthStatus = builder.healthStatus;
+        this.labelDetails = builder.labelDetails;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.outlierEndpoints = builder.outlierEndpoints;
         this.ports = builder.ports;
         this.protocol = builder.protocol;
         this.qualifier = builder.qualifier;
@@ -133,6 +145,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return expressType
+     */
+    public String getExpressType() {
+        return this.expressType;
+    }
+
+    /**
      * @return gatewayId
      */
     public String getGatewayId() {
@@ -161,6 +180,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return labelDetails
+     */
+    public java.util.List<LabelDetail> getLabelDetails() {
+        return this.labelDetails;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -172,6 +198,13 @@ public class Service extends TeaModel {
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return outlierEndpoints
+     */
+    public java.util.List<String> getOutlierEndpoints() {
+        return this.outlierEndpoints;
     }
 
     /**
@@ -235,12 +268,15 @@ public class Service extends TeaModel {
         private AgentServiceConfig agentServiceConfig; 
         private AiServiceConfig aiServiceConfig; 
         private Long createTimestamp; 
+        private String expressType; 
         private String gatewayId; 
         private String groupName; 
         private ServiceHealthCheck healthCheck; 
         private String healthStatus; 
+        private java.util.List<LabelDetail> labelDetails; 
         private String name; 
         private String namespace; 
+        private java.util.List<String> outlierEndpoints; 
         private java.util.List<Ports> ports; 
         private String protocol; 
         private String qualifier; 
@@ -258,12 +294,15 @@ public class Service extends TeaModel {
             this.agentServiceConfig = model.agentServiceConfig;
             this.aiServiceConfig = model.aiServiceConfig;
             this.createTimestamp = model.createTimestamp;
+            this.expressType = model.expressType;
             this.gatewayId = model.gatewayId;
             this.groupName = model.groupName;
             this.healthCheck = model.healthCheck;
             this.healthStatus = model.healthStatus;
+            this.labelDetails = model.labelDetails;
             this.name = model.name;
             this.namespace = model.namespace;
+            this.outlierEndpoints = model.outlierEndpoints;
             this.ports = model.ports;
             this.protocol = model.protocol;
             this.qualifier = model.qualifier;
@@ -307,6 +346,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * expressType.
+         */
+        public Builder expressType(String expressType) {
+            this.expressType = expressType;
+            return this;
+        }
+
+        /**
          * gatewayId.
          */
         public Builder gatewayId(String gatewayId) {
@@ -339,6 +386,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * labelDetails.
+         */
+        public Builder labelDetails(java.util.List<LabelDetail> labelDetails) {
+            this.labelDetails = labelDetails;
+            return this;
+        }
+
+        /**
          * name.
          */
         public Builder name(String name) {
@@ -351,6 +406,14 @@ public class Service extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * outlierEndpoints.
+         */
+        public Builder outlierEndpoints(java.util.List<String> outlierEndpoints) {
+            this.outlierEndpoints = outlierEndpoints;
             return this;
         }
 

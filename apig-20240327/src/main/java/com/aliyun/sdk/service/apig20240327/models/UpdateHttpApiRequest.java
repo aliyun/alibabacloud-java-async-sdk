@@ -52,6 +52,10 @@ public class UpdateHttpApiRequest extends Request {
     private Boolean enableAuth;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("firstByteTimeout")
+    private Integer firstByteTimeout;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ingressConfig")
     private IngressConfig ingressConfig;
 
@@ -81,6 +85,7 @@ public class UpdateHttpApiRequest extends Request {
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.enableAuth = builder.enableAuth;
+        this.firstByteTimeout = builder.firstByteTimeout;
         this.ingressConfig = builder.ingressConfig;
         this.onlyChangeConfig = builder.onlyChangeConfig;
         this.protocols = builder.protocols;
@@ -158,6 +163,13 @@ public class UpdateHttpApiRequest extends Request {
     }
 
     /**
+     * @return firstByteTimeout
+     */
+    public Integer getFirstByteTimeout() {
+        return this.firstByteTimeout;
+    }
+
+    /**
      * @return ingressConfig
      */
     public IngressConfig getIngressConfig() {
@@ -201,6 +213,7 @@ public class UpdateHttpApiRequest extends Request {
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private Boolean enableAuth; 
+        private Integer firstByteTimeout; 
         private IngressConfig ingressConfig; 
         private Boolean onlyChangeConfig; 
         private java.util.List<String> protocols; 
@@ -221,6 +234,7 @@ public class UpdateHttpApiRequest extends Request {
             this.deployConfigs = request.deployConfigs;
             this.description = request.description;
             this.enableAuth = request.enableAuth;
+            this.firstByteTimeout = request.firstByteTimeout;
             this.ingressConfig = request.ingressConfig;
             this.onlyChangeConfig = request.onlyChangeConfig;
             this.protocols = request.protocols;
@@ -308,6 +322,15 @@ public class UpdateHttpApiRequest extends Request {
         public Builder enableAuth(Boolean enableAuth) {
             this.putBodyParameter("enableAuth", enableAuth);
             this.enableAuth = enableAuth;
+            return this;
+        }
+
+        /**
+         * firstByteTimeout.
+         */
+        public Builder firstByteTimeout(Integer firstByteTimeout) {
+            this.putBodyParameter("firstByteTimeout", firstByteTimeout);
+            this.firstByteTimeout = firstByteTimeout;
             return this;
         }
 

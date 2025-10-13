@@ -27,6 +27,10 @@ public class ListHttpApiOperationsRequest extends Request {
     private String consumerAuthorizationRuleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("enableAuth")
+    private Boolean enableAuth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("forDeploy")
     private Boolean forDeploy;
 
@@ -74,6 +78,7 @@ public class ListHttpApiOperationsRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.consumerAuthorizationRuleId = builder.consumerAuthorizationRuleId;
+        this.enableAuth = builder.enableAuth;
         this.forDeploy = builder.forDeploy;
         this.gatewayId = builder.gatewayId;
         this.method = builder.method;
@@ -112,6 +117,13 @@ public class ListHttpApiOperationsRequest extends Request {
      */
     public String getConsumerAuthorizationRuleId() {
         return this.consumerAuthorizationRuleId;
+    }
+
+    /**
+     * @return enableAuth
+     */
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     /**
@@ -194,6 +206,7 @@ public class ListHttpApiOperationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListHttpApiOperationsRequest, Builder> {
         private String httpApiId; 
         private String consumerAuthorizationRuleId; 
+        private Boolean enableAuth; 
         private Boolean forDeploy; 
         private String gatewayId; 
         private String method; 
@@ -214,6 +227,7 @@ public class ListHttpApiOperationsRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.consumerAuthorizationRuleId = request.consumerAuthorizationRuleId;
+            this.enableAuth = request.enableAuth;
             this.forDeploy = request.forDeploy;
             this.gatewayId = request.gatewayId;
             this.method = request.method;
@@ -249,6 +263,15 @@ public class ListHttpApiOperationsRequest extends Request {
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putQueryParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
             this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;
+            return this;
+        }
+
+        /**
+         * enableAuth.
+         */
+        public Builder enableAuth(Boolean enableAuth) {
+            this.putQueryParameter("enableAuth", enableAuth);
+            this.enableAuth = enableAuth;
             return this;
         }
 

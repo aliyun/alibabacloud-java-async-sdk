@@ -49,6 +49,14 @@ public class UpdateHttpApiRouteRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("match")
     private HttpRouteMatch match;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mcpRouteConfig")
+    private McpRouteConfig mcpRouteConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
     private UpdateHttpApiRouteRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
@@ -59,6 +67,8 @@ public class UpdateHttpApiRouteRequest extends Request {
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
         this.match = builder.match;
+        this.mcpRouteConfig = builder.mcpRouteConfig;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -130,6 +140,20 @@ public class UpdateHttpApiRouteRequest extends Request {
         return this.match;
     }
 
+    /**
+     * @return mcpRouteConfig
+     */
+    public McpRouteConfig getMcpRouteConfig() {
+        return this.mcpRouteConfig;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder extends Request.Builder<UpdateHttpApiRouteRequest, Builder> {
         private String httpApiId; 
         private String routeId; 
@@ -139,6 +163,8 @@ public class UpdateHttpApiRouteRequest extends Request {
         private java.util.List<String> domainIds; 
         private String environmentId; 
         private HttpRouteMatch match; 
+        private McpRouteConfig mcpRouteConfig; 
+        private String name; 
 
         private Builder() {
             super();
@@ -154,6 +180,8 @@ public class UpdateHttpApiRouteRequest extends Request {
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
             this.match = request.match;
+            this.mcpRouteConfig = request.mcpRouteConfig;
+            this.name = request.name;
         } 
 
         /**
@@ -237,6 +265,24 @@ public class UpdateHttpApiRouteRequest extends Request {
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
             this.match = match;
+            return this;
+        }
+
+        /**
+         * mcpRouteConfig.
+         */
+        public Builder mcpRouteConfig(McpRouteConfig mcpRouteConfig) {
+            this.putBodyParameter("mcpRouteConfig", mcpRouteConfig);
+            this.mcpRouteConfig = mcpRouteConfig;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("name", name);
+            this.name = name;
             return this;
         }
 
@@ -484,6 +530,109 @@ public class UpdateHttpApiRouteRequest extends Request {
 
             public BackendConfig build() {
                 return new BackendConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateHttpApiRouteRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHttpApiRouteRequest</p>
+     */
+    public static class McpRouteConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exposedUriPath")
+        private String exposedUriPath;
+
+        @com.aliyun.core.annotation.NameInMap("mcpStatisticsEnable")
+        private Boolean mcpStatisticsEnable;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private McpRouteConfig(Builder builder) {
+            this.exposedUriPath = builder.exposedUriPath;
+            this.mcpStatisticsEnable = builder.mcpStatisticsEnable;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpRouteConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return exposedUriPath
+         */
+        public String getExposedUriPath() {
+            return this.exposedUriPath;
+        }
+
+        /**
+         * @return mcpStatisticsEnable
+         */
+        public Boolean getMcpStatisticsEnable() {
+            return this.mcpStatisticsEnable;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String exposedUriPath; 
+            private Boolean mcpStatisticsEnable; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpRouteConfig model) {
+                this.exposedUriPath = model.exposedUriPath;
+                this.mcpStatisticsEnable = model.mcpStatisticsEnable;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * exposedUriPath.
+             */
+            public Builder exposedUriPath(String exposedUriPath) {
+                this.exposedUriPath = exposedUriPath;
+                return this;
+            }
+
+            /**
+             * mcpStatisticsEnable.
+             */
+            public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
+                this.mcpStatisticsEnable = mcpStatisticsEnable;
+                return this;
+            }
+
+            /**
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public McpRouteConfig build() {
+                return new McpRouteConfig(this);
             } 
 
         } 

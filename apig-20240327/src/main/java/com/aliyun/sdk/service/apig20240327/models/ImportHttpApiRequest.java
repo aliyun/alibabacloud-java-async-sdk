@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ImportHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
-    private HttpApiDeployConfig deployConfigs;
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
@@ -28,6 +28,10 @@ public class ImportHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("mcpRouteId")
@@ -70,6 +74,7 @@ public class ImportHttpApiRequest extends Request {
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
+        this.gatewayId = builder.gatewayId;
         this.mcpRouteId = builder.mcpRouteId;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
@@ -97,7 +102,7 @@ public class ImportHttpApiRequest extends Request {
     /**
      * @return deployConfigs
      */
-    public HttpApiDeployConfig getDeployConfigs() {
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
         return this.deployConfigs;
     }
 
@@ -113,6 +118,13 @@ public class ImportHttpApiRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -179,9 +191,10 @@ public class ImportHttpApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportHttpApiRequest, Builder> {
-        private HttpApiDeployConfig deployConfigs; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private Boolean dryRun; 
+        private String gatewayId; 
         private String mcpRouteId; 
         private String name; 
         private String resourceGroupId; 
@@ -201,6 +214,7 @@ public class ImportHttpApiRequest extends Request {
             this.deployConfigs = request.deployConfigs;
             this.description = request.description;
             this.dryRun = request.dryRun;
+            this.gatewayId = request.gatewayId;
             this.mcpRouteId = request.mcpRouteId;
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
@@ -215,7 +229,7 @@ public class ImportHttpApiRequest extends Request {
         /**
          * <p>The deployment configuration.</p>
          */
-        public Builder deployConfigs(HttpApiDeployConfig deployConfigs) {
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
             this.deployConfigs = deployConfigs;
             return this;
@@ -242,6 +256,15 @@ public class ImportHttpApiRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putBodyParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
             return this;
         }
 

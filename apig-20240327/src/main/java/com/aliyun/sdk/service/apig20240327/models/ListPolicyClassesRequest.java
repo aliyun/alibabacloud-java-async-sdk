@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPolicyClassesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("attachResourceId")
+    private String attachResourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("attachResourceType")
     private String attachResourceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("direction")
     private String direction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
@@ -39,8 +47,10 @@ public class ListPolicyClassesRequest extends Request {
 
     private ListPolicyClassesRequest(Builder builder) {
         super(builder);
+        this.attachResourceId = builder.attachResourceId;
         this.attachResourceType = builder.attachResourceType;
         this.direction = builder.direction;
+        this.gatewayId = builder.gatewayId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.type = builder.type;
@@ -60,6 +70,13 @@ public class ListPolicyClassesRequest extends Request {
     }
 
     /**
+     * @return attachResourceId
+     */
+    public String getAttachResourceId() {
+        return this.attachResourceId;
+    }
+
+    /**
      * @return attachResourceType
      */
     public String getAttachResourceType() {
@@ -71,6 +88,13 @@ public class ListPolicyClassesRequest extends Request {
      */
     public String getDirection() {
         return this.direction;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -95,8 +119,10 @@ public class ListPolicyClassesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPolicyClassesRequest, Builder> {
+        private String attachResourceId; 
         private String attachResourceType; 
         private String direction; 
+        private String gatewayId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String type; 
@@ -107,12 +133,23 @@ public class ListPolicyClassesRequest extends Request {
 
         private Builder(ListPolicyClassesRequest request) {
             super(request);
+            this.attachResourceId = request.attachResourceId;
             this.attachResourceType = request.attachResourceType;
             this.direction = request.direction;
+            this.gatewayId = request.gatewayId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.type = request.type;
         } 
+
+        /**
+         * attachResourceId.
+         */
+        public Builder attachResourceId(String attachResourceId) {
+            this.putQueryParameter("attachResourceId", attachResourceId);
+            this.attachResourceId = attachResourceId;
+            return this;
+        }
 
         /**
          * <p>Types of attachment points supported by the policy.</p>
@@ -149,6 +186,15 @@ public class ListPolicyClassesRequest extends Request {
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
             this.direction = direction;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putQueryParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
             return this;
         }
 
