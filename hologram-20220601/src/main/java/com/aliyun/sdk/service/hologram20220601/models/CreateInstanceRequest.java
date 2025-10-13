@@ -87,6 +87,10 @@ public class CreateInstanceRequest extends Request {
     private Long storageSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storageType")
+    private String storageType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -119,6 +123,7 @@ public class CreateInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.storageSize = builder.storageSize;
+        this.storageType = builder.storageType;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -132,7 +137,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,6 +255,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -287,6 +299,7 @@ public class CreateInstanceRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private Long storageSize; 
+        private String storageType; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -313,6 +326,7 @@ public class CreateInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.storageSize = request.storageSize;
+            this.storageType = request.storageType;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -601,6 +615,15 @@ public class CreateInstanceRequest extends Request {
         public Builder storageSize(Long storageSize) {
             this.putBodyParameter("storageSize", storageSize);
             this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
+         * storageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putBodyParameter("storageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

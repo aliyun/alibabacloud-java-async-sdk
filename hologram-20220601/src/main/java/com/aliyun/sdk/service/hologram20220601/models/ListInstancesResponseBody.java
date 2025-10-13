@@ -52,6 +52,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -102,6 +106,18 @@ public class ListInstancesResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceList = model.instanceList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The error code returned if the request failed.</p>
          * 
@@ -136,7 +152,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of queried instances.</p>
+         * <p>The instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -262,6 +278,18 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String vpcInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.enabled = model.enabled;
+                this.endpoint = model.endpoint;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
 
             /**
              * <p>Indicates whether the endpoint is enabled.</p>
@@ -439,6 +467,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -704,6 +740,30 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String version; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.commodityCode = model.commodityCode;
+                this.creationTime = model.creationTime;
+                this.enableHiveAccess = model.enableHiveAccess;
+                this.endpoints = model.endpoints;
+                this.expirationTime = model.expirationTime;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.leaderInstanceId = model.leaderInstanceId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.storageType = model.storageType;
+                this.suspendReason = model.suspendReason;
+                this.tags = model.tags;
+                this.version = model.version;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The commodity code, which is the same as that on the Billing Management page.</p>

@@ -52,6 +52,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class GetInstanceResponseBody extends TeaModel {
         private Instance instance; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code that is returned if the request failed.</p>
@@ -274,6 +290,19 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String vpcInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.alternativeEndpoints = model.alternativeEndpoints;
+                this.enabled = model.enabled;
+                this.endpoint = model.endpoint;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
 
             /**
              * <p>The endpoint. This parameter is returned if both the AnyTunnel and SingleTunnel modes are enabled for an instance, and the instance is switched from the AnyTunnel mode to the SingleTunnel mode. In this case, two endpoints are returned.</p>
@@ -463,6 +492,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.</p>
@@ -873,6 +910,42 @@ public class GetInstanceResponseBody extends TeaModel {
             private String version; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.autoRenewal = model.autoRenewal;
+                this.coldStorage = model.coldStorage;
+                this.commodityCode = model.commodityCode;
+                this.computeNodeCount = model.computeNodeCount;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.disk = model.disk;
+                this.enableHiveAccess = model.enableHiveAccess;
+                this.enableServerless = model.enableServerless;
+                this.endpoints = model.endpoints;
+                this.expirationTime = model.expirationTime;
+                this.gatewayCount = model.gatewayCount;
+                this.gatewayCpu = model.gatewayCpu;
+                this.gatewayMemory = model.gatewayMemory;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceOwner = model.instanceOwner;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.leaderInstanceId = model.leaderInstanceId;
+                this.memory = model.memory;
+                this.regionId = model.regionId;
+                this.replicaRole = model.replicaRole;
+                this.resourceGroupId = model.resourceGroupId;
+                this.storageType = model.storageType;
+                this.suspendReason = model.suspendReason;
+                this.tags = model.tags;
+                this.version = model.version;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled.</p>
              * <p>Valid values:</p>
@@ -1064,7 +1137,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableServerless.
+             * <p>EnableServerless</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableServerless(Boolean enableServerless) {
                 this.enableServerless = enableServerless;
@@ -1303,7 +1379,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaRole.
+             * <p>Disaster recovery instance role. </p>
+             * <ul>
+             * <li>Active: Primary disaster recovery instance.</li>
+             * <li>Passive: Disaster tolerance instance.</li>
+             * <li>PreActive: Primary disaster recovery instance not yet in final state.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder replicaRole(String replicaRole) {
                 this.replicaRole = replicaRole;
@@ -1322,7 +1406,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * <ul>
+             * <li>redundant: 3 copies</li>
+             * <li>local: single copy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>redundant</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

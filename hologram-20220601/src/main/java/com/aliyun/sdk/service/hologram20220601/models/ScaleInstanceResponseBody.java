@@ -48,6 +48,10 @@ public class ScaleInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ScaleInstanceResponseBody extends TeaModel {
         private String errorMessage; 
         private String httpStatusCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScaleInstanceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -215,6 +230,16 @@ public class ScaleInstanceResponseBody extends TeaModel {
             private String message; 
             private String orderId; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.orderId = model.orderId;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The error code returned.</p>

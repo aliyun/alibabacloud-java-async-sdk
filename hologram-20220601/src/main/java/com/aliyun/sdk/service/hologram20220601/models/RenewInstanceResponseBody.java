@@ -52,6 +52,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewInstanceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -239,6 +255,16 @@ public class RenewInstanceResponseBody extends TeaModel {
             private String orderId; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.orderId = model.orderId;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The error code returned.</p>
              * 
@@ -252,6 +278,9 @@ public class RenewInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The error details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidChargeType.UnRenewable</p>
              */
             public Builder message(String message) {
                 this.message = message;

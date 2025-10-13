@@ -36,6 +36,10 @@ public class ListWarehousesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return warehouseList
      */
@@ -53,6 +57,14 @@ public class ListWarehousesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<WarehouseList> warehouseList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWarehousesResponseBody model) {
+            this.warehouseList = model.warehouseList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of virtual warehouse instances.</p>
@@ -170,6 +182,18 @@ public class ListWarehousesResponseBody extends TeaModel {
             private String name; 
             private Long nodeCount; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarehouseList model) {
+                this.cpu = model.cpu;
+                this.id = model.id;
+                this.mem = model.mem;
+                this.name = model.name;
+                this.nodeCount = model.nodeCount;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The number of CPU cores.</p>

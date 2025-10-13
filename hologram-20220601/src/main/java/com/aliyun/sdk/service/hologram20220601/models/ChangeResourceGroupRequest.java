@@ -39,7 +39,7 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-zvp25ysv3006</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * newResourceGroupId.
+         * <p>new resource group id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxwerqwerasfd</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("newResourceGroupId", newResourceGroupId);

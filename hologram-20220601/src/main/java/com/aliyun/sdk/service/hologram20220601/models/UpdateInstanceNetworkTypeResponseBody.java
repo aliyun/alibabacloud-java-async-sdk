@@ -52,6 +52,10 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -102,6 +106,18 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceNetworkTypeResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The returned result, which indicates whether the operation was successful.</p>
          * <p>Valid values:</p>
@@ -130,7 +146,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -141,7 +157,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal server error.</p>
@@ -177,19 +193,8 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
          * <p>Indicates whether the request was successful.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>

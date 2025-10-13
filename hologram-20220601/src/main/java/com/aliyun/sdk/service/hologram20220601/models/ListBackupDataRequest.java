@@ -39,7 +39,7 @@ public class ListBackupDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,19 @@ public class ListBackupDataRequest extends Request {
         } 
 
         /**
-         * backupType.
+         * <p>The backup type. Specific backup data is filtered based on the type. If you leave this parameter empty, all backup data is returned.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>redundant_remote</li>
+         * <li>remote</li>
+         * <li>redundant</li>
+         * <li>full_remote</li>
+         * <li>local</li>
+         * <li>full</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>redundant</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("backupType", backupType);
@@ -82,7 +94,10 @@ public class ListBackupDataRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-wwoxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);

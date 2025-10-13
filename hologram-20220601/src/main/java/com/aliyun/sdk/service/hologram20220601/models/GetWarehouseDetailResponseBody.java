@@ -36,6 +36,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private String requestId; 
         private WarehouseDetail warehouseDetail; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetWarehouseDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.warehouseDetail = model.warehouseDetail;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,7 +78,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The values returned.</p>
+         * <p>The returned values.</p>
          */
         public Builder warehouseDetail(WarehouseDetail warehouseDetail) {
             this.warehouseDetail = warehouseDetail;
@@ -206,6 +218,21 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             private Long nodeCount; 
             private String rebalanceStatus; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarehouseList model) {
+                this.cpu = model.cpu;
+                this.defaultWarehouse = model.defaultWarehouse;
+                this.elasticCpu = model.elasticCpu;
+                this.id = model.id;
+                this.mem = model.mem;
+                this.name = model.name;
+                this.nodeCount = model.nodeCount;
+                this.rebalanceStatus = model.rebalanceStatus;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The number of CPU cores.</p>
@@ -408,6 +435,16 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             private String reservedCpu; 
             private String timedElasticCpu; 
             private java.util.List<WarehouseList> warehouseList; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarehouseDetail model) {
+                this.remainingCpu = model.remainingCpu;
+                this.reservedCpu = model.reservedCpu;
+                this.timedElasticCpu = model.timedElasticCpu;
+                this.warehouseList = model.warehouseList;
+            } 
 
             /**
              * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>

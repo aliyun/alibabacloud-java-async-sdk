@@ -39,7 +39,7 @@ public class UpdateInstanceNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +85,7 @@ public class UpdateInstanceNameRequest extends Request {
         }
 
         /**
-         * <p>The new name of the instance.</p>
+         * <p>The new name of the instance. The name must be 2 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>new_name</p>

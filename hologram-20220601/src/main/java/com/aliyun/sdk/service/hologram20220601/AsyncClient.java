@@ -73,9 +73,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</li>
+     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
      * <li>You can delete only pay-as-you-go instances.</li>
-     * <li>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
@@ -90,16 +89,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableHiveAccessResponse> disableHiveAccess(DisableHiveAccessRequest request);
 
     /**
+     * @param request the request parameters of DisableSSL  DisableSSLRequest
+     * @return DisableSSLResponse
+     */
+    CompletableFuture<DisableSSLResponse> disableSSL(DisableSSLRequest request);
+
+    /**
      * @param request the request parameters of EnableHiveAccess  EnableHiveAccessRequest
      * @return EnableHiveAccessResponse
      */
     CompletableFuture<EnableHiveAccessResponse> enableHiveAccess(EnableHiveAccessRequest request);
 
     /**
+     * @param request the request parameters of EnableSSL  EnableSSLRequest
+     * @return EnableSSLResponse
+     */
+    CompletableFuture<EnableSSLResponse> enableSSL(EnableSSLRequest request);
+
+    /**
+     * @param request the request parameters of GetCertificateAttribute  GetCertificateAttributeRequest
+     * @return GetCertificateAttributeResponse
+     */
+    CompletableFuture<GetCertificateAttributeResponse> getCertificateAttribute(GetCertificateAttributeRequest request);
+
+    /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
      * @return GetInstanceResponse
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetRootCertificate  GetRootCertificateRequest
+     * @return GetRootCertificateResponse
+     */
+    CompletableFuture<GetRootCertificateResponse> getRootCertificate(GetRootCertificateRequest request);
 
     /**
      * @param request the request parameters of GetWarehouseDetail  GetWarehouseDetailRequest
@@ -140,11 +163,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</li>
-     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</li>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
      * <li>You can renew only subscription instances.</li>
      * </ul>
      * 
@@ -152,6 +175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewInstanceResponse
      */
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RenewSSLCertificate  RenewSSLCertificateRequest
+     * @return RenewSSLCertificateResponse
+     */
+    CompletableFuture<RenewSSLCertificateResponse> renewSSLCertificate(RenewSSLCertificateRequest request);
 
     /**
      * @param request the request parameters of RestartHoloWarehouse  RestartHoloWarehouseRequest

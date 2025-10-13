@@ -36,6 +36,10 @@ public class ListBackupDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupDataList
      */
@@ -54,8 +58,16 @@ public class ListBackupDataResponseBody extends TeaModel {
         private java.util.List<BackupDataList> backupDataList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListBackupDataResponseBody model) {
+            this.backupDataList = model.backupDataList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * BackupDataList.
+         * <p>The backups.</p>
          */
         public Builder backupDataList(java.util.List<BackupDataList> backupDataList) {
             this.backupDataList = backupDataList;
@@ -63,7 +75,10 @@ public class ListBackupDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AA0C48F-B5BB-5FF9-A43B-6B91E0715D46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -312,8 +327,35 @@ public class ListBackupDataResponseBody extends TeaModel {
             private String status; 
             private String triggerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupDataList model) {
+                this.backupType = model.backupType;
+                this.coldDataSize = model.coldDataSize;
+                this.dataDesc = model.dataDesc;
+                this.dataGran = model.dataGran;
+                this.dataSize = model.dataSize;
+                this.dataTime = model.dataTime;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRegion = model.instanceRegion;
+                this.instanceType = model.instanceType;
+                this.instanceZoneId = model.instanceZoneId;
+                this.snapshotRegion = model.snapshotRegion;
+                this.snapshotZoneId = model.snapshotZoneId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.triggerType = model.triggerType;
+            } 
+
             /**
-             * BackupType.
+             * <p>The backup type. In general, the following two types are supported: local backup and remote backup. In the local backup type, snapshots reside in the same region as your instance. The following two sub-types are available: full (single backup, single replica) and redundant (zone-redundant storage, multiple replicas). In the remote backup type, snapshots and your instance reside in different regions. Remote backups are the replicas of the backups of the full or redundant type in another region. The values local and remote do not represent specific types, but are used only for data filtering. The value local indicates all local backups, and the value remote indicates all remote backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redundant</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -321,7 +363,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSize.
+             * <p>The size of cold data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32413521</p>
              */
             public Builder coldDataSize(Long coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -329,7 +374,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * DataDesc.
+             * <p>The description of the backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder dataDesc(String dataDesc) {
                 this.dataDesc = dataDesc;
@@ -337,7 +385,14 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * DataGran.
+             * <p>The backup granularity.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder dataGran(String dataGran) {
                 this.dataGran = dataGran;
@@ -345,7 +400,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * <p>The size of the backup data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76085723136</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -353,7 +411,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * <p>The snapshot time. The value format of this parameter follows the same standard as that of the StartTime parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-28T12:23:37.000+00:00</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -361,7 +422,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the backup task. The value format of this parameter follows the same standard as that of the StartTime parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-28T12:27:34.000+00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -369,7 +433,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780805690994479105</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -377,7 +444,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-pe33jdxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -385,7 +455,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-hologres-dw</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -393,7 +466,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRegion.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder instanceRegion(String instanceRegion) {
                 this.instanceRegion = instanceRegion;
@@ -401,7 +477,15 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Warehouse: virtual warehouse instance</li>
+             * <li>Standard: general-purpose instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warehouse</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -409,7 +493,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceZoneId.
+             * <p>The zone in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder instanceZoneId(String instanceZoneId) {
                 this.instanceZoneId = instanceZoneId;
@@ -417,7 +504,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotRegion.
+             * <p>The region in which the backup data resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder snapshotRegion(String snapshotRegion) {
                 this.snapshotRegion = snapshotRegion;
@@ -425,7 +515,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotZoneId.
+             * <p>The zone in which the backup data resides. In zone-redundant storage mode, backup data is stored in different zones, including the current zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder snapshotZoneId(String snapshotZoneId) {
                 this.snapshotZoneId = snapshotZoneId;
@@ -433,7 +526,10 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the backup task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSTZ format. The time is displayed in UTC (the same below).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-28T11:19:56.000+00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -441,7 +537,16 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>processing</li>
+             * <li>completed</li>
+             * <li>failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -449,7 +554,15 @@ public class ListBackupDataResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The mode in which the backup task is triggered.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>scheduled: periodic backup</li>
+             * <li>manual: manual backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>scheduled</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
