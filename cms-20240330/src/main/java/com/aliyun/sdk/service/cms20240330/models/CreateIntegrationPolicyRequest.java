@@ -206,6 +206,9 @@ public class CreateIntegrationPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("clusterId")
         private String clusterId;
 
+        @com.aliyun.core.annotation.NameInMap("disablePolicyShare")
+        private Boolean disablePolicyShare;
+
         @com.aliyun.core.annotation.NameInMap("entityGroupId")
         private String entityGroupId;
 
@@ -215,6 +218,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         private EntityGroup(Builder builder) {
             this.clusterEntityType = builder.clusterEntityType;
             this.clusterId = builder.clusterId;
+            this.disablePolicyShare = builder.disablePolicyShare;
             this.entityGroupId = builder.entityGroupId;
             this.vpcId = builder.vpcId;
         }
@@ -242,6 +246,13 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
+         * @return disablePolicyShare
+         */
+        public Boolean getDisablePolicyShare() {
+            return this.disablePolicyShare;
+        }
+
+        /**
          * @return entityGroupId
          */
         public String getEntityGroupId() {
@@ -258,6 +269,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         public static final class Builder {
             private String clusterEntityType; 
             private String clusterId; 
+            private Boolean disablePolicyShare; 
             private String entityGroupId; 
             private String vpcId; 
 
@@ -267,6 +279,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             private Builder(EntityGroup model) {
                 this.clusterEntityType = model.clusterEntityType;
                 this.clusterId = model.clusterId;
+                this.disablePolicyShare = model.disablePolicyShare;
                 this.entityGroupId = model.entityGroupId;
                 this.vpcId = model.vpcId;
             } 
@@ -284,6 +297,14 @@ public class CreateIntegrationPolicyRequest extends Request {
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * disablePolicyShare.
+             */
+            public Builder disablePolicyShare(Boolean disablePolicyShare) {
+                this.disablePolicyShare = disablePolicyShare;
                 return this;
             }
 

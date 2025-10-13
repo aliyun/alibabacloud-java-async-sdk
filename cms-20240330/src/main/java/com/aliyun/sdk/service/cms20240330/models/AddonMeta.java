@@ -442,6 +442,81 @@ public class AddonMeta extends TeaModel {
      *
      * <p>AddonMeta</p>
      */
+    public static class CommonSchemaRefs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("group")
+        private String group;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private CommonSchemaRefs(Builder builder) {
+            this.group = builder.group;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommonSchemaRefs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return group
+         */
+        public String getGroup() {
+            return this.group;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String group; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonSchemaRefs model) {
+                this.group = model.group;
+                this.version = model.version;
+            } 
+
+            /**
+             * group.
+             */
+            public Builder group(String group) {
+                this.group = group;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public CommonSchemaRefs build() {
+                return new CommonSchemaRefs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddonMeta} extends {@link TeaModel}
+     *
+     * <p>AddonMeta</p>
+     */
     public static class Dependencies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clusterTypes")
         private java.util.List<String> clusterTypes;
@@ -1049,6 +1124,9 @@ public class AddonMeta extends TeaModel {
      * <p>AddonMeta</p>
      */
     public static class Environments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("commonSchemaRefs")
+        private java.util.List<CommonSchemaRefs> commonSchemaRefs;
+
         @com.aliyun.core.annotation.NameInMap("dependencies")
         private Dependencies dependencies;
 
@@ -1071,6 +1149,7 @@ public class AddonMeta extends TeaModel {
         private String policyType;
 
         private Environments(Builder builder) {
+            this.commonSchemaRefs = builder.commonSchemaRefs;
             this.dependencies = builder.dependencies;
             this.description = builder.description;
             this.enable = builder.enable;
@@ -1086,6 +1165,13 @@ public class AddonMeta extends TeaModel {
 
         public static Environments create() {
             return builder().build();
+        }
+
+        /**
+         * @return commonSchemaRefs
+         */
+        public java.util.List<CommonSchemaRefs> getCommonSchemaRefs() {
+            return this.commonSchemaRefs;
         }
 
         /**
@@ -1138,6 +1224,7 @@ public class AddonMeta extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<CommonSchemaRefs> commonSchemaRefs; 
             private Dependencies dependencies; 
             private String description; 
             private Boolean enable; 
@@ -1150,6 +1237,7 @@ public class AddonMeta extends TeaModel {
             } 
 
             private Builder(Environments model) {
+                this.commonSchemaRefs = model.commonSchemaRefs;
                 this.dependencies = model.dependencies;
                 this.description = model.description;
                 this.enable = model.enable;
@@ -1158,6 +1246,14 @@ public class AddonMeta extends TeaModel {
                 this.policies = model.policies;
                 this.policyType = model.policyType;
             } 
+
+            /**
+             * commonSchemaRefs.
+             */
+            public Builder commonSchemaRefs(java.util.List<CommonSchemaRefs> commonSchemaRefs) {
+                this.commonSchemaRefs = commonSchemaRefs;
+                return this;
+            }
 
             /**
              * dependencies.
