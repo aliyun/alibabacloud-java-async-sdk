@@ -235,6 +235,60 @@ public class SubmitDocTranslateTaskRequest extends Request {
      *
      * <p>SubmitDocTranslateTaskRequest</p>
      */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("skipImgTrans")
+        private Boolean skipImgTrans;
+
+        private Config(Builder builder) {
+            this.skipImgTrans = builder.skipImgTrans;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return skipImgTrans
+         */
+        public Boolean getSkipImgTrans() {
+            return this.skipImgTrans;
+        }
+
+        public static final class Builder {
+            private Boolean skipImgTrans; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.skipImgTrans = model.skipImgTrans;
+            } 
+
+            /**
+             * skipImgTrans.
+             */
+            public Builder skipImgTrans(Boolean skipImgTrans) {
+                this.skipImgTrans = skipImgTrans;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitDocTranslateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDocTranslateTaskRequest</p>
+     */
     public static class Terminologies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("src")
         private String src;
@@ -311,6 +365,9 @@ public class SubmitDocTranslateTaskRequest extends Request {
      * <p>SubmitDocTranslateTaskRequest</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
         @com.aliyun.core.annotation.NameInMap("domainHint")
         private String domainHint;
 
@@ -318,6 +375,7 @@ public class SubmitDocTranslateTaskRequest extends Request {
         private java.util.List<Terminologies> terminologies;
 
         private Ext(Builder builder) {
+            this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.terminologies = builder.terminologies;
         }
@@ -328,6 +386,13 @@ public class SubmitDocTranslateTaskRequest extends Request {
 
         public static Ext create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
         }
 
         /**
@@ -345,6 +410,7 @@ public class SubmitDocTranslateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Config config; 
             private String domainHint; 
             private java.util.List<Terminologies> terminologies; 
 
@@ -352,9 +418,18 @@ public class SubmitDocTranslateTaskRequest extends Request {
             } 
 
             private Builder(Ext model) {
+                this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.terminologies = model.terminologies;
             } 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
 
             /**
              * domainHint.
