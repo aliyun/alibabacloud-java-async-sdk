@@ -788,6 +788,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRoutineCodeDeployment  CreateRoutineCodeDeploymentRequest
      * @return CreateRoutineCodeDeploymentResponse
      */
@@ -2255,6 +2262,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
+     * <ul>
+     * <li>The log data is collected every hour.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSiteLogs  DescribeSiteLogsRequest
      * @return DescribeSiteLogsResponse
      */
@@ -2273,6 +2288,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
+     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
+     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
+     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
+     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
+     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
+     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
+     * </ul>
+     * </li>
+     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSiteTimeSeriesData  DescribeSiteTimeSeriesDataRequest
      * @return DescribeSiteTimeSeriesDataResponse
      */
@@ -2291,6 +2320,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * 
      * @param request the request parameters of DescribeSiteTopData  DescribeSiteTopDataRequest
      * @return DescribeSiteTopDataResponse
      */
@@ -2309,6 +2341,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
+     * 
      * @param request the request parameters of DescribeUrlObservationData  DescribeUrlObservationDataRequest
      * @return DescribeUrlObservationDataResponse
      */
@@ -3984,6 +4019,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * 
      * @param request the request parameters of ListESAIPInfo  ListESAIPInfoRequest
      * @return ListESAIPInfoResponse
      */
@@ -4580,6 +4618,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
+     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
+     * The response includes the number, description, and creation time of each code version.</p>
+     * 
      * @param request the request parameters of ListRoutineCodeVersions  ListRoutineCodeVersionsRequest
      * @return ListRoutineCodeVersionsResponse
      */
@@ -4598,6 +4641,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * 
      * @param request the request parameters of ListRoutineRelatedRecords  ListRoutineRelatedRecordsRequest
      * @return ListRoutineRelatedRecordsResponse
      */
@@ -4832,6 +4878,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * 
      * @param request the request parameters of ListUserRoutines  ListUserRoutinesRequest
      * @return ListUserRoutinesResponse
      */

@@ -132,7 +132,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -140,7 +143,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -148,7 +154,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaRoutineNumber.
+         * <p>The maximum number of functions supported by the billing plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder quotaRoutineNumber(Long quotaRoutineNumber) {
             this.quotaRoutineNumber = quotaRoutineNumber;
@@ -156,7 +165,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890ABCDEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * Routines.
+         * <p>The functions.</p>
          */
         public Builder routines(java.util.List<Routines> routines) {
             this.routines = routines;
@@ -172,7 +184,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -180,7 +195,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * UsedRoutineNumber.
+         * <p>The number of functions that were already created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder usedRoutineNumber(Long usedRoutineNumber) {
             this.usedRoutineNumber = usedRoutineNumber;
@@ -285,7 +303,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the function was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-11T01:23:02.883361712Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -293,7 +314,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRelatedRecord.
+             * <p>The default record name to access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serverless-test-2.154edaf6.er.aliyun-esa.net</p>
              */
             public Builder defaultRelatedRecord(String defaultRelatedRecord) {
                 this.defaultRelatedRecord = defaultRelatedRecord;
@@ -301,7 +325,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The function description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg==</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +336,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * HasAssets.
+             * <p>Specifies whether to include the Assets file tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasAssets(Boolean hasAssets) {
                 this.hasAssets = hasAssets;
@@ -317,7 +347,10 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineName.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;

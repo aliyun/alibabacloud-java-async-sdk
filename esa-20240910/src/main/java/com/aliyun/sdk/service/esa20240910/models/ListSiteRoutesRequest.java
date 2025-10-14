@@ -130,7 +130,10 @@ public class ListSiteRoutesRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -139,7 +142,15 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. You can use this parameter to query global configurations or feature configurations. This parameter takes effect only if the functionName parameter is passed.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>global</li>
+         * <li>rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -148,7 +159,10 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +171,10 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,7 +183,10 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * <p>The rule name. This parameter takes effect only when parameter functionName is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_route</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -175,6 +195,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

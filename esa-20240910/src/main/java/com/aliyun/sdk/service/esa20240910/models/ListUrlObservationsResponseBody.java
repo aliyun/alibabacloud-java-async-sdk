@@ -119,7 +119,7 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Configs.
+         * <p>The configurations of the feature.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +160,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +171,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -241,7 +253,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35281609698****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -249,7 +264,14 @@ public class ListUrlObservationsResponseBody extends TeaModel {
             }
 
             /**
-             * SdkType.
+             * <p>SDK integration. Valid values:</p>
+             * <ul>
+             * <li><strong>automatic</strong></li>
+             * <li><strong>manual</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder sdkType(String sdkType) {
                 this.sdkType = sdkType;
@@ -257,7 +279,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the web page to monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com/test</p>
              */
             public Builder url(String url) {
                 this.url = url;

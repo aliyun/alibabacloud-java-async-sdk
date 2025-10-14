@@ -54,7 +54,10 @@ public class UpdateVideoProcessingResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3558df77-8a7a-4060-a900-2d7949403836</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

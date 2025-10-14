@@ -67,7 +67,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -78,7 +78,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         }
 
         /**
-         * SiteLogDetails.
+         * <p>The information about the website log files.</p>
          */
         public Builder siteLogDetails(java.util.List<SiteLogDetails> siteLogDetails) {
             this.siteLogDetails = siteLogDetails;
@@ -183,7 +183,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-06T17:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -191,7 +194,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * <p>The name of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com_2022_11_07_000000_020000.gz.xxxxxx</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -199,7 +205,13 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogPath.
+             * <p>The log path.</p>
+             * <blockquote>
+             * <p> Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2022_11_07/example.com_2022_11_07_000000_020000.gz.xxxxxx?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -207,7 +219,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * <p>The size of the log file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>438304768</p>
              */
             public Builder logSize(Integer logSize) {
                 this.logSize = logSize;
@@ -215,7 +230,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The create time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-06T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -295,7 +313,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageIndex.
+             * <p>The page number returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageIndex(Integer pageIndex) {
                 this.pageIndex = pageIndex;
@@ -303,7 +324,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: <strong>300</strong>. Valid values: <strong>1 to 1000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -311,7 +335,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -417,7 +444,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * LogCount.
+             * <p>The total number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder logCount(Integer logCount) {
                 this.logCount = logCount;
@@ -425,7 +455,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogInfos.
+             * <p>The details of the website log files.</p>
              */
             public Builder logInfos(java.util.List<LogInfos> logInfos) {
                 this.logInfos = logInfos;
@@ -433,7 +463,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfos.
+             * <p>Pagination information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;
@@ -441,7 +471,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456***</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -449,7 +482,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;

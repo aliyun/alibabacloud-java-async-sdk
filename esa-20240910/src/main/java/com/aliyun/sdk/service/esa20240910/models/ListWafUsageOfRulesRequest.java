@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListWafUsageOfRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
 
@@ -27,6 +31,7 @@ public class ListWafUsageOfRulesRequest extends Request {
 
     private ListWafUsageOfRulesRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.phase = builder.phase;
         this.siteId = builder.siteId;
     }
@@ -45,6 +50,13 @@ public class ListWafUsageOfRulesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return phase
      */
     public String getPhase() {
@@ -59,6 +71,7 @@ public class ListWafUsageOfRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListWafUsageOfRulesRequest, Builder> {
+        private String instanceId; 
         private String phase; 
         private Long siteId; 
 
@@ -68,9 +81,19 @@ public class ListWafUsageOfRulesRequest extends Request {
 
         private Builder(ListWafUsageOfRulesRequest request) {
             super(request);
+            this.instanceId = request.instanceId;
             this.phase = request.phase;
             this.siteId = request.siteId;
         } 
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * <p>Name of the WAF operation phase.</p>

@@ -67,7 +67,14 @@ public class GetCrossBorderOptimizationResponseBody extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Whether to enable Chinese mainland network access optimization. By default, it is disabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -75,7 +82,10 @@ public class GetCrossBorderOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF521A24-633F-5350-A6A5-42AD503D0D20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

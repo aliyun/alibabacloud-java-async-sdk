@@ -106,7 +106,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The queried certificates.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -122,7 +125,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID,</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -130,7 +136,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;
@@ -138,7 +147,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that you specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -412,7 +424,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * CasId.
+             * <p>The certificate ID on Certificate Management Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000137</p>
              */
             public Builder casId(String casId) {
                 this.casId = casId;
@@ -420,7 +435,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * <p>The Common Name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -428,7 +446,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-28 06:17:11</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -436,7 +457,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FingerprintSha256.
+             * <p>The SHA-256 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
              */
             public Builder fingerprintSha256(String fingerprintSha256) {
                 this.fingerprintSha256 = fingerprintSha256;
@@ -444,7 +468,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>babab022c5e9b27bf9c64d7f4b1667f4</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -452,7 +479,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GlobalSign nv-sa</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -460,7 +490,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerCN.
+             * <p>The Common Name of the certificate issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GlobalSign Organization Validation CA - SHA256 - G3</p>
              */
             public Builder issuerCN(String issuerCN) {
                 this.issuerCN = issuerCN;
@@ -468,7 +501,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -476,7 +512,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-28 06:17:11</p>
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -484,7 +523,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * <p>The time when the certificate takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-28 06:17:11</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -492,7 +534,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PubAlg.
+             * <p>The public key algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder pubAlg(String pubAlg) {
                 this.pubAlg = pubAlg;
@@ -500,7 +545,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the certificate is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -508,7 +556,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SAN.
+             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
              */
             public Builder SAN(String SAN) {
                 this.SAN = SAN;
@@ -516,7 +567,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>The serial number of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baba39055622c008b90285a8838ed09a</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -524,7 +578,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SigAlg.
+             * <p>The signature algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256-RSA</p>
              */
             public Builder sigAlg(String sigAlg) {
                 this.sigAlg = sigAlg;
@@ -532,7 +589,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -540,7 +600,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the SSL certificate. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -548,7 +611,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-28 06:17:11</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -654,7 +720,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplylingCount.
+             * <p>The number of certificates that are being requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder applylingCount(Long applylingCount) {
                 this.applylingCount = applylingCount;
@@ -662,7 +731,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Certificates.
+             * <p>The certificates that match the specified records.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -670,7 +739,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of certificates that match the specified records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -678,7 +750,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The name of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -686,7 +761,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Certificate configuration status. Possible values: none; configured; applying; failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder status(String status) {
                 this.status = status;

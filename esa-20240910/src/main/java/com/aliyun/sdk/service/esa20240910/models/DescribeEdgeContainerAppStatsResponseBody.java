@@ -158,7 +158,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * CpuUsageSecondsQuotaRateAvg.
+         * <p>Average CPU limit ratio</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder cpuUsageSecondsQuotaRateAvg(Double cpuUsageSecondsQuotaRateAvg) {
             this.cpuUsageSecondsQuotaRateAvg = cpuUsageSecondsQuotaRateAvg;
@@ -166,7 +169,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * CpuUsageSecondsTotalAvg.
+         * <p>Average number of CPU cores</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuUsageSecondsTotalAvg(Double cpuUsageSecondsTotalAvg) {
             this.cpuUsageSecondsTotalAvg = cpuUsageSecondsTotalAvg;
@@ -174,7 +180,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * FsReadsBytesAvgAvg.
+         * <p>Average read IO</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fsReadsBytesAvgAvg(Double fsReadsBytesAvgAvg) {
             this.fsReadsBytesAvgAvg = fsReadsBytesAvgAvg;
@@ -182,7 +191,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * FsWritesBytesAvgAvg.
+         * <p>Average write IO</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fsWritesBytesAvgAvg(Double fsWritesBytesAvgAvg) {
             this.fsWritesBytesAvgAvg = fsWritesBytesAvgAvg;
@@ -190,7 +202,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * MemoryRssAvg.
+         * <p>Average memory usage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder memoryRssAvg(Double memoryRssAvg) {
             this.memoryRssAvg = memoryRssAvg;
@@ -198,7 +213,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * MemoryRssQuotaRateAvg.
+         * <p>Average memory limit proportion</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder memoryRssQuotaRateAvg(Double memoryRssQuotaRateAvg) {
             this.memoryRssQuotaRateAvg = memoryRssQuotaRateAvg;
@@ -206,7 +224,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * PodReadyRateAvg.
+         * <p>Average PodReady rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder podReadyRateAvg(Double podReadyRateAvg) {
             this.podReadyRateAvg = podReadyRateAvg;

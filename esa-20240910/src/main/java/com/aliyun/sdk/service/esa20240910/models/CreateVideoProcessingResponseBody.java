@@ -67,7 +67,10 @@ public class CreateVideoProcessingResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816**********</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -75,7 +78,10 @@ public class CreateVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

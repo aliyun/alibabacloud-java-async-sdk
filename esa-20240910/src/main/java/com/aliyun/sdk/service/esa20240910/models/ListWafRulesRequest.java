@@ -27,6 +27,7 @@ public class ListWafRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Phase")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phase;
 
     @com.aliyun.core.annotation.Query
@@ -173,6 +174,7 @@ public class ListWafRulesRequest extends Request {
          * <li>http_anti_scan: Scan protection</li>
          * <li>http_bot: Bots</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>

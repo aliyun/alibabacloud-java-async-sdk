@@ -80,7 +80,10 @@ public class UpdateCacheReserveSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-cr-9tuv*********</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -88,7 +91,10 @@ public class UpdateCacheReserveSpecResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223332122***</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class UpdateCacheReserveSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40423A7F-A83D-1E24-B80E-86DD25790759</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -144,7 +144,10 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>424371770570752</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -153,7 +156,14 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type to query. Valid values:</p>
+         * <ul>
+         * <li>global: global configurations.</li>
+         * <li>rule: rule configurations.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -162,7 +172,10 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +184,10 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +196,10 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -189,6 +208,7 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +221,10 @@ public class ListHttpIncomingRequestHeaderModificationRulesRequest extends Reque
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

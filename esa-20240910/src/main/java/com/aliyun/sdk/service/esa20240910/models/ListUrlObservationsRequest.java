@@ -102,7 +102,10 @@ public class ListUrlObservationsRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID,</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -111,7 +114,10 @@ public class ListUrlObservationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Page starts from page 1. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -120,7 +126,10 @@ public class ListUrlObservationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,6 +138,7 @@ public class ListUrlObservationsRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

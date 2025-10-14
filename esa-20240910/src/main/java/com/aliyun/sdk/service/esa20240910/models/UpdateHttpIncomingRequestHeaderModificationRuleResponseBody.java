@@ -54,7 +54,10 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleResponseBody extends
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFEF3861-8BB7-5B63-954C-6575EA7FB2CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

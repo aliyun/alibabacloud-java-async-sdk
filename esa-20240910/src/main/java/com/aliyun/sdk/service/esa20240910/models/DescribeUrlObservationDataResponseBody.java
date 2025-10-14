@@ -93,7 +93,11 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which data was queried.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-19T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -101,7 +105,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The create time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-06T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -117,7 +127,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         }
 
         /**
-         * UrlDetailData.
+         * <p>The objects that are returned.</p>
          */
         public Builder urlDetailData(java.util.List<UrlDetailData> urlDetailData) {
             this.urlDetailData = urlDetailData;
@@ -274,7 +284,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             } 
 
             /**
-             * CLS.
+             * <p>Measures the maximum layout mutation score for every unexpected layout change that occurs throughout the life of the page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder CLS(Float CLS) {
                 this.CLS = CLS;
@@ -282,7 +295,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ClientPlatform.
+             * <p>The platform of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PC</p>
              */
             public Builder clientPlatform(String clientPlatform) {
                 this.clientPlatform = clientPlatform;
@@ -290,7 +306,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country or region to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -298,7 +317,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * FCP.
+             * <p>Measures the time between when the page is loaded and when any part of the page&quot;s content is rendered on the screen. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder FCP(Float FCP) {
                 this.FCP = FCP;
@@ -306,7 +328,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * FID.
+             * <p>Measures the time between when the user first interacts with the page and when the browser is actually able to start processing an event handler in response to that interaction. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder FID(Float FID) {
                 this.FID = FID;
@@ -314,7 +339,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * INP.
+             * <p>Measures the responsiveness of the page, or how long it takes for the page to respond to user input visibly. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder INP(Float INP) {
                 this.INP = INP;
@@ -322,7 +350,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * LCP.
+             * <p>Reports the rendering time of the largest image or text block visible in the viewport. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder LCP(Float LCP) {
                 this.LCP = LCP;
@@ -330,7 +361,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * TTFB.
+             * <p>This metric measures the time between when a resource initiates a request and when the first byte of the response starts to arrive. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder TTFB(Float TTFB) {
                 this.TTFB = TTFB;
@@ -338,7 +372,10 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the web page to monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com/test</p>
              */
             public Builder url(String url) {
                 this.url = url;

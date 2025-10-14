@@ -197,7 +197,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * Bypass.
+         * <p>Bypass mode. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder bypass(String bypass) {
             this.bypass = bypass;
@@ -205,7 +212,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816******</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -213,7 +223,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type to query. Valid values:</p>
+         * <ul>
+         * <li>global: global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -221,7 +238,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Fallback.
+         * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder fallback(String fallback) {
             this.fallback = fallback;
@@ -229,7 +253,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Mode.
+         * <p>The configuration mode. Valid values: Valid values:</p>
+         * <ul>
+         * <li>simple</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -237,7 +268,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +279,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RouteEnable.
+         * <p>The routing switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder routeEnable(String routeEnable) {
             this.routeEnable = routeEnable;
@@ -253,7 +294,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RouteName.
+         * <p>The route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_route</p>
          */
         public Builder routeName(String routeName) {
             this.routeName = routeName;
@@ -261,7 +305,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineName.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine1</p>
          */
         public Builder routineName(String routineName) {
             this.routineName = routineName;
@@ -269,7 +316,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>The rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -277,7 +327,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>The order in which the rule is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -285,7 +338,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;

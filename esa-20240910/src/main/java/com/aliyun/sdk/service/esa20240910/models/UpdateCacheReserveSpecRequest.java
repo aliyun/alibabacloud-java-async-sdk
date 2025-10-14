@@ -101,7 +101,7 @@ public class UpdateCacheReserveSpecRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto payment.</p>
+         * <p>Automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,7 +113,14 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>Billing type. Valid values:</p>
+         * <ul>
+         * <li>PREPAY</li>
+         * <li>POSTPAY</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -122,7 +129,10 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-cr-9tuv*********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +141,10 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * TargetQuotaGb.
+         * <p>Cache requested size, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder targetQuotaGb(Long targetQuotaGb) {
             this.putQueryParameter("TargetQuotaGb", targetQuotaGb);

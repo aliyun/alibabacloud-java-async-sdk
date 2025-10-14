@@ -93,7 +93,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeVersions.
+         * <p>The configuration list of the phased release version number.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -101,7 +101,10 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentId.
+         * <p>The deployment record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
@@ -109,7 +112,10 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Strategy.
+         * <p>The phased release policy. The constant string is &quot;percentage&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>percentage</p>
          */
         public Builder strategy(String strategy) {
             this.strategy = strategy;
@@ -183,7 +192,10 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeVersion.
+             * <p>The version of the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723599747213377175</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -191,7 +203,10 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The phased release ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Long percentage) {
                 this.percentage = percentage;

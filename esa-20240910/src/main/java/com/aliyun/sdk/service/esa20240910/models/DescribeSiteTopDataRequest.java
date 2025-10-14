@@ -130,7 +130,14 @@ public class DescribeSiteTopDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,6 +146,7 @@ public class DescribeSiteTopDataRequest extends Request {
         }
 
         /**
+         * <p>The metrics to query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -149,7 +157,10 @@ public class DescribeSiteTopDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time interval between the data entries to return. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -158,7 +169,10 @@ public class DescribeSiteTopDataRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of top-ranking data entries to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -167,7 +181,11 @@ public class DescribeSiteTopDataRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>If you do not specify this parameter, the system returns data by account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1150376036*****</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -176,7 +194,11 @@ public class DescribeSiteTopDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -244,7 +266,7 @@ public class DescribeSiteTopDataRequest extends Request {
             } 
 
             /**
-             * Dimension.
+             * <p>The dimensions at which you want to query data.</p>
              */
             public Builder dimension(java.util.List<String> dimension) {
                 this.dimension = dimension;
@@ -252,7 +274,10 @@ public class DescribeSiteTopDataRequest extends Request {
             }
 
             /**
-             * FieldName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Traffic</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;

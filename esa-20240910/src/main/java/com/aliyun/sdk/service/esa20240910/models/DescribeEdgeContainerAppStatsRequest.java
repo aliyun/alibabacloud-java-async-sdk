@@ -205,7 +205,10 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * Tenant.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-xxxx</p>
          */
         public Builder tenant(String tenant) {
             this.putQueryParameter("Tenant", tenant);

@@ -67,7 +67,10 @@ public class CreateUrlObservationResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;

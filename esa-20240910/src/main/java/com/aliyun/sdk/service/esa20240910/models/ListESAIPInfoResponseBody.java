@@ -67,7 +67,7 @@ public class ListESAIPInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The objects that are returned.</p>
          */
         public Builder content(java.util.List<Content> content) {
             this.content = content;
@@ -75,7 +75,11 @@ public class ListESAIPInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * <p>Example D03F9502-6653-127C-8A5F-0647197*****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +145,14 @@ public class ListESAIPInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CdnIp.
+             * <p>Whether the IP address in the parameter belongs to ESA POPs.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cdnIp(String cdnIp) {
                 this.cdnIp = cdnIp;
@@ -149,7 +160,10 @@ public class ListESAIPInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27.129.167.239</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

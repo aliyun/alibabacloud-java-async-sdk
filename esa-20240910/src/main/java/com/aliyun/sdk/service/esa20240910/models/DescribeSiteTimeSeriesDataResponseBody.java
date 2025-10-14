@@ -132,7 +132,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +140,11 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for fetching the data.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -148,7 +152,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The granularity of the data, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(Long interval) {
             this.interval = interval;
@@ -156,7 +163,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +174,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * SamplingRate.
+         * <p>The sampling rate, in %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder samplingRate(Float samplingRate) {
             this.samplingRate = samplingRate;
@@ -172,7 +185,11 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for fetching the data.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -180,7 +197,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * SummarizedData.
+         * <p>Aggregated query data.</p>
          */
         public Builder summarizedData(java.util.List<SummarizedData> summarizedData) {
             this.summarizedData = summarizedData;
@@ -246,7 +263,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * TimeStamp.
+             * <p>Start timestamp of the time slice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-08T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -254,7 +274,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -347,7 +370,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DetailData.
+             * <p>Returned data.</p>
              */
             public Builder detailData(java.util.List<DetailData> detailData) {
                 this.detailData = detailData;
@@ -355,7 +378,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionName.
+             * <p>Query dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionName(String dimensionName) {
                 this.dimensionName = dimensionName;
@@ -363,7 +389,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValue.
+             * <p>Query dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -371,7 +400,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>Query metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Traffic</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -477,7 +509,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AggMethod.
+             * <p>The aggregation method used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sum</p>
              */
             public Builder aggMethod(String aggMethod) {
                 this.aggMethod = aggMethod;
@@ -485,7 +520,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionName.
+             * <p>The dimension of the aggregated data being queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionName(String dimensionName) {
                 this.dimensionName = dimensionName;
@@ -493,7 +531,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValue.
+             * <p>The value of the aggregated dimension being queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -501,7 +542,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The value of the aggregated metric being queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Traffic</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -509,7 +553,10 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The aggregated value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder value(Object value) {
                 this.value = value;

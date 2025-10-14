@@ -1509,7 +1509,7 @@ public class WafRuleConfig extends TeaModel {
      */
     public static class RateLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Characteristics")
-        private WafRuleMatch2 characteristics;
+        private WafRatelimitCharacteristics characteristics;
 
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
@@ -1542,7 +1542,7 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return characteristics
          */
-        public WafRuleMatch2 getCharacteristics() {
+        public WafRatelimitCharacteristics getCharacteristics() {
             return this.characteristics;
         }
 
@@ -1575,7 +1575,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         public static final class Builder {
-            private WafRuleMatch2 characteristics; 
+            private WafRatelimitCharacteristics characteristics; 
             private Integer interval; 
             private Boolean onHit; 
             private Integer TTL; 
@@ -1595,7 +1595,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * Characteristics.
              */
-            public Builder characteristics(WafRuleMatch2 characteristics) {
+            public Builder characteristics(WafRatelimitCharacteristics characteristics) {
                 this.characteristics = characteristics;
                 return this;
             }

@@ -159,7 +159,14 @@ public class CreateRoutineRouteRequest extends Request {
         } 
 
         /**
-         * Bypass.
+         * <p>Bypass mode Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder bypass(String bypass) {
             this.putQueryParameter("Bypass", bypass);
@@ -168,7 +175,14 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * Fallback.
+         * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder fallback(String fallback) {
             this.putQueryParameter("Fallback", fallback);
@@ -177,7 +191,14 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * RouteEnable.
+         * <p>The routing switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder routeEnable(String routeEnable) {
             this.putQueryParameter("RouteEnable", routeEnable);
@@ -186,7 +207,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_route</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -195,6 +219,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
+         * <p>The edge function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +232,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>The content of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -216,7 +244,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The order in which the rule is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -225,6 +256,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

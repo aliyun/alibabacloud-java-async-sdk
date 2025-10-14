@@ -116,7 +116,14 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time for obtaining data.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -125,6 +132,7 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
         }
 
         /**
+         * <p>Query metrics.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -135,7 +143,11 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity for querying data, in seconds.</p>
+         * <p>Depending on the maximum time span of a single query, this parameter supports values of 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For details, see the <strong>Supported Query Time Granularities</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -144,7 +156,11 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>Site ID. Obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>If this parameter is empty, user-level data will be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1150376036*****</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -153,7 +169,11 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for obtaining data.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -221,7 +241,7 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
             } 
 
             /**
-             * Dimension.
+             * <p>Query dimension.</p>
              */
             public Builder dimension(java.util.List<String> dimension) {
                 this.dimension = dimension;
@@ -229,7 +249,13 @@ public class DescribeSiteTimeSeriesDataRequest extends Request {
             }
 
             /**
-             * FieldName.
+             * <p>Query metric value.</p>
+             * <blockquote>
+             * <p>For specific dimensions, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data Analysis Field Description</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Traffic</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;

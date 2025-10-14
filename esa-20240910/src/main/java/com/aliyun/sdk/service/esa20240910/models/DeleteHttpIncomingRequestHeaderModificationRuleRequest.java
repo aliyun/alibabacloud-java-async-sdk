@@ -75,6 +75,7 @@ public class DeleteHttpIncomingRequestHeaderModificationRuleRequest extends Requ
         } 
 
         /**
+         * <p>The configuration ID. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteHttpIncomingRequestHeaderModificationRuleRequest extends Requ
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

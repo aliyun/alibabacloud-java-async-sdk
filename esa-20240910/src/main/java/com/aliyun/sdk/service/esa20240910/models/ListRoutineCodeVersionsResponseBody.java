@@ -106,7 +106,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeVersions.
+         * <p>The code versions of the routine.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -114,7 +114,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of code versions returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -191,7 +203,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * NotFoundStrategy.
+             * <p>Code version configuration items NotFoundStrategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SinglePageApplication</p>
              */
             public Builder notFoundStrategy(String notFoundStrategy) {
                 this.notFoundStrategy = notFoundStrategy;
@@ -323,7 +338,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * BuildId.
+             * <p>The ID of the code version build.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25801233</p>
              */
             public Builder buildId(Long buildId) {
                 this.buildId = buildId;
@@ -331,7 +349,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CodeDescription.
+             * <p>The description of the code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test desc</p>
              */
             public Builder codeDescription(String codeDescription) {
                 this.codeDescription = codeDescription;
@@ -339,7 +360,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CodeVersion.
+             * <p>The version of the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723599747213377175</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -347,7 +371,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfOptions.
+             * <p>Code version configuration items.</p>
              */
             public Builder confOptions(ConfOptions confOptions) {
                 this.confOptions = confOptions;
@@ -355,7 +379,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the code version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-16T09:42:47Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +390,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * <p>Additional information about the code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;approver&quot;:[&quot;348678&quot;,&quot;111133&quot;,&quot;411544&quot;]}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -371,7 +401,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

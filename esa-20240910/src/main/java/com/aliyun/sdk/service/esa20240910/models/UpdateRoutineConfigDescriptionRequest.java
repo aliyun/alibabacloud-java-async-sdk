@@ -74,7 +74,10 @@ public class UpdateRoutineConfigDescriptionRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The routine description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description of this routine</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -83,6 +86,7 @@ public class UpdateRoutineConfigDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The routine name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

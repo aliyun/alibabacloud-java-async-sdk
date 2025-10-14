@@ -106,7 +106,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedRecords.
+         * <p>The list of records associated with the edge function.</p>
          */
         public Builder relatedRecords(java.util.List<RelatedRecords> relatedRecords) {
             this.relatedRecords = relatedRecords;
@@ -130,7 +136,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * RecordId.
+             * <p>The record ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>509348423011904</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -238,7 +253,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The name of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-record-1.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -246,7 +264,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54362329990032</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -254,7 +275,10 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;

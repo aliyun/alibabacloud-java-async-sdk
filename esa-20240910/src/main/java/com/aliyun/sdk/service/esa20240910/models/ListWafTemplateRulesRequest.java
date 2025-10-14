@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListWafTemplateRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
 
@@ -31,6 +35,7 @@ public class ListWafTemplateRulesRequest extends Request {
 
     private ListWafTemplateRulesRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.phase = builder.phase;
         this.queryArgs = builder.queryArgs;
         this.siteId = builder.siteId;
@@ -47,6 +52,13 @@ public class ListWafTemplateRulesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -71,6 +83,7 @@ public class ListWafTemplateRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListWafTemplateRulesRequest, Builder> {
+        private String instanceId; 
         private String phase; 
         private QueryArgs queryArgs; 
         private Long siteId; 
@@ -81,10 +94,20 @@ public class ListWafTemplateRulesRequest extends Request {
 
         private Builder(ListWafTemplateRulesRequest request) {
             super(request);
+            this.instanceId = request.instanceId;
             this.phase = request.phase;
             this.queryArgs = request.queryArgs;
             this.siteId = request.siteId;
         } 
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * <p>WAF operation phase, used to filter template rules for a specific phase.</p>

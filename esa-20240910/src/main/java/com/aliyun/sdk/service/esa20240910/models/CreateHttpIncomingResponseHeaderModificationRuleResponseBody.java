@@ -67,7 +67,10 @@ public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody extend
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>434497172875264</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -75,7 +78,10 @@ public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody extend
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

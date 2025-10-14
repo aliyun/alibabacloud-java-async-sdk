@@ -214,7 +214,10 @@ public class CreateVideoProcessingRequest extends Request {
         } 
 
         /**
-         * FlvSeekEnd.
+         * <p>Set custom end parameters for FLV files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end</p>
          */
         public Builder flvSeekEnd(String flvSeekEnd) {
             this.putQueryParameter("FlvSeekEnd", flvSeekEnd);
@@ -223,7 +226,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * FlvSeekStart.
+         * <p>The custom start parameter for FLV files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder flvSeekStart(String flvSeekStart) {
             this.putQueryParameter("FlvSeekStart", flvSeekStart);
@@ -232,7 +238,14 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * FlvVideoSeekMode.
+         * <p>FLV seeking. Valid values:</p>
+         * <ul>
+         * <li>by_byte: seek by byte</li>
+         * <li>by_time: seek by time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>by_byte</p>
          */
         public Builder flvVideoSeekMode(String flvVideoSeekMode) {
             this.putQueryParameter("FlvVideoSeekMode", flvVideoSeekMode);
@@ -241,7 +254,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * Mp4SeekEnd.
+         * <p>Customize the mp4 end parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end</p>
          */
         public Builder mp4SeekEnd(String mp4SeekEnd) {
             this.putQueryParameter("Mp4SeekEnd", mp4SeekEnd);
@@ -250,7 +266,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * Mp4SeekStart.
+         * <p>Customize the mp4 start parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder mp4SeekStart(String mp4SeekStart) {
             this.putQueryParameter("Mp4SeekStart", mp4SeekStart);
@@ -259,7 +278,14 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <ul>
+         * <li>true: Match all incoming requests.</li>
+         * <li>Set the value to a custom expression, for example:(http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -268,7 +294,14 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -277,7 +310,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the scheduling rule. You do not need to set this parameter when you add global configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -286,7 +322,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -295,6 +334,7 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +347,10 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -316,7 +359,14 @@ public class CreateVideoProcessingRequest extends Request {
         }
 
         /**
-         * VideoSeekEnable.
+         * <p>Video seeking. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder videoSeekEnable(String videoSeekEnable) {
             this.putQueryParameter("VideoSeekEnable", videoSeekEnable);

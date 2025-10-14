@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWafUsageOfRulesResponseBody</p>
  */
 public class ListWafUsageOfRulesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BatchConfigUsage")
+    private Long batchConfigUsage;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceUsage")
+    private Long instanceUsage;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +30,8 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     private java.util.List<Sites> sites;
 
     private ListWafUsageOfRulesResponseBody(Builder builder) {
+        this.batchConfigUsage = builder.batchConfigUsage;
+        this.instanceUsage = builder.instanceUsage;
         this.requestId = builder.requestId;
         this.sites = builder.sites;
     }
@@ -41,6 +49,20 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     }
 
     /**
+     * @return batchConfigUsage
+     */
+    public Long getBatchConfigUsage() {
+        return this.batchConfigUsage;
+    }
+
+    /**
+     * @return instanceUsage
+     */
+    public Long getInstanceUsage() {
+        return this.instanceUsage;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +77,8 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long batchConfigUsage; 
+        private Long instanceUsage; 
         private String requestId; 
         private java.util.List<Sites> sites; 
 
@@ -62,9 +86,27 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         } 
 
         private Builder(ListWafUsageOfRulesResponseBody model) {
+            this.batchConfigUsage = model.batchConfigUsage;
+            this.instanceUsage = model.instanceUsage;
             this.requestId = model.requestId;
             this.sites = model.sites;
         } 
+
+        /**
+         * BatchConfigUsage.
+         */
+        public Builder batchConfigUsage(Long batchConfigUsage) {
+            this.batchConfigUsage = batchConfigUsage;
+            return this;
+        }
+
+        /**
+         * InstanceUsage.
+         */
+        public Builder instanceUsage(Long instanceUsage) {
+            this.instanceUsage = instanceUsage;
+            return this;
+        }
 
         /**
          * <p>Request ID.</p>

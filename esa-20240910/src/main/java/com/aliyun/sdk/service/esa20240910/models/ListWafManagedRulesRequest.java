@@ -24,12 +24,19 @@ public class ListWafManagedRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedRuleset")
+    private ManagedRuleset managedRuleset;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -49,14 +56,15 @@ public class ListWafManagedRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     private ListWafManagedRulesRequest(Builder builder) {
         super(builder);
         this.attackType = builder.attackType;
         this.id = builder.id;
+        this.instanceId = builder.instanceId;
         this.language = builder.language;
+        this.managedRuleset = builder.managedRuleset;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.protectionLevel = builder.protectionLevel;
@@ -92,10 +100,24 @@ public class ListWafManagedRulesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
         return this.language;
+    }
+
+    /**
+     * @return managedRuleset
+     */
+    public ManagedRuleset getManagedRuleset() {
+        return this.managedRuleset;
     }
 
     /**
@@ -136,7 +158,9 @@ public class ListWafManagedRulesRequest extends Request {
     public static final class Builder extends Request.Builder<ListWafManagedRulesRequest, Builder> {
         private Integer attackType; 
         private Long id; 
+        private String instanceId; 
         private String language; 
+        private ManagedRuleset managedRuleset; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Integer protectionLevel; 
@@ -151,7 +175,9 @@ public class ListWafManagedRulesRequest extends Request {
             super(request);
             this.attackType = request.attackType;
             this.id = request.id;
+            this.instanceId = request.instanceId;
             this.language = request.language;
+            this.managedRuleset = request.managedRuleset;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.protectionLevel = request.protectionLevel;
@@ -186,7 +212,6 @@ public class ListWafManagedRulesRequest extends Request {
 
         /**
          * <p>ID of the WAF rule.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -194,6 +219,15 @@ public class ListWafManagedRulesRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -210,6 +244,16 @@ public class ListWafManagedRulesRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * ManagedRuleset.
+         */
+        public Builder managedRuleset(ManagedRuleset managedRuleset) {
+            String managedRulesetShrink = shrink(managedRuleset, "ManagedRuleset", "json");
+            this.putQueryParameter("ManagedRuleset", managedRulesetShrink);
+            this.managedRuleset = managedRuleset;
             return this;
         }
 
@@ -258,7 +302,6 @@ public class ListWafManagedRulesRequest extends Request {
 
         /**
          * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -276,6 +319,238 @@ public class ListWafManagedRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListWafManagedRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListWafManagedRulesRequest</p>
+     */
+    public static class ManagedRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private ManagedRules(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ManagedRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRules model) {
+                this.action = model.action;
+                this.id = model.id;
+                this.status = model.status;
+            } 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * <p>ID of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ManagedRules build() {
+                return new ManagedRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWafManagedRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListWafManagedRulesRequest</p>
+     */
+    public static class ManagedRuleset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("AttackType")
+        private Integer attackType;
+
+        @com.aliyun.core.annotation.NameInMap("ManagedRules")
+        private java.util.List<ManagedRules> managedRules;
+
+        @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
+        private Integer protectionLevel;
+
+        private ManagedRuleset(Builder builder) {
+            this.action = builder.action;
+            this.attackType = builder.attackType;
+            this.managedRules = builder.managedRules;
+            this.protectionLevel = builder.protectionLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ManagedRuleset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return attackType
+         */
+        public Integer getAttackType() {
+            return this.attackType;
+        }
+
+        /**
+         * @return managedRules
+         */
+        public java.util.List<ManagedRules> getManagedRules() {
+            return this.managedRules;
+        }
+
+        /**
+         * @return protectionLevel
+         */
+        public Integer getProtectionLevel() {
+            return this.protectionLevel;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Integer attackType; 
+            private java.util.List<ManagedRules> managedRules; 
+            private Integer protectionLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRuleset model) {
+                this.action = model.action;
+                this.attackType = model.attackType;
+                this.managedRules = model.managedRules;
+                this.protectionLevel = model.protectionLevel;
+            } 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * <p>Attack type of the vulnerability protection event. Values:</p>
+             * <ul>
+             * <li>SQL injection</li>
+             * <li>Cross-site scripting</li>
+             * <li>Code execution</li>
+             * <li>CRLF</li>
+             * <li>Local file inclusion</li>
+             * <li>Remote file inclusion</li>
+             * <li>Webshell</li>
+             * <li>Cross-site request forgery</li>
+             * <li>Other</li>
+             * <li>SEMA</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
+             */
+            public Builder attackType(Integer attackType) {
+                this.attackType = attackType;
+                return this;
+            }
+
+            /**
+             * ManagedRules.
+             */
+            public Builder managedRules(java.util.List<ManagedRules> managedRules) {
+                this.managedRules = managedRules;
+                return this;
+            }
+
+            /**
+             * ProtectionLevel.
+             */
+            public Builder protectionLevel(Integer protectionLevel) {
+                this.protectionLevel = protectionLevel;
+                return this;
+            }
+
+            public ManagedRuleset build() {
+                return new ManagedRuleset(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListWafManagedRulesRequest} extends {@link TeaModel}

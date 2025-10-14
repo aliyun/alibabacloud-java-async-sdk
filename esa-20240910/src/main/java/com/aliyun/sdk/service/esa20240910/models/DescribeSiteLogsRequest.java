@@ -117,7 +117,14 @@ public class DescribeSiteLogsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-06T17:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -126,7 +133,10 @@ public class DescribeSiteLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -135,7 +145,10 @@ public class DescribeSiteLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 300. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,6 +157,7 @@ public class DescribeSiteLogsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the website. You can call the ListSites operation to obtain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +170,11 @@ public class DescribeSiteLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-06T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

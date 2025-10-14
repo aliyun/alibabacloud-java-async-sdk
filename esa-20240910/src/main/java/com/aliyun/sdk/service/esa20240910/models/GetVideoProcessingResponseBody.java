@@ -223,7 +223,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -231,7 +234,14 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The type of the configuration. Valid values:</p>
+         * <ul>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -239,7 +249,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * FlvSeekEnd.
+         * <p>The custom end parameter for FLV files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end</p>
          */
         public Builder flvSeekEnd(String flvSeekEnd) {
             this.flvSeekEnd = flvSeekEnd;
@@ -247,7 +260,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * FlvSeekStart.
+         * <p>The custom start parameter for FLV files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder flvSeekStart(String flvSeekStart) {
             this.flvSeekStart = flvSeekStart;
@@ -255,7 +271,14 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * FlvVideoSeekMode.
+         * <p>FLV Seeking Valid values:</p>
+         * <ul>
+         * <li>by_byte: Seek by byte.</li>
+         * <li>by_time: Seek by time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>by_byte</p>
          */
         public Builder flvVideoSeekMode(String flvVideoSeekMode) {
             this.flvVideoSeekMode = flvVideoSeekMode;
@@ -263,7 +286,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * Mp4SeekEnd.
+         * <p>Customize the mp4 end parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end</p>
          */
         public Builder mp4SeekEnd(String mp4SeekEnd) {
             this.mp4SeekEnd = mp4SeekEnd;
@@ -271,7 +297,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * Mp4SeekStart.
+         * <p>Customize the mp4 start parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder mp4SeekStart(String mp4SeekStart) {
             this.mp4SeekStart = mp4SeekStart;
@@ -279,7 +308,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -287,7 +319,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>The rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -295,7 +330,14 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -303,7 +345,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -311,7 +356,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -319,7 +367,10 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the website configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
@@ -327,7 +378,14 @@ public class GetVideoProcessingResponseBody extends TeaModel {
         }
 
         /**
-         * VideoSeekEnable.
+         * <p>Video seeking. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder videoSeekEnable(String videoSeekEnable) {
             this.videoSeekEnable = videoSeekEnable;

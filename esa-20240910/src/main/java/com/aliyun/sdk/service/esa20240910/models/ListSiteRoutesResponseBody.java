@@ -119,7 +119,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * Configs.
+         * <p>The returned configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -342,7 +357,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * Bypass.
+             * <p>The bypass mode. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder bypass(String bypass) {
                 this.bypass = bypass;
@@ -350,7 +372,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35281609698****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -358,7 +383,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The configuration type to query. Valid values:</p>
+             * <ul>
+             * <li>global: global configurations.</li>
+             * <li>rule: queries rule configurations.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -374,7 +406,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The configuration mode. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+             * <ul>
+             * <li>simple: Simple Mode</li>
+             * <li>custom: Custom Mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>simple</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -382,7 +421,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEnable.
+             * <p>The route switch. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder routeEnable(String routeEnable) {
                 this.routeEnable = routeEnable;
@@ -390,7 +436,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The route name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_route</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -398,7 +447,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineName.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-routine1</p>
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;
@@ -406,7 +458,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -414,7 +469,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -422,7 +480,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The version number of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

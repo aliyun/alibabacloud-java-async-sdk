@@ -87,7 +87,10 @@ public class ListUserRoutinesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. Default value: 1. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ListUserRoutines</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -96,7 +99,10 @@ public class ListUserRoutinesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -105,7 +111,10 @@ public class ListUserRoutinesRequest extends Request {
         }
 
         /**
-         * SearchKeyWord.
+         * <p>The keyword used for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putQueryParameter("SearchKeyWord", searchKeyWord);

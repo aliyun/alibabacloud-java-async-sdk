@@ -21,9 +21,21 @@ public class BatchGetExpressionFieldsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Expressions")
     private java.util.List<Expressions> expressions;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Kind")
+    private String kind;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanNameEn")
+    private String planNameEn;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -32,7 +44,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
     private BatchGetExpressionFieldsRequest(Builder builder) {
         super(builder);
         this.expressions = builder.expressions;
+        this.instanceId = builder.instanceId;
+        this.kind = builder.kind;
         this.phase = builder.phase;
+        this.planNameEn = builder.planNameEn;
         this.siteId = builder.siteId;
     }
 
@@ -57,10 +72,31 @@ public class BatchGetExpressionFieldsRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return kind
+     */
+    public String getKind() {
+        return this.kind;
+    }
+
+    /**
      * @return phase
      */
     public String getPhase() {
         return this.phase;
+    }
+
+    /**
+     * @return planNameEn
+     */
+    public String getPlanNameEn() {
+        return this.planNameEn;
     }
 
     /**
@@ -72,7 +108,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchGetExpressionFieldsRequest, Builder> {
         private java.util.List<Expressions> expressions; 
+        private String instanceId; 
+        private String kind; 
         private String phase; 
+        private String planNameEn; 
         private Long siteId; 
 
         private Builder() {
@@ -82,7 +121,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         private Builder(BatchGetExpressionFieldsRequest request) {
             super(request);
             this.expressions = request.expressions;
+            this.instanceId = request.instanceId;
+            this.kind = request.kind;
             this.phase = request.phase;
+            this.planNameEn = request.planNameEn;
             this.siteId = request.siteId;
         } 
 
@@ -100,6 +142,24 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Kind.
+         */
+        public Builder kind(String kind) {
+            this.putBodyParameter("Kind", kind);
+            this.kind = kind;
+            return this;
+        }
+
+        /**
          * <p>WAF Phase</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +168,15 @@ public class BatchGetExpressionFieldsRequest extends Request {
         public Builder phase(String phase) {
             this.putBodyParameter("Phase", phase);
             this.phase = phase;
+            return this;
+        }
+
+        /**
+         * PlanNameEn.
+         */
+        public Builder planNameEn(String planNameEn) {
+            this.putQueryParameter("PlanNameEn", planNameEn);
+            this.planNameEn = planNameEn;
             return this;
         }
 

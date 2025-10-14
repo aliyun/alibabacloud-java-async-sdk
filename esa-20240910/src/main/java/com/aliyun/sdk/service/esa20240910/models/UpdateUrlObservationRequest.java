@@ -90,6 +90,7 @@ public class UpdateUrlObservationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the configuration. You can call the <a href="~~ListUrlObservations~~">ListUrlObservations</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class UpdateUrlObservationRequest extends Request {
         }
 
         /**
+         * <p>SDK integration. Valid values:</p>
+         * <ul>
+         * <li><strong>automatic</strong> (Recommended)</li>
+         * <li><strong>manual</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +120,7 @@ public class UpdateUrlObservationRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

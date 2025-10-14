@@ -130,7 +130,14 @@ public class DescribeUrlObservationDataRequest extends Request {
         } 
 
         /**
-         * ClientPlatform.
+         * <p>The platform of the device. If the parameter is left empty, all devices are queried.</p>
+         * <ul>
+         * <li>PC</li>
+         * <li>Mobile</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder clientPlatform(String clientPlatform) {
             this.putQueryParameter("ClientPlatform", clientPlatform);
@@ -139,7 +146,11 @@ public class DescribeUrlObservationDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-19T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,7 +159,18 @@ public class DescribeUrlObservationDataRequest extends Request {
         }
 
         /**
-         * Metric.
+         * <p>The metric data that is detected.</p>
+         * <ul>
+         * <li>TTFB: Measures the time between when a resource initiates a request and when the first byte of the response starts to arrive.</li>
+         * <li>FCP: Measures the time between when the page is loaded and when any part of the page&quot;s content is rendered on the screen.</li>
+         * <li>LCP: Reports the rendering time of the largest image or text block visible in the viewport.</li>
+         * <li>CLS: A metric that measures the maximum layout mutation score for every unexpected layout change that occurs throughout the life of the page.</li>
+         * <li>INP: Measures the responsiveness of the page, or how long it takes for the page to respond to user input in a visible way.</li>
+         * <li>FID: Measures the time between when the user first interacts with the page and when the browser is actually able to start processing the event handler in response to that interaction.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TTFB</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -157,6 +179,7 @@ public class DescribeUrlObservationDataRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +192,11 @@ public class DescribeUrlObservationDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -178,7 +205,10 @@ public class DescribeUrlObservationDataRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>The URL of the web page to monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/test</p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
