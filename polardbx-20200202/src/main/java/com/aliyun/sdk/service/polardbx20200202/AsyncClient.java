@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of AttachColumnarInstance  AttachColumnarInstanceRequest
+     * @return AttachColumnarInstanceResponse
+     */
+    CompletableFuture<AttachColumnarInstanceResponse> attachColumnarInstance(AttachColumnarInstanceRequest request);
+
+    /**
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
@@ -56,6 +62,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckCloudResourceAuthorizedResponse> checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request);
 
     /**
+     * @param request the request parameters of CheckSqlAuditSlsStatus  CheckSqlAuditSlsStatusRequest
+     * @return CheckSqlAuditSlsStatusResponse
+     */
+    CompletableFuture<CheckSqlAuditSlsStatusResponse> checkSqlAuditSlsStatus(CheckSqlAuditSlsStatusRequest request);
+
+    /**
+     * @param request the request parameters of CloseEngineMigration  CloseEngineMigrationRequest
+     * @return CloseEngineMigrationResponse
+     */
+    CompletableFuture<CloseEngineMigrationResponse> closeEngineMigration(CloseEngineMigrationRequest request);
+
+    /**
+     * @param request the request parameters of ConfirmNoConnection  ConfirmNoConnectionRequest
+     * @return ConfirmNoConnectionResponse
+     */
+    CompletableFuture<ConfirmNoConnectionResponse> confirmNoConnection(ConfirmNoConnectionRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -66,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateBackupResponse
      */
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
+
+    /**
+     * @param request the request parameters of CreateCustomEndpoint  CreateCustomEndpointRequest
+     * @return CreateCustomEndpointResponse
+     */
+    CompletableFuture<CreateCustomEndpointResponse> createCustomEndpoint(CreateCustomEndpointRequest request);
 
     /**
      * @param request the request parameters of CreateDB  CreateDBRequest
@@ -80,16 +110,64 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateDataImportTask  CreateDataImportTaskRequest
+     * @return CreateDataImportTaskResponse
+     */
+    CompletableFuture<CreateDataImportTaskResponse> createDataImportTask(CreateDataImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateGdnInstance  CreateGdnInstanceRequest
+     * @return CreateGdnInstanceResponse
+     */
+    CompletableFuture<CreateGdnInstanceResponse> createGdnInstance(CreateGdnInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
+     * @return CreateRplInspectionTaskResponse
+     */
+    CompletableFuture<CreateRplInspectionTaskResponse> createRplInspectionTask(CreateRplInspectionTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateSQLEvaluateTask  CreateSQLEvaluateTaskRequest
+     * @return CreateSQLEvaluateTaskResponse
+     */
+    CompletableFuture<CreateSQLEvaluateTaskResponse> createSQLEvaluateTask(CreateSQLEvaluateTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateStoragePool  CreateStoragePoolRequest
+     * @return CreateStoragePoolResponse
+     */
+    CompletableFuture<CreateStoragePoolResponse> createStoragePool(CreateStoragePoolRequest request);
+
+    /**
+     * @param request the request parameters of CreateStructureImportTask  CreateStructureImportTaskRequest
+     * @return CreateStructureImportTaskResponse
+     */
+    CompletableFuture<CreateStructureImportTaskResponse> createStructureImportTask(CreateStructureImportTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateSuperAccount  CreateSuperAccountRequest
      * @return CreateSuperAccountResponse
      */
     CompletableFuture<CreateSuperAccountResponse> createSuperAccount(CreateSuperAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateTransformOperation  CreateTransformOperationRequest
+     * @return CreateTransformOperationResponse
+     */
+    CompletableFuture<CreateTransformOperationResponse> createTransformOperation(CreateTransformOperationRequest request);
+
+    /**
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomEndpoint  DeleteCustomEndpointRequest
+     * @return DeleteCustomEndpointResponse
+     */
+    CompletableFuture<DeleteCustomEndpointResponse> deleteCustomEndpoint(DeleteCustomEndpointRequest request);
 
     /**
      * @param request the request parameters of DeleteDB  DeleteDBRequest
@@ -102,6 +180,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBInstanceResponse
      */
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEvaluateAndImportTask  DeleteEvaluateAndImportTaskRequest
+     * @return DeleteEvaluateAndImportTaskResponse
+     */
+    CompletableFuture<DeleteEvaluateAndImportTaskResponse> deleteEvaluateAndImportTask(DeleteEvaluateAndImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGdnInstance  DeleteGdnInstanceRequest
+     * @return DeleteGdnInstanceResponse
+     */
+    CompletableFuture<DeleteGdnInstanceResponse> deleteGdnInstance(DeleteGdnInstanceRequest request);
 
     /**
      * @param request the request parameters of DescribeAccountList  DescribeAccountListRequest
@@ -134,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeArchiveTableListResponse> describeArchiveTableList(DescribeArchiveTableListRequest request);
 
     /**
+     * @param request the request parameters of DescribeAvailableCrossRegions  DescribeAvailableCrossRegionsRequest
+     * @return DescribeAvailableCrossRegionsResponse
+     */
+    CompletableFuture<DescribeAvailableCrossRegionsResponse> describeAvailableCrossRegions(DescribeAvailableCrossRegionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
      */
@@ -158,10 +254,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBinaryLogListResponse> describeBinaryLogList(DescribeBinaryLogListRequest request);
 
     /**
+     * @param request the request parameters of DescribeCdcClassList  DescribeCdcClassListRequest
+     * @return DescribeCdcClassListResponse
+     */
+    CompletableFuture<DescribeCdcClassListResponse> describeCdcClassList(DescribeCdcClassListRequest request);
+
+    /**
      * @param request the request parameters of DescribeCdcInfo  DescribeCdcInfoRequest
      * @return DescribeCdcInfoResponse
      */
     CompletableFuture<DescribeCdcInfoResponse> describeCdcInfo(DescribeCdcInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCdcVersionList  DescribeCdcVersionListRequest
+     * @return DescribeCdcVersionListResponse
+     */
+    CompletableFuture<DescribeCdcVersionListResponse> describeCdcVersionList(DescribeCdcVersionListRequest request);
 
     /**
      * @param request the request parameters of DescribeCharacterSet  DescribeCharacterSetRequest
@@ -174,6 +282,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeColdDataBasicInfoResponse
      */
     CompletableFuture<DescribeColdDataBasicInfoResponse> describeColdDataBasicInfo(DescribeColdDataBasicInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeColumnarClassList  DescribeColumnarClassListRequest
+     * @return DescribeColumnarClassListResponse
+     */
+    CompletableFuture<DescribeColumnarClassListResponse> describeColumnarClassList(DescribeColumnarClassListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeColumnarInfo  DescribeColumnarInfoRequest
+     * @return DescribeColumnarInfoResponse
+     */
+    CompletableFuture<DescribeColumnarInfoResponse> describeColumnarInfo(DescribeColumnarInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeColumnarVersionList  DescribeColumnarVersionListRequest
+     * @return DescribeColumnarVersionListResponse
+     */
+    CompletableFuture<DescribeColumnarVersionListResponse> describeColumnarVersionList(DescribeColumnarVersionListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComponentPropeties  DescribeComponentPropetiesRequest
+     * @return DescribeComponentPropetiesResponse
+     */
+    CompletableFuture<DescribeComponentPropetiesResponse> describeComponentPropeties(DescribeComponentPropetiesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCustomEndpointList  DescribeCustomEndpointListRequest
+     * @return DescribeCustomEndpointListResponse
+     */
+    CompletableFuture<DescribeCustomEndpointListResponse> describeCustomEndpointList(DescribeCustomEndpointListRequest request);
 
     /**
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
@@ -230,6 +368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBNodePerformanceResponse> describeDBNodePerformance(DescribeDBNodePerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataImportTaskInfo  DescribeDataImportTaskInfoRequest
+     * @return DescribeDataImportTaskInfoResponse
+     */
+    CompletableFuture<DescribeDataImportTaskInfoResponse> describeDataImportTaskInfo(DescribeDataImportTaskInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeDbList  DescribeDbListRequest
      * @return DescribeDbListResponse
      */
@@ -240,6 +384,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDistributeTableListResponse
      */
     CompletableFuture<DescribeDistributeTableListResponse> describeDistributeTableList(DescribeDistributeTableListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEnabledCrossRegions  DescribeEnabledCrossRegionsRequest
+     * @return DescribeEnabledCrossRegionsResponse
+     */
+    CompletableFuture<DescribeEnabledCrossRegionsResponse> describeEnabledCrossRegions(DescribeEnabledCrossRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEvaluateAndImportTask  DescribeEvaluateAndImportTaskRequest
+     * @return DescribeEvaluateAndImportTaskResponse
+     */
+    CompletableFuture<DescribeEvaluateAndImportTaskResponse> describeEvaluateAndImportTask(DescribeEvaluateAndImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEvaluateAndImportTasks  DescribeEvaluateAndImportTasksRequest
+     * @return DescribeEvaluateAndImportTasksResponse
+     */
+    CompletableFuture<DescribeEvaluateAndImportTasksResponse> describeEvaluateAndImportTasks(DescribeEvaluateAndImportTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeEvents  DescribeEventsRequest
@@ -260,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOpenBackupSetResponse> describeOpenBackupSet(DescribeOpenBackupSetRequest request);
 
     /**
+     * @param request the request parameters of DescribeParameterGroups  DescribeParameterGroupsRequest
+     * @return DescribeParameterGroupsResponse
+     */
+    CompletableFuture<DescribeParameterGroupsResponse> describeParameterGroups(DescribeParameterGroupsRequest request);
+
+    /**
      * @param request the request parameters of DescribeParameterTemplates  DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
      */
@@ -272,10 +440,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarxDataNodes  DescribePolarxDataNodesRequest
+     * @return DescribePolarxDataNodesResponse
+     */
+    CompletableFuture<DescribePolarxDataNodesResponse> describePolarxDataNodes(DescribePolarxDataNodesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
+     * @return DescribeRdsVpcsResponse
+     */
+    CompletableFuture<DescribeRdsVpcsResponse> describeRdsVpcs(DescribeRdsVpcsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRdsVswitches  DescribeRdsVswitchesRequest
+     * @return DescribeRdsVswitchesResponse
+     */
+    CompletableFuture<DescribeRdsVswitchesResponse> describeRdsVswitches(DescribeRdsVswitchesRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRplInspectionTask  DescribeRplInspectionTaskRequest
+     * @return DescribeRplInspectionTaskResponse
+     */
+    CompletableFuture<DescribeRplInspectionTaskResponse> describeRplInspectionTask(DescribeRplInspectionTaskRequest request);
 
     /**
      * @param request the request parameters of DescribeScaleOutMigrateTaskList  DescribeScaleOutMigrateTaskListRequest
@@ -290,10 +482,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityIpsResponse> describeSecurityIps(DescribeSecurityIpsRequest request);
 
     /**
+     * @param request the request parameters of DescribeShowStorageInfo  DescribeShowStorageInfoRequest
+     * @return DescribeShowStorageInfoResponse
+     */
+    CompletableFuture<DescribeShowStorageInfoResponse> describeShowStorageInfo(DescribeShowStorageInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
      */
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSqlAuditInfo  DescribeSqlAuditInfoRequest
+     * @return DescribeSqlAuditInfoResponse
+     */
+    CompletableFuture<DescribeSqlAuditInfoResponse> describeSqlAuditInfo(DescribeSqlAuditInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSqlFlashbackTaskList  DescribeSqlFlashbackTaskListRequest
+     * @return DescribeSqlFlashbackTaskListResponse
+     */
+    CompletableFuture<DescribeSqlFlashbackTaskListResponse> describeSqlFlashbackTaskList(DescribeSqlFlashbackTaskListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeStoragePoolInfo  DescribeStoragePoolInfoRequest
+     * @return DescribeStoragePoolInfoResponse
+     */
+    CompletableFuture<DescribeStoragePoolInfoResponse> describeStoragePoolInfo(DescribeStoragePoolInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeStructureImportTaskInfo  DescribeStructureImportTaskInfoRequest
+     * @return DescribeStructureImportTaskInfoResponse
+     */
+    CompletableFuture<DescribeStructureImportTaskInfoResponse> describeStructureImportTaskInfo(DescribeStructureImportTaskInfoRequest request);
 
     /**
      * @param request the request parameters of DescribeTags  DescribeTagsRequest
@@ -308,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeTransformStatus  DescribeTransformStatusRequest
+     * @return DescribeTransformStatusResponse
+     */
+    CompletableFuture<DescribeTransformStatusResponse> describeTransformStatus(DescribeTransformStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeUserEncryptionKeyList  DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
      */
@@ -320,16 +548,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableRightsSeparationResponse> disableRightsSeparation(DisableRightsSeparationRequest request);
 
     /**
+     * @param request the request parameters of DisableSqlAudit  DisableSqlAuditRequest
+     * @return DisableSqlAuditResponse
+     */
+    CompletableFuture<DisableSqlAuditResponse> disableSqlAudit(DisableSqlAuditRequest request);
+
+    /**
      * @param request the request parameters of EnableRightsSeparation  EnableRightsSeparationRequest
      * @return EnableRightsSeparationResponse
      */
     CompletableFuture<EnableRightsSeparationResponse> enableRightsSeparation(EnableRightsSeparationRequest request);
 
     /**
+     * @param request the request parameters of EnableSqlAudit  EnableSqlAuditRequest
+     * @return EnableSqlAuditResponse
+     */
+    CompletableFuture<EnableSqlAuditResponse> enableSqlAudit(EnableSqlAuditRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of MigrateDBInstance  MigrateDBInstanceRequest
+     * @return MigrateDBInstanceResponse
+     */
+    CompletableFuture<MigrateDBInstanceResponse> migrateDBInstance(MigrateDBInstanceRequest request);
 
     /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
@@ -356,6 +602,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyCdcClass  ModifyCdcClassRequest
+     * @return ModifyCdcClassResponse
+     */
+    CompletableFuture<ModifyCdcClassResponse> modifyCdcClass(ModifyCdcClassRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyColumnarClass  ModifyColumnarClassRequest
+     * @return ModifyColumnarClassResponse
+     */
+    CompletableFuture<ModifyColumnarClassResponse> modifyColumnarClass(ModifyColumnarClassRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCustomEndpoint  ModifyCustomEndpointRequest
+     * @return ModifyCustomEndpointResponse
+     */
+    CompletableFuture<ModifyCustomEndpointResponse> modifyCustomEndpoint(ModifyCustomEndpointRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCustomEndpointNet  ModifyCustomEndpointNetRequest
+     * @return ModifyCustomEndpointNetResponse
+     */
+    CompletableFuture<ModifyCustomEndpointNetResponse> modifyCustomEndpointNet(ModifyCustomEndpointNetRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBInstanceClass  ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
      */
@@ -380,10 +656,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBInstanceMaintainTime  ModifyDBInstanceMaintainTimeRequest
+     * @return ModifyDBInstanceMaintainTimeResponse
+     */
+    CompletableFuture<ModifyDBInstanceMaintainTimeResponse> modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyDBInstanceVip  ModifyDBInstanceVipRequest
+     * @return ModifyDBInstanceVipResponse
+     */
+    CompletableFuture<ModifyDBInstanceVipResponse> modifyDBInstanceVip(ModifyDBInstanceVipRequest request);
+
+    /**
      * @param request the request parameters of ModifyDatabaseDescription  ModifyDatabaseDescriptionRequest
      * @return ModifyDatabaseDescriptionResponse
      */
     CompletableFuture<ModifyDatabaseDescriptionResponse> modifyDatabaseDescription(ModifyDatabaseDescriptionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyEngineMigration  ModifyEngineMigrationRequest
+     * @return ModifyEngineMigrationResponse
+     */
+    CompletableFuture<ModifyEngineMigrationResponse> modifyEngineMigration(ModifyEngineMigrationRequest request);
 
     /**
      * @param request the request parameters of ModifyParameter  ModifyParameterRequest
@@ -396,6 +696,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySecurityIpsResponse
      */
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    /**
+     * @param request the request parameters of PreCheckSqlFlashbackTask  PreCheckSqlFlashbackTaskRequest
+     * @return PreCheckSqlFlashbackTaskResponse
+     */
+    CompletableFuture<PreCheckSqlFlashbackTaskResponse> preCheckSqlFlashbackTask(PreCheckSqlFlashbackTaskRequest request);
+
+    /**
+     * @param request the request parameters of RefreshImportMeta  RefreshImportMetaRequest
+     * @return RefreshImportMetaResponse
+     */
+    CompletableFuture<RefreshImportMetaResponse> refreshImportMeta(RefreshImportMetaRequest request);
 
     /**
      * @param request the request parameters of ReleaseColdDataVolume  ReleaseColdDataVolumeRequest
@@ -416,10 +728,49 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ResetAccountPasswordRestrict  ResetAccountPasswordRestrictRequest
+     * @return ResetAccountPasswordRestrictResponse
+     */
+    CompletableFuture<ResetAccountPasswordRestrictResponse> resetAccountPasswordRestrict(ResetAccountPasswordRestrictRequest request);
+
+    /**
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */
     CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RestartDataImportTask  RestartDataImportTaskRequest
+     * @return RestartDataImportTaskResponse
+     */
+    CompletableFuture<RestartDataImportTaskResponse> restartDataImportTask(RestartDataImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of SkipCurrentStep  SkipCurrentStepRequest
+     * @return SkipCurrentStepResponse
+     */
+    CompletableFuture<SkipCurrentStepResponse> skipCurrentStep(SkipCurrentStepRequest request);
+
+    /**
+     * @param request the request parameters of StartSwitchDatabase  StartSwitchDatabaseRequest
+     * @return StartSwitchDatabaseResponse
+     */
+    CompletableFuture<StartSwitchDatabaseResponse> startSwitchDatabase(StartSwitchDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of StopDataImportTask  StopDataImportTaskRequest
+     * @return StopDataImportTaskResponse
+     */
+    CompletableFuture<StopDataImportTaskResponse> stopDataImportTask(StopDataImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSqlFlashbackTask  SubmitSqlFlashbackTaskRequest
+     * @return SubmitSqlFlashbackTaskResponse
+     */
+    CompletableFuture<SubmitSqlFlashbackTaskResponse> submitSqlFlashbackTask(SubmitSqlFlashbackTaskRequest request);
 
     /**
      * @param request the request parameters of SwitchDBInstanceHA  SwitchDBInstanceHARequest
@@ -468,6 +819,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolarDBXInstanceNodeResponse
      */
     CompletableFuture<UpdatePolarDBXInstanceNodeResponse> updatePolarDBXInstanceNode(UpdatePolarDBXInstanceNodeRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeCDCVersion  UpgradeCDCVersionRequest
+     * @return UpgradeCDCVersionResponse
+     */
+    CompletableFuture<UpgradeCDCVersionResponse> upgradeCDCVersion(UpgradeCDCVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeColumnarVersion  UpgradeColumnarVersionRequest
+     * @return UpgradeColumnarVersionResponse
+     */
+    CompletableFuture<UpgradeColumnarVersionResponse> upgradeColumnarVersion(UpgradeColumnarVersionRequest request);
 
     /**
      * @param request the request parameters of UpgradeDBInstanceKernelVersion  UpgradeDBInstanceKernelVersionRequest

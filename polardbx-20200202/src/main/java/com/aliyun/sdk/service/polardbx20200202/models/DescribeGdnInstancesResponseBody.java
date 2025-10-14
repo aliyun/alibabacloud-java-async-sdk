@@ -149,6 +149,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
+        @com.aliyun.core.annotation.NameInMap("DataSyncStatus")
+        private String dataSyncStatus;
+
         @com.aliyun.core.annotation.NameInMap("DnNodeClassCode")
         private String dnNodeClassCode;
 
@@ -169,6 +172,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
+
+        @com.aliyun.core.annotation.NameInMap("ReadWriteStatus")
+        private String readWriteStatus;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -199,6 +205,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             this.cnNodeClassCode = builder.cnNodeClassCode;
             this.cnNodeCount = builder.cnNodeCount;
             this.commodityCode = builder.commodityCode;
+            this.dataSyncStatus = builder.dataSyncStatus;
             this.dnNodeClassCode = builder.dnNodeClassCode;
             this.dnNodeCount = builder.dnNodeCount;
             this.expireTime = builder.expireTime;
@@ -206,6 +213,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             this.memberName = builder.memberName;
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
+            this.readWriteStatus = builder.readWriteStatus;
             this.regionId = builder.regionId;
             this.role = builder.role;
             this.secondaryZone = builder.secondaryZone;
@@ -250,6 +258,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
          */
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        /**
+         * @return dataSyncStatus
+         */
+        public String getDataSyncStatus() {
+            return this.dataSyncStatus;
         }
 
         /**
@@ -299,6 +314,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
          */
         public String getPrimaryZone() {
             return this.primaryZone;
+        }
+
+        /**
+         * @return readWriteStatus
+         */
+        public String getReadWriteStatus() {
+            return this.readWriteStatus;
         }
 
         /**
@@ -362,6 +384,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String cnNodeClassCode; 
             private String cnNodeCount; 
             private String commodityCode; 
+            private String dataSyncStatus; 
             private String dnNodeClassCode; 
             private String dnNodeCount; 
             private String expireTime; 
@@ -369,6 +392,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String memberName; 
             private String payType; 
             private String primaryZone; 
+            private String readWriteStatus; 
             private String regionId; 
             private String role; 
             private String secondaryZone; 
@@ -386,6 +410,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
                 this.cnNodeClassCode = model.cnNodeClassCode;
                 this.cnNodeCount = model.cnNodeCount;
                 this.commodityCode = model.commodityCode;
+                this.dataSyncStatus = model.dataSyncStatus;
                 this.dnNodeClassCode = model.dnNodeClassCode;
                 this.dnNodeCount = model.dnNodeCount;
                 this.expireTime = model.expireTime;
@@ -393,6 +418,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
                 this.memberName = model.memberName;
                 this.payType = model.payType;
                 this.primaryZone = model.primaryZone;
+                this.readWriteStatus = model.readWriteStatus;
                 this.regionId = model.regionId;
                 this.role = model.role;
                 this.secondaryZone = model.secondaryZone;
@@ -432,6 +458,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
+                return this;
+            }
+
+            /**
+             * DataSyncStatus.
+             */
+            public Builder dataSyncStatus(String dataSyncStatus) {
+                this.dataSyncStatus = dataSyncStatus;
                 return this;
             }
 
@@ -488,6 +522,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
+             * ReadWriteStatus.
+             */
+            public Builder readWriteStatus(String readWriteStatus) {
+                this.readWriteStatus = readWriteStatus;
                 return this;
             }
 
@@ -575,6 +617,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GdnInstanceName")
         private String gdnInstanceName;
 
+        @com.aliyun.core.annotation.NameInMap("GdnMode")
+        private String gdnMode;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
@@ -583,6 +628,15 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MysqlVersion")
         private String mysqlVersion;
+
+        @com.aliyun.core.annotation.NameInMap("RplConflictStrategy")
+        private String rplConflictStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RplDmlStrategy")
+        private String rplDmlStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RplSyncDdl")
+        private Boolean rplSyncDdl;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -593,9 +647,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         private GdnInstanceList(Builder builder) {
             this.description = builder.description;
             this.gdnInstanceName = builder.gdnInstanceName;
+            this.gdnMode = builder.gdnMode;
             this.gmtCreated = builder.gmtCreated;
             this.memberList = builder.memberList;
             this.mysqlVersion = builder.mysqlVersion;
+            this.rplConflictStrategy = builder.rplConflictStrategy;
+            this.rplDmlStrategy = builder.rplDmlStrategy;
+            this.rplSyncDdl = builder.rplSyncDdl;
             this.status = builder.status;
             this.switchHistory = builder.switchHistory;
         }
@@ -623,6 +681,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return gdnMode
+         */
+        public String getGdnMode() {
+            return this.gdnMode;
+        }
+
+        /**
          * @return gmtCreated
          */
         public String getGmtCreated() {
@@ -644,6 +709,27 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return rplConflictStrategy
+         */
+        public String getRplConflictStrategy() {
+            return this.rplConflictStrategy;
+        }
+
+        /**
+         * @return rplDmlStrategy
+         */
+        public String getRplDmlStrategy() {
+            return this.rplDmlStrategy;
+        }
+
+        /**
+         * @return rplSyncDdl
+         */
+        public Boolean getRplSyncDdl() {
+            return this.rplSyncDdl;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -660,9 +746,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String gdnInstanceName; 
+            private String gdnMode; 
             private String gmtCreated; 
             private java.util.List<MemberList> memberList; 
             private String mysqlVersion; 
+            private String rplConflictStrategy; 
+            private String rplDmlStrategy; 
+            private Boolean rplSyncDdl; 
             private String status; 
             private String switchHistory; 
 
@@ -672,9 +762,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private Builder(GdnInstanceList model) {
                 this.description = model.description;
                 this.gdnInstanceName = model.gdnInstanceName;
+                this.gdnMode = model.gdnMode;
                 this.gmtCreated = model.gmtCreated;
                 this.memberList = model.memberList;
                 this.mysqlVersion = model.mysqlVersion;
+                this.rplConflictStrategy = model.rplConflictStrategy;
+                this.rplDmlStrategy = model.rplDmlStrategy;
+                this.rplSyncDdl = model.rplSyncDdl;
                 this.status = model.status;
                 this.switchHistory = model.switchHistory;
             } 
@@ -692,6 +786,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
              */
             public Builder gdnInstanceName(String gdnInstanceName) {
                 this.gdnInstanceName = gdnInstanceName;
+                return this;
+            }
+
+            /**
+             * GdnMode.
+             */
+            public Builder gdnMode(String gdnMode) {
+                this.gdnMode = gdnMode;
                 return this;
             }
 
@@ -716,6 +818,30 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
              */
             public Builder mysqlVersion(String mysqlVersion) {
                 this.mysqlVersion = mysqlVersion;
+                return this;
+            }
+
+            /**
+             * RplConflictStrategy.
+             */
+            public Builder rplConflictStrategy(String rplConflictStrategy) {
+                this.rplConflictStrategy = rplConflictStrategy;
+                return this;
+            }
+
+            /**
+             * RplDmlStrategy.
+             */
+            public Builder rplDmlStrategy(String rplDmlStrategy) {
+                this.rplDmlStrategy = rplDmlStrategy;
+                return this;
+            }
+
+            /**
+             * RplSyncDdl.
+             */
+            public Builder rplSyncDdl(Boolean rplSyncDdl) {
+                this.rplSyncDdl = rplSyncDdl;
                 return this;
             }
 
