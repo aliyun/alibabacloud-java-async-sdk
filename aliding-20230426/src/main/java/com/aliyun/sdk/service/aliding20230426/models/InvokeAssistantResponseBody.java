@@ -334,7 +334,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
      */
     public static class CardData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cardParamMap")
-        private java.util.Map<String, ?> cardParamMap;
+        private Object cardParamMap;
 
         private CardData(Builder builder) {
             this.cardParamMap = builder.cardParamMap;
@@ -351,12 +351,12 @@ public class InvokeAssistantResponseBody extends TeaModel {
         /**
          * @return cardParamMap
          */
-        public java.util.Map<String, ?> getCardParamMap() {
+        public Object getCardParamMap() {
             return this.cardParamMap;
         }
 
         public static final class Builder {
-            private java.util.Map<String, ?> cardParamMap; 
+            private Object cardParamMap; 
 
             private Builder() {
             } 
@@ -368,7 +368,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
             /**
              * cardParamMap.
              */
-            public Builder cardParamMap(java.util.Map<String, ?> cardParamMap) {
+            public Builder cardParamMap(Object cardParamMap) {
                 this.cardParamMap = cardParamMap;
                 return this;
             }
