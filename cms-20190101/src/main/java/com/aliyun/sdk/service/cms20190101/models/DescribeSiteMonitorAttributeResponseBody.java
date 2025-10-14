@@ -3186,6 +3186,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("retry_delay")
         private Integer retryDelay;
 
+        @com.aliyun.core.annotation.NameInMap("safe_link")
+        private Integer safeLink;
+
         @com.aliyun.core.annotation.NameInMap("screen_shot")
         private Boolean screenShot;
 
@@ -3268,6 +3271,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.responseContent = builder.responseContent;
             this.responseFormat = builder.responseFormat;
             this.retryDelay = builder.retryDelay;
+            this.safeLink = builder.safeLink;
             this.screenShot = builder.screenShot;
             this.scrollEnd = builder.scrollEnd;
             this.steps = builder.steps;
@@ -3606,6 +3610,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return safeLink
+         */
+        public Integer getSafeLink() {
+            return this.safeLink;
+        }
+
+        /**
          * @return screenShot
          */
         public Boolean getScreenShot() {
@@ -3735,6 +3746,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String responseContent; 
             private String responseFormat; 
             private Integer retryDelay; 
+            private Integer safeLink; 
             private Boolean screenShot; 
             private Boolean scrollEnd; 
             private OptionJsonSteps steps; 
@@ -3797,6 +3809,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.responseContent = model.responseContent;
                 this.responseFormat = model.responseFormat;
                 this.retryDelay = model.retryDelay;
+                this.safeLink = model.safeLink;
                 this.screenShot = model.screenShot;
                 this.scrollEnd = model.scrollEnd;
                 this.steps = model.steps;
@@ -4333,6 +4346,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder retryDelay(Integer retryDelay) {
                 this.retryDelay = retryDelay;
+                return this;
+            }
+
+            /**
+             * safe_link.
+             */
+            public Builder safeLink(Integer safeLink) {
+                this.safeLink = safeLink;
                 return this;
             }
 
