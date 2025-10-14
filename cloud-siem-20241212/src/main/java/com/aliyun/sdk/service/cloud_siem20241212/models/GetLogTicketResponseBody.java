@@ -1,0 +1,91 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloud_siem20241212.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetLogTicketResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetLogTicketResponseBody</p>
+ */
+public class GetLogTicketResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("LogTicket")
+    private String logTicket;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private GetLogTicketResponseBody(Builder builder) {
+        this.logTicket = builder.logTicket;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetLogTicketResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return logTicket
+     */
+    public String getLogTicket() {
+        return this.logTicket;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String logTicket; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLogTicketResponseBody model) {
+            this.logTicket = model.logTicket;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * LogTicket.
+         */
+        public Builder logTicket(String logTicket) {
+            this.logTicket = logTicket;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public GetLogTicketResponseBody build() {
+            return new GetLogTicketResponseBody(this);
+        } 
+
+    } 
+
+}
