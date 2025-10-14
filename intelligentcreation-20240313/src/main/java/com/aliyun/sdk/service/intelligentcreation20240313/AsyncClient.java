@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchQueryIndividuationTextResponse> batchQueryIndividuationText(BatchQueryIndividuationTextRequest request);
 
     /**
+     * @param request the request parameters of BuildAICoachScriptRecord  BuildAICoachScriptRecordRequest
+     * @return BuildAICoachScriptRecordResponse
+     */
+    CompletableFuture<BuildAICoachScriptRecordResponse> buildAICoachScriptRecord(BuildAICoachScriptRecordRequest request);
+
+    /**
      * @param request the request parameters of CheckSession  CheckSessionRequest
      * @return CheckSessionResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAICoachTaskSessionResponse
      */
     CompletableFuture<CreateAICoachTaskSessionResponse> createAICoachTaskSession(CreateAICoachTaskSessionRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgent  CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
 
     /**
      * @param request the request parameters of CreateAnchor  CreateAnchorRequest
@@ -144,6 +156,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateVideoClipTaskResponse
      */
     CompletableFuture<CreateVideoClipTaskResponse> createVideoClipTask(CreateVideoClipTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAICoachScript  DeleteAICoachScriptRequest
+     * @return DeleteAICoachScriptResponse
+     */
+    CompletableFuture<DeleteAICoachScriptResponse> deleteAICoachScript(DeleteAICoachScriptRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgent  DeleteAgentRequest
+     * @return DeleteAgentResponse
+     */
+    CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
     /**
      * @param request the request parameters of DeleteIndividuationProject  DeleteIndividuationProjectRequest
@@ -310,6 +334,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVoiceModelsResponse> listVoiceModels(ListVoiceModelsRequest request);
 
     /**
+     * @param request the request parameters of OfflineAICoachScript  OfflineAICoachScriptRequest
+     * @return OfflineAICoachScriptResponse
+     */
+    CompletableFuture<OfflineAICoachScriptResponse> offlineAICoachScript(OfflineAICoachScriptRequest request);
+
+    /**
      * @param request the request parameters of OperateAvatarProject  OperateAvatarProjectRequest
      * @return OperateAvatarProjectResponse
      */
@@ -352,6 +382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTextStreamResponse> queryTextStream(QueryTextStreamRequest request);
 
     ResponseIterable<QueryTextStreamResponseBody> queryTextStreamWithResponseIterable(QueryTextStreamRequest request);
+
+    /**
+     * @param request the request parameters of ReleaseAgent  ReleaseAgentRequest
+     * @return ReleaseAgentResponse
+     */
+    CompletableFuture<ReleaseAgentResponse> releaseAgent(ReleaseAgentRequest request);
 
     /**
      * @param request the request parameters of SaveAvatarProject  SaveAvatarProjectRequest
@@ -428,5 +464,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TransferPortraitStyleResponse
      */
     CompletableFuture<TransferPortraitStyleResponse> transferPortraitStyle(TransferPortraitStyleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgent  UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
 
 }

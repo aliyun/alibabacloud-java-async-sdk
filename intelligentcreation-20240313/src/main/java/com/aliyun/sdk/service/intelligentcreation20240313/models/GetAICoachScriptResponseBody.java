@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAICoachScriptResponseBody</p>
  */
 public class GetAICoachScriptResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentId")
+    private String agentId;
+
     @com.aliyun.core.annotation.NameInMap("appendQuestionFlag")
     private Boolean appendQuestionFlag;
 
@@ -128,10 +131,17 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
+    @com.aliyun.core.annotation.NameInMap("voiceId")
+    private String voiceId;
+
+    @com.aliyun.core.annotation.NameInMap("voiceLanguage")
+    private String voiceLanguage;
+
     @com.aliyun.core.annotation.NameInMap("weights")
     private Weights weights;
 
     private GetAICoachScriptResponseBody(Builder builder) {
+        this.agentId = builder.agentId;
         this.appendQuestionFlag = builder.appendQuestionFlag;
         this.assessmentScope = builder.assessmentScope;
         this.checkCheatConfig = builder.checkCheatConfig;
@@ -169,6 +179,8 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.studentThinkTimeFlag = builder.studentThinkTimeFlag;
         this.studentThinkTimeLimit = builder.studentThinkTimeLimit;
         this.type = builder.type;
+        this.voiceId = builder.voiceId;
+        this.voiceLanguage = builder.voiceLanguage;
         this.weights = builder.weights;
     }
 
@@ -182,6 +194,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
     }
 
     /**
@@ -444,6 +463,20 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     /**
+     * @return voiceId
+     */
+    public String getVoiceId() {
+        return this.voiceId;
+    }
+
+    /**
+     * @return voiceLanguage
+     */
+    public String getVoiceLanguage() {
+        return this.voiceLanguage;
+    }
+
+    /**
      * @return weights
      */
     public Weights getWeights() {
@@ -451,6 +484,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentId; 
         private Boolean appendQuestionFlag; 
         private String assessmentScope; 
         private CheckCheatConfig checkCheatConfig; 
@@ -488,12 +522,15 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Boolean studentThinkTimeFlag; 
         private Integer studentThinkTimeLimit; 
         private Integer type; 
+        private String voiceId; 
+        private String voiceLanguage; 
         private Weights weights; 
 
         private Builder() {
         } 
 
         private Builder(GetAICoachScriptResponseBody model) {
+            this.agentId = model.agentId;
             this.appendQuestionFlag = model.appendQuestionFlag;
             this.assessmentScope = model.assessmentScope;
             this.checkCheatConfig = model.checkCheatConfig;
@@ -531,8 +568,18 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.studentThinkTimeFlag = model.studentThinkTimeFlag;
             this.studentThinkTimeLimit = model.studentThinkTimeLimit;
             this.type = model.type;
+            this.voiceId = model.voiceId;
+            this.voiceLanguage = model.voiceLanguage;
             this.weights = model.weights;
         } 
+
+        /**
+         * agentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * appendQuestionFlag.
@@ -827,6 +874,22 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder type(Integer type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * voiceId.
+         */
+        public Builder voiceId(String voiceId) {
+            this.voiceId = voiceId;
+            return this;
+        }
+
+        /**
+         * voiceLanguage.
+         */
+        public Builder voiceLanguage(String voiceLanguage) {
+            this.voiceLanguage = voiceLanguage;
             return this;
         }
 
