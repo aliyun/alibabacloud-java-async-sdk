@@ -1401,6 +1401,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DocBlocksDelete  DocBlocksDeleteRequest
+     * @return DocBlocksDeleteResponse
+     */
+    @Override
+    public CompletableFuture<DocBlocksDeleteResponse> docBlocksDelete(DocBlocksDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DocBlocksDelete").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/docBlocksDelete").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DocBlocksDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DocBlocksDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DocBlocksModify  DocBlocksModifyRequest
+     * @return DocBlocksModifyResponse
+     */
+    @Override
+    public CompletableFuture<DocBlocksModifyResponse> docBlocksModify(DocBlocksModifyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DocBlocksModify").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/docBlocksModify").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DocBlocksModifyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DocBlocksModifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DocBlocksQuery  DocBlocksQueryRequest
      * @return DocBlocksQueryResponse
      */
