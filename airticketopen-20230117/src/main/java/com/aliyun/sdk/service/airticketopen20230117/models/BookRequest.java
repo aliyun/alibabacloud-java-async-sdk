@@ -485,7 +485,6 @@ public class BookRequest extends Request {
         private String credentialNum;
 
         @com.aliyun.core.annotation.NameInMap("credential_type")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer credentialType;
 
         @com.aliyun.core.annotation.NameInMap("expire_date")
@@ -574,7 +573,6 @@ public class BookRequest extends Request {
 
             /**
              * <p>travel document type , only support &quot;1&quot;(1 means passport) currently</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -947,7 +945,6 @@ public class BookRequest extends Request {
         private String credentialNum;
 
         @com.aliyun.core.annotation.NameInMap("credential_type")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer credentialType;
 
         @com.aliyun.core.annotation.NameInMap("expire_date")
@@ -1036,7 +1033,6 @@ public class BookRequest extends Request {
 
             /**
              * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

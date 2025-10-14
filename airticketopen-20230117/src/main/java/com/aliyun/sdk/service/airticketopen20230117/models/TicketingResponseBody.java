@@ -221,11 +221,15 @@ public class TicketingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
+        @com.aliyun.core.annotation.NameInMap("pay_time")
+        private Long payTime;
+
         @com.aliyun.core.annotation.NameInMap("transaction_no")
         private String transactionNo;
 
         private Data(Builder builder) {
             this.orderNum = builder.orderNum;
+            this.payTime = builder.payTime;
             this.transactionNo = builder.transactionNo;
         }
 
@@ -245,6 +249,13 @@ public class TicketingResponseBody extends TeaModel {
         }
 
         /**
+         * @return payTime
+         */
+        public Long getPayTime() {
+            return this.payTime;
+        }
+
+        /**
          * @return transactionNo
          */
         public String getTransactionNo() {
@@ -253,6 +264,7 @@ public class TicketingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long orderNum; 
+            private Long payTime; 
             private String transactionNo; 
 
             private Builder() {
@@ -260,6 +272,7 @@ public class TicketingResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.orderNum = model.orderNum;
+                this.payTime = model.payTime;
                 this.transactionNo = model.transactionNo;
             } 
 
@@ -271,6 +284,14 @@ public class TicketingResponseBody extends TeaModel {
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
+                return this;
+            }
+
+            /**
+             * pay_time.
+             */
+            public Builder payTime(Long payTime) {
+                this.payTime = payTime;
                 return this;
             }
 

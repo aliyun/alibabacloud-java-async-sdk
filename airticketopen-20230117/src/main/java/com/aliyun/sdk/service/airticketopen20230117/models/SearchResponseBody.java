@@ -1128,7 +1128,10 @@ public class SearchResponseBody extends TeaModel {
             } 
 
             /**
-             * supply_source_type.
+             * <p>supply source: 1;2;3</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder supplySourceType(String supplySourceType) {
                 this.supplySourceType = supplySourceType;
@@ -1471,7 +1474,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * solution_attribute.
+             * <p>supply source type</p>
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;

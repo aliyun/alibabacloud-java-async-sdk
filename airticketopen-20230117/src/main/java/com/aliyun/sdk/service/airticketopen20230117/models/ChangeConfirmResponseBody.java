@@ -203,11 +203,15 @@ public class ChangeConfirmResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pay_amount")
         private Double payAmount;
 
+        @com.aliyun.core.annotation.NameInMap("pay_time")
+        private Long payTime;
+
         @com.aliyun.core.annotation.NameInMap("transaction_no")
         private String transactionNo;
 
         private Data(Builder builder) {
             this.payAmount = builder.payAmount;
+            this.payTime = builder.payTime;
             this.transactionNo = builder.transactionNo;
         }
 
@@ -227,6 +231,13 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
+         * @return payTime
+         */
+        public Long getPayTime() {
+            return this.payTime;
+        }
+
+        /**
          * @return transactionNo
          */
         public String getTransactionNo() {
@@ -235,6 +246,7 @@ public class ChangeConfirmResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double payAmount; 
+            private Long payTime; 
             private String transactionNo; 
 
             private Builder() {
@@ -242,6 +254,7 @@ public class ChangeConfirmResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.payAmount = model.payAmount;
+                this.payTime = model.payTime;
                 this.transactionNo = model.transactionNo;
             } 
 
@@ -250,6 +263,14 @@ public class ChangeConfirmResponseBody extends TeaModel {
              */
             public Builder payAmount(Double payAmount) {
                 this.payAmount = payAmount;
+                return this;
+            }
+
+            /**
+             * pay_time.
+             */
+            public Builder payTime(Long payTime) {
+                this.payTime = payTime;
                 return this;
             }
 

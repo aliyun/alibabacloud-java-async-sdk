@@ -150,7 +150,7 @@ public class OrderListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-02-02 11:20:00</p>
+         * <p>1677229005000</p>
          */
         public Builder bookTimeEnd(Long bookTimeEnd) {
             this.putQueryParameter("book_time_end", bookTimeEnd);
@@ -163,7 +163,7 @@ public class OrderListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-02-01 11:20:00</p>
+         * <p>1677227005000</p>
          */
         public Builder bookTimeStart(Long bookTimeStart) {
             this.putQueryParameter("book_time_start", bookTimeStart);
@@ -172,10 +172,10 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>pagination query parameters, from which page to start querying</p>
+         * <p>pagination query parameters, from which page to start querying,querying starts with 0</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);

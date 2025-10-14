@@ -217,11 +217,186 @@ public class BookResponseBody extends TeaModel {
      *
      * <p>BookResponseBody</p>
      */
+    public static class AbaPayLockRateInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("pay_intended_amount")
+        private String payIntendedAmount;
+
+        @com.aliyun.core.annotation.NameInMap("pay_intended_currency_code")
+        private String payIntendedCurrencyCode;
+
+        @com.aliyun.core.annotation.NameInMap("quotation_currency_code")
+        private String quotationCurrencyCode;
+
+        @com.aliyun.core.annotation.NameInMap("to_pay_currency_rate")
+        private String toPayCurrencyRate;
+
+        private AbaPayLockRateInfo(Builder builder) {
+            this.payIntendedAmount = builder.payIntendedAmount;
+            this.payIntendedCurrencyCode = builder.payIntendedCurrencyCode;
+            this.quotationCurrencyCode = builder.quotationCurrencyCode;
+            this.toPayCurrencyRate = builder.toPayCurrencyRate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AbaPayLockRateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return payIntendedAmount
+         */
+        public String getPayIntendedAmount() {
+            return this.payIntendedAmount;
+        }
+
+        /**
+         * @return payIntendedCurrencyCode
+         */
+        public String getPayIntendedCurrencyCode() {
+            return this.payIntendedCurrencyCode;
+        }
+
+        /**
+         * @return quotationCurrencyCode
+         */
+        public String getQuotationCurrencyCode() {
+            return this.quotationCurrencyCode;
+        }
+
+        /**
+         * @return toPayCurrencyRate
+         */
+        public String getToPayCurrencyRate() {
+            return this.toPayCurrencyRate;
+        }
+
+        public static final class Builder {
+            private String payIntendedAmount; 
+            private String payIntendedCurrencyCode; 
+            private String quotationCurrencyCode; 
+            private String toPayCurrencyRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AbaPayLockRateInfo model) {
+                this.payIntendedAmount = model.payIntendedAmount;
+                this.payIntendedCurrencyCode = model.payIntendedCurrencyCode;
+                this.quotationCurrencyCode = model.quotationCurrencyCode;
+                this.toPayCurrencyRate = model.toPayCurrencyRate;
+            } 
+
+            /**
+             * pay_intended_amount.
+             */
+            public Builder payIntendedAmount(String payIntendedAmount) {
+                this.payIntendedAmount = payIntendedAmount;
+                return this;
+            }
+
+            /**
+             * pay_intended_currency_code.
+             */
+            public Builder payIntendedCurrencyCode(String payIntendedCurrencyCode) {
+                this.payIntendedCurrencyCode = payIntendedCurrencyCode;
+                return this;
+            }
+
+            /**
+             * quotation_currency_code.
+             */
+            public Builder quotationCurrencyCode(String quotationCurrencyCode) {
+                this.quotationCurrencyCode = quotationCurrencyCode;
+                return this;
+            }
+
+            /**
+             * to_pay_currency_rate.
+             */
+            public Builder toPayCurrencyRate(String toPayCurrencyRate) {
+                this.toPayCurrencyRate = toPayCurrencyRate;
+                return this;
+            }
+
+            public AbaPayLockRateInfo build() {
+                return new AbaPayLockRateInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BookResponseBody} extends {@link TeaModel}
+     *
+     * <p>BookResponseBody</p>
+     */
+    public static class OrderAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aba_pay_lock_rate_info")
+        private AbaPayLockRateInfo abaPayLockRateInfo;
+
+        private OrderAttribute(Builder builder) {
+            this.abaPayLockRateInfo = builder.abaPayLockRateInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrderAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return abaPayLockRateInfo
+         */
+        public AbaPayLockRateInfo getAbaPayLockRateInfo() {
+            return this.abaPayLockRateInfo;
+        }
+
+        public static final class Builder {
+            private AbaPayLockRateInfo abaPayLockRateInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderAttribute model) {
+                this.abaPayLockRateInfo = model.abaPayLockRateInfo;
+            } 
+
+            /**
+             * aba_pay_lock_rate_info.
+             */
+            public Builder abaPayLockRateInfo(AbaPayLockRateInfo abaPayLockRateInfo) {
+                this.abaPayLockRateInfo = abaPayLockRateInfo;
+                return this;
+            }
+
+            public OrderAttribute build() {
+                return new OrderAttribute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BookResponseBody} extends {@link TeaModel}
+     *
+     * <p>BookResponseBody</p>
+     */
     public static class OrderList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("order_attribute")
+        private OrderAttribute orderAttribute;
+
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
         private OrderList(Builder builder) {
+            this.orderAttribute = builder.orderAttribute;
             this.orderNum = builder.orderNum;
         }
 
@@ -234,6 +409,13 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderAttribute
+         */
+        public OrderAttribute getOrderAttribute() {
+            return this.orderAttribute;
+        }
+
+        /**
          * @return orderNum
          */
         public Long getOrderNum() {
@@ -241,14 +423,24 @@ public class BookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private OrderAttribute orderAttribute; 
             private Long orderNum; 
 
             private Builder() {
             } 
 
             private Builder(OrderList model) {
+                this.orderAttribute = model.orderAttribute;
                 this.orderNum = model.orderNum;
             } 
+
+            /**
+             * order_attribute.
+             */
+            public Builder orderAttribute(OrderAttribute orderAttribute) {
+                this.orderAttribute = orderAttribute;
+                return this;
+            }
 
             /**
              * <p>order number</p>
@@ -328,11 +520,186 @@ public class BookResponseBody extends TeaModel {
      *
      * <p>BookResponseBody</p>
      */
+    public static class OrderAttributeAbaPayLockRateInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("pay_intended_amount")
+        private String payIntendedAmount;
+
+        @com.aliyun.core.annotation.NameInMap("pay_intended_currency_code")
+        private String payIntendedCurrencyCode;
+
+        @com.aliyun.core.annotation.NameInMap("quotation_currency_code")
+        private String quotationCurrencyCode;
+
+        @com.aliyun.core.annotation.NameInMap("to_pay_currency_rate")
+        private String toPayCurrencyRate;
+
+        private OrderAttributeAbaPayLockRateInfo(Builder builder) {
+            this.payIntendedAmount = builder.payIntendedAmount;
+            this.payIntendedCurrencyCode = builder.payIntendedCurrencyCode;
+            this.quotationCurrencyCode = builder.quotationCurrencyCode;
+            this.toPayCurrencyRate = builder.toPayCurrencyRate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrderAttributeAbaPayLockRateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return payIntendedAmount
+         */
+        public String getPayIntendedAmount() {
+            return this.payIntendedAmount;
+        }
+
+        /**
+         * @return payIntendedCurrencyCode
+         */
+        public String getPayIntendedCurrencyCode() {
+            return this.payIntendedCurrencyCode;
+        }
+
+        /**
+         * @return quotationCurrencyCode
+         */
+        public String getQuotationCurrencyCode() {
+            return this.quotationCurrencyCode;
+        }
+
+        /**
+         * @return toPayCurrencyRate
+         */
+        public String getToPayCurrencyRate() {
+            return this.toPayCurrencyRate;
+        }
+
+        public static final class Builder {
+            private String payIntendedAmount; 
+            private String payIntendedCurrencyCode; 
+            private String quotationCurrencyCode; 
+            private String toPayCurrencyRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderAttributeAbaPayLockRateInfo model) {
+                this.payIntendedAmount = model.payIntendedAmount;
+                this.payIntendedCurrencyCode = model.payIntendedCurrencyCode;
+                this.quotationCurrencyCode = model.quotationCurrencyCode;
+                this.toPayCurrencyRate = model.toPayCurrencyRate;
+            } 
+
+            /**
+             * pay_intended_amount.
+             */
+            public Builder payIntendedAmount(String payIntendedAmount) {
+                this.payIntendedAmount = payIntendedAmount;
+                return this;
+            }
+
+            /**
+             * pay_intended_currency_code.
+             */
+            public Builder payIntendedCurrencyCode(String payIntendedCurrencyCode) {
+                this.payIntendedCurrencyCode = payIntendedCurrencyCode;
+                return this;
+            }
+
+            /**
+             * quotation_currency_code.
+             */
+            public Builder quotationCurrencyCode(String quotationCurrencyCode) {
+                this.quotationCurrencyCode = quotationCurrencyCode;
+                return this;
+            }
+
+            /**
+             * to_pay_currency_rate.
+             */
+            public Builder toPayCurrencyRate(String toPayCurrencyRate) {
+                this.toPayCurrencyRate = toPayCurrencyRate;
+                return this;
+            }
+
+            public OrderAttributeAbaPayLockRateInfo build() {
+                return new OrderAttributeAbaPayLockRateInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BookResponseBody} extends {@link TeaModel}
+     *
+     * <p>BookResponseBody</p>
+     */
+    public static class OrderListOrderAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aba_pay_lock_rate_info")
+        private OrderAttributeAbaPayLockRateInfo abaPayLockRateInfo;
+
+        private OrderListOrderAttribute(Builder builder) {
+            this.abaPayLockRateInfo = builder.abaPayLockRateInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrderListOrderAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return abaPayLockRateInfo
+         */
+        public OrderAttributeAbaPayLockRateInfo getAbaPayLockRateInfo() {
+            return this.abaPayLockRateInfo;
+        }
+
+        public static final class Builder {
+            private OrderAttributeAbaPayLockRateInfo abaPayLockRateInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderListOrderAttribute model) {
+                this.abaPayLockRateInfo = model.abaPayLockRateInfo;
+            } 
+
+            /**
+             * aba_pay_lock_rate_info.
+             */
+            public Builder abaPayLockRateInfo(OrderAttributeAbaPayLockRateInfo abaPayLockRateInfo) {
+                this.abaPayLockRateInfo = abaPayLockRateInfo;
+                return this;
+            }
+
+            public OrderListOrderAttribute build() {
+                return new OrderListOrderAttribute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BookResponseBody} extends {@link TeaModel}
+     *
+     * <p>BookResponseBody</p>
+     */
     public static class ErrorDataOrderList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("order_attribute")
+        private OrderListOrderAttribute orderAttribute;
+
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
         private ErrorDataOrderList(Builder builder) {
+            this.orderAttribute = builder.orderAttribute;
             this.orderNum = builder.orderNum;
         }
 
@@ -345,6 +712,13 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderAttribute
+         */
+        public OrderListOrderAttribute getOrderAttribute() {
+            return this.orderAttribute;
+        }
+
+        /**
          * @return orderNum
          */
         public Long getOrderNum() {
@@ -352,14 +726,24 @@ public class BookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private OrderListOrderAttribute orderAttribute; 
             private Long orderNum; 
 
             private Builder() {
             } 
 
             private Builder(ErrorDataOrderList model) {
+                this.orderAttribute = model.orderAttribute;
                 this.orderNum = model.orderNum;
             } 
+
+            /**
+             * order_attribute.
+             */
+            public Builder orderAttribute(OrderListOrderAttribute orderAttribute) {
+                this.orderAttribute = orderAttribute;
+                return this;
+            }
 
             /**
              * <p>order number</p>

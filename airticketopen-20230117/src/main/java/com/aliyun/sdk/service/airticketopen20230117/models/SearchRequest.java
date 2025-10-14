@@ -508,7 +508,10 @@ public class SearchRequest extends Request {
             }
 
             /**
-             * service_quality.
+             * <p>service quality</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A1</p>
              */
             public Builder serviceQuality(String serviceQuality) {
                 this.serviceQuality = serviceQuality;
