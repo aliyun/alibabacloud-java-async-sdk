@@ -22,6 +22,10 @@ public class ListIntegrationPoliciesRequest extends Request {
     private String addonName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bindResourceId")
+    private String bindResourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("entityGroupIds")
     private String entityGroupIds;
 
@@ -72,6 +76,7 @@ public class ListIntegrationPoliciesRequest extends Request {
     private ListIntegrationPoliciesRequest(Builder builder) {
         super(builder);
         this.addonName = builder.addonName;
+        this.bindResourceId = builder.bindResourceId;
         this.entityGroupIds = builder.entityGroupIds;
         this.filterRegionIds = builder.filterRegionIds;
         this.maxResults = builder.maxResults;
@@ -104,6 +109,13 @@ public class ListIntegrationPoliciesRequest extends Request {
      */
     public String getAddonName() {
         return this.addonName;
+    }
+
+    /**
+     * @return bindResourceId
+     */
+    public String getBindResourceId() {
+        return this.bindResourceId;
     }
 
     /**
@@ -192,6 +204,7 @@ public class ListIntegrationPoliciesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIntegrationPoliciesRequest, Builder> {
         private String addonName; 
+        private String bindResourceId; 
         private String entityGroupIds; 
         private String filterRegionIds; 
         private Integer maxResults; 
@@ -212,6 +225,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         private Builder(ListIntegrationPoliciesRequest request) {
             super(request);
             this.addonName = request.addonName;
+            this.bindResourceId = request.bindResourceId;
             this.entityGroupIds = request.entityGroupIds;
             this.filterRegionIds = request.filterRegionIds;
             this.maxResults = request.maxResults;
@@ -232,6 +246,15 @@ public class ListIntegrationPoliciesRequest extends Request {
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
             this.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * bindResourceId.
+         */
+        public Builder bindResourceId(String bindResourceId) {
+            this.putQueryParameter("bindResourceId", bindResourceId);
+            this.bindResourceId = bindResourceId;
             return this;
         }
 

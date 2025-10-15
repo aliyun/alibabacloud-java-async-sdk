@@ -1160,6 +1160,9 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
      * <p>ListIntegrationPoliciesResponseBody</p>
      */
     public static class ManagedInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("eniId")
+        private String eniId;
+
         @com.aliyun.core.annotation.NameInMap("securityGroupId")
         private String securityGroupId;
 
@@ -1167,6 +1170,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         private String vswitchId;
 
         private ManagedInfo(Builder builder) {
+            this.eniId = builder.eniId;
             this.securityGroupId = builder.securityGroupId;
             this.vswitchId = builder.vswitchId;
         }
@@ -1177,6 +1181,13 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
         public static ManagedInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return eniId
+         */
+        public String getEniId() {
+            return this.eniId;
         }
 
         /**
@@ -1194,6 +1205,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String eniId; 
             private String securityGroupId; 
             private String vswitchId; 
 
@@ -1201,9 +1213,18 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             } 
 
             private Builder(ManagedInfo model) {
+                this.eniId = model.eniId;
                 this.securityGroupId = model.securityGroupId;
                 this.vswitchId = model.vswitchId;
             } 
+
+            /**
+             * eniId.
+             */
+            public Builder eniId(String eniId) {
+                this.eniId = eniId;
+                return this;
+            }
 
             /**
              * securityGroupId.

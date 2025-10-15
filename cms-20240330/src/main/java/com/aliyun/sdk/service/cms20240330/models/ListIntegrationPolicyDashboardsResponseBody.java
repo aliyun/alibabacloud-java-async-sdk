@@ -122,6 +122,9 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("folderUid")
         private String folderUid;
 
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
@@ -139,6 +142,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
         private Dashboards(Builder builder) {
             this.folderUid = builder.folderUid;
+            this.name = builder.name;
             this.region = builder.region;
             this.tags = builder.tags;
             this.title = builder.title;
@@ -159,6 +163,13 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
          */
         public String getFolderUid() {
             return this.folderUid;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -198,6 +209,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String folderUid; 
+            private String name; 
             private String region; 
             private java.util.List<String> tags; 
             private String title; 
@@ -209,6 +221,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
             private Builder(Dashboards model) {
                 this.folderUid = model.folderUid;
+                this.name = model.name;
                 this.region = model.region;
                 this.tags = model.tags;
                 this.title = model.title;
@@ -221,6 +234,14 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
              */
             public Builder folderUid(String folderUid) {
                 this.folderUid = folderUid;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

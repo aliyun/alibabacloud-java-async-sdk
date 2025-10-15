@@ -1,3 +1,6 @@
+2025-10-15 Version: 3.0.6
+- Generated java-async 2024-03-30 for Cms.
+
 2025-10-13 Version: 3.0.4
 - Generated java-async 2024-03-30 for Cms.
 
