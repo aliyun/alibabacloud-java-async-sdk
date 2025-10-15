@@ -268,6 +268,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunChatResultGenerationResponseBody> runChatResultGenerationWithResponseIterable(RunChatResultGenerationRequest request);
 
     /**
+     * @param request the request parameters of RunDialogAnalysis  RunDialogAnalysisRequest
+     * @return RunDialogAnalysisResponse
+     */
+    CompletableFuture<RunDialogAnalysisResponse> runDialogAnalysis(RunDialogAnalysisRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runDialogAnalysisWithAsyncResponseHandler(RunDialogAnalysisRequest request, AsyncResponseHandler<RunDialogAnalysisResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunDialogAnalysisResponseBody> runDialogAnalysisWithResponseIterable(RunDialogAnalysisRequest request);
+
+    /**
      * @param request the request parameters of RunLibraryChatGeneration  RunLibraryChatGenerationRequest
      * @return RunLibraryChatGenerationResponse
      */

@@ -806,6 +806,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunDialogAnalysis  RunDialogAnalysisRequest
+     * @return RunDialogAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<RunDialogAnalysisResponse> runDialogAnalysis(RunDialogAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunDialogAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/dialog/stream/analysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunDialogAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunDialogAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runDialogAnalysisWithAsyncResponseHandler(RunDialogAnalysisRequest request, AsyncResponseHandler<RunDialogAnalysisResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunDialogAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/dialog/stream/analysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunDialogAnalysisResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunDialogAnalysisResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunDialogAnalysisResponseBody> runDialogAnalysisWithResponseIterable(RunDialogAnalysisRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunDialogAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/dialog/stream/analysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        RunDialogAnalysisResponseBodyIterator iterator = RunDialogAnalysisResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunLibraryChatGeneration  RunLibraryChatGenerationRequest
      * @return RunLibraryChatGenerationResponse
      */
