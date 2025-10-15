@@ -26,6 +26,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
     private String appInstancePersistentId;
 
+    @com.aliyun.core.annotation.NameInMap("AvatarId")
+    private String avatarId;
+
     @com.aliyun.core.annotation.NameInMap("BindQueueInfo")
     private BindQueueInfo bindQueueInfo;
 
@@ -37,6 +40,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("NextPollIntervalMs")
+    private Integer nextPollIntervalMs;
 
     @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
@@ -69,10 +75,12 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
+        this.avatarId = builder.avatarId;
         this.bindQueueInfo = builder.bindQueueInfo;
         this.code = builder.code;
         this.loginToken = builder.loginToken;
         this.message = builder.message;
+        this.nextPollIntervalMs = builder.nextPollIntervalMs;
         this.osType = builder.osType;
         this.policy = builder.policy;
         this.regionId = builder.regionId;
@@ -118,6 +126,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return avatarId
+     */
+    public String getAvatarId() {
+        return this.avatarId;
+    }
+
+    /**
      * @return bindQueueInfo
      */
     public BindQueueInfo getBindQueueInfo() {
@@ -143,6 +158,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return nextPollIntervalMs
+     */
+    public Integer getNextPollIntervalMs() {
+        return this.nextPollIntervalMs;
     }
 
     /**
@@ -212,10 +234,12 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String appInstanceGroupId; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
+        private String avatarId; 
         private BindQueueInfo bindQueueInfo; 
         private String code; 
         private String loginToken; 
         private String message; 
+        private Integer nextPollIntervalMs; 
         private String osType; 
         private Policy policy; 
         private String regionId; 
@@ -233,10 +257,12 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             this.appInstanceGroupId = model.appInstanceGroupId;
             this.appInstanceId = model.appInstanceId;
             this.appInstancePersistentId = model.appInstancePersistentId;
+            this.avatarId = model.avatarId;
             this.bindQueueInfo = model.bindQueueInfo;
             this.code = model.code;
             this.loginToken = model.loginToken;
             this.message = model.message;
+            this.nextPollIntervalMs = model.nextPollIntervalMs;
             this.osType = model.osType;
             this.policy = model.policy;
             this.regionId = model.regionId;
@@ -273,6 +299,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
+         * AvatarId.
+         */
+        public Builder avatarId(String avatarId) {
+            this.avatarId = avatarId;
+            return this;
+        }
+
+        /**
          * BindQueueInfo.
          */
         public Builder bindQueueInfo(BindQueueInfo bindQueueInfo) {
@@ -301,6 +335,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * NextPollIntervalMs.
+         */
+        public Builder nextPollIntervalMs(Integer nextPollIntervalMs) {
+            this.nextPollIntervalMs = nextPollIntervalMs;
             return this;
         }
 
