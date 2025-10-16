@@ -34,7 +34,7 @@ public class CreateCloudDriveUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserMaxSize")
-    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long userMaxSize;
 
     private CreateCloudDriveUsersRequest(Builder builder) {

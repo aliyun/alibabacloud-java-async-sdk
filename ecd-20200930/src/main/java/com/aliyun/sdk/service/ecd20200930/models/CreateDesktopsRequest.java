@@ -140,6 +140,10 @@ public class CreateDesktopsRequest extends Request {
     private String snapshotPolicyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubnetId")
+    private String subnetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -203,6 +207,7 @@ public class CreateDesktopsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.savingPlanId = builder.savingPlanId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
+        this.subnetId = builder.subnetId;
         this.tag = builder.tag;
         this.timerGroupId = builder.timerGroupId;
         this.userAssignMode = builder.userAssignMode;
@@ -437,6 +442,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return subnetId
+     */
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -523,6 +535,7 @@ public class CreateDesktopsRequest extends Request {
         private String resourceGroupId; 
         private String savingPlanId; 
         private String snapshotPolicyId; 
+        private String subnetId; 
         private java.util.List<Tag> tag; 
         private String timerGroupId; 
         private String userAssignMode; 
@@ -568,6 +581,7 @@ public class CreateDesktopsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.savingPlanId = request.savingPlanId;
             this.snapshotPolicyId = request.snapshotPolicyId;
+            this.subnetId = request.subnetId;
             this.tag = request.tag;
             this.timerGroupId = request.timerGroupId;
             this.userAssignMode = request.userAssignMode;
@@ -981,6 +995,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
             this.snapshotPolicyId = snapshotPolicyId;
+            return this;
+        }
+
+        /**
+         * SubnetId.
+         */
+        public Builder subnetId(String subnetId) {
+            this.putQueryParameter("SubnetId", subnetId);
+            this.subnetId = subnetId;
             return this;
         }
 

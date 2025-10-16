@@ -1662,6 +1662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyResourceCenterPolicyResponse> modifyResourceCenterPolicy(ModifyResourceCenterPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifySecurityGroupAttribute  ModifySecurityGroupAttributeRequest
+     * @return ModifySecurityGroupAttributeResponse
+     */
+    CompletableFuture<ModifySecurityGroupAttributeResponse> modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request);
+
+    /**
      * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
      * @return ModifyTemplateResponse
      */
