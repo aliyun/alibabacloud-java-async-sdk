@@ -1,0 +1,187 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudfw20171207.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeAccessInstanceZoneListResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeAccessInstanceZoneListResponseBody</p>
+ */
+public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ZoneList")
+    private java.util.List<String> zoneList;
+
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    private java.util.List<Zones> zones;
+
+    private DescribeAccessInstanceZoneListResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.zoneList = builder.zoneList;
+        this.zones = builder.zones;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeAccessInstanceZoneListResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return zoneList
+     */
+    public java.util.List<String> getZoneList() {
+        return this.zoneList;
+    }
+
+    /**
+     * @return zones
+     */
+    public java.util.List<Zones> getZones() {
+        return this.zones;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private java.util.List<String> zoneList; 
+        private java.util.List<Zones> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessInstanceZoneListResponseBody model) {
+            this.requestId = model.requestId;
+            this.zoneList = model.zoneList;
+            this.zones = model.zones;
+        } 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ZoneList.
+         */
+        public Builder zoneList(java.util.List<String> zoneList) {
+            this.zoneList = zoneList;
+            return this;
+        }
+
+        /**
+         * Zones.
+         */
+        public Builder zones(java.util.List<Zones> zones) {
+            this.zones = zones;
+            return this;
+        }
+
+        public DescribeAccessInstanceZoneListResponseBody build() {
+            return new DescribeAccessInstanceZoneListResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link DescribeAccessInstanceZoneListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessInstanceZoneListResponseBody</p>
+     */
+    public static class Zones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LocalName")
+        private String localName;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private Zones(Builder builder) {
+            this.localName = builder.localName;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Zones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return localName
+         */
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String localName; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * LocalName.
+             */
+            public Builder localName(String localName) {
+                this.localName = localName;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Zones build() {
+                return new Zones(this);
+            } 
+
+        } 
+
+    }
+}

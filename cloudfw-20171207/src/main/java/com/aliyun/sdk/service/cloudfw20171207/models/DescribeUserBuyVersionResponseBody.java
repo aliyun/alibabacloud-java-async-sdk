@@ -17,11 +17,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBuyVersionResponseBody</p>
  */
 public class DescribeUserBuyVersionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AckClusterConnectorQuota")
+    private Long ackClusterConnectorQuota;
+
     @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
+    @com.aliyun.core.annotation.NameInMap("DefaultBandwidth")
+    private Long defaultBandwidth;
+
     @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
+
+    @com.aliyun.core.annotation.NameInMap("ExtensionBandwidth")
+    private Long extensionBandwidth;
+
+    @com.aliyun.core.annotation.NameInMap("GeneralInstance")
+    private Long generalInstance;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -41,17 +53,32 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LogStorage")
     private Long logStorage;
 
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
+    private Long majorVersion;
+
     @com.aliyun.core.annotation.NameInMap("MaxOverflow")
     private Long maxOverflow;
 
     @com.aliyun.core.annotation.NameInMap("NatBandwidth")
     private Long natBandwidth;
 
+    @com.aliyun.core.annotation.NameInMap("PrivateDnsConnectorQuota")
+    private Long privateDnsConnectorQuota;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Sdl")
+    private Long sdl;
+
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
+
+    @com.aliyun.core.annotation.NameInMap("TemporaryBandwidth")
+    private Long temporaryBandwidth;
+
+    @com.aliyun.core.annotation.NameInMap("ThreatIntelligence")
+    private Long threatIntelligence;
 
     @com.aliyun.core.annotation.NameInMap("UserStatus")
     private Boolean userStatus;
@@ -66,18 +93,27 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     private Long vpcNumber;
 
     private DescribeUserBuyVersionResponseBody(Builder builder) {
+        this.ackClusterConnectorQuota = builder.ackClusterConnectorQuota;
         this.aliUid = builder.aliUid;
+        this.defaultBandwidth = builder.defaultBandwidth;
         this.expire = builder.expire;
+        this.extensionBandwidth = builder.extensionBandwidth;
+        this.generalInstance = builder.generalInstance;
         this.instanceId = builder.instanceId;
         this.instanceStatus = builder.instanceStatus;
         this.internetBandwidth = builder.internetBandwidth;
         this.ipNumber = builder.ipNumber;
         this.logStatus = builder.logStatus;
         this.logStorage = builder.logStorage;
+        this.majorVersion = builder.majorVersion;
         this.maxOverflow = builder.maxOverflow;
         this.natBandwidth = builder.natBandwidth;
+        this.privateDnsConnectorQuota = builder.privateDnsConnectorQuota;
         this.requestId = builder.requestId;
+        this.sdl = builder.sdl;
         this.startTime = builder.startTime;
+        this.temporaryBandwidth = builder.temporaryBandwidth;
+        this.threatIntelligence = builder.threatIntelligence;
         this.userStatus = builder.userStatus;
         this.version = builder.version;
         this.vpcBandwidth = builder.vpcBandwidth;
@@ -97,6 +133,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return ackClusterConnectorQuota
+     */
+    public Long getAckClusterConnectorQuota() {
+        return this.ackClusterConnectorQuota;
+    }
+
+    /**
      * @return aliUid
      */
     public Long getAliUid() {
@@ -104,10 +147,31 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return defaultBandwidth
+     */
+    public Long getDefaultBandwidth() {
+        return this.defaultBandwidth;
+    }
+
+    /**
      * @return expire
      */
     public Long getExpire() {
         return this.expire;
+    }
+
+    /**
+     * @return extensionBandwidth
+     */
+    public Long getExtensionBandwidth() {
+        return this.extensionBandwidth;
+    }
+
+    /**
+     * @return generalInstance
+     */
+    public Long getGeneralInstance() {
+        return this.generalInstance;
     }
 
     /**
@@ -153,6 +217,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return majorVersion
+     */
+    public Long getMajorVersion() {
+        return this.majorVersion;
+    }
+
+    /**
      * @return maxOverflow
      */
     public Long getMaxOverflow() {
@@ -167,6 +238,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return privateDnsConnectorQuota
+     */
+    public Long getPrivateDnsConnectorQuota() {
+        return this.privateDnsConnectorQuota;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -174,10 +252,31 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return sdl
+     */
+    public Long getSdl() {
+        return this.sdl;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    /**
+     * @return temporaryBandwidth
+     */
+    public Long getTemporaryBandwidth() {
+        return this.temporaryBandwidth;
+    }
+
+    /**
+     * @return threatIntelligence
+     */
+    public Long getThreatIntelligence() {
+        return this.threatIntelligence;
     }
 
     /**
@@ -209,18 +308,27 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long ackClusterConnectorQuota; 
         private Long aliUid; 
+        private Long defaultBandwidth; 
         private Long expire; 
+        private Long extensionBandwidth; 
+        private Long generalInstance; 
         private String instanceId; 
         private String instanceStatus; 
         private Long internetBandwidth; 
         private Long ipNumber; 
         private Boolean logStatus; 
         private Long logStorage; 
+        private Long majorVersion; 
         private Long maxOverflow; 
         private Long natBandwidth; 
+        private Long privateDnsConnectorQuota; 
         private String requestId; 
+        private Long sdl; 
         private Long startTime; 
+        private Long temporaryBandwidth; 
+        private Long threatIntelligence; 
         private Boolean userStatus; 
         private Integer version; 
         private Long vpcBandwidth; 
@@ -230,23 +338,40 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeUserBuyVersionResponseBody model) {
+            this.ackClusterConnectorQuota = model.ackClusterConnectorQuota;
             this.aliUid = model.aliUid;
+            this.defaultBandwidth = model.defaultBandwidth;
             this.expire = model.expire;
+            this.extensionBandwidth = model.extensionBandwidth;
+            this.generalInstance = model.generalInstance;
             this.instanceId = model.instanceId;
             this.instanceStatus = model.instanceStatus;
             this.internetBandwidth = model.internetBandwidth;
             this.ipNumber = model.ipNumber;
             this.logStatus = model.logStatus;
             this.logStorage = model.logStorage;
+            this.majorVersion = model.majorVersion;
             this.maxOverflow = model.maxOverflow;
             this.natBandwidth = model.natBandwidth;
+            this.privateDnsConnectorQuota = model.privateDnsConnectorQuota;
             this.requestId = model.requestId;
+            this.sdl = model.sdl;
             this.startTime = model.startTime;
+            this.temporaryBandwidth = model.temporaryBandwidth;
+            this.threatIntelligence = model.threatIntelligence;
             this.userStatus = model.userStatus;
             this.version = model.version;
             this.vpcBandwidth = model.vpcBandwidth;
             this.vpcNumber = model.vpcNumber;
         } 
+
+        /**
+         * AckClusterConnectorQuota.
+         */
+        public Builder ackClusterConnectorQuota(Long ackClusterConnectorQuota) {
+            this.ackClusterConnectorQuota = ackClusterConnectorQuota;
+            return this;
+        }
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</p>
@@ -256,6 +381,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
+            return this;
+        }
+
+        /**
+         * DefaultBandwidth.
+         */
+        public Builder defaultBandwidth(Long defaultBandwidth) {
+            this.defaultBandwidth = defaultBandwidth;
             return this;
         }
 
@@ -273,6 +406,22 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder expire(Long expire) {
             this.expire = expire;
+            return this;
+        }
+
+        /**
+         * ExtensionBandwidth.
+         */
+        public Builder extensionBandwidth(Long extensionBandwidth) {
+            this.extensionBandwidth = extensionBandwidth;
+            return this;
+        }
+
+        /**
+         * GeneralInstance.
+         */
+        public Builder generalInstance(Long generalInstance) {
+            this.generalInstance = generalInstance;
             return this;
         }
 
@@ -363,6 +512,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
+         * MajorVersion.
+         */
+        public Builder majorVersion(Long majorVersion) {
+            this.majorVersion = majorVersion;
+            return this;
+        }
+
+        /**
          * <p>The status of the burstable protected traffic feature. Valid values:</p>
          * <ul>
          * <li><strong>1000000</strong>: enabled.</li>
@@ -392,6 +549,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
+         * PrivateDnsConnectorQuota.
+         */
+        public Builder privateDnsConnectorQuota(Long privateDnsConnectorQuota) {
+            this.privateDnsConnectorQuota = privateDnsConnectorQuota;
+            return this;
+        }
+
+        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
@@ -399,6 +564,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Sdl.
+         */
+        public Builder sdl(Long sdl) {
+            this.sdl = sdl;
             return this;
         }
 
@@ -413,6 +586,22 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TemporaryBandwidth.
+         */
+        public Builder temporaryBandwidth(Long temporaryBandwidth) {
+            this.temporaryBandwidth = temporaryBandwidth;
+            return this;
+        }
+
+        /**
+         * ThreatIntelligence.
+         */
+        public Builder threatIntelligence(Long threatIntelligence) {
+            this.threatIntelligence = threatIntelligence;
             return this;
         }
 

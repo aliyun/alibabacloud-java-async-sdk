@@ -18,6 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddAddressBookRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AckClusterConnectorId")
+    private String ackClusterConnectorId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AckLabels")
+    private java.util.List<AckLabels> ackLabels;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AckNamespaces")
+    private java.util.List<String> ackNamespaces;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddressList")
     private String addressList;
 
@@ -59,6 +71,9 @@ public class AddAddressBookRequest extends Request {
 
     private AddAddressBookRequest(Builder builder) {
         super(builder);
+        this.ackClusterConnectorId = builder.ackClusterConnectorId;
+        this.ackLabels = builder.ackLabels;
+        this.ackNamespaces = builder.ackNamespaces;
         this.addressList = builder.addressList;
         this.autoAddTagEcs = builder.autoAddTagEcs;
         this.description = builder.description;
@@ -81,6 +96,27 @@ public class AddAddressBookRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ackClusterConnectorId
+     */
+    public String getAckClusterConnectorId() {
+        return this.ackClusterConnectorId;
+    }
+
+    /**
+     * @return ackLabels
+     */
+    public java.util.List<AckLabels> getAckLabels() {
+        return this.ackLabels;
+    }
+
+    /**
+     * @return ackNamespaces
+     */
+    public java.util.List<String> getAckNamespaces() {
+        return this.ackNamespaces;
     }
 
     /**
@@ -147,6 +183,9 @@ public class AddAddressBookRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddAddressBookRequest, Builder> {
+        private String ackClusterConnectorId; 
+        private java.util.List<AckLabels> ackLabels; 
+        private java.util.List<String> ackNamespaces; 
         private String addressList; 
         private String autoAddTagEcs; 
         private String description; 
@@ -163,6 +202,9 @@ public class AddAddressBookRequest extends Request {
 
         private Builder(AddAddressBookRequest request) {
             super(request);
+            this.ackClusterConnectorId = request.ackClusterConnectorId;
+            this.ackLabels = request.ackLabels;
+            this.ackNamespaces = request.ackNamespaces;
             this.addressList = request.addressList;
             this.autoAddTagEcs = request.autoAddTagEcs;
             this.description = request.description;
@@ -173,6 +215,33 @@ public class AddAddressBookRequest extends Request {
             this.tagList = request.tagList;
             this.tagRelation = request.tagRelation;
         } 
+
+        /**
+         * AckClusterConnectorId.
+         */
+        public Builder ackClusterConnectorId(String ackClusterConnectorId) {
+            this.putQueryParameter("AckClusterConnectorId", ackClusterConnectorId);
+            this.ackClusterConnectorId = ackClusterConnectorId;
+            return this;
+        }
+
+        /**
+         * AckLabels.
+         */
+        public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
+            this.putQueryParameter("AckLabels", ackLabels);
+            this.ackLabels = ackLabels;
+            return this;
+        }
+
+        /**
+         * AckNamespaces.
+         */
+        public Builder ackNamespaces(java.util.List<String> ackNamespaces) {
+            this.putQueryParameter("AckNamespaces", ackNamespaces);
+            this.ackNamespaces = ackNamespaces;
+            return this;
+        }
 
         /**
          * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
@@ -315,6 +384,81 @@ public class AddAddressBookRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
+    public static class AckLabels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private AckLabels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AckLabels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AckLabels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AckLabels build() {
+                return new AckLabels(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AddAddressBookRequest} extends {@link TeaModel}

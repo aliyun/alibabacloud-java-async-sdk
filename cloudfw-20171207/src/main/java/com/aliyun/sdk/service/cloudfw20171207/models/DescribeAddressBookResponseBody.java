@@ -169,6 +169,81 @@ public class DescribeAddressBookResponseBody extends TeaModel {
      *
      * <p>DescribeAddressBookResponseBody</p>
      */
+    public static class AckLabels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private AckLabels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AckLabels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AckLabels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AckLabels build() {
+                return new AckLabels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddressBookResponseBody</p>
+     */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -332,6 +407,18 @@ public class DescribeAddressBookResponseBody extends TeaModel {
      * <p>DescribeAddressBookResponseBody</p>
      */
     public static class Acls extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AckClusterConnectorId")
+        private String ackClusterConnectorId;
+
+        @com.aliyun.core.annotation.NameInMap("AckClusterConnectorName")
+        private String ackClusterConnectorName;
+
+        @com.aliyun.core.annotation.NameInMap("AckLabels")
+        private java.util.List<AckLabels> ackLabels;
+
+        @com.aliyun.core.annotation.NameInMap("AckNamespaces")
+        private java.util.List<String> ackNamespaces;
+
         @com.aliyun.core.annotation.NameInMap("AddressList")
         private java.util.List<String> addressList;
 
@@ -359,6 +446,9 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
+        private String regionNo;
+
         @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List<TagList> tagList;
 
@@ -366,6 +456,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         private String tagRelation;
 
         private Acls(Builder builder) {
+            this.ackClusterConnectorId = builder.ackClusterConnectorId;
+            this.ackClusterConnectorName = builder.ackClusterConnectorName;
+            this.ackLabels = builder.ackLabels;
+            this.ackNamespaces = builder.ackNamespaces;
             this.addressList = builder.addressList;
             this.addressListCount = builder.addressListCount;
             this.addresses = builder.addresses;
@@ -375,6 +469,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             this.groupType = builder.groupType;
             this.groupUuid = builder.groupUuid;
             this.referenceCount = builder.referenceCount;
+            this.regionNo = builder.regionNo;
             this.tagList = builder.tagList;
             this.tagRelation = builder.tagRelation;
         }
@@ -385,6 +480,34 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
         public static Acls create() {
             return builder().build();
+        }
+
+        /**
+         * @return ackClusterConnectorId
+         */
+        public String getAckClusterConnectorId() {
+            return this.ackClusterConnectorId;
+        }
+
+        /**
+         * @return ackClusterConnectorName
+         */
+        public String getAckClusterConnectorName() {
+            return this.ackClusterConnectorName;
+        }
+
+        /**
+         * @return ackLabels
+         */
+        public java.util.List<AckLabels> getAckLabels() {
+            return this.ackLabels;
+        }
+
+        /**
+         * @return ackNamespaces
+         */
+        public java.util.List<String> getAckNamespaces() {
+            return this.ackNamespaces;
         }
 
         /**
@@ -451,6 +574,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionNo
+         */
+        public String getRegionNo() {
+            return this.regionNo;
+        }
+
+        /**
          * @return tagList
          */
         public java.util.List<TagList> getTagList() {
@@ -465,6 +595,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String ackClusterConnectorId; 
+            private String ackClusterConnectorName; 
+            private java.util.List<AckLabels> ackLabels; 
+            private java.util.List<String> ackNamespaces; 
             private java.util.List<String> addressList; 
             private Integer addressListCount; 
             private java.util.List<Addresses> addresses; 
@@ -474,6 +608,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             private String groupType; 
             private String groupUuid; 
             private Integer referenceCount; 
+            private String regionNo; 
             private java.util.List<TagList> tagList; 
             private String tagRelation; 
 
@@ -481,6 +616,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             private Builder(Acls model) {
+                this.ackClusterConnectorId = model.ackClusterConnectorId;
+                this.ackClusterConnectorName = model.ackClusterConnectorName;
+                this.ackLabels = model.ackLabels;
+                this.ackNamespaces = model.ackNamespaces;
                 this.addressList = model.addressList;
                 this.addressListCount = model.addressListCount;
                 this.addresses = model.addresses;
@@ -490,9 +629,42 @@ public class DescribeAddressBookResponseBody extends TeaModel {
                 this.groupType = model.groupType;
                 this.groupUuid = model.groupUuid;
                 this.referenceCount = model.referenceCount;
+                this.regionNo = model.regionNo;
                 this.tagList = model.tagList;
                 this.tagRelation = model.tagRelation;
             } 
+
+            /**
+             * AckClusterConnectorId.
+             */
+            public Builder ackClusterConnectorId(String ackClusterConnectorId) {
+                this.ackClusterConnectorId = ackClusterConnectorId;
+                return this;
+            }
+
+            /**
+             * AckClusterConnectorName.
+             */
+            public Builder ackClusterConnectorName(String ackClusterConnectorName) {
+                this.ackClusterConnectorName = ackClusterConnectorName;
+                return this;
+            }
+
+            /**
+             * AckLabels.
+             */
+            public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
+                this.ackLabels = ackLabels;
+                return this;
+            }
+
+            /**
+             * AckNamespaces.
+             */
+            public Builder ackNamespaces(java.util.List<String> ackNamespaces) {
+                this.ackNamespaces = ackNamespaces;
+                return this;
+            }
 
             /**
              * <p>The addresses in the address book.</p>
@@ -596,6 +768,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
+                return this;
+            }
+
+            /**
+             * RegionNo.
+             */
+            public Builder regionNo(String regionNo) {
+                this.regionNo = regionNo;
                 return this;
             }
 

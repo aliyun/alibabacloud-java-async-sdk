@@ -741,6 +741,9 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         @Deprecated
         private String srcIPTag;
 
+        @com.aliyun.core.annotation.NameInMap("SrcIPTags")
+        private java.util.List<String> srcIPTags;
+
         @com.aliyun.core.annotation.NameInMap("SrcPrivateIPList")
         private java.util.List<String> srcPrivateIPList;
 
@@ -775,6 +778,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             this.ruleSource = builder.ruleSource;
             this.srcIP = builder.srcIP;
             this.srcIPTag = builder.srcIPTag;
+            this.srcIPTags = builder.srcIPTags;
             this.srcPrivateIPList = builder.srcPrivateIPList;
             this.tag = builder.tag;
             this.vpcDstInfo = builder.vpcDstInfo;
@@ -917,6 +921,13 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return srcIPTags
+         */
+        public java.util.List<String> getSrcIPTags() {
+            return this.srcIPTags;
+        }
+
+        /**
          * @return srcPrivateIPList
          */
         public java.util.List<String> getSrcPrivateIPList() {
@@ -970,6 +981,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private Integer ruleSource; 
             private String srcIP; 
             private String srcIPTag; 
+            private java.util.List<String> srcIPTags; 
             private java.util.List<String> srcPrivateIPList; 
             private String tag; 
             private VpcDstInfo vpcDstInfo; 
@@ -998,6 +1010,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
                 this.ruleSource = model.ruleSource;
                 this.srcIP = model.srcIP;
                 this.srcIPTag = model.srcIPTag;
+                this.srcIPTags = model.srcIPTags;
                 this.srcPrivateIPList = model.srcPrivateIPList;
                 this.tag = model.tag;
                 this.vpcDstInfo = model.vpcDstInfo;
@@ -1231,6 +1244,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
              */
             public Builder srcIPTag(String srcIPTag) {
                 this.srcIPTag = srcIPTag;
+                return this;
+            }
+
+            /**
+             * SrcIPTags.
+             */
+            public Builder srcIPTags(java.util.List<String> srcIPTags) {
+                this.srcIPTags = srcIPTags;
                 return this;
             }
 
