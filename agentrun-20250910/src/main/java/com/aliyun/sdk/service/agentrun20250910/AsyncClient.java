@@ -56,6 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCodeInterpreterResponse> createCodeInterpreter(CreateCodeInterpreterRequest request);
 
     /**
+     * @param request the request parameters of CreateMemory  CreateMemoryRequest
+     * @return CreateMemoryResponse
+     */
+    CompletableFuture<CreateMemoryResponse> createMemory(CreateMemoryRequest request);
+
+    /**
+     * @param request the request parameters of CreateMemoryEvent  CreateMemoryEventRequest
+     * @return CreateMemoryEventResponse
+     */
+    CompletableFuture<CreateMemoryEventResponse> createMemoryEvent(CreateMemoryEventRequest request);
+
+    /**
      * <b>description</b> :
      * <p>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
      * 
@@ -89,6 +101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCodeInterpreterResponse> deleteCodeInterpreter(DeleteCodeInterpreterRequest request);
 
     /**
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</p>
      * 
@@ -120,6 +138,27 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCodeInterpreterResponse
      */
     CompletableFuture<GetCodeInterpreterResponse> getCodeInterpreter(GetCodeInterpreterRequest request);
+
+    /**
+     * @param request the request parameters of GetMemory  GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryEvent  GetMemoryEventRequest
+     * @return GetMemoryEventResponse
+     */
+    CompletableFuture<GetMemoryEventResponse> getMemoryEvent(GetMemoryEventRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据会话ID获取指定内存会话的详细信息，包括会话中的事件记录、时间戳等。用于查看和管理对话历史。</p>
+     * 
+     * @param request the request parameters of GetMemorySession  GetMemorySessionRequest
+     * @return GetMemorySessionResponse
+     */
+    CompletableFuture<GetMemorySessionResponse> getMemorySession(GetMemorySessionRequest request);
 
     /**
      * <b>description</b> :
@@ -164,6 +203,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCodeInterpretersResponse> listCodeInterpreters(ListCodeInterpretersRequest request);
 
     /**
+     * @param request the request parameters of ListMemory  ListMemoryRequest
+     * @return ListMemoryResponse
+     */
+    CompletableFuture<ListMemoryResponse> listMemory(ListMemoryRequest request);
+
+    /**
+     * @param request the request parameters of ListMemoryEvent  ListMemoryEventRequest
+     * @return ListMemoryEventResponse
+     */
+    CompletableFuture<ListMemoryEventResponse> listMemoryEvent(ListMemoryEventRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定内存实例的所有会话列表，支持按时间范围过滤和分页查询。会话是AgentRun中用于存储对话历史和管理上下文的重要组件。</p>
+     * 
+     * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
+     * @return ListMemorySessionsResponse
+     */
+    CompletableFuture<ListMemorySessionsResponse> listMemorySessions(ListMemorySessionsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
@@ -171,6 +231,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PublishRuntimeVersionResponse
      */
     CompletableFuture<PublishRuntimeVersionResponse> publishRuntimeVersion(PublishRuntimeVersionRequest request);
+
+    /**
+     * @param request the request parameters of RetrieveMemory  RetrieveMemoryRequest
+     * @return RetrieveMemoryResponse
+     */
+    CompletableFuture<RetrieveMemoryResponse> retrieveMemory(RetrieveMemoryRequest request);
 
     /**
      * <b>description</b> :
@@ -186,5 +252,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAgentRuntimeEndpointResponse
      */
     CompletableFuture<UpdateAgentRuntimeEndpointResponse> updateAgentRuntimeEndpoint(UpdateAgentRuntimeEndpointRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
 
 }
