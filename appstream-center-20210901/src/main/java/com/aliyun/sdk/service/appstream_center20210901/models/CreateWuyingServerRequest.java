@@ -31,7 +31,7 @@ public class CreateWuyingServerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 2)
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 2)
     private Integer bandwidth;
 
     @com.aliyun.core.annotation.Body

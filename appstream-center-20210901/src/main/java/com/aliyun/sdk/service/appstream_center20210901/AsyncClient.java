@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppInstanceGroupResponse> createAppInstanceGroup(CreateAppInstanceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateImageByInstance  CreateImageByInstanceRequest
+     * @return CreateImageByInstanceResponse
+     */
+    CompletableFuture<CreateImageByInstanceResponse> createImageByInstance(CreateImageByInstanceRequest request);
+
+    /**
      * @param request the request parameters of CreateImageFromAppInstanceGroup  CreateImageFromAppInstanceGroupRequest
      * @return CreateImageFromAppInstanceGroupResponse
      */
@@ -145,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBindInfoResponse
      */
     CompletableFuture<ListBindInfoResponse> listBindInfo(ListBindInfoRequest request);
+
+    /**
+     * @param request the request parameters of ListImage  ListImageRequest
+     * @return ListImageResponse
+     */
+    CompletableFuture<ListImageResponse> listImage(ListImageRequest request);
 
     /**
      * @param request the request parameters of ListNodeInstanceType  ListNodeInstanceTypeRequest
