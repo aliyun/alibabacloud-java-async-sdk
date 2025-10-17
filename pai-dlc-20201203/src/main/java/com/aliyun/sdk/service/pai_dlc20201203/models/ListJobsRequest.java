@@ -35,6 +35,10 @@ public class ListJobsRequest extends Request {
     private String displayName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayNameSearchMode")
+    private String displayNameSearchMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -128,6 +132,7 @@ public class ListJobsRequest extends Request {
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.displayName = builder.displayName;
+        this.displayNameSearchMode = builder.displayNameSearchMode;
         this.endTime = builder.endTime;
         this.fromAllWorkspaces = builder.fromAllWorkspaces;
         this.jobId = builder.jobId;
@@ -190,6 +195,13 @@ public class ListJobsRequest extends Request {
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return displayNameSearchMode
+     */
+    public String getDisplayNameSearchMode() {
+        return this.displayNameSearchMode;
     }
 
     /**
@@ -344,6 +356,7 @@ public class ListJobsRequest extends Request {
         private String businessUserId; 
         private String caller; 
         private String displayName; 
+        private String displayNameSearchMode; 
         private String endTime; 
         private Boolean fromAllWorkspaces; 
         private String jobId; 
@@ -376,6 +389,7 @@ public class ListJobsRequest extends Request {
             this.businessUserId = request.businessUserId;
             this.caller = request.caller;
             this.displayName = request.displayName;
+            this.displayNameSearchMode = request.displayNameSearchMode;
             this.endTime = request.endTime;
             this.fromAllWorkspaces = request.fromAllWorkspaces;
             this.jobId = request.jobId;
@@ -448,6 +462,15 @@ public class ListJobsRequest extends Request {
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * DisplayNameSearchMode.
+         */
+        public Builder displayNameSearchMode(String displayNameSearchMode) {
+            this.putQueryParameter("DisplayNameSearchMode", displayNameSearchMode);
+            this.displayNameSearchMode = displayNameSearchMode;
             return this;
         }
 
