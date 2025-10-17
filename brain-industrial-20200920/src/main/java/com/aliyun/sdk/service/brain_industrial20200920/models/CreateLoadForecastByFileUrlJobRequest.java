@@ -22,12 +22,20 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
     private String businessKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataMode")
+    private String dataMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceType")
     private String deviceType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ForecastHorizon")
+    private String forecastHorizon;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Freq")
@@ -64,8 +72,10 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
     private CreateLoadForecastByFileUrlJobRequest(Builder builder) {
         super(builder);
         this.businessKey = builder.businessKey;
+        this.dataMode = builder.dataMode;
         this.deviceType = builder.deviceType;
         this.duration = builder.duration;
+        this.forecastHorizon = builder.forecastHorizon;
         this.freq = builder.freq;
         this.historyUrl = builder.historyUrl;
         this.modelVersion = builder.modelVersion;
@@ -97,6 +107,13 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
     }
 
     /**
+     * @return dataMode
+     */
+    public String getDataMode() {
+        return this.dataMode;
+    }
+
+    /**
      * @return deviceType
      */
     public String getDeviceType() {
@@ -108,6 +125,13 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
      */
     public Integer getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return forecastHorizon
+     */
+    public String getForecastHorizon() {
+        return this.forecastHorizon;
     }
 
     /**
@@ -168,8 +192,10 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateLoadForecastByFileUrlJobRequest, Builder> {
         private String businessKey; 
+        private String dataMode; 
         private String deviceType; 
         private Integer duration; 
+        private String forecastHorizon; 
         private String freq; 
         private String historyUrl; 
         private String modelVersion; 
@@ -186,8 +212,10 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
         private Builder(CreateLoadForecastByFileUrlJobRequest request) {
             super(request);
             this.businessKey = request.businessKey;
+            this.dataMode = request.dataMode;
             this.deviceType = request.deviceType;
             this.duration = request.duration;
+            this.forecastHorizon = request.forecastHorizon;
             this.freq = request.freq;
             this.historyUrl = request.historyUrl;
             this.modelVersion = request.modelVersion;
@@ -208,6 +236,15 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
         }
 
         /**
+         * DataMode.
+         */
+        public Builder dataMode(String dataMode) {
+            this.putBodyParameter("DataMode", dataMode);
+            this.dataMode = dataMode;
+            return this;
+        }
+
+        /**
          * DeviceType.
          */
         public Builder deviceType(String deviceType) {
@@ -222,6 +259,15 @@ public class CreateLoadForecastByFileUrlJobRequest extends Request {
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * ForecastHorizon.
+         */
+        public Builder forecastHorizon(String forecastHorizon) {
+            this.putBodyParameter("ForecastHorizon", forecastHorizon);
+            this.forecastHorizon = forecastHorizon;
             return this;
         }
 
