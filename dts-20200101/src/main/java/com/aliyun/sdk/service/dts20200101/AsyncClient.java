@@ -523,6 +523,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDedicatedClusterResponse> listDedicatedCluster(ListDedicatedClusterRequest request);
 
     /**
+     * @param request the request parameters of ListJobStep  ListJobStepRequest
+     * @return ListJobStepResponse
+     */
+    CompletableFuture<ListJobStepResponse> listJobStep(ListJobStepRequest request);
+
+    /**
      * <b>description</b> :
      * <hr>
      * 
@@ -621,6 +627,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyGadInstanceNameResponse
      */
     CompletableFuture<ModifyGadInstanceNameResponse> modifyGadInstanceName(ModifyGadInstanceNameRequest request);
+
+    /**
+     * @param request the request parameters of ModifyJobStepCheckpoint  ModifyJobStepCheckpointRequest
+     * @return ModifyJobStepCheckpointResponse
+     */
+    CompletableFuture<ModifyJobStepCheckpointResponse> modifyJobStepCheckpoint(ModifyJobStepCheckpointRequest request);
 
     /**
      * <b>description</b> :

@@ -125,6 +125,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
+    @com.aliyun.core.annotation.NameInMap("InitCheckpoint")
+    private String initCheckpoint;
+
     @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
@@ -225,6 +228,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         this.finishTime = builder.finishTime;
         this.groupId = builder.groupId;
         this.httpStatusCode = builder.httpStatusCode;
+        this.initCheckpoint = builder.initCheckpoint;
         this.jobType = builder.jobType;
         this.lastUpdateTime = builder.lastUpdateTime;
         this.maxDu = builder.maxDu;
@@ -513,6 +517,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return initCheckpoint
+     */
+    public String getInitCheckpoint() {
+        return this.initCheckpoint;
+    }
+
+    /**
      * @return jobType
      */
     public String getJobType() {
@@ -696,6 +707,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String finishTime; 
         private String groupId; 
         private Integer httpStatusCode; 
+        private String initCheckpoint; 
         private String jobType; 
         private String lastUpdateTime; 
         private Double maxDu; 
@@ -758,6 +770,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.finishTime = model.finishTime;
             this.groupId = model.groupId;
             this.httpStatusCode = model.httpStatusCode;
+            this.initCheckpoint = model.initCheckpoint;
             this.jobType = model.jobType;
             this.lastUpdateTime = model.lastUpdateTime;
             this.maxDu = model.maxDu;
@@ -1199,6 +1212,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * InitCheckpoint.
+         */
+        public Builder initCheckpoint(String initCheckpoint) {
+            this.initCheckpoint = initCheckpoint;
             return this;
         }
 
