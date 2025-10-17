@@ -171,7 +171,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current query page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -187,7 +193,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>List of returned information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -195,7 +201,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>Maximum number of data entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -203,7 +212,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Token for the next query start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARfZmVDe9NvRXloR5+8CK9nwqHyx44CQz3pa71+mmu0e</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -219,7 +234,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>7F971622-38C0-5F56-B2EC-315367979B4F</p>
@@ -238,7 +256,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +267,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -364,7 +388,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * FaceId.
+             * <p>Face ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230642938</p>
              */
             public Builder faceId(String faceId) {
                 this.faceId = faceId;
@@ -372,7 +399,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-15T02:20:28Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -380,7 +410,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16112</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -388,7 +421,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ImgOssUrl.
+             * <p>Face image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.xxxx.com/1.jpg">http://www.xxxx.com/1.jpg</a></p>
              */
             public Builder imgOssUrl(String imgOssUrl) {
                 this.imgOssUrl = imgOssUrl;
@@ -396,7 +432,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * MerchantUserId.
+             * <p>Merchant User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CuN6hiD08qr</p>
              */
             public Builder merchantUserId(String merchantUserId) {
                 this.merchantUserId = merchantUserId;
@@ -404,7 +443,10 @@ public class QueryFaceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RegistrationType.
+             * <p>Registration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder registrationType(String registrationType) {
                 this.registrationType = registrationType;

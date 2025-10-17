@@ -83,6 +83,7 @@ public class TempOssUrlIntlRequest extends Request {
         }
 
         /**
+         * <p>Object name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

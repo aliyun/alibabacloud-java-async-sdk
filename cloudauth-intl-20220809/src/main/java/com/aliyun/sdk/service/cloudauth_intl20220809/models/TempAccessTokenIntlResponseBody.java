@@ -93,7 +93,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -238,7 +244,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>AccessKeyId for temporary file upload credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -246,7 +255,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * <p>Temporary authorization secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -254,7 +266,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * <p>Bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liyi</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -262,7 +277,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * FileNamePrefix.
+             * <p>File prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder fileNamePrefix(String fileNamePrefix) {
                 this.fileNamePrefix = fileNamePrefix;
@@ -270,7 +288,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OssEndPoint。</p>
+             * <p>OSS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>ossEndPoint</p>
@@ -281,7 +299,10 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>Security token for temporary file upload credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

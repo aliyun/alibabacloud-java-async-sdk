@@ -82,7 +82,10 @@ public class TempAccessTokenIntlRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

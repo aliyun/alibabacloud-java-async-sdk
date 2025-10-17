@@ -93,7 +93,10 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -120,7 +126,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -173,7 +179,10 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * TransactionId.
+             * <p>Unique identifier of the authentication request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ab0b***cbde97</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;

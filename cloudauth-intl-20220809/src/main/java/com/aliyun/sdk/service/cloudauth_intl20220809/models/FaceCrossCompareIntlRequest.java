@@ -224,7 +224,14 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * CompareModel.
+         * <p>Comparison mode</p>
+         * <ul>
+         * <li>0-Chain comparison (default): A:B and B:C</li>
+         * <li>1-Circular comparison: A:B and B:C and C:A</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder compareModel(String compareModel) {
             this.putQueryParameter("CompareModel", compareModel);
@@ -233,7 +240,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * FaceVerifyThreshold.
+         * <p>Face matching threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder faceVerifyThreshold(String faceVerifyThreshold) {
             this.putQueryParameter("FaceVerifyThreshold", faceVerifyThreshold);
@@ -242,6 +252,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
+         * <p>A unique business identifier for subsequent troubleshooting. It supports a combination of 32 alphanumeric characters, please ensure its uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +265,8 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
+         * <p>Product solution to be integrated. Value: 
+         * FACE_CROSS_COMPARE</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +279,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Custom business scenario ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -275,7 +291,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceAFacePicture.
+         * <p>Base64 encoded portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder sourceAFacePicture(String sourceAFacePicture) {
             this.putQueryParameter("SourceAFacePicture", sourceAFacePicture);
@@ -284,7 +303,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceAFacePictureUrl.
+         * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
          */
         public Builder sourceAFacePictureUrl(String sourceAFacePictureUrl) {
             this.putQueryParameter("SourceAFacePictureUrl", sourceAFacePictureUrl);
@@ -293,7 +315,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceBFacePicture.
+         * <p>Base64 encoded portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder sourceBFacePicture(String sourceBFacePicture) {
             this.putQueryParameter("SourceBFacePicture", sourceBFacePicture);
@@ -302,7 +327,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceBFacePictureUrl.
+         * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
          */
         public Builder sourceBFacePictureUrl(String sourceBFacePictureUrl) {
             this.putQueryParameter("SourceBFacePictureUrl", sourceBFacePictureUrl);
@@ -311,7 +339,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceCFacePicture.
+         * <p>Base64 encoded portrait photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder sourceCFacePicture(String sourceCFacePicture) {
             this.putQueryParameter("SourceCFacePicture", sourceCFacePicture);
@@ -320,7 +351,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * SourceCFacePictureUrl.
+         * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
          */
         public Builder sourceCFacePictureUrl(String sourceCFacePictureUrl) {
             this.putQueryParameter("SourceCFacePictureUrl", sourceCFacePictureUrl);

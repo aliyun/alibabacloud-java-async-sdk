@@ -93,7 +93,10 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>EFA11401-C961-5E89-A2D3-BF9883E5CC3D</p>
@@ -173,7 +179,10 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * Url.
+             * <p>File URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bzxh.cdn.weijin365.com/assets/index-55338127.png">http://bzxh.cdn.weijin365.com/assets/index-55338127.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

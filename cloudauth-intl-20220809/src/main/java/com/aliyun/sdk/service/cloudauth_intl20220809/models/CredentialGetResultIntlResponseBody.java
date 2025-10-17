@@ -93,7 +93,10 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -120,7 +126,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -199,7 +205,13 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtIdInfo.
+             * <p>Identified key information, in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;address&quot;: &quot;&quot;,
+             *   &quot;name&quot;:&quot;&quot;
+             * }</p>
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
@@ -207,7 +219,15 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status:</p>
+             * <ul>
+             * <li>PROCESSING: In progress (please continue polling)</li>
+             * <li>SUCCESS: Execution succeeded</li>
+             * <li>FAILED: Execution failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -215,7 +235,10 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>Authentication result description. For more information, see ResultObject.SubCode error codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

@@ -83,10 +83,11 @@ public class CredentialGetResultIntlRequest extends Request {
         }
 
         /**
+         * <p>Unique identifier for the authentication request</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>4ab0b***cbde97</p>
+         * <p>4ab0b***abde97</p>
          */
         public Builder transactionId(String transactionId) {
             this.putQueryParameter("TransactionId", transactionId);

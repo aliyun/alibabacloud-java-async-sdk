@@ -186,7 +186,10 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * CredentialOcrPictureBase64.
+         * <p>Base64 encoding of the image. If you choose to upload the photo this way, please check the photo size and avoid uploading overly large photos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder credentialOcrPictureBase64(String credentialOcrPictureBase64) {
             this.putBodyParameter("CredentialOcrPictureBase64", credentialOcrPictureBase64);
@@ -195,7 +198,10 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * CredentialOcrPictureUrl.
+         * <p>Image URL, accessible via HTTP or HTTPS on the public network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***</p>
          */
         public Builder credentialOcrPictureUrl(String credentialOcrPictureUrl) {
             this.putBodyParameter("CredentialOcrPictureUrl", credentialOcrPictureUrl);
@@ -204,10 +210,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>Credential type:</p>
+         * <ul>
+         * <li>02: Vehicle registration certificate</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>01</p>
+         * <p>02</p>
          */
         public Builder docType(String docType) {
             this.putQueryParameter("DocType", docType);
@@ -216,6 +226,11 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>Whether to enable tampering detection</p>
+         * <ul>
+         * <li>true: Enable</li>
+         * <li>false: Disable</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +243,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>A unique business identifier defined on the merchant side, used for troubleshooting issues later. Supports a combination of letters and digits, with a maximum length of 32 characters. Ensure uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,10 +256,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>Extraction type:</p>
+         * <ul>
+         * <li>0201: Thai vehicle registration certificate</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0101</p>
+         * <p>0201</p>
          */
         public Builder ocrArea(String ocrArea) {
             this.putQueryParameter("OcrArea", ocrArea);
@@ -252,6 +272,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,6 +285,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, digits, or underscores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

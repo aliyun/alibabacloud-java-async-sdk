@@ -53,6 +53,10 @@ public class DocOcrMaxRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OcrModel")
     private String ocrModel;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OcrValueStandard")
+    private String ocrValueStandard;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
@@ -80,6 +84,7 @@ public class DocOcrMaxRequest extends Request {
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.ocrModel = builder.ocrModel;
+        this.ocrValueStandard = builder.ocrValueStandard;
         this.productCode = builder.productCode;
         this.prompt = builder.prompt;
         this.sceneCode = builder.sceneCode;
@@ -163,6 +168,13 @@ public class DocOcrMaxRequest extends Request {
     }
 
     /**
+     * @return ocrValueStandard
+     */
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -200,6 +212,7 @@ public class DocOcrMaxRequest extends Request {
         private String merchantBizId; 
         private String merchantUserId; 
         private String ocrModel; 
+        private String ocrValueStandard; 
         private String productCode; 
         private String prompt; 
         private String sceneCode; 
@@ -220,6 +233,7 @@ public class DocOcrMaxRequest extends Request {
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.ocrModel = request.ocrModel;
+            this.ocrValueStandard = request.ocrValueStandard;
             this.productCode = request.productCode;
             this.prompt = request.prompt;
             this.sceneCode = request.sceneCode;
@@ -353,6 +367,15 @@ public class DocOcrMaxRequest extends Request {
         public Builder ocrModel(String ocrModel) {
             this.putBodyParameter("OcrModel", ocrModel);
             this.ocrModel = ocrModel;
+            return this;
+        }
+
+        /**
+         * OcrValueStandard.
+         */
+        public Builder ocrValueStandard(String ocrValueStandard) {
+            this.putQueryParameter("OcrValueStandard", ocrValueStandard);
+            this.ocrValueStandard = ocrValueStandard;
             return this;
         }
 

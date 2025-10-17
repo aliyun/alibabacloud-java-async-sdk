@@ -72,6 +72,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckVerifyLogResponse> checkVerifyLog(CheckVerifyLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</p>
+     * 
      * @param request the request parameters of CredentialGetResultIntl  CredentialGetResultIntlRequest
      * @return CredentialGetResultIntlResponse
      */
@@ -87,6 +90,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CredentialRecognitionIntlResponse> credentialRecognitionIntl(CredentialRecognitionIntlRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</p>
+     * 
      * @param request the request parameters of CredentialSubmitIntl  CredentialSubmitIntlRequest
      * @return CredentialSubmitIntlResponse
      */

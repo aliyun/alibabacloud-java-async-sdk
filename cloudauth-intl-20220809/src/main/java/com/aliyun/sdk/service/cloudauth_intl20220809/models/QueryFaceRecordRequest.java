@@ -183,6 +183,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
+         * <p>Current Page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +196,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
+         * <p>Face Group Code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +209,10 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * FaceId.
+         * <p>Face ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5006538</p>
          */
         public Builder faceId(String faceId) {
             this.putQueryParameter("FaceId", faceId);
@@ -216,7 +221,10 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of rows per page for paginated queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -225,7 +233,10 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>Merchant User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CuN6hiD08qr</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -234,7 +245,10 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Used to request the next page of search results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh0OP1yH8z+7FV4KKGUw4X32</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -243,6 +257,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
+         * <p>Number of items per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +270,10 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * RegistrationType.
+         * <p>Registration Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
          */
         public Builder registrationType(String registrationType) {
             this.putQueryParameter("RegistrationType", registrationType);
