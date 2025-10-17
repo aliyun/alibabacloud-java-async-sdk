@@ -853,10 +853,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      * <p>DescribeImagePipelinesResponseBody</p>
      */
     public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -869,6 +873,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -876,14 +887,24 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String imdsSupport; 
             private String nvmeSupport; 
 
             private Builder() {
             } 
 
             private Builder(Features model) {
+                this.imdsSupport = model.imdsSupport;
                 this.nvmeSupport = model.nvmeSupport;
             } 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
@@ -913,6 +934,135 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      *
      * <p>DescribeImagePipelinesResponseBody</p>
      */
+    public static class ImportImageTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ImportImageTag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportImageTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportImageTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImportImageTag build() {
+                return new ImportImageTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImportImageTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImportImageTag")
+        private java.util.List<ImportImageTag> importImageTag;
+
+        private ImportImageTags(Builder builder) {
+            this.importImageTag = builder.importImageTag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportImageTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return importImageTag
+         */
+        public java.util.List<ImportImageTag> getImportImageTag() {
+            return this.importImageTag;
+        }
+
+        public static final class Builder {
+            private java.util.List<ImportImageTag> importImageTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportImageTags model) {
+                this.importImageTag = model.importImageTag;
+            } 
+
+            /**
+             * ImportImageTag.
+             */
+            public Builder importImageTag(java.util.List<ImportImageTag> importImageTag) {
+                this.importImageTag = importImageTag;
+                return this;
+            }
+
+            public ImportImageTags build() {
+                return new ImportImageTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class ImportImageOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -920,11 +1070,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BootMode")
         private String bootMode;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
         private DiskDeviceMappings diskDeviceMappings;
 
         @com.aliyun.core.annotation.NameInMap("Features")
         private Features features;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("ImportImageTags")
+        private ImportImageTags importImageTags;
 
         @com.aliyun.core.annotation.NameInMap("LicenseType")
         private String licenseType;
@@ -938,15 +1097,26 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RetainImportedImage")
         private Boolean retainImportedImage;
 
+        @com.aliyun.core.annotation.NameInMap("RetentionStrategy")
+        private String retentionStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private String roleName;
+
         private ImportImageOptions(Builder builder) {
             this.architecture = builder.architecture;
             this.bootMode = builder.bootMode;
+            this.description = builder.description;
             this.diskDeviceMappings = builder.diskDeviceMappings;
             this.features = builder.features;
+            this.imageName = builder.imageName;
+            this.importImageTags = builder.importImageTags;
             this.licenseType = builder.licenseType;
             this.OSType = builder.OSType;
             this.platform = builder.platform;
             this.retainImportedImage = builder.retainImportedImage;
+            this.retentionStrategy = builder.retentionStrategy;
+            this.roleName = builder.roleName;
         }
 
         public static Builder builder() {
@@ -972,6 +1142,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return diskDeviceMappings
          */
         public DiskDeviceMappings getDiskDeviceMappings() {
@@ -983,6 +1160,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         public Features getFeatures() {
             return this.features;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return importImageTags
+         */
+        public ImportImageTags getImportImageTags() {
+            return this.importImageTags;
         }
 
         /**
@@ -1013,15 +1204,34 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.retainImportedImage;
         }
 
+        /**
+         * @return retentionStrategy
+         */
+        public String getRetentionStrategy() {
+            return this.retentionStrategy;
+        }
+
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
         public static final class Builder {
             private String architecture; 
             private String bootMode; 
+            private String description; 
             private DiskDeviceMappings diskDeviceMappings; 
             private Features features; 
+            private String imageName; 
+            private ImportImageTags importImageTags; 
             private String licenseType; 
             private String OSType; 
             private String platform; 
             private Boolean retainImportedImage; 
+            private String retentionStrategy; 
+            private String roleName; 
 
             private Builder() {
             } 
@@ -1029,12 +1239,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private Builder(ImportImageOptions model) {
                 this.architecture = model.architecture;
                 this.bootMode = model.bootMode;
+                this.description = model.description;
                 this.diskDeviceMappings = model.diskDeviceMappings;
                 this.features = model.features;
+                this.imageName = model.imageName;
+                this.importImageTags = model.importImageTags;
                 this.licenseType = model.licenseType;
                 this.OSType = model.OSType;
                 this.platform = model.platform;
                 this.retainImportedImage = model.retainImportedImage;
+                this.retentionStrategy = model.retentionStrategy;
+                this.roleName = model.roleName;
             } 
 
             /**
@@ -1068,6 +1283,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description.</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The information of disks from which the custom images are created.</p>
              * <ul>
              * <li>When the value of N is 1, a custom image is created from the system disk.</li>
@@ -1084,6 +1310,25 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder features(Features features) {
                 this.features = features;
+                return this;
+            }
+
+            /**
+             * <p>The prefix of the image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imageName</p>
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImportImageTags.
+             */
+            public Builder importImageTags(ImportImageTags importImageTags) {
+                this.importImageTags = importImageTags;
                 return this;
             }
 
@@ -1168,6 +1413,22 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder retainImportedImage(Boolean retainImportedImage) {
                 this.retainImportedImage = retainImportedImage;
+                return this;
+            }
+
+            /**
+             * RetentionStrategy.
+             */
+            public Builder retentionStrategy(String retentionStrategy) {
+                this.retentionStrategy = retentionStrategy;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 

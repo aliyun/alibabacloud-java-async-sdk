@@ -1375,10 +1375,14 @@ public class CreateImagePipelineRequest extends Request {
      * <p>CreateImagePipelineRequest</p>
      */
     public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -1391,6 +1395,13 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -1398,14 +1409,24 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         public static final class Builder {
+            private String imdsSupport; 
             private String nvmeSupport; 
 
             private Builder() {
             } 
 
             private Builder(Features model) {
+                this.imdsSupport = model.imdsSupport;
                 this.nvmeSupport = model.nvmeSupport;
             } 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
 
             /**
              * <p>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
@@ -1436,6 +1457,87 @@ public class CreateImagePipelineRequest extends Request {
      *
      * <p>CreateImagePipelineRequest</p>
      */
+    public static class ImportImageTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ImportImageTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportImageTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportImageTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of tag N to add to the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N to add to the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImportImageTags build() {
+                return new ImportImageTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImagePipelineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImagePipelineRequest</p>
+     */
     public static class ImportImageOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -1443,11 +1545,20 @@ public class CreateImagePipelineRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BootMode")
         private String bootMode;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
         private java.util.List<DiskDeviceMappings> diskDeviceMappings;
 
         @com.aliyun.core.annotation.NameInMap("Features")
         private Features features;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("ImportImageTags")
+        private java.util.List<ImportImageTags> importImageTags;
 
         @com.aliyun.core.annotation.NameInMap("LicenseType")
         private String licenseType;
@@ -1461,15 +1572,26 @@ public class CreateImagePipelineRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RetainImportedImage")
         private Boolean retainImportedImage;
 
+        @com.aliyun.core.annotation.NameInMap("RetentionStrategy")
+        private String retentionStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private String roleName;
+
         private ImportImageOptions(Builder builder) {
             this.architecture = builder.architecture;
             this.bootMode = builder.bootMode;
+            this.description = builder.description;
             this.diskDeviceMappings = builder.diskDeviceMappings;
             this.features = builder.features;
+            this.imageName = builder.imageName;
+            this.importImageTags = builder.importImageTags;
             this.licenseType = builder.licenseType;
             this.OSType = builder.OSType;
             this.platform = builder.platform;
             this.retainImportedImage = builder.retainImportedImage;
+            this.retentionStrategy = builder.retentionStrategy;
+            this.roleName = builder.roleName;
         }
 
         public static Builder builder() {
@@ -1495,6 +1617,13 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return diskDeviceMappings
          */
         public java.util.List<DiskDeviceMappings> getDiskDeviceMappings() {
@@ -1506,6 +1635,20 @@ public class CreateImagePipelineRequest extends Request {
          */
         public Features getFeatures() {
             return this.features;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return importImageTags
+         */
+        public java.util.List<ImportImageTags> getImportImageTags() {
+            return this.importImageTags;
         }
 
         /**
@@ -1536,15 +1679,34 @@ public class CreateImagePipelineRequest extends Request {
             return this.retainImportedImage;
         }
 
+        /**
+         * @return retentionStrategy
+         */
+        public String getRetentionStrategy() {
+            return this.retentionStrategy;
+        }
+
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
         public static final class Builder {
             private String architecture; 
             private String bootMode; 
+            private String description; 
             private java.util.List<DiskDeviceMappings> diskDeviceMappings; 
             private Features features; 
+            private String imageName; 
+            private java.util.List<ImportImageTags> importImageTags; 
             private String licenseType; 
             private String OSType; 
             private String platform; 
             private Boolean retainImportedImage; 
+            private String retentionStrategy; 
+            private String roleName; 
 
             private Builder() {
             } 
@@ -1552,12 +1714,17 @@ public class CreateImagePipelineRequest extends Request {
             private Builder(ImportImageOptions model) {
                 this.architecture = model.architecture;
                 this.bootMode = model.bootMode;
+                this.description = model.description;
                 this.diskDeviceMappings = model.diskDeviceMappings;
                 this.features = model.features;
+                this.imageName = model.imageName;
+                this.importImageTags = model.importImageTags;
                 this.licenseType = model.licenseType;
                 this.OSType = model.OSType;
                 this.platform = model.platform;
                 this.retainImportedImage = model.retainImportedImage;
+                this.retentionStrategy = model.retentionStrategy;
+                this.roleName = model.roleName;
             } 
 
             /**
@@ -1596,6 +1763,17 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
+             * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The information of disks from which the custom images are created.</p>
              * <ul>
              * <li>When the N value is 1, this parameter creates a custom image from the system disk.</li>
@@ -1612,6 +1790,26 @@ public class CreateImagePipelineRequest extends Request {
              */
             public Builder features(Features features) {
                 this.features = features;
+                return this;
+            }
+
+            /**
+             * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>The system generates the final image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImageName</p>
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImportImageTags.
+             */
+            public Builder importImageTags(java.util.List<ImportImageTags> importImageTags) {
+                this.importImageTags = importImageTags;
                 return this;
             }
 
@@ -1699,6 +1897,22 @@ public class CreateImagePipelineRequest extends Request {
              */
             public Builder retainImportedImage(Boolean retainImportedImage) {
                 this.retainImportedImage = retainImportedImage;
+                return this;
+            }
+
+            /**
+             * RetentionStrategy.
+             */
+            public Builder retentionStrategy(String retentionStrategy) {
+                this.retentionStrategy = retentionStrategy;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 

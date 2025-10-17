@@ -807,7 +807,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * OssOutputDelivery.
+             * <p>Command to execute the Output OSS delivery configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://testBucket/testPrefix</p>
              */
             public Builder ossOutputDelivery(String ossOutputDelivery) {
                 this.ossOutputDelivery = ossOutputDelivery;
@@ -815,7 +818,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * OssOutputStatus.
+             * <p>The output delivery status of the command execution. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The delivery is in progress.</li>
+             * <li>Finished: The delivery is complete.</li>
+             * <li>Failed: The delivery failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder ossOutputStatus(String ossOutputStatus) {
                 this.ossOutputStatus = ossOutputStatus;
@@ -823,7 +834,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * OssOutputUri.
+             * <p>The command execution Output delivers the object URI to OSS. This field is an empty string when the delivery fails or is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://testBucket/testPrefix/output.txt</p>
              */
             public Builder ossOutputUri(String ossOutputUri) {
                 this.ossOutputUri = ossOutputUri;

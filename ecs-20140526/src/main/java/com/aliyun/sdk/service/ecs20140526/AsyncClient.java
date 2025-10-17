@@ -3501,11 +3501,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following item:</p>
+     * <p>When you call this operation, note that:</p>
      * <ul>
      * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
      * <li>You can modify only one attribute at a time. If you modify multiple attributes, call this operation multiple times.</li>
-     * <li>To modify the BandwidthWeighting, you must specify the specifications of the instance. The instance types that are supported. You can query the instance type list (DescribeInstanceTypes).</li>
+     * <li>To modify the BandwidthWeighting, you must specify the specifications of the instance. You can use the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query whether the current instance type supports bandwidth weights and the supported bandwidth weights.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceNetworkOptions  ModifyInstanceNetworkOptionsRequest

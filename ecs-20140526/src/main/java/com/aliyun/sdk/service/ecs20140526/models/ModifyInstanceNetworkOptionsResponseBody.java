@@ -67,7 +67,7 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -78,8 +78,8 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the redeployment task.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the redeployment result.</p>
+         * <p>The ID of the task for which the bandwidth weight is modified.</p>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> interface to modify the bandwidth weight result.</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp198jigq7l0h5ac****</p>

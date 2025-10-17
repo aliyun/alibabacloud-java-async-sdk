@@ -175,7 +175,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of snapshots returned.</p>
+         * <p>The total number of snapshots.</p>
+         * <blockquote>
+         * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>

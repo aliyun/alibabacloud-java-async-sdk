@@ -224,9 +224,9 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * <ul>
-         * <li>Valid values: 1 to 100.</li>
+         * <li>Maximum value: 100</li>
          * <li>Default value: 10.</li>
          * </ul>
          * 
