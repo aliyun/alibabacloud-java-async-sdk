@@ -65,6 +65,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
+    @com.aliyun.core.annotation.NameInMap("PublicIp")
+    private String publicIp;
+
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -109,6 +112,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.maxQPM = builder.maxQPM;
         this.modelName = builder.modelName;
         this.payType = builder.payType;
+        this.publicIp = builder.publicIp;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.runType = builder.runType;
@@ -245,6 +249,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return publicIp
+     */
+    public String getPublicIp() {
+        return this.publicIp;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -324,6 +335,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String maxQPM; 
         private String modelName; 
         private String payType; 
+        private String publicIp; 
         private String regionId; 
         private String requestId; 
         private String runType; 
@@ -354,6 +366,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.maxQPM = model.maxQPM;
             this.modelName = model.modelName;
             this.payType = model.payType;
+            this.publicIp = model.publicIp;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.runType = model.runType;
@@ -494,6 +507,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * PublicIp.
+         */
+        public Builder publicIp(String publicIp) {
+            this.publicIp = publicIp;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -580,7 +601,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeAIDBClusterAttributeResponseBody</p>
      */
-    public static class DBNodesVolumes extends TeaModel {
+    public static class ChildVolumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -596,7 +617,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        private DBNodesVolumes(Builder builder) {
+        private ChildVolumes(Builder builder) {
             this.mountPath = builder.mountPath;
             this.name = builder.name;
             this.sizeGB = builder.sizeGB;
@@ -608,7 +629,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DBNodesVolumes create() {
+        public static ChildVolumes create() {
             return builder().build();
         }
 
@@ -657,7 +678,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(DBNodesVolumes model) {
+            private Builder(ChildVolumes model) {
                 this.mountPath = model.mountPath;
                 this.name = model.name;
                 this.sizeGB = model.sizeGB;
@@ -705,8 +726,8 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
                 return this;
             }
 
-            public DBNodesVolumes build() {
-                return new DBNodesVolumes(this);
+            public ChildVolumes build() {
+                return new ChildVolumes(this);
             } 
 
         } 
@@ -719,6 +740,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <p>DescribeAIDBClusterAttributeResponseBody</p>
      */
     public static class DBNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChildVolumes")
+        private java.util.List<ChildVolumes> childVolumes;
+
         @com.aliyun.core.annotation.NameInMap("CpuCores")
         private String cpuCores;
 
@@ -752,13 +776,11 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @com.aliyun.core.annotation.NameInMap("Volumes")
-        private java.util.List<DBNodesVolumes> volumes;
-
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNodes(Builder builder) {
+            this.childVolumes = builder.childVolumes;
             this.cpuCores = builder.cpuCores;
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeDescription = builder.DBNodeDescription;
@@ -770,7 +792,6 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.vNodeId = builder.vNodeId;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
-            this.volumes = builder.volumes;
             this.zoneId = builder.zoneId;
         }
 
@@ -780,6 +801,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
         public static DBNodes create() {
             return builder().build();
+        }
+
+        /**
+         * @return childVolumes
+         */
+        public java.util.List<ChildVolumes> getChildVolumes() {
+            return this.childVolumes;
         }
 
         /**
@@ -860,13 +888,6 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return volumes
-         */
-        public java.util.List<DBNodesVolumes> getVolumes() {
-            return this.volumes;
-        }
-
-        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -874,6 +895,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<ChildVolumes> childVolumes; 
             private String cpuCores; 
             private String DBNodeClass; 
             private String DBNodeDescription; 
@@ -885,13 +907,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             private String vNodeId; 
             private String VPCId; 
             private String vSwitchId; 
-            private java.util.List<DBNodesVolumes> volumes; 
             private String zoneId; 
 
             private Builder() {
             } 
 
             private Builder(DBNodes model) {
+                this.childVolumes = model.childVolumes;
                 this.cpuCores = model.cpuCores;
                 this.DBNodeClass = model.DBNodeClass;
                 this.DBNodeDescription = model.DBNodeDescription;
@@ -903,9 +925,16 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
                 this.vNodeId = model.vNodeId;
                 this.VPCId = model.VPCId;
                 this.vSwitchId = model.vSwitchId;
-                this.volumes = model.volumes;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * ChildVolumes.
+             */
+            public Builder childVolumes(java.util.List<ChildVolumes> childVolumes) {
+                this.childVolumes = childVolumes;
+                return this;
+            }
 
             /**
              * CpuCores.
@@ -992,14 +1021,6 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * Volumes.
-             */
-            public Builder volumes(java.util.List<DBNodesVolumes> volumes) {
-                this.volumes = volumes;
                 return this;
             }
 

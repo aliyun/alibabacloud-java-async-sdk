@@ -22,6 +22,10 @@ public class ModifyDBNodeClassRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudProvider")
+    private String cloudProvider;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -75,6 +79,7 @@ public class ModifyDBNodeClassRequest extends Request {
     private ModifyDBNodeClassRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.cloudProvider = builder.cloudProvider;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeTargetClass = builder.DBNodeTargetClass;
         this.DBNodeType = builder.DBNodeType;
@@ -107,6 +112,13 @@ public class ModifyDBNodeClassRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return cloudProvider
+     */
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     /**
@@ -195,6 +207,7 @@ public class ModifyDBNodeClassRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBNodeClassRequest, Builder> {
         private String clientToken; 
+        private String cloudProvider; 
         private String DBClusterId; 
         private String DBNodeTargetClass; 
         private String DBNodeType; 
@@ -215,6 +228,7 @@ public class ModifyDBNodeClassRequest extends Request {
         private Builder(ModifyDBNodeClassRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.cloudProvider = request.cloudProvider;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeTargetClass = request.DBNodeTargetClass;
             this.DBNodeType = request.DBNodeType;
@@ -238,6 +252,15 @@ public class ModifyDBNodeClassRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CloudProvider.
+         */
+        public Builder cloudProvider(String cloudProvider) {
+            this.putQueryParameter("CloudProvider", cloudProvider);
+            this.cloudProvider = cloudProvider;
             return this;
         }
 

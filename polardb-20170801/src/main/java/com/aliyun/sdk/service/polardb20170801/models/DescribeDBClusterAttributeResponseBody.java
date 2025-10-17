@@ -167,6 +167,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
 
+    @com.aliyun.core.annotation.NameInMap("SearchCompressStorageUsed")
+    private Long searchCompressStorageUsed;
+
+    @com.aliyun.core.annotation.NameInMap("SearchStorageUsed")
+    private Long searchStorageUsed;
+
     @com.aliyun.core.annotation.NameInMap("ServerlessType")
     private String serverlessType;
 
@@ -266,6 +272,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.restoreType = builder.restoreType;
         this.rowCompression = builder.rowCompression;
         this.SQLSize = builder.SQLSize;
+        this.searchCompressStorageUsed = builder.searchCompressStorageUsed;
+        this.searchStorageUsed = builder.searchStorageUsed;
         this.serverlessType = builder.serverlessType;
         this.sourceDBCluster = builder.sourceDBCluster;
         this.sourceRegionId = builder.sourceRegionId;
@@ -647,6 +655,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return searchCompressStorageUsed
+     */
+    public Long getSearchCompressStorageUsed() {
+        return this.searchCompressStorageUsed;
+    }
+
+    /**
+     * @return searchStorageUsed
+     */
+    public Long getSearchStorageUsed() {
+        return this.searchStorageUsed;
+    }
+
+    /**
      * @return serverlessType
      */
     public String getServerlessType() {
@@ -809,6 +831,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String restoreType; 
         private String rowCompression; 
         private Long SQLSize; 
+        private Long searchCompressStorageUsed; 
+        private Long searchStorageUsed; 
         private String serverlessType; 
         private String sourceDBCluster; 
         private String sourceRegionId; 
@@ -880,6 +904,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.restoreType = model.restoreType;
             this.rowCompression = model.rowCompression;
             this.SQLSize = model.SQLSize;
+            this.searchCompressStorageUsed = model.searchCompressStorageUsed;
+            this.searchStorageUsed = model.searchStorageUsed;
             this.serverlessType = model.serverlessType;
             this.sourceDBCluster = model.sourceDBCluster;
             this.sourceRegionId = model.sourceRegionId;
@@ -1552,6 +1578,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder SQLSize(Long SQLSize) {
             this.SQLSize = SQLSize;
+            return this;
+        }
+
+        /**
+         * SearchCompressStorageUsed.
+         */
+        public Builder searchCompressStorageUsed(Long searchCompressStorageUsed) {
+            this.searchCompressStorageUsed = searchCompressStorageUsed;
+            return this;
+        }
+
+        /**
+         * SearchStorageUsed.
+         */
+        public Builder searchStorageUsed(Long searchStorageUsed) {
+            this.searchStorageUsed = searchStorageUsed;
             return this;
         }
 

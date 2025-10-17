@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyAutoRenewAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudProvider")
+    private String cloudProvider;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterIds;
@@ -61,6 +65,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
 
     private ModifyAutoRenewAttributeRequest(Builder builder) {
         super(builder);
+        this.cloudProvider = builder.cloudProvider;
         this.DBClusterIds = builder.DBClusterIds;
         this.duration = builder.duration;
         this.ownerAccount = builder.ownerAccount;
@@ -84,6 +89,13 @@ public class ModifyAutoRenewAttributeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cloudProvider
+     */
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     /**
@@ -157,6 +169,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyAutoRenewAttributeRequest, Builder> {
+        private String cloudProvider; 
         private String DBClusterIds; 
         private String duration; 
         private String ownerAccount; 
@@ -174,6 +187,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
 
         private Builder(ModifyAutoRenewAttributeRequest request) {
             super(request);
+            this.cloudProvider = request.cloudProvider;
             this.DBClusterIds = request.DBClusterIds;
             this.duration = request.duration;
             this.ownerAccount = request.ownerAccount;
@@ -185,6 +199,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * CloudProvider.
+         */
+        public Builder cloudProvider(String cloudProvider) {
+            this.putQueryParameter("CloudProvider", cloudProvider);
+            this.cloudProvider = cloudProvider;
+            return this;
+        }
 
         /**
          * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>

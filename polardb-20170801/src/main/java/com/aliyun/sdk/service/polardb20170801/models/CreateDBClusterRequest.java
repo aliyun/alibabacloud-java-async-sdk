@@ -46,6 +46,10 @@ public class CreateDBClusterRequest extends Request {
     private String cloneDataPoint;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudProvider")
+    private String cloudProvider;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
@@ -86,6 +90,10 @@ public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultTimeZone")
     private String defaultTimeZone;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GDNId")
@@ -268,6 +276,7 @@ public class CreateDBClusterRequest extends Request {
         this.burstingEnabled = builder.burstingEnabled;
         this.clientToken = builder.clientToken;
         this.cloneDataPoint = builder.cloneDataPoint;
+        this.cloudProvider = builder.cloudProvider;
         this.clusterNetworkType = builder.clusterNetworkType;
         this.creationCategory = builder.creationCategory;
         this.creationOption = builder.creationOption;
@@ -278,6 +287,7 @@ public class CreateDBClusterRequest extends Request {
         this.DBType = builder.DBType;
         this.DBVersion = builder.DBVersion;
         this.defaultTimeZone = builder.defaultTimeZone;
+        this.ensRegionId = builder.ensRegionId;
         this.GDNId = builder.GDNId;
         this.hotStandbyCluster = builder.hotStandbyCluster;
         this.loosePolarLogBin = builder.loosePolarLogBin;
@@ -385,6 +395,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return cloudProvider
+     */
+    public String getCloudProvider() {
+        return this.cloudProvider;
+    }
+
+    /**
      * @return clusterNetworkType
      */
     public String getClusterNetworkType() {
@@ -452,6 +469,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getDefaultTimeZone() {
         return this.defaultTimeZone;
+    }
+
+    /**
+     * @return ensRegionId
+     */
+    public String getEnsRegionId() {
+        return this.ensRegionId;
     }
 
     /**
@@ -756,6 +780,7 @@ public class CreateDBClusterRequest extends Request {
         private String burstingEnabled; 
         private String clientToken; 
         private String cloneDataPoint; 
+        private String cloudProvider; 
         private String clusterNetworkType; 
         private String creationCategory; 
         private String creationOption; 
@@ -766,6 +791,7 @@ public class CreateDBClusterRequest extends Request {
         private String DBType; 
         private String DBVersion; 
         private String defaultTimeZone; 
+        private String ensRegionId; 
         private String GDNId; 
         private String hotStandbyCluster; 
         private String loosePolarLogBin; 
@@ -822,6 +848,7 @@ public class CreateDBClusterRequest extends Request {
             this.burstingEnabled = request.burstingEnabled;
             this.clientToken = request.clientToken;
             this.cloneDataPoint = request.cloneDataPoint;
+            this.cloudProvider = request.cloudProvider;
             this.clusterNetworkType = request.clusterNetworkType;
             this.creationCategory = request.creationCategory;
             this.creationOption = request.creationOption;
@@ -832,6 +859,7 @@ public class CreateDBClusterRequest extends Request {
             this.DBType = request.DBType;
             this.DBVersion = request.DBVersion;
             this.defaultTimeZone = request.defaultTimeZone;
+            this.ensRegionId = request.ensRegionId;
             this.GDNId = request.GDNId;
             this.hotStandbyCluster = request.hotStandbyCluster;
             this.loosePolarLogBin = request.loosePolarLogBin;
@@ -994,6 +1022,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder cloneDataPoint(String cloneDataPoint) {
             this.putQueryParameter("CloneDataPoint", cloneDataPoint);
             this.cloneDataPoint = cloneDataPoint;
+            return this;
+        }
+
+        /**
+         * CloudProvider.
+         */
+        public Builder cloudProvider(String cloudProvider) {
+            this.putQueryParameter("CloudProvider", cloudProvider);
+            this.cloudProvider = cloudProvider;
             return this;
         }
 
@@ -1237,6 +1274,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder defaultTimeZone(String defaultTimeZone) {
             this.putQueryParameter("DefaultTimeZone", defaultTimeZone);
             this.defaultTimeZone = defaultTimeZone;
+            return this;
+        }
+
+        /**
+         * EnsRegionId.
+         */
+        public Builder ensRegionId(String ensRegionId) {
+            this.putQueryParameter("EnsRegionId", ensRegionId);
+            this.ensRegionId = ensRegionId;
             return this;
         }
 

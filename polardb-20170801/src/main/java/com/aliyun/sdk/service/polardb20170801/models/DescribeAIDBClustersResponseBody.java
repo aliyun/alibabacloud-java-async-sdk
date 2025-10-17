@@ -329,6 +329,9 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RelativeDBClusterId")
+        private String relativeDBClusterId;
+
         @com.aliyun.core.annotation.NameInMap("RunType")
         private String runType;
 
@@ -364,6 +367,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             this.lockMode = builder.lockMode;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
+            this.relativeDBClusterId = builder.relativeDBClusterId;
             this.runType = builder.runType;
             this.storageSpace = builder.storageSpace;
             this.storageType = builder.storageType;
@@ -473,6 +477,13 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return relativeDBClusterId
+         */
+        public String getRelativeDBClusterId() {
+            return this.relativeDBClusterId;
+        }
+
+        /**
          * @return runType
          */
         public String getRunType() {
@@ -535,6 +546,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             private String lockMode; 
             private String payType; 
             private String regionId; 
+            private String relativeDBClusterId; 
             private String runType; 
             private Integer storageSpace; 
             private String storageType; 
@@ -560,6 +572,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
                 this.lockMode = model.lockMode;
                 this.payType = model.payType;
                 this.regionId = model.regionId;
+                this.relativeDBClusterId = model.relativeDBClusterId;
                 this.runType = model.runType;
                 this.storageSpace = model.storageSpace;
                 this.storageType = model.storageType;
@@ -670,6 +683,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RelativeDBClusterId.
+             */
+            public Builder relativeDBClusterId(String relativeDBClusterId) {
+                this.relativeDBClusterId = relativeDBClusterId;
                 return this;
             }
 

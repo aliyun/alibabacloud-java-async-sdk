@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddSQLRateLimitingRulesResponse> addSQLRateLimitingRules(AddSQLRateLimitingRulesRequest request);
 
     /**
+     * @param request the request parameters of AttachApplicationPolarFS  AttachApplicationPolarFSRequest
+     * @return AttachApplicationPolarFSResponse
+     */
+    CompletableFuture<AttachApplicationPolarFSResponse> attachApplicationPolarFS(AttachApplicationPolarFSRequest request);
+
+    /**
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckAccountNameResponse> checkAccountName(CheckAccountNameRequest request);
 
     /**
+     * @param request the request parameters of CheckAccountNameZonal  CheckAccountNameZonalRequest
+     * @return CheckAccountNameZonalResponse
+     */
+    CompletableFuture<CheckAccountNameZonalResponse> checkAccountNameZonal(CheckAccountNameZonalRequest request);
+
+    /**
      * @param request the request parameters of CheckConnectionString  CheckConnectionStringRequest
      * @return CheckConnectionStringResponse
      */
@@ -78,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckDBNameResponse
      */
     CompletableFuture<CheckDBNameResponse> checkDBName(CheckDBNameRequest request);
+
+    /**
+     * @param request the request parameters of CheckDBNameZonal  CheckDBNameZonalRequest
+     * @return CheckDBNameZonalResponse
+     */
+    CompletableFuture<CheckDBNameZonalResponse> checkDBNameZonal(CheckDBNameZonalRequest request);
 
     /**
      * @param request the request parameters of CheckKMSAuthorized  CheckKMSAuthorizedRequest
@@ -125,10 +143,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateAccountZonal  CreateAccountZonalRequest
+     * @return CreateAccountZonalResponse
+     */
+    CompletableFuture<CreateAccountZonalResponse> createAccountZonal(CreateAccountZonalRequest request);
+
+    /**
      * @param request the request parameters of CreateActivationCode  CreateActivationCodeRequest
      * @return CreateActivationCodeResponse
      */
     CompletableFuture<CreateActivationCodeResponse> createActivationCode(CreateActivationCodeRequest request);
+
+    /**
+     * @param request the request parameters of CreateApplication  CreateApplicationRequest
+     * @return CreateApplicationResponse
+     */
+    CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
+
+    /**
+     * @param request the request parameters of CreateApplicationEndpointAddress  CreateApplicationEndpointAddressRequest
+     * @return CreateApplicationEndpointAddressResponse
+     */
+    CompletableFuture<CreateApplicationEndpointAddressResponse> createApplicationEndpointAddress(CreateApplicationEndpointAddressRequest request);
 
     /**
      * <b>description</b> :
@@ -168,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDBClusterEndpointResponse
      */
     CompletableFuture<CreateDBClusterEndpointResponse> createDBClusterEndpoint(CreateDBClusterEndpointRequest request);
+
+    /**
+     * @param request the request parameters of CreateDBClusterEndpointZonal  CreateDBClusterEndpointZonalRequest
+     * @return CreateDBClusterEndpointZonalResponse
+     */
+    CompletableFuture<CreateDBClusterEndpointZonalResponse> createDBClusterEndpointZonal(CreateDBClusterEndpointZonalRequest request);
 
     /**
      * <b>description</b> :
@@ -214,6 +256,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDatabaseResponse
      */
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatabaseZonal  CreateDatabaseZonalRequest
+     * @return CreateDatabaseZonalResponse
+     */
+    CompletableFuture<CreateDatabaseZonalResponse> createDatabaseZonal(CreateDatabaseZonalRequest request);
 
     /**
      * @param request the request parameters of CreateExtensions  CreateExtensionsRequest
@@ -281,6 +329,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateStoragePlanResponse> createStoragePlan(CreateStoragePlanRequest request);
 
     /**
+     * @param request the request parameters of DeleteAIDBCluster  DeleteAIDBClusterRequest
+     * @return DeleteAIDBClusterResponse
+     */
+    CompletableFuture<DeleteAIDBClusterResponse> deleteAIDBCluster(DeleteAIDBClusterRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
@@ -292,10 +346,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteAccountZonal  DeleteAccountZonalRequest
+     * @return DeleteAccountZonalResponse
+     */
+    CompletableFuture<DeleteAccountZonalResponse> deleteAccountZonal(DeleteAccountZonalRequest request);
+
+    /**
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
      * @return DeleteApplicationResponse
      */
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApplicationEndpointAddress  DeleteApplicationEndpointAddressRequest
+     * @return DeleteApplicationEndpointAddressResponse
+     */
+    CompletableFuture<DeleteApplicationEndpointAddressResponse> deleteApplicationEndpointAddress(DeleteApplicationEndpointAddressRequest request);
 
     /**
      * <b>description</b> :
@@ -327,6 +393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBClusterEndpointResponse
      */
     CompletableFuture<DeleteDBClusterEndpointResponse> deleteDBClusterEndpoint(DeleteDBClusterEndpointRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDBClusterEndpointZonal  DeleteDBClusterEndpointZonalRequest
+     * @return DeleteDBClusterEndpointZonalResponse
+     */
+    CompletableFuture<DeleteDBClusterEndpointZonalResponse> deleteDBClusterEndpointZonal(DeleteDBClusterEndpointZonalRequest request);
 
     /**
      * <b>description</b> :
@@ -367,6 +439,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatabaseResponse
      */
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatabaseZonal  DeleteDatabaseZonalRequest
+     * @return DeleteDatabaseZonalResponse
+     */
+    CompletableFuture<DeleteDatabaseZonalResponse> deleteDatabaseZonal(DeleteDatabaseZonalRequest request);
 
     /**
      * @param request the request parameters of DeleteEncryptionDBRolePrivilege  DeleteEncryptionDBRolePrivilegeRequest
@@ -470,6 +548,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeAccountsZonal  DescribeAccountsZonalRequest
+     * @return DescribeAccountsZonalResponse
+     */
+    CompletableFuture<DescribeAccountsZonalResponse> describeAccountsZonal(DescribeAccountsZonalRequest request);
+
+    /**
      * @param request the request parameters of DescribeActivationCodeDetails  DescribeActivationCodeDetailsRequest
      * @return DescribeActivationCodeDetailsResponse
      */
@@ -492,6 +576,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeActiveOperationTasksResponse
      */
     CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
+     * @return DescribeApplicationAttributeResponse
+     */
+    CompletableFuture<DescribeApplicationAttributeResponse> describeApplicationAttribute(DescribeApplicationAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationParameters  DescribeApplicationParametersRequest
+     * @return DescribeApplicationParametersResponse
+     */
+    CompletableFuture<DescribeApplicationParametersResponse> describeApplicationParameters(DescribeApplicationParametersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationServerlessConf  DescribeApplicationServerlessConfRequest
+     * @return DescribeApplicationServerlessConfResponse
+     */
+    CompletableFuture<DescribeApplicationServerlessConfResponse> describeApplicationServerlessConf(DescribeApplicationServerlessConfRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplications  DescribeApplicationsRequest
+     * @return DescribeApplicationsResponse
+     */
+    CompletableFuture<DescribeApplicationsResponse> describeApplications(DescribeApplicationsRequest request);
 
     /**
      * @param request the request parameters of DescribeAutoRenewAttribute  DescribeAutoRenewAttributeRequest
@@ -620,6 +728,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterEndpointsResponse> describeDBClusterEndpoints(DescribeDBClusterEndpointsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterEndpointsZonal  DescribeDBClusterEndpointsZonalRequest
+     * @return DescribeDBClusterEndpointsZonalResponse
+     */
+    CompletableFuture<DescribeDBClusterEndpointsZonalResponse> describeDBClusterEndpointsZonal(DescribeDBClusterEndpointsZonalRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The ID of the request.</p>
      * 
@@ -703,6 +817,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterVersionZonal  DescribeDBClusterVersionZonalRequest
+     * @return DescribeDBClusterVersionZonalResponse
+     */
+    CompletableFuture<DescribeDBClusterVersionZonalResponse> describeDBClusterVersionZonal(DescribeDBClusterVersionZonalRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
      */
@@ -713,6 +833,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBClustersWithBackupsResponse
      */
     CompletableFuture<DescribeDBClustersWithBackupsResponse> describeDBClustersWithBackups(DescribeDBClustersWithBackupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBClustersZonal  DescribeDBClustersZonalRequest
+     * @return DescribeDBClustersZonalResponse
+     */
+    CompletableFuture<DescribeDBClustersZonalResponse> describeDBClustersZonal(DescribeDBClustersZonalRequest request);
 
     /**
      * @param request the request parameters of DescribeDBInitializeVariable  DescribeDBInitializeVariableRequest
@@ -803,6 +929,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDatabasesResponse
      */
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDatabasesZonal  DescribeDatabasesZonalRequest
+     * @return DescribeDatabasesZonalResponse
+     */
+    CompletableFuture<DescribeDatabasesZonalResponse> describeDatabasesZonal(DescribeDatabasesZonalRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDbClusterAttributeZonal  DescribeDbClusterAttributeZonalRequest
+     * @return DescribeDbClusterAttributeZonalResponse
+     */
+    CompletableFuture<DescribeDbClusterAttributeZonalResponse> describeDbClusterAttributeZonal(DescribeDbClusterAttributeZonalRequest request);
 
     /**
      * <b>description</b> :
@@ -1148,6 +1286,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request);
 
     /**
+     * @param request the request parameters of FailoverDBClusterZonal  FailoverDBClusterZonalRequest
+     * @return FailoverDBClusterZonalResponse
+     */
+    CompletableFuture<FailoverDBClusterZonalResponse> failoverDBClusterZonal(FailoverDBClusterZonalRequest request);
+
+    /**
      * @param request the request parameters of GenerateUpgradeReportForSyncClone  GenerateUpgradeReportForSyncCloneRequest
      * @return GenerateUpgradeReportForSyncCloneResponse
      */
@@ -1169,6 +1313,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GrantAccountPrivilegeResponse
      */
     CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of GrantAccountPrivilegeZonal  GrantAccountPrivilegeZonalRequest
+     * @return GrantAccountPrivilegeZonalResponse
+     */
+    CompletableFuture<GrantAccountPrivilegeZonalResponse> grantAccountPrivilegeZonal(GrantAccountPrivilegeZonalRequest request);
 
     /**
      * @param request the request parameters of ListOrders  ListOrdersRequest
@@ -1207,6 +1357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyAccountDescriptionZonal  ModifyAccountDescriptionZonalRequest
+     * @return ModifyAccountDescriptionZonalResponse
+     */
+    CompletableFuture<ModifyAccountDescriptionZonalResponse> modifyAccountDescriptionZonal(ModifyAccountDescriptionZonalRequest request);
+
+    /**
      * @param request the request parameters of ModifyAccountLockState  ModifyAccountLockStateRequest
      * @return ModifyAccountLockStateResponse
      */
@@ -1219,6 +1375,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
 
     /**
+     * @param request the request parameters of ModifyAccountPasswordZonal  ModifyAccountPasswordZonalRequest
+     * @return ModifyAccountPasswordZonalResponse
+     */
+    CompletableFuture<ModifyAccountPasswordZonalResponse> modifyAccountPasswordZonal(ModifyAccountPasswordZonalRequest request);
+
+    /**
      * @param request the request parameters of ModifyActiveOperationMaintainConf  ModifyActiveOperationMaintainConfRequest
      * @return ModifyActiveOperationMaintainConfResponse
      */
@@ -1229,6 +1391,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyActiveOperationTasksResponse
      */
     CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationDescription  ModifyApplicationDescriptionRequest
+     * @return ModifyApplicationDescriptionResponse
+     */
+    CompletableFuture<ModifyApplicationDescriptionResponse> modifyApplicationDescription(ModifyApplicationDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationParameter  ModifyApplicationParameterRequest
+     * @return ModifyApplicationParameterResponse
+     */
+    CompletableFuture<ModifyApplicationParameterResponse> modifyApplicationParameter(ModifyApplicationParameterRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationServerlessConf  ModifyApplicationServerlessConfRequest
+     * @return ModifyApplicationServerlessConfResponse
+     */
+    CompletableFuture<ModifyApplicationServerlessConfResponse> modifyApplicationServerlessConf(ModifyApplicationServerlessConfRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationWhitelist  ModifyApplicationWhitelistRequest
+     * @return ModifyApplicationWhitelistResponse
+     */
+    CompletableFuture<ModifyApplicationWhitelistResponse> modifyApplicationWhitelist(ModifyApplicationWhitelistRequest request);
 
     /**
      * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
@@ -1296,10 +1482,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterDescriptionZonal  ModifyDBClusterDescriptionZonalRequest
+     * @return ModifyDBClusterDescriptionZonalResponse
+     */
+    CompletableFuture<ModifyDBClusterDescriptionZonalResponse> modifyDBClusterDescriptionZonal(ModifyDBClusterDescriptionZonalRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBClusterEndpoint  ModifyDBClusterEndpointRequest
      * @return ModifyDBClusterEndpointResponse
      */
     CompletableFuture<ModifyDBClusterEndpointResponse> modifyDBClusterEndpoint(ModifyDBClusterEndpointRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterEndpointZonal  ModifyDBClusterEndpointZonalRequest
+     * @return ModifyDBClusterEndpointZonalResponse
+     */
+    CompletableFuture<ModifyDBClusterEndpointZonalResponse> modifyDBClusterEndpointZonal(ModifyDBClusterEndpointZonalRequest request);
 
     /**
      * <b>description</b> :
@@ -1428,6 +1626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBDescriptionResponse
      */
     CompletableFuture<ModifyDBDescriptionResponse> modifyDBDescription(ModifyDBDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBDescriptionZonal  ModifyDBDescriptionZonalRequest
+     * @return ModifyDBDescriptionZonalResponse
+     */
+    CompletableFuture<ModifyDBDescriptionZonalResponse> modifyDBDescriptionZonal(ModifyDBDescriptionZonalRequest request);
 
     /**
      * @param request the request parameters of ModifyDBEndpointAddress  ModifyDBEndpointAddressRequest
@@ -1605,6 +1809,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
     /**
+     * @param request the request parameters of ResetAccountZonal  ResetAccountZonalRequest
+     * @return ResetAccountZonalResponse
+     */
+    CompletableFuture<ResetAccountZonalResponse> resetAccountZonal(ResetAccountZonalRequest request);
+
+    /**
      * @param request the request parameters of ResetGlobalDatabaseNetwork  ResetGlobalDatabaseNetworkRequest
      * @return ResetGlobalDatabaseNetworkResponse
      */
@@ -1623,6 +1833,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartDBNodeResponse> restartDBNode(RestartDBNodeRequest request);
 
     /**
+     * @param request the request parameters of RestartDBNodeZonal  RestartDBNodeZonalRequest
+     * @return RestartDBNodeZonalResponse
+     */
+    CompletableFuture<RestartDBNodeZonalResponse> restartDBNodeZonal(RestartDBNodeZonalRequest request);
+
+    /**
      * @param request the request parameters of RestoreTable  RestoreTableRequest
      * @return RestoreTableResponse
      */
@@ -1633,6 +1849,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeAccountPrivilegeResponse
      */
     CompletableFuture<RevokeAccountPrivilegeResponse> revokeAccountPrivilege(RevokeAccountPrivilegeRequest request);
+
+    /**
+     * @param request the request parameters of RevokeAccountPrivilegeZonal  RevokeAccountPrivilegeZonalRequest
+     * @return RevokeAccountPrivilegeZonalResponse
+     */
+    CompletableFuture<RevokeAccountPrivilegeZonalResponse> revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request);
 
     /**
      * @param request the request parameters of SwitchOverGlobalDatabaseNetwork  SwitchOverGlobalDatabaseNetworkRequest
@@ -1692,5 +1914,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeDBClusterVersionResponse
      */
     CompletableFuture<UpgradeDBClusterVersionResponse> upgradeDBClusterVersion(UpgradeDBClusterVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeDBClusterVersionZonal  UpgradeDBClusterVersionZonalRequest
+     * @return UpgradeDBClusterVersionZonalResponse
+     */
+    CompletableFuture<UpgradeDBClusterVersionZonalResponse> upgradeDBClusterVersionZonal(UpgradeDBClusterVersionZonalRequest request);
 
 }

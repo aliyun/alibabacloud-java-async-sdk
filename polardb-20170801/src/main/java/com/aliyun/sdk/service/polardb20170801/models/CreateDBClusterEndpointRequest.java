@@ -56,6 +56,10 @@ public class CreateDBClusterEndpointRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolarFsInstanceId")
+    private String polarFsInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolarSccTimeoutAction")
     private String polarSccTimeoutAction;
 
@@ -90,6 +94,7 @@ public class CreateDBClusterEndpointRequest extends Request {
         this.nodes = builder.nodes;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.polarFsInstanceId = builder.polarFsInstanceId;
         this.polarSccTimeoutAction = builder.polarSccTimeoutAction;
         this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
         this.readWriteMode = builder.readWriteMode;
@@ -175,6 +180,13 @@ public class CreateDBClusterEndpointRequest extends Request {
     }
 
     /**
+     * @return polarFsInstanceId
+     */
+    public String getPolarFsInstanceId() {
+        return this.polarFsInstanceId;
+    }
+
+    /**
      * @return polarSccTimeoutAction
      */
     public String getPolarSccTimeoutAction() {
@@ -226,6 +238,7 @@ public class CreateDBClusterEndpointRequest extends Request {
         private String nodes; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String polarFsInstanceId; 
         private String polarSccTimeoutAction; 
         private String polarSccWaitTimeout; 
         private String readWriteMode; 
@@ -248,6 +261,7 @@ public class CreateDBClusterEndpointRequest extends Request {
             this.nodes = request.nodes;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.polarFsInstanceId = request.polarFsInstanceId;
             this.polarSccTimeoutAction = request.polarSccTimeoutAction;
             this.polarSccWaitTimeout = request.polarSccWaitTimeout;
             this.readWriteMode = request.readWriteMode;
@@ -408,6 +422,15 @@ public class CreateDBClusterEndpointRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PolarFsInstanceId.
+         */
+        public Builder polarFsInstanceId(String polarFsInstanceId) {
+            this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
+            this.polarFsInstanceId = polarFsInstanceId;
             return this;
         }
 

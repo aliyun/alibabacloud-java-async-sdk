@@ -36,6 +36,10 @@ public class DeleteDBClusterEndpointRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolarFsInstanceId")
+    private String polarFsInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -49,6 +53,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
         this.DBEndpointId = builder.DBEndpointId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.polarFsInstanceId = builder.polarFsInstanceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -95,6 +100,13 @@ public class DeleteDBClusterEndpointRequest extends Request {
     }
 
     /**
+     * @return polarFsInstanceId
+     */
+    public String getPolarFsInstanceId() {
+        return this.polarFsInstanceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -113,6 +125,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
         private String DBEndpointId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String polarFsInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -126,6 +139,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
             this.DBEndpointId = request.DBEndpointId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.polarFsInstanceId = request.polarFsInstanceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -171,6 +185,15 @@ public class DeleteDBClusterEndpointRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PolarFsInstanceId.
+         */
+        public Builder polarFsInstanceId(String polarFsInstanceId) {
+            this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
+            this.polarFsInstanceId = polarFsInstanceId;
             return this;
         }
 

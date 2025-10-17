@@ -674,6 +674,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SearchStorageUsed")
+        private Long searchStorageUsed;
+
         @com.aliyun.core.annotation.NameInMap("ServerlessType")
         private String serverlessType;
 
@@ -732,6 +735,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.remoteMemorySize = builder.remoteMemorySize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.searchStorageUsed = builder.searchStorageUsed;
             this.serverlessType = builder.serverlessType;
             this.storagePayType = builder.storagePayType;
             this.storageSpace = builder.storageSpace;
@@ -922,6 +926,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchStorageUsed
+         */
+        public Long getSearchStorageUsed() {
+            return this.searchStorageUsed;
+        }
+
+        /**
          * @return serverlessType
          */
         public String getServerlessType() {
@@ -1023,6 +1034,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String regionId; 
             private String remoteMemorySize; 
             private String resourceGroupId; 
+            private Long searchStorageUsed; 
             private String serverlessType; 
             private String storagePayType; 
             private Long storageSpace; 
@@ -1063,6 +1075,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.remoteMemorySize = model.remoteMemorySize;
                 this.resourceGroupId = model.resourceGroupId;
+                this.searchStorageUsed = model.searchStorageUsed;
                 this.serverlessType = model.serverlessType;
                 this.storagePayType = model.storagePayType;
                 this.storageSpace = model.storageSpace;
@@ -1380,6 +1393,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SearchStorageUsed.
+             */
+            public Builder searchStorageUsed(Long searchStorageUsed) {
+                this.searchStorageUsed = searchStorageUsed;
                 return this;
             }
 
