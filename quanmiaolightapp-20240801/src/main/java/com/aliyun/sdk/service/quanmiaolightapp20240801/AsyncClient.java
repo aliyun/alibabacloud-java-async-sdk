@@ -283,4 +283,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateVideoAnalysisTaskResponse> updateVideoAnalysisTask(UpdateVideoAnalysisTaskRequest request);
 
+    /**
+     * @param request the request parameters of UpdateVideoAnalysisTasks  UpdateVideoAnalysisTasksRequest
+     * @return UpdateVideoAnalysisTasksResponse
+     */
+    CompletableFuture<UpdateVideoAnalysisTasksResponse> updateVideoAnalysisTasks(UpdateVideoAnalysisTasksRequest request);
+
 }

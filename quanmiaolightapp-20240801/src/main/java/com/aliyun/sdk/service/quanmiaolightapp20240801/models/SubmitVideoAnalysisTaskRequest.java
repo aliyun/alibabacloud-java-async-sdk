@@ -75,6 +75,10 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     private Integer splitInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("splitType")
+    private String splitType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("textProcessTasks")
     private java.util.List<TextProcessTasks> textProcessTasks;
 
@@ -123,6 +127,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         this.modelId = builder.modelId;
         this.snapshotInterval = builder.snapshotInterval;
         this.splitInterval = builder.splitInterval;
+        this.splitType = builder.splitType;
         this.textProcessTasks = builder.textProcessTasks;
         this.videoCaptionInfo = builder.videoCaptionInfo;
         this.videoExtraInfo = builder.videoExtraInfo;
@@ -245,6 +250,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     }
 
     /**
+     * @return splitType
+     */
+    public String getSplitType() {
+        return this.splitType;
+    }
+
+    /**
      * @return textProcessTasks
      */
     public java.util.List<TextProcessTasks> getTextProcessTasks() {
@@ -315,6 +327,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         private String modelId; 
         private Double snapshotInterval; 
         private Integer splitInterval; 
+        private String splitType; 
         private java.util.List<TextProcessTasks> textProcessTasks; 
         private VideoCaptionInfo videoCaptionInfo; 
         private String videoExtraInfo; 
@@ -344,6 +357,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
             this.modelId = request.modelId;
             this.snapshotInterval = request.snapshotInterval;
             this.splitInterval = request.splitInterval;
+            this.splitType = request.splitType;
             this.textProcessTasks = request.textProcessTasks;
             this.videoCaptionInfo = request.videoCaptionInfo;
             this.videoExtraInfo = request.videoExtraInfo;
@@ -483,6 +497,15 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         public Builder splitInterval(Integer splitInterval) {
             this.putBodyParameter("splitInterval", splitInterval);
             this.splitInterval = splitInterval;
+            return this;
+        }
+
+        /**
+         * splitType.
+         */
+        public Builder splitType(String splitType) {
+            this.putBodyParameter("splitType", splitType);
+            this.splitType = splitType;
             return this;
         }
 

@@ -75,6 +75,10 @@ public class RunVideoAnalysisRequest extends Request {
     private Integer splitInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("splitType")
+    private String splitType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
 
@@ -126,6 +130,7 @@ public class RunVideoAnalysisRequest extends Request {
         this.originalSessionId = builder.originalSessionId;
         this.snapshotInterval = builder.snapshotInterval;
         this.splitInterval = builder.splitInterval;
+        this.splitType = builder.splitType;
         this.taskId = builder.taskId;
         this.textProcessTasks = builder.textProcessTasks;
         this.videoCaptionInfo = builder.videoCaptionInfo;
@@ -249,6 +254,13 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return splitType
+     */
+    public String getSplitType() {
+        return this.splitType;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -326,6 +338,7 @@ public class RunVideoAnalysisRequest extends Request {
         private String originalSessionId; 
         private Double snapshotInterval; 
         private Integer splitInterval; 
+        private String splitType; 
         private String taskId; 
         private java.util.List<TextProcessTasks> textProcessTasks; 
         private VideoCaptionInfo videoCaptionInfo; 
@@ -356,6 +369,7 @@ public class RunVideoAnalysisRequest extends Request {
             this.originalSessionId = request.originalSessionId;
             this.snapshotInterval = request.snapshotInterval;
             this.splitInterval = request.splitInterval;
+            this.splitType = request.splitType;
             this.taskId = request.taskId;
             this.textProcessTasks = request.textProcessTasks;
             this.videoCaptionInfo = request.videoCaptionInfo;
@@ -496,6 +510,15 @@ public class RunVideoAnalysisRequest extends Request {
         public Builder splitInterval(Integer splitInterval) {
             this.putBodyParameter("splitInterval", splitInterval);
             this.splitInterval = splitInterval;
+            return this;
+        }
+
+        /**
+         * splitType.
+         */
+        public Builder splitType(String splitType) {
+            this.putBodyParameter("splitType", splitType);
+            this.splitType = splitType;
             return this;
         }
 

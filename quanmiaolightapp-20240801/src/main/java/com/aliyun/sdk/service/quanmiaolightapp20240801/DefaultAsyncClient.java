@@ -1027,4 +1027,22 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateVideoAnalysisTasks  UpdateVideoAnalysisTasksRequest
+     * @return UpdateVideoAnalysisTasksResponse
+     */
+    @Override
+    public CompletableFuture<UpdateVideoAnalysisTasksResponse> updateVideoAnalysisTasks(UpdateVideoAnalysisTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateVideoAnalysisTasks").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/quanmiao/lightapp/videoAnalysis/updateVideoAnalysisTasks").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateVideoAnalysisTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateVideoAnalysisTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }
