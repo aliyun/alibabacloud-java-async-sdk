@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
     /**
+     * @param request the request parameters of CreateKyuubiToken  CreateKyuubiTokenRequest
+     * @return CreateKyuubiTokenResponse
+     */
+    CompletableFuture<CreateKyuubiTokenResponse> createKyuubiToken(CreateKyuubiTokenRequest request);
+
+    /**
      * @param request the request parameters of CreateLivyCompute  CreateLivyComputeRequest
      * @return CreateLivyComputeResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateWorkspaceResponse
      */
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKyuubiToken  DeleteKyuubiTokenRequest
+     * @return DeleteKyuubiTokenResponse
+     */
+    CompletableFuture<DeleteKyuubiTokenResponse> deleteKyuubiToken(DeleteKyuubiTokenRequest request);
 
     /**
      * @param request the request parameters of DeleteLivyCompute  DeleteLivyComputeRequest
@@ -104,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
 
     /**
+     * @param request the request parameters of GetKyuubiToken  GetKyuubiTokenRequest
+     * @return GetKyuubiTokenResponse
+     */
+    CompletableFuture<GetKyuubiTokenResponse> getKyuubiToken(GetKyuubiTokenRequest request);
+
+    /**
      * @param request the request parameters of GetLivyCompute  GetLivyComputeRequest
      * @return GetLivyComputeResponse
      */
@@ -138,6 +156,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GrantRoleToUsersResponse
      */
     CompletableFuture<GrantRoleToUsersResponse> grantRoleToUsers(GrantRoleToUsersRequest request);
+
+    /**
+     * @param request the request parameters of ListCatalogs  ListCatalogsRequest
+     * @return ListCatalogsResponse
+     */
+    CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
+
+    /**
+     * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
+     * @return ListJobExecutorsResponse
+     */
+    CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request);
 
     /**
      * @param request the request parameters of ListJobRuns  ListJobRunsRequest
@@ -206,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSqlStatementContentsResponse> listSqlStatementContents(ListSqlStatementContentsRequest request);
 
     /**
+     * @param request the request parameters of ListTemplate  ListTemplateRequest
+     * @return ListTemplateResponse
+     */
+    CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaceQueues  ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
      */
@@ -264,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TerminateSqlStatementResponse
      */
     CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKyuubiToken  UpdateKyuubiTokenRequest
+     * @return UpdateKyuubiTokenResponse
+     */
+    CompletableFuture<UpdateKyuubiTokenResponse> updateKyuubiToken(UpdateKyuubiTokenRequest request);
 
     /**
      * @param request the request parameters of UpdateLivyCompute  UpdateLivyComputeRequest

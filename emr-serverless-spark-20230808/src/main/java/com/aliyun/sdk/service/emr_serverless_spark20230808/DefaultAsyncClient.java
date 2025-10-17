@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateKyuubiToken  CreateKyuubiTokenRequest
+     * @return CreateKyuubiTokenResponse
+     */
+    @Override
+    public CompletableFuture<CreateKyuubiTokenResponse> createKyuubiToken(CreateKyuubiTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateKyuubiToken").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/kyuubiService/{kyuubiServiceId}/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKyuubiTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKyuubiTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateLivyCompute  CreateLivyComputeRequest
      * @return CreateLivyComputeResponse
      */
@@ -178,6 +196,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteKyuubiToken  DeleteKyuubiTokenRequest
+     * @return DeleteKyuubiTokenResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKyuubiTokenResponse> deleteKyuubiToken(DeleteKyuubiTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteKyuubiToken").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/workspaces/{workspaceId}/kyuubiService/{kyuubiServiceId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKyuubiTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKyuubiTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -292,6 +328,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetKyuubiToken  GetKyuubiTokenRequest
+     * @return GetKyuubiTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetKyuubiTokenResponse> getKyuubiToken(GetKyuubiTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetKyuubiToken").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/kyuubiService/{kyuubiServiceId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKyuubiTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKyuubiTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetLivyCompute  GetLivyComputeRequest
      * @return GetLivyComputeResponse
      */
@@ -394,6 +448,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GrantRoleToUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCatalogs  ListCatalogsRequest
+     * @return ListCatalogsResponse
+     */
+    @Override
+    public CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListCatalogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/catalogs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCatalogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCatalogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
+     * @return ListJobExecutorsResponse
+     */
+    @Override
+    public CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobExecutors").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/jobRuns/{jobRunId}/executors").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobExecutorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobExecutorsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -598,6 +688,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTemplate  ListTemplateRequest
+     * @return ListTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTemplate").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/template/listing").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListWorkspaceQueues  ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
      */
@@ -772,6 +880,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TerminateSqlStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKyuubiToken  UpdateKyuubiTokenRequest
+     * @return UpdateKyuubiTokenResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKyuubiTokenResponse> updateKyuubiToken(UpdateKyuubiTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKyuubiToken").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/workspaces/{workspaceId}/kyuubiService/{kyuubiServiceId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKyuubiTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKyuubiTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

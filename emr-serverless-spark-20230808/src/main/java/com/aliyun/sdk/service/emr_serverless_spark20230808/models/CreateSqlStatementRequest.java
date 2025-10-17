@@ -41,6 +41,10 @@ public class CreateSqlStatementRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("sqlComputeId")
     private String sqlComputeId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskBizId")
+    private String taskBizId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
@@ -53,6 +57,7 @@ public class CreateSqlStatementRequest extends Request {
         this.defaultDatabase = builder.defaultDatabase;
         this.limit = builder.limit;
         this.sqlComputeId = builder.sqlComputeId;
+        this.taskBizId = builder.taskBizId;
         this.regionId = builder.regionId;
     }
 
@@ -112,6 +117,13 @@ public class CreateSqlStatementRequest extends Request {
     }
 
     /**
+     * @return taskBizId
+     */
+    public String getTaskBizId() {
+        return this.taskBizId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -125,6 +137,7 @@ public class CreateSqlStatementRequest extends Request {
         private String defaultDatabase; 
         private Integer limit; 
         private String sqlComputeId; 
+        private String taskBizId; 
         private String regionId; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class CreateSqlStatementRequest extends Request {
             this.defaultDatabase = request.defaultDatabase;
             this.limit = request.limit;
             this.sqlComputeId = request.sqlComputeId;
+            this.taskBizId = request.taskBizId;
             this.regionId = request.regionId;
         } 
 
@@ -211,6 +225,15 @@ public class CreateSqlStatementRequest extends Request {
         public Builder sqlComputeId(String sqlComputeId) {
             this.putBodyParameter("sqlComputeId", sqlComputeId);
             this.sqlComputeId = sqlComputeId;
+            return this;
+        }
+
+        /**
+         * taskBizId.
+         */
+        public Builder taskBizId(String taskBizId) {
+            this.putBodyParameter("taskBizId", taskBizId);
+            this.taskBizId = taskBizId;
             return this;
         }
 
