@@ -63,8 +63,16 @@ public class GetLogRequest extends Request {
     private Boolean reverse;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleTime")
+    private Long scheduleTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkerAddr")
+    private String workerAddr;
 
     private GetLogRequest(Builder builder) {
         super(builder);
@@ -79,7 +87,9 @@ public class GetLogRequest extends Request {
         this.logId = builder.logId;
         this.offset = builder.offset;
         this.reverse = builder.reverse;
+        this.scheduleTime = builder.scheduleTime;
         this.startTime = builder.startTime;
+        this.workerAddr = builder.workerAddr;
     }
 
     public static Builder builder() {
@@ -173,10 +183,24 @@ public class GetLogRequest extends Request {
     }
 
     /**
+     * @return scheduleTime
+     */
+    public Long getScheduleTime() {
+        return this.scheduleTime;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    /**
+     * @return workerAddr
+     */
+    public String getWorkerAddr() {
+        return this.workerAddr;
     }
 
     public static final class Builder extends Request.Builder<GetLogRequest, Builder> {
@@ -191,7 +215,9 @@ public class GetLogRequest extends Request {
         private Long logId; 
         private Integer offset; 
         private Boolean reverse; 
+        private Long scheduleTime; 
         private Long startTime; 
+        private String workerAddr; 
 
         private Builder() {
             super();
@@ -210,7 +236,9 @@ public class GetLogRequest extends Request {
             this.logId = request.logId;
             this.offset = request.offset;
             this.reverse = request.reverse;
+            this.scheduleTime = request.scheduleTime;
             this.startTime = request.startTime;
+            this.workerAddr = request.workerAddr;
         } 
 
         /**
@@ -319,11 +347,29 @@ public class GetLogRequest extends Request {
         }
 
         /**
+         * ScheduleTime.
+         */
+        public Builder scheduleTime(Long scheduleTime) {
+            this.putQueryParameter("ScheduleTime", scheduleTime);
+            this.scheduleTime = scheduleTime;
+            return this;
+        }
+
+        /**
          * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * WorkerAddr.
+         */
+        public Builder workerAddr(String workerAddr) {
+            this.putQueryParameter("WorkerAddr", workerAddr);
+            this.workerAddr = workerAddr;
             return this;
         }
 
