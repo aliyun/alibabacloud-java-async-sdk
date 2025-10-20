@@ -155,6 +155,9 @@ public class ListDomainsResponseBody extends TeaModel {
      * <p>ListDomainsResponseBody</p>
      */
     public static class Domains extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BrandId")
+        private String brandId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -183,6 +186,7 @@ public class ListDomainsResponseBody extends TeaModel {
         private Long updateTime;
 
         private Domains(Builder builder) {
+            this.brandId = builder.brandId;
             this.createTime = builder.createTime;
             this.defaultDomain = builder.defaultDomain;
             this.domain = builder.domain;
@@ -200,6 +204,13 @@ public class ListDomainsResponseBody extends TeaModel {
 
         public static Domains create() {
             return builder().build();
+        }
+
+        /**
+         * @return brandId
+         */
+        public String getBrandId() {
+            return this.brandId;
         }
 
         /**
@@ -266,6 +277,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String brandId; 
             private Long createTime; 
             private Boolean defaultDomain; 
             private String domain; 
@@ -280,6 +292,7 @@ public class ListDomainsResponseBody extends TeaModel {
             } 
 
             private Builder(Domains model) {
+                this.brandId = model.brandId;
                 this.createTime = model.createTime;
                 this.defaultDomain = model.defaultDomain;
                 this.domain = model.domain;
@@ -290,6 +303,14 @@ public class ListDomainsResponseBody extends TeaModel {
                 this.lockMode = model.lockMode;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * BrandId.
+             */
+            public Builder brandId(String brandId) {
+                this.brandId = brandId;
+                return this;
+            }
 
             /**
              * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

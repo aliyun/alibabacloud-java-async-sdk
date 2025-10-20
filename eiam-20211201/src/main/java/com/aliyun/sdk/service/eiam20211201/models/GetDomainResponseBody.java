@@ -153,6 +153,9 @@ public class GetDomainResponseBody extends TeaModel {
      * <p>GetDomainResponseBody</p>
      */
     public static class Domain extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BrandId")
+        private String brandId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -181,6 +184,7 @@ public class GetDomainResponseBody extends TeaModel {
         private Long updateTime;
 
         private Domain(Builder builder) {
+            this.brandId = builder.brandId;
             this.createTime = builder.createTime;
             this.defaultDomain = builder.defaultDomain;
             this.domain = builder.domain;
@@ -198,6 +202,13 @@ public class GetDomainResponseBody extends TeaModel {
 
         public static Domain create() {
             return builder().build();
+        }
+
+        /**
+         * @return brandId
+         */
+        public String getBrandId() {
+            return this.brandId;
         }
 
         /**
@@ -264,6 +275,7 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String brandId; 
             private Long createTime; 
             private Boolean defaultDomain; 
             private String domain; 
@@ -278,6 +290,7 @@ public class GetDomainResponseBody extends TeaModel {
             } 
 
             private Builder(Domain model) {
+                this.brandId = model.brandId;
                 this.createTime = model.createTime;
                 this.defaultDomain = model.defaultDomain;
                 this.domain = model.domain;
@@ -288,6 +301,14 @@ public class GetDomainResponseBody extends TeaModel {
                 this.lockMode = model.lockMode;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * BrandId.
+             */
+            public Builder brandId(String brandId) {
+                this.brandId = brandId;
+                return this;
+            }
 
             /**
              * <p>The start time when the change order was created.</p>

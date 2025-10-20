@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddApplicationAccountToUser  AddApplicationAccountToUserRequest
+     * @return AddApplicationAccountToUserResponse
+     */
+    CompletableFuture<AddApplicationAccountToUserResponse> addApplicationAccountToUser(AddApplicationAccountToUserRequest request);
+
+    /**
      * @param request the request parameters of AddUserToOrganizationalUnits  AddUserToOrganizationalUnitsRequest
      * @return AddUserToOrganizationalUnitsResponse
      */
@@ -65,6 +71,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationClientSecretResponse> createApplicationClientSecret(CreateApplicationClientSecretRequest request);
 
     /**
+     * @param request the request parameters of CreateApplicationFederatedCredential  CreateApplicationFederatedCredentialRequest
+     * @return CreateApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<CreateApplicationFederatedCredentialResponse> createApplicationFederatedCredential(CreateApplicationFederatedCredentialRequest request);
+
+    /**
+     * @param request the request parameters of CreateApplicationToken  CreateApplicationTokenRequest
+     * @return CreateApplicationTokenResponse
+     */
+    CompletableFuture<CreateApplicationTokenResponse> createApplicationToken(CreateApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of CreateBrand  CreateBrandRequest
+     * @return CreateBrandResponse
+     */
+    CompletableFuture<CreateBrandResponse> createBrand(CreateBrandRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Create Conditional Access Policy</p>
      * 
@@ -84,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDomainProxyTokenResponse
      */
     CompletableFuture<CreateDomainProxyTokenResponse> createDomainProxyToken(CreateDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of CreateFederatedCredentialProvider  CreateFederatedCredentialProviderRequest
+     * @return CreateFederatedCredentialProviderResponse
+     */
+    CompletableFuture<CreateFederatedCredentialProviderResponse> createFederatedCredentialProvider(CreateFederatedCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of CreateGroup  CreateGroupRequest
@@ -108,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateNetworkAccessEndpointResponse
      */
     CompletableFuture<CreateNetworkAccessEndpointResponse> createNetworkAccessEndpoint(CreateNetworkAccessEndpointRequest request);
+
+    /**
+     * @param request the request parameters of CreateNetworkZone  CreateNetworkZoneRequest
+     * @return CreateNetworkZoneResponse
+     */
+    CompletableFuture<CreateNetworkZoneResponse> createNetworkZone(CreateNetworkZoneRequest request);
 
     /**
      * @param request the request parameters of CreateOrganizationalUnit  CreateOrganizationalUnitRequest
@@ -137,6 +173,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApplicationClientSecretResponse> deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request);
 
     /**
+     * @param request the request parameters of DeleteApplicationFederatedCredential  DeleteApplicationFederatedCredentialRequest
+     * @return DeleteApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<DeleteApplicationFederatedCredentialResponse> deleteApplicationFederatedCredential(DeleteApplicationFederatedCredentialRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApplicationToken  DeleteApplicationTokenRequest
+     * @return DeleteApplicationTokenResponse
+     */
+    CompletableFuture<DeleteApplicationTokenResponse> deleteApplicationToken(DeleteApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBrand  DeleteBrandRequest
+     * @return DeleteBrandResponse
+     */
+    CompletableFuture<DeleteBrandResponse> deleteBrand(DeleteBrandRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
      * 
@@ -156,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDomainProxyTokenResponse
      */
     CompletableFuture<DeleteDomainProxyTokenResponse> deleteDomainProxyToken(DeleteDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFederatedCredentialProvider  DeleteFederatedCredentialProviderRequest
+     * @return DeleteFederatedCredentialProviderResponse
+     */
+    CompletableFuture<DeleteFederatedCredentialProviderResponse> deleteFederatedCredentialProvider(DeleteFederatedCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
@@ -183,6 +243,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNetworkAccessEndpointResponse
      */
     CompletableFuture<DeleteNetworkAccessEndpointResponse> deleteNetworkAccessEndpoint(DeleteNetworkAccessEndpointRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNetworkZone  DeleteNetworkZoneRequest
+     * @return DeleteNetworkZoneResponse
+     */
+    CompletableFuture<DeleteNetworkZoneResponse> deleteNetworkZone(DeleteNetworkZoneRequest request);
 
     /**
      * @param request the request parameters of DeleteOrganizationalUnit  DeleteOrganizationalUnitRequest
@@ -224,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationClientSecretResponse> disableApplicationClientSecret(DisableApplicationClientSecretRequest request);
 
     /**
+     * @param request the request parameters of DisableApplicationFederatedCredential  DisableApplicationFederatedCredentialRequest
+     * @return DisableApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<DisableApplicationFederatedCredentialResponse> disableApplicationFederatedCredential(DisableApplicationFederatedCredentialRequest request);
+
+    /**
      * @param request the request parameters of DisableApplicationProvisioning  DisableApplicationProvisioningRequest
      * @return DisableApplicationProvisioningResponse
      */
@@ -234,6 +306,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableApplicationSsoResponse
      */
     CompletableFuture<DisableApplicationSsoResponse> disableApplicationSso(DisableApplicationSsoRequest request);
+
+    /**
+     * @param request the request parameters of DisableApplicationToken  DisableApplicationTokenRequest
+     * @return DisableApplicationTokenResponse
+     */
+    CompletableFuture<DisableApplicationTokenResponse> disableApplicationToken(DisableApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of DisableBrand  DisableBrandRequest
+     * @return DisableBrandResponse
+     */
+    CompletableFuture<DisableBrandResponse> disableBrand(DisableBrandRequest request);
 
     /**
      * <b>description</b> :
@@ -249,6 +333,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableDomainProxyTokenResponse
      */
     CompletableFuture<DisableDomainProxyTokenResponse> disableDomainProxyToken(DisableDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of DisableFederatedCredentialProvider  DisableFederatedCredentialProviderRequest
+     * @return DisableFederatedCredentialProviderResponse
+     */
+    CompletableFuture<DisableFederatedCredentialProviderResponse> disableFederatedCredentialProvider(DisableFederatedCredentialProviderRequest request);
+
+    /**
+     * @param request the request parameters of DisableIdentityProviderAuthn  DisableIdentityProviderAuthnRequest
+     * @return DisableIdentityProviderAuthnResponse
+     */
+    CompletableFuture<DisableIdentityProviderAuthnResponse> disableIdentityProviderAuthn(DisableIdentityProviderAuthnRequest request);
 
     /**
      * @param request the request parameters of DisableIdentityProviderUdPull  DisableIdentityProviderUdPullRequest
@@ -287,6 +383,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableApplicationClientSecretResponse> enableApplicationClientSecret(EnableApplicationClientSecretRequest request);
 
     /**
+     * @param request the request parameters of EnableApplicationFederatedCredential  EnableApplicationFederatedCredentialRequest
+     * @return EnableApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<EnableApplicationFederatedCredentialResponse> enableApplicationFederatedCredential(EnableApplicationFederatedCredentialRequest request);
+
+    /**
      * @param request the request parameters of EnableApplicationProvisioning  EnableApplicationProvisioningRequest
      * @return EnableApplicationProvisioningResponse
      */
@@ -297,6 +399,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableApplicationSsoResponse
      */
     CompletableFuture<EnableApplicationSsoResponse> enableApplicationSso(EnableApplicationSsoRequest request);
+
+    /**
+     * @param request the request parameters of EnableApplicationToken  EnableApplicationTokenRequest
+     * @return EnableApplicationTokenResponse
+     */
+    CompletableFuture<EnableApplicationTokenResponse> enableApplicationToken(EnableApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of EnableBrand  EnableBrandRequest
+     * @return EnableBrandResponse
+     */
+    CompletableFuture<EnableBrandResponse> enableBrand(EnableBrandRequest request);
 
     /**
      * <b>description</b> :
@@ -312,6 +426,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableDomainProxyTokenResponse
      */
     CompletableFuture<EnableDomainProxyTokenResponse> enableDomainProxyToken(EnableDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of EnableFederatedCredentialProvider  EnableFederatedCredentialProviderRequest
+     * @return EnableFederatedCredentialProviderResponse
+     */
+    CompletableFuture<EnableFederatedCredentialProviderResponse> enableFederatedCredentialProvider(EnableFederatedCredentialProviderRequest request);
+
+    /**
+     * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
+     * @return EnableIdentityProviderAuthnResponse
+     */
+    CompletableFuture<EnableIdentityProviderAuthnResponse> enableIdentityProviderAuthn(EnableIdentityProviderAuthnRequest request);
 
     /**
      * @param request the request parameters of EnableIdentityProviderUdPull  EnableIdentityProviderUdPullRequest
@@ -338,6 +464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationFederatedCredential  GetApplicationFederatedCredentialRequest
+     * @return GetApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<GetApplicationFederatedCredentialResponse> getApplicationFederatedCredential(GetApplicationFederatedCredentialRequest request);
+
+    /**
      * @param request the request parameters of GetApplicationGrantScope  GetApplicationGrantScopeRequest
      * @return GetApplicationGrantScopeResponse
      */
@@ -362,6 +494,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationSsoConfigResponse> getApplicationSsoConfig(GetApplicationSsoConfigRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationTemplate  GetApplicationTemplateRequest
+     * @return GetApplicationTemplateResponse
+     */
+    CompletableFuture<GetApplicationTemplateResponse> getApplicationTemplate(GetApplicationTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetBrand  GetBrandRequest
+     * @return GetBrandResponse
+     */
+    CompletableFuture<GetBrandResponse> getBrand(GetBrandRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Query Conditional Access Policy</p>
      * 
@@ -381,6 +525,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDomainDnsChallengeResponse
      */
     CompletableFuture<GetDomainDnsChallengeResponse> getDomainDnsChallenge(GetDomainDnsChallengeRequest request);
+
+    /**
+     * @param request the request parameters of GetFederatedCredentialProvider  GetFederatedCredentialProviderRequest
+     * @return GetFederatedCredentialProviderResponse
+     */
+    CompletableFuture<GetFederatedCredentialProviderResponse> getFederatedCredentialProvider(GetFederatedCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of GetForgetPasswordConfiguration  GetForgetPasswordConfigurationRequest
@@ -422,10 +572,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceLicenseResponse> getInstanceLicense(GetInstanceLicenseRequest request);
 
     /**
+     * @param request the request parameters of GetLoginRedirectApplicationForBrand  GetLoginRedirectApplicationForBrandRequest
+     * @return GetLoginRedirectApplicationForBrandResponse
+     */
+    CompletableFuture<GetLoginRedirectApplicationForBrandResponse> getLoginRedirectApplicationForBrand(GetLoginRedirectApplicationForBrandRequest request);
+
+    /**
      * @param request the request parameters of GetNetworkAccessEndpoint  GetNetworkAccessEndpointRequest
      * @return GetNetworkAccessEndpointResponse
      */
     CompletableFuture<GetNetworkAccessEndpointResponse> getNetworkAccessEndpoint(GetNetworkAccessEndpointRequest request);
+
+    /**
+     * @param request the request parameters of GetNetworkZone  GetNetworkZoneRequest
+     * @return GetNetworkZoneResponse
+     */
+    CompletableFuture<GetNetworkZoneResponse> getNetworkZone(GetNetworkZoneRequest request);
 
     /**
      * @param request the request parameters of GetOrganizationalUnit  GetOrganizationalUnitRequest
@@ -476,16 +638,70 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     /**
+     * @param request the request parameters of ListApplicationAccounts  ListApplicationAccountsRequest
+     * @return ListApplicationAccountsResponse
+     */
+    CompletableFuture<ListApplicationAccountsResponse> listApplicationAccounts(ListApplicationAccountsRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationAccountsForUser  ListApplicationAccountsForUserRequest
+     * @return ListApplicationAccountsForUserResponse
+     */
+    CompletableFuture<ListApplicationAccountsForUserResponse> listApplicationAccountsForUser(ListApplicationAccountsForUserRequest request);
+
+    /**
      * @param request the request parameters of ListApplicationClientSecrets  ListApplicationClientSecretsRequest
      * @return ListApplicationClientSecretsResponse
      */
     CompletableFuture<ListApplicationClientSecretsResponse> listApplicationClientSecrets(ListApplicationClientSecretsRequest request);
 
     /**
+     * @param request the request parameters of ListApplicationFederatedCredentials  ListApplicationFederatedCredentialsRequest
+     * @return ListApplicationFederatedCredentialsResponse
+     */
+    CompletableFuture<ListApplicationFederatedCredentialsResponse> listApplicationFederatedCredentials(ListApplicationFederatedCredentialsRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationFederatedCredentialsForProvider  ListApplicationFederatedCredentialsForProviderRequest
+     * @return ListApplicationFederatedCredentialsForProviderResponse
+     */
+    CompletableFuture<ListApplicationFederatedCredentialsForProviderResponse> listApplicationFederatedCredentialsForProvider(ListApplicationFederatedCredentialsForProviderRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationSupportedProvisionProtocolTypes  ListApplicationSupportedProvisionProtocolTypesRequest
+     * @return ListApplicationSupportedProvisionProtocolTypesResponse
+     */
+    CompletableFuture<ListApplicationSupportedProvisionProtocolTypesResponse> listApplicationSupportedProvisionProtocolTypes(ListApplicationSupportedProvisionProtocolTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationTokens  ListApplicationTokensRequest
+     * @return ListApplicationTokensResponse
+     */
+    CompletableFuture<ListApplicationTokensResponse> listApplicationTokens(ListApplicationTokensRequest request);
+
+    /**
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse
      */
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationsForGroup  ListApplicationsForGroupRequest
+     * @return ListApplicationsForGroupResponse
+     */
+    CompletableFuture<ListApplicationsForGroupResponse> listApplicationsForGroup(ListApplicationsForGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationsForNetworkAccessEndpoint  ListApplicationsForNetworkAccessEndpointRequest
+     * @return ListApplicationsForNetworkAccessEndpointResponse
+     */
+    CompletableFuture<ListApplicationsForNetworkAccessEndpointResponse> listApplicationsForNetworkAccessEndpoint(ListApplicationsForNetworkAccessEndpointRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationsForNetworkZone  ListApplicationsForNetworkZoneRequest
+     * @return ListApplicationsForNetworkZoneResponse
+     */
+    CompletableFuture<ListApplicationsForNetworkZoneResponse> listApplicationsForNetworkZone(ListApplicationsForNetworkZoneRequest request);
 
     /**
      * <b>description</b> :
@@ -503,6 +719,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request);
 
     /**
+     * @param request the request parameters of ListBrands  ListBrandsRequest
+     * @return ListBrandsResponse
+     */
+    CompletableFuture<ListBrandsResponse> listBrands(ListBrandsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Paginated query for the list of conditional access policies</p>
      * 
@@ -512,6 +734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConditionalAccessPoliciesResponse> listConditionalAccessPolicies(ListConditionalAccessPoliciesRequest request);
 
     /**
+     * @param request the request parameters of ListConditionalAccessPoliciesForApplication  ListConditionalAccessPoliciesForApplicationRequest
+     * @return ListConditionalAccessPoliciesForApplicationResponse
+     */
+    CompletableFuture<ListConditionalAccessPoliciesForApplicationResponse> listConditionalAccessPoliciesForApplication(ListConditionalAccessPoliciesForApplicationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>List Conditional Access Policies Associated with Network Zones</p>
      * 
@@ -519,6 +747,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConditionalAccessPoliciesForNetworkZoneResponse
      */
     CompletableFuture<ListConditionalAccessPoliciesForNetworkZoneResponse> listConditionalAccessPoliciesForNetworkZone(ListConditionalAccessPoliciesForNetworkZoneRequest request);
+
+    /**
+     * @param request the request parameters of ListConditionalAccessPoliciesForUser  ListConditionalAccessPoliciesForUserRequest
+     * @return ListConditionalAccessPoliciesForUserResponse
+     */
+    CompletableFuture<ListConditionalAccessPoliciesForUserResponse> listConditionalAccessPoliciesForUser(ListConditionalAccessPoliciesForUserRequest request);
 
     /**
      * @param request the request parameters of ListDomainProxyTokens  ListDomainProxyTokensRequest
@@ -545,6 +779,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEiamRegionsResponse> listEiamRegions(ListEiamRegionsRequest request);
 
     /**
+     * @param request the request parameters of ListFederatedCredentialProviders  ListFederatedCredentialProvidersRequest
+     * @return ListFederatedCredentialProvidersResponse
+     */
+    CompletableFuture<ListFederatedCredentialProvidersResponse> listFederatedCredentialProviders(ListFederatedCredentialProvidersRequest request);
+
+    /**
      * @param request the request parameters of ListGroups  ListGroupsRequest
      * @return ListGroupsResponse
      */
@@ -567,6 +807,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIdentityProvidersResponse
      */
     CompletableFuture<ListIdentityProvidersResponse> listIdentityProviders(ListIdentityProvidersRequest request);
+
+    /**
+     * @param request the request parameters of ListIdentityProvidersForNetworkAccessEndpoint  ListIdentityProvidersForNetworkAccessEndpointRequest
+     * @return ListIdentityProvidersForNetworkAccessEndpointResponse
+     */
+    CompletableFuture<ListIdentityProvidersForNetworkAccessEndpointResponse> listIdentityProvidersForNetworkAccessEndpoint(ListIdentityProvidersForNetworkAccessEndpointRequest request);
 
     /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -597,6 +843,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNetworkAccessPathsResponse
      */
     CompletableFuture<ListNetworkAccessPathsResponse> listNetworkAccessPaths(ListNetworkAccessPathsRequest request);
+
+    /**
+     * @param request the request parameters of ListNetworkZones  ListNetworkZonesRequest
+     * @return ListNetworkZonesResponse
+     */
+    CompletableFuture<ListNetworkZonesResponse> listNetworkZones(ListNetworkZonesRequest request);
 
     /**
      * @param request the request parameters of ListOrganizationalUnitParents  ListOrganizationalUnitParentsRequest
@@ -653,10 +905,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ObtainApplicationClientSecretResponse> obtainApplicationClientSecret(ObtainApplicationClientSecretRequest request);
 
     /**
+     * @param request the request parameters of ObtainApplicationToken  ObtainApplicationTokenRequest
+     * @return ObtainApplicationTokenResponse
+     */
+    CompletableFuture<ObtainApplicationTokenResponse> obtainApplicationToken(ObtainApplicationTokenRequest request);
+
+    /**
      * @param request the request parameters of ObtainDomainProxyToken  ObtainDomainProxyTokenRequest
      * @return ObtainDomainProxyTokenResponse
      */
     CompletableFuture<ObtainDomainProxyTokenResponse> obtainDomainProxyToken(ObtainDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of RemoveApplicationAccountFromUser  RemoveApplicationAccountFromUserRequest
+     * @return RemoveApplicationAccountFromUserResponse
+     */
+    CompletableFuture<RemoveApplicationAccountFromUserResponse> removeApplicationAccountFromUser(RemoveApplicationAccountFromUserRequest request);
 
     /**
      * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
@@ -740,6 +1004,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetIdentityProviderUdPullConfigurationResponse> setIdentityProviderUdPullConfiguration(SetIdentityProviderUdPullConfigurationRequest request);
 
     /**
+     * @param request the request parameters of SetLoginRedirectApplicationForBrand  SetLoginRedirectApplicationForBrandRequest
+     * @return SetLoginRedirectApplicationForBrandResponse
+     */
+    CompletableFuture<SetLoginRedirectApplicationForBrandResponse> setLoginRedirectApplicationForBrand(SetLoginRedirectApplicationForBrandRequest request);
+
+    /**
      * @param request the request parameters of SetPasswordComplexityConfiguration  SetPasswordComplexityConfigurationRequest
      * @return SetPasswordComplexityConfigurationResponse
      */
@@ -794,6 +1064,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request);
 
     /**
+     * @param request the request parameters of UpdateApplicationFederatedCredential  UpdateApplicationFederatedCredentialRequest
+     * @return UpdateApplicationFederatedCredentialResponse
+     */
+    CompletableFuture<UpdateApplicationFederatedCredentialResponse> updateApplicationFederatedCredential(UpdateApplicationFederatedCredentialRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApplicationFederatedCredentialDescription  UpdateApplicationFederatedCredentialDescriptionRequest
+     * @return UpdateApplicationFederatedCredentialDescriptionResponse
+     */
+    CompletableFuture<UpdateApplicationFederatedCredentialDescriptionResponse> updateApplicationFederatedCredentialDescription(UpdateApplicationFederatedCredentialDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApplicationInfo  UpdateApplicationInfoRequest
+     * @return UpdateApplicationInfoResponse
+     */
+    CompletableFuture<UpdateApplicationInfoResponse> updateApplicationInfo(UpdateApplicationInfoRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApplicationTokenExpirationTime  UpdateApplicationTokenExpirationTimeRequest
+     * @return UpdateApplicationTokenExpirationTimeResponse
+     */
+    CompletableFuture<UpdateApplicationTokenExpirationTimeResponse> updateApplicationTokenExpirationTime(UpdateApplicationTokenExpirationTimeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBrand  UpdateBrandRequest
+     * @return UpdateBrandResponse
+     */
+    CompletableFuture<UpdateBrandResponse> updateBrand(UpdateBrandRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Update Conditional Access Policy</p>
      * 
@@ -810,6 +1110,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConditionalAccessPolicyDescriptionResponse
      */
     CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDomainBrand  UpdateDomainBrandRequest
+     * @return UpdateDomainBrandResponse
+     */
+    CompletableFuture<UpdateDomainBrandResponse> updateDomainBrand(UpdateDomainBrandRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDomainIcpNumber  UpdateDomainIcpNumberRequest
+     * @return UpdateDomainIcpNumberResponse
+     */
+    CompletableFuture<UpdateDomainIcpNumberResponse> updateDomainIcpNumber(UpdateDomainIcpNumberRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFederatedCredentialProvider  UpdateFederatedCredentialProviderRequest
+     * @return UpdateFederatedCredentialProviderResponse
+     */
+    CompletableFuture<UpdateFederatedCredentialProviderResponse> updateFederatedCredentialProvider(UpdateFederatedCredentialProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFederatedCredentialProviderDescription  UpdateFederatedCredentialProviderDescriptionRequest
+     * @return UpdateFederatedCredentialProviderDescriptionResponse
+     */
+    CompletableFuture<UpdateFederatedCredentialProviderDescriptionResponse> updateFederatedCredentialProviderDescription(UpdateFederatedCredentialProviderDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateGroup  UpdateGroupRequest
@@ -840,6 +1164,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateNetworkAccessEndpointNameResponse
      */
     CompletableFuture<UpdateNetworkAccessEndpointNameResponse> updateNetworkAccessEndpointName(UpdateNetworkAccessEndpointNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNetworkZone  UpdateNetworkZoneRequest
+     * @return UpdateNetworkZoneResponse
+     */
+    CompletableFuture<UpdateNetworkZoneResponse> updateNetworkZone(UpdateNetworkZoneRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNetworkZoneDescription  UpdateNetworkZoneDescriptionRequest
+     * @return UpdateNetworkZoneDescriptionResponse
+     */
+    CompletableFuture<UpdateNetworkZoneDescriptionResponse> updateNetworkZoneDescription(UpdateNetworkZoneDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateOrganizationalUnit  UpdateOrganizationalUnitRequest
