@@ -83,6 +83,10 @@ public class CreateWuyingServerRequest extends Request {
     private String serverInstanceType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerPortRange")
+    private String serverPortRange;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
     private String systemDiskCategory;
 
@@ -124,6 +128,7 @@ public class CreateWuyingServerRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.serverInstanceType = builder.serverInstanceType;
+        this.serverPortRange = builder.serverPortRange;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
         this.systemDiskSize = builder.systemDiskSize;
@@ -258,6 +263,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return serverPortRange
+     */
+    public String getServerPortRange() {
+        return this.serverPortRange;
+    }
+
+    /**
      * @return systemDiskCategory
      */
     public String getSystemDiskCategory() {
@@ -316,6 +328,7 @@ public class CreateWuyingServerRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String serverInstanceType; 
+        private String serverPortRange; 
         private String systemDiskCategory; 
         private String systemDiskPerformanceLevel; 
         private Integer systemDiskSize; 
@@ -345,6 +358,7 @@ public class CreateWuyingServerRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.serverInstanceType = request.serverInstanceType;
+            this.serverPortRange = request.serverPortRange;
             this.systemDiskCategory = request.systemDiskCategory;
             this.systemDiskPerformanceLevel = request.systemDiskPerformanceLevel;
             this.systemDiskSize = request.systemDiskSize;
@@ -494,6 +508,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder serverInstanceType(String serverInstanceType) {
             this.putBodyParameter("ServerInstanceType", serverInstanceType);
             this.serverInstanceType = serverInstanceType;
+            return this;
+        }
+
+        /**
+         * ServerPortRange.
+         */
+        public Builder serverPortRange(String serverPortRange) {
+            this.putBodyParameter("ServerPortRange", serverPortRange);
+            this.serverPortRange = serverPortRange;
             return this;
         }
 

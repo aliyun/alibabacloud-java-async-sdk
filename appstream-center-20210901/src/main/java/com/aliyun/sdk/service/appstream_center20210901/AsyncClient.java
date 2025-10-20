@@ -76,6 +76,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppInstancesResponse> deleteAppInstances(DeleteAppInstancesRequest request);
 
     /**
+     * @param request the request parameters of DeleteImage  DeleteImageRequest
+     * @return DeleteImageResponse
+     */
+    CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
+
+    /**
      * @param request the request parameters of DeleteWuyingServer  DeleteWuyingServerRequest
      * @return DeleteWuyingServerResponse
      */
@@ -293,6 +299,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartWuyingServerResponse
      */
     CompletableFuture<RestartWuyingServerResponse> restartWuyingServer(RestartWuyingServerRequest request);
+
+    /**
+     * @param request the request parameters of StartTaskForDistributeImage  StartTaskForDistributeImageRequest
+     * @return StartTaskForDistributeImageResponse
+     */
+    CompletableFuture<StartTaskForDistributeImageResponse> startTaskForDistributeImage(StartTaskForDistributeImageRequest request);
 
     /**
      * @param request the request parameters of StartWuyingServer  StartWuyingServerRequest
