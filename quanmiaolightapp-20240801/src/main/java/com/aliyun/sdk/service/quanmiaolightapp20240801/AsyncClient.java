@@ -80,6 +80,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoAnalysisTaskResponse> getVideoAnalysisTask(GetVideoAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of GetVideoDetectShotConfig  GetVideoDetectShotConfigRequest
+     * @return GetVideoDetectShotConfigResponse
+     */
+    CompletableFuture<GetVideoDetectShotConfigResponse> getVideoDetectShotConfig(GetVideoDetectShotConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoDetectShotTask  GetVideoDetectShotTaskRequest
+     * @return GetVideoDetectShotTaskResponse
+     */
+    CompletableFuture<GetVideoDetectShotTaskResponse> getVideoDetectShotTask(GetVideoDetectShotTaskRequest request);
+
+    /**
      * @param request the request parameters of HotNewsRecommend  HotNewsRecommendRequest
      * @return HotNewsRecommendResponse
      */
@@ -248,6 +260,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunVideoAnalysisResponseBody> runVideoAnalysisWithResponseIterable(RunVideoAnalysisRequest request);
 
     /**
+     * @param request the request parameters of RunVideoDetectShot  RunVideoDetectShotRequest
+     * @return RunVideoDetectShotResponse
+     */
+    CompletableFuture<RunVideoDetectShotResponse> runVideoDetectShot(RunVideoDetectShotRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runVideoDetectShotWithAsyncResponseHandler(RunVideoDetectShotRequest request, AsyncResponseHandler<RunVideoDetectShotResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunVideoDetectShotResponseBody> runVideoDetectShotWithResponseIterable(RunVideoDetectShotRequest request);
+
+    /**
      * @param request the request parameters of SubmitEnterpriseVocAnalysisTask  SubmitEnterpriseVocAnalysisTaskRequest
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
@@ -272,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitVideoAnalysisTaskResponse> submitVideoAnalysisTask(SubmitVideoAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of SubmitVideoDetectShotTask  SubmitVideoDetectShotTaskRequest
+     * @return SubmitVideoDetectShotTaskResponse
+     */
+    CompletableFuture<SubmitVideoDetectShotTaskResponse> submitVideoDetectShotTask(SubmitVideoDetectShotTaskRequest request);
+
+    /**
      * @param request the request parameters of UpdateVideoAnalysisConfig  UpdateVideoAnalysisConfigRequest
      * @return UpdateVideoAnalysisConfigResponse
      */
@@ -288,5 +316,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateVideoAnalysisTasksResponse
      */
     CompletableFuture<UpdateVideoAnalysisTasksResponse> updateVideoAnalysisTasks(UpdateVideoAnalysisTasksRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVideoDetectShotConfig  UpdateVideoDetectShotConfigRequest
+     * @return UpdateVideoDetectShotConfigResponse
+     */
+    CompletableFuture<UpdateVideoDetectShotConfigResponse> updateVideoDetectShotConfig(UpdateVideoDetectShotConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVideoDetectShotTask  UpdateVideoDetectShotTaskRequest
+     * @return UpdateVideoDetectShotTaskResponse
+     */
+    CompletableFuture<UpdateVideoDetectShotTaskResponse> updateVideoDetectShotTask(UpdateVideoDetectShotTaskRequest request);
 
 }

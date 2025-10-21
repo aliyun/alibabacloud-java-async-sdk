@@ -221,6 +221,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetVideoDetectShotConfig  GetVideoDetectShotConfigRequest
+     * @return GetVideoDetectShotConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoDetectShotConfigResponse> getVideoDetectShotConfig(GetVideoDetectShotConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVideoDetectShotConfig").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/quanmiao/lightapp/videoAnalysis/getVideoDetectShotConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoDetectShotConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoDetectShotConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVideoDetectShotTask  GetVideoDetectShotTaskRequest
+     * @return GetVideoDetectShotTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoDetectShotTaskResponse> getVideoDetectShotTask(GetVideoDetectShotTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVideoDetectShotTask").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/quanmiao/lightapp/getVideoDetectShotTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoDetectShotTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoDetectShotTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of HotNewsRecommend  HotNewsRecommendRequest
      * @return HotNewsRecommendResponse
      */
@@ -920,6 +956,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunVideoDetectShot  RunVideoDetectShotRequest
+     * @return RunVideoDetectShotResponse
+     */
+    @Override
+    public CompletableFuture<RunVideoDetectShotResponse> runVideoDetectShot(RunVideoDetectShotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunVideoDetectShot").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runVideoDetectShot").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunVideoDetectShotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunVideoDetectShotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runVideoDetectShotWithAsyncResponseHandler(RunVideoDetectShotRequest request, AsyncResponseHandler<RunVideoDetectShotResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunVideoDetectShot").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runVideoDetectShot").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunVideoDetectShotResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunVideoDetectShotResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunVideoDetectShotResponseBody> runVideoDetectShotWithResponseIterable(RunVideoDetectShotRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunVideoDetectShot").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runVideoDetectShot").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunVideoDetectShotResponseBodyIterator iterator = RunVideoDetectShotResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of SubmitEnterpriseVocAnalysisTask  SubmitEnterpriseVocAnalysisTaskRequest
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
@@ -992,6 +1071,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitVideoDetectShotTask  SubmitVideoDetectShotTaskRequest
+     * @return SubmitVideoDetectShotTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitVideoDetectShotTaskResponse> submitVideoDetectShotTask(SubmitVideoDetectShotTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitVideoDetectShotTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/submitVideoDetectShotTask").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitVideoDetectShotTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitVideoDetectShotTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateVideoAnalysisConfig  UpdateVideoAnalysisConfigRequest
      * @return UpdateVideoAnalysisConfigResponse
      */
@@ -1040,6 +1137,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateVideoAnalysisTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateVideoDetectShotConfig  UpdateVideoDetectShotConfigRequest
+     * @return UpdateVideoDetectShotConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateVideoDetectShotConfigResponse> updateVideoDetectShotConfig(UpdateVideoDetectShotConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateVideoDetectShotConfig").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/quanmiao/lightapp/videoAnalysis/updateVideoDetectShotConfig").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateVideoDetectShotConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateVideoDetectShotConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateVideoDetectShotTask  UpdateVideoDetectShotTaskRequest
+     * @return UpdateVideoDetectShotTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateVideoDetectShotTaskResponse> updateVideoDetectShotTask(UpdateVideoDetectShotTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateVideoDetectShotTask").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/quanmiao/lightapp/updateVideoDetectShotTask").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateVideoDetectShotTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateVideoDetectShotTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
