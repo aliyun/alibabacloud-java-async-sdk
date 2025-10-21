@@ -12,16 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SyncSensitiveWordResponseBody} extends {@link TeaModel}
+ * {@link UpdateWordGroupResponseBody} extends {@link TeaModel}
  *
- * <p>SyncSensitiveWordResponseBody</p>
+ * <p>UpdateWordGroupResponseBody</p>
  */
-public class SyncSensitiveWordResponseBody extends TeaModel {
+public class UpdateWordGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -35,20 +32,23 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SyncSensitiveWordResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("WordErrorInfoList")
+    private java.util.List<WordErrorInfoList> wordErrorInfoList;
+
+    private UpdateWordGroupResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.wordErrorInfoList = builder.wordErrorInfoList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SyncSensitiveWordResponseBody create() {
+    public static UpdateWordGroupResponseBody create() {
         return builder().build();
     }
 
@@ -61,13 +61,6 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
     }
 
     /**
@@ -98,28 +91,38 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return wordErrorInfoList
+     */
+    public java.util.List<WordErrorInfoList> getWordErrorInfoList() {
+        return this.wordErrorInfoList;
+    }
+
     public static final class Builder {
         private String code; 
-        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+        private java.util.List<WordErrorInfoList> wordErrorInfoList; 
 
         private Builder() {
         } 
 
-        private Builder(SyncSensitiveWordResponseBody model) {
+        private Builder(UpdateWordGroupResponseBody model) {
             this.code = model.code;
-            this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.wordErrorInfoList = model.wordErrorInfoList;
         } 
 
         /**
-         * Code.
+         * <p>Status code, 00000 indicates success; others indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,15 +130,10 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +141,10 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>If there is an error, return the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +152,10 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,31 +163,42 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether it was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public SyncSensitiveWordResponseBody build() {
-            return new SyncSensitiveWordResponseBody(this);
+        /**
+         * <p>List of error information.</p>
+         */
+        public Builder wordErrorInfoList(java.util.List<WordErrorInfoList> wordErrorInfoList) {
+            this.wordErrorInfoList = wordErrorInfoList;
+            return this;
+        }
+
+        public UpdateWordGroupResponseBody build() {
+            return new UpdateWordGroupResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SyncSensitiveWordResponseBody} extends {@link TeaModel}
+     * {@link UpdateWordGroupResponseBody} extends {@link TeaModel}
      *
-     * <p>SyncSensitiveWordResponseBody</p>
+     * <p>UpdateWordGroupResponseBody</p>
      */
-    public static class SensitiveWordErrorList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ErrMessage")
-        private String errMessage;
+    public static class WordErrorInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
 
-        @com.aliyun.core.annotation.NameInMap("ErrStatus")
-        private Integer errStatus;
+        @com.aliyun.core.annotation.NameInMap("ErrorStatus")
+        private Integer errorStatus;
 
         @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
@@ -194,9 +209,9 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
-        private SensitiveWordErrorList(Builder builder) {
-            this.errMessage = builder.errMessage;
-            this.errStatus = builder.errStatus;
+        private WordErrorInfoList(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.errorStatus = builder.errorStatus;
             this.index = builder.index;
             this.label = builder.label;
             this.word = builder.word;
@@ -206,22 +221,22 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SensitiveWordErrorList create() {
+        public static WordErrorInfoList create() {
             return builder().build();
         }
 
         /**
-         * @return errMessage
+         * @return errorMessage
          */
-        public String getErrMessage() {
-            return this.errMessage;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
-         * @return errStatus
+         * @return errorStatus
          */
-        public Integer getErrStatus() {
-            return this.errStatus;
+        public Integer getErrorStatus() {
+            return this.errorStatus;
         }
 
         /**
@@ -246,8 +261,8 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String errMessage; 
-            private Integer errStatus; 
+            private String errorMessage; 
+            private Integer errorStatus; 
             private Long index; 
             private String label; 
             private String word; 
@@ -255,32 +270,41 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SensitiveWordErrorList model) {
-                this.errMessage = model.errMessage;
-                this.errStatus = model.errStatus;
+            private Builder(WordErrorInfoList model) {
+                this.errorMessage = model.errorMessage;
+                this.errorStatus = model.errorStatus;
                 this.index = model.index;
                 this.label = model.label;
                 this.word = model.word;
             } 
 
             /**
-             * ErrMessage.
+             * <p>Error message description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Keyword can not be empty</p>
              */
-            public Builder errMessage(String errMessage) {
-                this.errMessage = errMessage;
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 
             /**
-             * ErrStatus.
+             * <p>Error status information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder errStatus(Integer errStatus) {
-                this.errStatus = errStatus;
+            public Builder errorStatus(Integer errorStatus) {
+                this.errorStatus = errorStatus;
                 return this;
             }
 
             /**
-             * Index.
+             * <p>Position of the error information in the array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -288,7 +312,10 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Buss.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -296,69 +323,18 @@ public class SyncSensitiveWordResponseBody extends TeaModel {
             }
 
             /**
-             * Word.
+             * <p>Keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Inv.</p>
              */
             public Builder word(String word) {
                 this.word = word;
                 return this;
             }
 
-            public SensitiveWordErrorList build() {
-                return new SensitiveWordErrorList(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link SyncSensitiveWordResponseBody} extends {@link TeaModel}
-     *
-     * <p>SyncSensitiveWordResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SensitiveWordErrorList")
-        private java.util.List<SensitiveWordErrorList> sensitiveWordErrorList;
-
-        private Data(Builder builder) {
-            this.sensitiveWordErrorList = builder.sensitiveWordErrorList;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sensitiveWordErrorList
-         */
-        public java.util.List<SensitiveWordErrorList> getSensitiveWordErrorList() {
-            return this.sensitiveWordErrorList;
-        }
-
-        public static final class Builder {
-            private java.util.List<SensitiveWordErrorList> sensitiveWordErrorList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.sensitiveWordErrorList = model.sensitiveWordErrorList;
-            } 
-
-            /**
-             * SensitiveWordErrorList.
-             */
-            public Builder sensitiveWordErrorList(java.util.List<SensitiveWordErrorList> sensitiveWordErrorList) {
-                this.sensitiveWordErrorList = sensitiveWordErrorList;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
+            public WordErrorInfoList build() {
+                return new WordErrorInfoList(this);
             } 
 
         } 

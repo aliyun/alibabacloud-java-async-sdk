@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SyncSensitiveWordResponse} extends {@link TeaModel}
+ * {@link CreateTopicResponse} extends {@link TeaModel}
  *
- * <p>SyncSensitiveWordResponse</p>
+ * <p>CreateTopicResponse</p>
  */
-public class SyncSensitiveWordResponse extends Response {
+public class CreateTopicResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class SyncSensitiveWordResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SyncSensitiveWordResponseBody body;
+    private CreateTopicResponseBody body;
 
-    private SyncSensitiveWordResponse(BuilderImpl builder) {
+    private CreateTopicResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SyncSensitiveWordResponse create() {
+    public static CreateTopicResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class SyncSensitiveWordResponse extends Response {
     /**
      * @return body
      */
-    public SyncSensitiveWordResponseBody getBody() {
+    public CreateTopicResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SyncSensitiveWordResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateTopicResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SyncSensitiveWordResponseBody body);
+        Builder body(CreateTopicResponseBody body);
 
         @Override
-        SyncSensitiveWordResponse build();
+        CreateTopicResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SyncSensitiveWordResponse, Builder>
+            extends Response.BuilderImpl<CreateTopicResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SyncSensitiveWordResponseBody body; 
+        private CreateTopicResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SyncSensitiveWordResponse response) {
+        private BuilderImpl(CreateTopicResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class SyncSensitiveWordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SyncSensitiveWordResponseBody body) {
+        public Builder body(CreateTopicResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SyncSensitiveWordResponse build() {
-            return new SyncSensitiveWordResponse(this);
+        public CreateTopicResponse build() {
+            return new CreateTopicResponse(this);
         } 
 
     } 

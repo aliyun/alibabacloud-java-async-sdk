@@ -12,30 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetModelOutputContentDetectResultRequest} extends {@link RequestModel}
+ * {@link DeleteTopicRequest} extends {@link RequestModel}
  *
- * <p>GetModelOutputContentDetectResultRequest</p>
+ * <p>DeleteTopicRequest</p>
  */
-public class GetModelOutputContentDetectResultRequest extends Request {
+public class DeleteTopicRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
+    @com.aliyun.core.annotation.NameInMap("TopicIdList")
+    private java.util.List<Long> topicIdList;
 
-    private GetModelOutputContentDetectResultRequest(Builder builder) {
+    private DeleteTopicRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.taskId = builder.taskId;
+        this.topicIdList = builder.topicIdList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetModelOutputContentDetectResultRequest create() {
+    public static DeleteTopicRequest create() {
         return builder().build();
     }
 
@@ -52,31 +52,28 @@ public class GetModelOutputContentDetectResultRequest extends Request {
     }
 
     /**
-     * @return taskId
+     * @return topicIdList
      */
-    public String getTaskId() {
-        return this.taskId;
+    public java.util.List<Long> getTopicIdList() {
+        return this.topicIdList;
     }
 
-    public static final class Builder extends Request.Builder<GetModelOutputContentDetectResultRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteTopicRequest, Builder> {
         private String regionId; 
-        private String taskId; 
+        private java.util.List<Long> topicIdList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetModelOutputContentDetectResultRequest request) {
+        private Builder(DeleteTopicRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.taskId = request.taskId;
+            this.topicIdList = request.topicIdList;
         } 
 
         /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -85,20 +82,18 @@ public class GetModelOutputContentDetectResultRequest extends Request {
         }
 
         /**
-         * <p>Task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
+         * TopicIdList.
          */
-        public Builder taskId(String taskId) {
-            this.putQueryParameter("TaskId", taskId);
-            this.taskId = taskId;
+        public Builder topicIdList(java.util.List<Long> topicIdList) {
+            String topicIdListShrink = shrink(topicIdList, "TopicIdList", "json");
+            this.putQueryParameter("TopicIdList", topicIdListShrink);
+            this.topicIdList = topicIdList;
             return this;
         }
 
         @Override
-        public GetModelOutputContentDetectResultRequest build() {
-            return new GetModelOutputContentDetectResultRequest(this);
+        public DeleteTopicRequest build() {
+            return new DeleteTopicRequest(this);
         } 
 
     } 

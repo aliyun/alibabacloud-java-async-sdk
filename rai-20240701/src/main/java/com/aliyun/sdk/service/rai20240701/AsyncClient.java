@@ -50,6 +50,54 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContentSyncDetectResponse> contentSyncDetect(ContentSyncDetectRequest request);
 
     /**
+     * @param request the request parameters of CreateModelInstance  CreateModelInstanceRequest
+     * @return CreateModelInstanceResponse
+     */
+    CompletableFuture<CreateModelInstanceResponse> createModelInstance(CreateModelInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolicy  CreatePolicyRequest
+     * @return CreatePolicyResponse
+     */
+    CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateTopic  CreateTopicRequest
+     * @return CreateTopicResponse
+     */
+    CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request);
+
+    /**
+     * @param request the request parameters of CreateWordGroup  CreateWordGroupRequest
+     * @return CreateWordGroupResponse
+     */
+    CompletableFuture<CreateWordGroupResponse> createWordGroup(CreateWordGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelInstance  DeleteModelInstanceRequest
+     * @return DeleteModelInstanceResponse
+     */
+    CompletableFuture<DeleteModelInstanceResponse> deleteModelInstance(DeleteModelInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolicy  DeletePolicyRequest
+     * @return DeletePolicyResponse
+     */
+    CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTopic  DeleteTopicRequest
+     * @return DeleteTopicResponse
+     */
+    CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWordGroup  DeleteWordGroupRequest
+     * @return DeleteWordGroupResponse
+     */
+    CompletableFuture<DeleteWordGroupResponse> deleteWordGroup(DeleteWordGroupRequest request);
+
+    /**
      * @param request the request parameters of GetContentDetectResult  GetContentDetectResultRequest
      * @return GetContentDetectResultResponse
      */
@@ -62,16 +110,70 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetModelInputContentDetectResultResponse> getModelInputContentDetectResult(GetModelInputContentDetectResultRequest request);
 
     /**
+     * @param request the request parameters of GetModelInstanceInfo  GetModelInstanceInfoRequest
+     * @return GetModelInstanceInfoResponse
+     */
+    CompletableFuture<GetModelInstanceInfoResponse> getModelInstanceInfo(GetModelInstanceInfoRequest request);
+
+    /**
      * @param request the request parameters of GetModelOutputContentDetectResult  GetModelOutputContentDetectResultRequest
      * @return GetModelOutputContentDetectResultResponse
      */
     CompletableFuture<GetModelOutputContentDetectResultResponse> getModelOutputContentDetectResult(GetModelOutputContentDetectResultRequest request);
 
     /**
-     * @param request the request parameters of ListSensitiveWord  ListSensitiveWordRequest
-     * @return ListSensitiveWordResponse
+     * @param request the request parameters of GetPolicyDefaultOptions  GetPolicyDefaultOptionsRequest
+     * @return GetPolicyDefaultOptionsResponse
      */
-    CompletableFuture<ListSensitiveWordResponse> listSensitiveWord(ListSensitiveWordRequest request);
+    CompletableFuture<GetPolicyDefaultOptionsResponse> getPolicyDefaultOptions(GetPolicyDefaultOptionsRequest request);
+
+    /**
+     * @param request the request parameters of GetPolicyInfo  GetPolicyInfoRequest
+     * @return GetPolicyInfoResponse
+     */
+    CompletableFuture<GetPolicyInfoResponse> getPolicyInfo(GetPolicyInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetTopic  GetTopicRequest
+     * @return GetTopicResponse
+     */
+    CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
+
+    /**
+     * @param request the request parameters of GetWordGroup  GetWordGroupRequest
+     * @return GetWordGroupResponse
+     */
+    CompletableFuture<GetWordGroupResponse> getWordGroup(GetWordGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListModelCategory  ListModelCategoryRequest
+     * @return ListModelCategoryResponse
+     */
+    CompletableFuture<ListModelCategoryResponse> listModelCategory(ListModelCategoryRequest request);
+
+    /**
+     * @param request the request parameters of ListModelInstance  ListModelInstanceRequest
+     * @return ListModelInstanceResponse
+     */
+    CompletableFuture<ListModelInstanceResponse> listModelInstance(ListModelInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListPolicy  ListPolicyRequest
+     * @return ListPolicyResponse
+     */
+    CompletableFuture<ListPolicyResponse> listPolicy(ListPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ListTopic  ListTopicRequest
+     * @return ListTopicResponse
+     */
+    CompletableFuture<ListTopicResponse> listTopic(ListTopicRequest request);
+
+    /**
+     * @param request the request parameters of ListWordGroup  ListWordGroupRequest
+     * @return ListWordGroupResponse
+     */
+    CompletableFuture<ListWordGroupResponse> listWordGroup(ListWordGroupRequest request);
 
     /**
      * @param request the request parameters of ModelInputContentAsyncDetect  ModelInputContentAsyncDetectRequest
@@ -104,9 +206,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterAccountResponse> registerAccount(RegisterAccountRequest request);
 
     /**
-     * @param request the request parameters of SyncSensitiveWord  SyncSensitiveWordRequest
-     * @return SyncSensitiveWordResponse
+     * @param request the request parameters of UpdateModelInstance  UpdateModelInstanceRequest
+     * @return UpdateModelInstanceResponse
      */
-    CompletableFuture<SyncSensitiveWordResponse> syncSensitiveWord(SyncSensitiveWordRequest request);
+    CompletableFuture<UpdateModelInstanceResponse> updateModelInstance(UpdateModelInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolicy  UpdatePolicyRequest
+     * @return UpdatePolicyResponse
+     */
+    CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTopic  UpdateTopicRequest
+     * @return UpdateTopicResponse
+     */
+    CompletableFuture<UpdateTopicResponse> updateTopic(UpdateTopicRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWordGroup  UpdateWordGroupRequest
+     * @return UpdateWordGroupResponse
+     */
+    CompletableFuture<UpdateWordGroupResponse> updateWordGroup(UpdateWordGroupRequest request);
 
 }

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SyncSensitiveWordRequest} extends {@link RequestModel}
+ * {@link CreateWordGroupRequest} extends {@link RequestModel}
  *
- * <p>SyncSensitiveWordRequest</p>
+ * <p>CreateWordGroupRequest</p>
  */
-public class SyncSensitiveWordRequest extends Request {
+public class CreateWordGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BodyData")
     private BodyData bodyData;
@@ -26,21 +26,31 @@ public class SyncSensitiveWordRequest extends Request {
     private Boolean commit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    private String groupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private SyncSensitiveWordRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private Long workspaceId;
+
+    private CreateWordGroupRequest(Builder builder) {
         super(builder);
         this.bodyData = builder.bodyData;
         this.commit = builder.commit;
+        this.groupName = builder.groupName;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SyncSensitiveWordRequest create() {
+    public static CreateWordGroupRequest create() {
         return builder().build();
     }
 
@@ -64,30 +74,48 @@ public class SyncSensitiveWordRequest extends Request {
     }
 
     /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<SyncSensitiveWordRequest, Builder> {
+    /**
+     * @return workspaceId
+     */
+    public Long getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<CreateWordGroupRequest, Builder> {
         private BodyData bodyData; 
         private Boolean commit; 
+        private String groupName; 
         private String regionId; 
+        private Long workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SyncSensitiveWordRequest request) {
+        private Builder(CreateWordGroupRequest request) {
             super(request);
             this.bodyData = request.bodyData;
             this.commit = request.commit;
+            this.groupName = request.groupName;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * BodyData.
+         * <p>Request object</p>
          */
         public Builder bodyData(BodyData bodyData) {
             String bodyDataShrink = shrink(bodyData, "BodyData", "json");
@@ -97,7 +125,12 @@ public class SyncSensitiveWordRequest extends Request {
         }
 
         /**
-         * Commit.
+         * <p>Whether to commit.
+         * false: Not actually saved, only checked
+         * true: Commit and save</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder commit(Boolean commit) {
             this.putQueryParameter("Commit", commit);
@@ -106,7 +139,22 @@ public class SyncSensitiveWordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Keyword group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup</p>
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,36 +162,40 @@ public class SyncSensitiveWordRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>643168</p>
+         */
+        public Builder workspaceId(Long workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
         @Override
-        public SyncSensitiveWordRequest build() {
-            return new SyncSensitiveWordRequest(this);
+        public CreateWordGroupRequest build() {
+            return new CreateWordGroupRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SyncSensitiveWordRequest} extends {@link TeaModel}
+     * {@link CreateWordGroupRequest} extends {@link TeaModel}
      *
-     * <p>SyncSensitiveWordRequest</p>
+     * <p>CreateWordGroupRequest</p>
      */
-    public static class SensitiveWordList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Integer id;
-
+    public static class WordInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
-
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
-        private SensitiveWordList(Builder builder) {
-            this.id = builder.id;
+        private WordInfoList(Builder builder) {
             this.label = builder.label;
-            this.status = builder.status;
             this.word = builder.word;
         }
 
@@ -151,15 +203,8 @@ public class SyncSensitiveWordRequest extends Request {
             return new Builder();
         }
 
-        public static SensitiveWordList create() {
+        public static WordInfoList create() {
             return builder().build();
-        }
-
-        /**
-         * @return id
-         */
-        public Integer getId() {
-            return this.id;
         }
 
         /**
@@ -170,13 +215,6 @@ public class SyncSensitiveWordRequest extends Request {
         }
 
         /**
-         * @return status
-         */
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return word
          */
         public String getWord() {
@@ -184,31 +222,22 @@ public class SyncSensitiveWordRequest extends Request {
         }
 
         public static final class Builder {
-            private Integer id; 
             private String label; 
-            private Integer status; 
             private String word; 
 
             private Builder() {
             } 
 
-            private Builder(SensitiveWordList model) {
-                this.id = model.id;
+            private Builder(WordInfoList model) {
                 this.label = model.label;
-                this.status = model.status;
                 this.word = model.word;
             } 
 
             /**
-             * Id.
-             */
-            public Builder id(Integer id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * Label.
+             * <p>Label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Buss.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -216,23 +245,18 @@ public class SyncSensitiveWordRequest extends Request {
             }
 
             /**
-             * Status.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * Word.
+             * <p>Keyword</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Inv.</p>
              */
             public Builder word(String word) {
                 this.word = word;
                 return this;
             }
 
-            public SensitiveWordList build() {
-                return new SensitiveWordList(this);
+            public WordInfoList build() {
+                return new WordInfoList(this);
             } 
 
         } 
@@ -240,16 +264,16 @@ public class SyncSensitiveWordRequest extends Request {
     }
     /**
      * 
-     * {@link SyncSensitiveWordRequest} extends {@link TeaModel}
+     * {@link CreateWordGroupRequest} extends {@link TeaModel}
      *
-     * <p>SyncSensitiveWordRequest</p>
+     * <p>CreateWordGroupRequest</p>
      */
     public static class BodyData extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SensitiveWordList")
-        private java.util.List<SensitiveWordList> sensitiveWordList;
+        @com.aliyun.core.annotation.NameInMap("WordInfoList")
+        private java.util.List<WordInfoList> wordInfoList;
 
         private BodyData(Builder builder) {
-            this.sensitiveWordList = builder.sensitiveWordList;
+            this.wordInfoList = builder.wordInfoList;
         }
 
         public static Builder builder() {
@@ -261,27 +285,27 @@ public class SyncSensitiveWordRequest extends Request {
         }
 
         /**
-         * @return sensitiveWordList
+         * @return wordInfoList
          */
-        public java.util.List<SensitiveWordList> getSensitiveWordList() {
-            return this.sensitiveWordList;
+        public java.util.List<WordInfoList> getWordInfoList() {
+            return this.wordInfoList;
         }
 
         public static final class Builder {
-            private java.util.List<SensitiveWordList> sensitiveWordList; 
+            private java.util.List<WordInfoList> wordInfoList; 
 
             private Builder() {
             } 
 
             private Builder(BodyData model) {
-                this.sensitiveWordList = model.sensitiveWordList;
+                this.wordInfoList = model.wordInfoList;
             } 
 
             /**
-             * SensitiveWordList.
+             * <p>Keyword group list</p>
              */
-            public Builder sensitiveWordList(java.util.List<SensitiveWordList> sensitiveWordList) {
-                this.sensitiveWordList = sensitiveWordList;
+            public Builder wordInfoList(java.util.List<WordInfoList> wordInfoList) {
+                this.wordInfoList = wordInfoList;
                 return this;
             }
 

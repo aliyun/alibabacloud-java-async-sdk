@@ -115,7 +115,7 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
         } 
 
         /**
-         * BodyData.
+         * <p>Request object</p>
          */
         public Builder bodyData(BodyData bodyData) {
             String bodyDataShrink = shrink(bodyData, "BodyData", "json");
@@ -125,7 +125,10 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
         }
 
         /**
-         * PolicyIdentifier.
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x1bc5xgs4uhx</p>
          */
         public Builder policyIdentifier(String policyIdentifier) {
             this.putQueryParameter("PolicyIdentifier", policyIdentifier);
@@ -134,7 +137,10 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +149,10 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * <p>Scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);
@@ -152,7 +161,11 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>Service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>textDetection
+         * imageDetection</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -207,7 +220,13 @@ public class ModelOutputContentAsyncDetectRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <ol>
+             * <li>The text content to be reviewed, with a maximum limit of 10000 characters (including English and Chinese).</li>
+             * <li>Or the URL address of the image to be reviewed.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>the content to be checked</p>
              */
             public Builder content(String content) {
                 this.content = content;

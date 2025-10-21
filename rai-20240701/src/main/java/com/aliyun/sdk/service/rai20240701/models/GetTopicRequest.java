@@ -12,30 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetModelOutputContentDetectResultRequest} extends {@link RequestModel}
+ * {@link GetTopicRequest} extends {@link RequestModel}
  *
- * <p>GetModelOutputContentDetectResultRequest</p>
+ * <p>GetTopicRequest</p>
  */
-public class GetModelOutputContentDetectResultRequest extends Request {
+public class GetTopicRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
+    @com.aliyun.core.annotation.NameInMap("TopicId")
+    private Long topicId;
 
-    private GetModelOutputContentDetectResultRequest(Builder builder) {
+    private GetTopicRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.taskId = builder.taskId;
+        this.topicId = builder.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetModelOutputContentDetectResultRequest create() {
+    public static GetTopicRequest create() {
         return builder().build();
     }
 
@@ -52,31 +52,28 @@ public class GetModelOutputContentDetectResultRequest extends Request {
     }
 
     /**
-     * @return taskId
+     * @return topicId
      */
-    public String getTaskId() {
-        return this.taskId;
+    public Long getTopicId() {
+        return this.topicId;
     }
 
-    public static final class Builder extends Request.Builder<GetModelOutputContentDetectResultRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetTopicRequest, Builder> {
         private String regionId; 
-        private String taskId; 
+        private Long topicId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetModelOutputContentDetectResultRequest request) {
+        private Builder(GetTopicRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.taskId = request.taskId;
+            this.topicId = request.topicId;
         } 
 
         /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -85,20 +82,17 @@ public class GetModelOutputContentDetectResultRequest extends Request {
         }
 
         /**
-         * <p>Task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
+         * TopicId.
          */
-        public Builder taskId(String taskId) {
-            this.putQueryParameter("TaskId", taskId);
-            this.taskId = taskId;
+        public Builder topicId(Long topicId) {
+            this.putQueryParameter("TopicId", topicId);
+            this.topicId = topicId;
             return this;
         }
 
         @Override
-        public GetModelOutputContentDetectResultRequest build() {
-            return new GetModelOutputContentDetectResultRequest(this);
+        public GetTopicRequest build() {
+            return new GetTopicRequest(this);
         } 
 
     } 

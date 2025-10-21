@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModelInputContentAsyncDetectResponseBody} extends {@link TeaModel}
+ * {@link DeleteWordGroupResponseBody} extends {@link TeaModel}
  *
- * <p>ModelInputContentAsyncDetectResponseBody</p>
+ * <p>DeleteWordGroupResponseBody</p>
  */
-public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
+public class DeleteWordGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,23 +32,19 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
-
-    private ModelInputContentAsyncDetectResponseBody(Builder builder) {
+    private DeleteWordGroupResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
-        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModelInputContentAsyncDetectResponseBody create() {
+    public static DeleteWordGroupResponseBody create() {
         return builder().build();
     }
 
@@ -91,35 +87,26 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private String taskId; 
 
         private Builder() {
         } 
 
-        private Builder(ModelInputContentAsyncDetectResponseBody model) {
+        private Builder(DeleteWordGroupResponseBody model) {
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
-            this.taskId = model.taskId;
         } 
 
         /**
-         * <p>Result code, 00000 indicates success; others indicate failure.</p>
+         * <p>Result code, 200 indicates success; others indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>00000</p>
@@ -130,7 +117,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +128,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>If an error occurs, returns the error message.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -152,7 +139,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -163,7 +150,11 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作是否成功。true表示成功，false表示失败。</p>
+         * <p>Indicates whether the operation was successful. Possible values:</p>
+         * <ul>
+         * <li>True indicates success.</li>
+         * <li>False indicates failure.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -173,19 +164,8 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * <p>Task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
-         */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-
-        public ModelInputContentAsyncDetectResponseBody build() {
-            return new ModelInputContentAsyncDetectResponseBody(this);
+        public DeleteWordGroupResponseBody build() {
+            return new DeleteWordGroupResponseBody(this);
         } 
 
     } 

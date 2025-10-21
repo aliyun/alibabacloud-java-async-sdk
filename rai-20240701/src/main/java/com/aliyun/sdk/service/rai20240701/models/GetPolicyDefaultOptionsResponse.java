@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListSensitiveWordResponse} extends {@link TeaModel}
+ * {@link GetPolicyDefaultOptionsResponse} extends {@link TeaModel}
  *
- * <p>ListSensitiveWordResponse</p>
+ * <p>GetPolicyDefaultOptionsResponse</p>
  */
-public class ListSensitiveWordResponse extends Response {
+public class GetPolicyDefaultOptionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListSensitiveWordResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListSensitiveWordResponseBody body;
+    private GetPolicyDefaultOptionsResponseBody body;
 
-    private ListSensitiveWordResponse(BuilderImpl builder) {
+    private GetPolicyDefaultOptionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListSensitiveWordResponse create() {
+    public static GetPolicyDefaultOptionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListSensitiveWordResponse extends Response {
     /**
      * @return body
      */
-    public ListSensitiveWordResponseBody getBody() {
+    public GetPolicyDefaultOptionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListSensitiveWordResponse, Builder> {
+    public interface Builder extends Response.Builder<GetPolicyDefaultOptionsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListSensitiveWordResponseBody body);
+        Builder body(GetPolicyDefaultOptionsResponseBody body);
 
         @Override
-        ListSensitiveWordResponse build();
+        GetPolicyDefaultOptionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListSensitiveWordResponse, Builder>
+            extends Response.BuilderImpl<GetPolicyDefaultOptionsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListSensitiveWordResponseBody body; 
+        private GetPolicyDefaultOptionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListSensitiveWordResponse response) {
+        private BuilderImpl(GetPolicyDefaultOptionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListSensitiveWordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListSensitiveWordResponseBody body) {
+        public Builder body(GetPolicyDefaultOptionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListSensitiveWordResponse build() {
-            return new ListSensitiveWordResponse(this);
+        public GetPolicyDefaultOptionsResponse build() {
+            return new GetPolicyDefaultOptionsResponse(this);
         } 
 
     } 

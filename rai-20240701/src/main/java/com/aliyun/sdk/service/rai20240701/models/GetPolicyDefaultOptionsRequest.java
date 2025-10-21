@@ -12,30 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetModelOutputContentDetectResultRequest} extends {@link RequestModel}
+ * {@link GetPolicyDefaultOptionsRequest} extends {@link RequestModel}
  *
- * <p>GetModelOutputContentDetectResultRequest</p>
+ * <p>GetPolicyDefaultOptionsRequest</p>
  */
-public class GetModelOutputContentDetectResultRequest extends Request {
+public class GetPolicyDefaultOptionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
-
-    private GetModelOutputContentDetectResultRequest(Builder builder) {
+    private GetPolicyDefaultOptionsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetModelOutputContentDetectResultRequest create() {
+    public static GetPolicyDefaultOptionsRequest create() {
         return builder().build();
     }
 
@@ -51,25 +46,16 @@ public class GetModelOutputContentDetectResultRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public static final class Builder extends Request.Builder<GetModelOutputContentDetectResultRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetPolicyDefaultOptionsRequest, Builder> {
         private String regionId; 
-        private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetModelOutputContentDetectResultRequest request) {
+        private Builder(GetPolicyDefaultOptionsRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.taskId = request.taskId;
         } 
 
         /**
@@ -84,21 +70,9 @@ public class GetModelOutputContentDetectResultRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>Task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
-         */
-        public Builder taskId(String taskId) {
-            this.putQueryParameter("TaskId", taskId);
-            this.taskId = taskId;
-            return this;
-        }
-
         @Override
-        public GetModelOutputContentDetectResultRequest build() {
-            return new GetModelOutputContentDetectResultRequest(this);
+        public GetPolicyDefaultOptionsRequest build() {
+            return new GetPolicyDefaultOptionsRequest(this);
         } 
 
     } 

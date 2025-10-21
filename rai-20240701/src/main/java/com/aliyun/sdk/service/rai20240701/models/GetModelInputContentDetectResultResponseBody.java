@@ -171,7 +171,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code, 00000 indicates success; others indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * DetectResultList.
+         * <p>Detection result object</p>
          */
         public Builder detectResultList(java.util.List<DetectResultList> detectResultList) {
             this.detectResultList = detectResultList;
@@ -187,7 +190,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -195,7 +201,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -203,7 +212,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessedCount.
+         * <p>Number of processed items in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder processedCount(Integer processedCount) {
             this.processedCount = processedCount;
@@ -211,7 +223,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +234,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. true means success, false means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +245,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -235,7 +256,14 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>Task processing status:
+         * 0: Queued
+         * 1: Processing
+         * 2: Completed
+         * 3: Failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder taskStatus(Integer taskStatus) {
             this.taskStatus = taskStatus;
@@ -243,7 +271,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -309,7 +340,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Word.
+             * <p>Word</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testWord</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -317,7 +351,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * WordLabel.
+             * <p>Label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testLabel</p>
              */
             public Builder wordLabel(String wordLabel) {
                 this.wordLabel = wordLabel;
@@ -384,7 +421,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockWordList.
+             * <p>Keyword detection result object list</p>
              */
             public Builder blockWordList(java.util.List<BlockWordList> blockWordList) {
                 this.blockWordList = blockWordList;
@@ -392,7 +429,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>Keyword group name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -459,7 +499,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockWordGroupInfoList.
+             * <p>Keyword detection result object list</p>
              */
             public Builder blockWordGroupInfoList(java.util.List<BlockWordGroupInfoList> blockWordGroupInfoList) {
                 this.blockWordGroupInfoList = blockWordGroupInfoList;
@@ -467,7 +507,11 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskResult.
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskResult(Integer riskResult) {
                 this.riskResult = riskResult;
@@ -476,6 +520,243 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
 
             public BlockWord build() {
                 return new BlockWord(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetModelInputContentDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelInputContentDetectResultResponseBody</p>
+     */
+    public static class TopicInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryType")
+        private Integer categoryType;
+
+        @com.aliyun.core.annotation.NameInMap("RiskResult")
+        private Integer riskResult;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
+        private Integer securityLevel;
+
+        @com.aliyun.core.annotation.NameInMap("TopicName")
+        private String topicName;
+
+        private TopicInfoList(Builder builder) {
+            this.categoryType = builder.categoryType;
+            this.riskResult = builder.riskResult;
+            this.securityLevel = builder.securityLevel;
+            this.topicName = builder.topicName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TopicInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return categoryType
+         */
+        public Integer getCategoryType() {
+            return this.categoryType;
+        }
+
+        /**
+         * @return riskResult
+         */
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        /**
+         * @return securityLevel
+         */
+        public Integer getSecurityLevel() {
+            return this.securityLevel;
+        }
+
+        /**
+         * @return topicName
+         */
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+        public static final class Builder {
+            private Integer categoryType; 
+            private Integer riskResult; 
+            private Integer securityLevel; 
+            private String topicName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicInfoList model) {
+                this.categoryType = model.categoryType;
+                this.riskResult = model.riskResult;
+                this.securityLevel = model.securityLevel;
+                this.topicName = model.topicName;
+            } 
+
+            /**
+             * <p>0: Text
+             * 1: Image</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder categoryType(Integer categoryType) {
+                this.categoryType = categoryType;
+                return this;
+            }
+
+            /**
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder riskResult(Integer riskResult) {
+                this.riskResult = riskResult;
+                return this;
+            }
+
+            /**
+             * <p>Security level
+             * 0: Low
+             * 1: Medium
+             * 2: High</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder securityLevel(Integer securityLevel) {
+                this.securityLevel = securityLevel;
+                return this;
+            }
+
+            /**
+             * <p>Topic name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Buss.</p>
+             */
+            public Builder topicName(String topicName) {
+                this.topicName = topicName;
+                return this;
+            }
+
+            public TopicInfoList build() {
+                return new TopicInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetModelInputContentDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelInputContentDetectResultResponseBody</p>
+     */
+    public static class DenyTopics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfidenceScore")
+        private Double confidenceScore;
+
+        @com.aliyun.core.annotation.NameInMap("RiskResult")
+        private Integer riskResult;
+
+        @com.aliyun.core.annotation.NameInMap("TopicInfoList")
+        private java.util.List<TopicInfoList> topicInfoList;
+
+        private DenyTopics(Builder builder) {
+            this.confidenceScore = builder.confidenceScore;
+            this.riskResult = builder.riskResult;
+            this.topicInfoList = builder.topicInfoList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DenyTopics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidenceScore
+         */
+        public Double getConfidenceScore() {
+            return this.confidenceScore;
+        }
+
+        /**
+         * @return riskResult
+         */
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        /**
+         * @return topicInfoList
+         */
+        public java.util.List<TopicInfoList> getTopicInfoList() {
+            return this.topicInfoList;
+        }
+
+        public static final class Builder {
+            private Double confidenceScore; 
+            private Integer riskResult; 
+            private java.util.List<TopicInfoList> topicInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DenyTopics model) {
+                this.confidenceScore = model.confidenceScore;
+                this.riskResult = model.riskResult;
+                this.topicInfoList = model.topicInfoList;
+            } 
+
+            /**
+             * <p>ConfidenceScore</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
+             */
+            public Builder confidenceScore(Double confidenceScore) {
+                this.confidenceScore = confidenceScore;
+                return this;
+            }
+
+            /**
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder riskResult(Integer riskResult) {
+                this.riskResult = riskResult;
+                return this;
+            }
+
+            /**
+             * <p>List of sensitive topics</p>
+             */
+            public Builder topicInfoList(java.util.List<TopicInfoList> topicInfoList) {
+                this.topicInfoList = topicInfoList;
+                return this;
+            }
+
+            public DenyTopics build() {
+                return new DenyTopics(this);
             } 
 
         } 
@@ -500,11 +781,15 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private Integer securityLevel;
 
+        @com.aliyun.core.annotation.NameInMap("SubCategoryLabel")
+        private String subCategoryLabel;
+
         private HarmfulCategoryInfoList(Builder builder) {
             this.categoryLabel = builder.categoryLabel;
             this.categoryType = builder.categoryType;
             this.riskResult = builder.riskResult;
             this.securityLevel = builder.securityLevel;
+            this.subCategoryLabel = builder.subCategoryLabel;
         }
 
         public static Builder builder() {
@@ -543,11 +828,19 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             return this.securityLevel;
         }
 
+        /**
+         * @return subCategoryLabel
+         */
+        public String getSubCategoryLabel() {
+            return this.subCategoryLabel;
+        }
+
         public static final class Builder {
             private String categoryLabel; 
             private Integer categoryType; 
             private Integer riskResult; 
             private Integer securityLevel; 
+            private String subCategoryLabel; 
 
             private Builder() {
             } 
@@ -557,10 +850,14 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
                 this.categoryType = model.categoryType;
                 this.riskResult = model.riskResult;
                 this.securityLevel = model.securityLevel;
+                this.subCategoryLabel = model.subCategoryLabel;
             } 
 
             /**
-             * CategoryLabel.
+             * <p>Category name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Morality</p>
              */
             public Builder categoryLabel(String categoryLabel) {
                 this.categoryLabel = categoryLabel;
@@ -568,7 +865,11 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryType.
+             * <p>0: Text
+             * 1: Image</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder categoryType(Integer categoryType) {
                 this.categoryType = categoryType;
@@ -576,7 +877,11 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskResult.
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskResult(Integer riskResult) {
                 this.riskResult = riskResult;
@@ -584,10 +889,27 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>Security level
+             * 0: Low
+             * 1: Medium
+             * 2: High</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(Integer securityLevel) {
                 this.securityLevel = securityLevel;
+                return this;
+            }
+
+            /**
+             * <p>Sub-category label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>morality_ethics</p>
+             */
+            public Builder subCategoryLabel(String subCategoryLabel) {
+                this.subCategoryLabel = subCategoryLabel;
                 return this;
             }
 
@@ -664,7 +986,10 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfidenceScore.
+             * <p>Confidence score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder confidenceScore(Double confidenceScore) {
                 this.confidenceScore = confidenceScore;
@@ -672,7 +997,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * HarmfulCategoryInfoList.
+             * <p>List of harmful category objects</p>
              */
             public Builder harmfulCategoryInfoList(java.util.List<HarmfulCategoryInfoList> harmfulCategoryInfoList) {
                 this.harmfulCategoryInfoList = harmfulCategoryInfoList;
@@ -680,7 +1005,11 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskResult.
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskResult(Integer riskResult) {
                 this.riskResult = riskResult;
@@ -700,9 +1029,12 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
      *
      * <p>GetModelInputContentDetectResultResponseBody</p>
      */
-    public static class PromptAttack extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("PromptAttackInfo")
-        private String promptAttackInfo;
+    public static class PromptAttackInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryLabel")
+        private String categoryLabel;
+
+        @com.aliyun.core.annotation.NameInMap("CategoryType")
+        private Integer categoryType;
 
         @com.aliyun.core.annotation.NameInMap("RiskResult")
         private Integer riskResult;
@@ -710,8 +1042,9 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private Integer securityLevel;
 
-        private PromptAttack(Builder builder) {
-            this.promptAttackInfo = builder.promptAttackInfo;
+        private PromptAttackInfoList(Builder builder) {
+            this.categoryLabel = builder.categoryLabel;
+            this.categoryType = builder.categoryType;
             this.riskResult = builder.riskResult;
             this.securityLevel = builder.securityLevel;
         }
@@ -720,15 +1053,22 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static PromptAttack create() {
+        public static PromptAttackInfoList create() {
             return builder().build();
         }
 
         /**
-         * @return promptAttackInfo
+         * @return categoryLabel
          */
-        public String getPromptAttackInfo() {
-            return this.promptAttackInfo;
+        public String getCategoryLabel() {
+            return this.categoryLabel;
+        }
+
+        /**
+         * @return categoryType
+         */
+        public Integer getCategoryType() {
+            return this.categoryType;
         }
 
         /**
@@ -746,29 +1086,50 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String promptAttackInfo; 
+            private String categoryLabel; 
+            private Integer categoryType; 
             private Integer riskResult; 
             private Integer securityLevel; 
 
             private Builder() {
             } 
 
-            private Builder(PromptAttack model) {
-                this.promptAttackInfo = model.promptAttackInfo;
+            private Builder(PromptAttackInfoList model) {
+                this.categoryLabel = model.categoryLabel;
+                this.categoryType = model.categoryType;
                 this.riskResult = model.riskResult;
                 this.securityLevel = model.securityLevel;
             } 
 
             /**
-             * PromptAttackInfo.
+             * <p>Category name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Role Play</p>
              */
-            public Builder promptAttackInfo(String promptAttackInfo) {
-                this.promptAttackInfo = promptAttackInfo;
+            public Builder categoryLabel(String categoryLabel) {
+                this.categoryLabel = categoryLabel;
                 return this;
             }
 
             /**
-             * RiskResult.
+             * <p>0: Text
+             * 1: Image</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder categoryType(Integer categoryType) {
+                this.categoryType = categoryType;
+                return this;
+            }
+
+            /**
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskResult(Integer riskResult) {
                 this.riskResult = riskResult;
@@ -776,7 +1137,167 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>Security level
+             * 0: Low
+             * 1: Medium
+             * 2: High</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder securityLevel(Integer securityLevel) {
+                this.securityLevel = securityLevel;
+                return this;
+            }
+
+            public PromptAttackInfoList build() {
+                return new PromptAttackInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetModelInputContentDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelInputContentDetectResultResponseBody</p>
+     */
+    public static class PromptAttack extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfidenceScore")
+        private Double confidenceScore;
+
+        @com.aliyun.core.annotation.NameInMap("PromptAttackInfo")
+        private String promptAttackInfo;
+
+        @com.aliyun.core.annotation.NameInMap("PromptAttackInfoList")
+        private java.util.List<PromptAttackInfoList> promptAttackInfoList;
+
+        @com.aliyun.core.annotation.NameInMap("RiskResult")
+        private Integer riskResult;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
+        private Integer securityLevel;
+
+        private PromptAttack(Builder builder) {
+            this.confidenceScore = builder.confidenceScore;
+            this.promptAttackInfo = builder.promptAttackInfo;
+            this.promptAttackInfoList = builder.promptAttackInfoList;
+            this.riskResult = builder.riskResult;
+            this.securityLevel = builder.securityLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromptAttack create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidenceScore
+         */
+        public Double getConfidenceScore() {
+            return this.confidenceScore;
+        }
+
+        /**
+         * @return promptAttackInfo
+         */
+        public String getPromptAttackInfo() {
+            return this.promptAttackInfo;
+        }
+
+        /**
+         * @return promptAttackInfoList
+         */
+        public java.util.List<PromptAttackInfoList> getPromptAttackInfoList() {
+            return this.promptAttackInfoList;
+        }
+
+        /**
+         * @return riskResult
+         */
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        /**
+         * @return securityLevel
+         */
+        public Integer getSecurityLevel() {
+            return this.securityLevel;
+        }
+
+        public static final class Builder {
+            private Double confidenceScore; 
+            private String promptAttackInfo; 
+            private java.util.List<PromptAttackInfoList> promptAttackInfoList; 
+            private Integer riskResult; 
+            private Integer securityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromptAttack model) {
+                this.confidenceScore = model.confidenceScore;
+                this.promptAttackInfo = model.promptAttackInfo;
+                this.promptAttackInfoList = model.promptAttackInfoList;
+                this.riskResult = model.riskResult;
+                this.securityLevel = model.securityLevel;
+            } 
+
+            /**
+             * <p>Confidence score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
+             */
+            public Builder confidenceScore(Double confidenceScore) {
+                this.confidenceScore = confidenceScore;
+                return this;
+            }
+
+            /**
+             * <p>Prompt attack detection result object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Role Play</p>
+             */
+            public Builder promptAttackInfo(String promptAttackInfo) {
+                this.promptAttackInfo = promptAttackInfo;
+                return this;
+            }
+
+            /**
+             * <p>Prompt attack list</p>
+             */
+            public Builder promptAttackInfoList(java.util.List<PromptAttackInfoList> promptAttackInfoList) {
+                this.promptAttackInfoList = promptAttackInfoList;
+                return this;
+            }
+
+            /**
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder riskResult(Integer riskResult) {
+                this.riskResult = riskResult;
+                return this;
+            }
+
+            /**
+             * <p>Security level
+             * 0: Low
+             * 1: Medium
+             * 2: High</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(Integer securityLevel) {
                 this.securityLevel = securityLevel;
@@ -800,6 +1321,9 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockWord")
         private BlockWord blockWord;
 
+        @com.aliyun.core.annotation.NameInMap("DenyTopics")
+        private DenyTopics denyTopics;
+
         @com.aliyun.core.annotation.NameInMap("HarmfulCategories")
         private HarmfulCategories harmfulCategories;
 
@@ -808,6 +1332,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
 
         private TraceInfo(Builder builder) {
             this.blockWord = builder.blockWord;
+            this.denyTopics = builder.denyTopics;
             this.harmfulCategories = builder.harmfulCategories;
             this.promptAttack = builder.promptAttack;
         }
@@ -828,6 +1353,13 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return denyTopics
+         */
+        public DenyTopics getDenyTopics() {
+            return this.denyTopics;
+        }
+
+        /**
          * @return harmfulCategories
          */
         public HarmfulCategories getHarmfulCategories() {
@@ -843,6 +1375,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private BlockWord blockWord; 
+            private DenyTopics denyTopics; 
             private HarmfulCategories harmfulCategories; 
             private PromptAttack promptAttack; 
 
@@ -851,12 +1384,13 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
 
             private Builder(TraceInfo model) {
                 this.blockWord = model.blockWord;
+                this.denyTopics = model.denyTopics;
                 this.harmfulCategories = model.harmfulCategories;
                 this.promptAttack = model.promptAttack;
             } 
 
             /**
-             * BlockWord.
+             * <p>Detected keywords</p>
              */
             public Builder blockWord(BlockWord blockWord) {
                 this.blockWord = blockWord;
@@ -864,7 +1398,15 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * HarmfulCategories.
+             * <p>Sensitive topic object list</p>
+             */
+            public Builder denyTopics(DenyTopics denyTopics) {
+                this.denyTopics = denyTopics;
+                return this;
+            }
+
+            /**
+             * <p>List of harmful category result objects</p>
              */
             public Builder harmfulCategories(HarmfulCategories harmfulCategories) {
                 this.harmfulCategories = harmfulCategories;
@@ -872,7 +1414,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * PromptAttack.
+             * <p>Prompt attack information</p>
              */
             public Builder promptAttack(PromptAttack promptAttack) {
                 this.promptAttack = promptAttack;
@@ -952,7 +1494,11 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             } 
 
             /**
-             * RiskResult.
+             * <p>0: No risk
+             * 1: Risk exists</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskResult(Integer riskResult) {
                 this.riskResult = riskResult;
@@ -960,7 +1506,13 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>0: Queued
+             * 1: Processing
+             * 2: Completed
+             * 3: Failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -968,7 +1520,7 @@ public class GetModelInputContentDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * TraceInfo.
+             * <p>Inspection result</p>
              */
             public Builder traceInfo(TraceInfo traceInfo) {
                 this.traceInfo = traceInfo;

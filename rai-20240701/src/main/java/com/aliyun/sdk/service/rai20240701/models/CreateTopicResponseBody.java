@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModelInputContentAsyncDetectResponseBody} extends {@link TeaModel}
+ * {@link CreateTopicResponseBody} extends {@link TeaModel}
  *
- * <p>ModelInputContentAsyncDetectResponseBody</p>
+ * <p>CreateTopicResponseBody</p>
  */
-public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
+public class CreateTopicResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,23 +32,23 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
+    @com.aliyun.core.annotation.NameInMap("TopicId")
+    private Long topicId;
 
-    private ModelInputContentAsyncDetectResponseBody(Builder builder) {
+    private CreateTopicResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
-        this.taskId = builder.taskId;
+        this.topicId = builder.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModelInputContentAsyncDetectResponseBody create() {
+    public static CreateTopicResponseBody create() {
         return builder().build();
     }
 
@@ -92,10 +92,10 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskId
+     * @return topicId
      */
-    public String getTaskId() {
-        return this.taskId;
+    public Long getTopicId() {
+        return this.topicId;
     }
 
     public static final class Builder {
@@ -104,25 +104,22 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private String taskId; 
+        private Long topicId; 
 
         private Builder() {
         } 
 
-        private Builder(ModelInputContentAsyncDetectResponseBody model) {
+        private Builder(CreateTopicResponseBody model) {
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
-            this.taskId = model.taskId;
+            this.topicId = model.topicId;
         } 
 
         /**
-         * <p>Result code, 00000 indicates success; others indicate failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00000</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,10 +127,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,10 +135,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,10 +143,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,10 +151,7 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作是否成功。true表示成功，false表示失败。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,18 +159,15 @@ public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
+         * TopicId.
          */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
+        public Builder topicId(Long topicId) {
+            this.topicId = topicId;
             return this;
         }
 
-        public ModelInputContentAsyncDetectResponseBody build() {
-            return new ModelInputContentAsyncDetectResponseBody(this);
+        public CreateTopicResponseBody build() {
+            return new CreateTopicResponseBody(this);
         } 
 
     } 

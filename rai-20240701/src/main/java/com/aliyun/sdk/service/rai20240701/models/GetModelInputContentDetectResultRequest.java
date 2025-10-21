@@ -73,7 +73,10 @@ public class GetModelInputContentDetectResultRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class GetModelInputContentDetectResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

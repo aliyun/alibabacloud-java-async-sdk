@@ -119,7 +119,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code, 00000 indicates success; others indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>操作是否成功。true表示成功，false表示失败。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,10 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
