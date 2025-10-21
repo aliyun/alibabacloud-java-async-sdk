@@ -47,14 +47,17 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
     private Integer nodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeScaleMax")
+    @com.aliyun.core.annotation.Validation(maximum = 128, minimum = 4)
     private Integer nodeScaleMax;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeScaleMin")
+    @com.aliyun.core.annotation.Validation(maximum = 128, minimum = 4)
     private Integer nodeScaleMin;
 
     @com.aliyun.core.annotation.Query
@@ -80,7 +83,7 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageQuota")
-    private String storageQuota;
+    private Long storageQuota;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
@@ -243,7 +246,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return storageQuota
      */
-    public String getStorageQuota() {
+    public Long getStorageQuota() {
         return this.storageQuota;
     }
 
@@ -291,7 +294,7 @@ public class CreateDBInstanceRequest extends Request {
         private String scaleMax; 
         private String scaleMin; 
         private String sourceDBInstanceId; 
-        private String storageQuota; 
+        private Long storageQuota; 
         private String storageType; 
         private String vpcId; 
         private String vswitchId; 
@@ -495,7 +498,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * StorageQuota.
          */
-        public Builder storageQuota(String storageQuota) {
+        public Builder storageQuota(Long storageQuota) {
             this.putQueryParameter("StorageQuota", storageQuota);
             this.storageQuota = storageQuota;
             return this;

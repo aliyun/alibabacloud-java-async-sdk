@@ -350,6 +350,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("ClickObserveServiceStatus")
+        private String clickObserveServiceStatus;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -454,6 +457,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.bid = builder.bid;
             this.category = builder.category;
             this.chargeType = builder.chargeType;
+            this.clickObserveServiceStatus = builder.clickObserveServiceStatus;
             this.createTime = builder.createTime;
             this.DBInstanceId = builder.DBInstanceId;
             this.deletionProtection = builder.deletionProtection;
@@ -523,6 +527,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return clickObserveServiceStatus
+         */
+        public String getClickObserveServiceStatus() {
+            return this.clickObserveServiceStatus;
         }
 
         /**
@@ -761,6 +772,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String bid; 
             private String category; 
             private String chargeType; 
+            private String clickObserveServiceStatus; 
             private String createTime; 
             private String DBInstanceId; 
             private Boolean deletionProtection; 
@@ -803,6 +815,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.bid = model.bid;
                 this.category = model.category;
                 this.chargeType = model.chargeType;
+                this.clickObserveServiceStatus = model.clickObserveServiceStatus;
                 this.createTime = model.createTime;
                 this.DBInstanceId = model.DBInstanceId;
                 this.deletionProtection = model.deletionProtection;
@@ -876,6 +889,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ClickObserveServiceStatus.
+             */
+            public Builder clickObserveServiceStatus(String clickObserveServiceStatus) {
+                this.clickObserveServiceStatus = clickObserveServiceStatus;
                 return this;
             }
 

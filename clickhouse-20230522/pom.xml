@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-clickhouse20230522</artifactId>
-  <version>1.0.9</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-clickhouse20230522</name>
   <description>Alibaba Cloud clickhouse (20230522) Async SDK for Java
